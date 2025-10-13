@@ -6,551 +6,11 @@ import {
   Brain, 
   Shield, 
   Zap, 
-<<<<<<< HEAD
   Globe, 
-  ArrowRight, 
-  Star, 
-  Users, 
-  Award, 
-  BarChart3, 
-  Cloud, 
-  Sparkles, 
-  Mail, 
-  Smartphone, 
-  Monitor,
-  Phone,
-  Code,
-  Database,
   ChevronDown,
-  SidebarIcon,
-  Package,
-  Heart,
-  Receipt,
-  TrendingUp,
-  Cpu,
-  Network,
-  Target,
-  Calendar,
-  Clock,
-  FileText,
-  Bot,
-  Lock,
   Settings,
-  Wifi,
-  Mobile,
-  Laptop,
-  Server,
-  HardDrive,
-  Terminal,
-  GitBranch,
-  Layers,
-  Workflow,
-  MessageSquare,
-  Search,
-  Filter,
-  Download,
-  Upload,
-  Eye,
-  Activity,
-  Trending,
-  PieChart,
-  BarChart,
-  LineChart,
-  Globe2,
-  NetworkIcon,
-  Processor,
-  MemoryStick,
-  Storage,
-  DataIcon,
-  Security,
-  Privacy,
-  Key,
-  Fingerprint,
-  Scan,
-  AlertTriangle,
-  CheckCircle,
-  XCircle,
-  Info,
-  HelpCircle,
-  BookOpen,
-  Video,
-  Image,
-  Music,
-  File,
-  Folder,
-  Archive,
-  Trash2,
-  Edit,
-  Copy,
-  Share,
-  ExternalLink,
-  Maximize,
-  Minimize,
-  RotateCcw,
-  Save,
-  Play,
-  Pause,
-  Stop,
-  SkipForward,
-  SkipBack,
-  Volume2,
-  VolumeX,
-  Mic,
-  MicOff,
-  Camera,
-  CameraOff,
-  VideoIcon,
-  VideoOff,
-  PhoneIcon,
-  PhoneOff,
-  MessageCircle,
-  Send,
-  Reply,
-  Forward,
-  Flag,
-  Bookmark,
-  Like,
-  ThumbsUp,
-  ThumbsDown,
-  Smile,
-  Frown,
-  Meh,
-  Laugh,
-  Angry,
-  Surprised,
-  Confused,
-  Wink,
-  Kiss,
-  Hug,
-  Clap,
-  Wave,
-  ThumbUp,
-  ThumbDown,
-  StarIcon,
-  StarOff,
-  Plus,
-  Minus,
-  Times,
-  Divide,
-  Equals,
-  Percent,
-  DollarSign,
-  Euro,
-  Pound,
-  Yen,
-  Bitcoin,
-  CreditCard,
-  Wallet,
-  ShoppingCart,
-  ShoppingBag,
-  Tag,
-  Tags,
-  PriceTag,
-  ReceiptIcon,
-  Calculator,
-  CalendarIcon,
-  ClockIcon,
-  Timer,
-  Stopwatch,
-  Hourglass,
-  DateIcon,
-  Sun,
-  Moon,
-  CloudIcon,
-  CloudRain,
-  CloudSnow,
-  CloudLightning,
-  Wind,
-  Thermometer,
-  Droplets,
-  Umbrella,
-  Sunny,
-  MoonIcon,
-  Sunrise,
-  Sunset,
-  Compass,
-  Map,
-  MapPin,
-  Navigation as NavIcon,
-  Route,
-  Car,
-  Bus,
-  Train,
-  Plane,
-  Ship,
-  Bike,
-  Walking,
-  Running,
-  Swimming,
-  Skiing,
-  Snowboarding,
-  Surfing,
-  Climbing,
-  Hiking,
-  Camping,
-  Backpack,
-  Tent,
-  SleepingBag,
-  Flashlight,
-  Candle,
-  Fire,
-  Water,
-  Tree,
-  Mountain,
-  Home,
-  Building,
-  Factory,
-  Store,
-  Hospital,
-  School,
-  Church,
-  Bank,
-  PostOffice,
-  Library,
-  Museum,
-  Theater,
-  Stadium,
-  Park,
-  Beach,
-  Forest,
-  Desert,
-  Ocean,
-  River,
-  Lake,
-  Island,
-  Bridge,
-  Tower,
-  Castle,
-  Palace,
-  Temple,
-  Monument,
-  Statue,
-  Fountain,
-  Garden,
-  Farm,
-  Barn,
-  Windmill,
-  Lighthouse,
-  Observatory,
-  Laboratory,
-  Office,
-  Desk,
-  Chair,
-  Table,
-  Bed,
-  Sofa,
-  Lamp,
-  Lightbulb,
-  CandleIcon,
-  FlashlightIcon,
-  Battery,
-  Plug,
-  Power,
-  WifiIcon,
-  Bluetooth,
-  Radio,
-  Tv,
-  Computer,
-  LaptopIcon,
-  MonitorIcon,
-  Keyboard,
-  Mouse,
-  Headphones,
-  Speaker,
-  Microphone,
-  CameraIcon,
-  VideoIcon2,
-  PhoneIcon2,
-  SmartphoneIcon,
-  Tablet,
-  Watch,
-  Gamepad2,
-  Joystick,
-  Dice1,
-  Dice2,
-  Dice3,
-  Dice4,
-  Dice5,
-  Dice6,
-  Puzzle,
-  Rubik,
-  Chess,
-  Cards,
-  Spade,
-  HeartIcon,
-  Diamond,
-  Club,
-  Crown,
-  Gem,
-  Ring,
-  Necklace,
-  Bracelet,
-  Earrings,
-  Glasses,
-  Sunglasses,
-  Mask,
-  Hat,
-  Cap,
-  Helmet,
-  Shirt,
-  Dress,
-  Pants,
-  Shorts,
-  Skirt,
-  Jacket,
-  Coat,
-  Sweater,
-  Hoodie,
-  Vest,
-  Tie,
-  Belt,
-  Sock,
-  Shoe,
-  Boot,
-  Sandal,
-  Sneaker,
-  HighHeel,
-  FlipFlop,
-  Slipper,
-  Glove,
-  Mittens,
-  Scarf,
-  Shawl,
-  Poncho,
-  Kimono,
-  Sari,
-  Kilt,
-  Toga,
-  Uniform,
-  Suit,
-  Tuxedo,
-  Gown,
-  Robe,
-  Pajamas,
-  Underwear,
-  Bra,
-  Panties,
-  Boxers,
-  Briefs,
-  Thong,
-  Bikini,
-  Swimsuit,
-  Wetsuit,
-  DivingSuit,
-  SpaceSuit,
-  Armor,
-  Chainmail,
-  Plate,
-  ShieldIcon,
-  Sword,
-  Dagger,
-  Axe,
-  Bow,
-  Arrow,
-  Spear,
-  Mace,
-  Flail,
-  Whip,
-  Staff,
-  Wand,
-  Scepter,
-  CrownIcon,
-  Tiara,
-  Diadem,
-  Circlet,
-  Headband,
-  Hairpin,
-  Comb,
-  Brush,
-  Mirror,
-  Perfume,
-  Lipstick,
-  Mascara,
-  Eyeshadow,
-  Blush,
-  Foundation,
-  Concealer,
-  Powder,
-  Primer,
-  Serum,
-  Moisturizer,
-  Sunscreen,
-  Cleanser,
-  Toner,
-  Exfoliant,
-  FaceMask,
-  Scrub,
-  Peel,
-  Treatment,
-  Therapy,
-  Massage,
-  Acupuncture,
-  Chiropractic,
-  Physical,
-  Mental,
-  Emotional,
-  Spiritual,
-  Psychological,
-  Psychiatric,
-  Neurological,
-  Cardiovascular,
-  Respiratory,
-  Digestive,
-  Endocrine,
-  Immune,
-  Reproductive,
-  Urinary,
-  Muscular,
-  Skeletal,
-  Nervous,
-  Circulatory,
-  Lymphatic,
-  Integumentary,
-  Sensory,
-  Motor,
-  Cognitive,
-  Behavioral,
-  Social,
-  Cultural,
-  Educational,
-  Professional,
-  Personal,
-  Private,
-  Public,
-  Corporate,
-  Government,
-  Military,
-  Law,
-  Medicine,
-  Science,
-  Technology,
-  Engineering,
-  Mathematics,
-  Physics,
-  Chemistry,
-  Biology,
-  Geology,
-  Astronomy,
-  Meteorology,
-  Oceanography,
-  Ecology,
-  Environmental,
-  Conservation,
-  Sustainability,
-  Renewable,
-  Green,
-  Clean,
-  Pure,
-  Natural,
-  Organic,
-  Synthetic,
-  Artificial,
-  Digital,
-  Virtual,
-  Augmented,
-  Mixed,
-  Extended,
-  Immersive,
-  Interactive,
-  Responsive,
-  Adaptive,
-  Intelligent,
-  Smart,
-  Automated,
-  Robotic,
-  Autonomous,
-  SelfDriving,
-  Electric,
-  Hybrid,
-  Solar,
-  Wind,
-  Hydro,
-  Nuclear,
-  Fossil,
-  Coal,
-  Oil,
-  Gas,
-  Biomass,
-  Geothermal,
-  Tidal,
-  Wave,
-  Fusion,
-  Fission,
-  Plasma,
-  Ion,
-  Electron,
-  Proton,
-  Neutron,
-  Atom,
-  Molecule,
-  Compound,
-  Element,
-  Metal,
-  Nonmetal,
-  Metalloid,
-  Alloy,
-  Crystal,
-  Mineral,
-  Rock,
-  Stone,
-  GemIcon,
-  Pearl,
-  DiamondIcon,
-  Ruby,
-  Sapphire,
-  Emerald,
-  Topaz,
-  Amethyst,
-  Citrine,
-  Garnet,
-  Opal,
-  Jade,
-  Turquoise,
-  Lapis,
-  Malachite,
-  Agate,
-  Jasper,
-  Onyx,
-  Obsidian,
-  Quartz,
-  Feldspar,
-  Mica,
-  Talc,
-  Gypsum,
-  Calcite,
-  Aragonite,
-  Dolomite,
-  Magnesite,
-  Siderite,
-  Rhodochrosite,
-  Smithsonite,
-  Azurite,
-  Chrysocolla,
-  Dioptase,
-  Wulfenite,
-  Vanadinite,
-  Pyromorphite,
-  Mimetite,
-  Crocoite,
-  WulfeniteIcon,
-  VanadiniteIcon,
-  PyromorphiteIcon,
-  MimetiteIcon,
-  CrocoiteIcon,
-  WulfeniteIcon2,
-  VanadiniteIcon2,
-  PyromorphiteIcon2,
-  MimetiteIcon2,
-  CrocoiteIcon2
-=======
-<<<<<<< HEAD
-  Globe,
-  ChevronDown,
-=======
-  Globe, 
-  ChevronDown
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
->>>>>>> main
+  Package,
+  Wifi
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -592,39 +52,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
 
   const isActive = (path: string) => location.pathname === path;
 
-  const serviceDropdownItems = [
-    {
-      name: 'AI Analytics',
-      path: '/ai-analytics',
-      description: 'Advanced data analytics and insights'
-    },
-    {
-      name: 'AI Cybersecurity',
-      path: '/ai-cybersecurity',
-      description: 'AI-powered security solutions'
-    },
-    {
-      name: 'Cloud Migration',
-      path: '/cloud-migration',
-      description: 'Seamless cloud transition'
-    },
-    {
-      name: 'Web Development',
-      path: '/web-development',
-      description: 'Custom web applications'
-    },
-    {
-      name: 'DevOps',
-      path: '/devops',
-      description: 'CI/CD and automation'
-    },
-    {
-      name: 'IT Consulting',
-      path: '/it-consulting',
-      description: 'Strategic technology guidance'
-    }
-  ];
-
   return (
     <nav className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20 shadow-2xl">
       {/* Animated background */}
@@ -648,7 +75,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
           </div>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
               {/* Home */}
@@ -734,17 +160,17 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         </button>
                         {isITServicesOpen && (
                           <div className="ml-6 mt-2 space-y-1">
-                            <Link to="/cloud-infrastructure" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Cloud Infrastructure
+                            <Link to="/cloud-migration" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              Cloud Migration
                             </Link>
-                            <Link to="/cybersecurity" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Cybersecurity Solutions
+                            <Link to="/network-security" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              Network Security
                             </Link>
-                            <Link to="/data-management" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Data Management
+                            <Link to="/web-development" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              Web Development
                             </Link>
-                            <Link to="/network-solutions" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Network Solutions
+                            <Link to="/devops" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              DevOps
                             </Link>
                             <Link to="/it-consulting" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
                               IT Consulting
@@ -768,23 +194,23 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         </button>
                         {isMicroSaasOpen && (
                           <div className="ml-6 mt-2 space-y-1">
-                            <Link to="/project-management-tool" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Project Management Tool
+                            <Link to="/zion-ai-crm-pro" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              Zion AI CRM Pro
                             </Link>
-                            <Link to="/team-collaboration" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Team Collaboration
+                            <Link to="/zion-ai-video-generator" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Video Generator
                             </Link>
-                            <Link to="/analytics-dashboard" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Analytics Dashboard
+                            <Link to="/zion-ai-marketing-automation" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              AI Marketing Automation
                             </Link>
-                            <Link to="/customer-relationship" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Customer Relationship
+                            <Link to="/ai-workflow-automation" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              Workflow Automation
                             </Link>
-                            <Link to="/inventory-management" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Inventory Management
+                            <Link to="/data-analytics" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              Data Analytics
                             </Link>
-                            <Link to="/financial-tracking" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Financial Tracking
+                            <Link to="/micro-saas" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              View All Micro SAAS
                             </Link>
                           </div>
                         )}
@@ -808,68 +234,20 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                             <Link to="/5g-iot-solutions" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
                               5G IoT Solutions
                             </Link>
-                            <Link to="/5g-smart-city" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              5G Smart City
+                            <Link to="/5g-smart-city-solutions" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              5G Smart City Solutions
                             </Link>
                             <Link to="/5g-edge-computing" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
                               5G Edge Computing
                             </Link>
-                            <Link to="/5g-mobile-apps" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                            <Link to="/5g-mobile-applications" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
                               5G Mobile Applications
                             </Link>
-                            <Link to="/5g-data-analytics" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              5G Data Analytics
+                            <Link to="/5g-solutions" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
+                              View All 5G Solutions
                             </Link>
                           </div>
                         )}
-=======
-          <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.path}
-                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive(item.path)
-                      ? 'text-cyan-400 bg-cyan-500/10'
-                      : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
-                  }`}
-                >
-                  {item.icon}
-                  <span>{item.name}</span>
-                  {item.hasDropdown && (
-                    <ChevronDown className="w-4 h-4" />
-                  )}
-                </Link>
-                
-                {/* Services Dropdown */}
-                {item.hasDropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                    <div className="p-4">
-                      <h3 className="text-white font-semibold mb-3 text-sm">Popular Services</h3>
-                      <div className="grid grid-cols-1 gap-2">
-                        {serviceDropdownItems.map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.path}
-                            className="block p-3 rounded-lg hover:bg-cyan-500/10 transition-colors group"
-                          >
-                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                              {service.name}
-                            </div>
-                            <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                              {service.description}
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                      <div className="mt-3 pt-3 border-t border-cyan-500/20">
-                        <Link
-                          to="/services"
-                          className="block text-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                        >
-                          View All Services →
-                        </Link>
->>>>>>> main
                       </div>
                     </div>
                   </div>
@@ -955,6 +333,39 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
               onClick={toggleMenu}
             >
               Services
+            </Link>
+            <Link
+              to="/ai-services"
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                isActive('/ai-services') 
+                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+              }`}
+              onClick={toggleMenu}
+            >
+              AI Services
+            </Link>
+            <Link
+              to="/micro-saas"
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                isActive('/micro-saas') 
+                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+              }`}
+              onClick={toggleMenu}
+            >
+              Micro SAAS
+            </Link>
+            <Link
+              to="/5g-solutions"
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                isActive('/5g-solutions') 
+                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
+                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
+              }`}
+              onClick={toggleMenu}
+            >
+              5G Solutions
             </Link>
             <Link
               to="/contact"
