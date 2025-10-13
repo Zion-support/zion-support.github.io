@@ -1,110 +1,25 @@
 User-agent: *
 Allow: /
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Sitemap
-=======
-# Sitemaps
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
-=======
-# Sitemap
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
-=======
-# Sitemap
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-<<<<<<< HEAD
-# Crawl-delay
-Crawl-delay: 1
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 # Disallow admin and private areas
-=======
-# Disallow admin areas (if any)
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
-=======
-# Disallow admin areas
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
 Disallow: /admin/
 Disallow: /api/
-<<<<<<< HEAD
 Disallow: /_next/
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-Disallow: /node_modules/
-
-# Allow important pages
-Allow: /ai-services/
-Allow: /micro-saas/
-Allow: /5g-solutions/
-Allow: /case-studies/
-Allow: /careers/
-
-# Block common bot traps
-Disallow: /*.json$
-Disallow: /*.xml$
-Disallow: /*.txt$
-Disallow: /*.log$
-
-# Allow specific file types
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.png$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.webp$
-Allow: /*.ico$
-=======
-Disallow: /private/
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
-=======
-Disallow: /dist/
-=======
-Disallow: /private/
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
+Disallow: /static/
 
 # Allow important pages
 Allow: /
 Allow: /about
-<<<<<<< HEAD
 Allow: /services
-Allow: /ai-services
-Allow: /micro-saas
-Allow: /5g-solutions
 Allow: /contact
-
-# Host
-Host: https://ziontechgroup.com
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
-=======
-Allow: /contact
-Allow: /services
-Allow: /ai-services
-Allow: /it-services
+Allow: /solutions
+Allow: /pricing
 Allow: /blog
-Allow: /case-studies
-Allow: /team
-Allow: /enterprise
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
-=======
-Disallow: /private/
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
-=======
-# Crawl-delay for respectful crawling
+Allow: /tutorials
+Allow: /demo
+Allow: /support
+
+# Crawl delay
 Crawl-delay: 1
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ca8
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
