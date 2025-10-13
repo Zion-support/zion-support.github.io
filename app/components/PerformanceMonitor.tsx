@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 =======
 import React from 'react';
@@ -22,6 +23,25 @@ export default function PerformanceMonitor() {
     renderTime: 0,
     memoryUsage: 0,
     fps: 0
+=======
+import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
+  ttfb: number | null;
+}
+
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
+    ttfb: null
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
   });
 
   const [isVisible, setIsVisible] = useState(false);
@@ -39,12 +59,23 @@ export default function PerformanceMonitor() {
     const measurePerformance = () => {
       // Measure load time
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+<<<<<<< HEAD
       const loadTime = navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
 
       // Measure render time (FCP)
       const paintEntries = performance.getEntriesByType('paint');
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       const renderTime = fcp ? fcp.startTime : 0;
+=======
+      if (navigation) {
+        console.log('Page load metrics:', {
+          domContentLoaded: Math.round(navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
+          loadComplete: Math.round(navigation.loadEventEnd - navigation.loadEventStart),
+          totalTime: Math.round(navigation.loadEventEnd - navigation.fetchStart)
+        });
+      }
+    };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
 
       // Measure memory usage
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
@@ -63,23 +94,53 @@ export default function PerformanceMonitor() {
             lastTime = currentTime;
             frameCount = 0;
           }
+<<<<<<< HEAD
           requestAnimationFrame(measureFrame);
         };
         
         requestAnimationFrame(measureFrame);
+=======
+        } else if (entry.entryType === 'paint') {
+          if (entry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
+          }
+        }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
       }
 
+<<<<<<< HEAD
       setMetrics({
         loadTime: Math.round(loadTime),
         renderTime: Math.round(renderTime),
         memoryUsage: Math.round(memoryUsage * 100),
         fps
       });
+=======
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePageLoad();
+    } else {
+      window.addEventListener('load', measurePageLoad);
+    }
+
+    // Monitor resource loading
+    const monitorResources = () => {
+      const resources = performance.getEntriesByType('resource');
+      const slowResources = resources.filter((resource: any) => resource.duration > 1000);
+      
+      if (slowResources.length > 0) {
+        console.warn('Slow resources detected:', slowResources.map((r: any) => ({
+          name: r.name,
+          duration: Math.round(r.duration) + 'ms'
+        })));
+      }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
     };
 
     // Initial measurement
     measurePerformance();
 
+<<<<<<< HEAD
     // Show/hide with Ctrl+Shift+P
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
@@ -242,3 +303,78 @@ const PerformanceMonitor: React.FC = () => {
 
 export default PerformanceMonitor;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
+=======
+    // Cleanup
+    return () => {
+      clearInterval(memoryInterval);
+      window.removeEventListener('load', measurePageLoad);
+    };
+  }, []);
+
+    try {
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] })
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error)
+    }
+
+    // Monitor TTFB
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+    if (navigationEntry) {
+      setMetrics(prev => ({ 
+        ...prev, 
+        ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+      }))
+    }
+
+    // Log performance metrics for debugging
+    if (process.env['NODE_ENV'] === 'development') {
+      console.log('Performance Metrics:', metrics)
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  // Don't render anything in production
+  if (process.env['NODE_ENV'] === 'production') {
+    return null
+  }
+
+  // Development mode - show metrics
+  return (
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
+      <h3 className="font-bold mb-2">Performance Metrics</h3>
+      <div className="space-y-1">
+        {metrics.lcp && (
+          <div className={`${metrics.lcp > 2500 ? 'text-red-400' : metrics.lcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>
+            LCP: {Math.round(metrics.lcp)}ms
+          </div>
+        )}
+        {metrics.fid && (
+          <div className={`${metrics.fid > 300 ? 'text-red-400' : metrics.fid > 100 ? 'text-yellow-400' : 'text-green-400'}`}>
+            FID: {Math.round(metrics.fid)}ms
+          </div>
+        )}
+        {metrics.cls && (
+          <div className={`${metrics.cls > 0.25 ? 'text-red-400' : metrics.cls > 0.1 ? 'text-yellow-400' : 'text-green-400'}`}>
+            CLS: {metrics.cls.toFixed(3)}
+          </div>
+        )}
+        {metrics.fcp && (
+          <div className={`${metrics.fcp > 3000 ? 'text-red-400' : metrics.fcp > 1000 ? 'text-yellow-400' : 'text-green-400'}`}>
+            FCP: {Math.round(metrics.fcp)}ms
+          </div>
+        )}
+        {metrics.ttfb && (
+          <div className={`${metrics.ttfb > 800 ? 'text-red-400' : metrics.ttfb > 600 ? 'text-yellow-400' : 'text-green-400'}`}>
+            TTFB: {Math.round(metrics.ttfb)}ms
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default PerformanceMonitor;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc

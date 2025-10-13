@@ -3,11 +3,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 =======
 'use client';
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
 import React, { useState, useCallback, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -414,6 +417,7 @@ export default function Navigation() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
@@ -426,6 +430,9 @@ export default function Navigation() {
               About
 =======
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-white/10">
+=======
+    <nav className="relative z-50 bg-black/20 backdrop-blur-md border-b border-cyan-500/20">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -517,6 +524,7 @@ export default function Navigation() {
                           </div>
                         ))}
                       </div>
+<<<<<<< HEAD
                       <div className="mt-6 pt-4 border-t border-cyan-500/20">
                         <Link
                           to="/services"
@@ -800,10 +808,20 @@ export default function Navigation() {
             </Link>
             <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
 =======
+=======
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
               to="/contact"
+<<<<<<< HEAD
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
             >
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
@@ -858,22 +876,43 @@ export default function Navigation() {
               onClick={onSidebarToggle}
               className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
               aria-label="Toggle sidebar"
+=======
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center space-x-2"
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center space-x-2">
+            <button
+              onClick={onSidebarToggle}
+              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
             >
               <SidebarIcon className="w-6 h-6" />
             </button>
             <button
               onClick={toggleMenu}
               className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
+<<<<<<< HEAD
               aria-label="Toggle menu"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Mobile Menu */}
 <<<<<<< HEAD
+=======
+        {/* Mobile Navigation */}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
         {isOpen && (
 <<<<<<< HEAD
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
@@ -1023,6 +1062,7 @@ export default function Navigation() {
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
+<<<<<<< HEAD
 =======
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/10 backdrop-blur-lg rounded-lg mt-2">
@@ -1133,6 +1173,17 @@ export default function Navigation() {
     { name: 'Email Marketing', href: '/micro-saas/email-marketing', description: 'Email campaign management' },
     { name: 'Expense Tracker', href: '/micro-saas/expense-tracker', description: 'Financial tracking tool' }
   ];
+=======
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
+  );
+});
+
+Navigation.displayName = 'Navigation';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

@@ -593,10 +593,111 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       document.body.insertBefore(skipLink, document.body.firstChild);
 
+<<<<<<< HEAD
       return () => {
         if (skipLink.parentNode) {
           skipLink.parentNode.removeChild(skipLink);
         }
+=======
+      const nav = document.querySelector('nav')
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation')
+      }
+
+      const footer = document.querySelector('footer')
+      if (footer && !footer.getAttribute('role')) {
+        footer.setAttribute('role', 'contentinfo')
+      }
+
+      // Enhance focus management
+      const enhanceFocusManagement = () => {
+        // Add focus indicators to interactive elements
+        const interactiveElements = document.querySelectorAll(
+          'button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        )
+
+        interactiveElements.forEach(element => {
+          if (!element.classList.contains('focus-enhanced')) {
+            element.classList.add('focus-enhanced')
+            element.addEventListener('focus', (e) => {
+              e.currentTarget.classList.add('focus-visible')
+            })
+            element.addEventListener('blur', (e) => {
+              e.currentTarget.classList.remove('focus-visible')
+            })
+          }
+        })
+      }
+
+      // Apply focus trap to modals and dropdowns
+      const modals = document.querySelectorAll('[role="dialog"], [role="menu"]')
+      modals.forEach(modal => {
+        const focusableElements = modal.querySelectorAll(
+          'button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        )
+        
+        if (focusableElements.length > 0) {
+          const firstElement = focusableElements[0] as HTMLElement
+          const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
+
+          const trapFocus = (e: KeyboardEvent) => {
+            if (e.key === 'Tab') {
+              if (e.shiftKey) {
+                if (document.activeElement === firstElement) {
+                  e.preventDefault()
+                  lastElement.focus()
+                }
+              } else {
+                if (document.activeElement === lastElement) {
+                  e.preventDefault()
+                  firstElement.focus()
+                }
+              }
+            }
+          }
+
+          modal.addEventListener('keydown', trapFocus)
+        }
+      })
+
+      // Enhance keyboard navigation
+      const enhanceKeyboardNavigation = () => {
+        // Add keyboard support for custom components
+        const customButtons = document.querySelectorAll('[data-custom-button]')
+        customButtons.forEach(button => {
+          button.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault()
+              button.click()
+            }
+          })
+        })
+      }
+
+      // Apply focus trap to modals and dropdowns
+      const modalElements = document.querySelectorAll('[role="dialog"], [role="menu"]');
+      const cleanupFunctions = Array.from(modalElements).map(modal => trapFocus(modal as HTMLElement));
+
+      // Initialize all enhancements
+      enhanceFocusManagement()
+      enhanceKeyboardNavigation()
+
+      // Re-run enhancements when DOM changes
+      const observer = new MutationObserver(() => {
+        enhanceFocusManagement()
+        enhanceKeyboardNavigation()
+      })
+
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true
+      })
+
+      // Cleanup function
+      return () => {
+        cleanupFunctions.forEach(cleanup => cleanup());
+        observer.disconnect();
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
       };
     }
   }, [enableScreenReaderSupport]);
@@ -793,6 +894,7 @@ export default AccessibilityEnhancer
     return cleanup;
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
+<<<<<<< HEAD
   return <>{children}</>;
 };
 
@@ -808,3 +910,22 @@ export default AccessibilityEnhancer;
 
 export default AccessibilityEnhancer;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
+=======
+    // Large text mode
+    if (newSettings.largeText) {
+      root.classList.add('large-text');
+    } else {
+      root.classList.remove('large-text');
+    }
+
+    // Initialize accessibility features
+    const cleanup = initAccessibility()
+
+      // Cleanup on unmount
+      return cleanup;
+    }, []);
+
+  return <>{children}</>
+}
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc

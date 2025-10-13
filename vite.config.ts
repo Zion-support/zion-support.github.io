@@ -162,9 +162,28 @@ export default defineConfig({
           }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           // Large page components (lazy load)
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
+=======
+          // AI service pages - group by category
+          if (id.includes('/ai-') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/ai-')[1]?.split('/')[0];
+            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
+              return 'ai-analytics'
+            }
+            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
+              return 'ai-content'
+            }
+            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
+              return 'ai-security'
+            }
+            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
+              return 'ai-customer'
+            }
+            return 'ai-other'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
           }
 <<<<<<< HEAD
           // Service pages
