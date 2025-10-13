@@ -16,6 +16,7 @@ interface LoadingStatesProps {
 export default function LoadingStates({ className = '', children }: LoadingStatesProps) {
 =======
 export default function Loadingstates({ className = '', children, ...props }: LoadingstatesProps) {
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
@@ -58,3 +59,6 @@ export default LoadingPage;
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

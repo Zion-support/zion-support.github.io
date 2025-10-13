@@ -10,6 +10,7 @@ import React from 'react';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
+<<<<<<< HEAD
 interface SEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
@@ -426,3 +427,27 @@ export default function SEOOptimizer({
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+const services = [
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud infrastructure",
+      icon: "Cloud"
+    },
+    {
+      title: "Security Solutions",
+      description: "Advanced security and compliance",
+      icon: "Shield"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Optimize your cloud performance",
+      icon: "Zap"
+    }
+  ];interface SEOOptimizerProps {
+  children: React.ReactNode;
+}
+
+export default function Seooptimizer({ className = '', children, ...props }: SeooptimizerProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

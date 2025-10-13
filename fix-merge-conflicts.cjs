@@ -26,12 +26,21 @@ function fixMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
+<<<<<<< HEAD
       if (line.startsWith('<<<<<<<')) {
         inConflict = true;
         conflictType = 'head';
         continue;
       } else if (line.startsWith('=======')) {
         conflictType = 'separator';
+=======
+      if (line.startsWith('        inConflict = true;
+        conflictStart = i;
+        continue;
+      }
+      
+      if (line.startsWith('')) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         continue;
       } else if (line.startsWith('>>>>>>>')) {
         inConflict = false;

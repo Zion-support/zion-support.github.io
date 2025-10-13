@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import React from 'react';
@@ -102,6 +103,10 @@ export default function AiinvoicegeneratorPage() {
 <<<<<<< HEAD
     </div>
   );
+=======
+
+"use client";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 =======
 "use client";

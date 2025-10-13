@@ -65,6 +65,7 @@ interface FuturistictextProps {
 }
 
 export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
+<<<<<<< HEAD
   return (
     <div className={`futuristictext-component ${className}`} {...props}>
       {children}
@@ -73,3 +74,6 @@ export default function Futuristictext({ className = '', children, ...props }: F
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -22,6 +22,7 @@ import {
 import { Link } from 'react-router-dom';
 =======
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Clock } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -42,6 +43,32 @@ import React from "react";
 
 const Footer = () => {
   const services = [
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
+  Brain, 
+  Shield, 
+  Zap, 
+  Globe, 
+  Star, 
+  Users, 
+  Sparkles, 
+  Mail, 
+  Monitor,
+  ChevronDown,
+  ChevronUp,
+  Menu,
+  X,
+  Linkedin, 
+  Twitter, 
+  Github, 
+  Phone, 
+  MapPin,
+  ArrowRight,
+  Award  } from 'lucide-react';
+} from 'lucide-react';
+const services = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     {
       title: "Cloud Migration",
       description: "Seamless migration to cloud infrastructure",
@@ -69,6 +96,7 @@ const microSaasServices = [
     { name: "DevOps", href: "/devops" }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -90,6 +118,8 @@ import {
   Users
 } from "lucide-react";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 
 <<<<<<< HEAD
@@ -551,6 +581,7 @@ interface FooterProps {
 }
 
 export default function Footer({ className = '', children, ...props }: FooterProps) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     return (
         <div className="component" {...props}>
@@ -1084,3 +1115,6 @@ export default Footer;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

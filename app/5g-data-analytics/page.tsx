@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -12,9 +13,12 @@ import { Helmet } from 'react-helmet-async';
 =======
 import React from 'react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
@@ -114,3 +118,7 @@ import { ArrowRight } from 'lucide-react';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function DataAnalytics5GPage() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

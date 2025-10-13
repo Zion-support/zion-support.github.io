@@ -22,6 +22,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function AIServices() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 export default function Page() {
@@ -114,3 +115,6 @@ export default function AiservicesPage() {
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

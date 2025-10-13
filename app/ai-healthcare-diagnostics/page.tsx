@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -55,6 +56,10 @@ export default function Page() {
     "Benefit 2"
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+
+export default function AIHealthcareDiagnostics() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   const features = [
     {,
     title: "Medical Imaging Analysis",
@@ -104,6 +109,7 @@ export default function Page() {
     }
 
   const pricing = [
+<<<<<<< HEAD
     {,
     plan: "Starter",
         price: "$499/month",
@@ -124,8 +130,31 @@ export default function Page() {
         description: "Comprehensive solution for large healthcare systems",
         features: ["Unlimited patients", "Full AI suite", "Custom integrations", "Dedicated support", "Training & consultation"],
         popular: false
+=======
+    {
+      plan: "Starter",
+      price: "$499/month",
+      description: "Perfect for small clinics and private practices",
+      features: ["Up to 100 patients/month", "Basic imaging analysis", "Symptom assessment", "Email support"],
+      popular: false;
+    },
+    {
+      plan: "Professional",
+      price: "$999/month",
+      description: "Ideal for medium-sized hospitals and medical centers",
+      features: ["Up to 500 patients/month", "Advanced imaging analysis", "Drug interaction checking", "Predictive analytics", "Priority support"],
+      popular: true;
+    },
+    {
+      plan: "Enterprise",
+      price: "Custom Pricing",
+      description: "Comprehensive solution for large healthcare systems",
+      features: ["Unlimited patients", "Full AI suite", "Custom integrations", "Dedicated support", "Training & consultation"],
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -274,6 +303,8 @@ export default function AIHealthcareDiagnostics() {
 }
 =======
 }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 
 <<<<<<< HEAD

@@ -72,9 +72,16 @@ class ErrorHandler extends Component<Props, State>
     this.state = 
       hasError: false,
       error: null,
+<<<<<<< HEAD
       errorInfo: null;
   static getDerivedStateFromError(error: Error): State;
     return;
+=======
+      errorInfo: null
+
+  static getDerivedStateFromError(error: Error): State 
+    return 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
       hasError: true,
       error,
       errorInfo: null;
@@ -84,6 +91,7 @@ class ErrorHandler extends Component<Props, State>
         error: null,
         errorInfo: null
 
+<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): State 
     return ,
     hasError: true,
@@ -91,6 +99,8 @@ class ErrorHandler extends Component<Props, State>
         errorInfo: null
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   componentDidCatch(error: Error, errorInfo: ErrorInfo) 
     this.setState(
       error,
@@ -167,10 +177,13 @@ class ErrorHandler extends Component<Props, State>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   handleRetry = () => 
     this.setState(
       hasError: false,
@@ -235,7 +248,10 @@ class ErrorHandler extends Component<Props, State>
 =======
                     </div>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
                     <div></div>
                       <strong>Component Stack:</strong>
                       <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
@@ -353,5 +369,9 @@ export default ErrorHandler;
 =======
     return this.props.children
 
+<<<<<<< HEAD
 export default ErrorHandler
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default ErrorHandler
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

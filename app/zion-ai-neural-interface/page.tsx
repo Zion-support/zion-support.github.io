@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -76,6 +77,8 @@ import { Target } from 'lucide-react';
 import { Hand } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const ZionAINeuralInterface = () => {
   const features = [
     {
@@ -129,7 +132,7 @@ const ZionAINeuralInterface = () => {
         "Email support",
         "5GB neural data storage"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Neural Professional",
@@ -146,7 +149,7 @@ const ZionAINeuralInterface = () => {
         "API access",
         "Team collaboration tools"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Neural Enterprise",
@@ -163,7 +166,7 @@ const ZionAINeuralInterface = () => {
         "Custom integrations",
         "SLA guarantee"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -205,6 +208,7 @@ const ZionAINeuralInterface = () => {
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -563,3 +567,9 @@ export default function PagePage() {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+export default function ZionAiNeuralInterfacePage() {
+}
+
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

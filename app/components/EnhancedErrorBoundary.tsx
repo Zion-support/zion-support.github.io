@@ -31,6 +31,7 @@ export default function EnhancedErrorBoundary({ className = '', children }: Enha
     <div className={`${className}`}>
 =======
 export default function Enhancederrorboundary({ className = '', children, ...props }: EnhancederrorboundaryProps) {
+<<<<<<< HEAD
   return (
     <div className={`enhancederrorboundary-component ${className}`} {...props}>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
@@ -207,3 +208,6 @@ export default EnhancedErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

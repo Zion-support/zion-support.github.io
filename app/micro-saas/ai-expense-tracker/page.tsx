@@ -15,11 +15,14 @@ export default function aiExpenseTracker() {
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function Page() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+const Page = () => {
+export default function PagePage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
@@ -161,6 +164,7 @@ const Page = () => {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -177,3 +181,6 @@ import { ArrowRight } from 'lucide-react';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

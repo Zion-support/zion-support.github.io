@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+<<<<<<< HEAD
 import React from 'react';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -106,3 +107,7 @@ import { ArrowRight } from 'lucide-react';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Employeetimetracker() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

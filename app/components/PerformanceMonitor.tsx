@@ -12,6 +12,7 @@ interface PerformanceMonitorProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function PerformanceMonitor({ className = '', children }: PerformanceMonitorProps) {
   return (
     <div className={`${className}`}>
@@ -57,3 +58,7 @@ export default function Performancemonitor() {
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Performancemonitor({ className = '', children, ...props }: PerformancemonitorProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

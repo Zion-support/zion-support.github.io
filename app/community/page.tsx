@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -21,6 +22,15 @@ import { Cloud } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
+=======
+export default function Community() {
+  const stats = [
+    { number: "10K+", label: "Active Members", icon: <Users className="w-8 h-8" /> },
+    { number: "500+", label: "Events Hosted", icon: <Calendar className="w-8 h-8" /> },
+    { number: "50+", label: "Countries", icon: <Globe className="w-8 h-8" /> },
+    { number: "24/7", label: "Support", icon: <MessageCircle className="w-8 h-8" /> }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,7 +43,7 @@ export default function community() {
       time: "9:00 AM - 5:00 PM",
       location: "Virtual Event",
       description: "Join industry leaders as we explore the latest trends in artificial intelligence and machine learning.",
-      attendees: 500
+      attendees: 500;
     },
     {
       title: "Tech Talk: Cloud Security Best Practices",
@@ -41,7 +51,7 @@ export default function community() {
       time: "2:00 PM - 3:00 PM",
       location: "Online Webinar",
       description: "Learn about the latest cloud security strategies and how to protect your digital assets.",
-      attendees: 150
+      attendees: 150;
     },
     {
       title: "Developer Workshop: React & TypeScript",
@@ -49,7 +59,7 @@ export default function community() {
       time: "10:00 AM - 4:00 PM",
       location: "Zion Tech Office",
       description: "Hands-on workshop covering advanced React patterns and TypeScript best practices.",
-      attendees: 25
+      attendees: 25;
     }
   ];
 
@@ -181,6 +191,7 @@ export default function CommunityPage() {
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -505,3 +516,6 @@ const Community = () => {
 
 export default Community;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

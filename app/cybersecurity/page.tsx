@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,6 +71,11 @@ export default function Page() {
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }
   ];
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
+export default function Cybersecurity() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   const services = [
     {
       title: "AI Cybersecurity Suite",
@@ -225,6 +231,7 @@ export default function CybersecurityPage() {
             This page is under development. Please check back later.
 =======
 
+<<<<<<< HEAD
 export default function CybersecurityPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -705,6 +712,8 @@ export default CybersecurityPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

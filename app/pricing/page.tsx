@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -165,6 +166,10 @@ export default function Page() {
     { title: "Feature 2", description: "Description 2" }
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+
+export default function Pricing() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   const aiServicesPricing = [
     {,
     name: "AI Analytics Dashboard",
@@ -355,6 +360,7 @@ export default function Page() {
     }
   ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function Page() {
 <<<<<<< HEAD
@@ -728,3 +734,7 @@ export default PricingPage;
 }
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+}
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -586,6 +586,7 @@ export default function Page() {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   return (
     <>
@@ -962,6 +963,8 @@ export default function MicroSaasServicesPage() {
   );
 
 }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

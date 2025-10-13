@@ -23,6 +23,7 @@ import { Helmet } from 'react-helmet-async';
 import { Cloud } from 'lucide-react';
 
 export default function CloudMigration() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -107,3 +108,6 @@ import { ArrowRight } from 'lucide-react';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

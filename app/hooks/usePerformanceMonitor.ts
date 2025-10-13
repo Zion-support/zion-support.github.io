@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // usePerformanceMonitor hook
 import { useEffect, useRef } from 'react';
 
@@ -30,6 +31,9 @@ import { useState, useEffect, useRef } from 'react';
 import { useState, useEffect, useRef, useCallback } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
 
+=======
+import { useEffect, useRef } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;

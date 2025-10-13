@@ -8,6 +8,7 @@ interface FuturisticBackgroundEnhancedProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function FuturisticBackgroundEnhanced({ className = '', children }: FuturisticBackgroundEnhancedProps) {
   return (
     <div className={`${className}`}>
@@ -59,3 +60,7 @@ export default FuturisticBackgroundEnhanced;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Futuristicbackgroundenhanced({ className = '', children, ...props }: FuturisticbackgroundenhancedProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

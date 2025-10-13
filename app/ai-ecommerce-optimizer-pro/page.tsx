@@ -16,6 +16,7 @@ import { Brain, TrendingUp, BarChart3, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, TrendingUp, BarChart3, Zap } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function AIEcommerceOptimizerPro() {
   const features = [
     {
@@ -683,3 +684,8 @@ const AiEcommerceOptimizerPro = () => {
 
 export default AiEcommerceOptimizerPro;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+"use client";
+export default function AiEcommerceOptimizerProPage() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

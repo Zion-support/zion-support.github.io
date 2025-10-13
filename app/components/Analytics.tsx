@@ -315,6 +315,7 @@ export default Analytics;
 }
 
 export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
+<<<<<<< HEAD
   return (
     <div className={`analytics-component ${className}`} {...props}>
       {children}
@@ -323,3 +324,6 @@ export default function Analytics({ className = '', children, ...props }: Analyt
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

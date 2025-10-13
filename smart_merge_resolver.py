@@ -13,7 +13,35 @@ def resolve_merge_conflicts(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
+<<<<<<< HEAD
         if ''):
+=======
+        if '            return False
+        
+        # Split content into lines
+        lines = content.split('\n')
+        new_lines = []
+        i = 0
+        
+        while i < len(lines):
+            line = lines[i]
+            
+            if line.startswith('                # Find the end of this conflict block
+                conflict_start = i
+                while i < len(lines) and not lines[i].startswith('                    i += 1
+                
+                if i < len(lines) and lines[i].startswith('                    # We found the end of the conflict
+                    conflict_end = i
+                    
+                    # Extract the two versions
+                    head_lines = []
+                    incoming_lines = []
+                    current_section = None
+                    
+                    for j in range(conflict_start + 1, conflict_end):
+                        conflict_line = lines[j]
+                        if conflict_line.startswith(''):
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
                             current_section = 'incoming'
                         elif current_section == 'head':
                             head_lines.append(conflict_line)
@@ -39,8 +67,12 @@ def resolve_merge_conflicts(file_path):
                     # Add the chosen lines
                     new_lines.extend(chosen_lines)
                     
+<<<<<<< HEAD
                     # Skip the 
                     i += 1
+=======
+                    # Skip the                     i += 1
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
                 else:
                     # Malformed conflict, skip
                     i += 1

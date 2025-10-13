@@ -11,6 +11,7 @@ interface TestrunnerxProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function testRunner({ className = '', children }: testRunnerProps) {
   return (
     <div className={`${className}`}>
@@ -48,3 +49,7 @@ export default Testrunnerx;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Testrunner({ className = '', children, ...props }: TestrunnerProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

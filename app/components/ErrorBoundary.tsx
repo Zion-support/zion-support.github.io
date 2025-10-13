@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -29,12 +30,16 @@ interface ErrorBoundaryProps {
 =======
 import React from 'react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 interface Props {
+
   children: ReactNode;
   fallback?: ReactNode;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function ErrorBoundary({ className = '', children }: ErrorBoundaryProps) {
@@ -246,3 +251,7 @@ export default ErrorBoundary;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+export default function Errorboundary({ className = '', children, ...props }: ErrorboundaryProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

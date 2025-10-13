@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -55,6 +56,10 @@ export default function Page() {
     "Benefit 2"
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+
+export default function AIMarketingAutomation() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   const features = [
     {,
     title: "Email Marketing Automation",
@@ -112,7 +117,11 @@ export default function Page() {
         "Social media posting",
         "Email support"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Professional",
@@ -127,7 +136,11 @@ export default function Page() {
         "Advanced analytics",
         "Priority support"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Enterprise",
@@ -142,9 +155,14 @@ export default function Page() {
         "Custom integrations",
         "Dedicated support"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -293,6 +311,8 @@ export default function AIMarketingAutomation() {
 }
 =======
 }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 
 <<<<<<< HEAD

@@ -29,9 +29,9 @@ import React, { useState, useRef, useEffect } from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
 
-interface LazyImageProps {
   src: string;
   alt: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,6 +42,8 @@ interface LazyImageProps {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   className?: string;
   placeholder?: string;
   onLoad?: () => void;
@@ -55,6 +57,7 @@ interface LazyImageProps {
   quality?: number;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function LazyImage({ className = '', children }: LazyImageProps) {
@@ -468,3 +471,7 @@ export default function LazyImage({
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+export default function Lazyimage({ className = '', children, ...props }: LazyimageProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

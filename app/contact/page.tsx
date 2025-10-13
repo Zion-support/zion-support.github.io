@@ -75,15 +75,15 @@ export default function Contact() {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
+      [name]: value;
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
+    // Here you would typically send the form data to your backend;
     setIsSubmitted(true);
-    // Reset form after 3 seconds
+    // Reset form after 3 seconds;
     setTimeout(() => {
 <<<<<<< HEAD
       setIsSubmitted(false);
@@ -189,6 +189,7 @@ export default function PagePage() {
 =======
 import React from 'react';
 
+<<<<<<< HEAD
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -307,3 +308,7 @@ import { useState } from 'react';
 =======
 }}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+}
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

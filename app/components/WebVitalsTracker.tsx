@@ -21,6 +21,7 @@ interface WebvitalstrackerProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function WebVitalsTracker({ className = '', children }: WebVitalsTrackerProps) {
   return (
     <div className={`${className}`}>
@@ -41,3 +42,7 @@ export default function WebVitalsTracker({ className = '', children, ...props }:
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Webvitalstracker({ className = '', children, ...props }: WebvitalstrackerProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

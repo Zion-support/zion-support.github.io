@@ -145,6 +145,7 @@ export default function Page() {
     setIsPlaying(false);
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   return (
     <div>
@@ -474,6 +475,8 @@ export default function DemoPage() {
       </div>
     </div>
   );
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -5,6 +5,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
@@ -495,4 +496,7 @@ export default function CloudInfrastructureManagement() {
     </PerformanceOptimizer>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
+=======
+export default function CloudInfrastructureManagementPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }

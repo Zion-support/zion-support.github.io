@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -345,6 +346,10 @@ export default WebinarsPage;
       </div>
     </div>
   );
+=======
+
+const WebinarsPage = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

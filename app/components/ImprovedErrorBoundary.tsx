@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 interface Props {
@@ -95,6 +96,9 @@ import { Link } from 'react-router-dom';
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 interface Props {
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   children: ReactNode;
 =======
 
@@ -105,6 +109,7 @@ interface Props {,
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 interface State {
   hasError: boolean;
@@ -264,3 +269,7 @@ export default function Improvederrorboundary({ className = '', children, ...pro
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Improvederrorboundary({ className = '', children, ...props }: ImprovederrorboundaryProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -113,3 +114,8 @@ import { Link } from 'react-router-dom';
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+
+export default function AIContentGeneratorZionTechGroup() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

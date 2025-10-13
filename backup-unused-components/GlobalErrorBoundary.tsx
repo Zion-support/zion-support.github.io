@@ -67,7 +67,10 @@ class GlobalErrorBoundary extends Component<Props, State> {
 =======
       // Here you would typically send the error to a logging service
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   render() 
     if (this.state.hasError) 
 =======
@@ -133,6 +136,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default GlobalErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
@@ -144,3 +148,6 @@ export default GlobalErrorBoundary;
 =======
 export default GlobalErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default GlobalErrorBoundary;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

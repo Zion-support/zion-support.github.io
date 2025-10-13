@@ -17,6 +17,7 @@ interface FuturisticbackgroundProps {
 export default function FuturisticBackground({ className = '', children }: FuturisticBackgroundProps) {
 =======
 export default function Futuristicbackground({ className = '', children, ...props }: FuturisticbackgroundProps) {
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
@@ -91,3 +92,6 @@ export default FuturisticBackground;
 =======
 export default FuturisticBackground;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

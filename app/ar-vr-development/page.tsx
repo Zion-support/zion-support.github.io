@@ -45,6 +45,7 @@ const ARVRDevelopmentPage = () => {
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
@@ -540,3 +541,9 @@ export default ARVRDevelopmentPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+export default function Page() {
+}
+
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

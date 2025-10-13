@@ -15,10 +15,66 @@ import { Helmet } from "react-helmet-async";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function zionAiVoiceAssistantPro() {
 =======
+=======
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$29",
+      period: "/month",
+      description: "Perfect for small teams and individuals",
+      features: [
+        "Up to 5 users",
+        "Basic voice commands",
+        "10 integrations",
+        "Standard voice models",
+        "Email support",
+        "5GB storage"
+      ],
+      popular: false;
+    },
+    {
+      name: "Professional",
+      price: "$79",
+      period: "/month",
+      description: "Ideal for growing businesses",
+      features: [
+        "Up to 25 users",
+        "Advanced AI capabilities",
+        "Unlimited integrations",
+        "Custom voice training",
+        "Priority support",
+        "50GB storage",
+        "API access",
+        "Analytics dashboard"
+      ],
+      popular: true;
+    },
+    {
+      name: "Enterprise",
+      price: "$199",
+      period: "/month",
+      description: "For large organizations",
+      features: [
+        "Unlimited users",
+        "Full AI suite",
+        "Custom integrations",
+        "Advanced voice models",
+        "24/7 dedicated support",
+        "Unlimited storage",
+        "White-label options",
+        "Advanced analytics",
+        "Custom deployment"
+      ],
+      popular: false;
+    }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Page() {
@@ -98,6 +154,8 @@ export default function ZionaivoiceassistantproPage() {
     </div>
 <<<<<<< HEAD
   );
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 =======
 import { Helmet } from 'react-helmet-async';

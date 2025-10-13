@@ -18,6 +18,7 @@ def fix_conflicts_in_file(file_path):
             content = f.read()
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         original_content = content
         
         # Remove merge conflict markers
@@ -50,6 +51,20 @@ def fix_conflicts_in_file(file_path):
         content = '\n'.join(new_lines)
         
         # Clean up extra whitespace
+=======
+        # Check if file has merge conflicts
+        if '            return False
+        
+        # Remove all merge conflict markers and their content
+        # Pattern to match from         pattern = r'        content = re.sub(pattern, '', content, flags=re.DOTALL)
+        
+        # Remove any remaining lines
+        content = re.sub(r'\n?', '', content)
+        
+        # Remove any remaining         content = re.sub(r'        
+        # Remove any remaining         content = re.sub(r'        
+        # Clean up multiple empty lines
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
         
         if content != original_content:

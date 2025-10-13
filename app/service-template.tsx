@@ -43,6 +43,7 @@ interface ServiceTemplateProps {
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 export default function servicetemplate({ className = '', children }: servicetemplateProps) {
   return (
     <div className={`${className}`}>
@@ -117,3 +118,7 @@ interface ServiceTemplateProps {;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function ServiceTemplate({ className = '', children, ...props }: ServiceTemplateProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

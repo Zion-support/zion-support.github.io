@@ -55,6 +55,7 @@ import React from 'react';
 // Image utility functions
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
+<<<<<<< HEAD
 interface imageProps {
   className?: string;
   children?: React.ReactNode;
@@ -162,11 +163,18 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function UtilsPage() {
+=======
+export default function ImagePage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   return (
     <div className={`image-component ${className}`} {...props}>
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

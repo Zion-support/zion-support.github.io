@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -106,6 +107,8 @@ import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const ZionAIProjectManagerProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 

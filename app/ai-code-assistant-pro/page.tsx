@@ -14,6 +14,7 @@ export default function aiCodeAssistantPro() {
 =======
 
 
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from "react-helmet-async";
 
@@ -668,3 +669,83 @@ export default AICodeAssistantProZionTechGroup;
 =======
 export default AICodeAssistantProZionTechGroup;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$99",
+      period: "month",
+      description: "Perfect for individual developers",
+      features: [
+        "5,000 AI code generations per month",
+        "10 programming languages",
+        "Basic debugging assistance",
+        "Email support",
+        "Code optimization suggestions"
+      ],
+      popular: false;
+    },
+    {
+      name: "Professional",
+      price: "$199",
+      period: "month",
+      description: "Ideal for development teams",
+      features: [
+        "Unlimited AI code generations",
+        "50+ programming languages",
+        "Advanced debugging & optimization",
+        "Priority support",
+        "Team collaboration features",
+        "Custom AI model training",
+        "API access"
+      ],
+      popular: true;
+    },
+    {
+      name: "Enterprise",
+      price: "$499",
+      period: "month",
+      description: "For large organizations",
+      features: [
+        "Everything in Professional",
+        "Custom AI model deployment",
+        "On-premise installation",
+        "Dedicated support team",
+        "SLA guarantee",
+        "Custom integrations",
+        "Advanced analytics"
+      ],
+      popular: false;
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Chen",
+      role: "Senior Developer",
+      company: "TechCorp",
+      content: "Zion AI Code Assistant Pro has revolutionized our development workflow. The code generation is incredibly accurate and saves us hours every day.",
+      rating: 5,
+      avatar: "SC"
+    },
+    {
+      name: "Michael Rodriguez",
+      role: "Lead Engineer",
+      company: "InnovateLabs",
+      content: "The debugging capabilities are outstanding. It catches issues we would have missed and provides clear explanations for fixes.",
+      rating: 5,
+      avatar: "MR"
+    },
+    {
+      name: "Emily Johnson",
+      role: "Full Stack Developer",
+      company: "DataFlow Inc",
+      content: "Multi-language support is fantastic. We can work across different tech stacks seamlessly with this tool.",
+      rating: 5,
+      avatar: "EJ"
+    }
+  ];
+
+export default function AiCodeAssistantProPage() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

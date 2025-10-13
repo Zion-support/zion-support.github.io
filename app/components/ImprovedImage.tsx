@@ -20,6 +20,7 @@ interface ImprovedImageProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function ImprovedImage({ className = '', children }: ImprovedImageProps) {
   return (
     <div className={`${className}`}>
@@ -54,3 +55,8 @@ import { ImageIcon } from 'lucide-react';
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Improvedimage({ className = '', children, ...props }: ImprovedimageProps) {
+}
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

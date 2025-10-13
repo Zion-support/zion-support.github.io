@@ -23,6 +23,7 @@ export default function zionAiEmailAnalyzer() {
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 const ZionAiEmailAnalyzer = () => {
 <<<<<<< HEAD
 
@@ -128,3 +129,7 @@ export default ZionAiEmailAnalyzer;
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function ZionAiEmailAnalyzerPage() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -14,47 +15,9 @@ import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Calendar } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
-import { Helmet } from 'react-helmet-async';
-const features = [
-    {
-      title: "Predictive Analytics",
-      description: "Advanced machine learning models for accurate financial forecasting",
-      icon: "Brain"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and mitigation strategies",
-      icon: "Shield"
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of financial metrics and KPIs",
-      icon: "Activity"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate detailed reports automatically",
-      icon: "FileText"
-    }
-  ];
-const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CFO",
-      company: "TechCorp",
-      content: "The AI financial analysis platform has revolutionized our decision-making process.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Investment Manager",
-      company: "FinancePro",
-      content: "Incredible accuracy and insights that have improved our portfolio performance.",
-      rating: 5
-    }
-  ];
-export default function AISmartScheduler() {
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -83,6 +46,7 @@ export default function AISmartScheduler() {
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
@@ -162,12 +126,44 @@ export default function AISmartScheduler() {
         period: "/month",
         description: "Perfect for individuals and small teams",
         features: [
+=======
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      title: "AI-Powered Scheduling",
+      description:
+        "Intelligent scheduling that learns from your patterns and preferences"},
+    {
+      icon: <Users className="w-6 h-6 text-purple-400" />,
+      title: "Team Coordination",
+      description:
+        "Seamlessly coordinate meetings across multiple time zones and schedules"},
+    {
+      icon: <Zap className="w-6 h-6 text-yellow-400" />,
+      title: "Auto-Optimization",
+      description:
+        "Automatically finds the best meeting times for maximum productivity"},
+    {
+      icon: <Globe className="w-6 h-6 text-green-400" />,
+      title: "Global Integration",
+      description: "Works with all major calendar platforms and time zones"},
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$29",
+      period: "/month",
+      description: "Perfect for individuals and small teams",
+      features: [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         "Up to 5 team members",
         "Basic AI scheduling",
         "Calendar integration",
         "Email notifications",
         "Mobile app access",
       ],
+<<<<<<< HEAD
         popular: false,
     },
     {,
@@ -176,6 +172,15 @@ export default function AISmartScheduler() {
         period: "/month",
         description: "Ideal for growing businesses",
         features: [
+=======
+      popular: false},
+    {
+      name: "Professional",
+      price: "$79",
+      period: "/month",
+      description: "Ideal for growing businesses",
+      features: [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         "Up to 25 team members",
         "Advanced AI optimization",
         "Custom meeting templates",
@@ -183,6 +188,7 @@ export default function AISmartScheduler() {
         "Priority support",
         "API access",
       ],
+<<<<<<< HEAD
         popular: true,
     },
     {,
@@ -191,6 +197,15 @@ export default function AISmartScheduler() {
         period: "/month",
         description: "For large organizations",
         features: [
+=======
+      popular: true},
+    {
+      name: "Enterprise",
+      price: "$199",
+      period: "/month",
+      description: "For large organizations",
+      features: [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         "Unlimited team members",
         "Custom AI training",
         "White-label options",
@@ -198,6 +213,7 @@ export default function AISmartScheduler() {
         "Dedicated support",
         "Custom integrations",
       ],
+<<<<<<< HEAD
         popular: false,
     },
 
@@ -273,6 +289,11 @@ export default function AismartschedulerPage() {
       </div>
     </div>
   );
+=======
+      popular: false},
+  ];
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 <<<<<<< HEAD
 =======

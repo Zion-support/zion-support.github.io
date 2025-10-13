@@ -23,6 +23,7 @@ export default function Page() {
 =======
 import React from 'react';
 
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 export default function AiSocialMediaManagerZionTechGroup() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
@@ -100,6 +101,9 @@ export default function AisocialmediamanagerPage() {
 <<<<<<< HEAD
     </div>
   );
+=======
+"use client";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 =======
 "use client";

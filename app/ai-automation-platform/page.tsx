@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,21 +54,36 @@ import { Helmet } from 'react-helmet-async';
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 import { Link } from 'react-router-dom';
-import { 
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
+  BarChart3, 
+  Cloud, 
+  Users, 
   ArrowRight,
-  Users,
-  Star,
+  Sparkles,
   CheckCircle,
   TrendingUp,
   Settings,
-  Sparkles,
+  Workflow,
   Target,
+<<<<<<< HEAD
   BarChart3,
   Cloud,
   Workflow
 } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+  TrendingUp,
+  Settings,
+  Users,
+  Sparkles,
+  ArrowRight,
+  CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const AIAutomationPlatformPage = () => {
   const features = [
@@ -161,8 +177,12 @@ export default function AiAutomationPlatformPage() {
     "Cost reduction up to 60%"
   ];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
+=======
+  return (const Page = () => {  return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
@@ -266,7 +286,7 @@ export default function AiautomationplatformPage() {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Analytics Platform
+              AI Analytics Platform;
             </span>
           </h1>
           
@@ -276,18 +296,18 @@ export default function AiautomationplatformPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link;
               to="/contact" 
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
-              Get Started
+              Get Started;
               <Zap className="w-5 h-5 ml-2" />
             </Link>
-            <Link 
+            <Link;
               to="/demo" 
               className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300"
             >
-              View Demo
+              View Demo;
               <Target className="w-5 h-5 ml-2" />
             </Link>
           </div>
@@ -299,10 +319,10 @@ export default function AiautomationplatformPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Analytics Features
+              Powerful Analytics Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI analytics platform provides everything you need to make data-driven decisions
+              Our AI analytics platform provides everything you need to make data-driven decisions;
             </p>
           </div>
 
@@ -313,7 +333,7 @@ export default function AiautomationplatformPage() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Real-time Analytics</h3>
               <p className="text-gray-300">
-                Get instant insights from your data with real-time processing and visualization
+                Get instant insights from your data with real-time processing and visualization;
               </p>
             </div>
 
@@ -323,7 +343,7 @@ export default function AiautomationplatformPage() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">AI Predictions</h3>
               <p className="text-gray-300">
-                Leverage machine learning to predict trends and make proactive decisions
+                Leverage machine learning to predict trends and make proactive decisions;
               </p>
             </div>
 
@@ -333,7 +353,7 @@ export default function AiautomationplatformPage() {
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Secure & Compliant</h3>
               <p className="text-gray-300">
-                Enterprise-grade security with full compliance and data protection
+                Enterprise-grade security with full compliance and data protection;
               </p>
             </div>
           </div>
@@ -354,8 +374,9 @@ export default function AiautomationplatformPage() {
         <div className="prose prose-invert max-w-none">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of companies using our AI analytics platform to make better decisions
+            Join thousands of companies using our AI analytics platform to make better decisions;
           </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
@@ -384,10 +405,13 @@ export default function AiautomationplatformPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 =======
           <Link 
+=======
+          <Link;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
             to="/contact" 
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
           >
-            Start Your Free Trial
+            Start Your Free Trial;
             <Zap className="w-5 h-5 ml-2" />
           </Link>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
@@ -404,8 +428,13 @@ export default function AiautomationplatformPage() {
 =======
 };
 
+<<<<<<< HEAD
 export default AIAutomationPlatformPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default Page;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

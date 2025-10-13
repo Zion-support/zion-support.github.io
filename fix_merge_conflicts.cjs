@@ -11,6 +11,7 @@ function findFilesWithConflicts(dir) {
   function searchDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
     
+<<<<<<< HEAD
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
@@ -54,6 +55,15 @@ function resolveMergeConflict(content) {
       keepLines = true;
       continue;
     }
+=======
+    // Remove all merge conflict markers and keep the latest version
+    content = content.replace(/    content = content.replace(/    content = content.replace(/[\s\S]*?    
+    // Clean up any remaining conflict markers
+    content = content.replace(/    content = content.replace(//g, '');
+    content = content.replace(/    
+    // Remove empty lines that might be left behind
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     
     if (line.includes('>>>>>>>')) {
       inConflict = false;

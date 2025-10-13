@@ -17,16 +17,71 @@ export default function aiContentStudio() {
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function AiContentStudioPage() {
         return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
 =======
+=======
+  const pricingPlans = [
+    {
+      name: "Creator",
+      price: "$79",
+      period: "month",
+      description: "Perfect for individual content creators",
+      features: [
+        "100 AI-generated articles per month",
+        "50 AI-generated images per month",
+        "10 AI-generated videos per month",
+        "Basic SEO optimization",
+        "Email support",
+        "Standard templates"
+      ],
+      popular: false;
+    },
+    {
+      name: "Studio Pro",
+      price: "$149",
+      period: "month",
+      description: "Ideal for content teams and agencies",
+      features: [
+        "Unlimited AI-generated content",
+        "Advanced video generation",
+        "Premium image creation",
+        "Advanced SEO optimization",
+        "Priority support",
+        "Team collaboration",
+        "Custom brand templates",
+        "API access"
+      ],
+      popular: true;
+    },
+    {
+      name: "Enterprise",
+      price: "$299",
+      period: "month",
+      description: "For large content operations",
+      features: [
+        "Everything in Studio Pro",
+        "Custom AI model training",
+        "White-label solution",
+        "Dedicated support team",
+        "SLA guarantee",
+        "Custom integrations",
+        "Advanced analytics",
+        "On-premise deployment"
+      ],
+      popular: false;
+    }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 
 import React from 'react';
 import { Helmet } from "react-helmet-async";
 
 export default function AiContentStudioPage() {
+<<<<<<< HEAD
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
     <div className="min-h-screen bg-gray-900 text-white">
@@ -725,3 +780,6 @@ export default AIContentStudioZionTechGroup;
 =======
 export default AIContentStudioZionTechGroup;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

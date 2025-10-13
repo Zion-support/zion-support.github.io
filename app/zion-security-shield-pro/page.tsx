@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -28,6 +29,9 @@ import { FileText } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 export default function Page() {
   const benefits = [
@@ -93,7 +97,11 @@ export default function Page() {
         "Standard support",
         "Up to 50 users"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Professional",
@@ -109,7 +117,11 @@ export default function Page() {
         "Up to 200 users",
         "Mobile app access"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Enterprise",
@@ -126,6 +138,7 @@ export default function Page() {
         "White-label options",
         "On-premise deployment"
       ],
+<<<<<<< HEAD
         popular: false
     }
   ];
@@ -205,6 +218,12 @@ export default function ZionsecurityshieldproPage() {
       </div>
     </div>
   );
+=======
+      popular: false;
+    }
+  ];
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 <<<<<<< HEAD
 =======

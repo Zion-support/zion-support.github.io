@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -66,6 +67,9 @@ import React from 'react';
 import { 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   Brain, 
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   TrendingUp, 
   Shield, 
   Zap, 
@@ -120,8 +124,13 @@ import { Monitor } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Activity } from 'lucide-react';
+<<<<<<< HEAD
 import { DollarSign } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { DollarSign } from 'lucide-react';  PieChart  } from 'lucide-react';
+ } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const AIQuantumFinancialOraclePage = () => {
   const features = [
@@ -165,7 +174,11 @@ const AIQuantumFinancialOraclePage = () => {
         "Email support",
         "Basic reporting"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Quantum Professional",
@@ -182,7 +195,11 @@ const AIQuantumFinancialOraclePage = () => {
         "Custom strategies",
         "Advanced reporting"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Quantum Enterprise",
@@ -201,7 +218,11 @@ const AIQuantumFinancialOraclePage = () => {
         "SLA guarantee",
         "Dedicated account manager"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
   ];
 
@@ -239,6 +260,7 @@ const AIQuantumFinancialOraclePage = () => {
     { number: "24/7", label: "Market Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -506,6 +528,9 @@ const AIQuantumFinancialOraclePage = () => {
 }
 =======
 };
+=======
+export default function AiQuantumFinancialOraclePage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -128,11 +129,15 @@ export default function ItservicescloudmigrationPage() {
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 <<<<<<< HEAD
 export default function CloudMigration() {
 =======
 export default function GDataAnalyticsZionTechGroupPage() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -183,3 +188,6 @@ import { Link } from 'react-router-dom';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

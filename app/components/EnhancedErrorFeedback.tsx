@@ -15,6 +15,7 @@ interface EnhancedErrorFeedbackProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function EnhancedErrorFeedback({ className = '', children }: EnhancedErrorFeedbackProps) {
   return (
     <div className={`${className}`}>
@@ -170,3 +171,7 @@ export default GlobalErrorBoundary;
 =======
 export default GlobalErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+export default function Enhancederrorfeedback({ className = '', children, ...props }: EnhancederrorfeedbackProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

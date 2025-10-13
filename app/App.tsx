@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface AppProps {
@@ -49,6 +50,14 @@ import { Monitor } from 'lucide-react';
 
 // Lazy load pages for better performance
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
+"use client";
+
+// Lazy load pages for better performance;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
 const ContactPage = lazy(() => import("./contact/page"));
@@ -70,7 +79,7 @@ const PrivacyPage = lazy(() => import("./privacy/page"));
 const TermsPage = lazy(() => import("./terms/page"));
 const CookiesPage = lazy(() => import("./cookies/page"));
 
-// 5G Solutions Pages
+// 5G Solutions Pages;
 const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"));
 const FiveGEdgeComputingPage = lazy(() => import("./5g-edge-computing/page"));
 const FiveGImplementationPage = lazy(() => import("./5g-implementation/page"));
@@ -81,6 +90,7 @@ const FiveGPrivateNetworksPage = lazy(() => import("./5g-private-networks/page")
 const FiveGSmartCitySolutionsPage = lazy(() => import("./5g-smart-city-solutions/page"));
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 // Loading component
 const Loading = () => (
@@ -98,6 +108,11 @@ const Loading = () => (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 // Main App Component
 export default function App() {
+=======
+// Main App Component;
+function App() {
+export default function AppPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   return (
     <HelmetProvider>
       <BrowserRouter>
@@ -119,7 +134,9 @@ export default function App() {
 =======
         <ErrorBoundary>
           <PerformanceMonitor />
-          <AccessibilityEnhancer>
+          <AccessibilityEnhancer>          <PerformanceMonitor showDetails={false}>
+            <div>Performance monitoring active</div>
+          </PerformanceMonitor>          <AccessibilityEnhancer>
             <CriticalResourcePreloader />
             <CacheManager />
             <AdvancedPerformanceMonitor />
@@ -206,4 +223,10 @@ import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor"
     </HelmetProvider>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+
+export default App;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

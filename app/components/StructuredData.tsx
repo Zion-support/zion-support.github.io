@@ -10,6 +10,7 @@ import React from 'react';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
+<<<<<<< HEAD
 interface StructuredDataProps {
   className?: string;
   children?: React.ReactNode;
@@ -315,3 +316,11 @@ export const serviceSchema = (serviceName: string, description: string) => ({
   }
 });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
+  data: any;
+}
+
+export default function Structureddata({ className = '', children, ...props }: StructureddataProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

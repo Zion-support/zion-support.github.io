@@ -20,6 +20,7 @@ interface EnhancedPerformanceMonitorProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function EnhancedPerformanceMonitor({ className = '', children }: EnhancedPerformanceMonitorProps) {
   return (
     <div className={`${className}`}>
@@ -54,3 +55,7 @@ import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Enhancedperformancemonitor({ className = '', children, ...props }: EnhancedperformancemonitorProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

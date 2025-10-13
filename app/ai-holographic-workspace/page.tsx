@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -37,6 +38,8 @@ import { BarChart3 } from 'lucide-react';
 import { Hand } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const AIHolographicWorkspace = () => {
   const features = [
     {,
@@ -92,7 +95,11 @@ const AIHolographicWorkspace = () => {
         "Email support",
         "10GB holographic storage"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Holographic Professional",
@@ -109,7 +116,11 @@ const AIHolographicWorkspace = () => {
         "API access",
         "Custom workspace templates"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Holographic Enterprise",
@@ -126,7 +137,11 @@ const AIHolographicWorkspace = () => {
         "Advanced security protocols",
         "SLA guarantee"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
   const testimonials = [

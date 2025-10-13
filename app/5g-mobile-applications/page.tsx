@@ -15,8 +15,12 @@ export default function Page5gMobileApplications() {
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function MobileApplications5GPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+export default function PagePage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -112,6 +116,7 @@ export default function FiveGMobileapplicationsPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -122,3 +127,6 @@ import { ArrowRight } from 'lucide-react';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

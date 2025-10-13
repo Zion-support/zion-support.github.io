@@ -10,6 +10,7 @@ def fix_merge_conflicts(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
+<<<<<<< HEAD
         if '' not in content and '>>>>>>>' not in content:
             return False
         
@@ -23,6 +24,17 @@ def fix_merge_conflicts(file_path):
         content = re.sub(r'\n?', '', content)
         content = re.sub(r'
         
+=======
+        if '            return False
+        
+        # Remove all merge conflict markers and keep only the HEAD content
+        # Pattern to match merge conflicts:         pattern = r'        content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
+        
+        # Also handle cases where there might be multiple conflicts in one file
+        # Remove any remaining conflict markers
+        content = re.sub(r'        content = re.sub(r'\n?', '', content)
+        content = re.sub(r'        
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         # Clean up any double newlines
         content = re.sub(r'\n\n\n+', '\n\n', content)
         

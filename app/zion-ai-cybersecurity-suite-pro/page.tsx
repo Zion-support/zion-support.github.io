@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -105,6 +106,9 @@ import { Lock } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const ZionAICybersecuritySuiteProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -250,6 +254,7 @@ const ZionAICybersecuritySuiteProPage = () => {
     }
   ];
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -562,6 +567,9 @@ const ZionAICybersecuritySuiteProPage = () => {
     </div>
   );
 };
+=======
+export default function ZionAiCybersecuritySuiteProPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 <<<<<<< HEAD
 <<<<<<< HEAD

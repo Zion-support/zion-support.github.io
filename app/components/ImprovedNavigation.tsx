@@ -641,6 +641,7 @@ interface ImprovednavigationProps {
 }
 
 export default function Improvednavigation({ className = '', children, ...props }: ImprovednavigationProps) {
+<<<<<<< HEAD
   return (
     <div className={`improvednavigation-component ${className}`} {...props}>
       {children}
@@ -863,3 +864,6 @@ import { Link, useLocation } from 'react-router-dom';
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

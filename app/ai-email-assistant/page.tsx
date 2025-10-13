@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -339,5 +340,9 @@ import { Link } from 'react-router-dom';
       </section>
     </div>
   );
+=======
+
+"use client";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

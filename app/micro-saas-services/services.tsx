@@ -11,6 +11,7 @@ interface ServicesProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function services({ className = '', children }: servicesProps) {
   return (
     <div className={`${className}`}>
@@ -48,3 +49,7 @@ export default Services;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Services({ className = '', children, ...props }: ServicesProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

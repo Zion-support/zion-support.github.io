@@ -6,6 +6,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
@@ -527,3 +528,7 @@ const CloudMigrationPro = () => {
 
 export default CloudMigrationPro;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+export default function CloudMigrationProPage() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

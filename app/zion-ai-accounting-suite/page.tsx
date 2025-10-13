@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -72,6 +73,8 @@ import { BarChart3 } from 'lucide-react';
 import { FileText } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const ZionAIAccountingSuite = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -94,7 +97,7 @@ const ZionAIAccountingSuite = () => {
         "Mobile app access",
         "Basic reporting"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Business",
@@ -111,7 +114,7 @@ const ZionAIAccountingSuite = () => {
         "Custom reporting",
         "Bank reconciliation"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -128,7 +131,7 @@ const ZionAIAccountingSuite = () => {
         "Custom integrations",
         "Advanced security"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -163,6 +166,7 @@ const ZionAIAccountingSuite = () => {
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -522,3 +526,9 @@ export default function PagePage() {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+export default function ZionAiAccountingSuitePage() {
+}
+
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

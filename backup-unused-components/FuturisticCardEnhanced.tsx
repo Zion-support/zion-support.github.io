@@ -136,6 +136,7 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
         duration: 2,
         repeat: Infinity,
         ease: "easeInOut"
+<<<<<<< HEAD
 =======
   const pulseVariants = {
     pulse: {
@@ -159,6 +160,8 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
           repeat: Infinity,
           ease: "easeInOut"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 ;
   return (

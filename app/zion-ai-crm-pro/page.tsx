@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -32,6 +33,8 @@ import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const ZionAICRMProPage = () => {
   const features = [
     {
@@ -86,7 +89,7 @@ const ZionAICRMProPage = () => {
         'Email support',
         'Basic analytics'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -103,7 +106,7 @@ const ZionAICRMProPage = () => {
         'API access',
         'Custom fields'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -122,7 +125,7 @@ const ZionAICRMProPage = () => {
         'Custom training',
         'SLA guarantee'
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -547,6 +550,7 @@ export default ZionAICRMProPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
@@ -558,3 +562,6 @@ export default ZionAICRMProPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

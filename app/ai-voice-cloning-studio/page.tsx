@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -66,6 +67,9 @@ import React from 'react';
 import { 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   Mic, 
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   Play, 
   Settings, 
   Users, 
@@ -111,8 +115,13 @@ import { Settings } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Volume2 } from 'lucide-react';
+<<<<<<< HEAD
 import { Mic } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { Mic } from 'lucide-react';  Globe  } from 'lucide-react';
+ } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const AIVoiceCloningStudioPage = () => {
   const features = [
@@ -155,7 +164,11 @@ const AIVoiceCloningStudioPage = () => {
         "Standard quality (24kHz)",
         "Email support"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Professional",
@@ -171,7 +184,11 @@ const AIVoiceCloningStudioPage = () => {
         "API access",
         "Custom voice training"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Enterprise",
@@ -189,7 +206,11 @@ const AIVoiceCloningStudioPage = () => {
         "White-label solution",
         "SLA guarantee"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
   ];
 
@@ -216,6 +237,7 @@ const AIVoiceCloningStudioPage = () => {
     }
   ];
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -467,6 +489,9 @@ const AIVoiceCloningStudioPage = () => {
 }
 =======
 };
+=======
+export default function AiVoiceCloningStudioPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 <<<<<<< HEAD
 <<<<<<< HEAD

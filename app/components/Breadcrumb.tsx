@@ -25,6 +25,7 @@ interface BreadcrumbProps {
 }
 
 export default function Breadcrumb({ className = '', children, ...props }: BreadcrumbProps) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className={`${className}`}>
@@ -92,3 +93,6 @@ export default Breadcrumb;
 =======
 export default Breadcrumb;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

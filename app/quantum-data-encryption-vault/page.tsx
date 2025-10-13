@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -76,6 +77,8 @@ import { Lock } from 'lucide-react';
 import { Mic } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const QuantumDataEncryptionVault = () => {
   const features = [
     {,
@@ -139,7 +142,11 @@ const QuantumDataEncryptionVault = () => {
         "99.9% uptime SLA",
         "Standard security monitoring"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Quantum Vault Professional",
@@ -156,7 +163,11 @@ const QuantumDataEncryptionVault = () => {
         "API access",
         "Custom encryption policies"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Quantum Vault Enterprise",
@@ -173,7 +184,11 @@ const QuantumDataEncryptionVault = () => {
         "White-label solutions",
         "SLA guarantee"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 <<<<<<< HEAD
   ];

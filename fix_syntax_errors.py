@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 """
 Script to fix common syntax errors in the codebase
@@ -17,6 +18,10 @@ def fix_jsx_syntax(file_path):
 """
 Comprehensive syntax error fixer for the Zion Tech Group website.
 This script fixes common syntax errors that remain after merge conflict resolution.
+=======
+"""
+Fix syntax errors in React components - missing closing braces, etc.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 """
 
 import os
@@ -24,6 +29,7 @@ import re
 import glob
 from pathlib import Path
 
+<<<<<<< HEAD
 def fix_syntax_errors_in_file(file_path):
     """Fix syntax errors in a single file."""
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
@@ -31,12 +37,17 @@ def fix_syntax_errors_in_file(file_path):
 def fix_syntax_errors(file_path):
     """Fix common syntax errors in a file"""
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+def fix_syntax_errors(file_path):
+    """Fix syntax errors in React components"""
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         # Fix incomplete JSX elements - add missing closing tags
@@ -472,6 +483,69 @@ def has_critical_errors(file_path):
     print(f"\nProcessed {files_processed} files")
     print(f"Fixed syntax errors in {errors_fixed} files")
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+        # Fix missing closing braces by adding them at the end
+        # Count opening and closing braces
+        open_braces = content.count('{')
+        close_braces = content.count('}')
+        
+        if open_braces > close_braces:
+            missing_braces = open_braces - close_braces
+            # Add missing closing braces
+            content += '\n' + '}' * missing_braces
+        
+        # Fix common syntax issues
+        # Remove any trailing commas before closing braces
+        content = re.sub(r',\s*}', '}', content)
+        
+        # Fix missing semicolons
+        content = re.sub(r'(\w+)\s*$', r'\1;', content, flags=re.MULTILINE)
+        
+        # Clean up extra whitespace
+        content = re.sub(r'\n\s*\n\s*\n+', '\n\n', content)
+        
+        if content != original_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            return True
+                
+    except Exception as e:
+        print(f"Error processing {file_path}: {e}")
+        return False
+    
+    return False
+
+def main():
+    """Main function to fix syntax errors"""
+    workspace = Path('/workspace')
+    
+    # File extensions to process
+    extensions = ['*.tsx', '*.jsx']
+    
+    total_files = 0
+    fixed_files = 0
+    
+    print("Starting syntax error fixes...")
+    
+    for ext in extensions:
+        pattern = workspace / 'app' / '**' / ext
+        files = glob.glob(str(pattern), recursive=True)
+        
+        for file_path in files:
+            # Skip specific files
+            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', '.next', 'out']):
+                continue
+                
+            total_files += 1
+            
+            if fix_syntax_errors(file_path):
+                fixed_files += 1
+                print(f"Fixed: {file_path}")
+    
+    print(f"\nSyntax error fixes complete!")
+    print(f"Total files processed: {total_files}")
+    print(f"Files fixed: {fixed_files}")
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 if __name__ == "__main__":
     main()

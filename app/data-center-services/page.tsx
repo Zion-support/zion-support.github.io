@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,6 +129,11 @@ import { Server } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const DataCenterServicesPage = () => {
   const dataCenterServices = [
@@ -156,6 +162,7 @@ const DataCenterServicesPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
+<<<<<<< HEAD
 
   const serviceProcess = [
     {
@@ -262,6 +269,9 @@ const DataCenterServicesPage = () => {
     }
   ];
 
+=======
+export default function PagePage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -273,6 +283,7 @@ const DataCenterServicesPage = () => {
             canonical="https://ziontechgroup.com/data-center-services"
           />
           
+<<<<<<< HEAD
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -285,6 +296,61 @@ const DataCenterServicesPage = () => {
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Server className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Data Center Services</span>
+=======
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+              Data Center Services;
+            </span>
+          </h1>
+          
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Reliable, secure, and scalable data center solutions for your business. 
+            From enterprise hosting to cloud migration, we provide the infrastructure you need.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <Link;
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            >
+              Get Started Today;
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link;
+              to="/demo"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            >
+              Watch Demo;
+              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Enterprise Data Center Solutions;
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Our data center services provide the reliability, security, and performance;
+              your business needs to thrive in the digital age.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div;
+                key={index}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+              >
+                <div;
+                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                >
+                  {feature.icon}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
                 </div>
                 
                 <FuturisticTextEnhanced
@@ -322,6 +388,7 @@ const DataCenterServicesPage = () => {
               </ResponsiveContainer>
             </section>
 
+<<<<<<< HEAD
             {/* Data Center Services Section */}
             <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
               <ResponsiveContainer>
@@ -527,11 +594,70 @@ const DataCenterServicesPage = () => {
         </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
+=======
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Data Centers?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of enterprise-grade data center services;
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300 font-medium">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Ready to Optimize Your Infrastructure?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Join thousands of businesses trusting our data center services. 
+            Get reliable, secure, and scalable infrastructure today.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link;
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            >
+              Start Your Project;
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link;
+              to="/demo"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            >
+              Schedule Demo;
+              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   );
 };
 
 export default DataCenterServicesPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -85,6 +86,10 @@ const testimonials = [
     }
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 export default function ZionSecurityShield() {
   const features = [
     {,
@@ -146,7 +151,11 @@ export default function ZionSecurityShield() {
         "Email support",
         "Up to 10 users"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Professional",
@@ -162,7 +171,11 @@ export default function ZionSecurityShield() {
         "Up to 50 users",
         "Compliance reporting"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Enterprise",
@@ -179,9 +192,14 @@ export default function ZionSecurityShield() {
         "Advanced compliance",
         "Custom integrations"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
+<<<<<<< HEAD
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
@@ -262,6 +280,8 @@ export default function ZionsecurityshieldPage() {
       </div>
     </div>
   );
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 <<<<<<< HEAD
 =======

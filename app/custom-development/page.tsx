@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -17,6 +18,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 export default function page() {
   const features = [
     { title: "Feature 1", description: "Description 1" },
@@ -80,6 +83,7 @@ export default function page() {
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
@@ -627,3 +631,8 @@ const CustomDevelopment = () => {
 
 export default CustomDevelopment;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+}
+
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

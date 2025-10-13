@@ -21,6 +21,7 @@ interface AccessibilityEnhancerProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AccessibilityEnhancer({ className = '', children }: AccessibilityEnhancerProps) {
 =======
 export default function Accessibilityenhancer() {
@@ -173,3 +174,7 @@ export default AccessibilityEnhancer;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Accessibilityenhancer({ className = '', children, ...props }: AccessibilityenhancerProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

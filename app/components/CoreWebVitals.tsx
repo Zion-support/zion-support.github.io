@@ -10,6 +10,7 @@ interface CoreWebVitalsProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function CoreWebVitals({ className = '', children }: CoreWebVitalsProps) {
   return (
     <div className={`${className}`}>
@@ -30,3 +31,7 @@ export default function CoreWebVitals({ className = '', children, ...props }: Co
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Corewebvitals({ className = '', children, ...props }: CorewebvitalsProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

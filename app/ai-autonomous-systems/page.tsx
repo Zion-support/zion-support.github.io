@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
@@ -113,3 +114,7 @@ import { ArrowRight } from 'lucide-react';
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function AiAutonomousSystemsZionTechGroup() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

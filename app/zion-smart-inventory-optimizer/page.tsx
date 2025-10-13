@@ -23,6 +23,7 @@ export default function zionSmartInventoryOptimizer() {
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 const ZionSmartInventoryOptimizer = () => {
 <<<<<<< HEAD
 
@@ -129,3 +130,7 @@ export default ZionSmartInventoryOptimizer;
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function ZionSmartInventoryOptimizerPage() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

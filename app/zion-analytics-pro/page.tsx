@@ -57,6 +57,7 @@ export default function ZionAnalyticsPro() {
     "Custom metrics & KPIs"
 
   const pricing = [
+<<<<<<< HEAD
     {,
     name: "Starter",
         price: "$29",
@@ -80,8 +81,34 @@ export default function ZionAnalyticsPro() {
         description: "For large organizations",
         features: ["Unlimited data sources", "AI insights", "24/7 support", "Unlimited users", "White-label options"],
         popular: false
+=======
+    {
+      name: "Starter",
+      price: "$29",
+      period: "month",
+      description: "Perfect for small businesses",
+      features: ["Up to 5 data sources", "Basic dashboards", "Email support", "1 user"],
+      popular: false;
+    },
+    {
+      name: "Professional",
+      price: "$79",
+      period: "month",
+      description: "Ideal for growing companies",
+      features: ["Up to 20 data sources", "Advanced analytics", "Priority support", "5 users", "Custom reports"],
+      popular: true;
+    },
+    {
+      name: "Enterprise",
+      price: "$199",
+      period: "month",
+      description: "For large organizations",
+      features: ["Unlimited data sources", "AI insights", "24/7 support", "Unlimited users", "White-label options"],
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
+<<<<<<< HEAD
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
@@ -162,6 +189,8 @@ export default function ZionanalyticsproPage() {
       </div>
     </div>
   );
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 <<<<<<< HEAD
 =======

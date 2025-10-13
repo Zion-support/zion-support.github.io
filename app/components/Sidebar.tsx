@@ -11,6 +11,7 @@ import React from 'react';
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Home } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Zap } from 'lucide-react';
@@ -25,6 +26,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { X, Home, Shield, Zap, Brain, Globe, Menu } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
+  X, 
+  ChevronDown, 
+  ChevronRight,
+  Home,
+  Users,
+  Settings,
+  BarChart3,
+  Shield,
+  Cloud,
+  Code,
+  Brain,
+  Zap,
+  Database,
+  Star,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin  } from 'lucide-react';
+} from 'lucide-react';import { Link  } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 interface SidebarProps {
   className?: string;
@@ -139,6 +163,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   if (!isOpen) return null;
+<<<<<<< HEAD
 
   return (
 <<<<<<< HEAD
@@ -310,3 +335,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
 export default Sidebar;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

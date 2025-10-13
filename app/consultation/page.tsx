@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -121,6 +122,55 @@ import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedAccessibility from '../components/EnhancedAccessibility';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import { MessageCircle, ArrowRight, CheckCircle, Star, Users, Calendar, Phone, Mail } from 'lucide-react';
+=======
+export default function ConsultationPage() {
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2"
+  ];
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    budget: '',
+    timeline: '',
+    message: ''
+  });
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value;
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        budget: '',
+        timeline: '',
+        message: ''
+      });
+    }, 3000);
+  };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const ConsultationPage = () => {
   const consultationTypes = [
@@ -433,6 +483,7 @@ export default ConsultationPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 =======
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 =======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -450,3 +501,6 @@ export default ConsultationPage;
 
 export default Consultation;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

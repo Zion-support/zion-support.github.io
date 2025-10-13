@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,10 @@ import { Receipt } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
+=======
+const SmartExpenseCategorizerPage = () => {
+  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,7 +40,7 @@ export default function smartExpenseCategorizer() {
         "Email support",
         "1 user account"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Business",
@@ -51,7 +56,7 @@ export default function smartExpenseCategorizer() {
         "5 user accounts",
         "API access"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -67,7 +72,7 @@ export default function smartExpenseCategorizer() {
         "Unlimited users",
         "Custom integrations"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -172,6 +177,7 @@ export default function SmartexpensecategorizerPage() {
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -564,3 +570,6 @@ export default SmartExpenseCategorizerPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

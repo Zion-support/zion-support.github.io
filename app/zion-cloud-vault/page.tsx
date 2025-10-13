@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -38,16 +39,12 @@ const testimonials = [
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 import { Link } from 'react-router-dom';
-import { Search } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Filter } from 'lucide-react';
-import { Cloud } from 'lucide-react';
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
+<<<<<<< HEAD
 const features = [
     {
       title: "Predictive Analytics",
@@ -87,6 +84,8 @@ const testimonials = [
     }
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 export default function ZionCloudVault() {
   const features = [
     {,
@@ -148,7 +147,11 @@ export default function ZionCloudVault() {
         "Mobile apps",
         "File sharing"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Business",
@@ -164,7 +167,11 @@ export default function ZionCloudVault() {
         "Admin dashboard",
         "API access"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Enterprise",
@@ -180,9 +187,14 @@ export default function ZionCloudVault() {
         "Compliance tools",
         "Dedicated account manager"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
+<<<<<<< HEAD
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
@@ -263,6 +275,8 @@ export default function ZioncloudvaultPage() {
       </div>
     </div>
   );
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 <<<<<<< HEAD
 =======

@@ -82,7 +82,7 @@ export default function ZionCloudVaultPro() {
         "Email support",
         "Up to 5 users"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Business",
@@ -99,7 +99,7 @@ export default function ZionCloudVaultPro() {
         "Admin controls",
         "Audit logs"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -116,10 +116,11 @@ export default function ZionCloudVaultPro() {
         "SSO integration",
         "On-premise deployment"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
+<<<<<<< HEAD
 export default function Page() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
@@ -238,3 +239,8 @@ import { Link } from 'react-router-dom';
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+}
+
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

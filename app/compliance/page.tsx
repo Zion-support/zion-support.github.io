@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -22,6 +23,51 @@ import { FileText } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
+=======
+export default function page() {
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
+  const complianceFrameworks = [
+    {
+      name: "SOC 2 Type II",
+      description: "Security, availability, and confidentiality controls for service organizations",
+      status: "Certified",
+      icon: <Shield className="w-8 h-8" />
+    },
+    {
+      name: "ISO 27001",
+      description: "Information security management system certification",
+      status: "Certified",
+      icon: <Lock className="w-8 h-8" />
+    },
+    {
+      name: "GDPR",
+      description: "General Data Protection Regulation compliance for EU data",
+      status: "Compliant",
+      icon: <Globe className="w-8 h-8" />
+    },
+    {
+      name: "HIPAA",
+      description: "Health Insurance Portability and Accountability Act compliance",
+      status: "Compliant",
+      icon: <FileText className="w-8 h-8" />
+    },
+    {
+      name: "PCI DSS",
+      description: "Payment Card Industry Data Security Standard compliance",
+      status: "Compliant",
+      icon: <Award className="w-8 h-8" />
+    },
+    {
+      name: "CCPA",
+      description: "California Consumer Privacy Act compliance",
+      status: "Compliant",
+      icon: <Users className="w-8 h-8" />
+    }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -151,6 +197,7 @@ export default function CompliancePage() {
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -580,3 +627,6 @@ const Compliance = () => {
 
 export default Compliance;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

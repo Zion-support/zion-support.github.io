@@ -102,7 +102,11 @@ export default function ZionAiMarketingAutomationPro() {
         "Basic analytics",
         "5 users included"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Professional",
@@ -119,7 +123,11 @@ export default function ZionAiMarketingAutomationPro() {
         "15 users included",
         "API access"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Enterprise",
@@ -136,9 +144,14 @@ export default function ZionAiMarketingAutomationPro() {
         "Unlimited users",
         "Dedicated account manager"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
+<<<<<<< HEAD
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
@@ -219,6 +232,8 @@ export default function ZionaimarketingautomationproPage() {
       </div>
     </div>
   );
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 <<<<<<< HEAD
 =======

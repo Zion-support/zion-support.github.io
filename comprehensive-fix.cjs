@@ -10,6 +10,7 @@ function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
+<<<<<<< HEAD
     
     // Remove all merge conflict markers and branch names
     content = content.replace(/^<<<<<<< .*$/gm, '');
@@ -67,6 +68,63 @@ function fixFile(filePath) {
       content = content.replace(/(<[^>]+)\n\s*<\/[^>]+>/g, '$1>\n  </div>');
     }
     
+=======
+
+    // Fix common patterns
+    const patterns = [
+      // Fix merge conflict markers
+      {
+        pattern: /        replacement: "",
+      },
+      // Fix incomplete JSX tags
+      {
+        pattern: /<([^>]+?)\s*$/gm,
+        replacement: (match, tag) => {
+          // If it looks like an incomplete tag, close it
+          if (
+            tag.includes("className") ||
+            tag.includes("src") ||
+            tag.includes("alt")
+          ) {
+            return match + ">";
+          }
+          return match;
+        },
+      },
+      // Fix missing closing braces in JSX
+      {
+        pattern: /(\s*)([^}]+?)(\s*)(\n\s*)(<\/[^>]+>)/g,
+        replacement: (match, before, content, after, newline, closingTag) => {
+          if (content.includes("{") && !content.includes("}")) {
+            return before + content + "}" + after + newline + closingTag;
+          }
+          return match;
+        },
+      },
+      // Fix missing semicolons after variable declarations
+      {
+        pattern:
+          /(const|let|var)\s+(\w+)\s*=\s*([^;]+?)(\n\s*)(const|let|var|\n|$)/g,
+        replacement: (match, decl, name, value, newline, next) => {
+          if (
+            !value.includes(";") &&
+            !value.includes("{") &&
+            !value.includes("(")
+          ) {
+            return decl + " " + name + " = " + value + ";" + newline + next;
+          }
+          return match;
+        },
+      },
+    ];
+
+    // Apply patterns
+    patterns.forEach(({ pattern, replacement }) => {
+      content = content.replace(pattern, replacement);
+    });
+
+    // If content changed, write it back
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       return true;

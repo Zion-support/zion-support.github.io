@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -24,6 +25,8 @@ import { BarChart3 } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const CloudInfrastructure = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -208,6 +211,7 @@ export default function cloudInfrastructure() {
         content: "Zion's cloud infrastructure transformed our business operations."
     }
   ];
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
@@ -304,3 +308,8 @@ import { Helmet } from 'react-helmet-async';
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+}
+
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

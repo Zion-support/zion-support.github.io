@@ -130,6 +130,9 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => 
     // In a real application, you would send this to an error reporting service;
     // like Sentry, LogRocket, or Bugsnag;
@@ -448,8 +451,11 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 export default ComprehensiveErrorBoundary;
 </State>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

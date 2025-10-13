@@ -45,9 +45,12 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Link;
 =======
               
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
                 <Link
 =======
               )}

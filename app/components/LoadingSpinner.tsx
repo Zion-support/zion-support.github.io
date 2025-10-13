@@ -14,6 +14,7 @@ interface LoadingSpinnerProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function LoadingSpinner({ className = '', children }: LoadingSpinnerProps) {
 =======
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -117,3 +118,7 @@ export default LoadingSpinner;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+export default function Loadingspinner({ className = '', children, ...props }: LoadingspinnerProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

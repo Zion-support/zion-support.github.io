@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -683,6 +684,10 @@ import React from 'react';
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+
+export default function Page() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 <<<<<<< HEAD
 =======

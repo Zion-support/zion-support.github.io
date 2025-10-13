@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -66,6 +67,9 @@ import React from 'react';
 import { 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   Rocket, 
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   Satellite, 
   Orbit, 
   Zap, 
@@ -110,8 +114,13 @@ import { Globe } from 'lucide-react';
 import { Rocket } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Target } from 'lucide-react';
+<<<<<<< HEAD
 import { Activity } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { Activity } from 'lucide-react';  Gauge  } from 'lucide-react';
+ } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const AISpaceMissionOptimizerPage = () => {
   const features = [
@@ -155,7 +164,11 @@ const AISpaceMissionOptimizerPage = () => {
         "Email support",
         "Mission reports"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Mission Professional",
@@ -172,7 +185,11 @@ const AISpaceMissionOptimizerPage = () => {
         "Custom algorithms",
         "Advanced analytics"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Mission Enterprise",
@@ -191,7 +208,11 @@ const AISpaceMissionOptimizerPage = () => {
         "SLA guarantee",
         "Dedicated mission control"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
   ];
 
@@ -229,6 +250,7 @@ const AISpaceMissionOptimizerPage = () => {
     { number: "24/7", label: "Mission Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -496,6 +518,9 @@ const AISpaceMissionOptimizerPage = () => {
 }
 =======
 };
+=======
+export default function AiSpaceMissionOptimizerPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 <<<<<<< HEAD
 <<<<<<< HEAD

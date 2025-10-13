@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -78,6 +79,8 @@ import { FileText } from 'lucide-react';
 import { Heart } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const ZionHRAssistantPro = () => {
   const features = [
     {
@@ -133,7 +136,7 @@ const ZionHRAssistantPro = () => {
         "Mobile app access",
         "Basic analytics"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -150,7 +153,7 @@ const ZionHRAssistantPro = () => {
         "API integration",
         "Advanced reporting"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -167,7 +170,7 @@ const ZionHRAssistantPro = () => {
         "Custom integrations",
         "Advanced security"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -202,6 +205,7 @@ const ZionHRAssistantPro = () => {
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -561,3 +565,9 @@ export default function PagePage() {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+export default function ZionHrAssistantProPage() {
+}
+
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

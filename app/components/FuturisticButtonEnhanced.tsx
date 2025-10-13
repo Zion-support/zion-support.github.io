@@ -29,6 +29,7 @@ interface FuturisticButtonEnhancedProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function FuturisticButtonEnhanced({ className = '', children }: FuturisticButtonEnhancedProps) {
   return (
     <div className={`${className}`}>
@@ -203,3 +204,7 @@ export default FuturisticButtonEnhanced;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Futuristicbuttonenhanced({ className = '', children, ...props }: FuturisticbuttonenhancedProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

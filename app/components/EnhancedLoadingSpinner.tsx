@@ -20,6 +20,7 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 interface EnhancedLoadingSpinnerProps {
@@ -32,10 +33,15 @@ interface LoadingSpinnerProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  text?: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   className?: string;
   fullScreen?: boolean;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function EnhancedLoadingSpinner({ className = '', children }: EnhancedLoadingSpinnerProps) {
@@ -207,3 +213,7 @@ export default function EnhancedLoadingSpinner({
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+export default function Enhancedloadingspinner({ className = '', children, ...props }: EnhancedloadingspinnerProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

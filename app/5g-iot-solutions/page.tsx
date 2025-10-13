@@ -35,6 +35,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function IoT5GPage() {
   return (
 
@@ -123,3 +124,7 @@ import { ArrowRight } from 'lucide-react';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Page() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

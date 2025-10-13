@@ -13,6 +13,7 @@ interface AnalyticsProviderProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AnalyticsProvider({ className = '', children }: AnalyticsProviderProps) {
   return (
     <div className={`${className}`}>
@@ -99,3 +100,7 @@ export default AnalyticsProvider;
 =======
 export default AnalyticsProvider;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+export default function Analyticsprovider({ className = '', children, ...props }: AnalyticsproviderProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

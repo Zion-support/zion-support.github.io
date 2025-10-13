@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -26,11 +27,17 @@ import React from 'react';
 
 export default function UtilsPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { Link } from 'react-router-dom';
+
+export default function LinkPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   return (
     <div className={`${className}`}>
       {children}
     </div>
   );
+<<<<<<< HEAD
 =======
 export function formatDate(date: Date | string): string {
   const d = new Date(date);
@@ -155,3 +162,6 @@ export default function link() {
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -128,7 +129,21 @@ import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
+  Mail, 
+  Shield, 
+  Zap, 
+  BarChart3, 
+  Users, 
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Target,
+  Globe  } from 'lucide-react';
+} from 'lucide-react';
 const AIPoweredEmailAnalyzerPage = () => {
   const stats = [
     { label: "Emails Analyzed", value: "1M+", icon: <Mail className="w-6 h-6" /> },
@@ -176,7 +191,7 @@ const AIPoweredEmailAnalyzerPage = () => {
         "Email support",
         "Standard reporting"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -191,7 +206,7 @@ const AIPoweredEmailAnalyzerPage = () => {
         "API access",
         "Real-time processing"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -206,9 +221,10 @@ const AIPoweredEmailAnalyzerPage = () => {
         "SLA guarantee",
         "Advanced security"
       ],
-      popular: false
+      popular: false;
     }
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
@@ -569,3 +585,10 @@ export default function PagePage() {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+
+export default function AiPoweredEmailAnalyzerPage() {
+}
+
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

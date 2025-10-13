@@ -22,6 +22,7 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 const ZionAiBusinessIntelligencePro = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -503,3 +504,7 @@ export default function Page() {
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function ZionAiBusinessIntelligenceProPage() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

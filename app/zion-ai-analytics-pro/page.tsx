@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,6 +34,8 @@ import { BarChart3 } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const ZionAIAnalyticsProPage = () => {
   const features = [
     {
@@ -87,7 +90,7 @@ const ZionAIAnalyticsProPage = () => {
         'Monthly reports',
         'Mobile app access'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -104,7 +107,7 @@ const ZionAIAnalyticsProPage = () => {
         'Custom integrations',
         'Team collaboration'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -123,7 +126,7 @@ const ZionAIAnalyticsProPage = () => {
         'Custom training',
         'SLA guarantee'
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -548,6 +551,7 @@ export default ZionAIAnalyticsProPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
@@ -559,3 +563,6 @@ export default ZionAIAnalyticsProPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

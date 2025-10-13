@@ -76,7 +76,11 @@ export default function AiPoweredDevops() {
         "5 team members",
         "Cloud deployment only"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Enterprise",
@@ -95,7 +99,11 @@ export default function AiPoweredDevops() {
         "Custom integrations",
         "24/7 monitoring"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Enterprise Plus",
@@ -116,7 +124,11 @@ export default function AiPoweredDevops() {
         "White-label solution",
         "On-premise deployment"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
   const capabilities = [
@@ -145,6 +157,7 @@ export default function AiPoweredDevops() {
         color: "from-orange-500 to-red-500"
     }
 
+<<<<<<< HEAD
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
@@ -225,6 +238,8 @@ export default function AipowereddevopsPage() {
       </div>
     </div>
   );
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 <<<<<<< HEAD
 =======

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -46,9 +47,13 @@ export default function Page() {
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function GDataAnalyticsZionTechGroupPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
@@ -109,10 +114,33 @@ export default function AismartcalendarPage() {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
         </div>
+=======
+export default function Page() {  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional services coming soon." />
+      </Helmet>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-6">
+          Coming Soon;
+        </h1>
+        <p className="text-lg text-gray-300 mb-8">
+          Professional services coming soon.
+        </p>
+        <Link;
+          to="/contact"
+          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          Contact Us;
+          <ArrowRight className="ml-2 h-5 w-5" />
+        </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
       </div>
 <<<<<<< HEAD
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 import { ArrowRight } from 'lucide-react';
@@ -127,3 +155,6 @@ import { Link } from 'react-router-dom';
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

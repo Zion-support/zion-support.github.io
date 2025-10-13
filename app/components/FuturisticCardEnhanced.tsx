@@ -13,6 +13,7 @@ interface FuturisticCardEnhancedProps {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function FuturisticCardEnhanced({ className = '', children }: FuturisticCardEnhancedProps) {
   return (
     <div className={`${className}`}>
@@ -68,3 +69,7 @@ export default FuturisticCardEnhanced;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Futuristiccardenhanced({ className = '', children, ...props }: FuturisticcardenhancedProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

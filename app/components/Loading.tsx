@@ -14,6 +14,7 @@ export default function Loading({ className = '', children }: LoadingProps) {
     <div className={`${className}`}>
 =======
 export default function Loading({ className = '', children, ...props }: LoadingProps) {
+<<<<<<< HEAD
   return (
     <div className={`loading-component ${className}`} {...props}>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
@@ -82,3 +83,6 @@ interface LoadingProps {;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

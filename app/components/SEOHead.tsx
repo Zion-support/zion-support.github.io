@@ -8,6 +8,7 @@ interface SEOHeadProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function SEOHead({ className = '', children }: SEOHeadProps) {
   return (
     <div className={`${className}`}>
@@ -86,3 +87,7 @@ export default SEOHead;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Seohead({ className = '', children, ...props }: SeoheadProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

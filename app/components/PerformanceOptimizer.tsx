@@ -113,6 +113,7 @@ interface PerformanceoptimizerProps {
 }
 
 export default function Performanceoptimizer({ className = '', children, ...props }: PerformanceoptimizerProps) {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   return (
@@ -152,3 +153,6 @@ export default PerformanceOptimizer;
 =======
 export default PerformanceOptimizer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

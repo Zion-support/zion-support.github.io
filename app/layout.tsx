@@ -2,10 +2,23 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
+=======
+import React, { useState } from "react";
+import AnalyticsProvider from "./components/AnalyticsProvider";
+import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
+import ErrorFallback from "./components/ErrorFallback";
+import { Helmet } from "react-helmet-async";
+import MobileNavigation from "./components/MobileNavigation";
+import ImprovedNavigation from "./components/ImprovedNavigation";
+import ImprovedFooter from "./components/ImprovedFooter";
+import ImprovedSidebar from "./components/ImprovedSidebar";
+import { Monitor } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 <<<<<<< HEAD
 interface layoutProps {

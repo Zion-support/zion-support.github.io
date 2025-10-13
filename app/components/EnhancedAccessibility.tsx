@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -166,9 +167,11 @@ export default function EnhancedAccessibility({ children, className = '' }: Enha
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -208,3 +211,89 @@ const EnhancedAccessibility = ({ children }: { children: React.ReactNode }) => {
 
 export default EnhancedAccessibility;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  useEffect(() => {
+    // Add keyboard navigation enhancements;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Skip to main content;
+      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+        const mainContent = document.querySelector('main');
+        if (mainContent) {
+          mainContent.focus();
+          mainContent.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    };
+
+    // Add focus management;
+    const handleFocusIn = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      if (target) {
+        target.setAttribute('data-focused', 'true');
+      }
+    };
+
+    const handleFocusOut = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      if (target) {
+        target.removeAttribute('data-focused');
+      }
+    };
+
+    // Add ARIA landmarks;
+    const addLandmarks = () => {
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+      }
+
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+      }
+
+      const footer = document.querySelector('footer');
+      if (footer && !footer.getAttribute('role')) {
+        footer.setAttribute('role', 'contentinfo');
+      }
+    };
+
+    // Add skip links;
+    const addSkipLinks = () => {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+      skipLink.style.position = 'absolute';
+      skipLink.style.left = '-9999px';
+      skipLink.style.top = '-9999px';
+      
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    };
+
+    // Initialize accessibility features;
+    addLandmarks();
+    addSkipLinks();
+
+    // Add event listeners;
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
+
+    // Cleanup;
+export default function EnhancedaccessibilityPage() {
+  return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
+    };
+  }, []);
+}
+
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

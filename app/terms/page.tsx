@@ -12,6 +12,7 @@ import { Helmet } from 'react-helmet-async';
 import { Helmet } from "react-helmet-async";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
@@ -109,3 +110,7 @@ import { Helmet } from 'react-helmet-async';
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function TermsPage() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

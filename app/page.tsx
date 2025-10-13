@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -19,6 +20,9 @@ export default function app() {
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Home, Shield, Zap, Brain, Globe, Code, BarChart3, Mic, Cloud } from 'lucide-react';
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const HomePage = () => {
   const services = [
@@ -636,6 +640,7 @@ export default HomePage;
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
 =======
@@ -651,3 +656,6 @@ export default HomePage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

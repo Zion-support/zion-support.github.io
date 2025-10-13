@@ -36,6 +36,7 @@ export default function ImprovedSidebar({ className = '', children }: ImprovedSi
     <div className={`${className}`}>
 =======
 export default function Improvedsidebar({ className = '', children, ...props }: ImprovedsidebarProps) {
+<<<<<<< HEAD
   return (
     <div className={`improvedsidebar-component ${className}`} {...props}>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
@@ -86,3 +87,6 @@ export default function ImprovedSidebar() {;
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

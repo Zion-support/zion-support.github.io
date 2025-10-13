@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -66,6 +67,9 @@ import React from 'react';
 import { 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   Cpu, 
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   Zap, 
   Shield, 
   Brain, 
@@ -112,8 +116,13 @@ import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Target } from 'lucide-react';
+<<<<<<< HEAD
 import { Activity } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { Activity } from 'lucide-react';  Gauge  } from 'lucide-react';
+ } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const QuantumComputingSolutionsPage = () => {
   const features = [
@@ -157,7 +166,11 @@ const QuantumComputingSolutionsPage = () => {
         "Email support",
         "Quantum simulation"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Quantum Professional",
@@ -174,7 +187,11 @@ const QuantumComputingSolutionsPage = () => {
         "Custom quantum circuits",
         "Quantum machine learning"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Quantum Enterprise",
@@ -193,7 +210,11 @@ const QuantumComputingSolutionsPage = () => {
         "SLA guarantee",
         "Dedicated quantum team"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
   ];
 
@@ -231,6 +252,7 @@ const QuantumComputingSolutionsPage = () => {
     { number: "24/7", label: "Quantum Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -498,6 +520,9 @@ const QuantumComputingSolutionsPage = () => {
 }
 =======
 };
+=======
+export default function QuantumComputingSolutionsPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 <<<<<<< HEAD
 <<<<<<< HEAD

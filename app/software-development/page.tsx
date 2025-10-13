@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1037,3 +1038,8 @@ const SoftwareDevelopment = () => {
 
 export default SoftwareDevelopment;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+
+export default function SoftwareDevelopmentPage() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

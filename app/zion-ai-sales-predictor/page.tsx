@@ -123,6 +123,7 @@ export default function ZionAISalesPredictor() {
     "Make data-driven sales decisions"
 
   const pricing = [
+<<<<<<< HEAD
     {,
     name: "Starter",
         price: "$39",
@@ -146,9 +147,35 @@ export default function ZionAISalesPredictor() {
         description: "For large sales organizations",
         features: ["Unlimited leads", "Custom AI training", "Dedicated support", "Unlimited users", "Advanced analytics", "White-labeling"],
         popular: false
+=======
+    {
+      name: "Starter",
+      price: "$39",
+      period: "month",
+      description: "Perfect for small sales teams",
+      features: ["Up to 1,000 leads/month", "Basic predictions", "Email support", "1 user", "Standard accuracy"],
+      popular: false;
+    },
+    {
+      name: "Professional",
+      price: "$99",
+      period: "month",
+      description: "Ideal for growing sales teams",
+      features: ["Up to 10,000 leads/month", "Advanced AI models", "Priority support", "5 users", "CRM integration", "Custom models"],
+      popular: true;
+    },
+    {
+      name: "Enterprise",
+      price: "$199",
+      period: "month",
+      description: "For large sales organizations",
+      features: ["Unlimited leads", "Custom AI training", "Dedicated support", "Unlimited users", "Advanced analytics", "White-labeling"],
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
   const testimonials = [
+<<<<<<< HEAD
     {,
     name: "David Kim",
         company: "TechCorp Solutions",
@@ -169,8 +196,31 @@ export default function ZionAISalesPredictor() {
         role: "CEO",
         content: "This tool has revolutionized our sales forecasting. We can now predict quarterly revenue with 95% accuracy, which has been a game-changer for our business planning.",
         rating: 5
+=======
+    {
+      name: "David Kim",
+      company: "TechCorp Solutions",
+      role: "VP of Sales",
+      content: "Zion AI Sales Predictor has transformed our sales process. We've increased our close rate by 45% and can now predict which leads will convert with incredible accuracy.",
+      rating: 5;
+    },
+    {
+      name: "Lisa Martinez",
+      company: "Growth Marketing Co.",
+      role: "Sales Director",
+      content: "The churn prediction feature alone has saved us thousands of dollars. We can now intervene before customers leave and retain 80% more of them.",
+      rating: 5;
+    },
+    {
+      name: "James Wilson",
+      company: "Enterprise Software Inc.",
+      role: "CEO",
+      content: "This tool has revolutionized our sales forecasting. We can now predict quarterly revenue with 95% accuracy, which has been a game-changer for our business planning.",
+      rating: 5;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Page() {
@@ -189,6 +239,9 @@ export default function Page() {
         </div>
       </div>
     </div>
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

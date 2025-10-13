@@ -12,10 +12,25 @@ import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import { 
   ArrowRight,
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
+  Heart, 
+  Zap, 
+  BarChart3, 
+  TrendingUp, 
+  Zap, 
+  Shield, 
+  Target, 
+  Brain, 
+  Users, 
+  CheckCircle,  ArrowRight,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   Users,
   Star,
   CheckCircle,
@@ -30,8 +45,13 @@ import {
   TrendingUp
 } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';  AlertCircle,
+  Clock } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 import { Helmet } from 'react-helmet-async';
 =======
@@ -103,7 +123,11 @@ export default function AiCustomerSentimentTrackerPage() {
         "Email support",
         "3 team members"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Professional",
@@ -119,7 +143,11 @@ export default function AiCustomerSentimentTrackerPage() {
         "10 team members",
         "API access"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Enterprise",
@@ -135,7 +163,11 @@ export default function AiCustomerSentimentTrackerPage() {
         "Unlimited team members",
         "Custom integrations"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -165,7 +197,36 @@ export default function AiCustomerSentimentTrackerPage() {
 =======
   ];
 
-export default function AiCustomerSentimentTrackerPage() {
+export default function AiCustomerSentimentTrackerPage() {  const stats = [
+    { number: "95%", label: "Accuracy Rate" },
+    { number: "2.5M+", label: "Mentions Analyzed" },
+    { number: "50+", label: "Languages Supported" },
+    { number: "99.9%", label: "Uptime" }
+  ];
+
+  const benefits = [
+    {
+      icon: <TrendingUp className="w-12 h-12 text-green-400" />,
+      title: "Increase Customer Satisfaction",
+      description: "Proactively identify and resolve issues before they impact customer experience"
+    },
+    {
+      icon: <Target className="w-12 h-12 text-blue-400" />,
+      title: "Improve Response Time",
+      description: "Get instant alerts for negative sentiment and respond within minutes, not hours"
+    },
+    {
+      icon: <BarChart3 className="w-12 h-12 text-purple-400" />,
+      title: "Data-Driven Decisions",
+      description: "Make informed business decisions based on comprehensive sentiment analytics"
+    },
+    {
+      icon: <Users className="w-12 h-12 text-cyan-400" />,
+      title: "Team Collaboration",
+      description: "Enable seamless collaboration across teams with shared insights and task management"
+    }
+  ];
+export default function PagePage() {
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
     <div className="min-h-screen bg-gray-900 text-white">
@@ -259,6 +320,7 @@ export default function AicustomersentimenttrackerPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -269,3 +331,6 @@ import { ArrowRight } from 'lucide-react';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -8,10 +8,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // utils utility functions
 
 export interface utilsConfig {
   enabled: boolean;
+=======
+import { clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 <<<<<<< HEAD
 

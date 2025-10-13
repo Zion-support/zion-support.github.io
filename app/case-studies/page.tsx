@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
@@ -472,3 +473,7 @@ const CaseStudies = () => {
 
 export default CaseStudies;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+export default function CaseStudiesPage() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

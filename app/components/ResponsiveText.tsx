@@ -88,6 +88,7 @@ interface ResponsivetextProps {
 }
 
 export default function Responsivetext({ className = '', children, ...props }: ResponsivetextProps) {
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
@@ -134,3 +135,6 @@ export default ResponsiveText;
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

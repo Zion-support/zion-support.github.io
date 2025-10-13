@@ -72,7 +72,11 @@ export default function AiQuantumComputing() {
         "5 user accounts",
         "Standard quantum gates"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Enterprise",
@@ -91,7 +95,11 @@ export default function AiQuantumComputing() {
         "Quantum error correction",
         "Dedicated quantum resources"
       ],
+<<<<<<< HEAD
         popular: true
+=======
+      popular: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Quantum Lab",
@@ -112,7 +120,11 @@ export default function AiQuantumComputing() {
         "White-label quantum solutions",
         "On-premise quantum deployment"
       ],
+<<<<<<< HEAD
         popular: false
+=======
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
   const applications = [
@@ -141,6 +153,7 @@ export default function AiQuantumComputing() {
         color: "from-orange-500 to-red-500"
     }
 
+<<<<<<< HEAD
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
@@ -221,6 +234,8 @@ export default function AiquantumcomputingPage() {
       </div>
     </div>
   );
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 <<<<<<< HEAD
 =======

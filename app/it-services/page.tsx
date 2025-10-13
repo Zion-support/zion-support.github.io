@@ -53,11 +53,19 @@ export default function ITServices() {
         "Enhance security & compliance",
         "Increase system reliability"
       ],
+<<<<<<< HEAD
         category: "Infrastructure",
         rating: 4.9,
         reviews: 1247,
         link: "/cloud-infrastructure",
         featured: true
+=======
+      category: "Infrastructure",
+      rating: 4.9,
+      reviews: 1247,
+      link: "/cloud-infrastructure",
+      featured: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "cybersecurity-suite",
@@ -82,11 +90,19 @@ export default function ITServices() {
         "Ensure regulatory compliance",
         "Minimize business disruption"
       ],
+<<<<<<< HEAD
         category: "Security",
         rating: 4.8,
         reviews: 892,
         link: "/cybersecurity-suite",
         featured: true
+=======
+      category: "Security",
+      rating: 4.8,
+      reviews: 892,
+      link: "/cybersecurity-suite",
+      featured: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "network-engineering",
@@ -111,11 +127,19 @@ export default function ITServices() {
         "Enhance security posture",
         "Lower operational costs"
       ],
+<<<<<<< HEAD
         category: "Networking",
         rating: 4.7,
         reviews: 1567,
         link: "/network-engineering",
         featured: true
+=======
+      category: "Networking",
+      rating: 4.7,
+      reviews: 1567,
+      link: "/network-engineering",
+      featured: true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "database-management",
@@ -140,11 +164,19 @@ export default function ITServices() {
         "Reduce storage costs by 30%",
         "Enhance data security"
       ],
+<<<<<<< HEAD
         category: "Database",
         rating: 4.8,
         reviews: 1123,
         link: "/database-management",
         featured: false
+=======
+      category: "Database",
+      rating: 4.8,
+      reviews: 1123,
+      link: "/database-management",
+      featured: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "devops-automation",
@@ -169,11 +201,19 @@ export default function ITServices() {
         "Improve team productivity",
         "Scale infrastructure efficiently"
       ],
+<<<<<<< HEAD
         category: "DevOps",
         rating: 4.9,
         reviews: 1345,
         link: "/devops-automation",
         featured: false
+=======
+      category: "DevOps",
+      rating: 4.9,
+      reviews: 1345,
+      link: "/devops-automation",
+      featured: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "helpdesk-support",
@@ -198,11 +238,19 @@ export default function ITServices() {
         "Lower support costs",
         "Increase productivity"
       ],
+<<<<<<< HEAD
         category: "Support",
         rating: 4.7,
         reviews: 2156,
         link: "/helpdesk-support",
         featured: false
+=======
+      category: "Support",
+      rating: 4.7,
+      reviews: 2156,
+      link: "/helpdesk-support",
+      featured: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "mobile-app-development",
@@ -227,11 +275,19 @@ export default function ITServices() {
         "Increase revenue opportunities",
         "Stay competitive in market"
       ],
+<<<<<<< HEAD
         category: "Development",
         rating: 4.8,
         reviews: 987,
         link: "/mobile-app-development",
         featured: false
+=======
+      category: "Development",
+      rating: 4.8,
+      reviews: 987,
+      link: "/mobile-app-development",
+      featured: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "web-development",
@@ -256,11 +312,19 @@ export default function ITServices() {
         "Improve user experience",
         "Scale with business growth"
       ],
+<<<<<<< HEAD
         category: "Development",
         rating: 4.7,
         reviews: 1456,
         link: "/web-development",
         featured: false
+=======
+      category: "Development",
+      rating: 4.7,
+      reviews: 1456,
+      link: "/web-development",
+      featured: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "data-analytics",
@@ -285,11 +349,19 @@ export default function ITServices() {
         "Improve operational efficiency",
         "Increase competitive advantage"
       ],
+<<<<<<< HEAD
         category: "Analytics",
         rating: 4.8,
         reviews: 1234,
         link: "/data-analytics",
         featured: false
+=======
+      category: "Analytics",
+      rating: 4.8,
+      reviews: 1234,
+      link: "/data-analytics",
+      featured: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "it-consulting",
@@ -314,11 +386,19 @@ export default function ITServices() {
         "Reduce implementation risks",
         "Accelerate digital transformation"
       ],
+<<<<<<< HEAD
         category: "Consulting",
         rating: 4.9,
         reviews: 876,
         link: "/it-consulting",
         featured: false
+=======
+      category: "Consulting",
+      rating: 4.9,
+      reviews: 876,
+      link: "/it-consulting",
+      featured: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "backup-disaster-recovery",
@@ -343,11 +423,19 @@ export default function ITServices() {
         "Meet compliance requirements",
         "Reduce recovery time"
       ],
+<<<<<<< HEAD
         category: "Backup",
         rating: 4.7,
         reviews: 654,
         link: "/backup-disaster-recovery",
         featured: false
+=======
+      category: "Backup",
+      rating: 4.7,
+      reviews: 654,
+      link: "/backup-disaster-recovery",
+      featured: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "managed-it-services",
@@ -372,11 +460,19 @@ export default function ITServices() {
         "Lower operational costs",
         "Focus on core business"
       ],
+<<<<<<< HEAD
         category: "Managed Services",
         rating: 4.8,
         reviews: 1789,
         link: "/managed-it-services",
         featured: false
+=======
+      category: "Managed Services",
+      rating: 4.8,
+      reviews: 1789,
+      link: "/managed-it-services",
+      featured: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
   const processSteps = [
@@ -404,6 +500,7 @@ export default function ITServices() {
         description: "Provide ongoing monitoring, maintenance, and support to ensure optimal performance and security.",
         icon: <Monitor className="w-8 h-8" />
     }
+<<<<<<< HEAD
 
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -495,3 +592,7 @@ import { Link } from 'react-router-dom';
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+  ];
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

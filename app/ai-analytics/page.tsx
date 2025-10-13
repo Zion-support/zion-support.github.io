@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -77,6 +78,11 @@ import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import { 
   BarChart3, 
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
+  ArrowRight,   BarChart3, 
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   TrendingUp, 
   Zap, 
   Shield, 
@@ -89,7 +95,14 @@ import {
   Database,
   Settings,
   Sparkles,
+<<<<<<< HEAD
   Lightbulb
+=======
+  Lightbulb,
+  CheckCircle,
+  TrendingDown,
+  Monitor  } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 } from "lucide-react";
 <<<<<<< HEAD
 =======
@@ -190,6 +203,16 @@ export default function AIAnalyticsPage() {
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   const analyticsStats = [
+export default function AIAnalytics() {
+  const benefits = [
+    "Real-time data processing and analysis",
+    "Predictive analytics and forecasting",
+    "Custom dashboard creation",
+    "Automated reporting and insights",
+    "Machine learning model integration",
+    "Advanced data visualization"
+  ];
+    const analyticsStats = [
     { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
     { number: "85%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
     { number: "60%", label: "Cost Reduction", icon: <TrendingDown className="w-6 h-6" /> },
@@ -737,6 +760,43 @@ export default function AIAnalyticsPage() {
       benefits: ["Interactive charts", "Custom dashboards", "Mobile-responsive", "Export capabilities"]
     }
   ];
+<<<<<<< HEAD
 
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+      benefits: ["Live data processing", "Instant insights", "Real-time dashboards", "Automated alerts"]
+    },
+    {
+      title: "Predictive Modeling",
+      description: "Build sophisticated predictive models to forecast trends, behaviors, and outcomes with high accuracy.",
+      icon: <Brain className="w-8 h-8" />,
+      benefits: ["Trend forecasting", "Risk assessment", "Demand prediction", "Performance optimization"]
+    },
+    {
+      title: "Custom Dashboards",
+      description: "Create personalized dashboards with interactive visualizations tailored to your specific business needs.",
+      icon: <Settings className="w-8 h-8" />,
+      benefits: ["Drag-and-drop builder", "Custom widgets", "Interactive charts", "Mobile responsive"]
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate comprehensive reports automatically with scheduled delivery and customizable formats.",
+      icon: <Zap className="w-8 h-8" />,
+      benefits: ["Scheduled reports", "Custom templates", "Multi-format export", "Email delivery"]
+    },
+    {
+      title: "Data Integration",
+      description: "Seamlessly connect and integrate data from multiple sources including databases, APIs, and cloud services.",
+      icon: <Database className="w-8 h-8" />,
+      benefits: ["Multi-source integration", "API connectivity", "Cloud synchronization", "Data transformation"]
+    },
+    {
+      title: "Custom AI Models",
+      description: "Build and deploy custom machine learning models tailored to your specific business needs and data patterns.",
+      icon: <Settings className="w-8 h-8" />,
+      benefits: ["Custom model training", "Model deployment", "Performance monitoring", "Continuous learning"]
+    }
+  ];
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

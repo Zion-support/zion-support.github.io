@@ -2,7 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -26,6 +30,7 @@ export default function Page() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 =======
 export default function AIClimateSolutionsProZionTechGroup() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -116,3 +121,6 @@ import { Link } from 'react-router-dom';
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -807,3 +808,8 @@ const DevopsServices = () => {
 
 export default DevopsServices;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+
+export default function DevOpsServicesPage() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

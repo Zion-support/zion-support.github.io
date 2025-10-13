@@ -225,6 +225,7 @@ class AdvancedErrorBoundary extends Component<Props, State>
   </div>
 =======
               </div>
+<<<<<<< HEAD
 =======
 </div>
             
@@ -253,6 +254,9 @@ class AdvancedErrorBoundary extends Component<Props, State>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
               <details className="mb-6 text-left"></details>
                 <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2"></summary>
                   Error Details (Development)
@@ -412,8 +416,12 @@ class AdvancedErrorBoundary extends Component<Props, State>
     return this.props.children;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AdvancedErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
 export default AdvancedErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default AdvancedErrorBoundary;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

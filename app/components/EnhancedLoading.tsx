@@ -8,6 +8,7 @@ interface EnhancedLoadingProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function EnhancedLoading({ className = '', children }: EnhancedLoadingProps) {
   return (
     <div className={`${className}`}>
@@ -104,3 +105,7 @@ export default EnhancedLoading;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Enhancedloading({ className = '', children, ...props }: EnhancedloadingProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // useEnhancedPerformance
 =======
@@ -149,6 +150,9 @@ import { useState, useEffect } from 'react';
 };
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
+=======
+import { useState, useEffect } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 export function useEnhancedPerformance() {
   const [state, setState] = useState<string | null>(null);
 

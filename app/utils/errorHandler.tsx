@@ -11,6 +11,7 @@ interface ErrorhandlerxProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function errorHandler({ className = '', children }: errorHandlerProps) {
   return (
     <div className={`${className}`}>
@@ -48,3 +49,7 @@ export default Errorhandlerx;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Errorhandler({ className = '', children, ...props }: ErrorhandlerProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -22,6 +22,7 @@ interface MicrosaasservicesProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function microSaasServices({ className = '', children }: microSaasServicesProps) {
   return (
     <div className={`${className}`}>
@@ -61,3 +62,7 @@ export default Microsaasservices;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Microsaasservices({ className = '', children, ...props }: MicrosaasservicesProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

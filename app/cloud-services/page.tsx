@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -17,6 +18,8 @@ import { Globe } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const CloudServicesPage: React.FC = () => {
   const benefits = [
     {
@@ -68,6 +71,7 @@ const CloudServicesPage: React.FC = () => {
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
@@ -563,3 +567,9 @@ export default CloudServicesPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+export default function CloudServicesPage() {
+}
+
+}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

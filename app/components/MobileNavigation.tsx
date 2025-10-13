@@ -4,12 +4,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 =======
 import React from 'react';
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const MobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {

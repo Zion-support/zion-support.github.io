@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // monitoring utility functions
 
 export interface monitoringConfig {
@@ -46,10 +47,13 @@ export const monitoring = () => {
 // Monitoring utility functions
 
 export const Monitoring = {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   init: () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
     },
+<<<<<<< HEAD
 
   process: (data: any) => {
     return data;
@@ -227,6 +231,8 @@ export default monitoring;
     console.log('Performance metric:', metricName, value);
   }
 };
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 export function monitoring() {
   return Monitoring;

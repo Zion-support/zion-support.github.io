@@ -111,6 +111,9 @@ class ProductionErrorBoundary extends Component<Props, State> {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   private logErrorToService = async (error: Error, errorInfo: ErrorInfo) => 
     try;
       const errorData = 
@@ -395,6 +398,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ProductionErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
@@ -406,3 +410,6 @@ export default ProductionErrorBoundary;
 =======
 export default ProductionErrorBoundary;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default ProductionErrorBoundary;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

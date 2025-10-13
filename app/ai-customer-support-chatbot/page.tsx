@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -80,6 +81,10 @@ const testimonials = [
   ];
 export default function AICustomerSupportChatbot() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+
+"use client";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   const testimonials = [
     {,
     name: "Sarah Johnson",
@@ -115,29 +120,43 @@ export default function AICustomerSupportChatbot() {
         "Multi-language Support",
         "Context Awareness",
         "Real-time Responses",
+<<<<<<< HEAD
       ],
     },
     {,
     category: "Integration",
         items: [
+=======
+      ]},
+    {
+      category: "Integration",
+      items: [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         "API Integration",
         "CRM Integration",
         "Database Connectivity",
         "Third-party Tools",
+<<<<<<< HEAD
       ],
     },
     {,
     category: "Analytics",
         items: [
+=======
+      ]},
+    {
+      category: "Analytics",
+      items: [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         "Conversation Analytics",
         "Performance Metrics",
         "User Insights",
         "Custom Reports",
-      ],
-    },
+      ]},
   ];
 
   const pricingPlans = [
+<<<<<<< HEAD
     {,
     name: "Starter",
         price: "$299",
@@ -163,12 +182,36 @@ export default function AICustomerSupportChatbot() {
         popular: false,
     },
 <<<<<<< HEAD
+=======
+    {
+      name: "Starter",
+      price: "$299",
+      features: ["Basic chatbot", "Email support", "Standard templates"],
+      description: "Perfect for small businesses getting started",
+      period: "/month",
+      popular: false},
+    {
+      name: "Professional",
+      price: "$799",
+      features: ["Advanced AI", "Priority support", "Custom integrations"],
+      description: "Ideal for growing businesses with complex needs",
+      period: "/month",
+      popular: true},
+    {
+      name: "Enterprise",
+      price: "$1999",
+      features: ["Full customization", "24/7 support", "Dedicated manager"],
+      description: "Complete solution for large organizations",
+      period: "/month",
+      popular: false},
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function aiCustomerSupportChatbot() {
 =======
   const features = [
+<<<<<<< HEAD
     {,
     icon: <Brain className="w-6 h-6 text-cyan-400" />,
         title: "Natural Language Processing",
@@ -194,6 +237,28 @@ export default function aiCustomerSupportChatbot() {
         "Track customer satisfaction, response times, and identify improvement opportunities",
     },
 
+=======
+    {
+      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      title: "Natural Language Processing",
+      description:
+        "Advanced AI understands context, intent, and provides human-like responses"},
+    {
+      icon: <Clock className="w-6 h-6 text-purple-400" />,
+      title: "24/7 Availability",
+      description:
+        "Provide instant support around the clock without additional staffing costs"},
+    {
+      icon: <Target className="w-6 h-6 text-yellow-400" />,
+      title: "Intelligent Routing",
+      description:
+        "Automatically route complex queries to the right human agents when needed"},
+    {
+      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
+      title: "Analytics & Insights",
+      description:
+        "Track customer satisfaction, response times, and identify improvement opportunities"},
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   ];
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -203,6 +268,7 @@ import { Helmet } from "react-helmet-async";
 
 
 
+<<<<<<< HEAD
 export default function AiCustomerSupportChatbotPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
   return (
@@ -301,6 +367,8 @@ export default function AicustomersupportchatbotPage() {
 <<<<<<< HEAD
     </div>
   );
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 =======
 "use client";

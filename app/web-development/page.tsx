@@ -12,6 +12,7 @@ import { Helmet } from 'react-helmet-async';
 import { Helmet } from "react-helmet-async";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
@@ -101,3 +102,7 @@ export default function WebdevelopmentPage() {
 =======
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+export default function WebDevelopmentPage() {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

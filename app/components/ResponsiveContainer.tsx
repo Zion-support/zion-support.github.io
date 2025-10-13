@@ -70,6 +70,7 @@ interface ResponsivecontainerProps {
 }
 
 export default function Responsivecontainer({ className = '', children, ...props }: ResponsivecontainerProps) {
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
@@ -99,3 +100,6 @@ export default ResponsiveContainer;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

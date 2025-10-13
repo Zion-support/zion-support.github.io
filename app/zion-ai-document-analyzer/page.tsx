@@ -10,6 +10,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -118,9 +119,27 @@ const useCases = [
 export default function ZionAIDocumentAnalyzer() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
-export default function ZionAIDocumentAnalyzer() {
+  FileText, 
+  Brain, 
+  Shield, 
+  Zap, 
+  ArrowRight, 
+  CheckCircle, 
+  Star, 
+  Users, 
+  Award, 
+  Clock, 
+  DollarSign, 
+  Globe, 
+  Smartphone,
+  Monitor  } from 'lucide-react';
+} from 'lucide-react';
 
+<<<<<<< HEAD
 export default function ZionAiDocumentAnalyzerPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 =======
@@ -161,6 +180,99 @@ export default function Page() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+=======
+const features = [
+  {
+    title: "AI-Powered Document Processing",
+    description: "Advanced OCR and NLP technology to extract, analyze, and understand content from any document format",
+    icon: <Brain className="w-8 h-8" />,
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    title: "Intelligent Data Extraction",
+    description: "Automatically extract structured data from unstructured documents with 99% accuracy",
+    icon: <FileText className="w-8 h-8" />,
+    color: "from-green-500 to-emerald-500"
+  },
+  {
+    title: "Advanced Security",
+    description: "Enterprise-grade security with end-to-end encryption and compliance with industry standards",
+    icon: <Shield className="w-8 h-8" />,
+    color: "from-red-500 to-orange-500"
+  },
+  {
+    title: "Real-time Processing",
+    description: "Process documents in real-time with lightning-fast AI algorithms and cloud infrastructure",
+    icon: <Zap className="w-8 h-8" />,
+    color: "from-purple-500 to-pink-500"
+  }
+];
+
+const pricingPlans = [
+  {
+    name: "Starter",
+    price: "$29",
+    period: "month",
+    features: [
+      "Up to 1,000 documents/month",
+      "Basic AI analysis",
+      "Email support",
+      "Standard templates"
+    ],
+    popular: false;
+  },
+  {
+    name: "Professional",
+    price: "$79",
+    period: "month",
+    features: [
+      "Up to 10,000 documents/month",
+      "Advanced AI analysis",
+      "Priority support",
+      "Custom templates",
+      "API access"
+    ],
+    popular: true;
+  },
+  {
+    name: "Enterprise",
+    price: "$199",
+    period: "month",
+    features: [
+      "Unlimited documents",
+      "Full AI capabilities",
+      "24/7 support",
+      "White-label options",
+      "Custom integrations"
+    ],
+    popular: false;
+  }
+];
+
+const useCases = [
+  {
+    industry: "Legal",
+    description: "Contract analysis, legal document review, and compliance checking",
+    icon: <FileText className="w-6 h-6" />
+  },
+  {
+    industry: "Finance",
+    description: "Invoice processing, financial report analysis, and audit documentation",
+    icon: <DollarSign className="w-6 h-6" />
+  },
+  {
+    industry: "Healthcare",
+    description: "Medical record analysis, insurance claim processing, and patient documentation",
+    icon: <Users className="w-6 h-6" />
+  },
+  {
+    industry: "Education",
+    description: "Research paper analysis, student document processing, and academic assessment",
+    icon: <Award className="w-6 h-6" />
+  }
+];  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
       <Helmet>
         <title>Zion Ai Document Analyzer - Zion Tech Group</title>
         <meta name="description" content="Advanced zion ai document analyzer solutions by Zion Tech Group" />
@@ -390,7 +502,11 @@ export default function ZionaidocumentanalyzerPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default ZionAiDocumentAnalyzer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

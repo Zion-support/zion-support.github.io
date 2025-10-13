@@ -12,6 +12,7 @@ interface EnhancedSEOProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function EnhancedSEO({ className = '', children }: EnhancedSEOProps) {
   return (
     <div className={`${className}`}>
@@ -65,3 +66,7 @@ export default EnhancedSEO;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Enhancedseo({ className = '', children, ...props }: EnhancedseoProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

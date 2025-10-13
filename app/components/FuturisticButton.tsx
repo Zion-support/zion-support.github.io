@@ -8,6 +8,7 @@ import React from 'react';
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
+<<<<<<< HEAD
 interface FuturisticButtonProps {
 =======
 import { Link } from 'react-router-dom';
@@ -173,3 +174,6 @@ export default FuturisticButton;
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

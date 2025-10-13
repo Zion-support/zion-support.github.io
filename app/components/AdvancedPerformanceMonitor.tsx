@@ -17,6 +17,7 @@ interface AdvancedPerformanceMonitorProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AdvancedPerformanceMonitor({ className = '', children }: AdvancedPerformanceMonitorProps) {
   return (
     <div className={`${className}`}>
@@ -37,3 +38,7 @@ export default function AdvancedPerformanceMonitor({ className = '', children, .
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Advancedperformancemonitor({ className = '', children, ...props }: AdvancedperformancemonitorProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

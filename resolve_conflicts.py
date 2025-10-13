@@ -14,6 +14,7 @@ def resolve_merge_conflicts(file_path):
         
 <<<<<<< HEAD
         # Pattern to match merge conflict markers
+<<<<<<< HEAD
         conflict_pattern = r'\n(.*?)\n
 =======
         # Check if file has merge conflicts
@@ -23,9 +24,15 @@ def resolve_merge_conflicts(file_path):
         
         # Split by merge conflict markers
         parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
+=======
+        conflict_pattern = r'        
+        # Replace conflicts with HEAD version
+        resolved_content = re.sub(conflict_pattern, r'\1\n', content, flags=re.DOTALL)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         
 <<<<<<< HEAD
         # Also handle cases where there might be multiple conflict markers in one block
+<<<<<<< HEAD
         conflict_pattern2 = r'\n(.*?)\n
         resolved_content = re.sub(conflict_pattern2, r'\1', resolved_content, flags=re.DOTALL)
         
@@ -55,6 +62,19 @@ def resolve_merge_conflicts(file_path):
         return True
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
         
+=======
+        conflict_pattern2 = r'        resolved_content = re.sub(conflict_pattern2, r'\1', resolved_content, flags=re.DOTALL)
+        
+        # Remove any remaining conflict markers
+        resolved_content = re.sub(r'        resolved_content = re.sub(r'\n', '', resolved_content)
+        resolved_content = re.sub(r'        
+        if content != resolved_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(resolved_content)
+            print(f"Resolved conflicts in {file_path}")
+            return True
+        return False
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False

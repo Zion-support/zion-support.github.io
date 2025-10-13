@@ -206,6 +206,7 @@ interface FuturistictextenhancedProps {
 }
 
 export default function Futuristictextenhanced({ className = '', children, ...props }: FuturistictextenhancedProps) {
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
@@ -235,3 +236,6 @@ export default FuturisticTextEnhanced;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

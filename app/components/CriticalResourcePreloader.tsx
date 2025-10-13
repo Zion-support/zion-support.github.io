@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
@@ -12,6 +13,8 @@ import React from 'react';
 =======
 import React from 'react';
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 'use client'
 'use client'
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
@@ -35,6 +38,7 @@ interface CriticalresourcepreloaderProps {
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
+<<<<<<< HEAD
 const CriticalResourcePreloader = () => {
   useEffect(() => {
     const preloadCriticalResources = () => {
@@ -223,3 +227,7 @@ export default CriticalResourcePreloader
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Criticalresourcepreloader({ className = '', children, ...props }: CriticalresourcepreloaderProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

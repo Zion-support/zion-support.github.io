@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -100,6 +101,9 @@ export default function ComputervisionPage() {
 <<<<<<< HEAD
     </div>
   );
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 =======
 import { ArrowRight } from 'lucide-react';

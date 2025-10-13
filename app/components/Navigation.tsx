@@ -18,6 +18,7 @@ import React from 'react';
 =======
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Home } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Zap } from 'lucide-react';
@@ -34,6 +35,24 @@ import React, { useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, Shield, Zap, Brain, Globe, Network, Mic } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
+  Brain, 
+  Shield, 
+  Zap, 
+  Globe, 
+  Star, 
+  Users, 
+  Sparkles, 
+  Mail, 
+  Monitor,
+  ChevronDown,
+  ChevronUp,
+  Menu,
+  X  } from 'lucide-react';
+} from 'lucide-react';import { Link  } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 =======
 
@@ -167,6 +186,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     { name: 'Contact', href: '/contact' }
   ];
 
+<<<<<<< HEAD
   const toggleDropdown = (itemName: string) => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
@@ -440,6 +460,8 @@ export default Navigation;
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 
 export default function Navigation({ className = '', children, ...props }: NavigationProps) {

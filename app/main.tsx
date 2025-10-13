@@ -33,6 +33,7 @@ const root = ReactDOM.createRoot(
 );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+<<<<<<< HEAD
 export default function main({ className = '', children }: mainProps) {
   return (
     <div className={`${className}`}>
@@ -117,3 +118,7 @@ import App from "./App";
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function Main({ className = '', children, ...props }: MainProps) {
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -100,6 +101,9 @@ import { Search } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Mic } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 export default function ZionAIMeetingTranscriber() {
   const features = [
@@ -125,6 +129,7 @@ export default function ZionAIMeetingTranscriber() {
     "Ensure compliance with meeting records"
 
   const pricing = [
+<<<<<<< HEAD
     {,
     name: "Starter",
         price: "$19",
@@ -148,9 +153,35 @@ export default function ZionAIMeetingTranscriber() {
         description: "For large organizations",
         features: ["Unlimited hours", "Custom integrations", "Dedicated support", "Unlimited users", "Advanced analytics", "White-labeling"],
         popular: false
+=======
+    {
+      name: "Starter",
+      price: "$19",
+      period: "month",
+      description: "Perfect for small teams",
+      features: ["Up to 10 hours/month", "Basic transcription", "Email support", "1 user", "Standard accuracy"],
+      popular: false;
+    },
+    {
+      name: "Professional",
+      price: "$49",
+      period: "month",
+      description: "Ideal for growing businesses",
+      features: ["Up to 50 hours/month", "Advanced AI features", "Priority support", "5 users", "Speaker identification", "Action items"],
+      popular: true;
+    },
+    {
+      name: "Enterprise",
+      price: "$99",
+      period: "month",
+      description: "For large organizations",
+      features: ["Unlimited hours", "Custom integrations", "Dedicated support", "Unlimited users", "Advanced analytics", "White-labeling"],
+      popular: false;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
   const testimonials = [
+<<<<<<< HEAD
     {,
     name: "Sarah Chen",
         company: "TechStart Inc.",
@@ -171,8 +202,31 @@ export default function ZionAIMeetingTranscriber() {
         role: "Director",
         content: "The automatic action item extraction saves us hours of follow-up work. Highly recommended!",
         rating: 5
+=======
+    {
+      name: "Sarah Chen",
+      company: "TechStart Inc.",
+      role: "CEO",
+      content: "Zion AI Meeting Transcriber has revolutionized our team meetings. We never miss important details and our productivity has increased dramatically.",
+      rating: 5;
+    },
+    {
+      name: "Michael Rodriguez",
+      company: "Consulting Firm",
+      role: "Partner",
+      content: "The speaker identification feature is incredible. It's like having a professional secretary in every meeting.",
+      rating: 5;
+    },
+    {
+      name: "Emily Johnson",
+      company: "Marketing Agency",
+      role: "Director",
+      content: "The automatic action item extraction saves us hours of follow-up work. Highly recommended!",
+      rating: 5;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
+<<<<<<< HEAD
 import React from 'react';
 
 export default function Page() {
@@ -191,6 +245,9 @@ export default function Page() {
         </div>
       </div>
     </div>
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

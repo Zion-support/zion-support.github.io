@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -129,6 +130,8 @@ import { Helmet } from 'react-helmet-async';
 import { TrendingUp } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const AIFinancialAnalysisPage = () => {
   const benefits = [
     "Increase investment returns by 25%",
@@ -835,7 +838,11 @@ export default function PagePage() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 =======
 export default AIFinancialAnalysisZionTechGroup;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
