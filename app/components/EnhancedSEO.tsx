@@ -2,7 +2,6 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
 interface EnhancedSEOProps {
-<<<<<<< HEAD
   title: string;
   description: string;
   keywords?: string;
@@ -21,20 +20,6 @@ interface EnhancedSEOProps {
   lang?: string;
   noindex?: boolean;
   nofollow?: boolean;
-=======
-  title: string
-  description: string
-  keywords?: string
-  canonical?: string
-  ogTitle?: string
-  ogDescription?: string
-  ogImage?: string
-  twitterTitle?: string
-  twitterDescription?: string
-  twitterImage?: string
-  structuredData?: object
-  noIndex?: boolean
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({

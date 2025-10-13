@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -7,16 +6,6 @@ interface PerformanceMetrics {
   cls: number | null;
   fcp: number | null;
   ttfb: number | null;
-=======
-import React, { useEffect, useState } from 'react'
-
-interface PerformanceMetrics {
-  lcp: number | null
-  fid: number | null
-  cls: number | null
-  fcp: number | null
-  ttfb: number | null
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
 }
 
 const PerformanceMonitor: React.FC = () => {
