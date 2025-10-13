@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
+<<<<<<< HEAD
 import EnhancedSEO from "./components/EnhancedSEO";
+=======
+import SEOOptimizer from "./components/SEOOptimizer";
+import FuturisticBackground from "./components/FuturisticBackground";
+import FuturisticCard from "./components/FuturisticCard";
+import FuturisticButton from "./components/FuturisticButton";
+import FuturisticText from "./components/FuturisticText";
+import ResponsiveContainer from "./components/ResponsiveContainer";
+import ResponsiveGrid from "./components/ResponsiveGrid";
+import ResponsiveText from "./components/ResponsiveText";
+>>>>>>> origin/main
 
 const HomePage = () => {
   const structuredData = {
@@ -84,24 +95,51 @@ const HomePage = () => {
   const microSaasHighlights = [
     {
       name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform",
+      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro"
+      link: "/zion-analytics-pro",
+      featured: true
     },
     {
       name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection",
+      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield"
+      link: "/zion-security-shield",
+      featured: true
     },
     {
       name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
+      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
       price: "From $99/month",
       icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
+      link: "/zion-cloud-vault",
+      featured: true
+    },
+    {
+      name: "Zion AI CRM Pro",
+      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
+      price: "From $199/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-crm-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Marketing Automation Pro",
+      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
+      price: "From $149/month",
+      icon: <Target className="w-6 h-6" />,
+      link: "/zion-ai-marketing-automation-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Project Manager Pro",
+      description: "AI-powered project management with intelligent task prioritization and resource allocation",
+      price: "From $99/month",
+      icon: <Calendar className="w-6 h-6" />,
+      link: "/zion-ai-project-manager-pro",
+      featured: true
     }
   ];
 
@@ -138,7 +176,12 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+<<<<<<< HEAD
       <EnhancedSEO
+=======
+      <FuturisticBackground />
+      <SEOOptimizer
+>>>>>>> origin/main
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
@@ -279,18 +322,25 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
               >
+                {saas.featured && (
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                      Featured
+                    </span>
+                  </div>
+                )}
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
                     {saas.icon}
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
                       {saas.name}
                     </h3>
@@ -300,6 +350,10 @@ const HomePage = () => {
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {saas.description}
                 </p>
+                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
               </Link>
             ))}
           </div>

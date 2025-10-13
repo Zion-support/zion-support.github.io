@@ -33,39 +33,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         white-space: nowrap;
         border: 0;
       `;
-      
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.cssText = `
-          position: absolute;
-          width: auto;
-          height: auto;
-          padding: 0.5rem 1rem;
-          margin: 0;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-          z-index: 1000;
-        `;
-      });
-      
-      skipLink.addEventListener('blur', () => {
-        skipLink.style.cssText = `
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        `;
-      });
-      
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-    // Enhanced keyboard navigation
+    // Keyboard navigation enhancements
     const enhanceKeyboardNavigation = () => {
       if (!enableKeyboardNavigation) return;
 
@@ -78,12 +49,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           }
         }
 
-        // Tab navigation enhancement
+        // Tab navigation improvements
         if (e.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
         }
       };
 
+      // Remove keyboard navigation class on mouse use
       const handleMouseDown = () => {
         document.body.classList.remove('keyboard-navigation');
       };
@@ -103,21 +75,21 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       const trapFocus = (element: HTMLElement) => {
         const focusableElements = element.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
         );
-        const firstElement = focusableElements[0] as HTMLElement;
-        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+        const firstFocusableElement = focusableElements[0] as HTMLElement;
+        const lastFocusableElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
         const handleTabKey = (e: KeyboardEvent) => {
           if (e.key === 'Tab') {
             if (e.shiftKey) {
-              if (document.activeElement === firstElement) {
-                lastElement.focus();
+              if (document.activeElement === firstFocusableElement) {
+                lastFocusableElement.focus();
                 e.preventDefault();
               }
             } else {
-              if (document.activeElement === lastElement) {
-                firstElement.focus();
+              if (document.activeElement === lastFocusableElement) {
+                firstFocusableElement.focus();
                 e.preventDefault();
               }
             }
@@ -125,44 +97,65 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         };
 
         element.addEventListener('keydown', handleTabKey);
-        firstElement?.focus();
+        firstFocusableElement?.focus();
 
         return () => {
           element.removeEventListener('keydown', handleTabKey);
         };
       };
 
+<<<<<<< HEAD
       // Apply focus trap to modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
       const cleanupFunctions = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
 
       return () => {
         cleanupFunctions.forEach(cleanup => cleanup());
+=======
+      // Apply focus trapping to modals and dropdowns
+      const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
+      modals.forEach(modal => trapFocus(modal as HTMLElement));
+
+      return () => {
+        // Cleanup handled by individual trapFocus returns
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
       };
     };
 
-    // High contrast mode detection
+    // High contrast mode
     const enhanceHighContrast = () => {
       if (!enableHighContrast) return () => {};
 
-      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      
-      const handleContrastChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.classList.add('high-contrast');
-        } else {
-          document.documentElement.classList.remove('high-contrast');
-        }
+      const addHighContrastStyles = () => {
+        const style = document.createElement('style');
+        style.id = 'accessibility-high-contrast';
+        style.textContent = `
+          .high-contrast {
+            filter: contrast(150%) brightness(110%);
+          }
+          .high-contrast * {
+            border-color: currentColor !important;
+          }
+        `;
+        document.head.appendChild(style);
       };
 
+<<<<<<< HEAD
       mediaQuery.addEventListener('change', handleContrastChange);
       handleContrastChange(mediaQuery as any);
+=======
+      addHighContrastStyles();
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
 
       return () => {
-        mediaQuery.removeEventListener('change', handleContrastChange);
+        const existingStyle = document.getElementById('accessibility-high-contrast');
+        if (existingStyle) {
+          existingStyle.remove();
+        }
       };
     };
 
+<<<<<<< HEAD
     // Reduced motion detection
     const handleReducedMotion = () => {
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -184,25 +177,57 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
 
     // Screen reader announcements
+=======
+    // Screen reader optimizations
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
     const enhanceScreenReader = () => {
       if (!enableScreenReader) return;
 
-      const announceToScreenReader = (message: string) => {
-        const announcement = document.createElement('div');
-        announcement.setAttribute('aria-live', 'polite');
-        announcement.setAttribute('aria-atomic', 'true');
-        announcement.className = 'sr-only';
-        announcement.textContent = message;
-        
-        document.body.appendChild(announcement);
-        
-        setTimeout(() => {
-          document.body.removeChild(announcement);
-        }, 1000);
+      // Add ARIA landmarks
+      const addLandmarks = () => {
+        const main = document.querySelector('main');
+        if (main && !main.getAttribute('role')) {
+          main.setAttribute('role', 'main');
+        }
+
+        const nav = document.querySelector('nav');
+        if (nav && !nav.getAttribute('role')) {
+          nav.setAttribute('role', 'navigation');
+        }
+
+        const header = document.querySelector('header');
+        if (header && !header.getAttribute('role')) {
+          header.setAttribute('role', 'banner');
+        }
+
+        const footer = document.querySelector('footer');
+        if (footer && !footer.getAttribute('role')) {
+          footer.setAttribute('role', 'contentinfo');
+        }
       };
 
-      // Make announcement function globally available
-      (window as any).announceToScreenReader = announceToScreenReader;
+      // Add live regions for dynamic content
+      const addLiveRegions = () => {
+        let liveRegion = document.getElementById('live-region');
+        if (!liveRegion) {
+          liveRegion = document.createElement('div');
+          liveRegion.id = 'live-region';
+          liveRegion.setAttribute('aria-live', 'polite');
+          liveRegion.setAttribute('aria-atomic', 'true');
+          liveRegion.className = 'sr-only';
+          document.body.appendChild(liveRegion);
+        }
+      };
+
+      addLandmarks();
+      addLiveRegions();
+
+      return () => {
+        const liveRegion = document.getElementById('live-region');
+        if (liveRegion) {
+          liveRegion.remove();
+        }
+      };
     };
 
     // Initialize all enhancements
@@ -210,8 +235,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     const cleanupKeyboard = enhanceKeyboardNavigation();
     const cleanupFocus = enhanceFocusManagement();
     const cleanupContrast = enhanceHighContrast();
-    const cleanupMotion = handleReducedMotion();
-    enhanceScreenReader();
+    const cleanupMotion = enhanceScreenReader();
 
     return () => {
       if (cleanupKeyboard) cleanupKeyboard();
@@ -220,6 +244,60 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (cleanupMotion) cleanupMotion();
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+    const root = document.documentElement;
+
+    // Large text mode
+    if (newSettings.largeText) {
+      root.classList.add('large-text');
+    } else {
+      root.classList.remove('large-text');
+    }
+
+    // Reduced motion
+    if (newSettings.reducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
+
+    // Focus visible
+    if (newSettings.focusVisible) {
+      root.classList.add('focus-visible');
+    } else {
+      root.classList.remove('focus-visible');
+    }
+
+    // Save to localStorage
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+  };
+
+  const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
+    const newSettings = { ...settings, [key]: value };
+    setSettings(newSettings);
+    applyAccessibilitySettings(newSettings);
+  };
+
+  const resetSettings = () => {
+    const defaultSettings: AccessibilitySettings = {
+      highContrast: false,
+      largeText: false,
+      reducedMotion: false,
+      screenReader: false,
+      focusVisible: true
+    };
+    setSettings(defaultSettings);
+    applyAccessibilitySettings(defaultSettings);
+  };
+
+  // Removed unused functions - functionality is handled by updateSetting directly
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-3531
+>>>>>>> origin/main
   return (
     <>
       {children}
@@ -228,22 +306,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         .keyboard-navigation *:focus {
           outline: 2px solid #06b6d4;
           outline-offset: 2px;
-        }
-
-        /* High contrast mode */
-        .high-contrast {
-          filter: contrast(150%);
-        }
-
-        .high-contrast * {
-          border-color: currentColor !important;
-        }
-
-        /* Reduced motion */
-        .reduce-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
         }
 
         /* Screen reader only content */
@@ -260,39 +322,50 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
 
         .sr-only:focus {
-          position: absolute;
+          position: static;
           width: auto;
           height: auto;
-          padding: 0.5rem 1rem;
-          margin: 0;
+          padding: inherit;
+          margin: inherit;
           overflow: visible;
           clip: auto;
           white-space: normal;
-          z-index: 1000;
+        }
+
+        /* High contrast mode */
+        .high-contrast {
+          filter: contrast(150%) brightness(110%);
+        }
+
+        .high-contrast * {
+          border-color: currentColor !important;
         }
 
         /* Focus indicators */
-        *:focus-visible {
+        .focus-visible:focus-visible {
           outline: 2px solid #06b6d4;
           outline-offset: 2px;
         }
 
-        /* Skip link */
-        .skip-link {
-          position: absolute;
-          top: -40px;
-          left: 6px;
-          background: #06b6d4;
-          color: white;
-          padding: 8px;
-          text-decoration: none;
-          z-index: 1000;
-          border-radius: 4px;
+        /* Reduced motion */
+        .reduced-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
         }
 
-        .skip-link:focus {
-          top: 6px;
+        /* Large text mode */
+        .large-text {
+          font-size: 1.2em;
+          line-height: 1.6;
         }
+
+        .large-text h1 { font-size: 2.5em; }
+        .large-text h2 { font-size: 2em; }
+        .large-text h3 { font-size: 1.75em; }
+        .large-text h4 { font-size: 1.5em; }
+        .large-text h5 { font-size: 1.25em; }
+        .large-text h6 { font-size: 1.1em; }
       `}</style>
     </>
   );
