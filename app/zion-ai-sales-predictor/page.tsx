@@ -2,101 +2,100 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
-  Mic, 
+  TrendingUp, 
+  Target, 
   CheckCircle, 
   ArrowRight, 
   Sparkles, 
   Star, 
-  Clock, 
+  BarChart3, 
   Users, 
   Brain, 
-  FileText,
-  BarChart3,
-  Zap,
+  DollarSign,
+  Calendar,
   Award,
-  TrendingUp
+  Zap
 } from 'lucide-react';
 
-const ZionAIMeetingAssistantPage = () => {
+const ZionAISalesPredictorPage = () => {
   const features = [
     {
-      title: "Real-time Transcription",
-      description: "AI-powered live transcription with 99% accuracy in 50+ languages",
-      icon: <Mic className="w-6 h-6" />,
-      stat: "99% accuracy"
+      title: "Revenue Forecasting",
+      description: "Predict future revenue with 95% accuracy using advanced machine learning algorithms",
+      icon: <DollarSign className="w-6 h-6" />,
+      stat: "95% accuracy"
     },
     {
-      title: "Smart Summaries",
-      description: "Automatically generate meeting summaries with key points and action items",
-      icon: <FileText className="w-6 h-6" />,
-      stat: "5 min summaries"
+      title: "Lead Scoring",
+      description: "AI-powered lead scoring to identify high-value prospects and prioritize sales efforts",
+      icon: <Target className="w-6 h-6" />,
+      stat: "3x better conversion"
     },
     {
-      title: "Action Item Tracking",
-      description: "Extract and track action items with automatic follow-up reminders",
-      icon: <CheckCircle className="w-6 h-6" />,
-      stat: "Auto tracking"
+      title: "Churn Prediction",
+      description: "Identify customers at risk of churning and take proactive retention actions",
+      icon: <Users className="w-6 h-6" />,
+      stat: "40% churn reduction"
     },
     {
-      title: "Meeting Analytics",
-      description: "Insights on speaking time, participation, and meeting effectiveness",
+      title: "Sales Analytics",
+      description: "Comprehensive analytics and insights to optimize your sales process",
       icon: <BarChart3 className="w-6 h-6" />,
-      stat: "Deep insights"
+      stat: "360° visibility"
     }
   ];
 
   const integrations = [
-    { name: "Zoom", icon: "🔗" },
-    { name: "Microsoft Teams", icon: "🔗" },
-    { name: "Google Meet", icon: "🔗" },
-    { name: "Webex", icon: "🔗" },
-    { name: "Slack", icon: "🔗" },
-    { name: "Notion", icon: "🔗" }
+    { name: "Salesforce", icon: "🔗" },
+    { name: "HubSpot", icon: "🔗" },
+    { name: "Pipedrive", icon: "🔗" },
+    { name: "Zoho CRM", icon: "🔗" },
+    { name: "Microsoft Dynamics", icon: "🔗" },
+    { name: "Custom APIs", icon: "🔗" }
   ];
 
   const pricingPlans = [
     {
-      name: "Individual",
-      price: "$29",
+      name: "Starter",
+      price: "$79",
       period: "/month",
-      description: "Perfect for freelancers and small teams",
+      description: "Perfect for small sales teams",
       features: [
-        "10 hours/month recording",
-        "Real-time transcription",
-        "Basic summaries",
-        "Action item extraction",
+        "Up to 1,000 contacts",
+        "Basic revenue forecasting",
+        "Lead scoring",
         "Email support",
-        "Standard integrations"
+        "Standard integrations",
+        "Monthly reports"
       ],
       popular: false
     },
     {
-      name: "Team",
-      price: "$99",
+      name: "Professional",
+      price: "$199",
       period: "/month",
-      description: "Ideal for growing teams",
+      description: "Ideal for growing sales teams",
       features: [
-        "100 hours/month recording",
-        "Advanced AI summaries",
-        "Meeting analytics",
-        "Team collaboration",
+        "Up to 10,000 contacts",
+        "Advanced forecasting",
+        "Churn prediction",
         "Priority support",
         "All integrations",
-        "Custom templates"
+        "Real-time analytics",
+        "Custom dashboards"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$499",
       period: "/month",
-      description: "For large organizations",
+      description: "For large sales organizations",
       features: [
-        "Unlimited recording",
+        "Unlimited contacts",
         "Premium AI features",
-        "Advanced analytics",
         "Custom AI training",
+        "Advanced analytics",
         "24/7 dedicated support",
         "White-label options",
         "API access",
@@ -108,24 +107,24 @@ const ZionAIMeetingAssistantPage = () => {
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion AI Meeting Assistant has transformed our meeting culture. We save 2 hours per week per team member with automated summaries and action tracking.",
+      name: "Michael Rodriguez",
+      company: "Tech Solutions Inc.",
+      role: "VP of Sales",
+      content: "Zion AI Sales Predictor increased our forecast accuracy from 65% to 92%. We can now make data-driven decisions with confidence.",
       rating: 5
     },
     {
-      name: "Maria Rodriguez",
-      company: "Consulting Partners",
-      role: "Project Manager",
-      content: "The real-time transcription is incredibly accurate. Our client meetings are now fully documented without manual note-taking.",
+      name: "Jennifer Lee",
+      company: "SaaS Startup",
+      role: "Sales Director",
+      content: "The lead scoring feature helped us focus on high-value prospects. Our conversion rate increased by 180% in just 3 months.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "Global Corp",
-      role: "VP Operations",
-      content: "Meeting analytics helped us identify and fix unproductive meeting patterns. ROI was immediate.",
+      name: "David Thompson",
+      company: "Enterprise Corp",
+      role: "Chief Revenue Officer",
+      content: "Churn prediction saved us $2M in lost revenue last quarter. The AI insights are incredibly accurate and actionable.",
       rating: 5
     }
   ];
@@ -133,9 +132,9 @@ const ZionAIMeetingAssistantPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Zion AI Meeting Assistant - Intelligent Meeting Management | Zion Tech Group</title>
-        <meta name="description" content="Transform your meetings with AI-powered transcription, summaries, and action tracking. Boost productivity with intelligent meeting management." />
-        <meta name="keywords" content="AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meeting tools" />
+        <title>Zion AI Sales Predictor - Intelligent Sales Forecasting | Zion Tech Group</title>
+        <meta name="description" content="Predict sales with 95% accuracy using AI-powered forecasting. Boost revenue, reduce churn, and optimize your sales process with intelligent analytics." />
+        <meta name="keywords" content="AI sales forecasting, sales prediction, lead scoring, churn prediction, sales analytics, revenue forecasting, CRM integration" />
       </Helmet>
 
       {/* Hero Section */}
@@ -148,18 +147,18 @@ const ZionAIMeetingAssistantPage = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Meeting Intelligence</span>
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Sales Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion AI Meeting Assistant
+              Zion AI Sales Predictor
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your meetings with intelligent AI assistance. Get real-time transcription, 
-            smart summaries, and automated action tracking for maximum productivity.
+            Predict sales with 95% accuracy using advanced AI. Boost revenue, reduce churn, 
+            and optimize your sales process with intelligent forecasting and analytics.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -183,31 +182,31 @@ const ZionAIMeetingAssistantPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Mic className="w-6 h-6 text-cyan-400" />
+                <TrendingUp className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">99%</div>
-              <div className="text-gray-300 text-xs md:text-sm">Transcription Accuracy</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">95%</div>
+              <div className="text-gray-300 text-xs md:text-sm">Forecast Accuracy</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Clock className="w-6 h-6 text-cyan-400" />
+                <Target className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-300 text-xs md:text-sm">Languages</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">3x</div>
+              <div className="text-gray-300 text-xs md:text-sm">Better Conversion</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">10K+</div>
-              <div className="text-gray-300 text-xs md:text-sm">Active Users</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">40%</div>
+              <div className="text-gray-300 text-xs md:text-sm">Churn Reduction</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-6 h-6 text-cyan-400" />
+                <DollarSign className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">2hrs</div>
-              <div className="text-gray-300 text-xs md:text-sm">Time Saved/Week</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">$2M+</div>
+              <div className="text-gray-300 text-xs md:text-sm">Revenue Saved</div>
             </div>
           </div>
         </div>
@@ -218,10 +217,10 @@ const ZionAIMeetingAssistantPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Intelligent Meeting Features
+              AI-Powered Sales Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Advanced AI capabilities to make every meeting more productive and actionable
+              Advanced AI capabilities to optimize every aspect of your sales process
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -251,10 +250,10 @@ const ZionAIMeetingAssistantPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Seamless Integrations
+              Seamless CRM Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Works with your favorite meeting and productivity tools
+              Works with your existing CRM and sales tools
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
@@ -281,7 +280,7 @@ const ZionAIMeetingAssistantPage = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options for teams of all sizes
+              Flexible pricing options for sales teams of all sizes
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -341,10 +340,10 @@ const ZionAIMeetingAssistantPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Teams Worldwide
+              Trusted by Sales Teams Worldwide
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about Zion AI Meeting Assistant
+              See what our customers say about Zion AI Sales Predictor
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -373,11 +372,11 @@ const ZionAIMeetingAssistantPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Meetings?
+            Ready to Predict Your Sales Success?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of teams already using Zion AI Meeting Assistant to make 
-            their meetings more productive and actionable.
+            Join thousands of sales teams already using Zion AI Sales Predictor to boost 
+            their revenue and optimize their sales process.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -402,4 +401,4 @@ const ZionAIMeetingAssistantPage = () => {
   );
 };
 
-export default ZionAIMeetingAssistantPage;
+export default ZionAISalesPredictorPage;

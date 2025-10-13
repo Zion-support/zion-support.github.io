@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -18,7 +13,10 @@ import {
   Sparkles,
   Star,
   CheckCircle,
-  TrendingUp
+  TrendingUp,
+  FileText,
+  Video,
+  Mail
 } from 'lucide-react';
 
 const MicroSaasPage = () => {
@@ -78,6 +76,46 @@ const MicroSaasPage = () => {
       color: "from-yellow-500 to-orange-500",
       link: "/zion-ai-project-manager-pro",
       features: ["Task Automation", "Resource Optimization", "Progress Tracking", "Team Collaboration"]
+    },
+    {
+      name: "Zion AI Document Processor",
+      description: "Transform your document workflow with intelligent AI processing. Extract, classify, and analyze documents with 99.9% accuracy",
+      price: "From $49/month",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      link: "/zion-ai-document-processor",
+      features: ["Intelligent OCR", "Auto-Classification", "Data Extraction", "Batch Processing"],
+      popular: true
+    },
+    {
+      name: "Zion AI Meeting Assistant",
+      description: "Transform your meetings with intelligent AI assistance. Get real-time transcription, smart summaries, and automated action tracking",
+      price: "From $29/month",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-green-500 to-teal-500",
+      link: "/zion-ai-meeting-assistant",
+      features: ["Real-time Transcription", "Smart Summaries", "Action Item Tracking", "Meeting Analytics"],
+      popular: true
+    },
+    {
+      name: "Zion AI Email Optimizer",
+      description: "Boost email performance with AI-powered optimization. Increase open rates, click-through rates, and conversions",
+      price: "From $39/month",
+      icon: <Mail className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      link: "/zion-ai-email-optimizer",
+      features: ["AI Subject Lines", "Content Optimization", "Send Time Optimization", "A/B Testing"],
+      popular: true
+    },
+    {
+      name: "Zion AI Sales Predictor",
+      description: "Predict sales with 95% accuracy using advanced AI. Boost revenue, reduce churn, and optimize your sales process",
+      price: "From $79/month",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-amber-500 to-yellow-500",
+      link: "/zion-ai-sales-predictor",
+      features: ["Revenue Forecasting", "Lead Scoring", "Churn Prediction", "Sales Analytics"],
+      popular: true
     }
   ];
 
@@ -228,7 +266,3 @@ const MicroSaasPage = () => {
 };
 
 export default MicroSaasPage;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
->>>>>>> main

@@ -2,88 +2,87 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
-  Mic, 
+  Mail, 
+  Zap, 
   CheckCircle, 
   ArrowRight, 
   Sparkles, 
   Star, 
-  Clock, 
+  TrendingUp, 
   Users, 
   Brain, 
-  FileText,
   BarChart3,
-  Zap,
+  Target,
   Award,
-  TrendingUp
+  Clock
 } from 'lucide-react';
 
-const ZionAIMeetingAssistantPage = () => {
+const ZionAIEmailOptimizerPage = () => {
   const features = [
     {
-      title: "Real-time Transcription",
-      description: "AI-powered live transcription with 99% accuracy in 50+ languages",
-      icon: <Mic className="w-6 h-6" />,
-      stat: "99% accuracy"
+      title: "AI Subject Line Generator",
+      description: "Generate compelling subject lines that increase open rates by up to 40%",
+      icon: <Mail className="w-6 h-6" />,
+      stat: "40% higher opens"
     },
     {
-      title: "Smart Summaries",
-      description: "Automatically generate meeting summaries with key points and action items",
-      icon: <FileText className="w-6 h-6" />,
-      stat: "5 min summaries"
+      title: "Content Optimization",
+      description: "AI-powered content suggestions to improve engagement and conversions",
+      icon: <Brain className="w-6 h-6" />,
+      stat: "35% better CTR"
     },
     {
-      title: "Action Item Tracking",
-      description: "Extract and track action items with automatic follow-up reminders",
-      icon: <CheckCircle className="w-6 h-6" />,
-      stat: "Auto tracking"
+      title: "Send Time Optimization",
+      description: "Automatically determine the best time to send emails for each recipient",
+      icon: <Clock className="w-6 h-6" />,
+      stat: "25% more engagement"
     },
     {
-      title: "Meeting Analytics",
-      description: "Insights on speaking time, participation, and meeting effectiveness",
-      icon: <BarChart3 className="w-6 h-6" />,
-      stat: "Deep insights"
+      title: "A/B Testing Automation",
+      description: "Automated testing of subject lines, content, and send times",
+      icon: <Target className="w-6 h-6" />,
+      stat: "Auto optimization"
     }
   ];
 
   const integrations = [
-    { name: "Zoom", icon: "🔗" },
-    { name: "Microsoft Teams", icon: "🔗" },
-    { name: "Google Meet", icon: "🔗" },
-    { name: "Webex", icon: "🔗" },
-    { name: "Slack", icon: "🔗" },
-    { name: "Notion", icon: "🔗" }
+    { name: "Gmail", icon: "📧" },
+    { name: "Outlook", icon: "📧" },
+    { name: "Mailchimp", icon: "📧" },
+    { name: "Constant Contact", icon: "📧" },
+    { name: "HubSpot", icon: "📧" },
+    { name: "Salesforce", icon: "📧" }
   ];
 
   const pricingPlans = [
     {
-      name: "Individual",
-      price: "$29",
+      name: "Starter",
+      price: "$39",
       period: "/month",
-      description: "Perfect for freelancers and small teams",
+      description: "Perfect for small businesses",
       features: [
-        "10 hours/month recording",
-        "Real-time transcription",
-        "Basic summaries",
-        "Action item extraction",
+        "1,000 emails/month",
+        "Basic AI optimization",
+        "Subject line generator",
+        "Send time optimization",
         "Email support",
-        "Standard integrations"
+        "Standard templates"
       ],
       popular: false
     },
     {
-      name: "Team",
+      name: "Professional",
       price: "$99",
       period: "/month",
-      description: "Ideal for growing teams",
+      description: "Ideal for growing companies",
       features: [
-        "100 hours/month recording",
-        "Advanced AI summaries",
-        "Meeting analytics",
-        "Team collaboration",
+        "10,000 emails/month",
+        "Advanced AI features",
+        "Content optimization",
+        "A/B testing automation",
         "Priority support",
         "All integrations",
-        "Custom templates"
+        "Analytics dashboard"
       ],
       popular: true
     },
@@ -93,10 +92,10 @@ const ZionAIMeetingAssistantPage = () => {
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited recording",
+        "Unlimited emails",
         "Premium AI features",
-        "Advanced analytics",
         "Custom AI training",
+        "Advanced analytics",
         "24/7 dedicated support",
         "White-label options",
         "API access",
@@ -108,24 +107,24 @@ const ZionAIMeetingAssistantPage = () => {
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion AI Meeting Assistant has transformed our meeting culture. We save 2 hours per week per team member with automated summaries and action tracking.",
+      name: "Lisa Chen",
+      company: "E-commerce Solutions",
+      role: "Marketing Director",
+      content: "Zion AI Email Optimizer increased our email open rates from 18% to 32%. The AI suggestions are incredibly accurate and actionable.",
       rating: 5
     },
     {
-      name: "Maria Rodriguez",
-      company: "Consulting Partners",
-      role: "Project Manager",
-      content: "The real-time transcription is incredibly accurate. Our client meetings are now fully documented without manual note-taking.",
+      name: "Mark Johnson",
+      company: "SaaS Startup",
+      role: "Growth Manager",
+      content: "The send time optimization feature alone increased our click-through rates by 28%. ROI was achieved in the first month.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "Global Corp",
-      role: "VP Operations",
-      content: "Meeting analytics helped us identify and fix unproductive meeting patterns. ROI was immediate.",
+      name: "Sarah Davis",
+      company: "Digital Agency",
+      role: "Email Marketing Specialist",
+      content: "The A/B testing automation saves us hours every week. Our email campaigns are now consistently optimized.",
       rating: 5
     }
   ];
@@ -133,9 +132,9 @@ const ZionAIMeetingAssistantPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Zion AI Meeting Assistant - Intelligent Meeting Management | Zion Tech Group</title>
-        <meta name="description" content="Transform your meetings with AI-powered transcription, summaries, and action tracking. Boost productivity with intelligent meeting management." />
-        <meta name="keywords" content="AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meeting tools" />
+        <title>Zion AI Email Optimizer - Intelligent Email Marketing | Zion Tech Group</title>
+        <meta name="description" content="Boost email performance with AI-powered optimization. Increase open rates, click-through rates, and conversions with intelligent email marketing tools." />
+        <meta name="keywords" content="AI email optimization, email marketing, subject line generator, email automation, email analytics, email A/B testing" />
       </Helmet>
 
       {/* Hero Section */}
@@ -148,18 +147,18 @@ const ZionAIMeetingAssistantPage = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Meeting Intelligence</span>
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Email Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion AI Meeting Assistant
+              Zion AI Email Optimizer
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your meetings with intelligent AI assistance. Get real-time transcription, 
-            smart summaries, and automated action tracking for maximum productivity.
+            Transform your email marketing with AI-powered optimization. Increase open rates, 
+            click-through rates, and conversions with intelligent email intelligence.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -183,31 +182,31 @@ const ZionAIMeetingAssistantPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Mic className="w-6 h-6 text-cyan-400" />
+                <TrendingUp className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">99%</div>
-              <div className="text-gray-300 text-xs md:text-sm">Transcription Accuracy</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">40%</div>
+              <div className="text-gray-300 text-xs md:text-sm">Higher Open Rates</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Clock className="w-6 h-6 text-cyan-400" />
+                <Target className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-300 text-xs md:text-sm">Languages</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">35%</div>
+              <div className="text-gray-300 text-xs md:text-sm">Better CTR</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">10K+</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">15K+</div>
               <div className="text-gray-300 text-xs md:text-sm">Active Users</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Zap className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">2hrs</div>
-              <div className="text-gray-300 text-xs md:text-sm">Time Saved/Week</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">50M+</div>
+              <div className="text-gray-300 text-xs md:text-sm">Emails Optimized</div>
             </div>
           </div>
         </div>
@@ -218,10 +217,10 @@ const ZionAIMeetingAssistantPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Intelligent Meeting Features
+              AI-Powered Email Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Advanced AI capabilities to make every meeting more productive and actionable
+              Advanced AI capabilities to optimize every aspect of your email marketing
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -254,7 +253,7 @@ const ZionAIMeetingAssistantPage = () => {
               Seamless Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Works with your favorite meeting and productivity tools
+              Works with your favorite email marketing platforms
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
@@ -281,7 +280,7 @@ const ZionAIMeetingAssistantPage = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options for teams of all sizes
+              Flexible pricing options for businesses of all sizes
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -341,10 +340,10 @@ const ZionAIMeetingAssistantPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Teams Worldwide
+              Trusted by Marketers Worldwide
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about Zion AI Meeting Assistant
+              See what our customers say about Zion AI Email Optimizer
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -373,11 +372,11 @@ const ZionAIMeetingAssistantPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Meetings?
+            Ready to Optimize Your Email Marketing?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of teams already using Zion AI Meeting Assistant to make 
-            their meetings more productive and actionable.
+            Join thousands of marketers already using Zion AI Email Optimizer to boost 
+            their email performance and drive better results.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -402,4 +401,4 @@ const ZionAIMeetingAssistantPage = () => {
   );
 };
 
-export default ZionAIMeetingAssistantPage;
+export default ZionAIEmailOptimizerPage;

@@ -14,15 +14,8 @@ import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import EnhancedSEO from "./app/components/EnhancedSEO";
-=======
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
->>>>>>> main
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -103,6 +96,12 @@ const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translato
 const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
+
+// New Innovative Micro SAAS Services
+const ZionAIDocumentProcessorPage = React.lazy(() => import("./app/zion-ai-document-processor/page"));
+const ZionAIMeetingAssistantPage = React.lazy(() => import("./app/zion-ai-meeting-assistant/page"));
+const ZionAIEmailOptimizerPage = React.lazy(() => import("./app/zion-ai-email-optimizer/page"));
+const ZionAISalesPredictorPage = React.lazy(() => import("./app/zion-ai-sales-predictor/page"));
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -226,6 +225,12 @@ function App() {
                             <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+
+                            {/* New Innovative Micro SAAS Services Routes */}
+                            <Route path="/zion-ai-document-processor" element={<ZionAIDocumentProcessorPage />} />
+                            <Route path="/zion-ai-meeting-assistant" element={<ZionAIMeetingAssistantPage />} />
+                            <Route path="/zion-ai-email-optimizer" element={<ZionAIEmailOptimizerPage />} />
+                            <Route path="/zion-ai-sales-predictor" element={<ZionAISalesPredictorPage />} />
                           </Routes>
                         </Suspense>
                           </main>

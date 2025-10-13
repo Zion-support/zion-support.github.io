@@ -6,551 +6,22 @@ import {
   Brain, 
   Shield, 
   Zap, 
-<<<<<<< HEAD
   Globe, 
-  ArrowRight, 
-  Star, 
-  Users, 
-  Award, 
-  BarChart3, 
-  Cloud, 
-  Sparkles, 
-  Mail, 
-  Smartphone, 
-  Monitor,
-  Phone,
-  Code,
-  Database,
   ChevronDown,
-  SidebarIcon,
-  Package,
-  Heart,
-  Receipt,
-  TrendingUp,
-  Cpu,
-  Network,
+  Sparkles,
+  Users,
+  BarChart3,
+  Cloud,
   Target,
   Calendar,
-  Clock,
   FileText,
-  Bot,
-  Lock,
-  Settings,
-  Wifi,
-  Mobile,
-  Laptop,
-  Server,
-  HardDrive,
-  Terminal,
-  GitBranch,
-  Layers,
-  Workflow,
-  MessageSquare,
-  Search,
-  Filter,
-  Download,
-  Upload,
-  Eye,
-  Activity,
-  Trending,
-  PieChart,
-  BarChart,
-  LineChart,
-  Globe2,
-  NetworkIcon,
-  Processor,
-  MemoryStick,
-  Storage,
-  DataIcon,
-  Security,
-  Privacy,
-  Key,
-  Fingerprint,
-  Scan,
-  AlertTriangle,
-  CheckCircle,
-  XCircle,
-  Info,
-  HelpCircle,
-  BookOpen,
   Video,
-  Image,
-  Music,
-  File,
-  Folder,
-  Archive,
-  Trash2,
-  Edit,
-  Copy,
-  Share,
-  ExternalLink,
-  Maximize,
-  Minimize,
-  RotateCcw,
-  Save,
-  Play,
-  Pause,
-  Stop,
-  SkipForward,
-  SkipBack,
-  Volume2,
-  VolumeX,
-  Mic,
-  MicOff,
-  Camera,
-  CameraOff,
-  VideoIcon,
-  VideoOff,
-  PhoneIcon,
-  PhoneOff,
-  MessageCircle,
-  Send,
-  Reply,
-  Forward,
-  Flag,
-  Bookmark,
-  Like,
-  ThumbsUp,
-  ThumbsDown,
-  Smile,
-  Frown,
-  Meh,
-  Laugh,
-  Angry,
-  Surprised,
-  Confused,
-  Wink,
-  Kiss,
-  Hug,
-  Clap,
-  Wave,
-  ThumbUp,
-  ThumbDown,
-  StarIcon,
-  StarOff,
-  Plus,
-  Minus,
-  Times,
-  Divide,
-  Equals,
-  Percent,
-  DollarSign,
-  Euro,
-  Pound,
-  Yen,
-  Bitcoin,
-  CreditCard,
-  Wallet,
-  ShoppingCart,
-  ShoppingBag,
-  Tag,
-  Tags,
-  PriceTag,
-  ReceiptIcon,
-  Calculator,
-  CalendarIcon,
-  ClockIcon,
-  Timer,
-  Stopwatch,
-  Hourglass,
-  DateIcon,
-  Sun,
-  Moon,
-  CloudIcon,
-  CloudRain,
-  CloudSnow,
-  CloudLightning,
-  Wind,
-  Thermometer,
-  Droplets,
-  Umbrella,
-  Sunny,
-  MoonIcon,
-  Sunrise,
-  Sunset,
-  Compass,
-  Map,
-  MapPin,
-  Navigation as NavIcon,
-  Route,
-  Car,
-  Bus,
-  Train,
-  Plane,
-  Ship,
-  Bike,
-  Walking,
-  Running,
-  Swimming,
-  Skiing,
-  Snowboarding,
-  Surfing,
-  Climbing,
-  Hiking,
-  Camping,
-  Backpack,
-  Tent,
-  SleepingBag,
-  Flashlight,
-  Candle,
-  Fire,
-  Water,
-  Tree,
-  Mountain,
-  Home,
-  Building,
-  Factory,
-  Store,
-  Hospital,
-  School,
-  Church,
-  Bank,
-  PostOffice,
-  Library,
-  Museum,
-  Theater,
-  Stadium,
-  Park,
-  Beach,
-  Forest,
-  Desert,
-  Ocean,
-  River,
-  Lake,
-  Island,
-  Bridge,
-  Tower,
-  Castle,
-  Palace,
-  Temple,
-  Monument,
-  Statue,
-  Fountain,
-  Garden,
-  Farm,
-  Barn,
-  Windmill,
-  Lighthouse,
-  Observatory,
-  Laboratory,
-  Office,
-  Desk,
-  Chair,
-  Table,
-  Bed,
-  Sofa,
-  Lamp,
-  Lightbulb,
-  CandleIcon,
-  FlashlightIcon,
-  Battery,
-  Plug,
-  Power,
-  WifiIcon,
-  Bluetooth,
-  Radio,
-  Tv,
-  Computer,
-  LaptopIcon,
-  MonitorIcon,
-  Keyboard,
-  Mouse,
-  Headphones,
-  Speaker,
-  Microphone,
-  CameraIcon,
-  VideoIcon2,
-  PhoneIcon2,
-  SmartphoneIcon,
-  Tablet,
-  Watch,
-  Gamepad2,
-  Joystick,
-  Dice1,
-  Dice2,
-  Dice3,
-  Dice4,
-  Dice5,
-  Dice6,
-  Puzzle,
-  Rubik,
-  Chess,
-  Cards,
-  Spade,
-  HeartIcon,
-  Diamond,
-  Club,
-  Crown,
-  Gem,
-  Ring,
-  Necklace,
-  Bracelet,
-  Earrings,
-  Glasses,
-  Sunglasses,
-  Mask,
-  Hat,
-  Cap,
-  Helmet,
-  Shirt,
-  Dress,
-  Pants,
-  Shorts,
-  Skirt,
-  Jacket,
-  Coat,
-  Sweater,
-  Hoodie,
-  Vest,
-  Tie,
-  Belt,
-  Sock,
-  Shoe,
-  Boot,
-  Sandal,
-  Sneaker,
-  HighHeel,
-  FlipFlop,
-  Slipper,
-  Glove,
-  Mittens,
-  Scarf,
-  Shawl,
-  Poncho,
-  Kimono,
-  Sari,
-  Kilt,
-  Toga,
-  Uniform,
-  Suit,
-  Tuxedo,
-  Gown,
-  Robe,
-  Pajamas,
-  Underwear,
-  Bra,
-  Panties,
-  Boxers,
-  Briefs,
-  Thong,
-  Bikini,
-  Swimsuit,
-  Wetsuit,
-  DivingSuit,
-  SpaceSuit,
-  Armor,
-  Chainmail,
-  Plate,
-  ShieldIcon,
-  Sword,
-  Dagger,
-  Axe,
-  Bow,
-  Arrow,
-  Spear,
-  Mace,
-  Flail,
-  Whip,
-  Staff,
-  Wand,
-  Scepter,
-  CrownIcon,
-  Tiara,
-  Diadem,
-  Circlet,
-  Headband,
-  Hairpin,
-  Comb,
-  Brush,
-  Mirror,
-  Perfume,
-  Lipstick,
-  Mascara,
-  Eyeshadow,
-  Blush,
-  Foundation,
-  Concealer,
-  Powder,
-  Primer,
-  Serum,
-  Moisturizer,
-  Sunscreen,
-  Cleanser,
-  Toner,
-  Exfoliant,
-  FaceMask,
-  Scrub,
-  Peel,
-  Treatment,
-  Therapy,
-  Massage,
-  Acupuncture,
-  Chiropractic,
-  Physical,
-  Mental,
-  Emotional,
-  Spiritual,
-  Psychological,
-  Psychiatric,
-  Neurological,
-  Cardiovascular,
-  Respiratory,
-  Digestive,
-  Endocrine,
-  Immune,
-  Reproductive,
-  Urinary,
-  Muscular,
-  Skeletal,
-  Nervous,
-  Circulatory,
-  Lymphatic,
-  Integumentary,
-  Sensory,
-  Motor,
-  Cognitive,
-  Behavioral,
-  Social,
-  Cultural,
-  Educational,
-  Professional,
-  Personal,
-  Private,
-  Public,
-  Corporate,
-  Government,
-  Military,
-  Law,
-  Medicine,
-  Science,
-  Technology,
-  Engineering,
-  Mathematics,
-  Physics,
-  Chemistry,
-  Biology,
-  Geology,
-  Astronomy,
-  Meteorology,
-  Oceanography,
-  Ecology,
-  Environmental,
-  Conservation,
-  Sustainability,
-  Renewable,
-  Green,
-  Clean,
-  Pure,
-  Natural,
-  Organic,
-  Synthetic,
-  Artificial,
-  Digital,
-  Virtual,
-  Augmented,
-  Mixed,
-  Extended,
-  Immersive,
-  Interactive,
-  Responsive,
-  Adaptive,
-  Intelligent,
-  Smart,
-  Automated,
-  Robotic,
-  Autonomous,
-  SelfDriving,
-  Electric,
-  Hybrid,
-  Solar,
-  Wind,
-  Hydro,
-  Nuclear,
-  Fossil,
-  Coal,
-  Oil,
-  Gas,
-  Biomass,
-  Geothermal,
-  Tidal,
-  Wave,
-  Fusion,
-  Fission,
-  Plasma,
-  Ion,
-  Electron,
-  Proton,
-  Neutron,
-  Atom,
-  Molecule,
-  Compound,
-  Element,
-  Metal,
-  Nonmetal,
-  Metalloid,
-  Alloy,
-  Crystal,
-  Mineral,
-  Rock,
-  Stone,
-  GemIcon,
-  Pearl,
-  DiamondIcon,
-  Ruby,
-  Sapphire,
-  Emerald,
-  Topaz,
-  Amethyst,
-  Citrine,
-  Garnet,
-  Opal,
-  Jade,
-  Turquoise,
-  Lapis,
-  Malachite,
-  Agate,
-  Jasper,
-  Onyx,
-  Obsidian,
-  Quartz,
-  Feldspar,
-  Mica,
-  Talc,
-  Gypsum,
-  Calcite,
-  Aragonite,
-  Dolomite,
-  Magnesite,
-  Siderite,
-  Rhodochrosite,
-  Smithsonite,
-  Azurite,
-  Chrysocolla,
-  Dioptase,
-  Wulfenite,
-  Vanadinite,
-  Pyromorphite,
-  Mimetite,
-  Crocoite,
-  WulfeniteIcon,
-  VanadiniteIcon,
-  PyromorphiteIcon,
-  MimetiteIcon,
-  CrocoiteIcon,
-  WulfeniteIcon2,
-  VanadiniteIcon2,
-  PyromorphiteIcon2,
-  MimetiteIcon2,
-  CrocoiteIcon2
-=======
-<<<<<<< HEAD
-  Globe,
-  ChevronDown,
-=======
-  Globe, 
-  ChevronDown
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
->>>>>>> main
+  Mail,
+  TrendingUp,
+  Settings,
+  Package,
+  Wifi,
+  ArrowRight
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -592,313 +63,211 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
 
   const isActive = (path: string) => location.pathname === path;
 
+  const navigationItems = [
+    { name: 'Home', path: '/', icon: <Zap className="w-4 h-4" /> },
+    { name: 'About', path: '/about', icon: <Users className="w-4 h-4" /> },
+    { 
+      name: 'Services', 
+      path: '/services', 
+      icon: <Settings className="w-4 h-4" />,
+      hasDropdown: true 
+    },
+    { name: 'Contact', path: '/contact', icon: <Mail className="w-4 h-4" /> },
+    { name: 'Blog', path: '/blog', icon: <FileText className="w-4 h-4" /> }
+  ];
+
   const serviceDropdownItems = [
     {
       name: 'AI Analytics',
       path: '/ai-analytics',
-      description: 'Advanced data analytics and insights'
+      description: 'Advanced data analytics and insights',
+      icon: <BarChart3 className="w-4 h-4" />
     },
     {
       name: 'AI Cybersecurity',
       path: '/ai-cybersecurity',
-      description: 'AI-powered security solutions'
+      description: 'AI-powered security solutions',
+      icon: <Shield className="w-4 h-4" />
     },
     {
       name: 'Cloud Migration',
       path: '/cloud-migration',
-      description: 'Seamless cloud transition'
+      description: 'Seamless cloud transition',
+      icon: <Cloud className="w-4 h-4" />
     },
     {
       name: 'Web Development',
       path: '/web-development',
-      description: 'Custom web applications'
+      description: 'Custom web applications',
+      icon: <Globe className="w-4 h-4" />
     },
     {
       name: 'DevOps',
       path: '/devops',
-      description: 'CI/CD and automation'
+      description: 'CI/CD and automation',
+      icon: <Settings className="w-4 h-4" />
     },
     {
       name: 'IT Consulting',
       path: '/it-consulting',
-      description: 'Strategic technology guidance'
+      description: 'Strategic technology guidance',
+      icon: <Brain className="w-4 h-4" />
+    }
+  ];
+
+  const microSaasItems = [
+    {
+      name: 'Zion AI Document Processor',
+      path: '/zion-ai-document-processor',
+      description: 'Intelligent document processing with 99.9% accuracy',
+      icon: <FileText className="w-4 h-4" />
+    },
+    {
+      name: 'Zion AI Meeting Assistant',
+      path: '/zion-ai-meeting-assistant',
+      description: 'AI-powered meeting transcription and summaries',
+      icon: <Video className="w-4 h-4" />
+    },
+    {
+      name: 'Zion AI Email Optimizer',
+      path: '/zion-ai-email-optimizer',
+      description: 'Boost email performance with AI optimization',
+      icon: <Mail className="w-4 h-4" />
+    },
+    {
+      name: 'Zion AI Sales Predictor',
+      path: '/zion-ai-sales-predictor',
+      description: 'Predict sales with 95% accuracy using AI',
+      icon: <TrendingUp className="w-4 h-4" />
     }
   ];
 
   return (
-    <nav className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20 shadow-2xl">
+    <nav className="relative bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 border-b border-purple-500/20 shadow-2xl backdrop-blur-lg">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-blue-600/10 to-purple-600/10 animate-pulse"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="flex items-center space-x-2 group">
+            <Link to="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-all duration-300">
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg">
                   <Zap className="w-6 h-6 text-white" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg blur opacity-30 group-hover:opacity-60 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg blur opacity-30 group-hover:opacity-60 transition-opacity duration-300"></div>
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-white to-purple-200 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Zion Tech Group
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
           <div className="hidden lg:block">
             <div className="ml-10 flex items-baseline space-x-8">
-              {/* Home */}
-              <Link
-                to="/"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                  isActive('/') 
-                    ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
-                    : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
-                }`}
-              >
-                Home
-              </Link>
-
-              {/* About */}
-              <Link
-                to="/about"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                  isActive('/about') 
-                    ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
-                    : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
-                }`}
-              >
-                About
-              </Link>
-
-              {/* Services Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={toggleServices}
-                  className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-purple-600/10 transition-all duration-300"
-                >
-                  Services
-                  <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-lg shadow-2xl border border-purple-500/20 z-50">
-                    <div className="py-2">
-                      {/* AI Services */}
-                      <div className="px-4 py-2">
-                        <button
-                          onClick={toggleAIServices}
-                          className="flex items-center w-full text-left text-sm font-medium text-purple-200 hover:text-white transition-colors duration-200"
-                        >
-                          <Brain className="w-4 h-4 mr-2" />
-                          AI Services
-                          <ChevronDown className={`ml-auto h-4 w-4 transition-transform duration-300 ${isAIServicesOpen ? 'rotate-180' : ''}`} />
-                        </button>
-                        {isAIServicesOpen && (
-                          <div className="ml-6 mt-2 space-y-1">
-                            <Link to="/ai-analytics" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              AI Analytics Dashboard
-                            </Link>
-                            <Link to="/ai-content-generation" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              AI Content Generation
-                            </Link>
-                            <Link to="/ai-customer-support" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              AI Customer Support
-                            </Link>
-                            <Link to="/ai-cybersecurity" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              AI Cybersecurity
-                            </Link>
-                            <Link to="/ai-data-analytics" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              AI Data Analytics
-                            </Link>
-                            <Link to="/ai-workflow-automation" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              AI Workflow Automation
-                            </Link>
-                          </div>
-                        )}
-                      </div>
-
-                      {/* IT Services */}
-                      <div className="px-4 py-2">
-                        <button
-                          onClick={toggleITServices}
-                          className="flex items-center w-full text-left text-sm font-medium text-purple-200 hover:text-white transition-colors duration-200"
-                        >
-                          <Settings className="w-4 h-4 mr-2" />
-                          IT Services
-                          <ChevronDown className={`ml-auto h-4 w-4 transition-transform duration-300 ${isITServicesOpen ? 'rotate-180' : ''}`} />
-                        </button>
-                        {isITServicesOpen && (
-                          <div className="ml-6 mt-2 space-y-1">
-                            <Link to="/cloud-infrastructure" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Cloud Infrastructure
-                            </Link>
-                            <Link to="/cybersecurity" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Cybersecurity Solutions
-                            </Link>
-                            <Link to="/data-management" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Data Management
-                            </Link>
-                            <Link to="/network-solutions" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Network Solutions
-                            </Link>
-                            <Link to="/it-consulting" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              IT Consulting
-                            </Link>
-                            <Link to="/system-integration" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              System Integration
-                            </Link>
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Micro SAAS */}
-                      <div className="px-4 py-2">
-                        <button
-                          onClick={toggleMicroSaas}
-                          className="flex items-center w-full text-left text-sm font-medium text-purple-200 hover:text-white transition-colors duration-200"
-                        >
-                          <Package className="w-4 h-4 mr-2" />
-                          Micro SAAS
-                          <ChevronDown className={`ml-auto h-4 w-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
-                        </button>
-                        {isMicroSaasOpen && (
-                          <div className="ml-6 mt-2 space-y-1">
-                            <Link to="/project-management-tool" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Project Management Tool
-                            </Link>
-                            <Link to="/team-collaboration" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Team Collaboration
-                            </Link>
-                            <Link to="/analytics-dashboard" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Analytics Dashboard
-                            </Link>
-                            <Link to="/customer-relationship" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Customer Relationship
-                            </Link>
-                            <Link to="/inventory-management" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Inventory Management
-                            </Link>
-                            <Link to="/financial-tracking" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              Financial Tracking
-                            </Link>
-                          </div>
-                        )}
-                      </div>
-
-                      {/* 5G Solutions */}
-                      <div className="px-4 py-2">
-                        <button
-                          onClick={toggle5GServices}
-                          className="flex items-center w-full text-left text-sm font-medium text-purple-200 hover:text-white transition-colors duration-200"
-                        >
-                          <Wifi className="w-4 h-4 mr-2" />
-                          5G Solutions
-                          <ChevronDown className={`ml-auto h-4 w-4 transition-transform duration-300 ${is5GServicesOpen ? 'rotate-180' : ''}`} />
-                        </button>
-                        {is5GServicesOpen && (
-                          <div className="ml-6 mt-2 space-y-1">
-                            <Link to="/5g-network-infrastructure" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              5G Network Infrastructure
-                            </Link>
-                            <Link to="/5g-iot-solutions" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              5G IoT Solutions
-                            </Link>
-                            <Link to="/5g-smart-city" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              5G Smart City
-                            </Link>
-                            <Link to="/5g-edge-computing" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              5G Edge Computing
-                            </Link>
-                            <Link to="/5g-mobile-apps" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              5G Mobile Applications
-                            </Link>
-                            <Link to="/5g-data-analytics" className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-purple-600/20 rounded transition-colors duration-200">
-                              5G Data Analytics
-                            </Link>
-                          </div>
-                        )}
-=======
-          <div className="hidden md:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.path}
-                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive(item.path)
-                      ? 'text-cyan-400 bg-cyan-500/10'
-                      : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
-                  }`}
-                >
-                  {item.icon}
-                  <span>{item.name}</span>
+              {navigationItems.map((item) => (
+                <div key={item.name} className="relative group">
+                  <Link
+                    to={item.path}
+                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
+                      isActive(item.path)
+                        ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-500/30'
+                        : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
+                    }`}
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
+                    {item.hasDropdown && (
+                      <ChevronDown className="w-4 h-4" />
+                    )}
+                  </Link>
+                  
+                  {/* Services Dropdown */}
                   {item.hasDropdown && (
-                    <ChevronDown className="w-4 h-4" />
-                  )}
-                </Link>
-                
-                {/* Services Dropdown */}
-                {item.hasDropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                    <div className="p-4">
-                      <h3 className="text-white font-semibold mb-3 text-sm">Popular Services</h3>
-                      <div className="grid grid-cols-1 gap-2">
-                        {serviceDropdownItems.map((service) => (
+                    <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-lg border border-cyan-500/20 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="p-6">
+                        <div className="flex items-center mb-4">
+                          <Sparkles className="w-5 h-5 text-cyan-400 mr-2" />
+                          <h3 className="text-white font-semibold text-lg">Our Services</h3>
+                        </div>
+                        
+                        {/* AI Services Section */}
+                        <div className="mb-6">
+                          <div className="flex items-center mb-3">
+                            <Brain className="w-4 h-4 text-purple-400 mr-2" />
+                            <h4 className="text-purple-300 font-medium text-sm uppercase tracking-wide">AI Services</h4>
+                          </div>
+                          <div className="grid grid-cols-1 gap-2">
+                            {serviceDropdownItems.slice(0, 3).map((service) => (
+                              <Link
+                                key={service.name}
+                                to={service.path}
+                                className="flex items-center p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 group"
+                              >
+                                <div className="w-8 h-8 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                                  {service.icon}
+                                </div>
+                                <div className="flex-1">
+                                  <div className="font-medium text-white group-hover:text-cyan-400 transition-colors text-sm">
+                                    {service.name}
+                                  </div>
+                                  <div className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
+                                    {service.description}
+                                  </div>
+                                </div>
+                                <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+
+                        {/* Micro SAAS Section */}
+                        <div className="mb-4">
+                          <div className="flex items-center mb-3">
+                            <Package className="w-4 h-4 text-green-400 mr-2" />
+                            <h4 className="text-green-300 font-medium text-sm uppercase tracking-wide">Micro SAAS</h4>
+                          </div>
+                          <div className="grid grid-cols-1 gap-2">
+                            {microSaasItems.slice(0, 2).map((saas) => (
+                              <Link
+                                key={saas.name}
+                                to={saas.path}
+                                className="flex items-center p-3 rounded-lg hover:bg-green-500/10 transition-all duration-200 group"
+                              >
+                                <div className="w-8 h-8 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                                  {saas.icon}
+                                </div>
+                                <div className="flex-1">
+                                  <div className="font-medium text-white group-hover:text-green-400 transition-colors text-sm">
+                                    {saas.name}
+                                  </div>
+                                  <div className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
+                                    {saas.description}
+                                  </div>
+                                </div>
+                                <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-green-400 group-hover:translate-x-1 transition-all" />
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+
+                        <div className="pt-4 border-t border-cyan-500/20">
                           <Link
-                            key={service.name}
-                            to={service.path}
-                            className="block p-3 rounded-lg hover:bg-cyan-500/10 transition-colors group"
+                            to="/services"
+                            className="flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
                           >
-                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                              {service.name}
-                            </div>
-                            <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                              {service.description}
-                            </div>
+                            View All Services
+                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                           </Link>
-                        ))}
-                      </div>
-                      <div className="mt-3 pt-3 border-t border-cyan-500/20">
-                        <Link
-                          to="/services"
-                          className="block text-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                        >
-                          View All Services →
-                        </Link>
->>>>>>> main
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Contact */}
-              <Link
-                to="/contact"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                  isActive('/contact') 
-                    ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
-                    : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
-                }`}
-              >
-                Contact
-              </Link>
-
-              {/* Blog */}
-              <Link
-                to="/blog"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                  isActive('/blog') 
-                    ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
-                    : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
-                }`}
-              >
-                Blog
-              </Link>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -906,7 +275,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-purple-600/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500 transition-all duration-300"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white hover:bg-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500 transition-all duration-300"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
@@ -922,62 +291,22 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       {/* Mobile menu */}
       {isOpen && (
         <div className="lg:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-lg border-t border-purple-500/20">
-            <Link
-              to="/"
-              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
-                isActive('/') 
-                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
-                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
-              }`}
-              onClick={toggleMenu}
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
-                isActive('/about') 
-                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
-                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
-              }`}
-              onClick={toggleMenu}
-            >
-              About
-            </Link>
-            <Link
-              to="/services"
-              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
-                isActive('/services') 
-                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
-                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
-              }`}
-              onClick={toggleMenu}
-            >
-              Services
-            </Link>
-            <Link
-              to="/contact"
-              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
-                isActive('/contact') 
-                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
-                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
-              }`}
-              onClick={toggleMenu}
-            >
-              Contact
-            </Link>
-            <Link
-              to="/blog"
-              className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
-                isActive('/blog') 
-                  ? 'bg-purple-600/20 text-purple-200 border border-purple-400/30' 
-                  : 'text-gray-300 hover:text-white hover:bg-purple-600/10'
-              }`}
-              onClick={toggleMenu}
-            >
-              Blog
-            </Link>
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-lg border-t border-cyan-500/20">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
+                  isActive(item.path)
+                    ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                    : 'text-gray-300 hover:text-white hover:bg-cyan-500/10'
+                }`}
+                onClick={toggleMenu}
+              >
+                {item.icon}
+                <span>{item.name}</span>
+              </Link>
+            ))}
           </div>
         </div>
       )}

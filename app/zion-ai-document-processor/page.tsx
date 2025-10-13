@@ -2,104 +2,92 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
-  Mic, 
+  FileText, 
+  Zap, 
   CheckCircle, 
   ArrowRight, 
   Sparkles, 
   Star, 
   Clock, 
-  Users, 
+  Shield, 
   Brain, 
-  FileText,
   BarChart3,
-  Zap,
+  Users,
   Award,
   TrendingUp
 } from 'lucide-react';
 
-const ZionAIMeetingAssistantPage = () => {
+const ZionAIDocumentProcessorPage = () => {
   const features = [
     {
-      title: "Real-time Transcription",
-      description: "AI-powered live transcription with 99% accuracy in 50+ languages",
-      icon: <Mic className="w-6 h-6" />,
-      stat: "99% accuracy"
-    },
-    {
-      title: "Smart Summaries",
-      description: "Automatically generate meeting summaries with key points and action items",
+      title: "Intelligent OCR",
+      description: "Advanced optical character recognition with 99.9% accuracy for any document type",
       icon: <FileText className="w-6 h-6" />,
-      stat: "5 min summaries"
+      stat: "99.9% accuracy"
     },
     {
-      title: "Action Item Tracking",
-      description: "Extract and track action items with automatic follow-up reminders",
-      icon: <CheckCircle className="w-6 h-6" />,
-      stat: "Auto tracking"
+      title: "Auto-Classification",
+      description: "Automatically categorize and tag documents using AI-powered classification",
+      icon: <Brain className="w-6 h-6" />,
+      stat: "50+ categories"
     },
     {
-      title: "Meeting Analytics",
-      description: "Insights on speaking time, participation, and meeting effectiveness",
+      title: "Data Extraction",
+      description: "Extract structured data from unstructured documents with precision",
       icon: <BarChart3 className="w-6 h-6" />,
-      stat: "Deep insights"
+      stat: "95% precision"
+    },
+    {
+      title: "Batch Processing",
+      description: "Process thousands of documents simultaneously with our cloud infrastructure",
+      icon: <Zap className="w-6 h-6" />,
+      stat: "10,000+ docs/hour"
     }
-  ];
-
-  const integrations = [
-    { name: "Zoom", icon: "🔗" },
-    { name: "Microsoft Teams", icon: "🔗" },
-    { name: "Google Meet", icon: "🔗" },
-    { name: "Webex", icon: "🔗" },
-    { name: "Slack", icon: "🔗" },
-    { name: "Notion", icon: "🔗" }
   ];
 
   const pricingPlans = [
     {
-      name: "Individual",
-      price: "$29",
+      name: "Starter",
+      price: "$49",
       period: "/month",
-      description: "Perfect for freelancers and small teams",
+      description: "Perfect for small businesses",
       features: [
-        "10 hours/month recording",
-        "Real-time transcription",
-        "Basic summaries",
-        "Action item extraction",
+        "1,000 documents/month",
+        "Basic OCR processing",
         "Email support",
-        "Standard integrations"
+        "Standard templates",
+        "API access"
       ],
       popular: false
     },
     {
-      name: "Team",
-      price: "$99",
+      name: "Professional",
+      price: "$149",
       period: "/month",
-      description: "Ideal for growing teams",
+      description: "Ideal for growing companies",
       features: [
-        "100 hours/month recording",
-        "Advanced AI summaries",
-        "Meeting analytics",
-        "Team collaboration",
+        "10,000 documents/month",
+        "Advanced AI processing",
         "Priority support",
-        "All integrations",
-        "Custom templates"
+        "Custom templates",
+        "Full API access",
+        "Batch processing",
+        "Analytics dashboard"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited recording",
+        "Unlimited documents",
         "Premium AI features",
-        "Advanced analytics",
-        "Custom AI training",
         "24/7 dedicated support",
+        "Custom integrations",
         "White-label options",
-        "API access",
+        "Advanced security",
         "SLA guarantee"
       ],
       popular: false
@@ -108,24 +96,24 @@ const ZionAIMeetingAssistantPage = () => {
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion AI Meeting Assistant has transformed our meeting culture. We save 2 hours per week per team member with automated summaries and action tracking.",
+      name: "Jennifer Martinez",
+      company: "Legal Firm Partners",
+      role: "Managing Partner",
+      content: "Zion AI Document Processor has revolutionized our document management. We process 5,000+ legal documents daily with 99.9% accuracy.",
       rating: 5
     },
     {
-      name: "Maria Rodriguez",
-      company: "Consulting Partners",
-      role: "Project Manager",
-      content: "The real-time transcription is incredibly accurate. Our client meetings are now fully documented without manual note-taking.",
+      name: "David Chen",
+      company: "Financial Services Inc.",
+      role: "Operations Director",
+      content: "The AI-powered data extraction saves us 40 hours per week. ROI was achieved in the first month.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "Global Corp",
-      role: "VP Operations",
-      content: "Meeting analytics helped us identify and fix unproductive meeting patterns. ROI was immediate.",
+      name: "Sarah Williams",
+      company: "Healthcare Systems",
+      role: "IT Director",
+      content: "Compliance and security features are outstanding. Perfect for healthcare document processing.",
       rating: 5
     }
   ];
@@ -133,9 +121,9 @@ const ZionAIMeetingAssistantPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Zion AI Meeting Assistant - Intelligent Meeting Management | Zion Tech Group</title>
-        <meta name="description" content="Transform your meetings with AI-powered transcription, summaries, and action tracking. Boost productivity with intelligent meeting management." />
-        <meta name="keywords" content="AI meeting assistant, meeting transcription, meeting summaries, action items, meeting analytics, virtual meeting tools" />
+        <title>Zion AI Document Processor - Intelligent Document Processing | Zion Tech Group</title>
+        <meta name="description" content="Transform your document workflow with AI-powered OCR, classification, and data extraction. Process thousands of documents with 99.9% accuracy." />
+        <meta name="keywords" content="AI document processing, OCR, document classification, data extraction, document automation, intelligent OCR" />
       </Helmet>
 
       {/* Hero Section */}
@@ -148,18 +136,18 @@ const ZionAIMeetingAssistantPage = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Meeting Intelligence</span>
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Document Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion AI Meeting Assistant
+              Zion AI Document Processor
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your meetings with intelligent AI assistance. Get real-time transcription, 
-            smart summaries, and automated action tracking for maximum productivity.
+            Transform your document workflow with intelligent AI processing. Extract, classify, and analyze 
+            documents with 99.9% accuracy using advanced OCR and machine learning.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -183,31 +171,31 @@ const ZionAIMeetingAssistantPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Mic className="w-6 h-6 text-cyan-400" />
+                <FileText className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">99%</div>
-              <div className="text-gray-300 text-xs md:text-sm">Transcription Accuracy</div>
-            </div>
-            <div className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Clock className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-300 text-xs md:text-sm">Languages</div>
-            </div>
-            <div className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Users className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">10K+</div>
-              <div className="text-gray-300 text-xs md:text-sm">Active Users</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-gray-300 text-xs md:text-sm">OCR Accuracy</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Zap className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">2hrs</div>
-              <div className="text-gray-300 text-xs md:text-sm">Time Saved/Week</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">10K+</div>
+              <div className="text-gray-300 text-xs md:text-sm">Docs/Hour</div>
+            </div>
+            <div className="text-center group">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Shield className="w-6 h-6 text-cyan-400" />
+              </div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">100%</div>
+              <div className="text-gray-300 text-xs md:text-sm">Secure</div>
+            </div>
+            <div className="text-center group">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Users className="w-6 h-6 text-cyan-400" />
+              </div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">5K+</div>
+              <div className="text-gray-300 text-xs md:text-sm">Customers</div>
             </div>
           </div>
         </div>
@@ -218,10 +206,10 @@ const ZionAIMeetingAssistantPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Intelligent Meeting Features
+              Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Advanced AI capabilities to make every meeting more productive and actionable
+              Advanced document processing capabilities powered by cutting-edge AI technology
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -246,42 +234,15 @@ const ZionAIMeetingAssistantPage = () => {
         </div>
       </section>
 
-      {/* Integrations Section */}
+      {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Seamless Integrations
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Works with your favorite meeting and productivity tools
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            {integrations.map((integration, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
-              >
-                <div className="text-4xl mb-4">{integration.icon}</div>
-                <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                  {integration.name}
-                </h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Plan
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options for teams of all sizes
+              Choose the plan that fits your document processing needs
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -337,14 +298,14 @@ const ZionAIMeetingAssistantPage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Teams Worldwide
+              Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about Zion AI Meeting Assistant
+              See what our customers say about Zion AI Document Processor
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
@@ -373,11 +334,11 @@ const ZionAIMeetingAssistantPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Meetings?
+            Ready to Transform Your Document Workflow?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of teams already using Zion AI Meeting Assistant to make 
-            their meetings more productive and actionable.
+            Join thousands of businesses already using Zion AI Document Processor to streamline 
+            their document processing and boost productivity.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -402,4 +363,4 @@ const ZionAIMeetingAssistantPage = () => {
   );
 };
 
-export default ZionAIMeetingAssistantPage;
+export default ZionAIDocumentProcessorPage;

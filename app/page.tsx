@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, FileText, Video, TrendingUp } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
 import FuturisticBackground from "./components/FuturisticBackground";
@@ -141,6 +141,38 @@ const HomePage = () => {
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
       featured: true
+    },
+    {
+      name: "Zion AI Document Processor",
+      description: "Transform your document workflow with intelligent AI processing. Extract, classify, and analyze documents with 99.9% accuracy",
+      price: "From $49/month",
+      icon: <FileText className="w-6 h-6" />,
+      link: "/zion-ai-document-processor",
+      featured: true
+    },
+    {
+      name: "Zion AI Meeting Assistant",
+      description: "Transform your meetings with intelligent AI assistance. Get real-time transcription, smart summaries, and automated action tracking",
+      price: "From $29/month",
+      icon: <Video className="w-6 h-6" />,
+      link: "/zion-ai-meeting-assistant",
+      featured: true
+    },
+    {
+      name: "Zion AI Email Optimizer",
+      description: "Boost email performance with AI-powered optimization. Increase open rates, click-through rates, and conversions",
+      price: "From $39/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/zion-ai-email-optimizer",
+      featured: true
+    },
+    {
+      name: "Zion AI Sales Predictor",
+      description: "Predict sales with 95% accuracy using advanced AI. Boost revenue, reduce churn, and optimize your sales process",
+      price: "From $79/month",
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: "/zion-ai-sales-predictor",
+      featured: true
     }
   ];
 
@@ -176,17 +208,6 @@ const HomePage = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <PerformanceOptimizer>
-      <EnhancedAccessibility>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-          <EnhancedSEO
-            title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-            description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-            keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
-            canonical="https://ziontechgroup.com"
-          />
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
@@ -210,7 +231,6 @@ const HomePage = () => {
           }
         }} 
       />
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 
       {/* Main Content */}
       <main id="main-content" role="main" aria-label="Main content">
@@ -466,9 +486,7 @@ const HomePage = () => {
         </div>
       </section>
       </main>
-        </div>
-      </EnhancedAccessibility>
-    </PerformanceOptimizer>
+    </div>
   );
 };
 
