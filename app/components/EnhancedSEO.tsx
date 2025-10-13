@@ -23,7 +23,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   twitterCard = 'summary_large_image'
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullCanonical = canonical || `https://ziontechgroup.com${window.location.pathname}`;
+  const fullCanonical = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
 
   return (
     <Helmet>
