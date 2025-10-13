@@ -41,24 +41,22 @@ const generateSitemap = () => {
     { url: '/ai-sales-automation', priority: '0.8', changefreq: 'weekly' },
     { url: '/ai-workflow-automation', priority: '0.8', changefreq: 'weekly' },
     
+    // IT Services
+    { url: '/cloud-infrastructure', priority: '0.8', changefreq: 'weekly' },
+    { url: '/cybersecurity-solutions', priority: '0.8', changefreq: 'weekly' },
+    { url: '/web-development', priority: '0.8', changefreq: 'weekly' },
+    { url: '/mobile-development', priority: '0.8', changefreq: 'weekly' },
+    { url: '/database-management', priority: '0.8', changefreq: 'weekly' },
+    { url: '/custom-software', priority: '0.8', changefreq: 'weekly' },
+    { url: '/network-infrastructure', priority: '0.8', changefreq: 'weekly' },
+    
     // Micro SAAS
     { url: '/zion-analytics-pro', priority: '0.8', changefreq: 'weekly' },
     { url: '/zion-security-shield', priority: '0.8', changefreq: 'weekly' },
     { url: '/zion-cloud-vault', priority: '0.8', changefreq: 'weekly' },
     { url: '/zion-content-studio', priority: '0.8', changefreq: 'weekly' },
-    { url: '/zion-data-sync', priority: '0.8', changefreq: 'weekly' },
-    { url: '/zion-lead-magnet', priority: '0.8', changefreq: 'weekly' },
-    { url: '/zion-project-master', priority: '0.8', changefreq: 'weekly' },
-    { url: '/zion-email-automation', priority: '0.8', changefreq: 'weekly' },
-    { url: '/zion-social-scheduler', priority: '0.8', changefreq: 'weekly' },
-    { url: '/zion-workflow-automation', priority: '0.8', changefreq: 'weekly' },
-    { url: '/zion-invoice-genius', priority: '0.8', changefreq: 'weekly' },
-    { url: '/zion-inventory-smart', priority: '0.8', changefreq: 'weekly' },
-    { url: '/zion-compliance-manager', priority: '0.8', changefreq: 'weekly' },
-    { url: '/zion-performance-monitor', priority: '0.8', changefreq: 'weekly' },
     
     // 5G Solutions
-    { url: '/5g-solutions', priority: '0.8', changefreq: 'weekly' },
     { url: '/5g-data-analytics', priority: '0.8', changefreq: 'weekly' },
     { url: '/5g-edge-computing', priority: '0.8', changefreq: 'weekly' },
     { url: '/5g-implementation', priority: '0.8', changefreq: 'weekly' },
@@ -94,7 +92,7 @@ const generateSitemap = () => {
   }
   
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
-  console.log('Sitemap generated successfully!');
+  console.log('✅ Sitemap generated successfully!');
   
   // Also generate robots.txt
   const robotsTxt = `User-agent: *
@@ -122,7 +120,7 @@ Allow: /pricing
 `;
 
   fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt);
-  console.log('Robots.txt generated successfully!');
+  console.log('✅ Robots.txt generated successfully!');
 };
 
 generateSitemap();

@@ -155,4 +155,8 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default PerformanceMonitor;
+=======
+export default PerformanceMonitor;
+>>>>>>> cursor/analyze-improve-and-deploy-application-b200
