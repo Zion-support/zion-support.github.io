@@ -39,7 +39,17 @@ export default defineConfig({
     assetsInlineLimit: 4096,
     // Enable compression
     reportCompressedSize: true,
+<<<<<<< HEAD
     
+=======
+    // Additional optimizations
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+>>>>>>> cursor/analyze-improve-and-deploy-application-0ed4
     rollupOptions: {
       output: {
         manualChunks: (id) => {

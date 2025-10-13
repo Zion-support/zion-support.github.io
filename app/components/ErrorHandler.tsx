@@ -1,151 +1,195 @@
-'use client'
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
 interface Props {
-  children: ReactNode
-  fallback?: ReactNode
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
-  hasError: boolean
-  error: Error | null
-  errorInfo: ErrorInfo | null
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+  errorId?: string;
 }
 
 class ErrorHandler extends Component<Props, State> {
   constructor(props: Props) {
-    super(props)
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    }
+    super(props);
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
+    return { 
+      hasError: true, 
       error,
-      errorInfo: null
-    }
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
-    })
+      errorInfo,
+    });
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by ErrorHandler:', error, errorInfo)
+      console.error('ErrorHandler caught an error:', error, errorInfo);
     }
 
-    // Send error to monitoring service in production
+    // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      // You can integrate with services like Sentry, LogRocket, etc.
-      this.logErrorToService(error, errorInfo)
+      this.logErrorToService(error, errorInfo);
     }
+
+    // Call custom error handler if provided
+    this.props.onError?.(error, errorInfo);
   }
 
-  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // Example: Send to monitoring service
+  logErrorToService = async (error: Error, errorInfo: ErrorInfo) => {
     try {
-      // Replace with your actual error reporting service
-      console.log('Error reported to monitoring service:', {
+      // In a real application, you would send this to your error tracking service
+      // like Sentry, LogRocket, or Bugsnag
+      const errorData = {
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString()
-      })
-    } catch (reportingError) {
-      console.error('Failed to report error:', reportingError)
+        errorId: this.state.errorId,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+      };
+
+      console.error('Production error logged:', errorData);
+      
+      // Example: Send to error tracking service
+      // await fetch('/api/errors', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(errorData)
+      // });
+    } catch (logError) {
+      console.error('Failed to log error:', logError);
     }
-  }
+  };
 
-  handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
-    })
-  }
+  handleReset = () => {
+    this.setState({ 
+      hasError: false, 
+      error: undefined, 
+      errorInfo: undefined,
+      errorId: undefined 
+    });
+  };
 
-  handleGoHome = () => {
-    window.location.href = '/'
-  }
+  handleReload = () => {
+    window.location.reload();
+  };
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback
+        return this.props.fallback;
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
-            <div className="flex justify-center mb-4">
-              <AlertTriangle className="w-16 h-16 text-red-500" />
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex flex-col items-center justify-center px-4">
+          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl shadow-2xl p-8 text-center border border-white/20">
+            <div className="flex justify-center mb-6">
+              <div className="relative">
+                <AlertTriangle className="h-20 w-20 text-red-400" />
+                <div className="absolute inset-0 h-20 w-20 text-red-400 animate-ping opacity-20">
+                  <AlertTriangle className="h-20 w-20" />
+                </div>
+              </div>
             </div>
             
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
             
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+            <p className="text-gray-300 mb-6 text-lg">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
+            {this.state.errorId && (
+              <div className="bg-gray-800/50 rounded-lg p-4 mb-6">
+                <p className="text-sm text-gray-400 mb-2">Error ID:</p>
+                <p className="text-sm font-mono text-cyan-400">{this.state.errorId}</p>
+              </div>
+            )}
+
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
+              <details className="mb-6 text-left bg-gray-800/50 rounded-lg p-4">
+                <summary className="cursor-pointer text-sm font-medium text-gray-300 mb-3 flex items-center">
+                  <Bug className="w-4 h-4 mr-2" />
                   Error Details (Development)
                 </summary>
-                <div className="mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
+                <div className="bg-gray-900/50 p-4 rounded text-xs font-mono text-gray-300 overflow-auto max-h-64">
+                  <div className="mb-3">
+                    <strong className="text-red-400">Error:</strong>
+                    <div className="mt-1 text-red-300">{this.state.error.message}</div>
                   </div>
                   {this.state.error.stack && (
-                    <div>
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
+                    <div className="mb-3">
+                      <strong className="text-yellow-400">Stack Trace:</strong>
+                      <pre className="mt-1 text-gray-400 whitespace-pre-wrap">
+                        {this.state.error.stack}
+                      </pre>
                     </div>
                   )}
-                  {this.state.errorInfo?.componentStack && (
+                  {this.state.errorInfo && (
                     <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
+                      <strong className="text-blue-400">Component Stack:</strong>
+                      <pre className="mt-1 text-gray-400 whitespace-pre-wrap">
+                        {this.state.errorInfo.componentStack}
+                      </pre>
                     </div>
                   )}
                 </div>
               </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                onClick={this.handleReset}
+                className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg"
               >
-                <RefreshCw className="w-4 h-4 mr-2" />
+                <RefreshCw className="h-5 w-5 mr-2" />
                 Try Again
               </button>
               
               <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
+                onClick={this.handleReload}
+                className="flex items-center justify-center px-6 py-3 bg-gray-600 text-white rounded-lg font-semibold hover:bg-gray-700 transition-colors shadow-lg"
               >
-                <Home className="w-4 h-4 mr-2" />
+                <RefreshCw className="h-5 w-5 mr-2" />
+                Reload Page
+              </button>
+              
+              <button
+                onClick={() => window.location.href = '/'}
+                className="flex items-center justify-center px-6 py-3 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                <Home className="h-5 w-5 mr-2" />
                 Go Home
               </button>
             </div>
+
+            <div className="mt-8 pt-6 border-t border-gray-700">
+              <p className="text-sm text-gray-400">
+                If this problem persists, please contact our support team with the Error ID above.
+              </p>
+            </div>
           </div>
         </div>
-      )
+      );
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }
 
-export default ErrorHandler
+export default ErrorHandler;

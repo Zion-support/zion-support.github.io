@@ -1,83 +1,148 @@
 import React, { useEffect, useState } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
+  cls: number | null;
+  inp: number | null;
+  fcp: number | null;
+  lcp: number | null;
+  ttfb: number | null;
 }
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    cls: null,
+    inp: null,
+    fcp: null,
+    lcp: null,
+    ttfb: null,
+  });
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only run in browser environment
-    if (typeof window === 'undefined') return;
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
 
-    const measurePerformance = () => {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-      
-      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
-      
-      const metrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint: fcp ? fcp.startTime : 0,
-        largestContentfulPaint: lcp ? lcp.startTime : 0,
-        firstInputDelay: 0, // Would need to measure with PerformanceObserver
-        cumulativeLayoutShift: 0, // Would need to measure with PerformanceObserver
-      };
-
-      setMetrics(metrics);
+    const updateMetric = (name: keyof PerformanceMetrics, value: number) => {
+      setMetrics(prev => ({ ...prev, [name]: value }));
     };
 
-    // Measure after page load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-    }
+    // Measure Core Web Vitals
+    onCLS((metric) => updateMetric('cls', metric.value));
+    onINP((metric) => updateMetric('inp', metric.value));
+    onFCP((metric) => updateMetric('fcp', metric.value));
+    onLCP((metric) => updateMetric('lcp', metric.value));
+    onTTFB((metric) => updateMetric('ttfb', metric.value));
 
-    // Cleanup
-    return () => {
-      window.removeEventListener('load', measurePerformance);
+    // Show performance panel if metrics are poor
+    const checkPerformance = () => {
+      const hasPoorMetrics = 
+        (metrics.lcp && metrics.lcp > 4000) ||
+        (metrics.inp && metrics.inp > 300) ||
+        (metrics.cls && metrics.cls > 0.25);
+      
+      if (hasPoorMetrics) {
+        setIsVisible(true);
+      }
     };
-  }, []);
 
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development' || !metrics) {
-    return null;
-  }
+    // Check performance after 5 seconds
+    const timer = setTimeout(checkPerformance, 5000);
+    return () => clearTimeout(timer);
+  }, [metrics]);
+
+  const getPerformanceScore = () => {
+    let score = 100;
+    
+    if (metrics.lcp && metrics.lcp > 4000) score -= 30;
+    if (metrics.inp && metrics.inp > 300) score -= 25;
+    if (metrics.cls && metrics.cls > 0.25) score -= 25;
+    if (metrics.fcp && metrics.fcp > 3000) score -= 10;
+    if (metrics.ttfb && metrics.ttfb > 1000) score -= 10;
+    
+    return Math.max(0, score);
+  };
+
+  const getScoreColor = (score: number) => {
+    if (score >= 90) return 'text-green-400';
+    if (score >= 70) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  const score = getPerformanceScore();
+
+  if (!isVisible && score >= 90) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
-      <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-blue-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
-      >
-        Performance
-      </button>
+    <div className="fixed bottom-4 left-4 z-50 bg-gray-900 text-white p-4 rounded-lg shadow-lg max-w-sm">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="text-sm font-semibold">Performance Monitor</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white"
+        >
+          ×
+        </button>
+      </div>
       
-      {isVisible && (
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
-          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
-          <div className="space-y-2 text-sm">
-            <div className="flex justify-between">
-              <span className="text-gray-600">Load Time:</span>
-              <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">FCP:</span>
-              <span className="font-mono">{metrics.firstContentfulPaint.toFixed(2)}ms</span>
-            </div>
-            <div className="flex justify-between">
-              <span className="text-gray-600">LCP:</span>
-              <span className="font-mono">{metrics.largestContentfulPaint.toFixed(2)}ms</span>
-            </div>
+      <div className="space-y-2 text-xs">
+        <div className="flex justify-between">
+          <span>Performance Score:</span>
+          <span className={getScoreColor(score)}>{score}/100</span>
+        </div>
+        
+        {metrics.lcp && (
+          <div className="flex justify-between">
+            <span>LCP:</span>
+            <span className={metrics.lcp > 4000 ? 'text-red-400' : 'text-green-400'}>
+              {metrics.lcp.toFixed(0)}ms
+            </span>
           </div>
+        )}
+        
+        {metrics.inp && (
+          <div className="flex justify-between">
+            <span>INP:</span>
+            <span className={metrics.inp > 300 ? 'text-red-400' : 'text-green-400'}>
+              {metrics.inp.toFixed(0)}ms
+            </span>
+          </div>
+        )}
+        
+        {metrics.cls && (
+          <div className="flex justify-between">
+            <span>CLS:</span>
+            <span className={metrics.cls > 0.25 ? 'text-red-400' : 'text-green-400'}>
+              {metrics.cls.toFixed(3)}
+            </span>
+          </div>
+        )}
+        
+        {metrics.fcp && (
+          <div className="flex justify-between">
+            <span>FCP:</span>
+            <span className={metrics.fcp > 3000 ? 'text-red-400' : 'text-green-400'}>
+              {metrics.fcp.toFixed(0)}ms
+            </span>
+          </div>
+        )}
+        
+        {metrics.ttfb && (
+          <div className="flex justify-between">
+            <span>TTFB:</span>
+            <span className={metrics.ttfb > 1000 ? 'text-red-400' : 'text-green-400'}>
+              {metrics.ttfb.toFixed(0)}ms
+            </span>
+          </div>
+        )}
+      </div>
+      
+      {score < 70 && (
+        <div className="mt-3 pt-2 border-t border-gray-700">
+          <p className="text-xs text-yellow-400">
+            Consider optimizing images and reducing JavaScript bundle size.
+          </p>
         </div>
       )}
     </div>

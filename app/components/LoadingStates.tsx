@@ -1,91 +1,138 @@
-import React from "react";
-import { Loader2 } from "lucide-react";
+import React from 'react';
+import { Loader2, Zap, Shield, Globe, Database } from 'lucide-react';
 
-export const LoadingSpinner: React.FC<{ size?: "sm" | "md" | "lg" }> = ({
-  size = "md",
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  className = '' 
 }) => {
   const sizeClasses = {
-    sm: "w-4 h-4",
-    md: "w-6 h-6",
-    lg: "w-8 h-8",
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
   };
 
   return (
-    <div className="flex items-center justify-center">
-      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />
-    </div>
+    <Loader2 className={`animate-spin ${sizeClasses[size]} ${className}`} />
   );
 };
 
-export const LoadingPage: React.FC = () => {
+interface LoadingPageProps {
+  message?: string;
+  showIcon?: boolean;
+}
+
+export const LoadingPage: React.FC<LoadingPageProps> = ({ 
+  message = "Loading...", 
+  showIcon = true 
+}) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
-        <div className="relative">
-          <div className="w-16 h-16 border-4 border-pink-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <div
-            className="absolute inset-2 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin"
-            style={{ animationDirection: "reverse", animationDuration: "1.5s" }}
-          ></div>
+        {showIcon && (
+          <div className="mb-6">
+            <div className="relative">
+              <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center">
+                <Zap className="w-8 h-8 text-white animate-pulse" />
+              </div>
+              <div className="absolute inset-0 w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-ping opacity-20"></div>
+            </div>
+          </div>
+        )}
+        <h2 className="text-2xl font-bold text-white mb-2">{message}</h2>
+        <p className="text-gray-300">Please wait while we prepare everything for you...</p>
+        <div className="mt-6 flex justify-center">
+          <LoadingSpinner size="lg" className="text-cyan-400" />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-2">
-          Loading Zion Tech Group
-        </h3>
-        <p className="text-gray-300">Initializing advanced AI systems...</p>
       </div>
     </div>
   );
 };
 
-export const LoadingDots: React.FC = () => {
-  return (
-    <div className="flex space-x-1">
-      <div
-        className="w-2 h-2 bg-pink-500 rounded-full animate-bounce"
-        style={{ animationDelay: "0.1s" }}
-      ></div>
-      <div
-        className="w-2 h-2 bg-cyan-500 rounded-full animate-bounce"
-        style={{ animationDelay: "0.2s" }}
-      ></div>
-      <div
-        className="w-2 h-2 bg-green-500 rounded-full animate-bounce"
-        style={{ animationDelay: "0.3s" }}
-      ></div>
-    </div>
-  );
-};
+interface LoadingCardProps {
+  title?: string;
+  description?: string;
+  icon?: React.ReactNode;
+}
 
-export const LoadingPulse: React.FC = () => {
-  return (
-    <div className="flex space-x-2">
-      <div
-        className="w-3 h-3 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full animate-pulse"
-        style={{ animationDelay: "0.2s" }}
-      ></div>
-      <div
-        className="w-3 h-3 bg-gradient-to-r from-cyan-500 to-green-500 rounded-full animate-pulse"
-        style={{ animationDelay: "0.4s" }}
-      ></div>
-      <div
-        className="w-3 h-3 bg-gradient-to-r from-green-500 to-purple-500 rounded-full animate-pulse"
-        style={{ animationDelay: "0.6s" }}
-      ></div>
-    </div>
-  );
-};
-
-export const LoadingSkeleton: React.FC<{ lines?: number }> = ({
-  lines = 3,
+export const LoadingCard: React.FC<LoadingCardProps> = ({ 
+  title = "Loading...",
+  description = "Please wait",
+  icon
 }) => {
   return (
-    <div className="space-y-2">
+    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
+      <div className="flex items-center space-x-4">
+        {icon && (
+          <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
+            {icon}
+          </div>
+        )}
+        <div className="flex-1">
+          <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
+          <p className="text-gray-300 text-sm">{description}</p>
+        </div>
+        <LoadingSpinner size="md" className="text-cyan-400" />
+      </div>
+    </div>
+  );
+};
+
+interface SkeletonLoaderProps {
+  lines?: number;
+  className?: string;
+}
+
+export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ 
+  lines = 3, 
+  className = '' 
+}) => {
+  return (
+    <div className={`animate-pulse ${className}`}>
       {Array.from({ length: lines }).map((_, index) => (
         <div
           key={index}
-          className="h-4 bg-gray-300 rounded animate-pulse"
-        ></div>
+          className={`h-4 bg-gray-300 rounded mb-2 ${
+            index === lines - 1 ? 'w-3/4' : 'w-full'
+          }`}
+        />
       ))}
     </div>
   );
 };
+
+interface ServiceLoadingProps {
+  service: 'ai' | 'cybersecurity' | 'cloud' | '5g' | 'data';
+}
+
+export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ service }) => {
+  const serviceConfig = {
+    ai: { icon: <Zap className="w-6 h-6" />, color: "from-blue-500 to-cyan-500" },
+    cybersecurity: { icon: <Shield className="w-6 h-6" />, color: "from-green-500 to-emerald-500" },
+    cloud: { icon: <Globe className="w-6 h-6" />, color: "from-purple-500 to-pink-500" },
+    '5g': { icon: <Globe className="w-6 h-6" />, color: "from-orange-500 to-red-500" },
+    data: { icon: <Database className="w-6 h-6" />, color: "from-indigo-500 to-purple-500" }
+  };
+
+  const config = serviceConfig[service];
+
+  return (
+    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+      <div className="flex items-center space-x-4 mb-4">
+        <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${config.color} flex items-center justify-center`}>
+          {config.icon}
+        </div>
+        <div className="flex-1">
+          <SkeletonLoader lines={2} />
+        </div>
+      </div>
+      <SkeletonLoader lines={3} />
+    </div>
+  );
+};
+
+export default LoadingPage;

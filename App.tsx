@@ -19,6 +19,9 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
+import ServiceWorker from "./app/components/ServiceWorker";
+import SecurityHeaders from "./app/components/SecurityHeaders";
+import EnhancedSEO from "./app/components/EnhancedSEO";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -184,6 +187,9 @@ function App() {
       <ErrorBoundary>
         <HelmetProvider>
         <Router>
+          <SecurityHeaders />
+          <ServiceWorker />
+          <EnhancedSEO />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <FuturisticBackground>
               <Navigation />
