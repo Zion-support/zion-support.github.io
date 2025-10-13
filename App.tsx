@@ -96,10 +96,7 @@ const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network
 const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
 const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
