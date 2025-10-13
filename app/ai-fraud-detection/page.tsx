@@ -1,351 +1,199 @@
-<<<<<<< HEAD
-import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';';'
-;
-const PagePage: React.FC = () => {;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered Solutions','
-      description: 'Advanced AI technology to transform your business operations and improve efficiency''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Zap,
-      title: 'High Performance','
-      description: 'Lightning-fast processing and real-time analytics for optimal results''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Shield,
-      title: 'Enterprise Security','
-      description: 'Bank-level security with encryption and compliance standards''
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Globe,
-      title: 'Global Reach','
-      description: 'Worldwide deployment and support for international businesses''
-    }
-  ];
-;
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Advanced AI technology integration','
-    'Real-time processing and analytics','
-    'Enterprise-grade security and compliance','
-    'Scalable and flexible solutions','
-    '24/7 technical support','
-    'Easy integration with existing systems','
-    'Cost-effective pricing plans','
-    'Proven track record of success''
-  ];
-
-export default function PagePage() {
-  return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Helmet>
-<title>Page | Zion Tech Group</title>
-<meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
-<meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" /></Helmet>"
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center">"
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-<span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">"
-                Page
-              </span>
-<br />
-<span className="text-white">Solutions</span></h1>"
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-              Transform your business with our advanced page solutions.
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">"
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" /></button>"
-<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">"
-                Learn More
-              </button>;
-const features = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Brain,
-      title: 'AI-Powered Intelligence','
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.','
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},'
-    {icon: BarChart,
-  },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    icon: BarChart,
-      title: 'Advanced Analytics','
-      description: 'Comprehensive analytics dashboard with real-time data visualization.','
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}];';
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Increase efficiency by up to 50%','
-    'Reduce costs by 30% with automation','
-    'Improve decision-making with AI insights','
-    'Scale operations without proportional staff increases','
-  ]
-return(<>)
-      <Helmet />
-<title>Ai Fraud Detection - Zion Tech Group</title>
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" /></Helmet>"
-<Navigation />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900"></div>"
-<section className="relative py-20 px-4 overflow-hidden"></section>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />'"
-<div className="relative max-w-7xl mx-auto text-center">"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"
-              Ai Fraud Detection
-              <p className="text-xl text-gray-300">Section description</p>"
->>>>>>> origin/main
-            </div></div>
-</section>
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>'"
-<div className="relative max-w-7xl mx-auto text-center"></div>"
-<h1>Ai Fraud Detection;</h1>
->>>>>>> origin/main
-            </h1>
-<p>Advanced AI-powered ai fraud detection solution for modern businesses.</p></p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-              <button>Get Started;</button></button>
-<button>View Demo,</button></button>
-</div></div>
-</section>
-        {/* Features Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>Key Features;</h2></h2>
-<p>Advanced AI technology that drives results;</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,"
-              {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,"
-                  <div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,"
-                    <feature />
-<h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>"
-<p className="text-gray-300 mb-4">{feature.description</p>}</p>"
-                  {feature.benefits && (;
-                    <ul>
-                      {feature.benefits.map((benefit, idx) => (} <li>
-<CheckCircle />
-
-                          {benefit} </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-
-            </div></div>
-</section>
-        {/* Benefits Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
-              {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">"
-<div className="w-16 h-16 bg-gradient-to-br from-amber-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">"
-<feature.icon className="w-8 h-8 text-white" />"
-<h3 className="text-xl font-bold text-white mb-4">{feature.title}"
-                  <p className="text-gray-300 mb-4">{feature.description}"
-                  {feature.benefits && (
-  // TODO: Add parameters
-)
-                    <ul className="space-y-2">"
-                      {feature.benefits.map((benefit, idx) => (
-  // TODO: Add parameters
-)
-                        <li key={idx} className="flex items-center text-sm text-gray-400">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
-                          {benefit}
-                      ))}
-          <div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>Why Choose Our Solution?</h2></h2>
-<p>Proven results that drive business growth and efficiency;</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,"
-              {benefits.map((benefit, index) => (
-  // TODO: Add parameters
-)
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,"
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,"
-                    <CheckCircle />
-<p className="text-lg text-white font-medium">{benefit</p>}</p></div>"
-              ))}
-            </div></div>
-</section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-          ))
-        </section>
-<div className="max-w-4xl mx-auto text-center"></div>"
-<div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>"
-<h2>Ready to Get Started?</h2></h2>
-<p>Contact our experts to discuss your requirements and get started today.</p></p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-                <button>Contact Us;</button></button>
-<button>Learn More;</button>
-                Ready to Get Started?
-              </h2>
-<p></p>
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>"
-<button></button>
-                  Contact Us
-                </button>
-<button></button>
-                  Learn More
->>>>>>> origin/main
-                </button></div>
-</div>
-          ))
-        </section></div>;
-export default PagePage;
->>>>>>> origin/main
-
-}}
->>>>>>> cursor/delete-records-a75e
-=======
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Shield, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Shield, Brain, Zap, ArrowRight, CheckCircle, Star, AlertTriangle, Lock } from 'lucide-react';
 
-export default function PagePage() {
+export default function AiFraudDetectionPage() {
   const features = [
     {
-      title: "Advanced Technology",
-      description: "Cutting-edge solutions powered by the latest technology",
-      icon: <Brain className="w-8 h-8" />
+      title: "Real-time Fraud Detection",
+      description: "AI-powered fraud detection that analyzes transactions in real-time",
+      icon: <Shield className="w-8 h-8" />,
+      benefits: ["Instant analysis", "Pattern recognition", "Anomaly detection", "Risk scoring"]
     },
     {
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security and reliability for your business",
-      icon: <Shield className="w-8 h-8" />
+      title: "Machine Learning Models",
+      description: "Advanced ML algorithms that continuously learn and adapt to new fraud patterns",
+      icon: <Brain className="w-8 h-8" />,
+      benefits: ["Behavioral analysis", "Predictive modeling", "Adaptive learning", "False positive reduction"]
     },
     {
-      title: "Fast Implementation",
-      description: "Quick deployment and implementation for immediate results",
-      icon: <Zap className="w-8 h-8" />
+      title: "Multi-layered Security",
+      description: "Comprehensive fraud prevention with multiple detection layers",
+      icon: <Lock className="w-8 h-8" />,
+      benefits: ["Device fingerprinting", "Location analysis", "Velocity checks", "Rule-based filtering"]
     }
+  ];
+
+  const detectionTypes = [
+    {
+      title: "Payment Fraud",
+      description: "Detect fraudulent payment transactions and card usage",
+      icon: <Shield className="w-6 h-6" />
+    },
+    {
+      title: "Identity Theft",
+      description: "Identify and prevent identity theft attempts",
+      icon: <Brain className="w-6 h-6" />
+    },
+    {
+      title: "Account Takeover",
+      description: "Detect unauthorized account access and takeover attempts",
+      icon: <Lock className="w-6 h-6" />
+    },
+    {
+      title: "Synthetic Identity",
+      description: "Identify and prevent synthetic identity fraud",
+      icon: <AlertTriangle className="w-6 h-6" />
+    }
+  ];
+
+  const stats = [
+    { number: "99.9%", label: "Detection Accuracy" },
+    { number: "50ms", label: "Response Time" },
+    { number: "90%", label: "False Positive Reduction" },
+    { number: "24/7", label: "Monitoring" }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Advanced  solutions by Zion Tech Group" />
+        <title>AI Fraud Detection - Zion Tech Group</title>
+        <meta name="description" content="Protect your business with AI-powered fraud detection. Real-time analysis, machine learning, and multi-layered security." />
+        <meta name="keywords" content="AI fraud detection, fraud prevention, security, machine learning, risk management" />
       </Helmet>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced  solutions by Zion Tech Group
-          </p>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-6">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                AI Fraud Detection
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Protect your business with AI-powered fraud detection that analyzes transactions in real-time. 
+              Advanced machine learning models that continuously adapt to new fraud patterns.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                View Demo
+              </button>
             </div>
-          ))}
-=======
-import React from 'react';
+          </div>
+        </div>
+      </section>
 
-export default function AiFraudDetectionPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            AI Fraud Detection
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            This page is under development. Please check back soon for comprehensive solutions.
-          </p>
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-300">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        
-        <div className="text-center">
-          <p className="text-gray-300 text-lg">
-            This page is under development. Please check back soon for comprehensive solutions.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              AI-Powered Fraud Detection Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI fraud detection platform provides comprehensive protection against various types of fraud.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 mb-6">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Detection Types Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Fraud Detection Types
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive fraud detection covering all major types of fraudulent activities.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {detectionTypes.map((type, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  {type.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">{type.title}</h3>
+                <p className="text-gray-300 text-sm">{type.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Protect Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let our AI fraud detection experts help you implement comprehensive fraud prevention that protects your business and customers.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link 
+              to="/demo" 
+              className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300"
+            >
+              Schedule Demo
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
