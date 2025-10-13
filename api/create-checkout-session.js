@@ -25,8 +25,12 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
+<<<<<<< HEAD
 
     const session = {
+=======
+const session = {
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
       status: 'pending',
       productId: productId
@@ -36,7 +40,10 @@ export default withErrorLogging(async (req, res) => {
     res.end(JSON.stringify(session));
   } catch (error) {
     console.error('Checkout session creation error:', error);
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
   }

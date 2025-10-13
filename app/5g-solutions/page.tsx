@@ -24,18 +24,28 @@ const FiveGSolutionsPage: React.FC = () => {
     },
     {
       icon: Wifi,
+<<<<<<< HEAD
 
       title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
 
+=======
+title: 'IoT Connectivity',
+      description: 'Connect thousands of IoT devices with 5G technology',
+      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }
   ];
 
   const solutions = [
     {
+<<<<<<< HEAD
 
       title: '5G Network Infrastructure',
+=======
+title: '5G Network Infrastructure',
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       description: 'Complete 5G network setup and optimization',
       price: 'Starting at $50,000',
       features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
@@ -51,7 +61,10 @@ const FiveGSolutionsPage: React.FC = () => {
       description: 'IoT device connectivity and management platform',
       price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }
   ];
 

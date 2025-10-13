@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';

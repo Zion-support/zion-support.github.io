@@ -12,12 +12,19 @@ export default async function handler(req, res) {
   }
 
   const { destination, weight } = req.body;
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   if (!destination || !weight) {
     return res.status(400).json({ error: 'Destination and weight are required' });
   }
 
+<<<<<<< HEAD
   let rates = [];
+=======
+let rates = [];
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   try {
     const data = fs.readFileSync(file, 'utf8');
     rates = JSON.parse(data);
@@ -47,13 +54,20 @@ export default async function handler(req, res) {
       success: true,
       rate: rate,
       message: 'Shipping rate calculated successfully' 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }));
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
+<<<<<<< HEAD
 
     res.end(JSON.stringify({ error: 'Failed to save rate' }));
 
+=======
+res.end(JSON.stringify({ error: 'Failed to save rate' }));
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   }
 }

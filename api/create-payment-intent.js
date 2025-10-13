@@ -17,8 +17,12 @@ export default withErrorLogging(async (req, res) => {
     return;
   }
 
+<<<<<<< HEAD
   const { amount, currency = 'usd' } = req.body;
 
+=======
+const { amount, currency = 'usd' } = req.body;
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   if (!amount) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Amount is required' }));
@@ -26,8 +30,12 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
+<<<<<<< HEAD
 
     const paymentIntent = {
+=======
+const paymentIntent = {
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       id: 'pi_' + Math.random().toString(36).substr(2, 9),
       status: 'requires_payment_method',
       amount: amount,
@@ -38,7 +46,10 @@ export default withErrorLogging(async (req, res) => {
     res.end(JSON.stringify(paymentIntent));
   } catch (error) {
     console.error('Payment intent creation error:', error);
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }

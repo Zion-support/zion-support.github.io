@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs;
 import path from 'path;
 import { fileURLToPath } from 'url;
@@ -8,3 +9,16 @@ import { fileURLToPath } from 'url;
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx'';
       if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'';
 const appDir = '';
+=======
+#!/usr/bin// Fixed regex
+
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+    const content = fs.readFileSync(filePath, 'utf8'
+    if (content.includes('') || content.includes('>>>>>>>'
+  console.error('Error:'
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx'
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules'
+const appDir = '
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79

@@ -4,11 +4,15 @@ import { HelmetProvider } from 'react-helmet-async';
 
 // Components
 import Navigation from './app/components/Navigation';
+import Sidebar from './app/components/Sidebar';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 
 // Page Components
 import HomePage from './app/page';
@@ -34,6 +38,14 @@ import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
 import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
 import CaseStudiesPage from './app/pages/CaseStudiesPage';
 import CareersPage from './app/pages/CareersPage';
+
+// Additional Pages
+import CybersecurityPage from './app/pages/CybersecurityPage';
+import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
+import MicroSaaSPage from './app/pages/MicroSaaSPage';
+import FiveGSolutionsPage from './app/pages/5GSolutionsPage';
+import TeamPage from './app/pages/TeamPage';
+import DocumentationPage from './app/pages/DocumentationPage';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -63,13 +75,17 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 );
 
 function App() {
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
+
   return (
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-slate-900">
-            <Navigation />
-            <main className="relative z-10" id="main-content" role="main">
+          <div className="min-h-screen bg-slate-900 flex">
+            <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+            <div className="flex-1 flex flex-col">
+              <Navigation onSidebarToggle={() => setSidebarOpen(true)} />
+              <main className="relative z-10 flex-1" id="main-content" role="main">
               <ErrorBoundary>
                 <Routes>
                   {/* Main Pages */}
@@ -97,6 +113,19 @@ function App() {
                   <Route path="/case-studies" element={<CaseStudiesPage />} />
                   <Route path="/careers" element={<CareersPage />} />
                   
+<<<<<<< HEAD
+=======
+                  {/* Additional Service Pages */}
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                  <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
+                  <Route path="/micro-saas" element={<MicroSaaSPage />} />
+                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                  
+                  {/* Additional Pages */}
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/docs" element={<DocumentationPage />} />
+                  
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
                   {/* Catch all route */}
                   <Route path="*" element={
                     <div className="min-h-screen flex items-center justify-center bg-slate-900">
@@ -111,20 +140,24 @@ function App() {
                   } />
                 </Routes>
               </ErrorBoundary>
-            </main>
-            <Footer />
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
+              </main>
+              <Footer />
+              <PerformanceMonitor />
+              <AccessibilityEnhancer />
+            </div>
           </div>
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
+<<<<<<< HEAD
 =======
 =======
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import LoadingSpinner from './app/components/LoadingSpinner';
 >>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   );
 }
 

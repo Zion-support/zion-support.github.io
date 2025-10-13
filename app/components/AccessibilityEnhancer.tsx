@@ -50,6 +50,7 @@ const AccessibilityEnhancer: React.FC = () => {
         main.setAttribute('role', 'main');
       }
 
+<<<<<<< HEAD
     // Reduced motion mode
     if (isReducedMotion) {
       root.classList.add('reduced-motion');
@@ -117,6 +118,9 @@ const AccessibilityEnhancer: React.FC = () => {
         element.removeEventListener('focus', handleFocus);
         element.removeEventListener('blur', handleBlur);
       const nav = document.querySelector('nav');
+=======
+const nav = document.querySelector('nav');
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
       }
@@ -134,7 +138,10 @@ const AccessibilityEnhancer: React.FC = () => {
         if (!img.getAttribute('alt')) {
           img.setAttribute('alt', `Image ${index + 1}`);
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       });
     };
 

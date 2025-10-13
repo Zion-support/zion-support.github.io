@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 import { 
@@ -11,6 +12,11 @@ import {
   CheckIcon,
   StarIcon
 } from '@heroicons/react/24/outline';
+=======
+import { Helmet } from 'react-helmet-async';
+import { Circle, Star, Right, Zap, Shield, Code } from 'lucide-react';
+import { Circle, Star, Right } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
