@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
+<<<<<<< HEAD
 import StructuredData from "./components/StructuredData";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
 import FuturisticText from "./components/FuturisticText";
+=======
+import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
+import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
+import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
+import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
@@ -178,7 +185,7 @@ const HomePage = () => {
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <FuturisticBackgroundEnhanced>
           <EnhancedSEO
             title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
             description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
@@ -218,11 +225,17 @@ const HomePage = () => {
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Welcome to Zion Tech Group
-            </span>
-          </h1>
+          <FuturisticTextEnhanced
+            variant="display"
+            size="6xl"
+            gradient={true}
+            animated={true}
+            glow={true}
+            neon={true}
+            className="mb-6 leading-tight"
+          >
+            Welcome to Zion Tech Group
+          </FuturisticTextEnhanced>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
             Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
@@ -230,22 +243,30 @@ const HomePage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButton
+            <FuturisticButtonEnhanced
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
+              icon={Sparkles}
+              iconPosition="left"
+              glowColor="cyan"
+              neon={true}
+              animated={true}
             >
               Get Started Today
-            </FuturisticButton>
-            <FuturisticButton
+            </FuturisticButtonEnhanced>
+            <FuturisticButtonEnhanced
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Monitor className="w-5 h-5" />}
+              icon={Monitor}
+              iconPosition="left"
+              glowColor="purple"
+              neon={true}
+              animated={true}
             >
               Watch Demo
-            </FuturisticButton>
+            </FuturisticButtonEnhanced>
           </div>
           
           {/* Stats */}
@@ -277,9 +298,13 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <div
+              <FuturisticCardEnhanced
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+                glowColor={index % 2 === 0 ? 'cyan' : 'purple'}
+                hoverEffect={true}
+                animated={true}
+                neon={true}
+                className="cursor-pointer"
               >
                 <Link
                   to={feature.link}
@@ -304,7 +329,7 @@ const HomePage = () => {
                     </span>
                   </div>
                 </Link>
-              </div>
+              </FuturisticCardEnhanced>
             ))}
           </div>
         </ResponsiveContainer>
@@ -323,37 +348,45 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
-              <Link
+              <FuturisticCardEnhanced
                 key={index}
-                to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                glowColor={index % 3 === 0 ? 'cyan' : index % 3 === 1 ? 'purple' : 'pink'}
+                hoverEffect={true}
+                animated={true}
+                neon={true}
+                className="relative overflow-hidden"
               >
-                {saas.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                      Featured
-                    </span>
+                <Link
+                  to={saas.link}
+                  className="block"
+                >
+                  {saas.featured && (
+                    <div className="absolute top-4 right-4 z-20">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                        Featured
+                      </span>
+                    </div>
+                  )}
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                      {saas.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                        {saas.name}
+                      </h3>
+                      <p className="text-cyan-400 font-medium">{saas.price}</p>
+                    </div>
                   </div>
-                )}
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {saas.icon}
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {saas.description}
+                  </p>
+                  <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                      {saas.name}
-                    </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {saas.description}
-                </p>
-                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
+                </Link>
+              </FuturisticCardEnhanced>
             ))}
           </div>
           <div className="text-center mt-12">
@@ -438,30 +471,44 @@ const HomePage = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            <FuturisticButtonEnhanced
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={ArrowRight}
+              iconPosition="right"
+              glowColor="cyan"
+              neon={true}
+              animated={true}
             >
               Start Your Journey
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            </FuturisticButtonEnhanced>
+            <FuturisticButtonEnhanced
+              href="/services"
+              variant="outline"
+              size="lg"
+              icon={Sparkles}
+              iconPosition="right"
+              glowColor="purple"
+              neon={true}
+              animated={true}
             >
               Explore Services
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
+            </FuturisticButtonEnhanced>
           </div>
         </div>
       </section>
 <<<<<<< HEAD
       </main>
+<<<<<<< HEAD
       </div>
 =======
           </main>
         </div>
 >>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
+=======
+        </FuturisticBackgroundEnhanced>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );

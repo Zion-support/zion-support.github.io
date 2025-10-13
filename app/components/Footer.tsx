@@ -68,6 +68,7 @@ const Footer: React.FC = () => {
     { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
     { name: "AI Content Generation", path: "/ai-content-generation" },
     { name: "AI Customer Support", path: "/ai-customer-support" },
+<<<<<<< HEAD
 =======
     { name: "AI Content Generation", path: "/ai-content-generation" },
     { name: "AI Customer Support", path: "/ai-customer-support" },
@@ -95,10 +96,20 @@ const Footer: React.FC = () => {
 
   const itServices = [
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
+=======
+    { name: "AI Data Analytics", path: "/ai-data-analytics" },
+    { name: "AI Workflow Automation", path: "/ai-workflow-automation" },
+    { name: "AI Predictive Analytics", path: "/ai-predictive-analytics" },
+    { name: "AI Voice Assistant", path: "/ai-voice-assistant" },
+  ];
+
+  const itServices = [
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
     { name: "Cloud Migration", path: "/cloud-migration" },
     { name: "Web Development", path: "/web-development" },
     { name: "DevOps", path: "/devops" },
     { name: "IT Consulting", path: "/it-consulting" },
+<<<<<<< HEAD
     { name: "Network Security", path: "/network-security" },
     { name: "Custom Software", path: "/custom-software" },
     { name: "System Integration", path: "/system-integration" },
@@ -113,15 +124,23 @@ const Footer: React.FC = () => {
     { name: "5G Mobile Applications", path: "/5g-mobile-applications" },
     { name: "5G Data Analytics", path: "/5g-data-analytics" },
     { name: "5G Implementation", path: "/5g-implementation" },
+=======
+    { name: "System Integration", path: "/system-integration" },
+    { name: "Network Security", path: "/network-security" },
+    { name: "Custom Software", path: "/custom-software" },
+    { name: "Software Development", path: "/software-development" },
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
   ];
 
   const microSaasServices = [
-    { name: "Zion Analytics Pro", path: "/zion-analytics-pro" },
-    { name: "Zion Security Shield", path: "/zion-security-shield-pro" },
+    { name: "Zion Analytics Pro", path: "/zion-ai-analytics-pro" },
     { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
-    { name: "Zion Cloud Vault", path: "/zion-cloud-vault-pro" },
-    { name: "Zion AI Marketing", path: "/zion-ai-marketing-automation" },
     { name: "Zion AI Video Generator", path: "/zion-ai-video-generator" },
+    { name: "Zion Security Shield", path: "/zion-security-shield" },
+    { name: "Zion AI Marketing", path: "/zion-ai-marketing-automation" },
+    { name: "Zion E-commerce Suite", path: "/zion-ecommerce-suite" },
+    { name: "Zion AI Content Generator", path: "/zion-ai-content-generator" },
+    { name: "Zion AI Voice Assistant", path: "/zion-ai-voice-assistant" },
   ];
 
   const fiveGServices = [
@@ -157,7 +176,11 @@ const Footer: React.FC = () => {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+=======
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
           {/* Company Info */}
           <div className="lg:col-span-1">
 =======
@@ -279,6 +302,27 @@ const Footer: React.FC = () => {
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          {/* IT Services */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">IT Services</h3>
+            <ul className="space-y-2">
+              {itServices.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
           {/* Micro SAAS */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Micro SAAS</h3>

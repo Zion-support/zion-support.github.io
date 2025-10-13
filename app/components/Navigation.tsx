@@ -127,34 +127,33 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
 
   const serviceDropdownItems = [
     {
-      name: 'AI Analytics',
-      path: '/ai-analytics',
-      description: 'Advanced data analytics and insights'
+      category: 'AI Services',
+      items: [
+        { name: 'AI Analytics', path: '/ai-analytics', description: 'Advanced data analytics and insights' },
+        { name: 'AI CRM Pro', path: '/zion-ai-crm-pro', description: 'Intelligent customer relationship management' },
+        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI-powered content creation' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security solutions' },
+        { name: 'AI Video Generator', path: '/zion-ai-video-generator', description: 'Create videos with AI' }
+      ]
     },
     {
-      name: 'AI Cybersecurity',
-      path: '/ai-cybersecurity',
-      description: 'AI-powered security solutions'
+      category: 'IT Services',
+      items: [
+        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Seamless cloud transition' },
+        { name: 'Web Development', path: '/web-development', description: 'Custom web applications' },
+        { name: 'DevOps', path: '/devops', description: 'CI/CD and automation' },
+        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic technology guidance' },
+        { name: 'System Integration', path: '/system-integration', description: 'Connect your systems' }
+      ]
     },
     {
-      name: 'Cloud Migration',
-      path: '/cloud-migration',
-      description: 'Seamless cloud transition'
-    },
-    {
-      name: 'Web Development',
-      path: '/web-development',
-      description: 'Custom web applications'
-    },
-    {
-      name: 'DevOps',
-      path: '/devops',
-      description: 'CI/CD and automation'
-    },
-    {
-      name: 'IT Consulting',
-      path: '/it-consulting',
-      description: 'Strategic technology guidance'
+      category: 'Micro SAAS',
+      items: [
+        { name: 'Zion Analytics Pro', path: '/zion-ai-analytics-pro', description: 'Business intelligence platform' },
+        { name: 'Zion Security Shield', path: '/zion-security-shield', description: 'Advanced cybersecurity' },
+        { name: 'Zion AI Marketing', path: '/zion-ai-marketing-automation', description: 'Marketing automation' },
+        { name: 'Zion E-commerce Suite', path: '/zion-ecommerce-suite', description: 'Complete e-commerce platform' }
+      ]
     }
   ];
 
@@ -192,26 +191,35 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
 <<<<<<< HEAD
                 {/* Services Dropdown */}
                 {item.hasDropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                    <div className="p-4">
-                      <h3 className="text-white font-semibold mb-3 text-sm">Popular Services</h3>
-                      <div className="grid grid-cols-1 gap-2">
-                        {serviceDropdownItems.map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.path}
-                            className="block p-3 rounded-lg hover:bg-cyan-500/10 transition-colors group"
-                          >
-                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                              {service.name}
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <div className="p-6">
+                      <h3 className="text-white font-semibold mb-4 text-lg">Our Services</h3>
+                      <div className="space-y-6">
+                        {serviceDropdownItems.map((category, categoryIndex) => (
+                          <div key={categoryIndex}>
+                            <h4 className="text-cyan-400 font-medium mb-3 text-sm uppercase tracking-wide">
+                              {category.category}
+                            </h4>
+                            <div className="space-y-2">
+                              {category.items.map((service, serviceIndex) => (
+                                <Link
+                                  key={serviceIndex}
+                                  to={service.path}
+                                  className="block p-3 rounded-lg hover:bg-cyan-500/10 transition-colors group"
+                                >
+                                  <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                    {service.name}
+                                  </div>
+                                  <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                                    {service.description}
+                                  </div>
+                                </Link>
+                              ))}
                             </div>
-                            <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                              {service.description}
-                            </div>
-                          </Link>
+                          </div>
                         ))}
                       </div>
-                      <div className="mt-3 pt-3 border-t border-cyan-500/20">
+                      <div className="mt-6 pt-4 border-t border-cyan-500/20">
                         <Link
                           to="/services"
                           className="block text-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
