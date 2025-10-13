@@ -3,7 +3,7 @@ import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle }
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function Contact() {
+export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -82,8 +82,6 @@ export default function Contact() {
     "CRM Assistant",
     "Financial Analytics"
   ];
-
-export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
