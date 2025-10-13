@@ -1,89 +1,21 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface ResponsiveGridProps {
-interface ResponsivegridProps {
-interface ResponsiveGridProps {
-interface ResponsiveGridProps {
-  children: React.ReactNode;
-  className?: string;
-  cols?: {
-    default?: number;
-    sm?: number;
-    md?: number;
-    lg?: number;
-    xl?: number;
-  };
-  gap?: 'sm' | 'md' | 'lg' | 'xl';
-}
-
-export default function ResponsiveGrid({ className = '', children }: ResponsiveGridProps) {
-export default function Responsivegrid({ className = '', children, ...props }: ResponsivegridProps) {
-interface ResponsiveGridProps {
-  children: React.ReactNode;
-  className?: string;
-  [key: string]: any;
-}
-
-export default function ResponsiveGrid({ children, className = '', ...props }: ResponsiveGridProps) {
+export default function Page() {
   return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
-export default function ResponsiveGrid({ className = '', children, ...props }: ResponsiveGridProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-8">Page</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            This page is under development. Please check back later.
+          </p>
         </div>
-      );
-}
-}
-const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
-  children,
-  className = '',
-  cols = { default: 1, sm: 2, md: 3, lg: 4 },
-  gap = 'md'
-}) => {
-  const gapClasses = {
-    sm: 'gap-2',
-    md: 'gap-6',
-    lg: 'gap-8',
-    xl: 'gap-12'
-  };
-
-  const gridCols = `grid-cols-${cols.default || 1} ${
-    cols.sm ? `sm:grid-cols-${cols.sm}` : ''
-  } ${cols.md ? `md:grid-cols-${cols.md}` : ''} ${
-    cols.lg ? `lg:grid-cols-${cols.lg}` : ''
-  } ${cols.xl ? `xl:grid-cols-${cols.xl}` : ''}`;
-
-import React from 'react';
-
-interface ResponsivegridProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Responsivegrid({ className = '', children, ...props }: ResponsivegridProps) {
-
-  return (
-    <div className={`grid ${gridCols} ${gapClasses[gap]} ${className}`}>
-      {children}
-
+      </div>
     </div>
   );
-};
-
-export default ResponsiveGrid;
-  );
 }
-  return (;
-    <div className={`responsivegrid-component ${className}`} {...props}></div>;
-      {children}
-;
-</div>;
-);
-
-}
-export default $1;

@@ -1,58 +1,19 @@
 import React from 'react';
 
 interface FuturisticCardEnhancedProps {
-interface FuturisticCardEnhancedProps {
-  children: React.ReactNode;
   className?: string;
-  variant?: 'default' | 'gradient' | 'glass';
+  children?: React.ReactNode;
 }
 
 export default function FuturisticCardEnhanced({ className = '', children }: FuturisticCardEnhancedProps) {
   return (
     <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
-export default function FuturisticCardEnhanced({ className = '', children, ...props }: FuturisticCardEnhancedProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">Futuristic Card Enhanced</h3>
+          <p className="text-gray-600">This component is under development.</p>
         </div>
-      );
-}
-const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
-  children,
-  className = '',
-  variant = 'default'
-}) => {
-  const baseClasses = "relative rounded-xl overflow-hidden transition-all duration-300";
-
-  const variantClasses = {
-    default: "bg-slate-800/50 border border-cyan-500/20 hover:border-cyan-500/40",
-    gradient: "bg-gradient-to-br from-slate-800/50 to-purple-900/50 border border-cyan-500/20 hover:border-cyan-500/40",
-    glass: "bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20",
-  };
-
-  return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
-      {/* Glow effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-
-      {/* Content */}
-      <div className="relative z-10 p-6">
-        {children}
-      </div>
+      )}
     </div>
   );
-};
-
-import React from 'react';
-
-export default FuturisticCardEnhanced;
-  );
 }
-
-export default function Futuristiccardenhanced({ className = '', children, ...props }: FuturisticcardenhancedProps) {
-}
-export default $1;

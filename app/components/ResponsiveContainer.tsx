@@ -1,67 +1,21 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface ResponsiveContainerProps {
-interface ResponsivecontainerProps {
-interface ResponsiveContainerProps {
-interface ResponsiveContainerProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export default function ResponsiveContainer({ className = '', children }: ResponsiveContainerProps) {
-export default function Responsivecontainer({ className = '', children, ...props }: ResponsivecontainerProps) {
-interface ResponsiveContainerProps {
-  children: React.ReactNode;
-  className?: string;
-  [key: string]: any;
-}
-
-export default function ResponsiveContainer({ children, className = '', ...props }: ResponsiveContainerProps) {
+export default function Page() {
   return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
-export default function ResponsiveContainer({ className = '', children, ...props }: ResponsiveContainerProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-8">Page</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            This page is under development. Please check back later.
+          </p>
         </div>
-      );
-}
-}
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
-  children,
-  className = ''
-}) => {
-
-import React from 'react';
-
-interface ResponsivecontainerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Responsivecontainer({ className = '', children, ...props }: ResponsivecontainerProps) {
-
-  return (
-    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
-      {children}
-
+      </div>
     </div>
   );
-};
-
-export default ResponsiveContainer;
-  );
 }
-  return (;
-    <div className={`responsivecontainer-component ${className}`} {...props}></div>;
-      {children}
-;
-</div>;
-);
-
-}
-export default $1;

@@ -1,74 +1,21 @@
-
-interface FuturisticBackgroundProps {
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface FuturisticbackgroundProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function FuturisticBackground({ className = '', children }: FuturisticBackgroundProps) {
-export default function Futuristicbackground({ className = '', children, ...props }: FuturisticbackgroundProps) {
-
+export default function Page() {
   return (
-    <div className={`${className}`}>
-export default function FuturisticBackground({ className = '', children, ...props }: FuturisticBackgroundProps) {
-  return (
-    <div className={`futuristic-background-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
-export default function FuturisticBackground({ className = '', children, ...props }: FuturisticBackgroundProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-8">Page</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            This page is under development. Please check back later.
+          </p>
         </div>
-      );
-}
-const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    };
-  }, []);
-
-  return (
-    <div className="relative">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: 1 }}
-      />
-      <div className="relative" style={{ zIndex: 2 }}>
-        {children}
       </div>
     </div>
   );
-};
-
-export default FuturisticBackground;
-  );
 }
-
-}
-
-export default FuturisticBackground;
-}
-export default FuturisticBackground;

@@ -1,7 +1,4 @@
 import React from 'react';
-import React from 'react';
-
-import React from 'react';
 
 interface ImprovedImageProps {
   className?: string;
@@ -15,17 +12,3 @@ export default function ImprovedImage({ className = '', children }: ImprovedImag
     </div>
   );
 }
-export default function ImprovedImage({ className = '', children, ...props }: ImprovedImageProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-import { ImageIcon } from 'lucide-react';
-
-}
-
-export default function Improvedimage({ className = '', children, ...props }: ImprovedimageProps) {
-}
-}}

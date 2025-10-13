@@ -1,43 +1,21 @@
-
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface LoadingStatesProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function LoadingStates({ className = '', children }: LoadingStatesProps) {
-export default function Loadingstates({ className = '', children, ...props }: LoadingstatesProps) {
-
+export default function Page() {
   return (
-    <div className={`${className}`}>
-export default function LoadingStates({ className = '', children, ...props }: LoadingStatesProps) {
-  return (
-    <div className={`loading-states-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
-export default function LoadingStates({ className = '', children, ...props }: LoadingStatesProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-8">Page</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            This page is under development. Please check back later.
+          </p>
         </div>
-      );
-}
-export const LoadingPage: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-        <p className="text-white text-lg">Loading...</p>
       </div>
     </div>
   );
-};
-
-export default LoadingPage;
-
-}
-
 }

@@ -1,38 +1,19 @@
 import React from 'react';
 
 interface testRunnerProps {
-interface TestrunnerxProps {
   className?: string;
+  children?: React.ReactNode;
 }
 
 export default function testRunner({ className = '', children }: testRunnerProps) {
   return (
     <div className={`${className}`}>
-      {children}
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">testRunner</h3>
+          <p className="text-gray-600">This component is under development.</p>
+        </div>
+      )}
     </div>
   );
 }
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-    </div>
-  );
-}
-const Testrunnerx: React.FC<TestrunnerxProps> = ({ className = "" }) => {
-  return (
-    <div className={className}>
-      <h2>Testrunnerx</h2>
-    </div>
-  );
-};
-
-import React from 'react';
-
-export default Testrunnerx;
-  );
-}
-
-export default function Testrunner({ className = '', children, ...props }: TestrunnerProps) {
-}
-export default $1;

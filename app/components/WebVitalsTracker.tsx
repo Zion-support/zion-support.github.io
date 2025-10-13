@@ -1,11 +1,6 @@
 import React from 'react';
 
-import React from 'react';
-
 interface WebVitalsTrackerProps {
-import React, { useEffect } from 'react';
-
-interface WebvitalstrackerProps {
   className?: string;
   children?: React.ReactNode;
 }
@@ -13,17 +8,12 @@ interface WebvitalstrackerProps {
 export default function WebVitalsTracker({ className = '', children }: WebVitalsTrackerProps) {
   return (
     <div className={`${className}`}>
-      {children}
+      {children || (
+        <div className="p-4">
+          <h3 className="text-lg font-semibold mb-2">Web Vitals Tracker</h3>
+          <p className="text-gray-600">This component is under development.</p>
+        </div>
+      )}
     </div>
   );
-}
-export default function WebVitalsTracker({ className = '', children, ...props }: WebVitalsTrackerProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-
-export default function Webvitalstracker({ className = '', children, ...props }: WebvitalstrackerProps) {
 }

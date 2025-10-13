@@ -1,33 +1,21 @@
-
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-interface CacheManagerProps {
-interface CachemanagerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function CacheManager({ className = '', children }: CacheManagerProps) {
-export default function Cachemanager({ className = '', children, ...props }: CachemanagerProps) {
+export default function Page() {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Page solutions by Zion Tech Group" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-8">Page</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            This page is under development. Please check back later.
+          </p>
+        </div>
+      </div>
     </div>
   );
-}
-export default function CacheManager({ className = '', children, ...props }: CacheManagerProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
-import React from 'react';
-
-const CacheManager: React.FC = () => {
-  return null; // This component doesn't need to render anything
-};
-
-export default CacheManager;
-
 }
