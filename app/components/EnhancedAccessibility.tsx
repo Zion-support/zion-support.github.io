@@ -1,13 +1,3 @@
-import React, { useEffect, useState, useCallback } from 'react';
-
-interface AccessibilityMetrics {
-  contrastRatio: number;
-  focusableElements: number;
-  headingStructure: number;
-  altTexts: number;
-  ariaLabels: number;
-  keyboardNavigation: boolean;
-  screenReaderCompatible: boolean;
 'use client';
 import React, { useEffect, useState } from 'react';
 
@@ -17,201 +7,313 @@ interface AccessibilitySettings {
   fontSize: 'small' | 'medium' | 'large';
   screenReader: boolean;
   keyboardNavigation: boolean;
+  focusVisible: boolean;
+  skipLinks: boolean;
+  altText: boolean;
+  ariaLabels: boolean;
+  colorBlindSupport: boolean;
 }
 
-interface EnhancedAccessibilityProps {
-  children: React.ReactNode;
-  onMetricsUpdate?: (metrics: AccessibilityMetrics) => void;
-  enableMonitoring?: boolean;
-}
-
-const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
-  children,
-      {children}
-      {process.env['NODE_ENV'] === 'development' && (
-        <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
-          <div className="flex items-center justify-between mb-2">
-            <h3 className="text-sm font-semibold">Accessibility Monitor
-            <div className={`w-3 h-3 rounded-full ${
-              accessibilityScore >= 90 ? 'bg-green-500' : 
-              accessibilityScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-            }`} />
-          <div className="space-y-1 text-xs">
-            <div className="flex justify-between">
-              <span>Accessibility Score:
-              <span className="font-mono">{accessibilityScore}/100
-            <div className="flex justify-between">
-              <span>Focusable Elements:
-              <span className="font-mono">{metrics.focusableElements}
-            <div className="flex justify-between">
-              <span>Alt Text Coverage:
-              <span className="font-mono">{Math.round(metrics.altTexts)}%
-            <div className="flex justify-between">
-              <span>ARIA Labels:
-              <span className="font-mono">{metrics.ariaLabels}
-            <div className="flex justify-between">
-              <span>Keyboard Nav:
-              <span className="font-mono">{metrics.keyboardNavigation ? '✓' : '✗'}
-            <div className="flex justify-between">
-              <span>Screen Reader:
-              <span className="font-mono">{metrics.screenReaderCompatible ? '✓' : '✗'}
-      )}
-  enableKeyboardNavigation = true,
-  enableScreenReaderSupport = true,
-  enableHighContrast = false,
-  enableFocusManagement = true
-}) => {
+const EnhancedAccessibility: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: enableHighContrast,
+    highContrast: false,
     reducedMotion: false,
     fontSize: 'medium',
-    screenReader: enableScreenReaderSupport,
-    keyboardNavigation: enableKeyboardNavigation
+    screenReader: false,
+    keyboardNavigation: true,
+    focusVisible: true,
+    skipLinks: true,
+    altText: true,
+    ariaLabels: true,
+    colorBlindSupport: false
   });
 
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
-    // Apply accessibility settings
+    // Load saved settings from localStorage
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      setSettings(JSON.parse(savedSettings));
+    }
+
+    // Apply initial settings
+    applyAccessibilitySettings(settings);
+  }, []);
+
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
-    // High contrast
-    if (settings.highContrast) {
+    // High contrast mode
+    if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
 
     // Reduced motion
-    if (settings.reducedMotion) {
+    if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
 
     // Font size
-    const fontSizeMap = {
-      small: '14px',
-      medium: '16px',
-      large: '18px'
-    };
-    root.style.fontSize = fontSizeMap[settings.fontSize];
+    root.classList.remove('font-small', 'font-medium', 'font-large');
+    root.classList.add(`font-${newSettings.fontSize}`);
 
     // Screen reader support
-    if (settings.screenReader) {
+    if (newSettings.screenReader) {
       root.setAttribute('aria-live', 'polite');
     } else {
       root.removeAttribute('aria-live');
     }
-  }, [settings]);
 
-  useEffect(() => {
     // Keyboard navigation
-    if (settings.keyboardNavigation) {
-      const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
-          if (skipLink) {
-            skipLink.focus();
-            event.preventDefault();
-          }
-        }
-
-        // Escape key handling
-        if (event.key === 'Escape') {
-          const activeElement = document.activeElement as HTMLElement;
-          if (activeElement && activeElement.blur) {
-            activeElement.blur();
-          }
-        }
-      };
-
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
+    if (newSettings.keyboardNavigation) {
+      root.classList.add('keyboard-navigation');
+    } else {
+      root.classList.remove('keyboard-navigation');
     }
-  }, [settings.keyboardNavigation]);
 
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
-    setSettings(prev => ({ ...prev, [key]: value }));
+    // Focus visible
+    if (newSettings.focusVisible) {
+      root.classList.add('focus-visible');
+    } else {
+      root.classList.remove('focus-visible');
+    }
+
+    // Skip links
+    if (newSettings.skipLinks) {
+      const skipLink = document.getElementById('skip-link');
+      if (skipLink) {
+        skipLink.style.display = 'block';
+      }
+    } else {
+      const skipLink = document.getElementById('skip-link');
+      if (skipLink) {
+        skipLink.style.display = 'none';
+      }
+    }
+
+    // Alt text for images
+    if (newSettings.altText) {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.getAttribute('alt')) {
+          img.setAttribute('alt', 'Image');
+        }
+      });
+    }
+
+    // ARIA labels
+    if (newSettings.ariaLabels) {
+      const buttons = document.querySelectorAll('button');
+      buttons.forEach(button => {
+        if (!button.getAttribute('aria-label') && !button.textContent) {
+          button.setAttribute('aria-label', 'Button');
+        }
+      });
+    }
+
+    // Color blind support
+    if (newSettings.colorBlindSupport) {
+      root.classList.add('color-blind-support');
+    } else {
+      root.classList.remove('color-blind-support');
+    }
+  };
+
+  const handleSettingChange = (key: keyof AccessibilitySettings, value: boolean | string) => {
+    const newSettings = { ...settings, [key]: value };
+    setSettings(newSettings);
+    applyAccessibilitySettings(newSettings);
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+  };
+
+  const resetSettings = () => {
+    const defaultSettings: AccessibilitySettings = {
+      highContrast: false,
+      reducedMotion: false,
+      fontSize: 'medium',
+      screenReader: false,
+      keyboardNavigation: true,
+      focusVisible: true,
+      skipLinks: true,
+      altText: true,
+      ariaLabels: true,
+      colorBlindSupport: false
+    };
+    setSettings(defaultSettings);
+    applyAccessibilitySettings(defaultSettings);
+    localStorage.setItem('accessibility-settings', JSON.stringify(defaultSettings));
   };
 
   return (
-    <div className="enhanced-accessibility">
-      {/* Accessibility Controls */}
-      <div className="accessibility-panel fixed top-4 right-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg border border-slate-700 min-w-64">
-        <h3 className="text-white text-sm font-semibold mb-4">Accessibility Settings
-        <div className="space-y-4">
-          {/* High Contrast */}
-          <div className="flex items-center justify-between">
-            <label className="text-sm text-gray-300">High Contrast
-            <button
-              onClick={() => updateSetting('highContrast', !settings.highContrast)}
-              className={`w-12 h-6 rounded-full transition-colors ${
-                settings.highContrast ? 'bg-cyan-500' : 'bg-gray-600'
-              }`}
-              aria-label="Toggle high contrast mode"
-            >
-              <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                settings.highContrast ? 'translate-x-6' : 'translate-x-0.5'
-              }`} />
-          {/* Reduced Motion */}
-          <div className="flex items-center justify-between">
-            <label className="text-sm text-gray-300">Reduce Motion
-            <button
-              onClick={() => updateSetting('reducedMotion', !settings.reducedMotion)}
-              className={`w-12 h-6 rounded-full transition-colors ${
-                settings.reducedMotion ? 'bg-cyan-500' : 'bg-gray-600'
-              }`}
-              aria-label="Toggle reduced motion"
-            >
-              <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5'
-              }`} />
-          {/* Font Size */}
-            <label className="text-sm text-gray-300 mb-2 block">Font Size
-            <div className="flex space-x-2">
-              {(['small', 'medium', 'large'] as const).map((size) => (
-                <button
-                  key={size}
-                  onClick={() => updateSetting('fontSize', size)}
-                  className={`px-3 py-1 text-xs rounded ${
-                    settings.fontSize === size
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-gray-600 text-gray-300 hover:bg-gray-500'
-                  }`}
+    <>
+      {/* Skip Link */}
+      {settings.skipLinks && (
+        <a
+          href="#main-content"
+          id="skip-link"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+        >
+          Skip to main content
+        </a>
+      )}
+
+      {/* Accessibility Panel */}
+      <div className="fixed bottom-4 right-4 z-40">
+        <button
+          onClick={() => setIsVisible(!isVisible)}
+          className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
+          aria-label="Toggle accessibility settings"
+        >
+          ♿
+        </button>
+
+        {isVisible && (
+          <div className="absolute bottom-16 right-0 bg-white rounded-lg shadow-xl p-6 w-80 max-h-96 overflow-y-auto">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              Accessibility Settings
+            </h3>
+
+            <div className="space-y-4">
+              {/* High Contrast */}
+              <label className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gray-700">High Contrast</span>
+                <input
+                  type="checkbox"
+                  checked={settings.highContrast}
+                  onChange={(e) => handleSettingChange('highContrast', e.target.checked)}
+                  className="rounded"
+                />
+              </label>
+
+              {/* Reduced Motion */}
+              <label className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gray-700">Reduced Motion</span>
+                <input
+                  type="checkbox"
+                  checked={settings.reducedMotion}
+                  onChange={(e) => handleSettingChange('reducedMotion', e.target.checked)}
+                  className="rounded"
+                />
+              </label>
+
+              {/* Font Size */}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Font Size
+                </label>
+                <select
+                  value={settings.fontSize}
+                  onChange={(e) => handleSettingChange('fontSize', e.target.value as 'small' | 'medium' | 'large')}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm"
                 >
-                  {size.charAt(0).toUpperCase() + size.slice(1)}
-              ))}
-          {/* Screen Reader */}
-          <div className="flex items-center justify-between">
-            <label className="text-sm text-gray-300">Screen Reader
-            <button
-              onClick={() => updateSetting('screenReader', !settings.screenReader)}
-              className={`w-12 h-6 rounded-full transition-colors ${
-                settings.screenReader ? 'bg-cyan-500' : 'bg-gray-600'
-              }`}
-              aria-label="Toggle screen reader support"
-            >
-              <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                settings.screenReader ? 'translate-x-6' : 'translate-x-0.5'
-              }`} />
-          {/* Keyboard Navigation */}
-          <div className="flex items-center justify-between">
-            <label className="text-sm text-gray-300">Keyboard Nav
-            <button
-              onClick={() => updateSetting('keyboardNavigation', !settings.keyboardNavigation)}
-              className={`w-12 h-6 rounded-full transition-colors ${
-                settings.keyboardNavigation ? 'bg-cyan-500' : 'bg-gray-600'
-              }`}
-              aria-label="Toggle keyboard navigation"
-            >
-              <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-0.5'
-              }`} />
-      {children}
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                  <option value="large">Large</option>
+                </select>
+              </div>
+
+              {/* Screen Reader */}
+              <label className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gray-700">Screen Reader Support</span>
+                <input
+                  type="checkbox"
+                  checked={settings.screenReader}
+                  onChange={(e) => handleSettingChange('screenReader', e.target.checked)}
+                  className="rounded"
+                />
+              </label>
+
+              {/* Keyboard Navigation */}
+              <label className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gray-700">Keyboard Navigation</span>
+                <input
+                  type="checkbox"
+                  checked={settings.keyboardNavigation}
+                  onChange={(e) => handleSettingChange('keyboardNavigation', e.target.checked)}
+                  className="rounded"
+                />
+              </label>
+
+              {/* Focus Visible */}
+              <label className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gray-700">Focus Visible</span>
+                <input
+                  type="checkbox"
+                  checked={settings.focusVisible}
+                  onChange={(e) => handleSettingChange('focusVisible', e.target.checked)}
+                  className="rounded"
+                />
+              </label>
+
+              {/* Skip Links */}
+              <label className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gray-700">Skip Links</span>
+                <input
+                  type="checkbox"
+                  checked={settings.skipLinks}
+                  onChange={(e) => handleSettingChange('skipLinks', e.target.checked)}
+                  className="rounded"
+                />
+              </label>
+
+              {/* Alt Text */}
+              <label className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gray-700">Alt Text</span>
+                <input
+                  type="checkbox"
+                  checked={settings.altText}
+                  onChange={(e) => handleSettingChange('altText', e.target.checked)}
+                  className="rounded"
+                />
+              </label>
+
+              {/* ARIA Labels */}
+              <label className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gray-700">ARIA Labels</span>
+                <input
+                  type="checkbox"
+                  checked={settings.ariaLabels}
+                  onChange={(e) => handleSettingChange('ariaLabels', e.target.checked)}
+                  className="rounded"
+                />
+              </label>
+
+              {/* Color Blind Support */}
+              <label className="flex items-center justify-between">
+                <span className="text-sm font-medium text-gray-700">Color Blind Support</span>
+                <input
+                  type="checkbox"
+                  checked={settings.colorBlindSupport}
+                  onChange={(e) => handleSettingChange('colorBlindSupport', e.target.checked)}
+                  className="rounded"
+                />
+              </label>
+            </div>
+
+            <div className="mt-6 flex gap-2">
+              <button
+                onClick={resetSettings}
+                className="flex-1 bg-gray-500 text-white px-4 py-2 rounded text-sm hover:bg-gray-600 transition-colors"
+              >
+                Reset
+              </button>
+              <button
+                onClick={() => setIsVisible(false)}
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded text-sm hover:bg-blue-700 transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    </>
   );
-}
-  return <React.Fragment>{children}</React.Fragment>;
 };
 
 export default EnhancedAccessibility;
-</div></div></div>

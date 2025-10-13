@@ -1,234 +1,159 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
-const ContentCarouselPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-import React, {useState, useEffect}from 'react';
-import {Cloud, Zap, Shield, ChevronLeft, ChevronRight}}from 'lucide-react';
+import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Cloud, Zap, Shield, Brain } from 'lucide-react';
-import React from 'react';
 
-const ContentCarousel: React.FC = React.memo((props) => {
+interface CarouselItem {
+  id: string;
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+  color: string;
+  bgColor: string;
+}
+
+const ContentCarousel: React.FC = React.memo(() => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const items: CarouselItem[] = [
+    {
+      id: '1',
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence solutions.',
-      title: 'AI Solutions',
-      description: 'Transform your business with cutting-edge artificial intelligence solutions.',
-      features: [,
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics'
-      ],
-      icon: Zap,
-      color: 'from-purple-500 to-pink-600',},
-    {id: 2,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      stats: [
-        { value: '95%', label: 'Accuracy Rate' },
-        { value: '10x', label: 'Faster Processing' },
-        { value: '24/7', label: 'Automation' }
-      ]
-      icon: Zap,
-      color: 'from-cyan-500 to-blue-600'
-      color: 'from-purple-500 to-pink-600'
-      color: 'from-orange-500 to-red-600',},
-    {id: 4,
-      color: 'from-red-500 to-orange-600'
-      color: 'from-blue-500 to-indigo-600',}];
-  ];
-
-  useEffect(() => {];];
-    const timer = setInterval(() => {;
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
-  const nextSlide = () => {setCurrentSlide((prev) => (prev + 1) % slides.length);};
-
-  const prevSlide = () => {setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);};
-
-  return(<div className="relative w-full max-w-6xl mx-auto">)
-      <div className="overflow-hidden rounded-2xl">
-        <div;
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentSlide * 100,)}%)` }}
-        >{slides.map((slide) => (
-            <div key={slide.id}className="w-full flex-shrink-0">
-              <div className={`bg-gradient-to-br ${slide.color}p-8 md: p-12 text-white`,}>
-                <div className="max-w-4xl mx-auto">
-                  <div className="flex items-center justify-center mb-6">
-                    <div className="bg-white/20 p-4 rounded-full">
-                      <slide.icon className="h-12 w-12" />
-                  <h2 className="text-3xl md: text-4xl font-bold text-center mb-4">,
-                    {slide.title}
-                  <p className="text-xl text-center mb-8 text-white/90">{slide.description</p>}
-                  <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,
-                    {slide.features.map((feature, index) => (
-                      <div key={index}className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-white rounded-full">
-                        <span className="text-white/90">{feature</span>}
-                    ))}
-      {/* Navigation buttons */} <button;
-        onClick={prevSlide}className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover: bg-white/30 text-white p-2 rounded-full transition-all duration-300",
-      >
-        <ChevronLeft className="h-6 w-6" />
-      <button;
-        onClick={nextSlide}className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover: bg-white/30 text-white p-2 rounded-full transition-all duration-300",
-      >
-        <ChevronRight className="h-6 w-6" />
-      {/* Dots indicator */} <div className="flex justify-center mt-6 space-x-2">{slides.map((_, index) => (
-          <button;
-            key={index}onClick={() =>setCurrentSlide(index)</button>}className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'}`}
-  );
-});
-
-export default ContentCarousel;
-      description: 'Worldwide deployment and support for international businesses'
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Solutions',
-      role: 'CTO',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. The AI solutions they implemented increased our efficiency by 300%.',
-      rating: 5
+      icon: Brain,
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50'
     },
     {
-      name: 'Michael Chen',
-      company: 'FinanceFlow Inc',
-      role: 'CEO',
-      content: 'Outstanding service and cutting-edge technology. Their cloud migration saved us $2M annually while improving performance.',
-      rating: 5
+      id: '2',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions for modern businesses.',
+      icon: Cloud,
+      color: 'text-green-600',
+      bgColor: 'bg-green-50'
     },
     {
-      name: 'Alex Rodriguez',
-      company: 'HealthTech Plus',
-      role: 'IT Director',
-      content: 'The cybersecurity solutions provided by Zion Tech Group are exceptional. We\'ve had zero security incidents since implementation.',
-      rating: 5
+      id: '3',
+      title: 'Performance Optimization',
+      description: 'Lightning-fast applications with advanced performance tuning.',
+      icon: Zap,
+      color: 'text-yellow-600',
+      bgColor: 'bg-yellow-50'
+    },
+    {
+      id: '4',
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards.',
+      icon: Shield,
+      color: 'text-red-600',
+      bgColor: 'bg-red-50'
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>ContentCarousel | Zion Tech Group
-        <meta name="description" content="Professional ContentCarousel services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="ContentCarousel, AI solutions, IT services, Zion Tech Group, contentcarousel" />
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                ContentCarousel
-              <br />
-              <span className="text-white">Solutions
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced contentcarousel solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our ContentCarousel?
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our contentcarousel solutions deliver unmatched performance, security, and scalability.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
-                <p className="text-gray-300">{feature.description}
-            ))}
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our contentcarousel solutions for your business.
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}
-            ))}
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your contentcarousel needs and get a customized solution.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {slides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentSlide(index
-                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  index === currentSlide ? 'bg-purple-400' : 'bg-white/30'
-                }`}
-              />
-            ))}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
-        {/* Additional Info */}
-        <div className="mt-16 text-center">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">500+
-              <div className="text-gray-300">Happy Clients
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">99.9%
-              <div className="text-gray-300">Uptime
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">24/7
-              <div className="text-gray-300">Support
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">50+
-              <div className="text-gray-300">Countries
-  );
-};
+  useEffect(() => {
+    if (!isAutoPlaying) return;
 
-export default ContentCarouselPage;
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, items.length]);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? items.length - 1 : prevIndex - 1
+    );
+    setIsAutoPlaying(false);
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+    setIsAutoPlaying(false);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+    setIsAutoPlaying(false);
+  };
+
+  return (
+    <div className="relative w-full max-w-4xl mx-auto">
+      {/* Carousel Container */}
+      <div className="relative overflow-hidden rounded-lg">
+        <div 
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {items.map((item) => (
+            <div key={item.id} className="w-full flex-shrink-0">
+              <div className={`${item.bgColor} p-8 md:p-12 text-center`}>
+                <div className="max-w-2xl mx-auto">
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full ${item.bgColor} mb-6`}>
+                    <item.icon className={`w-8 h-8 ${item.color}`} />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                    {item.title}
+                  </h3>
+                  <p className="text-lg text-gray-600 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={goToPrevious}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+          aria-label="Previous slide"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+
+        <button
+          onClick={goToNext}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+          aria-label="Next slide"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+      </div>
+
+      {/* Dots Indicator */}
+      <div className="flex justify-center mt-6 space-x-2">
+        {items.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-200 ${
+              index === currentIndex
+                ? 'bg-blue-600 scale-125'
+                : 'bg-gray-300 hover:bg-gray-400'
+            }`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+
+      {/* Auto-play Toggle */}
+      <div className="flex justify-center mt-4">
+        <button
+          onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+          className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+            isAutoPlaying
+              ? 'bg-blue-600 text-white'
+              : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+          }`}
+        >
+          {isAutoPlaying ? 'Pause' : 'Play'} Auto-rotation
+        </button>
+      </div>
+    </div>
+  );
+});
+
+ContentCarousel.displayName = 'ContentCarousel';
+
+export default ContentCarousel;

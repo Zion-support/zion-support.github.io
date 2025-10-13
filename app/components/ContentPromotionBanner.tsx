@@ -1,148 +1,105 @@
-'use client';
-import React from 'react';
-import { Sparkles, ArrowRight, Star } from 'lucide-react';
+import React, { useState } from 'react';
+import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = React.memo((props) => {
-  return (
-    <div className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4 relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 animate-pulse">
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
-          <div className="flex items-center space-x-2 mb-2 sm:mb-0">
-            <Sparkles className="w-5 h-5 animate-pulse" />
-            <span className="font-semibold text-sm sm:text-base"><span className="sr-only">Screen reader: </span>New AI Solutions Available
-            <Star className="w-4 h-4 text-yellow-300 animate-bounce" />
-          <div className="flex items-center space-x-4 ml-0 sm:ml-6">
-            <span className="text-sm sm:text-base"><span className="sr-only">Screen reader:
-              Transform your business with cutting-edge AI technology
-            <a
-              href="/services"
-              className="flex items-center space-x-1 bg-white/20 hover:bg-white/30 px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
-            >
-              <span><span className="sr-only">Screen reader: </span>Learn More
-              <ArrowRight className="w-3 h-3" />
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+interface PromotionFeature {
+  title: string;
+  description: string;
+  icon: React.ComponentType<{ className?: string }>;
+}
 
-const ContentPromotionBannerPage: React.FC = () => {
-import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
+const ContentPromotionBanner: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(true);
 
-const ContentPromotionBanner: React.FC = () => {,
+  const features: PromotionFeature[] = [
+    {
+      title: 'AI-Powered Solutions',
       description: 'Leverage cutting-edge AI to automate and optimize your business processes.',
-      icon: Zap;,},
-    {title: 'Enterprise Security',
-      description: 'Bank-level security and compliance to protect your data and operations.',
-      icon: Shield;,},
-    {title: 'Proven Results',
-      description: 'Join 500+ companies that have transformed their operations with our solutions.',
-      icon: Star;,},
-    {title: 'Expert Support',
-      description: '24/7 support from our team of AI and IT specialists.',
-      icon: Users;,}];
-        {/* Features Section */} <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-12">,
-              <p className="text-purple-100 text-sm">{feature.description</p>}
-        {/* CTA Section */} <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-      description: 'Worldwide deployment and support for international businesses'
-  ];
-
-  ];
-
-  const stats = [
-    {
-      icon: Users,
-      value: '10,000+',
-      label: 'Happy Customers',
-      description: 'Businesses trust our solutions'
+      icon: Zap
     },
     {
-      icon: TrendingUp,
-      value: '99.9%',
-      label: 'Uptime',
-      description: 'Reliable service guarantee'
+      title: 'Enterprise Security',
+      description: 'Bank-level security with advanced encryption and compliance standards.',
+      icon: Shield
     },
     {
-      icon: Star,
-      value: '4.9/5',
-      label: 'Rating',
-      description: 'Highly rated by clients'
+      title: 'Proven Track Record',
+      description: 'Trusted by 500+ companies worldwide with 99.9% uptime.',
+      icon: Star
+    },
+    {
+      title: 'Expert Team',
+      description: 'Our certified professionals deliver world-class solutions.',
+      icon: Users
     }
   ];
 
+  if (!isVisible) {
+    return null;
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>ContentPromotionBanner | Zion Tech Group
-        <meta name="description" content="Professional ContentPromotionBanner services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="ContentPromotionBanner, AI solutions, IT services, Zion Tech Group, contentpromotionbanner" />
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                ContentPromotionBanner
-              <br />
-              <span className="text-white">Solutions
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced contentpromotionbanner solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our ContentPromotionBanner?
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our contentpromotionbanner solutions deliver unmatched performance, security, and scalability.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
-                <p className="text-gray-300">{feature.description}
-            ))}
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our contentpromotionbanner solutions for your business.
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your contentpromotionbanner needs and get a customized solution.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
+    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Transform Your Business with Zion Tech
+          </h2>
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+            Join thousands of companies already using our AI and IT solutions to drive growth and innovation.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          {features.map((feature, index) => (
+            <div key={index} className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-4">
+                <feature.icon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+              <p className="text-blue-100 text-sm">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors flex items-center gap-2">
+              Get Started Today
+              <ArrowRight className="w-4 h-4" />
+            </button>
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+              Learn More
+            </button>
+          </div>
+          
+          <div className="mt-6 flex items-center justify-center gap-8 text-sm text-blue-100">
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4" />
+              <span>Free Consultation</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4" />
+              <span>No Setup Fees</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4" />
+              <span>24/7 Support</span>
+            </div>
+          </div>
+        </div>
+
+        <button
+          onClick={() => setIsVisible(false)}
+          className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+          aria-label="Close banner"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
   );
 };
 
-export default ContentPromotionBannerPage;
-  );
-});
-
 export default ContentPromotionBanner;
-</div></div></div></div></div></div>
