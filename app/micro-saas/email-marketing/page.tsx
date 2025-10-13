@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {Mail, ArrowRight}}from 'lucide-react';
@@ -54,4 +52,3 @@ export default EmailMarketingSuitePage;
   )}};
 
 export default EmailMarketingSuitePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

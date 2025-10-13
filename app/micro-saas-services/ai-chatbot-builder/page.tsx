@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-export default function AIChatbotBuilder() {
-=======
 export default function AiChatbotBuilder() {
->>>>>>> origin/clean-main-20251013-145848
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
@@ -33,12 +26,6 @@ export default function AiChatbotBuilder() {
             </p>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-    </div>
-  );
-}
-=======
       </section>
 
       {/* Features Section */}
@@ -161,4 +148,3 @@ return(<>)
 };
 
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

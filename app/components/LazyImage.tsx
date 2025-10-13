@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -141,4 +139,3 @@ const LazyImagePage: React.FC = () => {
 };
 
 export default LazyImagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

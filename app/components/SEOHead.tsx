@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React from 'react';
 
 interface SEOHeadProps {
@@ -12,22 +7,6 @@ interface SEOHeadProps {
   canonical?: string;
   ogImage?: string;
   ogType?: string;
-<<<<<<< HEAD
-}
-
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
-  keywords = '',
-  canonical = '',
-  ogImage = '/og-image.jpg',
-<<<<<<< HEAD
-  ogType = 'website'
-}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullCanonical = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
-
-=======
   twitterCard?: string;
   structuredData?: any;
 }
@@ -44,40 +23,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <Helmet>
-<<<<<<< HEAD
-=======
       {/* Primary meta tags */}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />
-<<<<<<< HEAD
-      {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={fullCanonical} />
-      
-      {/* Open Graph Tags */}
-      <meta property="og:title" content={fullTitle} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={fullCanonical} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      
-      {/* Twitter Card Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={fullTitle} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
-      
-      {/* Additional SEO Tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
-=======
 
   ogType = 'website',
 
@@ -93,8 +43,6 @@ return(<Helmet />)
 {/* Open Graph Meta Tags */} <meta name="description" content="AI-powered solution" />
         {JSON.stringify(structuredData || defaultStructuredData</div>
       </script>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={canonical} />
       
@@ -133,20 +81,8 @@ return(<Helmet />)
           {JSON.stringify(structuredData)}
         </script>
       )}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
     </Helmet>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
   );
 };
 
 export default SEOHead;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-console-errors-and-fix-issues-845e
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5

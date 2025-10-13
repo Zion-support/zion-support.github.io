@@ -1,34 +1,10 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const PagePage: React.FC = () => {,
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-  ];];];
-const benefits = [
-    'Proven track record of success'
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
-
-<<<<<<< HEAD
-=======
-=======
 
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
 const MarketingToolsPage: React.FC = () => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -114,9 +90,4 @@ const MarketingToolsPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 export default MarketingToolsPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e

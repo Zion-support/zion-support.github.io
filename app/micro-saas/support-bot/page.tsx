@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {Bot, ArrowRight}}from 'lucide-react';
@@ -50,4 +48,3 @@ const SmartSupportBotPage: React.FC = () => {,
   )}};
 
 export default SmartSupportBotPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

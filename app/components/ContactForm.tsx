@@ -14,14 +14,6 @@ const ContactForm: React.FC = () => {
   const [status, setStatus] = useState<FormStatus>({type: 'idle',
     message: '',})
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
-    const {name, value}}= e.target;
-    setFormData(prev => ({)
-      [name]: value;}));
-=======
-=======
   const [status, setStatus] = useState<FormStatus>({
     type: 'idle',
     message: ''
@@ -35,7 +27,6 @@ const ContactForm: React.FC = () => {
     }))
   }
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -52,16 +43,10 @@ const ContactForm: React.FC = () => {
         message: "",
         service: "",
       });
-<<<<<<< HEAD
-    } catch (error) {
-      } finally {
-=======
-=======
 
     } catch (error) {
       console.error('Failed to submit contact form:', error);
     } finally {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
       setIsSubmitting(false);
     }
   };
@@ -76,7 +61,6 @@ const ContactForm: React.FC = () => {
         </p>
       </div>
     );
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
   }
 
   const handleSubmit = async (e: React.FormEvent) => {,

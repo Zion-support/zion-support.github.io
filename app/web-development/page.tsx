@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
 
 export default function WebDevelopment() {
-=======
 
 const WebDevelopmentPage: React.FC = () => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -31,17 +22,11 @@ const WebDevelopmentPage: React.FC = () => {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - WebDevelopment Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import {Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone}}from 'lucide-react';
@@ -320,6 +305,3 @@ export default WebDevelopmentPage;
 };
 
 export default WebDevelopmentPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e

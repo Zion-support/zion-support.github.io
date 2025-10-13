@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 
@@ -19,4 +17,3 @@ const SitemapPage: React.FC = () => {
     </div>
   );
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

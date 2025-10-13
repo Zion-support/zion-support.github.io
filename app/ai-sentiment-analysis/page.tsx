@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { Brain, Zap, CheckCircle, ArrowRight, Star, Users, BarChart, Shield, Target, Clock } from 'lucide-react';
 
 const AISentimentAnalysisPage: React.FC = () => {
@@ -157,4 +155,3 @@ const AISentimentAnalysisPage: React.FC = () => {
         </section>
       </div>
     </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 // Accessibility utilities for improving user experience and compliance;
 export const generateId = (prefix: string = 'id'): string => {,}return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
@@ -38,8 +34,6 @@ export const addFocusIndicators = (): void => {const style = document.createElem
 document.head.appendChild(style);
 }
 export const initializeAccessibility = (): void => {addFocusIndicators();
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 export const Accessibilityutils = {
   init: () => {
     },
@@ -53,4 +47,3 @@ export const Accessibilityutils = {
 };
 
 export default Accessibilityutils;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6

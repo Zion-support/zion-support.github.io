@@ -1,31 +1,14 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-export default function AIWebsiteBuilder() {
-=======
 export default function AiWebsiteBuilder() {
->>>>>>> origin/clean-main-20251013-145848
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>AI Website Builder - Zion Tech Group</title>
         <meta name="description" content="Advanced AI website builder solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            AI Website Builder
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI website builder solutions by Zion Tech Group
-          </p>
-=======
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -69,7 +52,6 @@ return(<>)
               <button>Get Started;</button>
               </button>
               <button>View Demo,</button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
         </div>
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-md p-8">
@@ -78,13 +60,6 @@ return(<>)
               This page is under development. Please check back later for updates.
             </p>
           </div>
-<<<<<<< HEAD
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -157,4 +132,3 @@ return(<>)
 };
 
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

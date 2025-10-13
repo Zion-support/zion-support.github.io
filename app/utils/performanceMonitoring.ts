@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 'use client';
 /**;
  * Advanced Performance Monitoring System;
@@ -672,7 +668,6 @@ export const recordMetric = (nam,
   }
   // Also record in the main performance monitoring service;
   performanceMonitoring.recordCustomMetric(name, value, unit);
-=======
 export const Performancemonitoring = {
   init: () => {
     },
@@ -683,7 +678,6 @@ export const Performancemonitoring = {
 
   cleanup: () => {
     },
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 };
 function getRating(nam,;)
   e: string, valu);
@@ -741,4 +735,3 @@ export const getRecommendations = (): string[] => {/* TODO: Fix JSX expression *
   return recommendations;
   return recommendations;
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

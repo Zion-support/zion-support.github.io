@@ -1,13 +1,6 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-'use client';
-import React, {useCallback, useState, useEffect, Suspense, lazy, memo}from 'react';
-import {Phone, Mail, MapPin, Clock}}from 'lucide-react';
-=======
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-029f
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';

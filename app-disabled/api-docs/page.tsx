@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React, {useState}from 'react';
 import {Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download}}from 'lucide-react';
@@ -103,4 +101,3 @@ export default function APIDocsPage() {const [copiedCode, setCopiedCode] = useSt
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

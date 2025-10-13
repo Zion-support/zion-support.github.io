@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 import React from 'react';
 'use client';
 /**;
@@ -393,8 +389,6 @@ export function debounce<T extends (...args: Parameters<T>) => ReturnType<T>>(,
     }
     timeout = setTimeout(later, wait);
   };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 export const Formvalidation = {
   init: () => {
     },
@@ -408,4 +402,3 @@ export const Formvalidation = {
 };
 
 export default Formvalidation;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6

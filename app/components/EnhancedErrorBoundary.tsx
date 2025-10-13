@@ -1,76 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
-=======
 'use client';
-<<<<<<< HEAD
-import React, { Component, ReactNode } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
-=======
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-<<<<<<< HEAD
-=======
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
-=======
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
 }
 
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-}
-
-export default class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
-=======
   error?: Error;
-=======
-  error?: Error;
-  errorInfo?: ErrorInfo;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
-}
-
-class EnhancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
   error?: Error;
   errorInfo?: ErrorInfo;
 }
@@ -79,7 +26,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -88,7 +42,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorInfo: null
     };
-=======
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react'
@@ -127,33 +80,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0373
   }
 
-<<<<<<< HEAD
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-<<<<<<< HEAD
-      errorInfo
-    });
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    // Log error to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-=======
     // Log error to monitoring service
     // In production, send to error reporting service
     if (process.env['NODE_ENV'] === "production") {
       // Example: sendErrorToService(error, errorInfo);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
     }
 
     // In production, you might want to send this to an error reporting service
     // Example: errorReportingService.captureException(error, { extra: errorInfo });
-=======
     
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
@@ -164,7 +100,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (process.env['NODE_ENV'] === 'production') {
       this.logErrorToService(error, errorInfo);
     }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
   }
 
   handleRetry = () => {
@@ -173,10 +108,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null
     });
-=======
   }
 
-=======
   error?: Error;
   errorInfo?: ErrorInfo;
 }
@@ -187,95 +120,37 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.state = { hasError: false };
   }
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    console.error('Error caught by boundary:', error, errorInfo);
-    this.setState({ error, errorInfo });
-=======
     this.setState({
       error,
       errorInfo
     });
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
 
     // Log to analytics service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-<<<<<<< HEAD
-=======
         error_type: error.name
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
       });
     }
-=======
     console.error('Error caught by EnhancedErrorBoundary:', error, errorInfo);
     this.setState({ error, errorInfo });
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
   }
 
-<<<<<<< HEAD
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
-  };
-
-  handleGoHome = () => {
-    window.location.href = '/';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
-  };
-
-  render() {
-    if (this.state.hasError) {
-<<<<<<< HEAD
-=======
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
       // Default error UI
       return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-            <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-6" />
-            <h1 className="text-2xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
-            </p>
-            
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="bg-black/20 p-3 rounded text-xs text-red-300 font-mono">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Stack:</strong>
-                      <pre className="mt-1 whitespace-pre-wrap">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-                  )}
-                </div>
-=======
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-red-500/20 text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -309,7 +184,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <pre className="mt-2 text-xs text-red-400 bg-slate-900/50 p-3 rounded overflow-auto">
                   {this.state.error.stack}
                 </pre>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
               </details>
             )}
 
@@ -317,7 +191,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <button
                 onClick={this.handleRetry}
                 className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50"
-=======
         <div className="min-h-screen bg-slate-900 flex items-center justify-center px-4">
           <div className="max-w-md w-full text-center">
             <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -348,24 +221,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <button
                 onClick={this.handleRetry}
                 className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-<<<<<<< HEAD
-              <Link
-                to="/"
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50"
-              >
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
-              </Link>
-            </div>
-=======
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-=======
       errorInfo,
     })
 
@@ -383,7 +244,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     if (process.env['NODE_ENV'] === 'production') {
       this.logErrorToService(error, errorInfo)
     }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0373
   }
 
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
@@ -406,18 +266,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   private handleRetry = () => {
-<<<<<<< HEAD
-    if (this.retryCount < this.maxRetries) {
-      this.retryCount++
-      this.setState({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: '',
-      })
-    }
-  }
-=======
     this.setState(prevState => ({
       hasError: false,
       error: null,
@@ -425,7 +273,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorId: ''
     });
   };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
 
   private handleReload = () => {
     window.location.reload()
@@ -451,21 +298,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-4">We're sorry, but something unexpected happened.</p>
-            <button
-              onClick={() => this.setState({ hasError: false })}
-              className="bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors"
-            >
-              Try again
-            </button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
       // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback
@@ -578,8 +410,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </p>
               )}
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0373
-=======
               
               <button
                 onClick={this.handleGoHome}
@@ -589,8 +419,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 Go Home
               </button>
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
-=======
       // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
@@ -692,37 +520,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               <p>Error ID: {this.state.errorId}</p>
               <p>If this problem persists, please contact our support team with this error ID.</p>
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
           </div>
         </div>
       );
-=======
       return <ErrorFallback error={this.state.error} errorInfo={this.state.errorInfo} />;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
     }
 
     return this.props.children;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default EnhancedErrorBoundary;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 export default EnhancedErrorBoundary
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0373
-=======
 }
 
 export default EnhancedErrorBoundary;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
-=======
 interface ErrorFallbackProps {
   error?: Error;
   errorInfo?: ErrorInfo;
@@ -800,9 +611,6 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, errorInfo }) => {
     </div>
   );
 };
-=======
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
 
 export default EnhancedErrorBoundary;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab

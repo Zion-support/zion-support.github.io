@@ -19,10 +19,6 @@ export default function ZionAiTaskScheduler() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - ZionAiTaskScheduler Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>

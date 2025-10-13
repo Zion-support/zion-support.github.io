@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function AIMobileBuilder() {
-=======
 export default function AiMobileBuilder() {
->>>>>>> origin/clean-main-20251013-145848
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
@@ -29,7 +21,6 @@ export default function AiMobileBuilder() {
               This page is under development. Please check back later for updates.
             </p>
           </div>
-=======
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -345,15 +336,10 @@ const AIMobileBuilderPage: React.FC = () => {
               Try Free Demo
             </Link>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default AIMobileBuilderPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3

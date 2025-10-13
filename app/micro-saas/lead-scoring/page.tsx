@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {Settings, ArrowRight}}from 'lucide-react';
@@ -64,4 +62,3 @@ return(<>,)
 
 export default MicroSaaSPage;
               <p>We're developing powerful {title.toLowerCase()</p>}}solutions. Stay tuned for updates!
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

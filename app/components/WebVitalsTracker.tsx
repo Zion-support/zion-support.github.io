@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface WebVitalsTrackerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function WebVitalsTracker({ className = '', children }: WebVitalsTrackerProps) {
-  return (
-    <div className={`web-vitals-tracker ${className}`}>
-      {children}
-    </div>
-  );
-}
-=======
 import React, { useEffect } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -55,4 +39,3 @@ const WebVitalsTracker: React.FC = () => {
 };
 
 export default WebVitalsTracker;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab

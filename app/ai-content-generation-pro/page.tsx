@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { FileText, Brain, Zap, Target, CheckCircle, ArrowRight, Star, Users, BarChart, Globe, Lock, PenTool } from 'lucide-react';
 
 const AIContentGenerationProPage: React.FC = () => {
@@ -286,4 +284,3 @@ const AIContentGenerationProPage: React.FC = () => {
         </section>
       </div>
     </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

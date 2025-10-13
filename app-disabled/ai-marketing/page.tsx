@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD:app/ai-marketing/page.tsx
-import { Helmet } from 'react-helmet-async';
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -12,7 +7,6 @@ import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Targ
 const AiMarketingPage: React.FC = () => {,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
-=======
 import { CheckCircle, Star, Target, TrendingUp, Users, BarChart, Zap, Brain } from 'lucide-react';
 
 const AIMarketingPage: React.FC = () => {
@@ -27,7 +21,6 @@ const AIMarketingPage: React.FC = () => {
       marketPrice: '$500-1,200/month',
       category: 'Advertising',
       technologies: ['Google Ads API', 'Facebook Marketing API', 'Machine Learning', 'Python', 'TensorFlow']
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-marketing/page.tsx
     },
     {
       icon: Zap,
@@ -56,41 +49,16 @@ const AIMarketingPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 export default function AiMarketing() {
   return (
-<<<<<<< HEAD:app/ai-marketing/page.tsx
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-      <Helmet>
-        <title>AiMarketing - Zion Tech Group</title>
-        <meta name="description" content="Advanced aimarketing solutions" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Marketing <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive aimarketing solutions designed to transform your business
-          </p>
-        </div>
-        <div className="text-center">
-          <p className="text-gray-300">Coming Soon - AiMarketing Solutions</p>
-<<<<<<< HEAD
-=======
     <>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-marketing/page.tsx
 
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>
   );
 }
-=======
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -212,4 +180,3 @@ return(<>)
 };
 
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

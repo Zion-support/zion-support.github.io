@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import { useContext } from 'react';
-import { AnalyticsContext } from '../contexts/AnalyticsContext';
-
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
-  }
-  return context;
-};
-=======
 import {useCallback}}from 'react';
 interface AnalyticsEvent {event_category: string,}
   event_label: string,
@@ -34,4 +22,3 @@ const trackConversion = useCallback((conversionId: string, value?: number) => {i
 return {trackEvent,;}
     trackPageView,;
     trackConversion,}}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

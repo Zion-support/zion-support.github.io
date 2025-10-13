@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -12,28 +9,11 @@ export default function AiFraudDetection() {
         <title>AiFraudDetection - Zion Tech Group</title>
         <meta name="description" content="Advanced aifrauddetection solutions" />
       </Helmet>
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Fraud Detection <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive aifrauddetection solutions designed to transform your business
-          </p>
-        </div>
-        <div className="text-center">
-          <p className="text-gray-300">Coming Soon - AiFraudDetection Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>
   );
 }
-=======
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -156,4 +136,3 @@ return(<>)
 };
 
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

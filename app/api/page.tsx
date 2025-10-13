@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -102,4 +100,3 @@ const ApiPage: React.FC = () => {,
                   className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-slate-900 transition-all duration-300",
                 >
                   Join Community;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

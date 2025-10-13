@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 /**;
  * Advanced Error Handler;
@@ -994,4 +992,3 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */}
 export const useErrorHandler = () => {/* TODO: Fix JSX expression */,},
     [errorHandler]
 "`
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

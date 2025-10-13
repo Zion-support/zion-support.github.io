@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
-<<<<<<< HEAD:app/blockchain/page.tsx
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap}}from 'lucide-react';
-const BlockchainPage: React.FC = () => {,
-=======
 import { CheckCircle } from 'lucide-react';
 
 const BlockchainPage: React.FC = () => {
   const blockchainServices = [
     {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/blockchain/page.tsx
       title: 'Smart Contract Development',
       description: 'Custom smart contract development for DeFi, NFTs, and enterprise blockchain applications.',
       icon: '📜',
@@ -151,24 +143,6 @@ const BlockchainPage: React.FC = () => {
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <Helmet />
     <>
-<<<<<<< HEAD:app/blockchain/page.tsx
-  </>
-      <Helmet>
-        <title>Blockchain Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." />
-        <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, enterprise blockchain, Web3" />
-              <p className="text-gray-300">{feature.description</p>}</p>
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}</div>
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
-        </section>
-          <div className="absolute inset-0 bg-black opacity-30"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/50 to-indigo-800/50"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="text-center"></div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                Blockchain Solutions</h1>
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-orange-50">
         {/* Hero Section */}
@@ -178,7 +152,6 @@ const BlockchainPage: React.FC = () => {
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Blockchain & Web3 Services
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/blockchain/page.tsx
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
                 Transform your business with cutting-edge blockchain technology and decentralized solutions
@@ -396,4 +369,3 @@ const BlockchainPage: React.FC = () => {
 };
 
 export default BlockchainPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

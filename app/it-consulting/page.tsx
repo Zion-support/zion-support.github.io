@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React, {Suspense, lazy}from 'react';
 import {Link}}from 'react-router-dom';
@@ -316,4 +314,3 @@ const filteredServices = itServices.filter(service => {;
 };
 
 export default ITConsultingPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

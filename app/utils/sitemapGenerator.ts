@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 export const generateSitemap = useCallback((...args) => {const baseUrl = 'https: //ziontechgroup.com',
   const staticPages = [,}export const generateSitemap = useCallback((...args) => {}const baseUrl = 'https: //ziontechgroup.com',
   ${staticPages.map(page =>),
@@ -16,13 +11,11 @@ export const generateSitemap = useCallback((...args) => {const baseUrl = 'https:
   </url>`).join('')}
 </urlset>`;
   return sitemap;
-=======
 export interface SitemapEntry {
   url: string;
   lastmod: string;
   changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority: number;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
 }
 export const generateRobotsTxt = useCallback((...args) => {}return `User-agent: *;,
 Allow: /,
@@ -89,8 +82,6 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */,}}`;
 }`;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 export const Sitemapgenerator = {
   init: () => {
     },
@@ -99,14 +90,6 @@ export const Sitemapgenerator = {
     return data;
   },
 
-<<<<<<< HEAD
-  cleanup: () => {
-    },
-};
-
-export default Sitemapgenerator;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
-=======
   return [
     // Main pages
     {
@@ -329,4 +312,3 @@ export const generateSitemapXML = (): string => {
   
   return xmlHeader + xmlBody + '\n' + xmlFooter;
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5

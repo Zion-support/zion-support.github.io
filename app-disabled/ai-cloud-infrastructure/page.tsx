@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
-<<<<<<< HEAD:app/ai-cloud-infrastructure/page.tsx
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiCloudInfrastructurePage: React.FC = () => {,
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
 import { CheckCircle, Zap, Shield, Clock } from 'lucide-react';
 
 const AICloudInfrastructurePage: React.FC = () => {
@@ -169,7 +159,6 @@ const AICloudInfrastructurePage: React.FC = () => {
       category: 'Multi-Cloud',
       technologies: ['Kubernetes', 'Terraform', 'Ansible', 'Python', 'Machine Learning', 'APIs'],
       compliance: ['SOC 2', 'ISO 27001', 'HIPAA', 'PCI DSS']
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-cloud-infrastructure/page.tsx
     }
   ];
 
@@ -215,17 +204,6 @@ const AICloudInfrastructurePage: React.FC = () => {
       description: 'Run AI and machine learning workloads on optimized cloud infrastructure',
       icon: '🤖'
     }
-<<<<<<< HEAD:app/ai-cloud-infrastructure/page.tsx
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-        </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Cloud Infrastructure
-=======
   ];
 
   const cloudProviders = [
@@ -247,7 +225,6 @@ const AICloudInfrastructurePage: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               AI Cloud Infrastructure
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-cloud-infrastructure/page.tsx
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai cloud infrastructure solution for modern businesses.
@@ -404,4 +381,3 @@ const AICloudInfrastructurePage: React.FC = () => {
           </div>
         </section>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

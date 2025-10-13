@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 
 interface LinkProps {href: string,}
@@ -56,4 +54,3 @@ export default Link;
 };
 
 export default Link;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

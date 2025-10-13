@@ -3,10 +3,6 @@ import React from 'react';
 const AIMegaTrends20252026: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD:app-disabled/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3:app/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 py-8">
           <div className="bg-white rounded-lg shadow-lg p-8">

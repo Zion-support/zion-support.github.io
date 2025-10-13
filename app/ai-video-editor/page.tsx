@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -38,7 +35,6 @@ const AiVideoEditorPage: React.FC = () => {,
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-=======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { Link } from 'react-router-dom'
@@ -158,7 +154,6 @@ export default function AIVideoEditor() {
       rating: 5
     }
   ]
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -347,28 +342,5 @@ export default PagePage;
         {/* CTA Section */}
         <section className="py-20 px-4">
         </section>
-<<<<<<< HEAD
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
-              <h2>Ready to Get Started?</h2>
-              </h2>
-              <p>Contact our experts to discuss your requirements and get started today.</p>
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>Contact Us;</button>
-                </button>
-                <button>Learn More;</button>
-      <Footer />
-
-  );
-};
-
-export default AiVideoEditorPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
       </div>
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

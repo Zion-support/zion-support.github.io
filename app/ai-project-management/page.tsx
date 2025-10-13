@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -39,25 +35,10 @@ const AiProjectManagementPage: React.FC = () => {,
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 export default function AiProjectManagement() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-      <Helmet>
-        <title>AiProjectManagement - Zion Tech Group</title>
-        <meta name="description" content="Advanced aiprojectmanagement solutions" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Project Management <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive aiprojectmanagement solutions designed to transform your business
-          </p>
-=======
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -108,21 +89,10 @@ return(<>)
               <button>Get Started;</button>
               </button>
               <button>View Demo,</button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - AiProjectManagement Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
-<<<<<<< HEAD
-      </div>
-    </div>
-  );
-}
-=======
       </section>
 
       {/* Benefits Section */}
@@ -224,4 +194,3 @@ return(<>)
 };
 
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

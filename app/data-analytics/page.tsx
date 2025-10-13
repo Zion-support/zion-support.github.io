@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -71,4 +69,3 @@ return(<>)
                 Ready to Unlock Your Data?
 
   );
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

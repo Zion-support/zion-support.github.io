@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import { 
   Mail, 
@@ -146,7 +144,6 @@ const ZionAIEmailMarketingProPage: React.FC = () => {
       avatar: "SW",
     }
   ];
->>>>>>> origin/clean-main-20251013-145848
 
 export default function ZionAIEmailMarketingPro() {
   return (

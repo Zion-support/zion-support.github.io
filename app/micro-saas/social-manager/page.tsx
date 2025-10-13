@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {Share2, ArrowRight}}from 'lucide-react';
@@ -51,4 +49,3 @@ const SocialMediaManagerPage: React.FC = () => {,
   )}};
 
 export default SocialMediaManagerPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

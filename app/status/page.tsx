@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React, {useState, useEffect}from 'react';
 import {CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart}}from 'lucide-react';
@@ -150,8 +147,6 @@ const incidents = [
             <button>Subscribe to Updates;</button>
             </button>
             <button>Contact Support;</button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 import React from 'react';
 
 const StatusPage: React.FC = () => {
@@ -170,4 +165,3 @@ const StatusPage: React.FC = () => {
 };
 
 export default StatusPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e

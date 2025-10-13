@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
-<<<<<<< HEAD:app/ai-fintech/page.tsx
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
 import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-fintech/page.tsx
 
 const PagePage: React.FC = () => {
   const features = [
@@ -45,16 +38,7 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD:app/ai-fintech/page.tsx
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
-=======
     <>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-fintech/page.tsx
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -259,4 +243,3 @@ return(<>)
 };
 
 export default AiFintechPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

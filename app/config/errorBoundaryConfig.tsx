@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /**;
  * Error Boundary Configuration;
  * Centralized configuration for error handling across the application;
@@ -198,4 +196,3 @@ export default getErrorBoundaryConfig;
 };
 
 export default getErrorBoundaryConfig;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

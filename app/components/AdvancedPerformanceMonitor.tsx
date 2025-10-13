@@ -1,28 +1,7 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React from 'react';
 
-<<<<<<< HEAD
-interface AdvancedPerformanceMonitorProps {
-  className?: string;
-}
 
-export default function AdvancedPerformanceMonitor({ className = '' }: AdvancedPerformanceMonitorProps) {
-  return (
-    <div className={`advanced-performance-monitor ${className}`}>
-      <h3>Performance Monitor</h3>
-      <p>Advanced performance monitoring component</p>
-    </div>
-  );
-}
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/clean-main-20251013-145848
-=======
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
   enableRealTimeMonitoring = true,
@@ -192,7 +171,6 @@ interface PerformanceMetrics {fcp: number | null;,}
         });
     } catch {
       // web-vitals not available, continue without it
-=======
   const [isVisible, setIsVisible] = useState(false)
   const [isRecording, setIsRecording] = useState(false)
 
@@ -260,29 +238,9 @@ interface PerformanceMetrics {fcp: number | null;,}
       return () => {
         observer.disconnect()
       }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
     }
   }, []);
 
-<<<<<<< HEAD
-  useEffect(() => {
-    if (!enableRealTimeMonitoring) return;
-
-    const cleanup = measureWebVitals();
-    measureResourceTiming();
-    measureCoreWebVitals();
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Monitor performance every 5 seconds
-    const interval = setInterval(() => {
-      measureResourceTiming();
-    }, 5000);
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
         onFCP((metric: any) => {
           setMetrics(prev => ({ ...prev, fcp: metric.value }))
           reportMetric('FCP', metric.value)
@@ -389,7 +347,6 @@ interface PerformanceMetrics {fcp: number | null;,}
     const memoryInterval = setInterval(measureMemoryUsage, 30000)
 
     // Cleanup
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
     return () => {
       if (cleanup) cleanup();
       clearInterval(interval);
@@ -499,13 +456,7 @@ interface PerformanceMetrics {fcp: number | null;,}
   return null;
 };
 
-<<<<<<< HEAD
-export default AdvancedPerformanceMonitor;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 export default AdvancedPerformanceMonitor
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
-=======
     const reportMetric = (name: string, value: number) => {
       console.log(`[Performance] ${name}: ${value}ms`)
     }
@@ -648,10 +599,7 @@ export default AdvancedPerformanceMonitor
   )
 }
 
-=======
 export default AdvancedPerformanceMonitor
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
-=======
     // Report metrics to analytics
     const reportMetric = (name: string, value: number) => {
       // Send to analytics service
@@ -881,4 +829,3 @@ export default AdvancedPerformanceMonitor
 }
 
 export default AdvancedPerformanceMonitor
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e

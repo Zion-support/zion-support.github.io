@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 // Performance optimization utilities;
 // Debounce utility for performance;
 export const debounce = <T extends (...args: any[]) => any>(
@@ -61,7 +57,6 @@ export const useIntersectionObserver = (
 // Performance optimization utilities;
 // Debounce utility for performance;
   };
-=======
 export const Performanceoptimizations = {
   init: () => {
     },
@@ -72,7 +67,6 @@ export const Performanceoptimizations = {
 
   cleanup: () => {
     },
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 };
 // Throttle utility for performance;
   };
@@ -405,4 +399,3 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
 };
 export default {/* TODO: Fix JSX expression */}
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

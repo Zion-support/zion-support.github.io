@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 'use client';
 interface SEOOptimizerProps {title: string;,}
@@ -33,125 +29,21 @@ interface SEOOptimizerProps {title: string;,}
       <meta name="twitter: description" content={description,}/>
 'use client';
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 'use client';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-029f
 import React, { useEffect } from 'react';
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 import { Helmet } from 'react-helmet-async';
 
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
-<<<<<<< HEAD
-  keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  structuredData?: Record<string, unknown>;
-  noIndex?: boolean;
-=======
   keywords?: string;
   canonical?: string;
   ogImage?: string;
   structuredData?: object;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 }
 
 export default function SEOOptimizer({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
-<<<<<<< HEAD
-  description = 'Leading provider of AI solutions, cloud infrastructure, and IT services. Transform your business with cutting-edge technology.',
-  keywords = [
-    'AI solutions',
-    'artificial intelligence',
-    'cloud infrastructure',
-    'IT services',
-    'machine learning',
-    'cybersecurity',
-    '5G solutions',
-    'business automation'
-  ],
-  canonicalUrl,
-  ogImage = '/images/og-image.jpg',
-  ogType = 'website',
-  structuredData,
-  noIndex = false
-}: SEOOptimizerProps) {
-  useEffect(() => {
-    // Add structured data to the page
-    if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
-
-      return () => {
-        if (document.head.contains(script)) {
-          document.head.removeChild(script);
-        }
-      };
-    }
-    return undefined;
-  }, [structuredData]);
-
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": description,
-    "url": canonicalUrl || "https://ziontechgroup.com",
-    "logo": ogImage,
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/zion-tech-group"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
-      "contactType": "customer service",
-      "areaServed": "US",
-      "availableLanguage": "English"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Tech Street",
-      "addressLocality": "San Francisco",
-      "addressRegion": "CA",
-      "postalCode": "94105",
-      "addressCountry": "US"
-    },
-    "offers": {
-      "@type": "Offer",
-      "name": "AI and IT Solutions",
-      "description": description,
-      "category": "Technology Services"
-    }
-  };
-
-  return (
-<<<<<<< HEAD
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-<<<<<<< HEAD
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="utf-8" />
-      <meta name="author" content="Zion Tech Group" />
-<<<<<<< HEAD
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="language" content="en-US" />
-      
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-      
-      {/* Open Graph Tags */}
-=======
       <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
       <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
       
@@ -161,7 +53,6 @@ export default function SEOOptimizer({
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
->>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
@@ -171,7 +62,6 @@ export default function SEOOptimizer({
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Tags */}
-=======
   description = 'Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.',
   keywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology',
   canonical = 'https://ziontechgroup.com',
@@ -193,47 +83,24 @@ export default function SEOOptimizer({
       <meta property="og:type" content="website" />
       
       {/* Twitter */}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-<<<<<<< HEAD
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
-      
-      {/* Additional SEO Tags */}
-      <meta name="theme-color" content="#1e293b" />
-      <meta name="msapplication-TileColor" content="#1e293b" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-=======
       <meta name="theme-color" content="#1e40af" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
       
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-=======
     <>
       {children}
     </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default SEOOptimizer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
       
       {/* Structured Data */}
       {structuredData && (
@@ -249,4 +116,3 @@ export default SEOOptimizer;
     </Helmet>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -106,8 +103,6 @@ return(<>)
 };
 
 export default AiHealthcareSolutionsPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Heart, Brain, Stethoscope, Activity } from 'lucide-react';
@@ -502,4 +497,3 @@ const AIHealthcareSolutionsPage: React.FC = () => {
 };
 
 export default AIHealthcareSolutionsPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3

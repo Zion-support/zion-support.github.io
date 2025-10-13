@@ -1,36 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD:app/ai-automation/page.tsx
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-export default function AIAutomation() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Automation - Zion Tech Group</title>
-        <meta name="description" content="Intelligent automation solutions powered by AI" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Automation</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Automate your business processes with intelligent AI solutions
-          </p>
-        </div>
-        <div className="text-center">
-          <p className="text-gray-300">Coming Soon - AI Automation Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>
   );
 }
-=======
 import { Zap, Settings, Shield, Clock, CheckCircle, ArrowRight, Phone, Mail, Star, TrendingUp, Users, Award } from 'lucide-react';
 import Header from '../components/Header';
 'use client';
@@ -39,9 +12,7 @@ import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Brain, Target, BarChart, Users, ArrowRight, Sparkles } from 'lucide-react';
-=======
 import { CheckCircle, Star, Zap, Settings, Clock, Shield, Brain, Target } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-automation/page.tsx
 
 const AIAutomationPage: React.FC = () => {
   const features = [
@@ -123,23 +94,12 @@ const AIAutomationPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD:app/ai-automation/page.tsx
-  return (</div>
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
-  ]
-return(<>)
-      <Helmet />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-=======
   const categories = [...new Set(aiAutomationServices.map(service => service.category))];
 
   return (
     <>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-automation/page.tsx
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
         </section>
@@ -282,4 +242,3 @@ return(<>)
         </div>
       </section>
 export default AIAutomationPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -286,4 +284,3 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 };
 
 export default EnterprisePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

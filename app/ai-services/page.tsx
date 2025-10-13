@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React from "react";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
 
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin } from 'lucide-react';
 const AIServicesPage: React.FC = () => {
@@ -633,23 +628,6 @@ const AIServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-<<<<<<< HEAD
-  // const categories = [
-  //   { name: 'All', count: aiServices.length },
-  //   { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
-  //   { name: 'Machine Learning', count: aiServices.filter(s => s.category === 'Machine Learning').length },
-  //   { name: 'NLP', count: aiServices.filter(s => s.category === 'NLP').length },
-  //   { name: 'Computer Vision', count: aiServices.filter(s => s.category === 'Computer Vision').length },
-  //   { name: 'Analytics', count: aiServices.filter(s => s.category === 'Analytics').length },
-  //   { name: 'Automation', count: aiServices.filter(s => s.category === 'Automation').length },
-  //   { name: 'Conversational AI', count: aiServices.filter(s => s.category === 'Conversational AI').length },
-  //   { name: 'Data Engineering', count: aiServices.filter(s => s.category === 'Data Engineering').length },
-  //   { name: 'Security', count: aiServices.filter(s => s.category === 'Security').length },
-  //   { name: 'Recommendation Systems', count: aiServices.filter(s => s.category === 'Recommendation Systems').length },
-  //   { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
-  //   { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length }
-  // ];
-=======
 
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics'];
 
@@ -661,7 +639,6 @@ const AIServicesPage: React.FC = () => {
     );
   }
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-091f
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -781,7 +758,6 @@ const AIServicesPage: React.FC = () => {
                   <p className="text-xs text-gray-500 mt-2">
                     {service.contactInfo}
                   </p>
-=======
 import React from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -860,41 +836,6 @@ const AIServicesPage = () => {
     { number: "10x", label: "Efficiency Boost", icon: <TrendingUp className="w-6 h-6" /> }
   ];
 
-<<<<<<< HEAD
-  const testimonials = [
-    {
-      name: "Dr. Sarah Johnson",
-      company: "MedTech Solutions",
-      role: "CTO",
-      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Plus",
-      role: "CEO",
-      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Content Marketing Agency",
-      role: "Director",
-      content: "AI content generation has been a game-changer. We can now produce 10x more content with the same team.",
-      rating: 5
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
-        title="AI Services - Zion Tech Group | Advanced AI Solutions for Business"
-        description="Transform your business with our comprehensive AI services including analytics, automation, content generation, customer service, marketing, and healthcare solutions."
-        keywords="AI services, artificial intelligence, machine learning, AI analytics, AI automation, AI content generation, AI customer service, AI marketing, AI healthcare"
-        canonical="https://ziontechgroup.com/ai-services"
-      />
-      <FuturisticBackground />
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
@@ -935,7 +876,6 @@ const AIServicesPage = () => {
                   <span className="text-sm">24/7 AI monitoring</span>
                 </div>
               </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -1017,11 +957,6 @@ const AIServicesPage = () => {
                   className="block"
                   aria-label={`Learn more about ${service.title}`}
                 >
-<<<<<<< HEAD
-                  <div
-                    className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                    aria-hidden="true"
-=======
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
@@ -1250,7 +1185,6 @@ const AIServicesPage = () => {
                   <Link
                     to={service.link}
                     className="w-full inline-flex items-center justify-center px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300"
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
                   >
                     {service.icon}
                   </div>
@@ -1274,8 +1208,6 @@ const AIServicesPage = () => {
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </div>
-<<<<<<< HEAD
-=======
                   
                   <p className="text-gray-300 italic">"{testimonial.content}"</p>
                 </div>
@@ -1452,7 +1384,6 @@ const AIServicesPage = () => {
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
                 >
                   Learn More <ArrowRight className="w-4 h-4" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
                 </Link>
               </div>
             ))}
@@ -1486,37 +1417,12 @@ const AIServicesPage = () => {
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Implement AI in Your Business?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Get started with our AI services today and transform your business operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >
-              Call (302) 464-0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              Email Us
-            </a>
-=======
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
@@ -1544,16 +1450,11 @@ const AIServicesPage = () => {
               Schedule Demo
               <Brain className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
           </div>
         </div>
       </section>
     </div>
   );
 };
-<<<<<<< HEAD
-export default AIServicesPage;
-=======
 
 export default AIServicesPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab

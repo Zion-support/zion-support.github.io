@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 
@@ -29,4 +27,3 @@ const DataAnalyticsBiPage: React.FC = () => {,
   );};
 
 export default DataAnalyticsBiPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

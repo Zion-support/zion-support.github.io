@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React, { useEffect } from 'react';
-=======
 'use client';
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 
 interface EnhancedAnalyticsProps {
   children: React.ReactNode;
@@ -25,7 +19,6 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     if (enableTracking && typeof window !== 'undefined') {
       // Initialize analytics tracking
       console.log('Analytics initialized');
-=======
 'use client';
 import React, { createContext, useContext, useEffect, useCallback } from 'react';
 
@@ -50,40 +43,6 @@ interface AnalyticsProviderProps {
   trackingId?: string;
 }
 
-<<<<<<< HEAD
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-  trackingId = 'G-XXXXXXXXXX'
-}) => {
-  // Initialize Google Analytics
-  useEffect(() => {
-    if (typeof window !== 'undefined' && trackingId) {
-      // Load Google Analytics script
-      const script = document.createElement('script');
-      script.async = true;
-      script['src'] = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document.head.appendChild(script);
-
-      // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
-      }
-      window.gtag = gtag;
-
-      gtag('js', new Date());
-      gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href
-      });
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
-    }
-  }, [enableTracking]);
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return <>{children}</>;
-=======
   const track = (event: string, properties?: Record<string, unknown>) => {
     if (typeof window !== "undefined") {
       // Google Analytics
@@ -136,7 +95,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
   };
 
-=======
   const track = useCallback((event: string, parameters?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, parameters);
@@ -162,18 +120,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
   }, [trackingId]);
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
   const value: AnalyticsContextType = {
     track,
     identify,
     page,
-<<<<<<< HEAD
-=======
     identify
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
   };
 
-=======
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const [userId, setUserId] = useState<string | null>(null);
   const [sessionId, setSessionId] = useState<string | null>(null);
@@ -253,20 +206,13 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     setUser,
   };
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
   );
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default EnhancedAnalytics;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 // Performance monitoring hook
 export const usePerformanceMonitor = () => {
   useEffect(() => {
@@ -302,7 +248,4 @@ declare global {
     dataLayer: any[];
   }
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
-=======
 export default AnalyticsProvider;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

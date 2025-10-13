@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -132,4 +130,3 @@ export default PagePage;
   </button>
   </h1>
   </main>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

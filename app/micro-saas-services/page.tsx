@@ -1,24 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
-=======
 import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-export default function MicroSaasServices() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Micro SaaS Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced micro SaaS services by Zion Tech Group" />
-=======
 const MicroSAASServicesPage: React.FC = () => {
   const microSAAS = [
     {
@@ -31,10 +15,6 @@ const MicroSAASServicesPage: React.FC = () => {
       popular: true,
       users: '1,200+',
       rating: '4.9'
-<<<<<<< HEAD
-    }
-  ]
-=======
     },
     {
       icon: <DollarSign className="w-8 h-8 text-green-500" />,
@@ -122,8 +102,6 @@ const MicroSAASServicesPage: React.FC = () => {
       icon: <Users className="w-6 h-6 text-orange-500" />
     }
   ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
-=======
 import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Settings } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -131,42 +109,10 @@ import { Link } from 'react-router-dom';
 export default function MicroSAASServicesPage() {
   const microSaasServices = [
     {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <title>Micro SAAS Services - Zion Tech Group</title>
-        <meta name="description" content="Discover our powerful micro SAAS applications designed to streamline your business operations with AI-powered tools." />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-<<<<<<< HEAD
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Micro SaaS Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced micro SaaS services for modern businesses
-          </p>
-        </div>
-
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-            <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              Our micro SaaS services page is under development. Please check back later for updates.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 // Real Micro SAAS Services for Zion Tech Group;
 // Comprehensive list of innovative, real-world micro SAAS solutions;
 export interface MicroSaasService {id: string,}
@@ -283,8 +229,6 @@ export const pricingTiers = {starter: {,
 export const contactInfo = {phone: '+1 302 464 0950',
   hours: '24/7 Support Available',}timezone: 'EST (Eastern Standard Time)',}
   timezone: 'EST (Eastern Standard Time)'}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Micro <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">SAAS Services</span>
           </h1>
@@ -340,8 +284,6 @@ export const contactInfo = {phone: '+1 302 464 0950',
     </div>
   )
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
-=======
         <title>Micro SaaS Services - Zion Tech Group</title>
         <meta name="description" content="Affordable micro SaaS solutions for small businesses. AI-powered tools for task management, expense tracking, CRM, and more." />
         <meta name="keywords" content="micro SaaS, small business tools, AI applications, task management, expense tracking, CRM" />
@@ -494,7 +436,4 @@ export const contactInfo = {phone: '+1 302 464 0950',
 };
 
 export default MicroSAASServicesPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
-=======
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

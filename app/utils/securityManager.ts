@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 import React from 'react';
 'use client';
 /**;
@@ -85,8 +81,6 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
   private getRateLimitStorage(): Map<string, number[]> {}if (!global._rateLimitStorage) {}global._rateLimitStorage = new Map();}
   private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */,}}
     return global._rateLimitStorage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 export const Securitymanager = {
   init: () => {
     },
@@ -100,4 +94,3 @@ export const Securitymanager = {
 };
 
 export default Securitymanager;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6

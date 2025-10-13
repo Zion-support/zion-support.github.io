@@ -1,48 +1,3 @@
-<<<<<<< HEAD
-interface AccessibilityConfig {
-  enabled: boolean;
-  highContrast: boolean;
-  fontSize: number;
-  screenReader: boolean;
-}
-
-class AccessibilityEnhancer {
-  private config: AccessibilityConfig;
-
-  constructor() {
-    this.config = {
-      enabled: true,
-      highContrast: false,
-      fontSize: 16,
-      screenReader: false
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      // Initialize accessibility features silently
-      this.applyAccessibilitySettings();
-    }
-  }
-
-  private applyAccessibilitySettings(): void {
-    // Apply accessibility settings without console logging
-    document.documentElement.setAttribute('data-accessibility-enabled', 'true');
-  }
-
-  setHighContrast(enabled: boolean): void {
-    this.config.highContrast = enabled;
-  }
-
-  setFontSize(size: number): void {
-    this.config.fontSize = size;
-  }
-
-  setScreenReader(enabled: boolean): void {
-    this.config.screenReader = enabled;
-  }
-}
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -631,12 +586,8 @@ Recommendations:
    */
   public destroy(): void {this.isInitialized = false;}
     this.landmarks = []}}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
-<<<<<<< HEAD
-export default accessibilityEnhancer;
-=======
 /**
  * Accessibility Enhancer Utility
  * Provides comprehensive accessibility improvements for the website
@@ -971,15 +922,7 @@ if (typeof window !== 'undefined') {
     AccessibilityEnhancer.getInstance().init();
   });
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-003e
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default accessibilityEnhancer;
-=======
-export default accessibilityEnhancer;
->>>>>>> origin/clean-main-20251013-145848
-=======
 
 // Export utility functions;
 export const announceToScreenReader = (message: string) => {,
@@ -1070,5 +1013,3 @@ export const announceToScreenReader = (message: string) => {,
           </div>
         </div>
       </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
->>>>>>> 087b9b5bb73300eddd182f26a6fee488e6ebab96

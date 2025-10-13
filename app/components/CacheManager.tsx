@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client'
 import { useEffect } from 'react'
 
 const CacheManager = () => {
-=======
 'use client'
 import { useEffect, useState } from 'react'
 
@@ -26,27 +22,13 @@ const CacheManager = () => {
 
   const [isVisible, setIsVisible] = useState(false)
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
   useEffect(() => {
-<<<<<<< HEAD
-    // Service Worker registration for caching
-    const registerServiceWorker = async () => {
-      if ('serviceWorker' in navigator) {
-        try {
-<<<<<<< HEAD
-          const registration = await navigator.serviceWorker.register('/sw.js')
-          } catch (error) {
-          }
-=======
           const registration = await navigator.serviceWorker.register('/sw.js');
-=======
           console.log('Service Worker registered:', registration);
 
         } catch (error) {
           console.error('Service Worker registration failed:', error);
         }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
-=======
     // Initialize cache management
     const initializeCache = () => {
       try {
@@ -62,7 +44,6 @@ const CacheManager = () => {
         setupLocalStorageCache()
       } catch (error) {
         console.warn('Cache initialization failed:', error)
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
       }
     }
 
@@ -78,26 +59,13 @@ const CacheManager = () => {
         '/static/css/'
       ]
 
-<<<<<<< HEAD
-      // Cache static assets
-      const cacheStaticAssets = async () => {
-        try {
-<<<<<<< HEAD
-          const cache = await caches.open(CACHE_NAME)
-          await cache.addAll(CACHE_URLS)
-          } catch (error) {
-          }
-=======
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
-=======
-=======
           console.log('Static assets cached successfully');
 
         } catch (error) {
           console.error('Failed to cache static assets:', error);
         }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
       }
 
       // Cache API responses
@@ -111,15 +79,10 @@ const CacheManager = () => {
           }
           
           return response
-<<<<<<< HEAD
-        } catch (error) {
-          return fetch(request)
-=======
 
         } catch (error) {
           console.error('Cache API error:', error);
           return fetch(request);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
         }
       }
 
@@ -201,7 +164,6 @@ const CacheManager = () => {
   }, [])
 
   return null
-=======
       // Install service worker cache
       caches.open(CACHE_NAME).then(cache => {
         cache.addAll(CACHE_URLS).catch(err => {
@@ -454,8 +416,6 @@ const CacheManager = () => {
       </div>
     </div>
   )
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
 }
 
 export default CacheManager
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6

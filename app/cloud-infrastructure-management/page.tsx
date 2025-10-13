@@ -2,8 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function CloudInfrastructureManagement() {
-<<<<<<< HEAD
-=======
   const features = [
     {
       icon: <Cloud className="w-6 h-6 text-cyan-400" />,
@@ -170,7 +168,6 @@ export default function CloudInfrastructureManagement() {
     },
   ];
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>

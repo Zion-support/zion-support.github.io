@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { BarChart, TrendingUp, FileText, Zap, Brain, CheckCircle, ArrowRight, Star, Users, Clock, Shield, Target } from 'lucide-react';
 
 const AIAutomatedReportingPage: React.FC = () => {
-=======
 'use client'
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
@@ -135,7 +131,6 @@ const AIAutomatedReportingPage: React.FC = () => {
     }
   ]
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
   return (
     <>
       <Helmet>
@@ -452,9 +447,6 @@ const AIAutomatedReportingPage: React.FC = () => {
         </section>
       </div>
     </>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
   )
 }
 
@@ -676,4 +668,3 @@ export default AiAutomatedReportingPage
 };
 
 export default AIAutomatedReportingPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b

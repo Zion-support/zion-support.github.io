@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 'use client';
 /**;
  * Comprehensive Monitoring Utility;
@@ -69,8 +65,6 @@ export interface ErrorReport {message: string,}
   }
   public measureNavigationTiming(): void {if ('performance' in window && 'getEntriesByType' in performance) {}
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 export const Monitoring = {
   init: () => {
     },
@@ -84,4 +78,3 @@ export const Monitoring = {
 };
 
 export default Monitoring;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6

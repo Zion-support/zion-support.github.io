@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -206,4 +204,3 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 };
 
 export default AiCodeSecurityAuditorPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

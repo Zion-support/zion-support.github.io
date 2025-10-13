@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 // Global type declarations
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 declare global {
   interface Window {
     gtag?: (
@@ -22,9 +19,6 @@ declare global {
   }
 }
 
-<<<<<<< HEAD
-export {};
-=======
 // API Response types
 export interface APIResponse<T = any> {
   data: T;
@@ -241,4 +235,3 @@ export interface SearchResult<T> {
 }
 
 export {};
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

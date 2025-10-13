@@ -1,80 +1,43 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // Service Worker for Zion Tech Group
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
 
-<<<<<<< HEAD
-=======
 const STATIC_CACHE_NAME = 'zion-tech-group-v2';
 const DYNAMIC_CACHE_NAME = 'zion-tech-group-dynamic-v2';
->>>>>>> origin/cursor/analyze-console-errors-and-fix-issues-845e
-=======
 const CACHE_NAME = 'zion-tech-group-v2';
 const STATIC_CACHE_NAME = 'zion-tech-group-static-v2';
 const DYNAMIC_CACHE_NAME = 'zion-tech-group-dynamic-v2';
->>>>>>> origin/cursor/analyze-console-errors-and-fix-issues-9064
-=======
 // Enhanced Service Worker for Zion Tech Group
 const CACHE_NAME = 'zion-tech-v1';
 const STATIC_CACHE = 'zion-static-v1';
 const DYNAMIC_CACHE = 'zion-dynamic-v1';
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 const STATIC_ASSETS = [
-=======
 // Files to cache for offline functionality
 const STATIC_FILES = [
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
   '/',
-<<<<<<< HEAD
-  '/about',
-<<<<<<< HEAD
-  '/services',
-<<<<<<< HEAD
-=======
   '/index.html',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
   '/manifest.json',
-<<<<<<< HEAD
-<<<<<<< HEAD
-  '/favicon.svg'
-=======
   '/favicon.svg',
-=======
   '/ai-services',
   '/micro-saas',
   '/5g-solutions',
   '/contact',
   '/manifest.json',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
   '/robots.txt'
->>>>>>> origin/cursor/analyze-console-errors-and-fix-issues-845e
-=======
   '/favicon.svg',
   '/robots.txt'
->>>>>>> origin/cursor/analyze-console-errors-and-fix-issues-9064
-=======
   '/contact',
   '/ai-services',
   '/it-services',
   '/micro-saas',
   '/manifest.json',
   '/favicon.ico'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 ];
 
 // Install event - cache static files
 self.addEventListener('install', (event) => {
-<<<<<<< HEAD
-  event.waitUntil(
-=======
 const CACHE_NAME = 'zion-tech-group-v1';
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'zion-static-v1';
@@ -95,23 +58,6 @@ const STATIC_FILES = [
 ];
 
 // Install event
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-    caches.open(STATIC_CACHE)
-      .then((cache) => {
-        return cache.addAll(STATIC_ASSETS);
-      })
-      .then(() => {
-        return self.skipWaiting();
-      })
-      .catch((error) => {
-        console.error('Service worker install failed:', error);
-      })
-  );
-});
-
-// Activate event - clean up old caches
-=======
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
   event.waitUntil(
@@ -121,7 +67,6 @@ self.addEventListener('install', (event) => {
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => self.skipWaiting())
-=======
   console.log('Service Worker: Installing...');
   
   event.waitUntil(
@@ -137,44 +82,21 @@ self.addEventListener('install', (event) => {
       .catch((error) => {
         console.error('Service Worker: Installation failed', error);
       })
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
   );
 });
 
 // Activate event
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 self.addEventListener('activate', (event) => {
-<<<<<<< HEAD
-  console.log('Service Worker activating...');
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-<<<<<<< HEAD
-=======
             console.log('Deleting old cache:', cacheName);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
             return caches.delete(cacheName);
           }
         })
       );
-<<<<<<< HEAD
-    }).then(() => {
-      return self.clients.claim();
-    })
-  );
-});
-
-// Fetch event - serve from cache, fallback to network
-=======
     }).then(() => self.clients.claim())
   );
 });
 
 // Fetch event
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
-=======
   console.log('Service Worker: Activating...');
   
   event.waitUntil(
@@ -197,31 +119,11 @@ self.addEventListener('activate', (event) => {
 });
 
 // Fetch event - serve from cache or network
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
   // Skip non-GET requests
-<<<<<<< HEAD
-  if (request.method !== 'GET') {
-    return;
-  }
-
-  // Skip external requests
-  if (url.origin !== location.origin) {
-    return;
-  }
-
-  event.respondWith(
-    caches.match(request)
-      .then((cachedResponse) => {
-        if (cachedResponse) {
-<<<<<<< HEAD
-          return cachedResponse;
-        }
-
-=======
   if (request.method !== 'GET') return;
 
   // Skip chrome-extension and other non-http requests
@@ -235,14 +137,11 @@ self.addEventListener('fetch', (event) => {
           return response;
         }
 
-=======
           console.log('Service Worker: Serving from cache', request.url);
           return cachedResponse;
         }
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
         // Otherwise fetch from network
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
         return fetch(request)
           .then((response) => {
             // Don't cache if not a valid response
@@ -258,70 +157,13 @@ self.addEventListener('fetch', (event) => {
               .then((cache) => {
                 cache.put(request, responseToCache);
               });
-<<<<<<< HEAD
-
-            return response;
-          })
-          .catch(() => {
-            // Return offline page for navigation requests
-            if (request.mode === 'navigate') {
-<<<<<<< HEAD
-              return caches.match('/');
-=======
               return caches.match('/offline.html');
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
             }
           });
       })
   );
 });
 
-<<<<<<< HEAD
-// Background sync for form submissions
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'contact-form') {
-    event.waitUntil(
-      // Handle form submission sync
-      handleFormSync()
-    );
-  }
-});
-
-// Handle message channel errors
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-});
-
-<<<<<<< HEAD
-
-async function handleFormSync() {
-  try {
-    // Get pending form data from IndexedDB
-    const pendingForms = await getPendingForms();
-    
-    for (const form of pendingForms) {
-      try {
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(form.data)
-        });
-
-        if (response.ok) {
-          // Remove from pending forms
-          await removePendingForm(form.id);
-        }
-      } catch (error) {
-        console.error('Failed to sync form:', error);
-      }
-    }
-  } catch (error) {
-    console.error('Form sync failed:', error);
-=======
 console.log('Service Worker loaded successfully');
   );
 });
@@ -334,23 +176,8 @@ console.log('Service Worker loaded successfully');
 self.addEventListener('sync', (event) => {
   if (event.tag === 'contact-form') {
     event.waitUntil(syncContactForm());
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
   }
 }
-<<<<<<< HEAD
-
-// Helper functions for IndexedDB
-async function getPendingForms() {
-  // Implementation would go here
-  return [];
-}
-
-async function removePendingForm(id) {
-  // Implementation would go here
-}
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 // Background sync for analytics
 self.addEventListener('sync', (event) => {
   if (event.tag === 'background-sync') {
@@ -368,11 +195,6 @@ function doBackgroundSync() {
     })
   });
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
-=======
 
             return response;
           })
@@ -497,4 +319,3 @@ self.addEventListener('message', (event) => {
 });
 
 console.log('Service Worker: Script loaded');
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

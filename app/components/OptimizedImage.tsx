@@ -1,48 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
-  onLoad?: () => void;
-  onError?: () => void;
-}
-
-export default function OptimizedImage({ 
-  src, 
-  alt, 
-  className = '', 
-  width, 
-  height,
-  priority = false,
-  onLoad,
-  onError
-}: OptimizedImageProps) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-
-  const handleLoad = () => {
-    setIsLoading(false);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setIsLoading(false);
-    setHasError(true);
-    onError?.();
-  };
-
-  if (hasError) {
-    return (
-      <div className={`optimized-image-error ${className}`}>
-        <div className="flex items-center justify-center w-full h-full bg-gray-100 text-gray-500">
-          Failed to load image
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -141,7 +96,6 @@ const OptimizedImagePage: React.FC = () => {
               </button>
             </div>
           </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
         </div>
       </div>
     );
@@ -151,7 +105,6 @@ const OptimizedImagePage: React.FC = () => {
     <div className={`relative ${className}`}>
       {isLoading && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
-=======
 import React, { useState } from 'react'
 import { Loader2 } from 'lucide-react'
 
@@ -203,30 +156,13 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
           <Loader2 className="w-6 h-6 animate-spin text-gray-500" />
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
       )}
       <img
         src={src}
         alt={alt}
-<<<<<<< HEAD
-        className="optimized-image"
-        width={width}
-        height={height}
-        loading={priority ? "eager" : "lazy"}
-        onLoad={handleLoad}
-        onError={handleError}
-        style={{ opacity: isLoading ? 0 : 1 }}
-      />
-    </div>
-  );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default OptimizedImagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
         width={width}
         height={height}
         loading={priority ? 'eager' : 'lazy'}
@@ -245,4 +181,3 @@ export default OptimizedImagePage;
 }
 
 export default OptimizedImage
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440

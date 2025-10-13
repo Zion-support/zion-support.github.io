@@ -52,12 +52,6 @@ class ErrorHandler extends Component<Props, State> {
     // Example: Send to monitoring service
     try {
       // Replace with your actual error reporting service
-<<<<<<< HEAD
-      .toISOString()
-      })
-    } catch (reportingError) {
-      }
-=======
       const errorData = {
         message: error.message,
         stack: error.stack,
@@ -66,13 +60,11 @@ class ErrorHandler extends Component<Props, State> {
       };
       console.log('Error logged:', errorData);
       // Send to your error reporting service here
-=======
       console.log('Error data prepared for reporting:', errorData);
     } catch (reportingError) {
       console.error('Failed to prepare error data for reporting:', reportingError);
 
     }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
   }
 
   handleRetry = () => {

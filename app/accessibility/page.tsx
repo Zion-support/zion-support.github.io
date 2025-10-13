@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -184,4 +182,3 @@ import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap } fr
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

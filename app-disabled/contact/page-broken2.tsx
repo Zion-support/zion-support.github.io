@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 'use client';
@@ -291,4 +289,3 @@ return(<>)
 };
 
 export default ContactPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

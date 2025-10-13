@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -106,8 +103,6 @@ return(<>)
 };
 
 export default AiEmailMarketingPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -430,4 +425,3 @@ const AIEmailMarketingPage: React.FC = () => {
 };
 
 export default AIEmailMarketingPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3

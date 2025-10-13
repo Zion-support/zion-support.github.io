@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD:app/ai-workflow-automation/page.tsx
-import { Helmet } from 'react-helmet-async';
-=======
 import { CheckCircle } from 'lucide-react';
 
 const AIWorkflowAutomationPage: React.FC = () => {
@@ -210,24 +205,9 @@ const AIWorkflowAutomationPage: React.FC = () => {
       description: 'Continuously monitor performance and optimize for better results'
     }
   ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-workflow-automation/page.tsx
 
 export default function AiWorkflowAutomation() {
   return (
-<<<<<<< HEAD:app/ai-workflow-automation/page.tsx
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AiWorkflowAutomation - Zion Tech Group</title>
-        <meta name="description" content="Advanced aiworkflowautomation solutions" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Workflow Automation <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive aiworkflowautomation solutions designed to transform your business
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
 
       {/* Hero Section */}
@@ -407,21 +387,15 @@ export default function AiWorkflowAutomation() {
           </h2>
           <p className="text-xl mb-8 text-green-100">
             Get a free automation audit and discover how much you can save
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-workflow-automation/page.tsx
           </p>
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - AiWorkflowAutomation Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>
   );
 }
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -630,4 +604,3 @@ import React, {useState, useEffect}from 'react';
   );
 };
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

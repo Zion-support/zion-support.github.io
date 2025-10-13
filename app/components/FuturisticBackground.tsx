@@ -1,37 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export default function FuturisticBackground({ children, className = '' }: FuturisticBackgroundProps) {
-  return (
-    <div className={`futuristic-background ${className}`}>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 opacity-90"></div>
-      <div className="relative z-10">
-        {children}
-      </div>
-    </div>
-  );
-}
-=======
 'use client';
 import React, { useEffect, useRef } from 'react';
 
-<<<<<<< HEAD
-const FuturisticBackground: React.FC = () => {
-=======
 const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
-=======
 'use client';
 import React, { useEffect, useRef } from 'react';
 
 const FuturisticBackground: React.FC = () => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -41,9 +15,6 @@ const FuturisticBackground: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     let animationId: number;
     let particles: Array<{
       x: number;
@@ -54,18 +25,10 @@ const FuturisticBackground: React.FC = () => {
       opacity: number;
     }> = [];
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-    resizeCanvas();
-=======
     const createParticles = () => {
       particles = [];
       for (let i = 0; i < 50; i++) {
@@ -79,7 +42,6 @@ const FuturisticBackground: React.FC = () => {
         });
       }
     };
-=======
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
@@ -108,7 +70,6 @@ const FuturisticBackground: React.FC = () => {
     }
 
     let animationId: number;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -142,21 +103,14 @@ const FuturisticBackground: React.FC = () => {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-<<<<<<< HEAD
-            ctx.strokeStyle = `rgba(6, 182, 212, ${0.1 * (1 - distance / 100)})`;
-=======
             ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
         });
       });
 
-<<<<<<< HEAD
-=======
       ctx.globalAlpha = 1;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
       animationId = requestAnimationFrame(animate);
     };
 
@@ -164,26 +118,11 @@ const FuturisticBackground: React.FC = () => {
     createParticles();
     animate();
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
-    window.addEventListener('resize', resizeCanvas);
-
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-<<<<<<< HEAD
-=======
       cancelAnimationFrame(animationId);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
     };
   }, []);
 
   return (
-<<<<<<< HEAD
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 w-full h-full pointer-events-none z-0"
-      style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)' }}
-=======
     return () => {
       cancelAnimationFrame(animationId);
       window.removeEventListener('resize', resizeCanvas);
@@ -195,9 +134,7 @@ const FuturisticBackground: React.FC = () => {
       ref={canvasRef}
       className="fixed inset-0 w-full h-full pointer-events-none z-0"
       style={{ background: 'transparent' }}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
     />
-=======
     <div className="relative">
       <canvas
         ref={canvasRef}
@@ -206,16 +143,7 @@ const FuturisticBackground: React.FC = () => {
       />
       {children}
     </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
   );
 };
 
-<<<<<<< HEAD
 export default FuturisticBackground;
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
-=======
-export default FuturisticBackground;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69

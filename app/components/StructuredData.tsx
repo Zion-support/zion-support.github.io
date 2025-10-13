@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 
@@ -10,4 +8,3 @@ interface StructuredDataProps {type?: 'Organization' | 'WebSite' | 'WebPage' | '
   const structuredData = data || getDefaultData();
 
   return(<script;)
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

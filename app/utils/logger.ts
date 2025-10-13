@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 'use client';
 /**;
  * Advanced Logging System;
@@ -77,11 +73,9 @@ class Logger {/* TODO: Fix JSX expression */,}}}
   error(messag,;)
   FATAL = 4;
 }
-=======
 export const Logger = {
   init: () => {
     },
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 
 export interface LogContext {
   userId?: string;
@@ -91,21 +85,9 @@ export interface LogContext {
   [key: string]: unknown;
 }
 
-<<<<<<< HEAD
-class Logger {
-  private logLevel: LogLevel = LogLevel.INFO;
-  private logs: Array<{
-    level: LogLevel,
-    message: string,
-    context?: LogContext;
-    metadata?: Record<string, unknown>
-    timestamp: number,
-  }> = []
-=======
   cleanup: () => {
     },
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 
   setLogLevel(level: LogLevel): void {,
     this.logLevel = level;
@@ -303,4 +285,3 @@ export const logger = new Logger();
   }
 }
 export const logger = new Logger();`
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

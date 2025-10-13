@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 ): ((...args: Parameters<T>) => void) => {,
   wait: number;,}): ((...args: Parameters<T>) => void) => {,}let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {,}clearTimeout(timeout);
@@ -230,8 +226,6 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */,}
 // Initialize performance enhancements;
 export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */,}}
 }`;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 export const Performanceenhancer = {
   init: () => {
     },
@@ -245,4 +239,3 @@ export const Performanceenhancer = {
 };
 
 export default Performanceenhancer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6

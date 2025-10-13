@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
-<<<<<<< HEAD:app/cybersecurity/page.tsx
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
 import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database, Globe } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/cybersecurity/page.tsx
 
 const PagePage: React.FC = () => {
   const features = [
@@ -41,17 +34,7 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD:app/cybersecurity/page.tsx
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      </Helmet>
-    'Cost-effective pricing plans',
-=======
     <>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/cybersecurity/page.tsx
 
     'Proven track record of success'
   ]
@@ -64,11 +47,6 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD:app/cybersecurity/page.tsx
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>Why Choose Our Page?,</h2>
-=======
 
         {/* Key Benefits */}
         <section className="py-16 bg-white">
@@ -233,7 +211,6 @@ const PagePage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Secure Your Business?
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/cybersecurity/page.tsx
             </h2>
             <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
@@ -288,4 +265,3 @@ const PagePage: React.FC = () => {
                 <Mail>
                 Email Us;
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

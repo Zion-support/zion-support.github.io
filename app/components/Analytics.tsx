@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React, {Suspense, lazy}from 'react';
 interface AnalyticsProps {enableGoogleAnalytics?: boolean;}
@@ -21,20 +18,12 @@ if (enableUserBehaviorTracking) {initializeUserBehaviorTracking()}}
 const initializeGoogleAnalytics = (;
     // Load Google Analytics;
 
-<<<<<<< HEAD
-    const script = document.createElement('script');
-    script.async = true;
-    script['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';,
-  return($3;)
-  )}(window as any).dataLayer.push(args);}
-=======
   const initializeGoogleAnalytics = () => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'GA_MEASUREMENT_ID', {
         page_title: document.title,
         page_location: window.location.href
       })
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
     }
     (window as any).gtag = gtag;
 gtag('js', new Date());
@@ -85,14 +74,6 @@ const initializeUserBehaviorTracking = (;
     })
 // Track scroll depth;
 
-<<<<<<< HEAD
-    let maxScroll = 0;
-    window.addEventListener('scroll', () => {const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
-      if (scrollPercent > maxScroll) {
-        maxScroll = scrollPercent;
-        if (maxScroll % 25 === 0) { // Track at 25%, 50%, 75%, 100%;
-          trackEvent('engagement', 'scroll_depth', maxScroll)}}
-=======
   const initializeErrorTracking = () => {
     if (typeof window !== 'undefined') {
       window.addEventListener('error', (event) => {
@@ -152,33 +133,10 @@ const initializeUserBehaviorTracking = (;
             page_location: window.location.href
           })
         }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
       }
     })
 // Track time on page;
 
-<<<<<<< HEAD
-    const startTime = Date.now();
-    window.addEventListener('beforeunload', () => {const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-      trackEvent('engagement', 'time_on_page', timeOnPage)}})
-// Track clicks on important elements;
-    document.addEventListener('click', (event) => {const target = event.target as HTMLElement;
-      const tagName = target.tagName.toLowerCase();
-if (tagName === 'a') {
-
-        const href = (target as HTMLAnchorElement).href;
-        trackEvent('engagement', 'link_click', {)
-          link_url: href,
-          link_text: target.textContent?.trim(),}})
-      } else if (tagName === 'button') {trackEvent('engagement', 'button_click', {)
-// Track form submissions;
-    document.addEventListener('submit', (event) => {const form = event.target as HTMLFormElement;
-      trackEvent('engagement', 'form_submit', {)
-        form_id: form.id,
-        form_class: form.className,
-        form_action: form.action;,}})
-    })
-=======
       // Track clicks
       const trackClick = (event: Event) => {
         const target = event.target as HTMLElement
@@ -233,7 +191,6 @@ if (tagName === 'a') {
         window.removeEventListener('scroll', trackScroll)
       }
     }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
   }
 const trackEvent = (;
     if (typeof window !== 'undefined' && 'gtag' in window) {(window as any).gtag('event', action, {)
@@ -253,8 +210,6 @@ export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({chil
       <Analytics />}{children}
       {children}
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -326,4 +281,3 @@ export default function Analytics() {
 
   return null;
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680

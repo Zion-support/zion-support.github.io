@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface CoreWebVitalsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function CoreWebVitals({ className = '', children }: CoreWebVitalsProps) {
-  return (
-    <div className={`core-web-vitals ${className}`}>
-      {children}
-    </div>
-  );
-}
-=======
 import React, { useEffect, useCallback } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -40,26 +24,7 @@ const CoreWebVitals: React.FC = () => {
     if (process.env['NODE_ENV'] === 'development') {
       console.log('Web Vital:', data);
     }
-<<<<<<< HEAD
-  }, []);
-
-  useEffect(() => {
-    // Measure Core Web Vitals
-    onCLS(reportWebVitals);
-    onINP(reportWebVitals);
-    onFCP(reportWebVitals);
-    onLCP(reportWebVitals);
-    onTTFB(reportWebVitals);
-  }, [reportWebVitals]);
-
-  return null;
-};
-
-export default CoreWebVitals;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
-=======
 
     // Log in development
     if (process.env['NODE_ENV'] === 'development') {
       }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e

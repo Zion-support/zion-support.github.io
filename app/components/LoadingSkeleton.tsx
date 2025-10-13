@@ -1,43 +1,6 @@
 'use client';
 import React from 'react';
 
-<<<<<<< HEAD
-const LoadingSkeletonPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 interface SkeletonProps {
   className?: string;
   width?: string | number;
@@ -48,22 +11,6 @@ interface SkeletonProps {
 
 const Skeleton: React.FC<SkeletonProps> = ({
   className = '',
-<<<<<<< HEAD
-  width = '100%',
-  height = '1rem',
-  rounded = false,
-  animate = true
-}) => {
-  const baseClasses = 'bg-gray-300 dark:bg-gray-700';
-  const roundedClasses = rounded ? 'rounded-full' : 'rounded';
-  const animateClasses = animate ? 'animate-pulse' : '';
-  
-  return (
-    <div
-      className={`${baseClasses} ${roundedClasses} ${animateClasses} ${className}`}
-      style={{ width, height }}
-      aria-hidden="true"
-=======
   width,
   height,
   rounded = false,
@@ -82,14 +29,10 @@ const Skeleton: React.FC<SkeletonProps> = ({
     <div
       className={`${baseClasses} ${roundedClasses} ${animateClasses} ${className}`}
       style={style}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
     />
   );
 };
 
-<<<<<<< HEAD
-export default LoadingSkeletonPage;
-=======
 export const PageSkeleton: React.FC = () => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     {/* Header Skeleton */}
@@ -198,4 +141,3 @@ export const TableSkeleton: React.FC<{ rows?: number; cols?: number }> = ({
 );
 
 export default Skeleton;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

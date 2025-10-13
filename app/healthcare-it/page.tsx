@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -220,4 +218,3 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900
             <button className="border border-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Contact Sales
             <button>View Case Studies;</button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
-export default function AIMobileAppBuilder() {
-=======
 export default function AiMobileAppBuilder() {
->>>>>>> origin/clean-main-20251013-145848
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
@@ -34,7 +26,6 @@ export default function AiMobileAppBuilder() {
     </div>
   );
 }
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -140,4 +131,3 @@ return(<>)
 };
 
 export default AiMobileAppBuilderPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React from 'react';
-<<<<<<< HEAD:app/ai-healthcare/page.tsx
-import { Helmet } from 'react-helmet-async';
-=======
 import { CheckCircle, Star, Heart, Brain, Shield, Zap, Target, Users } from 'lucide-react';
 
 const AIHealthcarePage: React.FC = () => {
@@ -145,36 +139,11 @@ const AIHealthcarePage: React.FC = () => {
   ];
 
   const categories = [...new Set(aiHealthcareServices.map(service => service.category))];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-healthcare/page.tsx
 
 export default function AiHealthcare() {
   return (
-<<<<<<< HEAD:app/ai-healthcare/page.tsx
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-      <Helmet>
-        <title>AiHealthcare - Zion Tech Group</title>
-        <meta name="description" content="Advanced aihealthcare solutions" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Healthcare <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive aihealthcare solutions designed to transform your business
-          </p>
-        </div>
-        <div className="text-center">
-          <p className="text-gray-300">Coming Soon - AiHealthcare Solutions</p>
-<<<<<<< HEAD
-=======
     <>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-healthcare/page.tsx
 
-=======
->>>>>>> origin/clean-main-20251013-145848
-=======
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -277,14 +246,10 @@ return(<>)
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 };
 
 export default PagePage;
@@ -346,4 +311,3 @@ export default PagePage;
 };
 
 export default AiHealthcarePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

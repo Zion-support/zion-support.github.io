@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD:app/ai-data-analytics/page.tsx
-import { Helmet } from 'react-helmet-async';
-=======
 import { CheckCircle } from 'lucide-react';
 
 const AIDataAnalyticsPage: React.FC = () => {
@@ -187,37 +182,14 @@ const AIDataAnalyticsPage: React.FC = () => {
       icon: <Target className="w-8 h-8 text-orange-600" />
     }
   ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-data-analytics/page.tsx
 
 export default function AiDataAnalytics() {
   return (
-<<<<<<< HEAD:app/ai-data-analytics/page.tsx
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AiDataAnalytics - Zion Tech Group</title>
-        <meta name="description" content="Advanced aidataanalytics solutions" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Data Analytics <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive aidataanalytics solutions designed to transform your business
-          </p>
-        </div>
-        <div className="text-center">
-          <p className="text-gray-300">Coming Soon - AiDataAnalytics Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>
   );
 }
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -283,9 +255,7 @@ const benefits = [
   ]
 return(<>)
       <Helmet />
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/ai-data-analytics/page.tsx
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -457,4 +427,3 @@ export default PagePage;
 };
 
 export default AiDataAnalyticsPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

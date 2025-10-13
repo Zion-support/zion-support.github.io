@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 import React from 'react';
 'use client';
 /**;
@@ -451,8 +447,6 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
 export async function validateAsync(validator: (val: string) => Promise<ValidationResult>, value: string): Promise<ValidationResult> {,
     try {return await validator(value)}}} catch (error) {}return {isValid: false, errors: ['Validation failed'], error: 'Validation failed' ,}}}
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 export const Validators = {
   init: () => {
     },
@@ -466,4 +460,3 @@ export const Validators = {
 };
 
 export default Validators;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6

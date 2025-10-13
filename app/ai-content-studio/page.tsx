@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -170,8 +167,6 @@ const AiContentStudioPage: React.FC = () => {
 };
 
 export default AiContentStudioPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 'use client';
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -493,4 +488,3 @@ const AIContentStudioPage: React.FC = () => {
 };
 
 export default AIContentStudioPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3

@@ -1,19 +1,10 @@
 import React from 'react';
 
-<<<<<<< HEAD:app-disabled/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3:app/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx
 const OperationalTrustScorecardsPage: React.FC = () => {
 
   return (
 
     <>
-<<<<<<< HEAD:app-disabled/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx
-
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3:app/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx
       <main className="min-h-screen bg-slate-950 text-white">
       <section className="py-16 border-b border-white/10">
         <div className="max-w-3xl mx-auto px-4">

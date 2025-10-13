@@ -19,10 +19,6 @@ export default function ZionAiTranslatorPro() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - ZionAiTranslatorPro Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>

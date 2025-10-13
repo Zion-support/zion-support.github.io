@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
 ): ((...args: Parameters<T>) => void) => {,
   wait: number;,}): ((...args: Parameters<T>) => void) => {,}let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {,}clearTimeout(timeout);
@@ -324,8 +320,6 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
 export {PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig}}`;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 export const Performanceoptimizer = {
   init: () => {
     },
@@ -339,4 +333,3 @@ export const Performanceoptimizer = {
 };
 
 export default Performanceoptimizer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6

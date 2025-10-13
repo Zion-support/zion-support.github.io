@@ -1,44 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-<<<<<<< HEAD
-'use client;
-
-import React from 'react;
-
-import { Helmet } from 'react-helmet-async;
-
-import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react;
-
-import Navigation from ../components
-import Footer from ../components
-;
-
-const DemoPage: React.FC = () => {const demos = [;
-
-const DemoPage: React.FC = () => {
-  const demos = [    {;
-      title: 'AI Analytics Dashboard,
-      description: 'See how our AI analytics can transform your business intelligence,
-      duration: '5 min,
-      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports]
-=======
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Calendar, Clock, Users, CheckCircle, Phone, Mail, ArrowRight, Star, Zap, Brain, Shield } from 'lucide-react';
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Calendar, Clock, User, Mail, Phone, MapPin, CheckCircle, Star, Zap, Brain, Cloud, Code } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-6266
 
 const DemoPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -46,12 +16,6 @@ const DemoPage: React.FC = () => {
     email: '',
     company: '',
     phone: '',
-<<<<<<< HEAD
-    service: '',
-    message: ''
-  });
-
-=======
     role: '',
     interests: [] as string[],
     message: '',
@@ -93,7 +57,6 @@ const DemoPage: React.FC = () => {
     '4:00 PM - 5:00 PM'
   ];
 
->>>>>>> cursor/website-audit-and-update-with-deployment-6266
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -102,101 +65,10 @@ const DemoPage: React.FC = () => {
     }));
   };
 
-<<<<<<< HEAD
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    const subject = `Demo Request from ${formData.name} - ${formData.company}`;
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nPhone: ${formData.phone}\nService: ${formData.service}\nMessage: ${formData.message}`;
-    window.location.href = `mailto:kleber@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  };
-
-  const demoFeatures = [
-    {
-      icon: Brain,
-      title: 'AI Solutions Demo',
-      description: 'See our AI services in action with live demonstrations'
-    },
-    {
-      icon: Shield,
-      title: 'Security Assessment',
-      description: 'Get a free security evaluation of your current setup'
-    },
-    {
-      icon: Zap,
-      title: 'Performance Analysis',
-      description: 'Learn how to optimize your business processes'
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
-    },
-    {
-      id: 'ai-chatbot,
-      title: 'AI Customer Service Bot,
-      description: 'See how our AI chatbot handles customer inquiries with natural language processing.,
-      features: [
-        'Natural language understanding,
-        'Multi-language support,
-        24
-        Seamless handoff to humans
-      ],
-      icon: Users,
-      duration: '3 min demo,
-      category: 'AI Solutions
-    },    {
-      title: 'AI Content Generation,
-      description: 'Watch our AI create high-quality content in seconds,
-      duration: '4 min,
-      features: ['Blog posts', 'Social media content', 'Product descriptions]
-=======
 'use client';
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-;
-
-const $1Page: React.FC = () => {}
-  const demos = [
-
-const DemoPage: React.FC = () => {}
-  const demos = [
-    {}
-      title: 'AI Analytics Dashboard',
-      description: 'See how our AI analytics can transform your business intelligence',
-      duration: '5 min',
-      features: ['Real-time data visualization', 'Predictive analytics', 'Custom reports']
-    },
-    {}
-      id: 'ai-chatbot',
-      title: 'AI Customer Service Bot',
-      description: 'See how our AI chatbot handles customer inquiries with natural language processing.',
-      features: []
-        'Natural language understanding',
-        'Multi-language support',
-        '24
-        'Seamless handoff to humans'
-      ],
-      icon: Users,
-      duration: '3 min demo',
-      category: 'AI Solutions'
-    },
-    {}
-      title: 'AI Content Generation',
-      description: 'Watch our AI create high-quality content in seconds',
-      duration: '4 min',
-      features: ['Blog posts', 'Social media content', 'Product descriptions']
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
-    }
-
-  ];
->>>>>>> origin/cursor/ad-creation-and-management-f267
-
-export default function Demo() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-=======
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -232,7 +104,6 @@ company: 'DataFlow Inc',
 return (
 
     <>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
       <Helmet>
         <title>Demo - Zion Tech Group</title>
         <meta name="description" content="Interactive demos by Zion Tech Group" />
@@ -267,18 +138,6 @@ return (
               </p>
             </div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/clean-main-20251013-145848
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
       {/* Testimonials *}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -292,7 +151,6 @@ return (
                 <div className="flex items-center mb-4">)
                   {[...Array(testimonial.rating)].map((_, i) => (}
                   "{testimonial.quote}"
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
                 <
                 <div>
                   <div className="font-semibold text-white>{testimonial.name}<
@@ -305,17 +163,10 @@ return (
         <
       <
 
-<<<<<<< HEAD
-      {/* CTA Section *
-      <section className="py-20 px-4>
-        <div className="max-w-4xl mx-auto text-center>
-          <h2 className="text-4xl font-bold text-white mb-6>
-=======
       {/* CTA Section *}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
             Ready to See More?
           <
           <p className="text-xl text-gray-300 mb-8>
@@ -338,7 +189,6 @@ return (
     <
     </React.Fragment>)
   );};
-=======
 
 const DemoPage: React.FC = () => {
   return (
@@ -354,7 +204,6 @@ const DemoPage: React.FC = () => {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-=======
   const handleCheckboxChange = (interest: string) => {
     setFormData(prev => ({
       ...prev,
@@ -628,15 +477,11 @@ const DemoPage: React.FC = () => {
       </div>
       
       <Footer />
->>>>>>> cursor/website-audit-and-update-with-deployment-6266
     </>
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 
 export default DemoPage;
->>>>>>> origin/cursor/ad-creation-and-management-f267
-=======
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Demo List */}
               <div className="space-y-6">
@@ -716,4 +561,3 @@ export default DemoPage;
     </>
 );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

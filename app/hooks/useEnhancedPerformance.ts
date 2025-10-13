@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 /**;
  * Enhanced Performance Hook;
  * Combines performance monitoring, error tracking, and analytics;
@@ -53,4 +50,3 @@ if (trackPerformance) {
 return {trackError,;}
     trackUserAction,;
     measureOperation,}}
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

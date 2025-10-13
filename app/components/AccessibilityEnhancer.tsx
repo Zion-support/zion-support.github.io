@@ -1,43 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
-=======
-<<<<<<< HEAD
-'use client;
-
-import React, { useEffect } from 'react;
-
-interface AccessibilityEnhancerProps {}
-  enableKeyboardNavigation?: boolean;
-
-  enableScreenReaderSupport?: boolean;
-
-  enableHighContrast?: boolean;
-
-  enableFocusManagement?: boolean;
->>>>>>> origin/cursor/ad-creation-and-management-f267
-
-interface AccessibilitySettings {
-  highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  focusVisible: boolean;
-}
-
-<<<<<<< HEAD
-export default function AccessibilityEnhancer() {
-=======
 interface AccessibilityEnhancerProps {
   children?: React.ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
->>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
@@ -45,53 +10,35 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     focusVisible: false
   });
 
-<<<<<<< HEAD
-  const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
-=======
         // Skip to main content
         if (event.key === 'Tab && event.shiftKey && event.target === document.body) {
           const skipLink = document.querySelector('a[href="#main-content]) as HTMLAnchorElement;;
 
           if (skipLink) {
-=======
     if (enableKeyboardNavigation && typeof window !== 'undefined') {}
       const handleKeyDown = (event: KeyboardEvent) => {}
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {}
           const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
           if (skipLink) {}
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
             skipLink.focus();
 
             event.preventDefault();
 
           }
 
-=======
-=======
 'use client';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-029f
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
-<<<<<<< HEAD
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  useEffect(() => {
-    // Accessibility enhancements
-=======
 import React, { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Add accessibility enhancements
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
     const enhanceAccessibility = () => {
       // Add skip links
-=======
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -143,15 +90,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const existingSkipLink = document.getElementById('skip-to-main');
       if (existingSkipLink) return;
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
       const skipLink = document.createElement('a');
       skipLink.id = 'skip-to-main';
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
-<<<<<<< HEAD
-<<<<<<< HEAD
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
-=======
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50';
       skipLink.style.cssText = `
         position: absolute;
@@ -164,79 +106,29 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         white-space: nowrap;
         border: 0;
       `;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
       document.body.insertBefore(skipLink, document.body.firstChild);
 
-<<<<<<< HEAD
-      // Add ARIA labels to interactive elements
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach((button) => {
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
-        }
-<<<<<<< HEAD
-      });
-    };
-
-<<<<<<< HEAD
-        // Close dropdowns with Escape key
-<<<<<<< HEAD
-        if (event.key === 'Escape) {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true]);;
-
-          openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false);
-
-          })        }
-
-=======
         if (event.key === 'Escape') {}
           const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
           openDropdowns.forEach(dropdown => {}
             (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
           })
         }
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
       };
 
       document.addEventListener(keydown, handleKeyDown);
 
       return () => document.removeEventListener(keydown, handleKeyDown);
->>>>>>> origin/cursor/ad-creation-and-management-f267
-=======
->>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
-=======
 import { useEffect } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 
 export default function AccessibilityEnhancer() {
   useEffect(() => {
-<<<<<<< HEAD
-    // Load saved settings from localStorage
-    const savedSettings = localStorage.getItem('accessibility-settings');
-    if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
-    }
-
-    // Check for system preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setSettings(prev => ({ ...prev, reducedMotion: prefersReducedMotion }));
-
-    // Apply settings
-    applySettings(settings);
-  }, [settings]);
-
-<<<<<<< HEAD
-  const applySettings = (newSettings: AccessibilitySettings) => {
-=======
       // Large text preference
       const savedLargeText = localStorage.getItem('large-text');
       if (savedLargeText === 'true') {
         setSettings(prev => ({ ...prev, largeText: true }));
         document.documentElement.classList.add('large-text');
       }
-=======
 
         // Arrow keys for navigation
         if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
@@ -251,7 +143,6 @@ export default function AccessibilityEnhancer() {
               nextIndex = (currentIndex + 1) % focusableElements.length;
             } else {
               nextIndex = currentIndex === 0 ? focusableElements.length - 1 : currentIndex - 1;
-=======
     // Keyboard navigation enhancements
     const enhanceKeyboardNavigation = () => {
       if (!enableKeyboardNavigation) return () => {};
@@ -391,7 +282,6 @@ export default function AccessibilityEnhancer() {
               if (liveRegion) {
                 liveRegion.textContent = addedNode.textContent || '';
               }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
             }
             
             (focusableElements[nextIndex] as HTMLElement)?.focus();
@@ -400,15 +290,6 @@ export default function AccessibilityEnhancer() {
         });
       });
 
-<<<<<<< HEAD
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
-    };
-
-    // Screen reader enhancements
-    const enhanceScreenReader = () => {
-      if (!enableScreenReader) return;
-=======
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
 
@@ -442,7 +323,6 @@ export default function AccessibilityEnhancer() {
         }
       `;
       document.head.appendChild(style);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
 
       // Add ARIA landmarks
       const main = document.querySelector('main');
@@ -450,65 +330,6 @@ export default function AccessibilityEnhancer() {
         main.setAttribute('role', 'main');
       }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // Add live regions for dynamic content
-      const liveRegion = document.createElement('div');
-      liveRegion.setAttribute('aria-live', 'polite');
-      liveRegion.setAttribute('aria-atomic', 'true');
-      liveRegion.className = 'sr-only';
-      liveRegion.id = 'live-region';
-      document.body.appendChild(liveRegion);
-
-      return () => {
-        const existingLiveRegion = document.getElementById('live-region');
-        if (existingLiveRegion) {
-          existingLiveRegion.remove();
-        }
-      };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
-    };
-
-    checkPreferences();
-
-    // Listen for changes in preferences
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-<<<<<<< HEAD
-    const handleHighContrastChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, highContrast: e.matches }));
-      if (e.matches) {
-        document.documentElement.classList.add('high-contrast');
-      } else {
-        document.documentElement.classList.remove('high-contrast');
-      }
-    };
-
-    const handleReducedMotionChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
-      if (e.matches) {
-        document.documentElement.classList.add('reduced-motion');
-      } else {
-        document.documentElement.classList.remove('reduced-motion');
-      }
-    };
-
-    highContrastQuery.addEventListener('change', handleHighContrastChange);
-    reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
-
-    // Keyboard navigation enhancement
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        setSettings(prev => ({ ...prev, focusVisible: true }));
-        document.body.classList.add('keyboard-navigation');
-      }
-    };
-
-    const handleMouseDown = () => {
-      setSettings(prev => ({ ...prev, focusVisible: false }));
-      document.body.classList.remove('keyboard-navigation');
-=======
     // Add skip links
     const skipLink = document.createElement('a');
     skipLink.href = '#main-content';
@@ -537,32 +358,11 @@ export default function AccessibilityEnhancer() {
           }
         }
       }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
     };
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
 
-<<<<<<< HEAD
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLinks = document.createElement('div');
-      skipLinks.innerHTML = `
-        <a href="#main-content" class="skip-link">Skip to main content</a>
-        <a href="#navigation" class="skip-link">Skip to navigation</a>
-        <a href="#footer" class="skip-link">Skip to footer</a>
-      `;
-      skipLinks.className = 'skip-links';
-      document.body.insertBefore(skipLinks, document.body.firstChild);
-    };
-
-    addSkipLinks();
-
-    // Cleanup
-    return () => {
-      highContrastQuery.removeEventListener('change', handleHighContrastChange);
-      reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
-=======
     // Add ARIA landmarks
     const main = document.querySelector('main');
     if (main && !main.getAttribute('role')) {
@@ -575,17 +375,12 @@ export default function AccessibilityEnhancer() {
     }
 
     return () => {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
   }, []);
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
->>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
     const root = document.documentElement;
     
     // High contrast
@@ -596,7 +391,6 @@ export default function AccessibilityEnhancer() {
     }
 
     // Large text
-=======
       observer.observe(document.body, {
         childList: true,
         subtree: true,
@@ -633,7 +427,6 @@ export default function AccessibilityEnhancer() {
     }
 
     // Large text mode
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
     if (newSettings.largeText) {
       root.classList.add('large-text');
     } else {
@@ -655,29 +448,16 @@ export default function AccessibilityEnhancer() {
     }
   };
 
-<<<<<<< HEAD
-  const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
-    applySettings(newSettings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  };
-<<<<<<< HEAD
-=======
-=======
     enhanceAccessibility();
   }, []);
 
   return <>{children}</>;
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 };
->>>>>>> origin/cursor/ad-creation-and-management-f267
 
   const togglePanel = () => {
     setIsVisible(prev => !prev);
   };
 
-=======
 
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
@@ -691,28 +471,7 @@ export default function AccessibilityEnhancer() {
     applyAccessibilitySettings(defaultSettings);
   };
 
-<<<<<<< HEAD
-  // Removed unused functions - functionality is handled by updateSetting directly
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
-  return (
-    <>
-      {/* Toggle Button */}
-      <button
-        onClick={togglePanel}
-        className="fixed top-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50"
-        aria-label="Toggle accessibility settings"
-        title="Accessibility Settings"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
-        </svg>
-      </button>
-
-<<<<<<< HEAD
-      {/* Settings Panel */}
-=======
       {/* Accessibility Panel */}
->>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
       {isVisible && (
         <div className="fixed top-16 right-4 z-50 bg-white rounded-lg shadow-xl p-6 w-80 max-w-sm">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -771,10 +530,6 @@ export default function AccessibilityEnhancer() {
       )}
 
       {/* CSS for accessibility features */}
-<<<<<<< HEAD
-      <style dangerouslySetInnerHTML={{
-        __html: `
-=======
       <style jsx global>{`
         .skip-links {
           position: absolute;
@@ -805,7 +560,6 @@ export default function AccessibilityEnhancer() {
           outline-offset: 2px !important;
         }
         
->>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
         .high-contrast {
           --tw-bg-opacity: 1;
           --tw-text-opacity: 1;
@@ -846,7 +600,6 @@ export default function AccessibilityEnhancer() {
         `
       }} />
     </>
-=======
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
@@ -1012,10 +765,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       {children}
     </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
   );
 }
-=======
 'use client';
 import React, { useEffect, useState } from 'react';
 
@@ -1034,56 +785,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableHighContrast = false,
   enableFocusManagement = true
 }) => {
-<<<<<<< HEAD
-  const [isHighContrast, setIsHighContrast] = useState(enableHighContrast);
-
-  useEffect(() => {
-    if (enableHighContrast) {
-      document.documentElement.classList.add('high-contrast');
-    } else {
-      document.documentElement.classList.remove('high-contrast');
-    }
-
-    return () => {
-      document.documentElement.classList.remove('high-contrast');
-    };
-  }, [enableHighContrast]);
-
-  useEffect(() => {
-    if (enableScreenReaderSupport) {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'skip-link';
-      skipLink.style.cssText = `
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #0891b2;
-        color: white;
-        padding: 8px;
-        text-decoration: none;
-        border-radius: 4px;
-        z-index: 1000;
-        transition: top 0.3s;
-      `;
-      
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.top = '6px';
-      });
-      
-      skipLink.addEventListener('blur', () => {
-        skipLink.style.top = '-40px';
-      });
-
-      document.body.insertBefore(skipLink, document.body.firstChild);
-
-<<<<<<< HEAD
-      return () => {
-        if (skipLink.parentNode) {
-          skipLink.parentNode.removeChild(skipLink);
-        }
-=======
       const nav = document.querySelector('nav')
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation')
@@ -1182,7 +883,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       return () => {
         cleanupFunctions.forEach(cleanup => cleanup());
         observer.disconnect();
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
       };
     }
   }, [enableScreenReaderSupport]);
@@ -1191,8 +891,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 };
 
 export default AccessibilityEnhancer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 import React, { useEffect } from 'react'
 
 const AccessibilityEnhancer: React.FC = () => {
@@ -1293,12 +991,8 @@ const AccessibilityEnhancer: React.FC = () => {
 }
 
 export default AccessibilityEnhancer
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
-=======
   return null;
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
-=======
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
       const handleContrastChange = (e: MediaQueryListEvent) => {
         if (e.matches) {
@@ -1379,17 +1073,9 @@ export default AccessibilityEnhancer
     return cleanup;
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
-<<<<<<< HEAD
-  return <>{children}</>;
-};
-
-export default AccessibilityEnhancer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
-=======
   return (
     <div className="accessibility-enhanced">
       {children}
-=======
   return (
     <div className="accessibility-enhancer">
       {children}
@@ -1468,16 +1154,10 @@ export default AccessibilityEnhancer;
           </button>
         </div>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
     </div>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default AccessibilityEnhancer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e
-=======
     // Large text mode
     if (newSettings.largeText) {
       root.classList.add('large-text');
@@ -1487,7 +1167,6 @@ export default AccessibilityEnhancer;
 
     // Initialize accessibility features
     const cleanup = initAccessibility()
-=======
       // Add keyboard navigation support
       const handleKeyDown = (event: KeyboardEvent) => {
         if (event.key === 'Tab') {
@@ -1511,23 +1190,11 @@ export default AccessibilityEnhancer;
     const cleanup = enhanceAccessibility();
     return cleanup;
   }, []);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
 
       // Cleanup on unmount
       return cleanup;
     }, []);
 
-<<<<<<< HEAD
-  return <>{children}</>
-}
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
-=======
 export default AccessibilityEnhancer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
-=======
 export default AccessibilityEnhancer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
-=======
 export default AccessibilityEnhancer;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e

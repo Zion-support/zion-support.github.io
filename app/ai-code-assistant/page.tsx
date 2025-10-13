@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -335,4 +333,3 @@ const AiCodeAssistantPage: React.FC = () => {,
 };
 
 export default AiCodeAssistantPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

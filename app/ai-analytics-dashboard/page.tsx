@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -449,4 +447,3 @@ import React, {useState, useEffect}from 'react';
               </a>
         <section className="py-20 px-4">
         </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

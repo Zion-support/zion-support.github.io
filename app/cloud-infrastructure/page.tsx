@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -33,37 +29,15 @@ const PagePage: React.FC = () => {
     'Scalable and flexible solutions',
     'Proven track record of success'
   ];
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 export default function CloudInfrastructure() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-      <Helmet>
-        <title>CloudInfrastructure - Zion Tech Group</title>
-        <meta name="description" content="Advanced cloudinfrastructure solutions" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Infrastructure <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive cloudinfrastructure solutions designed to transform your business
-          </p>
-        </div>
-        <div className="text-center">
-          <p className="text-gray-300">Coming Soon - CloudInfrastructure Solutions</p>
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>
   );
 }
-=======
     'Proven track record of success'
   ]
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
@@ -185,4 +159,3 @@ export default function CloudInfrastructure() {
             </div>
 export default PagePage;
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

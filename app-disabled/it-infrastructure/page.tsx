@@ -1,25 +1,10 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
-<<<<<<< HEAD:app/it-infrastructure/page.tsx
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Server, Database, Cloud, Lock, Settings, Monitor } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/it-infrastructure/page.tsx
 
 const PagePage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD:app/it-infrastructure/page.tsx
-      icon: Brain,
-    'Proven track record of success'
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
-      </Helmet>
-=======
       title: 'Cloud Infrastructure Management',
       description: 'Comprehensive cloud infrastructure setup, optimization, and management across AWS, Azure, and Google Cloud platforms.',
       icon: '☁️',
@@ -216,7 +201,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 
   return (
     <>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/it-infrastructure/page.tsx
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -317,4 +301,3 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 };
 
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

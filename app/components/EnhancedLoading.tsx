@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -153,4 +151,3 @@ const EnhancedLoadingPage: React.FC = () => {
 };
 
 export default EnhancedLoadingPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

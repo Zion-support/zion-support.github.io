@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
-<<<<<<< HEAD:app-disabled/iot-edge-computing/page.tsx
-<<<<<<< HEAD:app/iot-edge-computing/page.tsx
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-=======
-=======
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3:app/iot-edge-computing/page.tsx
 import { CheckCircle, Star, Wifi, Cpu, Shield, Zap, Target, BarChart, Brain, Settings, Globe, Database } from 'lucide-react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/iot-edge-computing/page.tsx
 
 const PagePage: React.FC = () => {
   const features = [
@@ -35,45 +25,11 @@ const PagePage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-<<<<<<< HEAD:app-disabled/iot-edge-computing/page.tsx
-
-      description: 'Worldwide deployment and support for international businesses',}}
-  ]
-  ];];];
-const benefits = [
-    'Proven track record of success'
-  ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
-      <Helmet />
-
-  return (
-<<<<<<< HEAD:app/iot-edge-computing/page.tsx
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-      <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-=======
     <>
 
-=======
   const categories = [...new Set(iotServices.map(service => service.category))];
   return (
     <>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3:app/iot-edge-computing/page.tsx
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-cyan-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-20">
@@ -272,7 +228,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             </h2>
             <p className="text-xl mb-8 text-cyan-100">
               Contact our IoT experts for a free consultation and custom connected solution strategy
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e:app-disabled/iot-edge-computing/page.tsx
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
@@ -363,4 +318,3 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 };
 
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

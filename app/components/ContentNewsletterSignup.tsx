@@ -175,22 +175,12 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       }
       
       setIsSubscribed(true);
-<<<<<<< HEAD
-      setEmail('');
-    } catch (error) {
-<<<<<<< HEAD
-      console.error('Subscription failed:', error);
-=======
       setEmail("");
-=======
 
     } catch (error) {
       console.error('Failed to subscribe to newsletter:', error);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
     } finally {
-=======
       } finally {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
       setIsLoading(false);
     }
   };
@@ -202,12 +192,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-8 h-8 text-white" />
           </div>
-<<<<<<< HEAD
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Welcome to Our Community!
-          </h2>
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
           <p className="text-xl text-blue-100 mb-8">
             Thank you for subscribing. You'll receive our latest insights and updates soon.
           </p>

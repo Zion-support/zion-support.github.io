@@ -17,9 +17,6 @@ interface AnimatedCounterProps {end: number,}
     let startTime: number;,
     let animationFrame: number;,
 
-<<<<<<< HEAD
-    const animate = (currentTime: number) => {,
-=======
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime
       const progress = Math.min((currentTime - startTime) / duration, 1)
@@ -53,4 +50,3 @@ interface AnimatedCounterProps {end: number,}
 }
 
 export default AnimatedCounter
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b

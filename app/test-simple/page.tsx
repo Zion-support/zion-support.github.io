@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -68,4 +66,3 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
               <button>
                 <Mail>
                 Email Us;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

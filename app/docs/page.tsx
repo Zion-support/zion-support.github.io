@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client';
 import React, {useState}from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -147,8 +144,6 @@ const DocsPage: React.FC = () => {,
 
                 ))
               </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 import React from 'react';
 
 const DocsPage: React.FC = () => {
@@ -176,4 +171,3 @@ const DocsPage: React.FC = () => {
 
 export default DocsPage;
 
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-084e

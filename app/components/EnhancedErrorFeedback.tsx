@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface EnhancedErrorFeedbackProps {
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -13,44 +8,16 @@ interface Props {
 
 interface State {
   hasError: boolean;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
   error?: Error;
   className?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function EnhancedErrorFeedback({ error, className = '' }: EnhancedErrorFeedbackProps) {
-  return (
-    <div className={`enhanced-error-feedback ${className}`}>
-      <h3>Error Feedback</h3>
-      {error && <p>Error: {error.message}</p>}
-    </div>
-  );
-}
-=======
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
 export class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
 
-<<<<<<< HEAD
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-    this.setState({ error, errorInfo });
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return <ErrorFallback error={this.state.error} errorInfo={this.state.errorInfo} />;
-=======
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
@@ -160,24 +127,12 @@ export class GlobalErrorBoundary extends Component<Props, State> {
           </div>
         </div>
       );
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
     }
 
     return this.props.children;
   }
 }
 
-<<<<<<< HEAD
-export const LoadingPage = () => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
-      <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-      <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
-      <p className="text-gray-300">Please wait while we load the content</p>
-    </div>
-  </div>
-);
-=======
 // Functional error boundary for specific components
 export const ErrorBoundary: React.FC<{
   children: ReactNode;
@@ -186,7 +141,6 @@ export const ErrorBoundary: React.FC<{
 }> = ({ children, fallback, onError }) => {
   const [hasError, setHasError] = React.useState(false);
   const [error, setError] = React.useState<Error | null>(null);
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
 
 interface ErrorFallbackProps {
   error?: Error;
@@ -269,9 +223,5 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, errorInfo }
     </div>
   );
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
-=======
 
 export default GlobalErrorBoundary;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e

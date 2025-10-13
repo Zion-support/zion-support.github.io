@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> origin/clean-main-20251013-145848
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -39,7 +31,6 @@ const PagePage: React.FC = () => {,
     'Proven track record of success'
   ]
 return(</div>)
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 export default function LandingPageBuilder() {
   return (
@@ -65,26 +56,6 @@ export default function LandingPageBuilder() {
                 Easy-to-use drag and drop interface for creating landing pages.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">A/B Testing</h3>
-              <p className="text-gray-600">
-                Built-in A/B testing tools to optimize conversion rates.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Analytics Integration</h3>
-              <p className="text-gray-600">
-                Comprehensive analytics and performance tracking.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
       </section>
 
       {/* Features Section */}
@@ -155,4 +126,3 @@ export default function LandingPageBuilder() {
 };
 
 export default PagePage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

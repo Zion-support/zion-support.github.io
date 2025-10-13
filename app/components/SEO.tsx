@@ -7,10 +7,6 @@
 
 import React from 'react';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
 export interface SEOProps {
   title?: string;
   description?: string;

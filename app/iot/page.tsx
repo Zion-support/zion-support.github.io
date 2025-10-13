@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles}}from 'lucide-react';
@@ -277,4 +275,3 @@ return(<>)
 };
 
 export default IoTPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

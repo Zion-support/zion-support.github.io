@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, ReactNode } from 'react';
-import { AnalyticsContext } from '../contexts/AnalyticsContext';
-interface AnalyticsProviderProps {
-=======
-<<<<<<< HEAD
-'use client;
-
-import React, { createContext, useContext, useEffect } from 'react;
-=======
 'use client';
 import React, { createContext, useContext, useEffect } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-029f
 
 interface AnalyticsContextType {}
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
@@ -28,16 +14,10 @@ export const useAnalytics = () => {;;;
 
   const context = useContext(AnalyticsContext);;;
 
-<<<<<<< HEAD
-  if (!context) {
-    throw new Error(useAnalytics must be used within an AnalyticsProvider);
-
-=======
 export const useAnalytics = () => {}
   const context = useContext(AnalyticsContext);
   if (!context) {}
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
->>>>>>> cursor/fix-errors-and-merge-to-main-d054
   }
 
   return context;
@@ -45,7 +25,6 @@ export const useAnalytics = () => {}
 };
 
 interface AnalyticsProviderProps {}
->>>>>>> origin/cursor/ad-creation-and-management-f267
   children: ReactNode;
 }
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
@@ -60,7 +39,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   const trackPageView = (pageName: string, properties?: Record<string, unknown>) => {
     console.log('Page View:', pageName, properties);
     // Add your page view tracking logic here
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from "react";
 
 interface AnalyticsContextType {
@@ -115,7 +93,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         console.log('Page View:', pageName, properties);
       }
     }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
   };
   const value = {
     trackEvent,
@@ -125,7 +102,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
-=======
 'use client';
 import React, {createContext, useContext, useEffect, ReactNode}from 'react';
 
@@ -237,14 +213,8 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       });
     trackPageView,}return(<AnalyticsContext.Provider value={value)}>
       {children} </AnalyticsContext.Provider>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
   );
 };
-<<<<<<< HEAD
-export default AnalyticsProvider;
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
 
 interface AnalyticsProviderProps {
@@ -255,11 +225,6 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   return <>{children}</>;
 };
 
-<<<<<<< HEAD
-export default AnalyticsProvider;
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
->>>>>>> origin/cursor/ad-creation-and-management-f267
-=======
 
 // Extend Window interface for gtag
 declare global {
@@ -268,8 +233,6 @@ declare global {
     dataLayer: any[];
   }
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
-=======
 export const useAnalytics = (): AnalyticsContextType => {
   const context = useContext(AnalyticsContext);
   if (context === undefined) {
@@ -277,4 +240,3 @@ export const useAnalytics = (): AnalyticsContextType => {
   }
   return context;
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab

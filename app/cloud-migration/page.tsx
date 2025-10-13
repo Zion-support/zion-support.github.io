@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
@@ -150,4 +148,3 @@ export default CloudMigrationPage;
 
 export default PagePage;
 export default CloudMigrationPage</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></button></p></p></p></p></p></h1></h2></h2></h2></h2></h3></section></section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

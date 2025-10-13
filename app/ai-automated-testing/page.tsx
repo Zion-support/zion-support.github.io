@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { CheckCircle, Zap, Brain, Target, Shield, Clock, ArrowRight, Star, Users, BarChart, Code, Bug } from 'lucide-react';
 
 const AIAutomatedTestingPage: React.FC = () => {
@@ -319,4 +317,3 @@ const AIAutomatedTestingPage: React.FC = () => {
         </section>
       </div>
     </>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
