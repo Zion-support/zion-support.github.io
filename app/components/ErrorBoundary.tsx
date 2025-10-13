@@ -58,16 +58,20 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { FileWarning } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -78,6 +82,8 @@ interface Props {
   enableErrorReporting?: boolean;
   enableRetry?: boolean;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
 }
 
 interface State {
@@ -260,6 +266,7 @@ class ErrorBoundary extends Component<Props, State> {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
+<<<<<<< HEAD
     // Report error to monitoring service in production
     if (process.env['NODE_ENV'] === 'production') {
       // Send to error tracking service
@@ -327,6 +334,15 @@ export default ErrorBoundary
 =======
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
+=======
+    // Log error to analytics in production
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.toString(),
+        fatal: false,
+      });
+    }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
   }
 
   handleRetry = () => {
@@ -349,6 +365,10 @@ export default ErrorBoundary
   }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
+
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -361,9 +381,15 @@ export default ErrorBoundary
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 text-center">
             <div className="w-16 h-16 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+=======
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
               <AlertTriangle className="w-8 h-8 text-red-400" />
 =======
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -378,11 +404,16 @@ export default ErrorBoundary
 <<<<<<< HEAD
             
             <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+=======
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
             </p>
 
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
               <details className="mb-6 text-left">
+<<<<<<< HEAD
                 <summary className="text-cyan-400 cursor-pointer mb-2">
                   Error Details (Development)
                 </summary>
@@ -404,6 +435,20 @@ export default ErrorBoundary
                 <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center">
                   <AlertTriangle className="h-8 w-8 text-red-400" />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+                <summary className="text-red-400 cursor-pointer mb-2">
+                  Error Details (Development)
+                </summary>
+                <div className="bg-red-900/20 p-4 rounded-lg text-sm">
+                  <pre className="text-red-300 whitespace-pre-wrap">
+                    {this.state.error.toString()}
+                  </pre>
+                  {this.state.errorInfo && (
+                    <pre className="text-red-300 whitespace-pre-wrap mt-2">
+                      {this.state.errorInfo.componentStack}
+                    </pre>
+                  )}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
                 </div>
               </div>
 
@@ -411,12 +456,17 @@ export default ErrorBoundary
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleRetry}
+<<<<<<< HEAD
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+=======
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
               
+<<<<<<< HEAD
 <<<<<<< HEAD
               <Link
                 to="/"
@@ -426,12 +476,18 @@ export default ErrorBoundary
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white font-medium rounded-lg transition-colors"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
+=======
+              <button
+                onClick={this.handleGoHome}
+                className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
-              </Link>
+              </button>
             </div>
 
+<<<<<<< HEAD
             <div className="mt-6 pt-6 border-t border-gray-700/50">
               <p className="text-gray-400 text-sm">
                 If this problem persists, please{' '}
@@ -470,6 +526,11 @@ export default ErrorBoundary
                   Something went wrong
                 </h3>
               </div>
+=======
+            <div className="mt-8 text-sm text-gray-400">
+              <p>If this problem persists, please contact our support team:</p>
+              <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
             </div>
             <div className="mt-2">
               <p className="text-sm text-gray-500">

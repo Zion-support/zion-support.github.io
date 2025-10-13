@@ -141,6 +141,7 @@ export default defineConfig(({ mode }) => ({
           }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           // Split large vendor libraries
           if (id.includes('node_modules')) {
             if (id.includes('@types/') || id.includes('typescript')) {
@@ -161,12 +162,32 @@ export default defineConfig(({ mode }) => ({
           }
           // AI service pages - group by category
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
+=======
+          // Group AI service pages into larger chunks for better performance
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
-            return `ai-${serviceName || 'services'}`
+            // Group similar services together
+            if (serviceName?.includes('analytics') || serviceName?.includes('dashboard')) {
+              return 'ai-analytics'
+            }
+            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
+              return 'ai-content'
+            }
+            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
+              return 'ai-customer'
+            }
+            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
+              return 'ai-security'
+            }
+            if (serviceName?.includes('financial') || serviceName?.includes('business')) {
+              return 'ai-business'
+            }
+            return 'ai-services'
           }
-          // Zion service pages
+          // Group Zion service pages
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
+<<<<<<< HEAD
             const serviceName = id.split('/zion-')[1]?.split('/')[0];
             return `zion-${serviceName || 'services'}`
 =======
@@ -243,11 +264,13 @@ export default defineConfig(({ mode }) => ({
             }
             return 'micro-other'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+            return 'zion-services'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
           }
-          // 5G service pages
+          // Group 5G service pages
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/5g-')[1]?.split('/')[0];
-            return `5g-${serviceName || 'services'}`
+            return '5g-services'
           }
 <<<<<<< HEAD
 <<<<<<< HEAD

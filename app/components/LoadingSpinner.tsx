@@ -42,11 +42,12 @@ interface LoadingSpinnerProps {
   color?: 'indigo' | 'blue' | 'green' | 'purple';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   text?: string;
-  className?: string;
+  fullScreen?: boolean;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
+<<<<<<< HEAD
 <<<<<<< HEAD
   color = 'primary',
   text,
@@ -57,10 +58,15 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   text,
   className = '',
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+  text = 'Loading...',
+  fullScreen = false,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     lg: 'w-12 h-12',
@@ -82,6 +88,17 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <Loader2 className={`${sizeClasses[size]} text-purple-600 animate-spin`} />
       {text && (
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{text}</p>
+=======
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16',
+  };
+
+  const spinner = (
+    <div className="flex flex-col items-center justify-center">
+      <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} />
+      {text && (
+        <p className="mt-4 text-gray-300 text-sm font-medium">{text}</p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
       )}
     white: 'text-white',}return(<div className="flex flex-col items-center justify-center space-y-2" role="status" aria-label="Loading">)</div>
       <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]}${colorClasses[color]}`}></div>
@@ -165,6 +182,18 @@ export default LoadingSpinner
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     </div>
   );
+
+  if (fullScreen) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+          {spinner}
+        </div>
+      </div>
+    );
+  }
+
+  return spinner;
 };
 
 export default LoadingSpinner;
