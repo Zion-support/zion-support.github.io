@@ -1,92 +1,92 @@
-import { ArrowRight, Mic, Brain, Zap, Users, BarChart3, Shield, Smartphone, Mail, Globe, CheckCircle, Star, Settings, Clock, Headphones } from "lucide-react";
+import { ArrowRight, Calendar, Clock, Users, Zap, BarChart3, Shield, Smartphone, Mail, Globe, CheckCircle, Star, Brain, Settings } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIVoiceAssistant() {
+export default function ZionSmartScheduler() {
   const features = [
     {
-      title: "Natural Voice Processing",
-      description: "Advanced speech recognition and natural language understanding for human-like conversations",
-      icon: <Mic className="w-6 h-6" />,
+      title: "AI-Powered Scheduling",
+      description: "Intelligent scheduling that learns from your preferences and automatically optimizes meeting times",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with accent recognition and regional dialect understanding",
-      icon: <Globe className="w-6 h-6" />,
+      title: "Multi-Platform Integration",
+      description: "Seamlessly sync with Google Calendar, Outlook, Apple Calendar, and 50+ other platforms",
+      icon: <Settings className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Context Awareness",
-      description: "AI that remembers conversation history and maintains context across interactions",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Smart Time Zones",
+      description: "Automatically handle time zone conversions and suggest optimal meeting times for global teams",
+      icon: <Globe className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Real-Time Processing",
-      description: "Sub-second response times with streaming audio processing for natural conversations",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Buffer Time Management",
+      description: "Automatically add buffer time between meetings and prevent back-to-back scheduling",
+      icon: <Clock className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Custom Voice Training",
-      description: "Train the assistant with your specific voice patterns and business terminology",
-      icon: <Settings className="w-6 h-6" />,
+      title: "Team Availability",
+      description: "Real-time team availability tracking with conflict detection and resolution suggestions",
+      icon: <Users className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     },
     {
-      title: "Enterprise Integration",
-      description: "Seamless integration with CRM, ERP, and other business systems via APIs",
-      icon: <Shield className="w-6 h-6" />,
+      title: "Analytics Dashboard",
+      description: "Comprehensive insights into meeting patterns, productivity metrics, and scheduling efficiency",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199",
+      name: "Personal",
+      price: "$9",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individuals and freelancers",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "5 languages supported",
-        "Basic voice recognition",
+        "Unlimited personal scheduling",
+        "Basic AI suggestions",
+        "2 calendar integrations",
         "Email support",
-        "Standard integrations"
+        "Mobile app access"
       ],
       color: "from-gray-500 to-gray-600",
       popular: false
     },
     {
-      name: "Professional",
-      price: "$499",
+      name: "Team",
+      price: "$29",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for small to medium teams",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "25 languages supported",
-        "Advanced AI capabilities",
+        "Up to 10 team members",
+        "Advanced AI scheduling",
+        "Unlimited calendar integrations",
+        "Team availability tracking",
         "Priority support",
-        "Custom integrations",
-        "Analytics dashboard"
+        "Basic analytics"
       ],
       color: "from-cyan-500 to-blue-500",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$79",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice interactions",
-        "50+ languages supported",
-        "Custom AI training",
+        "Unlimited team members",
+        "Custom AI models",
+        "Advanced analytics",
         "24/7 phone support",
+        "Custom integrations",
         "White-label solution",
-        "Dedicated account manager",
-        "Custom voice models"
+        "Dedicated account manager"
       ],
       color: "from-purple-500 to-pink-500",
       popular: false
@@ -96,14 +96,14 @@ export default function AIVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Advanced Voice AI Platform | Zion Tech Group</title>
+        <title>Zion Smart Scheduler - AI-Powered Meeting Scheduling | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform customer interactions with our AI Voice Assistant. Natural voice processing, multi-language support, and enterprise integration. Starting at $199/month."
+          content="Revolutionize your scheduling with Zion Smart Scheduler. AI-powered meeting optimization, multi-platform integration, and intelligent time management. Starting at $9/month."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, speech recognition, natural language processing, voice automation, conversational AI, voice integration"
+          content="AI scheduler, meeting scheduling, calendar management, time optimization, team scheduling, smart calendar, productivity tools"
         />
       </Helmet>
 
@@ -116,20 +116,20 @@ export default function AIVoiceAssistant() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 Voice AI Platform</span>
+              <Calendar className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">#1 AI-Powered Scheduler</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Voice
+              Zion Smart
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Assistant
+                {" "}Scheduler
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize customer interactions with our advanced AI Voice Assistant. 
-              Natural conversations, multi-language support, and seamless business integration.
+              Transform your scheduling with AI-powered meeting optimization. 
+              Save hours every week with intelligent time management and seamless calendar integration.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -145,7 +145,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Calendar className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
             
@@ -153,31 +153,31 @@ export default function AIVoiceAssistant() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Mic className="w-8 h-8 text-cyan-400" />
+                  <Clock className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Languages</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">5+ hrs</div>
+                <div className="text-gray-300 text-sm">Saved Per Week</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-8 h-8 text-purple-400" />
+                  <Users className="w-8 h-8 text-purple-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">0.3s</div>
-                <div className="text-gray-300 text-sm">Response Time</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">25,000+</div>
+                <div className="text-gray-300 text-sm">Active Users</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Brain className="w-8 h-8 text-pink-400" />
+                  <Zap className="w-8 h-8 text-pink-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">99.2%</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">98%</div>
                 <div className="text-gray-300 text-sm">Accuracy Rate</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-8 h-8 text-green-400" />
+                  <Calendar className="w-8 h-8 text-green-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">10K+</div>
-                <div className="text-gray-300 text-sm">Active Users</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">50+</div>
+                <div className="text-gray-300 text-sm">Integrations</div>
               </div>
             </div>
           </div>
@@ -188,13 +188,13 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Voice
+                Intelligent Scheduling
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}AI Features
+                  {" "}Made Simple
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to create intelligent voice interactions that understand and respond naturally.
+                Everything you need to optimize your time and streamline your scheduling process with AI-powered intelligence.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -227,11 +227,11 @@ export default function AIVoiceAssistant() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Choose Your
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Voice AI Plan
+                  {" "}Perfect Plan
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options designed to scale with your voice interaction needs.
+                Flexible pricing options designed to scale with your team and scheduling needs.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -284,14 +284,14 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform
+              Ready to Optimize Your
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                {" "}Voice Interactions?
+                {" "}Schedule?
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join forward-thinking businesses using AI Voice Assistant to enhance customer experience. 
-              Start your free trial today and experience the future of voice AI.
+              Join thousands of professionals who have transformed their scheduling with Zion Smart Scheduler. 
+              Start your free trial today and experience the difference.
             </p>
             
             {/* Contact Information */}
@@ -332,7 +332,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Calendar className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

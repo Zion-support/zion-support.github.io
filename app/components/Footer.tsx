@@ -40,6 +40,18 @@ const Footer = React.memo(() => {
               Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            <div className="space-y-2 text-sm">
+              <p className="text-gray-400">
+                <span className="text-cyan-400 font-semibold">Email:</span> kleber@ziontechgroup.com
+              </p>
+              <p className="text-gray-400">
+                <span className="text-cyan-400 font-semibold">Phone:</span> +1 302 464 0950
+              </p>
+              <p className="text-gray-400">
+                <span className="text-cyan-400 font-semibold">Address:</span> 364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -172,50 +184,50 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
+                  to="/zion-ai-chatbot-builder"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Chatbot Builder
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-smart-scheduler"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Smart Scheduler
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-translator"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Translator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-smart-forms"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Smart Forms
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-smart-invoicing"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Smart Invoicing
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/zion-analytics-pro"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Analytics Pro
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-security-shield"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Security Shield
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-cloud-vault"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Cloud Vault
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-content-studio"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Content Studio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-data-sync"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Data Sync
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-project-master"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Project Master
+                  Analytics Pro
                 </Link>
               </li>
             </ul>

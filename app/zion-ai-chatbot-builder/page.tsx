@@ -1,42 +1,42 @@
-import { ArrowRight, Mic, Brain, Zap, Users, BarChart3, Shield, Smartphone, Mail, Globe, CheckCircle, Star, Settings, Clock, Headphones } from "lucide-react";
+import { ArrowRight, Bot, MessageSquare, Zap, Users, BarChart3, Shield, Clock, Star, CheckCircle, Brain, Settings, Globe, Smartphone, Mail } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIVoiceAssistant() {
+export default function ZionAIChatbotBuilder() {
   const features = [
     {
-      title: "Natural Voice Processing",
-      description: "Advanced speech recognition and natural language understanding for human-like conversations",
-      icon: <Mic className="w-6 h-6" />,
+      title: "No-Code Builder",
+      description: "Create sophisticated chatbots without any coding knowledge using our intuitive drag-and-drop interface",
+      icon: <Settings className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with accent recognition and regional dialect understanding",
+      title: "Multi-Platform Support",
+      description: "Deploy your chatbot across websites, mobile apps, social media, and messaging platforms",
       icon: <Globe className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Context Awareness",
-      description: "AI that remembers conversation history and maintains context across interactions",
+      title: "Advanced AI Training",
+      description: "Train your chatbot with your specific data, documents, and knowledge base for accurate responses",
       icon: <Brain className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Real-Time Processing",
-      description: "Sub-second response times with streaming audio processing for natural conversations",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Real-time Analytics",
+      description: "Track conversations, user satisfaction, and performance metrics with detailed analytics dashboard",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Custom Voice Training",
-      description: "Train the assistant with your specific voice patterns and business terminology",
-      icon: <Settings className="w-6 h-6" />,
+      title: "24/7 Availability",
+      description: "Your chatbot works around the clock, providing instant responses to customer inquiries",
+      icon: <Clock className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     },
     {
-      title: "Enterprise Integration",
-      description: "Seamless integration with CRM, ERP, and other business systems via APIs",
+      title: "Enterprise Security",
+      description: "Bank-level security with data encryption, compliance with GDPR, and secure data handling",
       icon: <Shield className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     }
@@ -45,65 +45,92 @@ export default function AIVoiceAssistant() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "5 languages supported",
-        "Basic voice recognition",
+        "Up to 1,000 conversations/month",
+        "Basic AI training",
+        "Website integration",
         "Email support",
-        "Standard integrations"
+        "Basic analytics"
       ],
       color: "from-gray-500 to-gray-600",
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$79",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "25 languages supported",
-        "Advanced AI capabilities",
+        "Up to 10,000 conversations/month",
+        "Advanced AI training",
+        "Multi-platform deployment",
         "Priority support",
-        "Custom integrations",
-        "Analytics dashboard"
+        "Advanced analytics",
+        "Custom branding"
       ],
       color: "from-cyan-500 to-blue-500",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice interactions",
-        "50+ languages supported",
-        "Custom AI training",
+        "Unlimited conversations",
+        "Custom AI models",
+        "All platforms included",
         "24/7 phone support",
+        "Custom integrations",
         "White-label solution",
-        "Dedicated account manager",
-        "Custom voice models"
+        "Dedicated account manager"
       ],
       color: "from-purple-500 to-pink-500",
       popular: false
     }
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechStart Inc.",
+      role: "CEO",
+      content: "Zion AI Chatbot Builder transformed our customer support. We reduced response time by 80% and increased customer satisfaction significantly.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      company: "E-commerce Solutions",
+      role: "CTO",
+      content: "The no-code interface is incredibly intuitive. We had our first chatbot live within 2 hours of signing up.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "Digital Marketing Agency",
+      role: "Operations Director",
+      content: "The analytics dashboard provides incredible insights into customer behavior. Highly recommended!",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Advanced Voice AI Platform | Zion Tech Group</title>
+        <title>Zion AI Chatbot Builder - No-Code AI Chatbot Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform customer interactions with our AI Voice Assistant. Natural voice processing, multi-language support, and enterprise integration. Starting at $199/month."
+          content="Create intelligent chatbots without coding using Zion AI Chatbot Builder. Multi-platform deployment, advanced AI training, real-time analytics. Starting at $29/month."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, speech recognition, natural language processing, voice automation, conversational AI, voice integration"
+          content="AI chatbot builder, no-code chatbot, customer support automation, AI training, multi-platform chatbot, business automation, customer service AI"
         />
       </Helmet>
 
@@ -116,20 +143,20 @@ export default function AIVoiceAssistant() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 Voice AI Platform</span>
+              <Bot className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">#1 No-Code AI Chatbot Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Voice
+              Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Assistant
+                {" "}Chatbot Builder
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize customer interactions with our advanced AI Voice Assistant. 
-              Natural conversations, multi-language support, and seamless business integration.
+              Create intelligent, conversational AI chatbots without any coding knowledge. 
+              Deploy across multiple platforms and scale your customer support with advanced AI capabilities.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -137,7 +164,7 @@ export default function AIVoiceAssistant() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Free Trial
+                Start Building Free
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -145,7 +172,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Bot className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
             
@@ -153,31 +180,31 @@ export default function AIVoiceAssistant() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Mic className="w-8 h-8 text-cyan-400" />
+                  <Users className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Languages</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">50,000+</div>
+                <div className="text-gray-300 text-sm">Active Chatbots</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-8 h-8 text-purple-400" />
+                  <MessageSquare className="w-8 h-8 text-purple-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">0.3s</div>
-                <div className="text-gray-300 text-sm">Response Time</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">2M+</div>
+                <div className="text-gray-300 text-sm">Conversations Daily</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Brain className="w-8 h-8 text-pink-400" />
+                  <Zap className="w-8 h-8 text-pink-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">99.2%</div>
-                <div className="text-gray-300 text-sm">Accuracy Rate</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">95%</div>
+                <div className="text-gray-300 text-sm">Customer Satisfaction</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-8 h-8 text-green-400" />
+                  <Clock className="w-8 h-8 text-green-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">10K+</div>
-                <div className="text-gray-300 text-sm">Active Users</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">2 min</div>
+                <div className="text-gray-300 text-sm">Average Setup Time</div>
               </div>
             </div>
           </div>
@@ -188,13 +215,13 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Voice
+                Powerful Features for
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}AI Features
+                  {" "}Every Business
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to create intelligent voice interactions that understand and respond naturally.
+                Everything you need to create, deploy, and manage intelligent chatbots that deliver exceptional customer experiences.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -225,13 +252,13 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your
+                Simple, Transparent
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Voice AI Plan
+                  {" "}Pricing
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options designed to scale with your voice interaction needs.
+                Choose the perfect plan for your business. All plans include our core features with no hidden fees.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -280,18 +307,59 @@ export default function AIVoiceAssistant() {
           </div>
         </section>
 
+        {/* Testimonials Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Trusted by
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  {" "}Industry Leaders
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                See what our customers say about Zion AI Chatbot Builder
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                >
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">{testimonial.name}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform
+              Ready to Build Your
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                {" "}Voice Interactions?
+                {" "}AI Chatbot?
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join forward-thinking businesses using AI Voice Assistant to enhance customer experience. 
-              Start your free trial today and experience the future of voice AI.
+              Join thousands of businesses using Zion AI Chatbot Builder to enhance their customer experience. 
+              Start your free trial today - no credit card required.
             </p>
             
             {/* Contact Information */}
@@ -332,7 +400,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Bot className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

@@ -1,42 +1,42 @@
-import { ArrowRight, Mic, Brain, Zap, Users, BarChart3, Shield, Smartphone, Mail, Globe, CheckCircle, Star, Settings, Clock, Headphones } from "lucide-react";
+import { ArrowRight, FileText, Zap, BarChart3, Shield, Users, Smartphone, Mail, Globe, CheckCircle, Star, Brain, Settings, Clock, Database } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIVoiceAssistant() {
+export default function ZionSmartForms() {
   const features = [
     {
-      title: "Natural Voice Processing",
-      description: "Advanced speech recognition and natural language understanding for human-like conversations",
-      icon: <Mic className="w-6 h-6" />,
+      title: "AI-Powered Forms",
+      description: "Create intelligent forms that adapt to user responses and provide smart suggestions",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with accent recognition and regional dialect understanding",
-      icon: <Globe className="w-6 h-6" />,
+      title: "Drag & Drop Builder",
+      description: "Intuitive form builder with drag-and-drop functionality - no coding required",
+      icon: <Settings className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Context Awareness",
-      description: "AI that remembers conversation history and maintains context across interactions",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive analytics dashboard with conversion tracking and user behavior insights",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Real-Time Processing",
-      description: "Sub-second response times with streaming audio processing for natural conversations",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Multi-Step Forms",
+      description: "Create complex multi-step forms with conditional logic and progress tracking",
+      icon: <FileText className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Custom Voice Training",
-      description: "Train the assistant with your specific voice patterns and business terminology",
-      icon: <Settings className="w-6 h-6" />,
+      title: "Real-Time Validation",
+      description: "Instant form validation with smart error messages and field suggestions",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     },
     {
-      title: "Enterprise Integration",
-      description: "Seamless integration with CRM, ERP, and other business systems via APIs",
+      title: "Secure Data Collection",
+      description: "Enterprise-grade security with encryption, GDPR compliance, and secure data storage",
       icon: <Shield className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     }
@@ -45,48 +45,48 @@ export default function AIVoiceAssistant() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$15",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small businesses and individuals",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "5 languages supported",
-        "Basic voice recognition",
-        "Email support",
-        "Standard integrations"
+        "Up to 5 forms",
+        "1,000 submissions/month",
+        "Basic templates",
+        "Email notifications",
+        "Basic analytics"
       ],
       color: "from-gray-500 to-gray-600",
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$39",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "25 languages supported",
-        "Advanced AI capabilities",
-        "Priority support",
-        "Custom integrations",
-        "Analytics dashboard"
+        "Up to 25 forms",
+        "10,000 submissions/month",
+        "Advanced templates",
+        "AI-powered features",
+        "Advanced analytics",
+        "API access"
       ],
       color: "from-cyan-500 to-blue-500",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$99",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice interactions",
-        "50+ languages supported",
-        "Custom AI training",
-        "24/7 phone support",
+        "Unlimited forms",
+        "Unlimited submissions",
+        "Custom templates",
         "White-label solution",
-        "Dedicated account manager",
-        "Custom voice models"
+        "24/7 phone support",
+        "Custom integrations",
+        "Dedicated account manager"
       ],
       color: "from-purple-500 to-pink-500",
       popular: false
@@ -96,14 +96,14 @@ export default function AIVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Advanced Voice AI Platform | Zion Tech Group</title>
+        <title>Zion Smart Forms - AI-Powered Form Builder | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform customer interactions with our AI Voice Assistant. Natural voice processing, multi-language support, and enterprise integration. Starting at $199/month."
+          content="Create intelligent forms with Zion Smart Forms. AI-powered form builder, advanced analytics, multi-step forms, and secure data collection. Starting at $15/month."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, speech recognition, natural language processing, voice automation, conversational AI, voice integration"
+          content="form builder, smart forms, AI forms, form analytics, data collection, lead generation, survey forms, contact forms"
         />
       </Helmet>
 
@@ -116,20 +116,20 @@ export default function AIVoiceAssistant() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 Voice AI Platform</span>
+              <FileText className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">#1 AI Form Builder</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Voice
+              Zion Smart
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Assistant
+                {" "}Forms
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize customer interactions with our advanced AI Voice Assistant. 
-              Natural conversations, multi-language support, and seamless business integration.
+              Create intelligent, responsive forms that convert better with AI-powered features. 
+              Drag-and-drop builder, advanced analytics, and secure data collection.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -137,7 +137,7 @@ export default function AIVoiceAssistant() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Free Trial
+                Start Building Free
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -145,7 +145,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <FileText className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
             
@@ -153,31 +153,31 @@ export default function AIVoiceAssistant() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Mic className="w-8 h-8 text-cyan-400" />
+                  <FileText className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Languages</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">100K+</div>
+                <div className="text-gray-300 text-sm">Forms Created</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-8 h-8 text-purple-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">0.3s</div>
-                <div className="text-gray-300 text-sm">Response Time</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">40%</div>
+                <div className="text-gray-300 text-sm">Higher Conversion</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Brain className="w-8 h-8 text-pink-400" />
+                  <Users className="w-8 h-8 text-pink-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">99.2%</div>
-                <div className="text-gray-300 text-sm">Accuracy Rate</div>
-              </div>
-              <div className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-8 h-8 text-green-400" />
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">10K+</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">50K+</div>
                 <div className="text-gray-300 text-sm">Active Users</div>
+              </div>
+              <div className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Clock className="w-8 h-8 text-green-400" />
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">5 min</div>
+                <div className="text-gray-300 text-sm">Setup Time</div>
               </div>
             </div>
           </div>
@@ -188,13 +188,13 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Voice
+                Powerful Form
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}AI Features
+                  {" "}Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to create intelligent voice interactions that understand and respond naturally.
+                Everything you need to create high-converting forms with AI-powered intelligence and advanced analytics.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -225,13 +225,13 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your
+                Simple
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Voice AI Plan
+                  {" "}Pricing
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options designed to scale with your voice interaction needs.
+                Choose the perfect plan for your form building needs. All plans include our core features.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -284,14 +284,14 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform
+              Ready to Create
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                {" "}Voice Interactions?
+                {" "}Smart Forms?
               </span>
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join forward-thinking businesses using AI Voice Assistant to enhance customer experience. 
-              Start your free trial today and experience the future of voice AI.
+              Join thousands of businesses using Zion Smart Forms to collect data and generate leads. 
+              Start building your first form today.
             </p>
             
             {/* Contact Information */}
@@ -324,7 +324,7 @@ export default function AIVoiceAssistant() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Free Trial
+                Start Building Free
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -332,7 +332,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <FileText className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
