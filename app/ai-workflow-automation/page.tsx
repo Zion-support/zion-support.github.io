@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
                           {benefit}
                         </li>
@@ -13,6 +14,13 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
 const AiWorkflowAutomationPage: React.FC = () => {
+=======
+import { ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+export default function AiWorkflowAutomationZionTechGroup() {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
     <>
       <Helmet>

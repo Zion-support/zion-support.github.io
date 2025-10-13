@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 'use client';
 import React from 'react';
@@ -14,6 +15,16 @@ import {CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, A
     satisfaction: 99,
     years: 10;,};
 import React from 'react';
+=======
+import React from "react";
+import { Zap, TrendingUp } from "lucide-react";
+interface StatItem {
+  value: string;
+  label: string;
+  icon: React.ReactNode;
+  color: string;
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 const ContentStatistics: React.FC = React.memo((props) => {
     years: 10

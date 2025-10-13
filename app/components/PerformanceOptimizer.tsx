@@ -23,6 +23,7 @@ import React, { useEffect, useState } from 'react'
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   useEffect(() => {
     // Performance optimization logic
     if (typeof window !== 'undefined') {
@@ -289,6 +290,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     </>
   );
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 };
 
 <<<<<<< HEAD

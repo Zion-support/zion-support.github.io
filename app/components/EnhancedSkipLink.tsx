@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 
 const EnhancedSkipLink: React.FC = () => {
+=======
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+export default function EnhancedSkipLink() {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
     <a
       href="#main-content"

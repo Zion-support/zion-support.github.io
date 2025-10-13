@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 
   const toggleSection = (section: string) => {
     const newExpanded = new Set(expandedSections);
@@ -10,6 +11,13 @@ import { Link } from 'react-router-dom';
     }
     setExpandedSections(newExpanded);
   };
+=======
+import { Brain, Zap, Globe } from "lucide-react";
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
   const navigationSections = [
     {

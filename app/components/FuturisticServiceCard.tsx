@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -31,6 +32,11 @@ const FuturisticServiceCardPage: React.FC = () => {
 'use client';
 import React, { useState } from 'react';
 import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
+=======
+import React from "react";
+import { ArrowRight, CheckCircle, Star, Phone } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 interface FuturisticServiceCardProps {
   title: string;

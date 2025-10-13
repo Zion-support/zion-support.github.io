@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -46,6 +47,12 @@ const LoadingSkeletonPage: React.FC = () => {
   const roundedClasses = rounded ? 'rounded-full' : 'rounded';
   const animateClasses = animate ? 'animate-pulse' : '';
   
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+export default function LoadingSkeleton() {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
     <div
       className={`${baseClasses} ${roundedClasses} ${animateClasses} ${className}`}

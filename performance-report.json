@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-10-13T01:38:53.389Z",
 =======
 <<<<<<< HEAD
@@ -33,6 +34,14 @@
     "totalSize": 660839,
     "jsFiles": 19,
     "jsSize": 637083,
+=======
+  "timestamp": "2025-10-13T09:48:29.406Z",
+  "buildStats": {
+    "totalFiles": 20,
+    "totalSize": 427595,
+    "jsFiles": 16,
+    "jsSize": 404598,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
     "cssFiles": 1,
     "cssSize": 1811,
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
@@ -114,6 +123,7 @@
   ],
 <<<<<<< HEAD
   "recommendations": [
+<<<<<<< HEAD
     "Consider implementing image optimization pipeline",
     "Add more granular code splitting for large pages",
     "Implement preloading for critical resources",
@@ -126,5 +136,11 @@
     "Optimize images to reduce bundle size",
     "Implement service worker for better caching"
 >>>>>>> 087b9b5bb73300eddd182f26a6fee488e6ebab96
+=======
+    {
+      "type": "success",
+      "message": "Build size is optimized! Great job!"
+    }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   ]
 }

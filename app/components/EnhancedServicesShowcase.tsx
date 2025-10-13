@@ -1,7 +1,27 @@
+<<<<<<< HEAD
 import React from 'react';
 import {Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe}}from 'lucide-react';
 const EnhancedServicesShowcase: React.FC = () => {,
       stats: '300% ROI'
+=======
+import React from "react";
+import { ArrowRight, CheckCircle, Brain, Zap, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const EnhancedServicesShowcase: React.FC = () => {
+  const services = [
+    {
+      icon: Brain,
+      title: "AI Solutions",
+      description:
+        "Cutting-edge artificial intelligence solutions to automate and optimize your business processes.",
+      features: [
+        "Machine Learning",
+        "Natural Language Processing",
+        "Computer Vision",
+        "Predictive Analytics",
+      ],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
     },
     {
       title: 'IT Infrastructure',

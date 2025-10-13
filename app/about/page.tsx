@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import React from 'react;
 
@@ -14,6 +15,11 @@ import {
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Users } from 'lucide-react';
 
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight, Brain } from "lucide-react";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 export default function AboutPage() {
   // Team members data (for future use)
   // const teamMembers = [

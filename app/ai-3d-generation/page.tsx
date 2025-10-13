@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
       icon: Cube,
       title: 'Text-to-3D',
@@ -110,6 +111,22 @@ return(<>)
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Transform your ideas into stunning 3D models with our advanced AI technology. 
             Generate high-quality 3D assets from simple text descriptions in seconds.
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+export default function Ai3DGenerationZionTechGroup() {
+  return (
+    <>
+      <Helmet>
+        <title>Ai3DGeneration - Zion Tech Group</title>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Ai3DGeneration</h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional ai3dgeneration services coming soon.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">

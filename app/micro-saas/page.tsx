@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 import React from 'react';
 <<<<<<< HEAD
 import Navigation from '../components/Navigation';
@@ -19,6 +22,7 @@ import { CheckCircle, Star, Zap, ArrowRight, Brain, Code, BarChart, Users, Globe
 =======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 =======
@@ -59,6 +63,11 @@ interface MicroSaasProduct {
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts: MicroSaasProduct[] = [
+=======
+import { ArrowRight, CheckCircle, Star } from "lucide-react";
+const MicroSaasPage = () => {
+  const microSaasProducts = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
     {
       id: '1',
       icon: '📊',
@@ -128,6 +137,7 @@ const MicroSaasPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   const benefits = [
     'No upfront costs or setup fees',
     'Quick deployment in 24-48 hours',
@@ -384,6 +394,8 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1189,6 +1201,9 @@ export default MicroSaasPage
 
 export default MicroSaasPage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3

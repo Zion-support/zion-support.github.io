@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import {Loader2, Brain, Cloud, Shield, Code}}from 'lucide-react';
 
 interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';}
@@ -11,6 +12,14 @@ interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';}
     lg: 'w-12 h-12',}return(<div className="flex flex-col items-center justify-center p-8">)</div>
       <Loader2 className={`${sizeClasses[size]}animate-spin text-blue-500`} />
 );
+=======
+import { Brain, Zap, Globe } from "lucide-react";
+interface LoadingPageProps {
+  message?: string;
+  showProgress?: boolean;
+  progress?: number;
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 export const ServiceCardSkeleton: React.FC = () => (,
 );

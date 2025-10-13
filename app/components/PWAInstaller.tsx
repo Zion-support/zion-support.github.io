@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -37,6 +38,20 @@ const PWAInstallerPage: React.FC = () => {
   ]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+export default function ComponentsPage() {
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Professional components services by Zion Tech Group. Transform your business with our expert solutions."
+        />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
       </Helmet>
 
       {/* Hero Section */}

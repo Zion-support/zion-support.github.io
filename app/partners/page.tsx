@@ -7,7 +7,11 @@ import { Helmet } from 'react-helmet-async;
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 interface Partner {
   name: string;
@@ -257,6 +261,7 @@ import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from '
     }
   ];
 
+<<<<<<< HEAD
   const partnershipTiers = [
     {
       name: 'Strategic Partners',
@@ -297,6 +302,28 @@ import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from '
   const getPartnersByTier = (tier: string) => {
     return partners.filter(partner => partner.tier === tier);
   };
+=======
+  const tiers = [
+    {
+      name: "Platinum",
+      color: "from-gray-400 to-gray-600",
+      requirements: "Strategic partnership with significant revenue commitment",
+      benefits: ["Highest priority support", "Dedicated account manager", "Custom solutions", "Joint go-to-market"]
+    },
+    {
+      name: "Gold",
+      color: "from-yellow-400 to-yellow-600",
+      requirements: "Strong partnership with regular collaboration",
+      benefits: ["Priority support", "Training programs", "Marketing support", "Technical resources"]
+    },
+    {
+      name: "Silver",
+      color: "from-gray-300 to-gray-500",
+      requirements: "Partnership with mutual business opportunities",
+      benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
+    }
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
   return (
     <>

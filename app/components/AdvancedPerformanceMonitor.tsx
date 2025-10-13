@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface AdvancedPerformanceMonitorProps {
   className?: string;
 }
@@ -60,3 +61,5 @@ export default AdvancedPerformanceMonitor;
 =======
 export default AdvancedPerformanceMonitor
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3

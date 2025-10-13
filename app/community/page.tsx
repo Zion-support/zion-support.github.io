@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 };
 
 export default PagePage;
@@ -27,6 +28,39 @@ export default PagePage;
                         <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                         Keep discussions relevant and constructive;
           )}
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Star, Globe } from "lucide-react";
+export default function Community() {
+  const events = [
+    {
+      title: "AI Innovation Summit 2024",
+      date: "March 15, 2024",
+      time: "9:00 AM - 5:00 PM",
+      location: "Virtual Event",
+      description: "Join industry leaders as we explore the latest trends in artificial intelligence and machine learning.",
+      attendees: 500
+    },
+    {
+      title: "Tech Talk: Cloud Security Best Practices",
+      date: "March 22, 2024",
+      time: "2:00 PM - 3:00 PM",
+      location: "Online Webinar",
+      description: "Learn about the latest cloud security strategies and how to protect your digital assets.",
+      attendees: 150
+    },
+    {
+      title: "Developer Workshop: React & TypeScript",
+      date: "March 29, 2024",
+      time: "10:00 AM - 4:00 PM",
+      location: "Zion Tech Office",
+      description: "Hands-on workshop covering advanced React patterns and TypeScript best practices.",
+      attendees: 25
+    }
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
           {/* Events Tab */}{activeTab === 'events' && (
                           <span className="px-3 py-1 bg-cyan-600 text-white text-xs font-semibold rounded">{event.type</span>} </span>

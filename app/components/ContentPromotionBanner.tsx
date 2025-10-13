@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Sparkles, ArrowRight, Star } from 'lucide-react';
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -23,6 +24,18 @@ interface PromotionBanner {
     value: string;
     label: string;
   }[];
+=======
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Star, Zap } from "lucide-react";
+interface ContentPromotionBannerProps {
+  title?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  variant?: "primary" | "secondary" | "success";
+  className?: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 }
 
 const ContentPromotionBanner: React.FC = () => {

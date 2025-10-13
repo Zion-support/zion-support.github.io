@@ -1,7 +1,11 @@
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [

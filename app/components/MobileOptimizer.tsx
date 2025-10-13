@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect } from 'react';
 
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 export default function MobileOptimizer() {
   useEffect(() => {
     // Add viewport meta tag if not present

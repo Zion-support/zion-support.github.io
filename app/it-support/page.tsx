@@ -1,9 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
 const ItSupportPage: React.FC = () => {
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+export default function Softwaredevelopment() {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
     <>
       <Helmet>

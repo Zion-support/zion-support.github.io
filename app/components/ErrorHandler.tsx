@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
       .toISOString()
       })
     } catch (reportingError) {
@@ -6,6 +7,10 @@
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
+=======
+'use client'
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 interface Props {
   children: ReactNode;

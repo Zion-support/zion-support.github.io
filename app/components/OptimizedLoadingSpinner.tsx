@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 'use client';
 import React, {Suspense, lazy}from 'react';
 interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';}
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
+=======
+import React, { memo, useMemo } from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+interface OptimizedLoadingSpinnerProps {
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
+  variant?: "dots" | "pulse" | "spinner" | "skeleton" | "bars";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   text?: string;
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';

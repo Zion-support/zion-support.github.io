@@ -1,4 +1,22 @@
+<<<<<<< HEAD
     'Easy integration with existing systems',
+=======
+import React, { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { AnalyticsProvider } from "./components/AnalyticsProvider";
+import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
+// import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "./components/ErrorFallback";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+import MobileNavigation from "./components/MobileNavigation";
+import ImprovedNavigation from "./components/ImprovedNavigation";
+import ImprovedFooter from "./components/ImprovedFooter";
+import ImprovedSidebar from "./components/ImprovedSidebar";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
     'Cost-effective pricing plans',
 

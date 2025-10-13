@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -21,6 +22,64 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     const timer = setInterval(() => {;
       setCurrentIndex((prev) => (prev + 1) % features.length);
     }, 3000);
+=======
+import React, { useState, useEffect } from "react";
+
+interface ContentItem {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  featured?: boolean;
+}
+
+interface DynamicContentShowcaseProps {
+  items?: ContentItem[];
+  autoPlay?: boolean;
+  interval?: number;
+  className?: string;
+}
+
+const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
+  items = [
+    {
+      id: "1",
+      title: "AI-Powered Solutions",
+      description:
+        "Transform your business with cutting-edge artificial intelligence technology.",
+      image: "/api/placeholder/400/300",
+      category: "AI Solutions",
+      featured: true,
+    },
+    {
+      id: "2",
+      title: "Cloud Migration",
+      description:
+        "Seamlessly migrate your infrastructure to the cloud with our expert services.",
+      image: "/api/placeholder/400/300",
+      category: "Cloud Services",
+    },
+    {
+      id: "3",
+      title: "Data Analytics",
+      description:
+        "Unlock insights from your data with advanced analytics and visualization.",
+      image: "/api/placeholder/400/300",
+      category: "Data Services",
+    },
+  ],
+  autoPlay = true,
+  interval = 5000,
+  className = "",
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(autoPlay);
+
+  useEffect(() => {
+    if (!isPlaying) return;
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
     const timer = setInterval(() => {
   return(<div className="py-16 px-4">)</div>
       <div className="max-w-7xl mx-auto">{/* Header */</div>} <div className="text-center mb-16">

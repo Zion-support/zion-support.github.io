@@ -1,3 +1,45 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Brain } from "lucide-react";
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+
+const CybersecuritySolutions = () => {
+  const services = [
+    {
+      title: "Security Assessment",
+      description: "Comprehensive security audits to identify vulnerabilities and assess your current security posture",
+      icon: <Eye className="w-8 h-8" />,
+      features: ["Vulnerability scanning", "Penetration testing", "Risk assessment", "Compliance audit"],
+      price: "From $2,499/assessment"
+    },
+    {
+      title: "Threat Detection",
+      description: "Advanced threat detection and response systems to identify and neutralize security threats in real-time",
+      icon: <AlertTriangle className="w-8 h-8" />,
+      features: ["AI-powered detection", "Real-time monitoring", "Automated response", "Threat intelligence"],
+      price: "From $1,999/month"
+    },
+    {
+      title: "Identity Management",
+      description: "Secure identity and access management solutions to control user access and prevent unauthorized access",
+      icon: <Users className="w-8 h-8" />,
+      features: ["Multi-factor authentication", "Single sign-on", "Access governance", "Privileged access"],
+      price: "From $1,299/month"
+    },
+    {
+      title: "Data Protection",
+      description: "Comprehensive data protection solutions to secure sensitive information and ensure compliance",
+      icon: <Database className="w-8 h-8" />,
+      features: ["Data encryption", "Backup security", "Data loss prevention", "Compliance monitoring"],
+      price: "From $1,799/month"
+    }
+  ];
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   const pricingPlans = [
     {
       name: "Essential",

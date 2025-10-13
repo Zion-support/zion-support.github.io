@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -8,6 +9,9 @@ import React, {useState, useEffect}from 'react';
 import {Cloud, Zap, Shield, ChevronLeft, ChevronRight}}from 'lucide-react';
 import { ChevronLeft, ChevronRight, Cloud, Zap, Shield, Brain } from 'lucide-react';
 import React from 'react';
+=======
+import { useState, useEffect } from "react";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 const ContentCarousel: React.FC = React.memo((props) => {
       title: 'AI Solutions',

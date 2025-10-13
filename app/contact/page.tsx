@@ -1,8 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
+=======
+import { ArrowRight, CheckCircle, Globe, Phone } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 export default function ContactPage() {
     message: ''

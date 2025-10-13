@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 =======
 import { useState } from "react";
 import { ArrowRight, Calendar, User } from "lucide-react";
@@ -64,6 +65,19 @@ export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const blogPosts: BlogPost[] = useMemo(() => [
       category: "AI & Machine Learning",
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight } from "lucide-react";
+const BlogPage = () => {
+  const blogPosts = [
+    {
+      id: 1,
+      title: "The Future of AI in Business: A Comprehensive Guide",
+      excerpt: "Explore how artificial intelligence is transforming modern business operations and what it means for your organization.",
+      author: "Zion Tech Group",
+      date: "2024-01-15",
+      category: "AI & Technology",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
       readTime: "5 min read",
       image: "/images/blog/ai-business-2024.jpg",
       views: 1250,

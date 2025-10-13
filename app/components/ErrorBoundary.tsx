@@ -32,7 +32,11 @@ interface Props {}
 
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+<<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 import { Link } from 'react-router-dom';
 =======
 import React, { Component, ErrorInfo, ReactNode } from 'react'

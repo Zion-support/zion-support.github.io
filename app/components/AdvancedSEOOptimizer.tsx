@@ -1,6 +1,10 @@
 'use client';
+<<<<<<< HEAD
 import React, {useEffect, useState, useCallback}from 'react';
 import {Helmet}}from 'react-helmet-async';
+=======
+import React, { useState, useEffect, useCallback } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 interface SEOOptimizerProps {title?: string;}
   description?: string;

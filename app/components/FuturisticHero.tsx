@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 const FuturisticHeroPage: React.FC = () => {,
@@ -45,6 +46,11 @@ const FuturisticHeroPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
+=======
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+export default function FuturisticHero() {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

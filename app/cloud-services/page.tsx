@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, TrendingUp, Clock } from 'lucide-react';
+import { ArrowRight, Zap, TrendingUp, Shield, Clock } from "lucide-react";
 
 export default function CloudServices() {
   const services = [
@@ -55,6 +55,7 @@ export default function CloudServices() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
+<<<<<<< HEAD
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -121,6 +122,16 @@ export default function CloudServices() {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our comprehensive cloud solutions. From migration to management, 
               we provide end-to-end cloud services that drive growth and efficiency.
+=======
+        <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Enterprise Cloud Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our comprehensive cloud services. 
+              We provide scalable, secure, and reliable cloud infrastructure solutions.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -138,7 +149,7 @@ export default function CloudServices() {
               </Link>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Services Section */}
         <section className="py-20 px-4">
@@ -173,6 +184,7 @@ export default function CloudServices() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
 <<<<<<< HEAD
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
@@ -245,6 +257,32 @@ export default function CloudServices() {
                   View Pricing
                 </Link>
               </div>
+=======
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Your Cloud Infrastructure?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let our cloud experts help you migrate, optimize, and secure your infrastructure.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105"
+              >
+                Start Your Cloud Journey
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 border border-white/20"
+              >
+                View Pricing
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
             </div>
 =======
         <section className="py-20 px-4">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Link from 'next/link';
@@ -6,6 +7,12 @@ import Link from 'next/link';
  * Displayed when the user is offline and tries to access a page
  */
 const OfflinePage: React.FC = () => {
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+const OfflinePage = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center px-4'>
       <div className='max-w-md w-full text-center'>

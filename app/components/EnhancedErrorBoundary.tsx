@@ -1,5 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import React, { Component, ReactNode } from 'react';
@@ -14,10 +15,16 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+=======
+
+interface Props {
+  children: ReactNode;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 }
 
 interface State {
   hasError: boolean;
+<<<<<<< HEAD
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string;
@@ -190,6 +197,35 @@ Please describe what you were doing when this error occurred:
             <p className="text-gray-300 mb-6">
 <<<<<<< HEAD
               We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
+=======
+  error?: Error;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="max-w-md mx-auto text-center p-8">
+            <h1 className="text-2xl font-bold text-white mb-4">
+              Something went wrong
+            </h1>
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
             </p>
             
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
@@ -260,10 +296,15 @@ Please describe what you were doing when this error occurred:
                 onClick={this.handleRetry}
                 className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-4 rounded transition-colors"
               >
+<<<<<<< HEAD
                 Try Again
+=======
+                Refresh Page
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
               </button>
               
               <button
+<<<<<<< HEAD
                 onClick={this.handleReload}
                 className="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 px-4 rounded transition-colors"
               >
@@ -305,3 +346,21 @@ export default EnhancedErrorBoundary;
 
 export default EnhancedErrorBoundary;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
+=======
+                onClick={() => this.setState({ hasError: false })}
+                className="w-full bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+              >
+                Try Again
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    return this.props.children;
+  }
+}
+
+export default EnhancedErrorBoundary;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3

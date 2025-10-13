@@ -21,6 +21,7 @@ Allow: /
 # Sitemap
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
 Sitemap: https://ziontechgroup.com/sitemap.xml
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,6 +40,10 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
 =======
 # Crawl-delay for respectful crawling
+=======
+
+# Crawl-delay for better server performance
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 Crawl-delay: 1
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
@@ -103,6 +108,7 @@ Allow: /ai-services
 Allow: /micro-saas
 Allow: /5g-solutions
 <<<<<<< HEAD
+<<<<<<< HEAD
 Allow: /contact
 
 # Host
@@ -146,3 +152,8 @@ Disallow: /*.json$
 Disallow: /*?*
 Disallow: /*#
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
+=======
+Allow: /blog
+Allow: /case-studies
+Allow: /careers
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3

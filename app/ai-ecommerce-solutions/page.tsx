@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { CheckCircle, Star, Users, BarChart3, Zap, Shield, ShoppingCart, CreditCard, Package, TrendingUp, Globe, Smartphone } from 'lucide-react';
@@ -112,6 +113,11 @@ const AIEcommerceSolutionsPage: React.FC = () => {
       description: 'Enterprise-grade security for your e-commerce platform'
     }
   ];
+=======
+import { ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

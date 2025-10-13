@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
   // const categories = [
   //   { name: 'All', count: aiServices.length },
   //   { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
@@ -16,6 +17,13 @@ import React from 'react';
   //   { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length }
   // ];
   const testimonials = [
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Zap } from "lucide-react";
+const AIServicesPage = () => {
+  const aiServices = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
     {
       name: "Dr. Sarah Johnson",
       company: "MedTech Solutions",
@@ -107,6 +115,7 @@ import React from 'react';
       icon: Mic
     },
     {
+<<<<<<< HEAD
       id: 'ai-automation',
       name: 'AI Workflow Automation',
       description: 'Intelligent process automation that learns and optimizes business workflows',
@@ -953,6 +962,16 @@ import React from 'react';
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+      title: "AI Workflow Automation",
+      description: "Streamline your business processes with intelligent workflow automation.",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      link: "/ai-workflow-automation",
+      features: ["Process Optimization", "Task Automation", "Smart Routing"]
+    }
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
   return (
 <<<<<<< HEAD

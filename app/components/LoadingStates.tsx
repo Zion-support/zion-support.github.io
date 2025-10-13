@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client;
+=======
+import React from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 import React from 'react;
 =======

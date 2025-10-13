@@ -1,12 +1,19 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 import { ArrowRight, BarChart3, Brain, Shield, Zap, Globe, Star, Users, Award, CheckCircle, TrendingUp, Clock, Package, Target, Settings } from 'lucide-react';
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, Zap, TrendingUp } from "lucide-react";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
 const ZionAIInventoryManager = () => {
+<<<<<<< HEAD
   const features = [
     {
       title: "Smart Inventory Tracking",
@@ -56,6 +63,152 @@ const ZionAIInventoryManager = () => {
             <button className="border border-gray-300 text-gray-300 hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-colors duration-300">
               Learn More
             </button>
+=======
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$99",
+      period: "/month",
+      description: "Perfect for small businesses",
+      features: [
+        "Up to 1,000 products",
+        "Basic AI forecasting",
+        "2 user accounts",
+        "Email support",
+        "Mobile app access",
+        "Basic reporting"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$299",
+      period: "/month",
+      description: "Ideal for growing businesses",
+      features: [
+        "Up to 10,000 products",
+        "Advanced AI forecasting",
+        "10 user accounts",
+        "Priority support",
+        "Multi-location support",
+        "Advanced analytics",
+        "API access",
+        "Custom integrations"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$599",
+      period: "/month",
+      description: "For large organizations",
+      features: [
+        "Unlimited products",
+        "Premium AI forecasting",
+        "Unlimited users",
+        "24/7 phone support",
+        "Multi-warehouse support",
+        "Custom reporting",
+        "White-label options",
+        "Dedicated account manager"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechGear Solutions",
+      role: "Operations Manager",
+      content: "Zion AI Inventory Manager reduced our stockouts by 70% and saved us $50,000 in the first year. The AI forecasting is incredibly accurate.",
+      rating: 5,
+      savings: "$50,000 saved"
+    },
+    {
+      name: "Michael Chen",
+      company: "RetailMax Inc",
+      role: "CEO",
+      content: "The multi-channel integration is seamless. We can now track inventory across all our sales channels in real-time.",
+      rating: 5,
+      savings: "60% fewer stockouts"
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "Fashion Forward",
+      role: "Inventory Director",
+      content: "The mobile app is fantastic. I can check inventory levels and place orders from anywhere. Game changer for our business.",
+      rating: 5,
+      savings: "40% time saved"
+    }
+  ];
+
+  const stats = [
+    { number: "95%", label: "Forecast Accuracy", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "60%", label: "Reduction in Stockouts", icon: <AlertTriangle className="w-6 h-6" /> },
+    { number: "40%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <EnhancedSEO
+        title="Zion AI Inventory Manager - AI-Powered Inventory Management | Zion Tech Group"
+        description="Revolutionary AI-powered inventory management system with demand forecasting, real-time tracking, and automated reorder points. Reduce stockouts by 60% and save costs."
+        keywords="AI inventory management, demand forecasting, inventory tracking, stock management, supply chain optimization, business automation"
+        canonical="https://ziontechgroup.com/zion-ai-inventory-manager"
+      />
+
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+              <Zap className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Management</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+                Zion AI Inventory Manager
+              </span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Revolutionize your inventory management with AI-powered demand forecasting, real-time tracking, 
+              and automated reorder points. Reduce stockouts by 60% and optimize your supply chain.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              >
+                Watch Demo
+              </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    {stat.icon}
+                  </div>
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-300 text-sm">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
           </div>
         </div>
       </div>

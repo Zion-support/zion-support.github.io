@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { FileText, PenTool, Globe, BarChart, Zap, Users, Target, TrendingUp, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
@@ -22,6 +23,10 @@ const AIContentWriterPage: React.FC = () => {
       benefits: ['Keyword research', 'SEO scoring', 'Content suggestions']
     }
   ];
+=======
+import { ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
   const benefits = [
     'Increase content production by 10x',

@@ -1,16 +1,117 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight, Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, Sparkles, Monitor, Mic, Mail, Smartphone, Globe } from 'lucide-react';
+=======
+import { ArrowRight, CheckCircle, Star, Brain, TrendingUp } from "lucide-react";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
+<<<<<<< HEAD
 const ZionhrassistantproPage = () => {
   const features = [
     {
       title: "AI-Powered Intelligence",
       description: "Advanced artificial intelligence algorithms that learn and adapt to your business needs",
       icon: <Brain className="w-8 h-8" />,
+=======
+const ZionHRAssistantPro = () => {
+
+  const pricingPlans = [
+    {
+      name: "Startup",
+      price: "$149",
+      period: "/month",
+      description: "Perfect for small teams",
+      features: [
+        "Up to 25 employees",
+        "Basic AI screening",
+        "Interview scheduling",
+        "Leave management",
+        "Email support",
+        "Mobile app access",
+        "Basic analytics"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$399",
+      period: "/month",
+      description: "Ideal for growing companies",
+      features: [
+        "Up to 100 employees",
+        "Advanced AI screening",
+        "Performance analytics",
+        "Automated onboarding",
+        "Priority support",
+        "Custom workflows",
+        "API integration",
+        "Advanced reporting"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$799",
+      period: "/month",
+      description: "For large organizations",
+      features: [
+        "Unlimited employees",
+        "Premium AI features",
+        "Custom AI training",
+        "White-label options",
+        "24/7 phone support",
+        "Dedicated account manager",
+        "Custom integrations",
+        "Advanced security"
+      ],
+      popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Jennifer Martinez",
+      company: "TechStart Solutions",
+      role: "HR Director",
+      content: "Zion HR Assistant Pro reduced our time-to-hire by 65% and improved candidate quality significantly. The AI screening is incredibly accurate.",
+      rating: 5,
+      savings: "65% faster hiring"
+    },
+    {
+      name: "David Thompson",
+      company: "Global Enterprises",
+      role: "VP of People",
+      content: "The performance analytics have given us insights we never had before. We can now make data-driven decisions about our workforce.",
+      rating: 5,
+      savings: "40% better retention"
+    },
+    {
+      name: "Lisa Wang",
+      company: "Innovation Labs",
+      role: "Head of Talent",
+      content: "The automated onboarding process is seamless. New employees are productive from day one, and our HR team can focus on strategic initiatives.",
+      rating: 5,
+      savings: "50% faster onboarding"
+    }
+  ];
+
+  const stats = [
+    { number: "65%", label: "Faster Hiring", icon: <Clock className="w-6 h-6" /> },
+    { number: "95%", label: "Screening Accuracy", icon: <Brain className="w-6 h-6" /> },
+    { number: "50%", label: "Faster Onboarding", icon: <Users className="w-6 h-6" /> },
+    { number: "40%", label: "Better Retention", icon: <TrendingUp className="w-6 h-6" /> }
+  ];
+
+  const hrProcesses = [
+    {
+      title: "Recruitment & Hiring",
+      description: "AI-powered candidate screening, interview scheduling, and talent pipeline management",
+      icon: <Users className="w-8 h-8" />,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
       color: "from-blue-500 to-cyan-500"
     },
     {

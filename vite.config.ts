@@ -21,6 +21,7 @@ export default defineConfig(({ mode }) => ({
     minify: "terser",
     sourcemap: mode !== "production",
     cssCodeSplit: true,
+<<<<<<< HEAD
     chunkSizeWarningLimit: 1000,
 <<<<<<< HEAD
 =======
@@ -35,6 +36,16 @@ export default defineConfig(({ mode }) => ({
       },
     },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
+=======
+    modulePreload: {
+      polyfill: false,
+    },
+    // Performance optimizations
+    chunkSizeWarningLimit: 100, // Reduced threshold for better chunking
+    assetsInlineLimit: 2048, // Reduced for better caching
+    reportCompressedSize: true,
+    // Enhanced build optimizations
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -119,6 +130,7 @@ export default defineConfig(({ mode }) => ({
             return 'error-handling'
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
           // Split large vendor libraries
           if (id.includes('node_modules')) {
             if (id.includes('@types/') || id.includes('typescript')) {
@@ -149,6 +161,9 @@ export default defineConfig(({ mode }) => ({
             return `zion-${serviceName || 'services'}`
 =======
           // AI service pages - more granular splitting
+=======
+          // AI service pages - group by category with smaller chunks
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
@@ -163,6 +178,7 @@ export default defineConfig(({ mode }) => ({
             if (serviceName?.includes('customer') || serviceName?.includes('support')) {
               return 'ai-customer'
             }
+<<<<<<< HEAD
             if (serviceName?.includes('voice') || serviceName?.includes('assistant')) {
               return 'ai-voice'
             }
@@ -177,12 +193,32 @@ export default defineConfig(({ mode }) => ({
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
               return 'zion-analytics'
             }
+=======
+            if (serviceName?.includes('financial') || serviceName?.includes('fintech')) {
+              return 'ai-financial'
+            }
+            if (serviceName?.includes('health') || serviceName?.includes('medical')) {
+              return 'ai-health'
+            }
+            if (serviceName?.includes('marketing') || serviceName?.includes('social')) {
+              return 'ai-marketing'
+            }
+            if (serviceName?.includes('quantum') || serviceName?.includes('blockchain')) {
+              return 'ai-advanced'
+            }
+            return 'ai-other'
+          }
+          // Micro SAAS pages - group by category
+          if (id.includes('/micro-saas') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/micro-saas/')[1]?.split('/')[0];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
             if (serviceName?.includes('ai-')) {
-              return 'zion-ai'
+              return 'micro-ai'
             }
-            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
-              return 'zion-security'
+            if (serviceName?.includes('analytics') || serviceName?.includes('dashboard')) {
+              return 'micro-analytics'
             }
+<<<<<<< HEAD
             if (serviceName?.includes('video') || serviceName?.includes('content')) {
               return 'zion-content'
             }
@@ -191,12 +227,19 @@ export default defineConfig(({ mode }) => ({
             }
             return 'zion-other'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
+=======
+            if (serviceName?.includes('management') || serviceName?.includes('tracker')) {
+              return 'micro-management'
+            }
+            return 'micro-other'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
           }
           // 5G service pages
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/5g-')[1]?.split('/')[0];
             return `5g-${serviceName || 'services'}`
           }
+<<<<<<< HEAD
 <<<<<<< HEAD
           // Other service pages
           if (id.includes('/app/') && id.includes('/page.tsx') && 
@@ -211,6 +254,22 @@ export default defineConfig(({ mode }) => ({
             }
             return 'main-pages'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
+=======
+          // Main pages - split into smaller chunks
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/micro-saas') && !id.includes('/5g-')) {
+            const pageName = id.split('/app/')[1]?.split('/')[0];
+            if (pageName === 'about' || pageName === 'contact' || pageName === 'services') {
+              return 'main-core'
+            }
+            if (pageName?.includes('cloud') || pageName?.includes('cyber') || pageName?.includes('security')) {
+              return 'main-infrastructure'
+            }
+            if (pageName?.includes('data') || pageName?.includes('analytics') || pageName?.includes('business')) {
+              return 'main-data'
+            }
+            return 'main-other'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
           }
           // Default chunk for other modules
           return 'vendor'
@@ -235,9 +294,13 @@ export default defineConfig(({ mode }) => ({
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
   },
+<<<<<<< HEAD
   css: {
     devSourcemap: mode !== "production",
   },
   envPrefix: "VITE_",
   logLevel: mode === "production" ? "warn" : "info",
 }));
+=======
+});
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3

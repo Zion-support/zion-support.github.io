@@ -1,5 +1,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight, CheckCircle, Globe, TrendingUp, Phone } from "lucide-react";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 export default function MicroSaasServices() {
 =======
 import React from 'react';

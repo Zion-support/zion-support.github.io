@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { CheckCircle, Star, Heart, Brain, Shield, Zap, Target, Users } from 'lucide-react';
@@ -74,6 +75,11 @@ const AIHealthcarePage: React.FC = () => {
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+import { ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
   return (
 <<<<<<< HEAD

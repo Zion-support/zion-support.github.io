@@ -1,8 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 'use client;
 
 import React from 'react;
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star } from "lucide-react";
+export default function DemoPage() {
+  const [currentDemo, setCurrentDemo] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(false);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 import { Helmet } from 'react-helmet-async;
 
@@ -105,7 +113,31 @@ const DemoPage: React.FC = () => {}
 
   ];
 
+<<<<<<< HEAD
 export default function Demo() {
+=======
+  const stats = [
+    { number: '50+', label: 'Live Demos Available' },
+    { number: '1000+', label: 'Businesses Transformed' },
+    { number: '99.9%', label: 'Customer Satisfaction' },
+    { number: '24/7', label: 'Demo Access' }
+  ];
+
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleNextDemo = () => {
+    setCurrentDemo((prev) => (prev + 1) % demos.length);
+    setIsPlaying(false);
+  };
+
+  const handlePrevDemo = () => {
+    setCurrentDemo((prev) => (prev - 1 + demos.length) % demos.length);
+    setIsPlaying(false);
+  };
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
 

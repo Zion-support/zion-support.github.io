@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+=======
+import React from "react";
+import { ArrowRight, CheckCircle, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 const EnhancedHeroPage: React.FC = () => {
   const features = [

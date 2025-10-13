@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface LoadingOptimizerProps {
@@ -39,6 +40,12 @@ export default function LoadingOptimizer({
 }
 
 function DefaultLoadingSpinner() {
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+export default function LoadingOptimizer() {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">

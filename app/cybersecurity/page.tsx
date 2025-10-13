@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database, Globe } from 'lucide-react';
@@ -340,10 +341,33 @@ const CybersecurityPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const CybersecurityPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Cybersecurity - Zion Tech Group</title>
+        <meta name="description" content="Advanced cybersecurity solutions and services" />
+      </Helmet>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Cybersecurity
+          </h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Coming Soon - Advanced cybersecurity solutions and services
+          </p>
+        </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
       </div>
-    </>
+    </div>
   );
 };
+<<<<<<< HEAD
 export default CybersecurityPage;
 =======
 import React from 'react'
@@ -375,3 +399,7 @@ const CybersecurityPage: React.FC = () => {
 
 export default CybersecurityPage
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+
+export default CybersecurityPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3

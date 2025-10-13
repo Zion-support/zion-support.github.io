@@ -1,8 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Zap } from 'lucide-react'
+=======
+import React from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'

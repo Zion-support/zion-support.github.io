@@ -1,8 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client;
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
+=======
+import React from "react";
+import { ArrowRight, Star, Zap, Target, Monitor } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import SEOOptimizer from "../components/SEOOptimizer";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 import React from 'react;
 

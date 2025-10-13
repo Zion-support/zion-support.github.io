@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -119,6 +120,89 @@ export default function AICustomerSupportChatbot() {
       rating: 5
     }
   ]
+=======
+"use client";
+
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+export default function AICustomerSupportChatbot() {
+  const chatbotFeatures = [
+    {
+      category: "Core Features",
+      items: [
+        "Natural Language Processing",
+        "Multi-language Support",
+        "Context Awareness",
+        "Real-time Responses",
+      ],
+    },
+    {
+      category: "Integration",
+      items: [
+        "API Integration",
+        "CRM Integration",
+        "Database Connectivity",
+        "Third-party Tools",
+      ],
+    },
+    {
+      category: "Analytics",
+      items: [
+        "Conversation Analytics",
+        "Performance Metrics",
+        "User Insights",
+        "Custom Reports",
+      ],
+    },
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$299",
+      features: ["Basic chatbot", "Email support", "Standard templates"],
+      description: "Perfect for small businesses getting started",
+      period: "/month",
+      popular: false,
+    },
+    {
+      name: "Professional",
+      price: "$799",
+      features: ["Advanced AI", "Priority support", "Custom integrations"],
+      description: "Ideal for growing businesses with complex needs",
+      period: "/month",
+      popular: true,
+    },
+    {
+      name: "Enterprise",
+      price: "$1999",
+      features: ["Full customization", "24/7 support", "Dedicated manager"],
+      description: "Complete solution for large organizations",
+      period: "/month",
+      popular: false,
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechCorp",
+      text: "Amazing chatbot solution!",
+      rating: 5,
+      content:
+        "The AI chatbot has transformed our customer service operations.",
+    },
+    {
+      name: "Mike Chen",
+      company: "StartupXYZ",
+      text: "Increased customer satisfaction by 40%.",
+      rating: 5,
+      content:
+        "Our response times have improved dramatically with this solution.",
+    },
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
   return (
     <Layout

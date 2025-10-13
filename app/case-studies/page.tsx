@@ -21,6 +21,7 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
 'use client';
 
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
@@ -176,6 +177,12 @@ const CaseStudiesPage: React.FC = () => {
   ];
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
+=======
+import { CheckCircle, Zap, TrendingUp } from "lucide-react";
+import EnhancedSEO from '../components/EnhancedSEO';
+
+export default function CaseStudies() {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
   return (
     <>
 <<<<<<< HEAD
@@ -498,9 +505,15 @@ export default CaseStudiesPage;
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </>
   )
 }
 
 export default CaseStudiesPage
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
