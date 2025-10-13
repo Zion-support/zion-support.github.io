@@ -6,4 +6,9 @@ interface FuturistictextProps {
 }
 
 export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
+  return (
+    <div className={className} {...props}>
+      {children}
+    </div>
+  );
 }

@@ -1,4 +1,4 @@
-import { ArrowRight, Home, Search, AlertTriangle, Brain, Bot, FileText, Shield, Wifi, Cloud, BarChart3, Code, Target, Users, TrendingUp, Globe, Zap, Database, Monitor, Lock, Server, Settings, HardDrive, Phone, Laptop, Headphones, Network, Cpu } from 'lucide-react';
+import { ArrowRight, Brain, Bot, FileText, Shield, Wifi, Cloud, BarChart3, Code, Target, Users, TrendingUp, Globe, Zap, Database, Monitor, Lock, Server, Settings, HardDrive, Phone, Laptop, Headphones, Network, Cpu } from 'lucide-react';
 
 export default function Services() {
   const services = [
@@ -337,4 +337,75 @@ export default function Services() {
     }
   ];
 
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive AI and IT solutions designed to transform your business and drive innovation across all industries.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
+            >
+              <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                {service.icon}
+              </div>
+              
+              <div className="mb-4">
+                {service.popular && (
+                  <span className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full mb-3">
+                    POPULAR
+                  </span>
+                )}
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  {service.description}
+                </p>
+              </div>
+
+              <div className="mb-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="text-2xl font-bold text-white">{service.price}</span>
+                  {service.originalPrice && (
+                    <span className="text-lg text-gray-400 line-through">{service.originalPrice}</span>
+                  )}
+                </div>
+                <span className="text-sm text-blue-400 font-medium">{service.category}</span>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
+                <ul className="space-y-2">
+                  {service.features.slice(0, 3).map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 flex-shrink-0"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <a
+                href={service.path}
+                className={`inline-flex items-center justify-center w-full py-3 px-6 rounded-xl bg-gradient-to-r ${service.color} text-white font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 group-hover:scale-105`}
+              >
+                Learn More
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
