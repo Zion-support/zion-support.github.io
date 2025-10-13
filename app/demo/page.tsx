@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle, Star, Hand, Play, Pause, Calendar, Network } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Play, Pause, Calendar } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Pause } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Hand } from 'lucide-react';
-import { Cloud } from 'lucide-react';
 
 export default function DemoPage() {
   const [currentDemo, setCurrentDemo] = useState(0);
@@ -81,35 +71,6 @@ export default function DemoPage() {
   ];
 
   const handlePlayPause = () => {
-  const benefits = [
-    {
-      title: "Expert Team",
-      description: "Our team of AI and technology experts delivers exceptional results.",
-      icon: <Users className="w-8 h-8" />
-    },
-    {
-      title: "Proven Results",
-      description: "We have a track record of successful projects and satisfied clients.",
-      icon: <CheckCircle className="w-8 h-8" />
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock support to ensure your success.",
-      icon: <Clock className="w-8 h-8" />
-    },
-    {
-      title: "Innovation",
-      description: "Cutting-edge solutions that keep you ahead of the competition.",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-
-  const stats = [
-    { label: "Projects Completed", value: "500+" },
-    { label: "Happy Clients", value: "200+" },
-    { label: "Years Experience", value: "5+" },
-    { label: "Team Members", value: "50+" }
-  ];
 
     setIsPlaying(!isPlaying);
   };

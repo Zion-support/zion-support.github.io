@@ -7,7 +7,6 @@ import ImprovedNavigation from "./components/ImprovedNavigation";
 import ImprovedFooter from "./components/ImprovedFooter";
 import ImprovedSidebar from "./components/ImprovedSidebar";
 import { Helmet } from 'react-helmet-async';
-import { Monitor } from 'lucide-react';
 
 interface LayoutProps {
   children: React.ReactNode;

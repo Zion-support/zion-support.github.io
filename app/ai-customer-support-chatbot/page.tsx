@@ -1,13 +1,11 @@
+"use client";
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Clock } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Database } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
-
-"use client";
 
 export default function AICustomerSupportChatbot() {
   const chatbotFeatures = [

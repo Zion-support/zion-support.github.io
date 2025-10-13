@@ -13,10 +13,8 @@ import { Globe } from 'lucide-react';
 import { Rocket } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
-import { Plus } from 'lucide-react';
 import { DollarSign } from 'lucide-react';
 import { Phone } from 'lucide-react';
-import { Cloud } from 'lucide-react';
 
 export default function AiPoweredDevops() {
   const features = [

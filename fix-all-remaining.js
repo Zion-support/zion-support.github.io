@@ -1,35 +1,41 @@
 import fs from 'fs';
 
-// Component files with issues
+// All remaining files with issues
 const filesToFix = [
   {
-    file: '/workspace/app/components/AdvancedPerformanceMonitor.tsx',
-    removeImports: ['Monitor']
-  },
-  {
-    file: '/workspace/app/components/Analytics.tsx',
+    file: '/workspace/app/ai-financial-analysis/page.tsx',
     removeImports: ['Star']
   },
   {
-    file: '/workspace/app/components/CriticalResourcePreloader.tsx',
-    removeImports: ['Link'],
+    file: '/workspace/app/ai-financial-analytics-pro/page.tsx',
+    removeImports: ['Monitor'],
     moveUseClient: true
   },
   {
-    file: '/workspace/app/components/EnhancedAccessibility.tsx',
-    removeImports: ['Link']
-  },
-  {
-    file: '/workspace/app/components/EnhancedPerformanceMonitor.tsx',
+    file: '/workspace/app/ai-image-recognition-pro/page.tsx',
     removeImports: ['Star']
   },
   {
-    file: '/workspace/app/components/ImageOptimizer.tsx',
-    removeImports: ['Box']
+    file: '/workspace/app/ai-infrastructure-monitoring/page.tsx',
+    removeImports: ['Monitor']
   },
   {
-    file: '/workspace/app/components/ImprovedErrorBoundary.tsx',
-    removeImports: ['Hand']
+    file: '/workspace/app/ai-invoice-generator/page.tsx',
+    removeImports: [],
+    moveUseClient: true
+  },
+  {
+    file: '/workspace/app/ai-powered-devops/page.tsx',
+    removeImports: ['Plus', 'Cloud']
+  },
+  {
+    file: '/workspace/app/ai-powered-email-analyzer/page.tsx',
+    removeImports: ['Star']
+  },
+  {
+    file: '/workspace/app/ai-project-management-pro/page.tsx',
+    removeImports: ['Cloud'],
+    moveUseClient: true
   }
 ];
 
@@ -122,4 +128,4 @@ filesToFix.forEach(({ file, removeImports, moveUseClient }) => {
   fixFile(file, removeImports, moveUseClient);
 });
 
-console.log('Components cleanup completed!');
+console.log('All remaining issues cleanup completed!');

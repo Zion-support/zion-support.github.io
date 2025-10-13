@@ -1,39 +1,25 @@
 import fs from 'fs';
 
-// Component files with issues
+// Files with specific issues to fix
 const filesToFix = [
   {
-    file: '/workspace/app/components/AdvancedPerformanceMonitor.tsx',
-    removeImports: ['Monitor']
-  },
-  {
-    file: '/workspace/app/components/Analytics.tsx',
-    removeImports: ['Star']
-  },
-  {
-    file: '/workspace/app/components/CriticalResourcePreloader.tsx',
-    removeImports: ['Link'],
+    file: '/workspace/app/ai-email-assistant/page.tsx',
+    removeImports: ['Hand'],
     moveUseClient: true
   },
   {
-    file: '/workspace/app/components/EnhancedAccessibility.tsx',
-    removeImports: ['Link']
+    file: '/workspace/app/ai-email-marketing-automation/page.tsx',
+    removeImports: [],
+    moveUseClient: true
   },
   {
-    file: '/workspace/app/components/EnhancedPerformanceMonitor.tsx',
-    removeImports: ['Star']
-  },
-  {
-    file: '/workspace/app/components/ImageOptimizer.tsx',
-    removeImports: ['Box']
-  },
-  {
-    file: '/workspace/app/components/ImprovedErrorBoundary.tsx',
-    removeImports: ['Hand']
+    file: '/workspace/app/ai-expense-tracker/page.tsx',
+    removeImports: ['Users'],
+    moveUseClient: true
   }
 ];
 
-function fixFile(filePath, removeImports, moveUseClient = false) {
+function fixFile(filePath, removeImports, moveUseClient) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
@@ -122,4 +108,4 @@ filesToFix.forEach(({ file, removeImports, moveUseClient }) => {
   fixFile(file, removeImports, moveUseClient);
 });
 
-console.log('Components cleanup completed!');
+console.log('Remaining issues cleanup completed!');

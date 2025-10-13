@@ -1,35 +1,44 @@
 import fs from 'fs';
 
-// Component files with issues
+// All remaining files with issues
 const filesToFix = [
   {
-    file: '/workspace/app/components/AdvancedPerformanceMonitor.tsx',
+    file: '/workspace/app/ai-quantum-financial-oracle/page.tsx',
+    removeImports: ['ArrowRight', 'Users', 'Award', 'Star', 'Monitor']
+  },
+  {
+    file: '/workspace/app/ai-security-monitor/page.tsx',
     removeImports: ['Monitor']
   },
   {
-    file: '/workspace/app/components/Analytics.tsx',
-    removeImports: ['Star']
+    file: '/workspace/app/ai-sentiment-analysis-pro/page.tsx',
+    removeImports: ['Star', 'Monitor']
   },
   {
-    file: '/workspace/app/components/CriticalResourcePreloader.tsx',
-    removeImports: ['Link'],
+    file: '/workspace/app/ai-smart-home-controller/page.tsx',
+    removeImports: ['Home']
+  },
+  {
+    file: '/workspace/app/ai-smart-scheduler/page.tsx',
+    removeImports: ['Star', 'Calendar']
+  },
+  {
+    file: '/workspace/app/ai-social-media-manager/page.tsx',
+    removeImports: [],
     moveUseClient: true
   },
   {
-    file: '/workspace/app/components/EnhancedAccessibility.tsx',
-    removeImports: ['Link']
+    file: '/workspace/app/ai-space-mission-optimizer/page.tsx',
+    removeImports: ['ArrowRight', 'Cpu', 'Clock', 'Users', 'Star', 'PieChart', 'MapPin', 'Monitor']
   },
   {
-    file: '/workspace/app/components/EnhancedPerformanceMonitor.tsx',
-    removeImports: ['Star']
+    file: '/workspace/app/ai-video-editor/page.tsx',
+    removeImports: ['Edit'],
+    moveUseClient: true
   },
   {
-    file: '/workspace/app/components/ImageOptimizer.tsx',
-    removeImports: ['Box']
-  },
-  {
-    file: '/workspace/app/components/ImprovedErrorBoundary.tsx',
-    removeImports: ['Hand']
+    file: '/workspace/app/ai-voice-cloning-studio/page.tsx',
+    removeImports: ['Pause', 'Download', 'Upload', 'Star', 'Shield', 'ArrowRight', 'Clock']
   }
 ];
 
@@ -122,4 +131,4 @@ filesToFix.forEach(({ file, removeImports, moveUseClient }) => {
   fixFile(file, removeImports, moveUseClient);
 });
 
-console.log('Components cleanup completed!');
+console.log('Final issues cleanup completed!');

@@ -1,39 +1,34 @@
 import fs from 'fs';
 
-// Component files with issues
+// Fix specific files with unused imports
 const filesToFix = [
   {
-    file: '/workspace/app/components/AdvancedPerformanceMonitor.tsx',
+    file: '/workspace/app/ai-cloud-infrastructure/page.tsx',
+    removeImports: ['Cloud']
+  },
+  {
+    file: '/workspace/app/ai-customer-support-chatbot/page.tsx',
+    removeImports: ['Star', 'Database']
+  },
+  {
+    file: '/workspace/app/ai-cybersecurity-monitor-pro/page.tsx',
     removeImports: ['Monitor']
   },
   {
-    file: '/workspace/app/components/Analytics.tsx',
+    file: '/workspace/app/ai-cybersecurity-monitor/page.tsx',
+    removeImports: ['Monitor']
+  },
+  {
+    file: '/workspace/app/ai-data-analytics-pro/page.tsx',
     removeImports: ['Star']
   },
   {
-    file: '/workspace/app/components/CriticalResourcePreloader.tsx',
-    removeImports: ['Link'],
-    moveUseClient: true
-  },
-  {
-    file: '/workspace/app/components/EnhancedAccessibility.tsx',
-    removeImports: ['Link']
-  },
-  {
-    file: '/workspace/app/components/EnhancedPerformanceMonitor.tsx',
-    removeImports: ['Star']
-  },
-  {
-    file: '/workspace/app/components/ImageOptimizer.tsx',
-    removeImports: ['Box']
-  },
-  {
-    file: '/workspace/app/components/ImprovedErrorBoundary.tsx',
-    removeImports: ['Hand']
+    file: '/workspace/app/ai-ecommerce-optimizer-pro/page.tsx',
+    removeImports: ['Search']
   }
 ];
 
-function fixFile(filePath, removeImports, moveUseClient = false) {
+function fixFile(filePath, importsToRemove) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
@@ -41,33 +36,15 @@ function fixFile(filePath, removeImports, moveUseClient = false) {
     const lines = content.split('\n');
     const newLines = [];
 
-    // First, move "use client" to the top if needed
-    if (moveUseClient) {
-      const useClientIndex = lines.findIndex(line => line.trim() === '"use client";');
-      if (useClientIndex > 0) {
-        // Remove from current position
-        lines.splice(useClientIndex, 1);
-        // Add at the beginning
-        newLines.push('"use client";');
-        newLines.push('');
-        modified = true;
-      }
-    }
-
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      // Skip if we already processed this line
-      if (moveUseClient && line.trim() === '"use client";' && newLines.length > 0) {
-        continue;
-      }
-      
       // Check if this line imports the variables we want to remove
-      if (line.includes('import') && line.includes('from') && removeImports.length > 0) {
+      if (line.includes('import') && line.includes('from')) {
         let shouldRemoveLine = false;
         let newImportLine = line;
 
-        for (const importToRemove of removeImports) {
+        for (const importToRemove of importsToRemove) {
           if (line.includes(importToRemove)) {
             // Check if this is a single import
             if (line.includes(`{ ${importToRemove} }`) || line.includes(`{${importToRemove}}`)) {
@@ -80,7 +57,7 @@ function fixFile(filePath, removeImports, moveUseClient = false) {
                 const imports = importMatch[1].split(',').map(imp => imp.trim());
                 const filteredImports = imports.filter(imp => {
                   const importName = imp.replace(/\s+as\s+\w+/, '').trim();
-                  return !removeImports.includes(importName);
+                  return !importsToRemove.includes(importName);
                 });
                 
                 if (filteredImports.length === 0) {
@@ -118,8 +95,8 @@ function fixFile(filePath, removeImports, moveUseClient = false) {
 }
 
 // Fix all files
-filesToFix.forEach(({ file, removeImports, moveUseClient }) => {
-  fixFile(file, removeImports, moveUseClient);
+filesToFix.forEach(({ file, removeImports }) => {
+  fixFile(file, removeImports);
 });
 
-console.log('Components cleanup completed!');
+console.log('Specific files cleanup completed!');

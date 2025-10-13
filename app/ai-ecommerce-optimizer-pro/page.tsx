@@ -1,14 +1,13 @@
+"use client";
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Search } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
-
-"use client";
 
 export default function AIEcommerceOptimizerPro() {
   const features = [

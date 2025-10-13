@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Star } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -95,7 +94,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             }
           });
         }
-      } catch (error) {
+      } catch {
         setIsLoading(false);
       }
     };

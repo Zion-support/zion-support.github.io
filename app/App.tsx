@@ -7,10 +7,7 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import CriticalResourcePreloader from "./components/CriticalResourcePreloader";
 import CacheManager from "./components/CacheManager";
 import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
-import { Helmet } from 'react-helmet-async';
-import { Home } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Monitor } from 'lucide-react';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"));

@@ -1,3 +1,5 @@
+"use client";
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Users } from 'lucide-react';
@@ -9,9 +11,7 @@ import { Settings } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
-import { Hand } from 'lucide-react';
 
-"use client";
 
 export default function AIEmailAssistant() {
   const features = [
