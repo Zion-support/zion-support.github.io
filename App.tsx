@@ -6,7 +6,7 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
 import LoadingStates from './app/components/LoadingStates';
-import { AnalyticsProvider } from './app/contexts/AnalyticsContext';
+import { AnalyticsProvider } from './app/contexts/AnalyticsContext.tsx';
 
 // Lazy load pages for better performance
 const BlogPage = React.lazy(() => import("./app/blog/page"));
@@ -17,6 +17,7 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const PricingPage = React.lazy(() => import("./app/pricing/page"));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function App() {
   return (
@@ -71,6 +72,8 @@ function App() {
       </AnalyticsProvider>
     </HelmetProvider>
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a28c
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -123,8 +126,13 @@ function App() {
                     <Route path="*" element={
                       <div className="min-h-screen flex items-center justify-center">
                         <div className="text-center">
+<<<<<<< HEAD
                           <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
                           <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
+=======
+                        <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                        <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a28c
                           <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                             Go Home
                           </a>
@@ -140,7 +148,10 @@ function App() {
         </AnalyticsProvider>
       </HelmetProvider>
     </ErrorBoundary>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a28c
   );
 }
 

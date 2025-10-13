@@ -205,6 +205,9 @@ export default defineConfig({
   },
 <<<<<<< HEAD
 });
+<<<<<<< HEAD
 =======
 });
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a28c

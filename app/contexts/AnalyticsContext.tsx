@@ -28,7 +28,10 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   );
 <<<<<<< HEAD
 };
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
 =======
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a28c

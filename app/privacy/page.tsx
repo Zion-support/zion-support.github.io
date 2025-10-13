@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a28c
 import React from 'react';
 
 export default function PrivacyPage() {
@@ -9,10 +12,18 @@ export default function PrivacyPage() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
         <p className="text-gray-300 text-lg">
+<<<<<<< HEAD
           This page is under development. Check back soon for our privacy policy.
         </p>
       </div>
     </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+=======
+          This page is under development. Check back soon for our comprehensive 
+          privacy policy and data protection information.
+        </p>
+      </div>
+    </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a28c
   );
 }

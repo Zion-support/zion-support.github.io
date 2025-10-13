@@ -156,4 +156,7 @@ export default function HomePage() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
 =======
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a28c

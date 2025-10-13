@@ -6,11 +6,17 @@ export default function PagePage() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8">Page</h1>
         <p className="text-gray-300 text-lg">
+<<<<<<< HEAD
           This page is under development. Check back soon for our latest articles and insights.
+=======
+          This page is under development. Check back soon for the latest insights on AI, 
+          IT solutions, and technology trends.
+>>>>>>> cursor/fix-errors-and-merge-to-main-a28c
         </p>
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -52,3 +58,6 @@ export default BlogPage;
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-a28c
