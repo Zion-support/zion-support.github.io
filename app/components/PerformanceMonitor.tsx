@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   lcp: number | null;
   fid: number | null;
   cls: number | null;
@@ -157,12 +156,6 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
-<<<<<<< HEAD
-=======
-export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
-  lcp?: number;
   fid?: number;
   cls?: number;
   fcp?: number;
@@ -221,6 +214,3 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
