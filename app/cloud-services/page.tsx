@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -7,7 +5,6 @@ import { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, T
 
 export default function CloudServices() {
   const services = [
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
     {
       icon: <TrendingUp className="w-6 h-6" />,
       title: "Scalability",
@@ -19,17 +16,7 @@ export default function CloudServices() {
       description: "Enterprise-grade security with advanced threat protection"
     },
     {
-<<<<<<< HEAD
-      icon: <Clock className="w-6 h-6" />,
-      title: "Reliability",
-      description: "99.9% uptime guarantee with redundant systems"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Performance",
-      description: "Optimized performance with global content delivery"
-=======
-      icon: <Zap className="w-6 h-6" />,
+icon: <Zap className="w-6 h-6" />,
       title: "Performance",
       description: "High-performance cloud infrastructure for optimal speed"
     },
@@ -126,35 +113,24 @@ export default function CloudServices() {
         "SLA guarantees"
       ],
       popular: false
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
     }
   ];
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Cloud Services - Zion Tech Group | Enterprise Cloud Solutions</title>
-        <meta name="description" content="Comprehensive cloud services including migration, security, storage, and infrastructure management. Transform your business with our enterprise cloud solutions." />
-        <meta name="keywords" content="cloud services, cloud migration, cloud security, cloud infrastructure, AWS, Azure, Google Cloud" />
-=======
-        <title>Cloud Services - Zion Tech Group | Scalable Cloud Solutions</title>
+<title>Cloud Services - Zion Tech Group | Scalable Cloud Solutions</title>
         <meta name="description" content="Transform your business with our comprehensive cloud services including migration, infrastructure, security, and optimization solutions." />
         <meta name="keywords" content="cloud services, cloud migration, cloud infrastructure, cloud security, cloud optimization, AWS, Azure, GCP" />
         <meta property="og:title" content="Cloud Services - Zion Tech Group | Scalable Cloud Solutions" />
         <meta property="og:description" content="Transform your business with our comprehensive cloud services including migration, infrastructure, security, and optimization solutions." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/cloud-services" />
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <div className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-=======
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+<section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Cloud className="w-4 h-4 text-cyan-400 mr-2" />
@@ -169,28 +145,17 @@ export default function CloudServices() {
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Transform your business with our comprehensive cloud solutions. From migration to optimization, 
               we provide end-to-end cloud services that drive growth, enhance security, and reduce costs.
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-<<<<<<< HEAD
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-              >
-                Free Consultation
-=======
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
@@ -201,9 +166,7 @@ export default function CloudServices() {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
-        {/* Key Benefits */}
+{/* Key Benefits */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
@@ -227,35 +190,11 @@ export default function CloudServices() {
                   <p className="text-gray-300 leading-relaxed">
                     {service.description}
                   </p>
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-
-              <p className="text-xl text-gray-300 mb-8">
-                Let our cloud experts help you migrate, optimize, and secure your infrastructure.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105"
-                >
-                  Start Your Cloud Journey
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  to="/pricing"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 border border-white/20"
-                >
-                  View Pricing
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
-=======
-        </section>
+</section>
 
         {/* Cloud Solutions */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
@@ -382,7 +321,6 @@ export default function CloudServices() {
                 Schedule Demo
                 <Cloud className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
             </div>
           </div>
         </section>

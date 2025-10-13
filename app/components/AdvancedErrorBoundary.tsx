@@ -62,9 +62,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
     };
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
+
 >>>>>>> cursor/website-audit-and-update-with-deployment-3531
     // Log the error data for debugging
     console.error('Error data:', errorData);
