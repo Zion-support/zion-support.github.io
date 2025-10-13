@@ -3,7 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
+<<<<<<< HEAD
 import Navigation from './app/components/Navigation';
+=======
+import Header from './app/components/Header';
+>>>>>>> cursor/website-audit-and-update-with-deployment-7db2
 import Footer from './app/components/Footer';
 
 // Page Components
@@ -22,6 +26,14 @@ import SolutionsPage from './app/pages/SolutionsPage';
 import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
+
+// Service Pages
+import AIServicesPage from './app/pages/AIServicesPage';
+import ITServicesPage from './app/pages/ITServicesPage';
+import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
+import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
+import CaseStudiesPage from './app/pages/CaseStudiesPage';
+import CareersPage from './app/pages/CareersPage';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -54,8 +66,13 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+<<<<<<< HEAD
         <div className="min-h-screen bg-slate-900">
           <Navigation />
+=======
+        <div className="min-h-screen bg-gray-900">
+          <Header />
+>>>>>>> cursor/website-audit-and-update-with-deployment-7db2
           <main className="relative z-10" id="main-content" role="main">
             <Routes>
               {/* Main Pages */}
@@ -74,6 +91,14 @@ function App() {
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/solutions" element={<SolutionsPage />} />
+              
+              {/* Service Pages */}
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+              <Route path="/case-studies" element={<CaseStudiesPage />} />
+              <Route path="/careers" element={<CareersPage />} />
               
               {/* Catch all route */}
               <Route path="*" element={

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Right, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 =======
 import { 
@@ -10,6 +11,9 @@ import {
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
 >>>>>>> cursor/fix-errors-and-merge-to-main-3299
+=======
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-7db2
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -19,7 +23,7 @@ const Footer: React.FC = () => {
     services: [
       { name: 'AI Services', href: '/ai-services' },
       { name: 'IT Services', href: '/it-services' },
-      { name: 'Solutions', href: '/cloud-infrastructure' },
+      { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
       { name: 'Digital Transformation', href: '/digital-transformation' }
     ],
     company: [
@@ -95,6 +99,7 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Link to="/" className="text-2xl font-bold text-white mb-4 block">
               Zion Tech Group
 =======
@@ -104,6 +109,10 @@ const Footer: React.FC = () => {
               </div>
               <span className="text-white font-bold text-2xl">Zion Tech Group</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-3299
+=======
+            <Link to="/" className="text-2xl font-bold text-white mb-4 block">
+              Zion Tech Group
+>>>>>>> cursor/website-audit-and-update-with-deployment-7db2
             </Link>
             <p className="text-gray-300 mb-6 max-w-md">
               Transforming businesses through cutting-edge AI and IT solutions. 
@@ -133,6 +142,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
+<<<<<<< HEAD
                   <Link to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
@@ -149,6 +159,13 @@ const Footer: React.FC = () => {
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {service.name}
 >>>>>>> cursor/fix-errors-and-merge-to-main-3299
+=======
+                  <Link
+                    to={link.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    {link.name}
+>>>>>>> cursor/website-audit-and-update-with-deployment-7db2
                   </Link>
                 </li>
               ))}
@@ -162,6 +179,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
+<<<<<<< HEAD
                   <Link to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
@@ -178,6 +196,13 @@ const Footer: React.FC = () => {
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
 >>>>>>> cursor/fix-errors-and-merge-to-main-3299
+=======
+                  <Link
+                    to={link.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    {link.name}
+>>>>>>> cursor/website-audit-and-update-with-deployment-7db2
                   </Link>
                 </li>
               ))}
@@ -191,6 +216,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
+<<<<<<< HEAD
                   <Link to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
@@ -222,6 +248,13 @@ const Footer: React.FC = () => {
                     <ArrowRightIcon className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
                     {item.name}
 >>>>>>> cursor/fix-errors-and-merge-to-main-3299
+=======
+                  <Link
+                    to={link.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors"
+                  >
+                    {link.name}
+>>>>>>> cursor/website-audit-and-update-with-deployment-7db2
                   </Link>
                 </li>
               ))}
@@ -255,7 +288,12 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
             {footerLinks.legal.map((link) => (
+<<<<<<< HEAD
               <Link key={link.name}
+=======
+              <Link
+                key={link.name}
+>>>>>>> cursor/website-audit-and-update-with-deployment-7db2
                 to={link.href}
                 className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
               >
