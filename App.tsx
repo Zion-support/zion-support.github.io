@@ -7,24 +7,6 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-=======
-import { LoadingPage } from "./app/components/LoadingStates";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-import Breadcrumb from "./app/components/Breadcrumb";
-import FuturisticBackground from "./app/components/FuturisticBackground";
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import CoreWebVitals from "./app/components/CoreWebVitals";
-import FuturisticBackground from "./app/components/FuturisticBackground";
-=======
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
@@ -33,17 +15,12 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import EnhancedSEO from "./app/components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
-=======
 import { AnalyticsProvider } from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
-import EnhancedSEO from "./app/components/EnhancedSEO";
 import EnhancedSEOOptimizer from "./app/components/EnhancedSEOOptimizer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
->>>>>>> cursor/website-audit-and-update-with-deployment-df24
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -584,11 +561,6 @@ const ZionAiVideoEditorPage = React.lazy(() => import("./app/zion-ai-video-edito
 const ZionChatAiPage = React.lazy(() => import("./app/zion-chat-ai/page"));
 const ZionCrmIntelligencePage = React.lazy(() => import("./app/zion-crm-intelligence/page"));
 const ZionCustomerInsightsPage = React.lazy(() => import("./app/zion-customer-insights/page"));
-
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-df24
 // Main App Component
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
