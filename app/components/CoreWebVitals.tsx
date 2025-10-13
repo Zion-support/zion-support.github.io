@@ -1,66 +1,71 @@
-import React, { useEffect, useCallback } from 'react';
-
-interface WebVitalsData {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
-}
+import React, { useEffect } from 'react';
 
 const CoreWebVitals: React.FC = () => {
-<<<<<<< HEAD
-  const reportWebVitals = useCallback((data: WebVitalsData) => {
-    // Send to Google Analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'web_vitals', {
-        metric_name: data.name,
-        metric_value: Math.round(data.value),
-        metric_delta: Math.round(data.delta),
-        metric_id: data.id,
-        metric_navigation_type: data.navigationType
-      });
-    }
-
-    // Send to custom analytics
-    if (typeof window !== 'undefined' && (window as any).analytics) {
-      (window as any).analytics.track('Web Vitals', {
-        metric: data.name,
-        value: data.value,
-        delta: data.delta,
-        id: data.id
-      });
-    }
-
-    // Log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vital:', data.name, data.value);
-    }
-=======
   useEffect(() => {
-    // Core Web Vitals monitoring
-    console.log('Core Web Vitals monitoring initialized');
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-  }, []);
+    // Import web-vitals library dynamically
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      // Measure Core Web Vitals
+      getCLS((data) => {
+        console.log('CLS:', data);
+        // Send to analytics service
+        sendToAnalytics('CLS', data.value);
+      });
 
-  useEffect(() => {
-    const measureWebVitals = async () => {
-      try {
-        const { onCLS, onFID, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals');
+      getFID((data) => {
+        console.log('FID:', data);
+        sendToAnalytics('FID', data.value);
+      });
 
-        onCLS(reportWebVitals);
-        onFID(reportWebVitals);
-        onFCP(reportWebVitals);
-        onLCP(reportWebVitals);
-        onTTFB(reportWebVitals);
-        onINP(reportWebVitals);
-      } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
-      }
+      getFCP((data) => {
+        console.log('FCP:', data);
+        sendToAnalytics('FCP', data.value);
+      });
+
+      getLCP((data) => {
+        console.log('LCP:', data);
+        sendToAnalytics('LCP', data.value);
+      });
+
+      getTTFB((data) => {
+        console.log('TTFB:', data);
+        sendToAnalytics('TTFB', data.value);
+      });
+    }).catch((error) => {
+      console.warn('Failed to load web-vitals:', error);
+    });
+
+    // Function to send metrics to analytics
+    const sendToAnalytics = (metricName: string, value: number) => {
+      // In a real implementation, you would send this to your analytics service
+      console.log('Web Vital:', metricName, value);
+      
+      // Example: Send to Google Analytics
+      // gtag('event', 'web_vital', {
+      //   metric_name: metricName,
+      //   metric_value: value,
+      //   metric_rating: getMetricRating(metricName, value)
+      // });
     };
 
-    measureWebVitals();
-  }, [reportWebVitals]);
+    // Function to determine metric rating
+    const getMetricRating = (metricName: string, value: number): string => {
+      const thresholds = {
+        CLS: { good: 0.1, poor: 0.25 },
+        FID: { good: 100, poor: 300 },
+        FCP: { good: 1800, poor: 3000 },
+        LCP: { good: 2500, poor: 4000 },
+        TTFB: { good: 800, poor: 1800 }
+      };
+
+      const threshold = thresholds[metricName as keyof typeof thresholds];
+      if (!threshold) return 'unknown';
+
+      if (value <= threshold.good) return 'good';
+      if (value <= threshold.poor) return 'needs-improvement';
+      return 'poor';
+    };
+
+  }, []);
 
   return null; // This component doesn't render anything
 };
