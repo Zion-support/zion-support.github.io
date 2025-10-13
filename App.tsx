@@ -58,7 +58,6 @@ const SystemIntegrationPage = React.lazy(() => import("./app/system-integration/
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
 
 // 5G Services Pages
-const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
 const FiveGIoTSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));

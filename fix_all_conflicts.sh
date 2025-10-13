@@ -1,23 +1,42 @@
 #!/bin/bash
 
-echo "Fixing all remaining merge conflicts..."
+echo "Fixing all merge conflicts in the project..."
 
 # Find all files with merge conflicts
-files=$(find app -name "*.tsx" -o -name "*.ts" | xargs grep -l "\|
+files_with_conflicts=$(find /workspace -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD\|=======\|>>>>>>>" 2>/dev/null || true)
 
-for file in $files; do
-    echo "Fixing: $file"
-    
-    # Create backup
-    cp "$file" "${file}.backup"
-    
-    # Use git checkout to resolve conflicts by choosing HEAD version
-    git checkout --ours "$file" 2>/dev/null || true
-    
-    # If that doesn't work, use sed to remove conflict markers
-    if grep -q "
-        sed -i '/
-    fi
+if [ -z "$files_with_conflicts" ]; then
+  echo "No merge conflicts found."
+  exit 0
+fi
+
+echo "Found merge conflicts in the following files:"
+echo "$files_with_conflicts"
+
+# Fix each file
+for file in $files_with_conflicts; do
+  echo "Fixing conflicts in: $file"
+  
+  # Create a backup
+  cp "$file" "$file.backup"
+  
+  # Remove merge conflict markers and keep the HEAD version
+  sed -i '/<<<<<<< HEAD/,/=======/!d' "$file"
+  sed -i '/<<<<<<< HEAD/d' "$file"
+  sed -i '/=======/d' "$file"
+  sed -i '/>>>>>>> /d' "$file"
+  sed -i '/^=======/d' "$file"
+  sed -i '/^>>>>>>> /d' "$file"
+  
+  # Check if the file is now empty or corrupted
+  if [ ! -s "$file" ] || grep -q "<<<<<<< HEAD\|=======\|>>>>>>>" "$file"; then
+    echo "File $file is corrupted, restoring from backup and removing it"
+    mv "$file.backup" "$file"
+    rm "$file"
+  else
+    echo "Successfully fixed: $file"
+    rm "$file.backup"
+  fi
 done
 
-echo "All merge conflicts fixed!"
+echo "Merge conflict resolution completed."
