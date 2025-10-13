@@ -78,20 +78,39 @@ const routes = [
   '/zion-ai-customer-support-pro'
 ];
 
-// Generate sitemap XML
+// Generate sitemap XML with enhanced metadata
 const generateSitemap = () => {
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString();
   
   let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n';
   
   routes.forEach(route => {
     sitemap += '  <url>\n';
     sitemap += `    <loc>${baseUrl}${route}</loc>\n`;
     sitemap += `    <lastmod>${currentDate}</lastmod>\n`;
-    sitemap += '    <changefreq>weekly</changefreq>\n';
-    sitemap += '    <priority>0.8</priority>\n';
+    
+    // Set different priorities and change frequencies based on route importance
+    let priority = '0.8';
+    let changefreq = 'weekly';
+    
+    if (route === '/') {
+      priority = '1.0';
+      changefreq = 'daily';
+    } else if (route.includes('/ai-') || route.includes('/zion-') || route.includes('/5g-')) {
+      priority = '0.9';
+      changefreq = 'weekly';
+    } else if (route.includes('/about') || route.includes('/contact') || route.includes('/services')) {
+      priority = '0.8';
+      changefreq = 'monthly';
+    } else if (route.includes('/privacy') || route.includes('/terms')) {
+      priority = '0.3';
+      changefreq = 'yearly';
+    }
+    
+    sitemap += `    <changefreq>${changefreq}</changefreq>\n`;
+    sitemap += `    <priority>${priority}</priority>\n`;
     sitemap += '  </url>\n';
   });
   

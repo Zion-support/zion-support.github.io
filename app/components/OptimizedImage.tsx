@@ -1,13 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
-  className?: string;
   width?: number;
   height?: number;
+  className?: string;
   priority?: boolean;
   placeholder?: string;
+  effect?: 'blur' | 'black-and-white' | 'opacity';
+  threshold?: number;
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -15,38 +19,19 @@ interface OptimizedImageProps {
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
-  className = '',
   width,
   height,
+  className = '',
   priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
+  placeholder,
+  effect = 'blur',
+  threshold = 100,
   onLoad,
-  onError,
+  onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    if (priority) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [priority]);
 
   const handleLoad = () => {
     setIsLoaded(true);
@@ -58,38 +43,71 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     onError?.();
   };
 
-  const imageSrc = isInView ? src : placeholder;
+  // Generate optimized src for different screen sizes
+  const generateSrcSet = (originalSrc: string) => {
+    if (originalSrc.startsWith('http') || originalSrc.startsWith('/api/placeholder')) {
+      return originalSrc;
+    }
+    
+    // For local images, generate different sizes
+    const basePath = originalSrc.replace(/\.[^/.]+$/, '');
+    const extension = originalSrc.split('.').pop();
+    
+    return `${basePath}-${width || 400}w.${extension} ${width || 400}w,
+            ${basePath}-${(width || 400) * 2}w.${extension} ${(width || 400) * 2}w,
+            ${basePath}-${(width || 400) * 3}w.${extension} ${(width || 400) * 3}w`;
+  };
+
+  const optimizedSrc = generateSrcSet(src);
+
+  if (hasError) {
+    return (
+      <div 
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={{ width, height }}
+        role="img"
+        aria-label={`Failed to load image: ${alt}`}
+      >
+        <span className="text-gray-500 text-sm">Image unavailable</span>
+      </div>
+    );
+  }
+
+  if (priority) {
+    return (
+      <img
+        ref={imgRef}
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
+        onLoad={handleLoad}
+        onError={handleError}
+        loading="eager"
+        decoding="async"
+      />
+    );
+  }
 
   return (
-    <div
-      ref={imgRef}
-      className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
-    >
-      {!isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
-        </div>
-      )}
-      
-      {hasError ? (
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-          <div className="text-gray-400 text-sm">Failed to load image</div>
-        </div>
-      ) : (
-        <img
-          src={imageSrc}
-          alt={alt}
-          className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
-          onLoad={handleLoad}
-          onError={handleError}
-          loading={priority ? 'eager' : 'lazy'}
-          decoding="async"
-        />
-      )}
-    </div>
+    <LazyLoadImage
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
+      effect={effect}
+      threshold={threshold}
+      placeholderSrc={placeholder}
+      onLoad={handleLoad}
+      onError={handleError}
+      loading="lazy"
+      decoding="async"
+      sizes={`(max-width: 768px) ${width ? Math.min(width, 400) : 400}px, 
+              (max-width: 1024px) ${width ? Math.min(width, 600) : 600}px, 
+              ${width || 800}px`}
+    />
   );
 };
 

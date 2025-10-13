@@ -1,0 +1,139 @@
+{
+  "timestamp": "2025-10-13T09:06:11.070Z",
+  "buildStats": {
+    "totalFiles": 18,
+    "totalSize": 541742,
+    "jsFiles": 14,
+    "jsSize": 520157,
+    "cssFiles": 1,
+    "cssSize": 1811,
+    "imageFiles": 0,
+    "imageSize": 0,
+    "htmlFiles": 1,
+    "htmlSize": 6625,
+    "otherFiles": 2,
+    "otherSize": 13149,
+    "gzipSize": 2112,
+    "totalSavings": 1536
+  },
+  "optimizations": [
+    {
+      "type": "css",
+      "file": "assets/index-DEg1_9da.css",
+      "originalSize": 1811,
+      "optimizedSize": 1810,
+      "savings": 1
+    },
+    {
+      "type": "javascript",
+      "file": "assets/5g-services-CMzDQyrp.js",
+      "originalSize": 9274,
+      "optimizedSize": 9273,
+      "savings": 1
+    },
+    {
+      "type": "javascript",
+      "file": "assets/ai-analytics-CgMXQqNo.js",
+      "originalSize": 27804,
+      "optimizedSize": 27803,
+      "savings": 1
+    },
+    {
+      "type": "javascript",
+      "file": "assets/ai-content-BBDxeStr.js",
+      "originalSize": 942,
+      "optimizedSize": 941,
+      "savings": 1
+    },
+    {
+      "type": "javascript",
+      "file": "assets/ai-customer-CEYULiNd.js",
+      "originalSize": 942,
+      "optimizedSize": 941,
+      "savings": 1
+    },
+    {
+      "type": "javascript",
+      "file": "assets/ai-other-Bg_07MlW.js",
+      "originalSize": 21947,
+      "optimizedSize": 21946,
+      "savings": 1
+    },
+    {
+      "type": "javascript",
+      "file": "assets/ai-security-C4Gt-SmR.js",
+      "originalSize": 930,
+      "optimizedSize": 929,
+      "savings": 1
+    },
+    {
+      "type": "javascript",
+      "file": "assets/index-DQrfgHWd.js",
+      "originalSize": 44661,
+      "optimizedSize": 44165,
+      "savings": 496
+    },
+    {
+      "type": "javascript",
+      "file": "assets/main-pages-BY88cwUf.js",
+      "originalSize": 93773,
+      "optimizedSize": 93772,
+      "savings": 1
+    },
+    {
+      "type": "javascript",
+      "file": "assets/performance-CYJy4RqG.js",
+      "originalSize": 6018,
+      "optimizedSize": 6017,
+      "savings": 1
+    },
+    {
+      "type": "javascript",
+      "file": "assets/react-vendor-BqNfwiay.js",
+      "originalSize": 211163,
+      "optimizedSize": 210414,
+      "savings": 749
+    },
+    {
+      "type": "javascript",
+      "file": "assets/zion-ai-DN_zAexI.js",
+      "originalSize": 92813,
+      "optimizedSize": 92812,
+      "savings": 1
+    },
+    {
+      "type": "javascript",
+      "file": "assets/zion-analytics-DfoWv9CH.js",
+      "originalSize": 936,
+      "optimizedSize": 935,
+      "savings": 1
+    },
+    {
+      "type": "javascript",
+      "file": "assets/zion-other-D1hmWHf9.js",
+      "originalSize": 7854,
+      "optimizedSize": 7853,
+      "savings": 1
+    },
+    {
+      "type": "javascript",
+      "file": "sw.js",
+      "originalSize": 1100,
+      "optimizedSize": 821,
+      "savings": 279
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "warning",
+      "message": "JavaScript bundle size is large. Consider code splitting or tree shaking.",
+      "impact": "high"
+    },
+    {
+      "type": "success",
+      "message": "Optimizations saved 1.5 KB in total.",
+      "impact": "low"
+    }
+  ],
+  "performanceScore": 80
+}
