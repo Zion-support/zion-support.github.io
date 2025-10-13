@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { Suspense, useEffect, useState } from "react";
-=======
 import React, { Suspense, useEffect, useState, useCallback } from "react";
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
@@ -14,28 +10,17 @@ import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-<<<<<<< HEAD
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-import Breadcrumb from "./app/components/Breadcrumb";
+import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import LoadingPageEnhanced from "./app/components/EnhancedLoading";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
-=======
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-import Breadcrumb from "./app/components/Breadcrumb";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import CoreWebVitals from "./app/components/CoreWebVitals";
-import FuturisticBackground from "./app/components/FuturisticBackground";
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 import EnhancedSEO from "./app/components/EnhancedSEO";
 
 // Lazy load pages for better performance
@@ -43,16 +28,12 @@ const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
-<<<<<<< HEAD
-const DemoPage = React.lazy(() => import("./app/demo/page"));
-=======
 const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
 const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 
@@ -120,11 +101,6 @@ const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network
 const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
 const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
