@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
 
@@ -257,3 +258,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 };
 
 export default AccessibilityEnhancer;
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71

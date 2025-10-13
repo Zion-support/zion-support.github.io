@@ -4,7 +4,6 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-
 export default [
   {
     ignores: [
@@ -76,6 +75,7 @@ export default [
         console: 'readonly',
         process: 'readonly',
         global: 'readonly',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -185,6 +185,12 @@ export default [
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
       }
+=======
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly'}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71
     },
     plugins: {
       '@typescript-eslint': typescript,

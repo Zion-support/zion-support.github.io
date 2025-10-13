@@ -1,25 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71
 // Simple email validation function
 const isValidEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 };
 async function handler(req, res) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default function handler(req, res) {
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
 
 export default async function handler(req, res) {
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
@@ -40,6 +36,8 @@ export default async function handler(req, res) {
 
 export default async function handler(req, res) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -73,6 +71,7 @@ export default async function handler(req, res) {
     });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -92,6 +91,8 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -113,6 +114,7 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
 =======
@@ -144,3 +146,5 @@ export default handler;
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71

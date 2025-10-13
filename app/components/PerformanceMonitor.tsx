@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
@@ -109,6 +110,9 @@ declare global {
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -123,7 +127,7 @@ const PerformanceMonitor: React.FC = () => {
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null,
+    ttfb: null
   });
 
   useEffect(() => {
@@ -139,6 +143,7 @@ const PerformanceMonitor: React.FC = () => {
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
           } else if (entry.entryType === 'first-input') {
             const inputEntry = entry as any;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -179,13 +184,29 @@ const PerformanceMonitor: React.FC = () => {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
 >>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
+=======
+            setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71
           } else if (entry.entryType === 'layout-shift') {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
+            const layoutShiftEntry = entry as any;
+            if (!layoutShiftEntry.hadRecentInput) {
+              setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + layoutShiftEntry.value }));
+            }
           }
         }
       });
 
+<<<<<<< HEAD
       observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+=======
+      // Observe different entry types
+      try {
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+      } catch (e) {
+        // Fallback for browsers that don't support all entry types
+        observer.observe({ entryTypes: ['paint'] });
+      }
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71
 
       // Monitor TTFB
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -193,29 +214,58 @@ const PerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
       }
 
+<<<<<<< HEAD
       return () => observer.disconnect();
+=======
+      return () => {
+        observer.disconnect();
+      };
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71
     }
     return undefined;
   }, []);
 
+<<<<<<< HEAD
   // Only show in development
   if (process.env.NODE_ENV !== 'development') {
     return null;
   }
+=======
+  const formatMetric = (value: number | null, unit: string = 'ms') => {
+    if (value === null) return 'N/A';
+    return `${value.toFixed(2)}${unit}`;
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71
 
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
+    <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
+      <h3 className="text-lg font-semibold text-white mb-4">Performance Metrics</h3>
+      <div className="grid grid-cols-2 gap-4">
+        <div>
+          <p className="text-sm text-gray-400">First Contentful Paint</p>
+          <p className="text-lg font-mono text-cyan-400">{formatMetric(metrics.fcp)}</p>
+        </div>
+        <div>
+          <p className="text-sm text-gray-400">Largest Contentful Paint</p>
+          <p className="text-lg font-mono text-cyan-400">{formatMetric(metrics.lcp)}</p>
+        </div>
+        <div>
+          <p className="text-sm text-gray-400">First Input Delay</p>
+          <p className="text-lg font-mono text-cyan-400">{formatMetric(metrics.fid)}</p>
+        </div>
+        <div>
+          <p className="text-sm text-gray-400">Cumulative Layout Shift</p>
+          <p className="text-lg font-mono text-cyan-400">{formatMetric(metrics.cls)}</p>
+        </div>
+        <div className="col-span-2">
+          <p className="text-sm text-gray-400">Time to First Byte</p>
+          <p className="text-lg font-mono text-cyan-400">{formatMetric(metrics.ttfb)}</p>
+        </div>
       </div>
     </div>
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default PerformanceMonitor;
 <<<<<<< HEAD
@@ -226,3 +276,7 @@ export default PerformanceMonitor;
 
 export default PerformanceMonitor;
 >>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
+=======
+
+export default PerformanceMonitor;
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71

@@ -33,6 +33,7 @@ export default function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
@@ -60,3 +61,5 @@ export default function handler(req, res) {
   }
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71

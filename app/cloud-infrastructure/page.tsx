@@ -10,6 +10,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -34,8 +35,9 @@ import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71
 import { Helmet } from 'react-helmet-async';
-
 export default function CloudInfrastructure() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -118,6 +120,7 @@ export default function CloudInfrastructure() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -144,3 +147,5 @@ export default function CloudInfrastructure() {
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba71

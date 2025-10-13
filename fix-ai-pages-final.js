@@ -1,33 +1,19 @@
-'use client';
+#!/usr/bin/env node
+
+import fs from 'fs';
+
+const aiPages = [
+  'app/zion-ai-voice-assistant-pro/page.tsx',
+  'app/zion-ai-performance-optimizer/page.tsx',
+  'app/zion-ai-social-media-manager/page.tsx',
+  'app/zion-ai-inventory-manager/page.tsx'
+];
+
+const pageContent = `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-export default function ZionAISocialMediaManager() {
-=======
 
 export default function ZionAIVoiceAssistantPro() {
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -97,15 +83,16 @@ export default function ZionAIVoiceAssistantPro() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
+}`;
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-ba71
+// Fix all AI pages
+aiPages.forEach(pagePath => {
+  try {
+    fs.writeFileSync(pagePath, pageContent);
+    console.log(`Fixed: ${pagePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${pagePath}:`, error.message);
+  }
+});
+
+console.log('AI pages fixed successfully!');
