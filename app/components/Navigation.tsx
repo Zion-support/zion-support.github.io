@@ -5,11 +5,7 @@ import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartp
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
-<<<<<<< HEAD
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
-=======
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8391
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -19,29 +15,6 @@ const Navigation = React.memo(() => {
     setIsServicesOpen(!isServicesOpen)
   }, [isServicesOpen])
 
-<<<<<<< HEAD
-  const toggleSolutions = useCallback(() => {
-    setIsSolutionsOpen(!isSolutionsOpen)
-  }, [isSolutionsOpen])
-
-  const services = useMemo(() => [
-    { name: 'AI & Machine Learning', path: '/ai-services', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
-    { name: '5G Solutions', path: '/5g-solutions', icon: <Globe className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <Database className="w-4 h-4" /> },
-    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Development', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
-  ], [])
-
-  const solutions = useMemo(() => [
-    { name: 'AI Analytics', path: '/ai-analytics', icon: <Database className="w-4 h-4" /> },
-    { name: 'AI Automation', path: '/ai-automation', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Customer Service', path: '/ai-customer-service', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Marketing', path: '/ai-marketing', icon: <Globe className="w-4 h-4" /> },
-    { name: 'AI Project Management', path: '/ai-project-management', icon: <Smartphone className="w-4 h-4" /> }
-=======
   const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
@@ -73,7 +46,6 @@ const Navigation = React.memo(() => {
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
     { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8391
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -87,10 +59,18 @@ const Navigation = React.memo(() => {
   ], [])
 
   return (
-    <nav className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md">
+    <nav 
+      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md"
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:from-cyan-300 hover:to-purple-300 transition-all duration-300">
+          <Link 
+            to="/" 
+            className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
+            aria-label="Zion Tech Group - Go to homepage"
+          >
             Zion Tech Group
           </Link>
 
@@ -106,38 +86,7 @@ const Navigation = React.memo(() => {
               </Link>
             ))}
             
-<<<<<<< HEAD
-            {/* Solutions Dropdown */}
-            <div className="relative">
-              <button
-                onClick={toggleSolutions}
-                className="flex items-center space-x-1 hover:text-blue-400 transition-colors"
-              >
-                <span>Solutions</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${isSolutionsOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isSolutionsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
-                  {solutions.map((solution) => (
-                    <Link
-                      key={solution.name}
-                      to={solution.path}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
-                      onClick={() => setIsSolutionsOpen(false)}
-                    >
-                      {solution.icon}
-                      <span>{solution.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-            
-            {/* Services Dropdown */}
-=======
             {/* AI Services Dropdown */}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8391
             <div className="relative">
               <button
                 onClick={toggleServices}
@@ -246,41 +195,7 @@ const Navigation = React.memo(() => {
                 </Link>
               ))}
               
-<<<<<<< HEAD
-              {/* Mobile Solutions */}
-              <div>
-                <button
-                  onClick={toggleSolutions}
-                  className="flex items-center space-x-1 hover:text-blue-400 transition-colors"
-                >
-                  <span>Solutions</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isSolutionsOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isSolutionsOpen && (
-                  <div className="ml-4 mt-2 space-y-2">
-                    {solutions.map((solution) => (
-                      <Link
-                        key={solution.name}
-                        to={solution.path}
-                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors"
-                        onClick={() => {
-                          setIsSolutionsOpen(false)
-                          toggleMenu()
-                        }}
-                      >
-                        {solution.icon}
-                        <span>{solution.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-              
-              {/* Mobile Services */}
-=======
               {/* Mobile AI Services */}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8391
               <div>
                 <button
                   onClick={toggleServices}
