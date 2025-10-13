@@ -1,8 +1,97 @@
 import { useState } from "react";
-import { ArrowRight, Calendar, User } from "lucide-react";
-import { ArrowRight, Search, Calendar, Clock, User, Zap } from "lucide-react";
+import { ArrowRight, Search, Calendar, Clock, User, Zap, BookOpen } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+
+const BlogPage = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  // Sample blog data
+  const categories = [
+    { id: "all", name: "All", count: 12 },
+    { id: "ai", name: "AI & Machine Learning", count: 5 },
+    { id: "cybersecurity", name: "Cybersecurity", count: 3 },
+    { id: "cloud", name: "Cloud Computing", count: 2 },
+    { id: "business", name: "Business", count: 2 }
+  ];
+
+  const posts = [
+    {
+      id: 1,
+      title: "The Future of AI in Business: A Comprehensive Guide",
+      excerpt: "Explore how artificial intelligence is transforming modern business operations and what it means for your company's future.",
+      author: "Dr. Sarah Johnson",
+      date: "2024-01-15",
+      category: "AI & Machine Learning",
+      readTime: "8 min read",
+      featured: true,
+      image: "/api/placeholder/600/400"
+    },
+    {
+      id: 2,
+      title: "Cybersecurity Best Practices for 2024",
+      excerpt: "Essential security measures every business should implement to protect against evolving cyber threats.",
+      author: "Michael Chen",
+      date: "2024-01-12",
+      category: "Cybersecurity",
+      readTime: "6 min read",
+      featured: false,
+      image: "/api/placeholder/600/400"
+    },
+    {
+      id: 3,
+      title: "Cloud Migration Strategies: A Step-by-Step Guide",
+      excerpt: "Learn how to successfully migrate your infrastructure to the cloud with minimal downtime and maximum efficiency.",
+      author: "Emily Rodriguez",
+      date: "2024-01-10",
+      category: "Cloud Computing",
+      readTime: "10 min read",
+      featured: false,
+      image: "/api/placeholder/600/400"
+    },
+    {
+      id: 4,
+      title: "Digital Transformation: Where to Start",
+      excerpt: "A practical guide to beginning your digital transformation journey with proven strategies and real-world examples.",
+      author: "David Kim",
+      date: "2024-01-08",
+      category: "Business",
+      readTime: "7 min read",
+      featured: false,
+      image: "/api/placeholder/600/400"
+    },
+    {
+      id: 5,
+      title: "AI-Powered Analytics: Unlocking Business Insights",
+      excerpt: "Discover how AI-driven analytics can help you make better business decisions and gain competitive advantages.",
+      author: "Dr. Sarah Johnson",
+      date: "2024-01-05",
+      category: "AI & Machine Learning",
+      readTime: "9 min read",
+      featured: false,
+      image: "/api/placeholder/600/400"
+    },
+    {
+      id: 6,
+      title: "Zero Trust Security Architecture",
+      excerpt: "Implementing a zero trust security model to protect your organization from modern cyber threats.",
+      author: "Michael Chen",
+      date: "2024-01-03",
+      category: "Cybersecurity",
+      readTime: "11 min read",
+      featured: false,
+      image: "/api/placeholder/600/400"
+    }
+  ];
+
+  const featuredPost = posts.find(post => post.featured);
+  const filteredPosts = posts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === "all" || post.category === categories.find(c => c.id === selectedCategory)?.name;
+    return matchesSearch && matchesCategory;
+  });
 
   return (
     <>
@@ -31,8 +120,26 @@ import { Link } from "react-router-dom";
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
               <div className="relative flex-1 max-w-md">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search articles..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+                />
+              </div>
+              
+              {/* Category Filter */}
+              <div className="flex flex-wrap justify-center gap-4">
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-6 py-3 rounded-full transition-all duration-300 ${
+                      selectedCategory === category.id
                         ? 'bg-blue-600 text-white'
-                        : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                        : 'bg-white/10 text-gray-300 hover:bg-white/20'
                     }`}
                   >
                     {category.name} ({category.count})
@@ -91,74 +198,11 @@ import { Link } from "react-router-dom";
                         <ArrowRight className="ml-2 w-4 h-4" />
                       </Link>
                     </div>
-                    <Link
-                      to={`/blog/${featuredPost.id}`}
-                      className="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-800 dark:hover:text-blue-300"
-                    >
-                      Read More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
                   </div>
                 </div>
               </div>
             </div>
-
-            {/* Category Filter */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-full transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Featured Posts */}
-        {filteredPosts.filter(post => post.featured).length > 0 && (
-          <div className="py-16 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-                    </div>
-                    <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {new Date(post.date).toLocaleDateString()}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {post.readTime}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <User className="w-4 h-4" />
-                        {post.author}
-                      </span>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {post.excerpt}
-                    </p>
-                    <Link
-                      to={`/blog/${post.id}`}
-                      className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-semibold group-hover:gap-3 transition-all"
-                    >
-                      Read More
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </div>
+          </section>
         )}
 
         {/* All Posts */}
@@ -231,4 +275,3 @@ import { Link } from "react-router-dom";
 };
 
 export default BlogPage;
-

@@ -14,6 +14,17 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import LoadingPage from "./app/components/EnhancedLoading";
+import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
+import SEOOptimizer from "./app/components/SEOOptimizer";
+import EnhancedSEO from "./app/components/EnhancedSEO";
+import EnhancedSEOOptimizer from "./app/components/EnhancedSEOOptimizer";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
+import SEOEnhancer from "./app/components/SEOEnhancer";
+import ErrorBoundary from "./app/components/ErrorBoundary";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -569,60 +580,105 @@ function App() {
   }, []);
 
   return (
-    <GlobalErrorBoundary>
-      <EnhancedErrorBoundary>
-        <HelmetProvider>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <FuturisticBackground>
-                  <Navigation onSidebarToggle={toggleSidebar} />
-                  <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                  <Breadcrumb />
-                  <main id="main-content" role="main">
-                    <Suspense fallback={<LoadingPage />}>
-                      <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/services" element={<ServicesPage />} />
-                        <Route path="/pricing" element={<PricingPage />} />
-                        <Route path="/blog" element={<BlogPage />} />
-                        <Route path="/ai-services" element={<AIServicesPage />} />
-                        <Route path="/tutorials" element={<TutorialsPage />} />
-                        <Route path="/demo" element={<DemoPage />} />
-                        <Route path="/support" element={<SupportPage />} />
-                        <Route path="/privacy" element={<PrivacyPage />} />
-                        <Route path="/terms" element={<TermsPage />} />
-                        <Route path="/cookies" element={<CookiesPage />} />
-                        <Route path="/sitemap" element={<SitemapPage />} />
-                      </Routes>
-                    </Suspense>
-                  </main>
-                  <Footer />
-                  <EnhancedAccessibility>
-                    <div></div>
-                  </EnhancedAccessibility>
-                </FuturisticBackground>
-              </div>
-              <EnhancedAccessibility>
-                <div></div>
-              </EnhancedAccessibility>
-              <AnalyticsProvider>
-                <div>
-                  <PerformanceMonitor />
-                  <WebVitalsTracker />
-                  <PerformanceEnhancer />
-                  <SEOOptimizer />
-                  <EnhancedSEO />
-                  <EnhancedSEOOptimizer />
-                </div>
-              </AnalyticsProvider>
-            </Router>
-          </AccessibilityEnhancer>
-        </HelmetProvider>
-      </EnhancedErrorBoundary>
-    </GlobalErrorBoundary>
+    <ErrorBoundary>
+      <GlobalErrorBoundary>
+        <EnhancedErrorBoundary>
+          <HelmetProvider>
+            <AccessibilityEnhancer>
+              <PerformanceOptimizer>
+                <SEOEnhancer>
+                  <Router>
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                      <FuturisticBackground>
+                        <Navigation onSidebarToggle={toggleSidebar} />
+                        <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                        <Breadcrumb />
+                        <main id="main-content" role="main">
+                          <Suspense fallback={<LoadingPage message="Loading Zion Tech Group..." />}>
+                            <Routes>
+                              <Route path="/" element={<HomePage />} />
+                              <Route path="/about" element={<AboutPage />} />
+                              <Route path="/contact" element={<ContactPage />} />
+                              <Route path="/services" element={<ServicesPage />} />
+                              <Route path="/pricing" element={<PricingPage />} />
+                              <Route path="/blog" element={<BlogPage />} />
+                              <Route path="/ai-services" element={<AIServicesPage />} />
+                              <Route path="/tutorials" element={<TutorialsPage />} />
+                              <Route path="/demo" element={<DemoPage />} />
+                              <Route path="/support" element={<SupportPage />} />
+                              <Route path="/privacy" element={<PrivacyPage />} />
+                              <Route path="/terms" element={<TermsPage />} />
+                              <Route path="/cookies" element={<CookiesPage />} />
+                              <Route path="/sitemap" element={<SitemapPage />} />
+                              
+                              {/* AI Services Routes */}
+                              <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
+                              <Route path="/ai-automation" element={<AiAutomationPage />} />
+                              <Route path="/ai-business-intelligence" element={<AiBusinessIntelligencePage />} />
+                              <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
+                              <Route path="/ai-customer-service" element={<AiCustomerServicePage />} />
+                              <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
+                              <Route path="/ai-email-automation" element={<AiEmailAutomationPage />} />
+                              <Route path="/ai-fraud-detection" element={<AiFraudDetectionPage />} />
+                              <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+                              <Route path="/ai-marketing" element={<AiMarketingPage />} />
+                              <Route path="/ai-predictive-analytics" element={<AiPredictiveAnalyticsPage />} />
+                              <Route path="/ai-project-management" element={<AiProjectManagementPage />} />
+                              <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
+                              <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
+                              <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                              
+                              {/* Micro SAAS Routes */}
+                              <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                              <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                              <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
+                              <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
+                              <Route path="/zion-data-sync" element={<ZionDataSyncPage />} />
+                              <Route path="/zion-lead-magnet" element={<ZionLeadMagnetPage />} />
+                              <Route path="/zion-project-master" element={<ZionProjectMasterPage />} />
+                              <Route path="/zion-email-automation" element={<ZionEmailAutomationPage />} />
+                              <Route path="/zion-social-scheduler" element={<ZionSocialSchedulerPage />} />
+                              <Route path="/zion-workflow-automation" element={<ZionWorkflowAutomationPage />} />
+                              <Route path="/zion-invoice-genius" element={<ZionInvoiceGeniusPage />} />
+                              <Route path="/zion-inventory-smart" element={<ZionInventorySmartPage />} />
+                              <Route path="/zion-compliance-manager" element={<ZionComplianceManagerPage />} />
+                              <Route path="/zion-performance-monitor" element={<ZionPerformanceMonitorPage />} />
+                              
+                              {/* 5G Solutions Routes */}
+                              <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                              <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
+                              <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+                              <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                              <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
+                              <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
+                              <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+                              <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
+                              <Route path="/5g-iot-solutions" element={<FiveG5gIotSolutionsPage />} />
+                            </Routes>
+                          </Suspense>
+                        </main>
+                        <Footer />
+                        <EnhancedAccessibility>
+                          <div></div>
+                        </EnhancedAccessibility>
+                      </FuturisticBackground>
+                    </div>
+                    <AnalyticsProvider>
+                      <PerformanceMonitor />
+                      <WebVitalsTracker />
+                      <PerformanceEnhancer />
+                      <SEOOptimizer />
+                      <EnhancedSEO />
+                      <EnhancedSEOOptimizer />
+                    </AnalyticsProvider>
+                  </Router>
+                </SEOEnhancer>
+              </PerformanceOptimizer>
+            </AccessibilityEnhancer>
+          </HelmetProvider>
+        </EnhancedErrorBoundary>
+      </GlobalErrorBoundary>
+    </ErrorBoundary>
   );
 }
 
