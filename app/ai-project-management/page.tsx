@@ -1,255 +1,150 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+import { ArrowRight, Calendar, Users, BarChart3, Zap, Brain, Clock } from 'lucide-react';
 
-export default function PagePage() {
+export default function AIProjectManagementPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
+        <title>AI Project Management - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI project management solutions by Zion Tech Group. Streamline project workflows with intelligent AI-powered tools." />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-        <p className="text-gray-300">
-          This page is under development. Please check back later for updates.
-        </p>
-      </div>
-    
-=======
-import { Brain, Shield, Zap } from 'lucide-react';
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Ai Project Management - Zion Tech Group</title>
-        <meta name="description" content="Advanced ai project management solutions by Zion Tech Group" />
-      </Helmet>
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-        </div>
-      </div>
-    </>
-  );
-      title: 'Advanced Analytics','
-      description: 'Comprehensive analytics dashboard with real-time data visualization.','
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}];';
-const benefits = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'Increase efficiency by up to 50%','
-    'Reduce costs by 30% with automation','
-    'Improve decision-making with AI insights','
-    'Scale operations without proportional staff increases','
-  ]
-return(<>)
-      <Helmet />
-<Helmet>
-        <title>Ai Project Management - Zion Tech Group</title>
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" /></Helmet>"
-<section className="relative py-20 px-4 overflow-hidden"></section>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />'"
-<div className="relative max-w-7xl mx-auto text-center">"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"
-              Ai Project Management
-              <p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>'"
-<div className="relative max-w-7xl mx-auto text-center"></div>"
-<h1>Ai Project Management;</h1>
-            </h1>
-<p>Advanced AI-powered ai project management solution for modern businesses.</p></p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-              <button>Get Started;</button></button>
-<button>View Demo,</button>
-                Get Started
-              </button>
-<button></button>
-                View Demo,
-              </button></div>
-</div>
-        {/* Features Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Get Started"
-              <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">View Demo"
-        {/* Features Section */}
-        <section className="py-20 px-4"></section>"
-< className="$2 /></div>"
-<div className="text-center mb-16"></div>"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-              <p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>Key Features;</h2></h2>
-<p>Advanced AI technology that drives results;</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,"
-              {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,"
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,"
-                    <feature />
-<h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>"
-<p className="text-gray-300 mb-4">{feature.description</p>}</p>"
-                  {feature.benefits && (;
-                    <ul>
-                      {feature.benefits.map((benefit, idx) => (} <li>
-<CheckCircle />
-
-                          {benefit} </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-
-            </div></div>
-</section>
-        {/* Benefits Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Key Features"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Advanced AI technology that drives results"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
-              {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">"
-<div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">"
-<feature.icon className="w-8 h-8 text-white" />"
-<h3 className="text-xl font-bold text-white mb-4">{feature.title}"
-                  <p className="text-gray-300 mb-4">{feature.description}"
-                  {feature.benefits && (
-  // TODO: Add parameters
-)
-                    <ul className="space-y-2">"
-                      {feature.benefits.map((benefit, idx) => (
-  // TODO: Add parameters
-)
-                        <li key={idx} className="flex items-center text-sm text-gray-400">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2" />"
-                          {benefit}
-                      ))}
-          <div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>Why Choose Our Solution?</h2></h2>
-<p>Proven results that drive business growth and efficiency;</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,"
-              {benefits.map((benefit, index) => (
-  // TODO: Add parameters
-)
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,"
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,"
-                    <CheckCircle />
-<p className="text-lg text-white font-medium">{benefit</p>}</p></div>"
-              ))}
-            </div></div>
-</section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-          ))
-        </section>
-<div className="max-w-4xl mx-auto text-center"></div>"
-<div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>"
-<h2>Ready to Get Started?</h2></h2>
-<p>Contact our experts to discuss your requirements and get started today.</p></p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-                <button>Contact Us;</button></button>
-<button>Learn More;</button>
-                Ready to Get Started?
-              </h2>
-<p></p>
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center" / /></div>"
-<button></button>
-                  Contact Us
-                </button>
-<button></button>
-                  Learn More
-                </button></div>
-</div>
-          ))
-        </section></div>;
-export default PagePage;
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Advanced  solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            
+          <h1 className="text-5xl font-bold text-white mb-6">
+            AI Project Management
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced  solutions by Zion Tech Group
-            Advanced AI and IT solutions for your business needs.
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Revolutionize your project management with AI-powered solutions. 
+            Optimize workflows, predict risks, and ensure successful project delivery.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-6">
-                {feature.icon}
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Calendar className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Smart Scheduling</h3>
+            <p className="text-gray-300">
+              Automatically schedule tasks and resources based on priorities and dependencies.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Users className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Team Optimization</h3>
+            <p className="text-gray-300">
+              Optimize team assignments and workload distribution using AI insights.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <BarChart3 className="h-12 w-12 text-yellow-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Progress Tracking</h3>
+            <p className="text-gray-300">
+              Track project progress in real-time with intelligent analytics and reporting.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Zap className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Risk Prediction</h3>
+            <p className="text-gray-300">
+              Predict potential project risks and suggest mitigation strategies.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Brain className="h-12 w-12 text-red-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Intelligent Insights</h3>
+            <p className="text-gray-300">
+              Get AI-powered insights and recommendations for project optimization.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Clock className="h-12 w-12 text-indigo-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Time Estimation</h3>
+            <p className="text-gray-300">
+              Accurately estimate project timelines using historical data and AI analysis.
+            </p>
+          </div>
+        </div>
+
+        {/* Key Benefits */}
+        <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h3 className="text-2xl font-semibold text-white mb-4">Why Choose Our AI Project Management?</h3>
+            <ul className="space-y-3 text-gray-300">
+              <li className="flex items-start">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                <span>Increase project success rate by up to 40%</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                <span>Reduce project delays and cost overruns</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                <span>Improve team productivity and collaboration</span>
+              </li>
+              <li className="flex items-start">
+                <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 mt-2 flex-shrink-0"></div>
+                <span>Make data-driven project decisions</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h3 className="text-2xl font-semibold text-white mb-4">Implementation Process</h3>
+            <div className="space-y-4">
+              <div className="flex items-start">
+                <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4 flex-shrink-0">1</div>
+                <div>
+                  <h4 className="font-semibold text-white">Project Analysis</h4>
+                  <p className="text-gray-300 text-sm">Analyze current project management processes and identify improvement areas</p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+              <div className="flex items-start">
+                <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4 flex-shrink-0">2</div>
+                <div>
+                  <h4 className="font-semibold text-white">AI Integration</h4>
+                  <p className="text-gray-300 text-sm">Integrate AI tools and train your team on new processes</p>
+                </div>
+              </div>
+              <div className="flex items-start">
+                <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4 flex-shrink-0">3</div>
+                <div>
+                  <h4 className="font-semibold text-white">Optimization & Support</h4>
+                  <p className="text-gray-300 text-sm">Continuously optimize AI models and provide ongoing support</p>
+                </div>
+              </div>
             </div>
-          ))}
-      <div className="container mx-auto px-4 py-16">
+          </div>
+        </div>
+
+        {/* CTA Section */}
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Ai Project Management
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced ai project management solutions by Zion Tech Group.
-          </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Optimize Your Projects?
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Contact our AI project management experts to see how we can improve your project success.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-6 py-3 bg-cyan-600 text-white font-semibold rounded-lg hover:bg-cyan-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-};
-
-export default AiProjectManagementPage;
-}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-c832

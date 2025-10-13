@@ -1,33 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-        <p className="text-gray-300">
-          This page is under development. Please check back later for updates.
-        </p>
-      </div>
-    
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Wifi, Shield, Globe, Zap, Users, TrendingUp } from 'lucide-react';
 
@@ -48,37 +20,83 @@ export default function FiveGNetworkInfrastructurePage() {
             Professional 5G network infrastructure solutions designed to meet your business needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-            >
+            <Link to="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
               Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
 
-        <div className="text-center bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact our experts to learn more about our 5G network infrastructure solutions.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-          >
-            Contact Us Today
-            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-          </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Wifi className="h-12 w-12 text-blue-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">High-Speed Connectivity</h3>
+            <p className="text-gray-300">
+              Deploy ultra-fast 5G networks with gigabit speeds and low latency.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Shield className="h-12 w-12 text-red-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Enterprise Security</h3>
+            <p className="text-gray-300">
+              Implement robust security measures for your 5G network infrastructure.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Globe className="h-12 w-12 text-green-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Global Coverage</h3>
+            <p className="text-gray-300">
+              Extend your 5G network coverage across multiple locations and regions.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Zap className="h-12 w-12 text-yellow-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Real-time Processing</h3>
+            <p className="text-gray-300">
+              Enable real-time data processing and analytics with 5G infrastructure.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <Users className="h-12 w-12 text-purple-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Massive Scale</h3>
+            <p className="text-gray-300">
+              Support millions of connected devices with scalable 5G infrastructure.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <TrendingUp className="h-12 w-12 text-indigo-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Performance Optimization</h3>
+            <p className="text-gray-300">
+              Optimize your 5G network for maximum performance and efficiency.
+            </p>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Deploy 5G Infrastructure?
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Contact our infrastructure experts to design and deploy your 5G network.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-c832

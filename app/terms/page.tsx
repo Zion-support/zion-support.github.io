@@ -1,125 +1,107 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-export default function PagePage() {
+export default function TermsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
+        <title>Terms of Service - Zion Tech Group</title>
+        <meta name="description" content="Terms of Service for Zion Tech Group. Learn about our terms and conditions for using our AI and IT services." />
       </Helmet>
       
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page solutions by Zion Tech Group
-          </p>
-        </div>
-        
+      <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-        <p className="text-gray-300">
-          This page is under development. Please check back later for updates.
-        </p>
-      </div>
-    
-=======
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Terms - Zion Tech Group</title>
-        <meta name="description" content="Advanced terms solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <h1 className="text-5xl font-bold text-white mb-8">Terms of Service</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Last updated: January 2025
           </p>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Terms
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional terms services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced terms solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Terms
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced terms solutions by Zion Tech Group.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Shield, Zap } from 'lucide-react';
 
-export default function PagePage() {
-  const features = [
-    {
-      title: "Advanced Technology",
-      description: "Cutting-edge solutions powered by the latest technology",
-      icon: <Brain className="w-8 h-8" />
-    },
-    {
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security and reliability for your business",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: "Fast Implementation",
-      description: "Quick deployment and implementation for immediate results",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Advanced  solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Advanced  solutions by Zion Tech Group
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-6">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+          <div className="prose prose-invert max-w-none">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
+              <h2 className="text-2xl font-semibold text-white mb-4">1. Acceptance of Terms</h2>
+              <p className="text-gray-300 mb-4">
+                By accessing and using our services, you accept and agree to be bound by the terms 
+                and provision of this agreement. If you do not agree to abide by the above, 
+                please do not use this service.
+              </p>
             </div>
-          ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
+              <h2 className="text-2xl font-semibold text-white mb-4">2. Use License</h2>
+              <p className="text-gray-300 mb-4">
+                Permission is granted to temporarily download one copy of our services for personal, 
+                non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Modify or copy the materials</li>
+                <li>• Use the materials for any commercial purpose or for any public display</li>
+                <li>• Attempt to reverse engineer any software contained in our services</li>
+                <li>• Remove any copyright or other proprietary notations from the materials</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
+              <h2 className="text-2xl font-semibold text-white mb-4">3. Service Availability</h2>
+              <p className="text-gray-300 mb-4">
+                We strive to provide continuous service availability, but we do not guarantee that our services 
+                will be uninterrupted or error-free. We reserve the right to modify, suspend, or discontinue 
+                any part of our services at any time without notice.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
+              <h2 className="text-2xl font-semibold text-white mb-4">4. User Responsibilities</h2>
+              <p className="text-gray-300 mb-4">
+                You are responsible for:
+              </p>
+              <ul className="text-gray-300 space-y-2">
+                <li>• Providing accurate and complete information</li>
+                <li>• Maintaining the confidentiality of your account credentials</li>
+                <li>• Using our services in compliance with applicable laws</li>
+                <li>• Not interfering with or disrupting our services</li>
+                <li>• Not attempting to gain unauthorized access to our systems</li>
+              </ul>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
+              <h2 className="text-2xl font-semibold text-white mb-4">5. Intellectual Property</h2>
+              <p className="text-gray-300 mb-4">
+                All content, features, and functionality of our services are owned by Zion Tech Group 
+                and are protected by international copyright, trademark, patent, trade secret, and other 
+                intellectual property laws.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
+              <h2 className="text-2xl font-semibold text-white mb-4">6. Limitation of Liability</h2>
+              <p className="text-gray-300 mb-4">
+                In no event shall Zion Tech Group or its suppliers be liable for any damages (including, 
+                without limitation, damages for loss of data or profit, or due to business interruption) 
+                arising out of the use or inability to use our services, even if we have been notified 
+                orally or in writing of the possibility of such damage.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 mb-8">
+              <h2 className="text-2xl font-semibold text-white mb-4">7. Termination</h2>
+              <p className="text-gray-300 mb-4">
+                We may terminate or suspend your access to our services immediately, without prior notice 
+                or liability, for any reason whatsoever, including without limitation if you breach the Terms.
+              </p>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h2 className="text-2xl font-semibold text-white mb-4">8. Contact Information</h2>
+              <p className="text-gray-300 mb-4">
+                If you have any questions about these Terms of Service, please contact us:
+              </p>
+              <div className="text-gray-300 space-y-2">
+                <p>Email: legal@ziontechgroup.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 Tech Street, San Francisco, CA 94105</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
