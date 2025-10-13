@@ -1,20 +1,12 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
-=======
-import React, { useEffect, useCallback } from 'react';
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [isOptimized, setIsOptimized] = useState(false);
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
@@ -28,37 +20,20 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       // Preload critical images
       const criticalImages = [
         '/logo.svg',
-        '/og-image.svg'
-=======
-  const [isOptimized, setIsOptimized] = useState(false);
-
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalImages = [
+        '/og-image.svg',
         '/api/placeholder/1200/630', // Hero image
         '/api/placeholder/800/600',  // Service images
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
       ];
 
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
-<<<<<<< HEAD
-        link.href = src;
-        link.as = 'image';
-=======
         link.as = 'image';
         link.href = src;
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
         document.head.appendChild(link);
       });
     };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
@@ -117,9 +92,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     const timer = setTimeout(initializeOptimizations, 100);
 
     return () => clearTimeout(timer);
-=======
-    preloadCriticalResources();
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
   }, []);
 
   // Optimize scroll performance
@@ -163,7 +135,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     return () => window.removeEventListener('resize', handleResize);
   }, [handleResize]);
 
-<<<<<<< HEAD
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (!isOptimized) return;
@@ -286,12 +257,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       `}</style>
     </>
   );
-<<<<<<< HEAD
-=======
-  return <>{children}</>;
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
 };
 
 export default PerformanceOptimizer;
