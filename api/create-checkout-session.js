@@ -47,7 +47,11 @@ async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to create checkout session',
+<<<<<<< HEAD
       details: typeof process !== 'undefined' && process.env.NODE_ENV === 'development' ? error.message : undefined
+=======
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+>>>>>>> cursor/fix-errors-and-merge-to-main-9cbf
     }));
   }
 }
