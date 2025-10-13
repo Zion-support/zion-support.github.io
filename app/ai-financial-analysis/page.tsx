@@ -1,20 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  DollarSign, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Zap,
-  Brain,
-  PieChart,
-  Activity,
-  Shield
-} from 'lucide-react';
+
 
 const AIFinancialAnalysisPage = () => {
   const features = [
@@ -44,15 +29,7 @@ const AIFinancialAnalysisPage = () => {
     }
   ];
 
-  const benefits = [
-    "Improve investment returns by 30%",
-    "Reduce financial risk by 50%",
-    "Automate 90% of financial analysis",
-    "Make decisions 10x faster",
-    "Identify opportunities in real-time",
-    "Ensure regulatory compliance"
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

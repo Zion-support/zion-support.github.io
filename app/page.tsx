@@ -1,18 +1,14 @@
+
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, FileText } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
-<<<<<<< HEAD
-import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
-import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
-=======
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
 import FuturisticText from "./components/FuturisticText";
-// import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
-// import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
+import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
+import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
 import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
 import ResponsiveContainer from "./components/ResponsiveContainer";
@@ -209,41 +205,12 @@ const HomePage = () => {
     }
   ];
 
-  const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion Tech Group transformed our entire technology stack. The AI solutions increased our productivity by 60% in just 3 months.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "CTO",
-      content: "The micro SAAS solutions are incredibly powerful and easy to implement. We've saved thousands of hours with their automation tools.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Operations Director",
-      content: "Outstanding support and cutting-edge technology. Zion Tech Group is our trusted partner for all digital transformation needs.",
-      rating: 5
-    }
-  ];
-
+  
+  
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
-        <FuturisticBackground>
+        <FuturisticBackgroundEnhanced>
           <EnhancedSEO
             title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
             description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
@@ -555,19 +522,11 @@ const HomePage = () => {
             </FuturisticButtonEnhanced>
           </div>
         </div>
-<<<<<<< HEAD
         </section>
         </main>
         </FuturisticBackgroundEnhanced>
         </EnhancedAccessibility>
       </PerformanceOptimizer>
-=======
-      </section>
-      </main>
-      </FuturisticBackground>
-      </EnhancedAccessibility>
-    </PerformanceOptimizer>
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
   );
 };
 

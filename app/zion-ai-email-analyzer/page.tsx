@@ -1,92 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Mail, 
-  Brain, 
-  Shield, 
-  Eye, 
-  Heart, 
-  MessageSquare, 
-  Star, 
-  CheckCircle, 
-  Sparkles, 
-  Smartphone, 
-  Globe, 
-  Award, 
-  Lock, 
-  Cloud, 
-  Database, 
-  Settings, 
-  Headphones, 
-  ExternalLink, 
-  ChevronRight, 
-  RefreshCw, 
-  RotateCcw, 
-  Save, 
-  Trash2, 
-  Plus, 
-  Minus, 
-  X, 
-  Menu, 
-  MoreHorizontal, 
-  MoreVertical, 
-  Grid, 
-  List, 
-  Layout, 
-  Maximize, 
-  Minimize, 
-  Move, 
-  Copy, 
-  Scissors, 
-  Clipboard, 
-  Bookmark, 
-  Tag, 
-  Flag, 
-  Bell, 
-  BellOff, 
-  Volume2, 
-  VolumeX, 
-  Mic, 
-  MicOff, 
-  Camera, 
-  CameraOff, 
-  Wifi, 
-  WifiOff, 
-  Battery, 
-  BatteryLow, 
-  Signal, 
-  SignalLow, 
-  SignalZero, 
-  SignalHigh, 
-  SignalMedium,
-  DollarSign,
-  CreditCard,
-  Receipt,
-  Calculator,
-  PieChart,
-  LineChart,
-  BarChart,
-  TrendingDown,
-  AlertCircle,
-  Info,
-  HelpCircle,
-  Play,
-  Pause,
-  Stop,
-  ThumbsUp,
-  Share,
-  Download,
-  Upload,
-  Edit,
-  Zap,
-  Clock,
-  Target,
-  Users,
-  BarChart3,
-  TrendingUp
-} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { ChevronRight, RefreshCw, Save, Trash2, Plus, Minus, X, MoreHorizontal, MoreVertical, Layout, Move, Copy, Scissors, Clipboard, Bookmark, Flag, BellOff, MicOff, CameraOff, BatteryLow, SignalLow, SignalZero, SignalHigh, SignalMedium, Receipt, BarChart, TrendingDown, AlertCircle, Info, Edit } from "lucide-react";
 
 const ZionAIEmailAnalyzerPage = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');
@@ -250,40 +163,8 @@ const ZionAIEmailAnalyzerPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Amanda Foster',
-      company: 'Customer Support Team',
-      role: 'Support Manager',
-      content: 'Zion AI Email Analyzer has revolutionized our customer support. We can now respond to urgent emails 3x faster and with better context.',
-      rating: 5,
-      avatar: 'AF'
-    },
-    {
-      name: 'Carlos Rodriguez',
-      company: 'Sales Agency',
-      role: 'Sales Director',
-      content: 'The sentiment analysis helps us understand our prospects better. We\'ve increased our response rates by 40% and closed more deals.',
-      rating: 5,
-      avatar: 'CR'
-    },
-    {
-      name: 'Jennifer Lee',
-      company: 'Marketing Firm',
-      role: 'Email Marketing Manager',
-      content: 'The analytics dashboard gives us incredible insights into our email campaigns. We can now optimize our content for maximum engagement.',
-      rating: 5,
-      avatar: 'JL'
-    }
-  ];
-
-  const stats = [
-    { number: '99.9%', label: 'Spam Detection Accuracy', icon: <Shield className="w-6 h-6" /> },
-    { number: '3x', label: 'Faster Response Times', icon: <Zap className="w-6 h-6" /> },
-    { number: '40%', label: 'Increase in Engagement', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Headphones className="w-6 h-6" /> }
-  ];
-
+  
+  
   return (
     <>
       <Helmet>

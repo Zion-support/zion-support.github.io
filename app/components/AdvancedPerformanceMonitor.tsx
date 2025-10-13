@@ -39,7 +39,7 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
           metric_delta: Math.round(value)
         });
       }
-
+      
       // Send to custom analytics
       if (typeof window !== 'undefined' && (window as any).analytics) {
         (window as any).analytics.track('Performance Metric', {

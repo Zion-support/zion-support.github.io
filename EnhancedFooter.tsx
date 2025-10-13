@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
+
 
 const EnhancedFooter: React.FC = () => {
   return (

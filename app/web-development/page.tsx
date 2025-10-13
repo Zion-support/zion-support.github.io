@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Users, Clock, DollarSign } from 'lucide-react';
+
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const WebDevelopmentPage = () => {

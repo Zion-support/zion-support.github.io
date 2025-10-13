@@ -1,20 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Server, 
-  Shield, 
-  Zap, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Brain,
-  Users,
-  Globe,
-  Settings,
-  Database
-} from 'lucide-react';
+
 
 const DataCenterServicesPage = () => {
   const features = [
@@ -44,15 +29,7 @@ const DataCenterServicesPage = () => {
     }
   ];
 
-  const benefits = [
-    "99.99% uptime guarantee",
-    "Reduce infrastructure costs by 40%",
-    "Scale resources instantly",
-    "Enhanced security and compliance",
-    "24/7 expert support",
-    "Future-proof infrastructure"
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

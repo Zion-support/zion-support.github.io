@@ -1,92 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Users, 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
-  Eye, 
-  Heart, 
-  MessageSquare, 
-  Star, 
-  CheckCircle, 
-  Sparkles, 
-  Mail, 
-  Smartphone, 
-  Globe, 
-  Award, 
-  Shield, 
-  Lock, 
-  Cloud, 
-  Database, 
-  Settings, 
-  Headphones, 
-  ExternalLink, 
-  ChevronRight, 
-  RefreshCw, 
-  RotateCcw, 
-  Save, 
-  Trash2, 
-  Plus, 
-  Minus, 
-  X, 
-  Menu, 
-  MoreHorizontal, 
-  MoreVertical, 
-  Grid, 
-  List, 
-  Layout, 
-  Maximize, 
-  Minimize, 
-  Move, 
-  Copy, 
-  Scissors, 
-  Clipboard, 
-  Bookmark, 
-  Tag, 
-  Flag, 
-  Bell, 
-  BellOff, 
-  Volume2, 
-  VolumeX, 
-  Mic, 
-  MicOff, 
-  Camera, 
-  CameraOff, 
-  Wifi, 
-  WifiOff, 
-  Battery, 
-  BatteryLow, 
-  Signal, 
-  SignalLow, 
-  SignalZero, 
-  SignalHigh, 
-  SignalMedium,
-  DollarSign,
-  CreditCard,
-  Receipt,
-  Calculator,
-  PieChart,
-  LineChart,
-  BarChart,
-  TrendingDown,
-  AlertCircle,
-  Info,
-  HelpCircle,
-  Play,
-  Pause,
-  Stop,
-  ThumbsUp,
-  Share,
-  Download,
-  Upload,
-  Edit,
-  Zap,
-  Clock
-} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { ChevronRight, RefreshCw, Save, Trash2, Plus, Minus, X, MoreHorizontal, MoreVertical, Layout, Move, Copy, Scissors, Clipboard, Bookmark, Flag, BellOff, MicOff, CameraOff, BatteryLow, SignalLow, SignalZero, SignalHigh, SignalMedium, Receipt, BarChart, TrendingDown, AlertCircle, Info, Edit } from "lucide-react";
 
 const ZionAICustomerInsightsPage = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');
@@ -250,40 +163,8 @@ const ZionAICustomerInsightsPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Jennifer Adams',
-      company: 'E-commerce Platform',
-      role: 'Head of Marketing',
-      content: 'Zion AI Customer Insights has transformed our understanding of customer behavior. We\'ve increased retention by 40% and revenue by 25%.',
-      rating: 5,
-      avatar: 'JA'
-    },
-    {
-      name: 'Robert Kim',
-      company: 'SaaS Startup',
-      role: 'CEO',
-      content: 'The churn prediction feature is incredibly accurate. We can now intervene before customers leave and save thousands in revenue.',
-      rating: 5,
-      avatar: 'RK'
-    },
-    {
-      name: 'Maria Garcia',
-      company: 'Retail Chain',
-      role: 'Customer Experience Director',
-      content: 'The personalized recommendations have increased our average order value by 35%. Our customers love the relevant suggestions.',
-      rating: 5,
-      avatar: 'MG'
-    }
-  ];
-
-  const stats = [
-    { number: '40%', label: 'Average Retention Increase', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '95%', label: 'Prediction Accuracy', icon: <Target className="w-6 h-6" /> },
-    { number: '25%', label: 'Revenue Growth', icon: <DollarSign className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Headphones className="w-6 h-6" /> }
-  ];
-
+  
+  
   return (
     <>
       <Helmet>

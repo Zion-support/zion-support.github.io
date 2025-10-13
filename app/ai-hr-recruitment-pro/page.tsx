@@ -1,20 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Target, 
-  Brain, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  UserCheck,
-  FileText,
-  Calendar,
-  TrendingUp,
-  Shield,
-  Zap
-} from 'lucide-react';
+
 
 const AIHRRecruitmentProPage = () => {
   const features = [
@@ -44,15 +29,7 @@ const AIHRRecruitmentProPage = () => {
     }
   ];
 
-  const benefits = [
-    "Reduce time-to-hire by 70%",
-    "Improve candidate quality by 50%",
-    "Eliminate hiring bias completely",
-    "Automate 80% of recruitment tasks",
-    "Increase retention rates by 40%",
-    "Scale recruitment across all departments"
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

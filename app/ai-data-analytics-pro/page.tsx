@@ -1,20 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Database, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Zap,
-  Brain,
-  PieChart,
-  Activity,
-  LineChart
-} from 'lucide-react';
+
 
 const AIDataAnalyticsProPage = () => {
   const features = [
@@ -44,15 +29,7 @@ const AIDataAnalyticsProPage = () => {
     }
   ];
 
-  const benefits = [
-    "Make data-driven decisions 10x faster",
-    "Identify opportunities before competitors",
-    "Reduce data analysis time by 90%",
-    "Improve forecast accuracy by 40%",
-    "Automate report generation",
-    "Scale analytics across your organization"
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

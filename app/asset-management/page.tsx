@@ -1,20 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Package, 
-  BarChart3, 
-  Zap, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Brain,
-  Users,
-  Globe,
-  Settings,
-  Shield
-} from 'lucide-react';
+import { Package } from "lucide-react";
 
 const AssetManagementPage = () => {
   const features = [
@@ -44,15 +29,7 @@ const AssetManagementPage = () => {
     }
   ];
 
-  const benefits = [
-    "Reduce asset costs by 30%",
-    "Improve asset utilization by 50%",
-    "Ensure compliance automatically",
-    "Eliminate asset loss and theft",
-    "Optimize procurement decisions",
-    "Streamline asset operations"
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

@@ -1,24 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Zap, 
-  BarChart3, 
-  Shield, 
-  Cloud, 
-  Users, 
-  Code, 
-  Database, 
-  ArrowRight,
-  Sparkles,
-  Star,
-  CheckCircle,
-  TrendingUp,
-  Settings,
-  Bot,
-  Workflow,
-  Target
-} from 'lucide-react';
+import { Workflow } from "lucide-react";
 
 const AIAutomationPlatformPage = () => {
   const features = [
@@ -48,15 +29,7 @@ const AIAutomationPlatformPage = () => {
     }
   ];
 
-  const benefits = [
-    "Reduce manual work by up to 80%",
-    "Improve process efficiency by 60%",
-    "Eliminate human errors in repetitive tasks",
-    "Scale operations without proportional staff increases",
-    "24/7 automated monitoring and execution",
-    "Real-time process optimization"
-  ];
-
+  
   const useCases = [
     {
       industry: "Finance",

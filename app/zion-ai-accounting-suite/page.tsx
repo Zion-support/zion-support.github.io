@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Calculator, Brain, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Smartphone, Globe, Database, Settings, FileText, TrendingUp, AlertCircle, Calendar, Receipt, BarChart3, CreditCard, PieChart, Clock } from 'lucide-react';
+import { AlertCircle, Receipt } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const ZionAIAccountingSuite = () => {
@@ -96,40 +95,8 @@ const ZionAIAccountingSuite = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Robert Kim",
-      company: "Digital Marketing Agency",
-      role: "CFO",
-      content: "Zion AI Accounting Suite reduced our bookkeeping time by 85%. The AI categorization is incredibly accurate and saves us hours every week.",
-      rating: 5,
-      savings: "85% time saved"
-    },
-    {
-      name: "Maria Gonzalez",
-      company: "E-commerce Solutions",
-      role: "Owner",
-      content: "The fraud detection feature caught a suspicious transaction that would have cost us $5,000. The AI insights help us make better financial decisions.",
-      rating: 5,
-      savings: "$5,000 fraud prevented"
-    },
-    {
-      name: "James Wilson",
-      company: "Consulting Firm",
-      role: "Managing Partner",
-      content: "The automated tax preparation is a game-changer. We went from spending weeks on tax prep to just reviewing AI-generated reports.",
-      rating: 5,
-      savings: "80% faster tax prep"
-    }
-  ];
-
-  const stats = [
-    { number: "99.5%", label: "Invoice Accuracy", icon: <Receipt className="w-6 h-6" /> },
-    { number: "90%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
-    { number: "95%", label: "Auto-Categorization", icon: <PieChart className="w-6 h-6" /> },
-    { number: "99.9%", label: "Fraud Detection", icon: <Shield className="w-6 h-6" /> }
-  ];
-
+  
+  
   const accountingModules = [
     {
       title: "Invoice Management",

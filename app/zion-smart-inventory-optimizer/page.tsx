@@ -1,97 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Package, 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
-  Eye, 
-  Heart, 
-  MessageSquare, 
-  Star, 
-  CheckCircle, 
-  Sparkles, 
-  Mail, 
-  Smartphone, 
-  Globe, 
-  Award, 
-  Shield, 
-  Lock, 
-  Cloud, 
-  Database, 
-  Settings, 
-  Headphones, 
-  ExternalLink, 
-  ChevronRight, 
-  RefreshCw, 
-  RotateCcw, 
-  Save, 
-  Trash2, 
-  Plus, 
-  Minus, 
-  X, 
-  Menu, 
-  MoreHorizontal, 
-  MoreVertical, 
-  Grid, 
-  List, 
-  Layout, 
-  Maximize, 
-  Minimize, 
-  Move, 
-  Copy, 
-  Scissors, 
-  Clipboard, 
-  Bookmark, 
-  Tag, 
-  Flag, 
-  Bell, 
-  BellOff, 
-  Volume2, 
-  VolumeX, 
-  Mic, 
-  MicOff, 
-  Camera, 
-  CameraOff, 
-  Wifi, 
-  WifiOff, 
-  Battery, 
-  BatteryLow, 
-  Signal, 
-  SignalLow, 
-  SignalZero, 
-  SignalHigh, 
-  SignalMedium,
-  DollarSign,
-  CreditCard,
-  Receipt,
-  Calculator,
-  PieChart,
-  LineChart,
-  BarChart,
-  TrendingDown,
-  AlertCircle,
-  Info,
-  HelpCircle,
-  Play,
-  Pause,
-  Stop,
-  ThumbsUp,
-  Share,
-  Download,
-  Upload,
-  Edit,
-  Zap,
-  Clock,
-  Users,
-  Truck,
-  Warehouse,
-  ShoppingCart,
-  Store
-} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { Package, ChevronRight, RefreshCw, Save, Trash2, Plus, Minus, X, MoreHorizontal, MoreVertical, Layout, Move, Copy, Scissors, Clipboard, Bookmark, Flag, BellOff, MicOff, CameraOff, BatteryLow, SignalLow, SignalZero, SignalHigh, SignalMedium, Receipt, BarChart, TrendingDown, AlertCircle, Info, Edit, Truck, Warehouse, Store } from "lucide-react";
 
 const ZionSmartInventoryOptimizerPage = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');
@@ -255,40 +163,8 @@ const ZionSmartInventoryOptimizerPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Michael Thompson',
-      company: 'E-commerce Store',
-      role: 'Operations Manager',
-      content: 'Zion Smart Inventory Optimizer has reduced our stockouts by 80% and cut inventory costs by 30%. The demand forecasting is incredibly accurate.',
-      rating: 5,
-      avatar: 'MT'
-    },
-    {
-      name: 'Sarah Williams',
-      company: 'Retail Chain',
-      role: 'Inventory Director',
-      content: 'Managing inventory across 50+ stores has never been easier. The real-time alerts help us prevent stockouts and overstock situations.',
-      rating: 5,
-      avatar: 'SW'
-    },
-    {
-      name: 'David Chen',
-      company: 'Manufacturing Company',
-      role: 'Supply Chain Manager',
-      content: 'The AI-powered forecasting has revolutionized our production planning. We can now predict demand with 95% accuracy and optimize our supply chain.',
-      rating: 5,
-      avatar: 'DC'
-    }
-  ];
-
-  const stats = [
-    { number: '95%', label: 'Forecasting Accuracy', icon: <Target className="w-6 h-6" /> },
-    { number: '30%', label: 'Cost Reduction', icon: <DollarSign className="w-6 h-6" /> },
-    { number: '80%', label: 'Stockout Reduction', icon: <Shield className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Headphones className="w-6 h-6" /> }
-  ];
-
+  
+  
   return (
     <>
       <Helmet>

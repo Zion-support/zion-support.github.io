@@ -1,23 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Calendar, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe,
-  Mail,
-  Smartphone,
-  MapPin,
-  Star,
-  Users,
-  Award,
-  BarChart3
-} from 'lucide-react';
+
 
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({
@@ -94,29 +76,7 @@ export default function ConsultationPage() {
     }
   ];
 
-  const benefits = [
-    {
-      title: "Expert Guidance",
-      description: "Get insights from our team of AI and IT experts with 10+ years of experience",
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      title: "Customized Solutions",
-      description: "Tailored recommendations based on your specific business needs and goals",
-      icon: <BarChart3 className="w-6 h-6" />
-    },
-    {
-      title: "No Obligation",
-      description: "Free consultation with no commitment required - we're here to help",
-      icon: <Award className="w-6 h-6" />
-    },
-    {
-      title: "Actionable Insights",
-      description: "Receive a detailed report with actionable recommendations and next steps",
-      icon: <CheckCircle className="w-6 h-6" />
-    }
-  ];
-
+  
   return (
     <>
       <Helmet>

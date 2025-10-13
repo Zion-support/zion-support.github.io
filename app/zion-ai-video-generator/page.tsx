@@ -1,83 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Video, 
-  Play, 
-  Pause, 
-  Download, 
-  Upload, 
-  Edit, 
-  Settings, 
-  Sparkles, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Clock, 
-  Zap, 
-  Brain, 
-  Mic, 
-  Camera, 
-  Image, 
-  Music, 
-  Palette, 
-  Share, 
-  Eye, 
-  Heart, 
-  ThumbsUp,
-  Mail,
-  Smartphone,
-  Globe,
-  Award,
-  Shield,
-  Lock,
-  Cloud,
-  Database,
-  BarChart3,
-  TrendingUp,
-  Target,
-  MessageSquare,
-  Headphones,
-  ExternalLink,
-  ChevronRight,
-  RefreshCw,
-  RotateCcw,
-  Save,
-  Trash2,
-  Plus,
-  Minus,
-  X,
-  Menu,
-  MoreHorizontal,
-  MoreVertical,
-  Grid,
-  List,
-  Layout,
-  Maximize,
-  Minimize,
-  Move,
-  Copy,
-  Scissors,
-  Clipboard,
-  Bookmark,
-  Tag,
-  Flag,
-  Bell,
-  BellOff,
-  Volume2,
-  VolumeX,
-  CameraOff,
-  Wifi,
-  WifiOff,
-  Battery,
-  BatteryLow,
-  Signal,
-  SignalLow,
-  SignalZero,
-  SignalHigh,
-  SignalMedium
-} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
+import { Edit, Image, Palette, ChevronRight, RefreshCw, Save, Trash2, Plus, Minus, X, MoreHorizontal, MoreVertical, Layout, Move, Copy, Scissors, Clipboard, Bookmark, Flag, BellOff, CameraOff, BatteryLow, SignalLow, SignalZero, SignalHigh, SignalMedium } from "lucide-react";
 
 const ZionAIVideoGeneratorPage = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');
@@ -241,40 +163,8 @@ const ZionAIVideoGeneratorPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'Digital Marketing Agency',
-      role: 'Creative Director',
-      content: 'Zion AI Video Generator has revolutionized our content creation process. We can now produce high-quality videos 10x faster than before.',
-      rating: 5,
-      avatar: 'SJ'
-    },
-    {
-      name: 'Michael Chen',
-      company: 'E-learning Platform',
-      role: 'Content Manager',
-      content: 'The voice synthesis feature is incredible. We can create training videos in multiple languages without hiring voice actors.',
-      rating: 5,
-      avatar: 'MC'
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'E-commerce Store',
-      role: 'Marketing Manager',
-      content: 'Our product videos have never looked better. The AI automatically creates engaging content that converts visitors into customers.',
-      rating: 5,
-      avatar: 'ER'
-    }
-  ];
-
-  const stats = [
-    { number: '10,000+', label: 'Videos Created', icon: <Video className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime SLA', icon: <Shield className="w-6 h-6" /> },
-    { number: '50+', label: 'Languages Supported', icon: <Globe className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Headphones className="w-6 h-6" /> }
-  ];
-
+  
+  
   return (
     <>
       <Helmet>

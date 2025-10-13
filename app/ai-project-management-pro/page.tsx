@@ -1,14 +1,5 @@
 "use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import {
-  CheckCircle,
-  Star,
-  Brain,
-  Clock,
-  Target,
-  BarChart3,
-} from "lucide-react";
+import {  } from "lucide-react";
 
 export default function AIProjectManagementPro() {
   const features = [

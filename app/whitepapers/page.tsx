@@ -1,20 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  FileText, 
-  Download, 
-  Users, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Brain,
-  Globe,
-  Settings,
-  Shield,
-  BookOpen
-} from 'lucide-react';
+
 
 const WhitepapersPage = () => {
   const whitepapers = [
@@ -68,16 +53,7 @@ const WhitepapersPage = () => {
     }
   ];
 
-  const categories = [
-    "All Categories",
-    "Artificial Intelligence",
-    "Cybersecurity",
-    "Cloud Technology",
-    "5G Technology",
-    "Business Strategy",
-    "Digital Transformation"
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

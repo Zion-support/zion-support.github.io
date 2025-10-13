@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, Smartphone, Mail } from "lucide-react";
+import { PenTool, Image } from "lucide-react";
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -116,30 +115,7 @@ const AIContentStudioZionTechGroup = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Jessica Martinez",
-      company: "Content Marketing Agency",
-      role: "Creative Director",
-      content: "Zion AI Content Studio Pro has transformed our content production. We've increased output by 300% while maintaining quality.",
-      rating: 5
-    },
-    {
-      name: "David Kim",
-      company: "Digital Media Co.",
-      role: "Content Manager",
-      content: "The AI video generation is incredible. We can now create professional videos in minutes instead of hours.",
-      rating: 5
-    },
-    {
-      name: "Lisa Thompson",
-      company: "E-commerce Brand",
-      role: "Marketing Director",
-      content: "Best content creation tool we've used. The AI writing and image generation features are game-changers.",
-      rating: 5
-    }
-  ];
-
+  
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>

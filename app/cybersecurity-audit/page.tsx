@@ -1,20 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Shield, 
-  Search, 
-  AlertTriangle, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Brain,
-  Lock,
-  Eye,
-  Settings,
-  Zap
-} from 'lucide-react';
+
 
 const CybersecurityAuditPage = () => {
   const features = [
@@ -44,15 +29,7 @@ const CybersecurityAuditPage = () => {
     }
   ];
 
-  const benefits = [
-    "Identify security gaps before attackers do",
-    "Ensure regulatory compliance",
-    "Reduce risk of data breaches by 90%",
-    "Improve security posture significantly",
-    "Get detailed remediation roadmap",
-    "Protect your business reputation"
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

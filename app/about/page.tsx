@@ -1,15 +1,7 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe as GlobeIcon } from "lucide-react";
+
 
 export default function AboutPage() {
-  const stats = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "100+", label: "Happy Clients" },
-    { number: "50+", label: "AI Solutions" },
-    { number: "24/7", label: "Support" }
-  ];
-
+  
   const values = [
     {
       icon: <Brain className="w-8 h-8" />,

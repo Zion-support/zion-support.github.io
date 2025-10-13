@@ -1,7 +1,5 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, Star, Mic, Brain, Zap, Shield, Users, Clock, DollarSign, Globe, Smartphone, Headphones, Volume2, MessageSquare, Bot, Cpu, Wifi, Battery, Camera, Video, Phone, Mail, Calendar, FileText, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Settings, Monitor, BarChart3, TrendingUp, Target, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Voicemail, Headset, Speaker, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, Workflow, FileSignature, Bot as BotIcon } from "lucide-react";
+import { Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Package, Receipt, Workflow, FileSignature } from "lucide-react";
 
 export default function ZionAIVoiceAssistantPro() {
   const features = [
@@ -23,17 +21,7 @@ export default function ZionAIVoiceAssistantPro() {
     "Multi-device synchronization"
   ];
 
-  const benefits = [
-    "Increase productivity by 60%",
-    "Reduce manual tasks by 80%",
-    "Improve accessibility for all users",
-    "Enable hands-free operation",
-    "Scale customer support efficiently",
-    "Enhance user experience",
-    "Reduce training time for new employees",
-    "Improve response accuracy"
-  ];
-
+  
   const pricingPlans = [
     {
       name: "Starter",
@@ -87,33 +75,7 @@ export default function ZionAIVoiceAssistantPro() {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion AI Voice Assistant Pro has revolutionized how our team works. We've increased productivity by 65% and our customer satisfaction scores are through the roof.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "CTO",
-      content: "The voice recognition is incredibly accurate, even with our technical jargon. It's like having a personal AI assistant that actually understands our business.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Operations Director",
-      content: "Our team can now handle 3x more customer inquiries thanks to the voice automation. The ROI was immediate and continues to grow.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
+  
   const useCases = [
     {
       title: "Customer Service",

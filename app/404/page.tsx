@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Home, ArrowLeft, Search, AlertTriangle } from 'lucide-react';
+import { Home, ArrowLeft } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const NotFoundPage = () => {

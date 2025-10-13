@@ -1,32 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Twitter, 
-  Linkedin, 
-  Github, 
-  Facebook, 
-  Instagram,
-  Youtube,
-  Star,
-  Award,
-  Users,
-  Shield,
-  Zap,
-  Brain,
-  BarChart3,
-  Cloud,
-  Settings,
-  HelpCircle,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Clock
-} from 'lucide-react';
+import { Twitter, Linkedin, Github, Facebook, Instagram, Youtube } from "lucide-react";
 
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();
@@ -173,13 +146,7 @@ const ImprovedFooter = () => {
     { label: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: <Youtube className="w-5 h-5" /> }
   ];
 
-  const stats = [
-    { number: '10,000+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime SLA', icon: <Award className="w-6 h-6" /> },
-    { number: '60+', label: 'Micro SAAS Solutions', icon: <Zap className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Shield className="w-6 h-6" /> }
-  ];
-
+  
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',

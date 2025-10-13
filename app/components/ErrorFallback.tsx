@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
-import { AlertTriangle, RefreshCw, Home, Mail, Bug } from "lucide-react";
-import { Link } from "react-router-dom";
+import { RefreshCw, Home, Bug } from "lucide-react";
 
 interface ErrorFallbackProps {
   error: Error;
