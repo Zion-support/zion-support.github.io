@@ -62,7 +62,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
     };
 
-
+    // Log the error data for debugging
     console.error('Error data:', errorData);
     // Example: Send to your error reporting service
     // You could send this to your backend:

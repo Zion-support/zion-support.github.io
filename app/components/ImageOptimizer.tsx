@@ -1,100 +1,86 @@
-import React, { useState, useCallback, useMemo } from 'react';
-import { ImageIcon, Loader2 } from 'lucide-react';
+import React, { useState, useCallback } from 'react';
 
 interface ImageOptimizerProps {
   src: string;
   alt: string;
+  className?: string;
   width?: number;
   height?: number;
-  className?: string;
-  // placeholder?: string; // Available for future use
-  lazy?: boolean;
+  priority?: boolean;
+  placeholder?: string;
 }
 
-const ImageOptimizer = React.memo<ImageOptimizerProps>(({
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   src,
   alt,
+  className = '',
   width,
   height,
-  className = '',
-  lazy = true
+  priority = false,
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+'
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
   const handleLoad = useCallback(() => {
-    setIsLoading(false);
+    setIsLoaded(true);
   }, []);
 
   const handleError = useCallback(() => {
-    setIsLoading(false);
     setHasError(true);
   }, []);
 
-  const optimizedSrc = useMemo(() => {
-    // Add WebP format support and quality optimization
-    if (src.includes('?')) {
-      return `${src}&format=webp&quality=80`;
+  // Generate optimized src with WebP support
+  const getOptimizedSrc = useCallback((originalSrc: string) => {
+    if (originalSrc.startsWith('data:') || originalSrc.startsWith('http')) {
+      return originalSrc;
     }
-    return `${src}?format=webp&quality=80`;
-  }, [src]);
+    
+    // Add WebP format if supported
+    const webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+    return webpSrc;
+  }, []);
 
-  // Placeholder generation logic (currently unused but kept for future use)
-  // const placeholderSrc = useMemo(() => {
-  //   if (placeholder) return placeholder;
-  //   
-  //   // Generate a simple placeholder based on dimensions
-  //   const w = width || 300;
-  //   const h = height || 200;
-  //   return `data:image/svg+xml;base64,${btoa(`
-  //     <svg width="${w}" height="${h}" xmlns="http://www.w3.org/2000/svg">
-  //       <rect width="100%" height="100%" fill="#f3f4f6"/>
-  //       <text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="#9ca3af" font-family="Arial, sans-serif" font-size="14">
-  //         Loading...
-  //       </text>
-  //     </svg>
-  //   `)}`;
-  // }, [placeholder, width, height]);
-
-  if (hasError) {
-    return (
-      <div 
-        className={`flex items-center justify-center bg-gray-200 ${className}`}
-        style={{ width, height }}
-      >
-        <ImageIcon className="w-8 h-8 text-gray-400" />
-      </div>
-    );
-  }
+  const optimizedSrc = getOptimizedSrc(src);
 
   return (
-    <div className={`relative ${className}`} style={{ width, height }}>
-      {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200">
-          <Loader2 className="w-6 h-6 animate-spin text-gray-400" />
+    <div className={`relative overflow-hidden ${className}`}>
+      {!isLoaded && !hasError && (
+        <div 
+          className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
+          style={{ width, height }}
+        >
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
         </div>
       )}
       
-      <img
-        src={optimizedSrc}
-        alt={alt}
-        width={width}
-        height={height}
-        loading={lazy ? 'lazy' : 'eager'}
-        onLoad={handleLoad}
-        onError={handleError}
-        className={`transition-opacity duration-300 ${
-          isLoading ? 'opacity-0' : 'opacity-100'
-        }`}
-        style={{
-          width: width ? `${width}px` : '100%',
-          height: height ? `${height}px` : 'auto',
-        }}
-      />
+      {hasError ? (
+        <div 
+          className="flex items-center justify-center bg-gray-100 text-gray-400"
+          style={{ width, height }}
+        >
+          <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+            <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+          </svg>
+        </div>
+      ) : (
+        <img
+          src={optimizedSrc}
+          alt={alt}
+          width={width}
+          height={height}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          style={{ width, height }}
+        />
+      )}
     </div>
   );
-});
-
-ImageOptimizer.displayName = 'ImageOptimizer';
+};
 
 export default ImageOptimizer;

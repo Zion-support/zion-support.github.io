@@ -217,7 +217,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
-
   return (
     <>
       {children}

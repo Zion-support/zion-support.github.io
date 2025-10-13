@@ -14,8 +14,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enablePreloading = true,
     enableImageOptimization = true,
 
-    // enableCodeSplitting = true,
-
+    enableCodeSplitting = true,
     enableCaching = true,
   } = options;
 

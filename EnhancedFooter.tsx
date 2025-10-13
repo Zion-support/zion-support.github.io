@@ -4,11 +4,11 @@ import { ArrowRight, Mail, Phone, MapPin } from "lucide-react";
 
 const EnhancedFooter: React.FC = () => {
   return (
-    <footer className="bg-slate-900text-white">
-      <div className="max-w-7xlmx-auto px-4 py-12">
-        <div className="gridmd:grid-cols-4 gap-8">
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-2xlfont-bold text-white mb-4">
+            <h3 className="text-2xl font-bold text-white mb-4">
               Zion Tech Group
             </h3>
             <p className="text-gray-300 mb-4">
@@ -16,7 +16,7 @@ const EnhancedFooter: React.FC = () => {
             </p>
             <Link
               to="/contact"
-              className="inline-flexitems-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >
               Get Started
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -37,7 +37,7 @@ const EnhancedFooter: React.FC = () => {
               <li>
                 <Link
                   to="/it-services"
-                  className="text-gray-300hover:text-cyan-400 transition-colors"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   IT Services
                 </Link>
@@ -45,7 +45,7 @@ const EnhancedFooter: React.FC = () => {
               <li>
                 <Link
                   to="/cloud-solutions"
-                  className="text-gray-300hover:text-cyan-400 transition-colors"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   Cloud Solutions
                 </Link>
@@ -53,7 +53,7 @@ const EnhancedFooter: React.FC = () => {
               <li>
                 <Link
                   to="/cybersecurity"
-                  className="text-gray-300hover:text-cyan-400 transition-colors"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   Cybersecurity
                 </Link>
@@ -66,7 +66,7 @@ const EnhancedFooter: React.FC = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-gray-300hover:text-cyan-400 transition-colors"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   About Us
                 </Link>
@@ -74,7 +74,7 @@ const EnhancedFooter: React.FC = () => {
               <li>
                 <Link
                   to="/team"
-                  className="text-gray-300hover:text-cyan-400 transition-colors"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   Our Team
                 </Link>
@@ -82,7 +82,7 @@ const EnhancedFooter: React.FC = () => {
               <li>
                 <Link
                   to="/careers"
-                  className="text-gray-300hover:text-cyan-400 transition-colors"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   Careers
                 </Link>
@@ -90,7 +90,7 @@ const EnhancedFooter: React.FC = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-gray-300hover:text-cyan-400 transition-colors"
+                  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   Contact
                 </Link>

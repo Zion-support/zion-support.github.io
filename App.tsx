@@ -7,10 +7,12 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-import { LoadingPage } from "./app/components/LoadingStates";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-import Breadcrumb from "./app/components/Breadcrumb";
+import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 
 // Lazy load pages for better performance
