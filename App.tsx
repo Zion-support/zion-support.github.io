@@ -7,6 +7,7 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
+<<<<<<< HEAD
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -14,6 +15,15 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+=======
+import { LoadingPage } from "./app/components/LoadingStates";
+import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+>>>>>>> cursor/analyze-improve-and-deploy-application-29f3
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -604,6 +614,10 @@ function App() {
                     <div></div>
                   </EnhancedAccessibility>
                 </FuturisticBackground>
+<<<<<<< HEAD
+=======
+                <PerformanceMonitor />
+>>>>>>> cursor/analyze-improve-and-deploy-application-29f3
               </div>
               <EnhancedAccessibility>
                 <div></div>

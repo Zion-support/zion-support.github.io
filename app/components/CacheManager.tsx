@@ -19,6 +19,17 @@ const CacheManager = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+<<<<<<< HEAD
+=======
+    // Service Worker registration for caching
+    const registerServiceWorker = async () => {
+      if ('serviceWorker' in navigator) {
+        try {
+          const registration = await navigator.serviceWorker.register('/sw.js');
+          console.log('Service Worker registered:', registration);
+        } catch (error) {
+          console.error('Service Worker registration failed:', error);
+>>>>>>> cursor/analyze-improve-and-deploy-application-29f3
         }
       }
     }
@@ -111,6 +122,7 @@ const CacheManager = () => {
               imageObserver.unobserve(img)
             }
           }
+<<<<<<< HEAD
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return
 
@@ -143,6 +155,8 @@ const CacheManager = () => {
               size: totalSize
             }))
           })
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-29f3
         })
       }
     }
