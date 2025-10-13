@@ -44,7 +44,14 @@ export default [
       'analyze-*.js',
       'check-*.js',
       'clean-*.js',
-      'jest.setup.js'
+      'jest.setup.js',
+      'app-broken/**',
+      'app-disabled/**',
+      'api/**',
+      'add-missing-routes.js',
+      'advanced-app-improvements.js',
+      'aggressive-fix.js',
+      '*.js'
     ],
     languageOptions: {
       ecmaVersion: 'latest',
