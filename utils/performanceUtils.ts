@@ -33,8 +33,8 @@ export class PerformanceUtils {
   }
 
   measureMemoryUsage(): number {
-    if (typeof window !== 'undefined' && (window as any).performance?.memory) {
-      const memory = (window as any).performance.memory;
+    if (typeof window !== 'undefined' && (window as unknown as { performance?: { memory?: { usedJSHeapSize: number } } }).performance?.memory) {
+      const memory = (window as unknown as { performance: { memory: { usedJSHeapSize: number } } }).performance.memory;
       this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
     }
     return this.metrics.memoryUsage;

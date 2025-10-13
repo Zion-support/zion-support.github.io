@@ -12,7 +12,7 @@ export interface SEOConfig {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
   robots?: string;
   viewport?: string;
   charset?: string;
@@ -138,7 +138,7 @@ export function generateMetaTags(config: SEOConfig) {
   // Add alternate language tags if provided
   if (config.alternate) {
     config.alternate.forEach(alt => {
-      tags.push({ rel: 'alternate', href: alt.href, hreflang: alt.hreflang } as any);
+      tags.push({ rel: 'alternate', href: alt.href, hreflang: alt.hreflang } as { rel: string; href: string; hreflang: string });
     });
   }
 

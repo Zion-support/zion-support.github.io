@@ -142,12 +142,12 @@ const sitemapData = generateSitemap();
 const outputPath = path.join(__dirname, '..', 'dist', 'sitemap.xml');
 
 // Ensure dist directory exists
-const distDir = path.dirname(outputPath);
-if (!fs.existsSync(distDir)) {
-  fs.mkdirSync(distDir, { recursive: true });
+const outputDir = path.dirname(outputPath);
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir, { recursive: true });
 }
 
-fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemapData);
+fs.writeFileSync(path.join(outputDir, 'sitemap.xml'), sitemapData);
 console.log('Sitemap generated successfully');
 
 // Define all the routes in your application
