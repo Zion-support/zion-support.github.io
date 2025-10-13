@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { LucideProps } from 'lucide-react';
 
 interface LazyImageProps {
   src: string;

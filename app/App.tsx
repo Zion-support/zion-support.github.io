@@ -51,11 +51,11 @@ function App() {
       <BrowserRouter>
         <ErrorBoundary>
           <PerformanceMonitor />
-          <AccessibilityEnhancer />
-          <CriticalResourcePreloader />
-          <CacheManager />
-          <AdvancedPerformanceMonitor />
-          <Suspense fallback={<LoadingSpinner />}>
+          <AccessibilityEnhancer>
+            <CriticalResourcePreloader />
+            <CacheManager />
+            <AdvancedPerformanceMonitor />
+            <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -105,7 +105,8 @@ function App() {
               />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
             </Routes>
-          </Suspense>
+            </Suspense>
+          </AccessibilityEnhancer>
         </ErrorBoundary>
       </BrowserRouter>
     </HelmetProvider>
