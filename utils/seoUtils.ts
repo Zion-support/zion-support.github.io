@@ -1,3 +1,40 @@
+interface SEOConfig {
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
+  ogImage: string;
+  ogType: string;
+  twitterCard: string;
+  robots: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  structuredData?: Record<string, any>;
+  viewport?: string;
+  charset?: string;
+  publisher?: string;
+  language?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  geo?: {
+    region?: string;
+    placename?: string;
+    position?: string;
+    latitude?: string;
+    longitude?: string;
+  };
+  alternate?: {
+    hreflang?: string;
+    href?: string;
+  }[];
+}
+
 export const defaultSEOConfig: SEOConfig = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.',

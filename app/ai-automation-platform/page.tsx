@@ -47,7 +47,7 @@ const AIAutomationPlatform = () => {
       <EnhancedSEO
         title="AI Automation Platform - Intelligent Process Automation | Zion Tech Group"
         description="Transform your business with AI-powered automation. Workflow automation, smart decision making, and process optimization for modern enterprises."
-        keywords="AI automation, workflow automation, process optimization, business automation, intelligent automation, RPA"
+        keywords={["AI automation", "workflow automation", "process optimization", "business automation", "intelligent automation", "RPA"]}
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
