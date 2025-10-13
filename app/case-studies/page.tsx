@@ -97,7 +97,10 @@ const CaseStudiesPage = () => {
           content="case studies, success stories, client results, AI implementation, digital transformation, technology solutions, business outcomes"
         />
       </Helmet>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f25b
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
         <section className="flex items-center justify-center py-20 px-4">
@@ -255,7 +258,6 @@ const CaseStudiesPage = () => {
           </div>
         </section>
       </div>
-
     </div>
   );
 };

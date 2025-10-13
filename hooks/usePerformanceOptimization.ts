@@ -13,7 +13,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableLazyLoading = true,
     enablePreloading = true,
     enableImageOptimization = true,
+<<<<<<< HEAD
     // enableCodeSplitting = true,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f25b
     enableCaching = true,
   } = options;
 
