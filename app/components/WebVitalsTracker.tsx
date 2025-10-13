@@ -11,7 +11,6 @@ interface WebVitalsData {
 
 const WebVitalsTracker: React.FC = () => {
   useEffect(() => {
-<<<<<<< HEAD
     const sendToAnalytics = (metric: WebVitalsData) => {
       // Send to Google Analytics or other analytics service
       if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -42,51 +41,10 @@ const WebVitalsTracker: React.FC = () => {
 
     // Track Core Web Vitals
     onCLS(sendToAnalytics);
-    onINP(sendToAnalytics); // INP replaces FID in newer versions
+    onINP(sendToAnalytics);
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
-
-    // Track additional performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Track page load time
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          sendToAnalytics({
-            name: 'LOAD_TIME',
-            value: loadTime,
-            delta: loadTime,
-            id: 'load-time',
-            navigationType: navigation.type,
-          });
-        }
-      });
-
-      // Track memory usage (if available)
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        sendToAnalytics({
-          name: 'MEMORY_USAGE',
-          value: memoryUsage,
-          delta: memoryUsage,
-          id: 'memory-usage',
-          navigationType: 'reload',
-        });
-      }
-    }
-=======
-    // Track Core Web Vitals
-    const trackWebVitals = () => {
-      // This is a placeholder for web vitals tracking
-      // In a real implementation, you would use libraries like web-vitals
-      console.log('Web Vitals tracking initialized');
-    };
-
-    trackWebVitals();
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   }, []);
 
   return null;

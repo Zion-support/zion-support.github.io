@@ -37,6 +37,7 @@ export default defineConfig({
     // Performance optimizations
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
 =======
@@ -47,6 +48,10 @@ export default defineConfig({
     chunkSizeWarningLimit: 150, // Increased threshold for better chunking
     assetsInlineLimit: 4096, // Increased for better caching of small assets
 >>>>>>> cursor/analyze-improve-and-deploy-application-c69e
+=======
+    chunkSizeWarningLimit: 500, // Increased threshold for better chunking
+    assetsInlineLimit: 1024, // Optimized for better caching and faster initial load
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
     // Enable compression
     reportCompressedSize: true,
     // Better compression settings
@@ -160,6 +165,7 @@ export default defineConfig({
             }
             return 'zion-other'
 <<<<<<< HEAD
+<<<<<<< HEAD
           }
           // 5G service pages
 =======
@@ -178,6 +184,8 @@ export default defineConfig({
             return 'zion-services'
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
           }
           // 5G service pages - group together
           if (id.includes('/5g-') && id.includes('/page.tsx')) {

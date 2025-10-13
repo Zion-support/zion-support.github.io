@@ -2,21 +2,19 @@ import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
-<<<<<<< HEAD
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
   children,
   enableKeyboardNavigation = true,
   enableScreenReader = true,
-  enableHighContrast = true,
-  enableFocusManagement = true,
+  enableHighContrast = false
 }) => {
   useEffect(() => {
+<<<<<<< HEAD
     // Skip to main content functionality
     const addSkipLink = () => {
       const skipLink = document.createElement('a');
@@ -362,50 +360,49 @@ export default AccessibilityEnhancer
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
     // Add accessibility enhancements
-    document.documentElement.setAttribute('lang', 'en');
-    
-    // Add skip to main content link
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50 focus:outline-none focus:ring-2 focus:ring-cyan-300';
-    document.body.insertBefore(skipLink, document.body.firstChild);
+    if (enableKeyboardNavigation) {
+      // Add keyboard navigation support
+      document.addEventListener('keydown', handleKeyboardNavigation);
+    }
 
-    // Add focus management
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-    };
+    if (enableScreenReader) {
+      // Add screen reader support
+      document.body.setAttribute('aria-live', 'polite');
+    }
 
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    // Add ARIA landmarks
-    const main = document.querySelector('main');
-    if (main && !main.getAttribute('role')) {
-      main.setAttribute('role', 'main');
+    if (enableHighContrast) {
+      // Add high contrast mode
+      document.body.classList.add('high-contrast');
     }
 
     return () => {
-      const existingSkipLink = document.querySelector('a[href="#main-content"]');
-      if (existingSkipLink) {
-        existingSkipLink.remove();
+      if (enableKeyboardNavigation) {
+        document.removeEventListener('keydown', handleKeyboardNavigation);
       }
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
+      if (enableHighContrast) {
+        document.body.classList.remove('high-contrast');
+      }
     };
-  }, []);
+  }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast]);
+
+  const handleKeyboardNavigation = (event: KeyboardEvent) => {
+    // Handle keyboard navigation
+    if (event.key === 'Tab') {
+      // Ensure focus is visible
+      document.body.classList.add('keyboard-navigation');
+    }
+  };
 
   return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3

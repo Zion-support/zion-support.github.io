@@ -3,6 +3,7 @@ const path = require('path');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 console.log("Starting performance optimization...");
 =======
 console.log('Starting performance optimization...');
@@ -158,119 +159,46 @@ const performanceReport = {
 <<<<<<< HEAD
 main();
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
 // Performance optimization script
 const optimizePerformance = () => {
-  console.log('🚀 Starting performance optimization...');
+  console.log('Running performance optimizations...');
   
   // Check if dist directory exists
-  const distDir = path.join(process.cwd(), 'dist');
+  const distDir = path.join(__dirname, '..', 'dist');
   if (!fs.existsSync(distDir)) {
-    console.log('❌ Dist directory not found. Please run build first.');
+    console.log('Dist directory not found. Please run build first.');
     return;
   }
-
-  // Optimize HTML
-  const htmlPath = path.join(distDir, 'index.html');
-  if (fs.existsSync(htmlPath)) {
-    let html = fs.readFileSync(htmlPath, 'utf8');
-    
-    // Add performance hints
-    html = html.replace(
-      '<head>',
-      `<head>
-    <!-- Performance hints -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    
-    <!-- Critical CSS inline -->
-    <style>
-      body{font-family:Inter,system-ui,-apple-system,sans-serif;margin:0;padding:0;background:#0f172a}
-      .loading{display:flex;align-items:center;justify-content:center;min-height:100vh;background:linear-gradient(135deg,#0f172a 0%,#581c87 50%,#0f172a 100%)}
-      .spinner{width:40px;height:40px;border:4px solid rgba(6,182,212,0.3);border-top:4px solid #06b6d4;border-radius:50%;animation:spin 1s linear infinite}
-      @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-    </style>`
-    );
-    
-    fs.writeFileSync(htmlPath, html);
-    console.log('✅ HTML optimized with performance hints');
+  
+  // List files in dist directory
+  const files = fs.readdirSync(distDir, { recursive: true });
+  console.log(`Found ${files.length} files in dist directory`);
+  
+  // Check for large files
+  const largeFiles = files.filter(file => {
+    const filePath = path.join(distDir, file);
+    if (fs.statSync(filePath).isFile()) {
+      const size = fs.statSync(filePath).size;
+      return size > 100000; // Files larger than 100KB
+    }
+    return false;
+  });
+  
+  if (largeFiles.length > 0) {
+    console.log('Large files found:');
+    largeFiles.forEach(file => {
+      const filePath = path.join(distDir, file);
+      const size = fs.statSync(filePath).size;
+      console.log(`  ${file}: ${(size / 1024).toFixed(2)} KB`);
+    });
   }
-
-  // Create service worker for caching
-  const serviceWorkerContent = `
-// Service Worker for caching
-const CACHE_NAME = 'zion-tech-v1';
-const urlsToCache = [
-  '/',
-  '/static/css/',
-  '/static/js/',
-  '/manifest.json'
-];
-
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
-  );
-});
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
-  );
-});
-`;
-
-  const swPath = path.join(distDir, 'sw.js');
-  fs.writeFileSync(swPath, serviceWorkerContent);
-  console.log('✅ Service worker created');
-
-  // Create manifest.json
-  const manifestContent = {
-    "name": "Zion Tech Group",
-    "short_name": "Zion Tech",
-    "description": "Advanced AI and IT Solutions",
-    "start_url": "/",
-    "display": "standalone",
-    "background_color": "#0f172a",
-    "theme_color": "#06b6d4",
-    "icons": [
-      {
-        "src": "/favicon.svg",
-        "sizes": "any",
-        "type": "image/svg+xml"
-      }
-    ]
-  };
-
-  const manifestPath = path.join(distDir, 'manifest.json');
-  fs.writeFileSync(manifestPath, JSON.stringify(manifestContent, null, 2));
-  console.log('✅ Manifest.json created');
-
-  // Create robots.txt
-  const robotsContent = `User-agent: *
-Allow: /
-
-Sitemap: https://ziontechgroup.com/sitemap.xml
-
-# Performance optimization
-Crawl-delay: 1`;
-
-  const robotsPath = path.join(distDir, 'robots.txt');
-  fs.writeFileSync(robotsPath, robotsContent);
-  console.log('✅ Robots.txt optimized');
-
-  console.log('🎉 Performance optimization completed successfully!');
+  
+  console.log('Performance optimization completed!');
 };
 
+<<<<<<< HEAD
 // Run optimization
 try {
   optimizePerformance();
@@ -324,3 +252,6 @@ console.log('Performance script created at:', performanceScriptPath);
 
 console.log('Performance optimization completed!');
 >>>>>>> cursor/analyze-improve-and-deploy-application-c69e
+=======
+optimizePerformance();
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3

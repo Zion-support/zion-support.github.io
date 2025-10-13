@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   lcp: number | null;
   fid: number | null;
   cls: number | null;
@@ -19,6 +18,7 @@ const PerformanceMonitor: React.FC = () => {
   });
 
   useEffect(() => {
+<<<<<<< HEAD
     // Only run in browser
     if (typeof window === 'undefined') return;
 
@@ -174,12 +174,15 @@ const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     // Monitor Core Web Vitals
+=======
+    // Monitor performance metrics
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
     const observer = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'largest-contentful-paint') {
           setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
+          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
         } else if (entry.entryType === 'layout-shift') {
           if (!(entry as any).hadRecentInput) {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
@@ -192,10 +195,12 @@ const PerformanceMonitor: React.FC = () => {
       }
     });
 
+    // Observe different entry types
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
-    } catch (error) {
-      console.warn('Performance Observer not supported:', error);
+    } catch (e) {
+      // Fallback for browsers that don't support all entry types
+      observer.observe({ entryTypes: ['paint'] });
     }
 
     // Monitor TTFB
@@ -211,16 +216,18 @@ const PerformanceMonitor: React.FC = () => {
 
   // Log metrics in development
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development' && Object.keys(metrics).length > 0) {
+    if (process.env.NODE_ENV === 'development') {
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);
 
-  // Don't render anything visible
   return null;
 };
 
 export default PerformanceMonitor;
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
