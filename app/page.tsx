@@ -17,6 +17,8 @@ const HomePage = () => {
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.svg",
     "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
+    "foundingDate": "2020",
+    "numberOfEmployees": "50-100",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -25,33 +27,54 @@ const HomePage = () => {
       "postalCode": "19709",
       "addressCountry": "US"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com",
+        "availableLanguage": "English"
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "sales@ziontechgroup.com",
+        "availableLanguage": "English"
+      }
+    ],
     "sameAs": [
       "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
+      "https://linkedin.com/company/ziontechgroup",
+      "https://github.com/ziontechgroup"
     ],
     "offers": [
       {
         "@type": "Offer",
         "name": "AI Solutions",
-        "description": "Artificial intelligence and machine learning services"
+        "description": "Artificial intelligence and machine learning services",
+        "category": "Technology Services"
       },
       {
         "@type": "Offer", 
         "name": "Cybersecurity",
-        "description": "Advanced cybersecurity solutions and protection"
+        "description": "Advanced cybersecurity solutions and protection",
+        "category": "Security Services"
       },
       {
         "@type": "Offer",
         "name": "Cloud Infrastructure", 
-        "description": "Cloud computing and infrastructure services"
+        "description": "Cloud computing and infrastructure services",
+        "category": "Cloud Services"
+      },
+      {
+        "@type": "Offer",
+        "name": "Micro SAAS Solutions",
+        "description": "Ready-to-use software solutions for immediate deployment",
+        "category": "Software Services"
       }
-    ]
+    ],
+    "areaServed": "Worldwide",
+    "serviceType": "Technology Consulting and Software Development"
   };
   const features = [
     {

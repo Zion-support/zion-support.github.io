@@ -4,8 +4,8 @@ import { HelmetProvider } from "react-helmet-async";
 import { AnalyticsProvider } from "./components/AnalyticsProvider";
 import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
 // import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
-import { ErrorBoundary } from "react-error-boundary";
-import ErrorFallback from "./components/ErrorFallback";
+import AdvancedErrorBoundary from "./components/AdvancedErrorBoundary";
+import PerformanceMonitor from "./components/PerformanceMonitor";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -22,11 +22,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
+    <AdvancedErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
           <AnalyticsProvider>
             <EnhancedPerformanceMonitor showInProduction={false} />
+            <PerformanceMonitor showInProduction={false} />
             <Helmet>
               <title>Zion Tech Group - Advanced AI and IT Solutions</title>
               <meta
@@ -59,7 +60,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </AnalyticsProvider>
         </BrowserRouter>
       </HelmetProvider>
-    </ErrorBoundary>
+    </AdvancedErrorBoundary>
   );
 };
 

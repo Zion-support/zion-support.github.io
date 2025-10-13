@@ -35,8 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
-    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
+    chunkSizeWarningLimit: 100, // Further reduced warning threshold for better performance
+    assetsInlineLimit: 512, // Further reduced for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -121,7 +121,10 @@ export default defineConfig({
           // AI service pages - split into smaller chunks
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
-            return `ai-${serviceName || 'services'}`
+            if (serviceName && serviceName.length > 0) {
+              return `ai-${serviceName}`
+            }
+            return 'ai-services'
           }
           // Zion service pages
           if (id.includes('/zion-') && id.includes('/page.tsx')) {

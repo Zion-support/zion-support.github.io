@@ -1,190 +1,175 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  loadTime?: number;
-  firstContentfulPaint?: number;
-  largestContentfulPaint?: number;
-  firstInputDelay?: number;
-  cumulativeLayoutShift?: number;
-  timeToFirstByte?: number;
-  memoryUsage?: number;
-  interactionToNextPaint?: number;
+  CLS: number | null;
+  INP: number | null;
+  FCP: number | null;
+  LCP: number | null;
+  TTFB: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
+interface PerformanceMonitorProps {
+  showInProduction?: boolean;
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+  showInProduction = false, 
+  onMetricsUpdate 
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    CLS: null,
+    INP: null,
+    FCP: null,
+    LCP: null,
+    TTFB: null
+  });
+
   const [isVisible, setIsVisible] = useState(false);
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-
-  const getMetricColor = useCallback((value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
-  }, []);
-
-  const formatMetric = useCallback((value: number | undefined, unit: string = 'ms') => {
-    if (value === undefined || value === null) return 'N/A';
-    if (unit === '') return value.toFixed(4);
-    return `${value.toFixed(0)}${unit}`;
-  }, []);
-
-  const updateMetrics = useCallback(() => {
-    const newMetrics: PerformanceMetrics = {};
-
-    // Load time
-    if (performance.timing) {
-      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      if (loadTime > 0) newMetrics.loadTime = loadTime;
-    }
-
-    // Memory usage (if available)
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      if (memory && memory.usedJSHeapSize) {
-        newMetrics.memoryUsage = memory.usedJSHeapSize / (1024 * 1024); // Convert to MB
-      }
-    }
-
-    setMetrics(prev => ({ ...prev, ...newMetrics }));
-  }, []);
 
   useEffect(() => {
-    // Collect Core Web Vitals
-    onCLS((metric) => {
-      setMetrics(prev => ({ ...prev, cumulativeLayoutShift: metric.value }));
-    });
+    // Only show in development or if explicitly enabled
+    if (process.env.NODE_ENV === 'development' || showInProduction) {
+      setIsVisible(true);
+    }
 
-    onINP((metric) => {
-      setMetrics(prev => ({ ...prev, interactionToNextPaint: metric.value }));
-    });
-
-    onFCP((metric) => {
-      setMetrics(prev => ({ ...prev, firstContentfulPaint: metric.value }));
-    });
-
-    onLCP((metric) => {
-      setMetrics(prev => ({ ...prev, largestContentfulPaint: metric.value }));
-    });
-
-    onTTFB((metric) => {
-      setMetrics(prev => ({ ...prev, timeToFirstByte: metric.value }));
-    });
-
-    // Initial metrics collection
-    updateMetrics();
-
-    // Update metrics periodically
-    const interval = setInterval(updateMetrics, 5000);
-
-    // Keyboard shortcut to toggle visibility
-    const handleKeyPress = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        e.preventDefault();
-        setIsVisible(prev => !prev);
-      }
+    const updateMetrics = (metric: any) => {
+      setMetrics(prev => {
+        const newMetrics = {
+          ...prev,
+          [metric.name]: metric.value
+        };
+        
+        // Call the callback if provided
+        if (onMetricsUpdate) {
+          onMetricsUpdate(newMetrics);
+        }
+        
+        return newMetrics;
+      });
     };
 
-    document.addEventListener('keydown', handleKeyPress);
+    // Measure Core Web Vitals
+    onCLS(updateMetrics);
+    onINP(updateMetrics);
+    onFCP(updateMetrics);
+    onLCP(updateMetrics);
+    onTTFB(updateMetrics);
+
+    // Additional performance monitoring
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          console.log('Navigation timing:', {
+            domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+            loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
+            totalTime: navEntry.loadEventEnd - navEntry.fetchStart
+          });
+        }
+      }
+    });
+
+    observer.observe({ entryTypes: ['navigation'] });
 
     return () => {
-      clearInterval(interval);
-      document.removeEventListener('keydown', handleKeyPress);
+      observer.disconnect();
     };
-  }, [updateMetrics]);
+  }, [showInProduction, onMetricsUpdate]);
 
-  // Send metrics to analytics (if needed)
-  useEffect(() => {
-    const sendMetrics = () => {
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          event_category: 'Performance',
-          event_label: 'Core Web Vitals',
-          custom_map: {
-            cls: metrics.cumulativeLayoutShift,
-            inp: metrics.interactionToNextPaint,
-            fcp: metrics.firstContentfulPaint,
-            lcp: metrics.largestContentfulPaint,
-            ttfb: metrics.timeToFirstByte,
-          },
-        });
-      }
+  const getScoreColor = (metric: string, value: number | null) => {
+    if (value === null) return 'text-gray-400';
+    
+    const thresholds: { [key: string]: { good: number; needsImprovement: number } } = {
+      CLS: { good: 0.1, needsImprovement: 0.25 },
+      INP: { good: 200, needsImprovement: 500 },
+      FCP: { good: 1800, needsImprovement: 3000 },
+      LCP: { good: 2500, needsImprovement: 4000 },
+      TTFB: { good: 800, needsImprovement: 1800 }
     };
 
-    // Send metrics after a delay to ensure all are collected
-    const timeoutId = setTimeout(sendMetrics, 5000);
-    return () => clearTimeout(timeoutId);
-  }, [metrics]);
+    const threshold = thresholds[metric];
+    if (!threshold) return 'text-gray-400';
+
+    if (value <= threshold.good) return 'text-green-400';
+    if (value <= threshold.needsImprovement) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  const getScoreLabel = (metric: string, value: number | null) => {
+    if (value === null) return 'Measuring...';
+    
+    const thresholds: { [key: string]: { good: number; needsImprovement: number } } = {
+      CLS: { good: 0.1, needsImprovement: 0.25 },
+      INP: { good: 200, needsImprovement: 500 },
+      FCP: { good: 1800, needsImprovement: 3000 },
+      LCP: { good: 2500, needsImprovement: 4000 },
+      TTFB: { good: 800, needsImprovement: 1800 }
+    };
+
+    const threshold = thresholds[metric];
+    if (!threshold) return 'Unknown';
+
+    if (value <= threshold.good) return 'Good';
+    if (value <= threshold.needsImprovement) return 'Needs Improvement';
+    return 'Poor';
+  };
+
+  const formatValue = (metric: string, value: number | null) => {
+    if (value === null) return 'Measuring...';
+    
+    if (metric === 'CLS') {
+      return value.toFixed(3);
+    }
+    
+    if (['INP', 'FCP', 'LCP', 'TTFB'].includes(metric)) {
+      return `${Math.round(value)}ms`;
+    }
+    
+    return value.toString();
+  };
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg shadow-lg p-4 min-w-80 z-50">
-      <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-semibold text-white">Performance Metrics</h3>
+    <div className="fixed bottom-4 right-4 bg-black/80 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white text-xs font-mono z-50 max-w-xs">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="text-sm font-semibold text-cyan-400">Performance</h3>
         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white transition-colors"
-          aria-label="Close performance monitor"
         >
           ×
         </button>
       </div>
       
-      <div className="space-y-2 text-sm">
-        <div className="flex justify-between">
-          <span className="text-gray-300">Load Time:</span>
-          <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 2000, poor: 4000 }) : 'text-gray-400'}`}>
-            {formatMetric(metrics.loadTime)}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-300">FCP:</span>
-          <span className={`font-mono ${metrics.firstContentfulPaint ? getMetricColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 }) : 'text-gray-400'}`}>
-            {formatMetric(metrics.firstContentfulPaint)}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-300">LCP:</span>
-          <span className={`font-mono ${metrics.largestContentfulPaint ? getMetricColor(metrics.largestContentfulPaint, { good: 2500, poor: 4000 }) : 'text-gray-400'}`}>
-            {formatMetric(metrics.largestContentfulPaint)}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-300">INP:</span>
-          <span className={`font-mono ${metrics.interactionToNextPaint ? getMetricColor(metrics.interactionToNextPaint, { good: 200, poor: 500 }) : 'text-gray-400'}`}>
-            {formatMetric(metrics.interactionToNextPaint)}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-300">CLS:</span>
-          <span className={`font-mono ${metrics.cumulativeLayoutShift ? getMetricColor(metrics.cumulativeLayoutShift, { good: 0.1, poor: 0.25 }) : 'text-gray-400'}`}>
-            {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(4) : 'N/A'}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-300">TTFB:</span>
-          <span className={`font-mono ${metrics.timeToFirstByte ? getMetricColor(metrics.timeToFirstByte, { good: 200, poor: 600 }) : 'text-gray-400'}`}>
-            {formatMetric(metrics.timeToFirstByte)}
-          </span>
-        </div>
-        
-        {metrics.memoryUsage !== undefined && (
-          <div className="flex justify-between">
-            <span className="text-gray-300">Memory:</span>
-            <span className={`font-mono ${getMetricColor(metrics.memoryUsage, { good: 50, poor: 100 })}`}>
-              {formatMetric(metrics.memoryUsage, 'MB')}
-            </span>
+      <div className="space-y-1">
+        {Object.entries(metrics).map(([metric, value]) => (
+          <div key={metric} className="flex justify-between items-center">
+            <span className="text-gray-300">{metric}:</span>
+            <div className="flex items-center space-x-2">
+              <span className={getScoreColor(metric, value)}>
+                {formatValue(metric, value)}
+              </span>
+              <span className={`text-xs px-1 py-0.5 rounded ${
+                getScoreLabel(metric, value) === 'Good' ? 'bg-green-500/20 text-green-400' :
+                getScoreLabel(metric, value) === 'Needs Improvement' ? 'bg-yellow-500/20 text-yellow-400' :
+                'bg-red-500/20 text-red-400'
+              }`}>
+                {getScoreLabel(metric, value)}
+              </span>
+            </div>
           </div>
-        )}
+        ))}
       </div>
       
-      <div className="mt-3 pt-3 border-t border-cyan-500/20 text-xs text-cyan-400">
-        Press Ctrl+Shift+P to toggle
+      <div className="mt-3 pt-2 border-t border-white/10 text-xs text-gray-400">
+        <div>CLS: Cumulative Layout Shift</div>
+        <div>INP: Interaction to Next Paint</div>
+        <div>FCP: First Contentful Paint</div>
+        <div>LCP: Largest Contentful Paint</div>
+        <div>TTFB: Time to First Byte</div>
       </div>
     </div>
   );

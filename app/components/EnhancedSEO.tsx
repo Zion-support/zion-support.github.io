@@ -79,12 +79,19 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       
       {/* Additional Meta Tags */}
       <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
       <meta name="theme-color" content="#06b6d4" />
       <meta name="msapplication-TileColor" content="#06b6d4" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name="format-detection" content="telephone=no,address=no,email=no" />
+      <meta name="color-scheme" content="dark light" />
+      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      <meta name="generator" content="React + Vite" />
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="msapplication-tap-highlight" content="no" />
       
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
