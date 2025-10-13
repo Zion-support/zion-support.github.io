@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-// Next.js type definitions
+// Next.js type declarations
 declare module 'next' {
   interface NextApiRequest {
     user?: any;
   }
-}
-
-export {};
-=======
-// Next.js type declarations
-declare module 'next' {
+  
   interface NextConfig {
     // Add any Next.js specific types here
   }
@@ -22,4 +16,3 @@ export const nextUtil = () => {
 };
 
 export default nextUtil;
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
