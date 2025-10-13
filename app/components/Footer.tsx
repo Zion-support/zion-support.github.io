@@ -257,6 +257,22 @@ const Footer = React.memo(() => {
                   Blog
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/press"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Press
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/partners"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Partners
+                </Link>
+              </li>
             </ul>
           </div>
 

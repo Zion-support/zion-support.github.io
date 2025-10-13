@@ -18,10 +18,9 @@ export default function CaseStudies() {
         "80% faster response times",
         "35% increase in sales"
       ],
-      image: "/images/case-studies/ecommerce-ai.jpg",
+      image: "/api/placeholder/600/400",
       duration: "6 months",
       services: ["AI Analytics", "AI Customer Support", "Data Analytics"],
-      image: "/api/placeholder/600/400",
       featured: true
     },
     {
@@ -346,6 +345,9 @@ export default function CaseStudies() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-8 py-4 rounded-lg text-white font-semibold transition-all duration-300 text-center"
+              >
+                Start Your Project
               </Link>
             </div>
           </div>

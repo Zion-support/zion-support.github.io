@@ -4,8 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function Consultation() {
-
+function ConsultationPage() {
   return (
     <>
       <Helmet>
@@ -19,7 +18,6 @@ export default function Consultation() {
           content="free consultation, technology advisory, AI strategy, digital transformation, cybersecurity audit, cloud migration, technology planning"
         />
       </Helmet>
-
 
       <div className="flex items-center justify-center">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -36,10 +34,9 @@ export default function Consultation() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-
       </div>
     </>
   );
-};
+}
 
 export default ConsultationPage;
