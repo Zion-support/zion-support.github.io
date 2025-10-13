@@ -1,9 +1,5 @@
-
 'use client'
-<<<<<<< HEAD
 'use client'
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 interface CriticalresourcepreloaderProps {
   className?: string;

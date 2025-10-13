@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Pause } from 'lucide-react';
@@ -10,8 +9,6 @@ import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 import { useState } from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 export default function Page() {
   const [currentDemo, setCurrentDemo] = useState(0);

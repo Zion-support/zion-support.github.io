@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Clock } from 'lucide-react';
 import { MapPin } from 'lucide-react';
@@ -10,8 +9,6 @@ import { Cloud } from 'lucide-react';
 
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 export default function Contact() {
   const [formData, setFormData] = useState({

@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Activity } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
-
 const CloudInfrastructure = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -152,13 +137,10 @@ const CloudInfrastructure = () => {
       cta: "Contact Sales"
     }
   ];
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 export default function CloudInfrastructurePage() {
   const stats = [
     { label: "Uptime", value: "99.9%", icon: <Activity className="w-6 h-6" /> },

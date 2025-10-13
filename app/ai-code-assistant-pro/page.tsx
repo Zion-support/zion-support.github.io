@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
@@ -7,8 +6,6 @@ import { Globe } from 'lucide-react';
 import { Code } from 'lucide-react';
 
 const AICodeAssistantProZionTechGroup = () => {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
   const features = [
     {

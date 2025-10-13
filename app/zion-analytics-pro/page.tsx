@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import { Helmet } from 'react-helmet-async';
 import { Helmet } from 'react-helmet-async';
 import { Star } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 export default function ZionAnalyticsPro() {
   const features = [

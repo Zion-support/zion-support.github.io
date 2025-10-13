@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { TrendingUp } from 'lucide-react';
-import { Brain } from 'lucide-react';
-
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
   TrendingUp, 
@@ -13,7 +8,6 @@ import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
   Brain,
   PieChart  } from 'lucide-react';
 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 const AIDataAnalyticsProPage = () => {
   const benefits: string[] = [];
 
@@ -52,10 +46,6 @@ const AIDataAnalyticsProPage = () => {
     "Scale to handle any data volume",
     "Integrate with existing systems"
   ];
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 export default function AiDataAnalyticsProPage() {
 }

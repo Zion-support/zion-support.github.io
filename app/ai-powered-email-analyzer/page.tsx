@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
   Mail, 
@@ -21,7 +11,6 @@ import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
   Target,
   Globe  } from 'lucide-react';
 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 const AIPoweredEmailAnalyzerPage = () => {
   const stats = [
     { label: "Emails Analyzed", value: "1M+", icon: <Mail className="w-6 h-6" /> },
@@ -102,10 +91,6 @@ const AIPoweredEmailAnalyzerPage = () => {
       popular: false;
     }
   ];
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 export default function AiPoweredEmailAnalyzerPage() {
 }

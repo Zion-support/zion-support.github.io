@@ -1,21 +1,4 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { 
-  ArrowRight,
-  Users,
-  Star,
-  CheckCircle,
-  TrendingUp,
-  Settings,
-  Sparkles,
-  Target,
-  BarChart3,
-  Cloud,
-  Workflow
-} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
@@ -35,7 +18,6 @@ import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
   Sparkles,
   ArrowRight,
   CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const AIAutomationPlatformPage = () => {
   const features = [
@@ -101,7 +83,6 @@ const AIAutomationPlatformPage = () => {
     }
   ];
 
-<<<<<<< HEAD
   const benefits = [
     "Reduce manual work by 80%",
     "Improve process efficiency by 300%",
@@ -115,10 +96,7 @@ const AIAutomationPlatformPage = () => {
     "Cost reduction up to 60%"
   ];
 
-  return (
-=======
-const Page = () => {  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
+  return (const Page = () => {  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>

@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const CybersecuritySolutions = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -107,13 +95,7 @@ const CybersecuritySolutions = () => {
       cta: "Contact Sales"
     }
   ];
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 export default function CybersecuritySolutionsPage() {
   const capabilities = [
     {

@@ -1,12 +1,5 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const ZionAIInventoryManager = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];

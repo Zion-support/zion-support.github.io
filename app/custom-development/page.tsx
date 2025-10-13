@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Star } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
-
 export default function page() {
   const features = [
     { title: "Feature 1", description: "Description 1" },
@@ -71,10 +59,7 @@ export default function page() {
       features: ["RESTful APIs", "GraphQL", "API Documentation", "Rate Limiting"]
     }
   ];
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 }
 

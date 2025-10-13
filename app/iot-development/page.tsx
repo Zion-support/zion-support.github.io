@@ -1,15 +1,8 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-
-export default function IotDevelopmentZionTechGroup() {
-  return (
-=======
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
 export default function Page() {  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
         <title>Page - Zion Tech Group</title>

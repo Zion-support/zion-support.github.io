@@ -1,12 +1,4 @@
 
-<<<<<<< HEAD
-interface SEOOptimizerProps {
-  children: React.ReactNode;
-
-interface SeooptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-=======
 const services = [
     {
       title: "Cloud Migration",
@@ -25,7 +17,6 @@ const services = [
     }
   ];interface SEOOptimizerProps {
   children: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }
 
 export default function Seooptimizer({ className = '', children, ...props }: SeooptimizerProps) {

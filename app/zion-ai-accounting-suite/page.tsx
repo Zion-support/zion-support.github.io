@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { BarChart3 } from 'lucide-react';
-import { FileText } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
-
 const ZionAIAccountingSuite = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -90,10 +84,7 @@ const ZionAIAccountingSuite = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 export default function ZionAiAccountingSuitePage() {
 }

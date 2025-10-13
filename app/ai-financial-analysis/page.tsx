@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { TrendingUp } from 'lucide-react';
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 const AIFinancialAnalysisPage = () => {
   const benefits = [
     "Increase investment returns by 25%",
@@ -55,7 +49,6 @@ const AIFinancialAnalysisPage = () => {
     "Personalized investment recommendations",
     "Advanced fraud detection and prevention"
   ];
-<<<<<<< HEAD
 
 export default function AiFinancialAnalysisPage() {
   return (
@@ -99,6 +92,4 @@ export default function AiFinancialAnalysisPage() {
     </div>
   );
 }
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f

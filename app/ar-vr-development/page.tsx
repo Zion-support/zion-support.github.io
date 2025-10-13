@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -6,8 +5,6 @@ import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Box } from 'lucide-react';
 import { Mic } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const ARVRDevelopmentPage = () => {
   const features = [

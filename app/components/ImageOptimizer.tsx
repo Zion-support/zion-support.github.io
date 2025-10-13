@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 interface ImageOptimizerProps {
   src: string;
   alt: string;
@@ -15,7 +14,5 @@ export default function Imageoptimizer({ className = '', children, ...props }: I
     </div>
   );
 };
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 }

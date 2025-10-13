@@ -1,11 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function NotFoundPage() {
-=======
 export default function PagePage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
   return (
     <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
       <Helmet>

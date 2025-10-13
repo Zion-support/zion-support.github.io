@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Award } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Mic } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
-
 const QuantumDataEncryptionVault = () => {
   const features = [
     {
@@ -138,7 +128,6 @@ const QuantumDataEncryptionVault = () => {
   ];
 
 export default function QuantumDataEncryptionVaultPage() {
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -181,6 +170,4 @@ export default function QuantumDataEncryptionVaultPage() {
   );
 };
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }

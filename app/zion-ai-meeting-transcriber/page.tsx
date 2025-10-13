@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async";
-import { Helmet } from 'react-helmet-async';
-import { Helmet } from 'react-helmet-async';
-import { Search } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Mic } from 'lucide-react';
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 export default function ZionAIMeetingTranscriber() {
   const features = [

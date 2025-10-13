@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Hand } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 export default function Community() {
   const stats = [
     { number: "10K+", label: "Active Members", icon: <Users className="w-8 h-8" /> },
@@ -70,7 +59,6 @@ export default function Community() {
       participants: "100+ contributors"
     }
   ];
-<<<<<<< HEAD
 
 export default function CommunityPage() {
   return (
@@ -114,6 +102,4 @@ export default function CommunityPage() {
     </div>
   );
 }
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f

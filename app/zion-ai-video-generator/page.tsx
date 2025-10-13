@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-=======
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
@@ -136,12 +127,10 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
 export default function PagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional services coming soon." />
       </Helmet>
-<<<<<<< HEAD
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-6">
           Coming Soon
@@ -160,8 +149,6 @@ export default function PagePage() {
     </div>
   );
 }
-=======
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -402,4 +389,3 @@ export default function PagePage() {
 };
 
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { FileText } from 'lucide-react';
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 export default function page() {
   const features = [
     { title: "Feature 1", description: "Description 1" },
@@ -76,7 +64,6 @@ export default function page() {
       features: ["Regular Assessments", "Policy Updates", "Training Programs", "Incident Response"]
     }
   ];
-<<<<<<< HEAD
 
 export default function CompliancePage() {
   return (
@@ -120,6 +107,4 @@ export default function CompliancePage() {
     </div>
   );
 }
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f

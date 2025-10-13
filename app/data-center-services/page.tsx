@@ -1,19 +1,6 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Server } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-=======
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const DataCenterServicesPage = () => {
   const benefits = [

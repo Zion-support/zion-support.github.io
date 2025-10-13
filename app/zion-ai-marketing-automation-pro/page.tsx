@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Zap } from 'lucide-react';
@@ -9,8 +8,6 @@ import { MessageSquare } from 'lucide-react';
 
 import { Helmet } from "react-helmet-async";
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 export default function page() {
   const stats = [

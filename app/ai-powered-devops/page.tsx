@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import { Helmet } from 'react-helmet-async';
 import { Helmet } from 'react-helmet-async';
@@ -9,8 +8,6 @@ import { Rocket } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Plus } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 export default function AIPoweredDevOpsPage() {
   const testimonials = [

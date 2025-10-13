@@ -1,4 +1,3 @@
-
 const MobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -8,7 +7,6 @@ interface MobilenavigationProps {
 }
 
 export default function Mobilenavigation({ className = '', children, ...props }: MobilenavigationProps) {
-<<<<<<< HEAD
   return (
     <div className={`mobilenavigation-component ${className}`} {...props}>
       {children}
@@ -16,6 +14,4 @@ export default function Mobilenavigation({ className = '', children, ...props }:
   );
 };
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }

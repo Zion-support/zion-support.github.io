@@ -1,8 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { 
-  ArrowRight,
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
   Heart, 
@@ -15,14 +11,12 @@ import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
   Brain, 
   Users, 
   CheckCircle,  ArrowRight,
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
   Users,
   Star,
   CheckCircle,
   Zap,
   Brain,
   Globe,
-<<<<<<< HEAD
   Monitor,
   Target,
   BarChart3,
@@ -31,11 +25,8 @@ import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
   TrendingUp
 } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
-import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
-=======
-  AlertCircle,
+import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';  AlertCircle,
   Clock } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const AICustomerSentimentTrackerPage = () => {
   const stats = [
@@ -177,10 +168,7 @@ const AICustomerSentimentTrackerPage = () => {
     }
   ];
 
-<<<<<<< HEAD
-export default function AiCustomerSentimentTrackerPage() {
-=======
-  const stats = [
+export default function AiCustomerSentimentTrackerPage() {  const stats = [
     { number: "95%", label: "Accuracy Rate" },
     { number: "2.5M+", label: "Mentions Analyzed" },
     { number: "50+", label: "Languages Supported" },
@@ -210,7 +198,6 @@ export default function AiCustomerSentimentTrackerPage() {
     }
   ];
 export default function PagePage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import { Search } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { FileText } from 'lucide-react';
-
-import { Helmet } from "react-helmet-async";
-import { Helmet } from 'react-helmet-async';
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 export default function Page() {
   const benefits = [

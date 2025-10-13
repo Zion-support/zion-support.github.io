@@ -1,20 +1,4 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
   Brain, 
@@ -38,7 +22,6 @@ import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
   ArrowRight,
   Award  } from 'lucide-react';
 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 const services = [
     {
       title: "Cloud Migration",
@@ -66,27 +49,6 @@ const microSaasServices = [
     { name: "Cloud Solutions", href: "/cloud-services" },
     { name: "DevOps", href: "/devops" }
   ];
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { 
-  Brain, 
-  Mail, 
-  Phone, 
-  MapPin,
-  Clock, 
-  ArrowRight,
-  Shield,
-  Zap,
-  Globe,
-  Twitter,
-  Linkedin,
-  Github,
-  Award,
-  Users
-} from "lucide-react";
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

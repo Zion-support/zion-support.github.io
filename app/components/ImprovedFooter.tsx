@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Mic } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
-
 interface ImprovedfooterProps {
   className?: string;
   children?: React.ReactNode;
@@ -16,7 +6,6 @@ interface ImprovedfooterProps {
 export default function ImprovedFooter({ className = '', children, ...props }: ImprovedfooterProps) {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   const companyLinks = [
     { label: 'About Us', href: '/about' },
     { label: 'Our Team', href: '/team' },
@@ -77,7 +66,6 @@ export default function ImprovedFooter({ className = '', children, ...props }: I
   );
 };
 
-=======
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -180,4 +168,3 @@ export default function ImprovedFooter({ className = '', children, ...props }: I
     }
   ];
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f

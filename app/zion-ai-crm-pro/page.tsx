@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Mic } from 'lucide-react';
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 const ZionAICRMProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -123,7 +110,6 @@ const ZionAICRMProPage = () => {
     { name: 'Zapier', logo: 'ZP', category: 'Automation' },
     { name: 'Salesforce', logo: 'SF', category: 'CRM' }
   ];
-<<<<<<< HEAD
 
 export default function ZionAiCrmProPage() {
   return (
@@ -167,6 +153,4 @@ export default function ZionAiCrmProPage() {
     </div>
   );
 }
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f

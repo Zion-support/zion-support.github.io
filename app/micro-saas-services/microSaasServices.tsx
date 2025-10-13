@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import { Mic } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 interface MicrosaasservicesProps {
   className?: string;

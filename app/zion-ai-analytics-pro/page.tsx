@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Star } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { FileText } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 const ZionAIAnalyticsProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -125,7 +110,6 @@ const ZionAIAnalyticsProPage = () => {
     { name: 'MongoDB', logo: 'MG', category: 'Database' },
     { name: 'AWS', logo: 'AW', category: 'Cloud' }
   ];
-<<<<<<< HEAD
 
 export default function ZionAiAnalyticsProPage() {
   return (
@@ -169,6 +153,4 @@ export default function ZionAiAnalyticsProPage() {
     </div>
   );
 }
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f

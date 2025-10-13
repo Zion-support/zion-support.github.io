@@ -1,10 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-export default function FiveGSolutionsPage() {
-=======
 export default function PagePage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <Helmet>

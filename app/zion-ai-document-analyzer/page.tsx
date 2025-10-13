@@ -1,11 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-export default function ZionAIDocumentAnalyzer() {
-
-export default function ZionAiDocumentAnalyzerPage() {
-  return (
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
   FileText, 
@@ -114,7 +107,6 @@ const useCases = [
     icon: <Award className="w-6 h-6" />
   }
 ];  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Zion Ai Document Analyzer - Zion Tech Group</title>

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Star } from 'lucide-react';
 import { FileText } from 'lucide-react';
 
 const AIContentStudioZionTechGroup = () => {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
   const features = [
     {

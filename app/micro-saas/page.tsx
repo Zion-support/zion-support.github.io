@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-export default function Page() {
-  const benefits = [
-    "Benefit 1",
-    "Benefit 2"
-  ];
-  const generalFeatures = [
-    { title: "Feature 1", description: "Description 1" },
-    { title: "Feature 2", description: "Description 2" }
-  ];
-  const microSaasServices = [
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: 'AI Analytics Pro',
-      description: 'Advanced AI-powered analytics platform for business intelligence and data insights.',
-      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'API Integration'],
-      link: '/zion-ai-analytics-pro',
-      price: '$99/month',
-      popular: true
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: 'AI CRM Pro',
-      description: 'Intelligent customer relationship management with AI-powered automation.',
-      features: ['Lead Scoring', 'Automated Follow-ups', 'Sales Forecasting', 'Customer Insights'],
-      link: '/zion-ai-crm-pro',
-      price: '$149/month'
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'AI Video Generator',
-      description: 'Create professional videos automatically with AI-powered content generation.',
-      features: ['Auto Video Creation', 'Multiple Templates', 'Voice Synthesis', 'Brand Customization'],
-      link: '/zion-ai-video-generator',
-      price: '$79/month'
-    },
-    {
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
   Zap, 
@@ -59,7 +21,6 @@ import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [    {
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
       title: 'Zion Analytics Pro',
       description: 'Advanced analytics dashboard with real-time insights and customizable reports.',
       icon: <BarChart3 className="w-8 h-8" />,
@@ -177,7 +138,6 @@ const MicroSaasPage: React.FC = () => {
   ];
 
 export default function MicroSaasPage() {
-<<<<<<< HEAD
   return (
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -248,7 +208,4 @@ export default function MicroSaasZionTechGroup() {
   );
 }
 
-}
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
+}}

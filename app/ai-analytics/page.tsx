@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import { 
-  BarChart3, 
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
   ArrowRight,   BarChart3, 
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
   TrendingUp, 
   Zap, 
   Shield, 
@@ -23,7 +18,6 @@ import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
   TrendingDown,
   Monitor  } from 'lucide-react';
 } from "lucide-react";
-<<<<<<< HEAD
 import { Database } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
@@ -43,8 +37,6 @@ export default function AIAnalyticsPage() {
     </div>
   );
   const analyticsStats = [
-=======
-
 export default function AIAnalytics() {
   const benefits = [
     "Real-time data processing and analysis",
@@ -55,7 +47,6 @@ export default function AIAnalytics() {
     "Advanced data visualization"
   ];
     const analyticsStats = [
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
     { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
     { number: "85%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
     { number: "60%", label: "Cost Reduction", icon: <TrendingDown className="w-6 h-6" /> },
@@ -86,12 +77,9 @@ export default function AIAnalytics() {
       title: "Real-time Analytics",
       description: "Process and analyze data in real-time with our advanced AI algorithms and machine learning models.",
       icon: <BarChart3 className="w-8 h-8" />,
-<<<<<<< HEAD
       benefits: ["Interactive charts", "Custom dashboards", "Mobile-responsive", "Export capabilities"]
     }
   ];
-
-=======
       benefits: ["Live data processing", "Instant insights", "Real-time dashboards", "Automated alerts"]
     },
     {
@@ -125,5 +113,4 @@ export default function AIAnalytics() {
       benefits: ["Custom model training", "Model deployment", "Performance monitoring", "Continuous learning"]
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 }

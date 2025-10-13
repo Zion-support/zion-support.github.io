@@ -1,15 +1,4 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Home } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-import { Link } from 'react-router-dom';
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
   X, 
@@ -31,7 +20,6 @@ import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
   Mail,
   MapPin  } from 'lucide-react';
 } from 'lucide-react';import { Link  } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 
 interface SidebarProps {
   isOpen: boolean;

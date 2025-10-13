@@ -3,17 +3,7 @@ import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
 "use client";
 
-<<<<<<< HEAD
-import { HelmetProvider } from 'react-helmet-async';
-import { Helmet } from 'react-helmet-async';
-import { Home } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-
-// Lazy load pages for better performance
-=======
 // Lazy load pages for better performance;
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
 const ContactPage = lazy(() => import("./contact/page"));
@@ -53,14 +43,10 @@ export default function AppPage() {
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
-<<<<<<< HEAD
           <PerformanceMonitor />
-          <AccessibilityEnhancer>
-=======
-          <PerformanceMonitor showDetails={false}>
+          <AccessibilityEnhancer>          <PerformanceMonitor showDetails={false}>
             <div>Performance monitoring active</div>
           </PerformanceMonitor>          <AccessibilityEnhancer>
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
             <CriticalResourcePreloader />
             <CacheManager />
             <AdvancedPerformanceMonitor />
