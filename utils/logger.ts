@@ -23,21 +23,16 @@ class Logger {
       return;
     }
 
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+    // const timestamp = new Date().toISOString();
 
     switch (level) {
       case 'error':
-        console.error(logMessage, ...args);
         break;
       case 'warn':
-        console.warn(logMessage, ...args);
         break;
       case 'info':
-        console.info(logMessage, ...args);
         break;
       case 'debug':
-        console.debug(logMessage, ...args);
         break;
     }
 
@@ -67,10 +62,7 @@ class Logger {
       }
       
       localStorage.setItem('app-logs', JSON.stringify(logs));
-    } catch (error) {
-      console.error('Failed to store log:', error);
-    }
-  }
+    } catch (e) { console.error(e); }}
 
   error(message: string, ...args: any[]): void {
     this.log(LOG_LEVELS.ERROR, message, ...args);

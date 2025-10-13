@@ -1,34 +1,25 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { resolve } from "path";
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
-      // Enable JSX runtime
-      jsxRuntime: "automatic",
-    }),
+    react(),
   ],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./app"),
-      "@/components": resolve(__dirname, "./app/components"),
-      "@/pages": resolve(__dirname, "./app"),
-      "@/utils": resolve(__dirname, "./utils"),
-      "@/types": resolve(__dirname, "./types"),
-      "@/hooks": resolve(__dirname, "./hooks"),
-      "@/config": resolve(__dirname, "./config"),
-      "@/data": resolve(__dirname, "./data"),
-      "@/content": resolve(__dirname, "./content"),
+      '@': resolve(__dirname, './app'),
+      '@/components': resolve(__dirname, './app/components'),
+      '@/pages': resolve(__dirname, './app'),
+      '@/utils': resolve(__dirname, './utils'),
+      '@/types': resolve(__dirname, './types'),
+      '@/hooks': resolve(__dirname, './hooks'),
+      '@/config': resolve(__dirname, './config'),
+      '@/data': resolve(__dirname, './data'),
+      '@/content': resolve(__dirname, './content'),
     },
   },
   build: {
-    outDir: "dist",
-    sourcemap: false,
-    minify: "terser",
     target: "es2020",
     cssCodeSplit: true,
     modulePreload: {
@@ -39,51 +30,19 @@ export default defineConfig({
     assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
-    // Better compression settings
+    // Optimize for production
     terserOptions: {
       compress: {
-        drop_console: true, // Remove console.log in production
+        drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 2,
-        unsafe: false,
-        unsafe_comps: false,
-        unsafe_math: false,
-        unsafe_proto: false,
-        unsafe_regexp: false,
-        unsafe_undefined: false,
-        conditionals: true,
-        dead_code: true,
-        evaluate: true,
-        if_return: true,
-        join_vars: true,
-        loops: true,
-        sequences: true,
-        side_effects: false,
-        unused: true,
-      },
-      mangle: {
-        safari10: true,
-        toplevel: false,
-        properties: {
-          regex: /^_/
-        }
-      },
-      format: {
-        comments: false,
-        ascii_only: true
-      }
-    },
-    // Enhanced build optimizations
-    rollupOptions: {
-      treeshake: {
         moduleSideEffects: false,
         propertyReadSideEffects: false,
         tryCatchDeoptimization: false,
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries - keep together for better caching
+          // Core React libraries - keep smaller
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
@@ -91,34 +50,51 @@ export default defineConfig({
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries - group by functionality
+          // UI libraries - split further
           if (id.includes('framer-motion')) {
-            return 'animations'
+            return 'ui-animations'
           }
           if (id.includes('lucide-react')) {
-            return 'icons'
+            return 'ui-icons'
           }
-          // SEO and meta - lightweight
-          if (id.includes('react-helmet')) {
+          // SEO and meta - separate chunk
+          if (id.includes('react-helmet') || id.includes('gray-matter')) {
             return 'seo'
           }
-          // Charts and data visualization
+          // Analytics and monitoring - separate chunk
+          if (id.includes('web-vitals') || id.includes('analytics')) {
+            return 'analytics'
+          }
+          // Large libraries - separate chunks
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Utility libraries
-          if (id.includes('clsx') || id.includes('tailwind-merge')) {
-            return 'utils'
+          // Node modules - vendor chunk
+          if (id.includes('node_modules')) {
+            return 'vendor'
           }
-          // Performance monitoring - separate for lazy loading
+          // Performance monitoring - separate chunk
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // Error handling
+          // Error handling - separate chunk
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - more granular splitting
+          // Components - split by functionality
+          if (id.includes('/components/')) {
+            if (id.includes('Enhanced') || id.includes('Advanced')) {
+              return 'enhanced-components'
+            }
+            if (id.includes('Futuristic') || id.includes('Neon')) {
+              return 'ui-components'
+            }
+            if (id.includes('Performance') || id.includes('Analytics')) {
+              return 'monitoring-components'
+            }
+            return 'base-components'
+          }
+          // AI service pages - group by category with smaller chunks
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
@@ -175,55 +151,60 @@ export default defineConfig({
                id.includes('blog') || id.includes('privacy') || id.includes('terms'))) {
             return 'main-pages'
           }
-          // Large vendor libraries
-          if (id.includes('node_modules')) {
-            // Group large libraries separately
-            if (id.includes('axios') || id.includes('lodash')) {
-              return 'http-utils'
+          // Components - group by type
+          if (id.includes('/components/')) {
+            if (id.includes('Performance') || id.includes('Analytics')) {
+              return 'components-performance'
             }
-            if (id.includes('date-fns') || id.includes('moment')) {
-              return 'date-utils'
+            if (id.includes('SEO') || id.includes('Accessibility')) {
+              return 'components-seo'
             }
-            return 'vendor'
+            if (id.includes('Loading') || id.includes('Error')) {
+              return 'components-ui'
+            }
+            return 'components-common'
           }
           // Default chunk for other modules
           return 'vendor'
         },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Enable tree shaking
-    treeshake: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'router': ['react-router-dom'],
+          'ui-animations': ['framer-motion'],
+          'ui-icons': ['lucide-react'],
+          'seo': ['react-helmet-async', 'gray-matter'],
+          'analytics': ['web-vitals'],
+          'charts': ['recharts'],
+        },
+      },
+    },
   },
   server: {
     port: 3000,
-    open: true,
     host: true,
-    // Enable HMR
-    hmr: {
-      overlay: true,
-    },
+    open: true,
   },
   preview: {
     port: 4173,
-    open: true,
     host: true,
   },
-  // Optimize dependencies
   optimizeDeps: {
     include: [
-      "react",
-      "react-dom",
-      "react-router-dom",
-      "react-helmet-async",
-      "framer-motion",
-      "lucide-react",
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'framer-motion',
+      'lucide-react',
+      'react-helmet-async',
+      'web-vitals',
+      'recharts',
     ],
   },
-  // CSS optimization
-  css: {
-    devSourcemap: true,
+  define: {
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
   },
 });

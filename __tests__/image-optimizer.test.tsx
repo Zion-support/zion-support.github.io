@@ -64,10 +64,11 @@ describe('ImageOptimizer', () => {
       <ImageOptimizer
         src="test-image.jpg"
         alt="Test image"
+        lazy={false}
       />
     );
 
     const img = screen.getByRole('img', { hidden: true });
-    expect(img).toHaveAttribute('src', 'test-image.jpg?format=webp&quality=80');
+    expect(img).toHaveAttribute('src', 'http://localhost/test-image.jpg?format=webp&quality=80');
   });
 });

@@ -67,8 +67,6 @@ class ComprehensiveWebsiteAnalyzer {
   }
 
   async discoverRoutes() {
-    console.log('Discovering routes from codebase...');
-    
     try {
       // Find all page.tsx files
       const pageFiles = await glob('app/**/page.tsx');
@@ -92,22 +90,16 @@ class ComprehensiveWebsiteAnalyzer {
       
       commonRoutes.forEach(route => this.allRoutes.add(route));
 
-      console.log(`Found ${this.allRoutes.size} routes to check`);
       return Array.from(this.allRoutes);
     } catch (error) {
-      console.error('Error discovering routes:', error);
       return [];
     }
   }
 
   async analyzeRoutes() {
     const routes = await this.discoverRoutes();
-    console.log(`Analyzing ${routes.length} routes...`);
-
     for (const route of routes) {
       const fullUrl = `${this.baseUrl}${route}`;
-      console.log(`Checking: ${fullUrl}`);
-      
       const result = await this.checkUrl(fullUrl);
       
       if (result.success) {
@@ -116,7 +108,7 @@ class ComprehensiveWebsiteAnalyzer {
           route: route,
           status: result.status
         });
-        console.log(`✓ ${route} (${result.status})`);
+        `);
       } else {
         this.brokenLinks.push({
           url: fullUrl,
@@ -124,7 +116,7 @@ class ComprehensiveWebsiteAnalyzer {
           status: result.status,
           error: result.error
         });
-        console.log(`✗ ${route} (${result.status || 'ERROR'}) - ${result.error || 'Not found'}`);
+        - ${result.error || 'Not found'}`);
       }
       
       // Small delay to be respectful
@@ -133,8 +125,6 @@ class ComprehensiveWebsiteAnalyzer {
   }
 
   async checkNavigationLinks() {
-    console.log('Checking navigation links...');
-    
     // Get the homepage content
     const homepageContent = await this.fetchPageContent(this.baseUrl);
     if (!homepageContent) return;
@@ -285,37 +275,24 @@ class ComprehensiveWebsiteAnalyzer {
   }
 
   async runAnalysis() {
-    console.log('Starting comprehensive website analysis...');
-    
     await this.analyzeRoutes();
     await this.checkNavigationLinks();
     
     const report = this.generateReport();
     
-    console.log('\n=== COMPREHENSIVE ANALYSIS REPORT ===');
-    console.log(`Total Routes: ${report.summary.totalRoutes}`);
-    console.log(`Working Links: ${report.summary.workingLinks}`);
-    console.log(`Broken Links: ${report.summary.brokenLinks}`);
-    console.log(`Success Rate: ${report.summary.successRate}`);
-    
     if (report.brokenLinks.length > 0) {
-      console.log('\n=== BROKEN LINKS ===');
       report.brokenLinks.forEach(link => {
-        console.log(`✗ ${link.route || link.url} (${link.status || 'ERROR'}) - ${link.error || 'Not found'}`);
+        - ${link.error || 'Not found'}`);
       });
     }
     
     if (report.recommendations.length > 0) {
-      console.log('\n=== RECOMMENDATIONS ===');
       report.recommendations.forEach(rec => {
-        console.log(`${rec.priority}: ${rec.issue} - ${rec.description}`);
-      });
+        });
     }
     
     // Save report
     fs.writeFileSync('comprehensive-analysis-report.json', JSON.stringify(report, null, 2));
-    console.log('\nReport saved to comprehensive-analysis-report.json');
-    
     return report;
   }
 }

@@ -22,7 +22,7 @@ import { fileURLToPath } from 'url'
     // Fix missing semicolons;
     content = content.replace(/(\w+)\s*$/gm, '$1;')
     // Fix specific patterns;
-      content = content.replace(/catch\s*{\s*}/g, 'catch (error) { console.warn("Error:", error)}')
+      content = content.replace(/catch\s*{\s*}/g, 'catch (error) { }')
     if (filePath.includes('App.tsx')) {/* TODO: Fix JSX expression */}
       content = content.replace(/catch\s*{\s*}/g, 'catch (error) {/* TODO: Fix JSX expression */}
   r:", error)}')}
@@ -30,9 +30,7 @@ import { fileURLToPath } from 'url'
     // Write the cleaned content back;
     fs.writeFileSync(filePath, content, 'utf8')
     return modified} catch (error) {/* TODO: Fix JSX expression */}`
-    console.error(`Error fixing ${filePath}:`, error.message)
     return false}
 // Function to find all files that need fixing;
 const filesToFix = findFilesToFix(srcDir);`
-console.log(`Processing ${filesToFix.length} files`)
-console.log(`Fixed ${fixedCount} files`);"`
+"`

@@ -150,20 +150,17 @@ class WebsiteAnalyzer {
   }
 
   async analyzeWebsite() {
-    console.log('Starting website analysis...');
-    
     // Start with the homepage
     const homepage = await this.fetchPage(this.baseUrl);
     this.visitedUrls.add(this.baseUrl);
     
     if (homepage.success) {
-      console.log(`✓ Homepage loaded successfully (${homepage.status})`);
+      `);
       this.workingLinks.push(homepage.url);
       
       // Add all links from homepage
       homepage.links.forEach(link => this.allLinks.add(link));
     } else {
-      console.log(`✗ Homepage failed to load: ${homepage.error || homepage.status}`);
       this.brokenLinks.push(homepage);
     }
 
@@ -171,8 +168,6 @@ class WebsiteAnalyzer {
     const linksToCheck = Array.from(this.allLinks).filter(link => 
       link.startsWith(this.baseUrl) && !this.visitedUrls.has(link)
     );
-
-    console.log(`Found ${linksToCheck.length} internal links to check...`);
 
     for (const link of linksToCheck) {
       if (this.visitedUrls.has(link)) continue;
@@ -182,7 +177,7 @@ class WebsiteAnalyzer {
       
       if (result.success) {
         this.workingLinks.push(link);
-        console.log(`✓ ${link} (${result.status})`);
+        `);
         
         // If it's a page (not an asset), fetch it to get more links
         if (result.status === 200 && !this.isAsset(link)) {
@@ -197,7 +192,7 @@ class WebsiteAnalyzer {
         }
       } else {
         this.brokenLinks.push(result);
-        console.log(`✗ ${link} (${result.status || 'ERROR'}) - ${result.error || 'Not found'}`);
+        - ${result.error || 'Not found'}`);
       }
       
       // Small delay to be respectful
@@ -245,10 +240,8 @@ class WebsiteAnalyzer {
 // Run the analysis
 const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
 analyzer.analyzeWebsite().then(report => {
-  console.log('\n=== WEBSITE ANALYSIS REPORT ===');
-  console.log(JSON.stringify(report, null, 2));
+  );
   
   // Save report to file
   fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2));
-  console.log('\nReport saved to website-analysis-report.json');
-}).catch(console.error);
+  }).catch(console.error);

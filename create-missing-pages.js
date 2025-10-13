@@ -57,6 +57,4 @@ const pageFile = path.join(pageDir, 'page.tsx');
   // Create page file if it doesn't exist;
   if (!fs.existsSync(pageFile)) {
     fs.writeFileSync(pageFile, pageTemplate(pageName, title));
-    console.log(`Created: ${pageFile}`);
-});
-console.log('Missing pages creation completed!');
+    });

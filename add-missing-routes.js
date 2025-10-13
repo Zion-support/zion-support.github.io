@@ -87,10 +87,3 @@ if (routesEndMatch) {
 // Write the updated App.tsx file
 fs.writeFileSync(appTsxPath, appContent);
 
-console.log('Successfully added all missing routes to App.tsx');
-console.log(`Added ${analysis.missingRoutes} missing routes`);
-console.log(`- AI Services: ${analysis.categorized.aiServices.length}`);
-console.log(`- Micro SAAS: ${analysis.categorized.microSaas.length}`);
-console.log(`- IT Services: ${analysis.categorized.itServices.length}`);
-console.log(`- 5G Services: ${analysis.categorized.fiveGServices.length}`);
-console.log(`- Other Pages: ${analysis.categorized.otherPages.length}`);

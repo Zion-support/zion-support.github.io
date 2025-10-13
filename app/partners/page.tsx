@@ -1,7 +1,4 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Globe, Shield, Zap } from 'lucide-react';
 
 export default function Partners() {
   const partners = [
@@ -49,30 +46,6 @@ export default function Partners() {
     }
   ];
 
-  const benefits = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Joint Marketing",
-      description: "Collaborative marketing campaigns and co-branded content"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Global Reach",
-      description: "Access to our worldwide network of clients and opportunities"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Technical Support",
-      description: "Dedicated technical resources and training programs"
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Innovation Labs",
-      description: "Joint innovation initiatives and R&D projects"
-    }
-  ];
-
-  const tiers = [
     {
       name: "Platinum",
       color: "from-gray-400 to-gray-600",
@@ -112,12 +85,6 @@ export default function Partners() {
               Strategic partnerships that drive innovation and deliver exceptional value to our clients.
             </p>
           </div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Our Partners</h1>
-          <p className="text-xl text-gray-300 text-center mb-12">
-            Strategic partnerships that drive innovation and growth
-          </p>
         </div>
       </div>
     </>
