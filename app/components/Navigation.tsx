@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { 
   Bars3Icon, 
   XMarkIcon,
@@ -11,7 +11,6 @@ import {
   AcademicCapIcon,
   PlayIcon,
   QuestionMarkCircleIcon,
-  ShieldCheckIcon,
   CurrencyDollarIcon,
   CogIcon,
   ChevronDownIcon
@@ -20,7 +19,6 @@ import {
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const location = useLocation();
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },

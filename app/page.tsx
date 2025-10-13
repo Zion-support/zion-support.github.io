@@ -3,14 +3,14 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRightIcon, 
-  ShieldCheckIcon, 
-  CloudIcon, 
-  CpuChipIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
+  MapPinIcon,
+  CpuChipIcon,
+  ShieldCheckIcon,
+  CloudIcon,
+  ChartBarIcon,
+  GlobeAltIcon
 } from '@heroicons/react/24/outline';
 
 export default function HomePage() {

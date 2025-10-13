@@ -4,24 +4,21 @@ import { Link } from 'react-router-dom';
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
-  CloudIcon,
   ChartBarIcon,
-  GlobeAltIcon,
-  RocketLaunchIcon,
   ArrowRightIcon,
   CheckCircleIcon,
   PhoneIcon,
   EnvelopeIcon,
-  CurrencyDollarIcon,
   ClockIcon,
-  UserGroupIcon,
   CogIcon,
   ServerIcon,
   WrenchScrewdriverIcon,
   DocumentTextIcon,
   LightBulbIcon,
   WifiIcon,
-  CircleStackIcon
+  CircleStackIcon,
+  CloudIcon,
+  UserGroupIcon
 } from '@heroicons/react/24/outline';
 
 export default function ITSolutionsPage() {
@@ -274,7 +271,7 @@ export default function ITSolutionsPage() {
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {itServices.map((service, index) => {
+            {itServices.map((service, _index) => {
               const Icon = service.icon;
               return (
                 <div 
