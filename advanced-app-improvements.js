@@ -44,11 +44,12 @@ function main() {
   // console.log('Advanced app improvements completed!');
 }
 
-if (require.main === module) {
+// Run main function if this is the main module
+if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-module.exports = {
+export {
   createAdvancedMonitoring,
   createAdvancedCaching
 };

@@ -69,6 +69,27 @@ export default [
         ecmaFeatures: {
           jsx: true
         }
+      },
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        fs: 'readonly'
       }
     },
     plugins: {
@@ -94,4 +115,4 @@ export default [
       }
     }
   }
-);
+];

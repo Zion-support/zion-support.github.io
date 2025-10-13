@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const EnhancedFooter: React.FC = () => {
+export const EnhancedFooter: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -22,4 +22,7 @@ const EnhancedFooter: React.FC = () => {
           </p>
         </div>
       </section>
+    </div>
+  );
+};
 

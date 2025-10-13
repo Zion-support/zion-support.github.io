@@ -1,5 +1,8 @@
-const { withSentry } = require('../withSentry.cjs');
-const { isValidEmail } = require('../emailUtils.cjs');
+// Simple email validation function
+const isValidEmail = (email) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -32,20 +35,27 @@ async function handler(req, res) {
     // 2. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
     // 3. Send confirmation email
 
-    // // console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
-    // console.log removed for production
     console.log('Newsletter subscription:', {
       email: req.body.email,
+      timestamp: new Date().toISOString()
+    });
 
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Newsletter subscription error:', error);
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
+      message: 'Successfully subscribed to newsletter'
+    }));
+
+  } catch (error) {
+    console.error('Newsletter subscription error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to subscribe to newsletter',
-      details: process.env.NODE_ENV === 'development' ? _error.message : undefined
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }));
   }
 }
 
-module.exports = withSentry(handler);
+export default handler;

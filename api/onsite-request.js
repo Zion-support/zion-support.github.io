@@ -1,8 +1,5 @@
-const fs = require('fs');
-const path = require('path');
-
-// Simple wrapper function to replace withSentry
-// const withSentry = (handler) => handler;
+import fs from 'fs';
+import path from 'path';
 
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
@@ -28,8 +25,7 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Error reading existing requests:', error);
+  } catch {
     existing = [];
   }
 
@@ -49,10 +45,14 @@ export default function handler(req, res) {
 
   try {
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
       id: newRequest.id
     }));
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Error saving onsite request:', error);
+  } catch {
+    console.error('Error saving onsite request');
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save request' }));

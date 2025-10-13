@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'shipping-rates.json');
@@ -29,8 +29,7 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Error reading existing rates:', error);
+  } catch {
     existing = [];
   }
 
@@ -60,7 +59,7 @@ export default function handler(req, res) {
       rate: totalRate,
       id: newRate.id
     }));
-  } catch (_error) { // eslint-disable-line no-unused-vars
+  } catch {
     // console.error('Error saving shipping rate:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

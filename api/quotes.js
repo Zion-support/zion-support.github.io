@@ -39,7 +39,7 @@ export default async function handler(req, res) {
       data: quoteData
     }));
 
-  } catch (_error) { // eslint-disable-line no-unused-vars
+  } catch {
     // console.error('Quote submission error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
