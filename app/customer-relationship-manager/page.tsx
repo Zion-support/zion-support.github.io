@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Globe, 
+  Users, 
   ArrowRight, 
   Star, 
   CheckCircle,
   Sparkles,
   Monitor,
   Database,
+  Globe,
   Smartphone,
   Target,
   Brain,
@@ -20,28 +21,28 @@ import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackground from '../components/FuturisticBackground';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const WebDevelopmentPage = () => {
+const CustomerRelationshipManagerPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       <EnhancedSEO
-        title="Web Development - Zion Tech Group | Modern Web Applications"
-        description="Modern web development services for responsive, fast, and secure web applications. React, Next.js, and modern web technologies."
-        keywords="web development, web applications, React, Next.js, responsive design, modern web technologies"
-        canonical="https://ziontechgroup.com/web-development"
+        title="Customer Relationship Manager - Zion Tech Group | AI-Powered CRM"
+        description="AI-powered customer relationship management with intelligent lead scoring, automated follow-ups, and predictive customer insights."
+        keywords="CRM, customer relationship management, AI CRM, lead scoring, customer insights, sales automation"
+        canonical="https://ziontechgroup.com/customer-relationship-manager"
       />
 
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <ResponsiveContainer className="text-center relative z-10">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="holographic-text text-4xl md:text-6xl lg:text-7xl font-bold">
-              Web Development
+              Customer Relationship Manager
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Modern web development services for responsive, fast, and secure web applications. 
-            React, Next.js, and modern web technologies.
+            AI-powered customer relationship management with intelligent lead scoring, 
+            automated follow-ups, and predictive customer insights.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -59,4 +60,4 @@ const WebDevelopmentPage = () => {
   );
 };
 
-export default WebDevelopmentPage;
+export default CustomerRelationshipManagerPage;

@@ -1,60 +1,41 @@
-/* Enhanced Futuristic Design System */
-:root {
-  --primary-purple: #8b5cf6;
-  --primary-pink: #ec4899;
-  --primary-cyan: #06b6d4;
-  --primary-blue: #3b82f6;
-  --primary-green: #10b981;
-  --primary-orange: #f59e0b;
-  --primary-red: #ef4444;
-  --primary-yellow: #eab308;
+/* Futuristic Enhanced Styles for Zion Tech Group */
 
-  --dark-bg: #0f172a;
-  --darker-bg: #020617;
-  --card-bg: #1e293b;
-  --border-color: #334155;
-
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-
-  --glow-purple: 0 0 20px rgba(139, 92, 246, 0.3);
-  --glow-pink: 0 0 20px rgba(236, 72, 153, 0.3);
-  --glow-cyan: 0 0 20px rgba(6, 182, 212, 0.3);
-  --glow-green: 0 0 20px rgba(16, 185, 129, 0.3);
-  --glow-blue: 0 0 20px rgba(59, 130, 246, 0.3);
-  --glow-orange: 0 0 20px rgba(245, 158, 11, 0.3);
-  --glow-red: 0 0 20px rgba(239, 68, 68, 0.3);
-  --glow-yellow: 0 0 20px rgba(234, 179, 8, 0.3);
-
-  --neon-purple: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 15px #8b5cf6, 0 0 20px #8b5cf6;
-  --neon-cyan: 0 0 5px #06b6d4, 0 0 10px #06b6d4, 0 0 15px #06b6d4, 0 0 20px #06b6d4;
-  --neon-pink: 0 0 5px #ec4899, 0 0 10px #ec4899, 0 0 15px #ec4899, 0 0 20px #ec4899;
-  --neon-green: 0 0 5px #10b981, 0 0 10px #10b981, 0 0 15px #10b981, 0 0 20px #10b981;
-}
-
-/* Advanced Animations */
-@keyframes neonPulse {
+/* Neon Glow Effects */
+@keyframes neon-glow {
   0%, 100% {
-    text-shadow: var(--neon-purple);
-    box-shadow: var(--neon-purple);
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor;
   }
   50% {
-    text-shadow: var(--neon-cyan);
-    box-shadow: var(--neon-cyan);
+    text-shadow: 
+      0 0 2px currentColor,
+      0 0 5px currentColor,
+      0 0 8px currentColor,
+      0 0 12px currentColor;
   }
 }
 
-@keyframes neonGlow {
+@keyframes neon-pulse {
   0%, 100% {
-    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+    box-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      inset 0 0 5px currentColor;
   }
   50% {
-    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+    box-shadow: 
+      0 0 2px currentColor,
+      0 0 5px currentColor,
+      0 0 8px currentColor,
+      inset 0 0 2px currentColor;
   }
 }
 
-@keyframes cyberScan {
+@keyframes cyber-scan {
   0% {
     transform: translateX(-100%);
     opacity: 0;
@@ -68,7 +49,54 @@
   }
 }
 
-@keyframes matrixRain {
+@keyframes hologram-flicker {
+  0%, 100% {
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  25% {
+    opacity: 0.8;
+    filter: hue-rotate(90deg);
+  }
+  50% {
+    opacity: 0.9;
+    filter: hue-rotate(180deg);
+  }
+  75% {
+    opacity: 0.85;
+    filter: hue-rotate(270deg);
+  }
+}
+
+@keyframes quantum-pulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+@keyframes data-stream {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes matrix-rain {
   0% {
     transform: translateY(-100vh);
     opacity: 0;
@@ -85,245 +113,46 @@
   }
 }
 
-@keyframes hologramFlicker {
-  0%, 100% {
-    opacity: 1;
-    filter: hue-rotate(0deg);
-  }
-  10% {
-    opacity: 0.8;
-    filter: hue-rotate(90deg);
-  }
-  20% {
-    opacity: 1;
-    filter: hue-rotate(180deg);
-  }
-  30% {
-    opacity: 0.9;
-    filter: hue-rotate(270deg);
-  }
-  40% {
-    opacity: 1;
-    filter: hue-rotate(360deg);
-  }
-}
-
-@keyframes dataStream {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-}
-
-@keyframes energyPulse {
-  0%, 100% {
-    transform: scale(1);
-    filter: brightness(1);
-  }
-  50% {
-    transform: scale(1.05);
-    filter: brightness(1.2);
-  }
-}
-
-@keyframes circuitFlow {
-  0% {
-    background-position: 0% 0%;
-  }
-  100% {
-    background-position: 100% 100%;
-  }
-}
-
-/* Enhanced Base Styles */
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
-  color: var(--text-primary);
-  line-height: 1.6;
-  overflow-x: hidden;
-  position: relative;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: 
-    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.05) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* Cyber Grid Background */
-.cyber-grid {
-  background-image:
-    linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: circuitFlow 20s linear infinite;
-}
-
-/* Neon Text Effects */
+/* Futuristic Components */
 .neon-text {
-  color: var(--primary-cyan);
-  text-shadow: var(--neon-cyan);
-  animation: neonPulse 2s ease-in-out infinite;
+  animation: neon-glow 2s ease-in-out infinite alternate;
 }
 
-.neon-text-purple {
-  color: var(--primary-purple);
-  text-shadow: var(--neon-purple);
-  animation: neonPulse 2s ease-in-out infinite;
-}
-
-.neon-text-pink {
-  color: var(--primary-pink);
-  text-shadow: var(--neon-pink);
-  animation: neonPulse 2s ease-in-out infinite;
-}
-
-.neon-text-green {
-  color: var(--primary-green);
-  text-shadow: var(--neon-green);
-  animation: neonPulse 2s ease-in-out infinite;
-}
-
-/* Enhanced Card Styles */
-.futuristic-card {
-  background: rgba(30, 41, 59, 0.8);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(139, 92, 246, 0.3);
-  border-radius: 16px;
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-.futuristic-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.1), transparent);
-  transition: left 0.5s ease;
-}
-
-.futuristic-card:hover::before {
-  left: 100%;
-}
-
-.futuristic-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--glow-purple);
-  border-color: var(--primary-purple);
-}
-
-/* Enhanced Button Styles */
-.futuristic-btn {
-  background: linear-gradient(135deg, var(--primary-purple), var(--primary-cyan));
-  border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.futuristic-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s ease;
-}
-
-.futuristic-btn:hover::before {
-  left: 100%;
-}
-
-.futuristic-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--glow-purple);
-  animation: energyPulse 0.6s ease-in-out;
-}
-
-.futuristic-btn:active {
-  transform: translateY(0);
-}
-
-/* Neon Border Effects */
 .neon-border {
-  border: 2px solid var(--primary-cyan);
-  box-shadow: 
-    0 0 5px var(--primary-cyan),
-    inset 0 0 5px var(--primary-cyan);
-  animation: neonGlow 2s ease-in-out infinite;
+  animation: neon-pulse 2s ease-in-out infinite alternate;
 }
 
-.neon-border-purple {
-  border: 2px solid var(--primary-purple);
-  box-shadow: 
-    0 0 5px var(--primary-purple),
-    inset 0 0 5px var(--primary-purple);
-  animation: neonGlow 2s ease-in-out infinite;
-}
-
-/* Hologram Effect */
-.hologram {
-  position: relative;
-  background: linear-gradient(45deg, transparent 30%, rgba(139, 92, 246, 0.1) 50%, transparent 70%);
-  animation: hologramFlicker 3s ease-in-out infinite;
-}
-
-.hologram::before {
+.cyber-scan::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: repeating-linear-gradient(
-    90deg,
-    transparent,
-    transparent 2px,
-    rgba(139, 92, 246, 0.1) 2px,
-    rgba(139, 92, 246, 0.1) 4px
-  );
-  animation: cyberScan 2s linear infinite;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  animation: cyber-scan 3s linear infinite;
 }
 
-/* Data Stream Effect */
+.hologram {
+  animation: hologram-flicker 4s ease-in-out infinite;
+  background: linear-gradient(45deg, 
+    rgba(0, 255, 255, 0.1),
+    rgba(138, 43, 226, 0.1),
+    rgba(255, 0, 255, 0.1)
+  );
+}
+
+.quantum-card {
+  animation: quantum-pulse 3s ease-in-out infinite;
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.05),
+    rgba(138, 43, 226, 0.05),
+    rgba(255, 0, 255, 0.05)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+}
+
 .data-stream {
   position: relative;
   overflow: hidden;
@@ -334,145 +163,219 @@ body::before {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--primary-cyan), transparent);
-  animation: dataStream 3s linear infinite;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent
+  );
+  animation: data-stream 4s linear infinite;
 }
 
-/* Enhanced Gradient Text */
-.gradient-text {
-  background: linear-gradient(135deg, var(--primary-purple), var(--primary-cyan), var(--primary-pink));
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradientShift 3s ease-in-out infinite;
+.matrix-bg {
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes gradientShift {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-}
-
-/* Cyber Loading Animation */
-.cyber-loader {
-  width: 50px;
-  height: 50px;
-  border: 3px solid transparent;
-  border-top: 3px solid var(--primary-cyan);
-  border-right: 3px solid var(--primary-purple);
-  border-radius: 50%;
-  animation: cyberSpin 1s linear infinite;
-}
-
-@keyframes cyberSpin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* Matrix Rain Effect */
-.matrix-rain {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.matrix-rain::before {
+.matrix-bg::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   background: 
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(16, 185, 129, 0.03) 2px,
-      rgba(16, 185, 129, 0.03) 4px
-    );
-  animation: matrixRain 10s linear infinite;
+    radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(138, 43, 226, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(255, 0, 255, 0.1) 0%, transparent 50%);
+  animation: matrix-rain 8s linear infinite;
 }
 
-/* Enhanced Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* Glassmorphism Effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-::-webkit-scrollbar-track {
-  background: var(--dark-bg);
+.glass-button {
+  background: rgba(0, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
 }
 
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, var(--primary-purple), var(--primary-cyan));
-  border-radius: 4px;
+.glass-button:hover {
+  background: rgba(0, 255, 255, 0.2);
+  border-color: rgba(0, 255, 255, 0.5);
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, var(--primary-cyan), var(--primary-purple));
+/* Cyber Grid Background */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: matrix-rain 10s linear infinite;
 }
 
-/* Responsive Design */
+/* Holographic Text */
+.holographic-text {
+  background: linear-gradient(45deg, 
+    #00ffff,
+    #8b5cf6,
+    #ff00ff,
+    #00ffff
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: hologram-flicker 3s ease-in-out infinite;
+}
+
+/* Quantum Particles */
+.quantum-particles {
+  position: relative;
+}
+
+.quantum-particles::before,
+.quantum-particles::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #00ffff;
+  border-radius: 50%;
+  animation: quantum-pulse 2s ease-in-out infinite;
+}
+
+.quantum-particles::before {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.quantum-particles::after {
+  top: 60%;
+  right: 20%;
+  animation-delay: 1s;
+}
+
+/* Cyber Loading Animation */
+.cyber-loader {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-top: 2px solid #00ffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.cyber-loader::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 2px solid transparent;
+  border-top: 2px solid #8b5cf6;
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite reverse;
+}
+
+/* Responsive Design Enhancements */
 @media (max-width: 768px) {
-  .futuristic-card {
-    padding: 1.5rem;
-  }
-  
   .neon-text {
-    font-size: 1.5rem;
+    animation-duration: 3s;
   }
   
-  .futuristic-btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
+  .quantum-card {
+    animation-duration: 4s;
   }
-}
-
-/* Accessibility Enhancements */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  
+  .glass-card {
+    backdrop-filter: blur(15px);
   }
 }
 
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
-  .futuristic-card {
-    border: 2px solid var(--text-primary);
+  .neon-text {
+    animation: none;
+    text-shadow: 0 0 3px currentColor;
   }
   
-  .neon-text {
-    text-shadow: none;
-    color: var(--text-primary);
+  .quantum-card {
+    animation: none;
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .neon-text,
+  .neon-border,
+  .cyber-scan::before,
+  .hologram,
+  .quantum-card,
+  .data-stream::before,
+  .matrix-bg::before,
+  .holographic-text,
+  .quantum-particles::before,
+  .quantum-particles::after,
+  .cyber-loader,
+  .cyber-loader::before {
+    animation: none;
+  }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  .glass-card {
+    background: rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 255, 255, 0.2);
+  }
+  
+  .quantum-card {
+    background: linear-gradient(135deg, 
+      rgba(0, 255, 255, 0.1),
+      rgba(138, 43, 226, 0.1)
+    );
   }
 }
 
 /* Print Styles */
 @media print {
-  .futuristic-card {
-    background: white;
-    color: black;
-    border: 1px solid black;
+  .neon-text,
+  .neon-border,
+  .cyber-scan::before,
+  .hologram,
+  .quantum-card,
+  .data-stream::before,
+  .matrix-bg::before,
+  .holographic-text,
+  .quantum-particles::before,
+  .quantum-particles::after,
+  .cyber-loader,
+  .cyber-loader::before {
+    animation: none;
+    background: none;
+    box-shadow: none;
+    text-shadow: none;
   }
   
-  .neon-text {
-    text-shadow: none;
-    color: black;
+  .glass-card {
+    background: white;
+    border: 1px solid #ccc;
   }
 }
