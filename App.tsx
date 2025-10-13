@@ -177,6 +177,7 @@ const Navigation = () => {
       </div>
     </nav>
   );
+<<<<<<< HEAD
 };
 
 const Footer = () => (
@@ -247,4 +248,6 @@ export default function App() {
       </div>
     </Router>
   );
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
 }

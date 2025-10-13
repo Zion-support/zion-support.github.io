@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-interface SEOHeadProps 
+interface SEOHeadProps;
   title?: string;
   description?: string;
   keywords?: string;
@@ -13,6 +13,16 @@ interface SEOHeadProps
   section?: string;
   tags?: string[];
 
+interface SEOHeadProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function SEOHead({ className = '', children }: SEOHeadProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
 const SEOHead: React.FC<SEOHeadProps> = (
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
@@ -21,23 +31,33 @@ const SEOHead: React.FC<SEOHeadProps> = (
   url = 'https://ziontechgroup.com',
   type = 'website',
   author = 'Zion Tech Group',
-  publishedTime,
+//   publishedTime,
   modifiedTime,
-  section,
+//   section,
   tags = []
-) => 
-  const structuredData = 
+) =>
+  const structuredData =
     '@context': 'https://schema.org',
+}) => {
+  const structuredData = {
+//     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+//     name: 'Zion Tech Group',
+//     url: 'https://ziontechgroup.com',
+//     logo: 'https://ziontechgroup.com/logo.png',
     description: 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
-    address: 
+    address:
       '@type': 'PostalAddress',
       addressCountry: 'US'
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com',
+      logo: 'https://ziontechgroup.com/logo.png',
+      description: 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
+      address:
+      '@type': 'PostalAddress',
+        addressCountry: 'US'
 ,
-    sameAs: [
+      sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
       'https://github.com/ziontechgroup'
@@ -45,6 +65,17 @@ const SEOHead: React.FC<SEOHeadProps> = (
 ;
   return (
     <Helmet></Helmet>
+//       addressCountry: 'US'
+    },
+//     sameAs: [
+//       'https://twitter.com/ziontechgroup',
+//       'https://linkedin.com/company/ziontechgroup',
+//       'https://github.com/ziontechgroup'
+//     ]
+  };
+
+  return (
+//     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content="{description}" />
@@ -73,18 +104,13 @@ const SEOHead: React.FC<SEOHeadProps> = (
       {publishedTime && <meta property="article:published_time" content="{publishedTime}" />}</meta>
       {modifiedTime && <meta property="article:modified_time" content="{modifiedTime}" />}</meta>
       {section && <meta property="article:section" content="{section}" />}</meta>
-      
+
         <meta key="{index}" property="article:tag" content="{tag}" />
 
       {/* Structured Data */}
       <script type="application/ld+json"></script>
         {JSON.stringify(structuredData)}
-      </script>
-    </Helmet>
+//       </script>
+//     </Helmet>
   );
-;
-export default SEOHead;
-</meta>
-</meta>
-</meta>
-</SEOHeadProps>
+}

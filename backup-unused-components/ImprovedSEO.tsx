@@ -1,6 +1,13 @@
 import React from 'react';
+
+interface ImprovedSEOProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function ImprovedSEO({ className = '', children }: ImprovedSEOProps) {
 import { Helmet } from 'react-helmet-async';
-interface ImprovedSEOProps 
+interface ImprovedSEOProps;
   title?: string;
   description?: string;
   keywords?: string;
@@ -21,19 +28,19 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.',
   keywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting',
-  canonicalUrl,
-  ogTitle,
-  ogDescription,
+//   canonicalUrl,
+//   ogTitle,
+//   ogDescription,
   ogImage = '/images/og-image.jpg',
-  ogUrl,
+//   ogUrl,
   twitterCard = 'summary_large_image',
-  twitterTitle,
-  twitterDescription,
-  twitterImage,
-  structuredData,
+//   twitterTitle,
+//   twitterDescription,
+//   twitterImage,
+//   structuredData,
   noindex = false,
-  nofollow = false
-) => 
+  nofollow = false;
+) =>
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullOgTitle = ogTitle || fullTitle;
   const fullOgDescription = ogDescription || description;
@@ -42,7 +49,11 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
   const fullTwitterImage = twitterImage || ogImage;
   const fullOgUrl = ogUrl || canonicalUrl;
   return (
+    <div className={`${className}`}>
+      {children}
+    </div>
     <Helmet></Helmet>
+//     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content="{description}" />
@@ -91,30 +102,38 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       {/* Structured Data */}
-      
+
         <script type="application/ld+json"></script>
           {JSON.stringify(structuredData)}
         </script>
 
       {/* Default Organization Structured Data */}
-      
+
         <script type="application/ld+json"></script>
-          
+
             "@context": "https://schema.org",
+//         </script>
+      )}
+
+      {/* Default Organization Structured Data */}
+      {!structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+//             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.svg",
+//             "name": "Zion Tech Group",
+//             "url": "https://ziontechgroup.com",
+//             "logo": "https://ziontechgroup.com/logo.svg",
             "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
-            "address": 
+            "address":
               "@type": "PostalAddress",
-              "streetAddress": "364 E Main St STE 1008",
+//               "streetAddress": "364 E Main St STE 1008",
               "addressLocality": "Middletown",
               "addressRegion": "DE",
               "postalCode": "19709",
               "addressCountry": "US"
 ,
-            "contactPoint": 
+            "contactPoint":
               "@type": "ContactPoint",
               "telephone": "+1-302-464-0950",
               "contactType": "customer service",
@@ -128,9 +147,23 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
         </script>
 
     </Helmet>
+//               "addressRegion": "DE",
+//               "postalCode": "19709",
+//               "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+//               "telephone": "+1-302-464-0950",
+//               "contactType": "customer service",
+//               "email": "kleber@ziontechgroup.com"
+            },
+//             "sameAs": [
+//               "https://twitter.com/ziontechgroup",
+//               "https://linkedin.com/company/ziontechgroup"
+//             ]
+          })}
+//         </script>
+      )}
+//     </Helmet>
   );
-;
-export default ImprovedSEO;
-</meta>
-</link>
-</ImprovedSEOProps>
+}

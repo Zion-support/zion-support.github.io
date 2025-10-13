@@ -1,6 +1,12 @@
 import React from 'react';
+
+interface SEOEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+import StructuredData from "../components/StructuredData";
 import { Helmet } from 'react-helmet-async';
-interface SEOEnhancerProps 
+interface SEOEnhancerProps;
   title?: string;
   description?: string;
   keywords?: string;
@@ -20,26 +26,36 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
   ogImage = "https://ziontechgroup.com/og-image.jpg",
   ogType = "website",
   twitterCard = "summary_large_image",
-  structuredData,
+//   structuredData,
   noIndex = false,
+  noFollow = false;
   noFollow = false
-) => 
-  const defaultStructuredData = 
+) =>
+  const defaultStructuredData =
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.svg",
     "description": description,
-    "address": 
+    "address":
+}) => {
+  const defaultStructuredData = {
+//     "@context": "https://schema.org",
+    "@type": "Organization",
+//     "name": "Zion Tech Group",
+//     "url": "https://ziontechgroup.com",
+//     "logo": "https://ziontechgroup.com/logo.svg",
+//     "description": description,
+    "address": {
       "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
+//       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
 ,
-    "contactPoint": 
+    "contactPoint":
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
@@ -50,26 +66,59 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
       "https://linkedin.com/company/ziontechgroup"
     ],
     "offers": [
-      
+
+//       "addressRegion": "DE",
+//       "postalCode": "19709",
+//       "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+//       "telephone": "+1-302-464-0950",
+//       "contactType": "customer service",
+//       "email": "kleber@ziontechgroup.com"
+    },
+//     "sameAs": [
+//       "https://twitter.com/ziontechgroup",
+//       "https://linkedin.com/company/ziontechgroup"
+//     ],
+//     "offers": [
+      {
         "@type": "Offer",
-        "name": "AI Solutions",
+//         "name": "AI Solutions",
         "description": "Artificial intelligence and machine learning services"
 ,
-      
-        "@type": "Offer", 
+
+        "@type": "Offer",
         "name": "Cybersecurity",
         "description": "Advanced cybersecurity solutions and protection"
 ,
-      
+
         "@type": "Offer",
-        "name": "Cloud Infrastructure", 
+        "name": "Cloud Infrastructure",
         "description": "Cloud computing and infrastructure services"
 
+export default function SEOEnhancer({ className = '', children }: SEOEnhancerProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
     ]
 ;
+//         "name": "Cybersecurity",
+//         "description": "Advanced cybersecurity solutions and protection"
+      },
+      {
+        "@type": "Offer",
+//         "name": "Cloud Infrastructure",
+//         "description": "Cloud computing and infrastructure services"
+      }
+//     ]
+  };
+
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
     <Helmet></Helmet>
+//     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content="{description}" />
@@ -119,6 +168,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
       <script type="application/ld+json"></script>
         {JSON.stringify(finalStructuredData)}
       </script>
+//       </script>
+
       {/* Additional Meta Tags for Better SEO */}
       <meta name="google-site-verification" content="your-google-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />
@@ -130,8 +181,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
       {/* Cache Control */}
       <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
-    </Helmet>
+//     </Helmet>
   );
-;
-export default SEOEnhancer;
-</SEOEnhancerProps>
+}

@@ -1,10 +1,30 @@
 import React from 'react';
 
-export default function Component() {
+interface UnauthorizedProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Unauthorized({ className = '', children }: UnauthorizedProps) {
   return (
+    <div className={`${className}`}>
+      {children}
+    </div>
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
-    </div>
+  </div>
   );
 }
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+export default UnauthorizedPage;
+'use client'
+        <title>Unauthorized - Zion Tech Group</title>
+            <h1 className = "text-4xl font-bold text-white mb-4">Unauthorized</h1>
+            <p className="text-gray-300 mb-8">This page is under construction.</p>;
+              Learn More;
+  );
+};

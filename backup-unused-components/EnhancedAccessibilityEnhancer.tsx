@@ -1,10 +1,18 @@
 import React from 'react';
 
-export default function Component() {
+interface EnhancedAccessibilityEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function EnhancedAccessibilityEnhancer({ className = '', children }: EnhancedAccessibilityEnhancerProps) {
   return (
+    <div className={`${className}`}>
+      {children}
+    </div>
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
-    </div>
+  </div>
   );
 }

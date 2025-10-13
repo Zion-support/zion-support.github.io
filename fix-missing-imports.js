@@ -1,7 +1,26 @@
-import fs from 'fs';
-import path from 'path';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-// Common imports that are frequently missing
+export default function fix-missing-imports.js() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Fix Missing Imports.js - Zion Tech Group</title>
+        <meta name="description" content="Fix Missing Imports.js solutions by Zion Tech Group" />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-8">Fix Missing Imports.js</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            This page is under development. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+// Common imports that are frequently missing;
 const commonImports = {
   'Helmet': "import { Helmet } from 'react-helmet-async';",
   'Link': "import { Link } from 'react-router-dom';",
@@ -75,7 +94,7 @@ const commonImports = {
   'GlobeIcon': "import { Globe as GlobeIcon } from 'lucide-react';"
 };
 
-// Function to fix missing imports in a file
+// Function to fix missing imports in a file;
 function fixMissingImports(filePath) {
   try {
     if (!fs.existsSync(filePath) || (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts'))) {
@@ -84,68 +103,70 @@ function fixMissingImports(filePath) {
 
     const content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
-    
-    // Find all missing imports by checking for undefined variables
+
+    // Find all missing imports by checking for undefined variables;
     const missingImports = new Set();
-    
-    // Check for common patterns
+
+    // Check for common patterns;
     Object.keys(commonImports).forEach(importName => {
       if (content.includes(importName) && !content.includes(`import { ${importName}`) && !content.includes(`import ${importName}`)) {
         missingImports.add(importName);
       }
     });
-    
+
     if (missingImports.size === 0) {
       return;
     }
-    
-    // Find the last import statement
+
+    // Find the last import statement;
     let lastImportIndex = -1;
-    for (let i = 0; i < lines.length; i++) {
-      if (lines[i].trim().startsWith('import ')) {
-        lastImportIndex = i;
+    for (let i = 0; i < lines.length; i++) {>
+  if (lines[i].trim().startsWith('import ')) {>
+  lastImportIndex = i;
       }
     }
-    
-    // Add missing imports
+
+    // Add missing imports;
     const newImports = Array.from(missingImports).map(importName => commonImports[importName]);
-    
+    // Add missing imports>
+  const newImports = Array.from(missingImports).map(importName => commonImports[importName]);
+
     if (lastImportIndex >= 0) {
-      // Insert after the last import
+      // Insert after the last import;
       lines.splice(lastImportIndex + 1, 0, ...newImports);
     } else {
-      // Insert at the beginning
+      // Insert at the beginning;
       lines.unshift(...newImports, '');
     }
-    
+
     const newContent = lines.join('\n');
     fs.writeFileSync(filePath, newContent);
     console.log(`Fixed missing imports in: ${filePath}`);
-    
+
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
-// Function to recursively find all TypeScript files
+// Function to recursively find all TypeScript files;
 function findFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
-  
+
   files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
+
     if (stat.isDirectory() && !file.includes('node_modules') && !file.includes('.git')) {
       findFiles(filePath, fileList);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
       fileList.push(filePath);
     }
   });
-  
+
   return fileList;
 }
 
-// Main execution
+// Main execution;
 console.log('Starting to fix missing imports...');
 
 const files = findFiles('/workspace/app');

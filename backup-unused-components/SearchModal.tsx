@@ -1,23 +1,33 @@
+import React from 'react';
 import React from "react";
-interface SearchModalProps 
+interface SearchModalProps;
   children?: React.ReactNode;
   className?: string;
   title?: string;
   description?: string;
 
+interface SearchModalProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function SearchModal({ className = '', children }: SearchModalProps) {
 const SearchModal: React.FC<SearchModalProps> = (
   children,
   className = "",
   title,
   description,
-) => 
+) =>
+const SearchModal: React.FC<SearchModalProps> = ({
+//   children,
+  className = "",
+//   title,
+//   description,
+}) => {
   return (
-    <div className="{`enhanced-component" ${className}`}></div>
-      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}
-      {description && <p className="text-gray-600 mb-4">{description}</p>}
+    <div className={`${className}`}>
       {children}
-    </div>
+  </div>
+</div>
   );
-;
-export default SearchModal;
-</SearchModalProps>
+}
