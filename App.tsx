@@ -273,6 +273,7 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                  <Route path="/ai-marketing-automation" element={<AiMarketingPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -374,6 +375,11 @@ function App() {
                   <Route path="/machine-learning" element={<MachineLearningPage />} />
                   <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                   <Route path="/robotics" element={<RoboticsPage />} />
+
+                  {/* Additional Service Routes */}
+                  <Route path="/cloud-services" element={<CloudInfrastructurePage />} />
+                  <Route path="/cybersecurity" element={<CybersecuritySolutionsPage />} />
+                  <Route path="/custom-development" element={<CustomSoftwarePage />} />
 
                   {/* Micro SAAS Routes */}
                   <Route
