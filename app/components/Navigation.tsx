@@ -1,10 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-=======
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Bars3Icon, 
@@ -19,36 +13,31 @@ import {
   QuestionMarkCircleIcon,
   ShieldCheckIcon,
   CurrencyDollarIcon,
-  CogIcon
+  CogIcon,
+  ChevronDownIcon
 } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const location = useLocation();
 
-<<<<<<< HEAD
-  const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { 
-      name: 'Services', 
-      href: '/services',
-      submenu: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Solutions', href: '/cloud-infrastructure' },
-        { name: 'Digital Transformation', href: '/digital-transformation' }
-      ]
-    },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
-=======
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
-    { name: 'Services', href: '/services', icon: BriefcaseIcon },
+    { 
+      name: 'Services', 
+      href: '/services', 
+      icon: BriefcaseIcon,
+      submenu: [
+        { name: 'AI Solutions', href: '/ai-solutions' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: '5G Solutions', href: '/5g-solutions' }
+      ]
+    },
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
@@ -56,7 +45,6 @@ const Navigation = () => {
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon },
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
   ];
 
   return (
