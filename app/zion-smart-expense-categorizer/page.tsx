@@ -1,7 +1,27 @@
 'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+export default function Page() {
+  return (
+    <>
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
+        <title>Smart Expense Categorizer - Zion Tech Group</title>
+        <meta name="description" content="Professional smart expense categorizer services by Zion Tech Group." />
       </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-8">
+              Smart Expense Categorizer
+            </h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Professional smart expense categorizer solutions tailored to your business needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

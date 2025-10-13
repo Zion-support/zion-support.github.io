@@ -1,7 +1,16 @@
-// next.d utility
-export const next.d = () => {
-  // Implementation
-  return true;
-};
+// Next.js type declarations
+declare module 'next' {
+  interface NextPageContext {
+    query: { [key: string]: string | string[] | undefined };
+    pathname: string;
+    asPath: string;
+  }
+}
 
-export default next.d;
+declare module 'next/router' {
+  interface NextRouter {
+    query: { [key: string]: string | string[] | undefined };
+    pathname: string;
+    asPath: string;
+  }
+}

@@ -1,60 +1,51 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>AnalyticsContext - Zion Tech Group</title>
-        <meta name="description" content="Professional analyticscontext services by Zion Tech Group." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            AnalyticsContext
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Professional analyticscontext solutions tailored to your business needs.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                Expert Solutions
-              </h3>
-              <p className="text-blue-700">
-                Our team of experts delivers cutting-edge analyticscontext solutions.
-              </p>
-            </div>
-            
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-green-900 mb-2">
-                Custom Implementation
-              </h3>
-              <p className="text-green-700">
-                Tailored analyticscontext implementations for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                24/7 Support
-              </h3>
-              <p className="text-purple-700">
-                Round-the-clock support for all your analyticscontext needs.
-              </p>
-            </div>
-          </div>
-          
-          <div className="mt-12">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started Today
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
+  trackPageView: (pageName: string) => void;
+  isEnabled: boolean;
 }
+
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [isEnabled, setIsEnabled] = useState(true);
+
+  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
+    if (!isEnabled) return;
+    
+    // Simple console logging for now
+    console.log('Analytics Event:', eventName, properties);
+    
+    // In a real app, you would send this to your analytics service
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', eventName, properties);
+    }
+  };
+
+  const trackPageView = (pageName: string) => {
+    if (!isEnabled) return;
+    
+    console.log('Page View:', pageName);
+    
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: pageName,
+        page_location: window.location.href,
+      });
+    }
+  };
+
+  useEffect(() => {
+    // Initialize analytics
+    trackPageView('Home');
+  }, []);
+
+  return (
+    <AnalyticsContext.Provider value={{ trackEvent, trackPageView, isEnabled }}>
+      {children}
+    </AnalyticsContext.Provider>
+  );
+};
+
+export { AnalyticsContext };
