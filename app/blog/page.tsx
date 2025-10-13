@@ -1,35 +1,10 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Calendar, User } from 'lucide-react';
-=======
+
 import { useState } from "react";
-import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
+import { ArrowRight, Calendar, User } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
->>>>>>> cursor/analyze-improve-and-deploy-application-462b
 
-<<<<<<< HEAD
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  author: string;
-  date: string;
-  category: string;
-  featured: boolean;
-  image: string;
-  readTime: string;
-}
 
-const BlogPage = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const blogPosts: BlogPost[] = [
-=======
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -42,7 +17,6 @@ export default function Blog() {
   ];
 
   const blogPosts = [
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
     {
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
@@ -80,9 +54,6 @@ export default function Blog() {
       readTime: '6 min read'
     }
   ];
-
-  const categories = ['all', 'AI', 'Cloud', 'Security', 'Development', 'Business'];
-
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -133,15 +104,15 @@ export default function Blog() {
               <div className="flex gap-2 flex-wrap">
                 {categories.map(category => (
                   <button
-                    key={category}
-                    onClick={() => setSelectedCategory(category)}
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                      selectedCategory === category
+                      selectedCategory === category.id
                         ? 'bg-blue-600 text-white'
                         : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                     }`}
                   >
-                    {category}
+                    {category.name} ({category.count})
                   </button>
                 ))}
               </div>
@@ -262,5 +233,4 @@ export default function Blog() {
   );
 };
 
-export default BlogPage;
 

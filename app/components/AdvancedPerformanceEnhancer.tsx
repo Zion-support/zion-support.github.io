@@ -156,25 +156,23 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   // Performance monitoring
   const setupPerformanceMonitoring = useCallback(() => {
     // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => {
-          // Track CLS
-        });
-        getFID((metric) => {
-          // Track FID
-        });
-        getFCP((metric) => {
-          // Track FCP
-        });
-        getLCP((metric) => {
-          // Track LCP
-        });
-        getTTFB((metric) => {
-          // Track TTFB
-        });
+    import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+      onCLS((metric: any) => {
+        console.log('CLS:', metric.value);
       });
-    }
+      onINP((metric: any) => {
+        console.log('INP:', metric.value);
+      });
+      onFCP((metric: any) => {
+        console.log('FCP:', metric.value);
+      });
+      onLCP((metric: any) => {
+        console.log('LCP:', metric.value);
+      });
+      onTTFB((metric: any) => {
+        console.log('TTFB:', metric.value);
+      });
+    });
 
     // Monitor memory usage
     if ('memory' in performance) {

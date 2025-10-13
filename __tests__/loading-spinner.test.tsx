@@ -7,13 +7,10 @@ describe('LoadingSpinner', () => {
   it('renders with default props', () => {
     render(<LoadingSpinner />);
     
-<<<<<<< HEAD
 
-=======
     // Should render the spinner icon but no text by default
     expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
     expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
->>>>>>> cursor/analyze-improve-and-deploy-application-462b
   });
 
   it('renders with custom text', () => {

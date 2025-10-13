@@ -223,8 +223,9 @@ function App() {
   }, []);
 
   return (
-    <ErrorHandler>
-      <EnhancedErrorBoundary>
+    <GlobalErrorBoundary>
+      <ErrorHandler>
+        <EnhancedErrorBoundary>
         <HelmetProvider>
           <AccessibilityEnhancer>
             <Router>
@@ -499,8 +500,8 @@ function App() {
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
-      </EnhancedErrorBoundary>
-    </ErrorHandler>
+        </EnhancedErrorBoundary>
+      </ErrorHandler>
     </GlobalErrorBoundary>
   );
 }
