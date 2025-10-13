@@ -1,64 +1,36 @@
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback } from 'react';
-=======
 import React, { useEffect, useCallback } from 'react';
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [isOptimized, setIsOptimized] = useState(false);
-
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
       // Preload critical fonts
       const fontLink = document.createElement('link');
       fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
 
       // Preload critical images
       const criticalImages = [
-        '/logo.svg',
-        '/og-image.svg'
-=======
-  const [isOptimized, setIsOptimized] = useState(false);
-
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/api/placeholder/1200/630', // Hero image
-        '/api/placeholder/800/600',  // Service images
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
+        '/images/hero-bg.jpg',
+        '/images/logo.svg',
+        '/images/ai-icon.svg'
       ];
 
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
-<<<<<<< HEAD
-        link.href = src;
-        link.as = 'image';
-=======
         link.as = 'image';
         link.href = src;
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
         document.head.appendChild(link);
       });
     };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
@@ -75,24 +47,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       });
     };
 
-    // Preconnect to external domains
-    const preconnectExternalDomains = () => {
-      const domains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://www.google-analytics.com',
-        'https://www.googletagmanager.com'
-      ];
-
-      domains.forEach(domain => {
-        const link = document.createElement('link');
-        link.rel = 'preconnect';
-        link.href = domain;
-        link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
-      });
-    };
-
     // Optimize third-party scripts
     const optimizeThirdPartyScripts = () => {
       // Defer non-critical scripts
@@ -104,194 +58,192 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       });
     };
 
-    // Initialize optimizations
-    const initializeOptimizations = () => {
-      preloadCriticalResources();
-      preconnectExternalDomains();
-      optimizeImages();
-      optimizeThirdPartyScripts();
-      setIsOptimized(true);
-    };
-
-    // Run optimizations after component mount
-    const timer = setTimeout(initializeOptimizations, 100);
-
-    return () => clearTimeout(timer);
-=======
+    // Initialize performance optimizations
     preloadCriticalResources();
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
+    optimizeImages();
+    optimizeThirdPartyScripts();
+
+    // Cleanup function
+    return () => {
+      // Remove any added preload links
+      const preloadLinks = document.querySelectorAll('link[rel="preload"]');
+      preloadLinks.forEach(link => link.remove());
+    };
   }, []);
 
   // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events
+  useEffect(() => {
     let ticking = false;
-    
-    const updateScrollPosition = () => {
-      // Add scroll-based optimizations here
-      ticking = false;
+
+    const optimizeScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          // Throttle scroll events
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
+    window.addEventListener('scroll', optimizeScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', optimizeScroll);
+    };
   }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
 
   // Optimize resize performance
-  const handleResize = useCallback(() => {
-    let ticking = false;
-    
-    const updateLayout = () => {
-      // Add resize-based optimizations here
-      ticking = false;
+  useEffect(() => {
+    let resizeTimeout: NodeJS.Timeout;
+
+    const handleResize = () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        // Handle resize optimizations
+        const viewport = {
+          width: window.innerWidth,
+          height: window.innerHeight
+        };
+        
+        // Update CSS custom properties for responsive design
+        document.documentElement.style.setProperty('--viewport-width', `${viewport.width}px`);
+        document.documentElement.style.setProperty('--viewport-height', `${viewport.height}px`);
+      }, 100);
     };
 
-    if (!ticking) {
-      requestAnimationFrame(updateLayout);
-      ticking = true;
+    window.addEventListener('resize', handleResize, { passive: true });
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(resizeTimeout);
+    };
+  }, []);
+
+  // Memory optimization
+  useEffect(() => {
+    const cleanup = () => {
+      // Clear any unused event listeners
+      // Clean up any timers or intervals
+      // Remove unused DOM references
+    };
+
+    // Run cleanup on page unload
+    window.addEventListener('beforeunload', cleanup);
+    
+    return () => {
+      cleanup();
+      window.removeEventListener('beforeunload', cleanup);
+    };
+  }, []);
+
+  // Intersection Observer for lazy loading
+  useEffect(() => {
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            if (img.dataset.src) {
+              img.src = img.dataset.src;
+              img.removeAttribute('data-src');
+              imageObserver.unobserve(img);
+            }
+          }
+        });
+      });
+
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach(img => imageObserver.observe(img));
+
+      return () => {
+        imageObserver.disconnect();
+      };
     }
   }, []);
 
+  // Service Worker registration for caching
   useEffect(() => {
-    window.addEventListener('resize', handleResize, { passive: true });
-    return () => window.removeEventListener('resize', handleResize);
-  }, [handleResize]);
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('SW registered: ', registration);
+        })
+        .catch(registrationError => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
 
-<<<<<<< HEAD
-  // Intersection Observer for lazy loading
+  // Critical CSS inlining
   useEffect(() => {
-    if (!isOptimized) return;
-
-    const observerOptions = {
-      root: null,
-      rootMargin: '50px',
-      threshold: 0.1
+    const inlineCriticalCSS = () => {
+      // This would typically be handled by build tools
+      // For now, we'll ensure critical styles are loaded
+      const criticalStyles = document.querySelectorAll('style[data-critical]');
+      criticalStyles.forEach(style => {
+        style.setAttribute('media', 'all');
+      });
     };
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const element = entry.target as HTMLElement;
-          
-          // Add animation classes when element comes into view
-          element.classList.add('animate-fade-in');
-          
-          // Unobserve after animation
-          observer.unobserve(element);
-        }
-      });
-    }, observerOptions);
+    inlineCriticalCSS();
+  }, []);
 
-    // Observe elements with data-lazy attribute
-    const lazyElements = document.querySelectorAll('[data-lazy]');
-    lazyElements.forEach(el => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, [isOptimized]);
-
-  // Resource hints for better performance
+  // Resource hints
   useEffect(() => {
-    if (!isOptimized) return;
+    const addResourceHints = () => {
+      // DNS prefetch for external domains
+      const dnsPrefetchDomains = [
+        'fonts.googleapis.com',
+        'fonts.gstatic.com',
+        'cdnjs.cloudflare.com'
+      ];
 
-    // DNS prefetch for external resources
-    const dnsPrefetchDomains = [
-      '//fonts.googleapis.com',
-      '//fonts.gstatic.com',
-      '//www.google-analytics.com'
-    ];
+      dnsPrefetchDomains.forEach(domain => {
+        const link = document.createElement('link');
+        link.rel = 'dns-prefetch';
+        link.href = `//${domain}`;
+        document.head.appendChild(link);
+      });
 
-    dnsPrefetchDomains.forEach(domain => {
-      const link = document.createElement('link');
-      link.rel = 'dns-prefetch';
-      link.href = domain;
-      document.head.appendChild(link);
-    });
+      // Preconnect to critical third-party origins
+      const preconnectOrigins = [
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com'
+      ];
 
-    // Module preload for critical JavaScript
-    const criticalModules = [
-      '/assets/react-vendor',
-      '/assets/main-pages'
-    ];
+      preconnectOrigins.forEach(origin => {
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = origin;
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
+      });
+    };
 
-    criticalModules.forEach(module => {
-      const link = document.createElement('link');
-      link.rel = 'modulepreload';
-      link.href = `${module}.js`;
-      document.head.appendChild(link);
-    });
-  }, [isOptimized]);
+    addResourceHints();
+  }, []);
 
-  return (
-    <>
-      {children}
-      
-      {/* Performance monitoring styles */}
-      <style jsx>{`
-        @keyframes fade-in {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+  // Performance monitoring
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development') {
+      const logPerformanceMetrics = () => {
+        // Log Core Web Vitals
+        if ('web-vitals' in window) {
+          import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+            getCLS(console.log);
+            getFID(console.log);
+            getFCP(console.log);
+            getLCP(console.log);
+            getTTFB(console.log);
+          });
         }
-        
-        .animate-fade-in {
-          animation: fade-in 0.6s ease-out forwards;
-        }
-        
-        /* Optimize font loading */
-        @font-face {
-          font-family: 'Inter';
-          font-style: normal;
-          font-weight: 400;
-          font-display: swap;
-          src: local('Inter'), url('https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
-        }
-        
-        /* Critical CSS for above-the-fold content */
-        .hero-section {
-          contain: layout style paint;
-        }
-        
-        .navigation {
-          contain: layout style;
-        }
-        
-        /* Optimize animations for better performance */
-        .transition-transform {
-          will-change: transform;
-        }
-        
-        .transition-opacity {
-          will-change: opacity;
-        }
-        
-        /* Reduce motion for users who prefer it */
-        @media (prefers-reduced-motion: reduce) {
-          * {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-          }
-        }
-      `}</style>
-    </>
-  );
-<<<<<<< HEAD
-=======
+      };
+
+      logPerformanceMetrics();
+    }
+  }, []);
+
   return <>{children}</>;
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
 };
 
 export default PerformanceOptimizer;

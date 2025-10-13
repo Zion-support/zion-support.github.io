@@ -6,26 +6,9 @@ import {
   Brain, 
   Shield, 
   Zap, 
-<<<<<<< HEAD
-  Globe, 
-<<<<<<< HEAD
-  ChevronDown
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
-=======
-  ChevronDown,
-  ChevronUp
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-=======
   Globe,
   ChevronDown,
   ChevronUp
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -87,7 +70,8 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
         { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics' },
         { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' }
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation' },
+        { name: 'AI Autonomous Systems', path: '/ai-autonomous-systems' }
       ]
     },
     {
@@ -105,7 +89,10 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: 'Smart Expense Categorizer', path: '/zion-smart-expense-categorizer' },
         { name: 'AI Voice Assistant Pro', path: '/zion-ai-voice-assistant-pro' },
         { name: 'AI Code Reviewer', path: '/zion-ai-code-reviewer' },
-        { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' }
+        { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' },
+        { name: 'AI Contract Analyzer', path: '/zion-ai-contract-analyzer' },
+        { name: 'AI Supply Chain Optimizer', path: '/zion-ai-supply-chain-optimizer' },
+        { name: 'AI Financial Forecaster', path: '/zion-ai-financial-forecaster' }
       ]
     },
     {
@@ -139,7 +126,8 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: 'AI CRM Pro', path: '/zion-ai-crm-pro', description: 'Intelligent customer relationship management' },
         { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI-powered content creation' },
         { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security solutions' },
-        { name: 'AI Video Generator', path: '/zion-ai-video-generator', description: 'Create videos with AI' }
+        { name: 'AI Video Generator', path: '/zion-ai-video-generator', description: 'Create videos with AI' },
+        { name: 'AI Autonomous Systems', path: '/ai-autonomous-systems', description: 'Self-managing AI systems' }
       ]
     },
     {
@@ -155,10 +143,12 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     {
       category: 'Micro SAAS',
       items: [
-        { name: 'Zion Analytics Pro', path: '/zion-ai-analytics-pro', description: 'Business intelligence platform' },
-        { name: 'Zion Security Shield', path: '/zion-security-shield', description: 'Advanced cybersecurity' },
-        { name: 'Zion AI Marketing', path: '/zion-ai-marketing-automation', description: 'Marketing automation' },
-        { name: 'Zion E-commerce Suite', path: '/zion-ecommerce-suite', description: 'Complete e-commerce platform' }
+        { name: 'Zion AI Analytics Pro', path: '/zion-ai-analytics-pro', description: 'Business intelligence platform' },
+        { name: 'Zion AI CRM Pro', path: '/zion-ai-crm-pro', description: 'Intelligent customer management' },
+        { name: 'Zion AI Video Generator', path: '/zion-ai-video-generator', description: 'AI-powered video creation' },
+        { name: 'Zion AI Contract Analyzer', path: '/zion-ai-contract-analyzer', description: 'Legal document analysis' },
+        { name: 'Zion AI Supply Chain Optimizer', path: '/zion-ai-supply-chain-optimizer', description: 'Logistics optimization' },
+        { name: 'Zion AI Financial Forecaster', path: '/zion-ai-financial-forecaster', description: 'Financial planning & analysis' }
       ]
     }
   ];
