@@ -1,8 +1,8 @@
-import { Component, ErrorInfo, Node } from 'react';
+import React, { Component, ErrorInfo } from 'react';
 
 interface Props {
-  children: Node;
-  fallback?: Node;
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 

@@ -14,7 +14,7 @@ export const optimizeImage = (
   
   // In a real implementation, you would use a service like Cloudinary or ImageKit
   // For now, we'll return the original src with query parameters
-  const params = new URLSearchParams();
+  const params = new (globalThis as any).URLSearchParams();
   
   if (width) params.set('w', width.toString());
   if (height) params.set('h', height.toString());
