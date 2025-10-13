@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
-<<<<<<< HEAD
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
@@ -105,32 +104,24 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         };
       };
 
-<<<<<<< HEAD
       // Apply focus trap to modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
       const cleanupFunctions = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
-=======
-      // Initialize all enhancements
-      enhanceFocusManagement()
-      enhanceKeyboardNavigation()
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
 
       return () => {
-<<<<<<< HEAD
         cleanupFunctions.forEach(cleanup => cleanup());
       };
     };
 
     // High contrast mode
     const enhanceHighContrast = () => {
-      if (!enableHighContrast) return () => {};
+      if (!enableHighContrast) return;
 
       const addHighContrastStyles = () => {
         const style = document.createElement('style');
-        style.id = 'accessibility-high-contrast';
         style.textContent = `
           .high-contrast {
-            filter: contrast(150%) brightness(110%);
+            filter: contrast(150%) brightness(1.2);
           }
           .high-contrast * {
             border-color: currentColor !important;
@@ -139,43 +130,31 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         document.head.appendChild(style);
       };
 
-      mediaQuery.addEventListener('change', handleContrastChange);
-      handleContrastChange(mediaQuery as any);
+      addHighContrastStyles();
+
+      // Toggle high contrast mode
+      const toggleHighContrast = () => {
+        document.body.classList.toggle('high-contrast');
+      };
+
+      // Add high contrast toggle button
+      const button = document.createElement('button');
+      button.textContent = 'Toggle High Contrast';
+      button.className = 'fixed bottom-4 right-4 bg-cyan-600 text-white px-4 py-2 rounded-lg z-50';
+      button.onclick = toggleHighContrast;
+      document.body.appendChild(button);
 
       return () => {
-        const existingStyle = document.getElementById('accessibility-high-contrast');
-        if (existingStyle) {
-          existingStyle.remove();
-        }
+        button.remove();
       };
     };
 
-    // Reduced motion detection
-    const handleReducedMotion = () => {
-      const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      
-      const handleMotionChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.classList.add('reduce-motion');
-        } else {
-          document.documentElement.classList.remove('reduce-motion');
-        }
-      };
-
-      mediaQuery.addEventListener('change', handleMotionChange);
-      handleMotionChange(mediaQuery as any);
-
-      return () => {
-        mediaQuery.removeEventListener('change', handleMotionChange);
-      };
-    };
-
-    // Screen reader announcements
+    // Screen reader enhancements
     const enhanceScreenReader = () => {
       if (!enableScreenReader) return;
 
       // Add ARIA landmarks
-      const addLandmarks = () => {
+      const addAriaLandmarks = () => {
         const main = document.querySelector('main');
         if (main && !main.getAttribute('role')) {
           main.setAttribute('role', 'main');
@@ -186,232 +165,47 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           nav.setAttribute('role', 'navigation');
         }
 
-        const header = document.querySelector('header');
-        if (header && !header.getAttribute('role')) {
-          header.setAttribute('role', 'banner');
-        }
-
         const footer = document.querySelector('footer');
         if (footer && !footer.getAttribute('role')) {
           footer.setAttribute('role', 'contentinfo');
         }
       };
 
-      // Add live regions for dynamic content
-      const addLiveRegions = () => {
-        let liveRegion = document.getElementById('live-region');
-        if (!liveRegion) {
-          liveRegion = document.createElement('div');
-          liveRegion.id = 'live-region';
-          liveRegion.setAttribute('aria-live', 'polite');
-          liveRegion.setAttribute('aria-atomic', 'true');
-          liveRegion.className = 'sr-only';
-          document.body.appendChild(liveRegion);
-        }
+      addAriaLandmarks();
+
+      // Announce page changes
+      const announcePageChange = () => {
+        const announcement = document.createElement('div');
+        announcement.setAttribute('aria-live', 'polite');
+        announcement.setAttribute('aria-atomic', 'true');
+        announcement.className = 'sr-only';
+        announcement.textContent = 'Page content has loaded';
+        document.body.appendChild(announcement);
+
+        setTimeout(() => {
+          announcement.remove();
+        }, 1000);
       };
 
-      addLandmarks();
-      addLiveRegions();
-
-      return () => {
-        const liveRegion = document.getElementById('live-region');
-        if (liveRegion) {
-          liveRegion.remove();
-        }
-      };
+      announcePageChange();
     };
 
     // Initialize all enhancements
     addSkipLink();
-    const cleanupKeyboard = enhanceKeyboardNavigation();
-    const cleanupFocus = enhanceFocusManagement();
-    const cleanupContrast = enhanceHighContrast();
-    const cleanupMotion = enhanceScreenReader();
+    const keyboardCleanup = enhanceKeyboardNavigation();
+    const focusCleanup = enhanceFocusManagement();
+    const contrastCleanup = enhanceHighContrast();
+    enhanceScreenReader();
 
+    // Cleanup function
     return () => {
-      if (cleanupKeyboard) cleanupKeyboard();
-      if (cleanupFocus) cleanupFocus();
-      if (cleanupContrast) cleanupContrast();
-      if (cleanupMotion) cleanupMotion();
+      keyboardCleanup?.();
+      focusCleanup?.();
+      contrastCleanup?.();
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
-
-    // Large text mode
-    if (newSettings.largeText) {
-      root.classList.add('large-text');
-    } else {
-      root.classList.remove('large-text');
-=======
-        observer.disconnect()
-        skipLink.remove()
-      }
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-    }
-
-    // Reduced motion
-    if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
-    // Focus visible
-    if (newSettings.focusVisible) {
-      root.classList.add('focus-visible');
-    } else {
-      root.classList.remove('focus-visible');
-    }
-
-    // Save to localStorage
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  };
-
-<<<<<<< HEAD
-  const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
-    applyAccessibilitySettings(newSettings);
-  };
-
-  const resetSettings = () => {
-    const defaultSettings: AccessibilitySettings = {
-      highContrast: false,
-      largeText: false,
-      reducedMotion: false,
-      screenReader: false,
-      focusVisible: true
-    };
-    setSettings(defaultSettings);
-    applyAccessibilitySettings(defaultSettings);
-  };
-
-  // Removed unused functions - functionality is handled by updateSetting directly
-  return (
-    <>
-      {children}
-      <style>{`
-        /* Keyboard navigation styles */
-        .keyboard-navigation *:focus {
-          outline: 2px solid #06b6d4;
-          outline-offset: 2px;
-        }
-
-        /* Screen reader only content */
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-
-        .sr-only:focus {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-
-        /* High contrast mode */
-        .high-contrast {
-          filter: contrast(150%) brightness(110%);
-        }
-
-        .high-contrast * {
-          border-color: currentColor !important;
-        }
-
-        /* Focus indicators */
-        .focus-visible:focus-visible {
-          outline: 2px solid #06b6d4;
-          outline-offset: 2px;
-        }
-
-        /* Reduced motion */
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-
-        /* Large text mode */
-        .large-text {
-          font-size: 1.2em;
-          line-height: 1.6;
-        }
-
-        .large-text h1 { font-size: 2.5em; }
-        .large-text h2 { font-size: 2em; }
-        .large-text h3 { font-size: 1.75em; }
-        .large-text h4 { font-size: 1.5em; }
-        .large-text h5 { font-size: 1.25em; }
-        .large-text h6 { font-size: 1.1em; }
-      `}</style>
-    </>
-  );
-};
-
-export default AccessibilityEnhancer;
-=======
-export default AccessibilityEnhancer
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  useEffect(() => {
-    // Add accessibility enhancements
-    document.documentElement.setAttribute('lang', 'en');
-    
-    // Add skip to main content link
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50 focus:outline-none focus:ring-2 focus:ring-cyan-300';
-    document.body.insertBefore(skipLink, document.body.firstChild);
-
-    // Add focus management
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-    };
-
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    // Add ARIA landmarks
-    const main = document.querySelector('main');
-    if (main && !main.getAttribute('role')) {
-      main.setAttribute('role', 'main');
-    }
-
-    return () => {
-      const existingSkipLink = document.querySelector('a[href="#main-content"]');
-      if (existingSkipLink) {
-        existingSkipLink.remove();
-      }
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
-  }, []);
 
   return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
->>>>>>> cursor/analyze-improve-and-deploy-application-a281

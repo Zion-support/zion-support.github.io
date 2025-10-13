@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import React, { useEffect } from 'react';
 
 interface WebVitalsData {
   name: string;
@@ -11,7 +10,9 @@ interface WebVitalsData {
 
 const WebVitalsTracker: React.FC = () => {
   useEffect(() => {
-<<<<<<< HEAD
+    // Only run in browser
+    if (typeof window === 'undefined') return;
+
     const sendToAnalytics = (metric: WebVitalsData) => {
       // Send to Google Analytics or other analytics service
       if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -34,59 +35,29 @@ const WebVitalsTracker: React.FC = () => {
         }).catch(console.error);
       }
 
-      // Log to console in development
+      // Log in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
+        console.log('Web Vital:', metric.name, metric.value);
       }
     };
 
-    // Track Core Web Vitals
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics); // INP replaces FID in newer versions
-    onFCP(sendToAnalytics);
-    onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
-
-    // Track additional performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Track page load time
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          sendToAnalytics({
-            name: 'LOAD_TIME',
-            value: loadTime,
-            delta: loadTime,
-            id: 'load-time',
-            navigationType: navigation.type,
-          });
-        }
-      });
-
-      // Track memory usage (if available)
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        sendToAnalytics({
-          name: 'MEMORY_USAGE',
-          value: memoryUsage,
-          delta: memoryUsage,
-          id: 'memory-usage',
-          navigationType: 'reload',
-        });
+    // Load web-vitals library dynamically
+    const loadWebVitals = async () => {
+      try {
+        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+        
+        // Measure and report Core Web Vitals
+        getCLS(sendToAnalytics);
+        getFID(sendToAnalytics);
+        getFCP(sendToAnalytics);
+        getLCP(sendToAnalytics);
+        getTTFB(sendToAnalytics);
+      } catch (error) {
+        console.warn('Failed to load web-vitals:', error);
       }
-    }
-=======
-    // Track Core Web Vitals
-    const trackWebVitals = () => {
-      // This is a placeholder for web vitals tracking
-      // In a real implementation, you would use libraries like web-vitals
-      console.log('Web Vitals tracking initialized');
     };
 
-    trackWebVitals();
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
+    loadWebVitals();
   }, []);
 
   return null;
