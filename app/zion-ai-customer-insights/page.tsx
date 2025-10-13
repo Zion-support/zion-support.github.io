@@ -1,8 +1,56 @@
-import { Link } from 'react-router-dom';
-import { ArrowRight, Users, BarChart3, TrendingUp, Target, Eye, Heart, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Cloud, Settings, Headphones, DollarSign, CreditCard, TrendingDown, Play, Zap, ShoppingCart, Store } from 'lucide-react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Play } from 'lucide-react';
+import { Headphones } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+import { Heart } from 'lucide-react';
 
 const ZionAICustomerInsightsPage = () => {
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];
+
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
+
+  const [selectedPlan, setSelectedPlan] = useState('pro');
 
   const features = [
     {
@@ -164,7 +212,7 @@ const ZionAICustomerInsightsPage = () => {
   ];
 
   return (
-    <div>
+    <>
       <Helmet>
         <title>Zion AI Customer Insights Pro - Advanced Customer Analytics with AI | Zion Tech Group</title>
         <meta
@@ -362,7 +410,7 @@ const ZionAICustomerInsightsPage = () => {
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                        <span>{feature.title}</span>
+                        <span>{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -409,7 +457,7 @@ const ZionAICustomerInsightsPage = () => {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                      {`/avatars/avatar-${index + 1}.jpg`}
+                      {testimonial.avatar}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -478,7 +526,7 @@ const ZionAICustomerInsightsPage = () => {
           </div>
         </section>
       </div>
-</div>
+    </>
   );
 };
 

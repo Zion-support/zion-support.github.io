@@ -1,4 +1,5 @@
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import React, { useEffect, useState } from 'react';
+import { Star } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -94,7 +95,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             }
           });
         }
-      } catch {
+      } catch (error) {
         setIsLoading(false);
       }
     };

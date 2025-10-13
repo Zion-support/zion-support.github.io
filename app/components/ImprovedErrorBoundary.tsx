@@ -1,6 +1,10 @@
-import React, { Component, ReactNode, ErrorInfo } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import { Home } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Hand } from 'lucide-react';
+
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -138,7 +142,7 @@ export const withErrorBoundary = <P extends object>(
 };
 
 // Hook for functional components to handle errors
-export const _useErrorHandler = () => {
+export const useErrorHandler = () => {
   return (error: Error, errorInfo?: ErrorInfo) => {
     console.error('Error caught by hook:', error, errorInfo);
     

@@ -1,13 +1,69 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { Package, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, Shield } from 'lucide-react';
 
 const SmartInventoryOptimizerPage = () => {
-  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+  const benefits = [
+    {
+      title: "Expert Team",
+      description: "Our team of AI and technology experts delivers exceptional results.",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Proven Results",
+      description: "We have a track record of successful projects and satisfied clients.",
+      icon: <CheckCircle className="w-8 h-8" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support to ensure your success.",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Innovation",
+      description: "Cutting-edge solutions that keep you ahead of the competition.",
+      icon: <Zap className="w-8 h-8" />
+    }
+  ];
 
-  const benefits: string[] = [];
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
 
-  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      title: "AI-Powered Demand Forecasting",
+      description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations."
+    },
+    {
+      icon: <Target className="w-8 h-8 text-purple-400" />,
+      title: "Smart Reorder Points",
+      description: "Automatically calculate optimal reorder points based on lead times, demand variability, and supplier reliability."
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+      title: "Real-time Analytics Dashboard",
+      description: "Comprehensive analytics and reporting with real-time insights into inventory performance, turnover rates, and cost optimization."
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: "Multi-location Management",
+      description: "Seamlessly manage inventory across multiple warehouses, stores, and distribution centers with centralized control."
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      title: "Automated Alerts & Notifications",
+      description: "Get instant alerts for low stock, overstock, expiring items, and unusual demand patterns to prevent costly mistakes."
+    },
+    {
+      icon: <Users className="w-8 h-8 text-blue-400" />,
+      title: "Supplier Integration",
+      description: "Connect with suppliers for automated ordering, real-time stock updates, and seamless supply chain management."
+    }
+  ];
 
   const pricingPlans = [
     {
@@ -71,8 +127,8 @@ const SmartInventoryOptimizerPage = () => {
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 20 }}
-            animate={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
@@ -119,8 +175,8 @@ const SmartInventoryOptimizerPage = () => {
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 20 }}
-                animate={{ opacity: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
@@ -140,8 +196,8 @@ const SmartInventoryOptimizerPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 20 }}
-            animate={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -158,8 +214,8 @@ const SmartInventoryOptimizerPage = () => {
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 20 }}
-                animate={{ opacity: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
@@ -182,8 +238,8 @@ const SmartInventoryOptimizerPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 20 }}
-            animate={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -199,8 +255,8 @@ const SmartInventoryOptimizerPage = () => {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 20 }}
-                animate={{ opacity: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
               >
@@ -223,8 +279,8 @@ const SmartInventoryOptimizerPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 20 }}
-            animate={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
@@ -241,8 +297,8 @@ const SmartInventoryOptimizerPage = () => {
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 20 }}
-                animate={{ opacity: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
@@ -271,7 +327,7 @@ const SmartInventoryOptimizerPage = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature.title}</span>
+                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -297,8 +353,8 @@ const SmartInventoryOptimizerPage = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 20 }}
-            animate={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-12 text-center"
           >

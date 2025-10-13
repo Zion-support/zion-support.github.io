@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useEffect } from 'react';
 import { Star } from 'lucide-react';
-import { useLocation } from 'react-router-dom';
 
 declare global {
   interface Window {
@@ -11,22 +7,12 @@ declare global {
     dataLayer: any[];
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface AnalyticsProps {
-  className?: string;
-  children?: React.ReactNode;
+  measurementId?: string;
+  enabled?: boolean;
 }
 
-<<<<<<< HEAD
-export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
-  return (
-    <div className={`analytics-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
-=======
 const Analytics: React.FC<AnalyticsProps> = ({
   measurementId = 'G-XXXXXXXXXX', // Replace with actual GA4 measurement ID
   enabled = process.env.NODE_ENV === 'production'
@@ -44,14 +30,14 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     // Initialize dataLayer
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function() {
-      window.dataLayer.push(arguments);
+    window.gtag = function(...args: any[]) {
+      window.dataLayer.push(args);
     };
 
     window.gtag('js', new Date());
     window.gtag('config', measurementId, {
-//       page_title: document.title,
-//       page_location: window.location.href,
+      page_title: document.title,
+      page_location: window.location.href,
     });
 
     return () => {
@@ -68,8 +54,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
     if (!enabled || typeof window === 'undefined' || !window.gtag) return;
 
     window.gtag('config', measurementId, {
-//       page_title: document.title,
-//       page_location: window.location.href,
+      page_title: document.title,
+      page_location: window.location.href,
     });
   }, [location, measurementId, enabled]);
 
@@ -83,10 +69,10 @@ const Analytics: React.FC<AnalyticsProps> = ({
         for (const entry of entryList.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             window.gtag('event', 'web_vitals', {
-//               name: 'LCP',
+              name: 'LCP',
               value: Math.round(entry.startTime),
-//               event_category: 'Web Vitals',
-//               event_label: 'Largest Contentful Paint',
+              event_category: 'Web Vitals',
+              event_label: 'Largest Contentful Paint',
             });
           }
         }
@@ -97,10 +83,10 @@ const Analytics: React.FC<AnalyticsProps> = ({
         for (const entry of entryList.getEntries()) {
           if (entry.entryType === 'first-input') {
             window.gtag('event', 'web_vitals', {
-//               name: 'FID',
+              name: 'FID',
               value: Math.round((entry as any).processingStart - entry.startTime),
-//               event_category: 'Web Vitals',
-//               event_label: 'First Input Delay',
+              event_category: 'Web Vitals',
+              event_label: 'First Input Delay',
             });
           }
         }
@@ -115,9 +101,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
           }
         }
         window.gtag('event', 'web_vitals', {
-//           name: 'CLS',
+          name: 'CLS',
           value: Math.round(clsValue * 1000),
-//           event_category: 'Web Vitals',
+          event_category: 'Web Vitals',
           event_label: 'Cumulative Layout Shift',
         });
       }).observe({ entryTypes: ['layout-shift'] });
@@ -155,16 +141,16 @@ const Analytics: React.FC<AnalyticsProps> = ({
         const buttonId = button.id || button.className;
         
         trackEvent('button_click', {
-//           button_text: buttonText,
-//           button_id: buttonId,
-//           page_location: window.location.href,
+          button_text: buttonText,
+          button_id: buttonId,
+          page_location: window.location.href,
         });
       }
     };
 
     document.addEventListener('click', handleClick);
     return () => document.removeEventListener('click', handleClick);
-  }, [enabled]);
+  }, [enabled, trackEvent]);
 
   // Track form submissions
   useEffect(() => {
@@ -176,13 +162,13 @@ const Analytics: React.FC<AnalyticsProps> = ({
       
       trackEvent('form_submit', {
         form_id: formId,
-//         page_location: window.location.href,
+        page_location: window.location.href,
       });
     };
 
     document.addEventListener('submit', handleSubmit);
     return () => document.removeEventListener('submit', handleSubmit);
-  }, [enabled]);
+  }, [enabled, trackEvent]);
 
   // Track scroll depth
   useEffect(() => {
@@ -200,8 +186,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
         // Track at 25%, 50%, 75%, and 100%
         if ([25, 50, 75, 100].includes(scrollPercent)) {
           trackEvent('scroll_depth', {
-//             scroll_percent: scrollPercent,
-//             page_location: window.location.href,
+            scroll_percent: scrollPercent,
+            page_location: window.location.href,
           });
         }
       }
@@ -209,10 +195,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     window.addEventListener('scroll', trackScroll, { passive: true });
     return () => window.removeEventListener('scroll', trackScroll);
-  }, [enabled]);
+  }, [enabled, trackEvent]);
 
   return null; // This component doesn't render anything
 };
 
 export default Analytics;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

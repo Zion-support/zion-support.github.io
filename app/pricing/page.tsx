@@ -1,6 +1,3 @@
-import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Brain, Mail, Smartphone, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
 export default function Pricing() {
   const aiServicesPricing = [
@@ -172,7 +169,7 @@ export default function Pricing() {
   ];
 
   return (
-    <div>
+    <>
       <Helmet>
         <title>Pricing - Zion Tech Group | AI & IT Solutions</title>
         <meta
@@ -500,6 +497,6 @@ export default function Pricing() {
           </div>
         </section>
       </div>
-</div>
+    </>
   );
 }

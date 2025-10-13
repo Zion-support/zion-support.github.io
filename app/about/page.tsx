@@ -1,6 +1,3 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucide-react';
 
 export default function AboutPage() {
 
@@ -28,14 +25,14 @@ export default function AboutPage() {
   ];
 
   const stats = [
-    { label: "Projects Completed", number: "500+" },
-    { label: "Happy Clients", number: "200+" },
-    { label: "Years Experience", number: "10+" },
-    { label: "Team Members", number: "50+" }
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
   ];
 
   return (
-    <div>
+    <>
       <Helmet>
         <title>About - Zion Tech Group | AI & IT Solutions</title>
         <meta
@@ -91,15 +88,10 @@ export default function AboutPage() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { number: "500+", label: "Projects Completed" },
-                { number: "50+", label: "Happy Clients" },
-                { number: "5+", label: "Years Experience" },
-                { number: "24/7", label: "Support Available" }
-              ].map((stat, index) => (
+              {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                    {stat.number}
+                    {stat.value}
                   </div>
                   <div className="text-gray-300 text-sm md:text-base">
                     {stat.label}
@@ -261,6 +253,6 @@ export default function AboutPage() {
           </div>
         </section>
       </div>
-</div>
+    </>
   );
 }

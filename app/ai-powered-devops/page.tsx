@@ -1,30 +1,39 @@
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from "react";
 import SEOOptimizer from "../../components/SEOOptimizer";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+import { Plus } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 
-export default function AIPoweredDevOpsPage() {
-  const testimonials = [
-    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5, avatar: "/api/placeholder/64/64" }
-  ];
+export default function AiPoweredDevops() {
   const features = [
-    "Automated CI/CD Pipeline Setup",
-    "Intelligent Monitoring & Alerting",
-    "Auto-scaling Infrastructure",
-    "Security Vulnerability Scanning",
-    "Performance Optimization",
-    "Cost Optimization"
+    "AI-powered automated testing and quality assurance",
+    "Intelligent deployment orchestration and rollback",
+    "Predictive infrastructure scaling and optimization",
+    "Automated security vulnerability detection and patching",
+    "AI-driven performance monitoring and alerting",
+    "Intelligent log analysis and anomaly detection",
+    "Automated code review and optimization suggestions",
+    "Smart resource allocation and cost optimization",
+    "AI-powered incident response and resolution",
+    "Automated compliance checking and reporting",
+    "Intelligent capacity planning and forecasting",
+    "AI-driven continuous integration and deployment"
   ];
 
-  const capabilities = [
-    "Automated CI/CD pipeline setup",
-    "Intelligent monitoring and alerting",
-    "Auto-scaling infrastructure management",
-    "Security vulnerability scanning",
-    "Performance optimization",
-    "Cost optimization recommendations"
-  ];
-  
   const pricingPlans = [
     {
       name: "Startup",
@@ -112,7 +121,7 @@ export default function AIPoweredDevOpsPage() {
   ];
 
   return (
-    <React.Fragment>
+    <>
       <Helmet>
         <title>AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group</title>
         <meta
@@ -125,9 +134,10 @@ export default function AIPoweredDevOpsPage() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
       </Helmet>
-      <SEOOptimizer>
-        <div>AI-Powered DevOps Content</div>
-      </SEOOptimizer>
+      <SEOOptimizer
+        title="AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group"
+        description="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
+      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -225,7 +235,7 @@ export default function AIPoweredDevOpsPage() {
                 >
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
-                    <span className="text-white font-medium">{feature.title}</span>
+                    <span className="text-white font-medium">{feature}</span>
                   </div>
                 </div>
               ))}
@@ -252,13 +262,16 @@ export default function AIPoweredDevOpsPage() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >
                   <div
-                    className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${capability.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                   >
-                    <Zap className="w-8 h-8 text-white" />
+                    {capability.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {capability}
+                    {capability.title}
                   </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {capability.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -354,7 +367,7 @@ export default function AIPoweredDevOpsPage() {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                      {`/avatars/avatar-${index + 1}.jpg`}
+                      {testimonial.avatar}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -422,6 +435,6 @@ export default function AIPoweredDevOpsPage() {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </>
   );
 }

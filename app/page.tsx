@@ -1,58 +1,25 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
-import FuturisticCard from "./components/FuturisticCard";
-import FuturisticButton from "./components/FuturisticButton";
-import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
-import ResponsiveGrid from "./components/ResponsiveGrid";
-import ResponsiveText from "./components/ResponsiveText";
+import { Award } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Mic } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 
 const HomePage = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.svg",
-    "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-    ],
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "AI Solutions",
-        "description": "Artificial intelligence and machine learning services"
-      },
-      {
-        "@type": "Offer", 
-        "name": "Cybersecurity",
-        "description": "Advanced cybersecurity solutions and protection"
-      },
-      {
-        "@type": "Offer",
-        "name": "Cloud Infrastructure", 
-        "description": "Cloud computing and infrastructure services"
-      }
-    ]
-  };
   const features = [
     {
       title: "AI-Powered Solutions",
@@ -90,35 +57,19 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion AI Workflow Automator Pro",
-      description: "AI-powered workflow automation that reduces manual work by 80% with intelligent process optimization",
-      price: "From $99/month",
-      icon: <Zap className="w-6 h-6" />,
-      link: "/zion-ai-workflow-automator-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Social Scheduler Pro",
-      description: "AI-powered social media management with content optimization and 300% engagement increase",
-      price: "From $49/month",
-      icon: <Globe className="w-6 h-6" />,
-      link: "/zion-ai-social-scheduler-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Email Marketing Pro",
-      description: "AI-powered email marketing with 400% ROI increase and advanced segmentation capabilities",
-      price: "From $29/month",
+      name: "Zion AI Meeting Transcriber",
+      description: "Real-time meeting transcription with 99.5% accuracy, speaker identification, and automatic action item extraction",
+      price: "From $19/month",
       icon: <Mail className="w-6 h-6" />,
-      link: "/zion-ai-email-marketing-pro",
+      link: "/zion-ai-meeting-transcriber",
       featured: true
     },
     {
-      name: "Zion AI Inventory Optimizer Pro",
-      description: "AI-powered inventory management with 30% cost reduction and 95% forecast accuracy",
-      price: "From $199/month",
-      icon: <Package className="w-6 h-6" />,
-      link: "/zion-ai-inventory-optimizer-pro",
+      name: "Zion AI Sales Predictor",
+      description: "AI-powered sales forecasting with 95% accuracy, lead scoring, and customer behavior prediction",
+      price: "From $39/month",
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: "/zion-ai-sales-predictor",
       featured: true
     },
     {
@@ -136,13 +87,29 @@ const HomePage = () => {
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield",
       featured: true
+    },
+    {
+      name: "Zion Cloud Vault",
+      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
+      price: "From $99/month",
+      icon: <Cloud className="w-6 h-6" />,
+      link: "/zion-cloud-vault",
+      featured: true
+    },
+    {
+      name: "Zion AI CRM Pro",
+      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
+      price: "From $199/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-crm-pro",
+      featured: true
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -172,13 +139,13 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <FuturisticBackground />
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
         description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, business automation, technology consulting, micro SAAS, 5G technology, IT services, machine learning"
         canonical="https://ziontechgroup.com"
       />
+      <FuturisticBackground />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">

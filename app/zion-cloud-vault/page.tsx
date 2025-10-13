@@ -1,6 +1,3 @@
-import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
 export default function ZionCloudVault() {
   const features = [
@@ -102,7 +99,7 @@ export default function ZionCloudVault() {
   ];
 
   return (
-    <div>
+    <>
       <Helmet>
         <title>Zion Cloud Vault - Secure Cloud Storage Platform | Zion Tech Group</title>
         <meta
@@ -216,7 +213,7 @@ export default function ZionCloudVault() {
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{feature.title}</span>
+                  <span className="text-gray-300">{feature}</span>
                 </div>
               ))}
             </div>
@@ -263,7 +260,7 @@ export default function ZionCloudVault() {
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{feature.title}</span>
+                        <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -343,6 +340,6 @@ export default function ZionCloudVault() {
           </div>
         </section>
       </div>
-</div>
+    </>
   );
 }

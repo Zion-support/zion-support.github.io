@@ -1,11 +1,8 @@
-import { ArrowRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 
-import { Link } from 'react-router-dom';
 
 export default function GDataAnalyticsZionTechGroupPage() {
   return (
-    <div>
+    <>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
       </Helmet>
@@ -24,6 +21,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
           </Link>
         </div>
       </div>
-</div>
+    </>
   );
 }

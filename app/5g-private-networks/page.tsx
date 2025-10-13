@@ -1,10 +1,7 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 export default function PrivateNetworks5GPage() {
   return (
-    <div>
+    <>
       <Helmet>
         <title>5G Private Networks - Zion Tech Group</title>
         <meta
@@ -32,6 +29,6 @@ export default function PrivateNetworks5GPage() {
           </Link>
         </div>
       </div>
-</div>
+    </>
   );
 }

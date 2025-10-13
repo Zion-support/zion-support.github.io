@@ -1,12 +1,85 @@
+import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+import { AlertTriangle } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 
 const ZionAICybersecuritySuiteProPage = () => {
-  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];
 
-  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+  const features = [
+    {
+      title: "AI-Powered Threat Detection",
+      description: "Advanced machine learning algorithms detect and prevent cyber threats in real-time with 99.9% accuracy",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Zero-Trust Security Architecture",
+      description: "Implement comprehensive zero-trust security model with continuous verification and least-privilege access",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Automated Incident Response",
+      description: "AI-driven incident response system that automatically contains, analyzes, and remediates security breaches",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Advanced Endpoint Protection",
+      description: "Comprehensive endpoint security with behavioral analysis, ransomware protection, and device management",
+      icon: <Smartphone className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      title: "Network Security Monitoring",
+      description: "24/7 network monitoring with AI-powered anomaly detection and automated threat hunting",
+      icon: <Network className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      title: "Compliance Management",
+      description: "Automated compliance monitoring for GDPR, HIPAA, SOX, and other regulatory requirements",
+      icon: <FileShield className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500"
+    }
+  ];
 
   const pricingPlans = [
     {
@@ -182,11 +255,19 @@ const ZionAICybersecuritySuiteProPage = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
-              >
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<Sparkles className="w-5 h-5" />}
+            >
               Get Security Assessment
             </FuturisticButton>
             <FuturisticButton
-              >
+              href="#demo"
+              variant="outline"
+              size="lg"
+              icon={<Monitor className="w-5 h-5" />}
+            >
               Watch Demo
             </FuturisticButton>
           </div>
@@ -368,12 +449,14 @@ const ZionAICybersecuritySuiteProPage = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      <span className="text-sm">{feature.title}</span>
+                      <span className="text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
                 <FuturisticButton
+                  href="/contact"
                   variant={plan.popular ? "primary" : "outline"}
+                  size="lg"
                   className="w-full"
                 >
                   Get Started
@@ -409,7 +492,7 @@ const ZionAICybersecuritySuiteProPage = () => {
                 <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                    {`/avatars/avatar-${index + 1}.jpg`}
+                    {testimonial.avatar}
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
@@ -435,11 +518,19 @@ const ZionAICybersecuritySuiteProPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
-                >
+                href="/contact"
+                variant="primary"
+                size="lg"
+                icon={<Sparkles className="w-5 h-5" />}
+              >
                 Get Security Assessment
               </FuturisticButton>
               <FuturisticButton
-                >
+                href="/demo"
+                variant="outline"
+                size="lg"
+                icon={<Monitor className="w-5 h-5" />}
+              >
                 Schedule Demo
               </FuturisticButton>
             </div>

@@ -1,5 +1,33 @@
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Home } from 'lucide-react';
+import { Search } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+import { Play } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { FileText } from 'lucide-react';
+import { Mic } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play } from 'lucide-react';
+import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play, Mic, Code, Network } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -128,6 +156,26 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         { label: '5G Smart City Solutions', href: '/5g-smart-city-solutions', icon: <Globe className="w-4 h-4" /> }
       ]
     }
+  ];
+
+  const quickLinks = [
+    { label: 'Home', href: '/', icon: <Home className="w-4 h-4" /> },
+    { label: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
+    { label: 'Demo', href: '/demo', icon: <Play className="w-4 h-4" /> },
+    { label: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
+    { label: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" /> },
+    { label: 'Blog', href: '/blog', icon: <FileText className="w-4 h-4" /> },
+    { label: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> }
+  ];
+
+  const companyLinks = [
+    { label: 'About Us', href: '/about' },
+    { label: 'Our Team', href: '/team' },
+    { label: 'Careers', href: '/careers' },
+    { label: 'Case Studies', href: '/case-studies' },
+    { label: 'News', href: '/news' },
+    { label: 'Press', href: '/press' },
+    { label: 'Partners', href: '/partners' }
   ];
 
   const filteredSections = navigationSections.map(section => ({

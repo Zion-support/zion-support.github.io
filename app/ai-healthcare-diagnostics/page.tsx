@@ -1,6 +1,3 @@
-import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
 export default function AIHealthcareDiagnostics() {
   const features = [
@@ -78,7 +75,7 @@ export default function AIHealthcareDiagnostics() {
   ];
 
   return (
-    <div>
+    <>
       <Helmet>
         <title>AI Healthcare Diagnostics - Zion Tech Group | Medical AI Solutions</title>
         <meta
@@ -336,6 +333,6 @@ export default function AIHealthcareDiagnostics() {
           </div>
         </section>
       </div>
-</div>
+    </>
   );
 }

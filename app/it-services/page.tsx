@@ -1,8 +1,21 @@
 import React from "react";
+import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import SEOOptimizer from "../components/SEOOptimizer";
-import { Cloud, Shield, Network, Database, Code, Headphones, Smartphone, Monitor, Target, HardDrive, Settings, ArrowRight, Star, ArrowRight, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Code } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Headphones } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 
 export default function ITServices() {
   const itServices = [
@@ -384,7 +397,7 @@ export default function ITServices() {
   ];
 
   return (
-    <div>
+    <>
       <Helmet>
         <title>IT Services - Zion Tech Group | Professional IT Solutions</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, software development, and system integration. Expert solutions for modern businesses." />
@@ -392,8 +405,9 @@ export default function ITServices() {
         <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Helmet>
       
-      <SEOOptimizer></SEOOptimizer>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
@@ -534,6 +548,6 @@ export default function ITServices() {
           </div>
         </section>
       </div>
-</div>
+    </>
   );
 }

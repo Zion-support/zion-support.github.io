@@ -1,11 +1,5 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Globe, Phone, CheckCircle, Sparkles, Heart, Receipt, Package } from 'lucide-react';
 
-export default function Page() {
-  const stats = [
-    { label: "Stat 1", value: "100%" }
-  ];
+export default function MicroSaasServices() {
   const microSaasServices = [
     {
       id: "zion-ai-analytics-pro",
@@ -334,7 +328,7 @@ export default function Page() {
   ];
 
   return (
-    <div>
+    <>
       <Helmet>
         <title>Micro SAAS Services - Zion Tech Group | AI-Powered Business Solutions</title>
         <meta
@@ -594,6 +588,6 @@ export default function Page() {
           </div>
         </section>
       </div>
-</div>
+    </>
   );
 }

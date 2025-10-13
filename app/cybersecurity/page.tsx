@@ -1,6 +1,3 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, Users, Database, Mail, Smartphone, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
 export default function Cybersecurity() {
   const services = [
@@ -61,7 +58,7 @@ export default function Cybersecurity() {
   ];
 
   return (
-    <div>
+    <>
       <Helmet>
         <title>Cybersecurity Services - Zion Tech Group | Advanced Security Solutions</title>
         <meta
@@ -235,6 +232,6 @@ export default function Cybersecurity() {
           </div>
         </section>
       </div>
-</div>
+    </>
   );
 }
