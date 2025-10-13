@@ -51,15 +51,37 @@ const Footer: React.FC = () => {
     { name: "Micro SAAS", path: "/micro-saas" },
     { name: "5G Solutions", path: "/5g-solutions" },
     { name: "Contact", path: "/contact" },
+    { name: "Demo", path: "/demo" },
+    { name: "Consultation", path: "/consultation" },
   ];
 
   const services = [
     { name: "AI Analytics", path: "/ai-analytics" },
-    { name: "Cybersecurity", path: "/ai-cybersecurity" },
+    { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
+    { name: "AI Content Generation", path: "/ai-content-generation" },
+    { name: "AI Customer Support", path: "/ai-customer-support" },
     { name: "Cloud Migration", path: "/cloud-migration" },
     { name: "Web Development", path: "/web-development" },
     { name: "DevOps", path: "/devops" },
     { name: "IT Consulting", path: "/it-consulting" },
+  ];
+
+  const microSaasServices = [
+    { name: "Zion Analytics Pro", path: "/zion-analytics-pro" },
+    { name: "Zion Security Shield", path: "/zion-security-shield-pro" },
+    { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
+    { name: "Zion Cloud Vault", path: "/zion-cloud-vault-pro" },
+    { name: "Zion AI Marketing", path: "/zion-ai-marketing-automation" },
+    { name: "Zion AI Video Generator", path: "/zion-ai-video-generator" },
+  ];
+
+  const fiveGServices = [
+    { name: "5G Network Infrastructure", path: "/5g-network-infrastructure" },
+    { name: "5G Edge Computing", path: "/5g-edge-computing" },
+    { name: "5G IoT Solutions", path: "/5g-iot-solutions" },
+    { name: "5G Smart City", path: "/5g-smart-city-solutions" },
+    { name: "5G Private Networks", path: "/5g-private-networks" },
+    { name: "5G Mobile Apps", path: "/5g-mobile-applications" },
   ];
 
   const stats = [
