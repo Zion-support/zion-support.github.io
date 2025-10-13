@@ -118,20 +118,34 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - split into smaller chunks
+          // Group AI service pages into larger chunks for better performance
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
-            return `ai-${serviceName || 'services'}`
+            // Group similar services together
+            if (serviceName?.includes('analytics') || serviceName?.includes('dashboard')) {
+              return 'ai-analytics'
+            }
+            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
+              return 'ai-content'
+            }
+            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
+              return 'ai-customer'
+            }
+            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
+              return 'ai-security'
+            }
+            if (serviceName?.includes('financial') || serviceName?.includes('business')) {
+              return 'ai-business'
+            }
+            return 'ai-services'
           }
-          // Zion service pages
+          // Group Zion service pages
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/zion-')[1]?.split('/')[0];
-            return `zion-${serviceName || 'services'}`
+            return 'zion-services'
           }
-          // 5G service pages
+          // Group 5G service pages
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/5g-')[1]?.split('/')[0];
-            return `5g-${serviceName || 'services'}`
+            return '5g-services'
           }
           // Other service pages
           if (id.includes('/app/') && id.includes('/page.tsx') && 

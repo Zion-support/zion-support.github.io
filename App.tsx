@@ -14,6 +14,8 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+import ErrorBoundary from "./app/components/ErrorBoundary";
+import LoadingSpinner from "./app/components/LoadingSpinner";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -192,7 +194,6 @@ const FiveGPrivateNetworksPage = React.lazy(
 const FiveGSmartCitySolutionsPage = React.lazy(
   () => import("./app/5g-smart-city-solutions/page"),
 );
-const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const FiveG5gIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
 const AccessibilityPage = React.lazy(() => import("./app/accessibility/page"));
 const AccessibilityPagePage = React.lazy(() => import("./app/accessibility-page/page"));
@@ -584,7 +585,7 @@ function App() {
                   <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                   <Breadcrumb />
                   <main id="main-content" role="main">
-                    <Suspense fallback={<LoadingPage />}>
+                    <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
                       <Routes>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/about" element={<AboutPage />} />

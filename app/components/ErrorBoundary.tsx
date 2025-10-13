@@ -1,11 +1,9 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -35,17 +33,21 @@ class ErrorBoundary extends Component<Props, State> {
       console.error('Error caught by boundary:', error, errorInfo);
     }
 
-    // Call custom error handler if provided
-    this.props.onError?.(error, errorInfo);
-
-    // Log to error reporting service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a service like Sentry
-      }
+    // Log error to analytics in production
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'exception', {
+        description: error.toString(),
+        fatal: false,
+      });
+    }
   }
 
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
   };
 
   render() {
@@ -57,7 +59,7 @@ class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-            <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-red-500/20 flex items-center justify-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             
@@ -66,25 +68,22 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-              We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-400 hover:text-white mb-2">
+                <summary className="text-red-400 cursor-pointer mb-2">
                   Error Details (Development)
                 </summary>
-                <div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-xs font-mono text-red-300 overflow-auto max-h-32">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
+                <div className="bg-red-900/20 p-4 rounded-lg text-sm">
+                  <pre className="text-red-300 whitespace-pre-wrap">
+                    {this.state.error.toString()}
+                  </pre>
                   {this.state.errorInfo && (
-                    <div>
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
+                    <pre className="text-red-300 whitespace-pre-wrap mt-2">
+                      {this.state.errorInfo.componentStack}
+                    </pre>
                   )}
                 </div>
               </details>
@@ -93,31 +92,24 @@ class ErrorBoundary extends Component<Props, State> {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={this.handleRetry}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
               >
                 <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
                 Try Again
               </button>
               
-              <Link
-                to="/"
-                className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
+              <button
+                onClick={this.handleGoHome}
+                className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group"
               >
                 <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Go Home
-              </Link>
+              </button>
             </div>
 
-            <div className="mt-6 pt-6 border-t border-white/20">
-              <p className="text-sm text-gray-400 mb-2">
-                Still having trouble?
-              </p>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium"
-              >
-                Contact Support
-              </a>
+            <div className="mt-8 text-sm text-gray-400">
+              <p>If this problem persists, please contact our support team:</p>
+              <p className="text-cyan-400">kleber@ziontechgroup.com</p>
             </div>
           </div>
         </div>
