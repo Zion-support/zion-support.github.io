@@ -1,68 +1,91 @@
-import React, { useEffect, useCallback } from 'react';
-
-interface WebVitalsData {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
-}
+import React, { useEffect } from 'react';
 
 const CoreWebVitals: React.FC = () => {
-<<<<<<< HEAD
-  const reportWebVitals = useCallback((data: WebVitalsData) => {
-    // Send to Google Analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'web_vitals', {
-        metric_name: data.name,
-        metric_value: Math.round(data.value),
-        metric_delta: Math.round(data.delta),
-        metric_id: data.id,
-        metric_navigation_type: data.navigationType
-      });
-    }
-
-    // Send to custom analytics
-    if (typeof window !== 'undefined' && (window as any).analytics) {
-      (window as any).analytics.track('Web Vitals', {
-        metric: data.name,
-        value: data.value,
-        delta: data.delta,
-        id: data.id
-      });
-    }
-
-    // Log in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vital:', data.name, data.value);
-    }
-=======
   useEffect(() => {
-    // Core Web Vitals monitoring
-    console.log('Core Web Vitals monitoring initialized');
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-  }, []);
+    // Only run in browser
+    if (typeof window === 'undefined') return;
 
-  useEffect(() => {
-    const measureWebVitals = async () => {
+    // Load web-vitals library dynamically
+    const loadWebVitals = async () => {
       try {
-        const { onCLS, onFID, onFCP, onLCP, onTTFB, onINP } = await import('web-vitals');
+        const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
+        
+        // Measure Core Web Vitals
+        getCLS((data) => {
+          console.log('CLS:', data);
+          // Send to analytics if available
+          if (window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              event_category: 'Web Vitals',
+              event_label: 'CLS',
+              value: Math.round(data.value * 1000),
+              non_interaction: true,
+            });
+          }
+        });
 
-        onCLS(reportWebVitals);
-        onFID(reportWebVitals);
-        onFCP(reportWebVitals);
-        onLCP(reportWebVitals);
-        onTTFB(reportWebVitals);
-        onINP(reportWebVitals);
+        getFID((data) => {
+          console.log('FID:', data);
+          if (window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              event_category: 'Web Vitals',
+              event_label: 'FID',
+              value: Math.round(data.value),
+              non_interaction: true,
+            });
+          }
+        });
+
+        getFCP((data) => {
+          console.log('FCP:', data);
+          if (window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              event_category: 'Web Vitals',
+              event_label: 'FCP',
+              value: Math.round(data.value),
+              non_interaction: true,
+            });
+          }
+        });
+
+        getLCP((data) => {
+          console.log('LCP:', data);
+          if (window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              event_category: 'Web Vitals',
+              event_label: 'LCP',
+              value: Math.round(data.value),
+              non_interaction: true,
+            });
+          }
+        });
+
+        getTTFB((data) => {
+          console.log('TTFB:', data);
+          if (window.gtag) {
+            window.gtag('event', 'web_vitals', {
+              event_category: 'Web Vitals',
+              event_label: 'TTFB',
+              value: Math.round(data.value),
+              non_interaction: true,
+            });
+          }
+        });
       } catch (error) {
         console.warn('Failed to load web-vitals:', error);
       }
     };
 
-    measureWebVitals();
-  }, [reportWebVitals]);
+    loadWebVitals();
+  }, []);
 
-  return null; // This component doesn't render anything
+  return null;
 };
+
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
 
 export default CoreWebVitals;

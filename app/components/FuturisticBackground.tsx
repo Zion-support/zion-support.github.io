@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 
-<<<<<<< HEAD
-const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
+const FuturisticBackground: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -28,21 +27,20 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
     };
 
     const createParticle = () => {
-      const colors = ['#00f5ff', '#ff00ff', '#00ff00', '#ffff00', '#ff4500'];
       return {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.8 + 0.2,
-        color: colors[Math.floor(Math.random() * colors.length)]
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        size: Math.random() * 2 + 1,
+        opacity: Math.random() * 0.5 + 0.2,
+        color: Math.random() > 0.5 ? '#06b6d4' : '#8b5cf6'
       };
     };
 
     const initParticles = () => {
       particles = [];
-      for (let i = 0; i < 100; i++) {
+      for (let i = 0; i < 50; i++) {
         particles.push(createParticle());
       }
     };
@@ -50,74 +48,36 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Update and draw particles
-      particles.forEach((particle, index) => {
+      particles.forEach(particle => {
         particle.x += particle.vx;
         particle.y += particle.vy;
 
-        // Wrap around edges
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
+        if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
+        if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
 
-        // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
+      });
 
-        // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
-          if (index !== otherIndex) {
-            const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
+      // Draw connections
+      particles.forEach((particle, i) => {
+        particles.slice(i + 1).forEach(otherParticle => {
+          const dx = particle.x - otherParticle.x;
+          const dy = particle.y - otherParticle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
 
-            if (distance < 150) {
-              ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = `rgba(0, 245, 255, ${0.1 * (1 - distance / 150)})`;
-              ctx.lineWidth = 1;
-              ctx.stroke();
-            }
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.strokeStyle = `rgba(6, 182, 212, ${0.1 * (1 - distance / 100)})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
           }
         });
       });
-
-      // Draw animated grid
-      ctx.strokeStyle = 'rgba(0, 245, 255, 0.1)';
-      ctx.lineWidth = 1;
-      const gridSize = 50;
-      const time = Date.now() * 0.001;
-
-      for (let x = 0; x < canvas.width; x += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
-
-      for (let y = 0; y < canvas.height; y += gridSize) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
-
-      // Draw animated circles
-      for (let i = 0; i < 5; i++) {
-        const radius = 100 + Math.sin(time + i) * 50;
-        const x = canvas.width / 2 + Math.cos(time * 0.5 + i) * 200;
-        const y = canvas.height / 2 + Math.sin(time * 0.5 + i) * 200;
-
-        ctx.beginPath();
-        ctx.arc(x, y, radius, 0, Math.PI * 2);
-        ctx.strokeStyle = `rgba(255, 0, 255, ${0.1 * Math.sin(time + i)})`;
-        ctx.lineWidth = 2;
-        ctx.stroke();
-      }
 
       animationId = requestAnimationFrame(animate);
     };
@@ -134,19 +94,13 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
     window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
       cancelAnimationFrame(animationId);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
-=======
-interface FuturisticBackgroundProps {
-  children?: React.ReactNode;
-}
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
   return (
-<<<<<<< HEAD
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-hidden">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
@@ -155,20 +109,6 @@ interface FuturisticBackgroundProps {
       <div className="relative z-10">
         {children}
       </div>
-=======
-    <div className="relative">
-      {/* Animated background elements */}
-      <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500"></div>
-        
-        {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
-      </div>
-      
-      {children}
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
     </div>
   );
 };

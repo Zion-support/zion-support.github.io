@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-export default function ZionAiContractAnalyzer() {
+export default function ZionAiEmailAnalyzer() {
   const features = [
     'AI-powered automation',
     'Real-time analytics',
@@ -17,11 +17,11 @@ export default function ZionAiContractAnalyzer() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Contract Analyzer | Zion Tech Group</title>
-        <meta name='description' content='Intelligent contract analysis tool that reviews, extracts key terms, and identifies risks.' />
-        <link rel='canonical' href='https://ziontechgroup.com/zion-ai-contract-analyzer' />
+        <title>Zion AI Email Analyzer | Zion Tech Group</title>
+        <meta name='description' content='AI-powered email analysis tool that provides insights, sentiment analysis, and automated responses.' />
+        <link rel='canonical' href='https://ziontechgroup.com/zion-ai-email-analyzer' />
       </Helmet>
-      <SEOOptimizer title='Zion AI Contract Analyzer | Zion Tech Group' description='Intelligent contract analysis tool that reviews, extracts key terms, and identifies risks.' />
+      <SEOOptimizer title='Zion AI Email Analyzer | Zion Tech Group' description='AI-powered email analysis tool that provides insights, sentiment analysis, and automated responses.' />
 
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse'></div>
@@ -31,12 +31,12 @@ export default function ZionAiContractAnalyzer() {
             <div className='text-center mb-16'>
               <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'>
                 <span className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400'>
-                  Zion AI Contract Analyzer
+                  Zion AI Email Analyzer
                 </span>
               </h1>
               
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
-                Intelligent contract analysis tool that reviews, extracts key terms, and identifies risks.
+                AI-powered email analysis tool that provides insights, sentiment analysis, and automated responses.
               </p>
               
               <div className='flex flex-col sm:flex-row gap-4 justify-center mb-16'>
