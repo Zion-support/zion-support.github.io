@@ -1,81 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
-<<<<<<< HEAD
   ArrowRightIcon,
   HeartIcon
 } from '@heroicons/react/24/outline';
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
-=======
-  ArrowRightIcon
-} from '@heroicons/react/24/outline';
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
     { name: 'Cybersecurity', href: '/cybersecurity' },
     { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-<<<<<<< HEAD
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: '5G Solutions', href: '/5g-solutions' },
-  ];
-=======
-  const footerLinks = {
-    services: [
-      { name: 'AI Solutions', href: '/ai-solutions' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-      { name: 'Digital Transformation', href: '/digital-transformation' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: '5G Solutions', href: '/5g-solutions' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Solutions', href: '/solutions' },
-      { name: 'Pricing', href: '/pricing' },
-      { name: 'Blog', href: '/blog' }
-    ],
-    support: [
-      { name: 'Contact', href: '/contact' },
-      { name: 'Support', href: '/support' },
-      { name: 'Tutorials', href: '/tutorials' },
-      { name: 'Demo', href: '/demo' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' }
-    ]
-  };
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
-
-<<<<<<< HEAD
-=======
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
     { name: '5G Solutions', href: '/5g-solutions' },
   ];
-
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
