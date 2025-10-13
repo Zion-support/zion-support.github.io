@@ -98,6 +98,11 @@ const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translato
 const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
+const ZionAIMeetingTranscriberPage = React.lazy(() => import("./app/zion-ai-meeting-transcriber/page"));
+const ZionAIDocumentAnalyzerPage = React.lazy(() => import("./app/zion-ai-document-analyzer/page"));
+const ZionAIEmailOptimizerPage = React.lazy(() => import("./app/zion-ai-email-optimizer/page"));
+const ITStrategyConsultingPage = React.lazy(() => import("./app/it-strategy-consulting/page"));
+const AIMachineLearningPage = React.lazy(() => import("./app/ai-machine-learning/page"));
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -221,6 +226,11 @@ function App() {
                             <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+                            <Route path="/zion-ai-meeting-transcriber" element={<ZionAIMeetingTranscriberPage />} />
+                            <Route path="/zion-ai-document-analyzer" element={<ZionAIDocumentAnalyzerPage />} />
+                            <Route path="/zion-ai-email-optimizer" element={<ZionAIEmailOptimizerPage />} />
+                            <Route path="/it-strategy-consulting" element={<ITStrategyConsultingPage />} />
+                            <Route path="/ai-machine-learning" element={<AIMachineLearningPage />} />
                             
                             {/* 404 Route - Must be last */}
                             <Route path="*" element={<NotFoundPage />} />
