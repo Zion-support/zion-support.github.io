@@ -63,9 +63,6 @@ const Footer: React.FC = () => {
     { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
     { name: "AI Content Generation", path: "/ai-content-generation" },
     { name: "AI Customer Support", path: "/ai-customer-support" },
-<<<<<<< HEAD    { name: "AI Content Generation", path: "/ai-content-generation" },
-    { name: "AI Customer Support", path: "/ai-customer-support" },
-    { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
     { name: "AI Data Analytics", path: "/ai-data-analytics" },
     { name: "AI Document Processing", path: "/ai-document-processing" },
     { name: "AI Marketing Automation", path: "/ai-marketing-automation" },
@@ -88,15 +85,6 @@ const Footer: React.FC = () => {
   ];
 
   const itServices = [
-=======
-    { name: "AI Data Analytics", path: "/ai-data-analytics" },
-    { name: "AI Workflow Automation", path: "/ai-workflow-automation" },
-    { name: "AI Predictive Analytics", path: "/ai-predictive-analytics" },
-    { name: "AI Voice Assistant", path: "/ai-voice-assistant" },
-  ];
-
-  const itServices = [
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
     { name: "Cloud Migration", path: "/cloud-migration" },
     { name: "Web Development", path: "/web-development" },
     { name: "DevOps", path: "/devops" },
@@ -276,7 +264,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-<<<<<<< HEAD          {/* IT Services */}
+          {/* IT Services */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">IT Services</h3>
             <ul className="space-y-2">
@@ -305,7 +293,13 @@ const Footer: React.FC = () => {
                     className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
                   >
                     <ArrowRight className="w-4 h-4 mr-2" />
-=======
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* 5G Solutions */}
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">5G Solutions</h3>
@@ -317,7 +311,6 @@ const Footer: React.FC = () => {
                     className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm"
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
                     {service.name}
                   </Link>
                 </li>
