@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-=======
 const ZionAICustomerInsightsPage = () => {
   // const [selectedPlan, setSelectedPlan] = useState('pro');
   // const [selectedPlan, setSelectedPlan] = useState('pro');
@@ -175,18 +164,12 @@ const ZionAICustomerInsightsPage = () => {
         examples: ['Risk assessment', 'Cross-selling opportunities', 'Customer lifetime value', 'Fraud detection']
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default function zionAiCustomerInsights() {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function Page() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 const ZionAICustomerInsightsPage = () => {
 
   const features = [
@@ -348,20 +331,17 @@ const ZionAICustomerInsightsPage = () => {
     }
   ];
 export default function PagePage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional services coming soon." />
       </Helmet>
-<<<<<<< HEAD
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Zion Ai Customer Insights</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function ZionAiCustomerInsightsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -369,16 +349,14 @@ export default function ZionAiCustomerInsightsPage() {
         <title>Zion Ai Customer Insights - Zion Tech Group</title>
         <meta name="description" content="Advanced zion ai customer insights solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Zion Ai Customer Insights
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function ZionaicustomerinsightsPage() {
   return (
@@ -388,10 +366,9 @@ export default function ZionaicustomerinsightsPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Zion Ai Customer Insights</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -399,14 +376,14 @@ export default function ZionaicustomerinsightsPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -414,7 +391,7 @@ export default function ZionaicustomerinsightsPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -423,9 +400,7 @@ export default function ZionaicustomerinsightsPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Users, BarChart3, TrendingUp, Target, Eye, Heart, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Cloud, Settings, Headphones, DollarSign, CreditCard, TrendingDown, Play, Zap, ShoppingCart, Store } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -440,15 +415,9 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const ZionAICustomerInsightsPage = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-6">
           Coming Soon
@@ -468,15 +437,13 @@ const ZionAICustomerInsightsPage = () => {
   );
 }};
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Zion AI Customer Insights - Zion Tech Group</title>
         <meta name="description" content="Advanced AI customer insights platform with cutting-edge technology." />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white text-center mb-8">
           Zion AI Customer Insights
@@ -490,8 +457,6 @@ const ZionAICustomerInsightsPage = () => {
 };
 
 export default ZionAICustomerInsightsPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -551,7 +516,7 @@ export default ZionAICustomerInsightsPage;
             canonicalUrl="https://ziontechgroup.com/zion-ai-customer-insights"
           />
           <StructuredData data={structuredData} />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -561,7 +526,7 @@ export default ZionAICustomerInsightsPage;
                     <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
                     <span className="text-purple-400 text-sm font-medium">AI-Powered Customer Insights</span>
                   </div>
-                  
+
                   <FuturisticTextEnhanced
                     variant="display"
                     size="5xl"
@@ -570,12 +535,12 @@ export default ZionAICustomerInsightsPage;
                     className="mb-6 leading-tight">
                     Zion AI Customer Insights
                   </FuturisticTextEnhanced>
-                  
+
                   <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                    Transform customer data into actionable insights with our AI-powered customer analytics platform. 
+                    Transform customer data into actionable insights with our AI-powered customer analytics platform.
                     Understand behavior, predict trends, and personalize experiences.
                   </p>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                     <FuturisticButtonEnhanced
                       href="/contact"
@@ -638,10 +603,10 @@ export default ZionAICustomerInsightsPage;
                   Ready to Understand Your Customers Better?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of businesses using Zion AI Customer Insights to make 
+                  Join thousands of businesses using Zion AI Customer Insights to make
                   data-driven decisions and improve customer experiences. Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -670,4 +635,3 @@ export default ZionAICustomerInsightsPage;
 };
 
 export default ZionAICustomerInsightsPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

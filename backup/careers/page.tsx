@@ -1,21 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function careers() {
-=======
-<<<<<<< HEAD
 export default function CareersPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Careers - Zion Tech Group</title>
         <meta name="description" content="Careers solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Careers</h1>
           <p className="text-xl text-gray-300 mb-8">
@@ -24,14 +19,10 @@ export default function CareersPage() {
         </div>
       </div>
     </div>
-=======
-<<<<<<< HEAD
         <h1 className="text-4xl font-bold mb-8">Careers</h1>
         <p className="text-gray-300">Join our team and help shape the future of technology.</p>
   </div>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 export default function Careers() {
   const jobOpenings = [
     {
@@ -103,7 +94,7 @@ export default function Careers() {
 </span>
 </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-//               Be part of a dynamic team that's shaping the future of technology. 
+//               Be part of a dynamic team that's shaping the future of technology.
               We're looking for passionate individuals who want to make a difference.
 </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -208,7 +199,5 @@ export default function Careers() {
 //         </section>
 </div>
 //     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

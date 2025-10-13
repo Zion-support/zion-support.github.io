@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function assetManagement() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -22,42 +10,34 @@ export default function assetManagement() {
         <title>Asset Management - Zion Tech Group</title>
         <meta name="description" content="Asset Management solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Asset Management</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function AssetManagementPage() {
-=======
 
 import React from 'react';
 
 export default function Page() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Asset Management - Zion Tech Group</title>
         <meta name="description" content="Advanced asset management solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Asset Management
-=======
 
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Page
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function AssetmanagementPage() {
   return (
@@ -67,11 +47,9 @@ export default function AssetmanagementPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Asset Management</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
-<<<<<<< HEAD
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -79,14 +57,14 @@ export default function AssetmanagementPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -94,19 +72,16 @@ export default function AssetmanagementPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </div>
     </div>
   );
-=======
 
 const AssetManagementPage = () => {
   const benefits = [
@@ -121,7 +96,6 @@ const AssetManagementPage = () => {
   const features = [
     {
       icon: <Package className="w-8 h-8" />,
-<<<<<<< HEAD
       title: "Asset Tracking",
       description: "Real-time tracking and monitoring of all your digital and physical assets."
     },
@@ -160,10 +134,7 @@ const AssetManagementPage = () => {
     "Enhanced security controls",
     "Scalable management solution"
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Database, ArrowRight, Sparkles, CheckCircle, Star, Shield, Zap, Target } from 'lucide-react';
@@ -211,7 +182,6 @@ const AssetManagementPage = () => {
       title: "Analytics & Insights",
       description: "Advanced analytics and reporting to optimize asset utilization and costs",
       color: "from-orange-500 to-red-500"
-=======
       color: "from-blue-500 to-cyan-500",
     },
     {
@@ -231,7 +201,6 @@ const AssetManagementPage = () => {
       description: "Ensure compliance with regulations and maintain security across all assets",
       icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -345,7 +314,7 @@ const AssetManagementPage = () => {
             canonical="https://ziontechgroup.com/asset-management"
           />
           <StructuredData data={structuredData} />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -353,13 +322,13 @@ const AssetManagementPage = () => {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Database className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Comprehensive Asset Management</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -368,12 +337,12 @@ const AssetManagementPage = () => {
                   className="mb-6 leading-tight">
                   Zion Asset Management
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Optimize your asset utilization with comprehensive tracking, monitoring, automation, 
+                  Optimize your asset utilization with comprehensive tracking, monitoring, automation,
                   and analytics for better performance and cost management.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#pricing"
@@ -519,10 +488,10 @@ const AssetManagementPage = () => {
                   Ready to Optimize Your Assets?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of organizations using Zion Asset Management 
+                  Join thousands of organizations using Zion Asset Management
                   to optimize their asset utilization and reduce costs. Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -550,12 +519,6 @@ const AssetManagementPage = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AssetManagementPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

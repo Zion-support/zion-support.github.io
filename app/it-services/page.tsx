@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-=======
 
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -26,7 +18,6 @@ import { BarChart3 } from 'lucide-react';
 import { Headphones } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function ITServices() {
   const itServices = [
@@ -53,19 +44,16 @@ export default function ITServices() {
         "Enhance security & compliance",
         "Increase system reliability"
       ],
-<<<<<<< HEAD
         category: "Infrastructure",
         rating: 4.9,
         reviews: 1247,
         link: "/cloud-infrastructure",
         featured: true
-=======
       category: "Infrastructure",
       rating: 4.9,
       reviews: 1247,
       link: "/cloud-infrastructure",
       featured: true;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "cybersecurity-suite",
@@ -90,19 +78,16 @@ export default function ITServices() {
         "Ensure regulatory compliance",
         "Minimize business disruption"
       ],
-<<<<<<< HEAD
         category: "Security",
         rating: 4.8,
         reviews: 892,
         link: "/cybersecurity-suite",
         featured: true
-=======
       category: "Security",
       rating: 4.8,
       reviews: 892,
       link: "/cybersecurity-suite",
       featured: true;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "network-engineering",
@@ -127,19 +112,16 @@ export default function ITServices() {
         "Enhance security posture",
         "Lower operational costs"
       ],
-<<<<<<< HEAD
         category: "Networking",
         rating: 4.7,
         reviews: 1567,
         link: "/network-engineering",
         featured: true
-=======
       category: "Networking",
       rating: 4.7,
       reviews: 1567,
       link: "/network-engineering",
       featured: true;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "database-management",
@@ -164,19 +146,16 @@ export default function ITServices() {
         "Reduce storage costs by 30%",
         "Enhance data security"
       ],
-<<<<<<< HEAD
         category: "Database",
         rating: 4.8,
         reviews: 1123,
         link: "/database-management",
         featured: false
-=======
       category: "Database",
       rating: 4.8,
       reviews: 1123,
       link: "/database-management",
       featured: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "devops-automation",
@@ -201,19 +180,16 @@ export default function ITServices() {
         "Improve team productivity",
         "Scale infrastructure efficiently"
       ],
-<<<<<<< HEAD
         category: "DevOps",
         rating: 4.9,
         reviews: 1345,
         link: "/devops-automation",
         featured: false
-=======
       category: "DevOps",
       rating: 4.9,
       reviews: 1345,
       link: "/devops-automation",
       featured: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "helpdesk-support",
@@ -238,19 +214,16 @@ export default function ITServices() {
         "Lower support costs",
         "Increase productivity"
       ],
-<<<<<<< HEAD
         category: "Support",
         rating: 4.7,
         reviews: 2156,
         link: "/helpdesk-support",
         featured: false
-=======
       category: "Support",
       rating: 4.7,
       reviews: 2156,
       link: "/helpdesk-support",
       featured: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "mobile-app-development",
@@ -275,19 +248,16 @@ export default function ITServices() {
         "Increase revenue opportunities",
         "Stay competitive in market"
       ],
-<<<<<<< HEAD
         category: "Development",
         rating: 4.8,
         reviews: 987,
         link: "/mobile-app-development",
         featured: false
-=======
       category: "Development",
       rating: 4.8,
       reviews: 987,
       link: "/mobile-app-development",
       featured: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "web-development",
@@ -312,19 +282,16 @@ export default function ITServices() {
         "Improve user experience",
         "Scale with business growth"
       ],
-<<<<<<< HEAD
         category: "Development",
         rating: 4.7,
         reviews: 1456,
         link: "/web-development",
         featured: false
-=======
       category: "Development",
       rating: 4.7,
       reviews: 1456,
       link: "/web-development",
       featured: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "data-analytics",
@@ -349,19 +316,16 @@ export default function ITServices() {
         "Improve operational efficiency",
         "Increase competitive advantage"
       ],
-<<<<<<< HEAD
         category: "Analytics",
         rating: 4.8,
         reviews: 1234,
         link: "/data-analytics",
         featured: false
-=======
       category: "Analytics",
       rating: 4.8,
       reviews: 1234,
       link: "/data-analytics",
       featured: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "it-consulting",
@@ -386,19 +350,16 @@ export default function ITServices() {
         "Reduce implementation risks",
         "Accelerate digital transformation"
       ],
-<<<<<<< HEAD
         category: "Consulting",
         rating: 4.9,
         reviews: 876,
         link: "/it-consulting",
         featured: false
-=======
       category: "Consulting",
       rating: 4.9,
       reviews: 876,
       link: "/it-consulting",
       featured: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "backup-disaster-recovery",
@@ -423,19 +384,16 @@ export default function ITServices() {
         "Meet compliance requirements",
         "Reduce recovery time"
       ],
-<<<<<<< HEAD
         category: "Backup",
         rating: 4.7,
         reviews: 654,
         link: "/backup-disaster-recovery",
         featured: false
-=======
       category: "Backup",
       rating: 4.7,
       reviews: 654,
       link: "/backup-disaster-recovery",
       featured: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     id: "managed-it-services",
@@ -460,19 +418,16 @@ export default function ITServices() {
         "Lower operational costs",
         "Focus on core business"
       ],
-<<<<<<< HEAD
         category: "Managed Services",
         rating: 4.8,
         reviews: 1789,
         link: "/managed-it-services",
         featured: false
-=======
       category: "Managed Services",
       rating: 4.8,
       reviews: 1789,
       link: "/managed-it-services",
       featured: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
   const processSteps = [
@@ -500,14 +455,9 @@ export default function ITServices() {
         description: "Provide ongoing monitoring, maintenance, and support to ensure optimal performance and security.",
         icon: <Monitor className="w-8 h-8" />
     }
-<<<<<<< HEAD
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function itServices() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -515,12 +465,11 @@ export default function itServices() {
         <title>It Services - Zion Tech Group</title>
         <meta name="description" content="It Services solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">It Services</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function ItServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -528,16 +477,14 @@ export default function ItServicesPage() {
         <title>It Services - Zion Tech Group</title>
         <meta name="description" content="Advanced it services solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             It Services
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function ItservicesPage() {
   return (
@@ -547,10 +494,9 @@ export default function ItservicesPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">It Services</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -558,14 +504,14 @@ export default function ItservicesPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -573,7 +519,7 @@ export default function ItservicesPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -583,16 +529,9 @@ export default function ItservicesPage() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
   ];
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

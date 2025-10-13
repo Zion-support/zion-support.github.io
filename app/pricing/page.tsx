@@ -1,33 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function Pricing() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function pricing() {
-=======
   const microSaasPricing = [
-=======
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
@@ -87,7 +67,6 @@ const PricingPage = () => {
   ];
 
   const faqItems = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
     {
       question: "What's included in each plan?",
       answer: "Each plan includes different features and support levels. Check the features list for each plan to see what's included."
@@ -103,21 +82,17 @@ const PricingPage = () => {
     {
       question: "What payment methods do you accept?",
       answer: "We accept all major credit cards, PayPal, and bank transfers for enterprise plans."
-=======
-
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function Pricing() {
 
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
 export default function Pricing() {
 
 export default function Pricing() {
@@ -165,11 +140,8 @@ export default function Page() {
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 
 export default function Pricing() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   const aiServicesPricing = [
     {,
     name: "AI Analytics Dashboard",
@@ -329,7 +301,6 @@ export default function Pricing() {
     {,
     question: "What happens if I exceed my plan limits?",
         answer: "We'll notify you before you reach your limits and offer options to upgrade or purchase additional capacity."
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     }
   ];
 
@@ -360,54 +331,32 @@ export default function Pricing() {
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function Page() {
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import React from 'react';
 import { Helmet } from "react-helmet-async";
 
-
-
 export default function Pricing() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
   return (
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function Pricing() {
           return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
-=======
 export default function Pricing() {
           return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
     <div className="min-h-screen bg-gray-900 text-white">
-=======
 export default function PagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Pricing</h1>
           <p className="text-xl text-gray-300 mb-8">
             This page is under development. Please check back later.
-=======
 import React from 'react';
 
 export default function PricingPage() {
@@ -418,11 +367,9 @@ export default function PricingPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
-<<<<<<< HEAD
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -430,20 +377,19 @@ export default function PricingPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
               Scalable and secure implementation.
             </p>
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -467,9 +413,7 @@ export default function PricingPage() {
               </p>
 
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </div>
-=======
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -485,31 +429,19 @@ export default function PricingPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
         </div>
       </div>
-<<<<<<< HEAD
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -520,7 +452,7 @@ export default function PricingPage() {
             keywords="pricing, plans, subscription, free trial, business plans, enterprise pricing"
             canonical="https://ziontechgroup.com/pricing"
           />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -528,13 +460,13 @@ export default function PricingPage() {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Users className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Pricing Plans</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -543,12 +475,12 @@ export default function PricingPage() {
                   className="mb-6 leading-tight">
                   Choose Your Plan
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Flexible pricing options to fit your business needs. 
+                  Flexible pricing options to fit your business needs.
                   Start your free trial today and see the difference.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#plans"
@@ -689,10 +621,10 @@ export default function PricingPage() {
                   Ready to Get Started?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Choose your plan and start your free trial today. 
+                  Choose your plan and start your free trial today.
                   No credit card required, cancel anytime.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -721,20 +653,13 @@ export default function PricingPage() {
 };
 
 export default PricingPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
     </div>
   );
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
 }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
 }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function aiQuantumFinancialOracle() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -18,12 +8,11 @@ export default function aiQuantumFinancialOracle() {
         <title>Ai Quantum Financial Oracle - Zion Tech Group</title>
         <meta name="description" content="Ai Quantum Financial Oracle solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Quantum Financial Oracle</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function AiQuantumFinancialOraclePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -31,16 +20,14 @@ export default function AiQuantumFinancialOraclePage() {
         <title>Ai Quantum Financial Oracle - Zion Tech Group</title>
         <meta name="description" content="Advanced ai quantum financial oracle solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ai Quantum Financial Oracle
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function AiquantumfinancialoraclePage() {
   return (
@@ -50,36 +37,29 @@ export default function AiquantumfinancialoraclePage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Quantum Financial Oracle</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
             <p className="text-gray-600">
               Comprehensive solution for your business requirements.
             </p>
-=======
 import {
-=======
 import React from 'react';
-import { 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-  Brain, 
-=======
+import {
+  Brain,
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  DollarSign, 
-  Target, 
-  CheckCircle, 
+  TrendingUp,
+  Shield,
+  Zap,
+  BarChart3,
+  DollarSign,
+  Target,
+  CheckCircle,
   Cpu,
   Globe,
-=======
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -95,16 +75,13 @@ import {
   Cpu,
   Globe,
   Clock,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   Activity,
   PieChart
 } from 'lucide-react';
-<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Brain, TrendingUp, Shield, Zap, BarChart3, DollarSign, Target, CheckCircle, Cpu, Globe, Clock, Activity, PieChart } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
@@ -124,17 +101,12 @@ import { Monitor } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Activity } from 'lucide-react';
-<<<<<<< HEAD
 import { DollarSign } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { DollarSign } from 'lucide-react';  PieChart  } from 'lucide-react';
  } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const AIQuantumFinancialOraclePage = () => {
   const features = [
-<<<<<<< HEAD
     {,
     title: "Quantum-Powered Predictions",
         description: "Leverage quantum computing algorithms for ultra-accurate financial market predictions",
@@ -158,7 +130,6 @@ const AIQuantumFinancialOraclePage = () => {
         description: "AI-driven portfolio optimization with quantum-enhanced decision making",
         icon: <PieChart className="w-8 h-8" />,
         color: "from-orange-500 to-red-500"
-=======
     {
       title: "Quantum-Powered Predictions",
       description: "Leverage quantum computing algorithms for ultra-accurate financial market predictions",
@@ -182,7 +153,6 @@ const AIQuantumFinancialOraclePage = () => {
       description: "AI-driven portfolio optimization with quantum-enhanced decision making",
       icon: <PieChart className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -200,11 +170,8 @@ const AIQuantumFinancialOraclePage = () => {
         "Email support",
         "Basic reporting"
       ],
-<<<<<<< HEAD
         popular: false
-=======
       popular: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Quantum Professional",
@@ -221,11 +188,8 @@ const AIQuantumFinancialOraclePage = () => {
         "Custom strategies",
         "Advanced reporting"
       ],
-<<<<<<< HEAD
         popular: true
-=======
       popular: true;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Quantum Enterprise",
@@ -244,11 +208,8 @@ const AIQuantumFinancialOraclePage = () => {
         "SLA guarantee",
         "Dedicated account manager"
       ],
-<<<<<<< HEAD
         popular: false
-=======
       popular: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
   ];
 
@@ -286,9 +247,7 @@ const AIQuantumFinancialOraclePage = () => {
     { number: "24/7", label: "Market Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
 
-<<<<<<< HEAD
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="AI Quantum Financial Oracle - Advanced Financial AI | Zion Tech Group"
@@ -303,18 +262,17 @@ const AIQuantumFinancialOraclePage = () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 mb-6">
             <Cpu className="w-4 h-4 text-purple-400 mr-2" />
             <span className="text-purple-400 text-sm font-medium">AI Quantum Financial Oracle</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400">
               AI Quantum Financial Oracle
             </span>
-=======
 
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
@@ -322,15 +280,13 @@ const AIQuantumFinancialOraclePage = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Page
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary AI-powered financial oracle using quantum computing for ultra-accurate 
+            Revolutionary AI-powered financial oracle using quantum computing for ultra-accurate
             market predictions, risk analysis, and portfolio optimization.
           </p>
-<<<<<<< HEAD
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               href="/contact"
@@ -504,7 +460,7 @@ const AIQuantumFinancialOraclePage = () => {
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Join the financial revolution with quantum-powered AI predictions and analysis.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
               href="/contact"
@@ -522,16 +478,15 @@ const AIQuantumFinancialOraclePage = () => {
             >
               View Pricing
             </FuturisticButton>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -539,36 +494,23 @@ const AIQuantumFinancialOraclePage = () => {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
         </div>
       </section>
-=======
 
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 };
-=======
 export default function AiQuantumFinancialOraclePage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default AIQuantumFinancialOraclePage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

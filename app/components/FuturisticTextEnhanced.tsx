@@ -1,19 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface FuturisticTextEnhancedProps {
-=======
 interface FuturistictextenhancedProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 interface FuturisticTextEnhancedProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 interface FuturisticTextEnhancedProps {
   children: React.ReactNode;
   variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'display';
@@ -23,20 +12,13 @@ interface FuturisticTextEnhancedProps {
   animated?: boolean;
   glow?: boolean;
   neon?: boolean;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   className?: string;
   delay?: number;
   duration?: number;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function FuturisticTextEnhanced({ className = '', children }: FuturisticTextEnhancedProps) {
-=======
 export default function Futuristictextenhanced({ className = '', children, ...props }: FuturistictextenhancedProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 interface FuturisticTextEnhancedProps {
   children: React.ReactNode;
   className?: string;
@@ -44,15 +26,12 @@ interface FuturisticTextEnhancedProps {
 }
 
 export default function FuturisticTextEnhanced({ children, className = '', ...props }: FuturisticTextEnhancedProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
   return (
     <div className={`${className}`}>
       {children}
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 export default function FuturisticTextEnhanced({ className = '', children, ...props }: FuturisticTextEnhancedProps) {
     return (
         <div className="component" {...props}>
@@ -60,11 +39,7 @@ export default function FuturisticTextEnhanced({ className = '', children, ...pr
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
   children,
   variant = 'body',
@@ -130,13 +105,13 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
   };
 
   const textVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: 20,
       scale: 0.95
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       scale: 1,
       transition: {
@@ -196,8 +171,6 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
     );
   }
 
-=======
-
 import React from 'react';
 
 interface FuturistictextenhancedProps {
@@ -206,40 +179,24 @@ interface FuturistictextenhancedProps {
 }
 
 export default function Futuristictextenhanced({ className = '', children, ...props }: FuturistictextenhancedProps) {
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className={textClasses}>
       {children}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default FuturisticTextEnhanced;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
   return (;
     <div className={`futuristictextenhanced-component ${className}`} {...props}></div>;
       {children}
 ;
 </div>;
 );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

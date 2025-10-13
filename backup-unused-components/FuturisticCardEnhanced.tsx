@@ -1,18 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 interface FuturisticCardEnhancedProps {
-=======
 import { motion } from 'framer-motion';
 interface FuturisticCardEnhancedProps;
   children: React.ReactNode;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
 export default function FuturisticCardEnhanced({ className = '', children }: FuturisticCardEnhancedProps) {
   return (
     <div className={`${className}`}>
@@ -20,8 +15,6 @@ export default function FuturisticCardEnhanced({ className = '', children }: Fut
     </div>
   );
 }
-=======
-=======
 import FuturisticCard from "../components/FuturisticCard";
 import { motion } from 'framer-motion';
 interface FuturisticCardEnhancedProps ,
@@ -32,25 +25,17 @@ interface FuturisticCardEnhancedProps ,
   animated?: boolean;
   neon?: boolean;
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = (
   children,
-=======
 const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
 //   children,
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   className = '',
   glowColor = 'cyan',
   hoverEffect = true,
   animated = true,
-<<<<<<< HEAD
   neon = true;
-=======
   neon = true
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-) => 
+) =>
   const glowColors = ,
     cyan: 'shadow-cyan-500/25',
       purple: 'shadow-purple-500/25',
@@ -79,10 +64,8 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
         boxShadow: '0 20px 40px rgba(6, 182, 212, 0.3)',
         transition: { duration: 0.3 }
 ,
-<<<<<<< HEAD
-    tap: 
+    tap:
       scale: 0.98,
-=======
 }) => {
   const glowColors = {
 //     cyan: 'shadow-cyan-500/25',
@@ -106,38 +89,31 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
   const borderColor = neon ? neonColors[glowColor] : 'border-white/20';
 
   const cardVariants = {
-    initial: { 
+    initial: {
 //       scale: 1,
       boxShadow: '0 0 0 rgba(6, 182, 212, 0)'
     },
-    hover: { 
+    hover: {
 //       scale: 1.02,
       boxShadow: '0 20px 40px rgba(6, 182, 212, 0.3)',
       transition: { duration: 0.3 }
     },
-    tap: { 
+    tap: {
 //       scale: 0.98,
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       transition: { duration: 0.1 }
-=======
       tap: ,
     scale: 0.98,
         transition: { duration: 0.1 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
-  const pulseVariants = 
-    pulse: 
+  const pulseVariants =
+    pulse:
       scale: [1, 1.05, 1],
       opacity: [0.5, 0.8, 0.5],
-      transition: 
+      transition:
         duration: 2,
         repeat: Infinity,
         ease: "easeInOut"
-<<<<<<< HEAD
-=======
   const pulseVariants = {
     pulse: {
 //       scale: [1, 1.05, 1],
@@ -149,8 +125,6 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
       }
     }
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
-=======
   const pulseVariants = ,
     pulse: ,
     scale: [1, 1.05, 1],
@@ -159,47 +133,35 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
     duration: 2,
           repeat: Infinity,
           ease: "easeInOut"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 ;
   return (
-<<<<<<< HEAD
     <motion.div;
       className=
         relative bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300;
-=======
-<<<<<<< HEAD
     <motion.div
       className=
         relative bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300
-=======
 //     <motion.div
       className={`
 //         relative bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
         ${borderColor}
         ${hoverEffect ? 'hover:bg-white/20' : ''}
         ${glowEffect ? `hover:shadow-2xl hover:${glowEffect}` : ''}
         ${className}
 
-<<<<<<< HEAD
       variants="{animated" ? cardVariants : undefined}
       initial="initial"
       whileHover="{hoverEffect" ? "hover" : undefined}
       whileTap="tap"
-<<<<<<< HEAD
       animate="{animated" ? "pulse" : undefined}
     >
       {/* Neon border effect */}
-      
+
         <div className=
           absolute inset-0 rounded-xl pointer-events-none;
           bg-gradient-to-r from-transparent via-${glowColor}-500/20 to-transparent;
           opacity-0 group-hover:opacity-100 transition-opacity duration-300;
-=======
       variants="{animated" ? cardVariants : undefined}>
   initial="initial">
   whileHover="{hoverEffect" ? "hover" : undefined}>
@@ -207,38 +169,31 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
   animate="{animated" ? "pulse" : undefined}
     >
       {/* Neon border effect */}
-      
+
         <div className=>
   absolute inset-0 rounded-xl pointer-events-none>
   bg-gradient-to-r from-transparent via-${glowColor}-500/20 to-transparent>
   opacity-0 group-hover:opacity-100 transition-opacity duration-300
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
  />
       {/* Animated background pattern */}
       <div className="absolute inset-0 rounded-xl overflow-hidden pointer-events-none"></div>
-<<<<<<< HEAD
         <div className=
           absolute -top-1/2 -left-1/2 w-full h-full;
           bg-gradient-to-br from-${glowColor}-500/5 via-transparent to-${glowColor}-500/5;
           animate-spin;
  style="{}" animationDuration: '20s' {} />
-<<<<<<< HEAD
   </div>
-=======
         <div className=>
   absolute -top-1/2 -left-1/2 w-full h-full>
   bg-gradient-to-br from-${glowColor}-500/5 via-transparent to-${glowColor}-500/5>
   animate-spin>
   style="{}" animationDuration: '20s' {} />
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       {/* Content */}
       <div className="relative z-10"></div>
         {children}
   </div>
-=======
       </div>
-=======
       animate={animated ? "pulse" : undefined}
 //     >
       {/* Neon border effect */}
@@ -249,7 +204,7 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
 //           opacity-0 group-hover:opacity-100 transition-opacity duration-300
         `} />
       )}
-      
+
       {/* Animated background pattern */}
       <div className="absolute inset-0 rounded-xl overflow-hidden pointer-events-none">
         <div className={`
@@ -258,18 +213,13 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
 //           animate-spin
         `} style={{ animationDuration: '20s' }} />
 </div>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+
       {/* Content */}
       <div className="relative z-10"></div>
         {children}
-<<<<<<< HEAD
       </div>
-=======
 </div>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+
       {/* Corner accents */}
       <div className="absolute top-2 right-2 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse" />
       <div className="absolute bottom-2 left-2 w-1 h-1 bg-purple-400 rounded-full opacity-40 animate-pulse delay-1000" />
@@ -280,4 +230,3 @@ export default FuturisticCardEnhanced;
 </FuturisticCardEnhancedProps>
   </div>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

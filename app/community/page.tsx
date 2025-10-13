@@ -1,28 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-=======
 export default function Community() {
   const stats = [
     { number: "10K+", label: "Active Members", icon: <Users className="w-8 h-8" /> },
@@ -30,12 +15,8 @@ export default function Community() {
     { number: "50+", label: "Countries", icon: <Globe className="w-8 h-8" /> },
     { number: "24/7", label: "Support", icon: <MessageCircle className="w-8 h-8" /> }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function community() {
-=======
   const events = [
     {
       title: "AI Innovation Summit 2024",
@@ -91,26 +72,21 @@ export default function community() {
   ];
 
 export default function CommunityPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function PagePage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-      
-<<<<<<< HEAD
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Community</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function CommunityPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -118,16 +94,14 @@ export default function CommunityPage() {
         <title>Community - Zion Tech Group</title>
         <meta name="description" content="Advanced community solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Community
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function CommunityPage() {
   return (
@@ -137,10 +111,9 @@ export default function CommunityPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Community</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -148,14 +121,14 @@ export default function CommunityPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -163,12 +136,11 @@ export default function CommunityPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -184,17 +156,11 @@ export default function CommunityPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
 import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
@@ -294,7 +260,7 @@ const CommunityPage = () => {
             keywords="developer community, tech community, programming forums, tech events, developer resources"
             canonical="https://ziontechgroup.com/community"
           />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -302,13 +268,13 @@ const CommunityPage = () => {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Users className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Developer Community</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -317,12 +283,12 @@ const CommunityPage = () => {
                   className="mb-6 leading-tight">
                   Join Our Community
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Connect with developers, engineers, and tech professionals from around the world. 
+                  Connect with developers, engineers, and tech professionals from around the world.
                   Learn, share, and grow together in our vibrant community.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#features"
@@ -452,10 +418,10 @@ const CommunityPage = () => {
                   Ready to Join Our Community?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Connect with thousands of developers and tech professionals. 
+                  Connect with thousands of developers and tech professionals.
                   Start your journey with us today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -484,18 +450,9 @@ const CommunityPage = () => {
 };
 
 export default CommunityPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 
@@ -515,7 +472,4 @@ const Community = () => {
 };
 
 export default Community;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 import fs from "fs";
 import path from "path";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 // #!/usr/bin/env node
-
 
 const pageTemplate = `import React from 'react';
 
@@ -23,16 +19,12 @@ export default function {PAGE_NAME}() {;
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">{PAGE_TITLE}</h1>
           <p className="text-lg text-gray-300 mb-8">{PAGE_DESCRIPTION}</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <Link;
-            to="/contact" 
+            to="/contact"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-=======
           <Link >
   to="/contact" >
   className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           >
             Contact Us;
             <ArrowRight className="ml-2 h-5 w-5" />
@@ -40,9 +32,8 @@ export default function {PAGE_NAME}() {;
   </div>
   </div>
     </>
-=======
-//           <Link 
-            to="/contact" 
+//           <Link
+            to="/contact"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
 //           >
 //             Contact Us
@@ -51,23 +42,18 @@ export default function {PAGE_NAME}() {;
 </div>
 </div>
 //     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }`;
 
 const pages = [
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
     path: "app/terms/page.tsx";
     name: "TermsPage";
     title: "Terms of Service";
-=======
   {,
     path: "app/terms/page.tsx";,
     name: "TermsPage";,
     title: "Terms of Service";,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     description: "Our terms of service and usage guidelines.";
   };
   {,
@@ -166,7 +152,6 @@ const pages = [
     title: "Page Not Found";,
     description: "The page you are looking for does not exist.";
   };
-=======
 //     path: "app/terms/page.tsx",
 //     name: "TermsPage",
 //     title: "Terms of Service",
@@ -268,7 +253,6 @@ const pages = [
 //     title: "Page Not Found",
     description: "The page you are looking for does not exist.",
   },
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 ];
 
 function fixPage(pageInfo) {

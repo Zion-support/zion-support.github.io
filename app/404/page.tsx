@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function Page404() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -18,12 +8,11 @@ export default function Page404() {
         <title>404 - Zion Tech Group</title>
         <meta name="description" content="404 solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">404</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function NotFoundPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -31,19 +20,15 @@ export default function NotFoundPage() {
         <title>404 - Zion Tech Group</title>
         <meta name="description" content="Advanced 404 solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             404
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 export default function PagePage() {
   return (
@@ -53,10 +38,9 @@ export default function PagePage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">404</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -64,14 +48,14 @@ export default function PagePage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -79,13 +63,12 @@ export default function PagePage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
         </div>
-=======
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
@@ -94,12 +77,10 @@ import { Search } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 
 const NotFoundPage = () => {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function NotFoundPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
       <EnhancedSEO
@@ -107,8 +88,7 @@ export default function NotFoundPage() {
         description="The page you're looking for doesn't exist. Return to our homepage to explore our AI and IT solutions."
         canonical="https://ziontechgroup.com/404"
       />
-      
-<<<<<<< HEAD
+
       <div className="text-center max-w-2xl mx-auto">
         {/* 404 Animation */}
         <div className="mb-8">
@@ -127,7 +107,7 @@ export default function NotFoundPage() {
           Oops! Page Not Found
         </h1>
         <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-          The page you're looking for seems to have vanished into the digital void. 
+          The page you're looking for seems to have vanished into the digital void.
           Don't worry, our AI solutions can help you find what you need!
         </p>
 
@@ -189,28 +169,24 @@ export default function NotFoundPage() {
         {/* Help Text */}
         <div className="mt-8 text-gray-400 text-sm">
           <p>
-            Still can't find what you're looking for? 
+            Still can't find what you're looking for?
             <Link to="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors ml-1">
               Contact our support team
             </Link>
           </p>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
       <div className="text-center">
         <h1 className="text-6xl font-bold mb-4">404</h1>
         <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
         <p className="text-gray-300 mb-8">The page you are looking for could not be found.</p>
-        <a href="/" 
+        <a href="/"
           className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors">Go Home</a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
       </div>
     </div>
   );
 };
 
 export default NotFoundPage;
-=======
 
 import React from 'react';
 
@@ -230,5 +206,3 @@ export default function Page() {
     </div>
   );
 }
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

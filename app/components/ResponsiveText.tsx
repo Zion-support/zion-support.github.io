@@ -1,22 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ResponsiveTextProps {
-=======
 interface ResponsivetextProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 interface ResponsiveTextProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 interface ResponsiveTextProps {
   children: React.ReactNode;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   className?: string;
   size?: {
     default?: string;
@@ -29,14 +17,8 @@ interface ResponsiveTextProps {
   color?: 'primary' | 'secondary' | 'accent' | 'muted' | 'white' | 'gray';
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function ResponsiveText({ className = '', children }: ResponsiveTextProps) {
-=======
 export default function Responsivetext({ className = '', children, ...props }: ResponsivetextProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 interface ResponsiveTextProps {
   children: React.ReactNode;
   className?: string;
@@ -44,10 +26,8 @@ interface ResponsiveTextProps {
 }
 
 export default function ResponsiveText({ children, className = '', ...props }: ResponsiveTextProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
   return (
     <div className={`${className}`}>
-=======
 const ResponsiveText: React.FC<ResponsiveTextProps> = ({
   children,
   className = '',
@@ -78,8 +58,6 @@ const ResponsiveText: React.FC<ResponsiveTextProps> = ({
     size.lg ? `lg:text-${size.lg}` : ''
   } ${size.xl ? `xl:text-${size.xl}` : ''}`;
 
-=======
-
 import React from 'react';
 
 interface ResponsivetextProps {
@@ -88,20 +66,13 @@ interface ResponsivetextProps {
 }
 
 export default function Responsivetext({ className = '', children, ...props }: ResponsivetextProps) {
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <span className={`${sizeClasses} ${weightClasses[weight]} ${colorClasses[color]} ${className}`}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       {children}
-<<<<<<< HEAD
     </span>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 export default function ResponsiveText({ className = '', children, ...props }: ResponsiveTextProps) {
     return (
         <div className="component" {...props}>
@@ -109,36 +80,22 @@ export default function ResponsiveText({ className = '', children, ...props }: R
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 };
 
-<<<<<<< HEAD
 export default ResponsiveText;
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
   return (;
     <div className={`responsivetext-component ${className}`} {...props}></div>;
       {children}
 ;
 </div>;
 );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 
     </div>
   );
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-=======
 import React from 'react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -15,8 +7,6 @@ import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Calendar } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
   const testimonials = [
     {
@@ -44,12 +34,7 @@ import { Calendar } from 'lucide-react';
       avatar: "ER"
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function aiSmartScheduler() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -57,15 +42,12 @@ export default function aiSmartScheduler() {
         <title>Ai Smart Scheduler - Zion Tech Group</title>
         <meta name="description" content="Ai Smart Scheduler solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Smart Scheduler</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function AiSmartSchedulerPage() {
-=======
-
 
 const testimonials = [
   {,
@@ -126,7 +108,6 @@ export default function AISmartScheduler() {
         period: "/month",
         description: "Perfect for individuals and small teams",
         features: [
-=======
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
@@ -156,14 +137,12 @@ export default function AISmartScheduler() {
       period: "/month",
       description: "Perfect for individuals and small teams",
       features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         "Up to 5 team members",
         "Basic AI scheduling",
         "Calendar integration",
         "Email notifications",
         "Mobile app access",
       ],
-<<<<<<< HEAD
         popular: false,
     },
     {,
@@ -172,7 +151,6 @@ export default function AISmartScheduler() {
         period: "/month",
         description: "Ideal for growing businesses",
         features: [
-=======
       popular: false},
     {
       name: "Professional",
@@ -180,7 +158,6 @@ export default function AISmartScheduler() {
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         "Up to 25 team members",
         "Advanced AI optimization",
         "Custom meeting templates",
@@ -188,7 +165,6 @@ export default function AISmartScheduler() {
         "Priority support",
         "API access",
       ],
-<<<<<<< HEAD
         popular: true,
     },
     {,
@@ -197,7 +173,6 @@ export default function AISmartScheduler() {
         period: "/month",
         description: "For large organizations",
         features: [
-=======
       popular: true},
     {
       name: "Enterprise",
@@ -205,7 +180,6 @@ export default function AISmartScheduler() {
       period: "/month",
       description: "For large organizations",
       features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         "Unlimited team members",
         "Custom AI training",
         "White-label options",
@@ -213,31 +187,26 @@ export default function AISmartScheduler() {
         "Dedicated support",
         "Custom integrations",
       ],
-<<<<<<< HEAD
         popular: false,
     },
 
 import React from 'react';
 
 export default function Page() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Smart Scheduler - Zion Tech Group</title>
         <meta name="description" content="Advanced ai smart scheduler solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ai Smart Scheduler
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-<<<<<<< HEAD
-=======
 
 export default function AismartschedulerPage() {
   return (
@@ -247,13 +216,10 @@ export default function AismartschedulerPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Smart Scheduler</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -261,14 +227,14 @@ export default function AismartschedulerPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -276,31 +242,20 @@ export default function AismartschedulerPage() {
             </p>
           </div>
         </div>
-<<<<<<< HEAD
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
         </div>
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       </div>
     </div>
   );
-=======
       popular: false},
   ];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
 import Layout from "../layout";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

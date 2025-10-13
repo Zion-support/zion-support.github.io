@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // logger utility functions
 
 export interface loggerConfig {
   enabled: boolean;
 }
 
-<<<<<<< HEAD
 export class logger {
   private config: loggerConfig;
 
@@ -16,9 +13,7 @@ export class logger {
       ...config
     };
   }
-=======
 const LOG_LEVELS = {
-=======
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -26,37 +21,30 @@ interface LogLevel {
   DEBUG: 'debug';
 }
 
-<<<<<<< HEAD
 const LOG_LEVELS: LogLevel = {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   ERROR: 'error',
   WARN: 'warn',
   INFO: 'info',
   DEBUG: 'debug',
 } as const;
-=======
 const LOG_LEVELS: LogLevel = {,
     ERROR: 'error',
     WARN: 'warn',
     INFO: 'info',
     DEBUG: 'debug',
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 type LogLevelType = typeof LOG_LEVELS[keyof typeof LOG_LEVELS];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 
   init(): void {
     if (this.config.enabled) {
       console.log('logger initialized');
     }
-<<<<<<< HEAD
   }
 }
 
 export const loggerInstance = new logger();
 export default loggerInstance;
-=======
 
     switch (level) {
       case 'error':
@@ -99,8 +87,8 @@ export default loggerInstance;
       }
 
       localStorage.setItem('app-logs', JSON.stringify(logs));
-    } catch (e) { 
-      console.error(e); 
+    } catch (e) {
+      console.error(e);
     }
   }
 
@@ -135,21 +123,11 @@ export default loggerInstance;
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 const loggerInstance = new Logger();
 export default loggerInstance;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 const logger = new Logger();
-<<<<<<< HEAD
-=======
 const logger = new Logger();
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 export const logger = {
   // Logger implementation,
     info: (message: string) => {
@@ -162,27 +140,12 @@ export const logger = {
     console.warn(`[WARN] ${message}`);
   }
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export { logger };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 // Logger utility
 export function logger(message: string, level: 'info' | 'warn' | 'error' = 'info') {
   console[level](message);
 }
 
 export default logger;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 export default logger;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

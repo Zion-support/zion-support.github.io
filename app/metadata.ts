@@ -1,21 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // metadata
 export const metadata = () => {
   // Utility function implementation
   return null;
 };
-=======
 // Metadata utility functions
 
-<<<<<<< HEAD
 export function metadata() {
   // Implementation here
   return null;
 }
 
 export default metadata;
-=======
 export const siteMetadata = {
 //   title: "Zion Tech Group - Advanced AI and IT Solutions",
 //   description: "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
@@ -47,13 +42,8 @@ export const defaultMetadata = {
 };
 
 export default siteMetadata;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
 export const metadata = {,
     title: 'Zion - AI-Powered Technology Solutions',
     description: 'Leading provider of AI-powered technology solutions',
 };
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

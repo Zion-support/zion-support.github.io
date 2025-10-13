@@ -1,51 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import React, { useState, useCallback } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 interface OptimizedImageProps {
-=======
 interface OptimizedImageProps {,
     src: string;,
     alt: string;
   width?: number;
   height?: number;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function OptimizedImage({ className = '', children }: OptimizedImageProps) {
   return (
     <div className={`${className}`}>
       {children}
-=======
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 export default function OptimizedImage({
-=======
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
   src,
   alt,
   width,
@@ -83,7 +60,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     return () => observer.disconnect();
   }, [priority]);
 
-=======
 import React, { useState, useRef, useEffect, forwardRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -112,22 +88,15 @@ const OptimizedImage = forwardRef<HTMLImageElement, OptimizedImageProps>(({
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
   const handleError = () => {
     setHasError(true);
     onError?.();
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
 }: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -141,28 +110,19 @@ const OptimizedImage = forwardRef<HTMLImageElement, OptimizedImageProps>(({
     setHasError(true);
     onError?.();
   }, [onError]);
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 
   if (hasError) {
     return (
-<<<<<<< HEAD
-      <div 
+      <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
-<<<<<<< HEAD
         style={{ width, height }}
         style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}
-=======
 style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
       <div >
   className={`bg-gray-200 flex items-center justify-center ${className}`}>
   style={{ width, height }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
-=======
 
   useEffect(() => {
     const img = imgRef.current;
@@ -183,18 +143,13 @@ style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 
         <div className="flex items-center justify-center h-full bg-gray-200 text-gray-500">
           Failed to load image
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
       </div>
     );
   }
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div ref={imgRef} className={`relative ${className}`} style={{ width, height }}>
-=======
 <div ref={imgRef} className={`relative ${className}`} style={{ width, height }}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
       {!isLoaded && isInView && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded"></div>
       )}
@@ -213,7 +168,6 @@ style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 
   className="w-full h-full object-cover"
         />
       )}
-<<<<<<< HEAD
     <div className={`relative ${className}`} style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}>
       {!isLoaded && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
@@ -228,13 +182,9 @@ style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 
         onError={handleError}
         className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
       />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
     </div>
   );
 }
-=======
 export default function OptimizedImage({ className = '', children, ...props }: OptimizedImageProps) {
     return (
         <div className="component" {...props}>
@@ -242,8 +192,6 @@ export default function OptimizedImage({ className = '', children, ...props }: O
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div className={`optimized-image-container ${className}`} style={{ width, height }}>
       {!isLoaded && (
         <div className="animate-pulse bg-gray-200 w-full h-full flex items-center justify-center">
@@ -277,4 +225,3 @@ export default function OptimizedImage({ className = '', children, ...props }: O
 OptimizedImage.displayName = 'OptimizedImage';
 
 export default OptimizedImage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed

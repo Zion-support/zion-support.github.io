@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 
@@ -84,7 +82,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
   };
 
   const currentItem = items[currentIndex];
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface DynamicContentShowcaseProps {
   className?: string;
@@ -93,23 +90,17 @@ interface DynamicContentShowcaseProps {
 
 export default function DynamicContentShowcase({ className = '', children }: DynamicContentShowcaseProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
     <div className={`relative ${className}`}>
       <div className="relative overflow-hidden rounded-lg bg-gray-900">
         <div className="flex transition-transform duration-500 ease-in-out">
@@ -196,7 +187,5 @@ export default function DynamicContentShowcase({ className = '', children }: Dyn
 </div>
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

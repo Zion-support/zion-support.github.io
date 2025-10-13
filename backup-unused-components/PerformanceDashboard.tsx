@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React from "react";
 interface PerformanceDashboardProps;
   children?: React.ReactNode;
   className?: string;
   title?: string;
   description?: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 
 interface PerformanceDashboardProps {
   className?: string;
@@ -22,7 +18,6 @@ export default function PerformanceDashboard({ className = '', children }: Perfo
   </div>
   );
 }
-=======
 import React, { useState, useEffect } from 'react';
 import { Activity, Zap, Clock, TrendingUp, AlertCircle, X, RefreshCw } from 'lucide-react';
 import logger from '../../utils/logger';
@@ -61,15 +56,15 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ isVisible, 
                 newMetrics.fcp = entry.startTime;
               }
             }
-            
+
             if (entry.entryType === 'largest-contentful-paint') {
               newMetrics.lcp = entry.startTime;
             }
-            
+
             if (entry.entryType === 'first-input') {
               newMetrics.fid = (entry as any).processingStart - entry.startTime;
             }
-            
+
             if (entry.entryType === 'layout-shift') {
               if (!(entry as any).hadRecentInput) {
                 newMetrics.cls = (newMetrics.cls || 0) + (entry as any).value;
@@ -265,4 +260,3 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ isVisible, 
 };
 
 export default PerformanceDashboard;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

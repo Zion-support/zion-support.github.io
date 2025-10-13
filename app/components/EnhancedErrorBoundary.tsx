@@ -1,45 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface EnhancedErrorBoundaryProps {
-=======
 interface EnhancederrorboundaryProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 interface EnhancedErrorBoundaryProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function EnhancedErrorBoundary({ className = '', children }: EnhancedErrorBoundaryProps) {
   return (
     <div className={`${className}`}>
-=======
 export default function Enhancederrorboundary({ className = '', children, ...props }: EnhancederrorboundaryProps) {
-<<<<<<< HEAD
   return (
     <div className={`enhancederrorboundary-component ${className}`} {...props}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
       {children}
     </div>
   );
 }
-=======
 export default function EnhancedErrorBoundary({ className = '', children, ...props }: EnhancedErrorBoundaryProps) {
     return (
         <div className="component" {...props}>
@@ -47,13 +25,9 @@ export default function EnhancedErrorBoundary({ className = '', children, ...pro
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-=======
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 
 interface Props {
   children: ReactNode;
@@ -63,10 +37,7 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
-<<<<<<< HEAD
-=======
   errorInfo?: ErrorInfo;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }
 
 export class EnhancedErrorBoundary extends Component<Props, State> {
@@ -75,21 +46,17 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
     this.state = { hasError: false };
   }
 
-<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
-=======
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
       error
     };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-<<<<<<< HEAD
   }
 
   render() {
@@ -99,7 +66,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
           <div className="text-center">
             <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
             <p className="text-gray-600">Please refresh the page and try again.</p>
-=======
     this.setState({
       error,
       errorInfo
@@ -122,11 +88,11 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-            
+
             <h1 className="text-3xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            
+
             <p className="text-gray-300 mb-6 text-lg">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
@@ -152,7 +118,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2 group-hover:rotate-180 transition-transform duration-300" />
                 Try Again
               </button>
-              
+
               <button
                 onClick={this.handleGoHome}
                 className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
@@ -165,17 +131,15 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="mt-8 text-sm text-gray-400">
               <p>If this problem persists, please contact our support team.</p>
               <p className="mt-2">
-                <a 
-                  href="mailto:kleber@ziontechgroup.com" 
+                <a
+                  href="mailto:kleber@ziontechgroup.com"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   kleber@ziontechgroup.com
                 </a>
               </p>
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
           </div>
-=======
 
 import React from 'react';
 
@@ -191,7 +155,6 @@ export default function Enhancederrorboundary() {
             This page is under development. Please check back later.
           </p>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       );
     }
@@ -200,14 +163,5 @@ export default function Enhancederrorboundary() {
   }
 }
 
-<<<<<<< HEAD
 export default EnhancedErrorBoundary;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

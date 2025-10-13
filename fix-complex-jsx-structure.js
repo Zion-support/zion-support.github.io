@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 import fs from "fs";
 import { glob } from "glob";
 
@@ -99,4 +97,3 @@ async function fixComplexJSXStructure() {
   }
 
 fixComplexJSXStructure().catch(console.error);
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

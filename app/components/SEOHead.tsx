@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 interface SEOHeadProps {
@@ -7,8 +5,6 @@ interface SEOHeadProps {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function SEOHead({ className = '', children }: SEOHeadProps) {
   return (
     <div className={`${className}`}>
@@ -16,7 +12,6 @@ export default function SEOHead({ className = '', children }: SEOHeadProps) {
     </div>
   );
 }
-=======
 export default function SEOHead({ className = '', children, ...props }: SEOHeadProps) {
     return (
         <div className="component" {...props}>
@@ -24,8 +19,6 @@ export default function SEOHead({ className = '', children, ...props }: SEOHeadP
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {
   title: string;
@@ -53,7 +46,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={fullCanonical} />
-      
+
       {/* Open Graph Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
@@ -61,37 +54,26 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:url" content={fullCanonical} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      
+
       {/* Twitter Card Tags */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      
+
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
     </Helmet>
   );
 };
-=======
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default SEOHead;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default function Seohead({ className = '', children, ...props }: SeoheadProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

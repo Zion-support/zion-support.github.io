@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-=======
-=======
 import React from 'react';
 import { Helmet } from "react-helmet-async";
 import { Helmet } from 'react-helmet-async';
 import { TrendingUp } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Lock } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-
 
 const testimonials = [
   {,
@@ -72,11 +62,8 @@ export default function AiQuantumComputing() {
         "5 user accounts",
         "Standard quantum gates"
       ],
-<<<<<<< HEAD
         popular: false
-=======
       popular: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Enterprise",
@@ -95,11 +82,8 @@ export default function AiQuantumComputing() {
         "Quantum error correction",
         "Dedicated quantum resources"
       ],
-<<<<<<< HEAD
         popular: true
-=======
       popular: true;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Quantum Lab",
@@ -120,11 +104,8 @@ export default function AiQuantumComputing() {
         "White-label quantum solutions",
         "On-premise quantum deployment"
       ],
-<<<<<<< HEAD
         popular: false
-=======
       popular: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
   const applications = [
@@ -153,13 +134,8 @@ export default function AiQuantumComputing() {
         color: "from-orange-500 to-red-500"
     }
 
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function aiQuantumComputing() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -167,12 +143,11 @@ export default function aiQuantumComputing() {
         <title>Ai Quantum Computing - Zion Tech Group</title>
         <meta name="description" content="Ai Quantum Computing solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Quantum Computing</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function AiQuantumComputingPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -180,16 +155,14 @@ export default function AiQuantumComputingPage() {
         <title>Ai Quantum Computing - Zion Tech Group</title>
         <meta name="description" content="Advanced ai quantum computing solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ai Quantum Computing
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function AiquantumcomputingPage() {
   return (
@@ -199,10 +172,9 @@ export default function AiquantumcomputingPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Quantum Computing</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -210,14 +182,14 @@ export default function AiquantumcomputingPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -225,7 +197,7 @@ export default function AiquantumcomputingPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -234,17 +206,9 @@ export default function AiquantumcomputingPage() {
       </div>
     </div>
   );
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Cpu, Brain, Atom, Users, Award, Globe, Lock, TrendingUp, Monitor, MessageSquare, Phone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOOptimizer from "../../components/SEOOptimizer";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 }
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

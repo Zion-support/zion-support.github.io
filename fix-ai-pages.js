@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -8,14 +7,12 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
   );
-=======
 import fs from "fs";
 import path from "path";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 // #!/usr/bin/env node
-
 
 const aiPageTemplate = `import React from 'react';
 
@@ -30,8 +27,8 @@ export default function {PAGE_NAME}() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">{PAGE_TITLE}</h1>
           <p className="text-lg text-gray-300 mb-8">{PAGE_DESCRIPTION}</p>
-//           <Link 
-            to="/contact" 
+//           <Link
+            to="/contact"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
 //           >
 //             Contact Us
@@ -78,5 +75,4 @@ function getAIServiceDirectories() {
     // }
 
   return directories;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }

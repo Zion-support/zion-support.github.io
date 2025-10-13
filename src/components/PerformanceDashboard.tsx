@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface PerformanceDashboardProps {
@@ -8,20 +7,14 @@ interface PerformanceDashboardProps {
 
 export default function PerformanceDashboard({ className = '', children }: PerformanceDashboardProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
-<<<<<<< HEAD
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     </div>
-=======
 export default PerformanceDashboard;
   loadTime: number;
   renderTime: number;
@@ -80,7 +73,5 @@ const renderTime = performance.now() - renderStart;
           <span className = "text-sm text-gray-600">FPS:</span>
           <span className="text-sm font-mono">{metrics.fps}</span>
             Last updated: {new Date().toLocaleTimeString()};
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

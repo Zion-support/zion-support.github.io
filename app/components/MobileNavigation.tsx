@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
-=======
 import React from 'react';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const MobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
@@ -32,7 +20,7 @@ const MobileNavigation: React.FC = () => {
       {isOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
           {/* Backdrop */}
-          <div 
+          <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={closeMenu}
           />
@@ -124,50 +112,27 @@ const MobileNavigation: React.FC = () => {
     </>
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
-
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 interface MobileNavigationProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
 export default function MobileNavigation({ className = '', children }: MobileNavigationProps) {
   return (
     <div className={`${className}`}>
       {children}
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 export default function MobileNavigation({ className = '', children, ...props }: MobileNavigationProps) {
     return (
         <div className="component" {...props}>
@@ -175,10 +140,6 @@ export default function MobileNavigation({ className = '', children, ...props }:
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 const MobileNavigation: React.FC = () => {
@@ -208,11 +169,11 @@ const MobileNavigation: React.FC = () => {
       {isOpen && (
         <div className="fixed inset-0 z-50 md:hidden">
           {/* Backdrop */}
-          <div 
+          <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={closeMenu}
           />
-          
+
           {/* Menu panel */}
           <div className="absolute top-0 right-0 h-full w-80 max-w-[85vw] bg-slate-900/95 backdrop-blur-sm border-l border-white/20 shadow-2xl">
             <div className="p-6">
@@ -240,7 +201,7 @@ const MobileNavigation: React.FC = () => {
                   <span className="font-medium">About Us</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                
+
                 <Link
                   to="/services"
                   onClick={closeMenu}
@@ -249,7 +210,7 @@ const MobileNavigation: React.FC = () => {
                   <span className="font-medium">Our Services</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                
+
                 <Link
                   to="/contact"
                   onClick={closeMenu}
@@ -307,19 +268,9 @@ const MobileNavigation: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default MobileNavigation;
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

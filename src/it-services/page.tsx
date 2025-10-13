@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function itServices() {
@@ -9,8 +8,7 @@ export default function itServices() {
         <title>It Services - Zion Tech Group</title>
         <meta name="description" content="It Services solutions by Zion Tech Group" />
       </Helmet>
-      
-<<<<<<< HEAD
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">It Services</h1>
@@ -20,21 +18,16 @@ export default function itServices() {
         </div>
       </div>
     </div>
-=======
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-8"></h1>
         <div className="prose prose-invert max-w-none">
           <p>This page is under construction. Please check back later for  solutions.</p>
-<<<<<<< HEAD
   </div>
   </div>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
         </div>
       </div>
     </div>
-=======
 export default ITServicesPage;
   ];
   // Removed unused categories and services variables;
@@ -43,7 +36,7 @@ export default ITServicesPage;
   // Removed unused benefits variable;
         {/* Hero Section */}
               IT Services & Infrastructure;
-//             Comprehensive IT solutions to support and optimize your business infrastructure. 
+//             Comprehensive IT solutions to support and optimize your business infrastructure.
 //             From cloud migration to cybersecurity, we keep your technology running smoothly.
               Get Free IT Assessment;
               (302) 464-0950;
@@ -102,7 +95,5 @@ export default ITServicesPage;
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.;
                 Get Free IT Assessment;
                 (302) 464-0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

@@ -1,23 +1,18 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 interface page_cleanProps {
   className?: string;
   children?: React.ReactNode;
 }
 
 export default function page_clean({ className = '', children }: page_cleanProps) {
-=======
 export default function PageClean() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
   return (
     <div className={`${className}`}>
       {children}
     </div>
   );
 }
-=======
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
@@ -62,13 +57,13 @@ const HomePage = () => {
         "description": "Artificial intelligence and machine learning services"
       },
       {
-        "@type": "Offer", 
+        "@type": "Offer",
         "name": "Cybersecurity",
         "description": "Advanced cybersecurity solutions and protection"
       },
       {
         "@type": "Offer",
-        "name": "Cloud Infrastructure", 
+        "name": "Cloud Infrastructure",
         "description": "Cloud computing and infrastructure services"
       }
     ]
@@ -207,24 +202,24 @@ const HomePage = () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Transform Your Business with AI
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Unlock the power of artificial intelligence, cybersecurity, and cloud solutions. 
+            Unlock the power of artificial intelligence, cybersecurity, and cloud solutions.
             We help businesses scale, secure, and innovate with cutting-edge technology that drives real results.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               href="/contact"
@@ -243,7 +238,7 @@ const HomePage = () => {
               Explore AI Solutions
             </FuturisticButton>
           </div>
-          
+
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
@@ -267,7 +262,7 @@ const HomePage = () => {
               Our Core Services
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive technology solutions designed to accelerate your business growth and digital transformation. 
+              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
               From AI-powered analytics to enterprise security, we have everything you need.
             </p>
           </div>
@@ -404,10 +399,10 @@ const HomePage = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already using our solutions to drive growth and innovation. 
+            Join thousands of businesses already using our solutions to drive growth and innovation.
             Start your digital transformation journey today.
           </p>
-          
+
           {/* Contact Information */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
@@ -432,7 +427,7 @@ const HomePage = () => {
               <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -456,4 +451,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

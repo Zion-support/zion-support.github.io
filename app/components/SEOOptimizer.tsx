@@ -1,32 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 interface SEOOptimizerProps {
-<<<<<<< HEAD
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
 export default function SEOOptimizer({ className = '', children }: SEOOptimizerProps) {
   return (
     <div className={`${className}`}>
-=======
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Cloud } from 'lucide-react';
@@ -154,34 +137,30 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         <meta name="googlebot" content="index, follow" />
         <meta name="bingbot" content="index, follow" />
-        
+
         {/* Mobile optimization */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <meta name="theme-color" content="#0f172a" />
-        
+
         {/* Performance hints */}
         <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        
+
         {/* Security headers */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="X-Frame-Options" content="DENY" />
         <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        
+
         {/* Cache control */}
         <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
       </Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       {children}
     </>
   );
-<<<<<<< HEAD
 }
-=======
 export default function SEOOptimizer({ className = '', children, ...props }: SEOOptimizerProps) {
     return (
         <div className="component" {...props}>
           {children}
-=======
 
 import React from 'react';
 
@@ -196,24 +175,15 @@ export default function SEOOptimizer() {
           <p className="text-xl text-gray-600 mb-8">
             This component is under development. Please check back later.
           </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 };
 
-<<<<<<< HEAD
 export default SEOOptimizer;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -254,28 +224,26 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {description && <meta name="description" content={description} />}
       {keywords && <meta name="keywords" content={keywords} />}
       {canonical && <link rel="canonical" href={canonical} />}
-      
+
       {/* Open Graph */}
       <meta property="og:type" content="website" />
       {ogTitle && <meta property="og:title" content={ogTitle} />}
       {ogDescription && <meta property="og:description" content={ogDescription} />}
       {ogImage && <meta property="og:image" content={ogImage} />}
       {ogUrl && <meta property="og:url" content={ogUrl} />}
-      
+
       {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
       {twitterTitle && <meta name="twitter:title" content={twitterTitle} />}
       {twitterDescription && <meta name="twitter:description" content={twitterDescription} />}
       {twitterImage && <meta name="twitter:image" content={twitterImage} />}
-      
+
       {children}
     </Helmet>
   );
 };
 
 export default SEOOptimizer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -307,13 +275,13 @@ export default function SEOOptimizer({
         {description && <meta name="description" content={description} />}
         {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
         {canonical && <link rel="canonical" href={canonical} />}
-        
+
         {/* Open Graph */}
         {title && <meta property="og:title" content={title} />}
         {description && <meta property="og:description" content={description} />}
         {ogImage && <meta property="og:image" content={ogImage} />}
         <meta property="og:type" content={ogType} />
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content={twitterCard} />
         {title && <meta name="twitter:title" content={title} />}
@@ -324,8 +292,6 @@ export default function SEOOptimizer({
     </>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -357,13 +323,13 @@ export default function SEOOptimizer({
         {description && <meta name="description" content={description} />}
         {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
-        
+
         {/* Open Graph */}
         {title && <meta property="og:title" content={title} />}
         {description && <meta property="og:description" content={description} />}
         {ogImage && <meta property="og:image" content={ogImage} />}
         <meta property="og:type" content={ogType} />
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content={twitterCard} />
         {title && <meta name="twitter:title" content={title} />}
@@ -374,8 +340,6 @@ export default function SEOOptimizer({
     </>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -410,20 +374,20 @@ export default function SEOOptimizer({
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
         <link rel="canonical" href={fullCanonicalUrl} />
-        
+
         {/* Open Graph */}
         <meta property="og:title" content={fullTitle} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:type" content={ogType} />
         <meta property="og:url" content={fullCanonicalUrl} />
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content={twitterCard} />
         <meta name="twitter:title" content={fullTitle} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
-        
+
         {/* Additional SEO */}
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
@@ -433,8 +397,6 @@ export default function SEOOptimizer({
     </>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
-=======
 const services = [
     {
       title: "Cloud Migration",
@@ -457,8 +419,6 @@ const services = [
 
 export default function Seooptimizer({ className = '', children, ...props }: SeooptimizerProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
   title?: string;
   description?: string;
   keywords?: string[];
@@ -486,13 +446,13 @@ export default function SEOOptimizer({
         {description && <meta name="description" content={description} />}
         {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
         {canonical && <link rel="canonical" href={canonical} />}
-        
+
         {/* Open Graph */}
         {title && <meta property="og:title" content={title} />}
         {description && <meta property="og:description" content={description} />}
         {ogImage && <meta property="og:image" content={ogImage} />}
         <meta property="og:type" content={ogType} />
-        
+
         {/* Twitter */}
         <meta name="twitter:card" content={twitterCard} />
         {title && <meta name="twitter:title" content={title} />}
@@ -503,7 +463,4 @@ export default function SEOOptimizer({
     </>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

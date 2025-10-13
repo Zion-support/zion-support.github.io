@@ -1,55 +1,25 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
-=======
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ImprovedSidebarProps {
-=======
 interface ImprovedsidebarProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 interface ImprovedSidebarProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function ImprovedSidebar({ className = '', children }: ImprovedSidebarProps) {
   return (
     <div className={`${className}`}>
-=======
 export default function Improvedsidebar({ className = '', children, ...props }: ImprovedsidebarProps) {
-<<<<<<< HEAD
   return (
     <div className={`improvedsidebar-component ${className}`} {...props}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
       {children}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 export default function ImprovedSidebar({ className = '', children, ...props }: ImprovedSidebarProps) {
     return (
         <div className="component" {...props}>
@@ -57,13 +27,7 @@ export default function ImprovedSidebar({ className = '', children, ...props }: 
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import { Link, useLocation } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 export default function ImprovedSidebar() {;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>;
@@ -81,12 +45,7 @@ export default function ImprovedSidebar() {;
   );
 ;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

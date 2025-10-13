@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 declare module 'next' {
   export interface NextPageProps {
     params: { [key: string]: string | string[] | undefined };
     searchParams: { [key: string]: string | string[] | undefined };
   }
 }
-=======
 declare module "next" {
   export interface NextPageProps {
     params: { [key: string]: string };
@@ -43,8 +40,6 @@ declare module "*.webp" {
   const content: string;
   export default content;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 // Next.js type definitions
 
 declare module 'next' {
@@ -56,5 +51,3 @@ declare module 'next' {
 }
 
 export {};
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

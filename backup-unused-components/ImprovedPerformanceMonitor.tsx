@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { Activity, TrendingUp } from 'lucide-react';
 
@@ -44,7 +42,7 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const loadWebVitals = async () => {
       try {
         const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-        
+
         // Measure Core Web Vitals
         getCLS((metric) => {
           updateMetrics({ cls: metric.value });
@@ -80,7 +78,7 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const monitorMemory = () => {
       if ('memory' in performance) {
         const memory = (performance as any).memory;
-        updateMetrics({ 
+        updateMetrics({
 //           memory: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
         });
       }
@@ -90,7 +88,7 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     const monitorConnection = () => {
       if ('connection' in navigator) {
         const connection = (navigator as any).connection;
-        updateMetrics({ 
+        updateMetrics({
           connection: `${connection.effectiveType} (${connection.downlink}Mbps)`
         });
       }
@@ -105,8 +103,8 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           updateMetrics({ fid: entry.processingStart - entry.startTime });
         } else if (entry.entryType === 'layout-shift') {
           if (!(entry as any).hadRecentInput) {
-            updateMetrics({ 
-              cls: (metrics.cls || 0) + (entry as any).value 
+            updateMetrics({
+              cls: (metrics.cls || 0) + (entry as any).value
             });
           }
         } else if (entry.entryType === 'paint') {
@@ -151,13 +149,13 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   // Performance score calculation
   const getPerformanceScore = () => {
     let score = 100;
-    
+
     if (metrics.lcp && metrics.lcp > 2500) score -= 20;
     if (metrics.fid && metrics.fid > 100) score -= 20;
     if (metrics.cls && metrics.cls > 0.1) score -= 20;
     if (metrics.fcp && metrics.fcp > 1800) score -= 20;
     if (metrics.ttfb && metrics.ttfb > 600) score -= 20;
-    
+
     return Math.max(0, score);
   };
 
@@ -179,7 +177,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   if (!showDetails) {
     return null;
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface ImprovedPerformanceMonitorProps {
   className?: string;
@@ -188,23 +185,17 @@ interface ImprovedPerformanceMonitorProps {
 
 export default function ImprovedPerformanceMonitor({ className = '', children }: ImprovedPerformanceMonitorProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
     <div className="fixed bottom-4 right-4 z-50">
 //       <button
         onClick={() => setIsVisible(!isVisible)}
@@ -313,7 +304,5 @@ export default function ImprovedPerformanceMonitor({ className = '', children }:
 </div>
       )}
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

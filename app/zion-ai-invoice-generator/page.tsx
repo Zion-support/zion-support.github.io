@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-=======
 const ZionAIInvoiceGeneratorPage = () => {
   // const [selectedPlan, setSelectedPlan] = useState('pro');
   // const [selectedPlan, setSelectedPlan] = useState('pro');
@@ -177,9 +164,7 @@ const ZionAIInvoiceGeneratorPage = () => {
         examples: ['Client billing', 'Project tracking', 'Team collaboration', 'Financial analytics']
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default function zionAiInvoiceGenerator() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -187,12 +172,11 @@ export default function zionAiInvoiceGenerator() {
         <title>Zion Ai Invoice Generator - Zion Tech Group</title>
         <meta name="description" content="Zion Ai Invoice Generator solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Zion Ai Invoice Generator</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function ZionAiInvoiceGeneratorPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -200,16 +184,14 @@ export default function ZionAiInvoiceGeneratorPage() {
         <title>Zion Ai Invoice Generator - Zion Tech Group</title>
         <meta name="description" content="Advanced zion ai invoice generator solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Zion Ai Invoice Generator
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function ZionaiinvoicegeneratorPage() {
   return (
@@ -219,10 +201,9 @@ export default function ZionaiinvoicegeneratorPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Zion Ai Invoice Generator</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -230,14 +211,14 @@ export default function ZionaiinvoicegeneratorPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -245,7 +226,7 @@ export default function ZionaiinvoicegeneratorPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -254,9 +235,7 @@ export default function ZionaiinvoicegeneratorPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, FileText, Download, Settings, Sparkles, CheckCircle, Star, Users, Brain, Mail, Smartphone, Globe, Database, BarChart3, Target, Headphones, Layout, CreditCard, Calculator, Play } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -271,30 +250,23 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const ZionAIInvoiceGeneratorPage = () => {
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
-  FileText, 
-  Download, 
-  Upload, 
-  Sparkles, 
-  Clock, 
-  Users, 
-  Star, 
-  CheckCircle, 
+  FileText,
+  Download,
+  Upload,
+  Sparkles,
+  Clock,
+  Users,
+  Star,
+  CheckCircle,
   ArrowRight,
   Mail,
   Smartphone,
@@ -467,9 +439,6 @@ export default function PagePage() {
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 
@@ -489,8 +458,6 @@ const ZionAiInvoiceGenerator = () => {
 };
 
 export default ZionAiInvoiceGenerator;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -498,18 +465,18 @@ export default ZionAiInvoiceGenerator;
             <Sparkles className="w-4 h-4 text-green-400 mr-2" />
             <span className="text-green-400 text-sm font-medium">AI-Powered Invoice Automation</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400">
               Zion AI Invoice Generator;
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your invoicing process with AI-powered automation. Generate professional invoices, 
+            Transform your invoicing process with AI-powered automation. Generate professional invoices,
             track payments, and improve cash flow with intelligent data extraction and automated reminders.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link;
               to="/contact"
@@ -549,11 +516,11 @@ export default ZionAiInvoiceGenerator;
               Why Choose Our AI Invoice Generator?
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our intelligent invoicing solution automates every aspect of your billing process, 
+              Our intelligent invoicing solution automates every aspect of your billing process,
               from creation to payment collection;
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div;
@@ -586,7 +553,7 @@ export default ZionAiInvoiceGenerator;
               Everything you need to streamline your invoicing process and improve cash flow;
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div;
@@ -614,14 +581,14 @@ export default ZionAiInvoiceGenerator;
               Choose the plan that fits your invoicing needs. All plans include our core AI features.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div;
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
                   plan.popular;
-                    ? 'border-green-500/50 ring-2 ring-green-500/20' 
+                    ? 'border-green-500/50 ring-2 ring-green-500/20'
                     : 'border-white/20 hover:border-green-500/30'
                 }`}
               >
@@ -632,7 +599,7 @@ export default ZionAiInvoiceGenerator;
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -641,7 +608,7 @@ export default ZionAiInvoiceGenerator;
                     <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
@@ -650,7 +617,7 @@ export default ZionAiInvoiceGenerator;
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link;
                   to="/contact"
                   className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
@@ -678,7 +645,7 @@ export default ZionAiInvoiceGenerator;
               See how businesses are using our AI invoice generator to improve their cash flow;
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div;
@@ -718,7 +685,7 @@ export default ZionAiInvoiceGenerator;
             Join thousands of businesses who are already using our AI invoice generator to;
             streamline their billing process and improve cash flow.
           </p>
-          
+
           {/* Contact Information */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
@@ -743,7 +710,7 @@ export default ZionAiInvoiceGenerator;
               <p className="text-green-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link;
               to="/contact"
@@ -765,8 +732,6 @@ export default ZionAiInvoiceGenerator;
 };
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
   const features = [
     {
       icon: <FileText className="w-8 h-8" />,
@@ -826,7 +791,7 @@ export default ZionAiInvoiceGenerator;
             canonicalUrl="https://ziontechgroup.com/zion-ai-invoice-generator"
           />
           <StructuredData data={structuredData} />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -836,7 +801,7 @@ export default ZionAiInvoiceGenerator;
                     <Sparkles className="w-4 h-4 text-green-400 mr-2" />
                     <span className="text-green-400 text-sm font-medium">AI-Powered Invoice Generation</span>
                   </div>
-                  
+
                   <FuturisticTextEnhanced
                     variant="display"
                     size="5xl"
@@ -845,12 +810,12 @@ export default ZionAiInvoiceGenerator;
                     className="mb-6 leading-tight">
                     Zion AI Invoice Generator
                   </FuturisticTextEnhanced>
-                  
+
                   <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                    Streamline your billing process with our AI invoice generator. 
+                    Streamline your billing process with our AI invoice generator.
                     Automatically create professional invoices, calculate taxes, and integrate with payment systems.
                   </p>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                     <FuturisticButtonEnhanced
                       href="/contact"
@@ -913,10 +878,10 @@ export default ZionAiInvoiceGenerator;
                   Ready to Automate Your Invoicing?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of businesses using Zion AI Invoice Generator to streamline 
+                  Join thousands of businesses using Zion AI Invoice Generator to streamline
                   their billing process and get paid faster. Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -945,4 +910,3 @@ export default ZionAiInvoiceGenerator;
 };
 
 export default ZionAIInvoiceGeneratorPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

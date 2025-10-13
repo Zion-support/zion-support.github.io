@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function quantumDataEncryptionVault() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -18,12 +8,11 @@ export default function quantumDataEncryptionVault() {
         <title>Quantum Data Encryption Vault - Zion Tech Group</title>
         <meta name="description" content="Quantum Data Encryption Vault solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Quantum Data Encryption Vault</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function QuantumDataEncryptionVaultPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -31,16 +20,14 @@ export default function QuantumDataEncryptionVaultPage() {
         <title>Quantum Data Encryption Vault - Zion Tech Group</title>
         <meta name="description" content="Advanced quantum data encryption vault solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Quantum Data Encryption Vault
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function QuantumdataencryptionvaultPage() {
   return (
@@ -50,24 +37,19 @@ export default function QuantumdataencryptionvaultPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Quantum Data Encryption Vault</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
             <p className="text-gray-600">
               Comprehensive solution for your business requirements.
             </p>
-=======
 import { Link } from 'react-router-dom';
 import { Shield, ArrowRight, CheckCircle, Star, Lock, Award, Globe, Eye, Key } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Award } from 'lucide-react';
@@ -75,13 +57,9 @@ import { Shield } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Mic } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const QuantumDataEncryptionVault = () => {
   const features = [
-<<<<<<< HEAD
     {,
     title: "Quantum Encryption",
         description: "Unbreakable quantum encryption using quantum key distribution and post-quantum cryptography algorithms.",
@@ -105,7 +83,6 @@ const QuantumDataEncryptionVault = () => {
         description: "Built-in compliance with GDPR, HIPAA, SOX, and other major regulatory frameworks worldwide.",
         icon: <Award className="w-8 h-8" />,
         color: "from-orange-500 to-red-500"
-=======
     {
       title: "Quantum Encryption",
       description: "Unbreakable quantum encryption using quantum key distribution and post-quantum cryptography algorithms.",
@@ -129,12 +106,8 @@ const QuantumDataEncryptionVault = () => {
       description: "Built-in compliance with GDPR, HIPAA, SOX, and other major regulatory frameworks worldwide.",
       icon: <Award className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
-<<<<<<< HEAD
   ];
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   const capabilities = [
     "Quantum key distribution (QKD) encryption",
@@ -149,10 +122,7 @@ const QuantumDataEncryptionVault = () => {
     "Confidential computing environments",
     "Quantum-secured data backup",
     "Real-time threat detection and response"
-<<<<<<< HEAD
   ];
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   const pricingPlans = [
     {,
@@ -168,11 +138,8 @@ const QuantumDataEncryptionVault = () => {
         "99.9% uptime SLA",
         "Standard security monitoring"
       ],
-<<<<<<< HEAD
         popular: false
-=======
       popular: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Quantum Vault Professional",
@@ -189,11 +156,8 @@ const QuantumDataEncryptionVault = () => {
         "API access",
         "Custom encryption policies"
       ],
-<<<<<<< HEAD
         popular: true
-=======
       popular: true;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Quantum Vault Enterprise",
@@ -210,19 +174,12 @@ const QuantumDataEncryptionVault = () => {
         "White-label solutions",
         "SLA guarantee"
       ],
-<<<<<<< HEAD
         popular: false
-=======
       popular: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
-<<<<<<< HEAD
   ];
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   const testimonials = [
-<<<<<<< HEAD
     {,
     name: "Dr. Michael Zhang",
         company: "Quantum Security Labs",
@@ -246,7 +203,6 @@ const QuantumDataEncryptionVault = () => {
         content: "The zero-knowledge architecture gives us complete confidence in our data security. Even the service provider cannot access our sensitive healthcare data.",
         rating: 5,
         avatar: "RC"
-=======
     {
       name: "Dr. Michael Zhang",
       company: "Quantum Security Labs",
@@ -270,19 +226,14 @@ const QuantumDataEncryptionVault = () => {
       content: "The zero-knowledge architecture gives us complete confidence in our data security. Even the service provider cannot access our sensitive healthcare data.",
       rating: 5,
       avatar: "RC",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
-<<<<<<< HEAD
   ];
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   const stats = [
     { number: "256-bit", label: "Quantum Key Length", icon: <Key className="w-6 h-6" /> },
     { number: "99.999%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "Zero", label: "Data Breaches", icon: <Lock className="w-6 h-6" /> },
     { number: "50+", label: "Compliance Standards", icon: <Award className="w-6 h-6" /> }
-<<<<<<< HEAD
   ];
 
   return (
@@ -300,24 +251,24 @@ const QuantumDataEncryptionVault = () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Shield className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">Quantum-Grade Security</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Quantum Data Encryption Vault
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Unbreakable quantum encryption for sensitive data with zero-knowledge architecture. 
+            Unbreakable quantum encryption for sensitive data with zero-knowledge architecture.
             Protect your most valuable data with next-generation quantum security technology.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/contact"
@@ -334,7 +285,7 @@ const QuantumDataEncryptionVault = () => {
               <Eye className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
-          
+
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
@@ -361,7 +312,7 @@ const QuantumDataEncryptionVault = () => {
               Experience the ultimate in data security with our quantum-grade encryption technology.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
@@ -396,7 +347,7 @@ const QuantumDataEncryptionVault = () => {
               Unlock the full potential of quantum security with our comprehensive feature set.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
               {capabilities.slice(0, 6).map((capability, index) => (
@@ -414,16 +365,15 @@ const QuantumDataEncryptionVault = () => {
                 </div>
               ))}
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -431,7 +381,7 @@ const QuantumDataEncryptionVault = () => {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -511,7 +461,7 @@ const QuantumDataEncryptionVault = () => {
               Hear from security professionals who trust our quantum encryption technology.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -527,13 +477,13 @@ const QuantumDataEncryptionVault = () => {
                     <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
+
                 <p className="text-gray-300 italic">"{testimonial.content}"</p>
               </div>
             ))}
@@ -543,7 +493,6 @@ const QuantumDataEncryptionVault = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
 
 import React from 'react';
 
@@ -552,17 +501,15 @@ export default function Page() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Secure Your Data?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Protect your most sensitive data with quantum-grade encryption and zero-knowledge architecture. 
+            Protect your most sensitive data with quantum-grade encryption and zero-knowledge architecture.
             Start your quantum security journey today.
           </p>
-<<<<<<< HEAD
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -581,26 +528,15 @@ export default function Page() {
           </div>
         </div>
       </section>
-=======
 
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default QuantumDataEncryptionVault;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

@@ -1,27 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // utils utility functions
 
 export interface utilsConfig {
   enabled: boolean;
-=======
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
-<<<<<<< HEAD
 
 export class utils {
   private config: utilsConfig;
@@ -42,34 +27,26 @@ export class utils {
 
 export const utilsInstance = new utils();
 export default utilsInstance;
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-<<<<<<< HEAD
-}
-=======
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
 
 export function formatDate(date: Date | string): string {
   const d = new Date(date);
   return d.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
-<<<<<<< HEAD
     day: 'numeric'
   });
-=======
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -83,12 +60,8 @@ export function formatDate(date: Date | string): string {
     month: 'long',
     day: 'numeric',
   }).format(new Date(date))
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
     day: 'numeric',
   });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
-=======
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -103,25 +76,17 @@ export function formatDate(date: Date | string): string {
     month: 'long',
     day: 'numeric'
   })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 }
 
 export function formatCurrency(amount: number, currency = 'USD'): string {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     currency
   }).format(amount);
-=======
     currency,
   }).format(amount)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
     currency
   }).format(amount)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 }
 
 export function slugify(text: string): string {
@@ -129,8 +94,6 @@ export function slugify(text: string): string {
     .toLowerCase()
     .replace(/[^\w\s-]/g, '')
     .replace(/[\s_-]+/g, '-')
-<<<<<<< HEAD
-<<<<<<< HEAD
     .replace(/^-+|-+$/g, '');
 }
 
@@ -138,27 +101,14 @@ export function truncateText(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text;
   return text.slice(0, maxLength).trim() + '...';
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 // utils
 export const utils = () => {
   // Utility function implementation
   return null;
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
-
 
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
@@ -168,8 +118,6 @@ export function cn(...inputs: ClassValue[]) {
 
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -190,7 +138,6 @@ export function formatCurrency(amount: number, currency: string = 'USD'): string
     style: 'currency',
     currency,
   }).format(amount)
-=======
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -209,78 +156,42 @@ export function formatPhoneNumber(phone: string): string {
 
 export function formatEmail(email: string): string {
   return email.toLowerCase().trim();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
     .replace(/^-+|-+$/g, '')
 }
 
 export function truncateText(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text
   return text.slice(0, maxLength).trim() + '...'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
     currency,
   }).format(amount);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
-=======
     .replace(/^-+|-+$/g, '')
 }
 
 export function truncate(text: string, length: number): string {
   if (text.length <= length) return text
   return text.slice(0, length).trim() + '...'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 }
 
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   };
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 }
 
 export function throttle<T extends (...args: any[]) => any>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
   let inThrottle: boolean
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
@@ -289,8 +200,6 @@ export function throttle<T extends (...args: any[]) => any>(
       setTimeout(() => (inThrottle = false), limit)
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
 export function generateId(): string {
@@ -319,10 +228,6 @@ export function isValidUrl(url: string): boolean {
     return false
   }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
@@ -332,12 +237,7 @@ export function isValidUrl(url: string): boolean {
     }
   };
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
 
 export function generateId(): string {
   return Math.random().toString(36).substr(2, 9);
@@ -365,7 +265,4 @@ export function truncateText(text: string, maxLength: number): string {
 export function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5

@@ -1,44 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 'use client'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
 import React from 'react';
-=======
 import React from 'react';
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 'use client'
 'use client'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 // Critical resource preloader component
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 interface CriticalResourcePreloaderProps {
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
 interface CriticalresourcepreloaderProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
   className?: string;
   children?: React.ReactNode;
-=======
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 
-<<<<<<< HEAD
 const CriticalResourcePreloader = () => {
   useEffect(() => {
     const preloadCriticalResources = () => {
@@ -158,7 +132,7 @@ const CriticalResourcePreloader = () => {
     // Preload next page resources on hover
     const preloadOnHover = () => {
       const links = document.querySelectorAll('a[href^="/"]')
-      
+
       links.forEach(link => {
         link.addEventListener('mouseenter', () => {
           const href = link.getAttribute('href')
@@ -174,26 +148,14 @@ const CriticalResourcePreloader = () => {
 
     // Initialize hover preloading after a delay
     setTimeout(preloadOnHover, 2000)
-=======
-
 
 'use client'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   }, [])
 
   return null
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default function CriticalResourcePreloader({ className = '', children }: CriticalResourcePreloaderProps) {
   return (
     <div className={`${className}`}>
@@ -201,13 +163,6 @@ export default function CriticalResourcePreloader({ className = '', children }: 
     </div>
   );
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 
 export default function CriticalResourcePreloader({ className = '', children, ...props }: CriticalResourcePreloaderProps) {
     return (
@@ -216,18 +171,7 @@ export default function CriticalResourcePreloader({ className = '', children, ..
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 export default CriticalResourcePreloader
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default function Criticalresourcepreloader({ className = '', children, ...props }: CriticalresourcepreloaderProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

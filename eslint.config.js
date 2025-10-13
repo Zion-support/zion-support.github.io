@@ -5,15 +5,8 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-<<<<<<< HEAD
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   {,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
     ignores: [
       "dist",
       ".next",
@@ -30,7 +23,6 @@ export default tseslint.config(
       "fix-unused-imports.cjs",
     ],
   },
-<<<<<<< HEAD
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
@@ -43,9 +35,6 @@ export default tseslint.config(
       "react-refresh": reactRefresh,
     },
     rules: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   {,
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
       files: ["**/*.{ts,tsx}"],
@@ -58,9 +47,6 @@ export default tseslint.config(
       "react-refresh": reactRefresh,
     },
       rules: {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": "off",
       "@typescript-eslint/no-unused-vars": "warn",

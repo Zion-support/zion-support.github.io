@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 interface Props {
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-=======
 import React from 'react';
 
 interface ImprovedErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 }
 
 export default function ImprovedErrorBoundary({ className = '', children, ...props }: ImprovedErrorBoundaryProps) {
@@ -25,7 +15,6 @@ export default function ImprovedErrorBoundary({ className = '', children, ...pro
         </div>
       );
 }
-<<<<<<< HEAD
 // Higher-order component for easier usage
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType<P>,
@@ -40,37 +29,18 @@ export const withErrorBoundary = <P extends object>(
 export const useErrorHandler = () => {
   return (error: Error, errorInfo?: ErrorInfo) => {
     // In production, you might want to send this to an error reporting service
-=======
 
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { Home } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 import { Mail } from 'lucide-react';
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import { Hand } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ImprovedErrorBoundaryProps {
-=======
 interface ImprovederrorboundaryProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
   className?: string;
   children?: React.ReactNode;
 }
@@ -81,36 +51,19 @@ export default function ImprovedErrorBoundary({ className = '', children }: Impr
       {children}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 interface Props {
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   children: ReactNode;
-=======
 
 interface Props {,
     children: ReactNode;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface State {
   hasError: boolean;
   error?: Error;
@@ -129,17 +82,17 @@ class ImprovedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ error, errorInfo });
-    
+
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
-    
+
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-    
+
     // In production, you might want to send this to an error reporting service
     // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
@@ -178,7 +131,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-5 h-5" />
                 Try Again
               </button>
-              
+
               <Link
                 to="/"
                 className="w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
@@ -235,10 +188,9 @@ export const withErrorBoundary = <P extends object>(
       <Component {...props} />
     </ImprovedErrorBoundary>
   );
-<<<<<<< HEAD
-  
+
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  
+
   return WrappedComponent;
 };
 
@@ -246,20 +198,15 @@ export const withErrorBoundary = <P extends object>(
 export const _useErrorHandler = () => {
   return (error: Error, errorInfo?: ErrorInfo) => {
     console.error('Error caught by hook:', error, errorInfo);
-    
+
     // In production, you might want to send this to an error reporting service
     // Example: errorReportingService.captureException(error, { extra: errorInfo });
   };
 };
 
-<<<<<<< HEAD
 export default ImprovedErrorBoundary;
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 export default function Improvederrorboundary({ className = '', children, ...props }: ImprovederrorboundaryProps) {
   return (
     <div className={`improvederrorboundary-component ${className}`} {...props}>
@@ -269,11 +216,6 @@ export default function Improvederrorboundary({ className = '', children, ...pro
 
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default function Improvederrorboundary({ className = '', children, ...props }: ImprovederrorboundaryProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

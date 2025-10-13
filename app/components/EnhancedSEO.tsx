@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 interface EnhancedSEOProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function EnhancedSEO({ className = '', children }: EnhancedSEOProps) {
   return (
     <div className={`${className}`}>
@@ -20,7 +12,6 @@ export default function EnhancedSEO({ className = '', children }: EnhancedSEOPro
     </div>
   );
 }
-=======
 export default function EnhancedSEO({ className = '', children, ...props }: EnhancedSEOProps) {
     return (
         <div className="component" {...props}>
@@ -28,8 +19,6 @@ export default function EnhancedSEO({ className = '', children, ...props }: Enha
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import { Helmet } from 'react-helmet-async';
 interface EnhancedSEOProps {
   title?: string;
@@ -53,24 +42,13 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     </Helmet>
   );
 };
-=======
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default EnhancedSEO;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default function Enhancedseo({ className = '', children, ...props }: EnhancedseoProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

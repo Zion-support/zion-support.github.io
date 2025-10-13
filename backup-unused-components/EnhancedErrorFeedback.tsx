@@ -7,23 +7,16 @@ interface EnhancedErrorFeedbackProps {
 
 export default function EnhancedErrorFeedback({ className = '', children }: EnhancedErrorFeedbackProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
-<<<<<<< HEAD
 }
-=======
 }
-<<<<<<< HEAD
-=======
 
 interface State {
   hasError: boolean;
@@ -49,5 +42,3 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

@@ -1,28 +1,17 @@
-<<<<<<< HEAD
-=======
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 interface AnalyticsProviderProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function AnalyticsProvider({ className = '', children }: AnalyticsProviderProps) {
   return (
     <div className={`${className}`}>
-=======
 export default function AnalyticsProvider({ className = '', children, ...props }: AnalyticsProviderProps) {
   return (
     <div className={`analytics-provider-component ${className}`} {...props}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
   trackPageView: (pageName: string, properties?: Record<string, any>) => void;
@@ -62,20 +51,14 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     trackEvent,
     trackPageView,
   };
-=======
 export default function Analyticsprovider({ className = '', children, ...props }: AnalyticsproviderProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   return (
     <AnalyticsContext.Provider value={value}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       {children}
     </AnalyticsContext.Provider>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 export default function AnalyticsProvider({ className = '', children, ...props }: AnalyticsProviderProps) {
     return (
         <div className="component" {...props}>
@@ -83,28 +66,15 @@ export default function AnalyticsProvider({ className = '', children, ...props }
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default AnalyticsProvider;
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default AnalyticsProvider;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 export default function Analyticsprovider({ className = '', children, ...props }: AnalyticsproviderProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default AnalyticsProvider;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

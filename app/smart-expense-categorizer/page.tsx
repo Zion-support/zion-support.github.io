@@ -1,32 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import { Receipt } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-=======
 const SmartExpenseCategorizerPage = () => {
-<<<<<<< HEAD
   const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function smartExpenseCategorizer() {
-=======
   const benefits: string[] = [];
 
   const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
-=======
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -59,7 +41,6 @@ export default function smartExpenseCategorizer() {
       description: "Manage team expenses with role-based permissions, approval workflows, and centralized expense reporting.",
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
   const pricingPlans = [
     {
@@ -112,26 +93,21 @@ export default function smartExpenseCategorizer() {
   ];
 
 export default function SmartExpenseCategorizerPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function PagePage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-      
-<<<<<<< HEAD
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Smart Expense Categorizer</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function SmartExpenseCategorizerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -139,16 +115,14 @@ export default function SmartExpenseCategorizerPage() {
         <title>Smart Expense Categorizer - Zion Tech Group</title>
         <meta name="description" content="Advanced smart expense categorizer solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Smart Expense Categorizer
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function SmartexpensecategorizerPage() {
   return (
@@ -158,10 +132,9 @@ export default function SmartexpensecategorizerPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Smart Expense Categorizer</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -169,14 +142,14 @@ export default function SmartexpensecategorizerPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -184,12 +157,11 @@ export default function SmartexpensecategorizerPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -205,16 +177,11 @@ export default function SmartexpensecategorizerPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
 import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
@@ -334,13 +301,10 @@ const SmartExpenseCategorizerPage = () => {
       avatar: "EJ"
     }
   ];
-=======
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   return (
-<<<<<<< HEAD
     <PerformanceOptimizer>
       <EnhancedAccessibility>
         <FuturisticBackgroundEnhanced>
@@ -350,7 +314,7 @@ import React from 'react';
             keywords="expense categorizer, AI expense management, automated categorization, financial management, expense tracking"
             canonical="https://ziontechgroup.com/smart-expense-categorizer"
           />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -358,13 +322,13 @@ import React from 'react';
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Smart Expense Categorizer</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -373,12 +337,12 @@ import React from 'react';
                   className="mb-6 leading-tight">
                   Smart Expense Categorizer
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Automatically categorize expenses with our AI-powered smart expense categorizer. 
+                  Automatically categorize expenses with our AI-powered smart expense categorizer.
                   Save time and improve accuracy in expense management.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#contact"
@@ -546,10 +510,10 @@ import React from 'react';
                   Ready to Streamline Your Expenses?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Start using our smart expense categorizer today and see the difference 
+                  Start using our smart expense categorizer today and see the difference
                   AI can make in your expense management.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -577,10 +541,7 @@ import React from 'react';
   );
 };
 
-<<<<<<< HEAD
 export default SmartExpenseCategorizerPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
@@ -598,17 +559,7 @@ export default SmartExpenseCategorizerPage;
   );
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
-
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

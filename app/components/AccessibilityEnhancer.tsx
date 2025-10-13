@@ -1,39 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-
-=======
 import React from 'react';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 interface AccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function AccessibilityEnhancer({ className = '', children }: AccessibilityEnhancerProps) {
-=======
 export default function Accessibilityenhancer() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className={`${className}`}>
       {children}
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 export default function AccessibilityEnhancer({ className = '', children, ...props }: AccessibilityEnhancerProps) {
     return (
         <div className="component" {...props}>
@@ -41,8 +22,6 @@ export default function AccessibilityEnhancer({ className = '', children, ...pro
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -56,7 +35,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     // Check for user preferences
     const mediaQueryHighContrast = window.matchMedia('(prefers-contrast: high)');
     const mediaQueryReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
+
     setIsHighContrast(mediaQueryHighContrast.matches);
     setIsReducedMotion(mediaQueryReducedMotion.matches);
 
@@ -120,7 +99,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   useEffect(() => {
     // Apply accessibility styles
     const root = document.documentElement;
-    
+
     if (isHighContrast) {
       root.classList.add('high-contrast');
     } else {
@@ -170,11 +149,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 };
 
 export default AccessibilityEnhancer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default function Accessibilityenhancer({ className = '', children, ...props }: AccessibilityenhancerProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

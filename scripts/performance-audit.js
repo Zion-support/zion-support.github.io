@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -6,16 +5,12 @@ export default function Component() {
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
-<<<<<<< HEAD
   </div>
-=======
     </div>
-=======
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 // #!/usr/bin/env node
-
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -38,12 +33,12 @@ function checkBundleSize() {
 
   const files = fs.readdirSync(distPath, { recursive: true });
   const jsFiles = files.filter(file => file.endsWith('.js'));
-  
+
   jsFiles.forEach(file => {
     const filePath = path.join(distPath, file);
     const stats = fs.statSync(filePath);
     const sizeInKB = stats.size / 1024;
-    
+
     if (sizeInKB > 500) {
       performanceIssues.push({
         type: 'Large Bundle',
@@ -63,11 +58,11 @@ function checkUnusedImports() {
   }
 
   const files = getAllFiles(srcPath, ['.tsx', '.ts']);
-  
+
   files.forEach(file => {
     const content = fs.readFileSync(file, 'utf8');
     const lines = content.split('\n');
-    
+
     lines.forEach((line, index) => {
       if (line.includes('import') && line.includes('{') && line.includes('}')) {
         // Simple check for potentially unused imports
@@ -96,10 +91,10 @@ function checkUnusedImports() {
 function checkLazyLoading() {
   const srcPath = path.join(process.cwd(), 'app');
   const files = getAllFiles(srcPath, ['.tsx', '.ts']);
-  
+
   files.forEach(file => {
     const content = fs.readFileSync(file, 'utf8');
-    
+
     // Check for large components that should be lazy loaded
     if (content.includes('export default function') && content.length > 2000) {
       const fileName = path.basename(file);
@@ -118,10 +113,10 @@ function checkLazyLoading() {
 function checkMemoization() {
   const srcPath = path.join(process.cwd(), 'app');
   const files = getAllFiles(srcPath, ['.tsx', '.ts']);
-  
+
   files.forEach(file => {
     const content = fs.readFileSync(file, 'utf8');
-    
+
     // Check for components that could benefit from memoization
     if (content.includes('useState') && content.includes('useEffect')) {
       const fileName = path.basename(file);
@@ -140,18 +135,18 @@ function checkMemoization() {
 function getAllFiles(dir, extensions) {
   let files = [];
   const items = fs.readdirSync(dir);
-  
+
   items.forEach(item => {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-    
+
     if (stat.isDirectory()) {
       files = files.concat(getAllFiles(fullPath, extensions));
     } else if (extensions.some(ext => item.endsWith(ext))) {
       files.push(fullPath);
     }
   });
-  
+
   return files;
 }
 
@@ -173,7 +168,5 @@ function generateReport() {
   fs.writeFileSync(
     path.join(__dirname, '..', 'performance-audit-report.json'),
     JSON.stringify(report, null, 2)
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

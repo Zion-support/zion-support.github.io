@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 
 interface ImprovedSEOProps {
   className?: string;
@@ -7,7 +6,6 @@ interface ImprovedSEOProps {
 }
 
 export default function ImprovedSEO({ className = '', children }: ImprovedSEOProps) {
-=======
 import { Helmet } from 'react-helmet-async';
 interface ImprovedSEOProps;
   title?: string;
@@ -42,7 +40,7 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
 //   structuredData,
   noindex = false,
   nofollow = false;
-) => 
+) =>
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullOgTitle = ogTitle || fullTitle;
   const fullOgDescription = ogDescription || description;
@@ -50,18 +48,12 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
   const fullTwitterDescription = twitterDescription || fullOgDescription;
   const fullTwitterImage = twitterImage || ogImage;
   const fullOgUrl = ogUrl || canonicalUrl;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
-<<<<<<< HEAD
     <Helmet></Helmet>
-=======
 //     <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content="{description}" />
@@ -110,42 +102,38 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       {/* Structured Data */}
-      
+
         <script type="application/ld+json"></script>
           {JSON.stringify(structuredData)}
-<<<<<<< HEAD
         </script>
 
       {/* Default Organization Structured Data */}
-      
+
         <script type="application/ld+json"></script>
-          
+
             "@context": "https://schema.org",
-=======
 //         </script>
       )}
-      
+
       {/* Default Organization Structured Data */}
       {!structuredData && (
         <script type="application/ld+json">
           {JSON.stringify({
 //             "@context": "https://schema.org",
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
             "@type": "Organization",
 //             "name": "Zion Tech Group",
 //             "url": "https://ziontechgroup.com",
 //             "logo": "https://ziontechgroup.com/logo.svg",
             "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
-            "address": 
+            "address":
               "@type": "PostalAddress",
 //               "streetAddress": "364 E Main St STE 1008",
               "addressLocality": "Middletown",
-<<<<<<< HEAD
               "addressRegion": "DE",
               "postalCode": "19709",
               "addressCountry": "US"
 ,
-            "contactPoint": 
+            "contactPoint":
               "@type": "ContactPoint",
               "telephone": "+1-302-464-0950",
               "contactType": "customer service",
@@ -159,7 +147,6 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
         </script>
 
     </Helmet>
-=======
 //               "addressRegion": "DE",
 //               "postalCode": "19709",
 //               "addressCountry": "US"
@@ -178,7 +165,5 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = (
 //         </script>
       )}
 //     </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

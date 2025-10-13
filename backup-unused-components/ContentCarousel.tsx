@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -78,7 +76,6 @@ export default function ContentCarousel({
   const goToNext = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface ContentCarouselProps {
   className?: string;
@@ -87,23 +84,17 @@ interface ContentCarouselProps {
 
 export default function ContentCarousel({ className = '', children }: ContentCarouselProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
     <div className={`relative w-full ${className}`}>
       {/* Carousel Container */}
       <div className="relative overflow-hidden rounded-lg">
@@ -177,7 +168,5 @@ export default function ContentCarousel({ className = '', children }: ContentCar
         ))}
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

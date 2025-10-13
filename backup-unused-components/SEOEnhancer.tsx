@@ -1,15 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 interface SEOEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
-=======
-=======
 import StructuredData from "../components/StructuredData";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 import { Helmet } from 'react-helmet-async';
 interface SEOEnhancerProps;
   title?: string;
@@ -33,22 +28,17 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
   twitterCard = "summary_large_image",
 //   structuredData,
   noIndex = false,
-<<<<<<< HEAD
   noFollow = false;
-=======
   noFollow = false
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-) => 
-  const defaultStructuredData = 
+) =>
+  const defaultStructuredData =
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.svg",
     "description": description,
-    "address": 
-=======
+    "address":
 }) => {
   const defaultStructuredData = {
 //     "@context": "https://schema.org",
@@ -58,16 +48,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
 //     "logo": "https://ziontechgroup.com/logo.svg",
 //     "description": description,
     "address": {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       "@type": "PostalAddress",
 //       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
-<<<<<<< HEAD
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
 ,
-    "contactPoint": 
+    "contactPoint":
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
@@ -78,8 +66,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
       "https://linkedin.com/company/ziontechgroup"
     ],
     "offers": [
-      
-=======
+
 //       "addressRegion": "DE",
 //       "postalCode": "19709",
 //       "addressCountry": "US"
@@ -96,52 +83,42 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
 //     ],
 //     "offers": [
       {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
         "@type": "Offer",
 //         "name": "AI Solutions",
         "description": "Artificial intelligence and machine learning services"
 ,
-      
-        "@type": "Offer", 
-<<<<<<< HEAD
+
+        "@type": "Offer",
         "name": "Cybersecurity",
         "description": "Advanced cybersecurity solutions and protection"
 ,
-      
-        "@type": "Offer",
-        "name": "Cloud Infrastructure", 
-        "description": "Cloud computing and infrastructure services"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 
-<<<<<<< HEAD
+        "@type": "Offer",
+        "name": "Cloud Infrastructure",
+        "description": "Cloud computing and infrastructure services"
+
 export default function SEOEnhancer({ className = '', children }: SEOEnhancerProps) {
   return (
     <div className={`${className}`}>
       {children}
     </div>
-=======
     ]
 ;
-=======
 //         "name": "Cybersecurity",
 //         "description": "Advanced cybersecurity solutions and protection"
       },
       {
         "@type": "Offer",
-//         "name": "Cloud Infrastructure", 
+//         "name": "Cloud Infrastructure",
 //         "description": "Cloud computing and infrastructure services"
       }
 //     ]
   };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
-<<<<<<< HEAD
     <Helmet></Helmet>
-=======
 //     <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content="{description}" />
@@ -190,12 +167,9 @@ export default function SEOEnhancer({ className = '', children }: SEOEnhancerPro
       {/* Structured Data */}
       <script type="application/ld+json"></script>
         {JSON.stringify(finalStructuredData)}
-<<<<<<< HEAD
       </script>
-=======
 //       </script>
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+
       {/* Additional Meta Tags for Better SEO */}
       <meta name="google-site-verification" content="your-google-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />
@@ -208,6 +182,5 @@ export default function SEOEnhancer({ className = '', children }: SEOEnhancerPro
       {/* Cache Control */}
       <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
 //     </Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

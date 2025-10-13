@@ -1,16 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 interface servicetemplateProps {
-=======
 
-
-=======
 import React from 'react';
 
 const features = [
@@ -35,20 +26,16 @@ const features = [
       icon: "FileText"
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 interface ServiceTemplateProps {
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
 export default function servicetemplate({ className = '', children }: servicetemplateProps) {
   return (
     <div className={`${className}`}>
       {children}
-=======
 import { Helmet } from 'react-helmet-async';
 
 export default function ServiceTemplate() {
@@ -90,12 +77,9 @@ export default function ServiceTemplate() {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
 export default function Component() {
   return (
@@ -104,21 +88,12 @@ export default function Component() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 interface ServiceTemplateProps {;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default function ServiceTemplate({ className = '', children, ...props }: ServiceTemplateProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-=======
 import React from 'react';
-=======
 "use client";
 import { Brain, Zap, CheckCircle, Star, BarChart3, TrendingUp, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -25,17 +14,12 @@ import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
 import { Brain, TrendingUp, BarChart3, Zap } from 'lucide-react';
 
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Brain, TrendingUp, BarChart3, Zap } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 export default function AIEcommerceOptimizerPro() {
   const features = [
     {
@@ -98,45 +82,28 @@ export default function AIEcommerceOptimizerPro() {
       avatar: "LR",
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function aiEcommerceOptimizerPro() {
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function PagePage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
-=======
         <title>AI Ecommerce Optimizer Pro - Zion Tech Group</title>
         <meta name="description" content="AI Ecommerce Optimizer Pro solutions by Zion Tech Group" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
       </Helmet>
-      
-<<<<<<< HEAD
+
       <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Ecommerce Optimizer Pro</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function AiEcommerceOptimizerProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -144,16 +111,14 @@ export default function AiEcommerceOptimizerProPage() {
         <title>Ai Ecommerce Optimizer Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced ai ecommerce optimizer pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ai Ecommerce Optimizer Pro
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function AiecommerceoptimizerproPage() {
   return (
@@ -163,16 +128,13 @@ export default function AiecommerceoptimizerproPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Ecommerce Optimizer Pro</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
         <h1 className="text-4xl font-bold mb-8">AI Ecommerce Optimizer Pro</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive AI ecommerce optimizer pro solutions designed to meet your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -180,14 +142,14 @@ export default function AiecommerceoptimizerproPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -195,12 +157,11 @@ export default function AiecommerceoptimizerproPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -216,8 +177,6 @@ export default function AiecommerceoptimizerproPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
@@ -257,11 +216,9 @@ export default function AiecommerceoptimizerproPage() {
               </ul>
             </div>
           ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
         </div>
       </div>
     </div>
-=======
 "use client";
 import { Brain, Zap, CheckCircle, Star, BarChart3, TrendingUp, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -402,13 +359,10 @@ export default function AIEcommerceOptimizerPro() {
       "url": "https://ziontechgroup.com"
     }
   };
-=======
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   return (
-=======
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -431,40 +385,35 @@ import React from 'react';
   };
 
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     <PerformanceOptimizer>
       <EnhancedAccessibility>
         <FuturisticBackgroundEnhanced>
           <EnhancedSEO
-<<<<<<< HEAD
             title="AI E-commerce Optimizer Pro - Zion Tech Group"
             description="Boost your e-commerce sales with AI-powered optimization, conversion rate improvements, and automated A/B testing."
             keywords="AI e-commerce, conversion optimization, A/B testing, e-commerce analytics, online store optimization"
             canonical="https://ziontechgroup.com/ai-ecommerce-optimizer-pro"
-=======
             title="Zion AI E-commerce Optimizer Pro - Boost Your Online Store Performance"
             description="Increase conversions, reduce cart abandonment, and boost revenue with AI-powered e-commerce optimization. Transform your online store today."
             keywords="e-commerce optimization, conversion rate optimization, AI e-commerce, online store optimization, Zion Tech Group"
             canonicalUrl="https://ziontechgroup.com/ai-ecommerce-optimizer-pro"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
           />
           <StructuredData data={structuredData} />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
-<<<<<<< HEAD
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
               <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                   <Brain className="w-4 h-4 text-cyan-400 mr-2" />
                   <span className="text-cyan-400 text-sm font-medium">AI-Powered E-commerce Optimization</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -473,12 +422,12 @@ import React from 'react';
                   className="mb-6 leading-tight">
                   Zion AI E-commerce Optimizer Pro
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Boost your e-commerce sales with AI-powered optimization, conversion rate improvements, 
+                  Boost your e-commerce sales with AI-powered optimization, conversion rate improvements,
                   and automated A/B testing. Increase revenue by up to 40%.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#pricing"
@@ -624,10 +573,10 @@ import React from 'react';
                   Ready to Boost Your E-commerce Sales?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of e-commerce businesses using Zion AI E-commerce Optimizer Pro 
+                  Join thousands of e-commerce businesses using Zion AI E-commerce Optimizer Pro
                   to increase their sales and conversions. Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -652,24 +601,12 @@ import React from 'react';
         </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
-
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 
@@ -689,13 +626,9 @@ const AiEcommerceOptimizerPro = () => {
 };
 
 export default AiEcommerceOptimizerPro;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 "use client";
 export default function AiEcommerceOptimizerProPage() {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
             <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
               <div className="max-w-7xl mx-auto">
                 <div className="text-center relative z-10">
@@ -703,7 +636,7 @@ export default function AiEcommerceOptimizerProPage() {
                     <Brain className="w-4 h-4 text-cyan-400 mr-2" />
                     <span className="text-cyan-400 text-sm font-medium">AI-Powered E-commerce Optimization</span>
                   </div>
-                  
+
                   <FuturisticTextEnhanced
                     variant="display"
                     size="5xl"
@@ -712,12 +645,12 @@ export default function AiEcommerceOptimizerProPage() {
                     className="mb-6 leading-tight">
                     Zion AI E-commerce Optimizer Pro
                   </FuturisticTextEnhanced>
-                  
+
                   <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                    Boost your online store performance with AI-powered optimization. 
+                    Boost your online store performance with AI-powered optimization.
                     Increase conversions, reduce cart abandonment, and maximize revenue.
                   </p>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                     <FuturisticButtonEnhanced
                       href="/contact"
@@ -785,7 +718,7 @@ export default function AiEcommerceOptimizerProPage() {
                     See the impact of AI-powered optimization on your e-commerce store
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center">
@@ -808,7 +741,7 @@ export default function AiEcommerceOptimizerProPage() {
                     See what e-commerce professionals are saying about our optimization platform
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {testimonials.map((testimonial, index) => (
                     <FuturisticCardEnhanced key={index} className="text-center">
@@ -840,10 +773,10 @@ export default function AiEcommerceOptimizerProPage() {
                   Ready to Optimize Your Store?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of e-commerce businesses using Zion AI E-commerce Optimizer Pro 
+                  Join thousands of e-commerce businesses using Zion AI E-commerce Optimizer Pro
                   to boost their online performance. Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -870,4 +803,3 @@ export default function AiEcommerceOptimizerProPage() {
     </PerformanceOptimizer>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

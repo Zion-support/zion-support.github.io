@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // formValidation utility functions
 
 export interface formValidationConfig {
@@ -14,14 +12,12 @@ export class formValidation {
       enabled: true,
       ...config
     };
-=======
 
 // formValidation utility
 export const formValidation = {
   // Utility implementation,
     init: () => {
     console.log('formValidation initialized');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   }
 
   init(): void {
@@ -33,14 +29,8 @@ export const formValidation = {
 
 export const formvalidation = new formValidation();
 export default formvalidation;
-=======
 // formValidation
 export const formValidation = () => {
   // Utility function implementation
   return null;
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

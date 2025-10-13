@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 import { readFileSync, writeFileSync } from 'fs'
 #!/usr/bin/env node;
 // return false; // No conflicts;
@@ -22,4 +20,3 @@ import { readFileSync, writeFileSync } from 'fs'
     // // return false}
   // Get list of files with conflicts;
 // `
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

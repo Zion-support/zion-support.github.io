@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react';
 
@@ -44,7 +42,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
   // Apply accessibility settings
   useEffect(() => {
     const root = document.documentElement;
-    
+
     // High contrast
     if (settings.highContrast) {
       root.classList.add('high-contrast');
@@ -137,7 +135,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
       announcement.className = 'sr-only';
       announcement.textContent = message;
       document.body.appendChild(announcement);
-      
+
       setTimeout(() => {
         document.body.removeChild(announcement);
       }, 1000);
@@ -151,7 +149,6 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
       return newSettings;
     });
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface ImprovedAccessibilityProps {
   className?: string;
@@ -160,26 +157,20 @@ interface ImprovedAccessibilityProps {
 
 export default function ImprovedAccessibility({ className = '', children }: ImprovedAccessibilityProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
 //     <>
       {children}
-      
+
       {/* Accessibility Toggle Button */}
 //       <button
         onClick={() => setIsVisible(!isVisible)}
@@ -346,40 +337,40 @@ export default function ImprovedAccessibility({ className = '', children }: Impr
           --tw-bg-opacity: 1;
           --tw-text-opacity: 1;
         }
-        
+
         .high-contrast * {
           background-color: var(--tw-bg-opacity) !important;
           color: var(--tw-text-opacity) !important;
           border-color: currentColor !important;
         }
-        
+
         .large-text {
           font-size: 1.125rem;
         }
-        
+
         .large-text h1 { font-size: 3.5rem; }
         .large-text h2 { font-size: 2.5rem; }
         .large-text h3 { font-size: 2rem; }
         .large-text h4 { font-size: 1.5rem; }
         .large-text h5 { font-size: 1.25rem; }
         .large-text h6 { font-size: 1.125rem; }
-        
+
         .reduced-motion * {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
         }
-        
+
         .keyboard-navigation *:focus {
           outline: 2px solid #06b6d4 !important;
           outline-offset: 2px !important;
         }
-        
+
         .focus-visible *:focus {
           outline: 2px solid #06b6d4 !important;
           outline-offset: 2px !important;
         }
-        
+
         .sr-only {
           position: absolute;
           width: 1px;
@@ -391,7 +382,7 @@ export default function ImprovedAccessibility({ className = '', children }: Impr
           white-space: nowrap;
           border: 0;
         }
-        
+
         .focus\\:not-sr-only:focus {
           position: static;
           width: auto;
@@ -404,7 +395,5 @@ export default function ImprovedAccessibility({ className = '', children }: Impr
         }
       `}</style>
 //     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

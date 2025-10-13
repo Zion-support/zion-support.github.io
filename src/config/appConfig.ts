@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 export default config;
 // /**
  * Application Configuration;
@@ -69,4 +67,3 @@ export default config;
  * Check if running in development;
  */
   return config.app.environment === 'development';
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

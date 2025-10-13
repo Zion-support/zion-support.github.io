@@ -1,27 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 interface StructuredDataProps {
-<<<<<<< HEAD
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
 export default function StructuredData({ className = '', children }: StructuredDataProps) {
   return (
     <div className={`${className}`}>
@@ -29,7 +13,6 @@ export default function StructuredData({ className = '', children }: StructuredD
     </div>
   );
 }
-=======
 export default function StructuredData({ className = '', children, ...props }: StructuredDataProps) {
     return (
         <div className="component" {...props}>
@@ -37,8 +20,6 @@ export default function StructuredData({ className = '', children, ...props }: S
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import { Helmet } from 'react-helmet-async';
 
 interface StructuredDataProps {
@@ -146,21 +127,13 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
     </Helmet>
   );
 };
-=======
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default StructuredData;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import React from 'react';
 
 interface StructuredDataProps {
@@ -190,8 +163,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
 };
 
 export default StructuredData;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import React from 'react';
 
 interface StructuredDataProps {
@@ -215,8 +186,6 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
     />
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 import React from 'react';
 
 interface StructuredDataProps {
@@ -240,8 +209,6 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
     />
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -321,16 +288,12 @@ export const serviceSchema = (serviceName: string, description: string) => ({
     serviceUrl: 'https://ziontechgroup.com/contact'
   }
 });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
-=======
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
   data: any;
 }
 
 export default function Structureddata({ className = '', children, ...props }: StructureddataProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
   data: any;
 }
@@ -351,7 +314,4 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
     />
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

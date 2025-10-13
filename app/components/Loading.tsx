@@ -1,28 +1,18 @@
-<<<<<<< HEAD
 interface LoadingProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
   className?: string;
-<<<<<<< HEAD
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function Loading({ className = '', children }: LoadingProps) {
   return (
     <div className={`${className}`}>
-=======
 export default function Loading({ className = '', children, ...props }: LoadingProps) {
-<<<<<<< HEAD
   return (
     <div className={`loading-component ${className}`} {...props}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
       {children}
     </div>
   );
 }
-=======
 export default function Loading({ className = '', children, ...props }: LoadingProps) {
     return (
         <div className="component" {...props}>
@@ -30,8 +20,6 @@ export default function Loading({ className = '', children, ...props }: LoadingP
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 }
 
 export default function Loading({ className = '' }: LoadingProps) {
@@ -41,8 +29,6 @@ export default function Loading({ className = '' }: LoadingProps) {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
   message?: string;
 }
 
@@ -64,29 +50,16 @@ const Loading: React.FC<LoadingProps> = ({ message = 'Loading...' }) => {
     </div>
   );
 };
-=======
 
   className?: string;
   children?: React.ReactNode;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default Loading;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 interface LoadingProps {;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

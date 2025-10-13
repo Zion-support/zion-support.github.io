@@ -1,21 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // seoUtils utility functions
-=======
 // Utility functions
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 
 export interface seoUtilsConfig {
   enabled: boolean;
-=======
 // Utility functions;
 export function utilityFunction() {
   // Implementation here;
   return null;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 }
 
-<<<<<<< HEAD
 export class seoUtils {
   private config: seoUtilsConfig;
 
@@ -35,9 +28,7 @@ export class seoUtils {
 
 export const seoutils = new seoUtils();
 export default seoutils;
-=======
 export default utilityFunction;
-=======
 // SEO utilities and helpers
 
 export interface SEOData {
@@ -90,11 +81,11 @@ export class SEOOptimizer {
   // Generate meta description
   generateDescription(content: string, maxLength: number = 160): string {
     if (content.length <= maxLength) return content;
-    
+
     // Try to cut at sentence boundary
     const sentences = content.split('. ');
     let description = '';
-    
+
     for (const sentence of sentences) {
       if ((description + sentence + '. ').length <= maxLength) {
         description += sentence + '. ';
@@ -102,7 +93,7 @@ export class SEOOptimizer {
         break;
       }
     }
-    
+
     // If no sentences fit, cut at word boundary
     if (!description) {
       const words = content.split(' ');
@@ -115,7 +106,7 @@ export class SEOOptimizer {
       }
       description = description.trim() + '...';
     }
-    
+
     return description.trim();
   }
 
@@ -392,7 +383,7 @@ export const generatePageSEO = (pageData: {
   nofollow?: boolean;
 }): SEOData => {
   const seo = seoOptimizer;
-  
+
   return {
     title: seo.generateTitle(pageData.title),
     description: seo.generateDescription(pageData.content),
@@ -412,7 +403,7 @@ export const generateServiceSEO = (serviceData: {
 }): SEOData => {
   const seo = seoOptimizer;
   const content = `${serviceData.description} ${serviceData.features.join(' ')}`;
-  
+
   return {
     title: seo.generateTitle(serviceData.name),
     description: seo.generateDescription(content),
@@ -428,5 +419,3 @@ export const generateServiceSEO = (serviceData: {
     })
   };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

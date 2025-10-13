@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function devopsServices() {
@@ -19,7 +8,7 @@ export default function devopsServices() {
         <title>Devops Services - Zion Tech Group</title>
         <meta name="description" content="Devops Services solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Devops Services</h1>
@@ -31,28 +20,19 @@ export default function devopsServices() {
     </div>
   );
 }
-=======
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Server, Globe, BarChart3, Lock, Database, Clock, Award, Users, Settings, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Cloud, Shield, Monitor, Settings, Database, GitBranch } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Server, Globe, Shield, Monitor, Settings } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Server, Globe, Shield, Monitor, Cloud, Settings } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
 export default function DevopsservicesPage() {
   return (
@@ -64,7 +44,7 @@ export default function DevopsservicesPage() {
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -72,14 +52,14 @@ export default function DevopsservicesPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -87,7 +67,7 @@ export default function DevopsservicesPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -97,8 +77,6 @@ export default function DevopsservicesPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
 import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
@@ -239,7 +217,6 @@ const DevOpsServicesPage = () => {
       content: "The CI/CD pipelines have revolutionized our deployment process. We can now deploy with confidence.",
       rating: 5,
       avatar: "EJ"
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Server, Globe, BarChart3, Lock, Database, Clock, Award, Users, Settings, CheckCircle } from 'lucide-react';
@@ -285,7 +262,6 @@ export default function DevOpsServicesPage() {
   ];
 
   const benefits = [
-<<<<<<< HEAD
     {
       title: "Faster Deployments",
       description: "Reduce deployment time from hours to minutes with automated pipelines",
@@ -305,13 +281,10 @@ export default function DevOpsServicesPage() {
       title: "Cost Optimization",
       description: "Optimize infrastructure costs with automated scaling and resource management",
       icon: <Settings className="w-8 h-8" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
     }
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <PerformanceOptimizer>
       <EnhancedAccessibility>
         <FuturisticBackgroundEnhanced>
@@ -321,11 +294,7 @@ export default function DevOpsServicesPage() {
             keywords="devops services, ci/cd pipeline, infrastructure as code, monitoring, cloud migration, devops automation"
             canonical="https://ziontechgroup.com/devops-services"
           />
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-=======
     "Faster deployment cycles",
     "Improved reliability and stability",
     "Reduced manual errors",
@@ -336,16 +305,11 @@ export default function DevOpsServicesPage() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
       <Helmet>
         <title>DevOps Services - Zion Tech Group</title>
         <meta name="description" content="Professional DevOps services for modern software development and deployment." />
       </Helmet>
-<<<<<<< HEAD
-      
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <div className="container mx-auto px-4">
@@ -354,7 +318,7 @@ export default function DevOpsServicesPage() {
               DevOps Services
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Accelerate your software delivery with our comprehensive DevOps solutions. 
+              Accelerate your software delivery with our comprehensive DevOps solutions.
               We help you build, deploy, and scale applications with confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -382,20 +346,17 @@ export default function DevOpsServicesPage() {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Our DevOps Services</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From CI/CD pipelines to cloud migration, we provide end-to-end DevOps solutions 
+              From CI/CD pipelines to cloud migration, we provide end-to-end DevOps solutions
               tailored to your business needs.
             </p>
           </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
               <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -413,15 +374,14 @@ export default function DevOpsServicesPage() {
                     </li>
                   ))}
                 </ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Settings className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">DevOps Services</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -430,12 +390,12 @@ export default function DevOpsServicesPage() {
                   className="mb-6 leading-tight">
                   DevOps Services
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Accelerate your software delivery with comprehensive DevOps services. 
+                  Accelerate your software delivery with comprehensive DevOps services.
                   From CI/CD to cloud migration, we've got you covered.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#contact"
@@ -457,7 +417,6 @@ export default function DevOpsServicesPage() {
               </ResponsiveContainer>
             </section>
 
-<<<<<<< HEAD
             {/* DevOps Services Section */}
             <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
               <ResponsiveContainer>
@@ -491,7 +450,6 @@ export default function DevOpsServicesPage() {
               </ResponsiveContainer>
             </section>
 
-<<<<<<< HEAD
             {/* DevOps Process Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
               <ResponsiveContainer>
@@ -636,10 +594,10 @@ export default function DevOpsServicesPage() {
                   Ready to Accelerate Your Delivery?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Let's implement comprehensive DevOps services to accelerate your software delivery 
+                  Let's implement comprehensive DevOps services to accelerate your software delivery
                   and improve your development processes.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -668,8 +626,6 @@ export default function DevOpsServicesPage() {
 };
 
 export default DevOpsServicesPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
 export default function Page() {
   return (
@@ -685,8 +641,6 @@ export default function Page() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 
 const DevOpsServicesPage: React.FC = () => {
   return (
@@ -728,7 +682,6 @@ const DevOpsServicesPage: React.FC = () => {
             <p className="text-gray-300">
               Deploy and manage containerized applications with Kubernetes and Docker.
             </p>
-=======
       {/* Benefits Section */}
       <section className="py-20 bg-gray-800">
         <div className="container mx-auto px-4">
@@ -748,14 +701,11 @@ const DevOpsServicesPage: React.FC = () => {
                 <h3 className="text-lg font-semibold mb-2">{benefit}</h3>
               </div>
             ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
           </div>
         </div>
       </div>
     </div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
@@ -781,19 +731,11 @@ const DevOpsServicesPage: React.FC = () => {
       </section>
     </div>
   );
-<<<<<<< HEAD
 };
 
-<<<<<<< HEAD
 export default DevOpsServicesPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 export default DevOpsServicesPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
-=======
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 
@@ -813,9 +755,6 @@ const DevopsServices = () => {
 };
 
 export default DevopsServices;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 
 export default function DevOpsServicesPage() {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

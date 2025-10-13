@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-=======
-
 
 const testimonials = [
   {,
@@ -35,18 +26,13 @@ const testimonials = [
       rating: 5,
       company: "FutureTech"
   }
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Users, Star, Shield, Zap, Brain, Settings, BarChart3, Mail, MessageSquare, Hand, Sparkles, Target } from 'lucide-react';
 
-<<<<<<< HEAD
 "use client";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 export default function AIEmailAssistant() {
   const features = [
     {,
@@ -150,11 +136,7 @@ export default function AIEmailAssistant() {
     },
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function aiEmailAssistant() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -162,12 +144,11 @@ export default function aiEmailAssistant() {
         <title>Ai Email Assistant - Zion Tech Group</title>
         <meta name="description" content="Ai Email Assistant solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Email Assistant</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function AiEmailAssistantPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -175,16 +156,14 @@ export default function AiEmailAssistantPage() {
         <title>Ai Email Assistant - Zion Tech Group</title>
         <meta name="description" content="Advanced ai email assistant solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ai Email Assistant
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function AiemailassistantPage() {
   return (
@@ -194,10 +173,9 @@ export default function AiemailassistantPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Email Assistant</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -205,15 +183,14 @@ export default function AiemailassistantPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-<<<<<<< HEAD
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -221,7 +198,7 @@ export default function AiemailassistantPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -231,16 +208,9 @@ export default function AiemailassistantPage() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 "use client";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -343,9 +313,6 @@ import { Link } from 'react-router-dom';
       </section>
     </div>
   );
-=======
 
 "use client";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

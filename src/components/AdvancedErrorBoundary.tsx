@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface AdvancedErrorBoundaryProps {
@@ -8,20 +7,14 @@ interface AdvancedErrorBoundaryProps {
 
 export default function AdvancedErrorBoundary({ className = '', children }: AdvancedErrorBoundaryProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
-<<<<<<< HEAD
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     </div>
-=======
 export default AdvancedErrorBoundary;
 // Simple logger implementation;
       // console.error(message, context);
@@ -117,7 +110,5 @@ class AdvancedErrorBoundary extends Component;
                   If this problem persists, please contact our support team;
                   at&nbsp;
                     kleber@ziontechgroup.com;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

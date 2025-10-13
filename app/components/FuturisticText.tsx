@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import FuturisticText from "../components/FuturisticText";
 
@@ -7,20 +6,14 @@ interface FuturisticTextProps {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function FuturisticText({ className = '', children }: FuturisticTextProps) {
-=======
 export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   return (
     <div className={`${className}`}>
       {children}
     </div>
   );
 }
-=======
-<<<<<<< HEAD
 export default function FuturisticText({ className = '', children, ...props }: FuturisticTextProps) {
     return (
         <div className="component" {...props}>
@@ -28,8 +21,6 @@ export default function FuturisticText({ className = '', children, ...props }: F
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 const FuturisticText: React.FC<FuturisticTextProps> = ({
 //   children,
   variant = 'body',
@@ -37,7 +28,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
   as: Component = 'p'
 }) => {
   const baseClasses = "transition-all duration-300";
-  
+
   const variantClasses = {
 //     heading: "text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400",
 //     subheading: "text-2xl md:text-3xl lg:text-4xl font-bold text-white",
@@ -53,9 +44,6 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
 };
 
 export default FuturisticText;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
 import React from 'react';
 
@@ -65,7 +53,6 @@ interface FuturistictextProps {
 }
 
 export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
-<<<<<<< HEAD
   return (
     <div className={`futuristictext-component ${className}`} {...props}>
       {children}
@@ -73,7 +60,4 @@ export default function Futuristictext({ className = '', children, ...props }: F
   );
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

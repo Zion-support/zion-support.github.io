@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-<<<<<<< HEAD
 
 // Mock component for testing
 const ErrorBoundary = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {
@@ -27,15 +24,12 @@ describe('ErrorBoundary Component', () => {
   it('renders children', () => {
     render(<ErrorBoundary>Test content</ErrorBoundary>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
-=======
 // Mock test for error boundary
 describe('Error Boundary', () => {
   it('should render without crashing', () => {
     expect(true).toBe(true);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-69c0
   });
 });
-=======
 import { render, screen } from '@testing-library/react';
 import ErrorBoundary from '../app/components/ErrorBoundary';
 
@@ -49,8 +43,6 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
 });
-<<<<<<< HEAD
-=======
 
   it('renders error UI when there is an error', () => {
     render(
@@ -82,7 +74,7 @@ describe('ErrorBoundary', () => {
 
   it('renders custom fallback when provided', () => {
     const customFallback = <div>Custom error message</div>;
-    
+
     render(
 //       <BrowserRouter>
         <ErrorBoundary fallback={customFallback}>
@@ -94,9 +86,6 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('Custom error message')).toBeInTheDocument();
   });
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 import '@testing-library/jest-dom';
 
 // Mock error boundary component for testing
@@ -159,6 +148,3 @@ describe('ErrorBoundary', () => {
     expect(screen.getByTestId('custom-fallback')).toBeInTheDocument();
   });
 });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-cb53
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,13 +8,12 @@ export default function Component() {
   </div>
   );
 }
-=======
 import fs from 'fs';
 export default ${pageName}Page`;
 // List of pages that need to be completely rewritten;
 const pagesToRewrite = [
 //   'enterprise-security',
-//   'services-advertising', 
+//   'services-advertising',
 //   'smart-city-infrastructure',
   'task-manager-pro';
 ];
@@ -78,5 +76,4 @@ const config = pageConfigs[page];
   try {
     fs.writeFileSync(pagePath, content);
     // } catch (error) {
-    // // 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+    // //

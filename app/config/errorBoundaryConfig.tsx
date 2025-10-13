@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-
-<<<<<<< HEAD
 interface errorBoundaryConfigProps {
   className?: string;
   children?: React.ReactNode;
@@ -17,13 +9,10 @@ export default function errorBoundaryConfig({ className = '', children }: errorB
   return (
     <div className={`${className}`}>
       {children}
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const ErrorboundaryconfigPage = () => {
 export default function ErrorboundaryconfigPage() {
@@ -48,13 +37,9 @@ export default function ErrorboundaryconfigPage() {
           <ArrowRight className="ml-2 h-5 w-5" />
         </Link>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
     </div>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 export default function Component() {
   return (
     <div>
@@ -62,15 +47,8 @@ export default function Component() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -8,7 +7,6 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
   );
-=======
 class ComprehensiveWebsiteAnalyzer {
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
@@ -75,7 +73,7 @@ class ComprehensiveWebsiteAnalyzer {
     try {
       // Find all page.tsx files
       const pageFiles = await glob('app/**/page.tsx');
-      
+
       for (const file of pageFiles) {
         const route = file.replace('app/', '').replace('/page.tsx', '');
         if (route === 'page') {
@@ -87,12 +85,12 @@ class ComprehensiveWebsiteAnalyzer {
 
       // Add common routes that might be referenced
       const commonRoutes = [
-//         '/about', '/contact', '/services', '/ai-services', '/micro-saas', 
+//         '/about', '/contact', '/services', '/ai-services', '/micro-saas',
 //         '/5g-solutions', '/team', '/careers', '/case-studies', '/blog',
 //         '/news', '/press', '/partners', '/pricing', '/demo', '/support',
 //         '/consultation', '/privacy', '/terms', '/cookies', '/sitemap'
       ];
-      
+
       commonRoutes.forEach(route => this.allRoutes.add(route));
 
       return Array.from(this.allRoutes);
@@ -106,7 +104,7 @@ class ComprehensiveWebsiteAnalyzer {
     for (const route of routes) {
       const fullUrl = `${this.baseUrl}${route}`;
       const result = await this.checkUrl(fullUrl);
-      
+
       if (result.success) {
         this.workingLinks.push({
 //           url: fullUrl,
@@ -123,7 +121,7 @@ class ComprehensiveWebsiteAnalyzer {
         });
         - ${result.error || 'Not found'}`);
       }
-      
+
       // Small delay to be respectful
       await new Promise(resolve => setTimeout(resolve, 200));
     }
@@ -136,12 +134,12 @@ class ComprehensiveWebsiteAnalyzer {
 
     // Extract links from navigation components
     const navLinks = this.extractNavigationLinks(homepageContent);
-    
+
     for (const link of navLinks) {
       if (link.startsWith('/')) {
         const fullUrl = `${this.baseUrl}${link}`;
         const result = await this.checkUrl(fullUrl);
-        
+
         if (result.success) {
           this.workingLinks.push({
 //             url: fullUrl,
@@ -201,7 +199,7 @@ class ComprehensiveWebsiteAnalyzer {
 
   extractNavigationLinks(html) {
     const links = [];
-    
+
     // Extract href attributes
     const hrefRegex = /href=["']([^"']+)["']/gi;
     let match;
@@ -282,23 +280,22 @@ class ComprehensiveWebsiteAnalyzer {
   async runAnalysis() {
     await this.analyzeRoutes();
     await this.checkNavigationLinks();
-    
+
     const report = this.generateReport();
-    
+
     if (report.brokenLinks.length > 0) {
       report.brokenLinks.forEach(link => {
         - ${link.error || 'Not found'}`);
       });
     }
-    
+
     if (report.recommendations.length > 0) {
       report.recommendations.forEach(rec => {
         });
     }
-    
+
     // Save report
     fs.writeFileSync('comprehensive-analysis-report.json', JSON.stringify(report, null, 2));
     return report;
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }

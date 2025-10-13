@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function zionAiInventoryManager() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -17,12 +8,11 @@ export default function zionAiInventoryManager() {
         <title>Zion Ai Inventory Manager - Zion Tech Group</title>
         <meta name="description" content="Zion Ai Inventory Manager solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Zion Ai Inventory Manager</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function ZionAiInventoryManagerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -30,16 +20,14 @@ export default function ZionAiInventoryManagerPage() {
         <title>Zion Ai Inventory Manager - Zion Tech Group</title>
         <meta name="description" content="Advanced zion ai inventory manager solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Zion Ai Inventory Manager
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function ZionaiinventorymanagerPage() {
   return (
@@ -49,34 +37,27 @@ export default function ZionaiinventorymanagerPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Zion Ai Inventory Manager</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
             <p className="text-gray-600">
               Comprehensive solution for your business requirements.
             </p>
-=======
 import { Link } from 'react-router-dom';
 import { BarChart3, Package, TrendingUp, AlertTriangle, Zap, ArrowRight, CheckCircle, Star, Smartphone, Globe } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { Zap, ArrowRight, CheckCircle, CheckCircle, ArrowRight } from 'lucide-react';
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const ZionAIInventoryManager = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -155,18 +136,18 @@ export default function PagePage() {
               <Zap className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Management</span>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 Zion AI Inventory Manager;
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize your inventory management with AI-powered demand forecasting, real-time tracking, 
+              Revolutionize your inventory management with AI-powered demand forecasting, real-time tracking,
               and automated reorder points. Reduce stockouts by 60% and optimize your supply chain.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link;
                 to="/contact"
@@ -195,16 +176,15 @@ export default function PagePage() {
                 </div>
               ))}
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -212,7 +192,7 @@ export default function PagePage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -233,7 +213,7 @@ export default function PagePage() {
               and reduce costs while improving customer satisfaction.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div;
@@ -272,14 +252,14 @@ export default function PagePage() {
               and come with a 30-day free trial.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div;
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                   plan.popular;
-                    ? 'border-cyan-400 shadow-2xl shadow-cyan-500/25' 
+                    ? 'border-cyan-400 shadow-2xl shadow-cyan-500/25'
                     : 'border-white/20 hover:border-cyan-400/50'
                 }`}
               >
@@ -290,7 +270,7 @@ export default function PagePage() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -299,7 +279,7 @@ export default function PagePage() {
                     <span className="text-gray-300 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -308,7 +288,7 @@ export default function PagePage() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link;
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
@@ -337,7 +317,7 @@ export default function PagePage() {
               See how businesses are transforming their inventory management with our AI-powered solution.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div;
@@ -368,7 +348,6 @@ export default function PagePage() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         </section>
-=======
 
 import React from 'react';
 
@@ -377,17 +356,15 @@ export default function Page() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Inventory Management?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already using Zion AI Inventory Manager to optimize their supply chain. 
+            Join thousands of businesses already using Zion AI Inventory Manager to optimize their supply chain.
             Start your free trial today and see the difference AI can make.
           </p>
-<<<<<<< HEAD
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link;
               to="/contact"
@@ -407,17 +384,11 @@ export default function Page() {
       </section>
     </div>
   );
-<<<<<<< HEAD
-=======
 };
 
-<<<<<<< HEAD
 export default ZionAIInventoryManager;
-<<<<<<< HEAD
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }
-=======
 
         </div>
       </div>
@@ -425,10 +396,5 @@ export default ZionAIInventoryManager;
   );
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

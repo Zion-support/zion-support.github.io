@@ -1,90 +1,36 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState, useRef, useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
 interface LazyImageProps {
-=======
 import { ImageIcon } from 'lucide-react';
 interface LazyImageProps {
   src: string;
   alt: string;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 import React, { useState, useRef, useEffect } from 'react';
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
-=======
 import React, { useState, useRef, useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 import React, { useState, useRef, useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
 import React, { useState, useRef, useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
 
   src: string;
   alt: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
   className?: string;
   placeholder?: string;
   onLoad?: () => void;
   onError?: () => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   priority?: boolean;
   size?: string;
   quality?: number;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function LazyImage({ className = '', children }: LazyImageProps) {
   return (
     <div className={`${className}`}>
       {children}
     </div>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 export default function LazyImage({ className = '', children, ...props }: LazyImageProps) {
     return (
         <div className="component" {...props}>
@@ -92,10 +38,6 @@ export default function LazyImage({ className = '', children, ...props }: LazyIm
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
@@ -191,30 +133,19 @@ const LazyImage: React.FC<LazyImageProps> = ({
     </div>
   );
 };
-=======
-
 
 import React, { useState, useRef, useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default LazyImage;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
 
-const LazyImage: React.FC<LazyImageProps> = ({ 
-  src, 
-  alt, 
-  className = '', 
+const LazyImage: React.FC<LazyImageProps> = ({
+  src,
+  alt,
+  className = '',
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PC9zdmc+',
   onLoad,
   onError
@@ -275,17 +206,15 @@ const LazyImage: React.FC<LazyImageProps> = ({
 };
 
 export default LazyImage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
 
-export default function LazyImage({ 
-  src, 
-  alt, 
-  className = '', 
+export default function LazyImage({
+  src,
+  alt,
+  className = '',
   placeholder = '/placeholder.jpg',
   onLoad,
-  onError 
+  onError
 }: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -337,14 +266,12 @@ export default function LazyImage({
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 }
 
-export default function LazyImage({ 
-  src, 
-  alt, 
-  className = '', 
+export default function LazyImage({
+  src,
+  alt,
+  className = '',
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PC9zdmc+',
   onLoad,
   onError
@@ -403,14 +330,12 @@ export default function LazyImage({
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
 }
 
-export default function LazyImage({ 
-  src, 
-  alt, 
-  className = '', 
+export default function LazyImage({
+  src,
+  alt,
+  className = '',
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PC9zdmc+',
   onLoad,
   onError
@@ -479,21 +404,17 @@ export default function LazyImage({
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
-=======
 export default function Lazyimage({ className = '', children, ...props }: LazyimageProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 }
 
-export default function LazyImage({ 
-  src, 
-  alt, 
-  className = '', 
+export default function LazyImage({
+  src,
+  alt,
+  className = '',
   placeholder,
   onLoad,
-  onError 
+  onError
 }: LazyImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
@@ -547,7 +468,4 @@ export default function LazyImage({
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

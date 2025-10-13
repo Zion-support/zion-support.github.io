@@ -1,48 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 interface CacheManagerProps {
-=======
 interface CachemanagerProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function CacheManager({ className = '', children }: CacheManagerProps) {
-=======
 export default function Cachemanager({ className = '', children, ...props }: CachemanagerProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className={`${className}`}>
       {children}
     </div>
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 export default function CacheManager({ className = '', children, ...props }: CacheManagerProps) {
     return (
         <div className="component" {...props}>
@@ -50,10 +22,6 @@ export default function CacheManager({ className = '', children, ...props }: Cac
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import React from 'react';
 
 const CacheManager: React.FC = () => {
@@ -61,17 +29,5 @@ const CacheManager: React.FC = () => {
 };
 
 export default CacheManager;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

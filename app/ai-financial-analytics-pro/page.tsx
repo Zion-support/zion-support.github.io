@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Shield } from 'lucide-react';
 import { Brain } from 'lucide-react';
@@ -19,7 +9,6 @@ import { BarChart3 } from 'lucide-react';
 "use client";
 
 export default function AiFinancialAnalyticsProPage() {
-=======
 "use client";
 import { Brain, Shield, CheckCircle, Star, Target, BarChart3, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -43,7 +32,6 @@ export default function AIFinancialAnalyticsProPage() {
     "Integrate with existing systems"
   ];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -144,36 +132,25 @@ export default function Page() {
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function aiFinancialAnalyticsPro() {
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function PagePage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-      
-<<<<<<< HEAD
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Financial Analytics Pro</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function AiFinancialAnalyticsProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -181,16 +158,14 @@ export default function AiFinancialAnalyticsProPage() {
         <title>Ai Financial Analytics Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced ai financial analytics pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ai Financial Analytics Pro
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function AifinancialanalyticsproPage() {
   return (
@@ -200,10 +175,9 @@ export default function AifinancialanalyticsproPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Financial Analytics Pro</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -211,14 +185,14 @@ export default function AifinancialanalyticsproPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -226,12 +200,11 @@ export default function AifinancialanalyticsproPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -247,9 +220,7 @@ export default function AifinancialanalyticsproPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
-=======
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 
@@ -263,10 +234,8 @@ const AiFinancialAnalyticsPro = () => {
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">AiFinancialAnalyticsPro</h1>
         <p className="text-xl text-gray-300">Coming Soon</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       </div>
     </div>
-=======
 "use client";
 import { Brain, Shield, CheckCircle, Star, Target, BarChart3, ArrowRight, TrendingUp, DollarSign } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -281,7 +250,6 @@ import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
-<<<<<<< HEAD
 export default function AIFinancialAnalyticsProPage() {
   const benefits = [
     "Increase investment returns by 30%",
@@ -417,10 +385,8 @@ export default function AIFinancialAnalyticsProPage() {
       "url": "https://ziontechgroup.com"
     }
   };
-=======
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   return (
     <PerformanceOptimizer>
@@ -433,7 +399,7 @@ import React from 'react';
             canonical="https://ziontechgroup.com/ai-financial-analytics-pro"
           />
           <StructuredData data={structuredData} />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -441,13 +407,13 @@ import React from 'react';
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                   <Brain className="w-4 h-4 text-cyan-400 mr-2" />
                   <span className="text-cyan-400 text-sm font-medium">AI-Powered Financial Analytics</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -456,12 +422,12 @@ import React from 'react';
                   className="mb-6 leading-tight">
                   Zion AI Financial Analytics Pro
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Transform your financial analysis with advanced AI-powered insights, predictive analytics, 
+                  Transform your financial analysis with advanced AI-powered insights, predictive analytics,
                   and comprehensive risk management tools.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#pricing"
@@ -483,7 +449,6 @@ import React from 'react';
               </ResponsiveContainer>
             </section>
 
-=======
     <PerformanceOptimizer>
       <EnhancedAccessibility>
         <FuturisticBackgroundEnhanced>
@@ -494,7 +459,7 @@ import React from 'react';
             canonicalUrl="https://ziontechgroup.com/ai-financial-analytics-pro"
           />
           <StructuredData data={structuredData} />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -504,7 +469,7 @@ import React from 'react';
                     <Brain className="w-4 h-4 text-cyan-400 mr-2" />
                     <span className="text-cyan-400 text-sm font-medium">AI-Powered Financial Analytics</span>
                   </div>
-                  
+
                   <FuturisticTextEnhanced
                     variant="display"
                     size="5xl"
@@ -513,12 +478,12 @@ import React from 'react';
                     className="mb-6 leading-tight">
                     Zion AI Financial Analytics Pro
                   </FuturisticTextEnhanced>
-                  
+
                   <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                    Transform your financial data into actionable insights with our advanced AI financial analytics platform. 
+                    Transform your financial data into actionable insights with our advanced AI financial analytics platform.
                     Get real-time predictions, automated reporting, and intelligent recommendations.
                   </p>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                     <FuturisticButtonEnhanced
                       href="/contact"
@@ -541,23 +506,19 @@ import React from 'react';
               </div>
             </section>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
             {/* Features Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
               <ResponsiveContainer>
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
                     Advanced Financial Features
                   </h2>
                   <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                     Harness the power of AI to unlock insights from your financial data and make superior investment decisions.
-=======
                     Powerful Financial Analytics Features
                   </h2>
                   <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                     Harness the power of AI to unlock insights from your financial data and make better decisions.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                   </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -580,7 +541,6 @@ import React from 'react';
                   ))}
                 </div>
               </ResponsiveContainer>
-<<<<<<< HEAD
             </section>
 
             {/* Pricing Section */}
@@ -630,7 +590,6 @@ import React from 'react';
                         Get Started
                       </FuturisticButtonEnhanced>
                     </FuturisticCardEnhanced>
-=======
       </section>
             </section>
 
@@ -645,14 +604,13 @@ import React from 'react';
                     Experience the benefits of AI-powered financial analytics
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center">
                       <CheckCircle className="w-6 h-6 text-green-400 mr-4 flex-shrink-0" />
                       <span className="text-lg text-gray-300">{benefit}</span>
                     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                   ))}
                 </div>
               </div>
@@ -663,7 +621,6 @@ import React from 'react';
               <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
                     Trusted by Financial Professionals
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -676,31 +633,27 @@ import React from 'react';
                       key={index}
                       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden">
                       <div className="flex items-center mb-4">
-=======
                     Trusted by Financial Leaders
                   </h2>
                   <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                     See what financial professionals are saying about our analytics platform
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {testimonials.map((testimonial, index) => (
                     <FuturisticCardEnhanced key={index} className="text-center">
                       <div className="flex justify-center mb-4">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                         ))}
                       </div>
-<<<<<<< HEAD
                       <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                       <div>
                         <div className="font-semibold text-white">{testimonial.name}</div>
                         <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                       </div>
                     </div>
-=======
                       <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                       <div className="flex items-center justify-center">
                         <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
@@ -712,31 +665,24 @@ import React from 'react';
                         </div>
                       </div>
                     </FuturisticCardEnhanced>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                   ))}
                 </div>
               </div>
             </section>
 
             {/* CTA Section */}
-<<<<<<< HEAD
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
-=======
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
               <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                   Ready to Transform Your Financial Analytics?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of financial professionals using Zion AI Financial Analytics Pro 
-<<<<<<< HEAD
+                  Join thousands of financial professionals using Zion AI Financial Analytics Pro
                   to make superior investment decisions. Start your free trial today.
-=======
                   to make data-driven decisions and drive growth. Start your free trial today.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -750,11 +696,8 @@ import React from 'react';
                     href="/demo"
                     variant="outline"
                     size="lg"
-<<<<<<< HEAD
                     icon={Brain}
-=======
                     icon={BarChart3}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                     iconPosition="right">
                     Schedule Demo
                   </FuturisticButtonEnhanced>
@@ -765,34 +708,14 @@ import React from 'react';
         </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 export default function Page() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
-
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
 export default AiFinancialAnalyticsPro;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

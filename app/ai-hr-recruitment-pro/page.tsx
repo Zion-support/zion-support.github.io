@@ -1,24 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function aiHrRecruitmentPro() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -26,12 +11,11 @@ export default function aiHrRecruitmentPro() {
         <title>Ai Hr Recruitment Pro - Zion Tech Group</title>
         <meta name="description" content="Ai Hr Recruitment Pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Hr Recruitment Pro</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function AiHrRecruitmentProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -39,23 +23,18 @@ export default function AiHrRecruitmentProPage() {
         <title>Ai Hr Recruitment Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced ai hr recruitment pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ai Hr Recruitment Pro
-=======
 
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Page
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function AihrrecruitmentproPage() {
   return (
@@ -65,11 +44,9 @@ export default function AihrrecruitmentproPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Hr Recruitment Pro</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
-<<<<<<< HEAD
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -77,14 +54,14 @@ export default function AihrrecruitmentproPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -92,19 +69,16 @@ export default function AihrrecruitmentproPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </div>
     </div>
   );
-=======
 
 const AIHRRecruitmentProPage = () => {
   const benefits = [
@@ -157,18 +131,13 @@ const AIHRRecruitmentProPage = () => {
     "Real-time analytics dashboard",
     "Seamless integration with existing systems"
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Users, ArrowRight, Sparkles, CheckCircle, Star, Target, Brain, Shield } from 'lucide-react';
-=======
 import { useState, useEffect } from 'react';
 import { Users, Search, Brain, Shield, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -178,7 +147,6 @@ import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
-<<<<<<< HEAD
 
 const AIHRRecruitmentProPage = () => {
   const benefits = [
@@ -189,13 +157,10 @@ const AIHRRecruitmentProPage = () => {
     "Streamline interview scheduling",
     "Enhance candidate experience"
   ];
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 
 const AIHRRecruitmentProZionTechGroup = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: <Brain className="w-8 h-8" />,
       title: "AI-Powered Screening",
       description: "Advanced AI algorithms screen resumes and identify the best candidates automatically",
@@ -212,7 +177,6 @@ const AIHRRecruitmentProZionTechGroup = () => {
       title: "Interview Automation",
       description: "Automated interview scheduling and AI-powered interview analysis for consistent evaluation",
       color: "from-purple-500 to-pink-500"
-=======
       title: "AI Candidate Screening",
       description: "Automatically screen and rank candidates using advanced AI algorithms",
       icon: <Search className="w-8 h-8" />,
@@ -229,24 +193,19 @@ const AIHRRecruitmentProZionTechGroup = () => {
       description: "Conduct automated interviews with AI-powered question generation",
       icon: <Users className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
     },
     {
       title: "Bias Reduction",
       description: "Reduce unconscious bias with AI-powered fair hiring practices",
       icon: <Shield className="w-8 h-8" />,
-<<<<<<< HEAD
       title: "Bias Reduction",
       description: "AI-driven tools help reduce unconscious bias and ensure fair hiring practices",
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
-<<<<<<< HEAD
       name: "Starter",
       price: "$99",
       period: "month",
@@ -254,7 +213,6 @@ const AIHRRecruitmentProZionTechGroup = () => {
       features: [
         "Up to 50 job postings",
         "Basic AI screening",
-=======
       name: "Professional",
       price: "$199",
       period: "month",
@@ -263,14 +221,12 @@ const AIHRRecruitmentProZionTechGroup = () => {
         "AI candidate screening",
         "Basic talent matching",
         "Interview automation",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
         "Email support",
         "Standard reporting"
       ],
       popular: false
     },
     {
-<<<<<<< HEAD
       name: "Professional",
       price: "$199",
       period: "month",
@@ -282,7 +238,6 @@ const AIHRRecruitmentProZionTechGroup = () => {
         "Advanced analytics",
         "Interview automation",
         "Custom integrations"
-=======
       name: "Enterprise",
       price: "$499",
       period: "month",
@@ -294,12 +249,10 @@ const AIHRRecruitmentProZionTechGroup = () => {
         "Priority support",
         "Compliance tools",
         "SLA guarantee"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       ],
       popular: true
     },
     {
-<<<<<<< HEAD
       name: "Enterprise",
       price: "$399",
       period: "month",
@@ -311,7 +264,6 @@ const AIHRRecruitmentProZionTechGroup = () => {
         "White-label solution",
         "SLA guarantee",
         "Advanced security"
-=======
       name: "Custom",
       price: "Contact",
       period: "us",
@@ -322,13 +274,11 @@ const AIHRRecruitmentProZionTechGroup = () => {
         "Dedicated support",
         "On-premise deployment",
         "White-label solution"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       ],
       popular: false
     }
   ];
 
-<<<<<<< HEAD
   const testimonials = [
     {
       name: "Sarah Chen",
@@ -356,23 +306,17 @@ const AIHRRecruitmentProZionTechGroup = () => {
     }
   ];
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Zion AI HR Recruitment Pro",
-<<<<<<< HEAD
     "description": "AI-powered HR recruitment platform with intelligent screening and bias reduction",
-=======
     "description": "AI-powered HR recruitment platform with candidate screening, talent matching, and interview automation",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
     "url": "https://ziontechgroup.com/ai-hr-recruitment-pro",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web, Windows, macOS, Linux",
     "offers": {
       "@type": "Offer",
-<<<<<<< HEAD
       "price": "199",
       "priceCurrency": "USD",
       "priceSpecification": {
@@ -386,10 +330,8 @@ const AIHRRecruitmentProZionTechGroup = () => {
       "@type": "Organization",
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com"
-=======
       "price": "499",
       "priceCurrency": "USD"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
     }
   };
 
@@ -399,21 +341,19 @@ const AIHRRecruitmentProZionTechGroup = () => {
         <FuturisticBackgroundEnhanced>
           <EnhancedSEO
             title="AI HR Recruitment Pro - Zion Tech Group"
-<<<<<<< HEAD
             description="Revolutionize your hiring process with AI-powered recruitment tools, intelligent screening, and bias reduction for better talent acquisition."
             keywords="AI HR recruitment, talent acquisition, AI screening, bias reduction, interview automation, hiring optimization"
             canonical="https://ziontechgroup.com/ai-hr-recruitment-pro"
           />
           <StructuredData data={structuredData} />
-          
+
           <main className="min-h-screen">
-=======
             description="AI-powered HR recruitment platform with candidate screening, talent matching, interview automation, and bias reduction for modern hiring processes."
             keywords="AI HR recruitment, candidate screening, talent matching, interview automation, hiring platform"
             canonicalUrl="https://ziontechgroup.com/ai-hr-recruitment-pro"
           />
           <StructuredData data={structuredData} />
-          
+
           <Helmet>
             <title>AI HR Recruitment Pro - Zion Tech Group</title>
             <meta name="description" content="AI-powered HR recruitment platform with candidate screening, talent matching, and interview automation." />
@@ -422,21 +362,19 @@ const AIHRRecruitmentProZionTechGroup = () => {
           </Helmet>
 
           <main>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
               <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
-<<<<<<< HEAD
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Sparkles className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">AI-Powered HR Recruitment</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -445,12 +383,12 @@ const AIHRRecruitmentProZionTechGroup = () => {
                   className="mb-6 leading-tight">
                   Zion AI HR Recruitment Pro
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Revolutionize your hiring process with AI-powered recruitment tools, intelligent screening, 
+                  Revolutionize your hiring process with AI-powered recruitment tools, intelligent screening,
                   and bias reduction for superior talent acquisition.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#pricing"
@@ -596,10 +534,10 @@ const AIHRRecruitmentProZionTechGroup = () => {
                   Ready to Transform Your Hiring Process?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of HR professionals using Zion AI HR Recruitment Pro 
+                  Join thousands of HR professionals using Zion AI HR Recruitment Pro
                   to find and hire the best talent. Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -620,14 +558,13 @@ const AIHRRecruitmentProZionTechGroup = () => {
                 </div>
               </div>
             </section>
-=======
               <ResponsiveContainer>
                 <div className="text-center relative z-10">
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                     <Users className="w-4 h-4 text-blue-400 mr-2" />
                     <span className="text-blue-400 text-sm font-medium">AI-Powered Recruitment</span>
                   </div>
-                  
+
                   <FuturisticTextEnhanced
                     variant="display"
                     size="5xl"
@@ -636,12 +573,12 @@ const AIHRRecruitmentProZionTechGroup = () => {
                     className="mb-6">
                     AI HR Recruitment Pro
                   </FuturisticTextEnhanced>
-                  
+
                   <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                    Revolutionize your hiring process with our AI-powered recruitment platform. 
+                    Revolutionize your hiring process with our AI-powered recruitment platform.
                     Screen candidates, match talent, and conduct interviews with advanced automation.
                   </p>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <FuturisticButtonEnhanced
                       href="/contact"
@@ -756,10 +693,10 @@ const AIHRRecruitmentProZionTechGroup = () => {
                   Ready to Transform Your Hiring?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of companies using Zion AI HR Recruitment Pro to find and hire the best talent. 
+                  Join thousands of companies using Zion AI HR Recruitment Pro to find and hire the best talent.
                   Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -780,7 +717,6 @@ const AIHRRecruitmentProZionTechGroup = () => {
                 </div>
               </div>
             </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
           </main>
         </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
@@ -788,16 +724,7 @@ const AIHRRecruitmentProZionTechGroup = () => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default AIHRRecruitmentProPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default AIHRRecruitmentProZionTechGroup;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface ServiceCardSkeletonProps {
@@ -13,13 +12,10 @@ export default function ServiceCardSkeleton({ className = '', children }: Servic
     </div>
   );
 }
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-<<<<<<< HEAD
-export default function ComponentsPage() 
-=======
+export default function ComponentsPage()
 
 export default function ComponentsPage() {
   return (
@@ -49,5 +45,3 @@ export default function ComponentsPage() {
 //     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

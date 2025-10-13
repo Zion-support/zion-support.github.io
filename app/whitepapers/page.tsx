@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function whitepapers() {
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Download } from 'lucide-react';
@@ -77,7 +66,6 @@ const WhitepapersPage = () => {
     }
   ];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -86,13 +74,11 @@ const WhitepapersPage = () => {
         <meta name="keywords" content="whitepapers, industry reports, technology research, AI whitepapers, cybersecurity reports, cloud whitepapers" />
         <link rel="canonical" href="https://ziontechgroup.com/whitepapers" />
       </Helmet>
-<<<<<<< HEAD
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Whitepapers</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function WhitepapersPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -100,18 +86,14 @@ export default function WhitepapersPage() {
         <title>Whitepapers - Zion Tech Group</title>
         <meta name="description" content="Advanced whitepapers solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Whitepapers
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function WhitepapersPage() {
   return (
@@ -121,17 +103,15 @@ export default function WhitepapersPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Whitepapers</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
             <p className="text-gray-600">
               Comprehensive solution for your business requirements.
             </p>
-=======
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -140,24 +120,24 @@ export default function WhitepapersPage() {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">Expert Research</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Whitepapers
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Access our comprehensive whitepapers and research reports. 
+            Access our comprehensive whitepapers and research reports.
             Get expert insights on the latest technology trends and industry developments.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/contact"
@@ -173,16 +153,15 @@ export default function WhitepapersPage() {
               Request Custom Research
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -190,7 +169,7 @@ export default function WhitepapersPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -231,7 +210,7 @@ export default function WhitepapersPage() {
               Download our comprehensive whitepapers and stay ahead of technology trends
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whitepapers.map((whitepaper, index) => (
               <div
@@ -269,7 +248,6 @@ export default function WhitepapersPage() {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         </section>
-=======
 
 import React from 'react';
 
@@ -278,17 +256,15 @@ export default function Page() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Need Custom Research?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Our research team can create custom whitepapers and analysis reports 
+            Our research team can create custom whitepapers and analysis reports
             tailored to your specific industry and business needs.
           </p>
-<<<<<<< HEAD
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -309,22 +285,16 @@ export default function Page() {
       </section>
     </div>
   );
-<<<<<<< HEAD
-=======
 };
 
-<<<<<<< HEAD
 export default WhitepapersPage;
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }
-=======
 
         </div>
       </div>
     </div>
   );
-=======
 
 const WhitepapersPage = () => {
   const whitepapers = [
@@ -377,10 +347,6 @@ const WhitepapersPage = () => {
       icon: <BookOpen className="w-6 h-6" />
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

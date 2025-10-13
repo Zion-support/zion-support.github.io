@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // monitoring utility functions
 
 export interface monitoringConfig {
@@ -32,29 +23,17 @@ export class monitoring {
 
 export const monitoringInstance = new monitoring();
 export default monitoringInstance;
-=======
 // monitoring
 export const monitoring = () => {
   // Utility function implementation
   return null;
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 // Monitoring utility functions
 
 export const Monitoring = {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   init: () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     },
-<<<<<<< HEAD
 
   process: (data: any) => {
     return data;
@@ -65,8 +44,6 @@ export const Monitoring = {
 };
 
 export default Monitoring;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
 // monitoring utility
 export const monitoring = {
@@ -76,25 +53,21 @@ export const monitoring = {
   }
 };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 // Monitoring utility functions
-=======
     // Initialize monitoring
     console.log('Monitoring initialized');
   },
-  
+
   track: (event: string, data?: any) => {
     // Track events
     console.log('Event tracked:', event, data);
   },
-  
+
   error: (error: Error, context?: string) => {
     // Track errors
     console.error('Error tracked:', error, context);
   }
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 
 interface MonitoringConfig {
   apiEndpoint?: string;
@@ -102,7 +75,6 @@ interface MonitoringConfig {
   enablePerformanceTracking?: boolean;
 }
 
-<<<<<<< HEAD
 interface PerformanceMetric {
   name: string;
   value: number;
@@ -126,7 +98,7 @@ class MonitoringService {
     if (this.config.enablePerformanceTracking) {
       this.startPerformanceTracking();
     }
-    
+
     if (this.config.enableConsoleLogging) {
       console.log('Monitoring service initialized');
     }
@@ -212,36 +184,28 @@ export const Monitoring = {
 };
 
 export default Monitoring;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 export default monitoring;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
     console.log('Monitoring initialized');
   },
-  
+
   trackEvent: (eventName: string, properties?: Record<string, any>) => {
     console.log('Event tracked:', eventName, properties);
   },
-  
+
   trackError: (error: Error, context?: string) => {
     console.error('Error tracked:', error, context);
   },
-  
+
   trackPerformance: (metricName: string, value: number) => {
     console.log('Performance metric:', metricName, value);
   }
 };
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 export function monitoring() {
   return Monitoring;
 }
 
 export default monitoring;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
 // Monitoring utility functions
 
 export interface PerformanceMetrics {
@@ -310,7 +274,7 @@ export class PerformanceMonitor {
   trackError(error: ErrorInfo): void {
     this.errors.push(error);
     this.metrics.errorCount++;
-    
+
     // Send to monitoring service in production
     if (process.env.NODE_ENV === 'production') {
       this.sendToMonitoringService(error);
@@ -360,8 +324,6 @@ export function getErrors(): ErrorInfo[] {
 }
 
 export default performanceMonitor;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
-=======
 // Monitoring utility functions
 
 interface PerformanceData {
@@ -379,7 +341,7 @@ class PerformanceMonitor {
 
   init() {
     if (typeof window === 'undefined') return;
-    
+
     this.isEnabled = true;
     this.observePerformance();
   }
@@ -389,7 +351,7 @@ class PerformanceMonitor {
 
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      
+
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming;
@@ -410,7 +372,7 @@ class PerformanceMonitor {
 
   private recordMetric(data: PerformanceData) {
     this.data.push(data);
-    
+
     // Keep only last 100 entries
     if (this.data.length > 100) {
       this.data = this.data.slice(-100);
@@ -438,4 +400,3 @@ class PerformanceMonitor {
 export const monitoring = new PerformanceMonitor();
 
 export default monitoring;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5

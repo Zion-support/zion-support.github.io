@@ -1,44 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React, { useState } from "react";
 
 import { Helmet } from "react-helmet-async";
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 
 export default function contact() {
   return (
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function Contact() {
-=======
-=======
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Clock, MapPin, Code, Mail, Phone, Smartphone, Cloud } from 'lucide-react';
@@ -52,7 +25,6 @@ export default function ContactPage() {
     service: '',
     message: ''
   });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function Contact() {
   const [formData, setFormData] = useState({,
@@ -63,12 +35,8 @@ export default function Contact() {
       service: '',
       message: ''
   });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
       return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
-=======
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleInputChange = (e) => {
@@ -85,7 +53,6 @@ export default function Contact() {
     setIsSubmitted(true);
     // Reset form after 3 seconds;
     setTimeout(() => {
-<<<<<<< HEAD
       setIsSubmitted(false);
       setFormData({
         name: '',
@@ -98,7 +65,6 @@ export default function Contact() {
     }, 3000);
   };
 
-=======
       setFormData({,
     name: '',
           email: '',
@@ -106,7 +72,6 @@ export default function Contact() {
           phone: '',
           service: '',
           message: ''
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   const contactInfo = [
     {,
     icon: <Mail className="w-6 h-6" />,
@@ -148,48 +113,37 @@ export default function Contact() {
     "CRM Assistant",
     "Financial Analytics"
   ];
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
 
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
 
       return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
     <div className="min-h-screen bg-gray-900 text-white">
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function PagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Contact</h1>
           <p className="text-xl text-gray-300 mb-8">
             This page is under development. Please check back later.
-=======
 import React from 'react';
 
-<<<<<<< HEAD
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -198,10 +152,9 @@ export default function ContactPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -209,13 +162,12 @@ export default function ContactPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
-=======
 
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Contact</h1>
@@ -245,9 +197,8 @@ export default function ContactPage() {
                 Get round-the-clock support from our dedicated team of professionals.
               </p>
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -255,12 +206,11 @@ export default function ContactPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -276,39 +226,20 @@ export default function ContactPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
 }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
+}
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
 }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

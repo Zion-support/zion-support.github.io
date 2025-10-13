@@ -1,32 +1,22 @@
 import React from 'react';
 
-<<<<<<< HEAD
 interface ImprovedLoadingProps {
   className?: string;
   children?: React.ReactNode;
 }
 
 export default function ImprovedLoading({ className = '', children }: ImprovedLoadingProps) {
-=======
-<<<<<<< HEAD
 export default function Component() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
-<<<<<<< HEAD
 }
-=======
-=======
 interface ImprovedLoadingProps {
 //   message?: string
 //   size?: 'sm' | 'md' | 'lg' | 'xl'
@@ -93,7 +83,7 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
           {showProgress && (
             <div className="w-64 mx-auto mb-4">
               <div className="bg-white/10 rounded-full h-2 overflow-hidden">
-//                 <div 
+//                 <div
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
                   style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
 //                 ></div>
@@ -143,7 +133,7 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
       {showProgress && (
         <div className="w-48 mt-4">
           <div className="bg-white/10 rounded-full h-1 overflow-hidden">
-//             <div 
+//             <div
               className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
               style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
 //             ></div>
@@ -152,6 +142,4 @@ const ImprovedLoading: React.FC<ImprovedLoadingProps> = ({
       )}
 </div>
 //   )
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

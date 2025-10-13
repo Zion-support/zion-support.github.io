@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-=======
 import React, { useState } from "react";
 import AnalyticsProvider from "./components/AnalyticsProvider";
 import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
@@ -18,9 +10,7 @@ import ImprovedNavigation from "./components/ImprovedNavigation";
 import ImprovedFooter from "./components/ImprovedFooter";
 import ImprovedSidebar from "./components/ImprovedSidebar";
 import { Monitor } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
-<<<<<<< HEAD
 interface layoutProps {
   className?: string;
   children?: React.ReactNode;
@@ -33,7 +23,6 @@ export default function layout({ className = '', children }: layoutProps) {
     </div>
   );
 }
-=======
 export default function Component() {
   return (
     <div>
@@ -41,8 +30,6 @@ export default function Component() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import React, { useState } from "react";
 import AnalyticsProvider from "./components/AnalyticsProvider";
 import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
@@ -54,10 +41,7 @@ import ImprovedNavigation from "./components/ImprovedNavigation";
 import ImprovedFooter from "./components/ImprovedFooter";
 import ImprovedSidebar from "./components/ImprovedSidebar";
 import { Helmet } from 'react-helmet-async';
-=======
 import React from 'react';
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -88,17 +72,17 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
               <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-              
+
               <ImprovedNavigation />
 
               <main>{children}</main>
 
               <ImprovedFooter />
-              
+
               {/* Sidebar */}
-              <ImprovedSidebar 
-                isOpen={isSidebarOpen} 
-                onClose={() => setIsSidebarOpen(false)} 
+              <ImprovedSidebar
+                isOpen={isSidebarOpen}
+                onClose={() => setIsSidebarOpen(false)}
               />
             </div>
           </AnalyticsProvider>
@@ -107,20 +91,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     </ErrorBoundary>
   );
 };
-=======
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default Layout;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

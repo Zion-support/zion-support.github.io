@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 // /**
  * useForm Hook;
  * Provides form state management and validation;
@@ -111,4 +109,3 @@ const formErrors = getFormErrors(validationResults);
  errorArray.length === 0);
     validateAllFields;
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

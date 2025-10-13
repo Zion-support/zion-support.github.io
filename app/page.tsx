@@ -1,34 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function app() {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Home, Shield, Zap, Brain, Globe, Code, BarChart3, Mic, Cloud } from 'lucide-react';
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, BarChart3, Cloud, Sparkles, Mail, Monitor, Target } from "lucide-react";
 import FuturisticButton from "./components/FuturisticButton";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
 const HomePage = () => {
   const services = [
@@ -76,7 +56,6 @@ const HomePage = () => {
     }
   ];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -84,47 +63,34 @@ const HomePage = () => {
         <meta name="description" content="Leading provider of AI solutions, cybersecurity, cloud services, and 5G technology. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, cybersecurity, cloud services, 5G technology, machine learning, data analytics" />
       </Helmet>
-      
-<<<<<<< HEAD
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">App</h1>
           <p className="text-xl text-gray-300 mb-8">
             This page is under development. Please check back later.
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 export default function HomePage() {
   return (
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
         <meta name="description" content="Leading provider of AI and IT solutions for modern businesses" />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+      <div className="container mx-auto px-4 py-16">
+
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Welcome to Zion Tech Group
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
             Advanced AI and IT solutions for modern businesses.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 import React from 'react';
 
 export default function HomePage() {
@@ -135,48 +101,38 @@ export default function HomePage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Welcome to Zion Tech Group</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
-=======
 export default function Page() {
   return (
-=======
 export default function Page() {
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto text-center py-20">
-=======
 export default function Page() {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto text-center py-12">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
           Welcome to Zion Tech Group
         </h1>
         <p className="text-xl text-gray-600 mb-8">
           Advanced AI and IT Solutions for Modern Businesses
         </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="mt-8">
-          <a 
-            href="/services" 
+          <a
+            href="/services"
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Explore Our Services
           </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
             <p className="text-gray-600">
               Comprehensive solution for your business requirements.
             </p>
-=======
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -199,23 +155,20 @@ export default function Page() {
             >
               View Demo
             </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-<<<<<<< HEAD
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
               Scalable and secure implementation.
             </p>
-=======
         </section>
 
         {/* Services Section */}
@@ -249,7 +202,7 @@ export default function Page() {
                 </FuturisticButton>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -280,9 +233,7 @@ export default function Page() {
                 </div>
               ))}
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
           </div>
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -294,7 +245,7 @@ export default function PagePage() {
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-      
+
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -310,19 +261,15 @@ export default function PagePage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
             This page is under development. Please check back later.
           </p>
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </section>
 
@@ -332,19 +279,17 @@ export default function PagePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Services
-=======
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive technology solutions designed to accelerate your digital transformation.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -407,21 +352,12 @@ export default function PagePage() {
       </section>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
@@ -521,7 +457,7 @@ const HomePage = () => {
             keywords="AI solutions, cloud services, cybersecurity, data analytics, business transformation, technology consulting"
             canonical="https://ziontechgroup.com"
           />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -529,13 +465,13 @@ const HomePage = () => {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Users className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Technology Solutions</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -544,12 +480,12 @@ const HomePage = () => {
                   className="mb-6 leading-tight">
                   Transform Your Business with AI
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Leading provider of AI-powered solutions, cloud infrastructure, and cybersecurity services. 
+                  Leading provider of AI-powered solutions, cloud infrastructure, and cybersecurity services.
                   Transform your business with cutting-edge technology.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -676,10 +612,10 @@ const HomePage = () => {
                   Ready to Transform Your Business?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Let's discuss how our technology solutions can help you achieve your business goals. 
+                  Let's discuss how our technology solutions can help you achieve your business goals.
                   Get started with a free consultation today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -708,27 +644,15 @@ const HomePage = () => {
 };
 
 export default HomePage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 };
 
 export default HomePage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

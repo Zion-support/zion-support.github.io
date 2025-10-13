@@ -1,38 +1,24 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface FuturisticBackgroundProps {
-=======
 import React from 'react';
 
 interface FuturisticbackgroundProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function FuturisticBackground({ className = '', children }: FuturisticBackgroundProps) {
-=======
 export default function Futuristicbackground({ className = '', children, ...props }: FuturisticbackgroundProps) {
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className={`${className}`}>
-=======
 export default function FuturisticBackground({ className = '', children, ...props }: FuturisticBackgroundProps) {
   return (
     <div className={`futuristic-background-component ${className}`} {...props}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
       {children}
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 export default function FuturisticBackground({ className = '', children, ...props }: FuturisticBackgroundProps) {
     return (
         <div className="component" {...props}>
@@ -40,8 +26,6 @@ export default function FuturisticBackground({ className = '', children, ...prop
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -79,23 +63,12 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default FuturisticBackground;
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default FuturisticBackground;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default FuturisticBackground;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

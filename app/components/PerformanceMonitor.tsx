@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-
-<<<<<<< HEAD
 interface PerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function PerformanceMonitor({ className = '', children }: PerformanceMonitorProps) {
   return (
     <div className={`${className}`}>
@@ -20,7 +12,6 @@ export default function PerformanceMonitor({ className = '', children }: Perform
     </div>
   );
 }
-=======
 export default function PerformanceMonitor({ className = '', children, ...props }: PerformanceMonitorProps) {
     return (
         <div className="component" {...props}>
@@ -28,15 +19,11 @@ export default function PerformanceMonitor({ className = '', children, ...props 
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 const PerformanceMonitor: React.FC = () => {
   return null;
 };
 
 export default PerformanceMonitor;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
 import React from 'react';
 
@@ -57,8 +44,5 @@ export default function Performancemonitor() {
   );
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default function Performancemonitor({ className = '', children, ...props }: PerformancemonitorProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

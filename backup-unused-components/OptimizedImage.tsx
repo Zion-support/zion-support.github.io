@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState, useRef, useEffect } from 'react';
 
 interface OptimizedImageProps {
@@ -62,7 +60,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   };
 
   const imageSrc = isInView ? src : placeholder;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface OptimizedImageProps {
   className?: string;
@@ -71,23 +68,17 @@ interface OptimizedImageProps {
 
 export default function OptimizedImage({ className = '', children }: OptimizedImageProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
 //     <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
@@ -98,7 +89,7 @@ export default function OptimizedImage({ className = '', children }: OptimizedIm
           <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
 </div>
       )}
-      
+
       {hasError ? (
         <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
           <div className="text-gray-400 text-sm">Failed to load image</div>
@@ -117,7 +108,5 @@ export default function OptimizedImage({ className = '', children }: OptimizedIm
 //         />
       )}
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

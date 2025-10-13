@@ -1,56 +1,42 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface ContentStatisticsProps {
-=======
 import React from "react";
 import { TrendingUp, Users, Award, Zap } from "lucide-react";
-<<<<<<< HEAD
 interface StatItem;
   value: string;
   label: string;
   icon: React.ReactNode;
   color: string;
-=======
 interface StatItem ,
     value: string;,
     label: string;,
     icon: React.ReactNode;,
     color: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 interface ContentStatisticsProps;
   stats?: StatItem[];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
 export default function ContentStatistics({ className = '', children }: ContentStatisticsProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
-=======
 const ContentStatistics: React.FC<ContentStatisticsProps> = (
-<<<<<<< HEAD
   stats = [
-<<<<<<< HEAD
-    
+
       value: "500+",
       label: "Happy Clients",
       icon: <Users className="w-8 h-8" />,</Users>
       color: "text-blue-400",
-=======
   stats = [,
     value: "500+",
         label: "Happy Clients",
         icon: <Users className="w-8 h-8" />,</Users>,
     color: "text-blue-400",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 ,
     ,
     value: "99.9%",
@@ -71,7 +57,6 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = (
     color: "text-purple-400",
 ,
   ],
-=======
     {
 //       value: "500+",
 //       label: "Happy Clients",
@@ -97,12 +82,9 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = (
 //       color: "text-purple-400",
     },
 //   ],
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   className = "",
-) => 
+) =>
   return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
     <div className="{`py-16" ${className}`}></div>
       <div className="max-w-6xl mx-auto px-4"></div>
         <div className="text-center mb-12"></div>
@@ -114,13 +96,12 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = (
           </p>
   </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
-          
+
             <div key="{index}" className="text-center"></div>
               <div className="{`${stat.color}" flex justify-center mb-4`}></div>
                 {stat.icon}
   </div>
               <div className="text-4xl font-bold text-white mb-2"></div>
-=======
     <div className={`py-16 ${className}`}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
@@ -139,31 +120,23 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = (
                 {stat.icon}
 </div>
               <div className="text-4xl font-bold text-white mb-2">
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
                 {stat.value}
-<<<<<<< HEAD
   </div>
               <div className="text-gray-300 text-lg">{stat.label}</div>
   </div>  </div>
   </div>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 </div>
               <div className="text-gray-300 text-lg">{stat.label}</div>
-<<<<<<< HEAD
             </div>
 
         </div>
       </div>
     </div>
-=======
 </div>
           ))}
 </div>
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

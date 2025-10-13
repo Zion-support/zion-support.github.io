@@ -2,12 +2,9 @@ import React from "react";
 // import { Link } from "react-router-dom"; // Unused import
 // import { ArrowRight, Mail, Phone, MapPin } from "lucide-react"; // Unused import
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface EnhancedFooterProps {
   className?: string;
   children?: React.ReactNode;
-=======
 export default function EnhancedFooter() {
   return (
     <footer className="bg-gray-900 text-white py-8">
@@ -16,7 +13,6 @@ export default function EnhancedFooter() {
   </div>
     </footer>
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 }
 
 export default function EnhancedFooter({ className = '', children }: EnhancedFooterProps) {
@@ -26,7 +22,6 @@ export default function EnhancedFooter({ className = '', children }: EnhancedFoo
     </div>
   );
 }
-=======
 const EnhancedFooter: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
@@ -153,4 +148,3 @@ const EnhancedFooter: React.FC = () => {
 };
 
 export default EnhancedFooter;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

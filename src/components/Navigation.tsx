@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface NavigationProps {
@@ -8,20 +7,14 @@ interface NavigationProps {
 
 export default function Navigation({ className = '', children }: NavigationProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
-<<<<<<< HEAD
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     </div>
-=======
 export default Navigation;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -87,7 +80,5 @@ export default Navigation;
 <span>+1 302 464 0950</span>
                   Get Started;
         )}
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

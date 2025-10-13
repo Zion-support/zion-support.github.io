@@ -1,22 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function microSaas() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -24,12 +9,11 @@ export default function microSaas() {
         <title>Micro Saas - Zion Tech Group</title>
         <meta name="description" content="Micro Saas solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Micro Saas</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function MicroSaasPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -37,16 +21,14 @@ export default function MicroSaasPage() {
         <title>Micro Saas - Zion Tech Group</title>
         <meta name="description" content="Advanced micro saas solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Micro Saas
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function MicrosaasPage() {
   return (
@@ -56,10 +38,9 @@ export default function MicrosaasPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Micro Saas</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -67,14 +48,14 @@ export default function MicrosaasPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -82,7 +63,7 @@ export default function MicrosaasPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -92,26 +73,17 @@ export default function MicrosaasPage() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 import { ArrowRight, Brain, Shield, Zap, BarChart3, Users, Sparkles, CheckCircle, Star, TrendingUp } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function Page() {
-=======
 import React from 'react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 import { ArrowRight, Brain, Shield, Zap, BarChart3, Cloud, Sparkles, Users, TrendingUp, Award, Database, Cpu, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function MicroSaasPage() {
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
   const microSaasServices = [
     {
       icon: <Brain className="w-8 h-8" />,
@@ -145,17 +117,16 @@ export default function MicroSaasPage() {
       features: ['Auto Invoice Creation', 'Payment Tracking', 'Tax Calculations', 'Multi-currency'],
       link: '/zion-ai-invoice-generator',
       price: '$59/month'
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
-  Zap, 
-  BarChart3, 
-  Shield, 
-  Cloud, 
-  Users, 
-  TrendingUp, 
-  Database, 
-  Cpu, 
+  Zap,
+  BarChart3,
+  Shield,
+  Cloud,
+  Users,
+  TrendingUp,
+  Database,
+  Cpu,
   Sparkles,
   ArrowRight,
   CheckCircle,
@@ -176,10 +147,8 @@ const MicroSaasPage: React.FC = () => {
       features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'API integration'],
       price: '$299/month',
       featured: true;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {
-<<<<<<< HEAD
       icon: <Users className="w-8 h-8" />,
       title: 'AI Customer Insights',
       description: 'Deep customer analytics and sentiment analysis for better business decisions.',
@@ -194,7 +163,6 @@ const MicroSaasPage: React.FC = () => {
       features: ['Email Scoring', 'Content Optimization', 'A/B Testing', 'Performance Analytics'],
       link: '/zion-ai-email-analyzer',
       price: '$89/month'
-=======
       title: 'Zion Security Shield',
       description: 'Comprehensive security monitoring and threat detection for your applications.',
       icon: <Shield className="w-8 h-8" />,
@@ -210,13 +178,7 @@ const MicroSaasPage: React.FC = () => {
       path: '/zion-cloud-vault',
       features: ['End-to-end encryption', 'Automated backups', 'File sharing', 'Version control'],
       price: '$99/month',
-<<<<<<< HEAD
       featured: false
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
       featured: false;
     },
     {
@@ -272,7 +234,6 @@ const MicroSaasPage: React.FC = () => {
       features: ['Code generation', 'Bug detection', 'Performance optimization', 'Documentation'],
       price: '$129/month',
       featured: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
   ];
 
@@ -296,7 +257,6 @@ const MicroSaasPage: React.FC = () => {
       icon: <Users className="w-6 h-6" />,
       title: '24/7 Support',
       description: 'Round-the-clock support from our expert team.'
-=======
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -318,13 +278,11 @@ export default function MicroSaasPage() {
       title: "Cost Effective",
       description: "Affordable solutions for startups and small businesses",
       icon: <Mic className="w-6 h-6" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
     }
   ];
 
   const testimonials = [
     {
-<<<<<<< HEAD
       name: 'Sarah Johnson',
       company: 'TechStart Inc.',
       content: 'Zion\'s AI Analytics Pro transformed our data analysis. We saw 300% improvement in insights quality.',
@@ -335,7 +293,6 @@ export default function MicroSaasPage() {
       company: 'GrowthCorp',
       content: 'The AI CRM Pro is a game-changer. Our sales team productivity increased by 150%.',
       rating: 5
-=======
       name: "Sarah Johnson",
       role: "CEO, TechStart",
       content: "Zion Tech Group helped us launch our micro SaaS in record time. Their expertise is unmatched.",
@@ -355,17 +312,12 @@ export default function MicroSaasPage() {
       content: "Professional, reliable, and innovative. They exceeded our expectations.",
       rating: 5,
       avatar: "ER"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
     }
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>
-=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
       <Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group | Ready-to-Use AI Tools</title>
         <meta name="description" content="Discover our collection of ready-to-use Micro SAAS solutions powered by AI. No setup required - start using immediately and transform your business operations." />
@@ -379,13 +331,13 @@ export default function MicroSaasPage() {
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
           </div>
-          
+
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">Ready-to-Use Solutions</span>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 Micro SAAS
@@ -393,12 +345,12 @@ export default function MicroSaasPage() {
               <br />
               <span className="text-white">Solutions</span>
             </h1>
-            
+
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Ready-to-use AI-powered software solutions that can transform your business operations immediately. 
+              Ready-to-use AI-powered software solutions that can transform your business operations immediately.
               No setup required - start using today and see results tomorrow.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link
                 to="/contact"
@@ -431,7 +383,7 @@ export default function MicroSaasPage() {
                 Our solutions are designed for immediate deployment with maximum impact.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center">
@@ -457,7 +409,7 @@ export default function MicroSaasPage() {
                 Choose from our collection of AI-powered tools designed for immediate business impact.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasServices.map((service, index) => (
                 <div key={index} className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 relative ${service.popular ? 'ring-2 ring-cyan-500/50' : ''}`}>
@@ -468,24 +420,24 @@ export default function MicroSaasPage() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
                     {service.icon}
                   </div>
-                  
+
                   <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {service.description}
                   </p>
-                  
+
                   <div className="mb-6">
                     <div className="text-3xl font-bold text-white mb-2">{service.price}</div>
                     <div className="text-gray-400 text-sm">per month</div>
                   </div>
-                  
+
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
@@ -494,7 +446,7 @@ export default function MicroSaasPage() {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Link
                     to={service.link}
                     className="block w-full text-center bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
@@ -519,7 +471,7 @@ export default function MicroSaasPage() {
                 See how our Micro SAAS solutions are transforming businesses worldwide.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
@@ -543,25 +495,20 @@ export default function MicroSaasPage() {
                 </div>
               ))}
             </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Micro SaaS Services - Zion Tech Group</title>
         <meta name="description" content="Professional micro SaaS services for modern business solutions." />
       </Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-=======
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold text-white mb-6">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
             Micro SaaS Services
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -613,7 +560,7 @@ export default function MicroSaasPage() {
               Choose from our comprehensive suite of micro SaaS applications designed to solve specific business challenges.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasServices.map((service, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -641,7 +588,6 @@ export default function MicroSaasPage() {
                     className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     Learn More
-=======
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-16">
@@ -676,13 +622,11 @@ export default function MicroSaasPage() {
                   >
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
                   </Link>
                 </div>
               </div>
             ))}
           </div>
-<<<<<<< HEAD
         </div>
       </section>
 
@@ -697,7 +641,7 @@ export default function MicroSaasPage() {
               Join thousands of satisfied customers who have transformed their business with our micro SaaS solutions.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
@@ -711,7 +655,6 @@ export default function MicroSaasPage() {
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed mb-4">"{testimonial.content}"</p>
-=======
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             {stats.map((stat, index) => (
@@ -738,7 +681,6 @@ export default function MicroSaasPage() {
                   </div>
                 </div>
                 <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
                 <div className="flex">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -746,12 +688,9 @@ export default function MicroSaasPage() {
                 </div>
               </div>
             ))}
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -781,7 +720,6 @@ export default function MicroSaasPage() {
             </div>
           </div>
         </section>
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -793,7 +731,7 @@ export default function PagePage() {
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-      
+
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -810,17 +748,11 @@ export default function PagePage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
       </div>
     </>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -848,14 +780,8 @@ export default function PagePage() {
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
-=======
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
@@ -895,20 +821,12 @@ export default function PagePage() {
                 </div>
               </div>
             ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
           </div>
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
 
 }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5

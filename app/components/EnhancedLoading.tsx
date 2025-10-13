@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedLoadingProps {
@@ -7,8 +5,6 @@ interface EnhancedLoadingProps {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function EnhancedLoading({ className = '', children }: EnhancedLoadingProps) {
   return (
     <div className={`${className}`}>
@@ -16,7 +12,6 @@ export default function EnhancedLoading({ className = '', children }: EnhancedLo
     </div>
   );
 }
-=======
 export default function EnhancedLoading({ className = '', children, ...props }: EnhancedLoadingProps) {
     return (
         <div className="component" {...props}>
@@ -24,8 +19,6 @@ export default function EnhancedLoading({ className = '', children, ...props }: 
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 interface EnhancedLoadingProps {
   message?: string;
   showProgress?: boolean;
@@ -59,7 +52,7 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
         {showProgress && (
           <div className="w-64 mx-auto mb-4">
             <div className="bg-slate-700 rounded-full h-2 overflow-hidden">
-              <div 
+              <div
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
                 style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
               ></div>
@@ -92,24 +85,13 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
     </div>
   );
 };
-=======
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default EnhancedLoading;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default function Enhancedloading({ className = '', children, ...props }: EnhancedloadingProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

@@ -1,26 +1,20 @@
 /** @type {import('tailwindcss').Config} */
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default {;
   content: [
     "./index.html";
     "./src/**/*.{js,ts,jsx,tsx}";
     "./app/**/*.{js,ts,jsx,tsx}";
   ];
-=======
 export default {
 //   content: [
 //     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
 //   ],
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   theme: {
     extend: {
       colors: {
         primary: {
-<<<<<<< HEAD
-=======
 export default {;,
     content: [
     "./index.html";
@@ -31,7 +25,6 @@ export default {;,
     extend: {,
     colors: {,
     primary: {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           50: "#f0f9ff";
           500: "#06b6d4";
           600: "#0891b2";
@@ -48,10 +41,8 @@ export default {;,
     sans: ["Inter", "system-ui", "sans-serif"];
       };
     };
-<<<<<<< HEAD
   };
   plugins: [];
-=======
 //           50: "#f0f9ff",
 //           500: "#06b6d4",
 //           600: "#0891b2",
@@ -70,9 +61,6 @@ export default {;,
     },
   },
 //   plugins: [],
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
-=======
   };,
     plugins: [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 };

@@ -8,8 +8,6 @@ export default function Component() {
   </div>
   );
 }
-<<<<<<< HEAD
-=======
 
 findPages(appDir);
 
@@ -25,13 +23,13 @@ missingRoutes.forEach(route => );
 // Categorize missing routes
 const aiServices = missingRoutes.filter(route => route.startsWith('ai-'));
 const microSaas = missingRoutes.filter(route => route.startsWith('micro-saas') || route.startsWith('zion-'));
-const itServices = missingRoutes.filter(route => 
-  route.includes('cloud') || 
-  route.includes('cybersecurity') || 
-  route.includes('web-development') || 
-  route.includes('mobile-development') || 
-  route.includes('database') || 
-  route.includes('network') || 
+const itServices = missingRoutes.filter(route =>
+  route.includes('cloud') ||
+  route.includes('cybersecurity') ||
+  route.includes('web-development') ||
+  route.includes('mobile-development') ||
+  route.includes('database') ||
+  route.includes('network') ||
   route.includes('blockchain') ||
   route.includes('data-') ||
   route.includes('iot') ||
@@ -53,41 +51,41 @@ const itServices = missingRoutes.filter(route =>
   route.includes('data-visualization')
 );
 const fiveGServices = missingRoutes.filter(route => route.startsWith('5g-'));
-const otherPages = missingRoutes.filter(route => 
-  !aiServices.includes(route) && 
-  !microSaas.includes(route) && 
-  !itServices.includes(route) && 
+const otherPages = missingRoutes.filter(route =>
+  !aiServices.includes(route) &&
+  !microSaas.includes(route) &&
+  !itServices.includes(route) &&
   !fiveGServices.includes(route)
 );
 
 // Generate route additions
 const generateRouteAddition = (routes, category) => {
   if (routes.length === 0) return '';
-  
+
   let result = `\n  // ${category} Routes\n`;
   routes.forEach(route => {
-    const componentName = route.split('-').map(word => 
+    const componentName = route.split('-').map(word =>
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('') + 'Page';
-    
+
     result += `  const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`;
   });
-  
+
   return result;
 };
 
 const generateRouteElements = (routes) => {
   if (routes.length === 0) return '';
-  
+
   let result = '';
   routes.forEach(route => {
-    const componentName = route.split('-').map(word => 
+    const componentName = route.split('-').map(word =>
       word.charAt(0).toUpperCase() + word.slice(1)
     ).join('') + 'Page';
-    
+
     result += `                  <Route path="/${route}" element={<${componentName} />} />\n`;
   });
-  
+
   return result;
 };
 
@@ -119,4 +117,3 @@ const analysis = {
 };
 
 fs.writeFileSync('/workspace/missing-routes-analysis.json', JSON.stringify(analysis, null, 2));
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

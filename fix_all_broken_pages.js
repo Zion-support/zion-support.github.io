@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 import fs from 'fs';
 import path from 'path';
 import Layout from '../layout'
@@ -92,5 +90,3 @@ const componentName = config.title.replace(/\s+/g, '');
       fs.writeFileSync(file, content);
       fixedCount++;
   } catch (error) {
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

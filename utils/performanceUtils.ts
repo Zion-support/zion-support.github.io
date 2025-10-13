@@ -1,17 +1,13 @@
-<<<<<<< HEAD
 // performanceUtils utility functions
 
 export interface performanceUtilsConfig {
   enabled: boolean;
-=======
 // Utility functions;
 export function utilityFunction() {
   // Implementation here;
   return null;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 }
 
-<<<<<<< HEAD
 export class performanceUtils {
   private config: performanceUtilsConfig;
 
@@ -31,10 +27,7 @@ export class performanceUtils {
 
 export const performanceutils = new performanceUtils();
 export default performanceutils;
-=======
-<<<<<<< HEAD
 export default utilityFunction;
-=======
   optimizeImages() {
     // Lazy load images
     if ('IntersectionObserver' in window) {
@@ -86,20 +79,20 @@ export default utilityFunction;
 // Image optimization utility
 export const optimizeImage = (src: string, width?: number, height?: number, quality = 80) => {
   if (!src) return src;
-  
+
   // If it's already an optimized URL, return as is
   if (src.includes('w_') || src.includes('q_')) return src;
-  
+
   // For placeholder images, return as is
   if (src.includes('placeholder') || src.includes('api/placeholder')) return src;
-  
+
   // Add optimization parameters
   const params = new URLSearchParams();
   if (width) params.set('w', width.toString());
   if (height) params.set('h', height.toString());
   params.set('q', quality.toString());
   params.set('f', 'auto'); // Auto format
-  
+
   const separator = src.includes('?') ? '&' : '?';
   return `${src}${separator}${params.toString()}`;
 };
@@ -110,7 +103,7 @@ export const optimizeBundle = {
   lazyLoadComponent: (importFn: () => Promise<any>) => {
     return React.lazy(importFn);
   },
-  
+
   // Preload critical routes
   preloadRoute: (routePath: string) => {
     if (typeof window !== 'undefined') {
@@ -130,7 +123,7 @@ export const memoryOptimizer = {
       (window as any).gc();
     }
   },
-  
+
   // Monitor memory usage
   getMemoryUsage: () => {
     if (typeof window !== 'undefined' && 'memory' in performance) {
@@ -147,7 +140,7 @@ export const cacheOptimizer = {
     response.headers.set('Cache-Control', 'public, max-age=31536000, immutable');
     return response;
   },
-  
+
   // Clear cache when needed
   clearCache: () => {
     if ('caches' in window) {
@@ -161,5 +154,3 @@ export const cacheOptimizer = {
 };
 
 export default performanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

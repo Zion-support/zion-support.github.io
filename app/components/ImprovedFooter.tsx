@@ -1,52 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 interface ImprovedFooterProps {
-=======
 
 import React from 'react';
-=======
 import { Link } from 'react-router-dom';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Mic } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 interface ImprovedfooterProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function ImprovedFooter({ className = '', children }: ImprovedFooterProps) {
-=======
 export default function Improvedfooter({ className = '', children, ...props }: ImprovedfooterProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
   return (
     <div className={`${className}`}>
       {children}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 export default function ImprovedFooter({ className = '', children, ...props }: ImprovedFooterProps) {
     return (
         <div className="component" {...props}>
@@ -54,10 +30,6 @@ export default function ImprovedFooter({ className = '', children, ...props }: I
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, Phone, MapPin, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, CheckCircle } from 'lucide-react';
 
@@ -66,7 +38,6 @@ const ImprovedFooter = () => {
 
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -168,15 +139,9 @@ const ImprovedFooter = () => {
       ]
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 const ImprovedFooter: React.FC<ImprovedfooterProps> = ({ className = '', children, ...props }) => {
   const currentYear = new Date().getFullYear();
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
   const companyLinks = [
     { label: 'About Us', href: '/about' },
     { label: 'Our Team', href: '/team' },
@@ -236,11 +201,8 @@ const ImprovedFooter: React.FC<ImprovedfooterProps> = ({ className = '', childre
     </div>
   );
 
-<<<<<<< HEAD
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -343,4 +305,3 @@ const ImprovedFooter: React.FC<ImprovedfooterProps> = ({ className = '', childre
     }
   ];
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

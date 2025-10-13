@@ -2,17 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
-<<<<<<< HEAD
   </div>
-=======
     </div>
-=======
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -20,14 +16,11 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 // #!/usr/bin/env node
-=======
 // Find all TypeScript/JSX files in the app directory
 const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
 console.log(`Found ${files.length} files to process`);
 
-<<<<<<< HEAD
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -146,24 +139,18 @@ export default function ${pageName}() {
 </div>
 </div>
 //     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }
-<<<<<<< HEAD
-=======
 
 // Function to process a single file
 function processFile(filePath) {
-=======
 files.forEach(file => {
   const filePath = path.join(__dirname, file);
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
+
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
-    
+
     // Fix common JSX issues
     const fixes = [
       // Fix unclosed JSX elements by adding proper closing tags
@@ -192,7 +179,7 @@ files.forEach(file => {
         replacement: '$1);'
       }
     ];
-    
+
     // Apply basic fixes
     fixes.forEach(fix => {
       if (fix.pattern.test(content)) {
@@ -200,7 +187,7 @@ files.forEach(file => {
         modified = true;
       }
     });
-    
+
     // Write back if modified
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');

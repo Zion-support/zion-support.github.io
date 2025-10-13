@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -9,7 +8,7 @@ export default function fix-merge-conflicts.js() {
         <title>Fix Merge Conflicts.js - Zion Tech Group</title>
         <meta name="description" content="Fix Merge Conflicts.js solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Fix Merge Conflicts.js</h1>
@@ -21,7 +20,6 @@ export default function fix-merge-conflicts.js() {
     </div>
   );
 }
-=======
 #!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
@@ -30,7 +28,7 @@ import path from 'path';
 function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    
+
     // Check if file has merge conflict markers;
     if (!content.includes('')) {
         conflictType = 'separator';
@@ -38,7 +36,7 @@ function resolveMergeConflicts(filePath) {
       } else if (line.startsWith('>>>>>>>')) {
         // End of conflict - resolve it;
         inConflict = false;
-        
+
         // Choose the longer/more complete version, or prefer HEAD if similar length;
         let chosenLines;
         if (headLines.length >= branchLines.length) {
@@ -46,10 +44,10 @@ function resolveMergeConflicts(filePath) {
         } else {
           chosenLines = branchLines;
         }
-        
+
         // Add the chosen lines;
         resolvedLines.push(...chosenLines);
-        
+
         // Reset;
         headLines = [];
         separatorLines = [];
@@ -57,7 +55,7 @@ function resolveMergeConflicts(filePath) {
         conflictType = '';
         continue;
       }
-      
+
       if (inConflict) {
         if (conflictType === 'head') {
           headLines.push(line);
@@ -70,11 +68,11 @@ function resolveMergeConflicts(filePath) {
         resolvedLines.push(line);
       }
     }
-    
+
     // Write the resolved content;
     const resolvedContent = resolvedLines.join('\n');
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
-    
+
     return true; // Conflicts were resolved;
   } catch (error) {
     console.error(`Error resolving conflicts in ${filePath}:`, error.message);
@@ -85,14 +83,14 @@ function resolveMergeConflicts(filePath) {
 // Function to find all files with merge conflicts;
 function findFilesWithConflicts(dir) {
   const files = [];
-  
+
   function scanDirectory(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         // Skip node_modules and other irrelevant directories;
         if (!['node_modules', '.git', 'dist', '.next', 'out'].includes(item)) {
@@ -106,7 +104,7 @@ function findFilesWithConflicts(dir) {
       }
     }
   }
-  
+
   scanDirectory(dir);
   return files;
 }
@@ -142,4 +140,3 @@ if (errorCount > 0) {
 }
 
 console.log('🎉 Merge conflict resolution complete!');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

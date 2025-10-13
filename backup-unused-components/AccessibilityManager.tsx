@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
@@ -29,12 +27,12 @@ const AccessibilityManager: React.FC = () => {
 
     // Detect screen reader usage
     const detectScreenReader = () => {
-      const isScreenReader = 
+      const isScreenReader =
 //         window.speechSynthesis ||
         window.navigator.userAgent.includes('NVDA') ||
         window.navigator.userAgent.includes('JAWS') ||
         window.navigator.userAgent.includes('VoiceOver');
-      
+
       setSettings(prev => ({ ...prev, screenReader: !!isScreenReader }));
     };
 
@@ -44,11 +42,11 @@ const AccessibilityManager: React.FC = () => {
     if (window.matchMedia) {
       const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
       const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-      
+
       const handleHighContrastChange = (e: MediaQueryListEvent) => {
         setSettings(prev => ({ ...prev, highContrast: e.matches }));
       };
-      
+
       const handleReducedMotionChange = (e: MediaQueryListEvent) => {
         setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
       };
@@ -66,7 +64,7 @@ const AccessibilityManager: React.FC = () => {
   useEffect(() => {
     // Apply accessibility settings
     const root = document.documentElement;
-    
+
     // High contrast
     if (settings.highContrast) {
       root.classList.add('high-contrast');
@@ -109,7 +107,6 @@ const AccessibilityManager: React.FC = () => {
   const toggleSetting = (key: keyof AccessibilitySettings) => {
     setSettings(prev => ({ ...prev, [key]: !prev[key] }));
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface AccessibilityManagerProps {
   className?: string;
@@ -118,23 +115,17 @@ interface AccessibilityManagerProps {
 
 export default function AccessibilityManager({ className = '', children }: AccessibilityManagerProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
     <div className="accessibility-manager">
       <style jsx>{`
         .accessibility-manager {
@@ -230,12 +221,12 @@ export default function AccessibilityManager({ className = '', children }: Acces
           border: 0;
         }
       `}</style>
-      
+
 <h3>Accessibility Options</h3>
-      
+
       <div className="accessibility-toggle">
 <span>High Contrast</span>
-//         <button 
+//         <button
           className={settings.highContrast ? 'active' : ''}
           onClick={() => toggleSetting('highContrast')}
           aria-pressed={settings.highContrast}
@@ -243,10 +234,10 @@ export default function AccessibilityManager({ className = '', children }: Acces
           {settings.highContrast ? 'ON' : 'OFF'}
 </button>
 </div>
-      
+
       <div className="accessibility-toggle">
 <span>Large Text</span>
-//         <button 
+//         <button
           className={settings.largeText ? 'active' : ''}
           onClick={() => toggleSetting('largeText')}
           aria-pressed={settings.largeText}
@@ -254,10 +245,10 @@ export default function AccessibilityManager({ className = '', children }: Acces
           {settings.largeText ? 'ON' : 'OFF'}
 </button>
 </div>
-      
+
       <div className="accessibility-toggle">
 <span>Reduced Motion</span>
-//         <button 
+//         <button
           className={settings.reducedMotion ? 'active' : ''}
           onClick={() => toggleSetting('reducedMotion')}
           aria-pressed={settings.reducedMotion}
@@ -265,10 +256,10 @@ export default function AccessibilityManager({ className = '', children }: Acces
           {settings.reducedMotion ? 'ON' : 'OFF'}
 </button>
 </div>
-      
+
       <div className="accessibility-toggle">
 <span>Focus Indicators</span>
-//         <button 
+//         <button
           className={settings.focusVisible ? 'active' : ''}
           onClick={() => toggleSetting('focusVisible')}
           aria-pressed={settings.focusVisible}
@@ -277,7 +268,5 @@ export default function AccessibilityManager({ className = '', children }: Acces
 </button>
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

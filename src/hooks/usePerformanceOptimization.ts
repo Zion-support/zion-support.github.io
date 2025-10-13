@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
@@ -85,4 +83,3 @@ const link = document.createElement('link');
     preloadCriticalResources;
   };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

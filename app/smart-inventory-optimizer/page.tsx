@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function smartInventoryOptimizer() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -18,12 +8,11 @@ export default function smartInventoryOptimizer() {
         <title>Smart Inventory Optimizer - Zion Tech Group</title>
         <meta name="description" content="Smart Inventory Optimizer solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Smart Inventory Optimizer</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function SmartInventoryOptimizerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -31,16 +20,14 @@ export default function SmartInventoryOptimizerPage() {
         <title>Smart Inventory Optimizer - Zion Tech Group</title>
         <meta name="description" content="Advanced smart inventory optimizer solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Smart Inventory Optimizer
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function SmartinventoryoptimizerPage() {
   return (
@@ -50,10 +37,9 @@ export default function SmartinventoryoptimizerPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Smart Inventory Optimizer</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -61,14 +47,14 @@ export default function SmartinventoryoptimizerPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -76,7 +62,7 @@ export default function SmartinventoryoptimizerPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -86,7 +72,6 @@ export default function SmartinventoryoptimizerPage() {
     </div>
   );
 }
-=======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
 import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
@@ -217,7 +202,7 @@ const SmartInventoryOptimizerPage = () => {
             keywords="inventory optimizer, AI inventory management, demand forecasting, inventory optimization, supply chain management"
             canonical="https://ziontechgroup.com/smart-inventory-optimizer"
           />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -225,13 +210,13 @@ const SmartInventoryOptimizerPage = () => {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Smart Inventory Optimizer</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -240,12 +225,12 @@ const SmartInventoryOptimizerPage = () => {
                   className="mb-6 leading-tight">
                   Smart Inventory Optimizer
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Optimize your inventory with our AI-powered smart inventory optimizer. 
+                  Optimize your inventory with our AI-powered smart inventory optimizer.
                   Reduce costs, improve availability, and streamline operations.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#contact"
@@ -413,10 +398,10 @@ const SmartInventoryOptimizerPage = () => {
                   Ready to Optimize Your Inventory?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Start using our smart inventory optimizer today and see the difference 
+                  Start using our smart inventory optimizer today and see the difference
                   AI can make in your inventory management.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -445,8 +430,6 @@ const SmartInventoryOptimizerPage = () => {
 };
 
 export default SmartInventoryOptimizerPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
 import React from 'react';
 
@@ -470,14 +453,10 @@ export default function Page() {
 
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
 const SmartInventoryOptimizerPage = () => {
   const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
   const benefits: string[] = [];
 
@@ -532,10 +511,7 @@ const SmartInventoryOptimizerPage = () => {
       popular: false;
     }
   ];
-<<<<<<< HEAD
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -559,14 +535,14 @@ const SmartInventoryOptimizerPage = () => {
               <Package className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI-Powered Inventory Intelligence</span>
             </div>
-            
+
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Optimize Your
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Inventory Management</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your inventory operations with AI-powered demand forecasting, smart reorder points, 
+              Transform your inventory operations with AI-powered demand forecasting, smart reorder points,
               and real-time analytics that reduce costs and improve efficiency.
             </p>
 
@@ -630,7 +606,7 @@ const SmartInventoryOptimizerPage = () => {
               Transform Your Inventory Operations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform delivers measurable results that directly impact your bottom line 
+              Our AI-powered platform delivers measurable results that directly impact your bottom line
               and operational efficiency.
             </p>
           </motion.div>
@@ -715,7 +691,7 @@ const SmartInventoryOptimizerPage = () => {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business size and inventory complexity. 
+              Choose the perfect plan for your business size and inventory complexity.
               All plans include our core AI features with no setup fees.
             </p>
           </motion.div>
@@ -728,8 +704,8 @@ const SmartInventoryOptimizerPage = () => {
                 animate={{ opacity: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
+                  plan.popular
+                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent'
                     : 'border-white/10'
                 }`}
               >
@@ -790,7 +766,7 @@ const SmartInventoryOptimizerPage = () => {
               Ready to Optimize Your Inventory?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already using our Smart Inventory Optimizer 
+              Join thousands of businesses already using our Smart Inventory Optimizer
               to reduce costs, improve efficiency, and boost profitability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -839,4 +815,3 @@ const SmartInventoryOptimizerPage = () => {
 };
 
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

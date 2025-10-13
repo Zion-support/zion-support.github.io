@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { 
-  Brain, 
-  Mail, 
-  Phone, 
+import {
+  Brain,
+  Mail,
+  Phone,
   MapPin,
   ArrowRight,
   Twitter,
@@ -20,9 +12,7 @@ import {
   Users
 } from "lucide-react";
 import { Link } from 'react-router-dom';
-=======
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Clock } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -36,39 +26,34 @@ import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 const Footer = () => {
   const services = [
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Star, 
-  Users, 
-  Sparkles, 
-  Mail, 
+  Brain,
+  Shield,
+  Zap,
+  Globe,
+  Star,
+  Users,
+  Sparkles,
+  Mail,
   Monitor,
   ChevronDown,
   ChevronUp,
   Menu,
   X,
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Phone, 
+  Linkedin,
+  Twitter,
+  Github,
+  Phone,
   MapPin,
   ArrowRight,
   Award  } from 'lucide-react';
 } from 'lucide-react';
 const services = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     {
       title: "Cloud Migration",
       description: "Seamless migration to cloud infrastructure",
@@ -95,18 +80,12 @@ const microSaasServices = [
     { name: "Cloud Solutions", href: "/cloud-services" },
     { name: "DevOps", href: "/devops" }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
-import { 
-  Brain, 
-  Mail, 
-  Phone, 
+import {
+  Brain,
+  Mail,
+  Phone,
   MapPin,
-  Clock, 
+  Clock,
   ArrowRight,
   Shield,
   Zap,
@@ -117,13 +96,7 @@ import {
   Award,
   Users
 } from "lucide-react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
-
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Mail, Phone, MapPin, Clock, Brain, Shield, Zap, Globe } from 'lucide-react';
@@ -145,14 +118,12 @@ export default function Footer() {
     { name: "Terms of Service", href: "/terms" }
   ];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
   const socialLinks = [
     { name: "Twitter", href: "#" },
     { name: "LinkedIn", href: "#" },
     { name: "GitHub", href: "#" }
   ];
 
-<<<<<<< HEAD
   const serviceCategories = [
     {
       title: "AI Solutions",
@@ -225,7 +196,6 @@ export default function Footer() {
     { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
   ];
 
-<<<<<<< HEAD
 export default function Footer({ className = '', children }: FooterProps) {
   return (
     <div className={`${className}`}>
@@ -233,49 +203,35 @@ export default function Footer({ className = '', children }: FooterProps) {
     </div>
   );
 }
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React, { useMemo } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
 import { Link } from 'react-router-dom';
-import { 
-  Twitter, 
-  Linkedin, 
-  Github, 
-  Mail, 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Phone, 
-  MapPin, 
-  Shield, 
-  Award, 
-  Users, 
-  Clock 
-=======
+import {
+  Twitter,
+  Linkedin,
+  Github,
+  Mail,
+  Phone,
+  MapPin,
+  Shield,
+  Award,
+  Users,
+  Clock
   Phone,
   MapPin
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
-  Phone, 
-  MapPin, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Cloud, 
-  Code, 
-  BarChart3, 
-  Award, 
-  Users, 
-  TrendingUp 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+  Phone,
+  MapPin,
+  Brain,
+  Shield,
+  Zap,
+  Globe,
+  Cloud,
+  Code,
+  BarChart3,
+  Award,
+  Users,
+  TrendingUp
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -294,7 +250,6 @@ const Footer: React.FC = () => {
       name: "GitHub",
       href: "https://github.com/ziontechgroup",
       icon: <Github className="w-5 h-5" />
-=======
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
   const socialLinks = useMemo(() => [
@@ -312,7 +267,6 @@ const Footer = React.memo(() => {
     name: "GitHub",
         url: "https://github.com/ziontechgroup",
         icon: <Github className="w-5 h-5" />,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     }
   ];
 
@@ -330,11 +284,7 @@ const Footer = React.memo(() => {
     { name: "DevOps", href: "/devops" }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const stats = [
-<<<<<<< HEAD
-=======
   const supportLinks = useMemo(() => [
     { name: "Contact", path: "/contact" },
     { name: "Support", path: "/support" },
@@ -355,12 +305,10 @@ const Footer = React.memo(() => {
 
   const stats = useMemo(() => [
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     { number: "500+", label: "Projects Completed", icon: <Award className="w-5 h-5" /> },
     { number: "10,000+", label: "Happy Clients", icon: <Users className="w-5 h-5" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-5 h-5" /> },
     { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
-<<<<<<< HEAD
   ];
 
   return (
@@ -372,7 +320,6 @@ const Footer = React.memo(() => {
             <h3 className="text-lg font-semibold">Zion Tech Group</h3>
             <p className="text-gray-300 text-sm">
               Advanced AI and IT Solutions for Modern Businesses
-=======
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -382,7 +329,6 @@ const Footer = React.memo(() => {
             <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
             <p className="text-gray-300 mb-4">
               Advanced AI and IT solutions for modern businesses.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
@@ -390,18 +336,13 @@ const Footer = React.memo(() => {
                   key={link.name}
                   href={link.href}
                   className="text-gray-400 hover:text-white transition-colors"
-<<<<<<< HEAD
                   aria-label={link.name}
-=======
                   target="_blank"
                   rel="noopener noreferrer"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
                 >
                   {link.icon}
                 </a>
               ))}
-<<<<<<< HEAD
-=======
             </div>
           </div>
 
@@ -421,7 +362,6 @@ const Footer = React.memo(() => {
                   </li>
                 ))}
               </ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             </div>
           ))}
 
@@ -442,7 +382,6 @@ const Footer = React.memo(() => {
             </ul>
           </div>
 
-<<<<<<< HEAD
           {/* Quick Links */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
@@ -452,7 +391,6 @@ const Footer = React.memo(() => {
                   <Link
                     to={link.path}
                     className="text-gray-300 hover:text-white transition-colors text-sm"
-=======
           {/* Legal */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Legal</h4>
@@ -462,14 +400,12 @@ const Footer = React.memo(() => {
                   <Link
                     to={link.path}
                     className="text-gray-300 hover:text-white transition-colors"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
           </div>
 
           {/* Services */}
@@ -548,8 +484,6 @@ const Footer = React.memo(() => {
                 </Link>
               ))}
             </div>
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
           </div>
         </div>
 
@@ -563,36 +497,21 @@ const Footer = React.memo(() => {
   );
 };
 
-<<<<<<< HEAD
 export default Footer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 export default Footer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 interface FooterProps {
   className?: string;
   children?: React.ReactNode;
 }
 
 export default function Footer({ className = '', children, ...props }: FooterProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     return (
         <div className="component" {...props}>
           {children}
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
       {/* Background Effects */}
@@ -627,7 +546,7 @@ export default function Footer({ className = '', children, ...props }: FooterPro
               <p className="text-gray-300 mb-6 max-w-md">
                 Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
               </p>
-              
+
               {/* Contact Info */}
               <div className="space-y-3 mb-6">
                 <div className="flex items-center space-x-3">
@@ -654,7 +573,6 @@ export default function Footer({ className = '', children, ...props }: FooterPro
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                     aria-label={link.name}
-=======
   return (
     <footer className="bg-gray-900 border-t border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -668,7 +586,7 @@ export default function Footer({ className = '', children, ...props }: FooterPro
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 text-sm">
-              Leading technology solutions provider specializing in AI, cybersecurity, 
+              Leading technology solutions provider specializing in AI, cybersecurity,
               cloud infrastructure, and digital transformation services.
             </p>
             <div className="flex space-x-4">
@@ -693,7 +611,6 @@ export default function Footer({ className = '', children, ...props }: FooterPro
                   <Link
                     to={service.href}
                     className="text-gray-300 hover:text-white transition-colors flex items-center"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />
                     {service.name}
@@ -809,7 +726,6 @@ export default function Footer({ className = '', children, ...props }: FooterPro
                 ))}
               </ul>
             </div>
-=======
   return (
 
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
@@ -946,7 +862,6 @@ export default function Footer({ className = '', children, ...props }: FooterPro
                 {social.icon}
               </a>
             ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </div>
         </div>
 
@@ -956,7 +871,6 @@ export default function Footer({ className = '', children, ...props }: FooterPro
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="text-gray-400 text-sm mb-4 md:mb-0">
                 © {currentYear} Zion Tech Group. All rights reserved.
-<<<<<<< HEAD
               </div>
               <div className="flex items-center space-x-6 text-sm text-gray-400">
                 <span>Built with ❤️ for innovation</span>
@@ -964,7 +878,6 @@ export default function Footer({ className = '', children, ...props }: FooterPro
                   <Clock className="w-4 h-4 mr-1" />
                   <span>24/7 Support Available</span>
                 </div>
-=======
     { label: "Projects Completed", value: "500+" },
     { label: "Happy Clients", value: "200+" },
     { label: "Years Experience", value: "10+" },
@@ -994,7 +907,7 @@ export default function Footer({ className = '', children, ...props }: FooterPro
               ))}
             </div>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -1007,7 +920,7 @@ export default function Footer({ className = '', children, ...props }: FooterPro
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
@@ -1020,7 +933,7 @@ export default function Footer({ className = '', children, ...props }: FooterPro
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-2 text-gray-300">
@@ -1035,8 +948,6 @@ export default function Footer({ className = '', children, ...props }: FooterPro
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-2" />
                 San Francisco, CA
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
               </p>
               <div className="flex space-x-6 mt-4 md:mt-0">
                 <Link>
@@ -1058,12 +969,11 @@ export default function Footer({ className = '', children, ...props }: FooterPro
                   Cookie Policy
                 </Link>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               </div>
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
             © {currentYear} Zion Tech Group. All rights reserved.
@@ -1082,39 +992,24 @@ export default function Footer({ className = '', children, ...props }: FooterPro
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
   );
 };
 
-<<<<<<< HEAD
 export default Footer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 export default Footer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 
     <div className={`footer-component ${className}`} {...props}>
       {children}
     </div>
 
   );
-<<<<<<< HEAD
 };
 
 export default Footer;
-<<<<<<< HEAD
 
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 import fs from 'fs';
 import path from 'path';
 const __filename = fileURLToPath(import.meta.url);
@@ -53,4 +51,3 @@ const publicDir = path.join(__dirname, '../public')
   // console.log('Sitemap generated successfully!')
   // console.log(`Found ${routes.length} routes`);
 generateSitemap();
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

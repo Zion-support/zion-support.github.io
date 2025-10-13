@@ -1,51 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function aiPoweredEmailAnalyzer() {
-=======
 export default function AiPoweredEmailAnalyzerPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Powered Email Analyzer - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Ai Powered Email Analyzer solutions by Zion Tech Group" />
-=======
         <meta name="description" content="Advanced ai powered email analyzer solutions by Zion Tech Group" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-<<<<<<< HEAD
           <h1 className="text-4xl font-bold mb-8">Ai Powered Email Analyzer</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
             Ai Powered Email Analyzer
-=======
             AI Powered Email Analyzer
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
           </p>
-<<<<<<< HEAD
-=======
 
 export default function AipoweredemailanalyzerPage() {
   return (
@@ -57,7 +33,7 @@ export default function AipoweredemailanalyzerPage() {
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -65,14 +41,14 @@ export default function AipoweredemailanalyzerPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -80,26 +56,22 @@ export default function AipoweredemailanalyzerPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
         </div>
       </div>
     </div>
-=======
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Mail, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
+import {
+  Mail,
+  Shield,
+  Zap,
+  BarChart3,
+  Users,
   CheckCircle,
   ArrowRight,
   Brain,
@@ -119,7 +91,6 @@ import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
-=======
 import React from 'react';
 import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
@@ -128,16 +99,13 @@ import { Brain } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
-  Mail, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
+  Mail,
+  Shield,
+  Zap,
+  BarChart3,
+  Users,
   CheckCircle,
   ArrowRight,
   Brain,
@@ -156,7 +124,6 @@ const AIPoweredEmailAnalyzerPage = () => {
     {
       icon: <Brain className="w-8 h-8" />,
       title: "AI-Powered Analysis",
-<<<<<<< HEAD
       description: "Advanced machine learning algorithms analyze email content, sentiment, and intent with 99.5% accuracy",
       color: "from-blue-500 to-cyan-500"
     },
@@ -171,7 +138,6 @@ const AIPoweredEmailAnalyzerPage = () => {
       title: "Analytics & Insights",
       description: "Comprehensive analytics dashboard with detailed insights into email performance and trends",
       color: "from-purple-500 to-pink-500"
-=======
       description: "Advanced machine learning algorithms analyze email content, sentiment, and intent with 99.5% accuracy.",
     },
     {
@@ -183,17 +149,13 @@ const AIPoweredEmailAnalyzerPage = () => {
       icon: <BarChart3 className="w-8 h-8" />,
       title: "Analytics Dashboard",
       description: "Comprehensive analytics and reporting to track email performance and communication trends.",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Real-time Processing",
-<<<<<<< HEAD
       description: "Process and analyze emails in real-time for instant insights and automated responses",
       color: "from-orange-500 to-red-500"
-=======
       description: "Process and analyze emails in real-time with instant notifications and alerts.",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -242,11 +204,7 @@ const AIPoweredEmailAnalyzerPage = () => {
       popular: false;
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
   const testimonials = [
     {
@@ -312,7 +270,7 @@ import { Helmet } from 'react-helmet-async';
             canonical="https://ziontechgroup.com/ai-powered-email-analyzer"
           />
           <StructuredData data={structuredData} />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -320,13 +278,13 @@ import { Helmet } from 'react-helmet-async';
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Mail className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">AI-Powered Email Analysis</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -335,12 +293,12 @@ import { Helmet } from 'react-helmet-async';
                   className="mb-6 leading-tight">
                   Zion AI Email Analyzer
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Transform your email management with AI-powered analysis, sentiment detection, 
+                  Transform your email management with AI-powered analysis, sentiment detection,
                   and automated compliance checking for better communication.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#pricing"
@@ -508,10 +466,10 @@ import { Helmet } from 'react-helmet-async';
                   Ready to Transform Your Email Analysis?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of professionals using Zion AI Email Analyzer 
+                  Join thousands of professionals using Zion AI Email Analyzer
                   to optimize their email communications. Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -536,13 +494,10 @@ import { Helmet } from 'react-helmet-async';
         </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 };
 
-<<<<<<< HEAD
 export default AIPoweredEmailAnalyzerPage;
-=======
 
 import React from 'react';
 
@@ -559,7 +514,6 @@ export default function Page() {
 
           </p>
 
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -571,7 +525,7 @@ export default function PagePage() {
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-      
+
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -587,30 +541,18 @@ export default function PagePage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
 
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 
 export default function AiPoweredEmailAnalyzerPage() {
 }
 
 }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

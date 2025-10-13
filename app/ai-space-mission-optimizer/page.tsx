@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function aiSpaceMissionOptimizer() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -18,12 +8,11 @@ export default function aiSpaceMissionOptimizer() {
         <title>Ai Space Mission Optimizer - Zion Tech Group</title>
         <meta name="description" content="Ai Space Mission Optimizer solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Space Mission Optimizer</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function AiSpaceMissionOptimizerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -31,16 +20,14 @@ export default function AiSpaceMissionOptimizerPage() {
         <title>Ai Space Mission Optimizer - Zion Tech Group</title>
         <meta name="description" content="Advanced ai space mission optimizer solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ai Space Mission Optimizer
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function AispacemissionoptimizerPage() {
   return (
@@ -50,32 +37,25 @@ export default function AispacemissionoptimizerPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Space Mission Optimizer</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
             <p className="text-gray-600">
               Comprehensive solution for your business requirements.
             </p>
-=======
 import {
-=======
 import React from 'react';
-import { 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-  Rocket, 
-=======
+import {
+  Rocket,
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-  Satellite, 
-  Orbit, 
-  Zap, 
-  Target, 
-  CheckCircle, 
-=======
+  Satellite,
+  Orbit,
+  Zap,
+  Target,
+  CheckCircle,
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -86,18 +66,15 @@ import {
   Zap,
   Target,
   CheckCircle,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   Globe,
   Activity,
   Navigation,
   Gauge
 } from 'lucide-react';
-<<<<<<< HEAD
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Rocket, Satellite, Orbit, Zap, Target, CheckCircle, Globe, Activity, Navigation, Gauge } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
@@ -114,17 +91,12 @@ import { Globe } from 'lucide-react';
 import { Rocket } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Target } from 'lucide-react';
-<<<<<<< HEAD
 import { Activity } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { Activity } from 'lucide-react';  Gauge  } from 'lucide-react';
  } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const AISpaceMissionOptimizerPage = () => {
   const features = [
-<<<<<<< HEAD
     {,
     title: "Mission Planning AI",
         description: "AI-powered mission planning with optimal trajectory calculations and resource allocation",
@@ -148,7 +120,6 @@ const AISpaceMissionOptimizerPage = () => {
         description: "Advanced risk analysis for space missions with collision avoidance",
         icon: <Target className="w-8 h-8" />,
         color: "from-orange-500 to-red-500"
-=======
     {
       title: "Mission Planning AI",
       description: "AI-powered mission planning with optimal trajectory calculations and resource allocation",
@@ -172,7 +143,6 @@ const AISpaceMissionOptimizerPage = () => {
       description: "Advanced risk analysis for space missions with collision avoidance",
       icon: <Target className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -190,11 +160,8 @@ const AISpaceMissionOptimizerPage = () => {
         "Email support",
         "Mission reports"
       ],
-<<<<<<< HEAD
         popular: false
-=======
       popular: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Mission Professional",
@@ -211,11 +178,8 @@ const AISpaceMissionOptimizerPage = () => {
         "Custom algorithms",
         "Advanced analytics"
       ],
-<<<<<<< HEAD
         popular: true
-=======
       popular: true;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Mission Enterprise",
@@ -234,11 +198,8 @@ const AISpaceMissionOptimizerPage = () => {
         "SLA guarantee",
         "Dedicated mission control"
       ],
-<<<<<<< HEAD
         popular: false
-=======
       popular: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
   ];
 
@@ -276,9 +237,7 @@ const AISpaceMissionOptimizerPage = () => {
     { number: "24/7", label: "Mission Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
 
-<<<<<<< HEAD
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <EnhancedSEO
         title="AI Space Mission Optimizer - Advanced Space AI | Zion Tech Group"
@@ -293,18 +252,17 @@ const AISpaceMissionOptimizerPage = () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
             <Rocket className="w-4 h-4 text-blue-400 mr-2" />
             <span className="text-blue-400 text-sm font-medium">AI Space Mission Optimizer</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
               AI Space Mission Optimizer
             </span>
-=======
 
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
@@ -312,15 +270,13 @@ const AISpaceMissionOptimizerPage = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Page
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary AI-powered space mission optimization for satellite management, 
+            Revolutionary AI-powered space mission optimization for satellite management,
             trajectory planning, and mission control with unprecedented accuracy.
           </p>
-<<<<<<< HEAD
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               href="/contact"
@@ -494,7 +450,7 @@ const AISpaceMissionOptimizerPage = () => {
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Join the space technology revolution with AI-powered mission optimization.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <FuturisticButton
               href="/contact"
@@ -512,16 +468,15 @@ const AISpaceMissionOptimizerPage = () => {
             >
               View Pricing
             </FuturisticButton>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -529,36 +484,23 @@ const AISpaceMissionOptimizerPage = () => {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
         </div>
       </section>
-=======
 
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 };
-=======
 export default function AiSpaceMissionOptimizerPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default AISpaceMissionOptimizerPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

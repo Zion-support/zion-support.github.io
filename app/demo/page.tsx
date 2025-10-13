@@ -1,28 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function demo() {
-=======
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar } from 'lucide-react';
 
 import { useState } from 'react';
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-=======
-
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import { Pause } from 'lucide-react';
 import { Network } from 'lucide-react';
 import { Calendar } from 'lucide-react';
@@ -32,7 +18,6 @@ import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 import { useState } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function Page() {
   const [currentDemo, setCurrentDemo] = useState(0);
@@ -46,7 +31,6 @@ export default function Page() {
   ];
 
   const benefits = [
-<<<<<<< HEAD
     {,
     icon: <Play className="w-8 h-8 text-cyan-400" />,
         title: "Interactive Demos",
@@ -66,7 +50,6 @@ export default function Page() {
     icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
         title: "Data-Driven",
         description: "Make informed decisions with data"
-=======
     {
       icon: <Play className="w-8 h-8 text-cyan-400" />,
       title: "Interactive Demos",
@@ -86,7 +69,6 @@ export default function Page() {
       icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
       title: "Data-Driven",
       description: "Make informed decisions with data",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -167,8 +149,6 @@ export default function Page() {
     setIsPlaying(false);
   };
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   return (
     <div>
       <Helmet>
@@ -182,13 +162,11 @@ export default function Page() {
           content="live demos, AI solutions demo, IT services demo, interactive demonstrations, technology showcase, business automation demo"
         />
       </Helmet>
-<<<<<<< HEAD
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Demo</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function DemoPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -196,16 +174,14 @@ export default function DemoPage() {
         <title>Demo - Zion Tech Group</title>
         <meta name="description" content="Advanced demo solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Demo
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function DemoPage() {
   return (
@@ -215,10 +191,9 @@ export default function DemoPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Demo</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -226,14 +201,14 @@ export default function DemoPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -241,20 +216,18 @@ export default function DemoPage() {
             </p>
           </div>
         </div>
-<<<<<<< HEAD
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
         </div>
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        
+
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -262,15 +235,15 @@ export default function DemoPage() {
               <Play className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">Interactive Live Demos</span>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 Experience Our Solutions
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              See our AI and IT solutions in action through interactive live demonstrations. 
+              See our AI and IT solutions in action through interactive live demonstrations.
               Experience real-world applications and discover how our technology can transform your business.
             </p>
           </div>
@@ -307,7 +280,7 @@ export default function DemoPage() {
                 Our interactive demonstrations provide valuable insights into how our solutions work in real business environments.
               </p>
             </div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center group">
@@ -414,8 +387,8 @@ export default function DemoPage() {
                 <div
                   key={demo.id}
                   className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer ${
-                    currentDemo === index 
-                      ? 'border-cyan-500 bg-cyan-500/10' 
+                    currentDemo === index
+                      ? 'border-cyan-500 bg-cyan-500/10'
                       : 'border-white/20 hover:bg-white/20'
                   }`}
                   onClick={() => setCurrentDemo(index)}
@@ -430,7 +403,7 @@ export default function DemoPage() {
                       {demo.duration}
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30">
                       {demo.category}
@@ -442,11 +415,11 @@ export default function DemoPage() {
                       </div>
                     )}
                   </div>
-                  
+
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                     {demo.title}
                   </h3>
-                  
+
                   <p className="text-gray-300 text-sm leading-relaxed">
                     {demo.description}
                   </p>
@@ -468,7 +441,7 @@ export default function DemoPage() {
               <p className="text-xl text-gray-300 mb-8">
                 Schedule a personalized demo with our experts to see how our solutions can work specifically for your business.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/consultation"
@@ -488,17 +461,11 @@ export default function DemoPage() {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       </div>
 </div>
   );
 }
-=======
       </div>
     </div>
   );
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

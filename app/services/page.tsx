@@ -1,41 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 import { Brain, Shield, Globe, Code, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones, Phone } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
-
 
 import { Helmet } from "react-helmet-async";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function services() {
-=======
-
 
 import React from 'react';
 import { Brain, Shield, Globe, Code, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones, Phone } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
-=======
 import React from 'react';
 import { Helmet } from "react-helmet-async";
 import { Search, Users, Star, Cpu, Shield, Database, TrendingUp, Zap, Brain, Settings, Globe, Server, Network, Lock, Calendar, Code, Monitor, Target, BarChart3, Wifi, Headphones, Phone, FileText, Hand, Cloud } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function ServicesPage() {
   const services = [
@@ -372,42 +350,27 @@ export default function ServicesPage() {
         features: ["Asset Inventory", "Lifecycle Management", "Cost Tracking", "License Management", "Depreciation Tracking", "Compliance Reporting"],
         category: "Asset Management"
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import { Helmet } from "react-helmet-async";
 
-
-
-
 export default function Services() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
   return (
-=======
 import { Helmet } from "react-helmet-async";
 export default function Services() {
     return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
-=======
 import { Helmet } from 'react-helmet-async';
 export default function Services() {
     return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Services solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Services</h1>
           <p className="text-xl text-gray-300 mb-8">
             This page is under development. Please check back later.
-=======
 
 export default function ServicesPage() {
   return (
@@ -417,11 +380,9 @@ export default function ServicesPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Services</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
-<<<<<<< HEAD
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -429,20 +390,19 @@ export default function ServicesPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
               Scalable and secure implementation.
             </p>
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -466,51 +426,30 @@ export default function ServicesPage() {
               </p>
 
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     </div>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
 }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
+}
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
     </div>
   );
 }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
 export default function Services() {
@@ -853,4 +792,3 @@ export default function Services() {
 }
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

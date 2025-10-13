@@ -1,31 +1,21 @@
 import React from 'react';
 
-<<<<<<< HEAD
 interface EnhancedAccessibilityManagerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
 export default function EnhancedAccessibilityManager({ className = '', children }: EnhancedAccessibilityManagerProps) {
-=======
-<<<<<<< HEAD
 export default function Component() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
-<<<<<<< HEAD
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     </div>
-=======
 interface AccessibilityManagerProps {
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
@@ -86,7 +76,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
 
     const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
-    
+
     recognition.continuous = true;
     recognition.interimResults = false;
     recognition.lang = 'en-US';
@@ -97,7 +87,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
 
     recognition.onresult = (event: any) => {
       const command = event.results[event.results.length - 1][0].transcript.toLowerCase().trim();
-      
+
       // Navigation commands
       if (command.includes('go to') || command.includes('navigate to')) {
         const target = command.replace(/go to|navigate to/g, '').trim();
@@ -139,7 +129,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
   // Voice navigation toggle
   const toggleVoiceNavigation = useCallback(() => {
     if (!enableVoiceNavigation) return;
-    
+
     setIsVoiceNavigationActive(prev => {
       const newValue = !prev;
       if (newValue) {
@@ -180,12 +170,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
           'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
         );
         const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element);
-        
+
         if (currentIndex !== -1) {
-          const nextIndex = event.key === 'ArrowDown' 
+          const nextIndex = event.key === 'ArrowDown'
             ? Math.min(currentIndex + 1, focusableElements.length - 1)
             : Math.max(currentIndex - 1, 0);
-          
+
           (focusableElements[nextIndex] as HTMLElement)?.focus();
           event.preventDefault();
         }
@@ -234,7 +224,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       announcement.className = 'sr-only';
       announcement.textContent = `Page loaded: ${document.title}`;
       document.body.appendChild(announcement);
-      
+
       setTimeout(() => {
         document.body.removeChild(announcement);
       }, 1000);
@@ -368,7 +358,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
 //             High Contrast
 </button>
         )}
-        
+
         <div className="flex items-center space-x-2">
 //           <button
             onClick={() => adjustFontSize(-2)}
@@ -386,7 +376,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
 //             A+
 </button>
 </div>
-        
+
         {enableReducedMotion && (
 //           <button
             onClick={toggleReducedMotion}
@@ -398,7 +388,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
 //             Reduced Motion
 </button>
         )}
-        
+
         {enableVoiceNavigation && (
 //           <button
             onClick={toggleVoiceNavigation}
@@ -412,7 +402,5 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
         )}
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

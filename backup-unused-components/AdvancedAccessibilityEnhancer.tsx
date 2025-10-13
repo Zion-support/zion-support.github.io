@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useEffect, useState } from 'react';
 import { Eye, Volume2, MousePointer, Keyboard, Contrast, ZoomIn } from 'lucide-react';
 'use client';
@@ -37,32 +35,32 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
     // Apply accessibility settings
     applyAccessibilitySettings(settings);
-    
+
     // Save settings to localStorage
     localStorage.setItem('accessibilitySettings', JSON.stringify(settings));
   }, [settings]);
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
+
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-    
+
     if (newSettings.largeText) {
       root.classList.add('large-text');
     } else {
       root.classList.remove('large-text');
     }
-    
+
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-    
+
     if (newSettings.focusIndicator) {
       root.classList.add('enhanced-focus');
     } else {
@@ -127,7 +125,6 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
 </button>
     );
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface AdvancedAccessibilityEnhancerProps {
   className?: string;
@@ -136,23 +133,17 @@ interface AdvancedAccessibilityEnhancerProps {
 
 export default function AdvancedAccessibilityEnhancer({ className = '', children }: AdvancedAccessibilityEnhancerProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
     <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -166,7 +157,7 @@ export default function AdvancedAccessibilityEnhancer({ className = '', children
 //           ×
 </button>
 </div>
-      
+
       <div className="space-y-4">
         {accessibilityFeatures.map((feature) => {
           const Icon = feature.icon;
@@ -202,7 +193,7 @@ export default function AdvancedAccessibilityEnhancer({ className = '', children
           );
         })}
 </div>
-      
+
       <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
 //         <button
           onClick={() => {
@@ -221,7 +212,5 @@ export default function AdvancedAccessibilityEnhancer({ className = '', children
 </button>
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

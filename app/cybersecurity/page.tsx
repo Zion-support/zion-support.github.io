@@ -1,23 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-=======
-
 
 export default function Cybersecurity() {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
 export default function Cybersecurity() {
 const features = [
     {
@@ -71,11 +60,9 @@ export default function Page() {
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }
   ];
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
 export default function Cybersecurity() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   const services = [
     {
       title: "AI Cybersecurity Suite",
@@ -132,7 +119,6 @@ export default function Cybersecurity() {
       features: ["Vulnerability Scanning", "Patch Management", "Policy Enforcement", "Compliance Automation"]
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
   const services = [
     {,
@@ -191,28 +177,20 @@ export default function Cybersecurity() {
     }
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function cybersecurity() {
-=======
 export default function PagePage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-      
-<<<<<<< HEAD
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Cybersecurity</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function CybersecurityPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -220,18 +198,15 @@ export default function CybersecurityPage() {
         <title>Cybersecurity - Zion Tech Group</title>
         <meta name="description" content="Advanced cybersecurity solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Cybersecurity
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
-<<<<<<< HEAD
 export default function CybersecurityPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -240,10 +215,9 @@ export default function CybersecurityPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Cybersecurity</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -251,14 +225,14 @@ export default function CybersecurityPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -266,12 +240,11 @@ export default function CybersecurityPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -287,14 +260,11 @@ export default function CybersecurityPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
 import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
@@ -305,8 +275,6 @@ import EnhancedAccessibility from '../components/EnhancedAccessibility';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import { Shield, ArrowRight, CheckCircle, Star, Users, Calendar, Phone, Mail } from 'lucide-react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const CybersecurityPage = () => {
   const securityServices = [
     {
@@ -450,7 +418,7 @@ const CybersecurityPage = () => {
             keywords="cybersecurity services, threat protection, security consulting, compliance management, incident response, security solutions"
             canonical="https://ziontechgroup.com/cybersecurity"
           />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -458,13 +426,13 @@ const CybersecurityPage = () => {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Shield className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Cybersecurity Services</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -473,12 +441,12 @@ const CybersecurityPage = () => {
                   className="mb-6 leading-tight">
                   Cybersecurity Services
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Protect your business with comprehensive cybersecurity services. 
+                  Protect your business with comprehensive cybersecurity services.
                   From threat protection to compliance management, we've got you covered.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#contact"
@@ -677,10 +645,10 @@ const CybersecurityPage = () => {
                   Ready to Secure Your Business?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Let's implement comprehensive cybersecurity services to protect your business 
+                  Let's implement comprehensive cybersecurity services to protect your business
                   from threats and ensure your data is secure.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -709,18 +677,9 @@ const CybersecurityPage = () => {
 };
 
 export default CybersecurityPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5

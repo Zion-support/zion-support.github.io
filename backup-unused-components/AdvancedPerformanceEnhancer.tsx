@@ -7,23 +7,16 @@ interface AdvancedPerformanceEnhancerProps {
 
 export default function AdvancedPerformanceEnhancer({ className = '', children }: AdvancedPerformanceEnhancerProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
-<<<<<<< HEAD
 }
-=======
 }
-<<<<<<< HEAD
-=======
 
 const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   enableImageOptimization = true,
@@ -41,12 +34,12 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
       }
-      
+
       // Add decoding="async" for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
       }
-      
+
       // Add fetchpriority="auto" for above-the-fold images
       if (img.getBoundingClientRect().top < window.innerHeight) {
         img.setAttribute('fetchpriority', 'high');
@@ -103,7 +96,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     window.fetch = async (input, init = {}) => {
       const headers = new Headers(init.headers);
       headers.set('Accept-Encoding', 'gzip, deflate, br');
-      
+
       return originalFetch(input, {
 //         ...init,
 //         headers
@@ -197,7 +190,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
           }
         }
       };
-      
+
       setInterval(checkMemory, 30000); // Check every 30 seconds
     }
   }, []);
@@ -245,5 +238,3 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 };
 
 export default AdvancedPerformanceEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

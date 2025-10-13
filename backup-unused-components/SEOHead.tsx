@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps;
   title?: string;
@@ -14,9 +12,7 @@ interface SEOHeadProps;
   modifiedTime?: string;
   section?: string;
   tags?: string[];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 
-<<<<<<< HEAD
 interface SEOHeadProps {
   className?: string;
   children?: React.ReactNode;
@@ -27,7 +23,6 @@ export default function SEOHead({ className = '', children }: SEOHeadProps) {
     <div className={`${className}`}>
       {children}
     </div>
-=======
 const SEOHead: React.FC<SEOHeadProps> = (
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
@@ -40,34 +35,27 @@ const SEOHead: React.FC<SEOHeadProps> = (
   modifiedTime,
 //   section,
   tags = []
-<<<<<<< HEAD
-) => 
-  const structuredData = 
+) =>
+  const structuredData =
     '@context': 'https://schema.org',
-=======
 }) => {
   const structuredData = {
 //     '@context': 'https://schema.org',
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
     '@type': 'Organization',
-<<<<<<< HEAD
 //     name: 'Zion Tech Group',
 //     url: 'https://ziontechgroup.com',
 //     logo: 'https://ziontechgroup.com/logo.png',
     description: 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
-    address: 
+    address:
       '@type': 'PostalAddress',
-<<<<<<< HEAD
       addressCountry: 'US'
-=======
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
       logo: 'https://ziontechgroup.com/logo.png',
       description: 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
-      address: 
+      address:
       '@type': 'PostalAddress',
         addressCountry: 'US'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 ,
       sameAs: [
       'https://twitter.com/ziontechgroup',
@@ -77,7 +65,6 @@ const SEOHead: React.FC<SEOHeadProps> = (
 ;
   return (
     <Helmet></Helmet>
-=======
 //       addressCountry: 'US'
     },
 //     sameAs: [
@@ -89,7 +76,6 @@ const SEOHead: React.FC<SEOHeadProps> = (
 
   return (
 //     <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content="{description}" />
@@ -118,7 +104,7 @@ const SEOHead: React.FC<SEOHeadProps> = (
       {publishedTime && <meta property="article:published_time" content="{publishedTime}" />}</meta>
       {modifiedTime && <meta property="article:modified_time" content="{modifiedTime}" />}</meta>
       {section && <meta property="article:section" content="{section}" />}</meta>
-      
+
         <meta key="{index}" property="article:tag" content="{tag}" />
 
       {/* Structured Data */}
@@ -126,6 +112,5 @@ const SEOHead: React.FC<SEOHeadProps> = (
         {JSON.stringify(structuredData)}
 //       </script>
 //     </Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

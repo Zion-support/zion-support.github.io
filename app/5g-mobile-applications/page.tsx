@@ -1,42 +1,25 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function Page5gMobileApplications() {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function MobileApplications5GPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 export default function PagePage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>5g Mobile Applications - Zion Tech Group</title>
         <meta name="description" content="5g Mobile Applications solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">5g Mobile Applications</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function FiveGMobileApplicationsPage() {
   return (
-=======
-
 
 import React from 'react';
 
@@ -44,30 +27,23 @@ import { Helmet } from 'react-helmet-async';
 export default function MobileApplications5GPage() {
   return (
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>5g Mobile Applications - Zion Tech Group</title>
         <meta name="description" content="Advanced 5g mobile applications solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             5g Mobile Applications
-=======
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Page
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-<<<<<<< HEAD
-=======
 
 export default function FiveGMobileapplicationsPage() {
   return (
@@ -77,10 +53,9 @@ export default function FiveGMobileapplicationsPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">5G Mobile Applications</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -88,14 +63,14 @@ export default function FiveGMobileapplicationsPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -103,30 +78,20 @@ export default function FiveGMobileapplicationsPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
           </p>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

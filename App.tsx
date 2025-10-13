@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface AppProps {
@@ -8,11 +7,9 @@ interface AppProps {
 
 export default function App({ className = '', children }: AppProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
@@ -25,10 +22,8 @@ export default function App({ className = '', children }: AppProps) {
   </div>
   </div>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
 }
-=======
 import React, { useState, useCallback, useEffect, Suspense } from 'react';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -36,14 +31,10 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { LoadingPage } from './app/components/LoadingStates';
 import { GlobalErrorBoundary } from './app/components/EnhancedErrorFeedback';
-=======
 import LoadingPage from "./app/components/LoadingStates";
 import GlobalErrorBoundary from "./app/components/EnhancedErrorFeedback";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -54,10 +45,8 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
-=======
 import LoadingSpinner from "./app/components/LoadingSpinner";
 import ErrorBoundary from "./app/components/ErrorBoundary";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -90,12 +79,9 @@ const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendat
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
-<<<<<<< HEAD
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
-<<<<<<< HEAD
 const CybersecuritySolutionsPage = React.lazy(() => import("./app/cybersecurity-solutions/page"));
-=======
 // IT Services Pages
 const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
 const DevOpsServicesPage = React.lazy(() => import("./app/devops-services/page"));
@@ -103,17 +89,13 @@ const ITConsultingPage = React.lazy(() => import("./app/it-consulting/page"));
 const NetworkSecurityPage = React.lazy(() => import("./app/network-security/page"));
 const SoftwareDevelopmentPage = React.lazy(() => import("./app/software-development/page"));
 const SystemIntegrationPage = React.lazy(() => import("./app/system-integration/page"));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 // const CybersecuritySolutionsPage = React.lazy(() => import("./app/cybersecurity-solutions/page"));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
 const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
 const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
 const CustomSoftwarePage = React.lazy(() => import("./app/custom-software/page"));
 const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
 
-<<<<<<< HEAD
 // Micro SAAS Pages
 const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
 const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
@@ -159,7 +141,6 @@ const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network
 const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
 const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
-=======
 // 5G Services Pages
 const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
@@ -170,7 +151,6 @@ const FiveGMobileApplicationsPage = React.lazy(() => import("./app/5g-mobile-app
 const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
 const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -191,20 +171,15 @@ function App() {
   }, []);
 
   return (
-<<<<<<< HEAD
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
         <HelmetProvider>
-=======
     <HelmetProvider>
-<<<<<<< HEAD
         <GlobalErrorBoundary>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
           <AnalyticsProvider>
             <PerformanceMonitor>
               <WebVitalsTracker>
                 <EnhancedAccessibility>
-<<<<<<< HEAD
                   <AccessibilityEnhancer>
                     <CoreWebVitals>
                       <Router>
@@ -214,7 +189,7 @@ function App() {
                             <Navigation onSidebarToggle={toggleSidebar} />
                           <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                           <Breadcrumb />
-                            
+
                             <main className="relative z-10" id="main-content" role="main">
                               <Suspense fallback={<LoadingPage />}>
                                 <Routes>
@@ -232,14 +207,13 @@ function App() {
                                   <Route path="/support" element={<SupportPage />} />
                                   <Route path="/privacy" element={<PrivacyPage />} />
                                   <Route path="/terms" element={<TermsPage />} />
-=======
                 <Router>
                   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                     <FuturisticBackground>
                       <Navigation onSidebarToggle={toggleSidebar} />
                       <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                       <Breadcrumb />
-                      
+
                       <main className="relative z-10" id="main-content" role="main">
                         <Suspense fallback={<LoadingPage />}>
                           <Routes>
@@ -257,7 +231,6 @@ function App() {
                                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                                 <Route path="/tutorials" element={<TutorialsPage />} />
                                 <Route path="/support" element={<SupportPage />} />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
                                   {/* AI Services */}
                                   <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
@@ -321,7 +294,6 @@ function App() {
                                   <Route path="/zion-customer-satisfaction-monitor" element={<ZionCustomerSatisfactionMonitorPage />} />
                                   <Route path="/zion-ai-workflow-automator" element={<ZionAIWorkflowAutomatorPage />} />
 
-<<<<<<< HEAD
                                   {/* 5G Services */}
                                   <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
                                   <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
@@ -345,7 +317,7 @@ function App() {
                                 </Routes>
                               </Suspense>
                             </main>
-                            
+
                             <Footer />
                           </PerformanceOptimizer>
                         </FuturisticBackground>
@@ -353,7 +325,6 @@ function App() {
                       </Router>
                     </CoreWebVitals>
                   </AccessibilityEnhancer>
-=======
                                 {/* Catch all route */}
                                 <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
                                   <div className="text-center">
@@ -367,33 +338,28 @@ function App() {
                               </Routes>
                             </Suspense>
                         </main>
-                        
+
                         <Footer />
                       </FuturisticBackground>
                     </div>
                   </Router>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
                 </EnhancedAccessibility>
               </WebVitalsTracker>
             </PerformanceMonitor>
           </AnalyticsProvider>
-<<<<<<< HEAD
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>
   );
-=======
         </GlobalErrorBoundary>
       </HelmetProvider>
     );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
       <ErrorBoundary>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <Navigation onSidebarToggle={toggleSidebar} />
             <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-            
+
             <main className="relative z-10" id="main-content" role="main">
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
@@ -458,15 +424,13 @@ function App() {
                 </Routes>
               </Suspense>
             </main>
-            
+
             <Footer />
           </div>
         </Router>
       </ErrorBoundary>
     </HelmetProvider>
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 }
 
 export default App;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

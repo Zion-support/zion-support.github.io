@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function aiHolographicWorkspace() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -18,16 +8,13 @@ export default function aiHolographicWorkspace() {
         <title>Ai Holographic Workspace - Zion Tech Group</title>
         <meta name="description" content="Ai Holographic Workspace solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Holographic Workspace</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function AiHolographicWorkspacePage() {
-=======
 
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users } from 'lucide-react';
@@ -36,10 +23,7 @@ import { Shield } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Hand } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const AIHolographicWorkspace = () => {
   const features = [
     {,
@@ -95,11 +79,8 @@ const AIHolographicWorkspace = () => {
         "Email support",
         "10GB holographic storage"
       ],
-<<<<<<< HEAD
         popular: false
-=======
       popular: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Holographic Professional",
@@ -116,11 +97,8 @@ const AIHolographicWorkspace = () => {
         "API access",
         "Custom workspace templates"
       ],
-<<<<<<< HEAD
         popular: true
-=======
       popular: true;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Holographic Enterprise",
@@ -137,11 +115,8 @@ const AIHolographicWorkspace = () => {
         "Advanced security protocols",
         "SLA guarantee"
       ],
-<<<<<<< HEAD
         popular: false
-=======
       popular: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
 
   const testimonials = [
@@ -179,30 +154,24 @@ const AIHolographicWorkspace = () => {
 import React from 'react';
 
 export default function Page() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Ai Holographic Workspace - Zion Tech Group</title>
         <meta name="description" content="Advanced ai holographic workspace solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ai Holographic Workspace
-=======
 
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Page
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function AiholographicworkspacePage() {
   return (
@@ -212,11 +181,9 @@ export default function AiholographicworkspacePage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Holographic Workspace</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
-<<<<<<< HEAD
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -224,14 +191,14 @@ export default function AiholographicworkspacePage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -239,28 +206,18 @@ export default function AiholographicworkspacePage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 import { Link } from 'react-router-dom';
 import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

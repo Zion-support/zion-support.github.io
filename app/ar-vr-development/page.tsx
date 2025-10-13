@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
 const ARVRDevelopmentPage = () => {
   const features = [
     {
@@ -43,12 +33,7 @@ const ARVRDevelopmentPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function arVrDevelopment() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -56,12 +41,11 @@ export default function arVrDevelopment() {
         <title>Ar Vr Development - Zion Tech Group</title>
         <meta name="description" content="Ar Vr Development solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ar Vr Development</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function ArVrDevelopmentPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -69,23 +53,18 @@ export default function ArVrDevelopmentPage() {
         <title>Ar Vr Development - Zion Tech Group</title>
         <meta name="description" content="Advanced ar vr development solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ar Vr Development
-=======
 
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Page
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function ArvrdevelopmentPage() {
   return (
@@ -95,11 +74,9 @@ export default function ArvrdevelopmentPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ar Vr Development</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
-<<<<<<< HEAD
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -107,14 +84,14 @@ export default function ArvrdevelopmentPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -122,15 +99,12 @@ export default function ArvrdevelopmentPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default function PagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -138,7 +112,7 @@ export default function PagePage() {
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-      
+
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -154,16 +128,11 @@ export default function PagePage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Glasses, ArrowRight, Sparkles, CheckCircle, Star, Brain, Zap, Target } from 'lucide-react';
@@ -191,7 +160,6 @@ const ARVRDevelopmentPage = () => {
     {
       icon: <Glasses className="w-8 h-8" />,
       title: "AR Development",
-<<<<<<< HEAD
       description: "Create augmented reality applications for mobile and wearable devices with advanced tracking",
       color: "from-blue-500 to-cyan-500"
     },
@@ -212,7 +180,6 @@ const ARVRDevelopmentPage = () => {
       title: "Cross-Platform",
       description: "Develop once, deploy everywhere with our cross-platform AR/VR development framework",
       color: "from-orange-500 to-red-500"
-=======
       description: "Create immersive augmented reality experiences for mobile and web platforms.",
     },
     {
@@ -239,7 +206,6 @@ const ARVRDevelopmentPage = () => {
       icon: <Globe className="w-8 h-8" />,
       title: "Cross-platform",
       description: "Deploy across multiple platforms and devices with consistent performance.",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -353,7 +319,7 @@ const ARVRDevelopmentPage = () => {
             canonical="https://ziontechgroup.com/ar-vr-development"
           />
           <StructuredData data={structuredData} />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -361,13 +327,13 @@ const ARVRDevelopmentPage = () => {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Glasses className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">AR/VR Development Platform</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -376,12 +342,12 @@ const ARVRDevelopmentPage = () => {
                   className="mb-6 leading-tight">
                   Zion AR/VR Development
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Create immersive AR/VR experiences with advanced 3D modeling, cross-platform deployment, 
+                  Create immersive AR/VR experiences with advanced 3D modeling, cross-platform deployment,
                   and cutting-edge development tools for next-generation applications.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#pricing"
@@ -527,10 +493,10 @@ const ARVRDevelopmentPage = () => {
                   Ready to Create Immersive Experiences?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of developers using Zion AR/VR Development 
+                  Join thousands of developers using Zion AR/VR Development
                   to create next-generation immersive applications. Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -558,25 +524,12 @@ const ARVRDevelopmentPage = () => {
   );
 };
 
-<<<<<<< HEAD
 export default ARVRDevelopmentPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 export default function Page() {
 }
 
 }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

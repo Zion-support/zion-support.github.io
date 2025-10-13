@@ -3,14 +3,12 @@ import { Helmet } from 'react-helmet-async';
 
 export default function aiDrugDiscoveryPro() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Drug Discovery Pro - Zion Tech Group</title>
         <meta name="description" content="Ai Drug Discovery Pro solutions by Zion Tech Group" />
       </Helmet>
-      
-<<<<<<< HEAD
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Drug Discovery Pro</h1>
@@ -20,7 +18,6 @@ export default function aiDrugDiscoveryPro() {
         </div>
       </div>
     </div>
-=======
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-8"></h1>
         <div className="prose prose-invert max-w-none">
@@ -28,13 +25,9 @@ export default function aiDrugDiscoveryPro() {
   </div>
   </div>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
-<<<<<<< HEAD
 }
-=======
 }
-=======
 <div>Content</div>
   );
 <div>Component content</div>
@@ -97,5 +90,3 @@ export default function aiDrugDiscoveryPro() {
                 Contact Our Experts;
                 View All AI Services;
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

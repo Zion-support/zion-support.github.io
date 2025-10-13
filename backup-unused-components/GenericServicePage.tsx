@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, Phone, Mail, CheckCircle, Star } from "lucide-react";
-<<<<<<< HEAD
 interface GenericServicePageProps;
   title: string;
   description: string;
@@ -13,8 +10,6 @@ interface GenericServicePageProps;
   benefits: string[];
   pricing?: string;
   category: "AI" | "IT" | "MicroSAAS" | "Emerging";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 interface GenericServicePageProps ,
     title: string;,
     description: string;,
@@ -23,9 +18,7 @@ interface GenericServicePageProps ,
     benefits: string[];
   pricing?: string;,
     category: "AI" | "IT" | "MicroSAAS" | "Emerging";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 interface GenericServicePageProps {
   className?: string;
   children?: React.ReactNode;
@@ -33,13 +26,9 @@ interface GenericServicePageProps {
 
 export default function GenericServicePage({ className = '', children }: GenericServicePageProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
-=======
-<<<<<<< HEAD
 const GenericServicePage: React.FC<GenericServicePageProps> = (
   title,
   description,
@@ -48,14 +37,13 @@ const GenericServicePage: React.FC<GenericServicePageProps> = (
   benefits,
   pricing,
   category,
-) => 
+) =>
   const categoryColors = ,
     AI: "from-purple-500 to-pink-600",
       IT: "from-blue-500 to-cyan-600",
       MicroSAAS: "from-green-500 to-emerald-600",
       Emerging: "from-orange-500 to-red-600",
 ;
-=======
 const GenericServicePage: React.FC<GenericServicePageProps> = ({
 //   title,
 //   description,
@@ -72,25 +60,19 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
 //     Emerging: "from-orange-500 to-red-600",
   };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   const categoryColor =
     categoryColors[category] || "from-cyan-500 to-purple-600";
   return (
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
     <>
       <Helmet></Helmet>
         <title>{title} | Zion Tech Group</title>
         <meta name="description" content="{description}" />
-<<<<<<< HEAD
         <meta;
           name="keywords"
           content="{`${title.toLowerCase()}," AI solutions, IT services, ${category.toLowerCase()}`}
-=======
         <meta>
   name="keywords">
   content="{`${title.toLowerCase()}," AI solutions, IT services, ${category.toLowerCase()}`}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
@@ -98,15 +80,11 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
           {/* Hero Section */}
           <section className="text-center py-16"></section>
             <div className="flex justify-center mb-8"></div>
-<<<<<<< HEAD
               <div;
                 className="{`p-4" rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`}
-=======
               <div>
   className="{`p-4" rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
-=======
 //     <>
 //       <Helmet>
         <title>{title} | Zion Tech Group</title>
@@ -124,44 +102,32 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
 //               <div
                 className={`p-4 rounded-full bg-gradient-to-r ${categoryColor} shadow-lg`}
 //               >
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
                 <Icon className="w-12 h-12 text-white" />
-<<<<<<< HEAD
   </div>
   </div>
-=======
 </div>
 </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
             <h1 className="text-5xl font-bold text-white mb-6">{title}</h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
               {description}
-<<<<<<< HEAD
             </p>
-            
+
               <div className="text-2xl font-semibold text-cyan-400 mb-8"></div>
                 Starting at {pricing}
   </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <a;
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105"
                 href="/contact"
-=======
               <a>
   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">
   href="/contact"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 Get Started Today;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-<<<<<<< HEAD
               <a;
-=======
               <a
-=======
 </p>
             {pricing && (
               <div className="text-2xl font-semibold text-cyan-400 mb-8">
@@ -170,7 +136,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
             )}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 //               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105"
                 href="/contact"
 //               >
@@ -178,23 +143,16 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 <ArrowRight className="w-5 h-5 ml-2" />
 </a>
 //               <a
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
                 href="tel:+13024640950"
 //               >
-=======
               <a>
   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group">
   href="tel:+13024640950"
               >
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 <Phone className="w-5 h-5 mr-2" />
-<<<<<<< HEAD
                 Call (302) 464-0950;
-=======
                 Call (302) 464-0950
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
               </a>
   </div>
           </section>
@@ -210,19 +168,15 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               </p>
   </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
-              
-<<<<<<< HEAD
+
                 <div;
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
-=======
                 <div>
   key={index}>
   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 >
                   <div className="flex items-center mb-4"></div>
-=======
 </a>
 </div>
 //           </section>
@@ -245,16 +199,13 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-cyan-400/30 transition-all duration-300"
 //                 >
                   <div className="flex items-center mb-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
                     <CheckCircle className="w-6 h-6 text-cyan-400 mr-3" />
                     <h3 className="text-lg font-semibold text-white"></h3>
                       {feature}
-<<<<<<< HEAD
                     </h3>
   </div>
   </div>  </div>
           </section>
-=======
 </h3>
 </div>
 </div>
@@ -262,13 +213,11 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
 </div>
 //           </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
           {/* Benefits Section */}
           <section className="py-16"></section>
             <div className="text-center mb-12"></div>
               <h2 className="text-3xl font-bold text-white mb-4"></h2>
                 Why Choose Our {title}?
-<<<<<<< HEAD
               </h2>
               <p className="text-lg text-gray-300"></p>
                 Experience the difference with our proven expertise and;
@@ -276,7 +225,7 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               </p>
   </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8"></div>
-              
+
                 <div key="{index}" className="flex items-start space-x-4"></div>
                   <div className="flex-shrink-0"></div>
                     <Star className="w-6 h-6 text-yellow-400" />
@@ -333,25 +282,18 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
               {title.toLowerCase()} needs. Get a free consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <a;
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105"
                 href="/contact"
-=======
               <a>
   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105">
   href="/contact"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 Get Free Consultation;
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
-<<<<<<< HEAD
               <a;
-=======
               <a
-=======
 </h2>
               <p className="text-lg text-gray-300">
                 Experience the difference with our proven expertise and
@@ -421,7 +363,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
 </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 //               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center group shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transform hover:scale-105"
                 href="/contact"
 //               >
@@ -429,18 +370,14 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 <ArrowRight className="w-5 h-5 ml-2" />
 </a>
 //               <a
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
                 href="mailto:kleber@ziontechgroup.com"
 //               >
-=======
               <a>
   className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group">
   href="mailto:kleber@ziontechgroup.com"
               >
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                 <Mail className="w-5 h-5 mr-2" />
-<<<<<<< HEAD
                 Email Us;
               </a>
   </div>
@@ -448,8 +385,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
         </main>
   </div>
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 //                 Email Us
 </a>
 </div>
@@ -457,6 +392,5 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
 //         </main>
 </div>
 //     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

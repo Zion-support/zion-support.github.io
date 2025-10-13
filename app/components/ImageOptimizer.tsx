@@ -1,42 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 import React from 'react';
 
-=======
 import { useState, useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 interface ImageOptimizerProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   src: string;
   alt: string;
   width?: number;
   height?: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
-
 
 import React, { useState, useRef, useEffect } from 'react';
 
@@ -46,7 +16,6 @@ interface ImageOptimizerProps {,
   width?: number;
   height?: number;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   className?: string;
   lazy?: boolean;
   quality?: number;
@@ -54,20 +23,16 @@ interface ImageOptimizerProps {,
   placeholder?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function ImageOptimizer({ className = '', children }: ImageOptimizerProps) {
-=======
-export default function ImageOptimizer({ 
-  src, 
-  alt, 
-  width, 
-  height, 
-  className = '', 
-  priority = false, 
-  onLoad, 
-  onError 
+export default function ImageOptimizer({
+  src,
+  alt,
+  width,
+  height,
+  className = '',
+  priority = false,
+  onLoad,
+  onError
 }: ImageOptimizerProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -83,7 +48,6 @@ export default function ImageOptimizer({
           setIsInView(true);
           observer.disconnect();
         }
-=======
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   src,
   alt,
@@ -105,14 +69,14 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
       return originalSrc;
     }
-    
+
     const url = new URL(originalSrc, window.location.origin);
     url.searchParams.set('format', format);
     url.searchParams.set('quality', quality.toString());
-    
+
     if (width) url.searchParams.set('width', width.toString());
     if (height) url.searchParams.set('height', height.toString());
-    
+
     return url.toString();
   };
 
@@ -128,12 +92,10 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
             observer.disconnect();
           }
         });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       },
       { threshold: 0.1 }
     );
 
-<<<<<<< HEAD
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
@@ -144,7 +106,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
-=======
     observer.observe(imgRef.current);
 
     return () => observer.disconnect();
@@ -153,12 +114,10 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const handleLoad = () => {
     setIsLoaded(true);
     setHasError(false);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   };
 
   const handleError = () => {
     setHasError(true);
-<<<<<<< HEAD
     onError?.();
   };
 
@@ -173,15 +132,12 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     );
   }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
   return (
     <div className={`${className}`}>
       {children}
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 export default function ImageOptimizer({ className = '', children, ...props }: ImageOptimizerProps) {
     return (
         <div className="component" {...props}>
@@ -189,13 +145,9 @@ export default function ImageOptimizer({ className = '', children, ...props }: I
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 };
 
 export default ImageOptimizer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
     setIsLoaded(false);
   };
 
@@ -205,14 +157,14 @@ export default ImageOptimizer;
     <div className={`relative overflow-hidden ${className}`}>
       {/* Placeholder */}
       {!isLoaded && !hasError && (
-        <div 
+        <div
           className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"
           style={{ width, height }}
         >
           {placeholder ? (
-            <img 
-              src={placeholder} 
-              alt="" 
+            <img
+              src={placeholder}
+              alt=""
               className="w-full h-full object-cover opacity-50"
             />
           ) : (
@@ -223,7 +175,7 @@ export default ImageOptimizer;
 
       {/* Error state */}
       {hasError && (
-        <div 
+        <div
           className="absolute inset-0 bg-gray-100 flex items-center justify-center text-gray-500"
           style={{ width, height }}
         >
@@ -241,7 +193,6 @@ export default ImageOptimizer;
       {/* Main image */}
       {isInView && (
         <img
-<<<<<<< HEAD
           ref={imgRef}
           src={optimizedSrc}
           alt={alt}
@@ -255,7 +206,6 @@ export default ImageOptimizer;
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           style={{ width, height }}
-=======
           src={src}
   alt={alt}
           width={width}
@@ -264,26 +214,15 @@ export default ImageOptimizer;
   onLoad={handleLoad}>
   onError={handleError}>
   className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         />
       )}
     </div>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default ImageOptimizer;
-<<<<<<< HEAD
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

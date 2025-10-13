@@ -1,10 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Mock component for testing
 const ImageOptimizer = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {
   return (
@@ -13,25 +9,18 @@ const ImageOptimizer = ({ className = '', children }: { className?: string; chil
     </div>
   );
 };
-=======
 // Mock IntersectionObserver
-<<<<<<< HEAD
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-=======
 // Mock IntersectionObserver;
 global.IntersectionObserver = jest.fn().mockImplementation((callback) => ({
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn(),
-=======
 global.IntersectionObserver = jest.fn().mockImplementation((callback) => ({,
     observe: jest.fn(),
     unobserve: jest.fn(),
     disconnect: jest.fn(),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 }));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 
 describe('ImageOptimizer Component', () => {
   it('renders with default props', () => {
@@ -47,16 +36,12 @@ describe('ImageOptimizer Component', () => {
   it('renders children', () => {
     render(<ImageOptimizer>Test content</ImageOptimizer>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
-=======
 // Mock test for image optimizer
 describe('Image Optimizer', () => {
   it('should render without crashing', () => {
     expect(true).toBe(true);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-69c0
   });
 });
-=======
-=======
 import { render, screen } from '@testing-library/react';
 
 // Mock the image loading
@@ -72,16 +57,11 @@ Object.defineProperty(global, 'Image', {
   value: jest.fn(() => mockImage),
 });
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 describe('ImageOptimizer', () => {
   it('renders without crashing', () => {
     expect(() => render(<ImageOptimizer src="test.jpg" alt="test" />)).not.toThrow();
   });
 });
-<<<<<<< HEAD
-=======
 
   it('renders with correct attributes', () => {
     render(
@@ -134,7 +114,3 @@ describe('ImageOptimizer', () => {
     expect(img).toHaveAttribute('src', 'http://localhost/test-image.jpg?format=webp&quality=80');
   });
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081

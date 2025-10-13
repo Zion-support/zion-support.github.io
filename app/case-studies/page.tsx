@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function caseStudies() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -21,12 +9,11 @@ export default function caseStudies() {
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Case Studies solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Case Studies</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function CaseStudiesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -34,23 +21,18 @@ export default function CaseStudiesPage() {
         <title>Case Studies - Zion Tech Group</title>
         <meta name="description" content="Advanced case studies solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Case Studies
-=======
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Page
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function CasestudiesPage() {
   return (
@@ -60,10 +42,9 @@ export default function CasestudiesPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Case Studies</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -71,14 +52,14 @@ export default function CasestudiesPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -86,7 +67,7 @@ export default function CasestudiesPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -94,8 +75,6 @@ export default function CasestudiesPage() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-=======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
 import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
@@ -107,11 +86,8 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import { ArrowRight, CheckCircle, Star, Building, Calendar, Users } from 'lucide-react';
 
 export default function CaseStudies() {
-<<<<<<< HEAD
   const caseStudies = [
-=======
   const _caseStudies = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     {
       id: 1,
       title: "E-commerce Platform AI Transformation",
@@ -232,7 +208,7 @@ export default function CaseStudies() {
             keywords="case studies, success stories, AI implementation, digital transformation, business solutions"
             canonical="https://ziontechgroup.com/case-studies"
           />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -240,13 +216,13 @@ export default function CaseStudies() {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Building className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Success Stories</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -255,9 +231,9 @@ export default function CaseStudies() {
                   className="mb-6 leading-tight">
                   Case Studies
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Discover how we've helped businesses transform with AI, data analytics, 
+                  Discover how we've helped businesses transform with AI, data analytics,
                   and digital solutions. Real results from real clients.
                 </p>
               </ResponsiveContainer>
@@ -274,7 +250,7 @@ export default function CaseStudies() {
                     Explore our most impactful client transformations and the results we've achieved together.
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
                   {caseStudies.filter(study => study.featured).map((study) => (
                     <FuturisticCardEnhanced
@@ -290,7 +266,7 @@ export default function CaseStudies() {
                           </span>
                         </div>
                       </div>
-                      
+
                       <div className="space-y-4">
                         <div>
                           <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
@@ -305,17 +281,17 @@ export default function CaseStudies() {
                             {study.duration}
                           </div>
                         </div>
-                        
+
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-2">Challenge</h4>
                           <p className="text-gray-300 text-sm mb-4">{study.challenge}</p>
                         </div>
-                        
+
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-2">Solution</h4>
                           <p className="text-gray-300 text-sm mb-4">{study.solution}</p>
                         </div>
-                        
+
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-2">Results</h4>
                           <ul className="space-y-2">
@@ -327,7 +303,7 @@ export default function CaseStudies() {
                             ))}
                           </ul>
                         </div>
-                        
+
                         <div className="pt-4">
                           <div className="flex flex-wrap gap-2 mb-4">
                             {study.services.map((service, index) => (
@@ -357,7 +333,7 @@ export default function CaseStudies() {
                     Browse our complete portfolio of successful client transformations
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {caseStudies.map((study) => (
                     <FuturisticCardEnhanced
@@ -375,7 +351,7 @@ export default function CaseStudies() {
                           </div>
                         )}
                       </div>
-                      
+
                       <div className="space-y-3">
                         <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
                           {study.title}
@@ -419,10 +395,10 @@ export default function CaseStudies() {
                   Ready to Create Your Success Story?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join the companies that have transformed their business with Zion Tech Group. 
+                  Join the companies that have transformed their business with Zion Tech Group.
                   Let's discuss how we can help you achieve similar results.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -447,16 +423,12 @@ export default function CaseStudies() {
         </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }
-=======
 
   );
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import React from "react";
 import { Helmet } from 'react-helmet-async';
 
@@ -476,8 +448,5 @@ const CaseStudies = () => {
 };
 
 export default CaseStudies;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 export default function CaseStudiesPage() {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

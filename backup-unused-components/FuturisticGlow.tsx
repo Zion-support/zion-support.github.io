@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticGlowProps {
@@ -13,13 +12,10 @@ export default function FuturisticGlow({ className = '', children }: FuturisticG
     </div>
   );
 }
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-<<<<<<< HEAD
-export default function FuturisticGlow() 
-=======
+export default function FuturisticGlow()
 
 export default function FuturisticGlow() {
   return (
@@ -39,5 +35,3 @@ export default function FuturisticGlow() {
 //     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

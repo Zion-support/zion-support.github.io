@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 interface AdvancedSEOProps {
   className?: string;
@@ -12,20 +10,14 @@ export default function AdvancedSEO({ className = '', children }: AdvancedSEOPro
     <div className={`${className}`}>
       {children}
     </div>
-=======
-=======
 import StructuredData from "../components/StructuredData";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 interface AdvancedSEOProps;
   title: string;
   description: string;
-=======
 interface AdvancedSEOProps ,
     title: string;,
     description: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   keywords?: string;
   canonical?: string;
   ogTitle?: string;
@@ -48,7 +40,6 @@ interface AdvancedSEOProps ,
   tags?: string[];
   readingTime?: number;
 
-<<<<<<< HEAD
 const AdvancedSEO: React.FC<AdvancedSEOProps> = (
   title,
   description,
@@ -58,7 +49,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = (
   ogDescription,
   ogImage,
   ogUrl,
-=======
 const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
 //   title,
 //   description,
@@ -68,7 +58,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
 //   ogDescription,
 //   ogImage,
 //   ogUrl,
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   ogType = 'website',
   twitterCard = 'summary_large_image',
 //   twitterTitle,
@@ -83,17 +72,11 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   modifiedTime,
   section = 'Technology',
   tags = [],
-<<<<<<< HEAD
   readingTime;
-=======
-<<<<<<< HEAD
   readingTime
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-) => 
-=======
+) =>
 //   readingTime
 }) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullOgTitle = ogTitle || fullTitle;
   const fullOgDescription = ogDescription || description;
@@ -103,39 +86,29 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   const fullTwitterImage = twitterImage || fullOgImage;
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
   const currentDate = new Date().toISOString();
-<<<<<<< HEAD
   // Default structured data for organization;
-=======
   // Default structured data for organization
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-  const defaultStructuredData = 
+  const defaultStructuredData =
     "@context": "https://schema.org",
-=======
   const defaultStructuredData = {
 //     "@context": "https://schema.org",
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
     "@type": "Organization",
 //     "name": "Zion Tech Group",
 //     "url": "https://ziontechgroup.com",
 //     "logo": "https://ziontechgroup.com/logo.svg",
     "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-<<<<<<< HEAD
     "foundingDate": "2020",
-    "address": 
-=======
+    "address":
 //     "foundingDate": "2020",
     "address": {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       "@type": "PostalAddress",
 //       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
-<<<<<<< HEAD
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
 ,
-    "contactPoint": 
+    "contactPoint":
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
@@ -148,8 +121,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       "https://github.com/ziontechgroup"
     ],
     "offers": [
-      
-=======
+
 //       "addressRegion": "DE",
 //       "postalCode": "19709",
 //       "addressCountry": "US"
@@ -168,31 +140,25 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
 //     ],
 //     "offers": [
       {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
         "@type": "Offer",
 //         "name": "AI Solutions",
         "description": "Artificial intelligence and machine learning services",
-<<<<<<< HEAD
         "category": "Technology Services"
 ,
-      
-=======
+
 //         "category": "Technology Services"
       },
       {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
         "@type": "Offer",
 //         "name": "IT Services",
         "description": "Information technology consulting and implementation",
-<<<<<<< HEAD
         "category": "Technology Services"
 ,
-      
+
         "@type": "Offer",
         "name": "Micro SAAS",
         "description": "Ready-to-use software solutions",
         "category": "Software"
-=======
 //         "category": "Technology Services"
       },
       {
@@ -203,37 +169,31 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       }
 //     ]
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
     ]
 ;
-<<<<<<< HEAD
   // Article structured data if publishedTime is provided;
-=======
   // Article structured data if publishedTime is provided
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-  const articleStructuredData = publishedTime ? 
+  const articleStructuredData = publishedTime ?
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": fullTitle,
     "description": description,
     "image": fullOgImage,
-    "author": 
+    "author":
       "@type": "Organization",
       "name": author,
       "url": "https://ziontechgroup.com"
 ,
-    "publisher": 
+    "publisher":
       "@type": "Organization",
       "name": "Zion Tech Group",
-      "logo": 
+      "logo":
         "@type": "ImageObject",
         "url": "https://ziontechgroup.com/logo.svg"
 
 ,
     "datePublished": publishedTime,
-=======
   const articleStructuredData = publishedTime ? {
 //     "@context": "https://schema.org",
     "@type": "Article",
@@ -254,16 +214,11 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       }
     },
 //     "datePublished": publishedTime,
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
     "dateModified": modifiedTime || publishedTime,
-    "mainEntityOfPage": 
+    "mainEntityOfPage":
       "@type": "WebPage",
-<<<<<<< HEAD
       "@id": fullCanonical;
-=======
-<<<<<<< HEAD
       "@id": fullCanonical
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 ,
     "articleSection": section,
     "keywords": tags.join(', '),
@@ -271,7 +226,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
  : null;
   return (
     <Helmet></Helmet>
-=======
 //       "@id": fullCanonical
     },
 //     "articleSection": section,
@@ -281,7 +235,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
 
   return (
 //     <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content="{description}" />
@@ -308,7 +261,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       {publishedTime && <meta property="article:published_time" content="{publishedTime}" />}</meta>
       {modifiedTime && <meta property="article:modified_time" content="{modifiedTime}" />}</meta>
       {section && <meta property="article:section" content="{section}" />}</meta>
-      
+
         <meta key="{tag}" property="article:tag" content="{tag}" />
 
       {/* Twitter Card Meta Tags */}
@@ -348,32 +301,28 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json"></script>
         {JSON.stringify(structuredData || defaultStructuredData)}
-<<<<<<< HEAD
       </script>
-=======
 //       </script>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       {/* Article structured data if applicable */}
-      
+
         <script type="application/ld+json"></script>
           {JSON.stringify(articleStructuredData)}
-<<<<<<< HEAD
         </script>
 
       {/* Breadcrumb structured data */}
       <script type="application/ld+json"></script>
-        
+
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            
+
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
               "item": "https://ziontechgroup.com"
 ,
-            
+
               "@type": "ListItem",
               "position": 2,
               "name": title,
@@ -382,10 +331,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
 
       </script>
     </Helmet>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
-=======
 //         </script>
       )}
 
@@ -411,7 +356,5 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         })}
 //       </script>
 //     </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

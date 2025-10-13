@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // performanceMonitoring utility functions
 
 export interface performanceMonitoringConfig {
@@ -14,14 +12,12 @@ export class performanceMonitoring {
       enabled: true,
       ...config
     };
-=======
 
 // performanceMonitoring utility
 export const performanceMonitoring = {
   // Utility implementation,
     init: () => {
     console.log('performanceMonitoring initialized');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   }
 
   init(): void {
@@ -33,14 +29,8 @@ export const performanceMonitoring = {
 
 export const performancemonitoring = new performanceMonitoring();
 export default performancemonitoring;
-=======
 // performanceMonitoring
 export const performanceMonitoring = () => {
   // Utility function implementation
   return null;
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

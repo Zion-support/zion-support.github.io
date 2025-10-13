@@ -1,24 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Home } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Zap } from 'lucide-react';
@@ -26,49 +12,32 @@ import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Network } from 'lucide-react';
 import { Mic } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
-=======
 import React, { useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Home, Shield, Zap, Brain, Globe, Network, Mic } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Star, 
-  Users, 
-  Sparkles, 
-  Mail, 
+  Brain,
+  Shield,
+  Zap,
+  Globe,
+  Star,
+  Users,
+  Sparkles,
+  Mail,
   Monitor,
   ChevronDown,
   ChevronUp,
   Menu,
   X  } from 'lucide-react';
 } from 'lucide-react';import { Link  } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
-=======
-
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 interface NavigationProps {
   className?: string;
   children?: React.ReactNode;
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 export default function Navigation({ className = '', children }: NavigationProps) {
   return (
     <div className={`${className}`}>
@@ -76,41 +45,33 @@ export default function Navigation({ className = '', children }: NavigationProps
     </div>
   );
 }
-=======
 const Navigation: React.FC<NavigationProps> = () => {
-=======
 
 export default function Navigation({ onSidebarToggle }: NavigationProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const navigationItems = [
-<<<<<<< HEAD
-<<<<<<< HEAD
     { name: 'Home', href: '/' },
-    { 
-      name: 'AI Services', 
+    {
+      name: 'AI Services',
       href: '/ai-services',
       dropdown: [
         { name: 'AI Analytics', href: '/ai-services/analytics' },
         { name: 'Content Generation', href: '/ai-services/content-generation' },
         { name: 'Customer Experience', href: '/ai-services/customer-experience' }
       ]
-=======
     {
       name: 'Home',
       path: '/',
       icon: <Home className="w-4 h-4" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
     },
-    { 
-      name: 'IT Services', 
+    {
+      name: 'IT Services',
       href: '/it-services',
       dropdown: [
         { name: 'Cloud Migration', href: '/it-services/cloud-migration' },
         { name: 'Cybersecurity Audit', href: '/it-services/cybersecurity-audit' }
-=======
     {,
     name: 'Home',
         path: '/',
@@ -121,7 +82,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         path: '/about',
         icon: <Brain className="w-4 h-4" />
     },
-<<<<<<< HEAD
     {,
     name: 'Services',
         path: '/services',
@@ -171,11 +131,10 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: '5G Network Design', path: '/5g-network-design' },
         { name: '5G Implementation', path: '/5g-implementation' },
         { name: '5G Private Networks', path: '/5g-private-networks' }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       ]
     },
-    { 
-      name: 'Micro SAAS', 
+    {
+      name: 'Micro SAAS',
       href: '/micro-saas',
       dropdown: [
         { name: 'AI Content Writer', href: '/micro-saas/ai-content-writer' },
@@ -186,7 +145,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     { name: 'Contact', href: '/contact' }
   ];
 
-<<<<<<< HEAD
   const toggleDropdown = (itemName: string) => {
     setActiveDropdown(activeDropdown === itemName ? null : itemName);
   };
@@ -203,7 +161,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-<<<<<<< HEAD
             {navigationItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
@@ -229,7 +186,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         ))}
                       </div>
                     )}
-=======
             {navigationItems.map((item, index) => (
               <div key={index} className="relative group">
                 <Link>
@@ -266,7 +222,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         </div>
                       ))}
                     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                   </div>
                 ) : (
                   <Link
@@ -277,7 +232,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                   </Link>
                 )}
               </div>
-=======
     {
       name: 'AI Services',
       path: '/ai-services',
@@ -317,28 +271,21 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                 {item.icon}
                 <span>{item.name}</span>
               </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
             ))}
           </div>
 
           {/* Mobile menu button */}
-<<<<<<< HEAD
           <div className="md:hidden flex items-center">
             <button
-<<<<<<< HEAD
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
-=======
           <div className="md:hidden">
             <button>
   onClick={toggleMenu}>
   className="text-gray-300 hover:text-cyan-400 transition-colors p-2">
   aria-label="Toggle menu"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
               onClick={toggleMenu}
               className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -348,8 +295,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navigationItems.map((item) => (
                 <div key={item.name}>
@@ -377,7 +322,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                               {dropdownItem.name}
                             </Link>
                           ))}
-=======
             <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800/95 backdrop-blur-sm border-t border-cyan-500/20">
               {navigationItems.map((item, index) => (
                 <div key={index}>
@@ -413,7 +357,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                               </li>
                             ))}
                           </ul>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                         </div>
                       )}
                     </div>
@@ -427,7 +370,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                     </Link>
                   )}
                 </div>
-=======
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-lg mt-2">
               {navigationItems.map((item) => (
                 <Link
@@ -443,7 +385,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                   {item.icon}
                   <span>{item.name}</span>
                 </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
               ))}
             </div>
           </div>
@@ -451,17 +392,9 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       </div>
     </nav>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
 
 export default Navigation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
 
 export default function Navigation({ className = '', children, ...props }: NavigationProps) {
@@ -471,40 +404,25 @@ export default function Navigation({ className = '', children, ...props }: Navig
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 import { Link, useLocation } from 'react-router-dom';
-import { 
+import {
   Brain,
-  Shield, 
-  Zap, 
-  Globe, 
-  Star, 
-  Users, 
-  Sparkles, 
-  Mail, 
+  Shield,
+  Zap,
+  Globe,
+  Star,
+  Users,
+  Sparkles,
+  Mail,
   Monitor,
   ChevronDown,
   Menu,
   X
 } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
@@ -525,14 +443,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
                 to="/"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  location.pathname === '/' 
-                    ? 'text-cyan-400 bg-cyan-500/20' 
+                  location.pathname === '/'
+                    ? 'text-cyan-400 bg-cyan-500/20'
                     : 'text-gray-300 hover:text-white hover:bg-white/10'
                 }`}
               >
@@ -541,8 +459,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               <Link
                 to="/services"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  location.pathname === '/services' 
-                    ? 'text-cyan-400 bg-cyan-500/20' 
+                  location.pathname === '/services'
+                    ? 'text-cyan-400 bg-cyan-500/20'
                     : 'text-gray-300 hover:text-white hover:bg-white/10'
                 }`}
               >
@@ -551,8 +469,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               <Link
                 to="/about"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  location.pathname === '/about' 
-                    ? 'text-cyan-400 bg-cyan-500/20' 
+                  location.pathname === '/about'
+                    ? 'text-cyan-400 bg-cyan-500/20'
                     : 'text-gray-300 hover:text-white hover:bg-white/10'
                 }`}
               >
@@ -561,8 +479,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               <Link
                 to="/contact"
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  location.pathname === '/contact' 
-                    ? 'text-cyan-400 bg-cyan-500/20' 
+                  location.pathname === '/contact'
+                    ? 'text-cyan-400 bg-cyan-500/20'
                     : 'text-gray-300 hover:text-white hover:bg-white/10'
                 }`}
               >
@@ -570,7 +488,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </Link>
             </div>
           </div>
-          
+
           <div className="md:hidden">
             <button
               onClick={onSidebarToggle}
@@ -586,4 +504,3 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 };
 
 export default Navigation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081

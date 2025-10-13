@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -9,8 +8,7 @@ export default function aiCybersecuritySuite() {
         <title>Ai Cybersecurity Suite - Zion Tech Group</title>
         <meta name="description" content="Ai Cybersecurity Suite solutions by Zion Tech Group" />
       </Helmet>
-      
-<<<<<<< HEAD
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Cybersecurity Suite</h1>
@@ -20,7 +18,6 @@ export default function aiCybersecuritySuite() {
         </div>
       </div>
     </div>
-=======
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-8"></h1>
         <div className="prose prose-invert max-w-none">
@@ -28,13 +25,9 @@ export default function aiCybersecuritySuite() {
   </div>
   </div>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
-<<<<<<< HEAD
 }
-=======
 }
-=======
 export default function AICybersecuritySuitePage() {
   return (
 <div>Content</div>
@@ -48,7 +41,7 @@ export default function AICybersecuritySuitePage() {
 //         <title>AI Cybersecurity Suite - Zion Tech Group</title>
       {/* Hero Section */}
               AI Cybersecurity Suite;
-//               Comprehensive AI-powered cybersecurity solutions with advanced threat detection, 
+//               Comprehensive AI-powered cybersecurity solutions with advanced threat detection,
 //               zero trust security, and automated incident response capabilities.
                 Get Started;
                 View Pricing;
@@ -76,5 +69,3 @@ export default function AICybersecuritySuitePage() {
               Get Started;
               View Pricing;
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

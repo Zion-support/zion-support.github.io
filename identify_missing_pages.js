@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 import fs from 'fs';
 // Read existing pages;
 const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').split('\n').filter(Boolean);
@@ -17,7 +15,7 @@ const existingPages = fs.readFileSync('/workspace/existing_pages.txt', 'utf8').s
 const navigationLinks = [
 //   '/ai-services',
 //   '/ai-content-generator',
-//   '/ai-chatbot-enterprise', 
+//   '/ai-chatbot-enterprise',
 //   '/ai-analytics-dashboard',
 //   '/ai-3d-generation',
 //   '/ai-drug-discovery-pro',
@@ -168,4 +166,3 @@ const allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes])
 // Write results to files;
 fs.writeFileSync('/workspace/missing_pages.txt', missingPages.join('\n'));
 fs.writeFileSync('/workspace/broken_links.txt', brokenLinks.join('\n'));
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

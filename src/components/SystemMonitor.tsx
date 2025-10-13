@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface SystemMonitorProps {
@@ -8,22 +7,16 @@ interface SystemMonitorProps {
 
 export default function SystemMonitor({ className = '', children }: SystemMonitorProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
-<<<<<<< HEAD
 }
-=======
 }
-=======
 export default SystemMonitor;
 // /**
  * System Monitor Component;
@@ -235,5 +228,3 @@ const a = document.createElement('a');
       )};
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

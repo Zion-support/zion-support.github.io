@@ -7,23 +7,16 @@ interface EnhancedErrorBoundaryProps {
 
 export default function EnhancedErrorBoundary({ className = '', children }: EnhancedErrorBoundaryProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
-<<<<<<< HEAD
 }
-=======
 }
-<<<<<<< HEAD
-=======
 
 interface State {
   hasError: boolean;
@@ -169,7 +162,7 @@ ${JSON.stringify(errorReport, null, 2)}
                   Try Again ({this.maxRetries - this.state.retryCount} attempts left)
 </button>
               )}
-              
+
 //               <button
                 onClick={this.handleReload}
                 className="flex items-center justify-center px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-lg transition-colors"
@@ -177,7 +170,7 @@ ${JSON.stringify(errorReport, null, 2)}
                 <RefreshCw className="w-5 h-5 mr-2" />
 //                 Reload Page
 </button>
-              
+
 //               <button
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-colors"
@@ -213,5 +206,3 @@ ${JSON.stringify(errorReport, null, 2)}
 }
 
 export default EnhancedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

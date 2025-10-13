@@ -1,24 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function aiFinancialAnalysis() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -26,12 +9,11 @@ export default function aiFinancialAnalysis() {
         <title>Ai Financial Analysis - Zion Tech Group</title>
         <meta name="description" content="Ai Financial Analysis solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Financial Analysis</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function AiFinancialAnalysisPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -39,23 +21,18 @@ export default function AiFinancialAnalysisPage() {
         <title>Ai Financial Analysis - Zion Tech Group</title>
         <meta name="description" content="Advanced ai financial analysis solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ai Financial Analysis
-=======
 
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Page
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function AifinancialanalysisPage() {
   return (
@@ -65,11 +42,9 @@ export default function AifinancialanalysisPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Financial Analysis</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
-<<<<<<< HEAD
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -77,14 +52,14 @@ export default function AifinancialanalysisPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -92,34 +67,27 @@ export default function AifinancialanalysisPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { TrendingUp, ArrowRight, Sparkles, CheckCircle, PieChart, Activity, Shield, BarChart3, DollarSign, Star } from 'lucide-react';
-=======
 import { useState, useEffect } from 'react';
 import { DollarSign, TrendingUp, PieChart, Shield, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
+import {
   TrendingUp,
   ArrowRight,
   Sparkles,
@@ -129,7 +97,6 @@ import {
   PieChart,
   BarChart3
 } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -139,21 +106,11 @@ import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { TrendingUp } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const AIFinancialAnalysisPage = () => {
-<<<<<<< HEAD
   const benefits = [
     "Increase investment returns by 25%",
     "Reduce financial risk by 60%",
@@ -162,16 +119,12 @@ const AIFinancialAnalysisPage = () => {
     "Advanced fraud detection",
     "Comprehensive compliance reporting"
   ];
-=======
 import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 
 export default function AIFinancialAnalysisPage() {
-=======
 import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-react';
 
 const AIFinancialAnalysisPage = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -180,27 +133,22 @@ const AIFinancialAnalysisPage = () => {
       color: "from-blue-500 to-cyan-500"
     },
     {
-=======
 
 const AIFinancialAnalysisZionTechGroup = () => {
   const features = [
     {
       title: "Financial Forecasting",
       description: "Predict future financial performance with advanced AI models and machine learning",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       icon: <TrendingUp className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Risk Assessment",
-<<<<<<< HEAD
       description: "Comprehensive risk analysis using AI to identify potential threats and opportunities in real-time.",
       color: "from-green-500 to-emerald-500"
-=======
       description: "Identify and analyze financial risks with comprehensive risk modeling tools",
       icon: <Shield className="w-8 h-8" />,
       color: "from-red-500 to-orange-500"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
     },
     {
       title: "Portfolio Analysis",
@@ -212,7 +160,6 @@ const AIFinancialAnalysisZionTechGroup = () => {
       title: "Real-time Monitoring",
       description: "Monitor financial metrics and market conditions in real-time",
       icon: <DollarSign className="w-8 h-8" />,
-<<<<<<< HEAD
       title: "Portfolio Optimization",
       description: "AI-driven portfolio management that automatically rebalances investments for maximum returns.",
       color: "from-purple-500 to-pink-500"
@@ -222,15 +169,12 @@ const AIFinancialAnalysisZionTechGroup = () => {
       title: "Fraud Detection",
       description: "Advanced AI algorithms detect fraudulent activities and suspicious patterns in real-time.",
       color: "from-orange-500 to-red-500"
-=======
       color: "from-purple-500 to-pink-500"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
     }
   ];
 
   const pricingPlans = [
     {
-<<<<<<< HEAD
       name: "Starter",
       price: "$149",
       period: "month",
@@ -255,7 +199,6 @@ const AIFinancialAnalysisZionTechGroup = () => {
         "Custom reporting",
         "API access",
         "Client management"
-=======
       name: "Professional",
       price: "$299",
       period: "month",
@@ -281,12 +224,10 @@ const AIFinancialAnalysisZionTechGroup = () => {
         "Priority support",
         "Compliance tools",
         "SLA guarantee"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       ],
       popular: true
     },
     {
-<<<<<<< HEAD
       name: "Enterprise",
       price: "$599",
       period: "month",
@@ -298,7 +239,6 @@ const AIFinancialAnalysisZionTechGroup = () => {
         "Advanced security",
         "SLA guarantee",
         "Compliance reporting"
-=======
       name: "Custom",
       price: "Contact",
       period: "us",
@@ -309,18 +249,13 @@ const AIFinancialAnalysisZionTechGroup = () => {
         "Dedicated support",
         "On-premise deployment",
         "White-label solution"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       ],
       popular: false
     }
   ];
-=======
 import { Helmet } from 'react-helmet-async';
 import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const testimonials = [
     {
       name: "Sarah Chen",
@@ -348,9 +283,6 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
     }
   ];
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -386,27 +318,18 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
     "Integrate with existing systems"
   ];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Zion AI Financial Analysis",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "description": "AI-powered financial analysis platform with predictive analytics and risk assessment",
-=======
     "description": "AI-powered financial analysis platform with forecasting, risk assessment, and portfolio optimization",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
     "description": "Advanced AI financial analysis platform with real-time insights and predictive modeling",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     "url": "https://ziontechgroup.com/ai-financial-analysis",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web, Windows, macOS, Linux",
     "offers": {
       "@type": "Offer",
-<<<<<<< HEAD
-<<<<<<< HEAD
       "price": "299",
       "priceCurrency": "USD",
       "priceSpecification": {
@@ -420,11 +343,8 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
       "@type": "Organization",
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com"
-=======
       "price": "699",
       "priceCurrency": "USD"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
       "price": "299",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock"
@@ -433,7 +353,6 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
       "@type": "AggregateRating",
       "ratingValue": "4.9",
       "ratingCount": "1500"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   };
 
@@ -442,36 +361,31 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
       <EnhancedAccessibility>
         <FuturisticBackgroundEnhanced>
           <EnhancedSEO
-<<<<<<< HEAD
             title="AI Financial Analysis - Zion Tech Group"
-<<<<<<< HEAD
             description="Advanced AI-powered financial analysis platform with predictive analytics, risk assessment, and portfolio optimization for better investment decisions."
             keywords="AI financial analysis, investment analytics, risk assessment, portfolio optimization, financial predictions, fraud detection"
             canonical="https://ziontechgroup.com/ai-financial-analysis"
-=======
             title="Zion AI Financial Analysis - Advanced Financial Analytics Platform"
             description="Transform your financial data into actionable insights with our advanced AI financial analysis platform. Get real-time predictions, automated reporting, and intelligent recommendations."
             keywords="AI financial analysis, financial analytics, business intelligence, machine learning, predictive analytics, Zion Tech Group"
             canonicalUrl="https://ziontechgroup.com/ai-financial-analysis"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
           />
           <StructuredData data={structuredData} />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
-<<<<<<< HEAD
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
               <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-cyan-500/20 border border-green-500/30 mb-6">
                   <Sparkles className="w-4 h-4 text-green-400 mr-2" />
                   <span className="text-green-400 text-sm font-medium">AI-Powered Financial Analysis</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -480,12 +394,12 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
                   className="mb-6 leading-tight">
                   Zion AI Financial Analysis
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Make smarter investment decisions with AI-powered financial analysis, predictive analytics, 
+                  Make smarter investment decisions with AI-powered financial analysis, predictive analytics,
                   and advanced risk assessment tools.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#pricing"
@@ -631,10 +545,10 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
                   Ready to Transform Your Financial Analysis?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of financial professionals using Zion AI Financial Analysis 
+                  Join thousands of financial professionals using Zion AI Financial Analysis
                   to make better investment decisions. Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -655,13 +569,12 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
                 </div>
               </div>
             </section>
-=======
             description="AI-powered financial analysis platform with forecasting, risk assessment, portfolio optimization, and real-time monitoring for financial professionals."
             keywords="AI financial analysis, financial forecasting, risk assessment, portfolio optimization, financial modeling"
             canonicalUrl="https://ziontechgroup.com/ai-financial-analysis"
           />
           <StructuredData data={structuredData} />
-          
+
           <Helmet>
             <title>AI Financial Analysis - Zion Tech Group</title>
             <meta name="description" content="AI-powered financial analysis platform with forecasting, risk assessment, and portfolio optimization." />
@@ -676,14 +589,14 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-emerald-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer>
                 <div className="text-center relative z-10">
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
                     <DollarSign className="w-4 h-4 text-green-400 mr-2" />
                     <span className="text-green-400 text-sm font-medium">AI-Powered Financial Analysis</span>
                   </div>
-                  
+
                   <FuturisticTextEnhanced
                     variant="display"
                     size="5xl"
@@ -692,12 +605,12 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
                     className="mb-6">
                     AI Financial Analysis
                   </FuturisticTextEnhanced>
-                  
+
                   <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                    Transform your financial decision-making with our advanced AI-powered analysis platform. 
+                    Transform your financial decision-making with our advanced AI-powered analysis platform.
                     Forecasting, risk assessment, and portfolio optimization powered by machine learning.
                   </p>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <FuturisticButtonEnhanced
                       href="/contact"
@@ -812,10 +725,10 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
                   Ready to Optimize Your Finances?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of financial professionals using Zion AI Financial Analysis to make better decisions. 
+                  Join thousands of financial professionals using Zion AI Financial Analysis to make better decisions.
                   Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -836,8 +749,6 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
                 </div>
               </div>
             </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
             <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
               <div className="max-w-7xl mx-auto">
                 <div className="text-center relative z-10">
@@ -845,7 +756,7 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
                     <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
                     <span className="text-cyan-400 text-sm font-medium">AI-Powered Financial Analysis</span>
                   </div>
-                  
+
                   <FuturisticTextEnhanced
                     variant="display"
                     size="5xl"
@@ -854,12 +765,12 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
                     className="mb-6 leading-tight">
                     Zion AI Financial Analysis
                   </FuturisticTextEnhanced>
-                  
+
                   <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                    Transform your financial data into actionable insights with our advanced AI financial analysis platform. 
+                    Transform your financial data into actionable insights with our advanced AI financial analysis platform.
                     Get real-time predictions, automated reporting, and intelligent recommendations.
                   </p>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                     <FuturisticButtonEnhanced
                       href="/contact"
@@ -927,7 +838,7 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
                     Experience the benefits of AI-powered financial analysis
                   </p>
                 </div>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-center">
@@ -946,10 +857,10 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
                   Ready to Transform Your Financial Analysis?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of businesses using Zion AI Financial Analysis to make 
+                  Join thousands of businesses using Zion AI Financial Analysis to make
                   data-driven financial decisions and drive growth. Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -970,28 +881,18 @@ import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-re
                 </div>
               </div>
             </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
           </main>
         </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );
-<<<<<<< HEAD
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default AIFinancialAnalysisPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -1002,7 +903,7 @@ export default function PagePage() {
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-      
+
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -1018,7 +919,6 @@ export default function PagePage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <div className="container mx-auto px-4 py-20">
@@ -1052,20 +952,11 @@ export default function PagePage() {
               </div>
             </div>
           ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
         </div>
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 export default AIFinancialAnalysisZionTechGroup;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default AIFinancialAnalysisPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

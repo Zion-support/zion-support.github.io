@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedSkipLinkProps {
@@ -13,12 +12,9 @@ export default function EnhancedSkipLink({ className = '', children }: EnhancedS
     </div>
   );
 }
-=======
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-<<<<<<< HEAD
-export default function EnhancedSkipLink() 
-=======
+export default function EnhancedSkipLink()
 
 export default function EnhancedSkipLink() {
   return (
@@ -33,5 +29,3 @@ export default function EnhancedSkipLink() {
 </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

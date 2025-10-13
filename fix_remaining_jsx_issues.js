@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -6,11 +5,8 @@ export default function Component() {
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
-<<<<<<< HEAD
   </div>
-=======
     </div>
-=======
 import fs from 'fs';
 import path from 'path';
 #!/usr/bin/env node;
@@ -25,7 +21,5 @@ function fixRemainingJSXIssues(content) {
   content = content.replace(;
     /(\s*<\/Link>\s*<\/div>\s*\);\s*})/g,
     '\n        </Link>\n      </div>\n    </div>\n  );\n}'
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 
 export default function AiCustomerSupportChatbotPage() {
   const features = [
@@ -19,8 +9,6 @@ export default function AiCustomerSupportChatbotPage() {
       title: "AI-Powered Responses",
       description: "Intelligent chatbot that understands context and provides accurate answers",
       icon: <Brain className="w-8 h-8" />
-=======
-
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -32,8 +20,6 @@ export default function AiCustomerSupportChatbotPage() {
     title: "AI-Powered Responses",
         description: "Intelligent chatbot that understands context and provides accurate answers",
         icon: <Brain className="w-8 h-8" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -42,7 +28,6 @@ const features = [
       title: "Predictive Analytics",
       description: "Advanced machine learning models for accurate financial forecasting",
       icon: "Brain"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
     },
     {,
     title: "24/7 Availability",
@@ -60,9 +45,7 @@ const features = [
         icon: <Users className="w-8 h-8" />
     }
   ];
-<<<<<<< HEAD
 
-=======
 const testimonials = [
     {
       name: "Sarah Johnson",
@@ -80,11 +63,8 @@ const testimonials = [
     }
   ];
 export default function AICustomerSupportChatbot() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 
 "use client";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   const testimonials = [
     {,
     name: "Sarah Johnson",
@@ -120,34 +100,28 @@ export default function AICustomerSupportChatbot() {
         "Multi-language Support",
         "Context Awareness",
         "Real-time Responses",
-<<<<<<< HEAD
       ],
     },
     {,
     category: "Integration",
         items: [
-=======
       ]},
     {
       category: "Integration",
       items: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         "API Integration",
         "CRM Integration",
         "Database Connectivity",
         "Third-party Tools",
-<<<<<<< HEAD
       ],
     },
     {,
     category: "Analytics",
         items: [
-=======
       ]},
     {
       category: "Analytics",
       items: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         "Conversation Analytics",
         "Performance Metrics",
         "User Insights",
@@ -156,7 +130,6 @@ export default function AICustomerSupportChatbot() {
   ];
 
   const pricingPlans = [
-<<<<<<< HEAD
     {,
     name: "Starter",
         price: "$299",
@@ -181,8 +154,6 @@ export default function AICustomerSupportChatbot() {
         period: "/month",
         popular: false,
     },
-<<<<<<< HEAD
-=======
     {
       name: "Starter",
       price: "$299",
@@ -204,14 +175,10 @@ export default function AICustomerSupportChatbot() {
       description: "Complete solution for large organizations",
       period: "/month",
       popular: false},
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function aiCustomerSupportChatbot() {
-=======
   const features = [
-<<<<<<< HEAD
     {,
     icon: <Brain className="w-6 h-6 text-cyan-400" />,
         title: "Natural Language Processing",
@@ -237,7 +204,6 @@ export default function aiCustomerSupportChatbot() {
         "Track customer satisfaction, response times, and identify improvement opportunities",
     },
 
-=======
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: "Natural Language Processing",
@@ -258,44 +224,27 @@ export default function aiCustomerSupportChatbot() {
       title: "Analytics & Insights",
       description:
         "Track customer satisfaction, response times, and identify improvement opportunities"},
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   ];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import { Helmet } from "react-helmet-async";
 
-
-
-
-<<<<<<< HEAD
 export default function AiCustomerSupportChatbotPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
   return (
-=======
 export default function AiCustomerSupportChatbotPage() {
             return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
-=======
 export default function AiCustomerSupportChatbotPage() {
             return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Customer Support Chatbot - Zion Tech Group</title>
         <meta name="description" content="Ai Customer Support Chatbot solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Customer Support Chatbot</h1>
           <p className="text-xl text-gray-300 mb-8">
             This page is under development. Please check back later.
-=======
 
 export default function AicustomersupportchatbotPage() {
   return (
@@ -305,11 +254,9 @@ export default function AicustomersupportchatbotPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Customer Support Chatbot</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
-<<<<<<< HEAD
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -317,20 +264,19 @@ export default function AicustomersupportchatbotPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
               Scalable and secure implementation.
             </p>
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -354,32 +300,24 @@ export default function AicustomersupportchatbotPage() {
               </p>
 
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
         </div>
       </div>
-<<<<<<< HEAD
     </div>
   );
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
-=======
 "use client";
 import { Brain, Clock, Target, BarChart3 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
     </div>
   );
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

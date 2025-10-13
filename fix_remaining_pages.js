@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 import fs from 'fs';
 export default ${pageName}Page`;
 // List of all pages that need to be completely rewritten;
@@ -126,5 +124,3 @@ const config = pageConfigs[page];
   try {
     fs.writeFileSync(pagePath, content);
     } catch (error) {
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

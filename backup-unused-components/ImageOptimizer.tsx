@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState, useRef, useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -50,13 +48,13 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {
       return originalSrc;
     }
-    
+
     // Add WebP support if supported
     if (typeof window !== 'undefined' && 'WebP' in window) {
       const webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
       return webpSrc;
     }
-    
+
     return originalSrc;
   };
 
@@ -70,7 +68,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     const srcSet = sizes
       .map(size => `${baseSrc}?w=${size} ${size}w`)
       .join(', ');
-    
+
     return srcSet;
   };
 
@@ -79,7 +77,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 
   if (hasError) {
     return (
-//       <div 
+//       <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
 //       >
@@ -105,7 +103,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 //       />
     );
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface ImageOptimizerProps {
   className?: string;
@@ -114,23 +111,17 @@ interface ImageOptimizerProps {
 
 export default function ImageOptimizer({ className = '', children }: ImageOptimizerProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
 //     <LazyLoadImage
       src={optimizedSrc}
       srcSet={srcSet}
@@ -146,7 +137,5 @@ export default function ImageOptimizer({ className = '', children }: ImageOptimi
       loading="lazy"
       decoding="async"
 //     />
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

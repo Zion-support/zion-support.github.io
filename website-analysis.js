@@ -1,16 +1,12 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
-<<<<<<< HEAD
   </div>
-=======
     </div>
-=======
 class WebsiteAnalyzer {
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
@@ -72,7 +68,7 @@ class WebsiteAnalyzer {
     const links = [];
     const linkRegex = /<a[^>]+href=["']([^"']+)["'][^>]*>/gi;
     const routerLinkRegex = /<Link[^>]+to=["']([^"']+)["'][^>]*>/gi;
-    
+
     let match;
     while ((match = linkRegex.exec(html)) !== null) {
       const href = match[1];
@@ -161,11 +157,11 @@ class WebsiteAnalyzer {
     // Start with the homepage
     const homepage = await this.fetchPage(this.baseUrl);
     this.visitedUrls.add(this.baseUrl);
-    
+
     if (homepage.success) {
       `);
       this.workingLinks.push(homepage.url);
-      
+
       // Add all links from homepage
       homepage.links.forEach(link => this.allLinks.add(link));
     } else {
@@ -173,20 +169,20 @@ class WebsiteAnalyzer {
     }
 
     // Check all discovered links
-    const linksToCheck = Array.from(this.allLinks).filter(link => 
+    const linksToCheck = Array.from(this.allLinks).filter(link =>
       link.startsWith(this.baseUrl) && !this.visitedUrls.has(link)
     );
 
     for (const link of linksToCheck) {
       if (this.visitedUrls.has(link)) continue;
-      
+
       this.visitedUrls.add(link);
       const result = await this.checkUrl(link);
-      
+
       if (result.success) {
         this.workingLinks.push(link);
         `);
-        
+
         // If it's a page (not an asset), fetch it to get more links
         if (result.status === 200 && !this.isAsset(link)) {
           const pageResult = await this.fetchPage(link);
@@ -202,7 +198,7 @@ class WebsiteAnalyzer {
         this.brokenLinks.push(result);
         - ${result.error || 'Not found'}`);
       }
-      
+
       // Small delay to be respectful
       await new Promise(resolve => setTimeout(resolve, 100));
     }
@@ -236,7 +232,7 @@ class WebsiteAnalyzer {
     if (report.summary.brokenLinks > 0) {
       report.recommendations.push(`Fix ${report.summary.brokenLinks} broken links`);
     }
-    
+
     if (report.summary.successRate < 95) {
       report.recommendations.push('Improve overall link reliability');
     }
@@ -248,7 +244,5 @@ class WebsiteAnalyzer {
 // Run the analysis
 const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
 analyzer.analyzeWebsite().then(report => {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

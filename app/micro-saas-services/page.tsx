@@ -1,21 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function microSaasServices() {
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Phone, CheckCircle, Sparkles, Heart, Receipt, Package, Calendar as ScheduleIcon, Cloud as CloudIcon, Shield as ProtectionIcon } from 'lucide-react';
-=======
 import React from 'react';
 import { Shield } from 'lucide-react';
 import { Calendar } from 'lucide-react';
@@ -29,7 +18,6 @@ import { Heart } from 'lucide-react';
 import { Receipt } from 'lucide-react';
 
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function MicroSaasServices() {
   const microSaasServices = [
@@ -42,9 +30,7 @@ export default function MicroSaasServices() {
       originalPrice: "$599/month",
       features: [
         "Real-time Analytics Dashboard",
-        "Predictive Modeling & Forecasting", 
-=======
-
+        "Predictive Modeling & Forecasting",
 
 import React from 'react';
 
@@ -63,7 +49,6 @@ export default function Page() {
         features: [
         "Real-time Analytics Dashboard",
         "Predictive Modeling & Forecasting",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "Custom Report Generation",
         "API Integration & Data Connectors",
         "Mobile App Access",
@@ -71,24 +56,20 @@ export default function Page() {
         "Advanced Data Visualization",
         "Automated Insights & Alerts"
       ],
-<<<<<<< HEAD
       category: "AI Analytics",
       popular: true,
       link: "/zion-ai-analytics-pro",
       benefits: [
-=======
         category: "AI Analytics",
         popular: true,
         link: "/zion-ai-analytics-pro",
         benefits: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "40% increase in decision-making speed",
         "60% reduction in manual reporting time",
         "Real-time business insights",
         "Predictive trend analysis"
       ]
     },
-<<<<<<< HEAD
     {
       id: "zion-security-shield-pro",
       name: "Zion Security Shield Pro",
@@ -97,7 +78,6 @@ export default function Page() {
       price: "From $499/month",
       originalPrice: "$999/month",
       features: [
-=======
     {,
     id: "zion-security-shield-pro",
         name: "Zion Security Shield Pro",
@@ -106,7 +86,6 @@ export default function Page() {
         price: "From $499/month",
         originalPrice: "$999/month",
         features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "AI-Powered Threat Detection",
         "Automated Incident Response",
         "24/7 Security Monitoring",
@@ -116,24 +95,20 @@ export default function Page() {
         "Multi-factor Authentication",
         "Advanced Firewall Management"
       ],
-<<<<<<< HEAD
       category: "Cybersecurity",
       popular: true,
       link: "/zion-security-shield-pro",
       benefits: [
-=======
         category: "Cybersecurity",
         popular: true,
         link: "/zion-security-shield-pro",
         benefits: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "99.9% threat detection accuracy",
         "50% faster incident response",
         "Complete compliance coverage",
         "24/7 expert monitoring"
       ]
     },
-<<<<<<< HEAD
     {
       id: "zion-cloud-vault-pro",
       name: "Zion Cloud Vault Pro",
@@ -142,7 +117,6 @@ export default function Page() {
       price: "From $99/month",
       originalPrice: "$199/month",
       features: [
-=======
     {,
     id: "zion-cloud-vault-pro",
         name: "Zion Cloud Vault Pro",
@@ -151,7 +125,6 @@ export default function Page() {
         price: "From $99/month",
         originalPrice: "$199/month",
         features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "End-to-End Encryption",
         "Unlimited Storage Capacity",
         "Automated Backup Scheduling",
@@ -161,24 +134,20 @@ export default function Page() {
         "Advanced Access Controls",
         "99.99% Uptime Guarantee"
       ],
-<<<<<<< HEAD
       category: "Cloud Storage",
       popular: true,
       link: "/zion-cloud-vault-pro",
       benefits: [
-=======
         category: "Cloud Storage",
         popular: true,
         link: "/zion-cloud-vault-pro",
         benefits: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "Unlimited secure storage",
         "99.99% uptime guarantee",
         "Advanced collaboration features",
         "Complete data protection"
       ]
     },
-<<<<<<< HEAD
     {
       id: "zion-ai-crm-pro",
       name: "Zion AI CRM Pro",
@@ -187,7 +156,6 @@ export default function Page() {
       price: "From $199/month",
       originalPrice: "$399/month",
       features: [
-=======
     {,
     id: "zion-ai-crm-pro",
         name: "Zion AI CRM Pro",
@@ -196,7 +164,6 @@ export default function Page() {
         price: "From $199/month",
         originalPrice: "$399/month",
         features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "AI Lead Scoring & Qualification",
         "Automated Follow-up Sequences",
         "Predictive Sales Analytics",
@@ -206,24 +173,20 @@ export default function Page() {
         "Integration with 100+ Tools",
         "Custom Workflow Automation"
       ],
-<<<<<<< HEAD
       category: "CRM & Sales",
       popular: true,
       link: "/zion-ai-crm-pro",
       benefits: [
-=======
         category: "CRM & Sales",
         popular: true,
         link: "/zion-ai-crm-pro",
         benefits: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "35% increase in lead conversion",
         "50% reduction in manual tasks",
         "Predictive sales insights",
         "Complete sales automation"
       ]
     },
-<<<<<<< HEAD
     {
       id: "zion-ai-marketing-automation-pro",
       name: "Zion AI Marketing Automation Pro",
@@ -232,7 +195,6 @@ export default function Page() {
       price: "From $149/month",
       originalPrice: "$299/month",
       features: [
-=======
     {,
     id: "zion-ai-marketing-automation-pro",
         name: "Zion AI Marketing Automation Pro",
@@ -241,7 +203,6 @@ export default function Page() {
         price: "From $149/month",
         originalPrice: "$299/month",
         features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "AI Content Generation",
         "Multi-channel Campaign Management",
         "Advanced Personalization Engine",
@@ -251,24 +212,20 @@ export default function Page() {
         "Email Marketing Platform",
         "ROI Tracking & Analytics"
       ],
-<<<<<<< HEAD
       category: "Marketing Automation",
       popular: true,
       link: "/zion-ai-marketing-automation-pro",
       benefits: [
-=======
         category: "Marketing Automation",
         popular: true,
         link: "/zion-ai-marketing-automation-pro",
         benefits: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "300% increase in campaign ROI",
         "80% reduction in manual work",
         "Advanced personalization",
         "Complete marketing automation"
       ]
     },
-<<<<<<< HEAD
     {
       id: "zion-ai-project-manager-pro",
       name: "Zion AI Project Manager Pro",
@@ -277,7 +234,6 @@ export default function Page() {
       price: "From $99/month",
       originalPrice: "$199/month",
       features: [
-=======
     {,
     id: "zion-ai-project-manager-pro",
         name: "Zion AI Project Manager Pro",
@@ -286,7 +242,6 @@ export default function Page() {
         price: "From $99/month",
         originalPrice: "$199/month",
         features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "AI Task Prioritization",
         "Resource Allocation Optimization",
         "Predictive Project Analytics",
@@ -296,24 +251,20 @@ export default function Page() {
         "Integration with 50+ Tools",
         "Custom Dashboard Creation"
       ],
-<<<<<<< HEAD
       category: "Project Management",
       popular: true,
       link: "/zion-ai-project-manager-pro",
       benefits: [
-=======
         category: "Project Management",
         popular: true,
         link: "/zion-ai-project-manager-pro",
         benefits: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "25% faster project completion",
         "40% better resource utilization",
                 "Predictive risk management",
         "Complete project visibility"
       ]
     },
-<<<<<<< HEAD
     {
       id: "zion-ai-email-analyzer-pro",
       name: "Zion AI Email Analyzer Pro",
@@ -322,7 +273,6 @@ export default function Page() {
       price: "From $79/month",
       originalPrice: "$159/month",
       features: [
-=======
     {,
     id: "zion-ai-email-analyzer-pro",
         name: "Zion AI Email Analyzer Pro",
@@ -331,7 +281,6 @@ export default function Page() {
         price: "From $79/month",
         originalPrice: "$159/month",
         features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "AI Sentiment Analysis",
         "Priority Email Scoring",
         "Automated Response Suggestions",
@@ -341,24 +290,20 @@ export default function Page() {
         "Team Collaboration Features",
         "Integration with Major Email Clients"
       ],
-<<<<<<< HEAD
       category: "Email Management",
       popular: false,
       link: "/zion-ai-email-analyzer-pro",
       benefits: [
-=======
         category: "Email Management",
         popular: false,
         link: "/zion-ai-email-analyzer-pro",
         benefits: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "60% faster email processing",
         "90% accuracy in priority detection",
         "Automated response suggestions",
         "Complete email optimization"
       ]
     },
-<<<<<<< HEAD
     {
       id: "zion-smart-inventory-optimizer-pro",
       name: "Zion Smart Inventory Optimizer Pro",
@@ -367,7 +312,6 @@ export default function Page() {
       price: "From $179/month",
       originalPrice: "$359/month",
       features: [
-=======
     {,
     id: "zion-smart-inventory-optimizer-pro",
         name: "Zion Smart Inventory Optimizer Pro",
@@ -376,7 +320,6 @@ export default function Page() {
         price: "From $179/month",
         originalPrice: "$359/month",
         features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "AI Demand Forecasting",
         "Automated Reorder Points",
         "Cost Optimization Analysis",
@@ -386,24 +329,20 @@ export default function Page() {
         "Integration with ERP Systems",
         "Real-time Inventory Alerts"
       ],
-<<<<<<< HEAD
       category: "Inventory Management",
       popular: false,
       link: "/zion-smart-inventory-optimizer-pro",
       benefits: [
-=======
         category: "Inventory Management",
         popular: false,
         link: "/zion-smart-inventory-optimizer-pro",
         benefits: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "30% reduction in inventory costs",
         "50% fewer stockouts",
         "Automated reordering",
         "Complete supply chain visibility"
       ]
     },
-<<<<<<< HEAD
     {
       id: "zion-ai-customer-sentiment-tracker-pro",
       name: "Zion AI Customer Sentiment Tracker Pro",
@@ -412,7 +351,6 @@ export default function Page() {
       price: "From $129/month",
       originalPrice: "$259/month",
       features: [
-=======
     {,
     id: "zion-ai-customer-sentiment-tracker-pro",
         name: "Zion AI Customer Sentiment Tracker Pro",
@@ -421,7 +359,6 @@ export default function Page() {
         price: "From $129/month",
         originalPrice: "$259/month",
         features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "Multi-channel Sentiment Analysis",
         "Real-time Monitoring Dashboard",
         "Trend Analysis & Reporting",
@@ -431,24 +368,20 @@ export default function Page() {
         "Custom Sentiment Models",
         "Integration with CRM Systems"
       ],
-<<<<<<< HEAD
       category: "Customer Analytics",
       popular: false,
       link: "/zion-ai-customer-sentiment-tracker-pro",
       benefits: [
-=======
         category: "Customer Analytics",
         popular: false,
         link: "/zion-ai-customer-sentiment-tracker-pro",
         benefits: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "Real-time customer insights",
         "40% improvement in customer satisfaction",
         "Proactive issue detection",
         "Complete sentiment visibility"
       ]
     },
-<<<<<<< HEAD
     {
       id: "zion-smart-expense-categorizer-pro",
       name: "Zion Smart Expense Categorizer Pro",
@@ -457,7 +390,6 @@ export default function Page() {
       price: "From $89/month",
       originalPrice: "$179/month",
       features: [
-=======
     {,
     id: "zion-smart-expense-categorizer-pro",
         name: "Zion Smart Expense Categorizer Pro",
@@ -466,7 +398,6 @@ export default function Page() {
         price: "From $89/month",
         originalPrice: "$179/month",
         features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "AI Receipt Processing",
         "Automatic Expense Categorization",
         "Fraud Detection & Alerts",
@@ -476,24 +407,20 @@ export default function Page() {
         "Team Expense Management",
         "Advanced Financial Reporting"
       ],
-<<<<<<< HEAD
       category: "Financial Management",
       popular: false,
       link: "/zion-smart-expense-categorizer-pro",
       benefits: [
-=======
         category: "Financial Management",
         popular: false,
         link: "/zion-smart-expense-categorizer-pro",
         benefits: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "90% reduction in manual data entry",
         "95% accuracy in categorization",
         "Automated fraud detection",
         "Complete financial visibility"
       ]
     },
-<<<<<<< HEAD
     {
       id: "zion-ai-content-studio-pro",
       name: "Zion AI Content Studio Pro",
@@ -502,7 +429,6 @@ export default function Page() {
       price: "From $159/month",
       originalPrice: "$319/month",
       features: [
-=======
     {,
     id: "zion-ai-content-studio-pro",
         name: "Zion AI Content Studio Pro",
@@ -511,7 +437,6 @@ export default function Page() {
         price: "From $159/month",
         originalPrice: "$319/month",
         features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "Multi-format Content Generation",
         "Brand Voice Training & Consistency",
         "SEO Optimization & Analysis",
@@ -521,24 +446,20 @@ export default function Page() {
         "Performance Analytics",
         "Integration with Publishing Platforms"
       ],
-<<<<<<< HEAD
       category: "Content Creation",
       popular: false,
       link: "/zion-ai-content-studio-pro",
       benefits: [
-=======
         category: "Content Creation",
         popular: false,
         link: "/zion-ai-content-studio-pro",
         benefits: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "500% increase in content output",
         "80% improvement in SEO performance",
         "Consistent brand voice",
         "Complete content automation"
       ]
     },
-<<<<<<< HEAD
     {
       id: "zion-ai-devops-automation-pro",
       name: "Zion AI DevOps Automation Pro",
@@ -547,7 +468,6 @@ export default function Page() {
       price: "From $229/month",
       originalPrice: "$459/month",
       features: [
-=======
     {,
     id: "zion-ai-devops-automation-pro",
         name: "Zion AI DevOps Automation Pro",
@@ -556,7 +476,6 @@ export default function Page() {
         price: "From $229/month",
         originalPrice: "$459/month",
         features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "AI-Powered Deployment Optimization",
         "Automated Testing & Quality Assurance",
         "Performance Monitoring & Alerts",
@@ -566,17 +485,14 @@ export default function Page() {
         "Resource Optimization",
         "Team Collaboration & Workflow"
       ],
-<<<<<<< HEAD
       category: "DevOps & Automation",
       popular: false,
       link: "/zion-ai-devops-automation-pro",
       benefits: [
-=======
         category: "DevOps & Automation",
         popular: false,
         link: "/zion-ai-devops-automation-pro",
         benefits: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "50% faster deployment cycles",
         "70% reduction in deployment errors",
         "Automated quality assurance",
@@ -585,9 +501,6 @@ export default function Page() {
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   return (
     <>
       <Helmet>
@@ -602,13 +515,11 @@ export default function Page() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/micro-saas-services" />
       </Helmet>
-<<<<<<< HEAD
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Micro Saas Services</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function MicroSaasServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -616,16 +527,14 @@ export default function MicroSaasServicesPage() {
         <title>Micro Saas Services - Zion Tech Group</title>
         <meta name="description" content="Advanced micro saas services solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Micro Saas Services
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function MicrosaasservicesPage() {
   return (
@@ -635,10 +544,9 @@ export default function MicrosaasservicesPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Micro Saas Services</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -646,14 +554,14 @@ export default function MicrosaasservicesPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -661,19 +569,18 @@ export default function MicrosaasservicesPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
         </div>
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        
+
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
@@ -681,18 +588,18 @@ export default function MicrosaasservicesPage() {
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">#1 Micro SAAS Solutions Provider 2024</span>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 Micro SAAS Solutions
               </span>
             </h1>
-            
+
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-              Transform your business with our comprehensive suite of AI-powered micro SAAS solutions. 
+              Transform your business with our comprehensive suite of AI-powered micro SAAS solutions.
               Ready-to-deploy software that delivers immediate value and accelerates your digital transformation.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <Link
                 to="/contact"
@@ -709,7 +616,7 @@ export default function MicrosaasservicesPage() {
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
-            
+
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {stats.map((stat, index) => (
@@ -766,7 +673,7 @@ export default function MicrosaasservicesPage() {
                 Discover our comprehensive suite of AI-powered micro SAAS solutions designed to transform your business operations.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasServices.map((service, index) => (
                 <div
@@ -780,10 +687,10 @@ export default function MicrosaasservicesPage() {
                       </span>
                     </div>
                   )}
-                  
+
                   {/* Animated background effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   <div className="relative z-10">
                     <div className="flex items-center mb-4">
                       <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
@@ -797,14 +704,14 @@ export default function MicrosaasservicesPage() {
                         </div>
                       </div>
                     </div>
-                    
+
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                       {service.name}
                     </h3>
                     <p className="text-gray-300 text-sm leading-relaxed mb-4">
                       {service.description}
                     </p>
-                    
+
                     {/* Pricing */}
                     <div className="text-center mb-4">
                       <div className="flex items-center justify-center space-x-2">
@@ -814,7 +721,7 @@ export default function MicrosaasservicesPage() {
                         )}
                       </div>
                     </div>
-                    
+
                     {/* Key Features */}
                     <div className="space-y-2 mb-6">
                       {service.features.slice(0, 4).map((feature, idx) => (
@@ -829,7 +736,7 @@ export default function MicrosaasservicesPage() {
                         </div>
                       )}
                     </div>
-                    
+
                     {/* Benefits */}
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Benefits:</h4>
@@ -842,7 +749,7 @@ export default function MicrosaasservicesPage() {
                         ))}
                       </div>
                     </div>
-                    
+
                     <div className="mt-4 text-center">
                       <Link
                         to={service.link}
@@ -867,10 +774,10 @@ export default function MicrosaasservicesPage() {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already using our micro SAAS solutions to drive growth and innovation. 
+                Join thousands of businesses already using our micro SAAS solutions to drive growth and innovation.
                 Start your free trial today or contact us for a personalized consultation.
               </p>
-              
+
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
@@ -895,7 +802,7 @@ export default function MicrosaasservicesPage() {
                   <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
@@ -914,12 +821,10 @@ export default function MicrosaasservicesPage() {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       </div>
     </>
   );
 }
-=======
 export default function MicroSaasServicesPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -963,8 +868,4 @@ export default function MicroSaasServicesPage() {
   );
 
 }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

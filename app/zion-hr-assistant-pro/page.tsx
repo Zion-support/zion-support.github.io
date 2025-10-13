@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function zionHrAssistantPro() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -19,12 +8,11 @@ export default function zionHrAssistantPro() {
         <title>Zion Hr Assistant Pro - Zion Tech Group</title>
         <meta name="description" content="Zion Hr Assistant Pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Zion Hr Assistant Pro</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function ZionHrAssistantProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -32,16 +20,14 @@ export default function ZionHrAssistantProPage() {
         <title>Zion Hr Assistant Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced zion hr assistant pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Zion Hr Assistant Pro
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function ZionhrassistantproPage() {
   return (
@@ -51,21 +37,18 @@ export default function ZionhrassistantproPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Zion Hr Assistant Pro</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
             <p className="text-gray-600">
               Comprehensive solution for your business requirements.
             </p>
-=======
 import { Link } from 'react-router-dom';
 import { Users, Brain, Clock, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Calendar, Heart } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-=======
 import React from 'react';
 import { Clock } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -77,10 +60,7 @@ import { Calendar } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Heart } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const ZionHRAssistantPro = () => {
   const features = [
     {
@@ -200,12 +180,8 @@ const ZionHRAssistantPro = () => {
       color: "from-orange-500 to-red-500",
     }
   ];
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -224,18 +200,18 @@ import { Helmet } from 'react-helmet-async';
               <Brain className="w-4 h-4 text-cyan-400 mr-2" />
               <span className="text-cyan-400 text-sm font-medium">AI-Powered HR Management</span>
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 Zion HR Assistant Pro
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize your human resources with AI-powered recruitment, performance analytics, 
+              Revolutionize your human resources with AI-powered recruitment, performance analytics,
               and automated workflows. Transform HR from administrative burden to strategic advantage.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
@@ -264,16 +240,15 @@ import { Helmet } from 'react-helmet-async';
                 </div>
               ))}
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -281,7 +256,7 @@ import { Helmet } from 'react-helmet-async';
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -298,11 +273,11 @@ import { Helmet } from 'react-helmet-async';
               Complete HR Management Suite
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From recruitment to retirement, manage every aspect of your human resources 
+              From recruitment to retirement, manage every aspect of your human resources
               with intelligent automation and AI-powered insights.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {hrProcesses.map((process, index) => (
               <div
@@ -333,11 +308,11 @@ import { Helmet } from 'react-helmet-async';
               AI-Powered HR Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge artificial intelligence to automate HR processes, 
+              Leverage cutting-edge artificial intelligence to automate HR processes,
               improve decision-making, and enhance employee experience.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
@@ -372,18 +347,18 @@ import { Helmet } from 'react-helmet-async';
               Flexible Pricing for Every Organization
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your team size and HR needs. All plans include our core AI features 
+              Choose the plan that fits your team size and HR needs. All plans include our core AI features
               and come with a 30-day free trial.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
-                  plan.popular 
-                    ? 'border-cyan-400 shadow-2xl shadow-cyan-500/25' 
+                  plan.popular
+                    ? 'border-cyan-400 shadow-2xl shadow-cyan-500/25'
                     : 'border-white/20 hover:border-cyan-400/50'
                 }`}
               >
@@ -394,7 +369,7 @@ import { Helmet } from 'react-helmet-async';
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -403,7 +378,7 @@ import { Helmet } from 'react-helmet-async';
                     <span className="text-gray-300 ml-2">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -412,7 +387,7 @@ import { Helmet } from 'react-helmet-async';
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
@@ -441,7 +416,7 @@ import { Helmet } from 'react-helmet-async';
               See how HR professionals are transforming their departments with our AI-powered solution.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -472,7 +447,6 @@ import { Helmet } from 'react-helmet-async';
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         </section>
-=======
 
 import React from 'react';
 
@@ -481,17 +455,15 @@ export default function Page() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4 py-16">
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your HR Operations?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of HR professionals already using Zion HR Assistant Pro to streamline their operations. 
+            Join thousands of HR professionals already using Zion HR Assistant Pro to streamline their operations.
             Start your free trial today and experience the future of HR management.
           </p>
-<<<<<<< HEAD
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
@@ -511,18 +483,12 @@ export default function Page() {
       </section>
     </div>
   );
-<<<<<<< HEAD
-=======
 };
 
-<<<<<<< HEAD
 export default ZionHRAssistantPro;
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }
-=======
 
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -534,7 +500,7 @@ export default function PagePage() {
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-      
+
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -550,28 +516,16 @@ export default function PagePage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 export default function ZionHrAssistantProPage() {
 }
 
 }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

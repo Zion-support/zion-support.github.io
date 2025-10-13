@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -8,7 +7,6 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
   );
-=======
 class SimpleWebsiteAnalyzer {
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
@@ -72,7 +70,7 @@ class SimpleWebsiteAnalyzer {
     return [
 //       '/',
 //       '/about',
-//       '/contact', 
+//       '/contact',
 //       '/services',
 //       '/ai-services',
 //       '/micro-saas',
@@ -171,7 +169,7 @@ class SimpleWebsiteAnalyzer {
     for (const route of routes) {
       const fullUrl = `${this.baseUrl}${route}`;
       const result = await this.checkUrl(fullUrl);
-      
+
       if (result.success) {
         this.workingLinks.push({
 //           url: fullUrl,
@@ -188,7 +186,7 @@ class SimpleWebsiteAnalyzer {
         });
         - ${result.error || 'Not found'}`);
       }
-      
+
       // Small delay to be respectful
       await new Promise(resolve => setTimeout(resolve, 100));
     }
@@ -240,23 +238,22 @@ class SimpleWebsiteAnalyzer {
 
   async runAnalysis() {
     await this.analyzeRoutes();
-    
+
     const report = this.generateReport();
-    
+
     if (report.brokenLinks.length > 0) {
       report.brokenLinks.forEach(link => {
         - ${link.error || 'Not found'}`);
       });
     }
-    
+
     if (report.recommendations.length > 0) {
       report.recommendations.forEach(rec => {
         });
     }
-    
+
     // Save report
     fs.writeFileSync('simple-analysis-report.json', JSON.stringify(report, null, 2));
     return report;
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }

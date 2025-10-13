@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 interface FuturisticButtonEnhancedProps {
-=======
 import { motion } from 'framer-motion';
 import { Icon, Icon } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 interface FuturisticButtonEnhancedProps {
   children: React.ReactNode;
@@ -21,15 +15,11 @@ interface FuturisticButtonEnhancedProps {
   iconPosition?: 'left' | 'right';
   disabled?: boolean;
   loading?: boolean;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   className?: string;
   animated?: boolean;
   neon?: boolean;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function FuturisticButtonEnhanced({ className = '', children }: FuturisticButtonEnhancedProps) {
   return (
     <div className={`${className}`}>
@@ -37,7 +27,6 @@ export default function FuturisticButtonEnhanced({ className = '', children }: F
     </div>
   );
 }
-=======
 export default function FuturisticButtonEnhanced({ className = '', children, ...props }: FuturisticButtonEnhancedProps) {
     return (
         <div className="component" {...props}>
@@ -45,8 +34,6 @@ export default function FuturisticButtonEnhanced({ className = '', children, ...
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
   children,
   onClick,
@@ -91,16 +78,16 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
   };
 
   const buttonVariants = {
-    initial: { 
+    initial: {
       scale: 1,
       boxShadow: '0 0 0 rgba(6, 182, 212, 0)'
     },
-    hover: { 
+    hover: {
       scale: 1.05,
       boxShadow: '0 10px 30px rgba(6, 182, 212, 0.4)',
       transition: { duration: 0.2 }
     },
-    tap: { 
+    tap: {
       scale: 0.95,
       transition: { duration: 0.1 }
     }
@@ -108,8 +95,8 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
 
   const _rippleVariants = {
     initial: { scale: 0, opacity: 1 },
-    animate: { 
-      scale: 4, 
+    animate: {
+      scale: 4,
       opacity: 0,
       transition: { duration: 0.6, ease: "easeOut" }
     }
@@ -121,7 +108,7 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
       {animated && (
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       )}
-      
+
       {/* Neon glow effect */}
       {neon && (
         <div className={`
@@ -129,14 +116,14 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
           bg-gradient-to-r from-${glowColor}-500/20 to-${glowColor}-500/10
         `} />
       )}
-      
+
       {/* Loading spinner */}
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
         </div>
       )}
-      
+
       {/* Content */}
       <div className={`relative z-10 flex items-center ${loading ? 'opacity-0' : 'opacity-100'}`}>
         {Icon && iconPosition === 'left' && (
@@ -147,7 +134,7 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
           <Icon className={`w-4 h-4 ${size === 'sm' ? 'w-3 h-3' : size === 'lg' ? 'w-5 h-5' : size === 'xl' ? 'w-6 h-6' : 'w-4 h-4'} ml-2 group-hover:scale-110 transition-transform duration-200`} />
         )}
       </div>
-      
+
       {/* Corner accents */}
       <div className="absolute top-1 right-1 w-1 h-1 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="absolute bottom-1 left-1 w-1 h-1 bg-purple-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300" />
@@ -191,24 +178,13 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
     </motion.button>
   );
 };
-=======
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default FuturisticButtonEnhanced;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default function Futuristicbuttonenhanced({ className = '', children, ...props }: FuturisticbuttonenhancedProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

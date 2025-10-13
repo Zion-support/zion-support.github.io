@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -8,7 +7,6 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
   );
-=======
 import https from 'https';
 import http from 'http';
 import { JSDOM } from 'jsdom';
@@ -16,7 +14,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 // #!/usr/bin/env node
-
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -126,7 +123,7 @@ class WebsiteLinkAnalyzer {
       try {
         const absoluteUrl = new URL(href, currentUrl).href;
         const isExternal = !absoluteUrl.startsWith(this.baseUrl);
-        
+
         links.push({
 //           href,
 //           absoluteUrl,
@@ -202,7 +199,7 @@ class WebsiteLinkAnalyzer {
       // Check if it's a local page that should exist
       if (link.absoluteUrl.startsWith(this.baseUrl)) {
         const linkResult = await this.checkUrl(link.absoluteUrl);
-        
+
         if (linkResult.working) {
           this.results.workingLinks++;
           this.workingLinks.push({
@@ -286,11 +283,11 @@ class WebsiteLinkAnalyzer {
 
   analyzeBrokenLinkPatterns() {
     const patterns = {};
-    
+
     this.brokenLinks.forEach(link => {
       const path = new URL(link.url).pathname;
       const segments = path.split('/').filter(s => s);
-      
+
       if (segments.length > 0) {
         const pattern = segments[0];
         patterns[pattern] = (patterns[pattern] || 0) + 1;
@@ -306,11 +303,10 @@ class WebsiteLinkAnalyzer {
     try {
       await this.analyzePage(this.baseUrl);
       const report = await this.generateReport();
-      
+
       return report;
     } catch (error) {
       throw error;
     }
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }

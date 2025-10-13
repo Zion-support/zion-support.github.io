@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface FooterProps {
@@ -8,20 +7,14 @@ interface FooterProps {
 
 export default function Footer({ className = '', children }: FooterProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
-<<<<<<< HEAD
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     </div>
-=======
 export default Footer;
   ];
   ];
@@ -67,7 +60,5 @@ export default Footer;
 //               © 2024 Zion Tech Group. All rights reserved.
                   {link.name}
               ))};
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

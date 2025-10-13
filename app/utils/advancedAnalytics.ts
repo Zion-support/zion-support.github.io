@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // advancedAnalytics utility functions
 
 export interface advancedAnalyticsConfig {
@@ -14,14 +12,12 @@ export class advancedAnalytics {
       enabled: true,
       ...config
     };
-=======
 
 // advancedAnalytics utility
 export const advancedAnalytics = {
   // Utility implementation,
     init: () => {
     console.log('advancedAnalytics initialized');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   }
 
   init(): void {
@@ -33,14 +29,8 @@ export const advancedAnalytics = {
 
 export const advancedanalytics = new advancedAnalytics();
 export default advancedanalytics;
-=======
 // advancedAnalytics
 export const advancedAnalytics = () => {
   // Utility function implementation
   return null;
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

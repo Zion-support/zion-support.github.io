@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -17,7 +15,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 // #!/usr/bin/env node
-
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -152,5 +149,4 @@ for (const file of tsxFiles) {
   fixedCount++;
 }
 
-// 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+//

@@ -7,25 +7,19 @@ interface EnhancedLoadingStatesProps {
 
 export default function EnhancedLoadingStates({ className = '', children }: EnhancedLoadingStatesProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
 }
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <div className="relative mb-8">
@@ -34,13 +28,13 @@ export default function EnhancedLoadingStates({ className = '', children }: Enha
 </div>
           <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-full animate-bounce"></div>
 </div>
-        
+
         <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
-        
+
         {showProgress && (
           <div className="w-64 mx-auto mb-4">
             <div className="bg-gray-700 rounded-full h-2">
-//               <div 
+//               <div
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${progress}%` }}
 //               ></div>
@@ -48,7 +42,7 @@ export default function EnhancedLoadingStates({ className = '', children }: Enha
             <p className="text-sm text-gray-300 mt-2">{progress}% complete</p>
 </div>
         )}
-        
+
         <div className="flex justify-center space-x-2">
           <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
           <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
@@ -56,15 +50,12 @@ export default function EnhancedLoadingStates({ className = '', children }: Enha
 </div>
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }
-<<<<<<< HEAD
-=======
 
-export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ 
-//   serviceType, 
-//   message 
+export const ServiceLoading: React.FC<ServiceLoadingProps> = ({
+//   serviceType,
+//   message
 }) => {
   const getServiceIcon = () => {
     switch (serviceType) {
@@ -83,7 +74,7 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({
 
   const getServiceMessage = () => {
     if (message) return message;
-    
+
     switch (serviceType) {
 //       case 'ai':
         return "Initializing AI Solutions...";
@@ -109,9 +100,9 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({
 </div>
           <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-cyan-400 animate-spin"></div>
 </div>
-        
+
         <h2 className="text-3xl font-bold text-white mb-4">{getServiceMessage()}</h2>
-        
+
         <div className="max-w-md mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
             <div className="space-y-3">
@@ -140,9 +131,9 @@ interface SkeletonLoadingProps {
   count?: number;
 }
 
-export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({ 
-  type, 
-  count = 1 
+export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
+  type,
+  count = 1
 }) => {
   const renderSkeleton = () => {
     switch (type) {
@@ -155,7 +146,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
             <div className="h-4 bg-gray-600 rounded w-3/4"></div>
 </div>
         );
-      
+
 //       case 'list':
         return (
           <div className="space-y-4">
@@ -170,7 +161,7 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
             ))}
 </div>
         );
-      
+
 //       case 'text':
         return (
           <div className="space-y-3 animate-pulse">
@@ -183,14 +174,14 @@ export const SkeletonLoading: React.FC<SkeletonLoadingProps> = ({
             ))}
 </div>
         );
-      
+
 //       case 'image':
         return (
           <div className="animate-pulse">
             <div className="w-full h-64 bg-gray-600 rounded-lg"></div>
 </div>
         );
-      
+
 //       default:
         return <div className="animate-pulse bg-gray-600 rounded h-4"></div>;
     }
@@ -212,9 +203,9 @@ interface ErrorLoadingProps {
   onRetry?: () => void;
 }
 
-export const ErrorLoading: React.FC<ErrorLoadingProps> = ({ 
-//   error, 
-//   onRetry 
+export const ErrorLoading: React.FC<ErrorLoadingProps> = ({
+//   error,
+//   onRetry
 }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -222,10 +213,10 @@ export const ErrorLoading: React.FC<ErrorLoadingProps> = ({
         <div className="w-24 h-24 mx-auto mb-8 rounded-full bg-red-500/20 flex items-center justify-center">
           <Loader2 className="w-12 h-12 text-red-400 animate-spin" />
 </div>
-        
+
         <h2 className="text-2xl font-bold text-white mb-4">Loading Error</h2>
         <p className="text-gray-300 mb-6 max-w-md mx-auto">{error}</p>
-        
+
         {onRetry && (
 //           <button
             onClick={onRetry}
@@ -245,10 +236,10 @@ interface ProgressLoadingProps {
   subMessage?: string;
 }
 
-export const ProgressLoading: React.FC<ProgressLoadingProps> = ({ 
-//   progress, 
-//   message, 
-//   subMessage 
+export const ProgressLoading: React.FC<ProgressLoadingProps> = ({
+//   progress,
+//   message,
+//   subMessage
 }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -257,24 +248,24 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({
           <div className="w-32 h-32 mx-auto rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
             <span className="text-2xl font-bold text-white">{progress}%</span>
 </div>
-//           <div 
+//           <div
             className="absolute inset-0 rounded-full border-4 border-transparent border-t-cyan-400 animate-spin"
             style={{ animationDuration: '2s' }}
 //           ></div>
 </div>
-        
+
         <h2 className="text-2xl font-bold text-white mb-4">{message}</h2>
         {subMessage && (
           <p className="text-gray-300 mb-6">{subMessage}</p>
         )}
-        
+
         <div className="w-full bg-gray-700 rounded-full h-3 mb-4">
-//           <div 
+//           <div
             className="bg-gradient-to-r from-cyan-500 to-purple-600 h-3 rounded-full transition-all duration-500 ease-out"
             style={{ width: `${progress}%` }}
 //           ></div>
 </div>
-        
+
         <div className="flex justify-center space-x-1">
           {Array.from({ length: 10 }).map((_, index) => (
 //             <div
@@ -292,5 +283,3 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({
 };
 
 export default LoadingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

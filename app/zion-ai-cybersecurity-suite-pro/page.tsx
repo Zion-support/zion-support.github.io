@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function zionAiCybersecuritySuitePro() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -21,12 +9,11 @@ export default function zionAiCybersecuritySuitePro() {
         <title>Zion Ai Cybersecurity Suite Pro - Zion Tech Group</title>
         <meta name="description" content="Zion Ai Cybersecurity Suite Pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Zion Ai Cybersecurity Suite Pro</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function ZionAiCybersecuritySuiteProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -34,16 +21,14 @@ export default function ZionAiCybersecuritySuiteProPage() {
         <title>Zion Ai Cybersecurity Suite Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced zion ai cybersecurity suite pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Zion Ai Cybersecurity Suite Pro
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function ZionaicybersecuritysuiteproPage() {
   return (
@@ -53,10 +38,9 @@ export default function ZionaicybersecuritysuiteproPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Zion Ai Cybersecurity Suite Pro</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -64,14 +48,14 @@ export default function ZionaicybersecuritysuiteproPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -79,7 +63,7 @@ export default function ZionaicybersecuritysuiteproPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -88,13 +72,11 @@ export default function ZionaicybersecuritysuiteproPage() {
       </div>
     </div>
   );
-=======
 import { useState, useEffect } from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AlertTriangle } from 'lucide-react';
@@ -105,10 +87,7 @@ import { Network } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const ZionAICybersecuritySuiteProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -131,13 +110,10 @@ const ZionAICybersecuritySuiteProPage = () => {
         "Basic reporting",
         "Mobile app access"
       ],
-<<<<<<< HEAD
         popular: false,
         color: "from-gray-500 to-gray-600"
-=======
       popular: false,
       color: "from-gray-500 to-gray-600",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     },
     {,
     name: "Professional",
@@ -156,13 +132,10 @@ const ZionAICybersecuritySuiteProPage = () => {
         "Compliance reporting",
         "Dedicated security advisor"
       ],
-<<<<<<< HEAD
         popular: true,
         color: "from-cyan-500 to-purple-600"
-=======
       popular: true,
       color: "from-cyan-500 to-purple-600",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     },
     {,
     name: "Enterprise",
@@ -181,18 +154,14 @@ const ZionAICybersecuritySuiteProPage = () => {
         "SLA guarantees",
         "Penetration testing"
       ],
-<<<<<<< HEAD
         popular: false,
         color: "from-purple-500 to-pink-500"
-=======
       popular: false,
       color: "from-purple-500 to-pink-500",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
   const securityModules = [
-<<<<<<< HEAD
     {,
     title: "Threat Intelligence",
         description: "Real-time threat intelligence feeds and AI-powered analysis of global security threats and attack patterns",
@@ -228,7 +197,6 @@ const ZionAICybersecuritySuiteProPage = () => {
         description: "Comprehensive cloud security monitoring and protection for AWS, Azure, and Google Cloud",
         icon: <Cloud className="w-6 h-6" />,
         color: "from-cyan-500 to-blue-500"
-=======
     {
       title: "Threat Intelligence",
       description: "Real-time threat intelligence feeds and AI-powered analysis of global security threats and attack patterns",
@@ -264,12 +232,10 @@ const ZionAICybersecuritySuiteProPage = () => {
       description: "Comprehensive cloud security monitoring and protection for AWS, Azure, and Google Cloud",
       icon: <Cloud className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
   const threatTypes = [
-<<<<<<< HEAD
     {,
     title: "Ransomware Protection",
         description: "Advanced behavioral analysis and AI-powered detection to prevent ransomware attacks before they encrypt your data",
@@ -305,7 +271,6 @@ const ZionAICybersecuritySuiteProPage = () => {
         description: "Comprehensive monitoring and analysis of third-party vendors and supply chain security risks",
         icon: <Globe className="w-8 h-8" />,
         color: "from-cyan-500 to-blue-500"
-=======
     {
       title: "Ransomware Protection",
       description: "Advanced behavioral analysis and AI-powered detection to prevent ransomware attacks before they encrypt your data",
@@ -341,11 +306,9 @@ const ZionAICybersecuritySuiteProPage = () => {
       description: "Comprehensive monitoring and analysis of third-party vendors and supply chain security risks",
       icon: <Globe className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
@@ -362,24 +325,24 @@ const ZionAICybersecuritySuiteProPage = () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Security Intelligence</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Zion AI Cybersecurity Suite Pro
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Protect your business with the most advanced AI-powered cybersecurity suite. 
+            Protect your business with the most advanced AI-powered cybersecurity suite.
             Detect, prevent, and respond to cyber threats with enterprise-grade security and automated incident response.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               >
@@ -390,7 +353,7 @@ const ZionAICybersecuritySuiteProPage = () => {
               Watch Demo
             </FuturisticButton>
           </div>
-          
+
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center group">
@@ -433,7 +396,7 @@ const ZionAICybersecuritySuiteProPage = () => {
               Comprehensive Threat Protection
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our AI-powered security suite protects against all types of cyber threats with advanced machine learning 
+              Our AI-powered security suite protects against all types of cyber threats with advanced machine learning
               and behavioral analysis technologies.
             </p>
           </div>
@@ -547,8 +510,8 @@ const ZionAICybersecuritySuiteProPage = () => {
               <div
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20' 
+                  plan.popular
+                    ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20'
                     : 'border-white/20'
                 } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
               >
@@ -635,7 +598,7 @@ const ZionAICybersecuritySuiteProPage = () => {
               Secure Your Business Today
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Don't wait for a cyber attack to happen. Protect your business with the most advanced 
+              Don't wait for a cyber attack to happen. Protect your business with the most advanced
               AI-powered cybersecurity suite available. Get your free security assessment today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -658,24 +621,12 @@ const ZionAICybersecuritySuiteProPage = () => {
     </div>
   );
 };
-=======
 export default function ZionAiCybersecuritySuiteProPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default ZionAICybersecuritySuiteProPage;
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }
-=======
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

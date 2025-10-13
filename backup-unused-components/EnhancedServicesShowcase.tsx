@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedServicesShowcaseProps {
@@ -11,14 +10,9 @@ export default function EnhancedServicesShowcase({ className = '', children }: E
     <div className={`${className}`}>
       {children}
     </div>
-=======
 import React from "react";
-<<<<<<< HEAD
 import;
-=======
-<<<<<<< HEAD
-import 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+import
   Brain,
   Shield,
   Zap,
@@ -27,7 +21,7 @@ import
   ArrowRight,
  from "lucide-react";
 import { Link } from "react-router-dom";
-const EnhancedServicesShowcase: React.FC = () => 
+const EnhancedServicesShowcase: React.FC = () =>
   const services = [,
     icon: Brain,
         title: "AI Solutions",
@@ -64,10 +58,8 @@ const EnhancedServicesShowcase: React.FC = () =>
         "Disaster Recovery",
       ],
 ,
-<<<<<<< HEAD
-    
+
       icon: Globe,
-=======
 import { Link } from "react-router-dom";
 //   Brain,
 //   Shield,
@@ -117,27 +109,22 @@ const EnhancedServicesShowcase: React.FC = () => {
     },
     {
 //       icon: Globe,
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       title: "Digital Transformation",
 //       description:
         "Complete digital transformation services to modernize your business and stay competitive.",
-<<<<<<< HEAD
       features: [
-=======
     ,
     icon: Globe,
         title: "Digital Transformation",
         description:
         "Complete digital transformation services to modernize your business and stay competitive.",
         features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "Strategy Development",
         "Technology Integration",
         "Change Management",
         "Training & Support",
       ],
 ,
-=======
 //       features: [
 //         "Strategy Development",
 //         "Technology Integration",
@@ -145,10 +132,8 @@ const EnhancedServicesShowcase: React.FC = () => {
 //         "Training & Support",
 //       ],
     },
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   ];
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
       <div className="container mx-auto px-4 py-16"></div>
         <div className="text-center mb-16"></div>
@@ -161,19 +146,15 @@ const EnhancedServicesShowcase: React.FC = () => {
           </p>
   </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-          
-<<<<<<< HEAD
+
             <div;
               key={index}
               className="cyber-card p-8 group hover:scale-105 transition-transform"
-=======
             <div>
   key={index}>
   className="cyber-card p-8 group hover:scale-105 transition-transform"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
             >
               <div className="flex items-center mb-4"></div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -193,31 +174,22 @@ const EnhancedServicesShowcase: React.FC = () => {
               className="cyber-card p-8 group hover:scale-105 transition-transform"
 //             >
               <div className="flex items-center mb-4">
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
                 <service.icon className="h-12 w-12 text-cyan-400 mr-4" />
                 <h3 className="text-2xl font-semibold text-white"></h3>
                   {service.title}
-<<<<<<< HEAD
                 </h3>
   </div>
-=======
 </h3>
 </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
               <p className="text-gray-300 mb-6">{service.description}</p>
-<<<<<<< HEAD
               <div className="mb-6"></div>
                 <h4 className="text-sm font-semibold text-cyan-400 mb-3"></h4>
                   Key Features;
                 </h4>
                 <ul className="space-y-2"></ul>
-                  
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                     <li;
-=======
                     <li
-=======
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-cyan-400 mb-3">
 //                   Key Features
@@ -225,20 +197,15 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
 //                     <li
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
                       key={featureIndex}
                       className="flex items-center text-sm text-gray-300"
 //                     >
-=======
                     <li>
   key={featureIndex}>
   className="flex items-center text-sm text-gray-300"
                     >
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
                       <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
                       {feature}
-<<<<<<< HEAD
                     </li>
 
                 </ul>
@@ -249,16 +216,12 @@ const EnhancedServicesShowcase: React.FC = () => {
               </button>
   </div>  </div>
         <div className="text-center mt-16"></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <Link;
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-=======
           <Link>
   to="/contact">
   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           >
             Contact Us;
             <ArrowRight className="w-5 h-5 ml-2" />
@@ -266,10 +229,7 @@ const EnhancedServicesShowcase: React.FC = () => {
   </div>
   </div>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
           <Link
-=======
 //                     </li>
                   ))}
 //                 </ul>
@@ -284,7 +244,6 @@ const EnhancedServicesShowcase: React.FC = () => {
 
         <div className="text-center mt-16">
 //           <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
 //           >
@@ -294,6 +253,5 @@ const EnhancedServicesShowcase: React.FC = () => {
 </div>
 </div>
 </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useRef, useEffect, useState } from 'react';
 import FuturisticBackground from "../components/FuturisticBackground";
 
@@ -75,7 +73,7 @@ const FuturisticBackgroundEnhanced = ({ children }: { children: React.ReactNode 
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-        
+
         // Add glow effect
         ctx.shadowBlur = 20;
         ctx.shadowColor = this.color;
@@ -104,7 +102,7 @@ const FuturisticBackgroundEnhanced = ({ children }: { children: React.ReactNode 
         const dx = this.particle1.x - this.particle2.x;
         const dy = this.particle1.y - this.particle2.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        
+
         if (distance < 150) {
           this.opacity = Math.max(0, 1 - distance / 150);
         } else {
@@ -205,7 +203,7 @@ const FuturisticBackgroundEnhanced = ({ children }: { children: React.ReactNode 
         const dx = particle.x - mousePosition.x;
         const dy = particle.y - mousePosition.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-        
+
         if (distance < 100) {
           const force = (100 - distance) / 100;
           particle.vx += (dx / distance) * force * 0.01;
@@ -227,7 +225,7 @@ const FuturisticBackgroundEnhanced = ({ children }: { children: React.ReactNode 
         ctx.beginPath();
         ctx.arc(x, y, size, 0, Math.PI * 2);
         ctx.fill();
-        
+
         // Add glow
         ctx.shadowBlur = 50;
         ctx.shadowColor = '#8b5cf6';
@@ -257,7 +255,6 @@ const FuturisticBackgroundEnhanced = ({ children }: { children: React.ReactNode 
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, [mousePosition]);
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface FuturisticBackgroundEnhancedProps {
   className?: string;
@@ -266,50 +263,42 @@ interface FuturisticBackgroundEnhancedProps {
 
 export default function FuturisticBackgroundEnhanced({ className = '', children }: FuturisticBackgroundEnhancedProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
     <div className="relative min-h-screen overflow-hidden">
 //       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: 1 }}
 //       />
-      
+
       {/* Additional CSS-based effects */}
       <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2 }}>
         {/* Gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5"></div>
         <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-cyan-500/3 to-transparent"></div>
-        
+
         {/* Animated background elements */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500"></div>
-        
+
         {/* Scanning effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse"></div>
 </div>
-      
+
       <div className="relative z-10">
         {children}
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

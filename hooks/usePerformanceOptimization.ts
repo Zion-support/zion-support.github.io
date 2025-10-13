@@ -1,41 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
 // Performance optimization hook
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
 export default function usePerformanceOptimization() {
   // Hook implementation would go here
-<<<<<<< HEAD
-<<<<<<< HEAD
   return {};
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import { useEffect, useCallback, useRef } from 'react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 interface PerformanceOptimizationOptions {
   enableLazyLoading?: boolean;
@@ -62,7 +31,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if (!enableLazyLoading || typeof window === 'undefined') return;
 
     const images = document.querySelectorAll('img[data-src]');
-    
+
     if (observerRef.current) {
       observerRef.current.disconnect();
     }
@@ -107,7 +76,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource;
-      
+
       if (resource.endsWith('.woff2')) {
         link.as = 'font';
         link.type = 'font/woff2';
@@ -115,7 +84,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
         link.as = 'image';
       }
-      
+
       document.head.appendChild(link);
     });
   }, [enablePreloading]);
@@ -125,18 +94,18 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if (!enableImageOptimization || typeof window === 'undefined') return;
 
     const images = document.querySelectorAll('img');
-    
+
     images.forEach((img) => {
       // Add loading="lazy" for non-critical images
       if (!img.hasAttribute('loading')) {
         img.setAttribute('loading', 'lazy');
       }
-      
+
       // Add decoding="async" for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
       }
-      
+
       // Add proper alt text if missing
       if (!img.hasAttribute('alt')) {
         img.setAttribute('alt', '');
@@ -172,7 +141,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
           }
         }
       });
-      
+
       try {
         observer.observe({ entryTypes: ['longtask'] });
       } catch {
@@ -186,12 +155,12 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         const memory = (performance as any).memory;
         const usedMB = Math.round(memory.usedJSHeapSize / 1048576);
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576);
-        
+
         if (usedMB / totalMB > 0.8) {
           // High memory usage detected
         }
       };
-      
+
       setInterval(checkMemory, 30000); // Check every 30 seconds
     }
   }, []);
@@ -252,24 +221,13 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     setupPerformanceMonitoring,
   };
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 
 export default function usePerformanceOptimization() {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
   return {};
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 // Performance optimization hook
 export default function usePerformanceMonitor() {
   // Implementation would go here
   return {};
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed

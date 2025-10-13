@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 import fs from 'fs';
 export { fixFileContent, processFile };
 #!/usr/bin/env node;
@@ -20,8 +18,8 @@ function fixFileContent(content) {
   fixed = fixed.replace(/import\s+([^']+)from\s+\\'([^']+)\\'/g, "import $1 from '$2'");
   // Fix className spacing issues (missing spaces, between, classes)
     // Only fix if it looks like a className issue (contains common, Tailwind, patterns)
-    if (match.includes('from-') || match.includes('to-') || match.includes('bg-') || 
-        match.includes('text-') || match.includes('border-') || match.includes('px-') || 
+    if (match.includes('from-') || match.includes('to-') || match.includes('bg-') ||
+        match.includes('text-') || match.includes('border-') || match.includes('px-') ||
         match.includes('py-') || match.includes('mb-') || match.includes('mt-') ||
         match.includes('ml-') || match.includes('mr-') || match.includes('mx-') ||
         match.includes('pt-') || match.includes('pb-') || match.includes('pl-') ||
@@ -77,4 +75,3 @@ async function main() {
       fixedCount++;
   });
   // main().catch(console.error);
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

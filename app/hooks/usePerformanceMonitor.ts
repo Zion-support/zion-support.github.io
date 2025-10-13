@@ -1,18 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 // usePerformanceMonitor hook
 import { useEffect, useRef } from 'react';
-=======
 import { useState, useEffect, useRef, useCallback } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
 export function usePerformanceMonitor() {
   const metricsRef = useRef({});
@@ -21,23 +9,16 @@ export function usePerformanceMonitor() {
     // Performance monitoring logic will be implemented here
     console.log('Performance monitor initialized');
   }, []);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   return {
     metrics: metricsRef.current,
     startMonitoring: () => console.log('Monitoring started'),
     stopMonitoring: () => console.log('Monitoring stopped')
   };
-=======
 import { useState, useEffect, useRef } from 'react';
-=======
 import { useState, useEffect, useRef, useCallback } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
 
-=======
 import { useEffect, useRef } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -45,13 +26,9 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   cumulativeLayoutShift: number;
   timeToInteractive: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 }
 
 export default usePerformanceMonitor;
-=======
 export function formatDate(date: Date | string): string {
   const d = new Date(date);
   return d.toLocaleDateString('en-US', {
@@ -75,26 +52,14 @@ export function slugify(text: string): string {
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 // usePerformanceMonitor
 export const usePerformanceMonitor = () => {
   // Utility function implementation
   return null;
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import { useEffect, useRef } from 'react';
-=======
 import { useState, useEffect, useRef, useCallback } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { useState, useEffect, useRef } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -105,13 +70,10 @@ interface PerformanceMetrics {
   timeToInteractive: number;
 }
 
-<<<<<<< HEAD
 export const usePerformanceMonitor = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-=======
 export function usePerformanceMonitor() {
   const [state, setState] = useState<string | null>(null);
-=======
 }
 
 interface UsePerformanceMonitorReturn {
@@ -124,21 +86,14 @@ interface UsePerformanceMonitorReturn {
 
 export function usePerformanceMonitor(): UsePerformanceMonitorReturn {
   const [isMonitoring, setIsMonitoring] = useState(false);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
   const metricsRef = useRef<PerformanceMetrics>({
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
     loadTime: 0,
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
     firstInputDelay: 0,
     cumulativeLayoutShift: 0,
     timeToInteractive: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   })
-=======
   });
 
   const [metrics, setMetrics] = useState<PerformanceMetrics>(metricsRef.current);
@@ -148,7 +103,7 @@ export function usePerformanceMonitor(): UsePerformanceMonitorReturn {
       if (typeof window !== 'undefined' && 'performance' in window) {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         const paintEntries = performance.getEntriesByType('paint');
-        
+
         const newMetrics: PerformanceMetrics = {
           loadTime: navigation.loadEventEnd - navigation.loadEventStart,
           firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
@@ -157,7 +112,7 @@ export function usePerformanceMonitor(): UsePerformanceMonitorReturn {
           cumulativeLayoutShift: 0, // Would need to be measured with CLS API
           timeToInteractive: 0 // Would need to be calculated
         };
-        
+
         setMetrics(newMetrics);
         metricsRef.current = newMetrics;
       }
@@ -168,10 +123,8 @@ export function usePerformanceMonitor(): UsePerformanceMonitorReturn {
 
   return { metrics, metricsRef };
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 
   useEffect(() => {
-<<<<<<< HEAD
     const measurePerformance = () => {
       if (typeof window === 'undefined' || !window.performance) return
 
@@ -276,13 +229,8 @@ export function usePerformanceMonitor(): UsePerformanceMonitorReturn {
 export default usePerformanceMonitor
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
     setState('initialized');
   }, []);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
-
 
 import { useState, useEffect } from 'react';
 
@@ -306,20 +254,15 @@ export function usePerformanceMonitor() {
       timeToInteractive: 0
   });
 
-=======
   });
-  
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+
   useEffect(() => {
     setState('initialized');
   }, []);
-<<<<<<< HEAD
 
   return { state };
 };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
   });
 
   const [isMonitoring, setIsMonitoring] = useState(false);
@@ -355,7 +298,6 @@ export function usePerformanceMonitor() {
     setIsMonitoring(true);
     measurePerformance();
   }, [measurePerformance]);
-=======
   });
 
   const observerRef = useRef<PerformanceObserver | null>(null);
@@ -437,7 +379,6 @@ export function usePerformanceMonitor() {
 
     updateMetrics();
   }, [isMonitoring, updateMetrics]);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
 
   const stopMonitoring = useCallback(() => {
     setIsMonitoring(false);
@@ -447,7 +388,6 @@ export function usePerformanceMonitor() {
     }
   }, []);
 
-<<<<<<< HEAD
   useEffect(() => {
     if (isMonitoring) {
       startMonitoring();
@@ -457,7 +397,6 @@ export function usePerformanceMonitor() {
       stopMonitoring();
     };
   }, [isMonitoring, startMonitoring, stopMonitoring]);
-=======
 }
 
 export function usePerformanceMonitor() {
@@ -474,7 +413,7 @@ export function usePerformanceMonitor() {
 
     const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      
+
       entries.forEach((entry) => {
         if (entry.entryType === 'paint') {
           if (entry.name === 'first-contentful-paint') {
@@ -487,8 +426,8 @@ export function usePerformanceMonitor() {
         } else if (entry.entryType === 'layout-shift') {
           const layoutShiftEntry = entry as any;
           if (!layoutShiftEntry.hadRecentInput) {
-            updateMetrics({ 
-              cumulativeLayoutShift: (metrics?.cumulativeLayoutShift || 0) + layoutShiftEntry.value 
+            updateMetrics({
+              cumulativeLayoutShift: (metrics?.cumulativeLayoutShift || 0) + layoutShiftEntry.value
             });
           }
         }
@@ -496,8 +435,8 @@ export function usePerformanceMonitor() {
     });
 
     try {
-      observer.observe({ 
-        entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] 
+      observer.observe({
+        entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift']
       });
       observerRef.current = observer;
       setIsMonitoring(true);
@@ -518,7 +457,6 @@ export function usePerformanceMonitor() {
     startMonitoring();
     return stopMonitoring;
   }, [startMonitoring, stopMonitoring]);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
   return {
     metrics,
@@ -526,23 +464,15 @@ export function usePerformanceMonitor() {
     startMonitoring,
     stopMonitoring
   };
-<<<<<<< HEAD
 };
 
 export default usePerformanceMonitor;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
-  
+
   return { state, metrics: metricsRef.current };
 }
 
-<<<<<<< HEAD
 export default usePerformanceMonitor;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 export default usePerformanceMonitor;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
-=======
   const resetMetrics = useCallback(() => {
     metricsRef.current = {
       loadTime: 0,
@@ -570,9 +500,6 @@ export default usePerformanceMonitor;
 }
 
 export default usePerformanceMonitor;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
-=======
 }
 
 export default usePerformanceMonitor;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5

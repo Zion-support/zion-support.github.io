@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { TrendingUp } from 'lucide-react';
@@ -12,19 +5,10 @@ import { Globe } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const AISentimentAnalysisPro = () => {
   const features = [
     {,
@@ -52,9 +36,7 @@ const AISentimentAnalysisPro = () => {
         color: "from-orange-500 to-red-500"
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default function aiSentimentAnalysisPro() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -62,12 +44,11 @@ export default function aiSentimentAnalysisPro() {
         <title>Ai Sentiment Analysis Pro - Zion Tech Group</title>
         <meta name="description" content="Ai Sentiment Analysis Pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Sentiment Analysis Pro</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function AiSentimentAnalysisProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -75,16 +56,14 @@ export default function AiSentimentAnalysisProPage() {
         <title>Ai Sentiment Analysis Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced ai sentiment analysis pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ai Sentiment Analysis Pro
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function AisentimentanalysisproPage() {
   return (
@@ -94,10 +73,9 @@ export default function AisentimentanalysisproPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Sentiment Analysis Pro</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -105,14 +83,14 @@ export default function AisentimentanalysisproPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -120,7 +98,7 @@ export default function AisentimentanalysisproPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -130,7 +108,6 @@ export default function AisentimentanalysisproPage() {
     </div>
   );
 }
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Heart, ArrowRight, Sparkles, CheckCircle, Star, Brain, Target, TrendingUp } from 'lucide-react';
@@ -156,7 +133,6 @@ const AISentimentAnalysisProPage = () => {
 
   const features = [
     {
-<<<<<<< HEAD
       icon: <Heart className="w-8 h-8" />,
       title: "Emotion Detection",
       description: "Advanced AI algorithms detect emotions and sentiment in text with 95% accuracy",
@@ -179,7 +155,6 @@ const AISentimentAnalysisProPage = () => {
       title: "Trend Analysis",
       description: "Track sentiment trends over time and identify patterns in customer feedback",
       color: "from-purple-500 to-pink-500"
-=======
       title: "Real-time Sentiment Tracking",
       description: "Monitor customer sentiment across all channels in real-time",
       icon: <TrendingUp className="w-6 h-6" />,
@@ -202,7 +177,6 @@ const AISentimentAnalysisProPage = () => {
       description: "Identify sentiment trends and patterns over time",
       icon: <BarChart3 className="w-6 h-6" />,
       color: "from-orange-500 to-red-500",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -316,7 +290,7 @@ const AISentimentAnalysisProPage = () => {
             canonical="https://ziontechgroup.com/ai-sentiment-analysis-pro"
           />
           <StructuredData data={structuredData} />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -324,13 +298,13 @@ const AISentimentAnalysisProPage = () => {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-pink-500/20 to-red-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-red-500/20 border border-pink-500/30 mb-6">
                   <Heart className="w-4 h-4 text-pink-400 mr-2" />
                   <span className="text-pink-400 text-sm font-medium">AI-Powered Sentiment Analysis</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -339,12 +313,12 @@ const AISentimentAnalysisProPage = () => {
                   className="mb-6 leading-tight">
                   Zion AI Sentiment Analysis Pro
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Understand customer emotions and sentiment with advanced AI-powered analysis, 
+                  Understand customer emotions and sentiment with advanced AI-powered analysis,
                   emotion detection, and multi-language support for better customer insights.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#pricing"
@@ -490,10 +464,10 @@ const AISentimentAnalysisProPage = () => {
                   Ready to Understand Your Customers Better?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of professionals using Zion AI Sentiment Analysis Pro 
+                  Join thousands of professionals using Zion AI Sentiment Analysis Pro
                   to understand customer emotions and improve their experience. Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -521,18 +495,8 @@ const AISentimentAnalysisProPage = () => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default AISentimentAnalysisProPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-=======
 const ZionAIVideoGeneratorPage = () => {
   // const [selectedPlan, setSelectedPlan] = useState('pro');
   // const [selectedPlan, setSelectedPlan] = useState('pro');
@@ -176,9 +164,7 @@ const ZionAIVideoGeneratorPage = () => {
         examples: ['Product showcases', 'Sales presentations', 'Customer testimonials', 'How-to guides']
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default function zionAiVideoGenerator() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -186,12 +172,11 @@ export default function zionAiVideoGenerator() {
         <title>Zion Ai Video Generator - Zion Tech Group</title>
         <meta name="description" content="Zion Ai Video Generator solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Zion Ai Video Generator</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function ZionAiVideoGeneratorPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -199,16 +184,14 @@ export default function ZionAiVideoGeneratorPage() {
         <title>Zion Ai Video Generator - Zion Tech Group</title>
         <meta name="description" content="Advanced zion ai video generator solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Zion Ai Video Generator
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function ZionaivideogeneratorPage() {
   return (
@@ -218,10 +201,9 @@ export default function ZionaivideogeneratorPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Zion Ai Video Generator</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -229,14 +211,14 @@ export default function ZionaivideogeneratorPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -244,7 +226,7 @@ export default function ZionaivideogeneratorPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -253,9 +235,7 @@ export default function ZionaivideogeneratorPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Video, Play, Edit, Settings, Sparkles, CheckCircle, Star, Users, Brain, Mic, Palette, Share, Mail, Smartphone, Globe, Cloud, BarChart3, Target, Headphones, Layout } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -270,32 +250,24 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const ZionAIVideoGeneratorPage = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
-  Video, 
-  Play, 
-  Download, 
-  Upload, 
-  Sparkles, 
-  Clock, 
-  Users, 
-  Star, 
-  CheckCircle, 
+  Video,
+  Play,
+  Download,
+  Upload,
+  Sparkles,
+  Clock,
+  Users,
+  Star,
+  CheckCircle,
   ArrowRight,
   Mail,
   Smartphone,
@@ -434,16 +406,13 @@ export default function PagePage() {
     </div>
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Zion AI Video Generator - Zion Tech Group</title>
         <meta name="description" content="Advanced AI video generation platform with cutting-edge technology." />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold text-white text-center mb-8">
           Zion AI Video Generator
@@ -457,8 +426,6 @@ export default function PagePage() {
 };
 
 export default ZionAIVideoGeneratorPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -466,18 +433,18 @@ export default ZionAIVideoGeneratorPage;
             <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
             <span className="text-purple-400 text-sm font-medium">AI-Powered Video Creation</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">
               Zion AI Video Generator;
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your ideas into professional videos in minutes. Our AI-powered platform generates scripts, 
+            Transform your ideas into professional videos in minutes. Our AI-powered platform generates scripts,
             synthesizes voices, and creates engaging videos automatically. Perfect for marketing, education, and content creation.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link;
               to="/contact"
@@ -520,7 +487,7 @@ export default ZionAIVideoGeneratorPage;
               Our advanced AI technology handles every aspect of video creation, from script writing to final production;
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div;
@@ -548,14 +515,14 @@ export default ZionAIVideoGeneratorPage;
               Choose the plan that fits your video creation needs. All plans include our core AI features.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div;
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
                   plan.popular;
-                    ? 'border-purple-500/50 ring-2 ring-purple-500/20' 
+                    ? 'border-purple-500/50 ring-2 ring-purple-500/20'
                     : 'border-white/20 hover:border-purple-500/30'
                 }`}
               >
@@ -566,7 +533,7 @@ export default ZionAIVideoGeneratorPage;
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -575,7 +542,7 @@ export default ZionAIVideoGeneratorPage;
                     <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
@@ -584,7 +551,7 @@ export default ZionAIVideoGeneratorPage;
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link;
                   to="/contact"
                   className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
@@ -612,7 +579,7 @@ export default ZionAIVideoGeneratorPage;
               See how professionals are using our AI video generator to create amazing content;
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div;
@@ -652,7 +619,7 @@ export default ZionAIVideoGeneratorPage;
             Join thousands of content creators who are already using our AI video generator to produce;
             professional-quality videos in minutes, not hours.
           </p>
-          
+
           {/* Contact Information */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="text-center">
@@ -677,7 +644,7 @@ export default ZionAIVideoGeneratorPage;
               <p className="text-purple-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link;
               to="/contact"
@@ -699,8 +666,6 @@ export default ZionAIVideoGeneratorPage;
 };
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
   const features = [
     {
       icon: <Video className="w-8 h-8" />,
@@ -760,7 +725,7 @@ export default ZionAIVideoGeneratorPage;
             canonicalUrl="https://ziontechgroup.com/zion-ai-video-generator"
           />
           <StructuredData data={structuredData} />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -770,7 +735,7 @@ export default ZionAIVideoGeneratorPage;
                     <Sparkles className="w-4 h-4 text-blue-400 mr-2" />
                     <span className="text-blue-400 text-sm font-medium">AI-Powered Video Generation</span>
                   </div>
-                  
+
                   <FuturisticTextEnhanced
                     variant="display"
                     size="5xl"
@@ -779,12 +744,12 @@ export default ZionAIVideoGeneratorPage;
                     className="mb-6 leading-tight">
                     Zion AI Video Generator
                   </FuturisticTextEnhanced>
-                  
+
                   <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                    Create professional videos from text prompts with our AI video generator. 
+                    Create professional videos from text prompts with our AI video generator.
                     Generate voiceovers, apply effects, and produce stunning videos automatically.
                   </p>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                     <FuturisticButtonEnhanced
                       href="/contact"
@@ -847,10 +812,10 @@ export default ZionAIVideoGeneratorPage;
                   Ready to Create Amazing Videos?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of creators using Zion AI Video Generator to produce 
+                  Join thousands of creators using Zion AI Video Generator to produce
                   professional videos in minutes. Start your free trial today.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -879,4 +844,3 @@ export default ZionAIVideoGeneratorPage;
 };
 
 export default ZionAIVideoGeneratorPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

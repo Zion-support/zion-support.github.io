@@ -1,36 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-import { 
+import {
   ArrowRight,
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
-  Heart, 
-  Zap, 
-  BarChart3, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Target, 
-  Brain, 
-  Users, 
+  Heart,
+  Zap,
+  BarChart3,
+  TrendingUp,
+  Zap,
+  Shield,
+  Target,
+  Brain,
+  Users,
   CheckCircle,  ArrowRight,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   Users,
   Star,
   CheckCircle,
@@ -45,19 +29,13 @@ import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
   TrendingUp
 } from 'lucide-react';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';  AlertCircle,
   Clock } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 import { Helmet } from 'react-helmet-async';
-=======
 
 import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
 export default function AiCustomerSentimentTrackerPage() {
   const stats = [
@@ -123,11 +101,8 @@ export default function AiCustomerSentimentTrackerPage() {
         "Email support",
         "3 team members"
       ],
-<<<<<<< HEAD
         popular: false
-=======
       popular: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Professional",
@@ -143,11 +118,8 @@ export default function AiCustomerSentimentTrackerPage() {
         "10 team members",
         "API access"
       ],
-<<<<<<< HEAD
         popular: true
-=======
       popular: true;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     },
     {,
     name: "Enterprise",
@@ -163,38 +135,21 @@ export default function AiCustomerSentimentTrackerPage() {
         "Unlimited team members",
         "Custom integrations"
       ],
-<<<<<<< HEAD
         popular: false
-=======
       popular: false;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function aiCustomerSentimentTracker() {
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import { Helmet } from "react-helmet-async";
 
-
-
 export default function AiCustomerSentimentTrackerPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
   return (
-=======
 export default function AiCustomerSentimentTrackerPage() {
           return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
-=======
 export default function AiCustomerSentimentTrackerPage() {
           return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
-=======
   ];
 
 export default function AiCustomerSentimentTrackerPage() {  const stats = [
@@ -228,24 +183,17 @@ export default function AiCustomerSentimentTrackerPage() {  const stats = [
   ];
 export default function PagePage() {
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Customer Sentiment Tracker - Zion Tech Group</title>
         <meta name="description" content="Ai Customer Sentiment Tracker solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Customer Sentiment Tracker</h1>
           <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
             This page is under development. Please check back later.
-=======
 
 export default function AicustomersentimenttrackerPage() {
   return (
@@ -255,10 +203,9 @@ export default function AicustomersentimenttrackerPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Customer Sentiment Tracker</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -266,14 +213,14 @@ export default function AicustomersentimenttrackerPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -281,13 +228,12 @@ export default function AicustomersentimenttrackerPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
         </div>
-=======
             Discover our comprehensive ai customer sentiment tracker solutions designed to meet your business needs.
 
           </p>
@@ -316,21 +262,12 @@ export default function AicustomersentimenttrackerPage() {
           </div>
         </div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

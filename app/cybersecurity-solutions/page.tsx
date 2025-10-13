@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
-=======
 import React from 'react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -18,7 +16,6 @@ import { Lock } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Eye } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
 const CybersecuritySolutions = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -120,7 +117,6 @@ export default function CybersecuritySolutionsPage() {
   const capabilities = [
     {
       title: "AI-Powered Security",
-<<<<<<< HEAD
       description: "Advanced threat detection and prevention using artificial intelligence",
       icon: <Shield className="w-8 h-8" />
     },
@@ -128,7 +124,6 @@ export default function CybersecuritySolutionsPage() {
       title: "Real-time Monitoring",
       description: "24/7 security monitoring and incident response",
       icon: <CheckCircle className="w-8 h-8" />
-=======
       description: "Advanced AI algorithms detect and prevent sophisticated cyber threats before they cause damage",
       icon: <Brain className="w-6 h-6" />,
       stats: "99.9% threat detection",
@@ -150,14 +145,11 @@ export default function CybersecuritySolutionsPage() {
       description: "Meet industry compliance requirements including GDPR, HIPAA, SOX, and PCI DSS",
       icon: <FileText className="w-6 h-6" />,
       stats: "50+ frameworks",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 }
 
-<<<<<<< HEAD
 }}
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <Helmet>
@@ -173,24 +165,24 @@ export default function CybersecuritySolutionsPage() {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6">
             <Shield className="w-4 h-4 text-red-400 mr-2" />
             <span className="text-red-400 text-sm font-medium">Advanced Cybersecurity Solutions</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400">
               Cybersecurity Solutions
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Protect your business with our comprehensive cybersecurity solutions. From AI-powered threat detection 
+            Protect your business with our comprehensive cybersecurity solutions. From AI-powered threat detection
             to zero trust architecture, we provide enterprise-grade security that adapts to evolving threats.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <FuturisticButton
               href="#pricing"
@@ -236,7 +228,7 @@ export default function CybersecuritySolutionsPage() {
               Our advanced security technologies and expert team provide comprehensive protection against the most sophisticated cyber threats
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {capabilities.map((capability, index) => (
               <FuturisticCard
@@ -274,7 +266,7 @@ export default function CybersecuritySolutionsPage() {
               Comprehensive security solutions designed to protect your business from all types of cyber threats
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <FuturisticCard
@@ -318,7 +310,7 @@ export default function CybersecuritySolutionsPage() {
               Choose the security plan that provides the right level of protection for your organization
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
               <FuturisticCard
@@ -334,7 +326,7 @@ export default function CybersecuritySolutionsPage() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -343,7 +335,7 @@ export default function CybersecuritySolutionsPage() {
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
@@ -352,7 +344,7 @@ export default function CybersecuritySolutionsPage() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <FuturisticButton
                   href={plan.cta === "Contact Sales" ? "/contact" : "#contact"}
                   variant={plan.popular ? "primary" : "outline"}
@@ -378,7 +370,7 @@ export default function CybersecuritySolutionsPage() {
               See how organizations are using our cybersecurity solutions to protect their critical assets
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <FuturisticCard
@@ -418,7 +410,7 @@ export default function CybersecuritySolutionsPage() {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Don't wait for a breach to happen. Protect your organization with our comprehensive cybersecurity solutions.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
                 href="/contact"
@@ -437,7 +429,7 @@ export default function CybersecuritySolutionsPage() {
                 Schedule Security Audit
               </FuturisticButton>
             </div>
-            
+
             <div className="mt-8 text-sm text-gray-400">
               <p>Free security assessment • Custom solutions • 24/7 support</p>
             </div>
@@ -449,4 +441,3 @@ export default function CybersecuritySolutionsPage() {
 };
 
 export default CybersecuritySolutions;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

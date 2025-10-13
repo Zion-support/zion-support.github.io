@@ -1,17 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 import React from 'react';
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Home } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Zap } from 'lucide-react';
@@ -20,17 +9,13 @@ import { Network } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { X, Home, Shield, Zap, Brain, Globe, Menu } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
-  X, 
-  ChevronDown, 
+  X,
+  ChevronDown,
   ChevronRight,
   Home,
   Users,
@@ -48,21 +33,16 @@ import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
   Mail,
   MapPin  } from 'lucide-react';
 } from 'lucide-react';import { Link  } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 interface SidebarProps {
   className?: string;
   children?: React.ReactNode;
-<<<<<<< HEAD
-=======
 }
 
 export default function Sidebar({ className = '', children, ...props }: SidebarProps) {
     return (
         <div className="component" {...props}>
           {children}
-=======
-
 
 interface SidebarProps {,
     isOpen: boolean;,
@@ -70,7 +50,6 @@ interface SidebarProps {,
 }
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
-<<<<<<< HEAD
   const location = useLocation();
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
 
@@ -132,7 +111,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         path: '/contact',
         icon: <Phone className="w-5 h-5" />,
         children: []
-=======
   const navigationItems = [
     {
       name: 'Home',
@@ -158,15 +136,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       name: 'Contact',
       path: '/contact',
       icon: <Globe className="w-5 h-5" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
     }
   ];
 
   if (!isOpen) return null;
-<<<<<<< HEAD
 
   return (
-<<<<<<< HEAD
     <div className="fixed inset-0 z-50 overflow-hidden">
       <div className="absolute inset-0 bg-black bg-opacity-50" onClick={onClose} />
       <div className="relative flex h-full">
@@ -233,10 +208,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               </div>
             ))}
           </nav>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 }
 
 export default function Sidebar({ className = '', children }: SidebarProps) {
@@ -246,25 +219,17 @@ export default function Sidebar({ className = '', children }: SidebarProps) {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 import { Link, useLocation } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
     <>
       {/* Overlay */}
       <div
         className="fixed inset-0 bg-black bg-opacity-50 z-40"
         onClick={onClose}
       />
-      
+
       {/* Sidebar */}
       <div className="fixed inset-y-0 left-0 w-64 bg-gray-900 z-50 transform transition-transform duration-300 ease-in-out">
         <div className="flex items-center justify-between h-16 px-4 border-b border-gray-700">
@@ -281,7 +246,7 @@ import { ArrowRight } from 'lucide-react';
             <X className="w-6 h-6" />
           </button>
         </div>
-        
+
         <nav className="mt-8 px-4">
           <ul className="space-y-2">
             {navigationItems.map((item) => (
@@ -302,8 +267,6 @@ import { ArrowRight } from 'lucide-react';
     </>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 import React from 'react';
 import { X } from 'lucide-react';
 
@@ -314,7 +277,7 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
-  
+
   return (
     <div className="fixed inset-0 z-50 md:hidden">
       <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
@@ -334,7 +297,4 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 };
 
 export default Sidebar;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function cybersecurityAudit() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -22,42 +10,34 @@ export default function cybersecurityAudit() {
         <title>Cybersecurity Audit - Zion Tech Group</title>
         <meta name="description" content="Cybersecurity Audit solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Cybersecurity Audit</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function CybersecurityAuditPage() {
-=======
 
 import React from 'react';
 
 export default function Page() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Cybersecurity Audit - Zion Tech Group</title>
         <meta name="description" content="Advanced cybersecurity audit solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Cybersecurity Audit
-=======
 
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Page
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function CybersecurityauditPage() {
   return (
@@ -67,11 +47,9 @@ export default function CybersecurityauditPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Cybersecurity Audit</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
-<<<<<<< HEAD
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -79,14 +57,14 @@ export default function CybersecurityauditPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -94,19 +72,16 @@ export default function CybersecurityauditPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </div>
     </div>
   );
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
 const CybersecurityAuditPage = () => {
@@ -136,10 +111,7 @@ const CybersecurityAuditPage = () => {
       color: "from-orange-500 to-red-500",
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 }
-<<<<<<< HEAD
-=======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
 import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
@@ -293,7 +265,7 @@ const CybersecurityAuditPage = () => {
             keywords="cybersecurity audit, security assessment, penetration testing, compliance audit, vulnerability assessment, security audit"
             canonical="https://ziontechgroup.com/cybersecurity-audit"
           />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -301,13 +273,13 @@ const CybersecurityAuditPage = () => {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Shield className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Cybersecurity Audit</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -316,12 +288,12 @@ const CybersecurityAuditPage = () => {
                   className="mb-6 leading-tight">
                   Cybersecurity Audit Services
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Protect your business with comprehensive cybersecurity audits. 
+                  Protect your business with comprehensive cybersecurity audits.
                   Identify vulnerabilities, ensure compliance, and strengthen your security posture.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#contact"
@@ -520,10 +492,10 @@ const CybersecurityAuditPage = () => {
                   Ready to Secure Your Business?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Let's conduct a comprehensive cybersecurity audit to protect your business 
+                  Let's conduct a comprehensive cybersecurity audit to protect your business
                   from threats and ensure compliance.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -551,12 +523,6 @@ const CybersecurityAuditPage = () => {
   );
 };
 
-<<<<<<< HEAD
 export default CybersecurityAuditPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

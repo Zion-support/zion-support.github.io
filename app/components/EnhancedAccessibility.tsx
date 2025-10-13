@@ -1,64 +1,32 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface EnhancedAccessibilityProps {
-=======
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 interface EnhancedaccessibilityProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 interface EnhancedAccessibilityProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 interface EnhancedAccessibilityProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   className?: string;
   children?: React.ReactNode;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function EnhancedAccessibility({ className = '', children }: EnhancedAccessibilityProps) {
   return (
     <div className={`${className}`}>
-=======
 export default function Enhancedaccessibility({ className = '', children, ...props }: EnhancedaccessibilityProps) {
   return (
     <div className={`enhancedaccessibility-component ${className}`} {...props}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
-export default function EnhancedAccessibility({ 
-  className = '', 
-  children 
+export default function EnhancedAccessibility({
+  className = '',
+  children
 }: EnhancedAccessibilityProps) {
   return (
     <div className={`enhanced-accessibility ${className}`}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
       {children}
     </div>
   );
 }
-=======
 export default function EnhancedAccessibility({ className = '', children, ...props }: EnhancedAccessibilityProps) {
     return (
         <div className="component" {...props}>
@@ -66,8 +34,6 @@ export default function EnhancedAccessibility({ className = '', children, ...pro
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import React, { useEffect } from 'react';
 
 interface EnhancedAccessibilityProps {
@@ -152,26 +118,17 @@ export default function EnhancedAccessibility({ children, className = '' }: Enha
     };
   }, []);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   return <div className={className}>{children}</div>;
-=======
   return (
-=======
   return (
 
     <div className={`enhancedaccessibility-component ${className}`} {...props}>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       {children}
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 export default function Page() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -194,15 +151,9 @@ export default function Page() {
           <ArrowRight className="ml-2 h-5 w-5" />
         </Link>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
     </div>
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 import React from 'react';
 
 const EnhancedAccessibility = ({ children }: { children: React.ReactNode }) => {
@@ -210,8 +161,6 @@ const EnhancedAccessibility = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default EnhancedAccessibility;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -272,7 +221,7 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
       skipLink.style.position = 'absolute';
       skipLink.style.left = '-9999px';
       skipLink.style.top = '-9999px';
-      
+
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
@@ -296,4 +245,3 @@ export default function EnhancedaccessibilityPage() {
 }
 
 }}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

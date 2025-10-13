@@ -1,21 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-=======
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function consultation() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -23,31 +10,26 @@ export default function consultation() {
         <title>Consultation - Zion Tech Group</title>
         <meta name="description" content="Consultation solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Consultation</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function ConsultationPage() {
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Consultation - Zion Tech Group</title>
         <meta name="description" content="Advanced consultation solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Consultation
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
-=======
 import { Clock } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { MapPin } from 'lucide-react';
@@ -61,25 +43,20 @@ import { Calendar } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import React from "react";
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 
 const Consultation = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Consultation</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -87,14 +64,14 @@ const Consultation = () => {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -102,7 +79,7 @@ const Consultation = () => {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -112,8 +89,6 @@ const Consultation = () => {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
 import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
@@ -123,10 +98,7 @@ import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedAccessibility from '../components/EnhancedAccessibility';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import { MessageCircle, ArrowRight, CheckCircle, Star, Users, Calendar, Phone, Mail } from 'lucide-react';
-=======
 export default function ConsultationPage() {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
   const benefits = [
     "Benefit 1",
     "Benefit 2"
@@ -173,7 +145,6 @@ export default function ConsultationPage() {
       });
     }, 3000);
   };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const ConsultationPage = () => {
   const consultationTypes = [
@@ -272,7 +243,7 @@ const ConsultationPage = () => {
             keywords="technology consultation, IT consulting, digital transformation, strategy consultation, technical guidance"
             canonical="https://ziontechgroup.com/consultation"
           />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -280,13 +251,13 @@ const ConsultationPage = () => {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <MessageCircle className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Expert Consultation</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -295,12 +266,12 @@ const ConsultationPage = () => {
                   className="mb-6 leading-tight">
                   Consultation Services
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Get expert guidance on your technology strategy, digital transformation, 
+                  Get expert guidance on your technology strategy, digital transformation,
                   and implementation planning from our experienced team.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#contact"
@@ -447,10 +418,10 @@ const ConsultationPage = () => {
                   Ready to Get Started?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Schedule a consultation with our experts and take the first step 
+                  Schedule a consultation with our experts and take the first step
                   towards your technology transformation.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -476,19 +447,11 @@ const ConsultationPage = () => {
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );
-<<<<<<< HEAD
 };
 
 export default ConsultationPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
         <title>Consultation - Zion Tech Group</title>
@@ -503,7 +466,4 @@ export default ConsultationPage;
 };
 
 export default Consultation;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -127,7 +127,6 @@ function App() {
     }
   }, []);
 
-<<<<<<< HEAD
 interface App_cleanProps {
   className?: string;
   children?: React.ReactNode;
@@ -135,19 +134,15 @@ interface App_cleanProps {
 
 export default function App_clean({ className = '', children }: App_cleanProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
 }
-=======
   return (
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
@@ -164,7 +159,7 @@ export default function App_clean({ className = '', children }: App_cleanProps) 
                             <Navigation onSidebarToggle={toggleSidebar} />
                             <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                             <Breadcrumb />
-                            
+
                             <main className="relative z-10" id="main-content" role="main">
                               <Suspense fallback={<LoadingPage />}>
                                 <Routes>
@@ -268,7 +263,7 @@ export default function App_clean({ className = '', children }: App_cleanProps) 
                                 </Routes>
                               </Suspense>
                             </main>
-                            
+
                             <Footer />
                           </FuturisticBackground>
                         </div>
@@ -286,4 +281,3 @@ export default function App_clean({ className = '', children }: App_cleanProps) 
 }
 
 export default App;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

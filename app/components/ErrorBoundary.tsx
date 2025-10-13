@@ -1,60 +1,30 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
 interface ErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
-=======
 import React from 'react';
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 interface Props {
 
   children: ReactNode;
   fallback?: ReactNode;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function ErrorBoundary({ className = '', children }: ErrorBoundaryProps) {
   return (
     <div className={`${className}`}>
-=======
 export default function ErrorBoundary({ className = '', children, ...props }: ErrorBoundaryProps) {
   return (
     <div className={`error-boundary-component ${className}`} {...props}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
       {children}
     </div>
   );
 }
-=======
 export default function ErrorBoundary({ className = '', children, ...props }: ErrorBoundaryProps) {
     return (
         <div className="component" {...props}>
@@ -62,21 +32,16 @@ export default function ErrorBoundary({ className = '', children, ...props }: Er
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import { useState, useEffect } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 interface Props {
   children: ReactNode;
-=======
-
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 
 interface Props {,
     children: ReactNode;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   fallback?: ReactNode;
 }
 
@@ -93,14 +58,11 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-<<<<<<< HEAD
     return { hasError: true, error };
-=======
     return {,
     hasError: true,
       error
     };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -111,7 +73,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to monitoring service
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
+
     // In production, you would send this to your error monitoring service
     if (process.env.NODE_ENV === 'production') {
       // Example: sendErrorToService(error, errorInfo);
@@ -138,15 +100,14 @@ class ErrorBoundary extends Component<Props, State> {
             <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-red-500/20 flex items-center justify-center">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-            
+
             <h1 className="text-2xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            
+
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
-<<<<<<< HEAD
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mb-6 text-left">
@@ -168,32 +129,26 @@ class ErrorBoundary extends Component<Props, State> {
               <button
                 onClick={this.handleRetry}
                 className="flex items-center justify-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors"
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button>
   onClick={this.handleRetry}>
   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
                 Try Again
               </button>
-<<<<<<< HEAD
-              
+
               <button
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition-colors"
-=======
               <button>
   onClick={this.handleGoHome}>
   className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 <Home className="w-4 h-4 mr-2" />
                 Go Home
               </button>
             </div>
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -233,7 +188,6 @@ export default class ErrorBoundary extends Component<Props, State> {
             >
               Refresh Page
             </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
           </div>
         </div>
       );
@@ -241,21 +195,12 @@ export default class ErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
-<<<<<<< HEAD
 }
 
-<<<<<<< HEAD
 export default ErrorBoundary;
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 export default function Errorboundary({ className = '', children, ...props }: ErrorboundaryProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

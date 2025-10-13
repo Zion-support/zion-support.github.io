@@ -7,23 +7,16 @@ interface AdvancedPerformanceOptimizerProps {
 
 export default function AdvancedPerformanceOptimizer({ className = '', children }: AdvancedPerformanceOptimizerProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
-<<<<<<< HEAD
 }
-=======
 }
-<<<<<<< HEAD
-=======
 
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
@@ -161,11 +154,11 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (entry.isIntersecting) {
             const target = entry.target as HTMLElement;
             const componentName = target.dataset.lazyComponent;
-            
+
             if (componentName) {
               // Mark component as loaded
               target.classList.add('loaded');
-              
+
               observer.unobserve(target);
             }
           }
@@ -207,7 +200,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const checkMemory = () => {
         const memory = (performance as any).memory;
         const usedMemory = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
-        
+
         if (usedMemory > 0.8) {
           // Memory usage is high, trigger garbage collection
           if (window.gc) {
@@ -223,7 +216,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   // Initialize all optimizations
   useEffect(() => {
     const cleanup = optimizeMemory();
-    
+
     // Run optimizations after a short delay to not block initial render
     const timeoutId = setTimeout(() => {
       optimizeImages();
@@ -276,5 +269,3 @@ const getNextLikelyPage = (currentPath: string): string | null => {
 };
 
 export default AdvancedPerformanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

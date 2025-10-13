@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { Search, Eye } from 'lucide-react';
 'use client';
@@ -71,7 +69,7 @@ const AdvancedSEOOptimizer: React.FC = () => {
     const links = document.querySelectorAll('a[href]');
     let internalLinks = 0;
     let externalLinks = 0;
-    
+
     links.forEach(link => {
       const href = link.getAttribute('href');
       if (href) {
@@ -82,11 +80,11 @@ const AdvancedSEOOptimizer: React.FC = () => {
         }
       }
     });
-    
-    setMetrics(prev => ({ 
-//       ...prev, 
-//       internalLinks, 
-//       externalLinks 
+
+    setMetrics(prev => ({
+//       ...prev,
+//       internalLinks,
+//       externalLinks
     }));
   }, []);
 
@@ -96,37 +94,37 @@ const AdvancedSEOOptimizer: React.FC = () => {
 
   const optimizeSEO = useCallback(async () => {
     setIsOptimizing(true);
-    
+
     // Simulate optimization process
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
     // Apply optimizations based on settings
     if (settings.metaTags) {
       // Optimizing meta tags...
     }
-    
+
     if (settings.structuredData) {
       // Adding structured data...
     }
-    
+
     if (settings.sitemap) {
       // Generating sitemap...
     }
-    
+
     if (settings.robotsTxt) {
       // Updating robots.txt...
     }
-    
+
     if (settings.canonicalUrls) {
       // Setting canonical URLs...
     }
-    
+
     if (settings.altTexts) {
       // Adding alt texts to images...
     }
-    
+
     setIsOptimizing(false);
-    
+
     // Re-analyze SEO after optimization
     setTimeout(analyzeSEO, 1000);
   }, [settings, analyzeSEO]);
@@ -204,7 +202,6 @@ const AdvancedSEOOptimizer: React.FC = () => {
 </button>
     );
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface AdvancedSEOOptimizerProps {
   className?: string;
@@ -213,23 +210,17 @@ interface AdvancedSEOOptimizerProps {
 
 export default function AdvancedSEOOptimizer({ className = '', children }: AdvancedSEOOptimizerProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
     <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
@@ -244,7 +235,7 @@ export default function AdvancedSEOOptimizer({ className = '', children }: Advan
 //           ×
 </button>
 </div>
-      
+
       {/* SEO Metrics */}
       <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
@@ -284,7 +275,7 @@ export default function AdvancedSEOOptimizer({ className = '', children }: Advan
 </div>
 </div>
 </div>
-      
+
       {/* SEO Settings */}
       <div className="space-y-4">
         <h4 className="text-sm font-semibold text-gray-900 dark:text-white">
@@ -323,7 +314,7 @@ export default function AdvancedSEOOptimizer({ className = '', children }: Advan
 </div>
         ))}
 </div>
-      
+
       {/* Optimize Button */}
       <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
 //         <button
@@ -345,7 +336,5 @@ export default function AdvancedSEOOptimizer({ className = '', children }: Advan
 </button>
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

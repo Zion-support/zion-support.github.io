@@ -1,24 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function zionAiCrmPro() {
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
@@ -26,15 +12,10 @@ import { Zap } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
-<<<<<<< HEAD
 import { Play } from 'lucide-react';
 import { Phone } from 'lucide-react';
-=======
 import { Mic } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const ZionAICRMProPage = () => {
   const features = [
     {
@@ -144,14 +125,12 @@ const ZionAICRMProPage = () => {
     { name: 'Salesforce', logo: 'SF', category: 'CRM' }
   ];
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Zion AI CRM Pro - Intelligent Customer Relationship Management | Zion Tech Group</title>
         <meta name="description" content="Transform your sales process with Zion AI CRM Pro. AI-powered lead scoring, automated follow-ups, and predictive analytics for maximum sales efficiency." />
         <meta name="keywords" content="AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales pipeline" />
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -161,16 +140,12 @@ export default function PagePage() {
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
       </Helmet>
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Zion Ai Crm Pro</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function ZionAiCrmProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -178,16 +153,14 @@ export default function ZionAiCrmProPage() {
         <title>Zion Ai Crm Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced zion ai crm pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Zion Ai Crm Pro
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function ZionaicrmproPage() {
   return (
@@ -197,17 +170,15 @@ export default function ZionaicrmproPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Zion Ai Crm Pro</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
             <p className="text-gray-600">
               Comprehensive solution for your business requirements.
             </p>
-=======
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
@@ -216,15 +187,15 @@ export default function ZionaicrmproPage() {
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered CRM</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Zion AI CRM Pro
             </span>
           </h1>
-          
+
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Transform your sales process with intelligent customer relationship management. 
+            Transform your sales process with intelligent customer relationship management.
             AI-powered lead scoring, automated follow-ups, and predictive analytics for maximum sales efficiency.
           </p>
 
@@ -258,7 +229,6 @@ export default function ZionaicrmproPage() {
               <div className="text-gray-300 text-sm">AI Support</div>
             </div>
           </div>
-=======
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -274,7 +244,6 @@ export default function ZionaicrmproPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
 
         {/* Features Section */}
@@ -287,7 +256,7 @@ export default function ZionaicrmproPage() {
               Everything you need to manage customer relationships and boost sales performance
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
@@ -297,15 +266,15 @@ export default function ZionaicrmproPage() {
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
-                
+
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {feature.title}
                 </h3>
-                
+
                 <p className="text-gray-300 mb-4 leading-relaxed">
                   {feature.description}
                 </p>
-                
+
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
@@ -329,7 +298,7 @@ export default function ZionaicrmproPage() {
               Connect with your favorite business tools and streamline your workflow
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map((integration, index) => (
               <div
@@ -356,14 +325,14 @@ export default function ZionaicrmproPage() {
               Choose the plan that fits your sales team. All plans include 14-day free trial.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
                 className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10' 
+                  plan.popular
+                    ? 'border-cyan-500/50 bg-gradient-to-br from-cyan-500/10 to-purple-500/10'
                     : 'border-white/20 hover:bg-white/20'
                 }`}
               >
@@ -374,7 +343,7 @@ export default function ZionaicrmproPage() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
@@ -383,7 +352,7 @@ export default function ZionaicrmproPage() {
                     <span className="text-gray-300 ml-1">{plan.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
@@ -392,7 +361,7 @@ export default function ZionaicrmproPage() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
@@ -415,7 +384,7 @@ export default function ZionaicrmproPage() {
               Join thousands of sales teams already using Zion AI CRM Pro
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div
@@ -431,15 +400,15 @@ export default function ZionaicrmproPage() {
                     <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                
+
                 <p className="text-gray-300 italic leading-relaxed mb-4">"{testimonial.content}"</p>
-                
+
                 <div className="text-cyan-400 font-semibold text-sm">
                   {testimonial.results}
                 </div>
@@ -455,10 +424,10 @@ export default function ZionaicrmproPage() {
               Ready to Transform Your Sales Process?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Start your 14-day free trial today and experience the power of AI-driven CRM. 
+              Start your 14-day free trial today and experience the power of AI-driven CRM.
               No credit card required.
             </p>
-            
+
             {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
@@ -483,7 +452,7 @@ export default function ZionaicrmproPage() {
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
                 Start Free Trial
@@ -497,16 +466,15 @@ export default function ZionaicrmproPage() {
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -514,12 +482,11 @@ export default function ZionaicrmproPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
 
 import React from 'react';
 
@@ -534,38 +501,18 @@ export default function Page() {
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
           </p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 };
 
-<<<<<<< HEAD
 export default ZionAICRMProPage;
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
-
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

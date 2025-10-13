@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -23,10 +21,10 @@ const PerformanceEnhancer: React.FC = () => {
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paintEntries = performance.getEntriesByType('paint');
-      
+
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
-      
+
       const metrics: PerformanceMetrics = {
 //         fcp: fcp ? fcp.startTime : 0,
 //         lcp: lcp ? lcp.startTime : 0,
@@ -102,7 +100,6 @@ const PerformanceEnhancer: React.FC = () => {
   if (process.env.NODE_ENV !== 'development' || !metrics) {
     return null;
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface PerformanceEnhancerProps {
   className?: string;
@@ -111,23 +108,17 @@ interface PerformanceEnhancerProps {
 
 export default function PerformanceEnhancer({ className = '', children }: PerformanceEnhancerProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
     <div className="fixed bottom-4 right-4 z-50">
 //       <button
         onClick={() => setIsVisible(!isVisible)}
@@ -136,7 +127,7 @@ export default function PerformanceEnhancer({ className = '', children }: Perfor
 //       >
         Performance
 </button>
-      
+
       {isVisible && (
         <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
           <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
@@ -161,7 +152,5 @@ export default function PerformanceEnhancer({ className = '', children }: Perfor
 </div>
       )}
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

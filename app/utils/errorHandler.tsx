@@ -1,17 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 interface errorHandlerProps {
-=======
 interface ErrorhandlerxProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   className?: string;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function errorHandler({ className = '', children }: errorHandlerProps) {
   return (
     <div className={`${className}`}>
@@ -19,7 +12,6 @@ export default function errorHandler({ className = '', children }: errorHandlerP
     </div>
   );
 }
-=======
 export default function Component() {
   return (
     <div>
@@ -27,8 +19,6 @@ export default function Component() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 const Errorhandlerx: React.FC<ErrorhandlerxProps> = ({ className = "" }) => {
   return (
     <div className={className}>
@@ -36,24 +26,13 @@ const Errorhandlerx: React.FC<ErrorhandlerxProps> = ({ className = "" }) => {
     </div>
   );
 };
-=======
 
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
 export default Errorhandlerx;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default function Errorhandler({ className = '', children, ...props }: ErrorhandlerProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

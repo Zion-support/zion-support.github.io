@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -8,11 +7,9 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
   );
-=======
 import fs from "fs";
 import { glob } from "glob";
 // #!/usr/bin/env node
-
 
 function fixUnusedImports(filePath) {
   let content = fs.readFileSync(filePath, "utf8");
@@ -52,5 +49,4 @@ function fixUnusedImports(filePath) {
   if (modified) {
     fs.writeFileSync(filePath, content);
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }

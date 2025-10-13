@@ -1,29 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface PerformanceOptimizerProps {
-=======
 interface PerformanceoptimizerProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 interface PerformanceOptimizerProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function PerformanceOptimizer({ className = '', children }: PerformanceOptimizerProps) {
-=======
 export default function Performanceoptimizer({ className = '', children, ...props }: PerformanceoptimizerProps) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
   return (
     <div className={`${className}`}>
-=======
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
@@ -103,7 +90,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     const timer = setTimeout(optimizePerformance, 100);
     return () => clearTimeout(timer);
   }, []);
-=======
 
 import React from 'react';
 
@@ -113,12 +99,9 @@ interface PerformanceoptimizerProps {
 }
 
 export default function Performanceoptimizer({ className = '', children, ...props }: PerformanceoptimizerProps) {
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
   return (
     <div className="performance-optimizer">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       {children}
       {isOptimized && (
         <div className="hidden" aria-hidden="true">
@@ -128,10 +111,7 @@ export default function Performanceoptimizer({ className = '', children, ...prop
       )}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
 export default function PerformanceOptimizer({ className = '', children, ...props }: PerformanceOptimizerProps) {
     return (
         <div className="component" {...props}>
@@ -139,24 +119,11 @@ export default function PerformanceOptimizer({ className = '', children, ...prop
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default PerformanceOptimizer;
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 export default PerformanceOptimizer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default PerformanceOptimizer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState } from "react";
 import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";
 
@@ -30,7 +28,7 @@ const ImprovedContactForm: React.FC = () => {
 //     budget: "",
 //     timeline: "",
   });
-  
+
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -115,7 +113,7 @@ const ImprovedContactForm: React.FC = () => {
   ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    
+
     // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
@@ -132,20 +130,20 @@ const ImprovedContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
 
     setIsSubmitting(true);
-    
+
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       // In a real app, you would send the data to your backend
       console.log('Form submitted:', formData);
-      
+
       setIsSubmitted(true);
       setFormData({
 //         name: "",
@@ -183,7 +181,6 @@ const ImprovedContactForm: React.FC = () => {
 </div>
     );
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface ImprovedContactFormProps {
   className?: string;
@@ -192,23 +189,17 @@ interface ImprovedContactFormProps {
 
 export default function ImprovedContactForm({ className = '', children }: ImprovedContactFormProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
     <div className="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8">
       <div className="flex items-center gap-3 mb-6">
         <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
@@ -333,7 +324,7 @@ export default function ImprovedContactForm({ className = '', children }: Improv
 </span>
               <ChevronDown className={`w-5 h-5 transition-transform ${isServiceDropdownOpen ? 'rotate-180' : ''}`} />
 </button>
-            
+
             {isServiceDropdownOpen && (
               <div className="absolute z-10 w-full mt-1 bg-slate-800 border border-white/20 rounded-lg shadow-lg max-h-60 overflow-y-auto">
                 {services.map((service) => (
@@ -445,7 +436,5 @@ export default function ImprovedContactForm({ className = '', children }: Improv
 </button>
       </form>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

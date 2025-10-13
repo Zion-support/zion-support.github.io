@@ -1,53 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useEffect } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface AnalyticsProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
 export default function Analytics({ className = '', children }: AnalyticsProps) {
   return (
     <div className={`${className}`}>
-=======
 export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
   return (
     <div className={`analytics-component ${className}`} {...props}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
       {children}
     </div>
   );
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import React, { useEffect } from 'react';
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
-
 
 import React, { useEffect } from 'react';
 import { Star } from 'lucide-react';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 declare global {
   interface Window {,
     gtag: (...args: any[]) => void;
@@ -55,18 +29,12 @@ declare global {
 }
 
 interface AnalyticsProps {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   children: React.ReactNode;
 }
 
 export default function Analytics({ children }: AnalyticsProps) {
   return <>{children}</>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 }
-=======
 interface AnalyticsProps {
   className?: string;
   children?: React.ReactNode;
@@ -79,11 +47,7 @@ export default function Analytics({ className = '', children, ...props }: Analyt
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
   measurementId?: string;
   enabled?: boolean;
 }
@@ -199,7 +163,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
   // Track custom events
   const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
     if (!enabled || typeof window === 'undefined' || !window.gtag) return;
-    
+
     window.gtag('event', eventName, parameters);
   };
 
@@ -210,11 +174,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
     const handleClick = (event: Event) => {
       const target = event.target as HTMLElement;
       const button = target.closest('button, a, [role="button"]');
-      
+
       if (button) {
         const buttonText = button.textContent?.trim() || 'Unknown';
         const buttonId = button.id || button.className;
-        
+
         trackEvent('button_click', {
           button_text: buttonText,
           button_id: buttonId,
@@ -234,7 +198,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     const handleSubmit = (event: Event) => {
       const form = event.target as HTMLFormElement;
       const formId = form.id || form.className;
-      
+
       trackEvent('form_submit', {
         form_id: formId,
         page_location: window.location.href,
@@ -254,10 +218,10 @@ const Analytics: React.FC<AnalyticsProps> = ({
       const scrollPercent = Math.round(
         (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
       );
-      
+
       if (scrollPercent > maxScroll) {
         maxScroll = scrollPercent;
-        
+
         // Track at 25%, 50%, 75%, and 100%
         if ([25, 50, 75, 100].includes(scrollPercent)) {
           trackEvent('scroll_depth', {
@@ -275,12 +239,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
   return null; // This component doesn't render anything
 };
 
-<<<<<<< HEAD
 export default Analytics;
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
   trackingId?: string;
   children?: React.ReactNode;
 }
@@ -308,15 +269,12 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId, children }) => {
 };
 
 export default Analytics;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 
   className?: string;
   children?: React.ReactNode;
 }
 
 export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
-<<<<<<< HEAD
   return (
     <div className={`analytics-component ${className}`} {...props}>
       {children}
@@ -324,10 +282,5 @@ export default function Analytics({ className = '', children, ...props }: Analyt
   );
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

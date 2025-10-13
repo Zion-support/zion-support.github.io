@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function fix-missing-imports.js() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -9,7 +8,7 @@ export default function fix-missing-imports.js() {
         <title>Fix Missing Imports.js - Zion Tech Group</title>
         <meta name="description" content="Fix Missing Imports.js solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Fix Missing Imports.js</h1>
@@ -21,7 +20,6 @@ export default function fix-missing-imports.js() {
     </div>
   );
 }
-=======
 // Common imports that are frequently missing;
 const commonImports = {
   'Helmet': "import { Helmet } from 'react-helmet-async';",
@@ -105,21 +103,21 @@ function fixMissingImports(filePath) {
 
     const content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
-    
+
     // Find all missing imports by checking for undefined variables;
     const missingImports = new Set();
-    
+
     // Check for common patterns;
     Object.keys(commonImports).forEach(importName => {
       if (content.includes(importName) && !content.includes(`import { ${importName}`) && !content.includes(`import ${importName}`)) {
         missingImports.add(importName);
       }
     });
-    
+
     if (missingImports.size === 0) {
       return;
     }
-    
+
     // Find the last import statement;
     let lastImportIndex = -1;
     for (let i = 0; i < lines.length; i++) {>
@@ -127,15 +125,12 @@ function fixMissingImports(filePath) {
   lastImportIndex = i;
       }
     }
-    
-<<<<<<< HEAD
+
     // Add missing imports;
     const newImports = Array.from(missingImports).map(importName => commonImports[importName]);
-=======
     // Add missing imports>
   const newImports = Array.from(missingImports).map(importName => commonImports[importName]);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-    
+
     if (lastImportIndex >= 0) {
       // Insert after the last import;
       lines.splice(lastImportIndex + 1, 0, ...newImports);
@@ -143,11 +138,11 @@ function fixMissingImports(filePath) {
       // Insert at the beginning;
       lines.unshift(...newImports, '');
     }
-    
+
     const newContent = lines.join('\n');
     fs.writeFileSync(filePath, newContent);
     console.log(`Fixed missing imports in: ${filePath}`);
-    
+
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
   }
@@ -156,18 +151,18 @@ function fixMissingImports(filePath) {
 // Function to recursively find all TypeScript files;
 function findFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
-  
+
   files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
+
     if (stat.isDirectory() && !file.includes('node_modules') && !file.includes('.git')) {
       findFiles(filePath, fileList);
     } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
       fileList.push(filePath);
     }
   });
-  
+
   return fileList;
 }
 
@@ -180,4 +175,3 @@ files.forEach(file => {
 });
 
 console.log('Finished fixing missing imports.');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 import fs from 'fs';
 import path from 'path';
 #!/usr/bin/env node;
@@ -285,4 +283,3 @@ for (const file, of, criticalFiles) {
   if (fs.existsSync(file)) {
     if (fixFile(file)) {
       fixedCount++;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

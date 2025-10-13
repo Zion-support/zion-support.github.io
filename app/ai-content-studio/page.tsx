@@ -1,23 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function aiContentStudio() {
   return (
-=======
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import EnhancedSEO from "../components/EnhancedSEO";
@@ -57,14 +45,9 @@ const AIContentStudioZionTechGroup = () => {
       color: "from-orange-500 to-red-500",
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
-<<<<<<< HEAD
 export default function AiContentStudioPage() {
         return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
-=======
-=======
   const pricingPlans = [
     {
       name: "Creator",
@@ -111,28 +94,23 @@ export default function AiContentStudioPage() {
       popular: false;
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-
 
 import React from 'react';
 import { Helmet } from "react-helmet-async";
 
 export default function AiContentStudioPage() {
-<<<<<<< HEAD
   return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Content Studio - Zion Tech Group</title>
         <meta name="description" content="Ai Content Studio solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Content Studio</h1>
           <p className="text-xl text-gray-300 mb-8">
             This page is under development. Please check back later.
-=======
 
 export default function AicontentstudioPage() {
   return (
@@ -142,10 +120,9 @@ export default function AicontentstudioPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Content Studio</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -153,14 +130,14 @@ export default function AicontentstudioPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -168,7 +145,7 @@ export default function AicontentstudioPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -178,21 +155,15 @@ export default function AicontentstudioPage() {
     </div>
   );
 }
-=======
 import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-=======
-
 
 import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from 'lucide-react';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import { useState, useEffect } from 'react';
 import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -200,26 +171,18 @@ import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
 import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
-<<<<<<< HEAD
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
-=======
 
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 const AIContentStudioZionTechGroup = () => {
-<<<<<<< HEAD
-=======
 
 import { Helmet } from 'react-helmet-async';
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 export default function AiContentStudioPage() {
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
   const features = [
     {,
     title: "AI Writing Assistant",
@@ -233,19 +196,16 @@ export default function AiContentStudioPage() {
         icon: <Video className="w-8 h-8" />,
         color: "from-blue-500 to-cyan-500"
     },
-<<<<<<< HEAD
     {
       title: "Image Creation",
       description: "Generate stunning visuals, graphics, and artwork using cutting-edge AI image models",
       icon: <Image className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
-=======
     {,
     title: "Image Creation",
         description: "Generate stunning visuals, graphics, and artwork using cutting-edge AI image models",
         icon: <img className="w-8 h-8" />,
         color: "from-green-500 to-emerald-500"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     },
     {,
     title: "Content Optimization",
@@ -270,23 +230,19 @@ export default function AiContentStudioPage() {
       ],
         popular: false
     },
-<<<<<<< HEAD
     {
       name: "Professional",
       price: "$199",
       period: "month",
       description: "For professional content teams",
       features: [
-=======
     {,
     name: "Studio Pro",
         price: "$149",
         period: "month",
         description: "Ideal for content teams and agencies",
         features: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "Unlimited AI-generated content",
-<<<<<<< HEAD
         "Advanced video generation",
         "Premium image models",
         "Advanced SEO optimization",
@@ -294,17 +250,14 @@ export default function AiContentStudioPage() {
         "Team collaboration",
         "Brand voice customization",
         "API access"
-=======
         "Advanced AI models",
         "Team collaboration",
         "Advanced analytics",
         "Priority support",
         "Custom brand voice"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       ],
         popular: true
     },
-<<<<<<< HEAD
     {
       name: "Enterprise",
       price: "$499",
@@ -312,8 +265,6 @@ export default function AiContentStudioPage() {
       description: "For large organizations",
       features: [
         "Everything in Professional",
-<<<<<<< HEAD
-=======
     {,
     name: "Enterprise",
         price: "$299",
@@ -321,27 +272,22 @@ export default function AiContentStudioPage() {
         description: "For large content operations",
         features: [
         "Everything in Studio Pro",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         "Custom AI model training",
         "White-label solution",
         "Dedicated support team",
         "SLA guarantee",
         "Custom integrations",
         "Advanced analytics"
-=======
         "Dedicated support",
         "Custom AI training",
         "API access",
         "White-label solution",
         "SLA guarantee"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       ],
         popular: false
     }
-<<<<<<< HEAD
   ];
 
-<<<<<<< HEAD
   const testimonials = [
     {
       name: "Sarah Chen",
@@ -369,24 +315,18 @@ export default function AiContentStudioPage() {
     }
   ];
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Zion AI Content Studio",
-<<<<<<< HEAD
     "description": "AI-powered content creation platform for writing, video, and image generation",
-=======
     "description": "AI-powered content creation platform for articles, videos, images, and marketing materials",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
     "url": "https://ziontechgroup.com/ai-content-studio",
     "applicationCategory": "ContentCreationApplication",
     "operatingSystem": "Web, Windows, macOS, Linux",
     "offers": {
       "@type": "Offer",
       "price": "199",
-<<<<<<< HEAD
       "priceCurrency": "USD",
       "priceSpecification": {
         "@type": "UnitPriceSpecification",
@@ -413,26 +353,21 @@ export default function AiContentStudioPage() {
             canonical="https://ziontechgroup.com/ai-content-studio"
           />
           <StructuredData data={structuredData} />
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Star } from 'lucide-react';
 import { FileText } from 'lucide-react';
 
 const AIContentStudioZionTechGroup = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function AiContentStudioPage() {
         return (
-=======
 
   ];
 
   const testimonials = [
-<<<<<<< HEAD
     {,
     name: "Lisa Wang",
         role: "Content Manager",
@@ -456,10 +391,7 @@ export default function AiContentStudioPage() {
         content: "The design automation features are game-changing. We can create professional visuals in minutes instead of hours.",
         rating: 5,
         avatar: "MG"
-=======
       "priceCurrency": "USD"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
     {
       name: "Sarah Johnson",
       role: "Content Manager",
@@ -491,7 +423,6 @@ export default function AiContentStudioPage() {
       content: "The design automation features are game-changing. We can create professional visuals in minutes instead of hours.",
       rating: 5,
       avatar: "MG",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   };
 
@@ -517,50 +448,34 @@ export default function AiContentStudioPage() {
   };
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Content Studio - Zion Tech Group</title>
         <meta name="description" content="Ai Content Studio solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Ai Content Studio</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai content studio solutions designed to meet your business needs.
           </p>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
-          
+
           <main className="min-h-screen">
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     <PerformanceOptimizer>
       <EnhancedAccessibility>
         <FuturisticBackgroundEnhanced>
           <EnhancedSEO
-<<<<<<< HEAD
             title="AI Content Studio - Zion Tech Group"
             description="AI-powered content creation platform for articles, videos, images, and marketing materials. Create professional content at scale with advanced AI technology."
             keywords="AI content creation, content studio, AI writing, video generation, image creation, content marketing"
-=======
             title="Zion AI Content Studio - AI-Powered Content Creation"
             description="Create stunning content with AI-powered writing, video generation, and image creation. Transform your content strategy with Zion AI Content Studio."
             keywords="AI content creation, content generation, video creation, image generation, content marketing, Zion Tech Group"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
             canonicalUrl="https://ziontechgroup.com/ai-content-studio"
           />
           <StructuredData data={structuredData} />
-          
-<<<<<<< HEAD
+
           <Helmet>
             <title>AI Content Studio - Zion Tech Group</title>
             <meta name="description" content="AI-powered content creation platform for articles, videos, images, and marketing materials." />
@@ -569,21 +484,19 @@ export default function AiContentStudioPage() {
           </Helmet>
 
           <main>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
               <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
-<<<<<<< HEAD
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
                   <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
                   <span className="text-purple-400 text-sm font-medium">AI-Powered Content Creation</span>
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -592,12 +505,12 @@ export default function AiContentStudioPage() {
                   className="mb-6 leading-tight">
                   Zion AI Content Studio
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Create stunning content with AI-powered writing, video, and image generation tools. 
+                  Create stunning content with AI-powered writing, video, and image generation tools.
                   Perfect for content creators, marketers, and agencies.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#pricing"
@@ -615,14 +528,13 @@ export default function AiContentStudioPage() {
                     iconPosition="left">
                     Watch Demo
                   </FuturisticButtonEnhanced>
-=======
               <ResponsiveContainer>
                 <div className="text-center relative z-10">
                   <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                     <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
                     <span className="text-cyan-400 text-sm font-medium">AI-Powered Content Creation</span>
                   </div>
-                  
+
                   <FuturisticTextEnhanced
                     variant="display"
                     size="5xl"
@@ -631,12 +543,12 @@ export default function AiContentStudioPage() {
                     className="mb-6">
                     AI Content Studio
                   </FuturisticTextEnhanced>
-                  
+
                   <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                    Create professional content at scale with our advanced AI-powered platform. 
+                    Create professional content at scale with our advanced AI-powered platform.
                     Generate articles, videos, images, and marketing materials with cutting-edge technology.
                   </p>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <FuturisticButtonEnhanced
                       href="/contact"
@@ -655,10 +567,8 @@ export default function AiContentStudioPage() {
                       Watch Demo
                     </FuturisticButtonEnhanced>
                   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                 </div>
               </ResponsiveContainer>
-=======
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -668,7 +578,7 @@ export default function AiContentStudioPage() {
                     <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
                     <span className="text-purple-400 text-sm font-medium">AI-Powered Content Creation</span>
                   </div>
-                  
+
                   <FuturisticTextEnhanced
                     variant="display"
                     size="5xl"
@@ -677,12 +587,12 @@ export default function AiContentStudioPage() {
                     className="mb-6 leading-tight">
                     Zion AI Content Studio
                   </FuturisticTextEnhanced>
-                  
+
                   <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                    Create stunning content with AI-powered writing, video generation, and image creation. 
+                    Create stunning content with AI-powered writing, video generation, and image creation.
                     Transform your content strategy and scale your creative output.
                   </p>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                     <FuturisticButtonEnhanced
                       href="/contact"
@@ -703,7 +613,6 @@ export default function AiContentStudioPage() {
                   </div>
                 </div>
               </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
             </section>
 
             {/* Features Section */}
@@ -714,15 +623,9 @@ export default function AiContentStudioPage() {
                     Powerful Content Creation Tools
                   </h2>
                   <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-<<<<<<< HEAD
-<<<<<<< HEAD
                     Harness the power of AI to create engaging content across all formats and platforms.
-=======
                     Harness the power of AI to create professional content across all formats and platforms.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
                     Harness the power of AI to create professional content across all formats and channels.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                   </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -732,15 +635,9 @@ export default function AiContentStudioPage() {
                       className="text-center">
                       <div
                         className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         aria-hidden="true">
-=======
                       >
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
                         aria-hidden="true">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                         {feature.icon}
                       </div>
                       <h3 className="text-xl font-semibold text-white mb-3">
@@ -757,11 +654,8 @@ export default function AiContentStudioPage() {
             </section>
 
             {/* Pricing Section */}
-<<<<<<< HEAD
             <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-=======
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
               <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -771,10 +665,7 @@ export default function AiContentStudioPage() {
                     Select the perfect plan for your content creation needs
                   </p>
                 </div>
-<<<<<<< HEAD
-=======
-                
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {pricingPlans.map((plan, index) => (
                     <FuturisticCardEnhanced
@@ -787,24 +678,18 @@ export default function AiContentStudioPage() {
                           </span>
                         </div>
                       )}
-<<<<<<< HEAD
                       <div className="text-center mb-6">
                         <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-<<<<<<< HEAD
                         <div className="text-4xl font-bold text-purple-400 mb-2">
                           {plan.price}<span className="text-lg text-gray-400">/{plan.period}</span>
-=======
                         <div className="flex items-baseline justify-center">
                           <span className="text-4xl font-bold text-white">{plan.price}</span>
                           <span className="text-gray-400 ml-1">/{plan.period}</span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
                       <div className="text-center mb-8">
                         <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                         <div className="text-4xl font-bold text-white mb-2">
                           {plan.price}
                           <span className="text-lg text-gray-400">/{plan.period}</span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                         </div>
                         <p className="text-gray-300 mt-2">{plan.description}</p>
                       </div>
@@ -812,15 +697,9 @@ export default function AiContentStudioPage() {
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
-<<<<<<< HEAD
                             {feature}
-=======
                             <span className="text-gray-300">{feature}</span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
                             <span className="text-gray-300">{feature}</span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                           </li>
                         ))}
                       </ul>
@@ -836,10 +715,6 @@ export default function AiContentStudioPage() {
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
             {/* Testimonials Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -852,30 +727,25 @@ export default function AiContentStudioPage() {
                     See what content creators are saying about Zion AI Content Studio
                   </p>
                 </div>
-<<<<<<< HEAD
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {testimonials.map((testimonial, index) => (
                     <div
                       key={index}
                       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden">
                       <div className="flex items-center mb-4">
-=======
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {testimonials.map((testimonial, index) => (
                     <FuturisticCardEnhanced key={index} className="text-center">
                       <div className="flex justify-center mb-4">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                         ))}
                       </div>
-<<<<<<< HEAD
                       <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                       <div>
                         <div className="font-semibold text-white">{testimonial.name}</div>
                         <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-=======
                       <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                       <div className="flex items-center justify-center">
                         <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
@@ -885,18 +755,12 @@ export default function AiContentStudioPage() {
                           <div className="font-semibold text-white">{testimonial.name}</div>
                           <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                       </div>
                     </FuturisticCardEnhanced>
                   ))}
                 </div>
               </div>
             </section>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
             {/* CTA Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
@@ -905,20 +769,14 @@ export default function AiContentStudioPage() {
                   Ready to Transform Your Content Creation?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  Join thousands of content creators using Zion AI Content Studio to produce 
+                  Join thousands of content creators using Zion AI Content Studio to produce
                   engaging content at scale. Start your free trial today.
-=======
-                  Join thousands of creators using Zion AI Content Studio to produce professional content at scale. 
+                  Join thousands of creators using Zion AI Content Studio to produce professional content at scale.
                   Start your free trial today.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
-                  Join thousands of content creators using Zion AI Content Studio to produce 
+                  Join thousands of content creators using Zion AI Content Studio to produce
                   professional content at scale. Start your free trial today.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -932,15 +790,9 @@ export default function AiContentStudioPage() {
                     href="/demo"
                     variant="outline"
                     size="lg"
-<<<<<<< HEAD
-<<<<<<< HEAD
                     icon={PenTool}
-=======
                     icon={Video}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
                     icon={Video}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
                     iconPosition="right">
                     Watch Demo
                   </FuturisticButtonEnhanced>
@@ -954,11 +806,7 @@ export default function AiContentStudioPage() {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default AIContentStudioZionTechGroup;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -989,13 +837,6 @@ export default AIContentStudioZionTechGroup;
 
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default AIContentStudioZionTechGroup;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default AIContentStudioZionTechGroup;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

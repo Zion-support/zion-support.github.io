@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -8,11 +7,9 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
   );
-=======
 import fs from "fs";
 import { glob } from "glob";
 // #!/usr/bin/env node
-
 
 // Specific fixes for remaining JSX issues
 const fixes = [
@@ -123,5 +120,4 @@ for (const file of files) {
       }
   } catch (error) {
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }

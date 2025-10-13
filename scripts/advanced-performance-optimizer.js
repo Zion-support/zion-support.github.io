@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -93,7 +91,7 @@ const enhancedChunking = `
             return '5g-services'
           }
           // Other service pages
-          if (id.includes('/app/') && id.includes('/page.tsx') && 
+          if (id.includes('/app/') && id.includes('/page.tsx') &&
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
             return 'pages'
           }
@@ -199,7 +197,7 @@ const manifestContent = {
 };
 
 fs.writeFileSync(
-  path.join(__dirname, '..', 'public', 'manifest.json'), 
+  path.join(__dirname, '..', 'public', 'manifest.json'),
   JSON.stringify(manifestContent, null, 2)
 );
 
@@ -208,4 +206,3 @@ console.log('✓ Enhanced chunking strategy applied');
 console.log('✓ Service worker updated');
 console.log('✓ Performance monitoring added');
 console.log('✓ PWA manifest enhanced');
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

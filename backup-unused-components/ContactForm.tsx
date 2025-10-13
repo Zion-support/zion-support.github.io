@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface ContactFormProps {
   className?: string;
   children?: React.ReactNode;
 }
-=======
 import React, { useState } from "react";
 import { MessageSquare } from "lucide-react";
-<<<<<<< HEAD
 interface FormData;
   name: string;
   email: string;
@@ -16,7 +13,6 @@ interface FormData;
   company: string;
   message: string;
   service: string;
-=======
 interface FormData ,
     name: string;,
     email: string;,
@@ -24,10 +20,8 @@ interface FormData ,
     company: string;,
     message: string;,
     service: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-<<<<<<< HEAD
-const ContactForm: React.FC = () => 
+const ContactForm: React.FC = () =>
   const [formData, setFormData] = useState<FormData>(,
     name: "",
       email: "",
@@ -36,7 +30,6 @@ const ContactForm: React.FC = () =>
       message: "",
       service: "",
 );
-=======
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
 //     name: "",
@@ -46,27 +39,21 @@ const ContactForm: React.FC = () => {
 //     message: "",
 //     service: "",
   });
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-<<<<<<< HEAD
   const handleChange = (
-<<<<<<< HEAD
-=======
   const handleChange = (,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
     >,
-  ) => 
+  ) =>
     const { name, value } = e.target;
     setFormData()prev) => (
       ...prev,
       [name]: value,
 ();
 ;
-  const handleSubmit = async (e: React.FormEvent) => 
-=======
+  const handleSubmit = async (e: React.FormEvent) =>
 //     e: React.ChangeEvent<
 //       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
 //     >,
@@ -79,15 +66,12 @@ const ContactForm: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
     e.preventDefault();
     setIsSubmitting(true);
     try;
       // Simulate API call;
       await new Promise()resolve) => setTimeout(resolve, 1000();
       setIsSubmitted(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
       setFormData(
         name: "",
         email: "",
@@ -95,7 +79,6 @@ const ContactForm: React.FC = () => {
         company: "",
         message: "",
         service: "",
-=======
       setFormData(,
     name: "",
           email: "",
@@ -103,14 +86,10 @@ const ContactForm: React.FC = () => {
           company: "",
           message: "",
           service: "",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 );
- catch (error) 
-<<<<<<< HEAD
+ catch (error)
  finally;
-=======
- finally 
-=======
+ finally
       setFormData({
 //         name: "",
 //         email: "",
@@ -122,173 +101,126 @@ const ContactForm: React.FC = () => {
 
     } catch (error) {
       } finally {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       setIsSubmitting(false);
 
 ;
-  if (isSubmitted) 
+  if (isSubmitted)
     return (
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center"></div>
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
         <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
-<<<<<<< HEAD
         <p></p>
           Your message has been sent successfully. We'll get back to you soon.
         </p>
-<<<<<<< HEAD
   </div>
-=======
       </div>
-=======
 //         <p>
 //           Your message has been sent successfully. We'll get back to you soon.
 </p>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
     );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 
 export default function ContactForm({ className = '', children }: ContactFormProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <form onSubmit="{handleSubmit}" className="space-y-6"></form>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         <div></div>
-<<<<<<< HEAD
           <label;
             htmlFor="name"
             className="block text-sm font-medium text-gray-700 mb-2"
-=======
           <label>
   htmlFor="name">
   className="block text-sm font-medium text-gray-700 mb-2"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           >
             Full Name *
           </label>
           <input;
-=======
     <form onSubmit="{handleSubmit}" className="space-y-6"></form>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         <div></div>
           <label
-=======
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 //         <div>
 //           <label
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
             htmlFor="name"
             className="block text-sm font-medium text-gray-700 mb-2"
 //           >
 //             Full Name *
 //           </label>
 //           <input
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
             type="text"
-<<<<<<< HEAD
             id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
-<<<<<<< HEAD
             required;
-=======
 //             required
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-<<<<<<< HEAD
-=======
   id="name"
             name="name">
   value={formData.name}>
   onChange={handleChange}>
   required>
   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           />
   </div>
         <div></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <label;
             htmlFor="email"
             className="block text-sm font-medium text-gray-700 mb-2"
-=======
           <label>
   htmlFor="email">
   className="block text-sm font-medium text-gray-700 mb-2"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           >
             Email Address *
           </label>
           <input;
-=======
           <label
-=======
 //           />
 </div>
 
 //         <div>
 //           <label
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
             htmlFor="email"
             className="block text-sm font-medium text-gray-700 mb-2"
 //           >
 //             Email Address *
 //           </label>
 //           <input
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
             type="email"
-<<<<<<< HEAD
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-<<<<<<< HEAD
             required;
-=======
 //             required
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-<<<<<<< HEAD
-=======
   id="email"
             name="email">
   value={formData.email}>
   onChange={handleChange}>
   required>
   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           />
   </div>
   </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         <div></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <label;
             htmlFor="phone"
             className="block text-sm font-medium text-gray-700 mb-2"
-=======
           <label>
   htmlFor="phone">
   className="block text-sm font-medium text-gray-700 mb-2"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           >
             Phone Number;
           </label>
           <input;
-=======
           <label
-=======
 //           />
 </div>
 </div>
@@ -296,120 +228,92 @@ export default function ContactForm({ className = '', children }: ContactFormPro
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 //         <div>
 //           <label
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
             htmlFor="phone"
             className="block text-sm font-medium text-gray-700 mb-2"
 //           >
 //             Phone Number
 //           </label>
 //           <input
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
             type="tel"
-<<<<<<< HEAD
             id="phone"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-<<<<<<< HEAD
-=======
   id="phone">
   name="phone">
   value={formData.phone}>
   onChange={handleChange}>
   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           />
   </div>
         <div></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <label;
             htmlFor="company"
             className="block text-sm font-medium text-gray-700 mb-2"
-=======
           <label>
   htmlFor="company">
   className="block text-sm font-medium text-gray-700 mb-2"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           >
             Company;
           </label>
           <input;
-=======
           <label
-=======
 //           />
 </div>
 
 //         <div>
 //           <label
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
             htmlFor="company"
             className="block text-sm font-medium text-gray-700 mb-2"
 //           >
 //             Company
 //           </label>
 //           <input
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
             type="text"
-<<<<<<< HEAD
             id="company"
             name="company"
             value={formData.company}
             onChange={handleChange}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-<<<<<<< HEAD
-=======
   id="company">
   name="company">
   value={formData.company}>
   onChange={handleChange}>
   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           />
   </div>
   </div>
       <div></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <label;
           htmlFor="service"
           className="block text-sm font-medium text-gray-700 mb-2"
-=======
         <label>
   htmlFor="service">
   className="block text-sm font-medium text-gray-700 mb-2"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         >
           Service Interest;
         </label>
-<<<<<<< HEAD
         <select;
-=======
         <label
-=======
 //           />
 </div>
 </div>
 
 //       <div>
 //         <label
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
           htmlFor="service"
           className="block text-sm font-medium text-gray-700 mb-2"
 //         >
 //           Service Interest
 //         </label>
 //         <select
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
           id="service"
           name="service"
           value={formData.service}
           onChange={handleChange}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
 //         >
-=======
         <select
           id="service">
   name="service">
@@ -417,97 +321,71 @@ export default function ContactForm({ className = '', children }: ContactFormPro
   onChange={handleChange}>
   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
         >
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           <option value="">Select a service</option>
           <option value="ai-solutions">AI Solutions</option>
           <option value="it-services">IT Services</option>
           <option value="micro-saas">Micro SAAS</option>
           <option value="consulting">Consulting</option>
           <option value="other">Other</option>
-<<<<<<< HEAD
         </select>
   </div>
       <div></div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <label;
           htmlFor="message"
           className="block text-sm font-medium text-gray-700 mb-2"
-=======
         <label>
   htmlFor="message">
   className="block text-sm font-medium text-gray-700 mb-2"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         >
           Message *
         </label>
         <textarea;
-=======
         <label
-=======
 //         </select>
 </div>
 
 //       <div>
 //         <label
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
           htmlFor="message"
           className="block text-sm font-medium text-gray-700 mb-2"
 //         >
 //           Message *
 //         </label>
 //         <textarea
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
           id="message"
   name="message"
           value={formData.message}
-<<<<<<< HEAD
           onChange={handleChange}
-<<<<<<< HEAD
           required;
-=======
 //           required
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
           rows={5}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           placeholder="Tell us about your project or requirements..."
-<<<<<<< HEAD
-=======
   onChange={handleChange}>
   required>
   rows={5}>
   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
   placeholder="Tell us about your project or requirements..."
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         />
-<<<<<<< HEAD
   </div>
       <button;
-=======
       </div>
-<<<<<<< HEAD
       <button
-=======
 //         />
 </div>
 
 //       <button
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
         type="submit"
         disabled={isSubmitting}
         className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
 //       >
-=======
       <button>
   type="submit">
   disabled={isSubmitting}>
   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         {isSubmitting ? "Sending..." : "Send Message"}
 </button>
     </form>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
 }

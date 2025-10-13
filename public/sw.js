@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 //   '/',
 //   '/about',
 //   '/contact',
@@ -10,7 +8,6 @@ import React from 'react';
 //   '/5g-solutions',
   '/manifest.json',
 ];
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (

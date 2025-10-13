@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface UnauthorizedProps {
@@ -8,19 +7,15 @@ interface UnauthorizedProps {
 
 export default function Unauthorized({ className = '', children }: UnauthorizedProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
 }
-=======
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -33,4 +28,3 @@ export default UnauthorizedPage;
               Learn More;
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Loader2, Brain, Zap, Shield } from 'lucide-react';
 
 interface LoadingSpinnerProps {
@@ -8,16 +6,15 @@ interface LoadingSpinnerProps {
   className?: string;
 }
 
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  className = '' 
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  className = ''
 }) => {
   const sizeClasses = {
 //     sm: 'w-4 h-4',
 //     md: 'w-8 h-8',
 //     lg: 'w-12 h-12'
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface ImprovedLoadingStatesProps {
   className?: string;
@@ -26,37 +23,28 @@ interface ImprovedLoadingStatesProps {
 
 export default function ImprovedLoadingStates({ className = '', children }: ImprovedLoadingStatesProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
 }
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
     <div className={`flex items-center justify-center ${className}`}>
       <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }
-<<<<<<< HEAD
-=======
 
-export const LoadingPage: React.FC<LoadingPageProps> = ({ 
-  message = 'Loading...', 
-  showIcon = true 
+export const LoadingPage: React.FC<LoadingPageProps> = ({
+  message = 'Loading...',
+  showIcon = true
 }) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -81,7 +69,7 @@ interface LoadingCardProps {
   icon?: React.ReactNode;
 }
 
-export const LoadingCard: React.FC<LoadingCardProps> = ({ 
+export const LoadingCard: React.FC<LoadingCardProps> = ({
   title = 'Loading...',
   description = 'Please wait while we load the content.',
 //   icon
@@ -105,9 +93,9 @@ interface SkeletonLoaderProps {
   className?: string;
 }
 
-export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({ 
-  lines = 3, 
-  className = '' 
+export const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
+  lines = 3,
+  className = ''
 }) => {
   return (
     <div className={`animate-pulse ${className}`}>
@@ -151,5 +139,3 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) =
 };
 
 export default LoadingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

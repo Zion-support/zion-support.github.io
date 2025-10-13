@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 interface linkProps {
   className?: string;
@@ -19,26 +6,17 @@ interface linkProps {
 }
 
 export default function link({ className = '', children }: linkProps) {
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import React from 'react';
 
-
 export default function UtilsPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { Link } from 'react-router-dom';
 
 export default function LinkPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   return (
     <div className={`${className}`}>
       {children}
     </div>
   );
-<<<<<<< HEAD
-=======
 export function formatDate(date: Date | string): string {
   const d = new Date(date);
   return d.toLocaleDateString('en-US', {
@@ -61,8 +39,6 @@ export function slugify(text: string): string {
     .replace(/[^\w\s-]/g, '')
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
 import React from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -73,11 +49,11 @@ interface LinkProps {
   external?: boolean;
 }
 
-export default function Link({ 
-  to, 
-  children, 
-  className = '', 
-  external = false 
+export default function Link({
+  to,
+  children,
+  className = '',
+  external = false
 }: LinkProps) {
   if (external) {
     return (
@@ -97,9 +73,7 @@ export default function Link({
       {children}
     </RouterLink>
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 }
-=======
 import React from 'react';
 
 interface LinkProps {
@@ -115,13 +89,9 @@ export const Link = ({ href, children, className = '' }: LinkProps) => {
     </a>
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
   return (;
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>;
       <div className="container mx-auto px-4 py-16"></div>;
@@ -136,9 +106,6 @@ import { ArrowRight } from 'lucide-react';
       </div>;
 </div>;
 );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
-
 
 import React from 'react';
 
@@ -161,7 +128,4 @@ export default function link() {
   );
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

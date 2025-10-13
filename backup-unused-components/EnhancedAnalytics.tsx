@@ -7,27 +7,20 @@ interface EnhancedAnalyticsProps {
 
 export default function EnhancedAnalytics({ className = '', children }: EnhancedAnalyticsProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
-<<<<<<< HEAD
 }
-=======
 }
-<<<<<<< HEAD
-=======
 
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ 
-//   children, 
-  trackingId = 'G-XXXXXXXXXX' 
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
+//   children,
+  trackingId = 'G-XXXXXXXXXX'
 }) => {
   const location = useLocation();
 
@@ -113,10 +106,10 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       const scrollPercent = Math.round(
         (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
       );
-      
+
       if (scrollPercent > maxScroll) {
         maxScroll = scrollPercent;
-        
+
         // Track milestone scroll depths
         if (maxScroll >= 25 && maxScroll < 50) {
           trackEvent('scroll_depth', { depth: '25%' });
@@ -137,7 +130,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   // Track time on page
   useEffect(() => {
     const startTime = Date.now();
-    
+
     return () => {
       const timeOnPage = Math.round((Date.now() - startTime) / 1000);
       if (timeOnPage > 5) { // Only track if user spent more than 5 seconds
@@ -154,7 +147,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     const trackExternalLinks = (event: Event) => {
       const target = event.target as HTMLElement;
       const link = target.closest('a');
-      
+
       if (link && link.href && !link.href.startsWith(window.location.origin)) {
         trackEvent('external_link_click', {
 //           link_url: link.href,
@@ -172,11 +165,11 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     const trackDownloads = (event: Event) => {
       const target = event.target as HTMLElement;
       const link = target.closest('a');
-      
+
       if (link && link.href) {
         const fileName = link.href.split('/').pop() || '';
         const fileExtension = fileName.split('.').pop()?.toLowerCase();
-        
+
         if (fileExtension && ['pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx'].includes(fileExtension)) {
           trackEvent('file_download', {
 //             file_name: fileName,
@@ -215,5 +208,3 @@ declare global {
 }
 
 export default EnhancedAnalytics;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 import React from 'react';
 
 interface EnhancedAnalyticsProps {
@@ -16,7 +5,6 @@ interface EnhancedAnalyticsProps {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
 export default function EnhancedAnalytics({ className = '', children }: EnhancedAnalyticsProps) {
   return (
     <div className={`${className}`}>
@@ -24,11 +12,6 @@ export default function EnhancedAnalytics({ className = '', children }: Enhanced
     </div>
   );
 }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
 export default function EnhancedAnalytics({ className = '', children, ...props }: EnhancedAnalyticsProps) {
     return (
         <div className="component" {...props}>
@@ -36,19 +19,11 @@ export default function EnhancedAnalytics({ className = '', children, ...props }
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
 import { useState, useEffect } from 'react';
 interface EnhancedAnalyticsProps {
   children: React.ReactNode;
 }
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
-
-<<<<<<< HEAD
     // Track page views
     const trackPageView = () => {
       if (typeof window !== 'undefined') {
@@ -65,10 +40,6 @@ interface EnhancedAnalyticsProps {
 };
 
 export default EnhancedAnalytics;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
 import React from 'react';
 
 interface EnhancedanalyticsProps {
@@ -84,14 +55,9 @@ export default function Enhancedanalytics({ className = '', children, ...props }
   );
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8

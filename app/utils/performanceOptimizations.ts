@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // performanceOptimizations utility functions
 
 export interface performanceOptimizationsConfig {
@@ -14,14 +12,12 @@ export class performanceOptimizations {
       enabled: true,
       ...config
     };
-=======
 
 // performanceOptimizations utility
 export const performanceOptimizations = {
   // Utility implementation,
     init: () => {
     console.log('performanceOptimizations initialized');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   }
 
   init(): void {
@@ -33,14 +29,8 @@ export const performanceOptimizations = {
 
 export const performanceoptimizations = new performanceOptimizations();
 export default performanceoptimizations;
-=======
 // performanceOptimizations
 export const performanceOptimizations = () => {
   // Utility function implementation
   return null;
 };
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export default function Component() {
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 export default useEnhancedPerformance;
 // /**
  * Enhanced Performance Hook;
@@ -58,4 +56,3 @@ const duration = performance.now() - startTime;
   );
     measureOperation;
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

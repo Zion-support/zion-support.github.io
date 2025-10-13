@@ -1,16 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function dataCenterServices() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -18,42 +8,34 @@ export default function dataCenterServices() {
         <title>Data Center Services - Zion Tech Group</title>
         <meta name="description" content="Data Center Services solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Data Center Services</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function DataCenterServicesPage() {
-=======
 
 import React from 'react';
 
 export default function Page() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Data Center Services - Zion Tech Group</title>
         <meta name="description" content="Advanced data center services solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
-<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Data Center Services
-=======
 
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Page
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function DatacenterservicesPage() {
   return (
@@ -63,11 +45,9 @@ export default function DatacenterservicesPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Data Center Services</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
-<<<<<<< HEAD
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -75,14 +55,14 @@ export default function DatacenterservicesPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -90,21 +70,17 @@ export default function DatacenterservicesPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </div>
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
 import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
@@ -114,7 +90,6 @@ import ResponsiveContainer from '../components/ResponsiveContainer';
 import EnhancedAccessibility from '../components/EnhancedAccessibility';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import { Server, ArrowRight, CheckCircle, Star, Users, Calendar, Phone, Mail } from 'lucide-react';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -128,18 +103,14 @@ import { Globe } from 'lucide-react';
 import { Server } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 const DataCenterServicesPage = () => {
   const dataCenterServices = [
     {
       icon: <Server className="w-8 h-8" />,
-<<<<<<< HEAD
       title: "Data Center Management",
       description: "Comprehensive data center management and monitoring services",
       color: "from-blue-500 to-cyan-500"
@@ -161,7 +132,6 @@ const DataCenterServicesPage = () => {
       title: "Disaster Recovery",
       description: "Comprehensive disaster recovery and business continuity solutions",
       color: "from-orange-500 to-red-500"
-=======
       color: "from-blue-500 to-cyan-500",
     },
     {
@@ -181,10 +151,8 @@ const DataCenterServicesPage = () => {
       description: "Round-the-clock monitoring and support to ensure optimal performance",
       icon: <Settings className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
-<<<<<<< HEAD
 
   const serviceProcess = [
     {
@@ -291,9 +259,7 @@ const DataCenterServicesPage = () => {
     }
   ];
 
-=======
 export default function PagePage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -304,8 +270,7 @@ export default function PagePage() {
             keywords="data center services, infrastructure management, cloud migration, disaster recovery, data center support"
             canonical="https://ziontechgroup.com/data-center-services"
           />
-          
-<<<<<<< HEAD
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -313,23 +278,22 @@ export default function PagePage() {
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Server className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Data Center Services</span>
-=======
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Data Center Services;
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Reliable, secure, and scalable data center solutions for your business. 
+            Reliable, secure, and scalable data center solutions for your business.
             From enterprise hosting to cloud migration, we provide the infrastructure you need.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link;
               to="/contact"
@@ -361,7 +325,7 @@ export default function PagePage() {
               your business needs to thrive in the digital age.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div;
@@ -372,9 +336,8 @@ export default function PagePage() {
                   className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -383,12 +346,12 @@ export default function PagePage() {
                   className="mb-6 leading-tight">
                   Data Center Services
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Optimize your data center infrastructure with our comprehensive services. 
+                  Optimize your data center infrastructure with our comprehensive services.
                   From management to migration, we've got you covered.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#contact"
@@ -410,7 +373,6 @@ export default function PagePage() {
               </ResponsiveContainer>
             </section>
 
-<<<<<<< HEAD
             {/* Data Center Services Section */}
             <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
               <ResponsiveContainer>
@@ -588,10 +550,10 @@ export default function PagePage() {
                   Ready to Optimize Your Data Center?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Let's implement comprehensive data center services to optimize your infrastructure 
+                  Let's implement comprehensive data center services to optimize your infrastructure
                   and ensure your business runs smoothly.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -616,7 +578,6 @@ export default function PagePage() {
         </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
@@ -628,7 +589,7 @@ export default function PagePage() {
               Experience the benefits of enterprise-grade data center services;
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
@@ -647,10 +608,10 @@ export default function PagePage() {
             Ready to Optimize Your Infrastructure?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses trusting our data center services. 
+            Join thousands of businesses trusting our data center services.
             Get reliable, secure, and scalable infrastructure today.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link;
               to="/contact"
@@ -670,20 +631,10 @@ export default function PagePage() {
         </div>
       </section>
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
   );
 };
 
-<<<<<<< HEAD
 export default DataCenterServicesPage;
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

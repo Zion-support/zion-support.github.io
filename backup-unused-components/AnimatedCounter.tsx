@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { useState, useEffect } from "react";
 
 interface AnimatedCounterProps {
@@ -44,7 +42,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       }
     };
   }, [end, duration]);
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 interface AnimatedCounterProps {
   className?: string;
@@ -53,29 +50,21 @@ interface AnimatedCounterProps {
 
 export default function AnimatedCounter({ className = '', children }: AnimatedCounterProps) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-=======
     <span className={className}>
       {prefix}
       {count.toLocaleString()}
       {suffix}
 </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 import React from 'react';
 
 interface EnhancedErrorFeedbackProps {
@@ -13,22 +5,16 @@ interface EnhancedErrorFeedbackProps {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function EnhancedErrorFeedback({ className = '', children }: EnhancedErrorFeedbackProps) {
   return (
     <div className={`${className}`}>
-=======
 export default function EnhancedErrorFeedback({ className = '', children, ...props }: EnhancedErrorFeedbackProps) {
   return (
     <div className={`enhanced-error-feedback-component ${className}`} {...props}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
       {children}
     </div>
   );
 }
-=======
 export default function EnhancedErrorFeedback({ className = '', children, ...props }: EnhancedErrorFeedbackProps) {
     return (
         <div className="component" {...props}>
@@ -36,22 +22,18 @@ export default function EnhancedErrorFeedback({ className = '', children, ...pro
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-=======
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
 interface Props {,
     children: ReactNode;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 }
 
 interface State {,
@@ -97,11 +79,11 @@ export class GlobalErrorBoundary extends Component<Props, State> {
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
-            
+
             <h1 className="text-3xl font-bold text-white mb-4">
               Oops! Something went wrong
             </h1>
-            
+
             <p className="text-gray-300 mb-6 text-lg">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
@@ -127,16 +109,13 @@ export class GlobalErrorBoundary extends Component<Props, State> {
                 <RefreshCw className="w-4 h-4 mr-2 group-hover:rotate-180 transition-transform duration-300" />
                 Try Again
               </button>
-<<<<<<< HEAD
-              
+
               <button
                 onClick={this.handleGoHome}
                 className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
-=======
               <button>
   onClick={this.handleGoHome}>
   className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
               >
                 <Home className="w-4 h-4 mr-2 group-hover:scale-110 transition-transform duration-300" />
                 Go Home
@@ -163,19 +142,10 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default GlobalErrorBoundary;
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
 export default GlobalErrorBoundary;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 export default function Enhancederrorfeedback({ className = '', children, ...props }: EnhancederrorfeedbackProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
 export default GlobalErrorBoundary;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

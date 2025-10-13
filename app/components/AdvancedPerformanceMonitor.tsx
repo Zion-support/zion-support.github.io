@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 
 interface AdvancedPerformanceMonitorProps {
@@ -16,8 +7,6 @@ interface AdvancedPerformanceMonitorProps {
   children?: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function AdvancedPerformanceMonitor({ className = '', children }: AdvancedPerformanceMonitorProps) {
   return (
     <div className={`${className}`}>
@@ -25,8 +14,6 @@ export default function AdvancedPerformanceMonitor({ className = '', children }:
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 export default function AdvancedPerformanceMonitor({ className = '', children, ...props }: AdvancedPerformanceMonitorProps) {
     return (
         <div className="component" {...props}>
@@ -34,11 +21,6 @@ export default function AdvancedPerformanceMonitor({ className = '', children, .
         </div>
       );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 export default function Advancedperformancemonitor({ className = '', children, ...props }: AdvancedperformancemonitorProps) {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -1,19 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function zionAiProjectManagerPro() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -21,12 +9,11 @@ export default function zionAiProjectManagerPro() {
         <title>Zion Ai Project Manager Pro - Zion Tech Group</title>
         <meta name="description" content="Zion Ai Project Manager Pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Zion Ai Project Manager Pro</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function ZionAiProjectManagerProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -34,16 +21,14 @@ export default function ZionAiProjectManagerProPage() {
         <title>Zion Ai Project Manager Pro - Zion Tech Group</title>
         <meta name="description" content="Advanced zion ai project manager pro solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Zion Ai Project Manager Pro
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function ZionaiprojectmanagerproPage() {
   return (
@@ -53,10 +38,9 @@ export default function ZionaiprojectmanagerproPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Zion Ai Project Manager Pro</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -64,14 +48,14 @@ export default function ZionaiprojectmanagerproPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -79,7 +63,7 @@ export default function ZionaiprojectmanagerproPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -88,14 +72,12 @@ export default function ZionaiprojectmanagerproPage() {
       </div>
     </div>
   );
-=======
 import { useState, useEffect } from 'react';
 import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users } from 'lucide-react';
@@ -105,10 +87,7 @@ import { Zap } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 const ZionAIProjectManagerProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -129,13 +108,10 @@ const ZionAIProjectManagerProPage = () => {
         "Basic analytics",
         "Mobile app access"
       ],
-<<<<<<< HEAD
         popular: false,
         color: "from-gray-500 to-gray-600"
-=======
       popular: false,
       color: "from-gray-500 to-gray-600",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     },
     {,
     name: "Professional",
@@ -154,13 +130,10 @@ const ZionAIProjectManagerProPage = () => {
         "Time tracking",
         "Resource management"
       ],
-<<<<<<< HEAD
         popular: true,
         color: "from-cyan-500 to-purple-600"
-=======
       popular: true,
       color: "from-cyan-500 to-purple-600",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     },
     {,
     name: "Enterprise",
@@ -178,18 +151,14 @@ const ZionAIProjectManagerProPage = () => {
         "On-premise deployment",
         "SLA guarantees"
       ],
-<<<<<<< HEAD
         popular: false,
         color: "from-purple-500 to-pink-500"
-=======
       popular: false,
       color: "from-purple-500 to-pink-500",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
   const useCases = [
-<<<<<<< HEAD
     {,
     title: "Software Development",
         description: "Manage agile sprints, code reviews, and deployment pipelines with AI-powered sprint planning and bug tracking",
@@ -225,7 +194,6 @@ const ZionAIProjectManagerProPage = () => {
         description: "Deliver exceptional client projects with AI-optimized resource planning and automated progress reporting",
         icon: <Users className="w-6 h-6" />,
         color: "from-cyan-500 to-blue-500"
-=======
     {
       title: "Software Development",
       description: "Manage agile sprints, code reviews, and deployment pipelines with AI-powered sprint planning and bug tracking",
@@ -261,12 +229,10 @@ const ZionAIProjectManagerProPage = () => {
       description: "Deliver exceptional client projects with AI-optimized resource planning and automated progress reporting",
       icon: <Users className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
   const aiCapabilities = [
-<<<<<<< HEAD
     {,
     title: "Intelligent Task Prioritization",
         description: "AI analyzes task dependencies, deadlines, and team capacity to automatically prioritize tasks for optimal project flow",
@@ -302,7 +268,6 @@ const ZionAIProjectManagerProPage = () => {
         description: "Automate repetitive tasks, approvals, and notifications to streamline project management processes",
         icon: <Zap className="w-8 h-8" />,
         color: "from-cyan-500 to-blue-500"
-=======
     {
       title: "Intelligent Task Prioritization",
       description: "AI analyzes task dependencies, deadlines, and team capacity to automatically prioritize tasks for optimal project flow",
@@ -338,7 +303,6 @@ const ZionAIProjectManagerProPage = () => {
       description: "Automate repetitive tasks, approvals, and notifications to streamline project management processes",
       icon: <Zap className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -358,24 +322,24 @@ const ZionAIProjectManagerProPage = () => {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Project Intelligence</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Zion AI Project Manager Pro
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your project management with AI-powered task prioritization, predictive analytics, 
+            Transform your project management with AI-powered task prioritization, predictive analytics,
             and intelligent resource allocation. Boost team productivity by 40% and deliver projects on time, every time.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
               >
@@ -386,7 +350,7 @@ const ZionAIProjectManagerProPage = () => {
               Watch Demo
             </FuturisticButton>
           </div>
-          
+
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center group">
@@ -429,7 +393,7 @@ const ZionAIProjectManagerProPage = () => {
               Revolutionary AI Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our advanced AI technology learns from your team's patterns and optimizes project management 
+              Our advanced AI technology learns from your team's patterns and optimizes project management
               processes automatically for maximum efficiency and success.
             </p>
           </div>
@@ -543,8 +507,8 @@ const ZionAIProjectManagerProPage = () => {
               <div
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20' 
+                  plan.popular
+                    ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20'
                     : 'border-white/20'
                 } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
               >
@@ -631,7 +595,7 @@ const ZionAIProjectManagerProPage = () => {
               Ready to Revolutionize Your Project Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of teams already using Zion AI Project Manager Pro to deliver projects faster, 
+              Join thousands of teams already using Zion AI Project Manager Pro to deliver projects faster,
               more efficiently, and with greater success. Start your free trial today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -655,20 +619,10 @@ const ZionAIProjectManagerProPage = () => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default ZionAIProjectManagerProPage;
   );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }
-=======
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 export default $1;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

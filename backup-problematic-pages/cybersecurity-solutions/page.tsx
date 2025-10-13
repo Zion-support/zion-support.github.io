@@ -1,39 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
-
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function cybersecuritySolutions() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Cybersecurity Solutions - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Cybersecurity Solutions solutions by Zion Tech Group" />
-=======
         <meta name="description" content="Advanced cybersecurity solutions solutions by Zion Tech Group" />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
-<<<<<<< HEAD
           <h1 className="text-4xl font-bold mb-8">Cybersecurity Solutions</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Cybersecurity Solutions
-=======
 export default function CybersecuritySolutionsPage() {
   const capabilities = [
     {,
@@ -47,18 +30,12 @@ export default function CybersecuritySolutionsPage() {
         icon: <CheckCircle className="w-8 h-8" />
     }
   ];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
           </p>
-<<<<<<< HEAD
-=======
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -67,7 +44,6 @@ import { Shield } from 'lucide-react';
 import { Database } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Monitor } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
 export default function CybersecuritysolutionsPage() {
   return (
@@ -79,7 +55,7 @@ export default function CybersecuritysolutionsPage() {
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
@@ -87,14 +63,14 @@ export default function CybersecuritysolutionsPage() {
               Comprehensive solution for your business requirements.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
@@ -102,18 +78,14 @@ export default function CybersecuritysolutionsPage() {
             </p>
           </div>
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
         </div>
       </div>
     </div>
-=======
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackgroundEnhanced from '../components/FuturisticBackgroundEnhanced';
 import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
@@ -229,14 +201,8 @@ const CybersecuritySolutionsPage = () => {
       popular: false
     }
   ];
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-<<<<<<< HEAD
   const testimonials = [
     {
       name: "Sarah Chen",
@@ -274,7 +240,7 @@ import { Link } from 'react-router-dom';
             keywords="cybersecurity solutions, threat detection, identity management, data protection, network security, security solutions"
             canonical="https://ziontechgroup.com/cybersecurity-solutions"
           />
-          
+
           <main className="min-h-screen">
             {/* Hero Section */}
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -283,12 +249,11 @@ import { Link } from 'react-router-dom';
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
 <<<<<<< HEAD:app/cybersecurity-solutions/page.tsx
-              
+
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Shield className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Cybersecurity Solutions</span>
-=======
             ))}
           </div>
         </ResponsiveContainer>
@@ -305,7 +270,7 @@ import { Link } from 'react-router-dom';
               Our advanced security technologies and expert team provide comprehensive protection against the most sophisticated cyber threats
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {capabilities.map((capability, index) => (
               <FuturisticCard
@@ -314,9 +279,8 @@ import { Link } from 'react-router-dom';
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                   {capability.icon}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081:backup-problematic-pages/cybersecurity-solutions/page.tsx
                 </div>
-                
+
                 <FuturisticTextEnhanced
                   variant="display"
                   size="5xl"
@@ -325,12 +289,12 @@ import { Link } from 'react-router-dom';
                   className="mb-6 leading-tight">
                   Cybersecurity Solutions
                 </FuturisticTextEnhanced>
-                
+
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Protect your business with advanced cybersecurity solutions. 
+                  Protect your business with advanced cybersecurity solutions.
                   From threat detection to data protection, we've got you covered.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <FuturisticButtonEnhanced
                     href="#contact"
@@ -529,10 +493,10 @@ import { Link } from 'react-router-dom';
                   Ready to Secure Your Business?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Let's implement comprehensive cybersecurity solutions to protect your business 
+                  Let's implement comprehensive cybersecurity solutions to protect your business
                   from threats and ensure your data is secure.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <FuturisticButtonEnhanced
                     href="/contact"
@@ -557,21 +521,13 @@ import { Link } from 'react-router-dom';
         </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
-<<<<<<< HEAD
 };
 
 export default CybersecuritySolutionsPage;
-=======
 }
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 export default function PagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -579,7 +535,7 @@ export default function PagePage() {
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
-      
+
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -600,4 +556,3 @@ export default function PagePage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5

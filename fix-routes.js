@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -8,7 +7,6 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
   );
-=======
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -26,7 +24,7 @@ class RouteFixer {
     const content = fs.readFileSync(this.appPath, 'utf8');
     const routeRegex = /<Route\s+path="([^"]+)"\s+element={<[^>]+>}\s*\/>/g;
     let match;
-    
+
     while ((match = routeRegex.exec(content)) !== null) {
       this.existingRoutes.add(match[1]);
     }
@@ -35,14 +33,14 @@ class RouteFixer {
   // Get all pages from app directory
   getAllPages() {
     const pages = [];
-    
+
     const scanDirectory = (dir, basePath = '') => {
       const items = fs.readdirSync(dir);
-      
+
       for (const item of items) {
         const fullPath = path.join(dir, item);
         const stat = fs.statSync(fullPath);
-        
+
         if (stat.isDirectory()) {
           const newBasePath = basePath ? `${basePath}/${item}` : item;
           scanDirectory(fullPath, newBasePath);
@@ -52,7 +50,7 @@ class RouteFixer {
         }
       }
     };
-    
+
     scanDirectory(this.appDir);
     return pages;
   }
@@ -60,17 +58,17 @@ class RouteFixer {
   // Generate component name from route
   generateComponentName(route) {
     if (route === '/') return 'HomePage';
-    
+
     const parts = route.substring(1).split('/');
     return parts.map(part => {
       // Handle routes starting with numbers
       if (/^\d/.test(part)) {
-        return 'FiveG' + part.split('-').map(word => 
+        return 'FiveG' + part.split('-').map(word =>
           word.charAt(0).toUpperCase() + word.slice(1)
         ).join('');
       }
       // Handle special characters like dots, hyphens, etc.
-      const cleanPart = part.replace(/[^a-zA-Z0-9-]/g, '').split('-').map(word => 
+      const cleanPart = part.replace(/[^a-zA-Z0-9-]/g, '').split('-').map(word =>
         word.charAt(0).toUpperCase() + word.slice(1)
       ).join('');
       return cleanPart;
@@ -79,10 +77,10 @@ class RouteFixer {
 
   // Generate import statement for a component
   generateImportStatement(route, componentName) {
-    const importPath = route === '/' ? 
-//       './app/page' : 
+    const importPath = route === '/' ?
+//       './app/page' :
       `./app${route}/page`;
-    
+
     return `const ${componentName} = React.lazy(() => import("${importPath}"));`;
   }
 
@@ -96,52 +94,51 @@ class RouteFixer {
     // Get existing routes and all pages
     this.getExistingRoutes();
     const allPages = this.getAllPages();
-    
+
     // Find missing routes
     for (const page of allPages) {
       if (!this.existingRoutes.has(page)) {
         this.missingRoutes.push(page);
       }
     }
-    
+
     if (this.missingRoutes.length === 0) {
       return;
     }
-    
+
     // Read current App.tsx content
     let content = fs.readFileSync(this.appPath, 'utf8');
-    
+
     // Add import statements for missing routes
     const importStatements = [];
     const routeElements = [];
-    
+
     for (const route of this.missingRoutes) {
       const componentName = this.generateComponentName(route);
       importStatements.push(this.generateImportStatement(route, componentName));
       routeElements.push(this.generateRouteElement(route, componentName));
     }
-    
+
     // Find the position to insert new imports (after existing lazy imports)
     const lastLazyImportIndex = content.lastIndexOf('const ') + content.substring(content.lastIndexOf('const ')).indexOf(';');
     const insertPosition = content.indexOf(';', lastLazyImportIndex) + 1;
-    
+
     // Insert new imports
     const newImports = '\n' + importStatements.join('\n') + '\n';
     content = content.slice(0, insertPosition) + newImports + content.slice(insertPosition);
-    
+
     // Find the position to insert new routes (before the closing </Routes>)
     const routesEndIndex = content.lastIndexOf('</Routes>');
     const insertRoutesPosition = routesEndIndex;
-    
+
     // Insert new routes
     const newRoutes = '\n' + routeElements.join('\n') + '\n';
     content = content.slice(0, insertRoutesPosition) + newRoutes + content.slice(insertRoutesPosition);
-    
+
     // Write updated content
     fs.writeFileSync(this.appPath, content);
-    
+
     this.missingRoutes.forEach(route => {
       });
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }

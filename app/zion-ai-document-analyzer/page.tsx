@@ -1,50 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 import { Helmet } from 'react-helmet-async';
-import { 
+import {
   FileText,
-  Brain, 
-  Shield, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Award, 
-  Clock, 
-  DollarSign, 
-  Globe, 
+  Brain,
+  Shield,
+  Zap,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Award,
+  Clock,
+  DollarSign,
+  Globe,
   Smartphone,
   Monitor
 } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-<<<<<<< HEAD
 export default function zionAiDocumentAnalyzer() {
-=======
-=======
 import React from "react";
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 const features = [
   {
     title: "AI-Powered Document Processing",
@@ -137,43 +115,33 @@ const useCases = [
 ];
 
 export default function ZionAIDocumentAnalyzer() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
-=======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
-  FileText, 
-  Brain, 
-  Shield, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Award, 
-  Clock, 
-  DollarSign, 
-  Globe, 
+  FileText,
+  Brain,
+  Shield,
+  Zap,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Award,
+  Clock,
+  DollarSign,
+  Globe,
   Smartphone,
   Monitor  } from 'lucide-react';
 } from 'lucide-react';
 
-<<<<<<< HEAD
 export default function ZionAiDocumentAnalyzerPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
 const ZionAiDocumentAnalyzer = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
-<<<<<<< HEAD
         <title>Zion AI Document Analyzer - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered document analysis and processing platform with OCR, NLP, and intelligent data extraction capabilities." />
         <meta name="keywords" content="AI document analysis, OCR, NLP, document processing, data extraction, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-document-analyzer" />
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -183,24 +151,17 @@ export default function PagePage() {
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
       </Helmet>
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
+
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Zion Ai Document Analyzer</h1>
           <p className="text-xl text-gray-300 mb-8">
-=======
 export default function ZionAiDocumentAnalyzerPage() {
-=======
 export default function Page() {
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-=======
 const features = [
   {
     title: "AI-Powered Document Processing",
@@ -292,21 +253,18 @@ const useCases = [
   }
 ];  return (
     <div className="min-h-screen bg-gray-900 text-white">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
       <Helmet>
         <title>Zion Ai Document Analyzer - Zion Tech Group</title>
         <meta name="description" content="Advanced zion ai document analyzer solutions by Zion Tech Group" />
       </Helmet>
-      
+
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Zion Ai Document Analyzer
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
-=======
 
 export default function ZionaidocumentanalyzerPage() {
   return (
@@ -316,17 +274,15 @@ export default function ZionaidocumentanalyzerPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Zion Ai Document Analyzer</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
             <p className="text-gray-600">
               Comprehensive solution for your business requirements.
             </p>
-=======
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -334,24 +290,24 @@ export default function ZionaidocumentanalyzerPage() {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Brain className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI Document Analysis</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Zion AI Document Analyzer
             </span>
           </h1>
-          
+
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform any document into actionable insights with our advanced AI-powered document analysis platform. 
+            Transform any document into actionable insights with our advanced AI-powered document analysis platform.
             Extract, analyze, and understand content with unprecedented accuracy and speed.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
               Get Started Today
@@ -361,23 +317,21 @@ export default function ZionaidocumentanalyzerPage() {
               Watch Demo
               <Star className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </button>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
               Scalable and secure implementation.
             </p>
           </div>
-=======
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">
@@ -393,9 +347,8 @@ export default function ZionaidocumentanalyzerPage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
-        
+
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
@@ -411,11 +364,11 @@ export default function ZionaidocumentanalyzerPage() {
               Powerful Document Analysis Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our AI document analyzer combines cutting-edge OCR, NLP, and machine learning technologies 
+              Our AI document analyzer combines cutting-edge OCR, NLP, and machine learning technologies
               to deliver unprecedented document processing capabilities.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
@@ -450,7 +403,7 @@ export default function ZionaidocumentanalyzerPage() {
               See how our AI document analyzer transforms document processing across different industries
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <div
@@ -482,10 +435,10 @@ export default function ZionaidocumentanalyzerPage() {
             Ready to Transform Your Document Processing?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses using our AI document analyzer to streamline their document workflows. 
+            Join thousands of businesses using our AI document analyzer to streamline their document workflows.
             Start your document transformation journey today.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
               Start Analysis Today
@@ -500,16 +453,9 @@ export default function ZionaidocumentanalyzerPage() {
       </section>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 }
-=======
         <title>ZionAiDocumentAnalyzer - Zion Tech Group</title>
         <meta name="description" content="Advanced zionaidocumentanalyzer service coming soon." />
       </Helmet>
@@ -519,11 +465,7 @@ export default function ZionaidocumentanalyzerPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
 export default ZionAiDocumentAnalyzer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
