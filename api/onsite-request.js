@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // API endpoint for onsite requests;
 // API endpoint for onsite requests
 import fs from 'fs';
@@ -65,3 +66,24 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: "Failed to save request" }));
   }
 }
+=======
+const { withSentry } = require('./withSentry.cjs');'
+
+async function handler(req, res) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  if (req.method !== 'POST') {'
+    res.statusCode = 405
+    res.setHeader('Content-Type', 'application/json')'
+    res.end(JSON.stringify({ error: 'Method not allowed' }))'
+    return
+  }
+
+module.exports = handler;
+
+>>>>>>> origin/main
+
+}
+>>>>>>> cursor/delete-records-a75e
