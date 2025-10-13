@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // usePerformanceMonitor hook
 import { useEffect, useRef } from 'react';
 
@@ -65,6 +66,9 @@ import { useEffect, useRef } from 'react';
 =======
 import { useState, useEffect, useRef, useCallback } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { useState, useEffect, useRef } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -75,14 +79,21 @@ interface PerformanceMetrics {
   timeToInteractive: number;
 }
 
+<<<<<<< HEAD
 export const usePerformanceMonitor = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+=======
+export function usePerformanceMonitor() {
+  const [state, setState] = useState<string | null>(null);
+  const metricsRef = useRef<PerformanceMetrics>({
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
     loadTime: 0,
     firstContentfulPaint: 0,
     largestContentfulPaint: 0,
     firstInputDelay: 0,
     cumulativeLayoutShift: 0,
     timeToInteractive: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
   })
 
@@ -222,9 +233,14 @@ export function usePerformanceMonitor() {
       timeToInteractive: 0
   });
 
+=======
+  });
+  
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
   useEffect(() => {
     setState('initialized');
   }, []);
+<<<<<<< HEAD
 
   return { state };
 };
@@ -295,3 +311,10 @@ export function usePerformanceMonitor() {
 
 export default usePerformanceMonitor;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+  
+  return { state, metrics: metricsRef.current };
+}
+
+export default usePerformanceMonitor;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5

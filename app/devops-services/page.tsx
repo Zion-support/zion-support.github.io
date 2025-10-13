@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -218,10 +219,77 @@ const DevOpsServicesPage = () => {
       content: "The CI/CD pipelines have revolutionized our deployment process. We can now deploy with confidence.",
       rating: 5,
       avatar: "EJ"
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Zap, Server, Globe, BarChart3, Lock, Database, Clock, Award, Users, Settings, CheckCircle } from 'lucide-react';
+
+export default function DevOpsServicesPage() {
+  const services = [
+    {
+      title: "CI/CD Pipeline Setup",
+      description: "Automate your development workflow with continuous integration and deployment pipelines for faster, more reliable releases.",
+      icon: <Zap className="w-6 h-6" />,
+      features: ["Automated testing", "Code quality checks", "Deployment automation", "Rollback capabilities"]
+    },
+    {
+      title: "Infrastructure as Code",
+      description: "Manage your infrastructure using code with tools like Terraform, Ansible, and CloudFormation for consistency and scalability.",
+      icon: <Server className="w-6 h-6" />,
+      features: ["Terraform automation", "Configuration management", "Version control", "Environment consistency"]
+    },
+    {
+      title: "Container Orchestration",
+      description: "Deploy and manage containerized applications with Kubernetes, Docker Swarm, or other orchestration platforms.",
+      icon: <Globe className="w-6 h-6" />,
+      features: ["Kubernetes deployment", "Container management", "Auto-scaling", "Service mesh"]
+    },
+    {
+      title: "Monitoring & Logging",
+      description: "Comprehensive monitoring and logging solutions to ensure your applications run smoothly and issues are detected early.",
+      icon: <BarChart3 className="w-6 h-6" />,
+      features: ["Real-time monitoring", "Log aggregation", "Alerting systems", "Performance metrics"]
+    },
+    {
+      title: "Security Automation",
+      description: "Integrate security practices into your DevOps pipeline with automated security scanning and compliance checks.",
+      icon: <Lock className="w-6 h-6" />,
+      features: ["Security scanning", "Vulnerability assessment", "Compliance automation", "Secret management"]
+    },
+    {
+      title: "Database DevOps",
+      description: "Streamline database operations with automated migrations, backups, and performance optimization.",
+      icon: <Database className="w-6 h-6" />,
+      features: ["Database migrations", "Automated backups", "Performance tuning", "Schema management"]
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Faster Deployments",
+      description: "Reduce deployment time from hours to minutes with automated pipelines",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Higher Quality",
+      description: "Catch issues early with automated testing and quality gates",
+      icon: <Award className="w-8 h-8" />
+    },
+    {
+      title: "Better Collaboration",
+      description: "Improve team collaboration with shared tools and processes",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Cost Optimization",
+      description: "Optimize infrastructure costs with automated scaling and resource management",
+      icon: <Settings className="w-8 h-8" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -233,6 +301,8 @@ const DevOpsServicesPage = () => {
             canonical="https://ziontechgroup.com/devops-services"
           />
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>DevOps Services - Zion Tech Group</title>
@@ -633,7 +703,11 @@ const DevOpsServicesPage: React.FC = () => {
       </section>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default DevOpsServicesPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5

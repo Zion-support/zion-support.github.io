@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useState } from 'react';
@@ -27,6 +28,11 @@ import { Mic } from 'lucide-react';
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4fed
+=======
+import React, { useState, useCallback } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Home, Shield, Zap, Brain, Globe, Network, Mic } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 
 =======
 
@@ -61,6 +67,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
 
   const navigationItems = [
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: 'Home', href: '/' },
     { 
       name: 'AI Services', 
@@ -70,6 +77,12 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: 'Content Generation', href: '/ai-services/content-generation' },
         { name: 'Customer Experience', href: '/ai-services/customer-experience' }
       ]
+=======
+    {
+      name: 'Home',
+      path: '/',
+      icon: <Home className="w-4 h-4" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
     },
     { 
       name: 'IT Services', 
@@ -88,6 +101,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         path: '/about',
         icon: <Brain className="w-4 h-4" />
     },
+<<<<<<< HEAD
     {,
     name: 'Services',
         path: '/services',
@@ -242,6 +256,47 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                   </Link>
                 )}
               </div>
+=======
+    {
+      name: 'AI Services',
+      path: '/ai-services',
+      icon: <Zap className="w-4 h-4" />
+    },
+    {
+      name: 'Contact',
+      path: '/contact',
+      icon: <Globe className="w-4 h-4" />
+    }
+  ];
+
+  return (
+    <nav className="bg-gray-900/95 backdrop-blur-sm border-b border-gray-700 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <Brain className="w-5 h-5 text-white" />
+            </div>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive(item.path)
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-300 hover:text-white hover:bg-gray-700'
+                }`}
+              >
+                {item.icon}
+                <span>{item.name}</span>
+              </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
             ))}
           </div>
 
@@ -249,6 +304,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
 <<<<<<< HEAD
           <div className="md:hidden flex items-center">
             <button
+<<<<<<< HEAD
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-blue-600 focus:outline-none focus:text-blue-600"
 =======
@@ -258,6 +314,10 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
   className="text-gray-300 hover:text-cyan-400 transition-colors p-2">
   aria-label="Toggle menu"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+              onClick={toggleMenu}
+              className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -267,6 +327,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               {navigationItems.map((item) => (
@@ -345,6 +406,23 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                     </Link>
                   )}
                 </div>
+=======
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-lg mt-2">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    isActive(item.path)
+                      ? 'bg-blue-600 text-white'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-700'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.icon}
+                  <span>{item.name}</span>
+                </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
               ))}
             </div>
           </div>
@@ -352,6 +430,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       </div>
     </nav>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -395,3 +474,6 @@ import {
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5

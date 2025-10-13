@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // useEnhancedPerformance
 export const useEnhancedPerformance = () => {
@@ -14,14 +15,17 @@ export const useEnhancedPerformance = () => {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 import { useState, useEffect } from 'react';
 
-export const useEnhancedPerformance = () => {
+export function useEnhancedPerformance() {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+<<<<<<< HEAD
     setLoading(true);
     // Initialize hook logic here
     setLoading(false);
@@ -111,3 +115,13 @@ export const useEnhancedPerformance = () => {
 
 export default useEnhancedPerformance;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+    // Implementation here
+    setData('initialized');
+  }, []);
+  
+  return { data, loading, error, setData, setLoading, setError };
+}
+
+export default useEnhancedPerformance;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5

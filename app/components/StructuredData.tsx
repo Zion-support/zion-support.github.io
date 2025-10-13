@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -181,3 +182,28 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
 
 export default StructuredData;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import React from 'react';
+
+interface StructuredDataProps {
+  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
+  data: any;
+}
+
+export default function StructuredData({ type, data }: StructuredDataProps) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    ...data
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(structuredData, null, 2)
+      }}
+    />
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5

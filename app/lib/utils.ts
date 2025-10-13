@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // utils utility functions
 
 export interface utilsConfig {
@@ -122,23 +123,52 @@ export function formatCurrency(amount: number, currency: string = 'USD'): string
     style: 'currency',
     currency,
   }).format(amount)
+=======
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
+export function formatPhoneNumber(phone: string): string {
+  const cleaned = phone.replace(/\D/g, '');
+  const match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+  if (match) {
+    return `(${match[1]}) ${match[2]}-${match[3]}`;
+  }
+  return phone;
+}
+
+export function formatEmail(email: string): string {
+  return email.toLowerCase().trim();
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 }
 
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
   wait: number
 ): (...args: Parameters<T>) => void {
+<<<<<<< HEAD
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
+=======
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 }
 
 export function throttle<T extends (...args: any[]) => any>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {
+<<<<<<< HEAD
   let inThrottle: boolean
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
@@ -176,3 +206,14 @@ export function isValidUrl(url: string): boolean {
   }
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5

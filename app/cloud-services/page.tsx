@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -71,13 +72,21 @@ import { Helmet } from 'react-helmet-async';
 
 <<<<<<< HEAD
 export default function cloudServices() {
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function PagePage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Cloud Services - Zion Tech Group</title>
-        <meta name="description" content="Cloud Services solutions by Zion Tech Group" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
       
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Cloud Services</h1>
@@ -142,6 +151,23 @@ export default function CloudservicesPage() {
               Scalable and secure implementation.
             </p>
           </div>
+=======
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional page services coming soon.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
         
         <div className="text-center mt-12">
@@ -155,6 +181,7 @@ export default function CloudservicesPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -533,3 +560,6 @@ export default CloudServicesPage;
 
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5

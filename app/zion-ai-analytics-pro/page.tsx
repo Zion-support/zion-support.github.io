@@ -5,6 +5,7 @@ import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
@@ -148,9 +149,21 @@ const ZionAIAnalyticsProPage = () => {
         <title>Zion AI Analytics Pro - Advanced Business Intelligence Platform | Zion Tech Group</title>
         <meta name="description" content="Transform your business with Zion AI Analytics Pro. Advanced AI-powered business intelligence platform with real-time dashboards, predictive analytics, and automated insights." />
         <meta name="keywords" content="AI analytics, business intelligence, data visualization, predictive analytics, automated reporting, dashboard, data insights" />
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+
+export default function PagePage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
       </Helmet>
 <<<<<<< HEAD
       
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Zion Ai Analytics Pro</h1>
@@ -243,6 +256,23 @@ export default function ZionaianalyticsproPage() {
               <div className="text-gray-300 text-sm">Support</div>
             </div>
           </div>
+=======
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional page services coming soon.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
 
         {/* Features Section */}
@@ -509,6 +539,7 @@ export default function Page() {
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 };
 
@@ -525,3 +556,6 @@ export default ZionAIAnalyticsProPage;
 
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5

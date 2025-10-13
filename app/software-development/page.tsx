@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -218,10 +219,88 @@ const SoftwareDevelopmentPage = () => {
       content: "The custom solution has transformed our business operations. Highly recommended!",
       rating: 5,
       avatar: "EJ"
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Globe, Smartphone, Monitor, Code, Zap, BarChart3, Clock, Award, Settings, Users, CheckCircle } from 'lucide-react';
+
+export default function SoftwareDevelopmentPage() {
+  const services = [
+    {
+      title: "Custom Web Applications",
+      description: "Build scalable, modern web applications using the latest technologies and best practices for optimal performance and user experience.",
+      icon: <Globe className="w-6 h-6" />,
+      features: ["React/Next.js development", "Node.js backends", "Database design", "API development"]
+    },
+    {
+      title: "Mobile App Development",
+      description: "Create native and cross-platform mobile applications that deliver exceptional user experiences across iOS and Android devices.",
+      icon: <Smartphone className="w-6 h-6" />,
+      features: ["React Native apps", "Native iOS/Android", "Cross-platform solutions", "App store deployment"]
+    },
+    {
+      title: "Enterprise Software",
+      description: "Develop robust enterprise software solutions that integrate seamlessly with your existing systems and workflows.",
+      icon: <Monitor className="w-6 h-6" />,
+      features: ["System integration", "Legacy modernization", "Workflow automation", "Data migration"]
+    },
+    {
+      title: "API Development",
+      description: "Design and build secure, scalable APIs that enable seamless integration between different systems and services.",
+      icon: <Code className="w-6 h-6" />,
+      features: ["RESTful APIs", "GraphQL endpoints", "API documentation", "Rate limiting"]
+    },
+    {
+      title: "Cloud-Native Applications",
+      description: "Build applications designed for the cloud with microservices architecture, containerization, and serverless computing.",
+      icon: <Zap className="w-6 h-6" />,
+      features: ["Microservices", "Containerization", "Serverless functions", "Cloud deployment"]
+    },
+    {
+      title: "AI-Powered Solutions",
+      description: "Integrate artificial intelligence and machine learning capabilities into your applications for enhanced functionality.",
+      icon: <BarChart3 className="w-6 h-6" />,
+      features: ["Machine learning models", "AI integration", "Data analytics", "Predictive features"]
+    }
+  ];
+
+  const technologies = [
+    { name: "React/Next.js", category: "Frontend" },
+    { name: "Node.js/Express", category: "Backend" },
+    { name: "TypeScript", category: "Language" },
+    { name: "PostgreSQL/MongoDB", category: "Database" },
+    { name: "AWS/Azure", category: "Cloud" },
+    { name: "Docker/Kubernetes", category: "DevOps" },
+    { name: "Python/Django", category: "Backend" },
+    { name: "React Native", category: "Mobile" }
+  ];
+
+  const benefits = [
+    {
+      title: "Faster Time to Market",
+      description: "Accelerate development with agile methodologies and modern tools",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "High Quality Code",
+      description: "Deliver robust, maintainable code with comprehensive testing and code reviews",
+      icon: <Award className="w-8 h-8" />
+    },
+    {
+      title: "Scalable Solutions",
+      description: "Build applications that grow with your business needs",
+      icon: <Settings className="w-8 h-8" />
+    },
+    {
+      title: "Ongoing Support",
+      description: "Get continuous support and maintenance for your applications",
+      icon: <Users className="w-8 h-8" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -261,6 +340,9 @@ const SoftwareDevelopmentPage = () => {
                   From web applications to mobile apps, we deliver excellence.
 =======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
       <Helmet>
         <title>Software Development - Zion Tech Group</title>
         <meta name="description" content="Professional software development services for modern applications." />
@@ -700,7 +782,11 @@ const SoftwareDevelopmentPage: React.FC = () => {
       </section>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default SoftwareDevelopmentPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5

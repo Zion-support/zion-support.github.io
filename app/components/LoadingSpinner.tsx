@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface LoadingSpinnerProps {
@@ -65,6 +66,32 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         </p>
       )}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  text?: string;
+  className?: string;
+}
+
+export default function LoadingSpinner({ 
+  size = 'md', 
+  text = 'Loading...', 
+  className = '' 
+}: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
+  return (
+    <div className={`flex flex-col items-center justify-center min-h-screen ${className}`}>
+      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`}></div>
+      {text && <p className="mt-2 text-sm text-gray-600">{text}</p>}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
     </div>
 </div>
   );
@@ -84,5 +111,9 @@ export default function LoadingSpinner({ className = '', children, ...props }: L
 
 export default LoadingSpinner;
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5

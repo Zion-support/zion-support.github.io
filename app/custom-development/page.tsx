@@ -12,14 +12,10 @@ import { Helmet } from 'react-helmet-async';
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Star } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function page() {
   const features = [
     { title: "Feature 1", description: "Description 1" },
@@ -87,13 +83,17 @@ export default function page() {
 
 <<<<<<< HEAD
 export default function customDevelopment() {
+=======
+export default function PagePage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Custom Development - Zion Tech Group</title>
-        <meta name="description" content="Custom Development solutions by Zion Tech Group" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
       
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Custom Development</h1>
@@ -156,10 +156,28 @@ export default function CustomdevelopmentPage() {
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
+=======
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Page
+          </h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional page services coming soon.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -584,3 +602,6 @@ export default CustomDevelopmentPage;
 
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
