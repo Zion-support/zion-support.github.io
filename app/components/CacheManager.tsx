@@ -9,27 +9,11 @@ const CacheManager = () => {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
           console.log('Service Worker registered:', registration);
-<<<<<<< HEAD
-<<<<<<< HEAD
-        } catch (error) {
-          console.error('Service Worker registration failed:', error);
-=======
-<<<<<<< HEAD
-
-        } catch (error) {
-          console.error('Service Worker registration failed:', error);
-
-
-
-=======
         } catch {
           // Handle error silently
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
 =======
         } catch (error) {
           console.error('Service Worker registration failed:', error);
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
         }
       }
     }
@@ -51,25 +35,12 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
-<<<<<<< HEAD
-          console.log('Static assets cached');
-        } catch (error) {
-          console.error('Failed to cache static assets:', error);
-=======
           console.log('Static assets cached successfully');
         } catch (error) {
           console.error('Failed to cache static assets:', error);
-<<<<<<< HEAD
-
-
-
-=======
         } catch {
           // Handle error silently
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
 =======
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
         }
       }
 
@@ -84,26 +55,10 @@ const CacheManager = () => {
           }
           
           return response
-<<<<<<< HEAD
-<<<<<<< HEAD
-        } catch (error) {
-          console.error('Cache API error:', error);
-=======
-<<<<<<< HEAD
-
-        } catch (error) {
-          console.error('Cache API error:', error);
-
-
-
-=======
         } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
 =======
         } catch (error) {
           console.error('Failed to cache API response:', error);
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
           return fetch(request);
         }
       }

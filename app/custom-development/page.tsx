@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail, Smartphone as Phone } from "lucide-react";
-=======
 import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail } from "lucide-react";
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 

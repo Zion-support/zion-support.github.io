@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, TrendingUp, Clock } from 'lucide-react';
-=======
 import { ArrowRight, Cloud, Shield, Database, Zap, Globe, BarChart3, Mail, Smartphone } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
 
 export default function CloudServices() {
   const services = [
@@ -37,19 +30,7 @@ export default function CloudServices() {
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const benefits = [
-    { icon: <TrendingUp className="w-6 h-6" />, title: 'Cost Optimization', description: 'Reduce IT costs by up to 40% with efficient cloud solutions' },
-    { icon: <Zap className="w-6 h-6" />, title: 'Scalability', description: 'Scale resources instantly based on demand' },
-    { icon: <Globe className="w-6 h-6" />, title: 'Global Reach', description: 'Access your applications from anywhere in the world' },
-    { icon: <Clock className="w-6 h-6" />, title: '24/7 Support', description: 'Round-the-clock technical support and monitoring' }
-  ];
 =======
->>>>>>> 772e8e1b479bacba5b030e0b9a1c321c4e1bf36c
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f1ad
   return (
     <>
       <Helmet>
