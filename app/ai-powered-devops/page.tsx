@@ -1,186 +1,346 @@
 import React from "react";
+import { ArrowRight, CheckCircle, Star, Code, Zap, Shield, BarChart3, Cloud, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Sparkles, Smartphone } from "lucide-react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Cpu, Brain, Zap, Settings, Sparkles, Users, Award, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Monitor, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award as AwardIcon, Rocket, Wifi, Battery, Camera, Headphones, Mic, Video, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
-export default function AiPoweredDevops() {
-  const features = [
-    "AI-powered automated testing and quality assurance",
-    "Intelligent deployment orchestration and rollback",
-    "Predictive infrastructure scaling and optimization",
-    "Automated security vulnerability detection and patching",
-    "AI-driven performance monitoring and alerting",
-    "Intelligent log analysis and anomaly detection",
-    "Automated code review and optimization suggestions",
-    "Smart resource allocation and cost optimization",
-    "AI-powered incident response and resolution",
-    "Automated compliance checking and reporting",
-    "Intelligent capacity planning and forecasting",
-    "AI-driven continuous integration and deployment"
-  ];
-
-  const benefits = [
-    "Reduce deployment time by 80%",
-    "Eliminate 95% of manual DevOps tasks",
-    "Improve system reliability by 99.9%",
-    "Cut infrastructure costs by 40%"
-  ];
-
-  const pricingPlans = [
+export default function AIPoweredDevOps() {
+  const services = [
     {
-      name: "Startup",
-      price: "$499",
-      period: "/month",
-      description: "Perfect for small development teams and startups",
+      id: "ai-ci-cd",
+      name: "AI-Powered CI/CD Pipeline",
+      description: "Intelligent continuous integration and deployment with automated testing, code analysis, and deployment optimization",
+      price: "From $2,500/month",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
       features: [
-        "Up to 10 applications",
-        "Basic AI automation",
-        "Standard monitoring",
-        "Email support",
-        "Basic reporting",
-        "5 team members",
-        "Cloud deployment only"
+        "Automated code quality analysis",
+        "Intelligent test case generation",
+        "Smart deployment strategies",
+        "Performance optimization",
+        "Security vulnerability scanning",
+        "Rollback automation",
+        "Multi-environment management",
+        "Real-time monitoring and alerts"
       ],
-      popular: false
+      benefits: [
+        "Reduce deployment time by 70%",
+        "Improve code quality by 50%",
+        "Minimize production incidents",
+        "Accelerate development cycles"
+      ],
+      category: "CI/CD",
+      rating: 4.9,
+      reviews: 234,
+      link: "/ai-ci-cd-pipeline",
+      featured: true
     },
     {
-      name: "Enterprise",
-      price: "$1,999",
-      period: "/month",
-      description: "Ideal for growing companies and development teams",
+      id: "ai-infrastructure",
+      name: "AI Infrastructure Management",
+      description: "Intelligent infrastructure provisioning, scaling, and optimization with predictive analytics and automated decision making",
+      price: "From $3,000/month",
+      icon: <Cloud className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
       features: [
-        "Up to 100 applications",
-        "Advanced AI automation",
-        "Comprehensive monitoring",
-        "Priority support",
-        "Advanced analytics",
-        "25 team members",
-        "Multi-cloud deployment",
-        "API access",
-        "Custom integrations",
-        "24/7 monitoring"
+        "Predictive scaling algorithms",
+        "Cost optimization automation",
+        "Resource utilization analysis",
+        "Infrastructure as Code (IaC)",
+        "Multi-cloud management",
+        "Disaster recovery automation",
+        "Performance monitoring",
+        "Capacity planning"
       ],
-      popular: true
+      benefits: [
+        "Reduce infrastructure costs by 40%",
+        "Improve resource utilization by 60%",
+        "Eliminate manual scaling decisions",
+        "Ensure 99.9% uptime"
+      ],
+      category: "Infrastructure",
+      rating: 4.8,
+      reviews: 189,
+      link: "/ai-infrastructure-management",
+      featured: true
     },
     {
-      name: "Enterprise Plus",
-      price: "$4,999",
-      period: "/month",
-      description: "For large organizations with complex DevOps needs",
+      id: "ai-monitoring",
+      name: "AI Monitoring & Observability",
+      description: "Advanced monitoring with AI-powered anomaly detection, root cause analysis, and predictive alerting",
+      price: "From $2,200/month",
+      icon: <Activity className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
       features: [
-        "Unlimited applications",
-        "Full AI automation suite",
-        "Enterprise monitoring",
-        "24/7 dedicated support",
-        "Custom analytics",
-        "Unlimited team members",
-        "Hybrid cloud deployment",
-        "Advanced API access",
-        "Custom AI model training",
-        "Dedicated DevOps engineers",
-        "White-label solution",
-        "On-premise deployment"
+        "Anomaly detection algorithms",
+        "Predictive alerting",
+        "Root cause analysis",
+        "Performance optimization",
+        "Log analysis and correlation",
+        "Custom metric creation",
+        "SLA monitoring",
+        "Incident response automation"
       ],
-      popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Jennifer Martinez",
-      company: "Tech Startup",
-      role: "CTO",
-      content: "AI-powered DevOps has transformed our development process. We've reduced deployment time by 85% and our system uptime is now 99.9%. The AI predictions are incredibly accurate.",
-      rating: 5,
-      avatar: "JM"
+      benefits: [
+        "Detect issues before they impact users",
+        "Reduce false positive alerts by 80%",
+        "Accelerate incident resolution",
+        "Improve system reliability"
+      ],
+      category: "Monitoring",
+      rating: 4.7,
+      reviews: 156,
+      link: "/ai-monitoring-observability",
+      featured: true
     },
     {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Head of Engineering",
-      content: "The automated testing and deployment features are game-changing. We can now deploy multiple times per day with confidence, and our bug rate has dropped by 90%.",
-      rating: 5,
-      avatar: "DK"
+      id: "ai-security",
+      name: "AI DevOps Security",
+      description: "Comprehensive security automation for DevSecOps with threat detection, vulnerability management, and compliance",
+      price: "From $2,800/month",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500",
+      features: [
+        "Automated security scanning",
+        "Threat intelligence integration",
+        "Compliance automation",
+        "Secrets management",
+        "Container security",
+        "API security monitoring",
+        "Security policy enforcement",
+        "Incident response automation"
+      ],
+      benefits: [
+        "Reduce security vulnerabilities by 90%",
+        "Automate compliance reporting",
+        "Detect threats in real-time",
+        "Minimize security risks"
+      ],
+      category: "Security",
+      rating: 4.9,
+      reviews: 178,
+      link: "/ai-devops-security",
+      featured: false
     },
     {
-      name: "Lisa Thompson",
-      company: "Financial Services",
-      role: "DevOps Director",
-      content: "The AI-driven security monitoring and compliance checking have been invaluable. We've achieved 100% compliance and our security incidents have dropped to zero.",
-      rating: 5,
-      avatar: "LT"
+      id: "ai-testing",
+      name: "AI Test Automation",
+      description: "Intelligent test generation, execution, and maintenance with machine learning-powered test optimization",
+      price: "From $1,800/month",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      features: [
+        "Automated test case generation",
+        "Smart test prioritization",
+        "Flaky test detection",
+        "Performance test optimization",
+        "Cross-browser testing",
+        "API testing automation",
+        "Visual regression testing",
+        "Test data management"
+      ],
+      benefits: [
+        "Increase test coverage by 60%",
+        "Reduce test maintenance by 50%",
+        "Improve test reliability",
+        "Accelerate testing cycles"
+      ],
+      category: "Testing",
+      rating: 4.6,
+      reviews: 145,
+      link: "/ai-test-automation",
+      featured: false
+    },
+    {
+      id: "ai-deployment",
+      name: "AI Deployment Orchestration",
+      description: "Intelligent deployment strategies with blue-green, canary, and A/B testing automation",
+      price: "From $2,300/month",
+      icon: <Rocket className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        "Intelligent deployment strategies",
+        "Automated rollback decisions",
+        "Traffic management",
+        "Feature flag automation",
+        "Database migration automation",
+        "Multi-region deployment",
+        "Load balancing optimization",
+        "Deployment analytics"
+      ],
+      benefits: [
+        "Reduce deployment risks by 75%",
+        "Improve deployment success rate",
+        "Minimize downtime",
+        "Optimize user experience"
+      ],
+      category: "Deployment",
+      rating: 4.8,
+      reviews: 167,
+      link: "/ai-deployment-orchestration",
+      featured: false
     }
   ];
 
   const capabilities = [
     {
-      title: "Automated Testing",
-      description: "AI generates and executes comprehensive test suites automatically",
-      icon: <CheckCircle className="w-8 h-8" />,
+      title: "Intelligent Automation",
+      description: "AI-powered automation that learns from patterns and optimizes processes continuously",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Smart Deployment",
-      description: "Intelligent deployment strategies with automatic rollback capabilities",
-      icon: <Rocket className="w-8 h-8" />,
+      title: "Predictive Analytics",
+      description: "Forecast issues and optimize performance using machine learning algorithms",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Predictive Scaling",
-      description: "AI predicts traffic patterns and scales infrastructure proactively",
-      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Self-Healing Systems",
+      description: "Automatically detect and resolve issues without human intervention",
+      icon: <Heart className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Intelligent Monitoring",
-      description: "AI-powered monitoring with anomaly detection and alerting",
-      icon: <Eye className="w-8 h-8" />,
+      title: "Intelligent Scaling",
+      description: "Dynamically scale resources based on demand patterns and predictions",
+      icon: <Layers className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
+    },
+    {
+      title: "Anomaly Detection",
+      description: "Identify unusual patterns and potential issues before they impact users",
+      icon: <Eye className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500"
+    },
+    {
+      title: "Continuous Optimization",
+      description: "Continuously improve performance, security, and efficiency through AI analysis",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500"
     }
+  ];
+
+  const benefits = [
+    {
+      title: "Faster Time to Market",
+      description: "Accelerate development and deployment cycles with intelligent automation",
+      icon: <Clock className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      stats: "70% faster deployments"
+    },
+    {
+      title: "Improved Reliability",
+      description: "Reduce incidents and downtime with predictive monitoring and self-healing",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      stats: "99.9% uptime SLA"
+    },
+    {
+      title: "Cost Optimization",
+      description: "Optimize resource usage and reduce infrastructure costs with AI insights",
+      icon: <DollarSign className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      stats: "40% cost reduction"
+    },
+    {
+      title: "Enhanced Security",
+      description: "Automate security practices and detect threats with AI-powered analysis",
+      icon: <Lock className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500",
+      stats: "90% fewer vulnerabilities"
+    },
+    {
+      title: "Better Quality",
+      description: "Improve code quality and reduce bugs with intelligent testing and analysis",
+      icon: <Award className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      stats: "50% fewer bugs"
+    },
+    {
+      title: "Team Productivity",
+      description: "Free up developers to focus on innovation with automated DevOps tasks",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      stats: "60% productivity boost"
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "Tech Startup",
+      role: "CTO",
+      content: "AI-powered DevOps has revolutionized our development process. We've reduced deployment time by 70% and eliminated 90% of production incidents.",
+      rating: 5,
+      avatar: "SJ"
+    },
+    {
+      name: "Michael Chen",
+      company: "E-commerce Platform",
+      role: "DevOps Director",
+      content: "The intelligent monitoring and self-healing capabilities have been game-changing. Our system reliability has improved dramatically while reducing operational overhead.",
+      rating: 5,
+      avatar: "MC"
+    },
+    {
+      name: "Emily Rodriguez",
+      company: "Financial Services",
+      role: "Head of Engineering",
+      content: "The AI security automation has helped us maintain compliance while accelerating development. We've seen a 60% reduction in security vulnerabilities.",
+      rating: 5,
+      avatar: "ER"
+    }
+  ];
+
+  const stats = [
+    { number: "500+", label: "DevOps Teams Served", icon: <Users className="w-6 h-6" /> },
+    { number: "99.9%", label: "System Uptime", icon: <Shield className="w-6 h-6" /> },
+    { number: "70%", label: "Faster Deployments", icon: <Rocket className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Monitoring", icon: <Activity className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group</title>
+        <title>AI-Powered DevOps - Intelligent DevOps Automation | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
+          content="Revolutionize your DevOps with AI-powered automation. Intelligent CI/CD, infrastructure management, monitoring, and security. Accelerate development and improve reliability."
         />
         <meta
           name="keywords"
-          content="AI DevOps, automated testing, intelligent deployment, predictive scaling, DevOps automation, CI/CD, infrastructure automation, monitoring AI"
+          content="AI DevOps, DevOps automation, CI/CD, infrastructure management, monitoring, DevSecOps, intelligent automation, predictive analytics"
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
       </Helmet>
       <SEOOptimizer
-        title="AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group"
-        description="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
+        title="AI-Powered DevOps - Intelligent DevOps Automation"
+        description="Revolutionize your DevOps with AI-powered automation. Intelligent CI/CD, infrastructure management, monitoring, and security. Accelerate development and improve reliability."
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+        
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-          
-          <div className="max-w-7xl mx-auto text-center relative z-10">
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Development Operations</span>
+              <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">Intelligent DevOps Automation</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI-Powered
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}DevOps
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+                AI-Powered DevOps
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize your development operations with AI. Automate testing, deployment, 
-              monitoring, and scaling with intelligent DevOps solutions that learn and adapt.
+              Transform your DevOps with intelligent automation powered by AI. Accelerate development, 
+              improve reliability, and optimize costs with self-healing systems and predictive analytics.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -188,108 +348,61 @@ export default function AiPoweredDevops() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Transform Your DevOps
+                Get DevOps Consultation
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                View Demo
+                See AI DevOps in Action
                 <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
             
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              <div className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-8 h-8 text-cyan-400" />
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">80%</div>
-                <div className="text-gray-300 text-sm">Faster Deployments</div>
-              </div>
-              <div className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle className="w-8 h-8 text-cyan-400" />
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">95%</div>
-                <div className="text-gray-300 text-sm">Task Automation</div>
-              </div>
-              <div className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Award className="w-8 h-8 text-cyan-400" />
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">99.9%</div>
-                <div className="text-gray-300 text-sm">System Uptime</div>
-              </div>
-              <div className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <DollarSign className="w-8 h-8 text-cyan-400" />
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">40%</div>
-                <div className="text-gray-300 text-sm">Cost Reduction</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Intelligent DevOps Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Harness the power of AI to automate and optimize every aspect of your 
-                development operations. From testing to deployment, monitoring to scaling.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-                >
-                  <div className="flex items-center mb-4">
-                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
-                    <span className="text-white font-medium">{feature}</span>
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    {stat.icon}
                   </div>
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-300 text-sm">{stat.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Capabilities */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        {/* Capabilities Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 AI DevOps Capabilities
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your development operations with intelligent automation and optimization.
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Leverage artificial intelligence to automate, optimize, and enhance every aspect 
+                of your DevOps pipeline for maximum efficiency and reliability.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {capabilities.map((capability, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${capability.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${capability.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                   >
                     {capability.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                  <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-cyan-300 transition-colors">
                     {capability.title}
                   </h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <p className="text-gray-300 text-center leading-relaxed">
                     {capability.description}
                   </p>
                 </div>
@@ -298,86 +411,141 @@ export default function AiPoweredDevops() {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        {/* Services Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                DevOps Transformation Plans
+                AI DevOps Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your development team's needs. All plans include core AI features.
+                Comprehensive AI-powered DevOps solutions covering CI/CD, infrastructure, 
+                monitoring, security, testing, and deployment automation.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
                 <div
-                  key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${
-                    plan.popular ? 'ring-2 ring-cyan-400' : ''
-                  }`}
+                  key={service.id}
+                  className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl"
                 >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
+                  {service.featured && (
+                    <div className="absolute -top-3 -right-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                      Featured
                     </div>
                   )}
                   
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className={`p-3 rounded-xl bg-gradient-to-r ${service.color}`}>
+                      <div className="text-white">{service.icon}</div>
+                    </div>
+                    <div className="flex items-center text-yellow-400">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-sm font-medium">{service.rating}</span>
+                      <span className="ml-1 text-xs text-gray-400">({service.reviews})</span>
                     </div>
                   </div>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+
+                  <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
+                  <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+
+                  <div className="flex items-center mb-4">
+                    <span className="text-2xl font-bold text-white">{service.price}</span>
+                  </div>
+
+                  <div className="space-y-2 mb-6">
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         <span>{feature}</span>
-                      </li>
+                      </div>
                     ))}
-                  </ul>
-                  
-                  <Link
-                    to="/contact"
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                      plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
-                    }`}
-                  >
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
+                    {service.features.length > 4 && (
+                      <div className="text-sm text-gray-400">
+                        +{service.features.length - 4} more features
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="space-y-3">
+                    <Link
+                      to={service.link}
+                      className="w-full inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105"
+                    >
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="w-full inline-flex items-center justify-center px-4 py-2 border border-white/20 text-white font-medium rounded-lg hover:bg-white/10 transition-all duration-300"
+                    >
+                      Get DevOps Demo
+                    </Link>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        {/* Benefits Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Transform Your DevOps with AI
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience the power of AI-driven DevOps automation and unlock new levels 
+                of efficiency, reliability, and innovation.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                >
+                  <div
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${benefit.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                  >
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-cyan-300 transition-colors">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-300 text-center mb-4 leading-relaxed">
+                    {benefit.description}
+                  </p>
+                  <div className="text-center">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
+                      {benefit.stats}
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 DevOps Success Stories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how development teams are transforming their operations with AI-powered DevOps.
+                See how leading organizations are transforming their DevOps with AI-powered automation.
               </p>
             </div>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -407,22 +575,22 @@ export default function AiPoweredDevops() {
               Ready to Transform Your DevOps?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join leading development teams using AI-powered DevOps to accelerate delivery 
-              and improve reliability. Contact our DevOps experts today.
+              Join hundreds of teams using AI-powered DevOps to accelerate development, 
+              improve reliability, and reduce costs. Start your transformation today.
             </p>
             
             {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <MessageSquare className="w-6 h-6 text-white" />
+                  <Mail className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-cyan-400">kleber@ziontechgroup.com</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Phone className="w-6 h-6 text-white" />
+                  <Smartphone className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
                 <p className="text-cyan-400">+1 302 464 0950</p>
@@ -441,15 +609,15 @@ export default function AiPoweredDevops() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Contact DevOps Experts
+                Get DevOps Consultation
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/demo"
+                to="/it-services"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                View Demo
-                <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                View All IT Services
+                <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

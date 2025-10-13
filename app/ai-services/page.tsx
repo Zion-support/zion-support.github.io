@@ -614,6 +614,64 @@ export default function AIServices() {
       reviews: 892,
       link: "/ai-chatbot-enterprise",
       featured: true
+    },
+    {
+      id: "ai-quantum-computing",
+      name: "AI Quantum Computing",
+      description: "Revolutionary quantum computing solutions powered by AI for optimization, machine learning, and simulation",
+      price: "From $5,000/month",
+      icon: <Cpu className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Quantum optimization algorithms",
+        "Quantum machine learning",
+        "Quantum cryptography & security",
+        "Quantum simulation services",
+        "Quantum financial modeling",
+        "Quantum AI development platform",
+        "Hybrid quantum-classical workflows",
+        "Expert quantum computing support"
+      ],
+      benefits: [
+        "Solve problems 1000x faster than classical computers",
+        "Achieve quantum supremacy for specific problem classes",
+        "Enable breakthrough discoveries",
+        "Gain competitive advantage with quantum advantage"
+      ],
+      category: "Quantum AI",
+      rating: 4.9,
+      reviews: 156,
+      link: "/ai-quantum-computing",
+      featured: true
+    },
+    {
+      id: "ai-powered-devops",
+      name: "AI-Powered DevOps",
+      description: "Intelligent DevOps automation with AI-powered CI/CD, infrastructure management, and monitoring",
+      price: "From $2,500/month",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "AI-powered CI/CD pipeline",
+        "Intelligent infrastructure management",
+        "AI monitoring & observability",
+        "AI DevOps security",
+        "AI test automation",
+        "AI deployment orchestration",
+        "Self-healing systems",
+        "Predictive analytics"
+      ],
+      benefits: [
+        "Reduce deployment time by 70%",
+        "Improve system reliability by 99.9%",
+        "Reduce infrastructure costs by 40%",
+        "Automate 90% of DevOps tasks"
+      ],
+      category: "DevOps AI",
+      rating: 4.8,
+      reviews: 234,
+      link: "/ai-powered-devops",
+      featured: true
     }
   ];
 
@@ -639,12 +697,14 @@ export default function AIServices() {
     { name: "Emotion AI", count: aiServices.filter(s => s.category === "Emotion AI").length, active: false },
     { name: "Security AI", count: aiServices.filter(s => s.category === "Security AI").length, active: false },
     { name: "Recommendation AI", count: aiServices.filter(s => s.category === "Recommendation AI").length, active: false },
-    { name: "Conversational AI", count: aiServices.filter(s => s.category === "Conversational AI").length, active: false }
+    { name: "Conversational AI", count: aiServices.filter(s => s.category === "Conversational AI").length, active: false },
+    { name: "Quantum AI", count: aiServices.filter(s => s.category === "Quantum AI").length, active: false },
+    { name: "DevOps AI", count: aiServices.filter(s => s.category === "DevOps AI").length, active: false }
   ];
 
   const stats = [
-    { number: "35+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
-    { number: "20,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
+    { number: "37+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
+    { number: "25,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
     { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "AI Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];

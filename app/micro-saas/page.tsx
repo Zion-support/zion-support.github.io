@@ -718,6 +718,68 @@ export default function MicroSaas() {
       reviews: 2134,
       link: "/zion-data-backup-pro",
       featured: false
+    },
+    {
+      id: "zion-ai-video-generator",
+      name: "Zion AI Video Generator",
+      description: "AI-powered video creation platform with text-to-video, voice synthesis, and 4K quality output",
+      price: "From $29/month",
+      originalPrice: "$49/month",
+      discount: "41% OFF",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI-powered video generation from text",
+        "4K and HD video output",
+        "Voice synthesis and lip-sync",
+        "50+ languages support",
+        "Custom branding and watermarks",
+        "Social media optimization",
+        "Real-time preview and editing",
+        "Cloud-based processing"
+      ],
+      benefits: [
+        "Create professional videos in minutes",
+        "Reduce video production costs by 80%",
+        "Scale content creation 10x",
+        "Maintain brand consistency"
+      ],
+      category: "Content Creation",
+      rating: 4.8,
+      reviews: 1456,
+      link: "/zion-ai-video-generator",
+      featured: true
+    },
+    {
+      id: "zion-ai-customer-insights",
+      name: "Zion AI Customer Insights",
+      description: "AI-powered customer analytics platform with sentiment analysis, churn prediction, and journey mapping",
+      price: "From $99/month",
+      originalPrice: "$149/month",
+      discount: "33% OFF",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "AI-powered customer behavior analysis",
+        "Real-time sentiment analysis",
+        "Predictive customer lifetime value",
+        "Automated customer segmentation",
+        "Churn prediction and prevention",
+        "Customer journey mapping",
+        "Multi-channel data integration",
+        "Advanced analytics and reporting"
+      ],
+      benefits: [
+        "Increase customer retention by 35%",
+        "Predict churn with 85% accuracy",
+        "Improve customer satisfaction",
+        "Make data-driven decisions"
+      ],
+      category: "Analytics",
+      rating: 4.9,
+      reviews: 892,
+      link: "/zion-ai-customer-insights",
+      featured: true
     }
   ];
 
@@ -727,6 +789,7 @@ export default function MicroSaas() {
     { name: "Security", count: microSaasServices.filter(s => s.category === "Security").length, active: false },
     { name: "Storage", count: microSaasServices.filter(s => s.category === "Storage").length, active: false },
     { name: "Content", count: microSaasServices.filter(s => s.category === "Content").length, active: false },
+    { name: "Content Creation", count: microSaasServices.filter(s => s.category === "Content Creation").length, active: false },
     { name: "Data", count: microSaasServices.filter(s => s.category === "Data").length, active: false },
     { name: "Marketing", count: microSaasServices.filter(s => s.category === "Marketing").length, active: false },
     { name: "Productivity", count: microSaasServices.filter(s => s.category === "Productivity").length, active: false },
@@ -746,8 +809,8 @@ export default function MicroSaas() {
   ];
 
   const stats = [
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "62+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "18,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
