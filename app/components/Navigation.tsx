@@ -1,5 +1,11 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { 
+  Menu, X, ChevronDown, ArrowRight, Star, 
+  Brain, Shield, Globe, Code, Database, 
+  BarChart3, Cloud, Zap, Users, Target,
+  SidebarIcon
+} from 'lucide-react'
 
 interface NavigationProps {
   onSidebarToggle?: () => void
@@ -103,11 +109,15 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
 
   return (
     <nav 
-      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md"
+      className="nav-cyberpunk text-white shadow-2xl relative overflow-hidden"
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-4">
+      {/* Animated background effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 opacity-90"></div>
+      <div className="absolute inset-0 data-stream opacity-20"></div>
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link 
             to="/" 
@@ -420,6 +430,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             </div>
           </div>
         )}
+        </div>
       </div>
     </nav>
   )

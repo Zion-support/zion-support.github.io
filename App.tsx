@@ -14,6 +14,10 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import LoadingPage from "./app/components/LoadingPage";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -85,8 +89,6 @@ function App() {
                   </main>
                   <Footer />
                 </FuturisticBackground>
-                  </div>
-                </AnalyticsProvider>
               </div>
             </Router>
           </AccessibilityEnhancer>
