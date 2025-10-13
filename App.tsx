@@ -9,7 +9,7 @@ import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+import ErrorBoundary from "./app/components/ErrorBoundary";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -22,6 +22,7 @@ import Breadcrumb from "./app/components/Breadcrumb";
 import LoadingPageEnhanced from "./app/components/EnhancedLoading";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedSEO from "./app/components/EnhancedSEO";
+import PerformanceMetrics from "./app/components/PerformanceMetrics";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -96,10 +97,7 @@ const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network
 const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
 const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -121,7 +119,7 @@ function App() {
 
   return (
     <HelmetProvider>
-      <GlobalErrorBoundary>
+      <ErrorBoundary>
         <AnalyticsProvider>
           <PerformanceMonitor>
             <WebVitalsTracker>
@@ -228,6 +226,7 @@ function App() {
                           </main>
                           
                           <Footer />
+                          <PerformanceMetrics showDetails={process.env.NODE_ENV === 'development'} />
                         </FuturisticBackground>
                       </div>
                     </Router>
@@ -237,7 +236,7 @@ function App() {
             </WebVitalsTracker>
           </PerformanceMonitor>
         </AnalyticsProvider>
-      </GlobalErrorBoundary>
+      </ErrorBoundary>
     </HelmetProvider>
   );
 }
