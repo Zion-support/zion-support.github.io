@@ -15,6 +15,7 @@ import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import LoadingSpinner from "./app/components/LoadingSpinner";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";

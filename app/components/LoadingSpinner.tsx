@@ -1,11 +1,37 @@
-const LoadingSpinner = () => {
+import React from 'react';
+import { Loader2 } from 'lucide-react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  text = 'Loading...', 
+  className = '' 
+}) => {
+  const sizeClasses = {
+    sm: 'h-4 w-4',
+    md: 'h-8 w-8',
+    lg: 'h-12 w-12'
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-        <p className="text-white text-lg">Loading...</p>
-      </div>
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <Loader2 
+        className={`animate-spin ${sizeClasses[size]} text-blue-600`} 
+        role="img"
+        aria-label="Loading"
+      />
+      {text && (
+        <p className="mt-2 text-sm text-gray-600 animate-pulse">
+          {text}
+        </p>
+      )}
     </div>
   );
 };
+
 export default LoadingSpinner;

@@ -1,94 +1,115 @@
-"use client";
-import { useEffect } from "react";
+import React, { useEffect, useState } from 'react';
+import { Eye, EyeOff, Type, Volume2, VolumeX } from 'lucide-react';
 
-export default function AccessibilityEnhancer() {
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  screenReader: boolean;
+}
+
+const AccessibilityEnhancer: React.FC = () => {
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    screenReader: false,
+  });
+  const [isVisible, setIsVisible] = useState(false);
+
   useEffect(() => {
-    // Add keyboard navigation support
-    const addKeyboardNavigation = () => {
-      document.addEventListener("keydown", (e) => {
-        // Skip to main content with Alt + M
-        if (e.altKey && e.key === "m") {
-          e.preventDefault();
-          const mainContent = document.getElementById("main-content");
-          if (mainContent) {
-            mainContent.focus();
-            mainContent.scrollIntoView({ behavior: "smooth" });
-          }
-        }
+    // Apply accessibility settings to document
+    const root = document.documentElement;
+    
+    if (settings.highContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
 
-        // Skip to navigation with Alt + N
-        if (e.altKey && e.key === "n") {
-          e.preventDefault();
-          const navigation = document.querySelector("nav");
-          if (navigation) {
-            const firstLink = navigation.querySelector("a") as HTMLElement;
-            if (firstLink) {
-              firstLink.focus();
-            }
-          }
-        }
-      });
-    };
+    if (settings.largeText) {
+      root.classList.add('large-text');
+    } else {
+      root.classList.remove('large-text');
+    }
 
-    // Add focus indicators
-    const addFocusIndicators = () => {
-      const style = document.createElement("style");
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
-        }
-        
-        .focus-visible {
-          outline: 2px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
-        }
-      `;
-      document.head.appendChild(style);
-    };
+    if (settings.reducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
 
-    // Add ARIA labels to interactive elements
-    const addAriaLabels = () => {
-      const buttons = document.querySelectorAll("button:not([aria-label])");
-      buttons.forEach((button) => {
-        if (!button.getAttribute("aria-label") && !button.textContent?.trim()) {
-          button.setAttribute("aria-label", "Button");
-        }
-      });
+    // Save settings to localStorage
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
+  }, [settings]);
 
-      const links = document.querySelectorAll("a:not([aria-label])");
-      links.forEach((link) => {
-        if (!link.getAttribute("aria-label") && !link.textContent?.trim()) {
-          link.setAttribute("aria-label", "Link");
-        }
-      });
-    };
-
-    // Add skip links
-    const addSkipLinks = () => {
-      const skipLinks = document.createElement("div");
-      skipLinks.innerHTML = `
-        <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">
-          Skip to main content
-        </a>
-        <a href="nav" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-32 bg-blue-600 text-white px-4 py-2 rounded z-50">
-          Skip to navigation
-        </a>
-      `;
-      document.body.insertBefore(skipLinks, document.body.firstChild);
-    };
-
-    // Initialize accessibility enhancements
-    addKeyboardNavigation();
-    addFocusIndicators();
-    addAriaLabels();
-    addSkipLinks();
-
-    // Cleanup
-    return () => {
-      // Cleanup if needed
-    };
+  useEffect(() => {
+    // Load saved settings
+    const saved = localStorage.getItem('accessibility-settings');
+    if (saved) {
+      try {
+        setSettings(JSON.parse(saved));
+      } catch (error) {
+        console.error('Failed to load accessibility settings:', error);
+      }
+    }
   }, []);
 
-  return null;
-}
+  const toggleSetting = (key: keyof AccessibilitySettings) => {
+    setSettings(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
+
+  return (
+    <div className="fixed bottom-4 left-4 z-50">
+      <button
+        onClick={() => setIsVisible(!isVisible)}
+        className="bg-green-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-green-700 transition-colors"
+        aria-label="Accessibility Settings"
+      >
+        <Eye className="h-4 w-4" />
+      </button>
+      
+      {isVisible && (
+        <div className="absolute bottom-12 left-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
+          <h3 className="font-semibold text-gray-900 mb-3">Accessibility Settings</h3>
+          <div className="space-y-3">
+            <label className="flex items-center space-x-3">
+              <input
+                type="checkbox"
+                checked={settings.highContrast}
+                onChange={() => toggleSetting('highContrast')}
+                className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+              />
+              <span className="text-sm text-gray-700">High Contrast</span>
+            </label>
+            
+            <label className="flex items-center space-x-3">
+              <input
+                type="checkbox"
+                checked={settings.largeText}
+                onChange={() => toggleSetting('largeText')}
+                className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+              />
+              <span className="text-sm text-gray-700">Large Text</span>
+            </label>
+            
+            <label className="flex items-center space-x-3">
+              <input
+                type="checkbox"
+                checked={settings.reducedMotion}
+                onChange={() => toggleSetting('reducedMotion')}
+                className="rounded border-gray-300 text-green-600 focus:ring-green-500"
+              />
+              <span className="text-sm text-gray-700">Reduce Motion</span>
+            </label>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default AccessibilityEnhancer;
