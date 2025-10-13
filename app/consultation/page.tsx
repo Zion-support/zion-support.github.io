@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, CheckCircle, Zap, Mail, Smartphone, Globe } from "lucide-react";
+import { ArrowRight, Calendar, CheckCircle, Zap, Mail, Smartphone, Globe, Clock, Users, Target, Brain, Shield } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -29,6 +29,20 @@ export default function Consultation() {
     e.preventDefault();
     setIsSubmitted(true);
     // Handle form submission logic here
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        industry: '',
+        projectSize: '',
+        timeline: '',
+        message: '',
+        consultationType: ''
+      });
+    }, 3000);
   };
 
   const consultationTypes = [
@@ -38,7 +52,7 @@ export default function Consultation() {
       price: "Free",
       duration: "30 min",
       color: "from-blue-500 to-cyan-500",
-      icon: <Zap className="w-8 h-8 text-white" />,
+      icon: <Brain className="w-8 h-8 text-white" />,
       features: [
         "AI readiness assessment",
         "Technology roadmap",
@@ -66,7 +80,7 @@ export default function Consultation() {
       price: "Free",
       duration: "60 min",
       color: "from-red-500 to-orange-500",
-      icon: <CheckCircle className="w-8 h-8 text-white" />,
+      icon: <Shield className="w-8 h-8 text-white" />,
       features: [
         "Security assessment",
         "Vulnerability analysis",
@@ -80,7 +94,7 @@ export default function Consultation() {
       price: "Free",
       duration: "90 min",
       color: "from-green-500 to-teal-500",
-      icon: <Calendar className="w-8 h-8 text-white" />,
+      icon: <Target className="w-8 h-8 text-white" />,
       features: [
         "Digital audit",
         "Technology stack review",
@@ -126,17 +140,347 @@ export default function Consultation() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Free Consultation
-          </h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Get expert advice on your technology needs
-          </p>
-        </div>
+    <>
+      <Helmet>
+        <title>Free Consultation - Zion Tech Group | Expert Technology Guidance</title>
+        <meta name="description" content="Get free expert consultation on AI, cloud migration, cybersecurity, and digital transformation. No obligation, actionable insights from certified professionals." />
+        <meta name="keywords" content="free consultation, AI strategy, cloud migration, cybersecurity audit, digital transformation, technology consulting" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+              <Calendar className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">Free Expert Consultation</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+                Free Consultation
+              </span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Get expert guidance on your technology needs. Our certified professionals provide 
+              actionable insights to help you make informed decisions about AI, cloud, security, and digital transformation.
+            </p>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Consultation?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Get the expert guidance you need to make the right technology decisions for your business.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
+                >
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {benefit.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Consultation Types */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Choose Your Consultation Type
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Select the type of consultation that best matches your current needs and challenges.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {consultationTypes.map((type, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                >
+                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${type.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    {type.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                    {type.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">
+                    {type.description}
+                  </p>
+                  <div className="space-y-2 mb-4">
+                    {type.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></div>
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-cyan-400 font-semibold">{type.price}</span>
+                    <span className="text-gray-400">{type.duration}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                    Schedule Your Free Consultation
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-300">
+                  Fill out the form below and we'll get back to you within 24 hours to schedule your consultation.
+                </p>
+              </div>
+              
+              {isSubmitted ? (
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Consultation Request Submitted!</h3>
+                  <p className="text-gray-300">We'll contact you within 24 hours to schedule your free consultation.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                        Company
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        placeholder="Your company name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                        placeholder="+1 (555) 123-4567"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                      <label htmlFor="industry" className="block text-sm font-medium text-gray-300 mb-2">
+                        Industry
+                      </label>
+                      <select
+                        id="industry"
+                        name="industry"
+                        value={formData.industry}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      >
+                        <option value="">Select industry</option>
+                        {industries.map((industry, index) => (
+                          <option key={index} value={industry} className="bg-slate-800">
+                            {industry}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="projectSize" className="block text-sm font-medium text-gray-300 mb-2">
+                        Company Size
+                      </label>
+                      <select
+                        id="projectSize"
+                        name="projectSize"
+                        value={formData.projectSize}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      >
+                        <option value="">Select size</option>
+                        {projectSizes.map((size, index) => (
+                          <option key={index} value={size} className="bg-slate-800">
+                            {size}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
+                        Timeline
+                      </label>
+                      <select
+                        id="timeline"
+                        name="timeline"
+                        value={formData.timeline}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      >
+                        <option value="">Select timeline</option>
+                        {timelines.map((timeline, index) => (
+                          <option key={index} value={timeline} className="bg-slate-800">
+                            {timeline}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="consultationType" className="block text-sm font-medium text-gray-300 mb-2">
+                      Consultation Type
+                    </label>
+                    <select
+                      id="consultationType"
+                      name="consultationType"
+                      value={formData.consultationType}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      <option value="">Select consultation type</option>
+                      {consultationTypes.map((type, index) => (
+                        <option key={index} value={type.title} className="bg-slate-800">
+                          {type.title} - {type.duration}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                      Tell us about your project *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      rows={5}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+                      placeholder="Describe your current challenges, goals, and what you hope to achieve with our consultation..."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+                  >
+                    Schedule Free Consultation
+                    <Calendar className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </form>
+              )}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Information */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-8 border border-cyan-500/20">
+              <h2 className="text-2xl font-bold text-white mb-6">
+                Need Immediate Assistance?
+              </h2>
+              <p className="text-gray-300 mb-8">
+                Contact us directly for urgent matters or if you prefer to speak with someone immediately.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Email</h3>
+                  <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Smartphone className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Phone</h3>
+                  <p className="text-cyan-400">+1 302 464 0950</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Address</h3>
+                  <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+    </>
   );
 }
