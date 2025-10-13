@@ -2,11 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, 
   Zap, 
   Shield, 
   BarChart3, 
-  Cloud, 
   Code, 
   Database, 
   Users, 

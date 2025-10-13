@@ -4,16 +4,11 @@ import { Link } from 'react-router-dom';
 import { 
   Eye, 
   Box, 
-  Zap, 
   ArrowRight,
   Sparkles,
   CheckCircle,
-  Target,
   Brain,
-  Users,
   Globe,
-  Settings,
-  Shield
 } from 'lucide-react';
 
 const ARVRDevelopmentPage = () => {

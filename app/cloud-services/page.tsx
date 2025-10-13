@@ -11,8 +11,7 @@ import {
   Database, 
   Lock, 
   Users, 
-  Settings, 
-  Monitor 
+  Settings
 } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {

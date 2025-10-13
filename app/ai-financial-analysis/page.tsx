@@ -2,18 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  BarChart3, 
-  TrendingUp, 
-  DollarSign, 
   ArrowRight,
   Sparkles,
   CheckCircle,
-  Target,
-  Zap,
-  Brain,
-  PieChart,
+  TrendingUp,
+  Shield,
   Activity,
-  Shield
+  PieChart
 } from 'lucide-react';
 
 const AIFinancialAnalysisPage = () => {

@@ -25,7 +25,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       });
 
       // Optimize images
-      }
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+      });
 
       setIsOptimized(true);
     };
@@ -38,6 +43,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     <div className="performance-optimizer">
       {children}
       {isOptimized && (
+        <div className="optimization-indicator">
+          Performance optimized
         </div>
       )}
     </div>

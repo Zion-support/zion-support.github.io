@@ -4,15 +4,10 @@ import { Link } from 'react-router-dom';
 import { 
   Package, 
   BarChart3, 
-  Zap, 
   ArrowRight,
   Sparkles,
   CheckCircle,
   Target,
-  Brain,
-  Users,
-  Globe,
-  Settings,
   Shield
 } from 'lucide-react';
 

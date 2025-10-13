@@ -2,18 +2,13 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Users, 
-  Target, 
-  Brain, 
   ArrowRight,
   Sparkles,
   CheckCircle,
-  UserCheck,
+  Target,
   FileText,
-  Calendar,
   TrendingUp,
-  Shield,
-  Zap
+  Shield
 } from 'lucide-react';
 
 const AIHRRecruitmentProPage = () => {
