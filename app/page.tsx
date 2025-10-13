@@ -1,13 +1,6 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
-=======
-import SEOOptimizer from "./components/SEOOptimizer";
-=======
-import EnhancedSEO from "./components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
@@ -15,13 +8,7 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
+import { optimizeImage } from "../utils/performanceUtils";
 
 const HomePage = () => {
   const structuredData = {
@@ -186,29 +173,30 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-<<<<<<< HEAD
-      <EnhancedSEO
-=======
       <FuturisticBackground />
-<<<<<<< HEAD
-      <SEOOptimizer
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
       <EnhancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
         canonical="https://ziontechgroup.com"
       />
+      
+      {/* Skip to main content link for accessibility */}
+      <a 
+        href="#main-content" 
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50"
+      >
+        Skip to main content
+      </a>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section 
+        className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+        aria-labelledby="hero-heading"
+        role="banner"
+      >
         {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
@@ -225,6 +213,7 @@ const HomePage = () => {
             weight="bold"
             color="white"
             className="mb-6 leading-tight"
+            id="hero-heading"
           >
             <FuturisticText text="Welcome to " delay={0} speed={100} />
             <FuturisticText 
@@ -246,12 +235,13 @@ const HomePage = () => {
             Transform your operations with cutting-edge technology and innovative solutions.
           </ResponsiveText>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16" role="group" aria-label="Main actions">
             <FuturisticButton
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
+              icon={<Sparkles className="w-5 h-5" aria-hidden="true" />}
+              aria-label="Get started with Zion Tech Group services"
             >
               Get Started Today
             </FuturisticButton>
@@ -259,17 +249,23 @@ const HomePage = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Monitor className="w-5 h-5" />}
+              icon={<Monitor className="w-5 h-5" aria-hidden="true" />}
+              aria-label="Watch a demo of our solutions"
             >
               Watch Demo
             </FuturisticButton>
           </div>
           
           {/* Stats */}
-          <ResponsiveGrid cols={{ default: 2, md: 4 }} className="max-w-5xl mx-auto">
+          <ResponsiveGrid 
+            cols={{ default: 2, md: 4 }} 
+            className="max-w-5xl mx-auto"
+            role="region"
+            aria-label="Company statistics"
+          >
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="text-center group" role="img" aria-label={`${stat.number} ${stat.label}`}>
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300" aria-hidden="true">
                   {stat.icon}
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -281,10 +277,10 @@ const HomePage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="features-heading">
         <ResponsiveContainer>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 id="features-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Core Services
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -292,17 +288,22 @@ const HomePage = () => {
               From AI-powered analytics to enterprise security, we have everything you need.
             </p>
           </div>
-          <ResponsiveGrid cols={{ default: 1, sm: 2, lg: 4 }}>
+          <ResponsiveGrid 
+            cols={{ default: 1, sm: 2, lg: 4 }}
+            role="list"
+            aria-label="Core services"
+          >
             {features.map((feature, index) => (
               <FuturisticCard
                 key={index}
                 className="group cursor-pointer"
                 glowColor={feature.color.includes('blue') ? 'cyan' : feature.color.includes('green') ? 'green' : feature.color.includes('purple') ? 'purple' : 'pink'}
+                role="listitem"
               >
                 <Link
                   to={feature.link}
                   className="block p-6"
-                  aria-label={`Learn more about ${feature.title}`}
+                  aria-label={`Learn more about ${feature.title} - ${feature.description}`}
                 >
                   <div
                     className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
