@@ -1,47 +1,18 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Calendar, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe,
-  Mail,
-  Smartphone,
-  MapPin,
-  Star,
-  Users,
-  Award,
-  BarChart3
-} from 'lucide-react';
-
-export default function ConsultationPage() {
-=======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock, Users, CheckCircle, Brain, Shield, Zap, Globe, BarChart3, Mail, Phone, MapPin, Star, Award, Target, Settings } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const ConsultationPage = () => {
->>>>>>> cursor/website-audit-and-update-with-deployment-6c87
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
-<<<<<<< HEAD
-    budget: '',
-    timeline: '',
-=======
     timeline: '',
     budget: '',
->>>>>>> cursor/website-audit-and-update-with-deployment-6c87
     message: ''
   });
 
