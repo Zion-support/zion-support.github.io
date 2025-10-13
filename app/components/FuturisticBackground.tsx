@@ -52,20 +52,11 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children })
     return () => {
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, []);
-<<<<<<< HEAD
-=======
-interface FuturisticBackgroundProps {
-  children: React.ReactNode;
-}
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
+    }, []);
 
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen">
-<<<<<<< HEAD
       <canvas
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none"

@@ -1,23 +1,20 @@
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
-<<<<<<< HEAD
 export const LoadingPage: React.FC = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="text-center">
-<<<<<<< HEAD
-        <Loader2 className="w-12 h-12 text-blue-400 animate-spin mx-auto mb-4" />
-        <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
-        <p className="text-gray-400">Please wait while we load the content</p>
-=======
         <div className="w-16 h-16 mx-auto mb-4">
           <Loader2 className="w-16 h-16 text-cyan-400 animate-spin" />
         </div>
         <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
         <p className="text-gray-300">Please wait while we load the content</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
+      </div>
+    </div>
+  );
+};
+
 interface LoadingPageProps {
   type?: 'loading' | 'ai' | 'security' | 'performance' | 'global';
   message?: string;

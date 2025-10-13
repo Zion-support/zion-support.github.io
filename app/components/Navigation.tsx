@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-<<<<<<< HEAD
 import { 
   Menu, 
   X, 
@@ -9,39 +8,26 @@ import {
   Code, 
   Mail, 
   Brain, 
-  Shield, 
-<<<<<<< HEAD
-  Zap, 
-  Globe, 
+  Shield,
+  Zap,
+  ChevronDown,
   ArrowRight, 
   Star, 
-  Users, 
   Award, 
   BarChart3, 
   Cloud, 
   Sparkles, 
-  Mail, 
   Smartphone, 
   Monitor,
   Phone,
   MapPin,
-  Code,
   Database,
-  ChevronDown,
-  Menu,
-  X,
-  SidebarIcon,
   Package,
   Heart,
   Receipt,
   TrendingUp,
   Cpu,
-  Network,
-  Sparkles
-} from 'lucide-react';
-=======
-  Zap,
-  ChevronDown
+  Network
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -49,28 +35,58 @@ interface NavigationItem {
   path: string;
   icon: React.ReactNode;
   dropdown?: NavigationItem[];
-}
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
-import {
-  Brain,
-  Shield,
-  Zap,
-  Globe,
-  Menu,
-  X,
-  ChevronDown
-} from 'lucide-react';
-import FuturisticButton from './FuturisticButton';
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
+  }
+
+  const navigationItems: NavigationItem[] = [
+    {
+      name: 'Home',
+      path: '/',
+      icon: <Home className="w-5 h-5" />,
+    },
+    {
+      name: 'About',
+      path: '/about',
+      icon: <Users className="w-5 h-5" />,
+    },
+    {
+      name: 'Services',
+      path: '/services',
+      icon: <Code className="w-5 h-5" />,
+      dropdown: [
+        {
+          name: 'AI Services',
+          path: '/ai-services',
+          icon: <Brain className="w-5 h-5" />,
+        },
+        {
+          name: 'IT Services',
+          path: '/services',
+          icon: <Shield className="w-5 h-5" />,
+        },
+        {
+          name: 'Micro SAAS',
+          path: '/micro-saas',
+          icon: <Zap className="w-5 h-5" />,
+        },
+        {
+          name: '5G Solutions',
+          path: '/5g-solutions',
+          icon: <Globe className="w-5 h-5" />,
+        },
+      ],
+    },
+    {
+      name: 'Contact',
+      path: '/contact',
+      icon: <Mail className="w-5 h-5" />,
+    },
+  ];
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
+  }
+  
+  const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);

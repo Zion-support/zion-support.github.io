@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
-=======
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -93,11 +87,6 @@ const Footer = React.memo(() => {
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-5 h-5" /> },
     { number: "24/7", label: "Support", icon: <Clock className="w-5 h-5" /> }
   ], []);
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -114,13 +103,10 @@ const Footer: React.FC = () => {
     { name: 'Contact', href: '/contact' },
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' }
-  ];
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
-
-const Footer: React.FC = () => {
+    ];
+  
+  const Footer: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <footer className="bg-gray-900/50 backdrop-blur-sm border-t border-gray-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
@@ -211,12 +197,9 @@ const Footer: React.FC = () => {
               <div className="flex items-start space-x-3 text-gray-400">
                 <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
                 <span className="text-sm">364 E Main St STE 1008<br />Middletown, DE 19709</span>
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
               </div>
             </div>
           </div>
-
-<<<<<<< HEAD
           {/* AI Services */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h4>

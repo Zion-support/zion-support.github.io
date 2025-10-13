@@ -6,8 +6,7 @@ interface WebVitalsTrackerProps {
 
 const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
   useEffect(() => {
-<<<<<<< HEAD
-    const sendToAnalytics = (metric: WebVitalsData) => {
+      const sendToAnalytics = (metric: WebVitalsData) => {
       // Send to Google Analytics or other analytics service
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', metric.name, {

@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
-<<<<<<< HEAD
   Zap, 
   Shield, 
   BarChart3, 
@@ -28,7 +25,7 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const AIServices = () => {
+const AIServicesPage = () => {
   const aiServices = [
     {
       title: "AI Video Generation",

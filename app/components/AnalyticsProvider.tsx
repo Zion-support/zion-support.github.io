@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-import React, { useEffect } from 'react';
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 
 const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {

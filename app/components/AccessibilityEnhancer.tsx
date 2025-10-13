@@ -1,18 +1,7 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
-<<<<<<< HEAD
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-=======
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
-  enableHighContrast?: boolean;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ 
@@ -21,7 +10,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableScreenReader = true,
   enableHighContrast = false
 }) => {
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     // Enhanced keyboard navigation
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -163,11 +153,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       }
     };
 
-    // Reduced motion detection
-    const handleReducedMotion = () => {
-<<<<<<< HEAD
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.body.classList.add('reduced-motion');
+      // Reduced motion detection
+      const handleReducedMotion = () => {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.body.classList.add('reduced-motion');
       } else {
         document.body.classList.remove('reduced-motion');
       }

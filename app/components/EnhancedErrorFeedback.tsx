@@ -1,37 +1,22 @@
-<<<<<<< HEAD
-import React, { Component, ReactNode } from 'react';
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 
 interface Props {
   children: ReactNode;
-<<<<<<< HEAD
-=======
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 }
 
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
-  error?: Error;
-=======
   error: Error | null;
   errorInfo: ErrorInfo | null;
   retryCount: number;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 }
 
-<<<<<<< HEAD
-class GlobalErrorBoundary extends Component<Props, State> {
+export class GlobalErrorBoundary extends Component<Props, State> {
   private maxRetries = 3;
 
-=======
-export class GlobalErrorBoundary extends Component<Props, State> {
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -41,8 +26,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
       retryCount: 0
     };
   }
-
-<<<<<<< HEAD
+  
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }

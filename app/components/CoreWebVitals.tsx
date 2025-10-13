@@ -1,10 +1,7 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 const CoreWebVitals: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const reportWebVitals = useCallback((data: WebVitalsData) => {
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {

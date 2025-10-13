@@ -1,42 +1,28 @@
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-<<<<<<< HEAD
-
-interface Props {
-  children: ReactNode;
-=======
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-<<<<<<< HEAD
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 }
 
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
   error?: Error;
-}
-
-class EnhancedErrorBoundary extends Component<Props, State> {
-=======
-  error?: Error;
+  errorInfo?: ErrorInfo;
+  retryCount: number;
 }
 
 export class EnhancedErrorBoundary extends Component<Props, State> {
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { 
+      hasError: false, 
+      error: undefined, 
+      errorInfo: undefined, 
+      retryCount: 0 
+    };
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -45,7 +31,47 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
+    
+    this.setState({
+      error,
+      errorInfo,
+    });
+
+    // Call the onError callback if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log error to external service
+    this.logErrorToService(error, errorInfo);
   }
+
+  logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    // In a real application, you would send this to an error reporting service
+    console.error('Error logged to service:', {
+      error: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString(),
+    });
+  };
+
+  handleRetry = () => {
+    this.setState(prevState => ({
+      hasError: false,
+      error: undefined,
+      errorInfo: undefined,
+      retryCount: prevState.retryCount + 1,
+    }));
+  };
+
+  handleReload = () => {
+    window.location.reload();
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
 
   render() {
     if (this.state.hasError) {
