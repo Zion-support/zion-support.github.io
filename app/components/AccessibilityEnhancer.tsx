@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 'use client;
 
@@ -35,8 +36,51 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           button.setAttribute('aria-label', 'Button');
         }
       });
-    };
+=======
+import React, { useEffect, useState, useCallback } from 'react';
 
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+  enableSkipLinks?: boolean;
+  enableKeyboardNav?: boolean;
+  enableFocusIndicators?: boolean;
+}
+
+/**
+ * Accessibility Enhancer Component
+ * Provides comprehensive accessibility improvements
+ */
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
+  enableSkipLinks = true,
+  enableKeyboardNav = true,
+  enableFocusIndicators = true,
+}) => {
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState(16);
+
+  useEffect(() => {
+    // Check for reduced motion preference
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsReducedMotion(e.matches);
+    };
+    
+    setIsReducedMotion(mediaQuery.matches);
+    mediaQuery.addEventListener('change', handleChange);
+
+    // Check for high contrast preference
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+    const handleContrastChange = (e: MediaQueryListEvent) => {
+      setIsHighContrast(e.matches);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
+    };
+    
+    setIsHighContrast(highContrastQuery.matches);
+    highContrastQuery.addEventListener('change', handleContrastChange);
+
+<<<<<<< HEAD
         // Close dropdowns with Escape key
         if (event.key === 'Escape) {
           const openDropdowns = document.querySelectorAll('[aria-expanded="true]);;
@@ -63,8 +107,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const applySettings = (newSettings: AccessibilitySettings) => {
       document.addEventListener('keydown', handleKeyDown);
       return () => document.removeEventListener('keydown', handleKeyDown);
-    };
+=======
+    // Check for font size preference
+    const computedStyle = getComputedStyle(document.documentElement);
+    const rootFontSize = parseFloat(computedStyle.fontSize);
+    setFontSize(rootFontSize);
 
+    return () => {
+      mediaQuery.removeEventListener('change', handleChange);
+      highContrastQuery.removeEventListener('change', handleContrastChange);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
+    };
+  }, []);
+
+<<<<<<< HEAD
     // Screen reader enhancements
     const enhanceScreenReader = () => {
       if (!enableScreenReader) return;
@@ -119,6 +175,53 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
     };
 
+=======
+  // Enhanced keyboard navigation
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    // Skip to main content with Alt + M
+    if (e.altKey && e.key === 'm') {
+      e.preventDefault();
+      const main = document.querySelector('main');
+      if (main) {
+        (main as HTMLElement).focus();
+        (main as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Skip to navigation with Alt + N
+    if (e.altKey && e.key === 'n') {
+      e.preventDefault();
+      const nav = document.querySelector('nav');
+      if (nav) {
+        (nav as HTMLElement).focus();
+        (nav as HTMLElement).scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Close modals/dropdowns with Escape
+    if (e.key === 'Escape') {
+      const modals = document.querySelectorAll('[role="dialog"][aria-modal="true"]');
+      modals.forEach((modal) => {
+        const closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss" i]');
+        if (closeButton) {
+          (closeButton as HTMLElement).click();
+        }
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!enableKeyboardNav) return;
+
+    // Add keyboard navigation class on first keyboard use
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    };
+
+    // Remove keyboard navigation class on mouse use
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
     const handleMouseDown = () => {
       setSettings(prev => ({ ...prev, focusVisible: false }));
       document.body.classList.remove('keyboard-navigation');
@@ -138,6 +241,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     // Cleanup
     return () => {
+<<<<<<< HEAD
       highContrastQuery.removeEventListener('change', handleHighContrastChange);
       reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
@@ -160,6 +264,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
         </svg>
       </button>
+=======
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, [enableKeyboardNav]);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
 
       {/* Settings Panel */}
       <style dangerouslySetInnerHTML={{
@@ -178,6 +288,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
   }, [enableHighContrast]);
 
+<<<<<<< HEAD
   useEffect(() => {
     if (enableScreenReaderSupport) {
       const skipLink = document.createElement('a');
@@ -204,6 +315,24 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       skipLink.addEventListener('blur', () => {
         skipLink.style.top = '-40px';
       });
+=======
+  // Screen reader announcements
+  const announceToScreenReader = useCallback((message: string) => {
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+    
+    document.body.appendChild(announcement);
+    
+    setTimeout(() => {
+      if (announcement.parentNode) {
+        announcement.parentNode.removeChild(announcement);
+      }
+    }, 1000);
+  }, []);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
 
       document.body.insertBefore(skipLink, document.body.firstChild);
 

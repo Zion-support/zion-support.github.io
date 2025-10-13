@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   fallback?: ReactNode;
 'use client;
 
@@ -38,10 +39,17 @@ import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react'
 import { Link } from 'react-router-dom'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+<<<<<<< HEAD
+=======
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
 }
 
 interface State {
@@ -90,14 +98,18 @@ export class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Log the error to console and any error reporting service
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
     this.setState({
       error,
       errorInfo
     });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     // You can also log the error to an error reporting service here
     if (typeof window !== 'undefined' && window.gtag) {
@@ -110,6 +122,27 @@ export class ErrorBoundary extends Component<Props, State> {
     if (process.env['NODE_ENV'] === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo)
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log error to console in development
+    if (process.env['NODE_ENV'] === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+
+    // Log error to analytics in production
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+        custom_map: {
+          stack: error.stack
+        }
+      });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
     }
   }
     })  };
@@ -256,11 +289,14 @@ export default ErrorBoundary
 
   render() {
     if (this.state.hasError) {
+      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
+      // Default fallback UI
       return (
+<<<<<<< HEAD
 <<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 text-center">
@@ -345,10 +381,57 @@ export default ErrorBoundary
                   </pre>
                   {this.state.errorInfo && (
                     <pre className="text-red-300 text-sm mt-2 overflow-auto">
+=======
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center mb-4">
+              <div className="flex-shrink-0">
+                <svg className="h-8 w-8 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                </svg>
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-medium text-gray-900">
+                  Something went wrong
+                </h3>
+              </div>
+            </div>
+            <div className="mt-2">
+              <p className="text-sm text-gray-500">
+                We're sorry, but something unexpected happened. Please try refreshing the page.
+              </p>
+            </div>
+            <div className="mt-4 flex space-x-3">
+              <button
+                onClick={() => window.location.reload()}
+                className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                Refresh Page
+              </button>
+              <button
+                onClick={() => this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
+                className="inline-flex items-center px-3 py-2 border border-gray-300 text-sm leading-4 font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                Try Again
+              </button>
+            </div>
+            {process.env['NODE_ENV'] === 'development' && this.state.error && (
+              <details className="mt-4">
+                <summary className="text-sm font-medium text-gray-700 cursor-pointer">
+                  Error Details (Development)
+                </summary>
+                <div className="mt-2 p-3 bg-gray-100 rounded-md">
+                  <pre className="text-xs text-gray-600 whitespace-pre-wrap">
+                    {this.state.error.stack}
+                  </pre>
+                  {this.state.errorInfo && (
+                    <pre className="text-xs text-gray-600 whitespace-pre-wrap mt-2">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
                       {this.state.errorInfo.componentStack}
                     </pre>
                   )}
                 </div>
+<<<<<<< HEAD
               )}
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -389,6 +472,10 @@ export default ErrorBoundary
                 </p>
               </div>
             </div>
+=======
+              </details>
+            )}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
           </div>
         </div>
       );
@@ -398,5 +485,9 @@ export default ErrorBoundary
   }
 }
 
+<<<<<<< HEAD
 export default ErrorBoundary;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+export default ErrorBoundary;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74

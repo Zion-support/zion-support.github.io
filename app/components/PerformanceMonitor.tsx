@@ -238,11 +238,20 @@ const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+<<<<<<< HEAD
     // Only run in production
     if (process.env['NODE_ENV'] !== 'production') return;
 
     const updateMetric = (name: keyof PerformanceMetrics, value: number) => {
       setMetrics(prev => ({ ...prev, [name]: value }));
+=======
+    const metrics: PerformanceMetrics = {
+      lcp: null,
+      fid: null,
+      cls: null,
+      fcp: null,
+      ttfb: null
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
     };
 
     // Measure Core Web Vitals
@@ -252,6 +261,7 @@ const PerformanceMonitor: React.FC = () => {
     onLCP((metric) => updateMetric('lcp', metric.value));
     onTTFB((metric) => updateMetric('ttfb', metric.value));
 
+<<<<<<< HEAD
     // Show performance panel if metrics are poor
     const checkPerformance = () => {
       const hasPoorMetrics = 
@@ -294,6 +304,20 @@ interface PerformanceMetrics {
 
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+=======
+        // FID - First Input Delay
+        const fidObserver = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry: any) => {
+            metrics.fid = entry.processingStart - entry.startTime;
+          });
+        });
+        
+        try {
+          fidObserver.observe({ entryTypes: ['first-input'] });
+        } catch (e) {
+          console.warn('FID observer not supported');
+        }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
 
   useEffect(() => {
     // Monitor Core Web Vitals
@@ -336,6 +360,7 @@ const PerformanceMonitor: React.FC = () => {
         }
       }, 1000);
 
+<<<<<<< HEAD
       return () => {
         clearTimeout(timeout);
         observer.disconnect();
@@ -349,6 +374,12 @@ const PerformanceMonitor: React.FC = () => {
       console.log('Performance Metrics:', metrics);
     }
   }, [metrics]);
+=======
+    return () => {
+      // Cleanup observers if needed
+    };
+  }, []);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
 
   return null;
 };

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Zap } from 'lucide-react'
@@ -22,16 +23,43 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     <div className="flex flex-col items-center justify-center space-y-2" role="status" aria-label="Loading">
       )}
   className = '',
+=======
+import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  color?: 'primary' | 'secondary' | 'white';
+  text?: string;
+  className?: string;
+}
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
+  color = 'primary',
+  text,
+  className = ''
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
+<<<<<<< HEAD
     lg: 'w-12 h-12',
     xl: 'w-16 h-16',
+=======
+    lg: 'w-12 h-12'
+  };
+
+  const colorClasses = {
+    primary: 'text-indigo-600',
+    secondary: 'text-gray-600',
+    white: 'text-white'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
   };
 
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
+<<<<<<< HEAD
       <Loader2 className={`${sizeClasses[size]} text-purple-600 animate-spin`} />
       {text && (
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{text}</p>
@@ -88,3 +116,18 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 export default LoadingSpinner
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}>
+        <span className="sr-only">Loading...</span>
+      </div>
+      {text && (
+        <p className={`mt-2 text-sm ${colorClasses[color]}`}>
+          {text}
+        </p>
+      )}
+    </div>
+  );
+};
+
+export default LoadingSpinner;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74

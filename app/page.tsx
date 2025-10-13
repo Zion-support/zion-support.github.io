@@ -24,6 +24,12 @@ import { Footer } from './components/Footer;
 
 import { ContentPromotionBanner } from './components/ContentPromotionBanner;
 
+// Preload critical components
+if (typeof window !== 'undefined') {
+  import('./components/ContentPromotionBanner');
+  import('./components/ContentCarousel');
+}
+
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
 
@@ -36,7 +42,21 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton;
 
 const HomePage: React.FC = () => {}
 
+<<<<<<< HEAD
     const timer = setTimeout(() => setIsVisible(true), 100);;
+=======
+  useEffect(() => {
+    // Use requestAnimationFrame for better performance
+    const rafId = requestAnimationFrame(() => {
+      setIsLoaded(true);
+      // Trigger visibility animation
+      const timer = setTimeout(() => setIsVisible(true), 100);
+      return () => clearTimeout(timer);
+    });
+    
+    return () => cancelAnimationFrame(rafId);
+  }, []);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
 
   const handlePhoneClick = () => {;;
 

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
   Network,
   FileText,
   Clock
@@ -94,6 +95,13 @@ import {
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+import { ChevronDown, Menu, X } from 'lucide-react';
+
+const Navigation: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
 
   useEffect(() => {
     const handleScroll = () => {
@@ -367,6 +375,7 @@ export default function Navigation() {
     { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Cpu, description: 'Intelligent Lead Qualification' }
   ];
 
+<<<<<<< HEAD
   const emergingTech = [
     { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
@@ -379,6 +388,31 @@ export default function Navigation() {
     { name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' },
     { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }
   ]
+=======
+  const technologies = [
+    { name: 'Quantum Computing', url: '/quantum-computing' },
+    { name: 'Autonomous Systems', url: '/autonomous-systems' },
+    { name: 'Business Intelligence', url: '/business-intelligence' },
+    { name: 'Blockchain & Web3', url: '/blockchain-web3' },
+    { name: 'IoT & Edge Computing', url: '/iot-edge-computing' },
+  ];
+
+  const company = [
+    { name: 'About Us', url: '/about' },
+    { name: 'Our Team', url: '/team' },
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Enterprise Solutions', url: '/enterprise' },
+    { name: 'Contact Us', url: '/contact' },
+  ];
+
+  const resources = [
+    { name: 'Blog', url: '/blog' },
+    { name: 'Technical Guides', url: '/guides' },
+    { name: 'Privacy Policy', url: '/privacy' },
+    { name: 'Terms of Service', url: '/terms' },
+    { name: 'Sitemap', url: '/sitemap' },
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
 =======
@@ -387,6 +421,7 @@ export default function Navigation() {
     <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
+<<<<<<< HEAD
           <Link to="/" className="text-xl font-bold text-gray-800">
             Zion Tech Group
           </Link>
@@ -466,6 +501,66 @@ export default function Navigation() {
             </Link>
             
             {/* Services Dropdown */}
+=======
+          {/* Logo */}
+          <Link to="/" className="text-2xl font-bold text-cyan-400 neon-text flex items-center">
+            <span className="text-3xl mr-2">⚡</span>
+            Zion Tech Group
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors font-medium">
+              Home
+            </Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center font-medium"
+                aria-expanded={servicesOpen}
+                aria-haspopup="true"
+              >
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border py-4 z-50">
+                  <div className="grid grid-cols-2 gap-4 px-4">
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">Core Services</h3>
+                      {services.slice(0, 8).map((service, index) => (
+                        <Link
+                          key={index}
+                          to={service.url}
+                          className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors"
+                          onClick={() => setServicesOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">Additional Services</h3>
+                      {services.slice(8).map((service, index) => (
+                        <Link
+                          key={index}
+                          to={service.url}
+                          className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded transition-colors"
+                          onClick={() => setServicesOpen(false)}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Technologies Dropdown */}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
             <div className="relative">
               <button
                 onClick={toggleServices}
@@ -1158,8 +1253,15 @@ const Navigation: React.FC = () => {
 
           {/* Mobile Menu Button */}
           <button
+<<<<<<< HEAD
             onClick={toggleMobileMenu}
             className="lg:hidden p-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+=======
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors"
+            aria-expanded={isOpen}
+            aria-label="Toggle mobile menu"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -1463,6 +1565,9 @@ Navigation.displayName = 'Navigation';
       </div>
     </nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
   );
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
 };

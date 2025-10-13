@@ -52,6 +52,7 @@ const ContentCarousel: React.FC = React.memo((props) => {
 
   const prevSlide = () => {setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);};
 
+<<<<<<< HEAD
   return(<div className="relative w-full max-w-6xl mx-auto">)</div>
       <div className="overflow-hidden rounded-2xl">
         <div;
@@ -64,6 +65,63 @@ const ContentCarousel: React.FC = React.memo((props) => {
                   <div className="flex items-center justify-center mb-6">
                     <div className="bg-white/20 p-4 rounded-full">
                       <slide.icon className="h-12 w-12" />
+=======
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev - 1 + contentItems.length) % contentItems.length);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % contentItems.length);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  };
+
+  const formatNumber = (num: number): string => {
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1) + 'k';
+    }
+    return num.toString();
+  };
+
+  const currentItem = contentItems[currentIndex];
+
+  return (
+    <div className="bg-gray-50 py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Featured Content Spotlight
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore our most popular and impactful content that's transforming enterprises worldwide
+          </p>
+        </div>
+
+        {/* Carousel */}
+        <div className="relative">
+          {/* Main carousel content */}
+          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
+              {/* Image/Visual section */}
+              <div className="relative h-64 lg:h-96 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <div className="text-8xl mb-4">{currentItem.image}</div>
+                  <div className="text-2xl font-bold mb-2">{currentItem.category}</div>
+                  <div className="text-lg opacity-90">{currentItem.readTime}</div>
+                </div>
+                
+                {/* Stats overlay */}
+                {currentItem.stats && (
+                  <div className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-3">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-white">
+                        {formatNumber(currentItem.stats.views)}
+                      </div>
+                      <div className="text-sm text-white opacity-90">views</div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
                     </div>
                   </div>
                   <h2 className="text-3xl md: text-4xl font-bold text-center mb-4">,</h2>

@@ -34,12 +34,16 @@ const aiServices = [;;;
 
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
 =======
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Github, Linkedin, Twitter, ArrowRight, Brain, Cloud, Shield, Globe, Database, Smartphone, Zap, Sparkles, Star } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -329,6 +333,7 @@ export default function Footer() {
                 <Brain className="w-6 h-6 text-white" />
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
             </p>
+<<<<<<< HEAD
             
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
@@ -400,6 +405,28 @@ export default function Footer() {
               <div className="flex items-center space-x-3 text-gray-300">
                 <MapPin className="w-4 h-4 text-cyan-400" />
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
+=======
+            <div className="space-y-3">
+              <div className="flex items-center">
+                <Phone className="w-5 h-5 mr-3 text-cyan-400" />
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 mr-3 text-cyan-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center">
+                <MapPin className="w-5 h-5 mr-3 text-cyan-400" />
+                <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center">
+                <Clock className="w-5 h-5 mr-3 text-cyan-400" />
+                <span className="text-gray-300">24/7 Support Available</span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
               </div>
             </div>
           </div>
