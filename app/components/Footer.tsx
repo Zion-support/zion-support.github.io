@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Github } from "lucide-react";
+import { Linkedin, Twitter, Github, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
@@ -23,9 +23,55 @@ const Footer = React.memo(() => {
     },
   ], []);
 
+  const contactInfo = useMemo(() => [
+    {
+      icon: <Mail className="w-5 h-5" />,
+      label: "Email",
+      value: "kleber@ziontechgroup.com",
+      link: "mailto:kleber@ziontechgroup.com"
+    },
+    {
+      icon: <Phone className="w-5 h-5" />,
+      label: "Phone",
+      value: "+1 302 464 0950",
+      link: "tel:+13024640950"
+    },
+    {
+      icon: <MapPin className="w-5 h-5" />,
+      label: "Address",
+      value: "364 E Main St STE 1008\nMiddletown DE 19709",
+      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+    }
+  ], []);
+
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Contact Information Section */}
+        <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-8 mb-12 border border-cyan-500/20">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-2">Get in Touch</h3>
+            <p className="text-gray-300">Ready to transform your business? Contact us today!</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {contactInfo.map((info, index) => (
+              <a
+                key={index}
+                href={info.link}
+                className="flex items-center space-x-3 p-4 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 group"
+              >
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  {info.icon}
+                </div>
+                <div>
+                  <div className="text-sm text-gray-400">{info.label}</div>
+                  <div className="text-white font-medium whitespace-pre-line">{info.value}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}

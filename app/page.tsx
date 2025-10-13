@@ -42,21 +42,21 @@ const HomePage = () => {
     {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
-      price: "From $29/month",
+      price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro"
     },
     {
       name: "Zion Security Shield",
       description: "Advanced cybersecurity protection",
-      price: "From $49/month",
+      price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield"
     },
     {
       name: "Zion Cloud Vault",
       description: "Secure cloud storage solution",
-      price: "From $9/month",
+      price: "From $99/month",
       icon: <Cloud className="w-6 h-6" />,
       link: "/zion-cloud-vault"
     }
