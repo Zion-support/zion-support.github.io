@@ -24,7 +24,6 @@ const CacheManager = () => {
         } catch (error) {
           console.error('Service Worker registration failed:', error);
 >>>>>>> cursor/website-audit-and-update-with-deployment-3210
-=======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
         }
       }
@@ -52,7 +51,6 @@ const CacheManager = () => {
         } catch (error) {
           console.error('Failed to cache static assets:', error);
 >>>>>>> cursor/website-audit-and-update-with-deployment-3210
-=======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
         }
       }
