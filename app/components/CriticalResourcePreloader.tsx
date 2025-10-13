@@ -1,6 +1,4 @@
-import { Link } from 'react-router-dom';
-
-'use client'
+// Critical resource preloader component
 
 interface CriticalresourcepreloaderProps {
   className?: string;
