@@ -1,23 +1,4 @@
-import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { 
-  CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  ArrowRightIcon,
-  CheckIcon,
-  StarIcon
-} from '@heroicons/react/24/outline';
-=======
-import { Helmet } from 'react-helmet-async';
-import { Circle, Star, Right, Zap, Shield, Code } from 'lucide-react';
-import { Circle, Star, Right } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-
+import React from 'react'
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
@@ -94,8 +75,7 @@ const ServicesPage: React.FC = () => {
         { name: '5G Applications', price: '$2,200/month', description: 'Custom applications designed for 5G networks', features: ['App Development', '5G Optimization', 'Performance Tuning', 'User Experience'] }
       ]
     }
-  ];
-
+  ]
   return (
     <>
       <EnhancedSEO
@@ -141,7 +121,7 @@ const ServicesPage: React.FC = () => {
           </div>
 
           {serviceCategories.map((category, categoryIndex) => {
-            const Icon = category.icon;
+            const Icon = category.icon
             return (
               <div key={categoryIndex} className="mb-20">
                 <div className="flex items-center mb-12">
@@ -186,8 +166,7 @@ const ServicesPage: React.FC = () => {
                   ))}
                 </div>
               </div>
-            );
-          })}
+            )})}
         </div>
       </section>
 
@@ -222,7 +201,5 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
     </>
-  );
-};
-
-export default ServicesPage;
+  )}
+export default ServicesPage

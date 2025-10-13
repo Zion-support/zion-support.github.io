@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import { 
   ShieldCheckIcon,
   LockClosedIcon,
@@ -11,8 +11,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 export default function CybersecurityPage() {
   const services = [
     {
@@ -39,8 +38,7 @@ export default function CybersecurityPage() {
       description: 'Regular security assessments and penetration testing to identify and fix vulnerabilities.',
       features: ['Penetration testing', 'Vulnerability scanning', 'Security audits', 'Compliance checks']
     }
-  ];
-
+  ]
   const compliance = [
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
@@ -48,8 +46,7 @@ export default function CybersecurityPage() {
     { name: 'HIPAA', status: 'Compliant' },
     { name: 'PCI DSS', status: 'Compliant' },
     { name: 'NIST', status: 'Compliant' }
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -239,5 +236,4 @@ export default function CybersecurityPage() {
         </div>
       </section>
     </>
-  );
-}
+  )}

@@ -1,18 +1,16 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  noIndex?: boolean;
-  noFollow?: boolean;
-}
+  title: string
+  description: string
+  keywords?: string
+  canonicalUrl?: string
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
+  structuredData?: object
+  noIndex?: boolean
+  noFollow?: boolean}
 
 const EnhancedSEO: React.FC<SEOProps> = ({
   title,
@@ -26,11 +24,10 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   noIndex = false,
   noFollow = false
 }) => {
-  const siteName = 'Zion Tech Group';
-  const siteUrl = 'https://ziontechgroup.com';
-  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl;
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
-
+  const siteName = 'Zion Tech Group'
+  const siteUrl = 'https://ziontechgroup.com'
+  const fullCanonicalUrl = canonicalUrl ? `${siteUrl}${canonicalUrl}` : siteUrl
+  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`
   const defaultStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -55,10 +52,8 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       'https://github.com/ziontechgroup',
       'https://twitter.com/ziontechgroup'
     ]
-  };
-
-  const mergedStructuredData = structuredData || defaultStructuredData;
-
+  }
+  const mergedStructuredData = structuredData || defaultStructuredData
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -112,7 +107,5 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         {JSON.stringify(mergedStructuredData)}
       </script>
     </Helmet>
-  );
-};
-
-export default EnhancedSEO;
+  )}
+export default EnhancedSEO

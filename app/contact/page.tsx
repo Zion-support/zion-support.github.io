@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
-
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react'
 export default function ContactPage()    {
   const [formData, setFormData] = useState({
     name: '',
@@ -10,37 +9,24 @@ export default function ContactPage()    {
     phone: '',
     subject: '',
     message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
-  };
-
+    })}
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
+    e.preventDefault()
+    setIsSubmitting(true)
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-  };
-
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    setIsSubmitted(true)
+    setIsSubmitting(false)}
   const contactInfo = [
     {
-<<<<<<< HEAD
 
-      icon: 'Phone',
-=======
-icon: 'Phone',
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       title: 'Phone',
       value: '+1 (555) 123-4567',
       description: 'Mon-Fri 9AM-6PM EST'
@@ -59,38 +45,10 @@ icon: 'Phone',
     },
     {
       icon: 'Clock',
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
-=======
-icon: Phone,
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9AM-6PM EST'
-    },
-    {
-      icon: Mail,
-      title: 'Email',
-      value: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
-    },
-    {
-      icon: MapPin,
-      title: 'Address',
-      value: '123 Tech Street, Suite 100',
-      description: 'San Francisco, CA 94105'
-    },
-    {
-      icon: Clock,
-      title: 'Business Hours',
-      value: 'Monday - Friday',
-value: 'Monday - Friday',
-value: 'Monday - Friday',
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       description: '9:00 AM - 6:00 PM EST'
     }
-  ];
-
+  ]
   const subjects = [
     'AI Services',
     'IT Services',
@@ -99,8 +57,7 @@ value: 'Monday - Friday',
     'Digital Transformation',
     '5G Implementation',
     'Other'
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -133,7 +90,7 @@ value: 'Monday - Friday',
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => {
-              const Icon = info.icon;
+              const Icon = info.icon
               return (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
@@ -143,8 +100,7 @@ value: 'Monday - Friday',
                   <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
                   <p className="text-gray-400 text-sm">{info.description}</p>
                 </div>
-              );
-            })}
+              )})}
           </div>
         </div>
       </section>
@@ -167,7 +123,7 @@ value: 'Monday - Friday',
               </p>
               <button
                 onClick={() => {
-                  setIsSubmitted(false);
+                  setIsSubmitted(false)
                   setFormData({
                     name: '',
                     email: '',
@@ -175,8 +131,7 @@ value: 'Monday - Friday',
                     phone: '',
                     subject: '',
                     message: ''
-                  });
-                }}
+                  })}}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 Send Another Message
@@ -309,5 +264,4 @@ value: 'Monday - Friday',
         </div>
       </section>
     </div>
-  );
-}
+  )}

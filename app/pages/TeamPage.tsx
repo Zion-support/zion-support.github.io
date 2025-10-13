@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import { 
   UserGroupIcon,
   AcademicCapIcon,
@@ -10,8 +10,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 export default function TeamPage() {
   const team = [
     {
@@ -62,8 +61,7 @@ export default function TeamPage() {
       linkedin: 'https://linkedin.com/in/lisa-wang',
       twitter: 'https://twitter.com/lisa_wang'
     }
-  ];
-
+  ]
   const values = [
     {
       icon: StarIcon,
@@ -85,8 +83,7 @@ export default function TeamPage() {
       title: 'Integrity',
       description: 'We maintain the highest ethical standards in all our business practices.'
     }
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -272,5 +269,4 @@ export default function TeamPage() {
         </div>
       </section>
     </>
-  );
-}
+  )}

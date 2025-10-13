@@ -1,7 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Right, User, Calendar } from 'lucide-react';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Right, User, Calendar } from 'lucide-react'
 const BlogPage: React.FC = () => {
   const categories = [
     { id: "all", name: "All Posts", count: 12 },
@@ -9,8 +8,7 @@ const BlogPage: React.FC = () => {
     { id: "cybersecurity", name: "Cybersecurity", count: 3 },
     { id: "cloud", name: "Computing", count: 2 },
     { id: "development", name: "Development", count: 2 }
-  ];
-
+  ]
   const blogPosts = [
     {
       id: 1,
@@ -72,8 +70,7 @@ const BlogPage: React.FC = () => {
       readTime: "9 min read",
       image: "🛡️"
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -124,13 +121,7 @@ const BlogPage: React.FC = () => {
                   <div className="text-4xl mb-4">{post.image}</div>
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center">
-<<<<<<< HEAD
 
-                      <div className="w-4 h-4 mr-1" />
-
-=======
-<div className="w-4 h-4 mr-1" />
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center">
@@ -178,7 +169,5 @@ const BlogPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default BlogPage;
+  )}
+export default BlogPage

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import { 
   CloudIcon,
   ServerIcon,
@@ -11,8 +11,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 export default function CloudSolutionsPage() {
   const services = [
     {
@@ -39,8 +38,7 @@ export default function CloudSolutionsPage() {
       description: 'Advanced analytics and monitoring solutions for your cloud infrastructure and applications.',
       features: ['Performance monitoring', 'Cost optimization', 'Security analytics', 'Predictive insights']
     }
-  ];
-
+  ]
   const platforms = [
     { name: 'Amazon Web Services (AWS)', logo: 'AWS' },
     { name: 'Microsoft Azure', logo: 'Azure' },
@@ -48,8 +46,7 @@ export default function CloudSolutionsPage() {
     { name: 'IBM Cloud', logo: 'IBM' },
     { name: 'Oracle Cloud', logo: 'Oracle' },
     { name: 'DigitalOcean', logo: 'DO' }
-  ];
-
+  ]
   return (
     <>
       <SEO 
@@ -239,5 +236,4 @@ export default function CloudSolutionsPage() {
         </div>
       </section>
     </>
-  );
-}
+  )}
