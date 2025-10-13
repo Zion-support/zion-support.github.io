@@ -172,10 +172,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     applyAccessibilitySettings(defaultSettings);
   };
 
-<<<<<<< HEAD
-  // Removed unused functions - functionality is handled by updateSetting directly
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-952e
   return (
     <>
       {children}
