@@ -1,15 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-=======
-import React, { useState, useCallback, useMemo } from 'react'.
-import React, { Link, useLocation } from 'react-router-dom'.
-import React, { X, Brain, Shield, Zap, Globe, ChevronDown, ChevronRight, Home, User, Mail, Phone, MapPin, Clock, ArrowRight, Star, Users, Award, BarChart3, Cloud, Code, Database, Network, Smartphone, Monitor, Target, Calendar, Heart, Receipt, TrendingUp, Cpu, Package } from 'lucide-react'.
-interface SidebarProps {
-  isOpen: boolean.
-  onClose: () => void.
-}
->>>>>>> origin/main
 
   const toggleSection = (section: string) => {
     const newExpanded = new Set(expandedSections).
@@ -56,7 +46,6 @@ interface SidebarProps {
       title: 'Micro SaaS',
       key: 'micro-saas',
       items: [
-<<<<<<< HEAD
         { name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings },
         { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart },
         { name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users },
@@ -70,25 +59,6 @@ interface SidebarProps {
         { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart },
         { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart },
         { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },
-=======
-        { name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings },'
-        { name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart },'
-        { name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users },'
-        { name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings },'
-        { name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail },'
-        { name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings },'
-        { name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart },'
-        { name: 'Document Processor', path: '/micro-saas/document-processor', icon: Settings },'
-        { name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings },'
-        { name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock },'
-        { name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart },'
-        { name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart },'
-        { name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings },]'
-      ],
-    },
-    {
-      title: 'IT Services',
->>>>>>> origin/main
       key: 'it-services',
       items: [
         { name: 'IT Services Overview', path: '/it-services', icon: Code },'
@@ -114,7 +84,6 @@ interface SidebarProps {
     {
       title: 'Resources',
       items: [
-<<<<<<< HEAD
         { name: 'Documentation', path: '/docs', icon: Settings },
         { name: 'API Docs', path: '/api-docs', icon: Code },
         { name: 'Support', path: '/support', icon: Users },
@@ -139,145 +108,7 @@ interface SidebarProps {
   );
 }
       <div className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out lg:translate-x-0">
-=======
-        { name: 'Documentation', path: '/docs', icon: Settings },'
-        { name: 'API Docs', path: '/api-docs', icon: Code },'
-        { name: 'Support', path: '/support', icon: Users },'
-        { name: 'Status', path: '/status', icon: Settings },]'
-      ],
-    }
-  ];
-
-  const location = useLocation().
-
-  const toggleSection = useCallback((section: string) => {
-    setExpandedSections(prev => {
-      const newSet = new Set(prev).
-      if (newSet.has(section)) {
-        newSet.delete(section).
-      } else {
-        newSet.add(section).
-      }
-      return newSet.
-    }).
-  }, []).
-
-  const services = useMemo(() => [
-    {
-      name: "AI Solutions",
-      href: "/ai-services",
-      icon: <Brain className="w-5 h-5" />,"
-      color: "from-blue-500 to-cyan-500",
-      items: [
-        { name: "AI Analytics", href: "/ai-analytics" },"
-        { name: "AI Automation", href: "/ai-automation" },"
-        { name: "AI Content Generation", href: "/ai-content-generation" },"
-        { name: "AI Customer Service", href: "/ai-customer-service" },"
-        { name: "AI Marketing", href: "/ai-marketing" },"
-        { name: "AI Healthcare", href: "/ai-healthcare" }]"
-      ],
-    },
-    {
-      name: "IT Services",
-      href: "/services",
-      icon: <Shield className="w-5 h-5" />,"
-      color: "from-green-500 to-emerald-500",
-      items: [
-        { name: "Cloud Infrastructure", href: "/cloud-infrastructure" },"
-        { name: "Cybersecurity", href: "/cybersecurity-solutions" },"
-        { name: "Web Development", href: "/web-development" },"
-        { name: "Mobile Development", href: "/mobile-development" },"
-        { name: "Database Management", href: "/database-management" },"
-        { name: "Custom Software", href: "/custom-software" }]"
-      ],
-    },
-    {
-      name: "Micro SAAS",
-      href: "/micro-saas",
-      icon: <Zap className="w-5 h-5" />,"
-      color: "from-purple-500 to-pink-500",
-      items: [
-        { name: "Zion Analytics Pro", href: "/zion-analytics-pro" },"
-        { name: "Zion Security Shield", href: "/zion-security-shield" },"
-        { name: "Zion Cloud Vault", href: "/zion-cloud-vault" },"
-        { name: "Zion Content Studio", href: "/zion-content-studio" },"
-        { name: "Zion AI Video Generator", href: "/zion-ai-video-generator" },"
-        { name: "Zion AI Invoice Generator", href: "/zion-ai-invoice-generator" }]"
-      ],
-    },
-    {
-      name: "5G Solutions",
-      href: "/5g-solutions",
-      icon: <Globe className="w-5 h-5" />,"
-      color: "from-orange-500 to-red-500",
-      items: [
-        { name: "5G Data Analytics", href: "/5g-data-analytics" },"
-        { name: "5G Edge Computing", href: "/5g-edge-computing" },"
-        { name: "5G Implementation", href: "/5g-implementation" },"
-        { name: "5G Mobile Applications", href: "/5g-mobile-applications" },"
-        { name: "5G Network Infrastructure", href: "/5g-network-infrastructure" },"
-        { name: "5G Private Networks", href: "/5g-private-networks" }]"
-      ],
-    }
-  ], []).
-
-  const mainPages = useMemo(() => [
-    { name: "Home", href: "/", icon: <Home className="w-5 h-5" /> },"
-    { name: "About", href: "/about", icon: <User className="w-5 h-5" /> },"
-    { name: "Contact", href: "/contact", icon: <Mail className="w-5 h-5" /> },"
-    { name: "Blog", href: "/blog", icon: <Receipt className="w-5 h-5" /> },"
-    { name: "Demo", href: "/demo", icon: <Monitor className="w-5 h-5" /> },"
-    { name: "Support", href: "/support", icon: <Heart className="w-5 h-5" /> }
-  ], []).
-
-  const contactInfo = useMemo(() => [
-    { icon: <Mail className="w-4 h-4" />, text: "kleber@ziontechgroup.com" },"
-    { icon: <Phone className="w-4 h-4" />, text: "+1 (302) 464-0950" },"
-    { icon: <MapPin className="w-4 h-4" />, text: "364 E Main St STE 1008, Middletown, DE 19709" }
-  ], []).
-
-  if (!isOpen) return null.
-
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
-  return (
-    <div>
-  )
-    </div>
-  ).
-  ).
-  )
-  const companyLinks = [
-    { name: 'Home', path: '/', icon: Home },'
-    { name: 'About Us', path: '/about', icon: Users },'
-    { name: 'Our Team', path: '/team', icon: Users },'
-    { name: 'Case Studies', path: '/case-studies', icon: FileText },'
-    { name: 'Careers', path: '/careers', icon: Users },'
-    { name: 'Blog', path: '/blog', icon: FileText },'
-    { name: 'News', path: '/news', icon: FileText }'
-  ];
-
-  const supportLinks = [
-    { name: 'Documentation', path: '/docs', icon: FileText },'
-    { name: 'API Reference', path: '/api-docs', icon: Code },'
-    { name: 'Support Center', path: '/support', icon: Settings },'
-    { name: 'System Status', path: '/status', icon: BarChart },'
-    { name: 'Contact', path: '/contact', icon: Phone }'
-  ];
-
-  if (!isOpen) return null.
-
-  return (
-<<<<<<< HEAD
     <React.Fragment>
-=======
-    <div>
-  )
-    </div>
-  ).
-  ).
-  )
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       {/* Overlay */}
       <div 
         className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
@@ -289,40 +120,22 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       />
       {/* Sidebar */}
       <div className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 transform transition-transform duration-300 ease-in-out lg:translate-x-0">"
->>>>>>> origin/main
         <div className="flex flex-col h-full">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200">"
             <div className="flex items-center space-x-2">"
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">"
                 <Zap className="w-5 h-5 text-white" />
-<<<<<<< HEAD
               <span className="text-xl font-bold text-gray-900">Zion Tech Group
             <button
-=======
-              </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-            </div>
-            <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               onClick={onClose}
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors lg:hidden"
-<<<<<<< HEAD
-=======
-            >
-              <X className="w-6 h-6" />
->>>>>>> origin/main
           {/* Navigation Content */}
           <div className="flex-1 overflow-y-auto">
             {/* Company Links */}
             <div className="p-4">"
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-<<<<<<< HEAD
                 Company
-=======
-                Company.
-              </h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               <ul className="space-y-1">
                 {companyLinks.map((link, index) => (
                   <li key={index}>
@@ -337,12 +150,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             {/* Service Categories */}
             <div className="p-4">"
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-<<<<<<< HEAD
                 Services
-=======
-                Services.
-              </h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               <div className="space-y-1">
                 {serviceCategories.map((category, index) => (
                   <div key={index}>
@@ -375,12 +183,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             {/* Support Links */}
             <div className="p-4">"
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-<<<<<<< HEAD
                 Support
-=======
-                Support.
-              </h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               <ul className="space-y-1">
                 {supportLinks.map((link, index) => (
                   <li key={index}>
@@ -397,36 +200,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <div className="space-y-3">"
               <div className="flex items-center space-x-2 text-sm text-gray-600">"
                 <Phone className="w-4 h-4" />
-<<<<<<< HEAD
                 <span>(302) 464-0950
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Mail className="w-4 h-4" />
-<<<<<<< HEAD
                 <span>kleber@ziontechgroup.com</span>
               </div>
             </div>
-=======
-                <span>kleber@ziontechgroup.com
-  );
-};
-
-export default Sidebar;
-</div></div></li>
-=======
-                <span>(302) 464-0950</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600">"
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  ).
-};
-
-export default Sidebar.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
->>>>>>> origin/main

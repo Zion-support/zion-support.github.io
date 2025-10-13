@@ -1,89 +1,16 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, Zap, ArrowRight, Brain, Code, BarChart, Users, Globe, Shield, Smartphone, Target, TrendingUp, Settings, Calendar, FileText, Lock, Cpu, Database } from 'lucide-react';
-=======
-<<<<<<< HEAD
 import React from 'react';
-=======
-'use client'.
-import React from 'react'.
-import Navigation from '../components/Navigation'.
-import Footer from '../components/Footer'.
-import React, { CheckCircle, Star, Zap, ArrowRight, Brain, Code, BarChart, Users, Globe, Shield, Smartphone, Target, TrendingUp, Settings, Calendar, FileText, Lock, Cpu, Database } from 'lucide-react'.
-const MicroSaasPage: React.FC = () => {
-  const microSaasTools = [
-    {
-      icon: Brain,
-      title: 'AI Content Generator',
-      description: 'Generate high-quality content for blogs, social media, and marketing materials',
-      category: 'Content',
-      price: '$29/month',
-      features: ['Blog Writing', 'Social Media Posts', 'Email Campaigns', 'SEO Optimization'],
-      benefits: ['Save 10+ hours/week', 'Consistent Quality', 'SEO Optimized', 'Multiple Languages'],
-    },
-    {
-      icon: BarChart,
-      title: 'Analytics Dashboard',
-      description: 'Comprehensive business intelligence and performance tracking',
-      category: 'Analytics',
-      price: '$49/month',
-      features: ['Real-time Metrics', 'Custom Reports', 'Data Visualization', 'API Integration'],
-      benefits: ['Data-driven Decisions', 'Performance Insights', 'ROI Tracking', 'Automated Reports'],
-    },
-    {
-      icon: Users,
-      title: 'CRM System',
-      description: 'Customer relationship management with AI-powered insights',
-      category: 'Sales',
-      price: '$39/month',
-      features: ['Lead Management', 'Contact Tracking', 'Sales Pipeline', 'Automation'],
-      benefits: ['Increase Sales 25%', 'Better Customer Service', 'Automated Follow-ups', 'Lead Scoring'],
-    },
-    {
->>>>>>> origin/main
       icon: Code,
       title: 'API Builder',
       description: 'No-code API development and integration platform',
       category: 'Development',
       price: '$59/month',
       features: ['Visual API Designer', 'Auto Documentation', 'Testing Tools', 'Deployment'],
-<<<<<<< HEAD
       benefits: ['Faster Development', 'No Coding Required', 'Scalable APIs', 'Easy Integration']
-=======
-      benefits: ['Faster Development', 'No Coding Required', 'Scalable APIs', 'Easy Integration'],
-    },
-    {
-      icon: Shield,
-      title: 'Security Monitor',
-      description: 'Real-time security monitoring and threat detection',
-      category: 'Security',
-      price: '$79/month',
-      features: ['Threat Detection', 'Vulnerability Scanning', 'Compliance Monitoring', 'Incident Response'],
-      benefits: ['24/7 Protection', 'Compliance Ready', 'Early Warning', 'Automated Response'],
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile App Builder',
-      description: 'Create native mobile apps without coding',
-      category: 'Development',
-      price: '$69/month',
-      features: ['Drag & Drop Builder', 'Native Performance', 'App Store Ready', 'Push Notifications'],
-      benefits: ['No Coding Skills', 'Fast Development', 'Cross Platform', 'Professional Quality'],
-    },
-    {
-      icon: Target,
-      title: 'Marketing Automation',
-      description: 'Automate marketing campaigns and customer engagement',
-      category: 'Marketing',
-      price: '$45/month',
-      features: ['Email Automation', 'Social Media Scheduling', 'Lead Nurturing', 'A/B Testing'],
-      benefits: ['Higher Conversion', 'Time Savings', 'Personalized Campaigns', 'Better ROI'],
-    },
-    {
->>>>>>> origin/main
       icon: TrendingUp,
       title: 'Growth Tracker',
       description: 'Track and optimize business growth metrics',
@@ -131,11 +58,9 @@ const MicroSaasPage: React.FC = () => {
   ];
 
   const categories = [...new Set(microSaasTools.map(tool => tool.category))];
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
 export default function PagePage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8">Page</h1>
@@ -146,115 +71,10 @@ export default function PagePage() {
     </div>
   );
 }
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">"
-        <section className="text-center mb-16">"
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-            Micro SAAS Solutions.
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Powerful, affordable software tools designed to streamline your business operations and boost productivity.
-          </p>
-        </section>
-
-        {/* Tools Grid */}
-        <section className="mb-16">"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {microSaasTools.map((tool, index) => (
-              <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">"
-                <div className="flex items-center mb-4">"
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mr-4">"
-                    <tool.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{tool.title}</h3>"
-                    <p className="text-sm text-purple-400">{tool.category}</p>
-                  </div>
-                </div>
-                
-                <p className="text-gray-300 mb-4">{tool.description}</p>
-                
-                <div className="mb-4">"
-                  <h4 className="text-sm font-semibold text-purple-400 mb-2">Features:</h4>"
-                  <ul className="text-sm text-gray-400 space-y-1">
-                    {tool.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center">"
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="mb-4">"
-                  <h4 className="text-sm font-semibold text-purple-400 mb-2">Benefits:</h4>"
-                  <ul className="text-sm text-gray-400 space-y-1">
-                    {tool.benefits.slice(0, 3).map((benefit, idx) => (
-                      <li key={idx} className="flex items-center">"
-                        <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="mb-4">"
-                  <div className="text-2xl font-bold text-purple-400 mb-2">{tool.price}</div>
-                  <a 
-                    href="/contact" "
-                    className="inline-flex items-center text-purple-400 hover:text-purple-300 font-medium"
-                  >
-                    Get Started <ArrowRight className="w-4 h-4 ml-1" />
-                  </a>
-<<<<<<< HEAD
       company: "Digital Marketing Agency",
       role: "Operations Director",
       content: "Outstanding support and cutting-edge technology. Zion's micro SAAS tools are game-changers for our business.",
       rating: 5
-=======
-      featured: false.
-    }
-  ];
-
-  const stats = [
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },"
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },"
-    { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },"
-    { number: "24/7", label: "Support Available", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion's micro SAAS solutions have transformed our operations. We've increased productivity by 60% in just 3 months.",
-      rating: 5.
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "CTO",
-      content: "The analytics platform is incredibly powerful and easy to use. We've gained insights we never had before.",'
-      rating: 5.
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Operations Director",
-      content: "Outstanding support and cutting-edge technology. Zion's micro SAAS tools are game-changers for our business.",'
-      rating: 5.
-    }
-  ];
-
-  const Component = () => {
-  
-    return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
->>>>>>> origin/main
         title="Micro SAAS Solutions - Zion Tech Group | Ready-to-Use Software"
         description="Transform your business with our comprehensive micro SAAS solutions. Ready-to-use software for analytics, security, cloud storage, AI video generation, and more."
         keywords="micro SAAS, software as a service, business software, analytics, security, cloud storage, AI tools, business automation"
@@ -289,36 +109,6 @@ export default function PagePage() {
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-<<<<<<< HEAD
-=======
-            >
-              Get Started Now
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-            >
-              Try Free Demo
-              <Zap className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
-          </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">"
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-                </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>"
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </section>
-
->>>>>>> origin/main
         {/* Categories */}
         <section className="mb-16">"
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Tool Categories</h2>"
@@ -412,7 +202,6 @@ export default function PagePage() {
         </section>
       </main>
       <Footer />
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -441,11 +230,3 @@ export default function PagePage() {
           </div>
         </div>
       </section>
-=======
-    </div>
-  ).
-};
-
-export default MicroSaasPage.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
->>>>>>> origin/main

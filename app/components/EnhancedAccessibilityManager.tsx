@@ -262,12 +262,7 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   )
     <AccessibilityContext.Provider value={contextValue}>
       {children}
-<<<<<<< HEAD
   );
-=======
-    </AccessibilityContext.Provider>
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
 export default AccessibilityProvider.

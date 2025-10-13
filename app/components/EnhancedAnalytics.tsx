@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   children,
   trackingId = 'G-XXXXXXXXXX'
@@ -24,45 +23,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         page_title: document.title,
         page_location: window.location.href
       });
-=======
-'use client'.
-import React, { createContext, useContext, useEffect, useCallback } from 'react'.
-
-interface AnalyticsContextType {
-  track: (event: string, parameters?: Record<string, any>) => void.
-  page: (pageName: string, parameters?: Record<string, any>) => void.
-  identify: (userId: string, traits?: Record<string, any>) => void.
-}
-
-const AnalyticsContext = createContext<AnalyticsContextType | null>(null).
-
-export const useAnalytics = () => {
-  
-  const context = useContext(AnalyticsContext).
-  if (!context) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider').
-  }
-  return context.
-};
-
-interface AnalyticsProviderProps {
-  children: React.ReactNode.
-  trackingId?: string.
-}
-
->>>>>>> origin/main
     }
   }, [enableTracking]).
 
-<<<<<<< HEAD
   return <>{children}</>;
 export default EnhancedAnalytics;
-=======
-<<<<<<< HEAD
   return <React.Fragment>{children}</React.Fragment>;
-=======
-  return <>{children}</>.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
   const value: AnalyticsContextType = {
     track,
     identify,
@@ -108,4 +74,3 @@ declare global {
   }
 }
 export default AnalyticsProvider.
->>>>>>> origin/main

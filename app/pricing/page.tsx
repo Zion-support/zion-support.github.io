@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 export default function PagePage() {
@@ -20,41 +16,6 @@ export default function PagePage() {
     </div>
   );
 }
-=======
-import React from 'react;'
-
-import { Helmet } from 'react-helmet-async;'
-
-import { Link } from 'react-router-dom;'
-
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;'
-
-const PagePage: React.FC = () => {}
-import React, { Helmet } from 'react-helmet-async'.
-import Navigation from '../components/Navigation'.
-import Footer from '../components/Footer'.
-import SEOOptimizer from '../components/SEOOptimizer'.
-import React, { CheckCircle, Star, Phone, Mail, ArrowRight, Zap, Shield, Users, Clock, DollarSign, Award, TrendingUp } from 'lucide-react'.
-import React, { Helmet } from 'react-helmet-async'.
-import Navigation from '../components/Navigation'.
-import Footer from '../components/Footer'.
-import Link from 'next/link'.
-import React, { CheckCircle, Star, Phone, Mail, MapPin, Zap, Brain, Cloud, Code } from 'lucide-react'.
-import React, { useState } from 'react'.
-import React, { Helmet } from 'react-helmet-async'.
-import React, { CheckCircle, Star, ArrowRight, Zap, Brain, Cloud, Cpu, DollarSign, Users, Shield, BarChart3, FileText, Target, Globe, Database, Settings, Calendar, Eye, Mic, Heart, Lock, Package, Monitor, Wifi, Code, Smartphone } from 'lucide-react'.
-const PricingPage: React.FC = () => {
-import React, { Helmet } from 'react-helmet-async'.
-import React, { Link } from 'react-router-dom'.
-import React, { CheckCircle, Star, ArrowRight, Zap, Phone, Mail } from 'lucide-react'.
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Star } from 'lucide-react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
->>>>>>> origin/main
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -67,22 +28,11 @@ const PricingPage: React.FC = () => {
         'Cloud Infrastructure Setup',
         'Email Support',
         'Monthly Reports',
-<<<<<<< HEAD
         'Basic Analytics Dashboard'
-=======
-        'Basic Analytics Dashboard']
-=======
-        'Basic AI automation',
-        'Email support',
-        'Standard analytics',
-        'Up to 5 users',
-        'Basic integrations'
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
       ],
       popular: false.
     },
     {
->>>>>>> origin/main
       name: 'Professional',
       price: '$7,999',
       period: 'per month',
@@ -94,23 +44,11 @@ const PricingPage: React.FC = () => {
         'Weekly Reports',
         'Advanced Analytics',
         'API Access',
-<<<<<<< HEAD
         'Training Sessions'
-=======
-        'Training Sessions']
-=======
-        'Advanced AI solutions',
-        'Priority support',
-        'Advanced analytics',
-        'Up to 25 users',
-        'Custom integrations',
-        'Dedicated account manager'
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
       ],
       popular: true.
     },
     {
->>>>>>> origin/main
       name: 'Enterprise',
       price: 'Custom',
       period: 'contact us',
@@ -123,19 +61,9 @@ const PricingPage: React.FC = () => {
         'Custom Integrations',
         'White-label Options',
         'On-site Training',
-<<<<<<< HEAD
         'SLA Guarantee'
   const microSaasPlans = [
   const addOns = [
-=======
-        'SLA Guarantee']
-      ],
-      popular: false.
-    }
-  ];
-
-  const microSaasPlans = [
->>>>>>> origin/main
     {
       name: 'Basic',
       price: '$29',
@@ -179,34 +107,17 @@ const PricingPage: React.FC = () => {
         'On-premise Deployment',
         'SLA Guarantee',
         'Training & Consulting']
-=======
-        'Custom AI development',
-        '24/7 dedicated support',
-        'Enterprise analytics',
-        'Unlimited users',
-        'Full customization',
-        'On-site implementation',
-        'SLA guarantee'
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
       ],
       popular: false.
     }
   ];
 
-<<<<<<< HEAD
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Advanced pricing solutions by Zion Tech Group" />
         <title>Page - Zion Tech Group</title>
         <meta name="description" content=Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business. />
         <meta name="keywords" content=page, AI solutions, IT services, Zion Tech Group />
-=======
-  return (
-    <>
-      <Helmet>
-        <title>Pricing - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Advanced pricing solutions by Zion Tech Group" />
->>>>>>> origin/main
       </Helmet>
       <div className="container mx-auto px-4 py-16">"
         <div className="text-center">"
@@ -217,15 +128,9 @@ const PricingPage: React.FC = () => {
             Advanced pricing solutions by Zion Tech Group.
           </p>
         </div>
-<<<<<<< HEAD
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-md p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
-=======
-        <div className="max-w-4xl mx-auto">"
-          <div className="bg-white rounded-lg shadow-md p-8">"
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>"
->>>>>>> origin/main
             <p className="text-gray-600">
               This page is under development. Please check back later for updates.
             </p>
@@ -238,7 +143,6 @@ const PricingPage: React.FC = () => {
                 <li>Basic AI features</li>
                 <li>Email support</li>
                 <li>Standard templates</li>
-<<<<<<< HEAD
         <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
@@ -302,8 +206,6 @@ export default PricingPage;
                   <CheckCircle className="w-5 h-5 text-cyan-400" />
                   <span className="text-gray-300">Flexible payment options</span>
                 </li>
-=======
->>>>>>> origin/main
               </ul>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6 border-2 border-blue-500">"
@@ -328,7 +230,6 @@ export default PricingPage;
               </ul>
             </div>
           </div>
-<<<<<<< HEAD
 }
 
   );  ));)
@@ -340,9 +241,6 @@ export default PricingPage;
                         Most Popular
                       <span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold">
                         {plan.cta}
-=======
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
       </div>
     </div>
   ).
@@ -386,7 +284,6 @@ export default PricingPage.
                       <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">"
                         <Star className="w-4 h-4 mr-1" />
                         Most Popular.
->>>>>>> origin/main
                       </span>
                     </div>
                   )}
@@ -549,31 +446,7 @@ export default PricingPage.
                   Call Now.
                 </a>
               </div>
-<<<<<<< HEAD
 export default PricingPage;
-=======
-        <title>Pricing - Zion Tech Group | Affordable AI & IT Solutions</title>
-        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from our flexible plans designed to fit your business needs and budget." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">"
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-          <div className="text-center mb-16">"
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-              Transparent <span className="text-cyan-400">Pricing</span>
-=======
-        <meta name="description" content="Choose the perfect plan for your business. Flexible pricing options for AI and IT solutions with guaranteed ROI." />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gray-900 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Pricing Plans
-              </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the perfect plan for your business. All our solutions come with 
@@ -581,7 +454,6 @@ export default PricingPage;
             </p>
           </div>
 
-<<<<<<< HEAD
           {/* Service Tabs */}
           <div className="flex justify-center mb-12">"
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-2 border border-slate-700">
@@ -621,12 +493,6 @@ export default PricingPage;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {getCurrentServices().map((service, index) => (
               <div.
-=======
-          {/* Pricing Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {plans.map((plan, index) => (
-              <div
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
                 key={index}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular
@@ -634,7 +500,6 @@ export default PricingPage;
                     : 'border-gray-700'
                 }`}
               >
-<<<<<<< HEAD
                 <div className="text-center mb-6">"
                   <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>"
                   <div className="flex items-baseline justify-center space-x-2">"
@@ -651,31 +516,6 @@ export default PricingPage;
                     <li key={featureIndex} className="flex items-start space-x-3">"
                       <CheckCircle className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />"
                       <span className="text-gray-300 text-sm">{feature}</span>
-=======
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">
-                      <Star className="h-4 w-4 mr-1" />
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
-                  </div>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
                     </li>
                   ))}
                 </ul>
@@ -694,7 +534,6 @@ export default PricingPage;
             ))}
           </div>
 
-<<<<<<< HEAD
           {/* Enterprise Section */}
           <div className="mt-20 text-center">"
             <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/20">"
@@ -711,26 +550,12 @@ export default PricingPage;
                 <button className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 flex items-center justify-center space-x-2">
                   <span>Schedule Demo</span>
                   <Calendar className="w-5 h-5" />
-=======
-          {/* Guarantee Section */}
-          <div className="bg-gradient-to-r from-green-900/50 to-blue-900/50 rounded-xl p-8 mb-16">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold mb-4">300% ROI Guarantee</h2>
-              <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
-                We're so confident in our solutions that we guarantee a 300% return on investment 
-                within the first year, or we'll refund your investment.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">
-                  Learn More About Our Guarantee
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
                 </button>
               </div>
             </div>
           </div>
 
           {/* FAQ Section */}
-<<<<<<< HEAD
           <div className="mt-20">"
             <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">"
@@ -749,41 +574,6 @@ export default PricingPage;
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">"
                 <h3 className="text-lg font-semibold text-white mb-3">Do you offer refunds?</h3>"
                 <p className="text-gray-300">Yes, we offer a 30-day money-back guarantee if you're not satisfied with our service.</p>'
-=======
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Pricing FAQ</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-                <h3 className="text-xl font-semibold mb-3">Can I change plans anytime?</h3>
-                <p className="text-gray-300">
-                  Yes, you can upgrade or downgrade your plan at any time. Changes take effect 
-                  immediately, and we'll prorate any billing differences.
-                </p>
-              </div>
-              
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-                <h3 className="text-xl font-semibold mb-3">What's included in support?</h3>
-                <p className="text-gray-300">
-                  All plans include email support. Professional and Enterprise plans include 
-                  priority support, and Enterprise includes 24/7 dedicated support.
-                </p>
-              </div>
-              
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-                <h3 className="text-xl font-semibold mb-3">Do you offer custom solutions?</h3>
-                <p className="text-gray-300">
-                  Yes, our Enterprise plan includes fully custom AI solutions tailored to your 
-                  specific business needs and requirements.
-                </p>
-              </div>
-              
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-                <h3 className="text-xl font-semibold mb-3">Is there a free trial?</h3>
-                <p className="text-gray-300">
-                  We offer a 30-day free trial for our Professional plan. Contact us to set up 
-                  your trial and see the value of our solutions firsthand.
-                </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
               </div>
             </div>
           </div>
@@ -805,7 +595,6 @@ export default PricingPage;
           </div>
         </div>
       </div>
-<<<<<<< HEAD
                       <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
                         Most Popular.
                       </span>
@@ -942,16 +731,8 @@ export default PricingPage;
       </div>
       
       <Footer />
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
     </>
   ).
 };
 
-<<<<<<< HEAD
 export default PricingPage.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
-=======
-export default PricingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
->>>>>>> origin/main

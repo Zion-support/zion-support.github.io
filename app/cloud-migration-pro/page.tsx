@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
-=======
-      ],
-      popular: false,
-    },
-    {
->>>>>>> origin/main
       name: "Professional",
       price: "$7,999",
       period: "/project",
@@ -18,15 +9,7 @@ import React from 'react';
         "Priority support",
         "Custom integrations",
         "Performance optimization",
-<<<<<<< HEAD
         "Security assessment",
-=======
-        "Security assessment",]
-      ],
-      popular: true,
-    },
-    {
->>>>>>> origin/main
       name: "Enterprise",
       price: "Custom",
       period: "",
@@ -38,7 +21,6 @@ import React from 'react';
         "White-label options",
         "API access",
         "Custom reporting",
-<<<<<<< HEAD
         "24/7 monitoring",
       name: "Sarah Johnson",
       role: "CTO",
@@ -57,16 +39,8 @@ import React from 'react';
     },
   ];
 
-=======
-        "24/7 monitoring",]
-      ],
-      popular: false
-    }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
 export default function PagePage() {
->>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -77,10 +51,6 @@ export default function PagePage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 
 export default CloudMigrationProPage;
-=======
-}
->>>>>>> origin/main

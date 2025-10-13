@@ -1,32 +1,16 @@
-<<<<<<< HEAD
 'use client;
-=======
-'use client;'
->>>>>>> origin/main
 
 import React from 'react;'
 
 import { Helmet } from react-helmet-async.
 
 interface EnhancedSEOHeadProps {}
-<<<<<<< HEAD
-=======
-import React, { Helmet } from 'react-helmet-async'.
-interface SEOHeadProps {
-  title?: string.
-
-  description?: string.
->>>>>>> origin/main
 
   keywords?: string[];
 
   canonicalUrl?: string.
 
-<<<<<<< HEAD
   ogImage?: string;
-=======
-  ogImage?: string.
->>>>>>> origin/main
 
   structuredData?: Record<string, unknown>.
 
@@ -42,23 +26,12 @@ interface SEOHeadProps {
 
   tags?: string[];
 
-<<<<<<< HEAD
-=======
-}
-
->>>>>>> origin/main
 const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions,'
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.,'
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI],
-<<<<<<< HEAD
   canonicalUrl = 'https://ziontechgroup.com,
   ogImage = 'https://ziontechgroup.com/og-image.jpg,
-=======
-  canonicalUrl = 'https://ziontechgroup.com,'
-  ogImage = 'https://ziontechgroup.com/og-image.jpg,'
-  structuredData,
->>>>>>> origin/main
   noIndex = false,
   author = 'Zion Tech Group,'
   publishedTime,
@@ -66,43 +39,15 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   section = 'Technology,'
   tags = []
 }) => {
-<<<<<<< HEAD
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group;;
 
     <Helmet>
       {/* Basic Meta Tags */}
-=======
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group;.
-
-  const fullDescription = description.length > 160 ? description.substring(0, 157) + ... : description;.
-
-  const fullKeywords = [...keywords, 'Zion Tech Group', 'technology solutions', 'AI consulting', IT services];;'
-
-const SEOHead: React.FC = () => {
-  return (
-    <div>
-  )
-    </div>
-  ).
-  ).
-  )
-    <Helmet>
-      {/* Basic Meta Tags */}
-
-<<<<<<< HEAD
       <title>{fullTitle}
->>>>>>> origin/main
       <meta name="description content={fullDescription} />
       <meta name="keywords" content={fullKeywords.join(', )} />
       <meta name="author content={author} />
       <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow} />
-=======
-      <title>{fullTitle}</title>
-      <meta name="description content={fullDescription} />"
-      <meta name="keywords" content={fullKeywords.join(', )} />"'
-      <meta name="author content={author} />"
-      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow} />"'
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       <link rel="canonical href={canonicalUrl} />
       {/* Open Graph Tags */}
 
@@ -150,21 +95,10 @@ const SEOHead: React.FC = () => {
       {tags.map((tag, index) => (
 
         <meta key={index} property="article:tag content={tag} />
-<<<<<<< HEAD
-=======
-      ))}
-
-      {/* Structured Data */}
->>>>>>> origin/main
 
       {structuredData && (
 
         <script type="application/ld+json>
-<<<<<<< HEAD
-=======
-          {JSON.stringify(structuredData)}
-      )}
->>>>>>> origin/main
 
       {/* Default Organization Structured Data */}
 
@@ -195,19 +129,12 @@ const SEOHead: React.FC = () => {
             availableLanguage: en.
           },
           sameAs: [
-<<<<<<< HEAD
             'https://linkedin.com/company/ziontechgroup,
             https://twitter.com/ziontechgroup
 export default EnhancedSEOHead;
       <meta name="twitter:description" content={fullDescription} />
       <meta name="twitter:image" content={ogImage.startsWith('http') ? ogImage : `https://ziontechgroup.com${ogImage}`} />
       <meta name="twitter:site" content="@ziontechgroup" />
-=======
-            'https://linkedin.com/company/ziontechgroup,'
-            https://twitter.com/ziontechgroup]
-          ],
-        })}
-<<<<<<< HEAD
   );
 
 };
@@ -219,22 +146,6 @@ export default EnhancedSEOHead;
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'},${noFollow ? 'nofollow' : 'follow'}`} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-=======
-
-      </script>
-    </Helmet>
-  ).
-
-};
-
-export default EnhancedSEOHead.
-      <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />"
-      <meta name="keywords" content={keywords} />"
-      <meta name="author" content="Zion Tech Group" />"
-      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'},${noFollow ? 'nofollow' : 'follow'}`} />"'
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -272,7 +183,6 @@ export default EnhancedSEOHead.
       <meta name="twitter:description" content={fullDescription} />"
       <meta name="twitter:image" content={ogImage.startsWith('http') ? ogImage : `https://ziontechgroup.com${ogImage}`} />"
       <meta name="twitter:site" content="@ziontechgroup" />"
->>>>>>> origin/main
       <meta name="twitter:creator" content="@ziontechgroup" />
       {/* Additional SEO Meta Tags */}
       <meta name="theme-color" content="#8b5cf6" />"
@@ -281,16 +191,7 @@ export default EnhancedSEOHead.
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />"
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       {/* Language and Region */}
-<<<<<<< HEAD
       <meta name="language" content="English" />
-=======
-      <meta name="language" content="English" />"
-      <meta name="geo.region" content="US-DE" />"
-      <meta name="geo.placename" content="Middletown" />"
-      <meta name="geo.position" content="39.4496;-75.7163" />"
-      <meta name="ICBM" content="39.4496, -75.7163" />
-      {/* Structured Data */}
->>>>>>> origin/main
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       {/* Preconnect to external domains */}
@@ -302,20 +203,9 @@ export default EnhancedSEOHead.
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />"
       <link rel="dns-prefetch" href="//www.google-analytics.com" />"
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-<<<<<<< HEAD
 export default EnhancedSEOHead;
-=======
-<<<<<<< HEAD
   );
 };
 
 export default SEOHead;
 </li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>
-=======
-    </Helmet>
-  ).
-};
-
-export default SEOHead.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
->>>>>>> origin/main

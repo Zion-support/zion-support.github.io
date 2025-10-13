@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
->>>>>>> origin/main
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react';
 
@@ -132,12 +127,4 @@ const Ai3dGenerationPage: React.FC = () => {
           </button>
         </div>
       </section>
-<<<<<<< HEAD
 
-=======
-    </>
-  );
-};
-
-export default Ai3dGenerationPage;
->>>>>>> origin/main

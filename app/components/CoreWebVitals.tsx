@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React from 'react'.
->>>>>>> origin/main
 
 interface CoreWebVitalsProps {
   className?: string.
@@ -13,7 +9,6 @@ export default function CoreWebVitals({ className = '', children }: CoreWebVital
   return (
     <div className={`core-web-vitals ${className}`}>
       {children}
-<<<<<<< HEAD
     </div>
   );
 }
@@ -32,17 +27,9 @@ export default function CoreWebVitals({ className = '', children }: CoreWebVital
 };
 
 export default CoreWebVitals;
-=======
-<<<<<<< HEAD
   );
-=======
-    </div>
-  ).
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
 
     // Log in development
     if (process.env['NODE_ENV'] === 'development') {'
       }
->>>>>>> origin/main

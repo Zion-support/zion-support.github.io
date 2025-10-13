@@ -197,7 +197,3 @@ describe('Validation Functions, () => {
 
   });
 
-<<<<<<< HEAD:__tests__/validation.test.ts
-=======
-});
->>>>>>> origin/main:app-broken/__tests__/validation.test.ts

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 'use client;
@@ -18,9 +17,6 @@ interface BreadcrumbItem {}
 
   current?: boolean;
 
-=======
-import React, { Link } from 'react-router-dom'.
->>>>>>> origin/main
 interface BreadcrumbProps {
   items: Array<{
     label: string.
@@ -28,10 +24,6 @@ interface BreadcrumbProps {
   }>.
   className?: string.
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
 export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
   return (
     <div>
@@ -52,7 +44,6 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
               <span className="text-gray-500">{item.label}
             )}
         ))}
-<<<<<<< HEAD
       </ol>
 const Breadcrumb: React.FC = () => {
   const location = useLocation();;;
@@ -63,41 +54,18 @@ const Breadcrumb: React.FC = () => {
 
   const generateBreadcrumbs = (): BreadcrumbItem[] => {}
     const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
-=======
->>>>>>> origin/main
     const breadcrumbs: BreadcrumbItem[] = [
       { name: 'Home', href: '/ }'
 
     ];
 
-<<<<<<< HEAD
     let currentPath = ;;
-=======
-    let currentPath = ;.
->>>>>>> origin/main
 
     pathSegments.forEach((segment, index) => {
       currentPath += `/${segment};
 
       const isLast = index === pathSegments.length - 1;.
 
-<<<<<<< HEAD
-=======
-      // Convert segment to readable name.
-      const name = segment;.
-
-        .split('-)'
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join( ).
-
-      breadcrumbs.push({}
-        name,
-        href: currentPath,
-        current: isLast.
-      }).
-
-    }).
->>>>>>> origin/main
 
     return breadcrumbs.
 
@@ -105,33 +73,11 @@ const Breadcrumb: React.FC = () => {
 
   const breadcrumbs = generateBreadcrumbs();.
 
-<<<<<<< HEAD
   // Dont show breadcrumb on home page
   if (location.pathname === '/) {
 
     <nav className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700/50" aria-label="Breadcrumb>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>
-=======
-const Breadcrumb: React.FC = () => {
-  const pathSegments = typeof window !== 'undefined' ? window.location.pathname.split('/').filter(segment => segment !== '') : [];'
-  const breadcrumbItems = [
-    { label: 'Home', href: '/' },'
-    ...pathSegments.map((segment, index) => ({
-      label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
-      href: index === pathSegments.length - 1 ? undefined : `/${pathSegments.slice(0, index + 1).join('/')}`
-    }))
-  ];
-
-  return (
-    <div>
-  )
-    </div>
-  ).
-  ).
-  )
-    <nav className="bg-gray-900/50 backdrop-blur-sm border-b border-gray-700/50" aria-label="Breadcrumb>"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8>"
->>>>>>> origin/main
         <ol className="flex items-center space-x-2 py-3 text-sm>
           {breadcrumbs.map((item, index) => (
 
@@ -143,25 +89,11 @@ const Breadcrumb: React.FC = () => {
 
               {index === 0 ? (
 
-<<<<<<< HEAD
 
 }
 export default Breadcrumb;
-=======
-                <Link.
-                  to={item.href}
-
-                  className="flex items-center text-gray-300 hover:text-white transition-colors"
-                  aria-label="Home.
-                >
-<<<<<<< HEAD
                   <Home className="w-4 h-4" aria-hidden="true />
                   <span className="sr-only>Home
-=======
-                  <Home className="w-4 h-4" aria-hidden="true />"
-                  <span className="sr-only>Home</span>
-                </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               ) : item.current ? (
 
                 <span className="text-white font-medium" aria-current="page>
@@ -174,19 +106,11 @@ export default Breadcrumb;
                   className="text-gray-300 hover:text-white transition-colors.
                 >
                   {item.name}
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 
-=======
-
-                </Link>
-'use client'.
-import React, { Link } from 'react-router-dom'.
-import React, { ChevronRight, Home } from 'lucide-react'.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 interface BreadcrumbItem {
   label: string.
   href?: string.
@@ -215,13 +139,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
               className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center"
             >
               <Home className="w-4 h-4 mr-1" />
-<<<<<<< HEAD
               Home
-=======
-              Home.
-            </Link>
-          </li>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
           {items.map((item, index) => (
             <li key={index} className="flex items-center">"
               <ChevronRight className="w-4 h-4 text-gray-500 mx-2" />
@@ -235,12 +153,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
                 <span className="text-cyan-400 font-medium">{item.label}
               )}
 
-<<<<<<< HEAD
     return items;
-=======
-    
-    return items.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
   };
 
   const breadcrumbItems = getBreadcrumbItems().
@@ -258,20 +171,12 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
       <div className="max-w-7xl mx-auto">"
         <ol className="flex items-center space-x-2 text-sm">
           {breadcrumbItems.map((item, index) => (
-<<<<<<< HEAD
             <li key={item.path} className="flex items-center">
               {index > 0 && <span className="text-gray-400 mx-2">/</span>}
               <span className="text-gray-300">{item.name}
 import { useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 
-=======
-            <li key={item.path} className="flex items-center">"
-              {index > 0 && <span className="text-gray-400 mx-2">/</span>}"
-              <span className="text-gray-300">{item.name}</span>"
-import React, { useLocation } from 'react-router-dom'.
-import React, { ChevronRight, Home } from 'lucide-react'.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 const Breadcrumb: React.FC = () => {
   const location = useLocation().
   
@@ -320,18 +225,10 @@ const Breadcrumb: React.FC = () => {
                 {item.icon && <item.icon className="w-4 h-4" />}
                 <span>{item.name}
           ))}
-<<<<<<< HEAD
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 
-=======
-
-        </ol>
-      </div>
-import React, { Link, useLocation } from 'react-router-dom'.
-import React, { ChevronRight, Home } from 'lucide-react'.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 export default function Breadcrumb() {
   const location = useLocation().
   const pathnames = location.pathname.split("/").filter((x) => x).
@@ -398,14 +295,7 @@ export default function Breadcrumb() {
               className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors"
             >
               <Home className="w-4 h-4 mr-1" />
-<<<<<<< HEAD
               Home
-=======
-              Home.
-            </Link>
-          </li>
-          
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
           {pathnames.map((path, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`.
             const isLast = index === pathnames.length - 1.
@@ -431,7 +321,6 @@ export default function Breadcrumb() {
                   >
                     {name}
                 )}
-<<<<<<< HEAD
             );
           })}
   );
@@ -440,17 +329,3 @@ export default function Breadcrumb() {
 export default Breadcrumb;
 export default Breadcrumb;
 </div></div></div></li></li>
-=======
-              </li>
-            ).
-          })}
-        </ol>
-      </div>
-    </nav>
-  ).
-};
-
-export default Breadcrumb.
-export default Breadcrumb.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
->>>>>>> origin/main

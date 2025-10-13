@@ -1,29 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
       description: 'Lightning-fast processing and real-time analytics for optimal results'
-=======
-'use client'.
-import React, { Helmet } from 'react-helmet-async'.
-import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'.
-const ContentCarouselPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
->>>>>>> origin/main
       description: 'Bank-level security with encryption and compliance standards'
 import React, { useState, useEffect } from 'react'.
 import {Cloud, Zap, Shield, ChevronLeft, ChevronRight}}from 'lucide-react'.
@@ -73,30 +52,18 @@ const ContentCarousel: React.FC = React.memo((props) => {
 
   const prevSlide = () => {setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);};
 
-<<<<<<< HEAD
   return(<div className="relative w-full max-w-6xl mx-auto">)
-=======
-  const Component = () => {
-  
-    return (<div className="relative w-full max-w-6xl mx-auto">)</div>"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       <div className="overflow-hidden rounded-2xl">
         <div.
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100,)}%)` }}
-<<<<<<< HEAD
         >{slides.map((slide) => (
             <div key={slide.id}className="w-full flex-shrink-0">
-=======
-        >{slides.map((slide) => (</div>
-            <div key={slide.id}className="w-full flex-shrink-0">"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               <div className={`bg-gradient-to-br ${slide.color}p-8 md: p-12 text-white`,}>
                 <div className="max-w-4xl mx-auto">"
                   <div className="flex items-center justify-center mb-6">"
                     <div className="bg-white/20 p-4 rounded-full">"
                       <slide.icon className="h-12 w-12" />
-<<<<<<< HEAD
                   <h2 className="text-3xl md: text-4xl font-bold text-center mb-4">,
                     {slide.title}
                   <p className="text-xl text-center mb-8 text-white/90">{slide.description</p>}
@@ -116,36 +83,6 @@ const ContentCarousel: React.FC = React.memo((props) => {
         <ChevronRight className="h-6 w-6" />
       {/* Dots indicator */} <div className="flex justify-center mt-6 space-x-2">{slides.map((_, index) => (
           <button;
-=======
-                    </div>
-                  </div>
-                  <h2 className="text-3xl md: text-4xl font-bold text-center mb-4">,</h2>
-                    {slide.title} </h2>
-                  <p className="text-xl text-center mb-8 text-white/90">{slide.description</p>} </p>"
-                  <div className="grid grid-cols-1 md: grid-cols-2 gap-4">,</div>
-                    {slide.features.map((feature, index) => (
-                      <div key={index}className="flex items-center space-x-3">"
-                        <div className="w-2 h-2 bg-white rounded-full"></div>"
-                        <span className="text-white/90">{feature</span>}</span>
-                      </div>
-                    ))}
-                  </div>
-      </div>
-      
-      {/* Navigation buttons */} <button.
-        onClick={prevSlide}className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover: bg-white/30 text-white p-2 rounded-full transition-all duration-300",
-      >
-        <ChevronLeft className="h-6 w-6" />
-      </button>
-      <button.
-        onClick={nextSlide}className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover: bg-white/30 text-white p-2 rounded-full transition-all duration-300",
-      >
-        <ChevronRight className="h-6 w-6" />
-      </button>
-      
-      {/* Dots indicator */} <div className="flex justify-center mt-6 space-x-2">{slides.map((_, index) => (</div>
-          <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
             key={index}onClick={() =>setCurrentSlide(index)</button>}className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'}`}'
   ).
@@ -153,47 +90,10 @@ const ContentCarousel: React.FC = React.memo((props) => {
 
 export default ContentCarousel.
       description: 'Worldwide deployment and support for international businesses'
-<<<<<<< HEAD
-=======
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Solutions',
-      role: 'CTO',
-      content: 'Zion Tech Group transformed our entire IT infrastructure. The AI solutions they implemented increased our efficiency by 300%.',
-      rating: 5.
-    },
-    {
-      name: 'Michael Chen',
-      company: 'FinanceFlow Inc',
-      role: 'CEO',
-      content: 'Outstanding service and cutting-edge technology. Their cloud migration saved us $2M annually while improving performance.',
-      rating: 5.
-    },
-    {
-      name: 'Alex Rodriguez',
-      company: 'HealthTech Plus',
-      role: 'IT Director',
-      content: 'The cybersecurity solutions provided by Zion Tech Group are exceptional. We\'ve had zero security incidents since implementation.','
-      rating: 5.
-    }
-  ];
-
-  const Component = () => {
-  
-    return (
->>>>>>> origin/main
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>ContentCarousel | Zion Tech Group
         <meta name="description" content="Professional ContentCarousel services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-=======
-        <title>ContentCarousel | Zion Tech Group</title>
-        <meta name="description" content="Professional ContentCarousel services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
         <meta name="keywords" content="ContentCarousel, AI solutions, IT services, Zion Tech Group, contentcarousel" />
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -201,38 +101,18 @@ export default ContentCarousel.
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
                 ContentCarousel
-=======
-                ContentCarousel.
-              </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               <br />
               <span className="text-white">Solutions
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced contentcarousel solutions. 
               Powered by cutting-edge AI technology and industry expertise.
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-<<<<<<< HEAD
                 Learn More
-=======
-                Learn More.
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
         <div className="max-w-7xl mx-auto">"
@@ -246,41 +126,22 @@ export default ContentCarousel.
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">"
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">"
                   <feature.icon className="h-6 w-6 text-white" />
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}
                 <p className="text-gray-300">{feature.description}
-=======
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
             ))}
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">"
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
               Key Benefits
-=======
-              Key Benefits.
-            </h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our contentcarousel solutions for your business.
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-<<<<<<< HEAD
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}
-=======
-              <div key={index} className="flex items-start space-x-3">"
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />"
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
             ))}
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">"
@@ -290,7 +151,6 @@ export default ContentCarousel.
               Ready to Get Started?
             <p className="text-xl text-purple-100 mb-8">
               Contact our experts to discuss your contentcarousel needs and get a customized solution.
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                 <Phone className="mr-2 h-5 w-5" />
@@ -298,22 +158,6 @@ export default ContentCarousel.
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us
-=======
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">"
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now.
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">"
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us.
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
             {slides.map((_, index) => (
@@ -324,13 +168,6 @@ export default ContentCarousel.
                   index === currentSlide ? 'bg-purple-400' : 'bg-white/30'
                 }`}
               />
-<<<<<<< HEAD
-=======
-            ))}
-              className={`w-3 h-3 rounded-full transition-colors ${
-                index === currentSlide ? 'bg-white' : 'bg-white/30'
-        {/* Additional Info */}
-<<<<<<< HEAD
         <div className="mt-16 text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
@@ -346,33 +183,6 @@ export default ContentCarousel.
               <div className="text-3xl font-bold text-white mb-2">50+
               <div className="text-gray-300">Countries
   );
-=======
-        <div className="mt-16 text-center">"
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
-            <div className="text-center">"
-              <div className="text-3xl font-bold text-white mb-2">500+</div>"
-              <div className="text-gray-300">Happy Clients</div>
-            </div>
-            <div className="text-center">"
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>"
-              <div className="text-gray-300">Uptime</div>
-            </div>
-            <div className="text-center">"
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>"
-              <div className="text-gray-300">Support</div>
-            </div>
-            <div className="text-center">"
-              <div className="text-3xl font-bold text-white mb-2">50+</div>"
-              <div className="text-gray-300">Countries</div>
-            </div>
-          </div>
-        </div>
-      </div>
-  ).
-    </div>
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
 export default ContentCarouselPage.
->>>>>>> origin/main

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Error reporting API endpoint
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -7,8 +6,6 @@ export default function handler(req, res) {
 
   try {
     const { error: _error, stack: _stack, componentStack: _componentStack, timestamp: _timestamp, userAgent: _userAgent, url: _url } = req.body; // eslint-disable-line no-unused-vars
-=======
->>>>>>> origin/main
 // Error reporting API endpoint
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -24,7 +21,6 @@ export default function handler(req, res) {
     // 2. Store in your database
     // 3. Send alerts to your team
 
-<<<<<<< HEAD
     // console.error('Client Error Report:', {
     //   error: error?.message || error,
     //   stack,
@@ -44,25 +40,3 @@ export default function handler(req, res) {
     // console.error removed for production
 }
 }
-=======
-    // console.error removed for production
-    // console.log('Error report received:', {
-    //   error: req.body.error,
-    //   timestamp: new Date().toISOString()
-    // });
-
-    // For now, just acknowledge receipt
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Error report received' 
-    }));
-  } catch (error) {
-    // console.error removed for production
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to process error report' }));
-  }
-}
->>>>>>> origin/main

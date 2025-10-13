@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   color = 'primary', 
@@ -28,20 +27,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]}${colorClasses[color]}`}></div>
       {text && (
         <p className={`text-sm ${colorClasses[color]}animate-pulse`}>{text</p>} </p>
-=======
-import React from 'react'.
-
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  text,
-<<<<<<< HEAD
   );
-=======
-    </div>
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
 export default LoadingSpinner.
@@ -59,13 +45,7 @@ export default LoadingSpinner.
       {text && (
         <p className="mt-2 text-sm text-gray-600">{text}
       )}
-<<<<<<< HEAD
-=======
-    </div>
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
   )
 }
 
 export default LoadingSpinner.
->>>>>>> origin/main

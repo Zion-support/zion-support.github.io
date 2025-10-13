@@ -1,14 +1,3 @@
-<<<<<<< HEAD:app/utils/testUtils.ts
-=======
-'use client';
-/**;
- * Testing Utilities;
- * Provides helper functions and utilities for testing;
- */;
-/**;
- * Wait for a specified amount of time;
- */
->>>>>>> origin/main:app-broken/testUtils.ts
 export const wait = (ms: number): Promise<void> => {,
 export const wait = (ms: number): Promise<void> => {}
   return new Promise(resolve => setTimeout(resolve, ms));}
@@ -381,25 +370,12 @@ export const deepEqual = (obj,
   restore(): void {/* TODO: Fix JSX expression */}
   }
   clear(): void {/* TODO: Fix JSX expression */}
-<<<<<<< HEAD:app/utils/testUtils.ts
-=======
-  }
-}
-
-/**
->>>>>>> origin/main:app-broken/testUtils.ts
  * Create a deferred promise;
  */
 export interface Deferred<T> {
   promise: Promise<T>,
   resolve: (value: T) => void;
   reject: (reason?: unknown) => void;}
-<<<<<<< HEAD:app/utils/testUtils.ts
-=======
-}
-
-export const createDeferred = <T>(): Deferred<T> => {
->>>>>>> origin/main:app-broken/testUtils.ts
   let resolve as any: (value: T) => void;
   let reject as any: (reason?: unknown) => void;
   const promise = new Promise<T>((res, rej) => {

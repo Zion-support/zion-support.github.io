@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 
 import Link from 'next/link';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
-=======
-import React from 'react'.
-
-<<<<<<< HEAD
 export default function PagePage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
@@ -18,17 +13,6 @@ export default function PagePage() {
     </div>
   );
 }
-=======
-import Link from 'next/link'.
-import React, { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react'.
-const CaseStudiesPage: React.FC = () => {
-  const caseStudies = [
-    {
-      id: 1,
-      title: 'E-commerce Platform Transformation',
-      company: 'TechRetail Inc.',
-      industry: 'E-commerce',
->>>>>>> origin/main
       challenge: 'Low conversion rates and high customer acquisition costs',
       solution: 'AI-powered personalization and dynamic pricing optimization',
       results: {
@@ -221,7 +205,6 @@ const CaseStudiesPage: React.FC = () => {
               Ready to Create Your Success Story?
             </h2>
             <p className="text-xl mb-8 text-blue-100">
-<<<<<<< HEAD
               Join the companies that have transformed their business with our AI solutions
         <title>Case Studies | Zion Tech Group</title>
         <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." />
@@ -362,9 +345,6 @@ const CaseStudiesPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Explore our successful projects and client transformations across various industries.
-=======
-              Join the companies that have transformed their business with our AI solutions.
->>>>>>> origin/main
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -378,80 +358,8 @@ const CaseStudiesPage: React.FC = () => {
                 href="/services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
               >
-<<<<<<< HEAD
                 View Our Services
           <div className="text-center mt-16">
-=======
-                View Our Services.
-              </Link>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study) => (
-              <div.
-                key={study.id}
-                className="bg-slate-800/50 backdrop-blur-xl rounded-xl p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="flex items-center mb-4">"
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mr-4">
-                    {study.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">{study.title}</h3>"
-                    <p className="text-cyan-400 font-semibold">{study.client}</p>
-                  </div>
-                </div>
-
-                <div className="mb-4">"
-                  <span className="inline-block bg-purple-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-medium">
-                    {study.industry}
-                  </span>
-                </div>
-
-                <div className="space-y-3 mb-6">
-                  <div>
-                    <h4 className="text-gray-300 font-semibold mb-1">Challenge:</h4>"
-                    <p className="text-gray-400 text-sm">{study.challenge}</p>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-gray-300 font-semibold mb-1">Solution:</h4>"
-                    <p className="text-gray-400 text-sm">{study.solution}</p>
-                  </div>
-                </div>
-
-                <div className="mb-4">"
-                  <h4 className="text-gray-300 font-semibold mb-2">Results:</h4>"
-                  <ul className="space-y-1">
-                    {study.results.map((result, index) => (
-                      <li key={index} className="text-green-400 text-sm flex items-center">"
-                        <Award className="w-4 h-4 mr-2 text-green-500" />
-                        {result}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mb-4">"
-                  <h4 className="text-gray-300 font-semibold mb-2">Technologies:</h4>"
-                  <div className="flex flex-wrap gap-2">
-                    {study.technologies.map((tech, index) => (
-                      <span.
-                        key={index}
-                        className="bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded text-xs"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-16">"
->>>>>>> origin/main
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Start Your Success Story?
             </h2>
@@ -465,73 +373,5 @@ const CaseStudiesPage: React.FC = () => {
               <span>Get Started Today</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
-<<<<<<< HEAD
 };
 export default CaseStudiesPage;
-=======
-          </div>
-        </div>
-      </div>
-  const Component = () => {
-  
-    return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
-        title="Case Studies - Zion Tech Group | Success Stories & Client Results"
-        description="Explore our successful case studies and client results. See how Zion Tech Group has helped businesses transform with AI, cybersecurity, and digital solutions."
-        keywords="case studies, success stories, client results, AI implementation, cybersecurity solutions, digital transformation, business automation"
-        canonical="https://ziontechgroup.com/case-studies"
-      />
-      <FuturisticBackground />
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">"
-        <div className="absolute inset-0 overflow-hidden">"
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>"
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <ResponsiveContainer className="text-center relative z-10">"
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">"
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />"
-            <span className="text-cyan-400 text-sm font-medium">Real Results, Real Impact</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">"
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Case Studies.
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">"
-            Discover how we've helped businesses transform their operations with cutting-edge technology solutions. '
-            Real stories, real results, real impact.
-          </p>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">"
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-                </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>"
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-    </div>
-  ).
-  ).
-  ).
-};
-
-export default CaseStudiesPage.
-    </>
-  ).
-};
-
-export default CaseStudiesPage.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
->>>>>>> origin/main

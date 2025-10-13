@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-'use client'.
-import React from 'react'.
-
->>>>>>> origin/main
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -38,19 +32,6 @@ const LoadingSkeletonPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-<<<<<<< HEAD
-=======
-interface SkeletonProps {
-  className?: string.
-  width?: string | number.
-  height?: string | number.
-  rounded?: boolean.
-  animate?: boolean.
-}
-
-const Skeleton: React.FC<SkeletonProps> = ({
-  className = '',
->>>>>>> origin/main
   width = '100%',
   height = '1rem',
   rounded = false,
@@ -65,16 +46,5 @@ const Skeleton: React.FC<SkeletonProps> = ({
       className={`${baseClasses} ${roundedClasses} ${animateClasses} ${className}`}
       style={{ width, height }}
       aria-hidden="true"
-<<<<<<< HEAD
 export default LoadingSkeletonPage;
-=======
-    />
-  ).
-};
-
-<<<<<<< HEAD
 export default LoadingSkeletonPage;
-=======
-export default LoadingSkeletonPage.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
->>>>>>> origin/main

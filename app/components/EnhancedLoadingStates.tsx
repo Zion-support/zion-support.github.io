@@ -8,11 +8,7 @@ interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';}'
   text = 'Loading...'}) => {const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-<<<<<<< HEAD
     lg: 'w-12 h-12',}return(<div className="flex flex-col items-center justify-center p-8">)
-=======
-    lg: 'w-12 h-12',}return (<div className="flex flex-col items-center justify-center p-8">)</div>"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       <Loader2 className={`${sizeClasses[size]}animate-spin text-blue-500`} />
 ).
 
@@ -20,19 +16,10 @@ export const ServiceCardSkeleton: React.FC = () => (,
 ).
 
 export const StatsSkeleton: React.FC = () => (,
-<<<<<<< HEAD
   <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,
     {Array.from({ length: 4 ,)}).map((_, index) => (
       <div key={index}className="text-center animate-pulse">
         <div className="h-8 bg-gray-600 rounded mb-2">
 );
-=======
-  <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,</div>
-  ).
-    {Array.from({ length: 4 ,)}).map((_, index) => (
-      <div key={index}className="text-center animate-pulse">"
-        <div className="h-8 bg-gray-600 rounded mb-2"></div>
-).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
 export const ContentSkeleton: React.FC = () => (,

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap}}from 'lucide-react';
 const BlockchainPage: React.FC = () => {,
@@ -18,19 +17,3 @@ const BlockchainPage: React.FC = () => {,
             <div className="text-center"></div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                 Blockchain Solutions</h1>
-=======
-import React from 'react';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Page</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
-}
->>>>>>> origin/main

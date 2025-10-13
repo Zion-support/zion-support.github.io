@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { createContext, useContext } from 'react';
-=======
-import React, { createContext, useContext, useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
@@ -11,14 +6,6 @@ interface AnalyticsContextType {
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-=======
-import React, {  createContext  } from 'react';
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
-}
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
@@ -37,8 +24,6 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     </AnalyticsContext.Provider>
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
@@ -47,8 +32,3 @@ export const useAnalytics = () => {
   }
   return context;
 };
-=======
->>>>>>> origin/main
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc

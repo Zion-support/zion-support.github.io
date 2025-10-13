@@ -1,12 +1,7 @@
-<<<<<<< HEAD
 'use client;
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> origin/main
 
 export default function PagePage() {
   return (
@@ -20,23 +15,7 @@ export default function PagePage() {
     </div>
   );
 }
-=======
-
-import React from 'react;'
-
-import { Helmet } from 'react-helmet-async;'
-
-import { Link } from 'react-router-dom;'
-
-import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react;'
-
-<<<<<<< HEAD
 const ItServicesPage: React.FC = () => {const itServices = [;
-=======
-.
-
-const ItServicesPage: React.FC = () => {const itServices = [.
->>>>>>> origin/main
     {
       titl,
     e: 'Cloud Infrastructure Management,'
@@ -63,23 +42,10 @@ const ItServicesPage: React.FC = () => {const itServices = [.
     {
       title: DevOps & CI.
       descriptio,
-<<<<<<< HEAD
     n: 'Automated deployment pipelines, infrastructure as code, and continuous integration services.,
       icon: '🔄,
       price: Starting at $2,000
       features: [CI
-=======
-    n: 'Automated deployment pipelines, infrastructure as code, and continuous integration services.,'
-      icon: '🔄,'
-      price: Starting at $2,000.
-      features: [CI.
-      benefit,]
-    s: ['Deploy 10x faster', 'Reduce deployment errors by 90%', 'Improve team productivity],
-      marketPrice: $3,500-7,000
-      category: 'DevOps,'
-      technologies: ['Jenkins', 'GitLab CI', 'Terraform', 'Ansible', 'Prometheus],
-    },
->>>>>>> origin/main
     {
       title: 'Database Administration,'
       description: 'Database design, optimization, backup, and maintenance for SQL and NoSQL databases.,'
@@ -106,21 +72,9 @@ const ItServicesPage: React.FC = () => {const itServices = [.
       title: 'IT Support & Helpdesk,'
       description: 24.
       ico,
-<<<<<<< HEAD
     n: '🛠️,
       price: Starting at $1,200
       features: [24
-=======
-    n: '🛠️,'
-      price: Starting at $1,200.
-      features: [24.
-      benefit,]
-    s: ['Reduce downtime by 70%', 'Improve user satisfaction', 'Lower support costs],
-      marketPrice: $2,000-4,000
-      category: 'Support,'
-      technologies: ['ServiceNow', 'Jira', 'Remote Desktop', 'Active Directory', 'Office 365],
-    },
->>>>>>> origin/main
     {
       title: 'Data Analytics & BI,'
       description: 'Data warehouse design, ETL processes, and business intelligence dashboard development.,'
@@ -166,25 +120,10 @@ const ItServicesPage: React.FC = () => {const itServices = [.
       technologies: ['React', 'Vue.js', 'Node.js', 'PHP', 'WordPress],
     },
     {
-<<<<<<< HEAD
       title: 'IT Consulting & Strategy,
       description: 'Technology roadmap development, digital transformation planning, and IT strategy consulting.,
       icon: '💡,
       price: Starting at $200
-=======
-      title: 'IT Consulting & Strategy,'
-      description: 'Technology roadmap development, digital transformation planning, and IT strategy consulting.,'
-      icon: '💡,'
-      price: Starting at $200.
-      feature,
-    s: ['Technology assessment', 'Digital transformation', 'IT strategy planning', 'Vendor evaluation', 'ROI analysis],
-      benefits: ['Align IT with business goals', 'Optimize technology investments', 'Reduce risks],
-      marketPrice: $300-500.
-      categor,
-    y: 'Consulting,'
-      technologies: ['Strategic Planning', 'Architecture Design', 'Risk Assessment', 'ROI Analysis],
-    },
->>>>>>> origin/main
     {
       title: 'Disaster Recovery & Backup,'
       description: 'Comprehensive backup solutions, disaster recovery planning, and business continuity services.,'
@@ -291,16 +230,7 @@ const ItServicesPage: React.FC = () => {const itServices = [.
     n: '🤖,'
       price: Starting at $4,800
       features: ['GPU cluster setup', 'ML pipeline deployment', 'Model serving', 'Data preprocessing', 'Monitoring],
-<<<<<<< HEAD
       benefits: [Enable AI
-=======
-      benefits: [Enable AI.
-      marketPric,
-    e: $8,000-30,000
-      category: 'AI Infrastructure,]'
-      technologies: ['NVIDIA GPUs', 'Kubernetes', 'TensorFlow', 'PyTorch', 'MLflow],
-    },
->>>>>>> origin/main
     {
       title: 'Hybrid Cloud Management,'
       description: 'Multi-cloud and hybrid cloud infrastructure management and optimization.,'
@@ -386,117 +316,13 @@ const ItServicesPage: React.FC = () => {const itServices = [.
       features: ['Stream processing', 'Data pipelines', 'Real-time analytics', 'Event handling', 'Monitoring],
       benefits: ['Enable real-time insights', 'Improve decision making', 'Support live applications],
       marketPrice: $5,000-18,000
-<<<<<<< HEAD
       category: 'Streaming,
       technologies: ['Apache Kafka', 'Apache Flink', 'Apache Storm', 'AWS Kinesis', 'Azure Stream Analytics]
-=======
-      category: 'Streaming,'
-      technologies: ['Apache Kafka', 'Apache Flink', 'Apache Storm', 'AWS Kinesis', 'Azure Stream Analytics],
-    }
-
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration },'
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations },'
-    { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management },'
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions },'
-    { name: 'Security Monitoring', href: '/security-monitoring', icon: Shield, description: '24/7 Security },'
-    { name: 'Penetration Testing', href: '/penetration-testing', icon: Shield, description: 'Security Testing },'
-    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Infrastructure Setup },'
-    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support },'
-    { name: 'IT Consulting', href: '/it-consulting', icon: Globe, description: 'IT Strategy },'
-    { name: 'Data Analytics', href: '/data-analytics', icon: Database, description: 'Business Intelligence },'
-    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'Mobile Apps },'
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications },'
-    { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation }'
-
-  ];
-
-  return (
-    <div>
-  )
-    </div>
-  ).
-  ).
-  )
-    <React.Fragment>
-    <div>
-        <title>IT Services - Zion Tech Group<
-        <meta name="description" content="Comprehensive IT services including cloud, security, DevOps, and infrastructure solutions for modern businesses. "
-        <meta name="keywords" content="IT services, cloud computing, cybersecurity, DevOps, infrastructure, technology consulting .
-      <
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50>
-        {/* Hero Section */}<
-        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20>"
-          <div className="absolute inset-0 bg-black opacity-20><"
-          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8><"
-            <div className="text-center><"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6>
-                Professional IT Services<
-              <
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto>
-                Comprehensive technology solutions to power your business growth and digital transformation.
-              <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center><"
-                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors>
-                  Get Free Assessment.
-                <
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors>
-                  View Our Portfolio.
-                <
-              <
-            <
-          <
-        <
-
->>>>>>> origin/main
         {/* Key Benefits *
         <section className="py-16 bg-white>"
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8><"
             <div className="text-center mb-12><"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4>
-<<<<<<< HEAD
-=======
-                Why Choose Our IT Services?
-              <
-              <p className="text-xl text-gray-600>
-                Expert solutions delivered by certified professionals with proven track records.
-              <
-            <
-            <div className=grid grid-cols-1 md:grid-cols-2 l,
-    g:grid-cols-4 gap-8><
-              <div className="text-center><"
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4><"
-                  <Server className="w-8 h-8 text-blue-600 .
-                <
-                <h3 className="text-xl font-semibold text-gray-900 mb-2>Certified Experts<"
-                <p className="text-gray-600>AWS, Microsoft, Cisco, and other industry certifications<
-              <
-              <div className="text-center><"
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4><"
-                  <Shield className="w-8 h-8 text-green-600 .
-                <
-                <h3 className="text-xl font-semibold text-gray-900 mb-2>Enterprise Security<"
-                <p className="text-gray-600>Bank-level security with compliance and monitoring<
-              <
-              <div className="text-center><"
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4><"
-                  <Cloud className="w-8 h-8 text-purple-600 .
-                <
-                <h3 className="text-xl font-semibold text-gray-900 mb-2>Cloud-First Approach<"
-                <p className="text-gray-600>Modern, scalable solutions built for the cloud<
-              <
-              <div className="text-center><"
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4><"
-                  <Settings className="w-8 h-8 text-orange-600 .
-                <
-                <h3 className="text-xl font-semibold text-gray-900 mb-2>24/7 Support<"
-                <p className="text-gray-600>Round-the-clock monitoring and support services<
-              <
-            <
-          <
-        <
-
->>>>>>> origin/main
         {/* Services by Category *
         {categories.map(category => (
 
@@ -505,7 +331,6 @@ const ItServicesPage: React.FC = () => {const itServices = [.
               <div className="text-center mb-12><
                 <h2 className=text-3xl m,
     d:text-4xl font-bold text-gray-900 mb-4>
-<<<<<<< HEAD
               <div className=grid grid-cols-1 md: grid-cols-2 l,
     g:grid-cols-3 gap-8>
                 {itServices
@@ -514,79 +339,10 @@ const ItServicesPage: React.FC = () => {const itServices = [.
                         <div className="flex flex-wrap gap-2>
                           {service.technologies.map((tech), techIndex) => (<
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded>
-=======
-                  {category} Services.
-                <
-                <p className="text-xl text-gray-600>
-                  Professional {category.toLowerCase()} solutions tailored to your business needs.
-                <
-              <
-              <div className=grid grid-cols-1 md: grid-cols-2 l,
-    g:grid-cols-3 gap-8>
-                {itServices.
-                  .filter(service => service.category === category)
-                  .map((service, index) => (<
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow><"
-                      <div className="text-4xl mb-4>{service.icon}<"
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3>{service.title}<"
-                      <p className="text-gray-600 mb-4>{service.description}<
-                      
-                      <div className="mb-4><"
-                        <div className="flex items-center justify-between mb-2><"
-                          <span className="text-2xl font-bold text-blue-600>{service.price}<"
-                          <span className="text-sm text-gray-500>Market: {service.marketPrice}<
-                        <
-                        <div className="text-sm text-green-600 font-semibold>
-                          Save up to 40% vs market rates<
-                        <
-                      <
-
-                      <div className="mb-4><"
-                        <h4 className="font-semibold text-gray-900 mb-2>Key Features: <"
-                        <ul className="space-y-1>)"
-                          {service.features.map((feature), featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-600>"
-                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0 .
-                              {feature}
-
-                            <)
-                          ))}
-
-                        <
-                      <
-
-                      <div className="mb-4><"
-                        <h4 className="font-semibold text-gray-900 mb-2>Technologies: <"
-                        <div className="flex flex-wrap gap-2>
-                          {service.technologies.map((tech), techIndex) => (<
-                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded>
-                              {tech}
-
-                            <)
-                          ))}
-
-                        <
-                      <
-
-                      <div className="mb-6><"
-                        <h4 className="font-semibold text-gray-900 mb-2>Business Benefits: <"
-                        <ul className="space-y-1>"
-                          {service.benefits.map((benefit), benefitIndex) => (<li key={benefitIndex} className="flex items-center text-sm text-gray-600>
-                        Get Quote.
-                      <
-                    <
-                  ))}
-
-              <
-            <
-          <
-        ))}
-
->>>>>>> origin/main
         {/* Contact Section *
         <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white>"
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center><"
             <h2 className="text-3xl md:text-4xl font-bold mb-4>
-<<<<<<< HEAD
         <section className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
@@ -594,112 +350,6 @@ const ItServicesPage: React.FC = () => {const itServices = [.
 
     </React.Fragment>)
   );};
-=======
-              Ready to Transform Your IT Infrastructure?
-            <
-            <p className="text-xl mb-8 text-blue-100>
-              Contact our certified IT experts for a free consultation and custom solution design.
-            <
-            <div className="flex flex-col sm:flex-row gap-4 justify-center><
-              <a 
-                href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center.
-              >
-                📞 +1 302 464 0950.
-              <
-              <a 
-                href="mailto:kleber@ziontechgroup.com.
-                className=border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hove,
-    r:text-blue-600 transition-colors.
-              >
-                ✉️ kleber@ziontechgroup.com.
-              <
-            <
-            <div className="mt-8 text-sm text-blue-200><
-              <p>📍 364 E Main St STE 1008, Middletown DE 19709<
-            <
-          <
-        <
-      <
-    <
-      <Helmet>        <title>IT Services - Zion Tech Group | Information Technology Solutions</title>
-        <meta name="description" content="Comprehensive IT services including cloud solutions, cybersecurity, infrastructure management, and more. Expert IT support and consulting. />"
-        <meta name="keywords" content="IT services, cloud solutions, cybersecurity, IT infrastructure, managed IT, IT consulting, DevOps />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>"
-        <section className="py-20 px-4>"
-          <div className="max-w-7xl mx-auto text-center>"
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6>"
-              IT <span className="text-cyan-400>Services</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto>
-              Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth.
-            </p>
-          </div>
-        </section>
-
-        <section className="py-16 px-4>"
-          <div className="max-w-7xl mx-auto>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8>
-              {itServices.map((service, index) => (
-
-                <Link.
-                  key={index}
-
-                  to={service.href}
-
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group.
-                >
-                  <service.icon className="w-12 h-12 text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors />"
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors>
-                    {service.name}
-
-                  </h3>
-                  <p className="text-gray-300 mb-4>{service.description}</p>"
-                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors>"
-                    <span className="text-sm font-medium>Learn More</span>"
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform />
-                  </div>
-                </Link>
-              ))            </div>
-          </div>
-        </section>
-      </div>
-    </React.Fragment>)
-  );};
-    {
-      id: 'managed-it-services',
-      name: 'Managed IT Services',
-      description: 'Comprehensive 24/7 IT management and support for your business infrastructure.',
-      icon: Settings,
-      category: 'infrastructure',
-      pricing: { starting: 199, period: 'month', perUser: true },
-      features: [
-        '24/7 monitoring and support',
-        'Proactive maintenance',
-        'Security management',
-        'Backup and disaster recovery',
-        'Software updates',
-        'Help desk support']
-      ],
-      benefits: [
-        'Reduce IT costs by 40%',
-        'Minimize downtime by 90%',
-        'Improve security posture',
-        'Focus on core business']
-      ],
-      popular: true,
-      rating: 4.9,
-      users: 2500,
-      link: 'https://ziontechgroup.com/managed-it-services'
-    },
-    {
-      id: 'cloud-migration',
-      name: 'Cloud Migration Services',
-      description: 'Seamless migration to cloud platforms with zero downtime and enhanced security.',
-      icon: Cloud,
->>>>>>> origin/main
       category: 'cloud',
       pricing: { starting: 2999, period: 'project' },
       features: [
@@ -720,15 +370,6 @@ const ItServicesPage: React.FC = () => {const itServices = [.
       rating: 4.8,
       users: 1200,
       link: 'https://ziontechgroup.com/cloud-migration'
-<<<<<<< HEAD
-=======
-    },
-    {
-      id: 'cybersecurity-suite',
-      name: 'Cybersecurity Suite',
-      description: 'Comprehensive security solutions to protect your business from cyber threats.',
-      icon: Shield,
->>>>>>> origin/main
       category: 'security',
       pricing: { starting: 149, period: 'month' },
       features: [
@@ -749,7 +390,6 @@ const ItServicesPage: React.FC = () => {const itServices = [.
       rating: 4.9,
       users: 3200,
       link: 'https://ziontechgroup.com/cybersecurity-suite'
-<<<<<<< HEAD
       category: 'data',
       pricing: { starting: 99, period: 'month' },
       features: [
@@ -1021,83 +661,6 @@ import { Helmet } from 'react-helmet-async';
 };
 
 export default ItServicesPage;
-=======
-    },
-    {
-      id: 'network-infrastructure',
-      name: 'Network Infrastructure',
-      description: 'Design, implement, and maintain robust network infrastructure for optimal performance.',
-      icon: Network,
-      category: 'infrastructure',
-      pricing: { starting: 399, period: 'month' },
-      features: [
-        'Network design and planning',
-        'Hardware installation',
-        'Configuration and optimization',
-        'Monitoring and maintenance',
-        'Troubleshooting',
-        'Performance tuning']
-      ],
-      benefits: [
-        'Improve network performance by 80%',
-        'Reduce connectivity issues by 90%',
-        'Enhance security',
-        'Support business growth']
-      ],
-      popular: false,
-      rating: 4.7,
-      users: 1800,
-      link: 'https://ziontechgroup.com/network-infrastructure'
-    },
-    {
-      id: 'data-backup-recovery',
-      name: 'Data Backup & Recovery',
-      description: 'Reliable data protection with automated backups and rapid recovery solutions.',
-      icon: Database,
-'use client'.
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, BarChart, Target, TrendingUp, Bot } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      icon: Bot,
-      title: 'AI-Powered Page',
-      description: 'Leverage advanced AI technology for intelligent page solutions.',
-      benefits: ['Smart automation', 'Real-time insights', 'Predictive analytics', 'Performance optimization']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Track and analyze performance with comprehensive analytics.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'ROI tracking']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 300%',
-    'Reduce manual work by 80%',
-    'Improve accuracy with AI automation',
-    'Scale your operations seamlessly',
-    'Save time with intelligent automation',
-    'Boost productivity and results'
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
 
 import React, { Helmet } from 'react-helmet-async'.
   return (
@@ -1109,7 +672,6 @@ import React, { Helmet } from 'react-helmet-async'.
   )
     <>
       <Helmet>
-<<<<<<< HEAD
 export default ItServicesPage.
 import React from 'react'
 import React, { CheckCircle, ArrowRight, Cloud, Shield, Server, Database, Smartphone, Globe, Code, Cpu, DollarSign, Star, Clock, Users, Network, Settings } from 'lucide-react'.
@@ -1201,7 +763,6 @@ const ItServicesPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
->>>>>>> origin/main
         <meta name="description" content="Comprehensive IT services including cloud migration, cybersecurity, infrastructure management, and digital transformation." />
       </Helmet>
       
@@ -1251,7 +812,6 @@ const ItServicesPage: React.FC = () => {
               <Link.
                 to={service.link}
                 className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:scale-105"
-<<<<<<< HEAD
           ))}
         </div>
       </div>
@@ -1259,58 +819,10 @@ const ItServicesPage: React.FC = () => {
   )
 }
 export default ItServicesPage;
-=======
-              >
-                Learn More
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">"
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>"
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-=======
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions powered by artificial intelligence. Transform your business with our cutting-edge technology." />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced page solutions powered by artificial intelligence. Transform your business with our cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition duration-300">
-                View Demo
-              </button>
-            </div>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
         </div>
       </section>
   ).
 
-<<<<<<< HEAD
       {/* Category Filter */}
       <section className="py-10 px-4">"
         <div className="max-w-7xl mx-auto">"
@@ -1416,69 +928,11 @@ export default ItServicesPage;
               <h3 className="text-xl font-semibold text-white mb-2">Cost Effective</h3>"
               <p className="text-gray-300">Competitive pricing with transparent costs and no hidden fees.</p>
             </div>
-=======
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the advanced capabilities of our page platform.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-purple-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our advanced page technology.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <div className="flex-shrink-0">
-                  <CheckCircle className="h-6 w-6 text-green-400 mt-1" />
-                </div>
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4">"
         <div className="max-w-7xl mx-auto">"
           <div className="text-center">"
@@ -1917,31 +1371,3 @@ export default ITServicesPage.
     </>
   ).
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
-=======
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of businesses already using our page solutions to boost their performance.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 flex items-center justify-center">
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition duration-300">
-              Schedule Demo
-            </button>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
-
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
->>>>>>> origin/main

@@ -29,21 +29,12 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
       document.removeEventListener('mousedown', handleMouseDown)}}, [isHighContrast, isReducedMotion]).
   const toggleHighContrast = () => {setIsHighContrast(!isHighContrast).
     document.documentElement.classList.toggle('high-contrast')}const changeFontSize = (size: string) => {,
-<<<<<<< HEAD
     document.documentElement.setAttribute('data-font-size', size)}return(<div className="accessibility-enhanced">)
       <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 ,}}>
         <button;
           onClick={toggleHighContrast}className="accessibility-button"
           aria-label="Toggle high contrast"
         >{isHighContrast ? 'Normal Contrast' : 'High Contrast'</button>}
-=======
-    document.documentElement.setAttribute('data-font-size', size)}return (<div className="accessibility-enhanced">)</div>"
-      <div className="accessibility-controls" style={{ position: 'fixed', top: '10px', right: '10px', zIndex: 1000 ,}}>'
-        <button.
-          onClick={toggleHighContrast}className="accessibility-button"
-          aria-label="Toggle high contrast"
-        >{isHighContrast ? 'Normal Contrast' : 'High Contrast'</button>} </button>'
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
         <div className="font-size-controls">
           <button.
             onClick={() =>changeFontSize('small')</button>}className="accessibility-button"
@@ -63,11 +54,4 @@ const AdvancedAccessibilityEnhancerPage: React.FC = () => {
           >
             A.
   </
-<<<<<<< HEAD
       {children}
-=======
-        </div>
-      </div>
-  ).
-      {children} </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706

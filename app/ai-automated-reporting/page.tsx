@@ -1,54 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 export default function PagePage() {
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, BarChart, Target, TrendingUp, Bot } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      icon: Bot,
-      title: 'AI-Powered Page',
-      description: 'Leverage advanced AI technology for intelligent page solutions.',
-      benefits: ['Smart automation', 'Real-time insights', 'Predictive analytics', 'Performance optimization']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Track and analyze performance with comprehensive analytics.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'ROI tracking']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 300%',
-    'Reduce manual work by 80%',
-    'Improve accuracy with AI automation',
-    'Scale your operations seamlessly',
-    'Save time with intelligent automation',
-    'Boost productivity and results'
-  ];
-
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -60,19 +12,6 @@ const PagePage: React.FC = () => {
     </div>
   );
 }
-=======
-import React from 'react'.
-
-  return (
-    <div>
-  )
-    </div>
-  ).
-  ).
-  )
-    <>
-      <Helmet>
-<<<<<<< HEAD
         <title>AI Automated Reporting | Zion Tech Group</title>
         <meta name="description" content="Transform your business intelligence with AI-powered automated reporting. Generate insights, analytics, and reports automatically with our advanced AI reporting solutions." />"
         <meta name="keywords" content="AI reporting, automated reports, business intelligence, data analytics, smart reporting, AI insights" />
@@ -380,33 +319,6 @@ import React from 'react'.
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Schedule Demo.
-=======
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions powered by artificial intelligence. Transform your business with our cutting-edge technology." />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Advanced page solutions powered by artificial intelligence. Transform your business with our cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition duration-300">
-                View Demo
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
               </button>
             </div>
           </div>
@@ -496,10 +408,4 @@ import React from 'react'.
   );
 };
 
-<<<<<<< HEAD
 export default AiAutomatedReportingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
-=======
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
->>>>>>> origin/main

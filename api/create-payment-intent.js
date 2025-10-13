@@ -8,46 +8,25 @@ async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
   const { amount, currency = 'usd' } = req.body || {};
 
   if (!amount) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Amount is required' }));
-=======
-  const { amount, currency = 'usd', metadata = {} } = req.body || {};
-
-  if (!amount || amount <= 0) {
-    res.statusCode = 400;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Valid amount is required' }));
->>>>>>> origin/main
     return;
   }
 
   try {
-<<<<<<< HEAD
     const paymentIntent = {
       id: 'pi_' + Math.random().toString(36).substr(2, 9),
       amount: Math.round(amount * 100), // Convert to cents
       currency,
       status: 'requires_payment_method',
       created: Math.floor(Date.now() / 1000)
-=======
-    // Basic payment intent creation logic
-    const paymentIntent = {
-      id: `pi_${Date.now()}`,
-      amount: Math.round(amount * 100), // Convert to cents
-      currency,
-      status: 'requires_payment_method',
-      client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`,
-      metadata
->>>>>>> origin/main
     };
 
     res.statusCode = 200;
-<<<<<<< HEAD
     res.json({ paymentIntent });
   } catch (_err) { // eslint-disable-line no-unused-vars
     // console.error("Error:", err);
@@ -58,22 +37,3 @@ async function handler(req, res) {
 }
 
 export default withErrorLogging(handler);
-=======
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({
-      success: true,
-      paymentIntent
-    }));
-  } catch (error) {
-    // console.error('Payment intent creation error:', error);
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to create payment intent',
-      details: typeof process !== 'undefined' && process.env.NODE_ENV === 'development' ? error.message : undefined
-    }));
-  }
-}
-
-export default withErrorLogging(handler);
->>>>>>> origin/main

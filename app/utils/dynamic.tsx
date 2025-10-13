@@ -17,19 +17,9 @@ interface DynamicOptions {/* TODO: Fix JSX expression */,}}}
 export function dynamic<T extends ComponentType<unknown>>(importFun).
   c: () => Promise<{/* TODO: Fix JSX expression */,}t: T ,}>,
   option,
-<<<<<<< HEAD
   s: DynamicOptions = {,}): ComponentType<unknown> {/* TODO: Fix JSX expression */,} <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>;
       <LazyComponent {...props}}/>
   );
 };
 
 export default dynamic;
-=======
-  s: DynamicOptions = {,}): ComponentType<unknown> {/* TODO: Fix JSX expression */,} <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>.
-      <LazyComponent {...props}}/></LazyComponent>
-    </Suspense>
-  ).
-};
-
-export default dynamic.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706

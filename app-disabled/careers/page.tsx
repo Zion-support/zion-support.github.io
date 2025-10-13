@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react;
 
 import { Helmet } from 'react-helmet-async;
@@ -78,11 +77,6 @@ const CareersPage: React.FC = () => {
         'State-of-the-art facilities
 
 const CareersPage: React.FC = () => {
-=======
-import React from 'react';
-
-export default function PagePage() {
->>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -93,7 +87,6 @@ export default function PagePage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 };
 import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'lucide-react';
     },
@@ -407,6 +400,3 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
                         <li className="text-sm text-gray-400>
             </div>  ));)
 export default CareersPage;
-=======
-}
->>>>>>> origin/main

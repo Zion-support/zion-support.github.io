@@ -185,10 +185,5 @@ export {isValidEmail,;}
   isRequired,;
   isValidPassword,;
   sanitizeInput;}} from './validators';
-<<<<<<< HEAD
 export {/* TODO: Fix JSX expression */,}}} from './validators';"`;
 } from './validators';"`;
-=======
-export {/* TODO: Fix JSX expression */,}}} from './validators';"`;"
-} from './validators';"`;"
->>>>>>> origin/main

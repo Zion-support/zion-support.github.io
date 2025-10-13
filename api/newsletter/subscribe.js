@@ -26,7 +26,6 @@ async function handler(req, res) {
       return;
     }
 
-<<<<<<< HEAD
     // Save subscription logic here
     // In a real application, you would:
     // 1. Save to your database
@@ -39,22 +38,6 @@ async function handler(req, res) {
       email: req.body.email,
 
   } catch (_error) { // eslint-disable-line no-unused-vars
-=======
-    // console.log removed for production
-    console.log('Newsletter subscription:', {
-      email: req.body.email,
-      timestamp: new Date().toISOString()
-    });
-
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Successfully subscribed to newsletter',
-      email 
-    }));
-  } catch (error) {
->>>>>>> origin/main
     // console.error('Newsletter subscription error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

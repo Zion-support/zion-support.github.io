@@ -35,7 +35,6 @@ case 'spinner':.
             <div,
 
               className={`${baseClasses}rounded-full border-2 border-t-transparent animate-spin`}
-<<<<<<< HEAD
               role='status';
               aria-label='Loading';
             />
@@ -47,22 +46,6 @@ const containerClasses = useMemo(() => {return `${baseClasses}${fullScreenClasse
 return(</div>)
       <div className={containerClasses}>
         <div className='text-center'>
-=======
-              role='status'.
-              aria-label='Loading'.
-            /></div>
-  ).
-          ).
-      }
-    }, [size, variant, color, sizeClasses, colorClasses]).
-const containerClasses = useMemo(() => {return `${baseClasses}${fullScreenClasses}${className}`.
-    }, [fullScreen, className]).
-return (</div>)
-      <div className={containerClasses}></div>
-  ).
-        <div className='text-center'></div>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
           {renderSpinner}{
           const Component = () => {
   
@@ -109,22 +92,11 @@ return (</div>)
           {text && ())
             <p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
               {text}
-<<<<<<< HEAD
     );
-=======
-            </p>
-          </div>
-        </div>
-    ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
   }
 ).
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner'.
 
-<<<<<<< HEAD
 export default OptimizedLoadingSpinner;
 </div></div></div></div></div>
-=======
-export default OptimizedLoadingSpinner.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706

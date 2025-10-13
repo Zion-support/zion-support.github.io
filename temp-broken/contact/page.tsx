@@ -1,4 +1,3 @@
-<<<<<<< HEAD:temp-broken/contact/page.tsx
 import React from 'react';
 
 export default function PagePage() {
@@ -10,23 +9,9 @@ export default function PagePage() {
           This page is under development.
         </p>
       </div>
-<<<<<<< HEAD:app/contact/page.tsx
     </div>
   );
 }
-=======
-=======
-'use client';
-import React, { useState } from 'react';
-import React, { Helmet } from 'react-helmet-async';
-import React, { Phone, Mail, MapPin, Send } from 'lucide-react';
-=======
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc:app/contact/page.tsx
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -70,7 +55,6 @@ const ContactPage: React.FC = () => {
             </p>
           </div>
 
-<<<<<<< HEAD:temp-broken/contact/page.tsx
       {/* Hero Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">"
         <div className="max-w-7xl mx-auto text-center">"
@@ -95,55 +79,6 @@ const ContactPage: React.FC = () => {
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name;
-=======
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div>
-              <h2 className="text-2xl font-bold mb-8">Get in Touch</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Mail className="h-6 w-6 text-purple-400 mt-1" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Email</h3>
-                    <p className="text-gray-300">kleber@ziontechgroup.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <Phone className="h-6 w-6 text-purple-400 mt-1" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Phone</h3>
-                    <p className="text-gray-300">+1-302-464-0950</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <MapPin className="h-6 w-6 text-purple-400 mt-1" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Address</h3>
-                    <p className="text-gray-300">
-                      364 E Main St STE 1008<br />
-                      Middletown, DE 19709
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-2xl font-bold mb-8">Send us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Name
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc:app/contact/page.tsx
                   </label>
                   <input
                     type="text"
@@ -158,13 +93,8 @@ const ContactPage: React.FC = () => {
                 </div>
                 
                 <div>
-<<<<<<< HEAD:temp-broken/contact/page.tsx
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address;
-=======
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc:app/contact/page.tsx
                   </label>
                   <input
                     type="email"
@@ -179,13 +109,8 @@ const ContactPage: React.FC = () => {
                 </div>
                 
                 <div>
-<<<<<<< HEAD:temp-broken/contact/page.tsx
                   <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                     Company;
-=======
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                    Company
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc:app/contact/page.tsx
                   </label>
                   <input
                     type="text"
@@ -199,30 +124,18 @@ const ContactPage: React.FC = () => {
                 </div>
                 
                 <div>
-<<<<<<< HEAD:temp-broken/contact/page.tsx
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                     Message;
-=======
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Message
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc:app/contact/page.tsx
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-<<<<<<< HEAD:temp-broken/contact/page.tsx
                     required;
                     rows={6}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Tell us about your project or how we can help..."
-=======
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500"
-                    placeholder="Tell us about your project or requirements"
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc:app/contact/page.tsx
                   />
                 </div>
                 
@@ -235,7 +148,6 @@ const ContactPage: React.FC = () => {
                 </button>
               </form>
             </div>
-<<<<<<< HEAD:temp-broken/contact/page.tsx
 
             {/* Contact Information */}
             <div>
@@ -281,18 +193,10 @@ const ContactPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
     </div>
-=======
-          </div>
-        </div>
-      </div>
-    </>
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc:app/contact/page.tsx
   );
   );
   );
 };
 
 export default ContactPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-9706:temp-broken/contact/page.tsx

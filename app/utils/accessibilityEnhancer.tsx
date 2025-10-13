@@ -9,11 +9,5 @@ export default function AccessibilityEnhancer({ children, className = '' }: Acce
   return (
     <div className={`accessibility-enhancer ${className}`}>
       {children}
-<<<<<<< HEAD
   );
-=======
-    </div>
-  ).
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }

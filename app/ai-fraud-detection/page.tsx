@@ -1,4 +1,3 @@
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -11,9 +10,6 @@
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - AiFraudDetection Solutions</p>
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 export default function PagePage() {
@@ -28,60 +24,12 @@ export default function PagePage() {
     </div>
   );
 }
-=======
-import React, { Helmet } from 'react-helmet-async'.
-export default function AiFraudDetection() {
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, BarChart, Target, TrendingUp, Bot } from 'lucide-react';
-
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      icon: Bot,
-      title: 'AI-Powered Page',
-      description: 'Leverage advanced AI technology for intelligent page solutions.',
-      benefits: ['Smart automation', 'Real-time insights', 'Predictive analytics', 'Performance optimization']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Track and analyze performance with comprehensive analytics.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'ROI tracking']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 300%',
-    'Reduce manual work by 80%',
-    'Improve accuracy with AI automation',
-    'Scale your operations seamlessly',
-    'Save time with intelligent automation',
-    'Boost productivity and results'
-  ];
-
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
   return (
     <>
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Advanced page solutions powered by artificial intelligence. Transform your business with our cutting-edge technology." />
       </Helmet>
-<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">"
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-white mb-6">"
@@ -93,8 +41,6 @@ const PagePage: React.FC = () => {
         </div>
         <div className="text-center">"
           <p className="text-gray-300">Coming Soon - AiFraudDetection Solutions</p>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
@@ -110,7 +56,6 @@ const PagePage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Advanced page solutions powered by artificial intelligence. Transform your business with our cutting-edge technology.
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
@@ -194,16 +139,6 @@ return (
                   <p className="text-lg text-white font-medium">{benefit</p>}</p>
                 </div>
               ))}
-=======
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-8 rounded-lg transition duration-300">
-                View Demo
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
             </div>
           </div>
         </div>
@@ -243,7 +178,6 @@ return (
         </div>
       </section>
 
-<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4">
         </section>
@@ -267,57 +201,3 @@ return (
 
 export default Component.
 export default PagePage.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
-=======
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our advanced page technology.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <div className="flex-shrink-0">
-                  <CheckCircle className="h-6 w-6 text-green-400 mt-1" />
-                </div>
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join thousands of businesses already using our page solutions to boost their performance.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 flex items-center justify-center">
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition duration-300">
-              Schedule Demo
-            </button>
-          </div>
-        </div>
-      </section>
-    </>
-  );
-};
-
-export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-1cdc
->>>>>>> origin/main
