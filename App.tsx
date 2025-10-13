@@ -7,7 +7,10 @@ import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
+<<<<<<< HEAD
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 
 // Page Components
 import HomePage from './app/page';
@@ -65,10 +68,18 @@ function App() {
   return (
 <<<<<<< HEAD
     <HelmetProvider>
+<<<<<<< HEAD
       <Router>
         <div className="min-h-screen bg-slate-900">
           <Navigation />
           <main className="relative z-10" id="main-content" role="main">
+=======
+      <ErrorBoundary>
+        <Router>
+          <div className="min-h-screen bg-slate-900">
+            <Navigation />
+            <main className="relative z-10" id="main-content" role="main">
+>>>>>>> cursor/analyze-improve-and-deploy-application-b99c
             <Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
@@ -108,10 +119,12 @@ function App() {
                 </div>
               } />
             </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
+            </main>
+            <Footer />
+            <PerformanceMonitor />
+          </div>
+        </Router>
+      </ErrorBoundary>
     </HelmetProvider>
 =======
     <ErrorBoundary>

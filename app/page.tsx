@@ -3,8 +3,8 @@
 'use client';
 >>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEO from './components/SEO';
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -20,11 +20,12 @@ import {
 export default function HomePage() {
   return (
     <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." />
-        <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" />
-      </Helmet>
+      <SEO 
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
+        url="/"
+      />
       
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
