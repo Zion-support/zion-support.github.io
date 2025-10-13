@@ -1,86 +1,86 @@
-import { ArrowRight, Shield, AlertTriangle, BarChart3, CheckCircle, Star, Brain, Zap, Lock, Eye } from "lucide-react";
+import { ArrowRight, Users, FileText, Clock, BarChart3, CheckCircle, Star, Brain, Briefcase, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIFraudDetection() {
+export default function ZionAIHRAssistant() {
   const features = [
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Real-time Fraud Detection",
-      description: "Detect fraudulent transactions in real-time with 99.9% accuracy using advanced AI algorithms"
+      icon: <Users className="w-6 h-6" />,
+      title: "AI-Powered Recruitment",
+      description: "Intelligent candidate screening, resume analysis, and interview scheduling with bias-free algorithms"
     },
     {
-      icon: <AlertTriangle className="w-6 h-6" />,
-      title: "Instant Alerts",
-      description: "Get immediate notifications when suspicious activities are detected with detailed risk analysis"
+      icon: <FileText className="w-6 h-6" />,
+      title: "Automated Onboarding",
+      description: "Streamlined employee onboarding with digital forms, document collection, and task automation"
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: "Smart Time Tracking",
+      description: "AI-powered time tracking with productivity insights and automated timesheet generation"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Behavioral Analytics",
-      description: "Analyze user behavior patterns to identify anomalies and potential fraud attempts"
+      title: "HR Analytics Dashboard",
+      description: "Comprehensive HR metrics, employee satisfaction tracking, and predictive analytics"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Response",
-      description: "AI-powered automated responses including transaction blocking and account protection"
-    },
-    {
-      icon: <Lock className="w-6 h-6" />,
-      title: "Multi-layer Security",
-      description: "Comprehensive fraud protection across all channels including online, mobile, and in-person"
+      title: "Performance Management",
+      description: "Automated performance reviews, goal tracking, and 360-degree feedback collection"
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Learning Algorithms",
-      description: "Self-improving AI that learns from new fraud patterns and adapts to emerging threats"
+      title: "Employee Insights",
+      description: "AI-driven employee sentiment analysis, retention predictions, and engagement recommendations"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$49",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams",
       features: [
-        "Up to 10,000 transactions/month",
-        "Basic fraud detection",
-        "Standard alerts",
+        "Up to 25 employees",
+        "Basic recruitment tools",
+        "Simple time tracking",
+        "Standard reports",
         "Email support",
-        "1 user account",
-        "Basic analytics"
+        "1 HR admin account"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$599",
+      price: "$129",
       period: "/month",
-      description: "Most popular for growing businesses",
+      description: "Most popular for growing companies",
       features: [
-        "Up to 100,000 transactions/month",
-        "Advanced AI detection",
-        "Real-time alerts",
+        "Up to 100 employees",
+        "AI recruitment features",
+        "Advanced analytics",
+        "Performance management",
         "Priority support",
-        "Up to 5 user accounts",
+        "Up to 5 HR accounts",
         "API access",
-        "Custom rules",
-        "Advanced analytics"
+        "Custom workflows"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,499",
+      price: "$299",
       period: "/month",
-      description: "For large financial institutions",
+      description: "For large organizations",
       features: [
-        "Unlimited transactions",
-        "Premium AI features",
-        "Custom models",
-        "White-label solution",
+        "Unlimited employees",
+        "Advanced AI features",
+        "Custom integrations",
+        "White-label reporting",
         "24/7 dedicated support",
-        "Unlimited users",
+        "Unlimited HR accounts",
         "Advanced compliance",
         "Custom training"
       ],
@@ -90,24 +90,24 @@ export default function AIFraudDetection() {
 
   const testimonials = [
     {
-      name: "Jennifer Walsh",
-      company: "Financial Services",
-      role: "Security Director",
-      content: "AI Fraud Detection reduced our fraud losses by 85% and false positives by 70%. It's been a game-changer.",
+      name: "Jennifer Martinez",
+      company: "Tech Startup",
+      role: "Head of People",
+      content: "Zion AI HR Assistant reduced our hiring time by 60% and improved candidate quality significantly.",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      company: "E-commerce Platform",
-      role: "Risk Manager",
-      content: "The real-time detection is incredible. We can now stop fraudulent transactions before they complete.",
+      name: "David Chen",
+      company: "Manufacturing Corp",
+      role: "HR Director",
+      content: "The AI insights helped us reduce turnover by 40% and improve employee satisfaction scores.",
       rating: 5
     },
     {
-      name: "Sarah Rodriguez",
-      company: "Payment Processor",
-      role: "Fraud Prevention Manager",
-      content: "Automated response and behavioral analytics have transformed our fraud prevention strategy completely.",
+      name: "Sarah Thompson",
+      company: "Consulting Firm",
+      role: "People Operations Manager",
+      content: "Automated onboarding saved us 15 hours per new hire. The system is incredibly intuitive.",
       rating: 5
     }
   ];
@@ -115,45 +115,45 @@ export default function AIFraudDetection() {
   return (
     <>
       <Helmet>
-        <title>AI Fraud Detection - Advanced Fraud Prevention Platform | Zion Tech Group</title>
+        <title>Zion AI HR Assistant - Intelligent Human Resources Management Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Protect your business with AI Fraud Detection. 99.9% accuracy real-time detection, behavioral analytics, and automated response for financial security."
+          content="Transform your HR operations with Zion AI HR Assistant. AI-powered recruitment, automated onboarding, performance management, and comprehensive HR analytics for modern businesses."
         />
         <meta
           name="keywords"
-          content="fraud detection, fraud prevention, AI security, transaction monitoring, behavioral analytics, risk management, financial security, fraud analytics"
+          content="HR management, AI recruitment, employee onboarding, performance management, HR analytics, time tracking, employee engagement, human resources automation"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 mb-6">
-              <Shield className="w-4 h-4 text-red-400 mr-2" />
-              <span className="text-red-400 text-sm font-medium">AI-Powered Fraud Prevention</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
+              <Users className="w-4 h-4 text-indigo-400 mr-2" />
+              <span className="text-indigo-400 text-sm font-medium">AI-Powered HR Management</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
-                AI Fraud Detection
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                Zion AI HR Assistant
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your business with our advanced AI Fraud Detection platform. 
-              Detect fraud with 99.9% accuracy, reduce losses by 85%, and prevent false positives.
+              Revolutionize your HR operations with AI-powered recruitment, automated onboarding, 
+              and intelligent performance management. Streamline processes and improve employee experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -162,16 +162,16 @@ export default function AIFraudDetection() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Detection Accuracy</div>
+                <div className="text-3xl font-bold text-indigo-400 mb-2">60%</div>
+                <div className="text-gray-300">Faster Hiring</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">85%</div>
-                <div className="text-gray-300">Fraud Loss Reduction</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
+                <div className="text-gray-300">Reduced Turnover</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">70%</div>
-                <div className="text-gray-300">False Positive Reduction</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">1,200+</div>
+                <div className="text-gray-300">HR Teams</div>
               </div>
             </div>
           </div>
@@ -182,10 +182,10 @@ export default function AIFraudDetection() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Fraud Detection Features
+                Comprehensive HR Management Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to protect your business from fraud with AI-powered security.
+                Everything you need to modernize your HR operations and improve employee experience.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -194,7 +194,7 @@ export default function AIFraudDetection() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-red-500 to-pink-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -217,7 +217,7 @@ export default function AIFraudDetection() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your transaction volume. All plans include 14-day free trial.
+                Choose the plan that fits your organization size. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -226,13 +226,13 @@ export default function AIFraudDetection() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-red-400 bg-gradient-to-br from-red-500/10 to-pink-500/10'
-                      : 'border-white/20 hover:border-red-400'
+                      ? 'border-indigo-400 bg-gradient-to-br from-indigo-500/10 to-purple-500/10'
+                      : 'border-white/20 hover:border-indigo-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -257,8 +257,8 @@ export default function AIFraudDetection() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700'
-                        : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
+                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -274,10 +274,10 @@ export default function AIFraudDetection() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Financial Leaders
+                Trusted by HR Professionals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what security professionals say about our fraud detection platform
+                See what HR leaders say about our AI-powered management platform
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -306,22 +306,22 @@ export default function AIFraudDetection() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Protect Your Business?
+              Ready to Transform Your HR Operations?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses preventing fraud with AI-powered detection.
+              Join thousands of HR teams improving efficiency and employee experience with AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>

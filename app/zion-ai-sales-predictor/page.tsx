@@ -1,84 +1,84 @@
-import { ArrowRight, Shield, AlertTriangle, BarChart3, CheckCircle, Star, Brain, Zap, Lock, Eye } from "lucide-react";
+import { ArrowRight, TrendingUp, Target, BarChart3, CheckCircle, Star, Brain, Zap, DollarSign, Users } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIFraudDetection() {
+export default function ZionAISalesPredictor() {
   const features = [
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Real-time Fraud Detection",
-      description: "Detect fraudulent transactions in real-time with 99.9% accuracy using advanced AI algorithms"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "AI Sales Forecasting",
+      description: "Predict future sales with 92% accuracy using machine learning and historical data analysis"
     },
     {
-      icon: <AlertTriangle className="w-6 h-6" />,
-      title: "Instant Alerts",
-      description: "Get immediate notifications when suspicious activities are detected with detailed risk analysis"
+      icon: <Target className="w-6 h-6" />,
+      title: "Lead Scoring Intelligence",
+      description: "AI-powered lead scoring based on behavior patterns, demographics, and engagement history"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Behavioral Analytics",
-      description: "Analyze user behavior patterns to identify anomalies and potential fraud attempts"
+      title: "Revenue Analytics",
+      description: "Comprehensive revenue analytics with pipeline forecasting and performance insights"
+    },
+    {
+      icon: <DollarSign className="w-6 h-6" />,
+      title: "Deal Probability Scoring",
+      description: "AI calculates the probability of closing deals and recommends next best actions"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Response",
-      description: "AI-powered automated responses including transaction blocking and account protection"
-    },
-    {
-      icon: <Lock className="w-6 h-6" />,
-      title: "Multi-layer Security",
-      description: "Comprehensive fraud protection across all channels including online, mobile, and in-person"
+      title: "Automated Follow-ups",
+      description: "AI-driven follow-up recommendations and automated outreach sequences"
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Learning Algorithms",
-      description: "Self-improving AI that learns from new fraud patterns and adapts to emerging threats"
+      title: "Market Trend Analysis",
+      description: "Real-time market trend analysis and competitive intelligence for sales strategy"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$49",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small sales teams",
       features: [
-        "Up to 10,000 transactions/month",
-        "Basic fraud detection",
-        "Standard alerts",
+        "Up to 1,000 leads/month",
+        "Basic sales forecasting",
+        "Simple lead scoring",
+        "Standard analytics",
         "Email support",
-        "1 user account",
-        "Basic analytics"
+        "1 user account"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$599",
+      price: "$129",
       period: "/month",
-      description: "Most popular for growing businesses",
+      description: "Most popular for growing teams",
       features: [
-        "Up to 100,000 transactions/month",
-        "Advanced AI detection",
-        "Real-time alerts",
+        "Up to 10,000 leads/month",
+        "Advanced AI forecasting",
+        "Intelligent lead scoring",
+        "Comprehensive analytics",
         "Priority support",
         "Up to 5 user accounts",
         "API access",
-        "Custom rules",
-        "Advanced analytics"
+        "Custom integrations"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,499",
+      price: "$299",
       period: "/month",
-      description: "For large financial institutions",
+      description: "For large sales organizations",
       features: [
-        "Unlimited transactions",
-        "Premium AI features",
+        "Unlimited leads",
+        "Advanced AI features",
         "Custom models",
-        "White-label solution",
+        "White-label reporting",
         "24/7 dedicated support",
         "Unlimited users",
         "Advanced compliance",
@@ -90,24 +90,24 @@ export default function AIFraudDetection() {
 
   const testimonials = [
     {
-      name: "Jennifer Walsh",
-      company: "Financial Services",
-      role: "Security Director",
-      content: "AI Fraud Detection reduced our fraud losses by 85% and false positives by 70%. It's been a game-changer.",
+      name: "Michael Rodriguez",
+      company: "SaaS Platform",
+      role: "VP of Sales",
+      content: "Zion AI Sales Predictor increased our forecast accuracy by 40% and helped us close 25% more deals.",
       rating: 5
     },
     {
-      name: "Michael Chen",
+      name: "Sarah Chen",
+      company: "B2B Services",
+      role: "Sales Director",
+      content: "The AI lead scoring is incredibly accurate. We're focusing on the right prospects and closing more deals.",
+      rating: 5
+    },
+    {
+      name: "David Kim",
       company: "E-commerce Platform",
-      role: "Risk Manager",
-      content: "The real-time detection is incredible. We can now stop fraudulent transactions before they complete.",
-      rating: 5
-    },
-    {
-      name: "Sarah Rodriguez",
-      company: "Payment Processor",
-      role: "Fraud Prevention Manager",
-      content: "Automated response and behavioral analytics have transformed our fraud prevention strategy completely.",
+      role: "Head of Revenue",
+      content: "Automated follow-ups and deal probability scoring have transformed our sales process completely.",
       rating: 5
     }
   ];
@@ -115,45 +115,45 @@ export default function AIFraudDetection() {
   return (
     <>
       <Helmet>
-        <title>AI Fraud Detection - Advanced Fraud Prevention Platform | Zion Tech Group</title>
+        <title>Zion AI Sales Predictor - Intelligent Sales Forecasting Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Protect your business with AI Fraud Detection. 99.9% accuracy real-time detection, behavioral analytics, and automated response for financial security."
+          content="Predict and optimize your sales with Zion AI Sales Predictor. AI-powered forecasting, lead scoring, and revenue analytics for modern sales teams."
         />
         <meta
           name="keywords"
-          content="fraud detection, fraud prevention, AI security, transaction monitoring, behavioral analytics, risk management, financial security, fraud analytics"
+          content="sales forecasting, lead scoring, revenue analytics, sales prediction, AI sales, sales intelligence, deal probability, sales automation"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 mb-6">
-              <Shield className="w-4 h-4 text-red-400 mr-2" />
-              <span className="text-red-400 text-sm font-medium">AI-Powered Fraud Prevention</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 mb-6">
+              <TrendingUp className="w-4 h-4 text-violet-400 mr-2" />
+              <span className="text-violet-400 text-sm font-medium">AI-Powered Sales Intelligence</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
-                AI Fraud Detection
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">
+                Zion AI Sales Predictor
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Protect your business with our advanced AI Fraud Detection platform. 
-              Detect fraud with 99.9% accuracy, reduce losses by 85%, and prevent false positives.
+              Predict and optimize your sales performance with AI-powered forecasting, intelligent lead scoring, 
+              and comprehensive revenue analytics. Close more deals with data-driven insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-violet-400 text-violet-400 px-8 py-4 rounded-lg font-semibold hover:bg-violet-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -162,16 +162,16 @@ export default function AIFraudDetection() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Detection Accuracy</div>
+                <div className="text-3xl font-bold text-violet-400 mb-2">92%</div>
+                <div className="text-gray-300">Forecast Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">85%</div>
-                <div className="text-gray-300">Fraud Loss Reduction</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">25%</div>
+                <div className="text-gray-300">More Deals Closed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">70%</div>
-                <div className="text-gray-300">False Positive Reduction</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">2,800+</div>
+                <div className="text-gray-300">Sales Teams</div>
               </div>
             </div>
           </div>
@@ -182,10 +182,10 @@ export default function AIFraudDetection() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Fraud Detection Features
+                Advanced Sales Intelligence Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to protect your business from fraud with AI-powered security.
+                Everything you need to predict, optimize, and accelerate your sales performance.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -194,7 +194,7 @@ export default function AIFraudDetection() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-red-500 to-pink-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-violet-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -217,7 +217,7 @@ export default function AIFraudDetection() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your transaction volume. All plans include 14-day free trial.
+                Choose the plan that fits your sales team size. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -226,13 +226,13 @@ export default function AIFraudDetection() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-red-400 bg-gradient-to-br from-red-500/10 to-pink-500/10'
-                      : 'border-white/20 hover:border-red-400'
+                      ? 'border-violet-400 bg-gradient-to-br from-violet-500/10 to-purple-500/10'
+                      : 'border-white/20 hover:border-violet-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -257,8 +257,8 @@ export default function AIFraudDetection() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700'
-                        : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700'
+                        : 'border border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -274,10 +274,10 @@ export default function AIFraudDetection() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Financial Leaders
+                Trusted by Sales Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what security professionals say about our fraud detection platform
+                See what sales professionals say about our prediction platform
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -306,22 +306,22 @@ export default function AIFraudDetection() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Protect Your Business?
+              Ready to Predict Your Sales Success?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses preventing fraud with AI-powered detection.
+              Join thousands of sales teams closing more deals with AI-powered predictions and insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-violet-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-violet-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-violet-400 text-violet-400 px-8 py-4 rounded-lg font-semibold hover:bg-violet-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>

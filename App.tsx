@@ -177,6 +177,55 @@ const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
 
+// New Micro SAAS Services
+const ZionAICustomerSentimentAnalyzerPage = React.lazy(
+  () => import("./app/zion-ai-customer-sentiment-analyzer/page"),
+);
+const ZionAIExpenseOptimizerPage = React.lazy(
+  () => import("./app/zion-ai-expense-optimizer/page"),
+);
+const ZionAISocialMediaManagerPage = React.lazy(
+  () => import("./app/zion-ai-social-media-manager/page"),
+);
+const ZionAIHRAssistantPage = React.lazy(
+  () => import("./app/zion-ai-hr-assistant/page"),
+);
+const ZionAIInventoryOptimizerPage = React.lazy(
+  () => import("./app/zion-ai-inventory-optimizer/page"),
+);
+const ZionAIEmailOptimizerPage = React.lazy(
+  () => import("./app/zion-ai-email-optimizer/page"),
+);
+const ZionAISalesPredictorPage = React.lazy(
+  () => import("./app/zion-ai-sales-predictor/page"),
+);
+const ZionAICustomerChurnPredictorPage = React.lazy(
+  () => import("./app/zion-ai-customer-churn-predictor/page"),
+);
+const ZionAIWorkflowAutomationProPage = React.lazy(
+  () => import("./app/zion-ai-workflow-automation-pro/page"),
+);
+const ZionAIDataPrivacyManagerPage = React.lazy(
+  () => import("./app/zion-ai-data-privacy-manager/page"),
+);
+
+// New AI Services
+const AIVoiceAssistantPage = React.lazy(
+  () => import("./app/ai-voice-assistant/page"),
+);
+const AIImageGeneratorPage = React.lazy(
+  () => import("./app/ai-image-generator/page"),
+);
+const AITranslationServicePage = React.lazy(
+  () => import("./app/ai-translation-service/page"),
+);
+const AIPredictiveMaintenancePage = React.lazy(
+  () => import("./app/ai-predictive-maintenance/page"),
+);
+const AIFraudDetectionPage = React.lazy(
+  () => import("./app/ai-fraud-detection/page"),
+);
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
   () => import("./app/5g-data-analytics/page"),
@@ -425,6 +474,70 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+
+                  {/* New Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-customer-sentiment-analyzer"
+                    element={<ZionAICustomerSentimentAnalyzerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-expense-optimizer"
+                    element={<ZionAIExpenseOptimizerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-social-media-manager"
+                    element={<ZionAISocialMediaManagerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-hr-assistant"
+                    element={<ZionAIHRAssistantPage />}
+                  />
+                  <Route
+                    path="/zion-ai-inventory-optimizer"
+                    element={<ZionAIInventoryOptimizerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-email-optimizer"
+                    element={<ZionAIEmailOptimizerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-sales-predictor"
+                    element={<ZionAISalesPredictorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-customer-churn-predictor"
+                    element={<ZionAICustomerChurnPredictorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-workflow-automation-pro"
+                    element={<ZionAIWorkflowAutomationProPage />}
+                  />
+                  <Route
+                    path="/zion-ai-data-privacy-manager"
+                    element={<ZionAIDataPrivacyManagerPage />}
+                  />
+
+                  {/* New AI Services Routes */}
+                  <Route
+                    path="/ai-voice-assistant"
+                    element={<AIVoiceAssistantPage />}
+                  />
+                  <Route
+                    path="/ai-image-generator"
+                    element={<AIImageGeneratorPage />}
+                  />
+                  <Route
+                    path="/ai-translation-service"
+                    element={<AITranslationServicePage />}
+                  />
+                  <Route
+                    path="/ai-predictive-maintenance"
+                    element={<AIPredictiveMaintenancePage />}
+                  />
+                  <Route
+                    path="/ai-fraud-detection"
+                    element={<AIFraudDetectionPage />}
                   />
 
                   {/* 5G Solutions Routes */}

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, TrendingUp } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
@@ -47,18 +47,74 @@ const HomePage = () => {
       link: "/zion-analytics-pro"
     },
     {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection",
-      price: "From $49/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield"
+      name: "Zion AI Customer Sentiment Analyzer",
+      description: "AI-powered customer sentiment analysis",
+      price: "From $39/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-customer-sentiment-analyzer"
     },
     {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $9/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
+      name: "Zion AI Expense Optimizer",
+      description: "Smart expense management and optimization",
+      price: "From $29/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-expense-optimizer"
+    },
+    {
+      name: "Zion AI Social Media Manager",
+      description: "AI-powered social media management",
+      price: "From $39/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-social-media-manager"
+    },
+    {
+      name: "Zion AI HR Assistant",
+      description: "Intelligent HR management platform",
+      price: "From $49/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-hr-assistant"
+    },
+    {
+      name: "Zion AI Inventory Optimizer",
+      description: "Smart inventory management and optimization",
+      price: "From $59/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-inventory-optimizer"
+    },
+    {
+      name: "Zion AI Email Optimizer",
+      description: "AI-powered email marketing optimization",
+      price: "From $29/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/zion-ai-email-optimizer"
+    },
+    {
+      name: "Zion AI Sales Predictor",
+      description: "Intelligent sales forecasting and analytics",
+      price: "From $49/month",
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: "/zion-ai-sales-predictor"
+    },
+    {
+      name: "Zion AI Churn Predictor",
+      description: "AI-powered customer churn prevention",
+      price: "From $39/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-customer-churn-predictor"
+    },
+    {
+      name: "Zion AI Workflow Pro",
+      description: "Advanced workflow automation platform",
+      price: "From $49/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-workflow-automation-pro"
+    },
+    {
+      name: "Zion AI Privacy Manager",
+      description: "AI-powered data privacy compliance",
+      price: "From $59/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-ai-data-privacy-manager"
     }
   ];
 
@@ -215,7 +271,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
