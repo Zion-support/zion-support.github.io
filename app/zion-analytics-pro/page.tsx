@@ -1,7 +1,6 @@
-import React from "react";
 import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign, Star as StarIcon } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function ZionAnalyticsPro() {

@@ -1,6 +1,5 @@
-import React, { useState, useCallback, useMemo } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { 
+import { Link, useLocation } from 'react-router-dom';
+import {
   X, 
   ChevronDown, 
   ChevronRight,
@@ -19,7 +18,7 @@ import {
   Phone,
   Mail,
   MapPin
-} from 'lucide-react'
+} from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean
