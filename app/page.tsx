@@ -59,6 +59,27 @@ const HomePage = () => {
       price: "From $9/month",
       icon: <Cloud className="w-6 h-6" />,
       link: "/zion-cloud-vault"
+    },
+    {
+      name: "Zion AI Video Editor",
+      description: "AI-powered video editing platform",
+      price: "From $19/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-video-editor"
+    },
+    {
+      name: "Zion Smart Scheduler",
+      description: "AI-powered meeting scheduling",
+      price: "From $12/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-smart-scheduler"
+    },
+    {
+      name: "Zion AI Customer Insights",
+      description: "Advanced customer analytics platform",
+      price: "From $39/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-customer-insights"
     }
   ];
 
@@ -215,7 +236,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}

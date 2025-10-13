@@ -55,6 +55,7 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AIVoiceSynthesisPage = React.lazy(() => import("./app/ai-voice-synthesis/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -174,6 +175,18 @@ const ZionComplianceManagerPage = React.lazy(
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
+const ZionAIVideoEditorPage = React.lazy(
+  () => import("./app/zion-ai-video-editor/page"),
+);
+const ZionSmartSchedulerPage = React.lazy(
+  () => import("./app/zion-smart-scheduler/page"),
+);
+const ZionAICustomerInsightsPage = React.lazy(
+  () => import("./app/zion-ai-customer-insights/page"),
+);
+const ZionBlockchainManagerPage = React.lazy(
+  () => import("./app/zion-blockchain-manager/page"),
+);
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
@@ -250,6 +263,7 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                  <Route path="/ai-voice-synthesis" element={<AIVoiceSynthesisPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -408,6 +422,22 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-video-editor"
+                    element={<ZionAIVideoEditorPage />}
+                  />
+                  <Route
+                    path="/zion-smart-scheduler"
+                    element={<ZionSmartSchedulerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-customer-insights"
+                    element={<ZionAICustomerInsightsPage />}
+                  />
+                  <Route
+                    path="/zion-blockchain-manager"
+                    element={<ZionBlockchainManagerPage />}
                   />
 
                   {/* 5G Solutions Routes */}

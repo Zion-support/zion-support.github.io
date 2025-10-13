@@ -1,104 +1,103 @@
-import { ArrowRight, Video, Wand2, Sparkles, Zap, Globe, CheckCircle, Star, Brain, Play, Download, Share2 } from "lucide-react";
+import { ArrowRight, Shield, Link as LinkIcon, Zap, Globe, CheckCircle, Star, Brain, Database, Lock } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAIVideoEditor() {
+export default function ZionBlockchainManager() {
   const features = [
     {
-      icon: <Wand2 className="w-6 h-6" />,
-      title: "AI-Powered Editing",
-      description: "Automatically edit videos with AI that understands context, pacing, and visual appeal"
-    },
-    {
-      icon: <Sparkles className="w-6 h-6" />,
-      title: "Smart Auto-Cut",
-      description: "Intelligent scene detection and automatic cutting for seamless transitions"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Multi-Chain Support",
+      description: "Manage assets across Ethereum, Bitcoin, Polygon, BSC, and 20+ other blockchain networks"
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Voice Enhancement",
-      description: "AI-powered noise reduction, voice clarity, and automatic audio leveling"
+      title: "AI-Powered Analytics",
+      description: "Advanced AI algorithms analyze market trends, portfolio performance, and risk factors"
+    },
+    {
+      icon: <Lock className="w-6 h-6" />,
+      title: "Enterprise Security",
+      description: "Military-grade security with hardware wallet integration and multi-signature support"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "One-Click Templates",
-      description: "Professional video templates that adapt to your content automatically"
+      title: "Automated Trading",
+      description: "Set up automated trading strategies with smart contracts and DeFi protocols"
+    },
+    {
+      icon: <Database className="w-6 h-6" />,
+      title: "Portfolio Management",
+      description: "Comprehensive portfolio tracking with real-time P&L, tax reporting, and analytics"
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Platform Export",
-      description: "Export optimized for YouTube, TikTok, Instagram, LinkedIn, and more"
-    },
-    {
-      icon: <Play className="w-6 h-6" />,
-      title: "Real-time Preview",
-      description: "See your changes instantly with our advanced rendering engine"
+      title: "DeFi Integration",
+      description: "Access to 100+ DeFi protocols for yield farming, liquidity provision, and staking"
     }
   ];
 
   const capabilities = [
-    "AI Scene Detection & Auto-Cutting",
-    "Smart Color Correction & Grading",
-    "Automatic Subtitle Generation",
-    "Background Music & Sound Effects",
-    "Text Overlay & Motion Graphics",
-    "Green Screen & Background Removal",
-    "Video Stabilization & Enhancement",
-    "Multi-track Audio Mixing",
-    "4K & 8K Video Support",
-    "Cloud-based Processing",
-    "Collaborative Editing",
-    "Version Control & History"
+    "Multi-Chain Wallet Management",
+    "AI-Powered Market Analysis",
+    "Automated Trading Strategies",
+    "DeFi Protocol Integration",
+    "NFT Portfolio Management",
+    "Tax Reporting & Compliance",
+    "Risk Assessment & Alerts",
+    "Yield Farming Optimization",
+    "Liquidity Pool Management",
+    "Cross-Chain Bridge Support",
+    "Smart Contract Deployment",
+    "Real-time Market Data"
   ];
 
   const pricingPlans = [
     {
-      name: "Creator",
-      price: "$19",
+      name: "Individual",
+      price: "$29",
       period: "/month",
-      description: "Perfect for content creators",
+      description: "Perfect for crypto enthusiasts",
       features: [
-        "Up to 10 hours of video processing",
-        "HD export quality",
-        "Basic AI editing tools",
-        "5GB cloud storage",
+        "Up to 5 wallets",
+        "Basic portfolio tracking",
+        "Standard security features",
         "Email support",
-        "Standard templates"
+        "Mobile app access",
+        "Basic analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$49",
+      price: "$79",
       period: "/month",
-      description: "Most popular for professionals",
+      description: "Most popular for traders",
       features: [
-        "Up to 50 hours of video processing",
-        "4K export quality",
-        "Advanced AI editing tools",
-        "50GB cloud storage",
+        "Up to 25 wallets",
+        "Advanced portfolio tracking",
+        "AI-powered analytics",
         "Priority support",
-        "Premium templates",
+        "Automated trading",
+        "DeFi integration",
         "API access",
-        "Team collaboration"
+        "Advanced security"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$149",
+      price: "$299",
       period: "/month",
-      description: "For large teams and agencies",
+      description: "For institutions and large teams",
       features: [
-        "Unlimited video processing",
-        "8K export quality",
-        "All AI editing tools",
-        "Unlimited cloud storage",
+        "Unlimited wallets",
+        "Custom portfolio management",
+        "Advanced AI models",
         "24/7 phone support",
-        "Custom templates",
         "White-label solution",
-        "Advanced analytics",
-        "Dedicated account manager"
+        "Custom integrations",
+        "Dedicated account manager",
+        "Institutional security"
       ],
       popular: false
     }
@@ -106,24 +105,24 @@ export default function ZionAIVideoEditor() {
 
   const testimonials = [
     {
-      name: "Alex Chen",
-      company: "Digital Marketing Agency",
-      role: "Creative Director",
-      content: "Zion AI Video Editor has revolutionized our video production. What used to take hours now takes minutes with incredible quality.",
+      name: "Michael Chen",
+      company: "Crypto Investment Fund",
+      role: "Portfolio Manager",
+      content: "Zion Blockchain Manager has revolutionized our portfolio management. The AI analytics help us make better investment decisions and reduce risk significantly.",
       rating: 5
     },
     {
-      name: "Sarah Martinez",
-      company: "YouTube Creator",
-      role: "Content Creator",
-      content: "The AI auto-cutting feature is a game-changer. My editing time has been reduced by 80% while maintaining professional quality.",
+      name: "Sarah Johnson",
+      company: "DeFi Protocol",
+      role: "CTO",
+      content: "The multi-chain support and DeFi integration are outstanding. We can manage our entire ecosystem from one platform with enterprise-grade security.",
       rating: 5
     },
     {
-      name: "David Kim",
-      company: "Corporate Training",
-      role: "Video Producer",
-      content: "The voice enhancement and subtitle generation features are outstanding. Perfect for our training videos and presentations.",
+      name: "David Rodriguez",
+      company: "Crypto Trading Firm",
+      role: "Head of Trading",
+      content: "The automated trading features and risk management tools have increased our profitability by 40% while reducing manual errors to zero.",
       rating: 5
     }
   ];
@@ -131,45 +130,45 @@ export default function ZionAIVideoEditor() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Video Editor - AI-Powered Video Editing Platform | Zion Tech Group</title>
+        <title>Zion Blockchain Manager - AI-Powered Crypto Portfolio Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Create professional videos with Zion AI Video Editor - the ultimate AI-powered video editing platform. Auto-cutting, voice enhancement, and smart templates for content creators."
+          content="Manage your crypto portfolio with Zion Blockchain Manager - the ultimate AI-powered blockchain management platform. Multi-chain support, DeFi integration, and automated trading."
         />
         <meta
           name="keywords"
-          content="AI video editor, video editing software, automated video editing, content creation, video templates, AI video tools"
+          content="blockchain management, crypto portfolio, DeFi, automated trading, multi-chain wallet, cryptocurrency management, AI trading"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
-              <Video className="w-4 h-4 text-purple-400 mr-2" />
-              <span className="text-purple-400 text-sm font-medium">AI-Powered Video Creation</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 mb-6">
+              <LinkIcon className="w-4 h-4 text-amber-400 mr-2" />
+              <span className="text-amber-400 text-sm font-medium">AI-Powered Blockchain Management</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                Zion AI Video Editor
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
+                Zion Blockchain Manager
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Create professional videos in minutes, not hours. Our AI-powered video editor automatically cuts, 
-              enhances, and optimizes your content for maximum impact across all platforms.
+              Master the blockchain with AI-powered portfolio management. Track, trade, and optimize your crypto assets 
+              across multiple chains with enterprise-grade security and intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-amber-400 text-amber-400 px-8 py-4 rounded-lg font-semibold hover:bg-amber-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -178,16 +177,16 @@ export default function ZionAIVideoEditor() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
-                <div className="text-gray-300">Faster Editing</div>
+                <div className="text-3xl font-bold text-amber-400 mb-2">20+</div>
+                <div className="text-gray-300">Blockchain Networks</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">4K/8K</div>
-                <div className="text-gray-300">Export Quality</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">$2.5B+</div>
+                <div className="text-gray-300">Assets Under Management</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">25,000+</div>
-                <div className="text-gray-300">Videos Created</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Security Uptime</div>
               </div>
             </div>
           </div>
@@ -198,10 +197,10 @@ export default function ZionAIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Revolutionary AI Video Editing
+                Advanced Blockchain Management
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Harness the power of artificial intelligence to create stunning videos with minimal effort.
+                Harness the power of AI to manage your crypto portfolio across multiple blockchain networks.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -210,7 +209,7 @@ export default function ZionAIVideoEditor() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-amber-500 to-orange-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -230,10 +229,10 @@ export default function ZionAIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Video Production Suite
+                Complete Blockchain Solution
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create professional videos from start to finish.
+                Everything you need to manage, trade, and optimize your blockchain assets.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -255,10 +254,10 @@ export default function ZionAIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Creative Plan
+                Choose Your Blockchain Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start creating amazing videos today. All plans include 14-day free trial.
+                Start managing your crypto portfolio today. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -267,13 +266,13 @@ export default function ZionAIVideoEditor() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-purple-400 bg-gradient-to-br from-purple-500/10 to-pink-500/10'
-                      : 'border-white/20 hover:border-purple-400'
+                      ? 'border-amber-400 bg-gradient-to-br from-amber-500/10 to-orange-500/10'
+                      : 'border-white/20 hover:border-amber-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -298,8 +297,8 @@ export default function ZionAIVideoEditor() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
-                        : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-amber-500 to-orange-600 text-white hover:from-amber-600 hover:to-orange-700'
+                        : 'border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -315,10 +314,10 @@ export default function ZionAIVideoEditor() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Loved by Content Creators
+                Trusted by Crypto Professionals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what creators say about Zion AI Video Editor
+                See what blockchain professionals say about Zion Blockchain Manager
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -347,22 +346,22 @@ export default function ZionAIVideoEditor() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Create Amazing Videos?
+              Ready to Master the Blockchain?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of creators using Zion AI Video Editor to produce professional content.
+              Join thousands of crypto professionals using Zion Blockchain Manager to optimize their portfolios.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-amber-600 hover:to-orange-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-amber-400 text-amber-400 px-8 py-4 rounded-lg font-semibold hover:bg-amber-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
