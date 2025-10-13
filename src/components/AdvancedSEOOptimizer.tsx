@@ -1,4 +1,4 @@
-'use client';
+&apos;use client&apos;;
 import { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 

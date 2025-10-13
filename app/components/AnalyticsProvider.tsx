@@ -15,19 +15,19 @@ interface AnalyticsProviderProps {
 const  ({ children }) => {
   const track = (event: string, properties?: Record<string, any>) => {
     // Analytics tracking implementation
-    console.log('Analytics Event:', event, properties);
+    console.log(&apos;Analytics Event:&apos;, event, properties);
     
     // In a real implementation, you would send this to your analytics service
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', event, properties);
+    if (typeof window !== &apos;undefined&apos; && (window as any).gtag) {
+      (window as any).gtag(&apos;event&apos;, event, properties);
     }
   };
 
   const identify = (userId: string, traits?: Record<string, any>) => {
-    console.log('Analytics Identify:', userId, traits);
+    console.log(&apos;Analytics Identify:&apos;, userId, traits);
     
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== &apos;undefined&apos; && (window as any).gtag) {
+      (window as any).gtag(&apos;config&apos;, &apos;GA_MEASUREMENT_ID&apos;, {
         user_id: userId,
         custom_map: traits
       });
@@ -48,9 +48,9 @@ const  ({ children }) => {
 
   useEffect(() => {
     // Initialize analytics
-    if (typeof window !== 'undefined') {
+    if (typeof window !== &apos;undefined&apos;) {
       // Load Google Analytics or other analytics scripts here
-      console.log('Analytics initialized');
+      console.log(&apos;Analytics initialized&apos;);
     }
   }, []);
 
@@ -70,7 +70,7 @@ const  ({ children }) => {
 const  (): AnalyticsContextType => {
   const context = useContext(AnalyticsContext);
   if (context === undefined) {
-    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+    throw new Error(&apos;useAnalytics must be used within an AnalyticsProvider&apos;);
   }
   return context;
 };

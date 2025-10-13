@@ -8,45 +8,45 @@ const SupportPage: React.FC = () => {
     {
       icon: title: 'Live Chat',
       description: 'Get instant help from our support team',
-      action: 'Start Chat',
-      color: 'from-blue-500 to-cyan-500'
+      action: &apos;Start Chat&apos;,
+      color: &apos;from-blue-500 to-cyan-500&apos;
     },
     {
       icon: title: 'Support',
       description: 'Call us for immediate assistance',
-      action: 'Call Now',
-      color: 'from-green-500 to-emerald-500'
+      action: &apos;Call Now&apos;,
+      color: &apos;from-green-500 to-emerald-500&apos;
     },
     {
       icon: title: 'Email Support',
       description: 'Send us a detailed message',
-      action: 'Send Email',
-      color: 'from-purple-500 to-pink-500'
+      action: &apos;Send Email&apos;,
+      color: &apos;from-purple-500 to-pink-500&apos;
     },
     {
       icon: title: 'Documentation',
       description: 'Browse our comprehensive guides',
-      action: 'View Docs',
-      color: 'from-orange-500 to-red-500'
+      action: &apos;View Docs&apos;,
+      color: &apos;from-orange-500 to-red-500&apos;
     }
   ];
 
   const faqs = [
     {
-      question: 'How do I get started with your AI services?',
-      answer: 'Getting started is easy! Contact our team for a consultation, and we\'ll help you identify the best AI solutions for your business needs.'
+      question: &apos;How do I get started with your AI services?&apos;,
+      answer: &apos;Getting started is easy! Contact our team for a consultation, and we\&apos;ll help you identify the best AI solutions for your business needs.&apos;
     },
     {
-      question: 'What is your response time for support requests?',
-      answer: 'We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for non-urgent matters.'
+      question: &apos;What is your response time for support requests?&apos;,
+      answer: &apos;We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for non-urgent matters.&apos;
     },
     {
-      question: 'Do you offer training for your solutions?',
-      answer: 'Yes! We provide comprehensive training programs for all our solutions, including documentation, video tutorials, and live training sessions.'
+      question: &apos;Do you offer training for your solutions?&apos;,
+      answer: &apos;Yes! We provide comprehensive training programs for all our solutions, including documentation, video tutorials, and live training sessions.&apos;
     },
     {
-      question: 'What if I need custom development?',
-      answer: 'We offer custom development services for unique requirements. Contact our team to discuss your specific needs and get a quote.'
+      question: &apos;What if I need custom development?&apos;,
+      answer: &apos;We offer custom development services for unique requirements. Contact our team to discuss your specific needs and get a quote.&apos;
     }
   ];
 
@@ -69,7 +69,7 @@ const SupportPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We're here to help! Get support for our AI and IT solutions through multiple channels.
+              We&apos;re here to help! Get support for our AI and IT solutions through multiple channels.
             </p>
           </div>
         </section>

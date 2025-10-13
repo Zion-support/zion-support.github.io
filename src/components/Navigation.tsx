@@ -35,7 +35,7 @@ const : React.FC = () => {
               <p className="text-xs text-cyan-400">AI & IT Solutions
             <to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
-                            <to={`/${category.title.toLowerCase().replace(' ', '-')}`}
+                            <to={`/${category.title.toLowerCase().replace(&apos; &apos;, &apos;-&apos;)}`}
                     <to="/services"
               )}
           {/* Contact Info */}
