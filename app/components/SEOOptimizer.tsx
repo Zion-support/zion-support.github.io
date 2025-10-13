@@ -247,6 +247,20 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
       <meta name="msapplication-config" content="/browserconfig.xml" />
       
+      {/* Advanced SEO Meta Tags */}
+      <meta name="classification" content="Technology, AI, IT Services" />
+      <meta name="category" content="Technology" />
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="bingbot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      
+      {/* Security Headers */}
+      <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+      <meta http-equiv="X-Frame-Options" content="DENY" />
+      <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+      <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+      <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+      
       {/* Language and Geo Tags */}
       <meta name="language" content="en-US" />
       <meta name="geo.region" content="US-DE" />

@@ -9,10 +9,12 @@ import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
+import EnhancedLoadingPage from "./app/components/EnhancedLoadingPage";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import EnhancedPerformanceMonitor from "./app/components/EnhancedPerformanceMonitor";
 import AdvancedPerformanceEnhancer from "./app/components/AdvancedPerformanceEnhancer";
 import EnhancedAccessibilityManager from "./app/components/EnhancedAccessibilityManager";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
@@ -235,7 +237,7 @@ function App() {
                   <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
                   <Breadcrumb />
                   <main id="main-content" role="main">
-                    <Suspense fallback={<LoadingPage />}>
+                    <Suspense fallback={<EnhancedLoadingPage />}>
                       <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -494,6 +496,7 @@ function App() {
                     <PerformanceEnhancer />
                     <SEOOptimizer />
                     <EnhancedSEO />
+                    <EnhancedPerformanceMonitor />
                   </div>
                 </AnalyticsProvider>
               </div>
