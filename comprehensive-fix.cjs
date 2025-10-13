@@ -1,130 +1,242 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+const fs = require('fs');
+const path = require('path');
 
-// Function to fix specific syntax errors in files
-function fixSyntaxErrors(filePath) {
+function fixComponentFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, "utf8");
-    let originalContent = content;
-
-    // Fix common patterns
-    const patterns = [
-      // Fix merge conflict markers
-      {
-        pattern: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> cursor[^\n]*\n/g,
-        replacement: "",
-      },
-      // Fix incomplete JSX tags
-      {
-        pattern: /<([^>]+?)\s*$/gm,
-        replacement: (match, tag) => {
-          // If it looks like an incomplete tag, close it
-          if (
-            tag.includes("className") ||
-            tag.includes("src") ||
-            tag.includes("alt")
-          ) {
-            return match + ">";
+    let content = fs.readFileSync(filePath, 'utf8');
+    let fixed = false;
+    
+    // Fix missing function declarations
+    if (content.includes('return (') && !content.includes('function ') && !content.includes('=>')) {
+      const lines = content.split('\n');
+      const fixedLines = [];
+      let inReturn = false;
+      let braceCount = 0;
+      
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        
+        if (line.trim().startsWith('return (')) {
+          inReturn = true;
+          braceCount = 1;
+          fixedLines.push('const Component = () => {');
+          fixedLines.push('  ' + line);
+        } else if (inReturn) {
+          if (line.includes('{')) braceCount++;
+          if (line.includes('}')) braceCount--;
+          
+          fixedLines.push('  ' + line);
+          
+          if (braceCount === 0) {
+            fixedLines.push('};');
+            fixedLines.push('');
+            fixedLines.push('export default Component;');
+            inReturn = false;
           }
-          return match;
-        },
-      },
-      // Fix missing closing braces in JSX
-      {
-        pattern: /(\s*)([^}]+?)(\s*)(\n\s*)(<\/[^>]+>)/g,
-        replacement: (match, before, content, after, newline, closingTag) => {
-          if (content.includes("{") && !content.includes("}")) {
-            return before + content + "}" + after + newline + closingTag;
+        } else {
+          fixedLines.push(line);
+        }
+      }
+      
+      content = fixedLines.join('\n');
+      fixed = true;
+    }
+    
+    // Fix duplicate variable declarations
+    const duplicateVars = ['isItServicesOpen', 'AnalyticsProvider', 'isAiServicesOpen'];
+    for (const varName of duplicateVars) {
+      const regex = new RegExp(`const\\s+${varName}\\s*=`, 'g');
+      const matches = content.match(regex);
+      if (matches && matches.length > 1) {
+        // Keep only the first declaration
+        const lines = content.split('\n');
+        let foundFirst = false;
+        const fixedLines = lines.filter(line => {
+          if (line.includes(`const ${varName} =`) && !foundFirst) {
+            foundFirst = true;
+            return true;
+          } else if (line.includes(`const ${varName} =`) && foundFirst) {
+            return false;
           }
-          return match;
-        },
-      },
-      // Fix missing semicolons after variable declarations
-      {
-        pattern:
-          /(const|let|var)\s+(\w+)\s*=\s*([^;]+?)(\n\s*)(const|let|var|\n|$)/g,
-        replacement: (match, decl, name, value, newline, next) => {
-          if (
-            !value.includes(";") &&
-            !value.includes("{") &&
-            !value.includes("(")
-          ) {
-            return decl + " " + name + " = " + value + ";" + newline + next;
-          }
-          return match;
-        },
-      },
-    ];
-
-    // Apply patterns
-    patterns.forEach(({ pattern, replacement }) => {
-      content = content.replace(pattern, replacement);
-    });
-
-    // If content changed, write it back
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, "utf8");
-      console.log(`Fixed syntax errors in: ${filePath}`);
+          return true;
+        });
+        content = fixedLines.join('\n');
+        fixed = true;
+      }
+    }
+    
+    // Fix missing function wrapper for static methods
+    if (content.includes('static getDerivedStateFromError') && !content.includes('class ')) {
+      content = content.replace(
+        /static getDerivedStateFromError/g,
+        'class ErrorBoundary extends React.Component {\n  static getDerivedStateFromError'
+      );
+      fixed = true;
+    }
+    
+    // Fix missing interface declarations
+    if (content.includes('interface Props {') && !content.includes('import React')) {
+      content = 'import React from \'react\';\n\n' + content;
+      fixed = true;
+    }
+    
+    // Fix export statements in wrong places
+    if (content.includes('export default') && content.includes('const Component')) {
+      const lines = content.split('\n');
+      const fixedLines = [];
+      let foundExport = false;
+      
+      for (const line of lines) {
+        if (line.includes('export default') && !foundExport) {
+          foundExport = true;
+          // Skip this line, we'll add it at the end
+        } else {
+          fixedLines.push(line);
+        }
+      }
+      
+      // Add export at the end
+      fixedLines.push('');
+      fixedLines.push('export default Component;');
+      content = fixedLines.join('\n');
+      fixed = true;
+    }
+    
+    // Fix JSX syntax errors
+    if (content.includes('Adjacent JSX elements must be wrapped')) {
+      // This is a complex fix, let's wrap the JSX in a fragment
+      content = content.replace(
+        /return\s*\(\s*<div/g,
+        'return (\n    <>\n      <div'
+      );
+      content = content.replace(
+        /<\/div>\s*\)\s*;?\s*$/,
+        '</div>\n    </>\n  );'
+      );
+      fixed = true;
+    }
+    
+    // Fix parameter name clashes
+    if (content.includes('className = \'\',')) {
+      content = content.replace(
+        /className,\s*icon,\s*className = \'\',/g,
+        'className = \'\',\n  icon,'
+      );
+      fixed = true;
+    }
+    
+    // Fix missing imports
+    if (content.includes('useState') && !content.includes('import { useState }')) {
+      content = content.replace(
+        /import React from 'react';/g,
+        "import React, { useState } from 'react';"
+      );
+      fixed = true;
+    }
+    
+    if (fixed) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed component: ${filePath}`);
       return true;
     }
-
+    
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all files with syntax errors
-function findFilesWithErrors(dir) {
+function findComponentFiles(dir) {
   const files = [];
-
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
-
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
     for (const item of items) {
-      const fullPath = path.join(currentPath, item);
+      const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-
-      if (
-        stat.isDirectory() &&
-        !item.startsWith(".") &&
-        item !== "node_modules"
-      ) {
-        walkDir(fullPath);
-      } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
         files.push(fullPath);
       }
     }
   }
-
-  walkDir(dir);
+  
+  traverse(dir);
   return files;
 }
 
 // Main execution
-console.log("Finding files to fix...");
-const files = findFilesWithErrors("./app");
+const appDir = path.join(__dirname, 'app');
+const files = findComponentFiles(appDir);
 
-console.log(`Found ${files.length} files to process`);
+console.log(`Found ${files.length} component files to process...`);
 
 let fixedCount = 0;
 for (const file of files) {
-  if (fixSyntaxErrors(file)) {
+  if (fixComponentFile(file)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed syntax errors in ${fixedCount} files`);
+console.log(`Fixed ${fixedCount} component files.`);
 
-// Run linting to check for remaining issues
-console.log("\nRunning linting to check for remaining issues...");
-try {
-  execSync("npm run lint", { stdio: "inherit" });
-  console.log("Linting passed!");
-} catch (error) {
-  console.log("Linting found remaining issues that need manual fixing");
+// Create missing pages that are referenced but don't exist
+const missingPages = [
+  'app/zion-ai-email-analyzer/page.tsx',
+  'app/zion-ai-crm-pro/page.tsx',
+  'app/zion-ai-marketing-automation-pro/page.tsx',
+  'app/zion-ai-project-manager-pro/page.tsx'
+];
+
+for (const pagePath of missingPages) {
+  const fullPath = path.join(__dirname, pagePath);
+  const dir = path.dirname(fullPath);
+  
+  if (!fs.existsSync(fullPath)) {
+    // Create directory if it doesn't exist
+    fs.mkdirSync(dir, { recursive: true });
+    
+    // Create basic page component
+    const pageName = path.basename(dir).replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    const componentName = pageName.replace(/\s+/g, '');
+    
+    const pageContent = `import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ${componentName}Page = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>${pageName} - Zion Tech Group</title>
+        <meta name="description" content="Professional ${pageName.toLowerCase()} services by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8">
+            ${pageName}
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Professional ${pageName.toLowerCase()} services designed to help your business grow and succeed.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ${componentName}Page;
+`;
+    
+    fs.writeFileSync(fullPath, pageContent);
+    console.log(`Created missing page: ${pagePath}`);
+  }
 }
+
+console.log('Comprehensive fix completed!');

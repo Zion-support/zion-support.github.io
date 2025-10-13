@@ -66,6 +66,28 @@ const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shie
 const ZionCloudVaultPage = React.lazy(() => import("./app/zion-cloud-vault/page"));
 const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio/page"));
 
+// New Innovative Micro SAAS Services
+const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
+const ZionAIInvoiceGeneratorPage = React.lazy(() => import("./app/zion-ai-invoice-generator/page"));
+const ZionAICustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
+const ZionAIEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-analyzer/page"));
+const ZionSmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-smart-inventory-optimizer/page"));
+const ZionAICustomerSentimentTrackerPage = React.lazy(() => import("./app/zion-ai-customer-sentiment-tracker/page"));
+const ZionSmartExpenseCategorizerPage = React.lazy(() => import("./app/zion-smart-expense-categorizer/page"));
+const ZionAIVoiceAssistantProPage = React.lazy(() => import("./app/zion-ai-voice-assistant-pro/page"));
+const ZionAICodeReviewerPage = React.lazy(() => import("./app/zion-ai-code-reviewer/page"));
+const ZionAISocialMediaManagerPage = React.lazy(() => import("./app/zion-ai-social-media-manager/page"));
+const ZionAIContractAnalyzerPage = React.lazy(() => import("./app/zion-ai-contract-analyzer/page"));
+const ZionAIPerformanceOptimizerPage = React.lazy(() => import("./app/zion-ai-performance-optimizer/page"));
+const ZionAICustomerChurnPredictorPage = React.lazy(() => import("./app/zion-ai-customer-churn-predictor/page"));
+const ZionAISupplyChainOptimizerPage = React.lazy(() => import("./app/zion-ai-supply-chain-optimizer/page"));
+const ZionAIFinancialForecasterPage = React.lazy(() => import("./app/zion-ai-financial-forecaster/page"));
+const ZionAIContentModeratorPage = React.lazy(() => import("./app/zion-ai-content-moderator/page"));
+const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translator-pro/page"));
+const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
+const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
+const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
@@ -75,6 +97,27 @@ const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network
 const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
 const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
+
+// Additional AI Services Pages
+const AIChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
+const AICodeAssistantPage = React.lazy(() => import("./app/ai-code-assistant/page"));
+const AIDesignStudioPage = React.lazy(() => import("./app/ai-design-studio/page"));
+const AIComputerVisionPage = React.lazy(() => import("./app/ai-computer-vision/page"));
+const AIConversationalAIPage = React.lazy(() => import("./app/ai-conversational-ai/page"));
+const AICRMPage = React.lazy(() => import("./app/ai-crm/page"));
+const AICustomerInsightsPage = React.lazy(() => import("./app/ai-customer-insights/page"));
+const AIDataVisualizationPage = React.lazy(() => import("./app/ai-data-visualization/page"));
+const AIDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
+const AIDocumentIntelligencePage = React.lazy(() => import("./app/ai-document-intelligence/page"));
+
+// Additional IT Services Pages
+const CloudConsultingPage = React.lazy(() => import("./app/cloud-consulting/page"));
+const DataCenterSolutionsPage = React.lazy(() => import("./app/data-center-solutions/page"));
+const DisasterRecoveryPage = React.lazy(() => import("./app/disaster-recovery/page"));
+const ITSupportPage = React.lazy(() => import("./app/it-support/page"));
+const ManagedServicesPage = React.lazy(() => import("./app/managed-services/page"));
+const SecurityAuditPage = React.lazy(() => import("./app/security-audit/page"));
+const TechnologyConsultingPage = React.lazy(() => import("./app/technology-consulting/page"));
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -164,6 +207,27 @@ function App() {
                         <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                         <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
                         <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
+
+                        {/* Additional AI Services Routes */}
+                        <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                        <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
+                        <Route path="/ai-design-studio" element={<AIDesignStudioPage />} />
+                        <Route path="/ai-computer-vision" element={<AIComputerVisionPage />} />
+                        <Route path="/ai-conversational-ai" element={<AIConversationalAIPage />} />
+                        <Route path="/ai-crm" element={<AICRMPage />} />
+                        <Route path="/ai-customer-insights" element={<AICustomerInsightsPage />} />
+                        <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} />
+                        <Route path="/ai-devops-automation" element={<AIDevOpsAutomationPage />} />
+                        <Route path="/ai-document-intelligence" element={<AIDocumentIntelligencePage />} />
+
+                        {/* Additional IT Services Routes */}
+                        <Route path="/cloud-consulting" element={<CloudConsultingPage />} />
+                        <Route path="/data-center-solutions" element={<DataCenterSolutionsPage />} />
+                        <Route path="/disaster-recovery" element={<DisasterRecoveryPage />} />
+                        <Route path="/it-support" element={<ITSupportPage />} />
+                        <Route path="/managed-services" element={<ManagedServicesPage />} />
+                        <Route path="/security-audit" element={<SecurityAuditPage />} />
+                        <Route path="/technology-consulting" element={<TechnologyConsultingPage />} />
 
                         {/* Catch all route */}
                         <Route path="*" element={
