@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Navigation from './components/Navigation';
@@ -205,10 +206,19 @@ import { Link } from "react-router-dom";
 <<<<<<< HEAD
 import { Brain, Shield, Zap, Globe, ArrowRight, CheckCircle, Star, Users, Award } from "lucide-react";
 import ImageOptimizer from "./components/ImageOptimizer";
+=======
+import React from 'react';
+import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-130f
 
 const HomePage = () => {
   const features = [
     {
+<<<<<<< HEAD
       title: "AI-Powered Solutions",
       description:
         "Cutting-edge artificial intelligence to transform your business operations",
@@ -256,6 +266,57 @@ const HomePage = () => {
   ];
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
+=======
+      icon: <Zap className="w-8 h-8 text-blue-500" />,
+      title: 'AI-Powered Solutions',
+      description: 'Transform your business with our comprehensive AI services including content generation, chatbots, and automation.',
+      benefits: ['AI Content Generation - $500/month', 'AI Chatbots - $300/month', 'AI Automation - $800/month', 'AI Analytics - $400/month'],
+      link: '/ai-services'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-green-500" />,
+      title: 'IT Services & Solutions',
+      description: 'Complete IT infrastructure services including cloud migration, cybersecurity, DevOps, and mobile development.',
+      benefits: ['Cloud Migration - Starting at $2,500', 'Cybersecurity - $1,500/month', 'Mobile Development - Starting at $5,000', 'Data Analytics - $2,000/month'],
+      link: '/it-services'
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-purple-500" />,
+      title: 'Micro SAAS Applications',
+      description: 'Powerful, affordable micro applications designed to solve specific business problems with AI intelligence.',
+      benefits: ['AI Task Manager - $19/month', 'AI Expense Tracker - $15/month', 'AI Password Manager - $12/month', 'AI Invoice Generator - $25/month'],
+      link: '/micro-saas-services'
+    },
+    {
+      icon: <Cloud className="w-8 h-8 text-orange-500" />,
+      title: 'Cloud Services',
+      description: 'Professional cloud services including migration, infrastructure setup, security, and optimization.',
+      benefits: ['Cloud Migration - $1,200/month', 'Infrastructure Setup - $3,000', 'Security Solutions - $800/month', 'Cost Optimization - $500/month'],
+      link: '/cloud-services'
+    },
+    {
+      icon: <Database className="w-8 h-8 text-red-500" />,
+      title: '5G Implementation',
+      description: 'Next-generation connectivity solutions to power your digital transformation with ultra-fast speeds and low latency.',
+      benefits: ['Ultra-Fast Speeds - 10+ Gbps', 'Low Latency - 1ms', 'IoT Integration - 1M+ devices/km²', 'Edge Computing Solutions'],
+      link: '/5g-implementation'
+    },
+    {
+      icon: <Smartphone className="w-8 h-8 text-yellow-500" />,
+      title: 'Digital Transformation',
+      description: 'Transform your business for the digital age with comprehensive digital transformation services.',
+      benefits: ['Process Automation - $2,000/month', 'Digital Workforce - $1,500/month', 'Customer Experience - $1,800/month', 'Data Strategy - $2,500/month'],
+      link: '/digital-transformation'
+    }
+  ]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-130f
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '99%', label: 'Client Satisfaction' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '5+', label: 'Years Experience' }
+  ]
 
   return (
 <<<<<<< HEAD
