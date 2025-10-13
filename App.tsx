@@ -76,6 +76,14 @@ const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-
 const SmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-inventory-smart/page"));
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/ai-financial-crime-detection-pro/page"));
+
+// Zion Pro Solutions Pages
+const ZionAiAnalyticsProPage = React.lazy(() => import("./app/zion-ai-analytics-pro/page"));
+const ZionSecurityShieldProPage = React.lazy(() => import("./app/zion-security-shield-pro/page"));
+const ZionCloudVaultProPage = React.lazy(() => import("./app/zion-cloud-vault-pro/page"));
+const ZionAiCrmProPage = React.lazy(() => import("./app/zion-ai-crm-pro/page"));
+const ZionAiMarketingAutomationProPage = React.lazy(() => import("./app/zion-ai-marketing-automation-pro/page"));
+const ZionAiProjectManagerProPage = React.lazy(() => import("./app/zion-ai-project-manager-pro/page"));
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -174,6 +182,14 @@ function App() {
                                     <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
                                     <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
                                     <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
+
+                                    {/* Zion Pro Solutions */}
+                                    <Route path="/zion-ai-analytics-pro" element={<ZionAiAnalyticsProPage />} />
+                                    <Route path="/zion-security-shield-pro" element={<ZionSecurityShieldProPage />} />
+                                    <Route path="/zion-cloud-vault-pro" element={<ZionCloudVaultProPage />} />
+                                    <Route path="/zion-ai-crm-pro" element={<ZionAiCrmProPage />} />
+                                    <Route path="/zion-ai-marketing-automation-pro" element={<ZionAiMarketingAutomationProPage />} />
+                                    <Route path="/zion-ai-project-manager-pro" element={<ZionAiProjectManagerProPage />} />
 
                                     {/* Catch all route */}
                                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
