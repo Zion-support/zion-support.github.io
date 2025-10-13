@@ -229,6 +229,7 @@ export default function page() {
                 Advanced analytics and insights to drive data-driven decision making
               </p>
             </div>
+          </div>
 
           {/* Pricing Section */}
           <div className="mb-16">
@@ -296,9 +297,7 @@ export default function page() {
             </div>
           </div>
         </div>
-      </div>
-</div>
+      </section>
+    </div>
   );
-};
-
-export default Page;
+}
