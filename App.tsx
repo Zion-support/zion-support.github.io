@@ -76,72 +76,71 @@ function App() {
     <EnhancedErrorBoundary>
       <HelmetProvider>
         <AnalyticsProvider>
-          <PerformanceMonitor className="performance-monitor" />
-          <WebVitalsTracker className="web-vitals-tracker" />
-          <EnhancedAccessibility className="enhanced-accessibility" />
-          <AccessibilityEnhancer>
-            <CoreWebVitals className="core-web-vitals" />
-            <Router>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                        <FuturisticBackground>
-                          <PerformanceOptimizer>
-                            <Navigation />
-                            <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                            <Breadcrumb items={breadcrumbItems} />
-                            
-                            <main className="relative z-10" id="main-content" role="main">
-                              <Suspense fallback={<LoadingStates isLoading={true}><div>Loading...</div></LoadingStates>}>
-                                <Routes>
-                                  {/* Main Pages */}
-                                  <Route path="/" element={<HomePage />} />
-                                  <Route path="/about" element={<AboutPage />} />
-                                  <Route path="/contact" element={<ContactPage />} />
-                                  <Route path="/services" element={<ServicesPage />} />
-                                  <Route path="/privacy" element={<PrivacyPage />} />
-                                  <Route path="/terms" element={<TermsPage />} />
-                                  <Route path="/tutorials" element={<TutorialsPage />} />
-                                  <Route path="/demo" element={<DemoPage />} />
-                                  <Route path="/support" element={<SupportPage />} />
-                                  <Route path="/blog" element={<BlogPage />} />
+          <PerformanceMonitor />
+          <WebVitalsTracker />
+          <EnhancedAccessibility />
+          <AccessibilityEnhancer />
+          <CoreWebVitals />
+          <Router>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+              <FuturisticBackground>
+                <PerformanceOptimizer>
+                  <Navigation />
+                  <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                  <Breadcrumb items={breadcrumbItems} />
+                  
+                  <main className="relative z-10" id="main-content" role="main">
+                    <Suspense fallback={<LoadingStates isLoading={true}><div>Loading...</div></LoadingStates>}>
+                      <Routes>
+                        {/* Main Pages */}
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/services" element={<ServicesPage />} />
+                        <Route path="/privacy" element={<PrivacyPage />} />
+                        <Route path="/terms" element={<TermsPage />} />
+                        <Route path="/tutorials" element={<TutorialsPage />} />
+                        <Route path="/demo" element={<DemoPage />} />
+                        <Route path="/support" element={<SupportPage />} />
+                        <Route path="/blog" element={<BlogPage />} />
 
-                                  {/* AI Services */}
-                                  <Route path="/ai-services" element={<AIServicesPage />} />
-                                  <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
-                                  <Route path="/ai-automation" element={<AIAutomationPage />} />
-                                  <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
-                                  <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-                                  <Route path="/ai-customer-service" element={<AICustomerServicePage />} />
-                                  <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
-                                  <Route path="/ai-email-automation" element={<AIEmailAutomationPage />} />
-                                  <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
-                                  <Route path="/ai-healthcare" element={<AIHealthcarePage />} />
-                                  <Route path="/ai-marketing" element={<AIMarketingPage />} />
-                                  <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
-                                  <Route path="/ai-project-management" element={<AIProjectManagementPage />} />
+                        {/* AI Services */}
+                        <Route path="/ai-services" element={<AIServicesPage />} />
+                        <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
+                        <Route path="/ai-automation" element={<AIAutomationPage />} />
+                        <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
+                        <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
+                        <Route path="/ai-customer-service" element={<AICustomerServicePage />} />
+                        <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
+                        <Route path="/ai-email-automation" element={<AIEmailAutomationPage />} />
+                        <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
+                        <Route path="/ai-healthcare" element={<AIHealthcarePage />} />
+                        <Route path="/ai-marketing" element={<AIMarketingPage />} />
+                        <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
+                        <Route path="/ai-project-management" element={<AIProjectManagementPage />} />
 
-                                  {/* 5G Solutions */}
-                                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                                  <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
-                                  <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
-                                  <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
-                                  <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
-                                  <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitiesPage />} />
+                        {/* 5G Solutions */}
+                        <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                        <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
+                        <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+                        <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
+                        <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+                        <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitiesPage />} />
 
-                                  {/* Cloud Infrastructure */}
-                                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                        {/* Cloud Infrastructure */}
+                        <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
 
-                                  {/* Catch all route */}
-                                  <Route path="*" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-white">404 - Page Not Found</h1></div>} />
-                                </Routes>
-                              </Suspense>
-                            </main>
-                            
-                            <Footer />
-                          </PerformanceOptimizer>
-                        </FuturisticBackground>
-                      </div>
-                    </Router>
-            </AccessibilityEnhancer>
+                        {/* Catch all route */}
+                        <Route path="*" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-white">404 - Page Not Found</h1></div>} />
+                      </Routes>
+                    </Suspense>
+                  </main>
+                  
+                  <Footer />
+                </PerformanceOptimizer>
+              </FuturisticBackground>
+            </div>
+          </Router>
         </AnalyticsProvider>
       </HelmetProvider>
     </EnhancedErrorBoundary>
