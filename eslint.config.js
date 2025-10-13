@@ -37,7 +37,10 @@ export default tseslint.config(
       "backup-unused-components/**",
 
 
+
       "corrupted-src-backup/**",
+
+
 
 
 
@@ -72,7 +75,10 @@ export default tseslint.config(
 
 
 
+
       "*.js"
+
+
 
     ],
   }

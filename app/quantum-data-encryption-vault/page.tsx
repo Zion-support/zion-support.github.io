@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
+
 export default function PageTsxPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -29,6 +30,8 @@ export default function PageTsxPage() {
       
 
 
+
+
 export default function QuantumDataEncryptionVault() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900">
@@ -42,7 +45,7 @@ export default function QuantumDataEncryptionVault() {
             Quantum Data Encryption Vault
           </h1>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Protect your most sensitive data with quantum-grade encryption and zero-knowledge architecture. 
+            Protect your most sensitive data with quantum-grade encryption and zero-knowledge architecture.
             Start your quantum security journey today.
           </p>
           <div className="flex justify-center space-x-4">
@@ -53,6 +56,9 @@ export default function QuantumDataEncryptionVault() {
               Learn More
             </button>
           </div>
+
+
+
 
 
         </div>

@@ -1,9 +1,9 @@
 import React from 'react';
-
 interface FuturistictextProps {
   className?: string;
   children?: React.ReactNode;
 }
+
 
 
 export default function Futuristictext({ className = '', children }: FuturistictextProps) {
@@ -15,6 +15,11 @@ export default function Futuristictext({ className = '', children, ...props }: F
   return (
     <div className={`futuristic-text ${className}`} {...props}>
 
+
+
+export default function Futuristictext({ className = '', children, ...props }: FuturistictextProps) {
+  return (
+    <div className={`futuristic-text ${className}`} {...props}>
 
       {children}
     </div>

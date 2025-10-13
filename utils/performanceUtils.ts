@@ -1,3 +1,4 @@
+
 export interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -15,11 +16,19 @@ export class PerformanceUtils {
 
   measureLoadTime() {
 
+interface PerformanceConfig {
+  enabled: boolean;
+  monitoring: boolean;
+  optimization: boolean;
+}
+
+
     if (typeof window !== 'undefined' && window.performance) {
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
     }
   }
+
 
   measureRenderTime() {
     if (typeof window !== 'undefined' && window.performance) {
@@ -74,6 +83,39 @@ export class PerformanceUtils {
       fps: 0
     };
   }
+
+  constructor(config: Partial<PerformanceConfig> = {}) {
+    this.config = {
+      enabled: true,
+      monitoring: true,
+      optimization: true,
+      ...config
+    };
+  }
+
+  init(): void {
+    if (this.config.enabled) {
+      console.log('Performance utils initialized');
+    }
+  }
+
+  measurePerformance(name: string, fn: () => void): void {
+    if (this.config.monitoring) {
+      const start = performance.now();
+      fn();
+      const end = performance.now();
+      console.log(`${name} took ${end - start} milliseconds`);
+    } else {
+      fn();
+    }
+  }
+
+  optimizeImages(): void {
+    if (this.config.optimization) {
+      console.log('Optimizing images...');
+    }
+  }
+
 }
 
 export default PerformanceUtils;

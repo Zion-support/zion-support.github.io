@@ -1,5 +1,9 @@
+
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
+
+
+import React, { useState, useRef, useEffect } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -12,7 +16,11 @@ interface OptimizedImageProps {
   onError?: () => void;
 }
 
+
 export default function OptimizedImage({
+
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+
   src,
   alt,
   className = '',
@@ -25,12 +33,26 @@ export default function OptimizedImage({
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
+
   const handleLoad = useCallback(() => {
     setIsLoaded(true);
     onLoad?.();
   }, [onLoad]);
 
   const handleError = useCallback(() => {
+
+  const imgRef = useRef<HTMLImageElement>(null);
+  useEffect(() => {
+    if (imgRef.current?.complete) {
+      setIsLoaded(true);
+    }
+  }, []);
+  const handleLoad = () => {
+    setIsLoaded(true);
+    onLoad?.();
+  };
+  const handleError = () => {
+
     setHasError(true);
     onError?.();
   }, [onError]);
@@ -39,7 +61,6 @@ export default function OptimizedImage({
     width: width ? `${width}px` : undefined,
     height: height ? `${height}px` : undefined,
   };
-
   if (hasError) {
     return (
       <div 
@@ -50,7 +71,6 @@ export default function OptimizedImage({
       </div>
     );
   }
-
   return (
     <div className={`relative ${className}`} style={containerStyle}>
       {!isLoaded && (
@@ -71,4 +91,9 @@ export default function OptimizedImage({
       />
     </div>
   );
+
 }
+
+};
+export default OptimizedImage;
+

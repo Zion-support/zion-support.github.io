@@ -1,3 +1,4 @@
+
 export interface SEOConfig {
   title: string;
   description: string;
@@ -24,6 +25,14 @@ export class SEOUtils {
   constructor(config: SEOConfig) {
     this.config = config;
   }
+
+interface SeoConfig {
+  enabled: boolean;
+  metaTags: boolean;
+  structuredData: boolean;
+}
+
+
 
 
 
@@ -121,6 +130,20 @@ export class SEOUtils {
         document.head.appendChild(meta);
       }
       meta.setAttribute('content', this.config.twitterCard);
+
+  constructor(config: Partial<SeoConfig> = {}) {
+    this.config = {
+      enabled: true,
+      metaTags: true,
+      structuredData: true,
+      ...config
+    };
+  }
+
+  init(): void {
+    if (this.config.enabled) {
+      console.log('SEO utils initialized');
+
     }
   }
 
@@ -150,12 +173,15 @@ export class SEOUtils {
 
   }
 
+
       canonical: this.config.canonical,
       'og:title': this.config.title,
       'og:description': this.config.description,
       'og:image': this.config.ogImage,
     };
   }
+
+
 
 }
 
