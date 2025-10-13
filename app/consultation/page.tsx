@@ -124,6 +124,26 @@ export default function Consultation() {
   const timelines = [
     "Immediate (1-3 months)", "Short-term (3-6 months)", "Medium-term (6-12 months)", "Long-term (12+ months)"
   ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Free Consultation - Zion Tech Group</title>
+        <meta name="description" content="Get a free consultation for your AI and IT needs. Our experts will help you find the perfect solution." />
+        <meta name="keywords" content="free consultation, AI consultation, IT consultation, tech advice, business solutions" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Free Consultation
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Get expert advice on your AI and IT needs. Our team will help you find the perfect solution for your business.
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );

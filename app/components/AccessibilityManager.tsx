@@ -58,6 +58,10 @@ const AccessibilityManager: React.FC = () => {
         reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
       };
     }
+    
+    return () => {
+      // Cleanup function for when component unmounts
+    };
   }, []);
 
   useEffect(() => {
@@ -109,7 +113,7 @@ const AccessibilityManager: React.FC = () => {
 
   return (
     <div className="accessibility-manager">
-      <style jsx>{`
+      <style>{`
         .accessibility-manager {
           position: fixed;
           top: 20px;

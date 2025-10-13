@@ -19,13 +19,18 @@ const CacheManager = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    const registerServiceWorker = async () => {
+      if ('serviceWorker' in navigator) {
+        try {
+          const registration = await navigator.serviceWorker.register('/sw.js');
           console.log('Service Worker registered:', registration);
-
         } catch (error) {
           console.error('Service Worker registration failed:', error);
         }
       }
-    }
+    };
+
+    registerServiceWorker();
 
     // Cache API for dynamic caching
     const setupCacheStrategy = () => {
@@ -44,40 +49,46 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
+        } catch (error) {
+          console.error('Failed to cache static assets:', error);
         }
       }
 
       // Cache API responses
       const cacheAPIResponses = async (request: Request) => {
         try {
-          const cache = await caches.open(CACHE_NAME)
-          const response = await fetch(request)
+          const cache = await caches.open(CACHE_NAME);
+          const response = await fetch(request);
           
           if (response.ok) {
-            cache.put(request, response.clone())
+            cache.put(request, response.clone());
           }
           
-          return response
+          return response;
+        } catch (error) {
+          console.error('Failed to cache API response:', error);
           return fetch(request);
         }
       }
 
       // Initialize caching
-      cacheStaticAssets()
+      cacheStaticAssets();
 
       // Intercept fetch requests for caching
-      const originalFetch = window.fetch
+      const originalFetch = window.fetch;
       window.fetch = async (input, init) => {
-        const request = new Request(input, init)
+        const request = new Request(input, init);
         
         // Check if request should be cached
         if (request.url.includes('/api/') || request.url.includes('/data/')) {
-          return cacheAPIResponses(request)
+          return cacheAPIResponses(request);
         }
         
-        return originalFetch(input, init)
-      }
-    }
+        return originalFetch(input, init);
+      };
+    };
+
+    setupCacheStrategy();
 
     // Memory management for large objects
     const setupMemoryManagement = () => {
@@ -99,29 +110,40 @@ const CacheManager = () => {
 
       // Cleanup on page unload
       window.addEventListener('beforeunload', () => {
-        clearInterval(cleanupInterval)
-      })
-    }
+        clearInterval(cleanupInterval);
+      });
+    };
+
+    setupMemoryManagement();
 
     // Image lazy loading with intersection observer
     const setupLazyLoading = () => {
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement
+            const img = entry.target as HTMLImageElement;
             if (img.dataset.src) {
-              img.src = img.dataset.src
-              img.classList.remove('lazy')
-              imageObserver.unobserve(img)
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+              imageObserver.unobserve(img);
             }
           }
+        });
+      });
+
+      // Observe all lazy images
+      document.querySelectorAll('img[data-src]').forEach(img => {
+        imageObserver.observe(img);
+      });
+    };
+
     // Only run in development
-    if (process.env.NODE_ENV !== 'development') return
+    if (process.env.NODE_ENV !== 'development') return;
 
     const updateStats = () => {
       if ('caches' in window) {
         caches.keys().then(cacheNames => {
-          let totalSize = 0
+          let totalSize = 0;
           Promise.all(
             cacheNames.map(cacheName =>
               caches.open(cacheName).then(cache =>
@@ -130,9 +152,9 @@ const CacheManager = () => {
                     requests.map(request =>
                       cache.match(request).then(response => {
                         if (response) {
-                          const contentLength = response.headers.get('content-length')
+                          const contentLength = response.headers.get('content-length');
                           if (contentLength) {
-                            totalSize += parseInt(contentLength, 10)
+                            totalSize += parseInt(contentLength, 10);
                           }
                         }
                       })
@@ -145,17 +167,17 @@ const CacheManager = () => {
             setStats(prev => ({
               ...prev,
               size: totalSize
-            }))
-          })
-        })
+            }));
+          });
+        });
       }
-    }
+    };
 
-    updateStats()
-    const interval = setInterval(updateStats, 5000)
+    updateStats();
+    const interval = setInterval(updateStats, 5000);
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   // Toggle visibility with keyboard shortcut (Ctrl+Shift+C)
   useEffect(() => {
@@ -249,4 +271,4 @@ const CacheManager = () => {
   )
 }
 
-export default CacheManager
+export default CacheManager;
