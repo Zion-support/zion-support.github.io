@@ -997,6 +997,151 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "zion-ai-voice-assistant-pro",
+      name: "Zion AI Voice Assistant Pro",
+      description: "Advanced voice AI with natural language processing, multi-language support, and voice cloning",
+      price: "From $299/month",
+      originalPrice: "$499/month",
+      discount: "40% OFF",
+      icon: <Mic className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "Natural language processing",
+        "50+ language support",
+        "Voice cloning technology",
+        "Real-time analytics",
+        "Integration ready",
+        "Enterprise security"
+      ],
+      benefits: [
+        "99.9% accuracy rate",
+        "24/7 availability",
+        "80% cost reduction",
+        "Enhanced customer experience"
+      ],
+      category: "AI",
+      rating: 4.9,
+      reviews: 1456,
+      link: "/zion-ai-voice-assistant-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-image-recognition-pro",
+      name: "Zion AI Image Recognition Pro",
+      description: "Advanced computer vision with 99.8% accuracy, real-time processing, and custom model training",
+      price: "From $199/month",
+      originalPrice: "$349/month",
+      discount: "43% OFF",
+      icon: <Eye className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "Advanced computer vision",
+        "Real-time processing",
+        "Multi-object detection",
+        "Custom model training",
+        "API integration",
+        "Enterprise security"
+      ],
+      benefits: [
+        "99.8% accuracy rate",
+        "30ms processing speed",
+        "1000+ object classes",
+        "24/7 API availability"
+      ],
+      category: "AI",
+      rating: 4.8,
+      reviews: 1234,
+      link: "/zion-ai-image-recognition-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-fraud-detection-pro",
+      name: "Zion AI Fraud Detection Pro",
+      description: "AI-powered fraud prevention with 99.9% accuracy, real-time monitoring, and machine learning",
+      price: "From $399/month",
+      originalPrice: "$699/month",
+      discount: "43% OFF",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Real-time detection",
+        "Machine learning models",
+        "Behavioral analysis",
+        "Risk scoring",
+        "API integration",
+        "Compliance ready"
+      ],
+      benefits: [
+        "99.9% detection accuracy",
+        "30ms response time",
+        "85% fraud reduction",
+        "24/7 monitoring"
+      ],
+      category: "Security",
+      rating: 4.9,
+      reviews: 1876,
+      link: "/zion-ai-fraud-detection-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-climate-solutions-pro",
+      name: "Zion AI Climate Solutions Pro",
+      description: "AI-powered climate intelligence with carbon tracking, sustainability reporting, and environmental monitoring",
+      price: "From $299/month",
+      originalPrice: "$499/month",
+      discount: "40% OFF",
+      icon: <Leaf className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Climate data analytics",
+        "Carbon footprint tracking",
+        "Predictive weather modeling",
+        "Sustainability reporting",
+        "Energy optimization",
+        "Global monitoring"
+      ],
+      benefits: [
+        "40% carbon reduction",
+        "95% weather accuracy",
+        "$2M+ annual savings",
+        "100% ESG compliance"
+      ],
+      category: "Sustainability",
+      rating: 4.8,
+      reviews: 1123,
+      link: "/zion-ai-climate-solutions-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-quantum-computing-pro",
+      name: "Zion AI Quantum Computing Pro",
+      description: "Access to quantum computers with 1000+ qubits, quantum algorithms, and hybrid computing solutions",
+      price: "From $999/month",
+      originalPrice: "$1,999/month",
+      discount: "50% OFF",
+      icon: <Atom className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Quantum processing",
+        "Quantum algorithms",
+        "Hybrid computing",
+        "Quantum security",
+        "Real-time simulation",
+        "Global access"
+      ],
+      benefits: [
+        "1000+ qubits available",
+        "1000x processing speed",
+        "50+ quantum algorithms",
+        "24/7 global access"
+      ],
+      category: "Quantum",
+      rating: 4.9,
+      reviews: 567,
+      link: "/zion-ai-quantum-computing-pro",
+      featured: true
     }
   ];
 
