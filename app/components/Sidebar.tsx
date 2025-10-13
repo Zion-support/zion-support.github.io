@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { X } from 'lucide-react';
-=======
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { 
@@ -24,7 +20,6 @@ import {
   Mail,
   MapPin
 } from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 
 interface SidebarProps {
   isOpen: boolean;
@@ -32,32 +27,74 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const location = useLocation();
+
+  const toggleSection = useCallback((section: string) => {
+    setExpandedSections(prev => 
+      prev.includes(section) 
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
+    );
+  }, []);
+
+  const isActive = useCallback((path: string) => {
+    return location.pathname === path;
+  }, [location.pathname]);
+
+  const navigationItems = useMemo(() => [
+    {
+      name: 'Home',
+      path: '/',
+      icon: <Home className="w-5 h-5" />
+    },
+    {
+      name: 'About',
+      path: '/about',
+      icon: <Users className="w-5 h-5" />
+    },
+    {
+      name: 'Services',
+      path: '/services',
+      icon: <Settings className="w-5 h-5" />,
+      children: [
+        {
+          name: 'AI Services',
+          path: '/ai-services',
+          icon: <Brain className="w-4 h-4" />
+        },
+        {
+          name: 'IT Services',
+          path: '/services',
+          icon: <Shield className="w-4 h-4" />
+        },
+        {
+          name: '5G Solutions',
+          path: '/5g-solutions',
+          icon: <Zap className="w-4 h-4" />
+        },
+        {
+          name: 'Micro SAAS',
+          path: '/micro-saas',
+          icon: <Code className="w-4 h-4" />
+        }
+      ]
+    },
+    {
+      name: 'Blog',
+      path: '/blog',
+      icon: <Code className="w-5 h-5" />
+    },
+    {
+      name: 'Contact',
+      path: '/contact',
+      icon: <Phone className="w-5 h-5" />
+    }
+  ], []);
+
   if (!isOpen) return null;
 
   return (
-<<<<<<< HEAD
-    <div className="fixed inset-0 z-50 md:hidden">
-      <div className="fixed inset-0 bg-black/50" onClick={onClose} />
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-md border-l border-cyan-500/20">
-        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
-          <h2 className="text-lg font-semibold text-white">Menu</h2>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        <div className="p-4">
-          <p className="text-gray-300">Sidebar content goes here</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Sidebar;
-=======
     <>
       {/* Overlay */}
       <div 
@@ -80,179 +117,103 @@ export default Sidebar;
             </div>
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/10"
+              className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
             >
-              <X className="w-5 h-5" />
+              <X className="w-6 h-6" />
             </button>
           </div>
 
-          {/* Main Navigation */}
-          <div className="space-y-2 mb-8">
-            {mainNavItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-300 ${
-                  isActive(item.path)
-                    ? 'bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 border-l-2 border-cyan-400'
-                    : 'text-gray-300 hover:bg-white/10 hover:text-white'
-                }`}
-                onClick={onClose}
-              >
-                {item.icon}
-                <span className="font-medium">{item.name}</span>
-              </Link>
-            ))}
-          </div>
-
-          {/* AI Services Section */}
-          <div className="mb-6">
-            <button
-              onClick={() => toggleSection('ai-services')}
-              className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium text-left"
-            >
-              <div className="flex items-center space-x-3">
-                <Brain className="w-4 h-4" />
-                <span>AI Services</span>
-              </div>
-              {expandedSections.has('ai-services') ? (
-                <ChevronDown className="w-4 h-4" />
-              ) : (
-                <ChevronRight className="w-4 h-4" />
-              )}
-            </button>
-            
-            {expandedSections.has('ai-services') && (
-              <div className="ml-6 mt-2 space-y-1">
-                {aiServices.map((service) => (
-                  <Link
-                    key={service.name}
-                    to={service.path}
-                    className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
-                      isActive(service.path)
-                        ? 'bg-cyan-500/10 text-cyan-400'
-                        : 'text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/5'
-                    }`}
-                    onClick={onClose}
-                  >
-                    {service.icon}
-                    <span className="text-sm">{service.name}</span>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* IT Services Section */}
-          <div className="mb-6">
-            <button
-              onClick={() => toggleSection('it-services')}
-              className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium text-left"
-            >
-              <div className="flex items-center space-x-3">
-                <Settings className="w-4 h-4" />
-                <span>IT Services</span>
-              </div>
-              {expandedSections.has('it-services') ? (
-                <ChevronDown className="w-4 h-4" />
-              ) : (
-                <ChevronRight className="w-4 h-4" />
-              )}
-            </button>
-            
-            {expandedSections.has('it-services') && (
-              <div className="ml-6 mt-2 space-y-1">
-                {itServices.map((service) => (
-                  <Link
-                    key={service.name}
-                    to={service.path}
-                    className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
-                      isActive(service.path)
-                        ? 'bg-green-500/10 text-green-400'
-                        : 'text-gray-400 hover:text-green-400 hover:bg-green-500/5'
-                    }`}
-                    onClick={onClose}
-                  >
-                    {service.icon}
-                    <span className="text-sm">{service.name}</span>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Micro SAAS Section */}
-          <div className="mb-6">
-            <button
-              onClick={() => toggleSection('micro-saas')}
-              className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 font-medium text-left"
-            >
-              <div className="flex items-center space-x-3">
-                <Zap className="w-4 h-4" />
-                <span>Micro SAAS</span>
-              </div>
-              {expandedSections.has('micro-saas') ? (
-                <ChevronDown className="w-4 h-4" />
-              ) : (
-                <ChevronRight className="w-4 h-4" />
-              )}
-            </button>
-            
-            {expandedSections.has('micro-saas') && (
-              <div className="ml-6 mt-2 space-y-1">
-                {microSaasServices.map((service) => (
-                  <Link
-                    key={service.name}
-                    to={service.path}
-                    className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
-                      isActive(service.path)
-                        ? 'bg-purple-500/10 text-purple-400'
-                        : 'text-gray-400 hover:text-purple-400 hover:bg-purple-500/5'
-                    }`}
-                    onClick={onClose}
-                  >
-                    {service.icon}
-                    <div className="flex-1 flex items-center justify-between">
-                      <span className="text-sm">{service.name}</span>
-                      {service.featured && (
-                        <Star className="w-3 h-3 text-yellow-400 fill-current" />
+          {/* Navigation */}
+          <nav className="space-y-2">
+            {navigationItems.map((item) => (
+              <div key={item.name}>
+                {item.children ? (
+                  <div>
+                    <button
+                      onClick={() => toggleSection(item.name)}
+                      className="w-full flex items-center justify-between px-4 py-3 text-left text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
+                    >
+                      <div className="flex items-center space-x-3">
+                        {item.icon}
+                        <span>{item.name}</span>
+                      </div>
+                      {expandedSections.includes(item.name) ? (
+                        <ChevronDown className="w-4 h-4" />
+                      ) : (
+                        <ChevronRight className="w-4 h-4" />
                       )}
-                    </div>
+                    </button>
+                    {expandedSections.includes(item.name) && (
+                      <div className="ml-6 mt-2 space-y-1">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.path}
+                            to={child.path}
+                            onClick={onClose}
+                            className={`flex items-center space-x-3 px-4 py-2 text-sm rounded-lg transition-colors ${
+                              isActive(child.path)
+                                ? 'text-cyan-400 bg-cyan-500/10'
+                                : 'text-gray-400 hover:text-white hover:bg-white/10'
+                            }`}
+                          >
+                            {child.icon}
+                            <span>{child.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.path}
+                    onClick={onClose}
+                    className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
+                      isActive(item.path)
+                        ? 'text-cyan-400 bg-cyan-500/10'
+                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                    }`}
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
                   </Link>
-                ))}
+                )}
               </div>
-            )}
+            ))}
+          </nav>
+
+          {/* CTA Button */}
+          <div className="mt-8 pt-6 border-t border-gray-700">
+            <Link
+              to="/contact"
+              onClick={onClose}
+              className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center space-x-2"
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
 
           {/* Contact Info */}
-          <div className="border-t border-white/10 pt-6">
-            <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Contact Info</h4>
+          <div className="mt-8 pt-6 border-t border-gray-700">
             <div className="space-y-3">
-              {contactInfo.map((info, index) => (
-                <div key={index} className="flex items-center space-x-3 text-sm text-gray-300">
-                  <div className="w-5 h-5 text-cyan-400">{info.icon}</div>
-                  <span>{info.text}</span>
-                </div>
-              ))}
+              <div className="flex items-center space-x-3 text-sm text-gray-400">
+                <Mail className="w-4 h-4" />
+                <span>contact@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3 text-sm text-gray-400">
+                <Phone className="w-4 h-4" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center space-x-3 text-sm text-gray-400">
+                <MapPin className="w-4 h-4" />
+                <span>New York, NY</span>
+              </div>
             </div>
-          </div>
-
-          {/* CTA Button */}
-          <div className="mt-6">
-            <Link
-              to="/consultation"
-              className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
-              onClick={onClose}
-            >
-              <span>Get Started</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Sidebar
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
+export default Sidebar;

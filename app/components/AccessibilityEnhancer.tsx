@@ -2,13 +2,6 @@ import React, { useEffect, useRef } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
-<<<<<<< HEAD
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-=======
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
@@ -20,7 +13,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableScreenReader = true,
   enableHighContrast = false
 }) => {
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
   useEffect(() => {
     // Enhanced keyboard navigation
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -164,71 +156,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Reduced motion detection
     const handleReducedMotion = () => {
-<<<<<<< HEAD
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.body.classList.add('reduced-motion');
-      } else {
-        document.body.classList.remove('reduced-motion');
-      }
-    };
-
-    // Initialize accessibility features
-    addAriaLabels();
-    handleHighContrast();
-    handleReducedMotion();
-    manageFocus();
-
-    // Set up event listeners
-    document.addEventListener('keydown', handleKeyDown);
-    
-    const highContrastMedia = window.matchMedia('(prefers-contrast: high)');
-    const reducedMotionMedia = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
-    highContrastMedia.addEventListener('change', handleHighContrast);
-    reducedMotionMedia.addEventListener('change', handleReducedMotion);
-
-    // Cleanup
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      highContrastMedia.removeEventListener('change', handleHighContrast);
-      reducedMotionMedia.removeEventListener('change', handleReducedMotion);
-      cleanupFunctions.forEach(cleanup => cleanup());
-    };
-  }, []);
-
-  // Screen reader announcements
-  const announceToScreenReader = (message: string) => {
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    
-    document.body.appendChild(announcement);
-    
-    setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
-  };
-
-  // Expose announcement function globally for use by other components
-  useEffect(() => {
-    (window as any).announceToScreenReader = announceToScreenReader;
-    
-    return () => {
-      delete (window as any).announceToScreenReader;
-    };
-  }, []);
-
-  return (
-    <div ref={containerRef} className="accessibility-enhanced">
-      {children}
-    </div>
-  );
-};
-
-export default AccessibilityEnhancer;
-=======
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
       
       const handleMotionChange = (e: MediaQueryListEvent) => {
@@ -433,4 +360,3 @@ export default AccessibilityEnhancer;
 };
 
 export default AccessibilityEnhancer;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
