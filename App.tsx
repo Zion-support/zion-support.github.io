@@ -475,7 +475,10 @@ function App() {
                     <WebVitalsTracker />
                     <PerformanceEnhancer />
                     <SEOOptimizer />
-                    <EnhancedSEO />
+                    <EnhancedSEO 
+                      title="Zion Tech Group - Advanced AI and IT Solutions"
+                      description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
+                    />
                   </div>
                 </AnalyticsProvider>
               </div>
