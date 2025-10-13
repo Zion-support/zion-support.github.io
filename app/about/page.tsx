@@ -1,12 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, Brain, Shield, Users, Award } from 'lucide-react';
-
-=======
 import { ArrowRight, Brain, Shield, Users } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6995
 
 export default function AboutPage() {
   const teamMembers = [
