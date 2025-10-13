@@ -23,7 +23,11 @@ import {
   Rocket,
   Mail,
   Phone,
-  MapPin
+  MapPin,
+  Activity,
+  Wifi,
+  Server,
+  HardDrive
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackground from '../components/FuturisticBackground';
@@ -31,107 +35,107 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const AIQuantumComputingPage = () => {
+const AdvancedEdgeComputingPage = () => {
   const features = [
     {
-      title: "Quantum Machine Learning",
-      description: "Revolutionary quantum algorithms for machine learning that process data exponentially faster than classical computers",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      benefits: ["1000x faster processing", "Exponential speedup", "Quantum advantage"]
-    },
-    {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum principles for ultimate data security and communication protection",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Ultra-Low Latency Processing",
+      description: "Process data at the edge with sub-millisecond latency for real-time applications and critical operations",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
-      benefits: ["Unbreakable encryption", "Quantum key distribution", "Future-proof security"]
+      benefits: ["<1ms latency", "Real-time processing", "Local data handling"]
     },
     {
-      title: "Quantum Optimization",
-      description: "Solve complex optimization problems in logistics, finance, and resource allocation with quantum algorithms",
-      icon: <Target className="w-8 h-8" />,
+      title: "AI-Powered Edge Intelligence",
+      description: "Deploy machine learning models directly on edge devices for intelligent decision-making without cloud dependency",
+      icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
-      benefits: ["Complex problem solving", "Optimal solutions", "Massive scale optimization"]
+      benefits: ["Local AI inference", "Offline capabilities", "Privacy protection"]
     },
     {
-      title: "Quantum Simulation",
-      description: "Simulate molecular structures, chemical reactions, and materials at quantum level for drug discovery and materials science",
-      icon: <Cpu className="w-8 h-8" />,
+      title: "Distributed Edge Network",
+      description: "Build resilient, distributed computing networks that automatically scale and self-heal across multiple edge locations",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      benefits: ["Auto-scaling", "Self-healing", "Global distribution"]
+    },
+    {
+      title: "Edge Security & Compliance",
+      description: "Comprehensive security framework with zero-trust architecture and compliance with industry standards",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
-      benefits: ["Molecular simulation", "Drug discovery", "Materials science"]
+      benefits: ["Zero-trust security", "Data encryption", "Compliance ready"]
     }
   ];
 
   const useCases = [
     {
-      industry: "Financial Services",
-      description: "Portfolio optimization, risk analysis, fraud detection, and high-frequency trading with quantum algorithms",
-      icon: <BarChart3 className="w-6 h-6" />,
-      results: "40% better portfolio returns, 99.9% fraud detection accuracy"
+      industry: "Autonomous Vehicles",
+      description: "Real-time decision making for autonomous vehicles with edge AI processing for safety-critical applications",
+      icon: <Car className="w-6 h-6" />,
+      results: "99.9% uptime, <10ms response time"
     },
     {
-      industry: "Healthcare & Pharmaceuticals",
-      description: "Drug discovery, protein folding, genetic analysis, and personalized medicine development",
-      icon: <Users className="w-6 h-6" />,
-      results: "10x faster drug discovery, 95% accuracy in protein prediction"
+      industry: "Smart Manufacturing",
+      description: "Industrial IoT with edge computing for predictive maintenance, quality control, and process optimization",
+      icon: <Cog className="w-6 h-6" />,
+      results: "40% reduction in downtime, 60% cost savings"
     },
     {
-      industry: "Logistics & Supply Chain",
-      description: "Route optimization, inventory management, demand forecasting, and supply chain resilience",
-      icon: <Globe className="w-6 h-6" />,
-      results: "60% cost reduction, 50% faster delivery times"
+      industry: "Healthcare & Telemedicine",
+      description: "Real-time patient monitoring, medical imaging analysis, and emergency response systems at the edge",
+      icon: <Heart className="w-6 h-6" />,
+      results: "50% faster diagnosis, 90% accuracy improvement"
     },
     {
-      industry: "Energy & Climate",
-      description: "Climate modeling, renewable energy optimization, carbon capture, and grid management",
-      icon: <Lightbulb className="w-6 h-6" />,
-      results: "30% energy efficiency improvement, 25% carbon footprint reduction"
+      industry: "Retail & Smart Cities",
+      description: "Smart retail analytics, traffic management, and public safety systems powered by edge computing",
+      icon: <Building className="w-6 h-6" />,
+      results: "300% efficiency gain, 80% cost reduction"
     }
   ];
 
   const pricing = [
     {
-      plan: "Quantum Starter",
-      price: "$2,999",
+      plan: "Edge Starter",
+      price: "$1,499",
       period: "per month",
-      description: "Perfect for small businesses exploring quantum computing",
+      description: "Perfect for small businesses starting with edge computing",
       features: [
-        "5 quantum computing hours/month",
-        "Basic quantum algorithms",
+        "Up to 5 edge nodes",
+        "Basic AI models",
         "Standard support",
-        "API access",
-        "Documentation"
+        "Cloud integration",
+        "Basic monitoring"
       ],
       popular: false
     },
     {
-      plan: "Quantum Professional",
-      price: "$9,999",
+      plan: "Edge Professional",
+      price: "$5,999",
       period: "per month",
-      description: "Ideal for mid-size companies with complex optimization needs",
+      description: "Ideal for growing companies with complex edge requirements",
       features: [
-        "25 quantum computing hours/month",
-        "Advanced quantum algorithms",
+        "Up to 25 edge nodes",
+        "Advanced AI models",
         "Priority support",
         "Custom integrations",
-        "Training sessions",
-        "Performance analytics"
+        "Advanced monitoring",
+        "SLA guarantee"
       ],
       popular: true
     },
     {
-      plan: "Quantum Enterprise",
-      price: "$29,999",
+      plan: "Edge Enterprise",
+      price: "$19,999",
       period: "per month",
-      description: "For large enterprises requiring maximum quantum computing power",
+      description: "For large enterprises requiring maximum edge computing power",
       features: [
-        "Unlimited quantum computing hours",
-        "All quantum algorithms",
+        "Unlimited edge nodes",
+        "Custom AI development",
         "24/7 dedicated support",
-        "Custom development",
-        "On-site training",
-        "SLA guarantee",
+        "On-premise deployment",
+        "Full customization",
+        "Training included",
         "White-label solutions"
       ],
       popular: false
@@ -139,44 +143,44 @@ const AIQuantumComputingPage = () => {
   ];
 
   const stats = [
-    { number: "1000x", label: "Faster Processing", icon: <Zap className="w-6 h-6" /> },
-    { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
-    { number: "50+", label: "Quantum Algorithms", icon: <Brain className="w-6 h-6" /> },
-    { number: "24/7", label: "Expert Support", icon: <Users className="w-6 h-6" /> }
+    { number: "<1ms", label: "Latency", icon: <Zap className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
+    { number: "100+", label: "Edge Locations", icon: <Globe className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="AI Quantum Computing Solutions | Zion Tech Group - Revolutionary Quantum AI"
-        description="Transform your business with quantum computing and AI. Unprecedented processing power, unbreakable security, and exponential speedup for complex problems. Get started today!"
-        keywords="quantum computing, quantum AI, quantum machine learning, quantum cryptography, quantum optimization, quantum simulation, quantum algorithms, quantum security"
-        canonical="https://ziontechgroup.com/ai-quantum-computing"
+        title="Advanced Edge Computing Solutions | Zion Tech Group - Ultra-Low Latency Processing"
+        description="Transform your business with advanced edge computing. Ultra-low latency processing, AI-powered edge intelligence, and distributed networks. Reduce latency by 99% today!"
+        keywords="edge computing, low latency, edge AI, distributed computing, IoT, real-time processing, edge analytics, edge security, 5G edge"
+        canonical="https://ziontechgroup.com/advanced-edge-computing"
       />
       <FuturisticBackground />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
-            <span className="text-purple-400 text-sm font-medium">Revolutionary Quantum AI Technology</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
+            <Sparkles className="w-4 h-4 text-green-400 mr-2" />
+            <span className="text-green-400 text-sm font-medium">Ultra-Low Latency Edge Computing</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">
-              Quantum Computing Meets AI
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400">
+              Advanced Edge Computing
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience the future of computing with our quantum AI solutions. 
-            Unprecedented processing power, unbreakable security, and exponential speedup for your most complex challenges.
+            Process data at the edge with sub-millisecond latency. Deploy AI models locally, 
+            reduce cloud dependency, and build resilient distributed networks that scale automatically.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -186,7 +190,7 @@ const AIQuantumComputingPage = () => {
               size="lg"
               icon={<ArrowRight className="w-5 h-5" />}
             >
-              Start Quantum Journey
+              Start Edge Journey
             </FuturisticButton>
             <FuturisticButton
               href="#pricing"
@@ -202,7 +206,7 @@ const AIQuantumComputingPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -218,11 +222,11 @@ const AIQuantumComputingPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Quantum AI Capabilities
+              Edge Computing Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Harness the power of quantum computing combined with artificial intelligence 
-              to solve problems that are impossible for classical computers.
+              Harness the power of edge computing to process data closer to the source, 
+              reduce latency, and build intelligent distributed systems.
             </p>
           </div>
           
@@ -235,7 +239,7 @@ const AIQuantumComputingPage = () => {
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   {feature.icon}
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">
@@ -256,14 +260,14 @@ const AIQuantumComputingPage = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-green-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how quantum AI is transforming industries across the globe
+              Discover how edge computing is transforming industries across the globe
             </p>
           </div>
           
@@ -274,7 +278,7 @@ const AIQuantumComputingPage = () => {
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white mr-4">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white mr-4">
                     {useCase.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white">{useCase.industry}</h3>
@@ -296,10 +300,10 @@ const AIQuantumComputingPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quantum Computing Pricing
+              Edge Computing Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect quantum computing plan for your business needs
+              Choose the perfect edge computing solution for your business needs
             </p>
           </div>
           
@@ -309,13 +313,13 @@ const AIQuantumComputingPage = () => {
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                   plan.popular 
-                    ? 'border-purple-500/50 ring-2 ring-purple-500/20' 
-                    : 'border-white/20 hover:border-purple-500/30'
+                    ? 'border-green-500/50 ring-2 ring-green-500/20' 
+                    : 'border-white/20 hover:border-green-500/30'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -354,39 +358,39 @@ const AIQuantumComputingPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-emerald-900/30">
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Experience Quantum AI?
+              Ready to Deploy Edge Computing?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-              Join the quantum revolution and unlock unprecedented computing power for your business. 
-              Contact our quantum computing experts today.
+              Join thousands of businesses already using our edge computing solutions to reduce latency, 
+              improve performance, and build resilient distributed systems. Contact our experts today.
             </p>
             
             {/* Contact Information */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Mail className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
-                <p className="text-purple-400">kleber@ziontechgroup.com</p>
+                <p className="text-green-400">kleber@ziontechgroup.com</p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Phone className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
-                <p className="text-purple-400">+1 302 464 0950</p>
+                <p className="text-green-400">+1 302 464 0950</p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
-                <p className="text-purple-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                <p className="text-green-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
             
@@ -397,7 +401,7 @@ const AIQuantumComputingPage = () => {
                 size="lg"
                 icon={<ArrowRight className="w-5 h-5" />}
               >
-                Start Quantum Journey
+                Start Edge Journey
               </FuturisticButton>
               <FuturisticButton
                 href="/demo"
@@ -415,4 +419,4 @@ const AIQuantumComputingPage = () => {
   );
 };
 
-export default AIQuantumComputingPage;
+export default AdvancedEdgeComputingPage;
