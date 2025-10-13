@@ -129,10 +129,6 @@ export default defineConfig({
           }
           // Default chunk for other modules
           return 'vendor'
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c316
         },
       },
     },

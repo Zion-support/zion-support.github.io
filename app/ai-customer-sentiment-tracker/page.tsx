@@ -3,8 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
   Heart, 
-  TrendingUp, 
-  MessageSquare, 
   Zap, 
   BarChart3, 
   Users, 
@@ -13,7 +11,6 @@ import {
   Brain,
   Target,
   Globe,
-  Smile,
   AlertCircle
 } from 'lucide-react';
 

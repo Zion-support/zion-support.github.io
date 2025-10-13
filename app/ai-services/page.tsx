@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Zap, Shield, BarChart3, Code, Database, Users, ArrowRight, Sparkles, Target, TrendingUp } from 'lucide-react';
+import { Zap, Shield, BarChart3, Code, Database, Users, ArrowRight, Sparkles } from 'lucide-react';
 
 const AIServicesPage = () => {
   const aiServices = [
