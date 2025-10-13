@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
 interface PerformanceMetrics {
   cls: number | null;
@@ -18,8 +16,8 @@ const PerformanceMonitor: React.FC = () => {
     inp: null,
     fcp: null,
     lcp: null,
-<<<<<<< HEAD
-    ttfb: null
+    ttfb: null,
+    loadTime: null
   });
 
   useEffect(() => {
@@ -52,58 +50,19 @@ const PerformanceMonitor: React.FC = () => {
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs">
       <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
+      <div className="space-y-1 text-sm">
         <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
         <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>INP: {metrics.inp ? `${metrics.inp.toFixed(2)}ms` : 'Loading...'}</div>
         <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
         <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
       </div>
-      
-      <div className="space-y-2 text-xs">
-        {metrics.fcp && (
-          <div className="flex justify-between">
-            <span className="text-gray-300">FCP:</span>
-            <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
-              {metrics.fcp.toFixed(0)}ms
-            </span>
-          </div>
-        )}
-        
-        {metrics.lcp && (
-          <div className="flex justify-between">
-            <span className="text-gray-300">LCP:</span>
-            <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
-              {metrics.lcp.toFixed(0)}ms
-            </span>
-          </div>
-        )}
-        
-        {metrics.fid && (
-          <div className="flex justify-between">
-            <span className="text-gray-300">FID:</span>
-            <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
-              {metrics.fid.toFixed(0)}ms
-            </span>
-          </div>
-        )}
-        
-        {metrics.cls !== undefined && (
-          <div className="flex justify-between">
-            <span className="text-gray-300">CLS:</span>
-            <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
-              {metrics.cls.toFixed(3)}
-            </span>
-          </div>
-        )}
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-slate-600 text-xs text-gray-400">
-        Press Ctrl+Shift+P to toggle
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-      </div>
-=======
     </div>
   );
 };

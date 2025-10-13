@@ -1,16 +1,7 @@
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import SEO from './components/SEO';
-=======
-=======
-=======
 import SEOHead from './components/SEOHead';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
->>>>>>> origin/main
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -57,14 +48,11 @@ export default function HomePage()  {
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO 
+      <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
         url="/"
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       />
       
       {/* Hero Section */}
@@ -90,7 +78,8 @@ export default function HomePage()  {
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
               Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
-              cloud infrastructure, and digital transformation services to drive innovation and growth.
+              cloud infrastructure, micro SaaS applications, blockchain technology, IoT solutions, and 
+              comprehensive digital transformation services to drive innovation and growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -125,7 +114,7 @@ export default function HomePage()  {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {/* AI Solutions */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover-lift hover-glow glass-dark">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform floating">
@@ -215,6 +204,51 @@ export default function HomePage()  {
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
+
+            {/* Blockchain Solutions */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <CpuChipIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Blockchain Solutions</h3>
+              <p className="text-gray-300 mb-6">
+                Decentralized blockchain solutions including smart contracts, 
+                DeFi applications, and enterprise blockchain integration.
+              </p>
+              <Link to="/blockchain-solutions" className="text-blue-400 hover:text-blue-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Learn More <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* IoT Solutions */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-yellow-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <GlobeAltIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">IoT Solutions</h3>
+              <p className="text-gray-300 mb-6">
+                Complete IoT platforms for device management, real-time monitoring, 
+                and analytics for connected devices and smart systems.
+              </p>
+              <Link to="/iot-solutions" className="text-yellow-400 hover:text-yellow-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Learn More <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* DevOps Services */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-teal-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-green-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <CogIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">DevOps Services</h3>
+              <p className="text-gray-300 mb-6">
+                Complete DevOps automation with CI/CD pipelines, infrastructure as code, 
+                monitoring, and automated deployment capabilities.
+              </p>
+              <Link to="/devops-services" className="text-teal-400 hover:text-teal-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Learn More <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -279,7 +313,7 @@ export default function HomePage()  {
               </div>
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <MapPinIcon className="w-6 h-6 text-purple-400" />
-                <span>Middletown, DE</span>
+                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
             

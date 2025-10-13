@@ -37,10 +37,12 @@ const Navigation = () => {
         { name: 'Cybersecurity', href: '/cybersecurity' },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: '5G Solutions', href: '/5g-solutions' }
+        { name: '5G Solutions', href: '/5g-solutions' },
+        { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
+        { name: 'IoT Solutions', href: '/iot-solutions' },
+        { name: 'DevOps Services', href: '/devops-services' }
       ]
     },
-<<<<<<< HEAD
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
@@ -48,11 +50,6 @@ const Navigation = () => {
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
   ];
 
   const isActive = (path: string) => {
@@ -73,7 +70,6 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
@@ -111,38 +107,6 @@ const Navigation = () => {
                 </div>
               );
             })}
-=======
-{navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                  onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
-                </Link>
-                
-                {/* Dropdown Menu */}
-                {item.submenu && isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
->>>>>>> origin/main
           </div>
 
           {/* CTA Button */}

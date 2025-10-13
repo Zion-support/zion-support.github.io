@@ -527,6 +527,417 @@ export const services: Service[] = [
     },
     href: '/iot-platform-solution',
     glowColor: 'yellow'
+  },
+
+  // Additional AI Services
+  {
+    id: 'ai-voice-assistant-platform',
+    title: 'AI Voice Assistant Platform',
+    description: 'Enterprise-grade voice assistant platform with natural language processing, multi-language support, and custom voice training capabilities.',
+    shortDescription: 'Custom voice assistant solutions for businesses',
+    category: 'AI',
+    icon: '🎤',
+    features: [
+      'Natural Language Processing',
+      'Multi-language Support (50+ languages)',
+      'Custom Voice Training',
+      'Business Integration APIs',
+      'Analytics Dashboard',
+      'Real-time Processing',
+      'Voice Command Recognition',
+      'Text-to-Speech Synthesis'
+    ],
+    pricing: {
+      basic: 299,
+      pro: 799,
+      enterprise: 2499
+    },
+    benefits: [
+      '95% voice recognition accuracy',
+      '24/7 voice assistance',
+      'Multi-language support',
+      'Custom voice branding',
+      'Seamless business integration'
+    ],
+    useCases: [
+      'Customer Service Automation',
+      'Voice Commands for Apps',
+      'Accessibility Solutions',
+      'Smart Office Automation',
+      'Voice-Enabled E-commerce'
+    ],
+    technologies: ['OpenAI Whisper', 'Google Speech API', 'Python', 'WebRTC', 'React', 'Node.js'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-voice-assistant-platform'
+    },
+    href: '/ai-voice-assistant-platform',
+    glowColor: 'purple'
+  },
+  {
+    id: 'ai-video-analytics-pro',
+    title: 'AI Video Analytics Pro',
+    description: 'Advanced video analytics platform with real-time object detection, facial recognition, and behavioral analysis for security and business intelligence.',
+    shortDescription: 'AI-powered video analysis and insights',
+    category: 'AI',
+    icon: '📹',
+    features: [
+      'Real-time Object Detection',
+      'Facial Recognition',
+      'Behavioral Analysis',
+      'Motion Tracking',
+      'Crowd Analytics',
+      'License Plate Recognition',
+      'Emotion Detection',
+      'Custom Alert System'
+    ],
+    pricing: {
+      basic: 499,
+      pro: 1299,
+      enterprise: 3499
+    },
+    benefits: [
+      'Real-time security monitoring',
+      'Automated threat detection',
+      'Customer behavior insights',
+      'Reduced security costs',
+      '24/7 surveillance'
+    ],
+    useCases: [
+      'Retail Analytics',
+      'Security Monitoring',
+      'Traffic Management',
+      'Event Analysis',
+      'Smart City Solutions'
+    ],
+    technologies: ['OpenCV', 'TensorFlow', 'YOLO', 'Python', 'FFmpeg', 'React'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-video-analytics-pro'
+    },
+    href: '/ai-video-analytics-pro',
+    glowColor: 'cyan'
+  },
+  {
+    id: 'ai-document-intelligence',
+    title: 'AI Document Intelligence',
+    description: 'Intelligent document processing platform with OCR, data extraction, classification, and automated workflow management for enterprise document handling.',
+    shortDescription: 'AI-powered document processing and automation',
+    category: 'AI',
+    icon: '📄',
+    features: [
+      'Advanced OCR Technology',
+      'Document Classification',
+      'Data Extraction & Validation',
+      'Workflow Automation',
+      'Version Control',
+      'Compliance Monitoring',
+      'Multi-format Support',
+      'API Integration'
+    ],
+    pricing: {
+      basic: 199,
+      pro: 599,
+      enterprise: 1599
+    },
+    benefits: [
+      '90% processing accuracy',
+      '80% time savings',
+      'Automated workflows',
+      'Compliance assurance',
+      'Multi-format support'
+    ],
+    useCases: [
+      'Invoice Processing',
+      'Contract Management',
+      'Legal Document Review',
+      'Insurance Claims',
+      'Medical Records'
+    ],
+    technologies: ['Tesseract OCR', 'AWS Textract', 'Python', 'FastAPI', 'React', 'PostgreSQL'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-document-intelligence'
+    },
+    href: '/ai-document-intelligence',
+    glowColor: 'green'
+  },
+
+  // Additional Micro SaaS Services
+  {
+    id: 'ai-social-media-manager',
+    title: 'AI Social Media Manager',
+    description: 'Intelligent social media management platform with AI-powered content creation, optimal posting times, and engagement optimization.',
+    shortDescription: 'AI-powered social media management and optimization',
+    category: 'SaaS',
+    icon: '📱',
+    features: [
+      'AI Content Generation',
+      'Optimal Posting Times',
+      'Hashtag Optimization',
+      'Engagement Analytics',
+      'Multi-platform Management',
+      'Sentiment Analysis',
+      'Competitor Analysis',
+      'Automated Responses'
+    ],
+    pricing: {
+      basic: 99,
+      pro: 299,
+      enterprise: 799
+    },
+    benefits: [
+      '200% engagement increase',
+      'Automated content creation',
+      'Optimal posting timing',
+      'Multi-platform management',
+      'Real-time analytics'
+    ],
+    useCases: [
+      'Social Media Marketing',
+      'Brand Management',
+      'Community Building',
+      'Content Strategy',
+      'Influencer Marketing'
+    ],
+    technologies: ['React', 'Node.js', 'MongoDB', 'Social APIs', 'AI/ML', 'Redis'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-social-media-manager'
+    },
+    href: '/ai-social-media-manager',
+    glowColor: 'pink'
+  },
+  {
+    id: 'ai-email-marketing-suite',
+    title: 'AI Email Marketing Suite',
+    description: 'Advanced email marketing platform with AI-powered personalization, send time optimization, and performance analytics for maximum engagement.',
+    shortDescription: 'AI-powered email marketing automation',
+    category: 'SaaS',
+    icon: '📧',
+    features: [
+      'AI Personalization',
+      'Send Time Optimization',
+      'Subject Line Testing',
+      'Advanced Segmentation',
+      'A/B Testing',
+      'Performance Analytics',
+      'Template Generator',
+      'Deliverability Optimization'
+    ],
+    pricing: {
+      basic: 149,
+      pro: 399,
+      enterprise: 999
+    },
+    benefits: [
+      '40% higher open rates',
+      'Personalized content',
+      'Optimized send times',
+      'Advanced analytics',
+      'Automated optimization'
+    ],
+    useCases: [
+      'Email Campaigns',
+      'Newsletter Management',
+      'Lead Nurturing',
+      'Customer Retention',
+      'E-commerce Marketing'
+    ],
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'SendGrid', 'AI/ML', 'Redis'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-email-marketing-suite'
+    },
+    href: '/ai-email-marketing-suite',
+    glowColor: 'blue'
+  },
+  {
+    id: 'ai-customer-insights-platform',
+    title: 'AI Customer Insights Platform',
+    description: 'Comprehensive customer analytics platform with AI-powered insights, sentiment analysis, and predictive customer behavior modeling.',
+    shortDescription: 'AI-driven customer insights and analytics',
+    category: 'SaaS',
+    icon: '👥',
+    features: [
+      'Customer Segmentation',
+      'Sentiment Analysis',
+      'Churn Prediction',
+      'Lifetime Value Analysis',
+      'Behavioral Analytics',
+      'Personalization Engine',
+      'Real-time Dashboards',
+      'API Integration'
+    ],
+    pricing: {
+      basic: 249,
+      pro: 699,
+      enterprise: 1899
+    },
+    benefits: [
+      '35% increase in retention',
+      'Predictive insights',
+      'Real-time analytics',
+      'Automated segmentation',
+      'Personalized experiences'
+    ],
+    useCases: [
+      'Customer Analytics',
+      'Retention Strategies',
+      'Personalization',
+      'Marketing Optimization',
+      'Product Development'
+    ],
+    technologies: ['Python', 'TensorFlow', 'React', 'PostgreSQL', 'Redis', 'D3.js'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-customer-insights-platform'
+    },
+    href: '/ai-customer-insights-platform',
+    glowColor: 'yellow'
+  },
+
+  // Additional IT Services
+  {
+    id: 'devops-automation-suite',
+    title: 'DevOps Automation Suite',
+    description: 'Complete DevOps automation platform with CI/CD pipelines, infrastructure as code, monitoring, and automated deployment capabilities.',
+    shortDescription: 'Comprehensive DevOps automation and deployment',
+    category: 'IT',
+    icon: '⚙️',
+    features: [
+      'CI/CD Pipeline Automation',
+      'Infrastructure as Code',
+      'Container Orchestration',
+      'Automated Testing',
+      'Monitoring & Alerting',
+      'Security Scanning',
+      'Multi-cloud Support',
+      'Disaster Recovery'
+    ],
+    pricing: {
+      basic: 2000,
+      pro: 5000,
+      enterprise: 15000
+    },
+    benefits: [
+      '50% faster deployments',
+      'Reduced manual errors',
+      'Improved reliability',
+      'Cost optimization',
+      '24/7 monitoring'
+    ],
+    useCases: [
+      'Software Development',
+      'Cloud Migration',
+      'Infrastructure Management',
+      'Security Compliance',
+      'Performance Optimization'
+    ],
+    technologies: ['Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'AWS', 'Azure'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/devops-automation-suite'
+    },
+    href: '/devops-automation-suite',
+    glowColor: 'cyan'
+  },
+  {
+    id: 'api-management-platform',
+    title: 'API Management Platform',
+    description: 'Enterprise-grade API management solution with gateway, analytics, security, and developer portal for comprehensive API lifecycle management.',
+    shortDescription: 'Complete API management and governance platform',
+    category: 'IT',
+    icon: '🔗',
+    features: [
+      'API Gateway',
+      'Rate Limiting & Throttling',
+      'Authentication & Authorization',
+      'API Analytics',
+      'Developer Portal',
+      'API Documentation',
+      'Version Management',
+      'Security Policies'
+    ],
+    pricing: {
+      basic: 999,
+      pro: 2499,
+      enterprise: 5999
+    },
+    benefits: [
+      'Centralized API management',
+      'Enhanced security',
+      'Developer productivity',
+      'API analytics',
+      'Scalable architecture'
+    ],
+    useCases: [
+      'Microservices Architecture',
+      'Third-party Integrations',
+      'Mobile App Backend',
+      'Partner APIs',
+      'Legacy System Modernization'
+    ],
+    technologies: ['Kong', 'Nginx', 'Redis', 'PostgreSQL', 'React', 'Node.js'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/api-management-platform'
+    },
+    href: '/api-management-platform',
+    glowColor: 'purple'
+  },
+  {
+    id: 'database-optimization-service',
+    title: 'Database Optimization Service',
+    description: 'Comprehensive database optimization service with performance tuning, query optimization, and automated maintenance for maximum efficiency.',
+    shortDescription: 'Database performance optimization and maintenance',
+    category: 'IT',
+    icon: '🗄️',
+    features: [
+      'Performance Analysis',
+      'Query Optimization',
+      'Index Optimization',
+      'Automated Maintenance',
+      'Capacity Planning',
+      'Backup & Recovery',
+      'Security Hardening',
+      'Monitoring & Alerting'
+    ],
+    pricing: {
+      basic: 1500,
+      pro: 3500,
+      enterprise: 8500
+    },
+    benefits: [
+      '300% performance improvement',
+      'Reduced downtime',
+      'Automated maintenance',
+      'Cost optimization',
+      'Enhanced security'
+    ],
+    useCases: [
+      'Performance Optimization',
+      'Database Migration',
+      'Backup Strategy',
+      'Security Enhancement',
+      'Capacity Planning'
+    ],
+    technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Python', 'Bash'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/database-optimization-service'
+    },
+    href: '/database-optimization-service',
+    glowColor: 'green'
   }
 ];
 
