@@ -11,11 +11,7 @@ import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-<<<<<<< HEAD
-import ErrorBoundary from "./app/components/ErrorBoundary";
-=======
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
 import Breadcrumb from "./app/components/Breadcrumb";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
@@ -128,7 +124,7 @@ function App() {
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
+      <EnhancedErrorBoundary>
         <AnalyticsProvider>
           <EnhancedAnalytics>
             <PerformanceOptimizer>
@@ -253,7 +249,7 @@ function App() {
             </PerformanceOptimizer>
           </EnhancedAnalytics>
         </AnalyticsProvider>
-      </ErrorBoundary>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 }

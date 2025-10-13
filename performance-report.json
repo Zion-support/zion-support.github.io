@@ -1,23 +1,14 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T10:35:44.609Z",
+  "timestamp": "2025-10-13T10:47:19.218Z",
   "buildStats": {
-    "totalFiles": 85,
-    "totalSize": 830641,
+    "totalFiles": 91,
+    "totalSize": 832415,
     "jsFiles": 82,
-    "jsSize": 821458,
-=======
-  "timestamp": "2025-10-13T10:36:32.987Z",
-  "buildStats": {
-    "totalFiles": 16,
-    "totalSize": 825630,
-    "jsFiles": 13,
-    "jsSize": 816250,
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
+    "jsSize": 821146,
     "cssFiles": 1,
     "cssSize": 1811,
-    "imageFiles": 0,
-    "imageSize": 0
+    "imageFiles": 4,
+    "imageSize": 1002
   },
   "recommendations": [
     {
