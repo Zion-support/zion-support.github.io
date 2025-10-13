@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -11,7 +10,6 @@ interface OptimizedImageProps {
   onError?: () => void;
   children?: React.ReactNode;
 }
-
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -26,23 +24,19 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
   useEffect(() => {
     if (imgRef.current?.complete) {
       setIsLoaded(true);
     }
   }, []);
-
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
   };
-
   const handleError = () => {
     setHasError(true);
     onError?.();
   };
-
   if (hasError) {
     return (
       <div className={`${className} flex items-center justify-center bg-gray-200 text-gray-500`}>
@@ -50,7 +44,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       </div>
     );
   }
-
   return (
     <div className={`${className} relative`}>
       {!isLoaded && (
@@ -73,5 +66,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     </div>
   );
 };
-
 export default OptimizedImage;

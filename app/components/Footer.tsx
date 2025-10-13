@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, Mail, Phone, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
-
 const Footer = () => {
   const services = [
     { name: 'AI Solutions', path: '/ai-services' },
@@ -11,14 +10,12 @@ const Footer = () => {
     { name: 'Micro SAAS', path: '/micro-saas' },
     { name: 'Data Analytics', path: '/data-analytics' }
   ];
-
   const company = [
     { name: 'About Us', path: '/about' },
     { name: 'Our Team', path: '/team' },
     { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' }
   ];
-
   const resources = [
     { name: 'Blog', path: '/blog' },
     { name: 'Documentation', path: '/docs' },
@@ -26,7 +23,6 @@ const Footer = () => {
     { name: 'Privacy Policy', path: '/privacy' },
     { name: 'Terms of Service', path: '/terms' }
   ];
-
   return (
     <footer className="bg-slate-900 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -40,7 +36,7 @@ const Footer = () => {
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Leading provider of AI solutions, cybersecurity, cloud services, and 5G technology. 
+              Leading provider of AI solutions, cybersecurity, cloud services, and 5G technology.
               Transform your business with cutting-edge technology.
             </p>
             <div className="flex space-x-4">
@@ -55,7 +51,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
           {/* Services */}
           <div>
             <h3 className="text-white font-semibold mb-4">Services</h3>
@@ -72,7 +67,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
           {/* Company */}
           <div>
             <h3 className="text-white font-semibold mb-4">Company</h3>
@@ -89,7 +83,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
           {/* Resources */}
           <div>
             <h3 className="text-white font-semibold mb-4">Resources</h3>
@@ -107,7 +100,6 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-
         {/* Contact Info */}
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-400">
@@ -125,7 +117,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -146,5 +137,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;

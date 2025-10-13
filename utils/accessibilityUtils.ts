@@ -1,11 +1,8 @@
 interface AccessibilityUtilsConfig {
   enabled: boolean;
-<<<<<<< HEAD
-=======
   highContrast: boolean;
   fontSize: number;
   screenReader: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d
 }
 
 export class AccessibilityUtils {
@@ -23,11 +20,7 @@ export class AccessibilityUtils {
 
   init(): void {
     if (this.config.enabled) {
-<<<<<<< HEAD
-      console.log('AccessibilityUtils initialized');
-=======
       console.log('Accessibility utils initialized');
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d
     }
   }
 

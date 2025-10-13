@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, BarChart3, Cloud } from "lucide-react";
-
 const HomePage = () => {
   const services = [
     {
@@ -48,7 +47,6 @@ const HomePage = () => {
       features: ["Business Intelligence", "Data Visualization", "Predictive Modeling", "Real-time Analytics"]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -56,7 +54,6 @@ const HomePage = () => {
         <meta name="description" content="Leading provider of AI solutions, cybersecurity, cloud services, and 5G technology. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI solutions, cybersecurity, cloud services, 5G technology, machine learning, data analytics" />
       </Helmet>
-      
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -82,7 +79,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -94,7 +90,6 @@ const HomePage = () => {
               Comprehensive technology services designed to accelerate your digital transformation and drive business growth.
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
@@ -127,7 +122,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -156,5 +150,4 @@ const HomePage = () => {
     </div>
   );
 };
-
 export default HomePage;
