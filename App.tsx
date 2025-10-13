@@ -13,13 +13,10 @@ import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-<<<<<<< HEAD
-import EnhancedSEO from "./app/components/EnhancedSEO";
-=======
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -121,7 +118,7 @@ function App() {
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
+      <EnhancedErrorBoundary>
         <AnalyticsProvider>
           <EnhancedAnalytics>
             <PerformanceOptimizer>
@@ -237,7 +234,7 @@ function App() {
             </PerformanceOptimizer>
           </EnhancedAnalytics>
         </AnalyticsProvider>
-      </ErrorBoundary>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 }

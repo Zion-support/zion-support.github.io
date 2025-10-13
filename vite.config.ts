@@ -35,8 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 200, // Increased threshold for better chunking
-    assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 150, // Reduced threshold for better performance
+    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -83,7 +83,7 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries - keep smaller
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
@@ -91,7 +91,7 @@ export default defineConfig({
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - split further
           if (id.includes('framer-motion')) {
             return 'animations'
           }
@@ -118,7 +118,20 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - group by category
+          // Components - split by functionality
+          if (id.includes('/components/')) {
+            if (id.includes('Enhanced') || id.includes('Advanced')) {
+              return 'enhanced-components'
+            }
+            if (id.includes('Futuristic') || id.includes('Neon')) {
+              return 'ui-components'
+            }
+            if (id.includes('Performance') || id.includes('Analytics')) {
+              return 'monitoring-components'
+            }
+            return 'base-components'
+          }
+          // AI service pages - group by category with smaller chunks
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
@@ -153,9 +166,12 @@ export default defineConfig({
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
-          // Main pages
+          // Main pages - split further
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
+            if (id.includes('about') || id.includes('contact') || id.includes('services')) {
+              return 'core-pages'
+            }
             return 'main-pages'
           }
           // Default chunk for other modules
