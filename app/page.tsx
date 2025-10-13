@@ -40,6 +40,34 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Video Generator",
+      description: "Create professional videos with AI",
+      price: "From $29/month",
+      icon: <Sparkles className="w-6 h-6" />,
+      link: "/zion-ai-video-generator"
+    },
+    {
+      name: "Zion AI Customer Insights Pro",
+      description: "Advanced customer analytics platform",
+      price: "From $99/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-customer-insights-pro"
+    },
+    {
+      name: "Zion AI Supply Chain Optimizer",
+      description: "AI-powered supply chain intelligence",
+      price: "From $199/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-supply-chain-optimizer"
+    },
+    {
+      name: "Zion AI Energy Manager",
+      description: "Smart energy management platform",
+      price: "From $79/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-energy-manager"
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
       price: "From $29/month",
@@ -52,13 +80,6 @@ const HomePage = () => {
       price: "From $49/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield"
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $9/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
     }
   ];
 
@@ -215,7 +236,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}

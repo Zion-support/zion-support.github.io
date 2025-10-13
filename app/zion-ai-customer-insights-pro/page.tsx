@@ -1,68 +1,68 @@
-import { ArrowRight, Zap, TrendingUp, Brain, BarChart3, Star, CheckCircle, Leaf, Sun, Wind } from "lucide-react";
+import { ArrowRight, Users, TrendingUp, Brain, BarChart3, Star, CheckCircle, Eye, Target, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAiEnergyManager() {
+export default function ZionAiCustomerInsightsPro() {
   const features = [
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Smart Energy Monitoring",
-      description: "Real-time energy consumption tracking with AI-powered insights and optimization"
+      icon: <Users className="w-6 h-6" />,
+      title: "Customer Segmentation",
+      description: "AI-powered customer segmentation with behavioral analysis and predictive modeling"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Churn Prediction",
+      description: "Identify at-risk customers with 95% accuracy using machine learning algorithms"
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Forecast energy usage and costs with 95% accuracy using machine learning"
-    },
-    {
-      icon: <Leaf className="w-6 h-6" />,
-      title: "Carbon Footprint Tracking",
-      description: "Monitor and reduce your carbon footprint with detailed sustainability metrics"
-    },
-    {
-      icon: <Sun className="w-6 h-6" />,
-      title: "Renewable Energy Integration",
-      description: "Optimize solar, wind, and other renewable energy sources for maximum efficiency"
+      title: "Sentiment Analysis",
+      description: "Real-time sentiment analysis across all customer touchpoints and channels"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Cost Optimization",
-      description: "Reduce energy costs by 30% through intelligent load balancing and scheduling"
+      title: "Lifetime Value Prediction",
+      description: "Predict customer lifetime value and optimize marketing spend accordingly"
     },
     {
-      icon: <Wind className="w-6 h-6" />,
-      title: "Automated Controls",
-      description: "Smart automation for HVAC, lighting, and equipment based on occupancy and usage"
+      icon: <Eye className="w-6 h-6" />,
+      title: "Behavioral Analytics",
+      description: "Track customer journey and behavior patterns across all platforms"
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
+      title: "Personalization Engine",
+      description: "AI-driven personalization recommendations for products and content"
     }
   ];
 
-  const capabilities = [
-    "Real-time Energy Monitoring",
-    "Predictive Maintenance Alerts",
-    "Load Balancing Optimization",
-    "Peak Demand Management",
-    "Renewable Energy Forecasting",
-    "Carbon Emissions Tracking",
-    "Energy Cost Analysis",
-    "Equipment Performance Monitoring",
-    "Automated Demand Response",
-    "Sustainability Reporting",
-    "Energy Efficiency Recommendations",
-    "Smart Grid Integration"
+  const insights = [
+    "Customer Lifetime Value Analysis",
+    "Purchase Pattern Recognition",
+    "Cross-sell & Upsell Opportunities",
+    "Customer Satisfaction Scoring",
+    "Engagement Level Tracking",
+    "Risk Assessment & Alerts",
+    "Market Basket Analysis",
+    "Cohort Analysis & Retention",
+    "Customer Journey Mapping",
+    "Predictive Churn Modeling",
+    "Sentiment Trend Analysis",
+    "Personalization Recommendations"
   ];
 
   const pricingPlans = [
     {
-      name: "Basic",
-      price: "$79",
+      name: "Starter",
+      price: "$99",
       period: "/month",
-      description: "Perfect for small buildings",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 5 energy meters",
-        "Basic monitoring",
-        "Monthly reports",
+        "Up to 10,000 customers",
+        "Basic segmentation",
+        "Churn prediction",
         "Email support",
-        "Standard dashboards",
+        "Standard reports",
         "5GB data storage"
       ],
       popular: false
@@ -71,16 +71,16 @@ export default function ZionAiEnergyManager() {
       name: "Professional",
       price: "$299",
       period: "/month",
-      description: "Most popular for businesses",
+      description: "Most popular for growing businesses",
       features: [
-        "Up to 25 energy meters",
-        "Advanced analytics",
-        "Predictive insights",
+        "Up to 100,000 customers",
+        "Advanced segmentation",
+        "Real-time insights",
         "Priority support",
         "Custom dashboards",
         "50GB data storage",
         "API access",
-        "Carbon tracking"
+        "A/B testing tools"
       ],
       popular: true
     },
@@ -88,10 +88,10 @@ export default function ZionAiEnergyManager() {
       name: "Enterprise",
       price: "$799",
       period: "/month",
-      description: "For large facilities",
+      description: "For large organizations",
       features: [
-        "Unlimited energy meters",
-        "AI-powered optimization",
+        "Unlimited customers",
+        "AI-powered insights",
         "Custom models",
         "24/7 dedicated support",
         "White-label solution",
@@ -105,24 +105,24 @@ export default function ZionAiEnergyManager() {
 
   const testimonials = [
     {
-      name: "Jennifer Liu",
-      company: "Office Complex",
-      role: "Facilities Manager",
-      content: "Zion AI Energy Manager reduced our energy costs by 35% and helped us achieve carbon neutrality. The ROI was achieved in just 6 months.",
+      name: "Sarah Johnson",
+      company: "E-commerce Platform",
+      role: "VP of Marketing",
+      content: "Zion AI Customer Insights Pro helped us increase customer retention by 35% and boost revenue by 28% through better targeting.",
       rating: 5
     },
     {
-      name: "Mark Thompson",
-      company: "Manufacturing Plant",
-      role: "Operations Director",
-      content: "The predictive analytics helped us avoid costly equipment failures and optimize our energy usage. We've saved over $100,000 annually.",
+      name: "Michael Chen",
+      company: "SaaS Company",
+      role: "Head of Growth",
+      content: "The churn prediction is incredibly accurate. We can now proactively retain customers before they leave, saving us thousands in acquisition costs.",
       rating: 5
     },
     {
-      name: "Sarah Davis",
+      name: "Emily Rodriguez",
       company: "Retail Chain",
-      role: "Sustainability Manager",
-      content: "This platform transformed our energy management. We've reduced our carbon footprint by 40% while cutting energy costs by 30%.",
+      role: "Customer Experience Director",
+      content: "The personalization engine has transformed our customer experience. Our conversion rates have increased by 45% since implementation.",
       rating: 5
     }
   ];
@@ -130,45 +130,45 @@ export default function ZionAiEnergyManager() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Energy Manager - Smart Energy Management Platform | Zion Tech Group</title>
+        <title>Zion AI Customer Insights Pro - Advanced Customer Analytics Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Optimize energy consumption with AI-powered monitoring and analytics. Reduce costs by 30%, track carbon footprint, and integrate renewable energy with Zion AI Energy Manager."
+          content="Unlock deep customer insights with AI-powered analytics. Predict churn, segment customers, analyze sentiment, and personalize experiences with Zion AI Customer Insights Pro."
         />
         <meta
           name="keywords"
-          content="energy management, energy monitoring, energy optimization, carbon footprint, renewable energy, smart building, energy analytics"
+          content="customer analytics, customer insights, churn prediction, customer segmentation, sentiment analysis, personalization, customer lifetime value"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-green-500/20 border border-emerald-500/30 mb-6">
-              <Leaf className="w-4 h-4 text-emerald-400 mr-2" />
-              <span className="text-emerald-400 text-sm font-medium">AI-Powered Energy Intelligence</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
+              <Brain className="w-4 h-4 text-blue-400 mr-2" />
+              <span className="text-blue-400 text-sm font-medium">AI-Powered Customer Intelligence</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-400">
-                Zion AI Energy Manager
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                Zion AI Customer Insights Pro
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Optimize your energy consumption with AI-powered monitoring and analytics. Reduce costs by 30%, 
-              track your carbon footprint, and integrate renewable energy sources for maximum efficiency.
+              Unlock the power of your customer data with AI-driven insights. Predict churn, segment customers, 
+              analyze sentiment, and personalize experiences to maximize customer lifetime value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-green-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -177,16 +177,16 @@ export default function ZionAiEnergyManager() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-2">30%</div>
-                <div className="text-gray-300">Average Cost Reduction</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">95%</div>
+                <div className="text-gray-300">Churn Prediction Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
-                <div className="text-gray-300">Prediction Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">35%</div>
+                <div className="text-gray-300">Average Retention Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">40%</div>
-                <div className="text-gray-300">Carbon Footprint Reduction</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
+                <div className="text-gray-300">Data Sources Supported</div>
               </div>
             </div>
           </div>
@@ -197,10 +197,10 @@ export default function ZionAiEnergyManager() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Energy Management Features
+                Advanced Customer Intelligence Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to optimize energy consumption and reduce costs with artificial intelligence.
+                Everything you need to understand and engage your customers better.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -209,7 +209,7 @@ export default function ZionAiEnergyManager() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-emerald-500 to-green-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -224,25 +224,25 @@ export default function ZionAiEnergyManager() {
           </div>
         </section>
 
-        {/* Capabilities Section */}
+        {/* Insights Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Energy Intelligence
+                Comprehensive Customer Insights
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Monitor, analyze, and optimize every aspect of your energy consumption.
+                Get deep insights into every aspect of your customer relationships.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {capabilities.map((capability, index) => (
+              {insights.map((insight, index) => (
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
-                  <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{capability}</span>
+                  <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                  <span className="text-gray-300">{insight}</span>
                 </div>
               ))}
             </div>
@@ -257,7 +257,7 @@ export default function ZionAiEnergyManager() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your energy management needs. All plans include 14-day free trial.
+                Choose the plan that fits your customer data needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -266,13 +266,13 @@ export default function ZionAiEnergyManager() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-emerald-400 bg-gradient-to-br from-emerald-500/10 to-green-500/10'
-                      : 'border-white/20 hover:border-emerald-400'
+                      ? 'border-blue-400 bg-gradient-to-br from-blue-500/10 to-cyan-500/10'
+                      : 'border-white/20 hover:border-blue-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -297,8 +297,8 @@ export default function ZionAiEnergyManager() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-emerald-500 to-green-600 text-white hover:from-emerald-600 hover:to-green-700'
-                        : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
+                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -314,10 +314,10 @@ export default function ZionAiEnergyManager() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Energy Managers
+                Trusted by Customer Success Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what energy professionals say about Zion AI Energy Manager
+                See what customer success professionals say about Zion AI Customer Insights Pro
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -346,22 +346,22 @@ export default function ZionAiEnergyManager() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Energy Usage?
+              Ready to Understand Your Customers Better?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations using Zion AI Energy Manager to reduce costs and environmental impact.
+              Join thousands of businesses using Zion AI Customer Insights Pro to maximize customer value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-green-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>

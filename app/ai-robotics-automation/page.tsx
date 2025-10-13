@@ -1,103 +1,103 @@
-import { ArrowRight, Zap, TrendingUp, Brain, BarChart3, Star, CheckCircle, Leaf, Sun, Wind } from "lucide-react";
+import { ArrowRight, Bot, Cpu, Zap, Shield, Star, CheckCircle, Settings, Wrench, Globe } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAiEnergyManager() {
+export default function AiRoboticsAutomation() {
   const features = [
     {
+      icon: <Bot className="w-6 h-6" />,
+      title: "Intelligent Robotics",
+      description: "AI-powered robots with advanced computer vision, natural language processing, and autonomous decision-making"
+    },
+    {
+      icon: <Cpu className="w-6 h-6" />,
+      title: "Machine Learning Integration",
+      description: "Robots that learn and adapt to new tasks through continuous machine learning algorithms"
+    },
+    {
       icon: <Zap className="w-6 h-6" />,
-      title: "Smart Energy Monitoring",
-      description: "Real-time energy consumption tracking with AI-powered insights and optimization"
+      title: "Process Automation",
+      description: "End-to-end automation solutions that reduce human intervention by 90% while maintaining quality"
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Forecast energy usage and costs with 95% accuracy using machine learning"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Safety & Compliance",
+      description: "Advanced safety systems with real-time monitoring and compliance with industrial standards"
     },
     {
-      icon: <Leaf className="w-6 h-6" />,
-      title: "Carbon Footprint Tracking",
-      description: "Monitor and reduce your carbon footprint with detailed sustainability metrics"
+      icon: <Settings className="w-6 h-6" />,
+      title: "Custom Integration",
+      description: "Seamless integration with existing systems and workflows for maximum efficiency"
     },
     {
-      icon: <Sun className="w-6 h-6" />,
-      title: "Renewable Energy Integration",
-      description: "Optimize solar, wind, and other renewable energy sources for maximum efficiency"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Cost Optimization",
-      description: "Reduce energy costs by 30% through intelligent load balancing and scheduling"
-    },
-    {
-      icon: <Wind className="w-6 h-6" />,
-      title: "Automated Controls",
-      description: "Smart automation for HVAC, lighting, and equipment based on occupancy and usage"
+      icon: <Wrench className="w-6 h-6" />,
+      title: "Predictive Maintenance",
+      description: "AI-powered maintenance scheduling that prevents downtime and extends equipment life"
     }
   ];
 
-  const capabilities = [
-    "Real-time Energy Monitoring",
-    "Predictive Maintenance Alerts",
-    "Load Balancing Optimization",
-    "Peak Demand Management",
-    "Renewable Energy Forecasting",
-    "Carbon Emissions Tracking",
-    "Energy Cost Analysis",
-    "Equipment Performance Monitoring",
-    "Automated Demand Response",
-    "Sustainability Reporting",
-    "Energy Efficiency Recommendations",
-    "Smart Grid Integration"
+  const applications = [
+    "Manufacturing Automation",
+    "Warehouse & Logistics",
+    "Quality Control & Inspection",
+    "Assembly Line Operations",
+    "Material Handling",
+    "Packaging & Sorting",
+    "Welding & Fabrication",
+    "Painting & Coating",
+    "Pick & Place Operations",
+    "Inventory Management",
+    "Customer Service Robots",
+    "Medical & Healthcare Robotics"
   ];
 
   const pricingPlans = [
     {
-      name: "Basic",
-      price: "$79",
+      name: "Starter",
+      price: "$4,999",
       period: "/month",
-      description: "Perfect for small buildings",
+      description: "Perfect for small operations",
       features: [
-        "Up to 5 energy meters",
-        "Basic monitoring",
-        "Monthly reports",
-        "Email support",
-        "Standard dashboards",
-        "5GB data storage"
+        "Up to 2 robotic units",
+        "Basic automation",
+        "Standard support",
+        "Basic training",
+        "Remote monitoring",
+        "1 year warranty"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$14,999",
       period: "/month",
       description: "Most popular for businesses",
       features: [
-        "Up to 25 energy meters",
-        "Advanced analytics",
-        "Predictive insights",
+        "Up to 10 robotic units",
+        "Advanced AI capabilities",
         "Priority support",
-        "Custom dashboards",
-        "50GB data storage",
-        "API access",
-        "Carbon tracking"
+        "Comprehensive training",
+        "Custom programming",
+        "3 year warranty",
+        "24/7 monitoring",
+        "Performance analytics"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$49,999",
       period: "/month",
       description: "For large facilities",
       features: [
-        "Unlimited energy meters",
-        "AI-powered optimization",
-        "Custom models",
-        "24/7 dedicated support",
-        "White-label solution",
-        "Unlimited storage",
-        "Advanced integrations",
-        "Custom reporting"
+        "Unlimited robotic units",
+        "Full AI integration",
+        "Dedicated support team",
+        "Custom development",
+        "White-label solutions",
+        "5 year warranty",
+        "Advanced analytics",
+        "Custom integrations"
       ],
       popular: false
     }
@@ -105,24 +105,24 @@ export default function ZionAiEnergyManager() {
 
   const testimonials = [
     {
-      name: "Jennifer Liu",
-      company: "Office Complex",
-      role: "Facilities Manager",
-      content: "Zion AI Energy Manager reduced our energy costs by 35% and helped us achieve carbon neutrality. The ROI was achieved in just 6 months.",
-      rating: 5
-    },
-    {
-      name: "Mark Thompson",
-      company: "Manufacturing Plant",
+      name: "Robert Kim",
+      company: "Manufacturing Corp",
       role: "Operations Director",
-      content: "The predictive analytics helped us avoid costly equipment failures and optimize our energy usage. We've saved over $100,000 annually.",
+      content: "Zion's robotics automation increased our production efficiency by 300% while reducing errors by 95%. The ROI was achieved in just 8 months.",
       rating: 5
     },
     {
-      name: "Sarah Davis",
-      company: "Retail Chain",
-      role: "Sustainability Manager",
-      content: "This platform transformed our energy management. We've reduced our carbon footprint by 40% while cutting energy costs by 30%.",
+      name: "Lisa Wang",
+      company: "E-commerce Fulfillment",
+      role: "Warehouse Manager",
+      content: "The AI-powered robots transformed our warehouse operations. We can now process 5x more orders with the same workforce.",
+      rating: 5
+    },
+    {
+      name: "David Martinez",
+      company: "Automotive Parts",
+      role: "Quality Manager",
+      content: "The quality control robots catch defects that human inspectors miss. Our defect rate dropped to near zero after implementation.",
       rating: 5
     }
   ];
@@ -130,45 +130,45 @@ export default function ZionAiEnergyManager() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Energy Manager - Smart Energy Management Platform | Zion Tech Group</title>
+        <title>AI Robotics Automation - Intelligent Robotic Solutions | Zion Tech Group</title>
         <meta
           name="description"
-          content="Optimize energy consumption with AI-powered monitoring and analytics. Reduce costs by 30%, track carbon footprint, and integrate renewable energy with Zion AI Energy Manager."
+          content="Transform your operations with AI-powered robotics automation. Intelligent robots, process automation, and machine learning integration for manufacturing, warehousing, and more."
         />
         <meta
           name="keywords"
-          content="energy management, energy monitoring, energy optimization, carbon footprint, renewable energy, smart building, energy analytics"
+          content="robotics automation, AI robots, manufacturing automation, warehouse robots, process automation, intelligent robotics, robotic solutions"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-green-500/20 border border-emerald-500/30 mb-6">
-              <Leaf className="w-4 h-4 text-emerald-400 mr-2" />
-              <span className="text-emerald-400 text-sm font-medium">AI-Powered Energy Intelligence</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 mb-6">
+              <Bot className="w-4 h-4 text-orange-400 mr-2" />
+              <span className="text-orange-400 text-sm font-medium">AI-Powered Robotics Revolution</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-400">
-                Zion AI Energy Manager
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                AI Robotics Automation
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Optimize your energy consumption with AI-powered monitoring and analytics. Reduce costs by 30%, 
-              track your carbon footprint, and integrate renewable energy sources for maximum efficiency.
+              Transform your operations with intelligent robotics powered by artificial intelligence. 
+              Increase productivity by 300%, reduce errors by 95%, and achieve unprecedented efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-green-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center group"
               >
-                Start Free Trial
+                Start Automation Journey
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -177,16 +177,16 @@ export default function ZionAiEnergyManager() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-2">30%</div>
-                <div className="text-gray-300">Average Cost Reduction</div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">300%</div>
+                <div className="text-gray-300">Productivity Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
-                <div className="text-gray-300">Prediction Accuracy</div>
+                <div className="text-3xl font-bold text-red-400 mb-2">95%</div>
+                <div className="text-gray-300">Error Reduction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">40%</div>
-                <div className="text-gray-300">Carbon Footprint Reduction</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+                <div className="text-gray-300">Continuous Operation</div>
               </div>
             </div>
           </div>
@@ -197,10 +197,10 @@ export default function ZionAiEnergyManager() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Energy Management Features
+                Advanced Robotics Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to optimize energy consumption and reduce costs with artificial intelligence.
+                Intelligent robots powered by cutting-edge AI and machine learning technologies.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -209,7 +209,7 @@ export default function ZionAiEnergyManager() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-emerald-500 to-green-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -224,25 +224,25 @@ export default function ZionAiEnergyManager() {
           </div>
         </section>
 
-        {/* Capabilities Section */}
+        {/* Applications Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Energy Intelligence
+                Robotics Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Monitor, analyze, and optimize every aspect of your energy consumption.
+                Transform every aspect of your operations with intelligent robotic solutions.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {capabilities.map((capability, index) => (
+              {applications.map((application, index) => (
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
-                  <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{capability}</span>
+                  <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+                  <span className="text-gray-300">{application}</span>
                 </div>
               ))}
             </div>
@@ -254,10 +254,10 @@ export default function ZionAiEnergyManager() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Robotics Automation Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your energy management needs. All plans include 14-day free trial.
+                Choose the robotics solution that fits your automation needs. All plans include installation and training.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -266,13 +266,13 @@ export default function ZionAiEnergyManager() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-emerald-400 bg-gradient-to-br from-emerald-500/10 to-green-500/10'
-                      : 'border-white/20 hover:border-emerald-400'
+                      ? 'border-orange-400 bg-gradient-to-br from-orange-500/10 to-red-500/10'
+                      : 'border-white/20 hover:border-orange-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -297,11 +297,11 @@ export default function ZionAiEnergyManager() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-emerald-500 to-green-600 text-white hover:from-emerald-600 hover:to-green-700'
-                        : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700'
+                        : 'border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-slate-900'
                     }`}
                   >
-                    Start Free Trial
+                    Start Automation Journey
                   </Link>
                 </div>
               ))}
@@ -314,10 +314,10 @@ export default function ZionAiEnergyManager() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Energy Managers
+                Trusted by Industry Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what energy professionals say about Zion AI Energy Manager
+                See what operations professionals say about our robotics automation solutions
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -346,22 +346,22 @@ export default function ZionAiEnergyManager() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Energy Usage?
+              Ready to Automate Your Operations?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations using Zion AI Energy Manager to reduce costs and environmental impact.
+              Join thousands of companies using Zion's robotics automation to transform their operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-green-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center"
               >
-                Start Your Free Trial
+                Start Your Automation Journey
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>

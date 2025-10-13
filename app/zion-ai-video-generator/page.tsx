@@ -1,103 +1,99 @@
-import { ArrowRight, Zap, TrendingUp, Brain, BarChart3, Star, CheckCircle, Leaf, Sun, Wind } from "lucide-react";
+import { ArrowRight, Video, Play, Zap, Brain, Star, CheckCircle, Sparkles, Camera, Film } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAiEnergyManager() {
+export default function ZionAiVideoGenerator() {
   const features = [
     {
+      icon: <Video className="w-6 h-6" />,
+      title: "AI Video Creation",
+      description: "Generate professional videos from text prompts with advanced AI models"
+    },
+    {
+      icon: <Play className="w-6 h-6" />,
+      title: "Multi-format Export",
+      description: "Export in 4K, HD, and mobile-optimized formats for all platforms"
+    },
+    {
       icon: <Zap className="w-6 h-6" />,
-      title: "Smart Energy Monitoring",
-      description: "Real-time energy consumption tracking with AI-powered insights and optimization"
+      title: "Real-time Rendering",
+      description: "Fast video generation with cloud-based processing power"
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Forecast energy usage and costs with 95% accuracy using machine learning"
+      title: "Smart Voice Synthesis",
+      description: "Natural-sounding voiceovers in 50+ languages and accents"
     },
     {
-      icon: <Leaf className="w-6 h-6" />,
-      title: "Carbon Footprint Tracking",
-      description: "Monitor and reduce your carbon footprint with detailed sustainability metrics"
+      icon: <Camera className="w-6 h-6" />,
+      title: "Stock Media Integration",
+      description: "Access to millions of stock videos, images, and music tracks"
     },
     {
-      icon: <Sun className="w-6 h-6" />,
-      title: "Renewable Energy Integration",
-      description: "Optimize solar, wind, and other renewable energy sources for maximum efficiency"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Cost Optimization",
-      description: "Reduce energy costs by 30% through intelligent load balancing and scheduling"
-    },
-    {
-      icon: <Wind className="w-6 h-6" />,
-      title: "Automated Controls",
-      description: "Smart automation for HVAC, lighting, and equipment based on occupancy and usage"
+      icon: <Film className="w-6 h-6" />,
+      title: "Advanced Editing",
+      description: "Professional editing tools with transitions, effects, and animations"
     }
   ];
 
-  const capabilities = [
-    "Real-time Energy Monitoring",
-    "Predictive Maintenance Alerts",
-    "Load Balancing Optimization",
-    "Peak Demand Management",
-    "Renewable Energy Forecasting",
-    "Carbon Emissions Tracking",
-    "Energy Cost Analysis",
-    "Equipment Performance Monitoring",
-    "Automated Demand Response",
-    "Sustainability Reporting",
-    "Energy Efficiency Recommendations",
-    "Smart Grid Integration"
+  const useCases = [
+    "Marketing Videos",
+    "Social Media Content",
+    "Product Demos",
+    "Training Materials",
+    "Educational Content",
+    "Explainer Videos",
+    "Brand Stories",
+    "Event Highlights"
   ];
 
   const pricingPlans = [
     {
-      name: "Basic",
-      price: "$79",
+      name: "Creator",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small buildings",
+      description: "Perfect for content creators",
       features: [
-        "Up to 5 energy meters",
-        "Basic monitoring",
-        "Monthly reports",
+        "10 video generations/month",
+        "HD quality export",
+        "Basic templates",
+        "Standard voice synthesis",
         "Email support",
-        "Standard dashboards",
-        "5GB data storage"
+        "5GB storage"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$79",
       period: "/month",
       description: "Most popular for businesses",
       features: [
-        "Up to 25 energy meters",
-        "Advanced analytics",
-        "Predictive insights",
+        "50 video generations/month",
+        "4K quality export",
+        "Premium templates",
+        "Advanced voice synthesis",
         "Priority support",
-        "Custom dashboards",
-        "50GB data storage",
-        "API access",
-        "Carbon tracking"
+        "50GB storage",
+        "Brand customization",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$199",
       period: "/month",
-      description: "For large facilities",
+      description: "For large organizations",
       features: [
-        "Unlimited energy meters",
-        "AI-powered optimization",
-        "Custom models",
+        "Unlimited video generations",
+        "8K quality export",
+        "Custom templates",
+        "Multi-language support",
         "24/7 dedicated support",
-        "White-label solution",
         "Unlimited storage",
-        "Advanced integrations",
-        "Custom reporting"
+        "White-label solution",
+        "Custom integrations"
       ],
       popular: false
     }
@@ -105,24 +101,24 @@ export default function ZionAiEnergyManager() {
 
   const testimonials = [
     {
-      name: "Jennifer Liu",
-      company: "Office Complex",
-      role: "Facilities Manager",
-      content: "Zion AI Energy Manager reduced our energy costs by 35% and helped us achieve carbon neutrality. The ROI was achieved in just 6 months.",
+      name: "Alex Chen",
+      company: "Digital Marketing Agency",
+      role: "Creative Director",
+      content: "Zion AI Video Generator has revolutionized our content creation process. We can now produce high-quality videos 10x faster than before.",
       rating: 5
     },
     {
-      name: "Mark Thompson",
-      company: "Manufacturing Plant",
-      role: "Operations Director",
-      content: "The predictive analytics helped us avoid costly equipment failures and optimize our energy usage. We've saved over $100,000 annually.",
+      name: "Maria Rodriguez",
+      company: "E-learning Platform",
+      role: "Content Manager",
+      content: "The AI voice synthesis is incredibly natural. Our students love the engaging video content we create with this platform.",
       rating: 5
     },
     {
-      name: "Sarah Davis",
-      company: "Retail Chain",
-      role: "Sustainability Manager",
-      content: "This platform transformed our energy management. We've reduced our carbon footprint by 40% while cutting energy costs by 30%.",
+      name: "David Kim",
+      company: "Tech Startup",
+      role: "Marketing Manager",
+      content: "This tool has saved us thousands of dollars in video production costs. The quality is professional-grade and the interface is intuitive.",
       rating: 5
     }
   ];
@@ -130,45 +126,45 @@ export default function ZionAiEnergyManager() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Energy Manager - Smart Energy Management Platform | Zion Tech Group</title>
+        <title>Zion AI Video Generator - Create Professional Videos with AI | Zion Tech Group</title>
         <meta
           name="description"
-          content="Optimize energy consumption with AI-powered monitoring and analytics. Reduce costs by 30%, track carbon footprint, and integrate renewable energy with Zion AI Energy Manager."
+          content="Create stunning professional videos with AI in minutes. Zion AI Video Generator offers text-to-video, voice synthesis, and advanced editing tools for content creators and businesses."
         />
         <meta
           name="keywords"
-          content="energy management, energy monitoring, energy optimization, carbon footprint, renewable energy, smart building, energy analytics"
+          content="AI video generator, video creation, text to video, video editing, content creation, marketing videos, social media content"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-green-500/20 border border-emerald-500/30 mb-6">
-              <Leaf className="w-4 h-4 text-emerald-400 mr-2" />
-              <span className="text-emerald-400 text-sm font-medium">AI-Powered Energy Intelligence</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
+              <Sparkles className="w-4 h-4 text-purple-400 mr-2" />
+              <span className="text-purple-400 text-sm font-medium">AI-Powered Video Creation</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-green-400">
-                Zion AI Energy Manager
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                Zion AI Video Generator
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Optimize your energy consumption with AI-powered monitoring and analytics. Reduce costs by 30%, 
-              track your carbon footprint, and integrate renewable energy sources for maximum efficiency.
+              Create professional videos in minutes with AI. Generate stunning content from text prompts, 
+              add natural voiceovers, and export in multiple formats for all platforms.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-green-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -177,16 +173,16 @@ export default function ZionAiEnergyManager() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-2">30%</div>
-                <div className="text-gray-300">Average Cost Reduction</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">1M+</div>
+                <div className="text-gray-300">Videos Generated</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
-                <div className="text-gray-300">Prediction Accuracy</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">50+</div>
+                <div className="text-gray-300">Languages Supported</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">40%</div>
-                <div className="text-gray-300">Carbon Footprint Reduction</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">4K</div>
+                <div className="text-gray-300">Export Quality</div>
               </div>
             </div>
           </div>
@@ -197,10 +193,10 @@ export default function ZionAiEnergyManager() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Energy Management Features
+                Powerful AI Video Creation Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to optimize energy consumption and reduce costs with artificial intelligence.
+                Everything you need to create professional videos with artificial intelligence.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -209,7 +205,7 @@ export default function ZionAiEnergyManager() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-emerald-500 to-green-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -224,25 +220,25 @@ export default function ZionAiEnergyManager() {
           </div>
         </section>
 
-        {/* Capabilities Section */}
+        {/* Use Cases Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Comprehensive Energy Intelligence
+                Perfect for Every Use Case
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Monitor, analyze, and optimize every aspect of your energy consumption.
+                From marketing to education, create videos for any purpose.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {capabilities.map((capability, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {useCases.map((useCase, index) => (
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
-                  <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{capability}</span>
+                  <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                  <span className="text-gray-300">{useCase}</span>
                 </div>
               ))}
             </div>
@@ -254,10 +250,10 @@ export default function ZionAiEnergyManager() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your energy management needs. All plans include 14-day free trial.
+                Choose the plan that fits your video creation needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -266,13 +262,13 @@ export default function ZionAiEnergyManager() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-emerald-400 bg-gradient-to-br from-emerald-500/10 to-green-500/10'
-                      : 'border-white/20 hover:border-emerald-400'
+                      ? 'border-purple-400 bg-gradient-to-br from-purple-500/10 to-pink-500/10'
+                      : 'border-white/20 hover:border-purple-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -297,8 +293,8 @@ export default function ZionAiEnergyManager() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-emerald-500 to-green-600 text-white hover:from-emerald-600 hover:to-green-700'
-                        : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
+                        : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -314,10 +310,10 @@ export default function ZionAiEnergyManager() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Energy Managers
+                Trusted by Content Creators
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what energy professionals say about Zion AI Energy Manager
+                See what creators and businesses say about Zion AI Video Generator
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -346,24 +342,24 @@ export default function ZionAiEnergyManager() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Energy Usage?
+              Ready to Create Amazing Videos?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of organizations using Zion AI Energy Manager to reduce costs and environmental impact.
+              Join thousands of creators using Zion AI Video Generator to produce professional content.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-green-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
               >
-                Schedule Demo
+                Watch Demo
               </Link>
             </div>
           </div>

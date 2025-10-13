@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Cpu } from 'lucide-react'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,13 +25,20 @@ const Navigation = React.memo(() => {
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Quantum Computing', path: '/ai-quantum-computing', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Robotics Automation', path: '/ai-robotics-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI Edge Computing', path: '/ai-edge-computing', icon: <Cpu className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Video Generator', path: '/zion-ai-video-generator', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Customer Insights Pro', path: '/zion-ai-customer-insights-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Supply Chain Optimizer', path: '/zion-ai-supply-chain-optimizer', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Energy Manager', path: '/zion-ai-energy-manager', icon: <Zap className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },

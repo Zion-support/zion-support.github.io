@@ -177,6 +177,31 @@ const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
 
+// New Micro SAAS Pages
+const ZionAiVideoGeneratorPage = React.lazy(
+  () => import("./app/zion-ai-video-generator/page"),
+);
+const ZionAiCustomerInsightsProPage = React.lazy(
+  () => import("./app/zion-ai-customer-insights-pro/page"),
+);
+const ZionAiSupplyChainOptimizerPage = React.lazy(
+  () => import("./app/zion-ai-supply-chain-optimizer/page"),
+);
+const ZionAiEnergyManagerPage = React.lazy(
+  () => import("./app/zion-ai-energy-manager/page"),
+);
+
+// New AI Services Pages
+const AiQuantumComputingPage = React.lazy(
+  () => import("./app/ai-quantum-computing/page"),
+);
+const AiRoboticsAutomationPage = React.lazy(
+  () => import("./app/ai-robotics-automation/page"),
+);
+const AiEdgeComputingPage = React.lazy(
+  () => import("./app/ai-edge-computing/page"),
+);
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
   () => import("./app/5g-data-analytics/page"),
@@ -419,6 +444,38 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+
+                  {/* New Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-video-generator"
+                    element={<ZionAiVideoGeneratorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-customer-insights-pro"
+                    element={<ZionAiCustomerInsightsProPage />}
+                  />
+                  <Route
+                    path="/zion-ai-supply-chain-optimizer"
+                    element={<ZionAiSupplyChainOptimizerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-energy-manager"
+                    element={<ZionAiEnergyManagerPage />}
+                  />
+
+                  {/* New AI Services Routes */}
+                  <Route
+                    path="/ai-quantum-computing"
+                    element={<AiQuantumComputingPage />}
+                  />
+                  <Route
+                    path="/ai-robotics-automation"
+                    element={<AiRoboticsAutomationPage />}
+                  />
+                  <Route
+                    path="/ai-edge-computing"
+                    element={<AiEdgeComputingPage />}
                   />
 
                   {/* 5G Solutions Routes */}
