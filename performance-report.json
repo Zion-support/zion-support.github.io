@@ -1,36 +1,10 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T10:35:44.609Z",
-=======
-  "timestamp": "2025-10-13T10:46:20.654Z",
->>>>>>> cursor/fix-errors-and-merge-to-main-65aa
+  "timestamp": "2025-10-13T10:59:26.618Z",
   "buildStats": {
-    "totalFiles": 85,
-    "totalSize": 815513,
+    "totalFiles": 86,
+    "totalSize": 818019,
     "jsFiles": 82,
-<<<<<<< HEAD
-    "jsSize": 821458,
-=======
-  "timestamp": "2025-10-13T10:36:32.987Z",
-  "buildStats": {
-    "totalFiles": 16,
-    "totalSize": 825630,
-    "jsFiles": 13,
-    "jsSize": 816250,
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
-=======
-  "timestamp": "2025-10-13T10:41:07.440Z",
-  "buildStats": {
-    "totalFiles": 16,
-    "totalSize": 692015,
-    "jsFiles": 12,
-    "jsSize": 668684,
->>>>>>> cursor/fix-errors-and-merge-to-main-aec0
-=======
-    "jsSize": 806330,
->>>>>>> cursor/fix-errors-and-merge-to-main-65aa
+    "jsSize": 794881,
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 0,

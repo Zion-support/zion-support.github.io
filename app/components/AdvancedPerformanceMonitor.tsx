@@ -25,8 +25,8 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
 
   const [isVisible, setIsVisible] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
-    }
 
+  const trackMetric = (name: string, value: number) => {
     // Send to custom analytics
     if (typeof window !== 'undefined' && (window as any).analytics) {
       (window as any).analytics.track('Performance Metric', {
