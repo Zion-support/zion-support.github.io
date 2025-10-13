@@ -1,89 +1,89 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calculator, FileText, BarChart3, Shield, Zap, Clock, CheckCircle, Star, Sparkles, Brain, DollarSign, TrendingUp, PieChart } from 'lucide-react';
+import { ArrowRight, Leaf, Globe, BarChart3, Shield, Zap, Users, Clock, CheckCircle, Star, Sparkles, Brain, Thermometer, Wind } from 'lucide-react';
 
-export default function ZionAIAccountingAssistant() {
+export default function ZionAIClimateSolutionsPro() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Bookkeeping",
-      description: "Automated transaction categorization and reconciliation using advanced machine learning"
+      title: "AI Climate Prediction",
+      description: "Advanced machine learning models for accurate weather and climate forecasting"
     },
     {
-      icon: <FileText className="w-6 h-6" />,
-      title: "Smart Invoice Processing",
-      description: "Automatically extract data from invoices and receipts with 99% accuracy"
+      icon: <Leaf className="w-6 h-6" />,
+      title: "Carbon Footprint Tracking",
+      description: "Real-time monitoring and analysis of carbon emissions across operations"
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: "Environmental Impact Assessment",
+      description: "Comprehensive analysis of environmental impact with actionable recommendations"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Financial Reports",
-      description: "Generate comprehensive financial reports and insights instantly"
+      title: "Sustainability Analytics",
+      description: "Advanced analytics and reporting for sustainability initiatives and goals"
+    },
+    {
+      icon: <Wind className="w-6 h-6" />,
+      title: "Renewable Energy Optimization",
+      description: "AI-powered optimization for renewable energy systems and efficiency"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Bank-Level Security",
-      description: "256-bit encryption and SOC 2 compliance for maximum data protection"
-    },
-    {
-      icon: <Calculator className="w-6 h-6" />,
-      title: "Tax Preparation",
-      description: "Automated tax calculations and preparation for seamless filing"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Expense Management",
-      description: "Track and categorize expenses with intelligent receipt scanning"
+      title: "Compliance Monitoring",
+      description: "Automated monitoring and reporting for environmental regulations and standards"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Solo",
-      price: "$39",
+      name: "Eco Starter",
+      price: "$99",
       period: "/month",
-      description: "Perfect for freelancers and solo entrepreneurs",
+      description: "Perfect for small businesses starting their sustainability journey",
       features: [
-        "Up to 100 transactions/month",
-        "Basic AI categorization",
-        "Invoice generation",
-        "Basic reporting",
+        "Basic carbon tracking",
+        "Monthly reports",
         "Email support",
-        "Mobile app access"
+        "Standard templates",
+        "Up to 5 users",
+        "Basic analytics"
       ],
       popular: false
     },
     {
-      name: "Business",
-      price: "$99",
+      name: "Climate Pro",
+      price: "$299",
       period: "/month",
-      description: "Ideal for small to medium businesses",
+      description: "Ideal for growing companies with sustainability goals",
       features: [
-        "Up to 1,000 transactions/month",
-        "Advanced AI features",
-        "Multi-user access",
-        "Advanced reporting",
-        "Tax preparation",
+        "Advanced AI predictions",
+        "Real-time monitoring",
         "Priority support",
-        "API integration",
-        "Custom categories"
+        "Custom dashboards",
+        "Up to 25 users",
+        "Advanced analytics",
+        "API access",
+        "Compliance reporting"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$299",
+      name: "Enterprise Green",
+      price: "$799",
       period: "/month",
-      description: "For large organizations",
+      description: "For large organizations with complex sustainability needs",
       features: [
-        "Unlimited transactions",
-        "Custom AI training",
-        "White-label solution",
-        "Advanced analytics",
+        "Custom AI models",
+        "Unlimited users",
         "Dedicated support",
+        "White-label solution",
         "Custom integrations",
-        "Compliance reporting",
-        "SLA guarantee"
+        "Advanced reporting",
+        "SLA guarantee",
+        "Training & consulting"
       ],
       popular: false
     }
@@ -91,67 +91,67 @@ export default function ZionAIAccountingAssistant() {
 
   const benefits = [
     {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Save 10+ Hours Weekly",
-      description: "Automate repetitive accounting tasks and focus on growing your business"
+      icon: <Leaf className="w-8 h-8" />,
+      title: "Reduce Carbon Footprint by 40%",
+      description: "AI-powered recommendations help optimize operations for maximum environmental impact"
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Improve Accuracy by 95%",
-      description: "AI-powered categorization reduces human errors and ensures consistency"
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Improve Sustainability Metrics",
+      description: "Track and improve key sustainability indicators with real-time insights"
     },
     {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: "Reduce Costs by 60%",
-      description: "Eliminate the need for expensive accounting software and manual processes"
+      icon: <Shield className="w-8 h-8" />,
+      title: "Ensure Compliance",
+      description: "Stay ahead of environmental regulations with automated monitoring and reporting"
     },
     {
-      icon: <PieChart className="w-8 h-8" />,
-      title: "Real-time Insights",
-      description: "Get instant financial insights and make data-driven business decisions"
+      icon: <Zap className="w-8 h-8" />,
+      title: "Optimize Energy Usage",
+      description: "Reduce energy costs by 30% with AI-powered optimization recommendations"
     }
   ];
 
   const testimonials = [
     {
-      name: "David Martinez",
-      company: "Martinez Consulting",
-      role: "Owner",
-      content: "Zion AI Accounting Assistant has revolutionized my bookkeeping. What used to take me 8 hours now takes 30 minutes. The AI categorization is incredibly accurate.",
+      name: "Dr. Sarah Green",
+      company: "GreenTech Solutions",
+      role: "Sustainability Director",
+      content: "Zion AI Climate Solutions Pro has transformed our sustainability efforts. We've reduced our carbon footprint by 45% in just 6 months.",
       rating: 5,
-      avatar: "DM"
+      avatar: "SG"
     },
     {
-      name: "Lisa Thompson",
-      company: "Thompson & Associates",
-      role: "CPA",
-      content: "This is the most advanced accounting AI I've used. The tax preparation features are outstanding and the reporting capabilities are comprehensive.",
+      name: "Michael Torres",
+      company: "EcoManufacturing Inc.",
+      role: "Environmental Manager",
+      content: "The AI predictions are incredibly accurate. We can now plan our operations around weather patterns and optimize our energy usage.",
       rating: 5,
-      avatar: "LT"
+      avatar: "MT"
     },
     {
-      name: "Robert Kim",
-      company: "TechStart Solutions",
-      role: "CFO",
-      content: "The real-time financial insights have helped us make better business decisions. The integration with our existing systems was seamless.",
+      name: "Lisa Chen",
+      company: "Sustainable Cities Initiative",
+      role: "Project Manager",
+      content: "The compliance monitoring features have saved us countless hours. We're always ahead of regulatory requirements now.",
       rating: 5,
-      avatar: "RK"
+      avatar: "LC"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Accounting Assistant - Automated Bookkeeping & Financial Management | Zion Tech Group</title>
+        <title>Zion AI Climate Solutions Pro - AI-Powered Climate & Sustainability Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your accounting with AI-powered bookkeeping, invoice processing, and financial reporting. Save 10+ hours weekly with Zion AI Accounting Assistant. Start free trial."
+          content="Advanced AI climate prediction, carbon tracking, and sustainability analytics. Reduce carbon footprint by 40% with Zion AI Climate Solutions Pro. Start free trial."
         />
         <meta
           name="keywords"
-          content="AI accounting, automated bookkeeping, invoice processing, financial reporting, tax preparation, expense management, accounting software, AI bookkeeper"
+          content="AI climate solutions, carbon tracking, sustainability analytics, environmental impact, climate prediction, renewable energy optimization, compliance monitoring"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-accounting-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-climate-solutions-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -165,19 +165,19 @@ export default function ZionAIAccountingAssistant() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 AI Accounting Platform</span>
+                <span className="text-cyan-400 text-sm font-medium">#1 AI Climate Solutions Platform</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                Zion AI
+                Zion AI Climate
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                  {" "}Accounting Assistant
+                  {" "}Solutions Pro
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your accounting with AI-powered automation. Automate bookkeeping, invoice processing, 
-                and financial reporting while saving 10+ hours weekly and improving accuracy by 95%.
+                Combat climate change with AI-powered solutions. Track carbon emissions, predict climate patterns, 
+                and optimize sustainability initiatives with advanced machine learning.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -200,20 +200,20 @@ export default function ZionAIAccountingAssistant() {
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                  <div className="text-gray-300 text-sm">Accuracy Rate</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
+                  <div className="text-gray-300 text-sm">Carbon Reduction</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">10+</div>
-                  <div className="text-gray-300 text-sm">Hours Saved Weekly</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+                  <div className="text-gray-300 text-sm">Prediction Accuracy</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">60%</div>
-                  <div className="text-gray-300 text-sm">Cost Reduction</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">30%</div>
+                  <div className="text-gray-300 text-sm">Energy Savings</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
-                  <div className="text-gray-300 text-sm">Invoice Accuracy</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+                  <div className="text-gray-300 text-sm">Monitoring</div>
                 </div>
               </div>
             </div>
@@ -225,13 +225,13 @@ export default function ZionAIAccountingAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose
+                Transform Your
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Zion AI Accounting?
+                  {" "}Sustainability Impact
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the future of accounting with AI-powered automation that saves time, reduces errors, and provides real-time insights.
+                Make a real difference in the fight against climate change with AI-powered insights and optimization.
               </p>
             </div>
             
@@ -261,13 +261,13 @@ export default function ZionAIAccountingAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Features for
+                Comprehensive Climate
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Modern Accounting
+                  {" "}Intelligence
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to automate your accounting processes and gain real-time financial insights.
+                Everything you need to understand, track, and optimize your environmental impact.
               </p>
             </div>
             
@@ -297,13 +297,13 @@ export default function ZionAIAccountingAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Simple, Transparent
+                Sustainable
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Pricing
+                  {" "}Pricing Plans
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs. All plans include our core AI features with no hidden fees.
+                Choose the perfect plan for your sustainability journey. All plans include our core AI features.
               </p>
             </div>
             
@@ -366,11 +366,11 @@ export default function ZionAIAccountingAssistant() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Trusted by
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Accounting Professionals
+                  {" "}Climate Leaders
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Accounting Assistant
+                See what our customers say about Zion AI Climate Solutions Pro
               </p>
             </div>
             
@@ -405,11 +405,11 @@ export default function ZionAIAccountingAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Automate Your Accounting?
+              Ready to Make a Climate Impact?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Accounting Assistant to streamline their financial processes. 
-              Start your free trial today and save 10+ hours weekly.
+              Join the fight against climate change with AI-powered solutions. Start your free trial today 
+              and begin your sustainability transformation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

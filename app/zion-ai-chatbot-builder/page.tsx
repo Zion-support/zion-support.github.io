@@ -1,157 +1,131 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calculator, FileText, BarChart3, Shield, Zap, Clock, CheckCircle, Star, Sparkles, Brain, DollarSign, TrendingUp, PieChart } from 'lucide-react';
+import { ArrowRight, Bot, MessageSquare, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, Sparkles, Brain, Code, Globe } from 'lucide-react';
 
-export default function ZionAIAccountingAssistant() {
+export default function ZionAIChatbotBuilder() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Bookkeeping",
-      description: "Automated transaction categorization and reconciliation using advanced machine learning"
+      title: "AI-Powered Conversations",
+      description: "Advanced natural language processing for human-like interactions"
     },
     {
-      icon: <FileText className="w-6 h-6" />,
-      title: "Smart Invoice Processing",
-      description: "Automatically extract data from invoices and receipts with 99% accuracy"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Financial Reports",
-      description: "Generate comprehensive financial reports and insights instantly"
+      icon: <Code className="w-6 h-6" />,
+      title: "No-Code Builder",
+      description: "Drag-and-drop interface for easy chatbot creation"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Bank-Level Security",
-      description: "256-bit encryption and SOC 2 compliance for maximum data protection"
+      title: "Enterprise Security",
+      description: "End-to-end encryption and compliance with industry standards"
     },
     {
-      icon: <Calculator className="w-6 h-6" />,
-      title: "Tax Preparation",
-      description: "Automated tax calculations and preparation for seamless filing"
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Analytics Dashboard",
+      description: "Real-time insights and conversation analytics"
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: "Multi-Language Support",
+      description: "Support for 50+ languages and dialects"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Expense Management",
-      description: "Track and categorize expenses with intelligent receipt scanning"
+      title: "Instant Deployment",
+      description: "Deploy chatbots across multiple platforms instantly"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Solo",
-      price: "$39",
+      name: "Starter",
+      price: "$29",
       period: "/month",
-      description: "Perfect for freelancers and solo entrepreneurs",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 100 transactions/month",
-        "Basic AI categorization",
-        "Invoice generation",
-        "Basic reporting",
+        "Up to 1,000 conversations/month",
+        "Basic AI responses",
         "Email support",
-        "Mobile app access"
+        "Standard templates",
+        "Basic analytics"
       ],
       popular: false
     },
     {
-      name: "Business",
-      price: "$99",
+      name: "Professional",
+      price: "$79",
       period: "/month",
-      description: "Ideal for small to medium businesses",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 1,000 transactions/month",
-        "Advanced AI features",
-        "Multi-user access",
-        "Advanced reporting",
-        "Tax preparation",
+        "Up to 10,000 conversations/month",
+        "Advanced AI with custom training",
         "Priority support",
-        "API integration",
-        "Custom categories"
+        "Custom branding",
+        "Advanced analytics",
+        "API access",
+        "Multi-language support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited transactions",
-        "Custom AI training",
+        "Unlimited conversations",
+        "Custom AI models",
+        "24/7 dedicated support",
         "White-label solution",
-        "Advanced analytics",
-        "Dedicated support",
-        "Custom integrations",
-        "Compliance reporting",
+        "Advanced integrations",
+        "Custom development",
         "SLA guarantee"
       ],
       popular: false
     }
   ];
 
-  const benefits = [
-    {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Save 10+ Hours Weekly",
-      description: "Automate repetitive accounting tasks and focus on growing your business"
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Improve Accuracy by 95%",
-      description: "AI-powered categorization reduces human errors and ensures consistency"
-    },
-    {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: "Reduce Costs by 60%",
-      description: "Eliminate the need for expensive accounting software and manual processes"
-    },
-    {
-      icon: <PieChart className="w-8 h-8" />,
-      title: "Real-time Insights",
-      description: "Get instant financial insights and make data-driven business decisions"
-    }
-  ];
-
   const testimonials = [
     {
-      name: "David Martinez",
-      company: "Martinez Consulting",
-      role: "Owner",
-      content: "Zion AI Accounting Assistant has revolutionized my bookkeeping. What used to take me 8 hours now takes 30 minutes. The AI categorization is incredibly accurate.",
+      name: "Sarah Johnson",
+      company: "TechStart Inc.",
+      role: "CEO",
+      content: "Zion AI Chatbot Builder transformed our customer support. We reduced response time by 80% and increased customer satisfaction significantly.",
       rating: 5,
-      avatar: "DM"
+      avatar: "SJ"
     },
     {
-      name: "Lisa Thompson",
-      company: "Thompson & Associates",
-      role: "CPA",
-      content: "This is the most advanced accounting AI I've used. The tax preparation features are outstanding and the reporting capabilities are comprehensive.",
+      name: "Michael Chen",
+      company: "E-commerce Solutions",
+      role: "CTO",
+      content: "The no-code interface made it incredibly easy to create sophisticated chatbots. Our team was up and running in just a few hours.",
       rating: 5,
-      avatar: "LT"
+      avatar: "MC"
     },
     {
-      name: "Robert Kim",
-      company: "TechStart Solutions",
-      role: "CFO",
-      content: "The real-time financial insights have helped us make better business decisions. The integration with our existing systems was seamless.",
+      name: "Emily Rodriguez",
+      company: "Digital Agency",
+      role: "Operations Director",
+      content: "The analytics dashboard provides incredible insights into customer interactions. It's helped us optimize our support processes dramatically.",
       rating: 5,
-      avatar: "RK"
+      avatar: "ER"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Accounting Assistant - Automated Bookkeeping & Financial Management | Zion Tech Group</title>
+        <title>Zion AI Chatbot Builder - No-Code AI Chatbot Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your accounting with AI-powered bookkeeping, invoice processing, and financial reporting. Save 10+ hours weekly with Zion AI Accounting Assistant. Start free trial."
+          content="Build intelligent chatbots without coding. Zion AI Chatbot Builder offers advanced AI, no-code interface, multi-language support, and enterprise security. Start free trial today."
         />
         <meta
           name="keywords"
-          content="AI accounting, automated bookkeeping, invoice processing, financial reporting, tax preparation, expense management, accounting software, AI bookkeeper"
+          content="AI chatbot builder, no-code chatbot, conversational AI, customer support automation, chatbot platform, AI assistant, natural language processing, chatbot analytics"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-accounting-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-chatbot-builder" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -165,19 +139,19 @@ export default function ZionAIAccountingAssistant() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 AI Accounting Platform</span>
+                <span className="text-cyan-400 text-sm font-medium">#1 No-Code AI Chatbot Platform</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 Zion AI
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                  {" "}Accounting Assistant
+                  {" "}Chatbot Builder
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your accounting with AI-powered automation. Automate bookkeeping, invoice processing, 
-                and financial reporting while saving 10+ hours weekly and improving accuracy by 95%.
+                Build intelligent, conversational AI chatbots without writing a single line of code. 
+                Deploy across multiple platforms with advanced analytics and enterprise-grade security.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -200,74 +174,38 @@ export default function ZionAIAccountingAssistant() {
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                  <div className="text-gray-300 text-sm">Accuracy Rate</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
+                  <div className="text-gray-300 text-sm">Languages Supported</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">10+</div>
-                  <div className="text-gray-300 text-sm">Hours Saved Weekly</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+                  <div className="text-gray-300 text-sm">Uptime SLA</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">60%</div>
-                  <div className="text-gray-300 text-sm">Cost Reduction</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">10K+</div>
+                  <div className="text-gray-300 text-sm">Active Chatbots</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
-                  <div className="text-gray-300 text-sm">Invoice Accuracy</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">5min</div>
+                  <div className="text-gray-300 text-sm">Setup Time</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Zion AI Accounting?
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the future of accounting with AI-powered automation that saves time, reduces errors, and provides real-time insights.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
-                >
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {benefit.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Powerful Features for
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Modern Accounting
+                  {" "}Every Business
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to automate your accounting processes and gain real-time financial insights.
+                Everything you need to create, deploy, and manage intelligent chatbots that deliver exceptional customer experiences.
               </p>
             </div>
             
@@ -293,7 +231,7 @@ export default function ZionAIAccountingAssistant() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -303,7 +241,7 @@ export default function ZionAIAccountingAssistant() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs. All plans include our core AI features with no hidden fees.
+                Choose the perfect plan for your business needs. All plans include our core features with no hidden fees.
               </p>
             </div>
             
@@ -360,17 +298,17 @@ export default function ZionAIAccountingAssistant() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Trusted by
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Accounting Professionals
+                  {" "}Industry Leaders
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Accounting Assistant
+                See what our customers say about Zion AI Chatbot Builder
               </p>
             </div>
             
@@ -405,11 +343,11 @@ export default function ZionAIAccountingAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Automate Your Accounting?
+              Ready to Build Your First AI Chatbot?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Accounting Assistant to streamline their financial processes. 
-              Start your free trial today and save 10+ hours weekly.
+              Join thousands of businesses using Zion AI Chatbot Builder to create intelligent, 
+              engaging customer experiences. Start your free trial today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

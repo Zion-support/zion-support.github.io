@@ -1,157 +1,157 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Calculator, FileText, BarChart3, Shield, Zap, Clock, CheckCircle, Star, Sparkles, Brain, DollarSign, TrendingUp, PieChart } from 'lucide-react';
+import { ArrowRight, Cube, Palette, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, Sparkles, Brain, Camera, Download } from 'lucide-react';
 
-export default function ZionAIAccountingAssistant() {
+export default function ZionAI3DGeneration() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Bookkeeping",
-      description: "Automated transaction categorization and reconciliation using advanced machine learning"
+      title: "AI-Powered 3D Modeling",
+      description: "Generate high-quality 3D models from text descriptions or 2D images using advanced AI"
     },
     {
-      icon: <FileText className="w-6 h-6" />,
-      title: "Smart Invoice Processing",
-      description: "Automatically extract data from invoices and receipts with 99% accuracy"
+      icon: <Palette className="w-6 h-6" />,
+      title: "Text-to-3D Generation",
+      description: "Create detailed 3D models from simple text prompts with photorealistic textures"
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Financial Reports",
-      description: "Generate comprehensive financial reports and insights instantly"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Bank-Level Security",
-      description: "256-bit encryption and SOC 2 compliance for maximum data protection"
-    },
-    {
-      icon: <Calculator className="w-6 h-6" />,
-      title: "Tax Preparation",
-      description: "Automated tax calculations and preparation for seamless filing"
+      icon: <Camera className="w-6 h-6" />,
+      title: "Image-to-3D Conversion",
+      description: "Transform 2D images into fully textured 3D models with automatic depth mapping"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Expense Management",
-      description: "Track and categorize expenses with intelligent receipt scanning"
+      title: "Real-time Rendering",
+      description: "Preview and render 3D models in real-time with advanced lighting and materials"
+    },
+    {
+      icon: <Download className="w-6 h-6" />,
+      title: "Multiple Export Formats",
+      description: "Export to OBJ, FBX, GLTF, STL, and other popular 3D formats"
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Cloud Processing",
+      description: "Leverage powerful cloud GPUs for fast 3D generation and processing"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Solo",
-      price: "$39",
+      name: "Creator",
+      price: "$49",
       period: "/month",
-      description: "Perfect for freelancers and solo entrepreneurs",
+      description: "Perfect for individual creators and designers",
       features: [
-        "Up to 100 transactions/month",
-        "Basic AI categorization",
-        "Invoice generation",
-        "Basic reporting",
+        "Up to 100 3D generations/month",
+        "Basic AI models",
+        "Standard resolution (1024x1024)",
+        "5 export formats",
         "Email support",
-        "Mobile app access"
+        "Basic templates"
       ],
       popular: false
     },
     {
-      name: "Business",
-      price: "$99",
+      name: "Professional",
+      price: "$149",
       period: "/month",
-      description: "Ideal for small to medium businesses",
+      description: "Ideal for professional designers and studios",
       features: [
-        "Up to 1,000 transactions/month",
-        "Advanced AI features",
-        "Multi-user access",
-        "Advanced reporting",
-        "Tax preparation",
+        "Up to 500 3D generations/month",
+        "Advanced AI models",
+        "High resolution (2048x2048)",
+        "All export formats",
         "Priority support",
-        "API integration",
-        "Custom categories"
+        "Custom textures",
+        "API access",
+        "Batch processing"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$499",
       period: "/month",
-      description: "For large organizations",
+      description: "For large teams and organizations",
       features: [
-        "Unlimited transactions",
+        "Unlimited generations",
         "Custom AI training",
+        "4K resolution (4096x4096)",
         "White-label solution",
-        "Advanced analytics",
         "Dedicated support",
         "Custom integrations",
-        "Compliance reporting",
+        "Team collaboration",
         "SLA guarantee"
       ],
       popular: false
     }
   ];
 
-  const benefits = [
+  const useCases = [
     {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Save 10+ Hours Weekly",
-      description: "Automate repetitive accounting tasks and focus on growing your business"
+      icon: <Cube className="w-8 h-8" />,
+      title: "Product Design",
+      description: "Create 3D prototypes and visualizations for product development"
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Improve Accuracy by 95%",
-      description: "AI-powered categorization reduces human errors and ensures consistency"
+      icon: <Camera className="w-8 h-8" />,
+      title: "Architecture Visualization",
+      description: "Generate 3D architectural models and walkthroughs from blueprints"
     },
     {
-      icon: <DollarSign className="w-8 h-8" />,
-      title: "Reduce Costs by 60%",
-      description: "Eliminate the need for expensive accounting software and manual processes"
+      icon: <Palette className="w-8 h-8" />,
+      title: "Game Development",
+      description: "Create 3D assets, characters, and environments for games"
     },
     {
-      icon: <PieChart className="w-8 h-8" />,
-      title: "Real-time Insights",
-      description: "Get instant financial insights and make data-driven business decisions"
+      icon: <Zap className="w-8 h-8" />,
+      title: "Marketing Materials",
+      description: "Generate 3D product shots and promotional content"
     }
   ];
 
   const testimonials = [
     {
-      name: "David Martinez",
-      company: "Martinez Consulting",
-      role: "Owner",
-      content: "Zion AI Accounting Assistant has revolutionized my bookkeeping. What used to take me 8 hours now takes 30 minutes. The AI categorization is incredibly accurate.",
+      name: "Alex Chen",
+      company: "Digital Design Studio",
+      role: "Creative Director",
+      content: "Zion AI 3D Generation has revolutionized our workflow. We can now create 3D models in minutes instead of hours. The quality is outstanding.",
       rating: 5,
-      avatar: "DM"
+      avatar: "AC"
     },
     {
-      name: "Lisa Thompson",
-      company: "Thompson & Associates",
-      role: "CPA",
-      content: "This is the most advanced accounting AI I've used. The tax preparation features are outstanding and the reporting capabilities are comprehensive.",
+      name: "Maria Rodriguez",
+      company: "Architectural Firm",
+      role: "3D Visualization Specialist",
+      content: "The text-to-3D feature is incredible. I can describe a building concept and get a detailed 3D model instantly. It's changed how we present to clients.",
       rating: 5,
-      avatar: "LT"
+      avatar: "MR"
     },
     {
-      name: "Robert Kim",
-      company: "TechStart Solutions",
-      role: "CFO",
-      content: "The real-time financial insights have helped us make better business decisions. The integration with our existing systems was seamless.",
+      name: "James Wilson",
+      company: "Game Development Studio",
+      role: "Lead Artist",
+      content: "The AI-generated 3D assets are perfect for our game prototypes. The variety and quality help us iterate faster than ever before.",
       rating: 5,
-      avatar: "RK"
+      avatar: "JW"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Accounting Assistant - Automated Bookkeeping & Financial Management | Zion Tech Group</title>
+        <title>Zion AI 3D Generation - AI-Powered 3D Modeling & Text-to-3D Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your accounting with AI-powered bookkeeping, invoice processing, and financial reporting. Save 10+ hours weekly with Zion AI Accounting Assistant. Start free trial."
+          content="Create stunning 3D models from text or images with AI. Zion AI 3D Generation offers text-to-3D, image-to-3D, real-time rendering, and multiple export formats. Start free trial."
         />
         <meta
           name="keywords"
-          content="AI accounting, automated bookkeeping, invoice processing, financial reporting, tax preparation, expense management, accounting software, AI bookkeeper"
+          content="AI 3D generation, text-to-3D, image-to-3D, 3D modeling, 3D rendering, 3D design, AI 3D creator, 3D visualization, product design, game development"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-accounting-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-3d-generation" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -165,19 +165,19 @@ export default function ZionAIAccountingAssistant() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 AI Accounting Platform</span>
+                <span className="text-cyan-400 text-sm font-medium">#1 AI 3D Generation Platform</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 Zion AI
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                  {" "}Accounting Assistant
+                  {" "}3D Generation
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your accounting with AI-powered automation. Automate bookkeeping, invoice processing, 
-                and financial reporting while saving 10+ hours weekly and improving accuracy by 95%.
+                Create stunning 3D models from text descriptions or 2D images using cutting-edge AI. 
+                Generate photorealistic 3D assets in minutes, not hours.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -200,55 +200,55 @@ export default function ZionAIAccountingAssistant() {
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                  <div className="text-gray-300 text-sm">Accuracy Rate</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">10x</div>
+                  <div className="text-gray-300 text-sm">Faster than Traditional</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">10+</div>
-                  <div className="text-gray-300 text-sm">Hours Saved Weekly</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+                  <div className="text-gray-300 text-sm">Export Formats</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">60%</div>
-                  <div className="text-gray-300 text-sm">Cost Reduction</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">4K</div>
+                  <div className="text-gray-300 text-sm">Maximum Resolution</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
-                  <div className="text-gray-300 text-sm">Invoice Accuracy</div>
+                  <div className="text-gray-300 text-sm">Accuracy Rate</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose
+                Perfect for
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Zion AI Accounting?
+                  {" "}Every Industry
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the future of accounting with AI-powered automation that saves time, reduces errors, and provides real-time insights.
+                From product design to game development, our AI 3D generation serves diverse creative needs.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {useCases.map((useCase, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >
                   <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    {benefit.icon}
+                    {useCase.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {benefit.title}
+                    {useCase.title}
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    {benefit.description}
+                    {useCase.description}
                   </p>
                 </div>
               ))}
@@ -263,11 +263,11 @@ export default function ZionAIAccountingAssistant() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Powerful Features for
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Modern Accounting
+                  {" "}3D Creation
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to automate your accounting processes and gain real-time financial insights.
+                Everything you need to create, customize, and export professional 3D models with AI.
               </p>
             </div>
             
@@ -303,7 +303,7 @@ export default function ZionAIAccountingAssistant() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs. All plans include our core AI features with no hidden fees.
+                Choose the perfect plan for your 3D creation needs. All plans include our core AI features with no hidden fees.
               </p>
             </div>
             
@@ -366,11 +366,11 @@ export default function ZionAIAccountingAssistant() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Trusted by
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Accounting Professionals
+                  {" "}Creative Professionals
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Accounting Assistant
+                See what our customers say about Zion AI 3D Generation
               </p>
             </div>
             
@@ -405,11 +405,11 @@ export default function ZionAIAccountingAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Automate Your Accounting?
+              Ready to Create Stunning 3D Models?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Accounting Assistant to streamline their financial processes. 
-              Start your free trial today and save 10+ hours weekly.
+              Join thousands of creators using Zion AI 3D Generation to bring their ideas to life. 
+              Start your free trial today and create 3D models in minutes.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
