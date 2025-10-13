@@ -9,6 +9,7 @@ export default tseslint.config(
       "dist",
       ".next",
       "backup-problematic/**",
+      "backup-unused-components/**",
       "corrupted-src-backup/**",
       "src/**",
       "*.js",
@@ -17,6 +18,7 @@ export default tseslint.config(
       "identify_missing_pages.js",
       "merge-with-conflict-resolution.js",
       "resolve-all-conflicts.js",
+      "fix-unused-imports.cjs",
     ],
   },
   {

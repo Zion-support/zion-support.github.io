@@ -14,7 +14,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enablePreloading = true,
     enableImageOptimization = true,
 
-    enableCodeSplitting = true,
+    // enableCodeSplitting = true,
     enableCaching = true,
   } = options;
 
@@ -114,9 +114,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
+          .then(() => {
             })
-          .catch((registrationError) => {
+          .catch(() => {
             });
       });
     }
@@ -131,7 +131,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) {
-            }
+            // Long task detected
+          }
         }
       });
       
@@ -150,7 +151,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576);
         
         if (usedMB / totalMB > 0.8) {
-          }
+          // High memory usage detected
+        }
       };
       
       setInterval(checkMemory, 30000); // Check every 30 seconds

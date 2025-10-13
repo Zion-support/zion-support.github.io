@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAICustomerInsightsPage = () => {
-  const [selectedPlan, setSelectedPlan] = useState('pro');
 
   const features = [
     {

@@ -1,11 +1,12 @@
-import { Routes, Route } from 'react-router-dom';
+import React, { useState, useCallback, useEffect, Suspense } from 'react';
+import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from './app/components/LoadingStates';
-import { GlobalErrorBoundary } from './app/components/EnhancedErrorFeedback';
+import ErrorBoundary from './app/components/ErrorBoundary';
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -13,7 +14,7 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+// import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 
@@ -23,7 +24,7 @@ const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
-const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
+// const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
@@ -122,8 +123,7 @@ function App() {
   }, []);
 
   return (
-    <GlobalErrorBoundary>
-      <EnhancedErrorBoundary>
+    <ErrorBoundary>
         <HelmetProvider>
           <AnalyticsProvider>
             <PerformanceMonitor>
@@ -147,7 +147,7 @@ function App() {
                                   <Route path="/about" element={<AboutPage />} />
                                   <Route path="/contact" element={<ContactPage />} />
                                   <Route path="/services" element={<ServicesPage />} />
-                                  <Route path="/micro-saas" element={<MicroSaasPage />} />
+                                  {/* <Route path="/micro-saas" element={<MicroSaasPage />} /> */}
                                   <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                                   <Route path="/blog" element={<BlogPage />} />
                                   <Route path="/ai-services" element={<AIServicesPage />} />
@@ -254,8 +254,7 @@ function App() {
             </PerformanceMonitor>
           </AnalyticsProvider>
         </HelmetProvider>
-      </EnhancedErrorBoundary>
-    </GlobalErrorBoundary>
+    </ErrorBoundary>
   );
 }
 
