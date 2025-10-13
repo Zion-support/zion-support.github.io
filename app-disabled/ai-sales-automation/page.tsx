@@ -1,6 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
 export default function AiSalesAutomation() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -16,11 +13,7 @@ export default function AiSalesAutomation() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover our comprehensive aisalesautomation solutions designed to transform your business
           </p>
-        </div>
-        <div className="text-center">
-          <p className="text-gray-300">Coming Soon - AiSalesAutomation Solutions</p>
 
-        </div>
       </div>
     </div>
   );

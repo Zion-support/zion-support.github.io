@@ -1,47 +1,49 @@
 require('@testing-library/jest-dom');
+import React from 'react;
 
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation((query) => ({
-    matches: false,
-    media: query,
-    onchange: null,
-    addListener: jest.fn(),
-    removeListener: jest.fn(),
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn()
-  }))
-});
+jest.mock(react-router-dom, () => {;
 
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  takeRecords() {
-    return [];
-  }
-  unobserve() {}
-};
+const actual = jest.requireActual(react-router-dom);;
 
-// Suppress console errors in tests
-const originalError = console.error;
+  const React = require(react);;
 
-beforeAll(() => {
-  console.error = jest.fn((...args) => {
-    if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('Warning: ReactDOM.render') ||
-        args[0].includes('Not implemented: HTMLFormElement.prototype.submit'))
-    ) {
-      return;
-    }
-    originalError.call(console, ...args);
-  });
-});
+      pathname: '/,
+      search: ',
+      hash: ',
+      state: null}),
+    useParams: () => ({}),
+    Link: ({ children, to, ...props }) => {
+      return React.createElement('a, { href: to, ...props }, children)},
+    NavLink: ({ children, to, ...props }) => {
+      return React.createElement('a, { href: to, ...props }, children)},
+    BrowserRouter: ({ children }) => children,
+    MemoryRouter: ({ children }) => {;
+
+const { createMemoryRouter, RouterProvider } = actual;
+
+      const router = createMemoryRouter([;;
+
+        {
+          path: '/,
+          element: children}], {
+        initialEntries: ['/],
+        initialIndex: 0});
+
+      return React.createElement(RouterProvider, { router })},
+    RouterProvider: ({ router }) => null}});
+global.IntersectionObserver = class IntersectionObserver {;
+
+constructor() {}
+
+    return []}
+
+// Suppress console errors in tests;
+
+const originalError = console.error;;
+
+      return}
+
+    originalError.call(console, ...args)})});
 
 afterAll(() => {
-  console.error = originalError;
-});
+  console.error = originalError});

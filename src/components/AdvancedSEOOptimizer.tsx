@@ -48,10 +48,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const finalStructuredData = structuredData || baseStructuredData;
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         {/* Basic Meta Tags */}
-        <title>{title}</title>
+        <title>{title}
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords.join(', ')} />
         <meta name="author" content="Zion Tech Group" />
@@ -76,10 +76,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(finalStructuredData)}
-        </script>
-      </Helmet>
       {children}
-    </>
   );
 };
 

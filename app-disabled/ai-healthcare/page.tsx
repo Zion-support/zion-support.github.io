@@ -1,8 +1,4 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-export default function AiHealthcare() {
-  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AiHealthcare - Zion Tech Group</title>
@@ -19,9 +15,4 @@ export default function AiHealthcare() {
         </div>
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - AiHealthcare Solutions</p>
-
-        </div>
-      </div>
-    </div>
-  );
 }

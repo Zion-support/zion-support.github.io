@@ -1,25 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Shield, Zap, Globe, Lock, ArrowRight } from 'lucide-react';
-import Layout from '../layout';
-export default function BlockchainWeb3() {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-    },
-    {
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
@@ -56,101 +36,6 @@ export default function BlockchainWeb3() {
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']}]
 return(<>)
       <Helmet />
-
-  const services = [
-    {
-      category: 'Blockchain Development',
-      items: ['Smart Contract Development', 'DApp Development', 'Token Creation', 'DeFi Protocols', 'NFT Marketplaces', 'Cross-chain Solutions']
-    },
-    {
-      category: 'Web3 Integration',
-      items: ['Wallet Integration', 'MetaMask Support', 'Web3.js Integration', 'IPFS Storage', 'Decentralized Identity', 'DAO Governance']
-    },
-    {
-      category: 'Security & Audit',
-      items: ['Smart Contract Audits', 'Security Testing', 'Penetration Testing', 'Code Review', 'Vulnerability Assessment', 'Compliance Check']
-    },
-    {
-      category: 'Consulting',
-      items: ['Blockchain Strategy', 'Technology Selection', 'Architecture Design', 'Implementation Planning', 'Training & Support', 'Maintenance']
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$2,999',
-      period: '/project',
-      description: 'Perfect for small blockchain projects',
-      features: [
-        'Basic smart contract development',
-        'Simple DApp creation',
-        'Token creation (ERC-20)',
-        'Basic security audit',
-        'Documentation',
-        '1 month support'      ],
-    },
-    {
-      name: 'Professional',
-      price: '$7,999',
-      period: '/project',
-      description: 'Ideal for medium-scale blockchain solutions',
-      features: [
-        'Advanced smart contract development',
-        'Complex DApp development',
-        'Multiple token standards',
-        'Comprehensive security audit',
-        'DeFi protocol integration',
-        '3 months support',
-        'Performance optimization'      ],
-    },
-    {
-      name: 'Enterprise',
-      price: '$19,999',
-      period: '/project',
-      description: 'Complete blockchain ecosystem development',
-      features: [
-        'Custom blockchain development',
-        'Multi-chain solutions',
-        'Advanced DeFi protocols',
-        'NFT marketplace development',
-        'Cross-chain integration',
-        '6 months support',
-        'Dedicated team',
-        '24/7 monitoring'
-      ],
-      popular: false
-    }  ];
-
-  return (
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Blockchain & Web3
-              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with cutting-edge blockchain technology and Web3 solutions. 
-              From smart contracts to DeFi protocols, we build the future of decentralized applications.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -224,17 +109,3 @@ return(<>)
         </div>
       </section>
     </div>
-  );
-};
-
-export default PagePage;
-                  {feature.benefits.map((benefit, benefitIndex) => (} <li>
-                      <CheckCircle />
-          </div>
-        ))
-      </div>
-
-  );
-};
-
-export default BlockchainWeb3Page;

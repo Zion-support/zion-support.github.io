@@ -1,11 +1,18 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft, Search, AlertTriangle, RefreshCw } from 'lucide-react';
 
 const NotFoundPage: React.FC = () => {
   return (
+=======
+
+export default function AppPage() {
+  return (
+<<<<<<< HEAD
+>>>>>>> origin/main
     <>
       <Helmet>
         <title>404 - Page Not Found | Zion Tech Group</title>
@@ -66,7 +73,7 @@ const NotFoundPage: React.FC = () => {
               ))}
             </div>
           </div>
-
+          
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Link
@@ -76,7 +83,10 @@ const NotFoundPage: React.FC = () => {
               <Home className="w-5 h-5 mr-2" />
               Go Home
             </Link>
+<<<<<<< HEAD
             
+=======
+>>>>>>> origin/main
             <button
               onClick={() => window.history.back()}
               className="flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
@@ -85,7 +95,7 @@ const NotFoundPage: React.FC = () => {
               Go Back
             </button>
           </div>
-
+          
           {/* Help Section */}
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-lg p-6">
             <h3 className="text-lg font-semibold text-white mb-3">
@@ -110,18 +120,34 @@ const NotFoundPage: React.FC = () => {
               </a>
             </div>
           </div>
-
+          
           {/* Fun Fact */}
           <div className="mt-8 p-4 bg-slate-800/30 rounded-lg">
             <p className="text-sm text-gray-400">
+<<<<<<< HEAD
               <span className="text-cyan-400">Fun Fact:</span> Even our AI gets confused sometimes. 
               That's why we have humans to help when things go wrong! 🤖
+=======
+<<<<<<< HEAD
+              <span className="text-cyan-400">Fun Fact:</span> Even our AI gets confused sometimes. 
+              That's why we have humans to help when things go wrong! 🤖
+=======
+              <span className="text-cyan-400">Fun Fact:</span> Even our AI gets confused sometimes,
+              That&apos;s why we have humans to help when things go wrong! 🤖
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+>>>>>>> origin/main
             </p>
           </div>
         </div>
+=======
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">App</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
       </div>
-    </>
+    </div>
   );
-};
-
-export default NotFoundPage;
+}

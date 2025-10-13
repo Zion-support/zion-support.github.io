@@ -9,7 +9,6 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
 
   ];
 
-
   ];
 
   ];
@@ -20,20 +19,11 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
 
   ];
 
-                  <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h3>
-                  <p className="text-sm text-cyan-400">AI & IT Solutions</p>
-                </div>
-              </Link>
-            </div>
-            
+                  <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group
+                  <p className="text-sm text-cyan-400">AI & IT Solutions
             <p className="text-gray-300 text-sm leading-relaxed">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
               and digital transformation services. Transform your business with cutting-edge technology.
-            </p>
-
-            </div>
-          </div>
-
                   <Link 
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
@@ -43,11 +33,6 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
                 >
                   View All AI Services →
-                </Link>
-              </li>
-            </ul>
-          </div>
-
                   <Link 
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm group flex items-center"
@@ -62,25 +47,8 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
               >
                 View All Solutions
                 <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-              </li>
-            </ul>
-          </div>
-
-            </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-                <div className="text-white font-medium">{contactInfo.hours}</div>
-                <div className="text-gray-400 text-sm">Business hours</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+                <div className="text-white font-medium">{contactInfo.hours}
+                <div className="text-gray-400 text-sm">Business hours
                   <Link 
                     to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
@@ -89,28 +57,16 @@ import { Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Clou
                     to={link.url}
                     className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
-              <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
-              <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
-              <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
-              <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
-            </ul>
-          </div>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
+              <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link>
+              <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link>
+              <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link>
+              <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link>
               <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy
-              </Link>
               <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Terms of Service
-              </Link>
               <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
-              </Link>
-            </div>
   );
 });
 

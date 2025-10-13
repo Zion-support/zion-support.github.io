@@ -1,15 +1,16 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, BookOpen, GraduationCap, Users, Award } from 'lucide-react';
-
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { Helmet } from 'react-helmet-async'.;
+import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, BookOpen, GraduationCap, Users, Award } from 'lucide-react';
 const AIEducationPlatformPage: React.FC = () => {
   const educationServices = [
-    {
+    {,
       title: 'AI Personalized Learning Platform',
       description: 'Adaptive learning system that personalizes education for each student based on their learning style and progress.',
       icon: '🎓',
       price: '$299/month',
-      features: [
+      features: [,
         'Adaptive Learning Paths',
         'Personalized Content',
         'Progress Tracking',
@@ -17,26 +18,26 @@ const AIEducationPlatformPage: React.FC = () => {
         'Difficulty Adjustment',
         'Performance Analytics',
         'Gamification',
-        'Multi-language Support'
+        'Multi-language Support']
       ],
-      benefits: [
+      benefits: [,
         'Improve learning outcomes by 40%',
         'Reduce learning time by 30%',
         'Increase engagement by 60%',
         'Personalize education for each student',
-        'Enable self-paced learning'
+        'Enable self-paced learning']
       ],
       marketPrice: '$800-2,500/month',
       category: 'Personalized Learning',
       technologies: ['Machine Learning', 'Adaptive Algorithms', 'Learning Analytics', 'Content Management', 'Mobile Apps'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     {
       title: 'AI Tutoring Assistant',
       description: 'Intelligent tutoring system that provides 24/7 personalized help and guidance to students across all subjects.',
       icon: '🤖',
       price: '$199/month',
-      features: [
+      features: [,
         '24/7 Tutoring Support',
         'Subject Expertise',
         'Step-by-step Solutions',
@@ -44,26 +45,26 @@ const AIEducationPlatformPage: React.FC = () => {
         'Progress Monitoring',
         'Parent Notifications',
         'Multi-language Support',
-        'Voice Interaction'
+        'Voice Interaction']
       ],
-      benefits: [
+      benefits: [,
         'Provide 24/7 tutoring support',
         'Improve student performance by 35%',
         'Reduce tutoring costs by 70%',
         'Enable personalized help',
-        'Support all subjects'
+        'Support all subjects']
       ],
       marketPrice: '$500-1,800/month',
       category: 'AI Tutoring',
       technologies: ['NLP', 'Machine Learning', 'Knowledge Graphs', 'Voice Recognition', 'Mobile Apps'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     {
       title: 'AI Content Generation for Education',
       description: 'Automated creation of educational content including lessons, quizzes, and assessments tailored to curriculum standards.',
       icon: '📚',
       price: '$399/month',
-      features: [
+      features: [,
         'Lesson Plan Generation',
         'Quiz Creation',
         'Assessment Development',
@@ -71,26 +72,26 @@ const AIEducationPlatformPage: React.FC = () => {
         'Content Personalization',
         'Multimedia Integration',
         'Standards Compliance',
-        'Quality Assurance'
+        'Quality Assurance']
       ],
-      benefits: [
+      benefits: [,
         'Reduce content creation time by 80%',
         'Ensure curriculum compliance',
         'Generate unlimited content',
         'Maintain consistent quality',
-        'Support multiple subjects'
+        'Support multiple subjects']
       ],
       marketPrice: '$1,200-4,000/month',
       category: 'Content Generation',
       technologies: ['NLP', 'Content Generation', 'Curriculum APIs', 'Multimedia Tools', 'Quality Assurance'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     {
       title: 'AI Student Assessment Platform',
       description: 'Intelligent assessment system that provides real-time feedback and identifies learning gaps automatically.',
       icon: '📊',
       price: '$249/month',
-      features: [
+      features: [,
         'Automated Grading',
         'Real-time Feedback',
         'Learning Gap Analysis',
@@ -98,26 +99,26 @@ const AIEducationPlatformPage: React.FC = () => {
         'Adaptive Testing',
         'Plagiarism Detection',
         'Rubric Generation',
-        'Progress Reports'
+        'Progress Reports']
       ],
-      benefits: [
+      benefits: [,
         'Reduce grading time by 90%',
         'Provide instant feedback',
         'Identify learning gaps',
         'Improve assessment accuracy',
-        'Enable data-driven teaching'
+        'Enable data-driven teaching']
       ],
       marketPrice: '$600-2,000/month',
       category: 'Assessment',
       technologies: ['Machine Learning', 'NLP', 'Automated Grading', 'Analytics', 'Plagiarism Detection'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     {
       title: 'AI Language Learning Platform',
       description: 'Advanced language learning system with speech recognition, pronunciation analysis, and cultural context.',
       icon: '🗣️',
       price: '$179/month',
-      features: [
+      features: [,
         'Speech Recognition',
         'Pronunciation Analysis',
         'Conversation Practice',
@@ -125,26 +126,26 @@ const AIEducationPlatformPage: React.FC = () => {
         'Progress Tracking',
         'Adaptive Learning',
         'Mobile Integration',
-        'Multi-language Support'
+        'Multi-language Support']
       ],
-      benefits: [
+      benefits: [,
         'Improve pronunciation by 50%',
         'Accelerate language learning',
         'Provide cultural context',
         'Enable conversation practice',
-        'Support 50+ languages'
+        'Support 50+ languages']
       ],
       marketPrice: '$400-1,500/month',
       category: 'Language Learning',
       technologies: ['Speech Recognition', 'NLP', 'Cultural AI', 'Mobile Apps', 'Voice Synthesis'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     {
       title: 'AI Career Guidance System',
       description: 'Intelligent career guidance platform that matches students with career paths based on skills and interests.',
       icon: '🎯',
       price: '$149/month',
-      features: [
+      features: [,
         'Career Matching',
         'Skill Assessment',
         'Interest Analysis',
@@ -152,26 +153,26 @@ const AIEducationPlatformPage: React.FC = () => {
         'Industry Insights',
         'Mentor Matching',
         'Progress Tracking',
-        'Goal Setting'
+        'Goal Setting']
       ],
-      benefits: [
+      benefits: [,
         'Improve career decision-making',
         'Match students with ideal careers',
         'Provide industry insights',
         'Enable goal-oriented learning',
-        'Connect with mentors'
+        'Connect with mentors']
       ],
       marketPrice: '$300-1,200/month',
       category: 'Career Guidance',
       technologies: ['Machine Learning', 'Career APIs', 'Skill Assessment', 'Matching Algorithms', 'Analytics'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     {
       title: 'AI Special Needs Education',
       description: 'Specialized AI platform for students with learning disabilities, providing personalized support and accommodations.',
       icon: '♿',
       price: '$499/month',
-      features: [
+      features: [,
         'Accessibility Features',
         'Personalized Accommodations',
         'Progress Monitoring',
@@ -179,26 +180,26 @@ const AIEducationPlatformPage: React.FC = () => {
         'Therapist Integration',
         'Adaptive Tools',
         'Multi-sensory Learning',
-        'IEP Support'
+        'IEP Support']
       ],
-      benefits: [
+      benefits: [,
         'Improve accessibility',
         'Personalize accommodations',
         'Support diverse learning needs',
         'Enable inclusive education',
-        'Track progress effectively'
+        'Track progress effectively']
       ],
       marketPrice: '$1,500-5,000/month',
       category: 'Special Education',
       technologies: ['Accessibility AI', 'Adaptive Learning', 'Multi-sensory Tools', 'Progress Tracking', 'Therapy Integration'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
     },
     {
       title: 'AI Teacher Assistant Platform',
       description: 'Comprehensive AI assistant for teachers that automates administrative tasks and provides teaching insights.',
       icon: '👩‍🏫',
       price: '$199/month',
-      features: [
+      features: [,
         'Administrative Automation',
         'Teaching Insights',
         'Student Progress Tracking',
@@ -206,189 +207,202 @@ const AIEducationPlatformPage: React.FC = () => {
         'Lesson Planning',
         'Resource Recommendations',
         'Performance Analytics',
-        'Professional Development'
+        'Professional Development']
       ],
-      benefits: [
+      benefits: [,
         'Reduce administrative workload by 60%',
         'Improve teaching effectiveness',
         'Enhance student engagement',
         'Streamline communication',
-        'Enable data-driven teaching'
+        'Enable data-driven teaching']
       ],
       marketPrice: '$500-2,000/month',
       category: 'Teacher Tools',
       technologies: ['NLP', 'Administrative Automation', 'Analytics', 'Communication Tools', 'Resource Management'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
-    }
+    },
   ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
 
+export default function PagePage() {
   return (
+<<<<<<< HEAD
+=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Education Platform - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI education solutions including personalized learning, tutoring, and assessment platforms. Starting at $149/month." />
+      <Helmet>"
+        <title>AI Education Platform - Zion Tech Group</title>""
+        <meta name="description" content="Revolutionary AI education solutions including personalized learning, tutoring, and assessment platforms. Starting at $149/month." />"""
         <meta name="keywords" content="ai education, personalized learning, ai tutoring, assessment platform, language learning, career guidance" />
-      </Helmet>
-      
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Education Platform
-          </h1>
+      </Helmet>"
+      {/* Hero Section */};""
+      <section className="pt-24 pb-16 px-4">"""
+        <div className="max-w-7xl mx-auto text-center">"""
+          <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">,
+            AI Education Platform,"
+          </h1>""
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform education with AI-powered solutions that personalize learning, enhance teaching, and improve student outcomes.
-          </p>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">8+</div>
-              <div className="text-gray-300">Education Tools</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$149</div>
-              <div className="text-gray-300">Starting Price</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
-              <div className="text-gray-300">Learning Improvement</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+          </p>"
+          {/* Stats */};""
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">"""
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"""
+              <div className="text-3xl font-bold text-cyan-400 mb-2">8+</div>"""
+              <div className="text-gray-300">Education Tools</div>"
+            </div>""
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"""
+              <div className="text-3xl font-bold text-green-400 mb-2">$149</div>"""
+              <div className="text-gray-300">Starting Price</div>"
+            </div>""
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"""
+              <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>"""
+              <div className="text-gray-300">Learning Improvement</div>"
+            </div>""
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"""
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>"""
               <div className="text-gray-300">AI Tutoring</div>
             </div>
-          </div>
-          
-          {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span className="text-white font-medium">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
-                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
+          </div>"
+          {/* Contact Info */};""
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">"""
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">"""
+              <div className="flex items-center space-x-2">"""
+                <Phone className="w-5 h-5" />"""
+                <span className="text-white font-medium">+1 302 464 0950</span>"
+              </div>""
+              <div className="flex items-center space-x-2">"""
+                <Mail className="w-5 h-5" />"""
+                <span className="text-white font-medium">kleber@ziontechgroup.com</span>"
+              </div>""
+              <div className="flex items-center space-x-2">"""
+                <MapPin className="w-5 h-5" />",""
                 <span className="text-white font-medium">Middletown, DE</span>
               </div>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+      </section>"
+      {/* Services Grid */};""
+      <section className="py-16 px-4">"""
+        <div className="max-w-7xl mx-auto">"""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your Education AI Solution
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {educationServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-gray-600 text-sm">{service.description}</p>
-                </div>
-                
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-green-600">{service.price}</span>
-                    <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
-                  </div>
+            Choose Your Education AI Solution."
+          </h2>""
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,"
+            {educationServices.map((service, index) => (""
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover: shadow-2xl transition-all duration-300 hover:scale-105">"""
+                <div className="text-center mb-6">"""
+                  <div className="text-5xl mb-4">{service.icon}</div>"""
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>"""
+                  <p className="text-gray-600 text-sm">{service.description}</p>"
+                </div>""
+                <div className="mb-6">"""
+                  <div className="flex items-center justify-between mb-4">"""
+                    <span className="text-2xl font-bold text-green-600">{service.price}</span>"""
+                    <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>"
+                  </div>""
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
-                    {service.category}
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                    {service.category};
+                  </div>"
+                </div>""
+                <div className="mb-6">"""
+                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>"""
+                  <ul className="space-y-2">,"
+                    {service.features.slice(0, 4).map((feature, featureIndex) => (""
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">"""
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-                        {feature}
+                        {feature};
                       </li>
-                    ))}
-                    {service.features.length > 4 && (
+                    ))};"
+                    {service.features.length > 4 && (""
                       <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features
+                        +{service.features.length - 4} more features.
                       </li>
-                    )}
-                  </ul>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
-                  <ul className="space-y-1">
-                    {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
+                    )};
+                  </ul>"
+                </div>""
+                <div className="mb-6">"""
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits: </h4>"""
+                  <ul className="space-y-1">,"
+                    {service.benefits.map((benefit, benefitIndex) => (""
+                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">"""
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
-                        {benefit}
+                        {benefit};
                       </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {service.technologies.map((tech, techIndex) => (
+                    ))};
+                  </ul>"
+                </div>""
+                <div className="mb-6">"""
+                  <h4 className="font-semibold text-gray-900 mb-3">Technologies: </h4>"""
+                  <div className="flex flex-wrap gap-2">,"
+                    {service.technologies.map((tech, techIndex) => (""
                       <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-                        {tech}
+                        {tech};
                       </span>
-                    ))}
-                  </div>
-                </div>
-                
+                    ))};
+                  </div>"
+                </div>""
                 <div className="text-center">
-                  <a
-                    href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
-                  >
-                    Get Started Now
-                  </a>
+                  <a"
+                    href={`mailto: kleber@ziontechgroup.com?subject=Interest in ${service.title}`};""
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block"
+                  >,
+                    Get Started Now."
+                  </a>""
                   <p className="text-xs text-gray-500 mt-2">
-                    {service.contactInfo}
+                    {service.contactInfo};
                   </p>
                 </div>
               </div>
-            ))}
+            ))};
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
+      </section>"
+      {/* CTA Section */};""
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">"""
+        <div className="max-w-4xl mx-auto text-center">"""
           <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Transform Education with AI?
-          </h2>
+            Ready to Transform Education with AI?"
+          </h2>""
           <p className="text-xl text-purple-100 mb-8">
-            Get started with our AI education solutions today and revolutionize learning outcomes.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
+            Get started with our AI education solutions today and revolutionize learning outcomes."
+          </p>""
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+            <a""
+              href="tel:+13024640950"""
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-            >
-              Call (302) 464-0950
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
+            >,
+              Call (302) 464-0950.
+            </a>"
+            <a"",
+              href="mailto:kleber@ziontechgroup.com"","
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
-            >
-              Email Us
+            >,
+              Email Us,
             </a>
           </div>
         </div>
       </section>
     </div>
   );
+  );
 };
+"
+export default AIEducationPlatformPage;""`
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+=======
+'use client';
+import React from 'react';
 
-export default AIEducationPlatformPage;
+export default function AiEducationPlatformPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Ai Education Platform</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

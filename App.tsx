@@ -1,24 +1,23 @@
 import React, { Suspense } from 'react';
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
 import LoadingStates from './app/components/LoadingStates';
-import { AnalyticsProvider } from './app/contexts/AnalyticsContext';
+import { AnalyticsProvider } from './app/contexts/AnalyticsContext.tsx';
 
-// Lazy load pages for better performance
-const AboutPage = React.lazy(() => import("./app/about/page"));
-const ContactPage = React.lazy(() => import("./app/contact/page"));
-const ServicesPage = React.lazy(() => import("./app/services/page"));
-const BlogPage = React.lazy(() => import("./app/blog/page"));
-const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
-const DemoPage = React.lazy(() => import("./app/demo/page"));
-const SupportPage = React.lazy(() => import("./app/support/page"));
-const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
-const TermsPage = React.lazy(() => import("./app/terms/page"));
-const PricingPage = React.lazy(() => import("./app/pricing/page"));
+// Components
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import FuturisticBackground from './app/components/FuturisticBackground';
+import AnalyticsProvider from './app/components/AnalyticsProvider';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (

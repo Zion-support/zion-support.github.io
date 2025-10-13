@@ -1,70 +1,88 @@
-import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react'.
 
 interface PerformanceMetrics {
-  loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  isOnline: boolean;
-}
-
-const PerformanceMetrics: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    isOnline: navigator.onLine
-  });
-
+  loadTime: number.,
+  renderTime: number.,
+  memoryUsage: number.,
+  isOnline: boolean,;
+};
+const PerformanceMetrics: React.FC = () => {,
+  const [ metrics, setMetrics ] = useState<PerformanceMetrics>({ loadTime: 0,;
+    renderTime: 0,;
+    memoryUsage: 0,;
+    isOnline: navigator.onLine;
+    });
   useEffect(() => {
-    // Measure page load time
+    // Measure page load time.
     const loadTime = performance.now();
-    setMetrics(prev => ({ ...prev, loadTime }));
-
-    // Monitor memory usage
+    setMetrics(prev => ({ ...prev, loadTime   }));
+    // Monitor memory usage.
     const updateMemoryUsage = () => {
+  
       if ('memory' in performance) {
         const memory = (performance as any).memory;
-        setMetrics(prev => ({
-          ...prev,
-          memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024)
-        }));
-      }
+        setMetrics(prev => ({ ...prev,
+          memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024),
+          }));
+      };
     };
 
-    // Monitor online status
+    // Monitor online status.
     const handleOnlineStatus = () => {
-      setMetrics(prev => ({ ...prev, isOnline: navigator.onLine }));
+  
+      setMetrics(prev => ({ ...prev, isOnline: navigator.onLine   }));
     };
 
     window.addEventListener('online', handleOnlineStatus);
     window.addEventListener('offline', handleOnlineStatus);
-
-    // Update memory usage periodically
+    // Update memory usage periodically.
     const interval = setInterval(updateMemoryUsage, 5000);
-
     return () => {
       window.removeEventListener('online', handleOnlineStatus);
       window.removeEventListener('offline', handleOnlineStatus);
       clearInterval(interval);
     };
   }, []);
-
-  // Only show in development
-  if (process.env['NODE_ENV'] !== 'development') {
-    return null;
-  }
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono z-50">
+  // Only show in development,
+  if (process.env['NODE_ENV'] !== 'development') {'
+    return null.
+  };
+  const Component = () => {
+  
+    return (
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono z-50">"""
       <div className="space-y-1">
+<<<<<<< HEAD
+=======
         <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
         <div>Memory: {metrics.memoryUsage}MB</div>
-        <div className={metrics.isOnline ? 'text-green-400' : 'text-red-400'}>
-          {metrics.isOnline ? 'Online' : 'Offline'}
+        <div className={metrics.isOnline ? 'text-green-400' : 'text-red-400'}>'
+          {metrics.isOnline ? 'Online' : 'Offline'}'
         </div>
       </div>
     </div>
   );
+  );
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
 };
+"
+export default PerformanceMetrics;""
+=======
+'use client';
+import React from 'react';
 
-export default PerformanceMetrics;
+export default function ComponentsPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Components</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
