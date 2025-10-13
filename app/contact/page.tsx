@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
@@ -25,10 +26,10 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
+
     setIsSubmitted(true);
     setIsSubmitting(false);
   };
@@ -77,7 +78,7 @@ export default function ContactPage() {
         <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact our experts today." />
         <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />
       </Helmet>
-      
+
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -88,7 +89,7 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Ready to transform your business with AI and IT solutions? 
+            Ready to transform your business with AI and IT solutions?
             Get in touch with our experts today.
           </p>
         </div>
@@ -124,14 +125,8 @@ export default function ContactPage() {
           <h2 className="text-4xl font-bold text-white text-center mb-16">
             Send us a Message
           </h2>
-          
+
           {isSubmitted ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-white" />
@@ -142,10 +137,6 @@ export default function ContactPage() {
               </p>
               <button
                 onClick={() => {
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
                   setIsSubmitted(false);
                   setFormData({
                     name: '',
@@ -157,27 +148,6 @@ export default function ContactPage() {
                   });
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-=======
-            <div className="text-center">
-              <div className="bg-green-500/20 border border-green-500/30 rounded-xl p-8 mb-8">
-                <h3 className="text-2xl font-bold text-green-400 mb-4">Message Sent Successfully!</h3>
-                <p className="text-gray-300 mb-6">
-                  Thank you for your message. We'll get back to you within 24 hours.
-                </p>
-                <button
-                  onClick={() => {
-                    setIsSubmitted(false);
-                    setFormData({
-                      name: '',
-                      email: '',
-                      company: '',
-                      phone: '',
-                      subject: '',
-                      message: ''
-                    });
-                  }}
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
               >
                 Send Another Message
               </button>
@@ -216,7 +186,6 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
-
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="company" className="block text-white font-medium mb-2">
@@ -247,7 +216,6 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
-
               <div className="mb-6">
                 <label htmlFor="subject" className="block text-white font-medium mb-2">
                   Subject *
@@ -268,7 +236,6 @@ export default function ContactPage() {
                   ))}
                 </select>
               </div>
-
               <div className="mb-8">
                 <label htmlFor="message" className="block text-white font-medium mb-2">
                   Message *
@@ -284,7 +251,6 @@ export default function ContactPage() {
                   placeholder="Tell us about your project or how we can help you..."
                 />
               </div>
-
               <div className="text-center">
                 <button
                   type="submit"

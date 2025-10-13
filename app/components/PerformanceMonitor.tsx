@@ -1,147 +1,83 @@
-<<<<<<< HEAD
+'use client';
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 // Type definitions for browser APIs
 declare global {
   interface PerformanceObserver {
     observe(options: { entryTypes: string[] }): void;
     disconnect(): void;
   }
-=======
 
-
-import React, { useEffect, useState } from 'react';
-
-// Extend the global PerformanceEntry interface
-declare global {
   interface PerformanceEntry {
     // This extends the built-in PerformanceEntry
   }
 }
 
-// Type definitions for browser APIs
-declare global {
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-  interface PerformanceNavigationTiming extends PerformanceEntry {
-    requestStart: number;
-    responseStart: number;
-  }
-<<<<<<< HEAD
-  const PerformanceObserver: {
-    new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver;
-  };
-  const performance: {
-    getEntriesByType(type: string): PerformanceEntry[];
-  };
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
 }
-import React, { useEffect, useState } from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
-  interface PerformanceEntry {
-    name: string;
-    entryType: string;
-    startTime: number;
-    duration: number;
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-}
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
+  const [metrics, setMetrics] = useState({
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    fcp: 0,
+    ttfb: 0
   });
+
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          } else if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-          } else if (entry.entryType === 'first-input') {
-            const inputEntry = entry as any;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-          } else if (entry.entryType === 'layout-shift') {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
-          }
+    // Monitor Core Web Vitals
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'largest-contentful-paint') {
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+        } else if (entry.entryType === 'first-input') {
+          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          setMetrics(prev => ({ ...prev, cls: prev.cls + (entry as any).value }));
+        } else if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
         }
-      });
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-      // Monitor TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
       }
-      return () => observer.disconnect();
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
+
+    // Monitor TTFB
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
     }
-    return undefined;
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-    return null;
-  }
+
+  // Log performance metrics
+  useEffect(() => {
+    if (metrics.lcp > 0 || metrics.fid > 0 || metrics.cls > 0) {
+      console.log('Performance Metrics:', metrics);
+    }
+  }, [metrics]);
+
   return (
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
-      </div>
+    <div className="performance-monitor">
+      {children}
+      
+      {/* Performance indicator (only in development) */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-4 left-4 bg-black/80 text-white p-2 rounded text-xs font-mono">
+          <div>LCP: {metrics.lcp.toFixed(2)}ms</div>
+          <div>FID: {metrics.fid.toFixed(2)}ms</div>
+          <div>CLS: {metrics.cls.toFixed(3)}</div>
+          <div>FCP: {metrics.fcp.toFixed(2)}ms</div>
+          <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>
+        </div>
+      )}
     </div>
   );
 };
-export default PerformanceMonitor;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
+export default PerformanceMonitor;

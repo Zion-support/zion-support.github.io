@@ -1,46 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-
-
-import React, { useEffect, useState } from 'react';
-
-import React, { useEffect, useState } from 'react';
-
-// Type definitions for browser APIs
-declare global {
-  interface MediaQueryListEvent extends Event {
-    matches: boolean;
-  }
-  
-  interface MediaQueryList {
-    matches: boolean;
-    addEventListener(type: 'change', listener: (event: MediaQueryListEvent) => void): void;
-    removeEventListener(type: 'change', listener: (event: MediaQueryListEvent) => void): void;
-  }
-
-import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
+'use client';
 import React, { useEffect, useState } from 'react';
 
 // Using built-in DOM types
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
-import React, { useEffect, useState } from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -54,7 +16,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    
+
     setIsReducedMotion(prefersReducedMotion);
     setIsHighContrast(prefersHighContrast);
 
@@ -77,7 +39,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   useEffect(() => {
     // Apply accessibility styles
     const root = document.documentElement;
-    
+
     if (isHighContrast) {
       root.style.setProperty('--contrast-ratio', '4.5');
       root.style.setProperty('--text-color', '#000000');
@@ -110,6 +72,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           (mainContent as HTMLElement).focus();
           e.preventDefault();
         }
+      }
 
       // Skip to navigation
       if (e.key === 'Tab' && !e.shiftKey && e.target === document.body) {
@@ -157,12 +120,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   }, []);
 
   return (
-    <div 
+    <div
       className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
       style={{ fontSize: `${fontSize}px` }}
     >
       {children}
-      
+
       {/* Accessibility controls */}
       <div className="fixed top-4 right-4 z-50 bg-white border border-gray-300 rounded-lg p-4 shadow-lg">
         <h3 className="text-sm font-semibold mb-2">Accessibility Controls</h3>
@@ -202,31 +165,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 };
 
 export default AccessibilityEnhancer;
