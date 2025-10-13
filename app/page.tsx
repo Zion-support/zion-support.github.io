@@ -217,6 +217,118 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Service Categories Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Comprehensive Technology Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From AI-powered micro SaaS to enterprise IT infrastructure, we provide end-to-end technology solutions
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* AI & Machine Learning */}
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+                <CpuChipIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI & Machine Learning</h3>
+              <p className="text-gray-300 mb-6">
+                Advanced AI solutions including chatbots, predictive analytics, computer vision, and custom ML models.
+              </p>
+              <ul className="space-y-2 mb-6">
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                  Custom AI Models
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                  Natural Language Processing
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                  Computer Vision
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                  Predictive Analytics
+                </li>
+              </ul>
+              <Link to="/ai-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2">
+                Explore AI Solutions <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Micro SaaS Solutions */}
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-cyan-500 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
+                <GlobeAltIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Micro SaaS Solutions</h3>
+              <p className="text-gray-300 mb-6">
+                Ready-to-deploy micro SaaS applications for specific business needs with AI-powered features.
+              </p>
+              <ul className="space-y-2 mb-6">
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                  Social Media Management
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                  Email Marketing Automation
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                  Customer Feedback Analysis
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                  Expense Tracking
+                </li>
+              </ul>
+              <Link to="/micro-saas-solutions" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2">
+                Explore Micro SaaS <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* IT Infrastructure */}
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6">
+                <CloudIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">IT Infrastructure</h3>
+              <p className="text-gray-300 mb-6">
+                Complete IT infrastructure management, cloud migration, cybersecurity, and DevOps automation.
+              </p>
+              <ul className="space-y-2 mb-6">
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                  Cloud Migration
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                  Cybersecurity Solutions
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                  DevOps Automation
+                </li>
+                <li className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                  Database Management
+                </li>
+              </ul>
+              <Link to="/it-solutions" className="text-green-400 hover:text-green-300 font-semibold flex items-center gap-2">
+                Explore IT Solutions <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
@@ -239,7 +351,7 @@ export default function HomePage() {
               </div>
               <div className="flex items-center justify-center gap-4 text-gray-300">
                 <MapPinIcon className="w-6 h-6 text-purple-400" />
-                <span>Middletown, DE</span>
+                <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>
             
