@@ -997,6 +997,161 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "ai-sales-predictor",
+      name: "AI Sales Predictor",
+      description: "Revolutionary AI-powered sales prediction platform with 95% accuracy. Boost revenue by 35% with intelligent forecasting and lead scoring.",
+      price: "From $49/month",
+      originalPrice: "$82/month",
+      discount: "40% OFF",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "AI-powered sales forecasting with 95% accuracy",
+        "Real-time pipeline analysis and optimization",
+        "Predictive lead scoring and qualification",
+        "Automated sales opportunity identification",
+        "Revenue prediction and trend analysis",
+        "Customer lifetime value calculation",
+        "Sales team performance analytics",
+        "Integration with 50+ CRM systems"
+      ],
+      benefits: [
+        "Increase sales revenue by 35%",
+        "Reduce sales cycle time by 40%",
+        "Improve forecast accuracy by 95%",
+        "Boost team productivity by 50%"
+      ],
+      category: "Sales",
+      rating: 4.9,
+      reviews: 1456,
+      link: "/ai-sales-predictor",
+      featured: true
+    },
+    {
+      id: "ai-workforce-optimizer",
+      name: "AI Workforce Optimizer",
+      description: "Revolutionary AI-powered workforce optimization platform. Increase productivity by 45%, reduce turnover by 30%, and optimize labor costs.",
+      price: "From $79/month",
+      originalPrice: "$132/month",
+      discount: "40% OFF",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI-powered workforce planning and optimization",
+        "Real-time employee performance analytics",
+        "Predictive hiring and retention modeling",
+        "Automated skill gap analysis and recommendations",
+        "Intelligent shift scheduling and workload balancing",
+        "Employee engagement and satisfaction tracking",
+        "Performance prediction and career pathing",
+        "Integration with 100+ HR systems"
+      ],
+      benefits: [
+        "Increase workforce productivity by 45%",
+        "Reduce employee turnover by 30%",
+        "Optimize labor costs by 25%",
+        "Improve employee satisfaction by 60%"
+      ],
+      category: "HR",
+      rating: 4.8,
+      reviews: 1234,
+      link: "/ai-workforce-optimizer",
+      featured: true
+    },
+    {
+      id: "ai-supply-chain-optimizer",
+      name: "AI Supply Chain Optimizer",
+      description: "Revolutionary AI-powered supply chain optimization platform. Reduce costs by 30%, improve inventory turnover by 40%, and minimize stockouts.",
+      price: "From $199/month",
+      originalPrice: "$332/month",
+      discount: "40% OFF",
+      icon: <Package className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "AI-powered demand forecasting with 98% accuracy",
+        "Real-time inventory optimization and rebalancing",
+        "Predictive supplier risk assessment and management",
+        "Automated route optimization and logistics planning",
+        "Supply chain visibility and tracking across all tiers",
+        "Cost optimization and procurement intelligence",
+        "Quality control and compliance monitoring",
+        "Integration with 200+ ERP and WMS systems"
+      ],
+      benefits: [
+        "Reduce supply chain costs by 30%",
+        "Improve inventory turnover by 40%",
+        "Minimize stockouts by 85%",
+        "Enhance supplier performance by 50%"
+      ],
+      category: "Supply Chain",
+      rating: 4.9,
+      reviews: 987,
+      link: "/ai-supply-chain-optimizer",
+      featured: true
+    },
+    {
+      id: "ai-financial-planner",
+      name: "AI Financial Planner",
+      description: "Revolutionary AI-powered financial planning platform. Increase savings by 40%, reduce financial stress by 60%, and optimize investments.",
+      price: "From $29/month",
+      originalPrice: "$48/month",
+      discount: "40% OFF",
+      icon: <DollarSign className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "AI-powered financial forecasting and budgeting",
+        "Real-time expense tracking and categorization",
+        "Intelligent investment recommendations and portfolio optimization",
+        "Automated bill payment and financial goal tracking",
+        "Tax optimization and compliance monitoring",
+        "Credit score monitoring and improvement suggestions",
+        "Retirement planning and wealth management",
+        "Integration with 500+ banks and financial institutions"
+      ],
+      benefits: [
+        "Increase savings by 40%",
+        "Reduce financial stress by 60%",
+        "Optimize investment returns by 25%",
+        "Achieve financial goals 3x faster"
+      ],
+      category: "Finance",
+      rating: 4.8,
+      reviews: 1123,
+      link: "/ai-financial-planner",
+      featured: true
+    },
+    {
+      id: "ai-healthcare-assistant",
+      name: "AI Healthcare Assistant",
+      description: "Revolutionary AI-powered healthcare assistant. Improve health outcomes by 50%, reduce costs by 30%, and enhance preventive care.",
+      price: "From $39/month",
+      originalPrice: "$65/month",
+      discount: "40% OFF",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "AI-powered health monitoring and analysis",
+        "Personalized health recommendations and insights",
+        "Symptom checker with 95% accuracy",
+        "Medication reminder and interaction checking",
+        "Health goal tracking and progress monitoring",
+        "Integration with 200+ health devices and apps",
+        "Telemedicine and virtual consultation support",
+        "Health data visualization and trend analysis"
+      ],
+      benefits: [
+        "Improve health outcomes by 50%",
+        "Reduce healthcare costs by 30%",
+        "Increase medication adherence by 60%",
+        "Enhance preventive care by 40%"
+      ],
+      category: "Healthcare",
+      rating: 4.9,
+      reviews: 1456,
+      link: "/ai-healthcare-assistant",
+      featured: true
     }
   ];
 
@@ -1020,12 +1175,14 @@ export default function MicroSaas() {
     { name: "Sales", count: microSaasServices.filter(s => s.category === "Sales").length, active: false },
     { name: "Research", count: microSaasServices.filter(s => s.category === "Research").length, active: false },
     { name: "SEO", count: microSaasServices.filter(s => s.category === "SEO").length, active: false },
-    { name: "Development", count: microSaasServices.filter(s => s.category === "Development").length, active: false }
+    { name: "Development", count: microSaasServices.filter(s => s.category === "Development").length, active: false },
+    { name: "Supply Chain", count: microSaasServices.filter(s => s.category === "Supply Chain").length, active: false },
+    { name: "Healthcare", count: microSaasServices.filter(s => s.category === "Healthcare").length, active: false }
   ];
 
   const stats = [
-    { number: "25+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "30+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "20,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
@@ -1095,7 +1252,7 @@ export default function MicroSaas() {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Powerful, AI-driven micro SAAS tools designed to transform your business operations. 
-                Choose from 25+ specialized solutions to boost productivity, security, and growth.
+                Choose from 30+ specialized solutions to boost productivity, security, and growth.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-12">

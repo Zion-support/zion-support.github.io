@@ -1,40 +1,40 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Package, TrendingUp, BarChart3, Target, Clock, Brain, Zap, Shield, Award, Globe, Smartphone, Mail, Phone, MapPin, Truck, Warehouse } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Users, TrendingUp, BarChart3, Target, Clock, Brain, Zap, Shield, Award, Globe, Smartphone, Mail, Phone, MapPin, Calendar, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function AISupplyChainOptimizer() {
+export default function AIWorkforceOptimizer() {
   const features = [
-    "AI-powered demand forecasting with 98% accuracy",
-    "Real-time inventory optimization and rebalancing",
-    "Predictive supplier risk assessment and management",
-    "Automated route optimization and logistics planning",
-    "Supply chain visibility and tracking across all tiers",
-    "Cost optimization and procurement intelligence",
-    "Quality control and compliance monitoring",
-    "Integration with 200+ ERP and WMS systems",
-    "Custom supply chain analytics dashboards",
-    "Mobile app for supply chain managers"
+    "AI-powered workforce planning and optimization",
+    "Real-time employee performance analytics",
+    "Predictive hiring and retention modeling",
+    "Automated skill gap analysis and recommendations",
+    "Intelligent shift scheduling and workload balancing",
+    "Employee engagement and satisfaction tracking",
+    "Performance prediction and career pathing",
+    "Integration with 100+ HR systems",
+    "Custom workforce analytics dashboards",
+    "Mobile app for managers and employees"
   ];
 
   const benefits = [
-    "Reduce supply chain costs by 30%",
-    "Improve inventory turnover by 40%",
-    "Minimize stockouts by 85%",
-    "Enhance supplier performance by 50%"
+    "Increase workforce productivity by 45%",
+    "Reduce employee turnover by 30%",
+    "Optimize labor costs by 25%",
+    "Improve employee satisfaction by 60%"
   ];
 
   const pricing = [
     {
-      name: "Starter",
-      price: "$199",
+      name: "Essential",
+      price: "$79",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams",
       features: [
-        "Up to 5 locations",
-        "Basic forecasting",
-        "Inventory optimization",
+        "Up to 50 employees",
+        "Basic workforce analytics",
+        "Performance tracking",
         "Email support",
         "Standard reports"
       ],
@@ -42,13 +42,13 @@ export default function AISupplyChainOptimizer() {
     },
     {
       name: "Professional",
-      price: "$399",
+      price: "$149",
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-        "Up to 25 locations",
+        "Up to 200 employees",
         "Advanced AI optimization",
-        "Supplier risk management",
+        "Predictive analytics",
         "Priority support",
         "Custom dashboards",
         "API access"
@@ -57,11 +57,11 @@ export default function AISupplyChainOptimizer() {
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$299",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited locations",
+        "Unlimited employees",
         "Custom AI models",
         "Dedicated support",
         "White-label options",
@@ -74,48 +74,48 @@ export default function AISupplyChainOptimizer() {
 
   const testimonials = [
     {
-      name: "Robert Kim",
-      company: "Global Manufacturing Corp",
-      role: "Supply Chain Director",
-      content: "AI Supply Chain Optimizer reduced our inventory costs by 35% and improved our supplier performance by 50%. The forecasting accuracy is incredible.",
+      name: "Jennifer Martinez",
+      company: "HR Solutions Inc.",
+      role: "Chief Human Resources Officer",
+      content: "AI Workforce Optimizer helped us reduce turnover by 30% and increase productivity by 45%. The predictive analytics are incredibly accurate.",
       rating: 5,
-      avatar: "RK"
+      avatar: "JM"
     },
     {
-      name: "Maria Santos",
-      company: "Retail Chain Inc.",
-      role: "Operations Manager",
-      content: "The route optimization feature saved us $2M annually in logistics costs. Our delivery times improved by 40% and customer satisfaction is at an all-time high.",
+      name: "David Thompson",
+      company: "Manufacturing Corp",
+      role: "Operations Director",
+      content: "The shift scheduling optimization saved us 20 hours per week in planning time. Our workforce is now perfectly balanced and more engaged.",
       rating: 5,
-      avatar: "MS"
+      avatar: "DT"
     },
     {
-      name: "James Wilson",
-      company: "E-commerce Platform",
-      role: "VP of Operations",
-      content: "The predictive analytics helped us avoid major supply disruptions during the pandemic. This tool is essential for modern supply chain management.",
+      name: "Lisa Chen",
+      company: "Tech Startup",
+      role: "People Operations Manager",
+      content: "The skill gap analysis helped us identify training needs before they became problems. Our team is now more skilled and motivated than ever.",
       rating: 5,
-      avatar: "JW"
+      avatar: "LC"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Supply Chain Optimizer - Zion Tech Group | Intelligent Supply Chain Management</title>
+        <title>AI Workforce Optimizer - Zion Tech Group | Intelligent HR & Workforce Management</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered supply chain optimization platform. Reduce costs by 30%, improve inventory turnover by 40%, and minimize stockouts with intelligent supply chain management."
+          content="Revolutionary AI-powered workforce optimization platform. Increase productivity by 45%, reduce turnover by 30%, and optimize labor costs with intelligent workforce planning and analytics."
         />
         <meta
           name="keywords"
-          content="AI supply chain optimization, supply chain management, inventory optimization, demand forecasting, logistics optimization, supplier management, supply chain analytics"
+          content="AI workforce optimization, HR analytics, employee performance, workforce planning, talent management, HR automation, workforce analytics, employee engagement"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimizer" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-workforce-optimizer" />
       </Helmet>
       <SEOOptimizer
-        title="AI Supply Chain Optimizer - Zion Tech Group | Intelligent Supply Chain Management"
-        description="Revolutionary AI-powered supply chain optimization platform. Reduce costs by 30%, improve inventory turnover by 40%, and minimize stockouts with intelligent supply chain management."
+        title="AI Workforce Optimizer - Zion Tech Group | Intelligent HR & Workforce Management"
+        description="Revolutionary AI-powered workforce optimization platform. Increase productivity by 45%, reduce turnover by 30%, and optimize labor costs with intelligent workforce planning."
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -128,19 +128,19 @@ export default function AISupplyChainOptimizer() {
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Package className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">30% Cost Reduction</span>
+              <Users className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">45% Productivity Increase</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                AI Supply Chain Optimizer
+                AI Workforce Optimizer
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionary AI-powered supply chain optimization platform that transforms how you manage inventory, suppliers, and logistics. 
-              Reduce costs by 30%, improve inventory turnover by 40%, and minimize stockouts with intelligent supply chain management.
+              Revolutionary AI-powered workforce optimization platform that transforms how you manage, plan, and optimize your human resources. 
+              Increase productivity by 45%, reduce turnover by 30%, and optimize labor costs with intelligent workforce planning.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -156,7 +156,7 @@ export default function AISupplyChainOptimizer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Package className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Users className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
             
@@ -166,29 +166,29 @@ export default function AISupplyChainOptimizer() {
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <TrendingUp className="w-6 h-6" />
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">30%</div>
-                <div className="text-gray-300 text-xs md:text-sm">Cost Reduction</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">45%</div>
+                <div className="text-gray-300 text-xs md:text-sm">Productivity Increase</div>
               </div>
               <div className="text-center group">
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Package className="w-6 h-6" />
+                  <Users className="w-6 h-6" />
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">40%</div>
-                <div className="text-gray-300 text-xs md:text-sm">Inventory Turnover</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">30%</div>
+                <div className="text-gray-300 text-xs md:text-sm">Turnover Reduction</div>
               </div>
               <div className="text-center group">
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Target className="w-6 h-6" />
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">85%</div>
-                <div className="text-gray-300 text-xs md:text-sm">Stockout Reduction</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">25%</div>
+                <div className="text-gray-300 text-xs md:text-sm">Cost Optimization</div>
               </div>
               <div className="text-center group">
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Award className="w-6 h-6" />
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">50%</div>
-                <div className="text-gray-300 text-xs md:text-sm">Supplier Performance</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">60%</div>
+                <div className="text-gray-300 text-xs md:text-sm">Satisfaction Boost</div>
               </div>
             </div>
           </div>
@@ -199,11 +199,11 @@ export default function AISupplyChainOptimizer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Intelligent Supply Chain Management
+                Intelligent Workforce Management
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Our advanced AI algorithms analyze supply chain data to provide unprecedented insights and optimization recommendations. 
-                Transform your supply chain operations with intelligent automation and predictive analytics.
+                Our advanced AI algorithms analyze workforce data to provide unprecedented insights and optimization recommendations. 
+                Transform your HR processes with intelligent automation and predictive analytics.
               </p>
             </div>
             
@@ -232,10 +232,10 @@ export default function AISupplyChainOptimizer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Transform Your Supply Chain Performance
+                Transform Your Workforce Performance
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of organizations who have revolutionized their supply chain management and optimization
+                Join thousands of organizations who have revolutionized their workforce management and optimization
               </p>
             </div>
             
@@ -330,10 +330,10 @@ export default function AISupplyChainOptimizer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Supply Chain Teams Worldwide
+                Trusted by HR Teams Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Supply Chain Optimizer
+                See what our customers say about AI Workforce Optimizer
               </p>
             </div>
             
@@ -368,10 +368,10 @@ export default function AISupplyChainOptimizer() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Optimize Your Workforce?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of organizations who have transformed their supply chain management and optimization. 
+              Join thousands of organizations who have transformed their workforce management and optimization. 
               Start your free 14-day trial today - no credit card required.
             </p>
             
@@ -413,7 +413,7 @@ export default function AISupplyChainOptimizer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Package className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Users className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
