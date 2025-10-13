@@ -20,23 +20,6 @@ export default function ZionAiCrmPro() {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-md p-6">
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-              <p className="text-gray-600">
-                Description of the first feature.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-              <p className="text-gray-600">
-                Description of the second feature.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-              <p className="text-gray-600">
-                Description of the third feature.
-=======
               <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Lead Scoring</h3>
               <p className="text-gray-600">
                 Automatically score and prioritize leads using AI algorithms.
@@ -52,7 +35,6 @@ export default function ZionAiCrmPro() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Customer Insights</h3>
               <p className="text-gray-600">
                 Get deep insights into customer behavior and preferences.
->>>>>>> cursor/fix-errors-and-merge-to-main-062f
               </p>
             </div>
           </div>

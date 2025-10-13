@@ -22,21 +22,6 @@ export default function AiChatbotBuilder() {
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
               <p className="text-gray-600">
-<<<<<<< HEAD
-                Description of the first feature.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-              <p className="text-gray-600">
-                Description of the second feature.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-              <p className="text-gray-600">
-                Description of the third feature.
-=======
                 Get started in minutes with our intuitive chatbot builder interface.
               </p>
             </div>
@@ -50,7 +35,6 @@ export default function AiChatbotBuilder() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Analytics</h3>
               <p className="text-gray-600">
                 Track performance and optimize your chatbot with detailed analytics.
->>>>>>> cursor/fix-errors-and-merge-to-main-062f
               </p>
             </div>
           </div>

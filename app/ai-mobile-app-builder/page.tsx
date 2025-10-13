@@ -22,15 +22,6 @@ export default function AiMobileAppBuilder() {
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
               <p className="text-gray-600">
-<<<<<<< HEAD
-                Description of the first feature.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-              <p className="text-gray-600">
-                Description of the second feature.
-=======
                 Leverage AI to accelerate mobile app development and reduce time to market.
               </p>
             </div>
@@ -38,17 +29,12 @@ export default function AiMobileAppBuilder() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Cross-Platform Support</h3>
               <p className="text-gray-600">
                 Build apps for iOS and Android with a single codebase using our platform.
->>>>>>> cursor/fix-errors-and-merge-to-main-062f
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
               <p className="text-gray-600">
-<<<<<<< HEAD
-                Description of the third feature.
-=======
                 Integrate AI features like natural language processing and machine learning.
->>>>>>> cursor/fix-errors-and-merge-to-main-062f
               </p>
             </div>
           </div>
