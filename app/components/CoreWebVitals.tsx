@@ -9,7 +9,6 @@ interface WebVitalsData {
 }
 
 const CoreWebVitals: React.FC = () => {
-<<<<<<< HEAD
   const reportWebVitals = useCallback((data: WebVitalsData) => {
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -35,10 +34,6 @@ const CoreWebVitals: React.FC = () => {
     // Log in development
     if (process.env.NODE_ENV === 'development') {
       }
-=======
-  useEffect(() => {
-    // Core Web Vitals monitoring
-    >>>>>>> cursor/analyze-improve-and-deploy-application-a281
   }, []);
 
   useEffect(() => {

@@ -1,12 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Define all the routes
-=======
 // Define all routes for the sitemap
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 const routes = [
   // Main pages
   { url: '/', priority: '1.0', changefreq: 'daily' },
