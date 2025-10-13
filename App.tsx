@@ -200,6 +200,11 @@ const AiImageRecognitionPage = React.lazy(
   () => import("./app/ai-image-recognition/page"),
 );
 
+// New IT Services Pages
+const CloudMigrationPage = React.lazy(
+  () => import("./app/cloud-migration/page"),
+);
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
   () => import("./app/5g-data-analytics/page"),
@@ -277,6 +282,9 @@ function App() {
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
                   <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
                   <Route path="/ai-image-recognition" element={<AiImageRecognitionPage />} />
+
+                  {/* New IT Service Routes */}
+                  <Route path="/cloud-migration" element={<CloudMigrationPage />} />
 
                   {/* IT Service Routes */}
                   <Route

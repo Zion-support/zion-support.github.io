@@ -70,10 +70,18 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-services"
+                  to="/cloud-migration"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Solutions
+                  Cloud Migration
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cloud-infrastructure"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cloud Infrastructure
                 </Link>
               </li>
               <li>
