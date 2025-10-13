@@ -111,6 +111,178 @@ export default function Services() {
       color: "from-amber-500 to-yellow-500",
       price: "Starting at $349/month",
       features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
+    },
+    {
+      title: "AI Healthcare Solutions",
+      description: "Medical image analysis, patient data processing, and diagnostic assistance. HIPAA-compliant AI solutions for healthcare providers.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/ai-healthcare",
+      color: "from-emerald-500 to-teal-500",
+      price: "Starting at $499/month",
+      features: ["Medical Imaging", "Patient Analytics", "Diagnostic Support", "HIPAA Compliance"]
+    },
+    {
+      title: "AI E-commerce Optimization",
+      description: "Intelligent product recommendations, dynamic pricing, and customer behavior analysis for online retailers.",
+      icon: <Target className="w-8 h-8" />,
+      path: "/ai-ecommerce-optimization",
+      color: "from-rose-500 to-pink-500",
+      price: "Starting at $199/month",
+      features: ["Product Recommendations", "Dynamic Pricing", "Customer Analytics", "Inventory Optimization"]
+    },
+    {
+      title: "AI Supply Chain Management",
+      description: "Predictive analytics for inventory management, demand forecasting, and logistics optimization.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      path: "/ai-supply-chain",
+      color: "from-indigo-500 to-blue-500",
+      price: "Starting at $299/month",
+      features: ["Demand Forecasting", "Inventory Optimization", "Route Planning", "Risk Management"]
+    },
+    {
+      title: "AI HR & Talent Management",
+      description: "Intelligent recruitment, employee analytics, and performance management solutions.",
+      icon: <Users className="w-8 h-8" />,
+      path: "/ai-hr-management",
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $179/month",
+      features: ["Resume Screening", "Performance Analytics", "Employee Insights", "Retention Prediction"]
+    },
+    {
+      title: "AI Legal Document Analysis",
+      description: "Contract analysis, legal research automation, and compliance monitoring for law firms and legal departments.",
+      icon: <FileText className="w-8 h-8" />,
+      path: "/ai-legal-analysis",
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $399/month",
+      features: ["Contract Analysis", "Legal Research", "Compliance Monitoring", "Document Review"]
+    },
+    {
+      title: "AI Real Estate Analytics",
+      description: "Property valuation, market analysis, and investment recommendations for real estate professionals.",
+      icon: <TrendingUp className="w-8 h-8" />,
+      path: "/ai-real-estate",
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $249/month",
+      features: ["Property Valuation", "Market Analysis", "Investment Insights", "Risk Assessment"]
+    },
+    {
+      title: "AI Manufacturing Optimization",
+      description: "Predictive maintenance, quality control, and production optimization for manufacturing companies.",
+      icon: <Code className="w-8 h-8" />,
+      path: "/ai-manufacturing",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $399/month",
+      features: ["Predictive Maintenance", "Quality Control", "Production Optimization", "Energy Management"]
+    },
+    {
+      title: "AI Education & Training",
+      description: "Personalized learning paths, automated grading, and educational content generation for institutions.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/ai-education",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $149/month",
+      features: ["Personalized Learning", "Automated Grading", "Content Generation", "Progress Tracking"]
+    },
+    {
+      title: "AI Energy Management",
+      description: "Smart grid optimization, energy consumption analysis, and renewable energy forecasting.",
+      icon: <Zap className="w-8 h-8" />,
+      path: "/ai-energy-management",
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $299/month",
+      features: ["Energy Optimization", "Grid Management", "Renewable Forecasting", "Cost Analysis"]
+    },
+    // IT Infrastructure Services
+    {
+      title: "Enterprise Cloud Migration",
+      description: "Complete cloud migration services with zero-downtime deployment and data integrity assurance.",
+      icon: <Cloud className="w-8 h-8" />,
+      path: "/enterprise-cloud-migration",
+      color: "from-blue-500 to-indigo-500",
+      price: "Custom Pricing",
+      features: ["Zero Downtime", "Data Migration", "Security Hardening", "Performance Optimization"]
+    },
+    {
+      title: "Advanced Cybersecurity Suite",
+      description: "Comprehensive security solutions including penetration testing, vulnerability assessment, and incident response.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/advanced-cybersecurity",
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $599/month",
+      features: ["Penetration Testing", "Vulnerability Assessment", "Incident Response", "Security Training"]
+    },
+    {
+      title: "DevOps & CI/CD Pipeline",
+      description: "Automated deployment pipelines, infrastructure as code, and continuous integration solutions.",
+      icon: <Code className="w-8 h-8" />,
+      path: "/devops-solutions",
+      color: "from-green-500 to-teal-500",
+      price: "Starting at $399/month",
+      features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
+    },
+    {
+      title: "Database Optimization",
+      description: "High-performance database design, optimization, and migration services for enterprise applications.",
+      icon: <Database className="w-8 h-8" />,
+      path: "/database-optimization",
+      color: "from-purple-500 to-violet-500",
+      price: "Starting at $299/month",
+      features: ["Performance Tuning", "Query Optimization", "Data Migration", "Backup & Recovery"]
+    },
+    {
+      title: "API Development & Management",
+      description: "RESTful and GraphQL API development with comprehensive documentation and monitoring.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/api-development",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $249/month",
+      features: ["RESTful APIs", "GraphQL", "API Documentation", "Rate Limiting"]
+    },
+    {
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile applications with modern UI/UX design and backend integration.",
+      icon: <Smartphone className="w-8 h-8" />,
+      path: "/mobile-development",
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $5,000/project",
+      features: ["iOS & Android", "Cross-platform", "UI/UX Design", "Backend Integration"]
+    },
+    {
+      title: "Blockchain Development",
+      description: "Smart contracts, DeFi applications, and blockchain infrastructure development and deployment.",
+      icon: <Zap className="w-8 h-8" />,
+      path: "/blockchain-development",
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $8,000/project",
+      features: ["Smart Contracts", "DeFi Applications", "NFT Platforms", "Blockchain Integration"]
+    },
+    {
+      title: "IoT Solutions & Integration",
+      description: "Internet of Things device integration, data collection, and real-time monitoring solutions.",
+      icon: <Wifi className="w-8 h-8" />,
+      path: "/iot-solutions",
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $399/month",
+      features: ["Device Integration", "Data Collection", "Real-time Monitoring", "Edge Computing"]
+    },
+    {
+      title: "Quantum Computing Services",
+      description: "Quantum algorithm development, quantum machine learning, and quantum optimization solutions.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/quantum-computing",
+      color: "from-indigo-500 to-purple-500",
+      price: "Custom Pricing",
+      features: ["Quantum Algorithms", "Quantum ML", "Optimization", "Research & Development"]
+    },
+    {
+      title: "Robotics & Automation",
+      description: "Industrial automation, robotic process automation, and intelligent robotic systems development.",
+      icon: <Target className="w-8 h-8" />,
+      path: "/robotics-automation",
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $10,000/project",
+      features: ["Industrial Automation", "RPA Solutions", "Robotic Systems", "AI Integration"]
     }
   ];
 
@@ -180,7 +352,7 @@ export default function Services() {
                 Discover our comprehensive suite of AI-powered services and cutting-edge technology solutions designed to transform your business.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <div
                   key={index}

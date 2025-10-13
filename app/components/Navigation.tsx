@@ -25,7 +25,11 @@ const Navigation = React.memo(() => {
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Healthcare Solutions', path: '/ai-healthcare', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI Financial Analytics', path: '/ai-financial-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Target className="w-4 h-4" /> },
+    { name: 'AI Supply Chain', path: '/ai-supply-chain', icon: <Database className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
@@ -36,7 +40,11 @@ const Navigation = React.memo(() => {
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Social Scheduler', path: '/zion-social-scheduler', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Workflow Automation', path: '/zion-workflow-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Invoice Genius', path: '/zion-invoice-genius', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Zion Inventory Smart', path: '/zion-inventory-smart', icon: <Database className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -51,7 +59,7 @@ const Navigation = React.memo(() => {
 
   return (
     <nav 
-      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md"
+      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md glass-enhanced"
       role="navigation"
       aria-label="Main navigation"
     >
@@ -65,7 +73,7 @@ const Navigation = React.memo(() => {
             Zion Tech Group
           </Link>
 
-          <div className="hidden lg:flex space-x-8 items-center">
+          <div className="hidden lg:flex space-x-6 xl:space-x-8 items-center">
             {mainNavItems.map((item) => (
               <Link
                 key={item.name}
@@ -173,8 +181,8 @@ const Navigation = React.memo(() => {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-cyan-500/20">
-            <div className="flex flex-col space-y-2">
+          <div className="lg:hidden py-4 border-t border-cyan-500/20 max-h-screen overflow-y-auto">
+            <div className="flex flex-col space-y-2 px-2">
               {mainNavItems.map((item) => (
                 <Link
                   key={item.name}
