@@ -22,7 +22,9 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       setIsSubscribed(true);
       setEmail("");
     } catch (error) {
-      console.error('Newsletter subscription error:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Newsletter subscription error:', error);
+      }
     } finally {
       setIsLoading(false);
     }

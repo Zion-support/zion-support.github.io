@@ -36,7 +36,7 @@ export default defineConfig({
     },
     // Performance optimizations
     chunkSizeWarningLimit: 500,
-    assetsInlineLimit: 2048,
+    assetsInlineLimit: 4096, // Increased for better performance
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -44,6 +44,11 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2, // Multiple passes for better optimization
+      },
+      mangle: {
+        safari10: true,
       },
     },
     

@@ -51,7 +51,9 @@ const ContactForm: React.FC = () => {
         service: "",
       });
     } catch (error) {
-      console.error('Form submission error:', error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Form submission error:', error);
+      }
     } finally {
       setIsSubmitting(false);
     }

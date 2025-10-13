@@ -59,10 +59,14 @@ class ErrorHandler extends Component<Props, State> {
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString()
       };
-      console.error('Production error:', errorData);
+      if (process.env.NODE_ENV === 'development') {
+        console.error('Production error:', errorData);
+      }
       // Send to your error reporting service here
     } catch (reportingError) {
-      console.warn('Failed to report error:', reportingError);
+      if (process.env.NODE_ENV === 'development') {
+        console.warn('Failed to report error:', reportingError);
+      }
     }
   }
 

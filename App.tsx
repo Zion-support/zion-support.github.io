@@ -1,5 +1,5 @@
 "use client";
-import React, { Suspense } from "react";
+import React, { Suspense, lazy, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
@@ -20,6 +20,7 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -201,6 +202,46 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 
 // Main App Component
 function App() {
+  // Preload critical resources
+  useEffect(() => {
+    // Preload critical fonts
+    const fontPreload = document.createElement('link');
+    fontPreload.rel = 'preload';
+    fontPreload.href = '/fonts/inter-var.woff2';
+    fontPreload.as = 'font';
+    fontPreload.type = 'font/woff2';
+    fontPreload.crossOrigin = 'anonymous';
+    document.head.appendChild(fontPreload);
+
+    // Preload critical images
+    const imagePreload = document.createElement('link');
+    imagePreload.rel = 'preload';
+    imagePreload.href = '/og-image.jpg';
+    imagePreload.as = 'image';
+    document.head.appendChild(imagePreload);
+
+    // Register service worker
+    if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('SW registered: ', registration);
+          }
+        })
+        .catch((registrationError) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('SW registration failed: ', registrationError);
+          }
+        });
+    }
+
+    // Cleanup
+    return () => {
+      document.head.removeChild(fontPreload);
+      document.head.removeChild(imagePreload);
+    };
+  }, []);
+
   return (
     <ErrorHandler>
       <ErrorBoundary>
@@ -453,12 +494,12 @@ function App() {
                   </EnhancedAccessibility>
                 </FuturisticBackground>
                 <AnalyticsProvider>
-                  <div>
+                  <PerformanceOptimizer>
                     <PerformanceMonitor />
                     <PerformanceEnhancer />
                     <SEOOptimizer />
                     <EnhancedSEO />
-                  </div>
+                  </PerformanceOptimizer>
                 </AnalyticsProvider>
               </div>
             </Router>

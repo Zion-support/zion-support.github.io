@@ -8,9 +8,13 @@ const CacheManager = () => {
       if ('serviceWorker' in navigator) {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
-          console.log('Service Worker registered:', registration);
+          if (process.env.NODE_ENV === 'development') {
+            console.log('Service Worker registered:', registration);
+          }
         } catch (error) {
-          console.warn('Service Worker registration failed:', error);
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('Service Worker registration failed:', error);
+          }
         }
       }
     }
@@ -32,9 +36,13 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
-          console.log('Static assets cached successfully');
+          if (process.env.NODE_ENV === 'development') {
+            console.log('Static assets cached successfully');
+          }
         } catch (error) {
-          console.warn('Failed to cache static assets:', error);
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('Failed to cache static assets:', error);
+          }
         }
       }
 
@@ -50,7 +58,9 @@ const CacheManager = () => {
           
           return response
         } catch (error) {
-          console.warn('Cache API error:', error);
+          if (process.env.NODE_ENV === 'development') {
+            console.warn('Cache API error:', error);
+          }
           return fetch(request)
         }
       }
