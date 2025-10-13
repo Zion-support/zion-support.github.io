@@ -55,12 +55,19 @@ interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
+<<<<<<< HEAD
 const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
   children,
 }) => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   // Preload critical resources
+=======
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  const [isOptimized, setIsOptimized] = useState(false);
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15ad
   useEffect(() => {
+    // Preload critical resources
     const preloadCriticalResources = () => {
       // Preload critical fonts
       const fontLink = document.createElement('link');
@@ -78,7 +85,13 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
       const criticalImages = [
 <<<<<<< HEAD
         '/logo.svg',
+<<<<<<< HEAD
         '/og-image.svg'
+=======
+        '/og-image.svg',
+        '/api/placeholder/1200/630', // Hero image
+        '/api/placeholder/800/600',  // Service images
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15ad
       ];
 
       criticalImages.forEach(src => {
@@ -346,9 +359,12 @@ const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
       `}</style>
     </>
   );
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15ad
 };
 
 <<<<<<< HEAD

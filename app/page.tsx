@@ -505,6 +505,7 @@ const HomePage = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
 <<<<<<< HEAD
 =======
@@ -525,6 +526,54 @@ const HomePage = () => {
         <div className="text-center mb-16">
           <h1 className="text-6xl font-bold text-white mb-6">
             Welcome to Zion Tech Group
+=======
+    <PerformanceOptimizer>
+      <EnhancedAccessibility>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+          <EnhancedSEO
+            title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
+            description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
+            keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
+            canonical="https://ziontechgroup.com"
+            structuredData={structuredData}
+          />
+          
+          <StructuredData type="Organization" data={structuredData} />
+          
+          <StructuredData 
+            type="WebSite" 
+            data={{
+              name: "Zion Tech Group",
+              url: "https://ziontechgroup.com",
+              potentialAction: {
+                "@type": "SearchAction",
+                "target": "https://ziontechgroup.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }} 
+          />
+
+      {/* Main Content */}
+      <main id="main-content" role="main" aria-label="Main content">
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <ResponsiveContainer className="text-center relative z-10">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+              Welcome to Zion Tech Group
+            </span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15ad
           </h1>
 <<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">

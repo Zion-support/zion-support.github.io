@@ -36,7 +36,12 @@ import {
   Brain, 
   Shield, 
 <<<<<<< HEAD
+<<<<<<< HEAD
   Zap,
+=======
+  Zap, 
+  Globe, 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15ad
   ChevronDown
 } from 'lucide-react';
 =======

@@ -30,6 +30,7 @@ import { LoadingPage } from "./app/components/LoadingStates";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import PerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
@@ -646,6 +647,11 @@ import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import LoadingSpinner from "./app/components/LoadingSpinner";
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-139b
+=======
+import EnhancedSEO from "./app/components/EnhancedSEO";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
+import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15ad
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
