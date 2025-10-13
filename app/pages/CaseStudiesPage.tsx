@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react;
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [{
@@ -55,8 +56,12 @@ const CaseStudiesPage: React.FC = () => {
       description: 'SecureBank Ltd. successfully migrated to the cloud, achieving unprecedented scalability and performance while reducing operational costs.'';
     }
   ];
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 
+const CaseStudiesPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900">;
       <Helmet>
         <title>Case Studies | Zion Tech Group</title>
@@ -140,6 +145,22 @@ const CaseStudiesPage: React.FC = () => {
         </div>;
       </div>;
     </div>;
+=======
+    <>
+      <Helmet>
+        <title>CaseStudiesPage - Zion Tech Group</title>
+        <meta name="description" content="CaseStudiesPage page for Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white p-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold mb-8">CaseStudiesPage</h1>
+          <p className="text-lg text-gray-300">
+            This is the CaseStudiesPage page for Zion Tech Group.
+          </p>
+        </div>
+      </div>
+    </>
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
   );
 };
 

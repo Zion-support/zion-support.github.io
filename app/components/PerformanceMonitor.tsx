@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
@@ -199,6 +200,12 @@ const PerformanceMonitor: React.FC = () => {
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     </div>
   );
+=======
+import React from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  return null;
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 };
 
 export default PerformanceMonitor;

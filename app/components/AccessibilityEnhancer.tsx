@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
@@ -163,6 +164,12 @@ const nav = document.querySelector('nav');
   }, []);
 
 return null;
+=======
+import React from 'react';
+
+const AccessibilityEnhancer: React.FC = () => {
+  return null;
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 };
 
 export default AccessibilityEnhancer;

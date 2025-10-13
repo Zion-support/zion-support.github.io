@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 'use client';
 
@@ -250,316 +251,28 @@ export default function ITSolutionsPage()   {
       href: "/it-compliance"
     }
   ];
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 
+const ITSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive IT solutions including infrastructure management, cloud services, cybersecurity, database management, and more. Expert IT services for modern businesses." />
-        <meta name="keywords" content="IT solutions, infrastructure management, cloud services, cybersecurity, database management, IT support, software development" />
+        <meta name="description" content="IT solutions from Zion Tech Group" />
       </Helmet>
-      
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              IT Solutions
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive IT services to power your business success
-            </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              From infrastructure management to cybersecurity, our expert IT solutions 
-              ensure your technology infrastructure is secure, scalable, and optimized for performance.
-            </p>
-          </div>
+      <div className="min-h-screen bg-slate-900 text-white p-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold mb-8">IT Solutions</h1>
+          <p className="text-lg text-gray-300">
+            Discover our IT solutions and services.
+          </p>
         </div>
-      </section>
-
-      {/* IT Services Grid */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {itServices.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div 
-                  key={service.title}
-                  className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  {/* Pricing */}
-                  <div className="mb-4">
-                    <span className="text-2xl font-bold text-green-400">{service.price}</span>
-                  </div>
-                  
-                  {/* Benefits */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
-                          {benefit}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  {/* Use Cases */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Perfect for:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.useCases.map((useCase, useCaseIndex) => (
-                        <span key={useCaseIndex} className="text-xs bg-blue-900/30 text-blue-300 px-2 py-1 rounded-full">
-                          {useCase}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <div className="flex gap-2">
-                    <Link 
-                      to={service.href}
-                      className={`flex-1 inline-flex items-center justify-center gap-2 text-${service.color.split(' ')[1].split('-')[1]}-400 hover:text-${service.color.split(' ')[1].split('-')[1]}-300 font-semibold group-hover:gap-3 transition-all border border-current px-4 py-2 rounded-lg`}
-                    >
-                      Learn More <ArrowRightIcon className="w-4 h-4" />
-                    </Link>
-                    <Link 
-                      to="/contact"
-                      className="flex-1 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-cyan-700 transition-all"
-                    >
-                      Get Started
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Our IT Solutions */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose Our IT Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Expert IT services backed by years of experience and cutting-edge technology
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ServerIcon className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Expert Team</h3>
-              <p className="text-gray-300">
-                Certified IT professionals with years of experience in enterprise-level solutions.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ClockIcon className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Round-the-clock support and monitoring to ensure your systems run smoothly.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <ShieldCheckIcon className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
-              <p className="text-gray-300">
-                Bank-level security measures and compliance with industry standards.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CogIcon className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Scalable Solutions</h3>
-              <p className="text-gray-300">
-                IT solutions that grow with your business and adapt to changing needs.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* IT Service Levels */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Service Level Options
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the service level that best fits your business needs and budget
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
-              <h3 className="text-2xl font-bold text-white mb-4">Basic Support</h3>
-              <div className="text-4xl font-bold text-green-400 mb-6">$1,200<span className="text-lg text-gray-400">/month</span></div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Business hours support</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Remote assistance</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Basic monitoring</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Monthly reports</span>
-                </li>
-              </ul>
-              <Link to="/contact" className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-cyan-700 transition-all">
-                Get Started
-              </Link>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-800 to-indigo-800 p-8 rounded-xl border border-blue-500 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                  Most Popular
-                </span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-green-400 mb-6">$2,500<span className="text-lg text-gray-400">/month</span></div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>24/7 support</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Proactive monitoring</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Priority response</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Weekly reports</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>On-site visits</span>
-                </li>
-              </ul>
-              <Link to="/contact" className="w-full bg-white text-blue-900 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-100 transition-all">
-                Get Started
-              </Link>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-green-400 mb-6">Custom<span className="text-lg text-gray-400">/month</span></div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Dedicated team</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Custom solutions</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>White-label support</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Daily reports</span>
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Strategic consulting</span>
-                </li>
-              </ul>
-              <Link to="/contact" className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-cyan-700 transition-all">
-                Contact Sales
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Ready to Optimize Your IT Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-12">
-              Let our expert IT team help you build a robust, secure, and scalable technology foundation
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Get Free IT Assessment
-                <ArrowRightIcon className="w-5 h-5" />
-              </Link>
-              <Link 
-                to="/demo" 
-                className="border-2 border-blue-400 text-blue-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Schedule IT Demo
-                <ArrowRightIcon className="w-5 h-5" />
-              </Link>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-300">
-              <div className="flex items-center gap-3">
-                <PhoneIcon className="w-6 h-6 text-blue-400" />
-                <span>+1-302-464-0950</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <EnvelopeIcon className="w-6 h-6 text-blue-400" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
     </>
   );
-}
+};
+
+export default ITSolutionsPage;

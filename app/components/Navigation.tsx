@@ -51,6 +51,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       ]
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
 =======
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
@@ -80,6 +83,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -87,6 +91,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 >>>>>>> origin/main
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
   ];
 
   const isActive = (path: string) => {
@@ -121,6 +127,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
@@ -142,6 +151,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (
+<<<<<<< HEAD
                     <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
                       {item.submenu.map((subItem) => (
                         <Link
@@ -149,6 +159,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                           to={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
                           onClick={() => setIsServicesOpen(false)}
+=======
+                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                      {item.submenu.map((subItem) => (
+                        <Link key={subItem.name}
+                          to={subItem.href}
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
                         >
                           {subItem.name}
                         </Link>
@@ -158,6 +175,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 </div>
               );
             })}
+<<<<<<< HEAD
 =======
 {navigation.map((item) => (
               <div key={item.name} className="relative group">
@@ -190,6 +208,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </div>
             ))}
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
           </div>
 
           {/* CTA Button */}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Server, Cloud, Shield, Wrench, Monitor, Database } from 'lucide-react;
 const ITServicesPage: React.FC = () => {
   const services = [{
@@ -39,8 +40,12 @@ const ITServicesPage: React.FC = () => {
       features: ['Database Design', 'Data Backup', 'Data Migration', 'Performance Tuning']';
     }
   ];
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 
+const ITServicesPage: React.FC = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">;
       <Helmet>
         <title>IT Services | Zion Tech Group</title>
@@ -102,6 +107,22 @@ const ITServicesPage: React.FC = () => {
         </div>;
       </div>;
     </div>;
+=======
+    <>
+      <Helmet>
+        <title>ITServicesPage - Zion Tech Group</title>
+        <meta name="description" content="ITServicesPage page for Zion Tech Group" />
+      </Helmet>
+      <div className="min-h-screen bg-slate-900 text-white p-8">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl font-bold mb-8">ITServicesPage</h1>
+          <p className="text-lg text-gray-300">
+            This is the ITServicesPage page for Zion Tech Group.
+          </p>
+        </div>
+      </div>
+    </>
+>>>>>>> cursor/analyze-improve-and-deploy-application-7aca
   );
 };
 
