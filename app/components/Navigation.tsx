@@ -6,26 +6,9 @@ import {
   Brain, 
   Shield, 
   Zap, 
-<<<<<<< HEAD
-  Globe, 
-<<<<<<< HEAD
-  ChevronDown
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
-=======
-  ChevronDown,
-  ChevronUp
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-=======
   Globe,
   ChevronDown,
   ChevronUp
->>>>>>> cursor/analyze-improve-and-deploy-application-e258
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -135,30 +118,36 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     {
       category: 'AI Services',
       items: [
-        { name: 'AI Analytics', path: '/ai-analytics', description: 'Advanced data analytics and insights' },
-        { name: 'AI CRM Pro', path: '/zion-ai-crm-pro', description: 'Intelligent customer relationship management' },
-        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'AI-powered content creation' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security solutions' },
-        { name: 'AI Video Generator', path: '/zion-ai-video-generator', description: 'Create videos with AI' }
+        { name: 'AI Code Assistant Pro', path: '/ai-code-assistant-pro', description: 'AI-powered code generation & debugging' },
+        { name: 'AI Content Studio Pro', path: '/ai-content-studio', description: 'AI-powered content creation platform' },
+        { name: 'AI Analytics Pro', path: '/ai-analytics-pro', description: 'Advanced data analytics and insights' },
+        { name: 'AI CRM Pro', path: '/ai-crm-assistant', description: 'Intelligent customer relationship management' },
+        { name: 'AI Cybersecurity Monitor Pro', path: '/ai-cybersecurity-monitor-pro', description: 'AI-powered security monitoring' },
+        { name: 'AI Customer Insights Pro', path: '/ai-customer-insights', description: 'AI-powered customer analytics' },
+        { name: 'AI Business Intelligence Pro', path: '/ai-business-intelligence-pro', description: 'Advanced AI business intelligence' },
+        { name: 'AI Marketing Automation Pro', path: '/ai-automation-platform', description: 'AI-powered marketing automation' }
       ]
     },
     {
-      category: 'IT Services',
+      category: 'Micro SAAS Solutions',
       items: [
-        { name: 'Cloud Migration', path: '/cloud-migration', description: 'Seamless cloud transition' },
-        { name: 'Web Development', path: '/web-development', description: 'Custom web applications' },
-        { name: 'DevOps', path: '/devops', description: 'CI/CD and automation' },
-        { name: 'IT Consulting', path: '/it-consulting', description: 'Strategic technology guidance' },
-        { name: 'System Integration', path: '/system-integration', description: 'Connect your systems' }
+        { name: 'Zion Analytics Pro', path: '/ai-analytics-dashboard-pro', description: 'Business intelligence platform' },
+        { name: 'Zion Security Shield', path: '/advanced-security-suite', description: 'Advanced cybersecurity suite' },
+        { name: 'Zion Cloud Vault', path: '/ai-cloud-infrastructure', description: 'Secure cloud storage solution' },
+        { name: 'Zion AI Project Manager Pro', path: '/ai-automation', description: 'AI-powered project management' },
+        { name: 'Zion AI Data Analytics Pro', path: '/ai-data-analytics-pro', description: 'Comprehensive data analytics' },
+        { name: 'Zion AI Content Generator Pro', path: '/ai-content-generation-pro', description: 'AI content generation suite' }
       ]
     },
     {
-      category: 'Micro SAAS',
+      category: '5G Solutions',
       items: [
-        { name: 'Zion Analytics Pro', path: '/zion-ai-analytics-pro', description: 'Business intelligence platform' },
-        { name: 'Zion Security Shield', path: '/zion-security-shield', description: 'Advanced cybersecurity' },
-        { name: 'Zion AI Marketing', path: '/zion-ai-marketing-automation', description: 'Marketing automation' },
-        { name: 'Zion E-commerce Suite', path: '/zion-ecommerce-suite', description: 'Complete e-commerce platform' }
+        { name: '5G Network Infrastructure', path: '/5g-network-infrastructure', description: 'Next-gen network solutions' },
+        { name: '5G Edge Computing', path: '/5g-edge-computing', description: 'Edge computing infrastructure' },
+        { name: '5G IoT Solutions', path: '/5g-iot-solutions', description: 'IoT connectivity solutions' },
+        { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions', description: 'Smart city implementations' },
+        { name: '5G Private Networks', path: '/5g-private-networks', description: 'Private 5G networks' },
+        { name: '5G Data Analytics', path: '/5g-data-analytics', description: '5G data insights' }
       ]
     }
   ];
