@@ -1,14 +1,10 @@
 export interface AccessibilityConfig {
   enabled: boolean;
-
   announceChanges: boolean;
   highContrast: boolean;
   reducedMotion: boolean;
-
-  highContrast: boolean;
   fontSize: number;
   screenReader: boolean;
-
 }
 
 export class AccessibilityUtils {
@@ -20,10 +16,11 @@ export class AccessibilityUtils {
       announceChanges: true,
       highContrast: false,
       reducedMotion: false,
+      fontSize: 16,
+      screenReader: false,
       ...config
     };
   }
-
 
   announceToScreenReader(message: string) {
     if (this.config.enabled && this.config.announceChanges) {
@@ -37,30 +34,36 @@ export class AccessibilityUtils {
       setTimeout(() => {
         document.body.removeChild(announcement);
       }, 1000);
+    }
+  }
 
   init(): void {
     if (this.config.enabled) {
       console.log('Accessibility utils initialized');
-
     }
   }
 
   setHighContrast(enabled: boolean) {
     this.config.highContrast = enabled;
     if (enabled) {
-      document.documentElement.classList.add('high-contrast');
+      document.body.classList.add('high-contrast');
     } else {
-      document.documentElement.classList.remove('high-contrast');
+      document.body.classList.remove('high-contrast');
     }
   }
 
   setReducedMotion(enabled: boolean) {
     this.config.reducedMotion = enabled;
     if (enabled) {
-      document.documentElement.classList.add('reduced-motion');
+      document.body.classList.add('reduced-motion');
     } else {
-      document.documentElement.classList.remove('reduced-motion');
+      document.body.classList.remove('reduced-motion');
     }
+  }
+
+  setFontSize(size: number) {
+    this.config.fontSize = size;
+    document.documentElement.style.fontSize = `${size}px`;
   }
 }
 
