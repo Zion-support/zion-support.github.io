@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -1137,89 +1136,6 @@ export default function MicroSaas() {
             </div>
           </div>
         </div>
-=======
-import React from 'react';
-import { ArrowRight, CheckCircle, Star, Package, Shield, BarChart3, Cloud, Users, Zap, Mail } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticBackground from '../components/FuturisticBackground';
-
-const MicroSaasPage: React.FC = () => {
-  const microSaasProducts = [
-    {
-      title: 'Zion Analytics Pro',
-      description: 'Advanced analytics platform for data-driven decision making.',
-      features: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'API integration'],
-      price: '$299/month',
-      icon: <BarChart3 className="w-8 h-8" />
-    },
-    {
-      title: 'Zion Security Shield',
-      description: 'Comprehensive cybersecurity solution for small to medium businesses.',
-      features: ['Threat detection', 'Vulnerability scanning', 'Security monitoring', 'Incident response'],
-      price: '$199/month',
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: 'Zion Cloud Vault',
-      description: 'Secure cloud storage and file management solution.',
-      features: ['Encrypted storage', 'File sharing', 'Version control', 'Collaboration tools'],
-      price: '$99/month',
-      icon: <Cloud className="w-8 h-8" />
-    },
-    {
-      title: 'Zion AI CRM Pro',
-      description: 'AI-powered customer relationship management system.',
-      features: ['Lead management', 'Sales automation', 'Customer insights', 'AI recommendations'],
-      price: '$399/month',
-      icon: <Users className="w-8 h-8" />
-    },
-    {
-      title: 'Zion AI Marketing Automation Pro',
-      description: 'Intelligent marketing automation platform.',
-      features: ['Email campaigns', 'Social media management', 'Lead nurturing', 'Performance tracking'],
-      price: '$249/month',
-      icon: <Zap className="w-8 h-8" />
-    },
-    {
-      title: 'Zion AI Project Manager Pro',
-      description: 'AI-enhanced project management and team collaboration.',
-      features: ['Task automation', 'Resource planning', 'Progress tracking', 'Team collaboration'],
-      price: '$179/month',
-      icon: <Package className="w-8 h-8" />
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <FuturisticBackground />
-      <EnhancedSEO
-        title="Micro SAAS Solutions - Zion Tech Group | Innovative Software as a Service"
-        description="Discover our comprehensive suite of micro SAAS solutions designed to streamline business operations and drive growth."
-        keywords="micro SAAS, software as a service, business solutions, productivity tools, cloud software"
-        canonical="https://ziontechgroup.com/micro-saas"
-      />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Micro SAAS Solutions
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Powerful, focused software solutions designed to solve specific business challenges and drive operational efficiency.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-              Explore Solutions
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-            <button className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300">
-              Free Trial
-            </button>
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
       {/* Products Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
@@ -1297,7 +1213,6 @@ const MicroSaasPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1533,9 +1448,5 @@ const MicroSaasPage: React.FC = () => {
         </section>
       </div>
     </>
-=======
-      </section>
-    </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   );
 }

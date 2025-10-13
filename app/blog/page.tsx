@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -45,7 +40,6 @@ const BlogPage: React.FC = () => {
       readTime: "7 min read",
       image: "/images/blog/cybersecurity-small-business.jpg",
       featured: false
-=======
 import React from 'react';
 import { Calendar, User, ArrowRight, Search } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -63,7 +57,6 @@ const BlogPage: React.FC = () => {
       image: '/api/placeholder/400/250'
     },
     {
-<<<<<<< HEAD
       title: 'Micro SAAS: The New Era of Business Software',
       excerpt: 'Discover how micro SAAS solutions are revolutionizing the way businesses operate and scale.',
       author: 'Sarah Johnson',
@@ -71,7 +64,6 @@ const BlogPage: React.FC = () => {
       category: 'Business',
       readTime: '7 min read',
       image: '/api/placeholder/400/250'
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
     },
     {
       title: '5G Technology: Transforming Industries and Creating Opportunities',
@@ -114,7 +106,6 @@ const BlogPage: React.FC = () => {
   const categories = ['All', 'AI & Technology', 'Business', 'Security', 'Cloud Computing', 'Technology'];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>Tech Insights & Innovation Blog | Zion Tech Group</title>
@@ -144,17 +135,6 @@ const BlogPage: React.FC = () => {
                   className="w-full pl-12 pr-4 py-4 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:border-transparent"
                 />
               </div>
-=======
-      title: "5G Technology: Transforming Industries and Creating New Opportunities",
-      excerpt: "Discover how 5G technology is revolutionizing various industries and creating new business opportunities for forward-thinking companies.",
-      author: "Zion Tech Group",
-=======
-      id: 3,
-      title: "Cloud Migration Strategies: A Complete Guide",
-      excerpt: "Learn the best practices for migrating your infrastructure to the cloud successfully.",
-      content: "Cloud migration is a complex process that requires careful planning and execution...",
-      author: "Emily Rodriguez",
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
       date: "2024-01-05",
       category: "cloud",
       readTime: "8 min read",
@@ -171,12 +151,7 @@ const BlogPage: React.FC = () => {
   })
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <FuturisticBackground />
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
       <EnhancedSEO
         title="Blog - Zion Tech Group | Technology Insights and Industry News"
         description="Stay updated with the latest technology trends, industry insights, and expert analysis from Zion Tech Group."
@@ -197,7 +172,6 @@ const BlogPage: React.FC = () => {
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
-=======
     <>
       <EnhancedSEO
         title="Blog - Zion Tech Group"
@@ -219,12 +193,10 @@ const BlogPage: React.FC = () => {
             
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto relative">
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search articles..."
-<<<<<<< HEAD
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
@@ -232,32 +204,17 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-                className="w-full pl-12 pr-4 py-4 bg-slate-800/50 backdrop-blur-md border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/40 transition-colors duration-300"
-              />
-            </div>
-          </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category, index) => (
               <button
-<<<<<<< HEAD
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? "bg-gradient-to-r from-cyan-500 to-purple-600 text-white"
                     : "bg-white/10 text-gray-300 hover:bg-white/20"
-=======
-                key={index}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  index === 0
-                    ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white border border-cyan-500/20'
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
                 }`}
               >
                 {category.name} ({category.count})
@@ -271,11 +228,7 @@ const BlogPage: React.FC = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
             {filteredPosts.map((post) => (
-=======
-            {blogPosts.map((post, index) => (
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
               <article
                 key={index}
                 className="bg-slate-800/50 backdrop-blur-md border border-cyan-500/20 rounded-2xl overflow-hidden hover:border-cyan-500/40 transition-all duration-300 group"
@@ -318,7 +271,6 @@ const BlogPage: React.FC = () => {
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
                   </div>
-<<<<<<< HEAD
                   
                   <Link
                     to={`/blog/${post.slug || post.id}`}
@@ -327,8 +279,6 @@ const BlogPage: React.FC = () => {
                     Read More
                     <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
                 </div>
               </article>
             ))}
@@ -339,7 +289,6 @@ const BlogPage: React.FC = () => {
       {/* Newsletter Signup */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Stay Updated
           </h2>
@@ -349,17 +298,6 @@ const BlogPage: React.FC = () => {
           
           <div className="max-w-md mx-auto">
             <div className="flex gap-2">
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
-          <div className="bg-slate-800/50 backdrop-blur-md border border-cyan-500/20 rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Stay Updated
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Subscribe to our newsletter and never miss the latest technology insights and industry updates.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
               <input
                 type="email"
                 placeholder="Enter your email"
@@ -373,19 +311,10 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
   )
 }
 
 export default BlogPage
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
-  );
-};
-
-export default BlogPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
 
         {/* Categories */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
@@ -501,4 +430,3 @@ export default BlogPage;
 };
 
 export default BlogPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7

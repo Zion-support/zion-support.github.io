@@ -21,7 +21,20 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
     );
   }
 
-<<<<<<< HEAD
+  // Default futuristic loading
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="text-center">
+        <div className="relative">
+          <div className="w-16 h-16 border-4 border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="absolute inset-0 w-16 h-16 border-4 border-purple-500/30 border-t-purple-500 rounded-full animate-spin mx-auto mb-4 animate-reverse"></div>
+        </div>
+        <p className="text-cyan-400 text-lg font-medium">{message}</p>
+      </div>
+    </div>
+  );
+};
+
 export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
   const getServiceIcon = (serviceName: string) => {
     switch (serviceName.toLowerCase()) {
@@ -41,19 +54,6 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
         return <Brain className="w-8 h-8 text-cyan-400" />;
     }
   };
-=======
-  if (variant === 'default') {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="text-center">
-          <Loader2 className="w-12 h-12 animate-spin text-cyan-400 mx-auto mb-4" />
-          <h2 className="text-xl font-semibold text-white mb-2">{message}</h2>
-          <p className="text-gray-400">Please wait while we load the content...</p>
-        </div>
-      </div>
-    );
-  }
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
   // Futuristic variant
   return (
@@ -111,7 +111,6 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
   );
 };
 
-<<<<<<< HEAD
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   return (
     <div className="animate-pulse">
@@ -141,6 +140,4 @@ export const CardSkeleton: React.FC = () => {
   );
 };
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 export default LoadingPage;
