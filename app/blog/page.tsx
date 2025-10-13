@@ -21,35 +21,44 @@ const BlogPage = () => {
       excerpt: 'Explore how artificial intelligence is transforming modern business operations and what it means for your organization.',
       content: 'Full article content here...',
       author: 'Dr. Sarah Johnson',
-      date: '2024-01-15',
+      authorRole: 'AI Research Director',
+      authorAvatar: '/api/placeholder/40/40',
+      publishedAt: '2024-01-15',
+      readTime: '8 min read',
       category: 'ai',
-      image: '/api/placeholder/600/400',
       featured: true,
-      readTime: '8 min read'
+      image: '/api/placeholder/600/300',
+      tags: ['AI', 'Business', 'Automation', 'Machine Learning']
     },
     {
       id: 2,
-      title: 'Cybersecurity Best Practices for 2024',
-      excerpt: 'Essential security measures every organization should implement to protect against evolving cyber threats.',
-      content: 'Full article content here...',
-      author: 'Mike Chen',
-      date: '2024-01-12',
+      title: 'Cybersecurity Best Practices for 2024: Protect Your Digital Assets',
+      excerpt: 'Essential cybersecurity strategies every business should implement to protect against evolving threats and ensure data security.',
+      content: 'In today\'s digital landscape, cybersecurity is not optional—it\'s essential. With cyber threats becoming more sophisticated, businesses must adopt a proactive approach to security...',
+      author: 'Michael Rodriguez',
+      authorRole: 'Cybersecurity Expert',
+      authorAvatar: '/api/placeholder/40/40',
+      publishedAt: '2024-01-12',
+      readTime: '6 min read',
       category: 'cybersecurity',
-      image: '/api/placeholder/600/400',
-      featured: false,
-      readTime: '6 min read'
+      featured: true,
+      image: '/api/placeholder/600/300',
+      tags: ['Cybersecurity', 'Security', 'Data Protection', 'Best Practices']
     },
     {
       id: 3,
       title: 'Cloud Migration Strategies: A Step-by-Step Guide',
       excerpt: 'Learn the best practices for migrating your infrastructure to the cloud safely and efficiently.',
-      content: 'Full article content here...',
+      content: 'Cloud migration is a complex process that requires careful planning and execution...',
       author: 'Alex Rodriguez',
-      date: '2024-01-10',
+      authorRole: 'Cloud Solutions Architect',
+      authorAvatar: '/api/placeholder/40/40',
+      publishedAt: '2024-01-10',
+      readTime: '10 min read',
       category: 'cloud',
-      image: '/api/placeholder/600/400',
       featured: false,
-      readTime: '10 min read'
+      image: '/api/placeholder/600/300',
+      tags: ['Cloud Computing', 'Migration', 'Infrastructure', 'Best Practices']
     }
   ];
 
@@ -73,135 +82,6 @@ const BlogPage = () => {
             <h1 className="text-5xl font-bold mb-6">Tech Insights & Innovation</h1>
             <p className="text-xl mb-8 max-w-3xl mx-auto">
               Stay ahead with the latest trends, insights, and best practices in AI, cybersecurity, cloud computing, and technology innovation.
-=======
-      title: "The Future of AI in Business: Transform Your Operations Today",
-      excerpt: "Discover how artificial intelligence is revolutionizing business operations and learn practical strategies to implement AI solutions in your organization.",
-      content: "Artificial intelligence is no longer a futuristic concept—it's a present reality that's transforming how businesses operate. From automating routine tasks to providing deep insights from data, AI offers unprecedented opportunities for growth and efficiency...",
-      author: "Dr. Sarah Chen",
-      authorRole: "AI Research Director",
-      authorAvatar: "/api/placeholder/40/40",
-      publishedAt: "2024-01-15",
-      readTime: "8 min read",
-      category: "ai",
-      featured: true,
-      image: "/api/placeholder/600/300",
-      tags: ["AI", "Business", "Automation", "Machine Learning"]
-    },
-    {
-      id: 2,
-      title: "Cybersecurity Best Practices for 2024: Protect Your Digital Assets",
-      excerpt: "Essential cybersecurity strategies every business should implement to protect against evolving threats and ensure data security.",
-      content: "In today's digital landscape, cybersecurity is not optional—it's essential. With cyber threats becoming more sophisticated, businesses must adopt a proactive approach to security...",
-      author: "Michael Rodriguez",
-      authorRole: "Cybersecurity Expert",
-      authorAvatar: "/api/placeholder/40/40",
-      publishedAt: "2024-01-12",
-      readTime: "6 min read",
-      category: "cybersecurity",
-      featured: true,
-      image: "/api/placeholder/600/300",
-      tags: ["Cybersecurity", "Security", "Data Protection", "Best Practices"]
-    },
-    {
-      id: 3,
-      title: "Cloud Migration Strategies: A Complete Guide for Enterprises",
-      excerpt: "Learn the best practices for migrating your infrastructure to the cloud and maximizing the benefits of cloud computing.",
-      content: "Cloud migration is a critical step in digital transformation, but it requires careful planning and execution. This comprehensive guide covers everything you need to know...",
-      author: "Jennifer Liu",
-      authorRole: "Cloud Solutions Architect",
-      authorAvatar: "/api/placeholder/40/40",
-      publishedAt: "2024-01-10",
-      readTime: "10 min read",
-      category: "cloud",
-      featured: false,
-      image: "/api/placeholder/600/300",
-      tags: ["Cloud Computing", "Migration", "Infrastructure", "Digital Transformation"]
-    },
-    {
-      id: 4,
-      title: "Building Scalable Web Applications with Modern Technologies",
-      excerpt: "Explore the latest technologies and frameworks for building web applications that can handle millions of users.",
-      content: "Building scalable web applications requires careful architecture decisions and the right technology stack. This article explores modern approaches...",
-      author: "David Park",
-      authorRole: "Senior Full-Stack Developer",
-      authorAvatar: "/api/placeholder/40/40",
-      publishedAt: "2024-01-08",
-      readTime: "7 min read",
-      category: "development",
-      featured: false,
-      image: "/api/placeholder/600/300",
-      tags: ["Web Development", "Scalability", "React", "Node.js"]
-    },
-    {
-      id: 5,
-      title: "The Rise of Edge Computing: Bringing Processing Power Closer to Users",
-      excerpt: "Understand how edge computing is changing the landscape of data processing and what it means for your business.",
-      content: "Edge computing represents a paradigm shift in how we process and analyze data. By bringing computation closer to the data source...",
-      author: "Alex Thompson",
-      authorRole: "Edge Computing Specialist",
-      authorAvatar: "/api/placeholder/40/40",
-      publishedAt: "2024-01-05",
-      readTime: "9 min read",
-      category: "cloud",
-      featured: false,
-      image: "/api/placeholder/600/300",
-      tags: ["Edge Computing", "IoT", "Data Processing", "5G"]
-    },
-    {
-      id: 6,
-      title: "Zero Trust Security Model: A New Approach to Cybersecurity",
-      excerpt: "Learn about the Zero Trust security model and how it can help protect your organization from modern cyber threats.",
-      content: "The traditional perimeter-based security model is no longer sufficient in today's distributed work environment. Zero Trust offers a more robust approach...",
-      author: "Lisa Wang",
-      authorRole: "Security Consultant",
-      authorAvatar: "/api/placeholder/40/40",
-      publishedAt: "2024-01-03",
-      readTime: "5 min read",
-      category: "cybersecurity",
-      featured: false,
-      image: "/api/placeholder/600/300",
-      tags: ["Zero Trust", "Security", "Network Security", "Access Control"]
-    }
-  ];
-
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const recentPosts = blogPosts.slice(0, 3);
-
-  return (
-    <>
-      <Helmet>
-        <title>Blog - Zion Tech Group | Technology Insights & Industry News</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group's expert team." />
-        <meta name="keywords" content="technology blog, AI insights, cybersecurity news, cloud computing, tech trends, industry analysis" />
-        <meta property="og:title" content="Blog - Zion Tech Group | Technology Insights & Industry News" />
-        <meta property="og:description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/blog" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <BookOpen className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Technology Insights</span>
-            </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Blog</span>
-            </h1>
-            
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Stay ahead of the curve with expert insights, industry trends, and practical guides on AI, cybersecurity, cloud computing, and emerging technologies.
             </p>
           </div>
         </div>
@@ -215,12 +95,12 @@ const BlogPage = () => {
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
                   <button
-                    key={category.name}
-                    onClick={() => setSelectedCategory(category.name)}
-                    className={`px-3 py-1 rounded-full text-sm font-medium transition-colors ${
-                      selectedCategory === category.name
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                      selectedCategory === category.id
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
+                        : 'bg-white/20 text-gray-300 hover:bg-white/30'
                     }`}
                   >
                     {category.name} ({category.count})
@@ -228,56 +108,129 @@ const BlogPage = () => {
                 ))}
               </div>
             </div>
+            
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Search articles..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10 pr-4 py-2 bg-white/20 text-white placeholder-gray-300 rounded-lg border border-white/30 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Featured Post */}
       {featuredPost && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8">Featured Article</h2>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20">
-              <div className="md:flex">
-                <div className="md:w-1/2">
-                  <img
-                    src={featuredPost.image}
-                    alt={featuredPost.title}
-                    className="w-full h-64 md:h-full object-cover"
-                  />
+        <section className="py-16">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-8 text-white">
+              <div className="flex items-center gap-2 mb-4">
+                <Star className="w-5 h-5 text-yellow-400" />
+                <span className="text-sm font-medium">Featured Article</span>
+              </div>
+              <h2 className="text-3xl font-bold mb-4">{featuredPost.title}</h2>
+              <p className="text-xl mb-6 text-cyan-100">{featuredPost.excerpt}</p>
+              <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center gap-2">
+                  <User className="w-4 h-4" />
+                  <span>{featuredPost.author}</span>
                 </div>
-                <div className="md:w-1/2 p-8">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      {categories.find(cat => cat.id === featuredPost.category)?.name}
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  <span>{featuredPost.publishedAt}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4" />
+                  <span>{featuredPost.readTime}</span>
+                </div>
+              </div>
+              <Link
+                to={`/blog/${featuredPost.id}`}
+                className="inline-flex items-center gap-2 bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors"
+              >
+                Read More
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Blog Posts Grid */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredPosts.map((post) => (
+              <article
+                key={post.id}
+                className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-300 group"
+              >
+                <div className="aspect-video bg-gradient-to-br from-cyan-500 to-purple-600 relative overflow-hidden">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/20" />
+                  {post.featured && (
+                    <div className="absolute top-4 left-4 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                      Featured
+                    </div>
+                  )}
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-sm text-cyan-400 font-medium">
+                      {categories.find(cat => cat.id === post.category)?.name}
                     </span>
-                    <span className="text-gray-400 text-sm">{featuredPost.readTime}</span>
+                    <span className="text-gray-400">•</span>
+                    <span className="text-sm text-gray-400">{post.readTime}</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{featuredPost.title}</h3>
-                  <p className="text-gray-300 mb-6">{featuredPost.excerpt}</p>
+                  
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {post.title}
+                  </h3>
+                  
+                  <p className="text-gray-300 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4 text-sm text-gray-400">
-                      <span className="flex items-center gap-1">
-                        <User className="w-4 h-4" />
-                        {featuredPost.author}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {new Date(featuredPost.date).toLocaleDateString()}
-                      </span>
-                      <div className="flex items-center text-gray-400 text-sm">
-                        <Calendar className="w-4 h-4 mr-1" />
-                        {new Date(filteredPosts[0].date).toLocaleDateString()}
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={post.authorAvatar}
+                        alt={post.author}
+                        className="w-8 h-8 rounded-full"
+                      />
+                      <div>
+                        <p className="text-sm font-medium text-white">{post.author}</p>
+                        <p className="text-xs text-gray-400">{post.authorRole}</p>
                       </div>
                     </div>
+                    
                     <Link
-                      to={`/blog/${featuredPost.id}`}
-                      className="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-800 dark:hover:text-blue-300"
+                      to={`/blog/${post.id}`}
+                      className="text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
-                      Read More
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="w-5 h-5" />
                     </Link>
                   </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default BlogPage;
 =======
         {/* Search and Filter Section */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
