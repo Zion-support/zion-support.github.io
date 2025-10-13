@@ -3,17 +3,21 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
-  Wrench, 
-  AlertTriangle, 
+  Mic, 
+  Volume2, 
   Brain, 
   Zap, 
   Shield, 
+  Globe, 
+  Users, 
   BarChart3, 
   CheckCircle, 
   Star, 
   Clock, 
   Smartphone, 
   Laptop, 
+  Headphones,
+  MessageSquare,
   Settings,
   Play,
   Pause,
@@ -56,96 +60,40 @@ import {
   Monitor,
   Smartphone as PhoneIcon,
   Laptop as LaptopIcon,
-  Headphones as HeadphonesIcon,
-  Home,
-  Factory,
-  Truck,
-  Plane,
-  Ship,
-  Car,
-  Cog,
-  Gauge,
-  TrendingDown,
-  AlertCircle,
-  CheckSquare,
-  XCircle,
-  Info,
-  HelpCircle,
-  MessageSquare,
-  FileText,
-  BookOpen,
-  Download as DownloadIcon,
-  Upload as UploadIcon,
-  Share2 as ShareIcon,
-  Lock as LockIcon,
-  Unlock as UnlockIcon,
-  Eye as EyeIcon,
-  EyeOff as EyeOffIcon,
-  Bell as BellIcon,
-  BellOff as BellOffIcon,
-  Wifi as WifiIcon,
-  WifiOff as WifiOffIcon,
-  Battery as BatteryIcon,
-  BatteryCharging as BatteryChargingIcon,
-  Thermometer as ThermometerIcon,
-  Activity as ActivityIcon,
-  TrendingUp as TrendingUpIcon,
-  Target as TargetIcon,
-  Award as AwardIcon,
-  DollarSign as DollarSignIcon,
-  Calendar as CalendarIcon,
-  Mail as MailIcon,
-  Phone as PhoneIcon,
-  MapPin as MapPinIcon,
-  ExternalLink as ExternalLinkIcon,
-  ChevronRight as ChevronRightIcon,
-  Sparkles as SparklesIcon,
-  Crown as CrownIcon,
-  Rocket as RocketIcon,
-  Lightbulb as LightbulbIcon,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon,
-  Server as ServerIcon,
-  Cloud as CloudIcon,
-  HardDrive as HardDriveIcon,
-  Network as NetworkIcon,
-  Monitor as MonitorIcon,
-  Smartphone as SmartphoneIcon,
-  Laptop as LaptopIcon,
   Headphones as HeadphonesIcon
 } from 'lucide-react';
 
-export default function AIPredictiveMaintenance() {
+export default function AIVoiceAssistantPro() {
   const features = [
     {
-      title: "Advanced Machine Learning",
-      description: "Sophisticated ML algorithms analyze equipment data to predict failures with 95%+ accuracy",
+      title: "Natural Language Processing",
+      description: "Advanced NLP engine understands context, intent, and sentiment with 99.2% accuracy",
       icon: <Brain className="w-6 h-6" />,
-      benefits: ["95%+ prediction accuracy", "Real-time analysis", "Pattern recognition", "Anomaly detection"]
+      benefits: ["Multi-language support", "Context awareness", "Intent recognition", "Sentiment analysis"]
     },
     {
-      title: "IoT Sensor Integration",
-      description: "Seamlessly connect with existing sensors and IoT devices for comprehensive monitoring",
-      icon: <Activity className="w-6 h-6" />,
-      benefits: ["Multi-sensor support", "Real-time data streaming", "Edge computing", "Wireless connectivity"]
+      title: "Real-time Voice Processing",
+      description: "Ultra-low latency voice processing with advanced noise cancellation and echo suppression",
+      icon: <Mic className="w-6 h-6" />,
+      benefits: ["<100ms response time", "Noise cancellation", "Echo suppression", "Voice enhancement"]
     },
     {
-      title: "Predictive Analytics Dashboard",
-      description: "Comprehensive dashboard with visual insights, alerts, and maintenance recommendations",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Real-time monitoring", "Visual analytics", "Custom dashboards", "Mobile access"]
+      title: "Multi-Platform Integration",
+      description: "Seamlessly integrates with web, mobile, desktop, and IoT devices",
+      icon: <Globe className="w-6 h-6" />,
+      benefits: ["Cross-platform SDK", "RESTful APIs", "WebRTC support", "Mobile SDKs"]
     },
     {
-      title: "Automated Workflow Management",
-      description: "Automatically generate work orders, schedule maintenance, and manage spare parts inventory",
+      title: "Custom Voice Training",
+      description: "Train custom voice models for specific industries and use cases",
       icon: <Settings className="w-6 h-6" />,
-      benefits: ["Auto work orders", "Smart scheduling", "Inventory management", "Resource optimization"]
+      benefits: ["Custom voice models", "Industry-specific training", "Accent adaptation", "Brand voice creation"]
     },
     {
-      title: "Cost Optimization",
-      description: "Reduce maintenance costs by up to 40% through predictive scheduling and resource optimization",
-      icon: <DollarSign className="w-6 h-6" />,
-      benefits: ["40% cost reduction", "Resource optimization", "Energy efficiency", "ROI tracking"]
+      title: "Advanced Analytics",
+      description: "Comprehensive analytics dashboard with conversation insights and performance metrics",
+      icon: <BarChart3 className="w-6 h-6" />,
+      benefits: ["Conversation analytics", "Performance metrics", "User behavior insights", "ROI tracking"]
     },
     {
       title: "Enterprise Security",
@@ -157,84 +105,83 @@ export default function AIPredictiveMaintenance() {
 
   const useCases = [
     {
-      title: "Manufacturing Equipment",
-      description: "Predict and prevent equipment failures in manufacturing plants to minimize downtime",
-      icon: <Factory className="w-8 h-8" />,
-      benefits: ["Reduce unplanned downtime by 60%", "Extend equipment life by 25%", "Optimize maintenance schedules", "Improve production efficiency"],
-      industries: ["Automotive", "Electronics", "Food & Beverage", "Pharmaceuticals"]
+      title: "Customer Service Automation",
+      description: "Deploy intelligent voice assistants for 24/7 customer support with human-like interactions",
+      icon: <Headphones className="w-8 h-8" />,
+      benefits: ["Reduce support costs by 60%", "24/7 availability", "Consistent service quality", "Multi-language support"],
+      industries: ["E-commerce", "Banking", "Healthcare", "Retail"]
     },
     {
-      title: "Fleet Management",
-      description: "Monitor vehicle health and predict maintenance needs for transportation fleets",
-      icon: <Truck className="w-8 h-8" />,
-      benefits: ["Reduce breakdowns by 70%", "Optimize fuel efficiency", "Extend vehicle life", "Improve safety"],
-      industries: ["Logistics", "Transportation", "Delivery Services", "Public Transit"]
-    },
-    {
-      title: "Building Systems",
-      description: "Monitor HVAC, electrical, and plumbing systems for predictive maintenance",
+      title: "Smart Home Control",
+      description: "Voice-controlled smart home automation with natural language commands",
       icon: <Home className="w-8 h-8" />,
-      benefits: ["Reduce energy costs by 30%", "Prevent system failures", "Improve comfort", "Extend equipment life"],
-      industries: ["Commercial Real Estate", "Healthcare", "Education", "Hospitality"]
+      benefits: ["Hands-free control", "Natural commands", "IoT integration", "Energy optimization"],
+      industries: ["Smart Homes", "Property Management", "Hospitality", "Senior Care"]
     },
     {
-      title: "Critical Infrastructure",
-      description: "Monitor critical infrastructure components for reliability and safety",
-      icon: <Server className="w-8 h-8" />,
-      benefits: ["Ensure system reliability", "Prevent catastrophic failures", "Comply with regulations", "Optimize performance"],
-      industries: ["Power Plants", "Water Treatment", "Data Centers", "Telecommunications"]
+      title: "Business Process Automation",
+      description: "Automate complex business processes with voice commands and intelligent workflows",
+      icon: <Zap className="w-8 h-8" />,
+      benefits: ["Process automation", "Voice workflows", "Integration capabilities", "Error reduction"],
+      industries: ["Manufacturing", "Logistics", "Healthcare", "Finance"]
+    },
+    {
+      title: "Accessibility Solutions",
+      description: "Provide voice interfaces for users with disabilities and accessibility needs",
+      icon: <Users className="w-8 h-8" />,
+      benefits: ["Accessibility compliance", "Voice navigation", "Screen reader integration", "Inclusive design"],
+      industries: ["Education", "Government", "Healthcare", "Non-profit"]
     }
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small facilities and single-site operations",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 50 connected devices",
-        "Basic predictive analytics",
-        "Standard dashboard",
-        "Email alerts",
-        "Basic reporting",
+        "Up to 1,000 voice interactions/month",
+        "Basic NLP capabilities",
+        "2 custom voice models",
         "Standard support",
+        "Basic analytics dashboard",
+        "Web and mobile SDKs",
         "99.5% uptime SLA"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$699",
+      price: "$499",
       period: "/month",
-      description: "Ideal for medium-sized facilities and multi-site operations",
+      description: "Ideal for growing businesses and enterprises",
       features: [
-        "Up to 200 connected devices",
-        "Advanced predictive analytics",
-        "Custom dashboards",
-        "Multi-channel alerts",
-        "Advanced reporting & insights",
+        "Up to 10,000 voice interactions/month",
+        "Advanced NLP with custom training",
+        "10 custom voice models",
         "Priority support",
+        "Advanced analytics & insights",
+        "All platform SDKs",
         "99.9% uptime SLA",
-        "API access",
-        "Custom integrations"
+        "Custom integrations",
+        "White-label options"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,499",
+      price: "$999",
       period: "/month",
-      description: "For large organizations with complex maintenance needs",
+      description: "For large organizations with complex needs",
       features: [
-        "Unlimited connected devices",
-        "AI-powered predictive analytics",
-        "Custom dashboards & reports",
-        "Real-time alerts & notifications",
-        "Advanced analytics & ML insights",
+        "Unlimited voice interactions",
+        "Enterprise-grade NLP",
+        "Unlimited custom voice models",
         "24/7 dedicated support",
+        "Custom analytics & reporting",
+        "On-premise deployment option",
         "99.99% uptime SLA",
-        "Full API access",
         "Custom integrations & APIs",
         "Dedicated account manager",
         "SLA guarantees"
@@ -245,51 +192,51 @@ export default function AIPredictiveMaintenance() {
 
   const testimonials = [
     {
-      name: "David Kim",
-      company: "Global Manufacturing Corp",
-      role: "Maintenance Director",
-      content: "AI Predictive Maintenance has reduced our unplanned downtime by 65% and saved us over $2M annually. The ROI was achieved in just 6 months.",
+      name: "Sarah Chen",
+      company: "TechFlow Solutions",
+      role: "CTO",
+      content: "Zion AI Voice Assistant Pro has revolutionized our customer service. We've reduced response times by 80% and customer satisfaction increased by 45%.",
       rating: 5,
-      avatar: "DK"
+      avatar: "SC"
     },
     {
-      name: "Lisa Martinez",
-      company: "Fleet Solutions Inc",
-      role: "Operations Manager",
-      content: "The predictive analytics are incredibly accurate. We've reduced vehicle breakdowns by 70% and improved our fleet efficiency significantly.",
+      name: "Michael Rodriguez",
+      company: "SmartHome Innovations",
+      role: "CEO",
+      content: "The voice recognition accuracy is incredible. Our smart home customers love the natural language commands and seamless integration.",
       rating: 5,
-      avatar: "LM"
+      avatar: "MR"
     },
     {
-      name: "Robert Chen",
-      company: "Data Center Solutions",
-      role: "Infrastructure Manager",
-      content: "The system prevented a critical server failure that would have cost us $500K in downtime. The investment paid for itself immediately.",
+      name: "Dr. Emily Watson",
+      company: "MedTech Solutions",
+      role: "Medical Director",
+      content: "The HIPAA compliance and medical terminology understanding make this perfect for our healthcare applications. Highly recommended.",
       rating: 5,
-      avatar: "RC"
+      avatar: "EW"
     }
   ];
 
   const stats = [
-    { number: "95%+", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
-    { number: "60%", label: "Downtime Reduction", icon: <TrendingDown className="w-6 h-6" /> },
-    { number: "40%", label: "Cost Savings", icon: <DollarSign className="w-6 h-6" /> },
+    { number: "99.2%", label: "Voice Recognition Accuracy", icon: <Mic className="w-6 h-6" /> },
+    { number: "<100ms", label: "Response Time", icon: <Zap className="w-6 h-6" /> },
+    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Smart Maintenance Solutions | Zion Tech Group</title>
+        <title>AI Voice Assistant Pro - Advanced Voice AI Solutions | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your maintenance operations with AI Predictive Maintenance. Reduce downtime by 60%, cut costs by 40%, and prevent equipment failures with 95%+ accuracy. Perfect for manufacturing, fleet management, and critical infrastructure."
+          content="Transform your business with AI Voice Assistant Pro. Advanced voice AI with 99.2% accuracy, real-time processing, and enterprise-grade security. Perfect for customer service, smart homes, and business automation."
         />
         <meta
           name="keywords"
-          content="AI predictive maintenance, predictive analytics, equipment monitoring, IoT sensors, maintenance optimization, fleet management, manufacturing, building systems, critical infrastructure, cost reduction, downtime prevention"
+          content="AI voice assistant, voice AI, natural language processing, voice recognition, customer service automation, smart home control, business process automation, accessibility solutions, voice SDK, voice analytics"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-predictive-maintenance" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -303,19 +250,19 @@ export default function AIPredictiveMaintenance() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 Predictive Maintenance Platform 2024</span>
+                <span className="text-cyan-400 text-sm font-medium">#1 Voice AI Platform 2024</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  AI Predictive Maintenance
+                  AI Voice Assistant Pro
                 </span>
               </h1>
               
               <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your maintenance operations with AI-powered predictive analytics. 
-                Reduce downtime by 60%, cut costs by 40%, and prevent equipment failures 
-                with 95%+ accuracy across manufacturing, fleet management, and critical infrastructure.
+                Transform your business with the most advanced voice AI platform. 
+                Experience 99.2% accuracy, real-time processing, and enterprise-grade security 
+                for customer service, smart homes, and business automation.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -356,10 +303,10 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Features
+                Powerful Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Built with cutting-edge AI and IoT technology to deliver the most accurate predictive maintenance
+                Built with cutting-edge AI technology to deliver the most advanced voice assistant experience
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -396,10 +343,10 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Industry Applications
+                Real-World Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how AI Predictive Maintenance transforms operations across industries
+                Discover how AI Voice Assistant Pro transforms businesses across industries
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -441,10 +388,10 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your maintenance needs. All plans include our core predictive analytics.
+                Choose the perfect plan for your business needs. All plans include our core features.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -505,7 +452,7 @@ export default function AIPredictiveMaintenance() {
                 Trusted by Industry Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Predictive Maintenance
+                See what our customers say about AI Voice Assistant Pro
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -542,11 +489,11 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Maintenance?
+                Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join thousands of organizations already using AI Predictive Maintenance to reduce downtime, cut costs, and optimize operations.
-                Start your free trial today and experience the future of maintenance.
+                Join thousands of businesses already using AI Voice Assistant Pro to enhance customer experience and automate processes.
+                Start your free trial today and experience the future of voice AI.
               </p>
               
               {/* Contact Information */}
