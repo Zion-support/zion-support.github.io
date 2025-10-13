@@ -15,6 +15,46 @@ import {
 } from 'lucide-react';
 
 const AICustomerSentimentTrackerPage = () => {
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "50+", label: "Happy Clients" },
+    { number: "5+", label: "Years Experience" },
+    { number: "99%", label: "Client Satisfaction" }
+  ];
+
+  const benefits = [
+    {
+      icon: <CheckCircle className="w-8 h-8 text-green-400" />,
+      title: "Reduce manual work by 80%",
+      description: "Automate repetitive tasks and focus on strategic initiatives"
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      title: "Increase productivity by 300%",
+      description: "Streamline workflows and boost team efficiency"
+    },
+    {
+      icon: <Target className="w-8 h-8 text-blue-400" />,
+      title: "Eliminate human errors",
+      description: "AI-powered accuracy reduces mistakes and improves quality"
+    },
+    {
+      icon: <Globe className="w-8 h-8 text-purple-400" />,
+      title: "Scale operations instantly",
+      description: "Handle growing workloads without proportional resource increases"
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-cyan-400" />,
+      title: "Lower operational costs",
+      description: "Reduce expenses while maintaining high service quality"
+    },
+    {
+      icon: <Heart className="w-8 h-8 text-red-400" />,
+      title: "Improve customer satisfaction",
+      description: "Deliver better experiences that keep customers happy"
+    }
+  ];
+
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,

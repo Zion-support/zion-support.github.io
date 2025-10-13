@@ -10,6 +10,33 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AIContentStudioZionTechGroup = () => {
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp",
+      company: "TechCorp",
+      avatar: "/avatars/sarah-johnson.jpg",
+      content: "This AI content studio has revolutionized our content creation process. We're producing 5x more content with better quality.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Content Director, InnovateLabs",
+      company: "InnovateLabs",
+      avatar: "/avatars/michael-chen.jpg",
+      content: "The AI-generated content is incredibly accurate and engaging. Our audience engagement has increased by 300%.",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "VP Marketing, DataFlow Inc",
+      company: "DataFlow Inc",
+      avatar: "/avatars/emily-rodriguez.jpg",
+      content: "Zion's content studio is a game-changer. Our content production costs have decreased by 70% while quality improved.",
+      rating: 5
+    }
+  ];
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",

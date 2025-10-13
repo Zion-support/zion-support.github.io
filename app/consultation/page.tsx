@@ -3,6 +3,14 @@ import { Helmet } from 'react-helmet-async';
 import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star } from 'lucide-react';
 
 export default function ConsultationPage() {
+  const benefits = [
+    "Reduce manual work by 80%",
+    "Increase productivity by 300%",
+    "Eliminate human errors",
+    "Scale operations instantly",
+    "Lower operational costs",
+    "Improve customer satisfaction"
+  ];
   const [formData, setFormData] = useState({
     name: '',
     email: '',

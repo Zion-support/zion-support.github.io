@@ -4,6 +4,15 @@ import { Link } from 'react-router-dom';
 import { Target, ArrowRight, Sparkles, CheckCircle, FileText, TrendingUp, Shield } from 'lucide-react';
 
 const AIHRRecruitmentProPage = () => {
+  const benefits = [
+    "Reduce manual work by 80%",
+    "Increase productivity by 300%",
+    "Eliminate human errors",
+    "Scale operations instantly",
+    "Lower operational costs",
+    "Improve customer satisfaction"
+  ];
+
   const features = [
     {
       title: "Intelligent Candidate Matching",

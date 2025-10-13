@@ -3,6 +3,32 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Brain, CheckCircle, Star, Award, Zap, Globe, Mail, Phone, Sparkles, FileText, Eye, Fingerprint, Search } from 'lucide-react';
 
 export default function ZionSecurityShieldPro() {
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp",
+      company: "TechCorp",
+      avatar: "/avatars/sarah-johnson.jpg",
+      content: "This solution has transformed our business operations. We've seen incredible results.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Data Director, InnovateLabs",
+      company: "InnovateLabs",
+      avatar: "/avatars/michael-chen.jpg",
+      content: "The AI capabilities are outstanding. Our productivity has increased by 300%.",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "VP Analytics, DataFlow Inc",
+      company: "DataFlow Inc",
+      avatar: "/avatars/emily-rodriguez.jpg",
+      content: "Zion's platform is a game-changer. Our ROI increased by 400% in just 6 months.",
+      rating: 5
+    }
+  ];
   const features = [
     {
       title: "AI-Powered Threat Detection",

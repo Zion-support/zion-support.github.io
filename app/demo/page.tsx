@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom';
 import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar } from 'lucide-react';
 
 export default function DemoPage() {
+  const benefits = [
+    "Reduce manual work by 80%",
+    "Increase productivity by 300%",
+    "Eliminate human errors",
+    "Scale operations instantly",
+    "Lower operational costs",
+    "Improve customer satisfaction"
+  ];
   const [currentDemo, setCurrentDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 

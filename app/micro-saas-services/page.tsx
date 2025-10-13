@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Shield, BarChart3, Cloud, Users, Mail, Smartphone, Globe, Zap, Target, Calendar, FileText, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Phone, Headphones, CheckCircle, Sparkles, Heart, Receipt, Package, Code, Cpu as Processor, Database as DataIcon, FileText as DocumentIcon, Mail as EmailIcon, Globe as WebIcon, Smartphone as MobileIcon, Monitor as DesktopIcon, Headphones as SupportIcon, Settings as ConfigIcon, Lock as SecurityIcon, Server as ServerIcon, Network as NetworkIcon, HardDrive as StorageIcon, Zap as LightningIcon, Target as MarketingIcon, Calendar as ScheduleIcon, Users as TeamIcon, BarChart3 as AnalyticsIcon, Cloud as CloudIcon, Brain as AIIcon, Shield as ProtectionIcon } from 'lucide-react';
 
 export default function MicroSaasServices() {
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "50+", label: "Happy Clients" },
+    { number: "5+", label: "Years Experience" },
+    { number: "99%", label: "Client Satisfaction" }
+  ];
   const microSaasServices = [
     {
       id: "zion-ai-analytics-pro",

@@ -14,6 +14,32 @@ import {
 } from "lucide-react";
 
 export default function AIExpenseTracker() {
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp",
+      company: "TechCorp",
+      avatar: "/avatars/sarah-johnson.jpg",
+      content: "This solution has transformed our business operations. We've seen incredible results.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "Data Director, InnovateLabs",
+      company: "InnovateLabs",
+      avatar: "/avatars/michael-chen.jpg",
+      content: "The AI capabilities are outstanding. Our productivity has increased by 300%.",
+      rating: 5
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "VP Analytics, DataFlow Inc",
+      company: "DataFlow Inc",
+      avatar: "/avatars/emily-rodriguez.jpg",
+      content: "Zion's platform is a game-changer. Our ROI increased by 400% in just 6 months.",
+      rating: 5
+    }
+  ];
   const features = [
     {
       icon: <Brain className="w-12 h-12 text-cyan-400" />,

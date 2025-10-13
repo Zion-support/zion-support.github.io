@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award } from 'lucide-react';
 
 export default function Compliance() {
+  const benefits = [
+    "Reduce manual work by 80%",
+    "Increase productivity by 300%",
+    "Eliminate human errors",
+    "Scale operations instantly",
+    "Lower operational costs",
+    "Improve customer satisfaction"
+  ];
   const complianceFrameworks = [
     {
       name: "SOC 2 Type II",

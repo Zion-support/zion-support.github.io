@@ -19,6 +19,14 @@ import {
 } from "lucide-react";
 
 export default function AiAnalytics() {
+  const benefits = [
+    "Reduce manual work by 80%",
+    "Increase productivity by 300%",
+    "Eliminate human errors",
+    "Scale operations instantly",
+    "Lower operational costs",
+    "Improve customer satisfaction"
+  ];
   const testimonials = [
     {
       name: "Sarah Johnson",
