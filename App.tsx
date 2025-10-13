@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { Suspense, useEffect, useState } from "react";
-=======
 import React, { Suspense, useEffect, useState, useCallback } from "react";
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-=======
-import React, { Suspense, useEffect } from "react";
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
@@ -19,12 +11,8 @@ import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
