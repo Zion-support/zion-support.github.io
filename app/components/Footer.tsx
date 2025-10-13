@@ -61,7 +61,9 @@ const Footer = React.memo(() => {
     { name: "Careers", path: "/careers" },
     { name: "Blog", path: "/blog" },
     { name: "Press", path: "/press" },
-    { name: "Partners", path: "/partners" }
+    { name: "Partners", path: "/partners" },
+    { name: "Tutorials", path: "/tutorials" },
+    { name: "Demo", path: "/demo" }
   ], []);
 
   const supportLinks = useMemo(() => [
@@ -248,6 +250,22 @@ const Footer = React.memo(() => {
                   AI Cybersecurity
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/ai-chatbot-builder"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Chatbot Builder
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-code-assistant"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Code Assistant
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -356,6 +374,61 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
                   Zion Project Master
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* 5G Solutions */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-orange-400">5G Solutions</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/5g-solutions"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Solutions Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-implementation"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Implementation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-edge-computing"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Edge Computing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-iot-solutions"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G IoT Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-smart-city-solutions"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  Smart City Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-private-networks"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  Private Networks
                 </Link>
               </li>
             </ul>

@@ -97,6 +97,37 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       ]
     },
     {
+      name: 'Resources',
+      href: '/blog',
+      icon: <FileText className="w-4 h-4" />,
+      dropdown: [
+        {
+          name: 'Blog',
+          href: '/blog',
+          icon: <FileText className="w-4 h-4" />,
+          description: 'Latest insights and updates'
+        },
+        {
+          name: 'Tutorials',
+          href: '/tutorials',
+          icon: <Award className="w-4 h-4" />,
+          description: 'Step-by-step guides'
+        },
+        {
+          name: 'Case Studies',
+          href: '/case-studies',
+          icon: <BarChart3 className="w-4 h-4" />,
+          description: 'Success stories and results'
+        },
+        {
+          name: 'Demo',
+          href: '/demo',
+          icon: <Monitor className="w-4 h-4" />,
+          description: 'Interactive demonstrations'
+        }
+      ]
+    },
+    {
       name: 'Contact',
       href: '/contact',
       icon: <Mail className="w-4 h-4" />
