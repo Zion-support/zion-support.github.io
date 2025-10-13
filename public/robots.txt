@@ -1,9 +1,8 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
-<<<<<<< HEAD
-=======
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
@@ -16,15 +15,69 @@ Disallow: /_next/
 Disallow: /static/
 
 # Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /ai-services
-Allow: /micro-saas
-Allow: /5g-solutions
-Allow: /contact
-Allow: /blog
+Allow: /ai-services/
+Allow: /micro-saas/
+Allow: /5g-solutions/
+Allow: /services/
+Allow: /about/
+Allow: /contact/
+Allow: /blog/
 
-# Host
-Host: https://ziontechgroup.com
->>>>>>> cursor/analyze-improve-and-deploy-application-0f46
+# Block specific file types
+Disallow: *.json$
+Disallow: *.xml$
+Disallow: *.txt$
+Disallow: *.log$
+
+# Allow specific file types
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /manifest.json
+
+# Block duplicate content
+Disallow: /*?*
+Disallow: /*#*
+
+# Block search parameters
+Disallow: /*?search=*
+Disallow: /*?filter=*
+Disallow: /*?sort=*
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Block bad bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+# Allow Google specifically
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Allow Bing specifically
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

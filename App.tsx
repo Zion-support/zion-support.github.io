@@ -14,15 +14,13 @@ import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import EnhancedSEO from "./app/components/EnhancedSEO";
-=======
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
->>>>>>> main
+import AdvancedPerformanceMonitor from "./app/components/AdvancedPerformanceMonitor";
+import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
+import SecurityEnhancer from "./app/components/SecurityEnhancer";
+import MobileOptimizer from "./app/components/MobileOptimizer";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -125,13 +123,17 @@ function App() {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <AnalyticsProvider>
-          <EnhancedAnalytics>
-            <PerformanceOptimizer>
-              <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
-                <WebVitalsTracker>
-                  <AccessibilityEnhancer>
-                    <Router>
+        <SecurityEnhancer>
+          <MobileOptimizer>
+            <AnalyticsProvider>
+              <EnhancedAnalytics>
+                <PerformanceOptimizer>
+                  <AdvancedPerformanceMonitor>
+                    <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
+                      <WebVitalsTracker>
+                        <AccessibilityEnhancer>
+                          <EnhancedAccessibility>
+                            <Router>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                         {/* Skip to main content link */}
                         <a href="#main-content" className="skip-link">
@@ -233,13 +235,17 @@ function App() {
                           <Footer />
                         </FuturisticBackground>
                       </div>
-                    </Router>
-                  </AccessibilityEnhancer>
-                </WebVitalsTracker>
-              </PerformanceMonitor>
-            </PerformanceOptimizer>
-          </EnhancedAnalytics>
-        </AnalyticsProvider>
+                            </Router>
+                          </EnhancedAccessibility>
+                        </AccessibilityEnhancer>
+                      </WebVitalsTracker>
+                    </PerformanceMonitor>
+                  </AdvancedPerformanceMonitor>
+                </PerformanceOptimizer>
+              </EnhancedAnalytics>
+            </AnalyticsProvider>
+          </MobileOptimizer>
+        </SecurityEnhancer>
       </ErrorBoundary>
     </HelmetProvider>
   );

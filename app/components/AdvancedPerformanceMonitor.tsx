@@ -1,185 +1,209 @@
-<<<<<<< HEAD
-=======
-'use client'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number | null
-  firstContentfulPaint: number | null
-  largestContentfulPaint: number | null
-  firstInputDelay: number | null
-  cumulativeLayoutShift: number | null
-  timeToFirstByte: number | null
-  memoryUsage: number | null
-  domContentLoaded: number | null
-  totalBlockingTime: number | null
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  fcp: number | null;
+  ttfb: number | null;
+  memory: number | null;
 }
 
-const AdvancedPerformanceMonitor = () => {
+const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,
-    firstContentfulPaint: null,
-    largestContentfulPaint: null,
-    firstInputDelay: null,
-    cumulativeLayoutShift: null,
-    timeToFirstByte: null,
-    memoryUsage: null,
-    domContentLoaded: null,
-    totalBlockingTime: null
-  })
+    lcp: null,
+    fid: null,
+    cls: null,
+    fcp: null,
+    ttfb: null,
+    memory: null
+  });
 
-  const [isVisible, setIsVisible] = useState(false)
-  const [isRecording, setIsRecording] = useState(false)
+  const measureWebVitals = useCallback(() => {
+    // Measure Largest Contentful Paint (LCP)
+    if ('PerformanceObserver' in window) {
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // Measure First Input Delay (FID)
+      const fidObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+        });
+      });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      // Measure Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+            setMetrics(prev => ({ ...prev, cls: clsValue }));
+          }
+        });
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      // Measure First Contentful Paint (FCP)
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+        });
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+
+      // Measure Time to First Byte (TTFB)
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        setMetrics(prev => ({ 
+          ...prev, 
+          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+        }));
+      }
+    }
+
+    // Measure memory usage
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      setMetrics(prev => ({ 
+        ...prev, 
+        memory: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+      }));
+    }
+  }, []);
+
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Add loading="lazy" if not already present
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+      
+      // Add decoding="async" for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+      }
+    });
+  }, []);
+
+  const preloadCriticalResources = useCallback(() => {
+    // Preload critical CSS
+    const criticalCSS = document.createElement('link');
+    criticalCSS.rel = 'preload';
+    criticalCSS.href = '/css/main.css';
+    criticalCSS.as = 'style';
+    criticalCSS.onload = () => {
+      criticalCSS.rel = 'stylesheet';
+    };
+    document.head.appendChild(criticalCSS);
+
+    // Preload critical fonts
+    const fontLink = document.createElement('link');
+    fontLink.rel = 'preload';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
+    fontLink.as = 'style';
+    document.head.appendChild(fontLink);
+
+    // Preload critical images
+    const criticalImages = [
+      '/logo.svg',
+      '/og-image.svg',
+      '/favicon.svg'
+    ];
+
+    criticalImages.forEach(src => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = src;
+      link.as = 'image';
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  const optimizeAnimations = useCallback(() => {
+    // Reduce motion for users who prefer it
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+      document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+      document.documentElement.style.setProperty('--animation-iteration-count', '1');
+    }
+  }, []);
+
+  const setupServiceWorker = useCallback(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
 
   useEffect(() => {
+    // Run performance optimizations
+    measureWebVitals();
+    optimizeImages();
+    preloadCriticalResources();
+    optimizeAnimations();
+    setupServiceWorker();
+
+    // Log performance metrics in development
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Performance Metrics:', metrics);
     }
 
-    // Report metrics to analytics
-    const reportMetric = () => {
-      // Analytics reporting would go here
-    }
-
-    measureWebVitals()
-    measureMemory()
-    measureLoadTime()
-
-
-        onFCP((metric: any) => {
-          setMetrics(prev => ({ ...prev, fcp: metric.value }))
-          reportMetric('FCP', metric.value)
-        })
-
-        onLCP((metric: any) => {
-          setMetrics(prev => ({ ...prev, lcp: metric.value }))
-          reportMetric('LCP', metric.value)
-        })
-
-        onTTFB((metric: any) => {
-          setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-          reportMetric('TTFB', metric.value)
-        })
-      } catch (error) {
-        console.error('Failed to measure web vitals:', error);
+    // Send metrics to analytics in production
+    if (process.env.NODE_ENV === 'production') {
+      // Send to Google Analytics or other analytics service
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'web_vitals', {
+          lcp: metrics.lcp,
+          fid: metrics.fid,
+          cls: metrics.cls,
+          fcp: metrics.fcp,
+          ttfb: metrics.ttfb,
+          memory: metrics.memory
+        });
       }
+    }
+  }, [measureWebVitals, optimizeImages, preloadCriticalResources, optimizeAnimations, setupServiceWorker, metrics]);
 
-      // Measure memory usage
-      const measureMemory = () => {
-        if ('memory' in performance) {
-          const memory = (performance as any).memory
-          setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }))
+  // Performance budget monitoring
+  useEffect(() => {
+    const checkPerformanceBudget = () => {
+      const budget = {
+        lcp: 2500, // 2.5s
+        fid: 100,  // 100ms
+        cls: 0.1,  // 0.1
+        fcp: 1800, // 1.8s
+        ttfb: 600, // 600ms
+        memory: 50 // 50MB
+      };
+
+      Object.entries(budget).forEach(([metric, threshold]) => {
+        const value = metrics[metric as keyof PerformanceMetrics];
+        if (value !== null && value > threshold) {
+          console.warn(`Performance budget exceeded for ${metric}: ${value} > ${threshold}`);
         }
-      }
+      });
+    };
 
-      // Measure load time
-      const measureLoadTime = () => {
-        if (performance.timing) {
-          const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
-          setMetrics(prev => ({ ...prev, loadTime }))
-        }
-      }
+    checkPerformanceBudget();
+  }, [metrics]);
 
-      // Report metrics to analytics
-      const reportMetric = (name: string, value: number) => {
+  return null; // This component doesn't render anything
+};
 
-      // Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          metric_name: name,
-          metric_value: Math.round(value),
-          metric_delta: Math.round(value)
-        })
-      }
-
-      // Send to custom analytics
-      if (typeof window !== 'undefined' && (window as any).analytics) {
-        (window as any).analytics.track('Performance Metric', {
-          name,
-          value: Math.round(value),
-          timestamp: Date.now()
-        })
-      }
-
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`Performance Metric: ${name} = ${value}`);
-
-      }
-
-      measureWebVitals()
-      measureMemory()
-      measureLoadTime()
-    }
-
-    // Set up performance observer for additional metrics
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'measure') {
-            console.log('Custom Performance Measure:', entry.name, entry.duration)
-          }
-        }
-      })
-      observer.observe({ entryTypes: ['measure'] })
-    }
-  }, [])
-
-  // Calculate performance score
-  const calculateScore = () => {
-    let score = 100
-    let factors = 0
-
-    if (metrics.fcp !== null) {
-      factors++
-      if (metrics.fcp > 1800) score -= 20
-      else if (metrics.fcp > 1000) score -= 10
-    }
-
-    if (metrics.lcp !== null) {
-      factors++
-      if (metrics.lcp > 2500) score -= 20
-      else if (metrics.lcp > 1500) score -= 10
-    }
-
-    if (metrics.cls !== null) {
-      factors++
-      if (metrics.cls > 0.25) score -= 20
-      else if (metrics.cls > 0.1) score -= 10
-    }
-
-    if (metrics.fid !== null) {
-      factors++
-      if (metrics.fid > 300) score -= 20
-      else if (metrics.fid > 100) score -= 10
-    }
-
-    return factors > 0 ? Math.max(0, score) : null
-  }
-
-  const performanceScore = calculateScore()
-
-  // Render performance dashboard in development
-  if (process.env.NODE_ENV === 'development') {
-    return (
-      <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">
-        <div className="font-bold mb-2">Performance Metrics</div>
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
-        <div>Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}%` : 'N/A'}</div>
-        <div>Load: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}</div>
-        {performanceScore && (
-          <div className="mt-2 pt-2 border-t border-gray-600">
-            <div>Score: {performanceScore}/100</div>
-          </div>
-        )}
-      </div>
-    )
-  }
-
-  return null
-}
-
-export default AdvancedPerformanceMonitor
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
+export default AdvancedPerformanceMonitor;
