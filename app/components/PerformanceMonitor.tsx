@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-
-interface PerformanceMetrics {
-  cls: number | null;
-  inp: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
-}
-
-interface PerformanceMonitorProps {
-  showInProduction?: boolean;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showInProduction = false }) => {
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
@@ -32,7 +12,11 @@ interface PerformanceMetrics {
   interactionToNextPaint?: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
+interface PerformanceMonitorProps {
+  showInProduction?: boolean;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showInProduction = false }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
 

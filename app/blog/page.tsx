@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight, Search, Filter } from 'lucide-react';
-
-const BlogPage = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All', count: 12 },
-    { id: 'ai', name: 'AI & Machine Learning', count: 5 },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 3 },
-    { id: 'cloud', name: 'Cloud Computing', count: 2 },
-    { id: 'development', name: 'Development', count: 2 }
-=======
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -39,268 +13,280 @@ export default function Blog() {
     { id: "cybersecurity", name: "Cybersecurity", count: 3 },
     { id: "cloud", name: "Cloud Computing", count: 2 },
     { id: "development", name: "Development", count: 2 }
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
-=======
-import { useState } from "react";
-import { ArrowRight, Search, Calendar, Clock, User, Zap, BookOpen } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-const BlogPage = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
-
-  // Sample blog data
-  const categories = [
-    { id: "all", name: "All", count: 12 },
-    { id: "ai", name: "AI & Machine Learning", count: 5 },
-    { id: "cybersecurity", name: "Cybersecurity", count: 3 },
-    { id: "cloud", name: "Cloud Computing", count: 2 },
-    { id: "business", name: "Business", count: 2 }
->>>>>>> cursor/analyze-improve-and-deploy-application-381c
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
   ];
 
-  const posts = [
+  const blogPosts = [
     {
       id: 1,
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: "The Future of AI in Business: 2024 Trends and Predictions",
-      excerpt: "Explore how artificial intelligence is transforming business operations and what to expect in 2024.",
-      content: "Artificial intelligence continues to revolutionize the business landscape...",
-      author: "Sarah Johnson",
-      date: "2024-01-15",
-      category: "ai",
-      readTime: "5 min read",
-      image: "/images/blog/ai-business-2024.jpg",
-=======
       title: "The Future of AI in Business: 2024 Trends and Predictions",
       excerpt: "Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.",
-      author: "Dr. Sarah Chen",
+      author: "Dr. Sarah Johnson",
       date: "2024-01-15",
       readTime: "8 min read",
       category: "ai",
-      image: "/api/placeholder/600/300",
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-      featured: true
+      featured: true,
+      image: "/images/blog/ai-future.jpg"
     },
     {
-<<<<<<< HEAD
       id: 2,
-<<<<<<< HEAD
-      title: "Cybersecurity Best Practices for Small Businesses",
-      excerpt: "Essential cybersecurity measures every small business should implement to protect their data and operations.",
-      content: "Small businesses are increasingly targeted by cybercriminals...",
+      title: "Cybersecurity Best Practices for Remote Work",
+      excerpt: "Essential security measures every remote team should implement to protect sensitive data and maintain productivity.",
       author: "Michael Chen",
       date: "2024-01-12",
-      category: "technology",
-      readTime: "7 min read",
-      image: "/images/blog/cybersecurity-small-business.jpg",
-      featured: false
+      readTime: "6 min read",
+      category: "cybersecurity",
+      featured: false,
+      image: "/images/blog/cybersecurity-remote.jpg"
     },
     {
       id: 3,
-      title: "Cloud Migration: A Step-by-Step Guide",
-      excerpt: "Learn how to successfully migrate your business to the cloud with our comprehensive guide.",
-      content: "Cloud migration can seem daunting, but with proper planning...",
+      title: "Cloud Migration Strategies: A Complete Guide",
+      excerpt: "Step-by-step approach to migrating your infrastructure to the cloud while minimizing risks and maximizing benefits.",
       author: "Emily Rodriguez",
       date: "2024-01-10",
-      category: "technology",
-      readTime: "8 min read",
-      image: "/images/blog/cloud-migration-guide.jpg",
-      featured: false
+      readTime: "10 min read",
+      category: "cloud",
+      featured: false,
+      image: "/images/blog/cloud-migration.jpg"
     },
     {
       id: 4,
-      title: "Digital Transformation: Where to Start",
-      excerpt: "A practical guide to beginning your company's digital transformation journey.",
-      content: "Digital transformation is no longer optional for businesses...",
+      title: "Building Scalable Microservices Architecture",
+      excerpt: "Learn how to design and implement microservices that can grow with your business needs.",
       author: "David Kim",
       date: "2024-01-08",
-      category: "business",
-      readTime: "6 min read",
-      image: "/images/blog/digital-transformation.jpg",
-      featured: true
+      readTime: "12 min read",
+      category: "development",
+      featured: false,
+      image: "/images/blog/microservices.jpg"
     },
     {
       id: 5,
-      title: "5G Technology: Revolutionizing Connectivity",
-      excerpt: "Discover how 5G technology is changing the way we connect and do business.",
-      content: "5G technology promises to revolutionize connectivity...",
+      title: "AI-Powered Customer Service: Revolutionizing Support",
+      excerpt: "How artificial intelligence is transforming customer service and what it means for your business.",
       author: "Lisa Wang",
       date: "2024-01-05",
-      category: "technology",
-      readTime: "4 min read",
-      image: "/images/blog/5g-technology.jpg",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "AI-Powered Analytics: Making Data Work for You",
-      excerpt: "How AI-powered analytics can help businesses make better decisions with their data.",
-      content: "Data is the new oil, but only if you can extract insights from it...",
-      author: "Alex Thompson",
-      date: "2024-01-03",
-      category: "ai",
-      readTime: "9 min read",
-      image: "/images/blog/ai-analytics.jpg",
-      featured: false
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: 'The Future of AI in Business: A Comprehensive Guide',
-      excerpt: 'Explore how artificial intelligence is transforming modern business operations and what it means for your organization.',
-      content: 'Full article content here...',
-      author: 'Dr. Sarah Johnson',
-      date: '2024-01-15',
-      category: 'ai',
-      image: '/api/placeholder/600/400',
-      featured: true,
-      readTime: '8 min read'
-=======
-      id: '2',
-      title: 'Cloud Migration Best Practices',
-      excerpt: 'A comprehensive guide to successfully migrating your infrastructure to the cloud.',
-      content: 'Full article content...',
-      author: 'Cloud Team',
-      date: '2024-01-10',
-      category: 'Cloud',
-      featured: false,
-      image: '/images/blog/cloud-migration.jpg',
-      readTime: '7 min read'
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
-    },
-    {
-      id: 2,
-      title: 'Cybersecurity Best Practices for 2024',
-      excerpt: 'Essential security measures every organization should implement to protect against evolving cyber threats.',
-      content: 'Full article content here...',
-      author: 'Mike Chen',
-      date: '2024-01-12',
-      category: 'cybersecurity',
-      image: '/api/placeholder/600/400',
-      featured: false,
-      readTime: '6 min read'
-    },
-    {
-<<<<<<< HEAD
-      id: 3,
-      title: 'Cloud Migration Strategies: A Step-by-Step Guide',
-      excerpt: 'Learn the best practices for migrating your infrastructure to the cloud safely and efficiently.',
-      content: 'Full article content here...',
-      author: 'Alex Rodriguez',
-      date: '2024-01-10',
-      category: 'cloud',
-      image: '/api/placeholder/600/400',
-      featured: false,
-      readTime: '10 min read'
-=======
-      title: "The Future of AI in Business: A Comprehensive Guide",
-      excerpt: "Explore how artificial intelligence is transforming modern business operations and what it means for your company's future.",
-      author: "Dr. Sarah Johnson",
-      date: "2024-01-15",
-      category: "AI & Machine Learning",
-      readTime: "8 min read",
-      featured: true,
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 2,
-      title: "Cybersecurity Best Practices for 2024",
-      excerpt: "Essential security measures every business should implement to protect against evolving cyber threats.",
-      author: "Michael Chen",
-      date: "2024-01-12",
-      category: "Cybersecurity",
-      readTime: "6 min read",
-      featured: false,
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 3,
-      title: "Cloud Migration Strategies: A Step-by-Step Guide",
-      excerpt: "Learn how to successfully migrate your infrastructure to the cloud with minimal downtime and maximum efficiency.",
-      author: "Emily Rodriguez",
-      date: "2024-01-10",
-      category: "Cloud Computing",
-      readTime: "10 min read",
-      featured: false,
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 4,
-      title: "Digital Transformation: Where to Start",
-      excerpt: "A practical guide to beginning your digital transformation journey with proven strategies and real-world examples.",
-      author: "David Kim",
-      date: "2024-01-08",
-      category: "Business",
       readTime: "7 min read",
+      category: "ai",
       featured: false,
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 5,
-      title: "AI-Powered Analytics: Unlocking Business Insights",
-      excerpt: "Discover how AI-driven analytics can help you make better business decisions and gain competitive advantages.",
-      author: "Dr. Sarah Johnson",
-      date: "2024-01-05",
-      category: "AI & Machine Learning",
-      readTime: "9 min read",
-      featured: false,
-      image: "/api/placeholder/600/400"
+      image: "/images/blog/ai-customer-service.jpg"
     },
     {
       id: 6,
-      title: "Zero Trust Security Architecture",
-      excerpt: "Implementing a zero trust security model to protect your organization from modern cyber threats.",
-      author: "Michael Chen",
+      title: "Zero Trust Security Model: Implementation Guide",
+      excerpt: "Understanding and implementing zero trust security principles in your organization.",
+      author: "James Wilson",
       date: "2024-01-03",
-      category: "Cybersecurity",
-      readTime: "11 min read",
+      readTime: "9 min read",
+      category: "cybersecurity",
       featured: false,
-      image: "/api/placeholder/600/400"
->>>>>>> cursor/analyze-improve-and-deploy-application-381c
+      image: "/images/blog/zero-trust.jpg"
     }
   ];
 
-  const featuredPost = posts.find(post => post.featured);
-<<<<<<< HEAD
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
 
-  const filteredPosts = useMemo(() => {
-    return posts.filter(post => {
-      const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
-  }, [searchTerm, selectedCategory]);
+  const featuredPost = blogPosts.find(post => post.featured);
+  const regularPosts = filteredPosts.filter(post => !post.featured);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Blog - Zion Tech Group | Technology Insights & Industry News</title>
+        <meta name="description" content="Stay updated with the latest technology trends, AI insights, cybersecurity best practices, and cloud computing strategies from Zion Tech Group experts." />
+        <meta name="keywords" content="technology blog, AI insights, cybersecurity tips, cloud computing, software development, tech trends" />
+      </Helmet>
+
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold mb-6">Tech Insights & Innovation</h1>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Stay ahead with the latest trends, insights, and best practices in AI, cybersecurity, cloud computing, and technology innovation.
-=======
-      title: "The Future of AI in Business: Transform Your Operations Today",
-      excerpt: "Discover how artificial intelligence is revolutionizing business operations and learn practical strategies to implement AI solutions in your organization.",
-      content: "Artificial intelligence is no longer a futuristic concept—it's a present reality that's transforming how businesses operate. From automating routine tasks to providing deep insights from data, AI offers unprecedented opportunities for growth and efficiency...",
-      author: "Dr. Sarah Chen",
-      authorRole: "AI Research Director",
-      authorAvatar: "/api/placeholder/40/40",
-      publishedAt: "2024-01-15",
-      readTime: "8 min read",
-      category: "ai",
-      featured: true,
-      image: "/api/placeholder/600/300",
-      tags: ["AI", "Business", "Automation", "Machine Learning"]
-    },
-    {
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              Technology Blog
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Stay ahead with the latest insights, trends, and best practices in AI, cybersecurity, cloud computing, and software development.
+          </p>
+        </div>
+      </section>
+
+      {/* Search and Filter Section */}
+      <section className="px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-4 mb-8">
+            {/* Search Bar */}
+            <div className="flex-1 relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search articles..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex gap-2 overflow-x-auto">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-300 ${
+                    selectedCategory === category.id
+                      ? 'bg-cyan-500 text-white'
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'
+                  }`}
+                >
+                  {category.name} ({category.count})
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Post */}
+      {featuredPost && (
+        <section className="px-4 sm:px-6 lg:px-8 mb-16">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-8 flex items-center">
+              <Zap className="w-6 h-6 text-yellow-400 mr-2" />
+              Featured Article
+            </h2>
+            <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-8 border border-white/20">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-semibold">
+                      Featured
+                    </span>
+                    <span className="text-cyan-400 text-sm font-medium">
+                      {categories.find(cat => cat.id === featuredPost.category)?.name}
+                    </span>
+                  </div>
+                  <h3 className="text-3xl font-bold text-white mb-4">
+                    {featuredPost.title}
+                  </h3>
+                  <p className="text-gray-300 text-lg mb-6">
+                    {featuredPost.excerpt}
+                  </p>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="flex items-center gap-2 text-gray-400">
+                      <User className="w-4 h-4" />
+                      <span>{featuredPost.author}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-gray-400">
+                      <Calendar className="w-4 h-4" />
+                      <span>{new Date(featuredPost.date).toLocaleDateString()}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-gray-400">
+                      <Clock className="w-4 h-4" />
+                      <span>{featuredPost.readTime}</span>
+                    </div>
+                  </div>
+                  <Link
+                    to={`/blog/${featuredPost.id}`}
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+                  >
+                    Read Article
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+                <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl h-64 flex items-center justify-center">
+                  <BookOpen className="w-16 h-16 text-cyan-400" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Blog Posts Grid */}
+      <section className="px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl font-bold text-white mb-8">
+            Latest Articles
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {regularPosts.map((post) => (
+              <article
+                key={post.id}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-slate-700/50 transition-all duration-300 group"
+              >
+                <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-48 flex items-center justify-center mb-4">
+                  <BookOpen className="w-12 h-12 text-cyan-400" />
+                </div>
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded text-xs font-medium">
+                    {categories.find(cat => cat.id === post.category)?.name}
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {post.title}
+                </h3>
+                <p className="text-gray-300 mb-4 line-clamp-3">
+                  {post.excerpt}
+                </p>
+                <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
+                  <div className="flex items-center gap-1">
+                    <User className="w-4 h-4" />
+                    <span>{post.author}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Calendar className="w-4 h-4" />
+                    <span>{new Date(post.date).toLocaleDateString()}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Clock className="w-4 h-4" />
+                    <span>{post.readTime}</span>
+                  </div>
+                </div>
+                <Link
+                  to={`/blog/${post.id}`}
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium group-hover:gap-3 transition-all duration-300"
+                >
+                  Read More
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-8 border border-white/20 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Stay Updated
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Get the latest technology insights and industry news delivered to your inbox.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 bg-slate-800/50 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
       id: 2,
       title: "Cybersecurity Best Practices for 2024: Protect Your Digital Assets",
       excerpt: "Essential cybersecurity strategies every business should implement to protect against evolving threats and ensure data security.",
