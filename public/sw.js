@@ -2,11 +2,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   '/about',
   '/services',
   '/favicon.svg'
 =======
 const CACHE_NAME = 'zion-tech-group-v1';
+=======
+
+const CACHE_NAME = 'zion-tech-v1';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
 const urlsToCache = [
 ];
   '/',
@@ -26,6 +31,7 @@ const STATIC_CACHE_URLS = [
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json'
+<<<<<<< HEAD
 ];
 <<<<<<< HEAD
 
@@ -62,11 +68,16 @@ const DYNAMIC_PATTERNS = [
 ];
 
 // Install event - cache static assets
+=======
+];
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
   
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
   event.waitUntil(
+<<<<<<< HEAD
     caches.open(STATIC_CACHE)
       .then((cache) => {
 <<<<<<< HEAD
@@ -250,10 +261,18 @@ self.addEventListener('install', (event) => {
 // Fetch event
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(urlsToCache))
+  );
+});
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
+<<<<<<< HEAD
         // Return cached version or fetch from network
 <<<<<<< HEAD
         return response || fetch(event.request);
@@ -716,3 +735,13 @@ const data = event.data.json();
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 });
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

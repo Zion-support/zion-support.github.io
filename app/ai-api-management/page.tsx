@@ -11,6 +11,7 @@ const PagePage: React.FC = () => {
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
+<<<<<<< HEAD
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Zap, Shield, Users, BarChart3 } from 'lucide-react'
 const AIApiManagementPage: React.FC = () => {
@@ -32,6 +33,9 @@ const AIApiManagementPage: React.FC = () => {
       title: 'Feature 3',
       description: 'Description of feature 3',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+=======
+import Footer from '../components/Footer';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     }
 =======
       title: 'Intelligent API Monitoring',
@@ -55,12 +59,15 @@ const AIApiManagementPage: React.FC = () => {
   ];
 
   const benefits = [
+<<<<<<< HEAD
     'Benefit 1',
     'Benefit 2',
     'Benefit 3',
     'Benefit 4',
     'Benefit 5',
     'Benefit 6'
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
   ];
 <<<<<<< HEAD
 =======
@@ -99,6 +106,7 @@ export default function AIAPIManagementZionTechGroup() {
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
@@ -407,6 +415,8 @@ export default function AIAPIManagementZionTechGroup() {
           </div>
         </div>
       </section>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
 
 <<<<<<< HEAD
         {/* Features Section */}
@@ -469,6 +479,7 @@ export default function AIAPIManagementZionTechGroup() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 };
 
+<<<<<<< HEAD
 export default PagePage;
 =======
   )
@@ -725,3 +736,5 @@ export default PagePage;
 export default PagePage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

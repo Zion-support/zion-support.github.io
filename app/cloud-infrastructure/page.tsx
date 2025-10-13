@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react';
 const CloudInfrastructurePage: React.FC = () => {
   const features = [
+<<<<<<< HEAD
     {}];
   const benefits = [
 =======
@@ -48,9 +49,13 @@ icon: Shield,
       icon: Globe,
       title: 'Global Deployment',
       description: 'Worldwide cloud infrastructure deployment and support'
+=======
+    {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     }
   ]
   const benefits = [
+<<<<<<< HEAD
 'Advanced cloud technology integration',
     'Real-time monitoring and analytics',
     'Enterprise-grade security and compliance',
@@ -70,6 +75,8 @@ const benefits = [
     'Automated scaling and management',
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
@@ -90,6 +97,7 @@ const benefits = [
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         <title>Cloud Infrastructure | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+<<<<<<< HEAD
 <meta name="keywords" content="cloud infrastructure, cloud services, IT services, Zion Tech Group, cloud computing" />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       </Helmet>
@@ -191,6 +199,8 @@ const CloudInfrastructurePage = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
             Cloud Infrastructure
   </
 <<<<<<< HEAD
@@ -202,6 +212,7 @@ const CloudInfrastructurePage = () => {
             Transform your business with our advanced cloud infrastructure solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Features Section */}
       <section className="py-16 px-4"></section>
@@ -296,10 +307,16 @@ const CloudInfrastructurePage = () => {
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" /></CheckCircle>
                 <span className="text-gray-300"></spa>{benefit}</span>
 
+=======
+        </div>
+
+                <span className="text-gray-300">{benefit}</span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
               </div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -312,6 +329,9 @@ const CloudInfrastructurePage = () => {
           <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
             Ready to Get Started?
           </h2>
 

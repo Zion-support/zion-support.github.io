@@ -136,12 +136,16 @@ const benefits = [
         <meta name="keywords" content="analytics tools, AI solutions, IT services, Zion Tech Group, data analytics" />
       </Helmet>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
 <<<<<<< HEAD
           <h1 className="text-5xl font-bold text-white mb-6">Analytics Tools;</h1>
 =======
           <h1 className="text-5xl font-bold text-white mb-6">
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
             Analytics Tools
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
@@ -186,6 +190,7 @@ const benefits = [
             Transform your business with our advanced analytics tools. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
+<<<<<<< HEAD
       </section>
       {/* Features Section */}
 <<<<<<< HEAD
@@ -319,6 +324,10 @@ const benefits = [
               Email Us
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
+=======
+        </div>
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
           </div>
         </div>
         <div className="text-center">

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
@@ -65,22 +66,35 @@ const features = [
       features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+'use client';
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+
+const CloudServicesPage: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     }
   ];
 <<<<<<< HEAD
 
   const benefits = [
+<<<<<<< HEAD
     "99.9% Uptime Guarantee",
     "24/7 Expert Support",
     "Cost Optimization",
     "Compliance Ready",
     "Disaster Recovery",
     "Real-time Monitoring"
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
   ];
 
   return (
     <>
       <Helmet>
+<<<<<<< HEAD
         <title>Cloud Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive cloud solutions including infrastructure, security, and scalability services." />
       </Helmet>
@@ -492,6 +506,24 @@ const benefits = [
         </section>
       </div>
     </>
+=======
+            </div>
+          ))}
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            Why Choose Our Cloud Services?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </div>
+            ))}
+          </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
   );
 };
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

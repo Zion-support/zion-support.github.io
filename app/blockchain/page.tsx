@@ -220,6 +220,7 @@ const blockchainServices = [
         <meta name="description" content="Professional Blockchain Solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="blockchain solutions, blockchain technology, IT services, Zion Tech Group, smart contracts" />
       </Helmet>
+<<<<<<< HEAD
 <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
 <<<<<<< HEAD
@@ -245,6 +246,9 @@ const blockchainServices = [
 =======
               <p className="text-gray-300">{feature.description}</p>
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
             </div>
           ))}
         </div>
@@ -297,6 +301,7 @@ const blockchainServices = [
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" /></CheckCircle>
                 <span className="text-gray-300"></spa>{benefit}</span>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
               </div>
             </div>
@@ -1085,6 +1090,8 @@ const categories = [...new Set(blockchainServices.map(service => service.categor
             </div>
           </div>
         </section>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
       </div>
 <<<<<<< HEAD
     </>

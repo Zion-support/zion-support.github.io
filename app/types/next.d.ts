@@ -172,7 +172,10 @@ declare module 'next' {
   }
 }
 
+<<<<<<< HEAD
 export {};
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
 =======

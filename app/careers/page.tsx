@@ -24,6 +24,7 @@ const CareersPage: React.FC = () => {
         <meta name="description" content="Careers services by Zion Tech Group. Advanced AI and IT solutions for your business." />
 =======
 'use client';
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
@@ -718,6 +719,12 @@ const CareersPage = () => {
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { MapPin, Clock, Users, Star, ArrowRight, CheckCircle, Zap, Heart, Brain, Rocket } from 'lucide-react';
+=======
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { MapPin, Clock, CheckCircle, Star, Users, Heart, Award, ArrowRight, Briefcase, GraduationCap, Zap } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
 
 interface JobPosition {
   id: string;
@@ -731,12 +738,15 @@ interface JobPosition {
   requirements: string[];
   featured: boolean;
 }
+<<<<<<< HEAD
 =======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
 
 const CareersPage: React.FC = () => {
   return (
@@ -785,13 +795,21 @@ const CareersPage: React.FC = () => {
       location: 'Remote / New York',
       type: 'Full-time',
       experience: '5+ years',
+<<<<<<< HEAD
       posted: '2 days ago',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
       requirements: ['PhD in Computer Science or related field', '5+ years ML/AI experience', 'Expert in Python, TensorFlow, PyTorch'],
+=======
+      description: 'Design and implement cutting-edge AI solutions for enterprise clients.',
+      requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise'],
+      benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Professional development'],
+      posted: '2024-01-15',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
       featured: true
     },
     {
       id: '2',
+<<<<<<< HEAD
       title: 'Quantum Computing Researcher',
       department: 'Research & Development',
       location: 'San Francisco, CA',
@@ -872,10 +890,36 @@ const CareersPage: React.FC = () => {
       icon: <Rocket className="w-8 h-8" />,
       title: 'Career Growth',
       description: 'Clear promotion paths and mentorship programs'
+=======
+      title: 'Cloud Solutions Architect',
+      department: 'Cloud Services',
+      location: 'New York, NY',
+      type: 'Full-time',
+      experience: '7+ years',
+      description: 'Lead cloud migration projects and design scalable cloud architectures.',
+      requirements: ['AWS/Azure/GCP certification', '7+ years cloud experience', 'Architecture design skills'],
+      benefits: ['Competitive salary', 'Health insurance', 'Flexible hours', 'Learning budget'],
+      posted: '2024-01-10',
+      featured: false
+    },
+    {
+      id: '3',
+      title: 'Cybersecurity Specialist',
+      department: 'Security',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Protect client systems and implement security best practices.',
+      requirements: ['CISSP/CISM certification', '4+ years security experience', 'Threat analysis skills'],
+      benefits: ['Competitive salary', 'Health insurance', 'Remote work', 'Security training'],
+      posted: '2024-01-05',
+      featured: false
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     }
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>Careers - Zion Tech Group | Join Our Team</title>
@@ -1062,10 +1106,128 @@ const CareersPage: React.FC = () => {
                 </div>
               </div>
             </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Careers - Zion Tech Group | Join Our Team</title>
+        <meta name="description" content="Join Zion Tech Group and be part of a team that's shaping the future of AI and IT solutions. Explore open positions and career opportunities." />
+        <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, tech careers" />
+        <meta property="og:title" content="Careers - Zion Tech Group" />
+        <meta property="og:description" content="Join our team and shape the future of technology" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/careers" />
+      </Helmet>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Team</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
+          </p>
+        </div>
+
+        {/* Open Positions */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {openPositions.map((position) => (
+            <div
+              key={position.id}
+              className={`bg-white/10 backdrop-blur-sm rounded-2xl p-8 border ${
+                position.featured
+                  ? 'border-purple-400 shadow-2xl shadow-purple-500/25'
+                  : 'border-white/20'
+              }`}
+            >
+              {position.featured && (
+                <div className="flex items-center gap-2 mb-4">
+                  <Star className="w-5 h-5 text-yellow-400" />
+                  <span className="text-yellow-400 font-semibold">Featured</span>
+                </div>
+              )}
+              
+              <h3 className="text-xl font-bold text-white mb-2">{position.title}</h3>
+              <p className="text-gray-300 text-sm mb-4">{position.department}</p>
+              
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center gap-2 text-sm text-gray-400">
+                  <MapPin className="w-4 h-4" />
+                  <span>{position.location}</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-400">
+                  <Briefcase className="w-4 h-4" />
+                  <span>{position.type}</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-400">
+                  <GraduationCap className="w-4 h-4" />
+                  <span>{position.experience}</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-400">
+                  <Clock className="w-4 h-4" />
+                  <span>Posted {position.posted}</span>
+                </div>
+              </div>
+
+              <p className="text-gray-300 text-sm mb-4">{position.description}</p>
+
+              <div className="mb-6">
+                <h4 className="text-sm font-semibold text-gray-300 mb-2">Requirements</h4>
+                <ul className="space-y-1">
+                  {position.requirements.map((req, index) => (
+                    <li key={index} className="flex items-start gap-2 text-sm text-gray-400">
+                      <CheckCircle className="w-3 h-3 text-green-400 mt-1 flex-shrink-0" />
+                      <span>{req}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <button className="w-full py-2 px-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center gap-2">
+                Apply Now
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          ))}
+        </div>
+
+        {/* Why Work With Us */}
+        <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-16">
+          <h2 className="text-2xl font-bold text-white text-center mb-8">Why Work With Us?</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Users className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Great Team</h3>
+              <p className="text-gray-300 text-sm">Work with talented and passionate professionals</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Heart className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Work-Life Balance</h3>
+              <p className="text-gray-300 text-sm">Flexible hours and remote work options</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Award className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Growth Opportunities</h3>
+              <p className="text-gray-300 text-sm">Continuous learning and career development</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Innovation</h3>
+              <p className="text-gray-300 text-sm">Work on cutting-edge technologies and projects</p>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
           </div>
-        </section>
+        </div>
 
         {/* CTA Section */}
+<<<<<<< HEAD
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
@@ -1421,10 +1583,29 @@ const CareersPage: React.FC = () => {
         </section>
       </div>
     </>
+=======
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Don't See Your Perfect Role?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+              We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute.
+            </p>
+            <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2 mx-auto">
+              Send Resume
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
   );
 };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
+<<<<<<< HEAD
 export default CareersPage
 =======
 export default CareersPage;
@@ -1433,3 +1614,6 @@ export default CareersPage;
 
 export default CareersPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-13a2
+=======
+export default CareersPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

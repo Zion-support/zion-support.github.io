@@ -39,6 +39,7 @@ import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Footer from '../components/Footer';
 =======
 <<<<<<< HEAD
@@ -352,6 +353,18 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
+=======
+import Footer from '../components/Footer';
+
+const AiContentStudioPage: React.FC = () => {
+  const features = [
+    {
+            </p>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+              Start Your Free Trial
+            </button>
+          </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
       <Footer />
 =======
       <Footer /></Footer>
@@ -361,6 +374,7 @@ const PagePage: React.FC = () => {
   ),
 };
 
+<<<<<<< HEAD
 export default AiContentStudioPage;
 =======
   )
@@ -409,3 +423,5 @@ export default AiContentStudioPage;
 export default AIContentStudioPage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

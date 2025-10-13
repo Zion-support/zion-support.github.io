@@ -40,6 +40,7 @@ import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiBlockchainAnalyticsPage: React.FC = () => {,
@@ -362,12 +363,19 @@ const benefits = [
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced solutions designed for modern business needs
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+=======
+import Footer from '../components/Footer';
+  return (
+    <>
+      <Helmet>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"></button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               Start Your Free Trial,
   </
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -554,3 +562,5 @@ export default PagePage;
 export default PagePage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

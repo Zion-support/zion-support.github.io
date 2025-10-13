@@ -14,6 +14,7 @@
   },
   transform: {
 <<<<<<< HEAD
+<<<<<<< HEAD
     '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: 'tsconfig.jest.json'
     }],
@@ -29,6 +30,8 @@
     }]
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',

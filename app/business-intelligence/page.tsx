@@ -7,6 +7,7 @@ import React from 'react';
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
     {
+<<<<<<< HEAD
       id: 'data-analytics',
       title: 'Advanced Data Analytics',
       description: 'Transform raw data into actionable insights with our comprehensive analytics solutions.',
@@ -107,6 +108,9 @@ icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Machine learning algorithms for predictive analytics and trend analysis'
     };
+=======
+    }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
   ];
 ;
 const benefits = [
@@ -135,6 +139,7 @@ const benefits = [
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         <title>Business Intelligence | Zion Tech Group</title>
         <meta name="description" content="Professional Business Intelligence services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+<<<<<<< HEAD
       </Helmet>
 <<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
@@ -210,10 +215,15 @@ const benefits = [
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+=======
+        </div>
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
               </div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 {/* Benefits Section */}
 =======
@@ -376,6 +386,9 @@ const benefits = [
           ))}
         </section>
       </div>
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     </div>
 <<<<<<< HEAD
   );

@@ -126,6 +126,7 @@ const benefits = [
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Our AR/VR solutions deliver unmatched performance, security, and scalability.
             </p>
@@ -142,6 +143,8 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
                 <feature .icon className="w-12 h-12 text-purple-400 mb-4" />
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>
@@ -149,6 +152,7 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Benefits Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">,</section>
 =======
@@ -175,6 +179,17 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
               </div>
             ))}
           </div>
+=======
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
         </div>
       </section>
 <<<<<<< HEAD

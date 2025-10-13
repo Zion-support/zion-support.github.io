@@ -375,6 +375,7 @@ const features = [
     {
       icon: BarChart,
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: 'Real-Time Dashboards',
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
@@ -532,6 +533,8 @@ const useCases = [
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
 =======
       icon: '🛡️'
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     }
   ]
 =======
@@ -544,8 +547,11 @@ const useCases = [
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
         <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
       </Helmet>
       <Navigation />
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">

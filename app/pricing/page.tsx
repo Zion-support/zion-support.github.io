@@ -230,6 +230,7 @@ const PricingPage: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       </Helmet>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 };
 =======
@@ -245,6 +246,8 @@ const PricingPage: React.FC = () => {
             </p>
           </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
 
 export default PricingPage;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -712,6 +715,7 @@ const PricingPage: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
         </div>
       </div>
+<<<<<<< HEAD
     </>
   )
 }
@@ -736,6 +740,9 @@ export default PricingPage
         <Footer />
       </div>
     </>
+=======
+    </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
   );
 };
 

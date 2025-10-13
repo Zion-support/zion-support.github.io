@@ -180,8 +180,11 @@ class AccessibilityEnhancer {
     } else {
       nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
     }
+<<<<<<< HEAD
     
     focusableElements[nextIndex]?.focus();
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     event.preventDefault();
   }
 
@@ -1207,6 +1210,7 @@ const liveRegion = document.createElement('div');
     // For now, we'll just count potential issues
     this.metrics.colorContrastIssues = 0;
   }
+<<<<<<< HEAD
 
   /**
    * Setup image alt text checking
@@ -1571,3 +1575,5 @@ export const focusLastElement = () => {
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 export default AccessibilityEnhancer;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

@@ -12,6 +12,7 @@ import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
@@ -217,6 +218,9 @@ import { Helmet } from "react-helmet-async";
 <<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4">
+=======
+import Footer from '../components/Footer';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
           <div className="max-w-7xl mx-auto">
                   )}
           <div className="max-w-7xl mx-auto">
@@ -246,6 +250,7 @@ import { Helmet } from "react-helmet-async";
   );
 };
 
+<<<<<<< HEAD
 export default AIContentWriterPage;
 =======
       <Footer />
@@ -321,3 +326,5 @@ const benefits = [
                     </ul>);
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

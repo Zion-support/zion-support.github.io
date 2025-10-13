@@ -25,6 +25,7 @@ interface EnhancedSEOHeadProps {}
 import { Helmet } from 'react-helmet-async';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface SEOHeadProps {
   title: string;
   description: string;
@@ -196,32 +197,49 @@ export default EnhancedSEOHead;
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
 export default EnhancedSEOHead;
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
 interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   canonicalUrl?: string;
 =======
   canonical?: string;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+  canonicalUrl?: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
 }
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
+<<<<<<< HEAD
   description = 'Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
   keywords = 'AI solutions, artificial intelligence, machine learning, quantum computing, autonomous systems, digital transformation, enterprise software, cloud computing, cybersecurity, IT services',
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
+=======
+  description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, cloud services, cybersecurity, and digital transformation solutions.',
+  keywords = 'AI solutions, IT services, cloud computing, cybersecurity, digital transformation, machine learning, artificial intelligence, business automation',
+  canonicalUrl = 'https://ziontechgroup.com',
+  ogImage = 'https://ziontechgroup.com/images/og-image.jpg',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData
 }) => {
+<<<<<<< HEAD
 =======
   noIndex?: boolean;
   noFollow?: boolean;
@@ -253,10 +271,13 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   const currentTime = new Date().toISOString();
   
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
@@ -278,6 +299,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       "availableLanguage": "English"
     },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/images/logo.png",
+    "description": description,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -294,11 +320,15 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     },
     "sameAs": [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup"
     ],
     "foundingDate": "2020",
     "numberOfEmployees": "50-100",
+<<<<<<< HEAD
     "industry": "Technology",
     "services": [
       "AI Solutions",
@@ -341,12 +371,24 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
         }
       }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+    "industry": "Information Technology",
+    "services": [
+      "AI Solutions",
+      "Cloud Computing",
+      "Cybersecurity",
+      "Digital Transformation",
+      "IT Consulting"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     ]
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -354,10 +396,14 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
       <meta name="bingbot" content="index, follow" />
+<<<<<<< HEAD
 =======
       <meta name="author" content={author} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -367,15 +413,23 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="distribution" content="global" />
       <meta name="rating" content="general" />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
       
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Open Graph Meta Tags */}
 <<<<<<< HEAD
+<<<<<<< HEAD
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+=======
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={ogType} />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
@@ -405,11 +459,15 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
       <meta name="twitter:image:alt" content={title} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Additional SEO Meta Tags */}
+<<<<<<< HEAD
       <meta name="theme-color" content="#00ffff" />
       <meta name="msapplication-TileColor" content="#00ffff" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
@@ -849,20 +907,38 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
 =======
       <meta name="theme-color" content="#0f172a" />
       <meta name="msapplication-TileColor" content="#0f172a" />
+=======
+      <meta name="theme-color" content="#8b5cf6" />
+      <meta name="msapplication-TileColor" content="#8b5cf6" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      
+      {/* Language and Region */}
+      <meta httpEquiv="content-language" content="en-US" />
+      <meta name="geo.region" content="US-DE" />
+      <meta name="geo.placename" content="Middletown" />
+      <meta name="geo.position" content="39.4496;-75.7163" />
+      <meta name="ICBM" content="39.4496, -75.7163" />
+      
+      {/* Mobile App Meta Tags */}
+      <meta name="mobile-web-app-capable" content="yes" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      
-      {/* Preconnect to external domains */}
+      {/* Performance Hints */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+      
+      {/* Favicon and Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/site.webmanifest" />
       
       {/* Structured Data */}
       {structuredData && (
@@ -876,6 +952,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
       
       {/* Default Organization Structured Data */}
       <script type="application/ld+json">
+<<<<<<< HEAD
         {JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'Organization',
@@ -908,10 +985,24 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
         })}
       </script>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+        {JSON.stringify(finalStructuredData)}
+      </script>
+      
+      {/* Additional Performance Meta Tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     </Helmet>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default EnhancedSEOHead;
@@ -922,3 +1013,6 @@ export default EnhancedSEOHead;
 =======
 export default EnhancedSEOHead;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+export default EnhancedSEOHead;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

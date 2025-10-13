@@ -66,6 +66,7 @@ const features = [
       description: 'Safe and secure migration of your applications and data to the cloud'
     },
     {
+<<<<<<< HEAD
 icon: Zap,
       title: 'Zero Downtime Migration',
       description: 'Seamless migration with minimal to zero downtime for your business'
@@ -114,6 +115,8 @@ icon: Zap,
       description: 'Optimize performance and provide ongoing support and monitoring.',
       icon: TrendingUp,
       duration: 'Ongoing'
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     }
   ];
   const pricingPlans = [
@@ -208,6 +211,7 @@ const benefits = [
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         <title>Cloud Migration | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Migration services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+<<<<<<< HEAD
 <meta name="keywords" content="cloud migration, cloud services, IT services, Zion Tech Group, cloud computing" />
       </Helmet>
 <<<<<<< HEAD
@@ -223,6 +227,8 @@ const benefits = [
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
             Cloud Migration
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
@@ -234,6 +240,7 @@ const benefits = [
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
             Powered by cutting-edge AI technology and industry expertise.
           </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
         <div className="max-w-7xl mx-auto">
@@ -384,10 +391,19 @@ const benefits = [
                 <h3 className="text-xl font-semibold text-white mb-3"></h>{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
 
+=======
+        </div>
+
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
               </div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -543,6 +559,9 @@ const benefits = [
             </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
           </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
         </div>

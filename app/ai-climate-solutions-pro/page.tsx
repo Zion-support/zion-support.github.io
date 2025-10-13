@@ -45,6 +45,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiClimateSolutionsProPage: React.FC = () => {,
 =======
@@ -527,3 +528,5 @@ export default PagePage;
 export default PagePage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

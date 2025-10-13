@@ -33,6 +33,7 @@ const BusinessAppsPage: React.FC = () => {
     },
     {
       icon: Brain,
+<<<<<<< HEAD
 title: 'AI-Powered Business Apps',
       description: 'Advanced AI technology to transform your business applications and improve efficiency'
 =======
@@ -93,10 +94,17 @@ const benefits = [
     'Cloud-based deployment',
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+    }
+  ];
+
+  const benefits = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
+<<<<<<< HEAD
 <<<<<<< HEAD
   ]
 
@@ -252,6 +260,16 @@ const benefits = [
               Email Us
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
+=======
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Business Apps | Zion Tech Group</title>
+        </div>
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
           </div>
         </div>
         <div className="text-center">

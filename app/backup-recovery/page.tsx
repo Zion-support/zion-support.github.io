@@ -8,6 +8,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const BackupRecoveryPage: React.FC = () => {
   const features = [
 <<<<<<< HEAD
+<<<<<<< HEAD
     {}];
   const benefits = [
 =======
@@ -40,9 +41,13 @@ icon: Shield,
 <<<<<<< HEAD
       title: 'Global Redundancy',
       description: 'Worldwide backup storage with multiple redundancy layers'
+=======
+    {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     }
   ]
   const benefits = [
+<<<<<<< HEAD
 'Advanced data protection and encryption',
     'Real-time backup monitoring and alerts',
 =======
@@ -57,6 +62,8 @@ const benefits = [
     'Real-time data protection',
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     'Enterprise-grade security and compliance',
     'Scalable and flexible backup solutions',
     '24/7 technical support',
@@ -79,6 +86,7 @@ const benefits = [
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         <title>Backup & Recovery | Zion Tech Group</title>
         <meta name="description" content="Professional Backup & Recovery services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+<<<<<<< HEAD
 <meta name="keywords" content="backup recovery, data protection, IT services, Zion Tech Group, disaster recovery" />
       </Helmet>
 <<<<<<< HEAD
@@ -94,6 +102,8 @@ const benefits = [
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
             Backup & Recovery
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
@@ -138,6 +148,7 @@ const benefits = [
             Transform your business with our advanced backup and recovery solutions. 
             Powered by cutting-edge AI technology and industry expertise.
           </p>
+<<<<<<< HEAD
       </section>
 <<<<<<< HEAD
       {/* Features Section */}
@@ -263,6 +274,8 @@ const benefits = [
               Email Us
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
           </div>
         </div>
         <div className="text-center">

@@ -41,6 +41,7 @@ import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Footer from '../components/Footer';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiComputerVisionPage: React.FC = () => {,
@@ -320,6 +321,17 @@ const AiComputerVisionPage: React.FC = () => {
           </div>
         </div>
       </section>
+=======
+import Footer from '../components/Footer';
+  return (
+    <>
+      <Helmet>
+            </p>
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+              Start Your Free Trial
+            </button>
+          </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
       <Footer />
 =======
       <Footer /></Footer>
@@ -329,6 +341,7 @@ const AiComputerVisionPage: React.FC = () => {
   ),
 };
 
+<<<<<<< HEAD
 export default AiComputerVisionPage;
 =======
   )
@@ -406,3 +419,5 @@ export default AiComputerVisionPage;
 export default PagePage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

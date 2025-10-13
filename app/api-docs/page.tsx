@@ -200,6 +200,7 @@ export default function APIDocsPage() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       ]
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
   ];
@@ -218,6 +219,30 @@ export default function ApiDocsZionTechGroup() {
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+=======
+    }
+  ];
+
+  const filteredEndpoints = apiEndpoints.map(category => ({
+    ...category,
+    endpoints: category.endpoints.filter(endpoint => 
+      endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  })).filter(category => category.endpoints.length > 0);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer 
+        title="API Documentation - Zion Tech Group"
+        description="Complete API documentation for Zion Tech Group's AI and IT solutions. Explore endpoints, authentication, and integration guides."
+        keywords="API documentation, REST API, AI API, cloud API, integration, developer tools, API reference"
+      />
+      <Navigation />
+      
+      {/* Hero Section */}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
             API Documentation
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -329,6 +354,7 @@ const filteredEndpoints = apiEndpoints.map(category => ({
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
             Explore endpoints, authentication, and integration guides.
           </p>
+<<<<<<< HEAD
             <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"></button>
               <Code className="mr-2 h-5 w-5" /></Code>
               Get Started
@@ -339,6 +365,8 @@ const filteredEndpoints = apiEndpoints.map(category => ({
               Download SDK,
   </
           </div>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
         </div>
       </section>
 <<<<<<< HEAD

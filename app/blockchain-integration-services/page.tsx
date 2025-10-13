@@ -64,6 +64,7 @@ const benefits = [
       <Helmet />
         <title>Blockchain Integration Services | Zion Tech Group</title>
         <meta name="description" content="Professional Blockchain Integration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+<<<<<<< HEAD
 <meta name="keywords" content="blockchain integration, blockchain services, IT services, Zion Tech Group, smart contracts" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
@@ -72,6 +73,8 @@ const benefits = [
           <h1 className="text-5xl font-bold text-white mb-6">Blockchain Integration Services;</h1>
 =======
           <h1 className="text-5xl font-bold text-white mb-6">
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
             Blockchain Integration Services
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
@@ -83,6 +86,7 @@ const benefits = [
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
             Powered by cutting-edge AI technology and industry expertise.
           </p>
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
         <div className="max-w-7xl mx-auto">
@@ -242,6 +246,10 @@ const benefits = [
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+        </div>
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3"></div>
                 <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" /></CheckCircle>
@@ -252,6 +260,10 @@ const benefits = [
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
           </div>
         </div>
       </div>

@@ -39,6 +39,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiCloudInfrastructurePage: React.FC = () => {,
 =======
@@ -312,6 +313,8 @@ export default AiCloudInfrastructurePage
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
@@ -333,15 +336,22 @@ export default AiCloudInfrastructurePage
               Contact Sales
             </button>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
       <Footer />
     </div>
   );
 };
+<<<<<<< HEAD
     </div>)
 export default PagePage;
 export default AiCloudInfrastructurePage;
 export default PagePage;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

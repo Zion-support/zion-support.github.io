@@ -67,6 +67,7 @@ Disallow: /_next/
 Disallow: /node_modules/
 =======
 Disallow: /private/
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 # Allow important pages
@@ -174,3 +175,46 @@ Allow: /ai-*
 Allow: /it-*
 Allow: /micro-saas
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+=======
+
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /pricing
+Allow: /blog
+Allow: /case-studies
+Allow: /careers
+Allow: /partners
+Allow: /support
+Allow: /faq
+Allow: /demo
+Allow: /consultation
+Allow: /micro-saas
+Allow: /ai-services
+Allow: /it-services
+
+# Block common bot traps
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /search?*
+Disallow: /filter?*
+Disallow: /sort?*
+
+# Allow specific file types
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+Allow: /*.eot$
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460

@@ -3,11 +3,16 @@
 'use client';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+=======
+import { Helmet } from 'react-helmet-async';
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
 const CloudMigrationServicesPage: React.FC = () => {
   const features = [
 =======
@@ -20,6 +25,7 @@ const features = [
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
+<<<<<<< HEAD
 icon: Shield,
       title: 'Secure Cloud Migration',
       description: 'Safe and secure migration of your applications and data to the cloud'
@@ -40,9 +46,12 @@ icon: Shield,
       title: 'Multi-Cloud Support',
       description: 'Support for migration to AWS, Azure, GCP, and other cloud platforms'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     }
   ];
   const benefits = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 'Advanced cloud migration technology',
@@ -64,6 +73,8 @@ const benefits = [
     'High availability and reliability',
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
@@ -83,6 +94,7 @@ const benefits = [
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         <title>Cloud Migration Services | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Migration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+<<<<<<< HEAD
       </Helmet>
 <<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
@@ -168,6 +180,8 @@ const benefits = [
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
               <Mail className="mr-2 h-5 w-5" />
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
           </div>
         </div>
       </section>
