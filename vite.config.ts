@@ -15,7 +15,12 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
+<<<<<<< HEAD
     target: "esnext",
+=======
+    outDir: "dist",
+    sourcemap: false,
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
     minify: "terser",
     sourcemap: mode !== "production",
     cssCodeSplit: true,
@@ -48,6 +53,24 @@ export default defineConfig(({ mode }) => ({
       },
     },
   },
+<<<<<<< HEAD
+=======
+  server: {
+    port: 3000,
+    open: true,
+    host: true,
+    // Enable HMR
+    hmr: {
+      overlay: true,
+    },
+  },
+  preview: {
+    port: 4173,
+    open: true,
+    host: true,
+  },
+  // Optimize dependencies
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
   optimizeDeps: {
     include: [
       "react",
@@ -61,9 +84,13 @@ export default defineConfig(({ mode }) => ({
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
   },
+<<<<<<< HEAD
   css: {
     devSourcemap: mode !== "production",
   },
   envPrefix: "VITE_",
   logLevel: mode === "production" ? "warn" : "info",
 }));
+=======
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

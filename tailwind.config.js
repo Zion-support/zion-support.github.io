@@ -1,12 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
-    "./App.tsx",
-    "./main.tsx"
   ],
   theme: {
     extend: {
@@ -29,6 +26,15 @@ export default {
       },
     },
   },
+<<<<<<< HEAD
+//   plugins: [],
+  };,
+    plugins: [];
+};
+<<<<<<< HEAD
+=======
   plugins: [],
 };
-
+>>>>>>> cursor/fix-errors-and-merge-to-main-a28c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

@@ -1,13 +1,12 @@
   }
 
   // Custom render function with providers
-  customRender(</TestConfig>
-    ui: ReactElement)</TestConfig>
+  customRender(
+    ui: ReactElement)
     options?: Omit<RenderOptions, 'wrapper'>): RenderResult {}
-    const AllTheProviders = useCallback((...args) => {</RenderOptions>
-      return (<BrowserRouter>}</BrowserRouter>
-          {children}</BrowserRouter>
-        </BrowserRouter>
+    const AllTheProviders = useCallback((...args) => {
+      return (<BrowserRouter>}
+          {children}
   // Custom render function with providers;
   customRender(ui: ReactElement),
     options?: Omit<RenderOptions, 'wrapper'>
@@ -16,7 +15,6 @@
       return(<BrowserRouter>})
           {children})
         </BrowserRouter>)
-        </BrowserRouter>
       )
     }
     return render(ui, { wrapper: AllTheProviders, ...options })
@@ -51,7 +49,6 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     return TestRunner.instance;
   }
   // Custom render function with providers;
-        </BrowserRouter>
       );
     };
     return render(ui, {/* TODO: Fix JSX expression */})
@@ -62,9 +59,9 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     const previousSuite = this.currentSuite;
     this.currentSuite = suite;
     this.suites.push(suite);
-    this.currentSuite.tests.push({</div>
-    component: ReactElement)</void>
-    testName: string</void>
+    this.currentSuite.tests.push({
+    component: ReactElement)
+    testName: string
   public it(name: string)
     fn: () => void | Promise<void>
     timeout?: number;
@@ -76,7 +73,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   }
   // Performance test;
         const memory = (performance as { memory?: {// usedJSHeapSize: number} }).memory;
-      timestamp: new Date().toISOString(</div>
+      timestamp: new Date().toISOString(
     const passed = renderTime < this.config.performanceThreshold;
       error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms;
     timeout?: number;
@@ -126,7 +123,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     if (!this.currentSuite) {}
       throw new Error('Test must be inside a describe block');}
     }
-    this.currentSuite.tests.push({</div>
+    this.currentSuite.tests.push({
       name,
       fn)
     skip: true}
@@ -140,7 +137,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     if (!this.currentSuite) {}
       throw new Error('Test must be inside a describe block');}
     }
-    this.currentSuite.tests.push({</div>
+    this.currentSuite.tests.push({
       name,
       fn)
     only: true}
@@ -393,7 +390,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
           await hook();
         }
       }
-      this.results.push({</div>
+      this.results.push({
         name: testName,
         status: 'passed')
     duration: Date.now() - startTime,
@@ -408,7 +405,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       }
     } catch (error) {
       this.results.push({} catch (error) {}
-      this.results.push({</div>
+      this.results.push({
         name: testName,
         status: 'failed')
     duration: Date.now() - startTime,

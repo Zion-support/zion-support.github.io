@@ -14,6 +14,7 @@ import Footer from ../components
 
 const DemoPage: React.FC = () => {const demos = [;
 
+<<<<<<< HEAD
 const DemoPage: React.FC = () => {
   const demos = [    {;
       title: 'AI Analytics Dashboard,
@@ -118,3 +119,17 @@ export default function Demo() {
       <section className="py-20 px-4>"
         <div className="max-w-4xl mx-auto text-center>"
           <h2 className="text-4xl font-bold text-white mb-6>
+=======
+export default function DemoPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Demo</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

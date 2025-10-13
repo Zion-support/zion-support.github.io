@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client;
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
@@ -639,9 +640,11 @@ const ItServicesPage: React.FC = () => {const itServices = [;
 
     return filtered;
   }, [searchTerm, selectedCategory, sortBy, itServices]);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
 'use client';
-
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="IT services from Zion Tech Group" />
@@ -714,3 +717,18 @@ export default ItServicesPage;
   )
 }
 export default ItServicesPage;
+=======
+
+export default function ItServicesPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">It Services</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 export default function PerformanceMonitor() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -80,8 +81,14 @@ export default function PerformanceMonitor() {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   if (!isVisible) return null;
+=======
+'use client';
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
 
+export default function ComponentsPage() {
   return (
+<<<<<<< HEAD
     <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg font-mono text-sm z-50">"
       <div className="mb-2 font-bold">Performance Monitor</div>
       <div>Load Time: {metrics.loadTime}ms</div>
@@ -221,3 +228,15 @@ const timer = setTimeout(() => setIsVisible(true), 3000);
             <span>Poor</span>
           </div>
         </div>
+=======
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Components</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

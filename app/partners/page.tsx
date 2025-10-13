@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react;
 
 import { Helmet } from 'react-helmet-async;
@@ -486,3 +487,20 @@ export default PartnersPage;
               </button>
               <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">,</button>
                 Learn More;
+=======
+'use client';
+import React from 'react';
+
+export default function PartnersPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Partners</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

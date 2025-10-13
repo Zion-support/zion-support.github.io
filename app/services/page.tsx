@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
@@ -233,3 +234,17 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
+=======
+export default function ServicesPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Services</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

@@ -1,7 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
 
-public getConfig(): SEOConfig {}}return {...this.config}}}
-private applyConfig(): void {if (typeof document === 'undefined') return;}
+public getConfig(): SEOConfig {}}return {...this.config}}};
+private applyConfig(): void {if (typeof document === 'undefined') return;};
 // Update title;
     document.title = this.config.title;
 // Update meta description;
@@ -16,63 +17,80 @@ private applyConfig(): void {if (typeof document === 'undefined') return;}
     this.updateTwitterTags();
 // Update robots meta;
     if (this.config.robots) {
-      this.updateMetaTag('robots', this.config.robots)}}
+      this.updateMetaTag('robots', this.config.robots)}};
 // Update author;
-    if (this.config.author) {this.updateMetaTag('author', this.config.author)}}
+    if (this.config.author) {this.updateMetaTag('author', this.config.author)}};
 // Update published time;
-    if (this.config.publishedTime) {this.updateMetaTag('article:published_time', this.config.publishedTime)}}
+    if (this.config.publishedTime) {this.updateMetaTag('article:published_time', this.config.publishedTime)}};
 // Update modified time;
-    if (this.config.modifiedTime) {this.updateMetaTag('article:modified_time', this.config.modifiedTime)}}
+    if (this.config.modifiedTime) {this.updateMetaTag('article:modified_time', this.config.modifiedTime)}};
 // Update section;
-    if (this.config.section) {this.updateMetaTag('article:section', this.config.section)}}
+    if (this.config.section) {this.updateMetaTag('article:section', this.config.section)}};
 // Update tags;
-    if (this.config.tags) {this.config.tags.forEach(tag => {)
-        this.addMetaTag('article:tag', tag)}})
-    }
-  }
-private updateMetaTag(name: string, content: string): void {,}
+    if (this.config.tags) {this.config.tags.forEach(tag => {);
+        this.addMetaTag('article:tag', tag)}});
+    };
+  };
+private updateMetaTag(name: string, content: string): void {,};
     if (typeof document === 'undefined') return;}let meta = document.querySelector(`meta[name="${name)}"]`) as HTMLMetaElement;
     if (!meta) {meta = document.createElement('meta');
       meta.name = name;
-      document.head.appendChild(meta)}}
+      document.head.appendChild(meta)}};
     meta.content = content;
-  }
-private updateCanonicalUrl(): void {if (typeof document === 'undefined' || !this.config.canonicalUrl) return;}
+  };"
+private updateCanonicalUrl(): void {if (typeof document === 'undefined' || !this.config.canonicalUrl) return;};""
 let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonical) {
       canonical = document.createElement('link');
       canonical.rel = 'canonical';
-      document.head.appendChild(canonical)}}
+      document.head.appendChild(canonical)}};
     canonical.href = this.config.canonicalUrl;
-private updateOpenGraphTags(): void {if (typeof document === 'undefined') return;}
+private updateOpenGraphTags(): void {if (typeof document === 'undefined') return;};
 const ogTags = [}{ property: 'og:title', content: this.config.ogTitle || this.config.title ,},;
       {property: 'og:description', content: this.config.ogDescription || this.config.description ,},;
       {property: 'og:type', content: this.config.ogType || 'website' ,},;'
       {property: 'og:url', content: this.config.canonicalUrl || window.location.href ,},;
     ]
-if (this.config.ogImage) {}ogTags.push({property: 'og:image', content: this.config.ogImage ,)})
-ogTags.forEach(tag => {)
-    this.updateMetaTagByProperty(tag.property, tag.content)}})
-private updateTwitterTags(): void {if (typeof document === 'undefined') return;}
+if (this.config.ogImage) {}ogTags.push({ property: 'og:image', content: this.config.ogImage ,)  });
+ogTags.forEach(tag => {);
+    this.updateMetaTagByProperty(tag.property, tag.content)}});
+private updateTwitterTags(): void {if (typeof document === 'undefined') return;};
 const twitterTags = [}{ name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' ,},;'
       {name: 'twitter:title', content: this.config.twitterTitle || this.config.title ,},;
       {name: 'twitter:description', content: this.config.twitterDescription || this.config.description ,},;
     ]
-if (this.config.twitterImage) {}twitterTags.push({name: 'twitter:image', content: this.config.twitterImage ,)})
-twitterTags.forEach(tag => {)
-    this.updateMetaTag(tag.name, tag.content)}})
-  }
-private updateMetaTagByProperty(property: string, content: string): void {,}
+if (this.config.twitterImage) {}twitterTags.push({ name: 'twitter:image', content: this.config.twitterImage ,)  });
+twitterTags.forEach(tag => {);
+    this.updateMetaTag(tag.name, tag.content)}});
+  };"
+private updateMetaTagByProperty(property: string, content: string): void {,};""`
     if (typeof document === 'undefined') return;}let meta = document.querySelector(`meta[property="${property)}"]`) as HTMLMetaElement;
     if (!meta) {meta = document.createElement('meta');
       meta.setAttribute('property', property);
-      document.head.appendChild(meta)}}
+      document.head.appendChild(meta)}};
     meta.content = content;
-  }
-private addMetaTag(name: string, content: string): void {,}
+  };
+private addMetaTag(name: string, content: string): void {,};
     if (typeof document === 'undefined') return;
 // Utility functions;
 export const generateMetaDescription = (content: string, maxLength: number = 160): string => {,
-export const addStructuredData = (data: any): void => {,
-  document.head.appendChild(script)}}
+export const addStructuredData = (data: any): void => {,;
+  document.head.appendChild(script)}};"
+};""`
+=======
+'use client';
+import React from 'react';
+
+export default function UtilsPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Utils</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
 }
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

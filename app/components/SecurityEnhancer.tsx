@@ -22,6 +22,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
     if (typeof window === 'undefined) {
 import React from 'react';
 'use client';
+<<<<<<< HEAD
 import React, {useEffect}from 'react';
 interface SecurityEnhancerProps {children: React.ReactNode;,}}}
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({children ,}) => {useEffect(() => {
@@ -87,3 +88,19 @@ const inputs = document.querySelectorAll(input, textarea, select);;
 const target = e.target as HTMLInputElement;;
 
         if (target.value !== sanitizeInput(target.value)) {
+=======
+import React from 'react';
+
+export default function ComponentsPage() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Components</h1>
+        <p className="text-gray-300 text-lg">
+          This page is under development.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
