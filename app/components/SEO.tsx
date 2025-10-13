@@ -60,7 +60,7 @@ export const SEO: React.FC<SEOProps> = ({
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
   alternateLocales = [],
-}) => {
+} => {
   const seo = {
     title: title ? `${title} | Zion Tech Group` : defaultSEO.title,
     description: description || defaultSEO.description,
@@ -110,3 +110,4 @@ export const SEO: React.FC<SEOProps> = ({
 };
 
 export default SEO;
+)

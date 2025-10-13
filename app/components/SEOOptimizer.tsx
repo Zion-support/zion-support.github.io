@@ -96,7 +96,7 @@ export default function SEOOptimizer({
       <meta name="language" content="en-US" />
       
       {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} /></li>}
       
       {/* Open Graph Tags */}
       <meta property="og:title" content={title} />
@@ -122,8 +122,8 @@ export default function SEOOptimizer({
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" /></li>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></li>
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -141,9 +141,9 @@ export default function SEOOptimizer({
       )}
       
       {/* Performance hints */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="dns-prefetch" href="https://ziontechgroup.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" /></li>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></li>
+      <link rel="dns-prefetch" href="https://ziontechgroup.com" /></li>
     </Helmet>
   );
 }

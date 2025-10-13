@@ -21,7 +21,7 @@ const ErrorPage: React.FC = () => {,
       <Helmet />
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     <>
-      <Helmet>
+      </><Helmet>
         <title>Error - Zion Tech Group</title>
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
           <div className="max-w-7xl mx-auto">
@@ -47,7 +47,7 @@ const ErrorPage: React.FC = () => {,
           </div>
         </section>
         {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center"></div>
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
               Ready to Get Started?
             </h2>

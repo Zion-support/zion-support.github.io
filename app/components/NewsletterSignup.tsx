@@ -13,7 +13,7 @@ export default function NewsletterSignup() {
 
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>
       </Helmet>
       <div className="newsletter-signup-container">

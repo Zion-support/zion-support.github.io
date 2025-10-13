@@ -106,7 +106,7 @@ export default function ZionSmartInventoryOptimizer() {
 
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>Zion Smart Inventory Optimizer - AI-Powered Inventory Management | Zion Tech Group</title>
         <meta
           name="description"
@@ -361,4 +361,4 @@ export default function ZionSmartInventoryOptimizer() {
       </div>
     </>
   );
-}
+}})

@@ -30,7 +30,7 @@ class ErrorLogger {}}private logs: ErrorLogEntry[] = [],
   ): void {const entry: ErrorLogEntry = {,}
   log();
     error?: Error,;
-    context?: Record<string, unknown>}): void {}}const entry: ErrorLogEntry = {,}timestamp: new Date().toISOString(),
+    context?: Record<string, unknown>}: void {}}const entry: ErrorLogEntry = {,}timestamp: new Date().toISOString(),
       severity,;
       message,;
       error,;
@@ -116,8 +116,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */,}}}
       await fetch(endpoint, {
         method: 'POST')
         headers: {)
-          'Content-Type': 'application/json'})
-        })
+          'Content-Type': 'application/json'}
+        }
         body: JSON.stringify({)
           ...entry;)
           error: entry.error;)
@@ -134,8 +134,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */,}}}
                 stack: entry.error.stack}
               }
             : undefined;
-        })
-      })
+        }
+      }
     } catch (error) {}
       // Silently fail to avoid infinite loop}
   private async sendToExternalService(entr)
@@ -147,8 +147,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */,}}}
   y: JSON.stringify({/* TODO: Fix JSX expression */}
               }
             : undefined;)
-        })
-      });
+        }
+      };
     } catch (error) {/* TODO: Fix JSX expression */}
       }
     } catch (error) {}// Silently fail to avoid infinite loop}

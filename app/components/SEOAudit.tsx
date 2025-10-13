@@ -44,7 +44,7 @@ export default function SEOAudit() {
         if (!img.alt) {
           imagesWithoutAlt++;
         }
-      });
+      };
       if (imagesWithoutAlt > 0) {
         issues.push(`${imagesWithoutAlt} images missing alt text`);
       }
@@ -62,7 +62,7 @@ export default function SEOAudit() {
           if (!link.getAttribute('rel')?.includes('nofollow')) {
             recommendations.push('Consider adding rel="nofollow" to external links');
           }
-        });
+        };
       }
 
       // Check for structured data
@@ -91,8 +91,8 @@ export default function SEOAudit() {
     // Re-run on route changes
     const observer = new MutationObserver(() => {
       setTimeout(runSEOAudit, 100);
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
+    };
+    observer.observe(document.body, { childList: true, subtree: true };
 
     return () => {
       observer.disconnect();
@@ -100,4 +100,4 @@ export default function SEOAudit() {
   }, []);
 
   return null;
-}
+}))))

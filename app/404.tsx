@@ -7,7 +7,7 @@ import { Home, ArrowLeft, Search, AlertTriangle, RefreshCw } from 'lucide-react'
 const NotFoundPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>404 - Page Not Found | Zion Tech Group</title>
         <meta name="description" content="The page you're looking for doesn't exist. Return to Zion Tech Group's homepage or explore our AI and IT solutions." />
         <meta name="robots" content="noindex, nofollow" />

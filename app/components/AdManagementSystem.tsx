@@ -45,7 +45,7 @@ interface AdManagementSystemProps {
   className?: string;
 }
 
-const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' }) => {
+const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' } => {
   const [ads, setAds] = useState<Ad[]>([]);
   const [selectedAd, setSelectedAd] = useState<Ad | null>(null);
   const [isCreating, setIsCreating] = useState(false);
@@ -108,7 +108,7 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
                          ad.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          ad.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesFilter && matchesSearch;
-  });
+  };
 
   const sortedAds = [...filteredAds].sort((a, b) => {
     switch (sortBy) {
@@ -123,7 +123,7 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
       default:
         return 0;
     }
-  });
+  };
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -423,4 +423,4 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
   );
 };
 
-export default AdManagementSystem;
+export default AdManagementSystem;)))

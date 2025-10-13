@@ -11,7 +11,7 @@ const EnhancedSkipLink: React.FC = () => {
         const main = document.querySelector('#main-content');
         if (main) {
           main.focus();
-          main.scrollIntoView({ behavior: 'smooth' });
+          main.scrollIntoView({ behavior: 'smooth' };
         }
       }}
     >
@@ -20,4 +20,4 @@ const EnhancedSkipLink: React.FC = () => {
   );
 };
 
-export default EnhancedSkipLink;
+export default EnhancedSkipLink;)

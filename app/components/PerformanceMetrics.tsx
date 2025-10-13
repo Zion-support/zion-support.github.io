@@ -13,12 +13,12 @@ const PerformanceMetrics: React.FC = () => {
     renderTime: 0,
     memoryUsage: 0,
     isOnline: navigator.onLine
-  });
+  };
 
   useEffect(() => {
     // Measure page load time
     const loadTime = performance.now();
-    setMetrics(prev => ({ ...prev, loadTime }));
+    setMetrics(prev => ({ ...prev, loadTime };
 
     // Monitor memory usage
     const updateMemoryUsage = () => {
@@ -27,13 +27,13 @@ const PerformanceMetrics: React.FC = () => {
         setMetrics(prev => ({
           ...prev,
           memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024)
-        }));
+        };
       }
     };
 
     // Monitor online status
     const handleOnlineStatus = () => {
-      setMetrics(prev => ({ ...prev, isOnline: navigator.onLine }));
+      setMetrics(prev => ({ ...prev, isOnline: navigator.onLine };
     };
 
     window.addEventListener('online', handleOnlineStatus);
@@ -68,3 +68,4 @@ const PerformanceMetrics: React.FC = () => {
 };
 
 export default PerformanceMetrics;
+)))))))

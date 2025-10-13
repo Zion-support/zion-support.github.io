@@ -15,7 +15,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               <span>Page Optimized;</span>
             <p>Transform your business with our advanced page optimized solutions.;</p>

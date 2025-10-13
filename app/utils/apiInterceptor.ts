@@ -73,7 +73,7 @@ class ErrorHandler {/* TODO: Fix JSX expression */,}}}
 export interface RequestConfig {/* TODO: Fix JSX expression */,}}}
 export interface APIResponse<T = unknown> {/* TODO: Fix JSX expression */,}}
 export interface CacheEntry {/* TODO: Fix JSX expression */,}}}
-export class APIInterceptor {/* TODO: Fix JSX expression */,}}g: Partial<APIConfig> = {,}) {/* TODO: Fix JSX expression */,}headers: config.headers || {,},;
+export class APIInterceptor {/* TODO: Fix JSX expression */,}}g: Partial<APIConfig> = {,} {/* TODO: Fix JSX expression */,}headers: config.headers || {,},;
       interceptor,;
   s: config.interceptors || {,}}
     this.errorHandler = ErrorHandler.getInstance();
@@ -105,23 +105,18 @@ export class APIInterceptor {/* TODO: Fix JSX expression */,}}g: Partial<APIConf
       const,;
   fetchOptions: RequestInit = {/* TODO: Fix JSX expression */,}}
     confi,;
-  g: Partial<RequestConfig> = {,})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'GET' ,})
+  g: Partial<RequestConfig> = {,}: Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'GET' ,}
     body?: unknown,;
     confi,;
-  g: Partial<RequestConfig> = {,})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'POST', body })
+  g: Partial<RequestConfig> = {,}: Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'POST', body }
     body?: unknown,;
     confi,;
-  g: Partial<RequestConfig> = {,})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'PUT', body })
+  g: Partial<RequestConfig> = {,}: Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'PUT', body }
     confi,;
-  g: Partial<RequestConfig> = {,})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'DELETE' ,})
+  g: Partial<RequestConfig> = {,}: Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'DELETE' ,}
     body?: unknown,;
     confi,;
-  g: Partial<RequestConfig> = {,})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'PATCH', body })
+  g: Partial<RequestConfig> = {,}: Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'PATCH', body }
   /**;
    * Prepare request configuration;
    */;
@@ -134,13 +129,13 @@ export class APIInterceptor {/* TODO: Fix JSX expression */,}}g: Partial<APIConf
   private buildURL(confi);
   g: RequestConfig): string {/* TODO: Fix JSX expression */,}}`;
     let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
-    if (config.params) {/* TODO: Fix JSX expression */,}})`;
+    if (config.params) {/* TODO: Fix JSX expression */,}}`;
       url += `?${params.toString()}`;
   /**;
    * Build request headers;
    */;
   private buildHeaders(confi);
-  g: RequestConfig): Headers {/* TODO: Fix JSX expression */,}}Object.entries(config.headers || {)}).forEach(([key, value]) => {/* TODO: Fix JSX expression */,}})
+  g: RequestConfig): Headers {/* TODO: Fix JSX expression */,}}Object.entries(config.headers || {)}.forEach(([key, value]) => {/* TODO: Fix JSX expression */,}}
     return headers;
   }
   /**;

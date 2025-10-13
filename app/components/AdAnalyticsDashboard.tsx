@@ -65,7 +65,7 @@ interface AdAnalyticsDashboardProps {
   className?: string;
 }
 
-const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className = '' }) => {
+const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className = '' } => {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null);
   const [selectedPeriod, setSelectedPeriod] = useState('7d');
   const [isLoading, setIsLoading] = useState(true);
@@ -90,7 +90,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
           conversions: Math.floor(baseConversions / 7 * (Math.random() * 0.5 + 0.75)),
           spend: Math.floor(baseSpend / 7 * (Math.random() * 0.5 + 0.75))
         };
-      });
+      };
 
       const campaignPerformance = [
         {
@@ -180,7 +180,7 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0
-    }).format(amount);
+    }.format(amount);
   };
 
   const formatPercentage = (num: number) => {
@@ -458,4 +458,4 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
   );
 };
 
-export default AdAnalyticsDashboard;
+export default AdAnalyticsDashboard;)))

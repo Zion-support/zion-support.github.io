@@ -93,20 +93,20 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
             this.recordMetric('CLS', clsValue);
   private initializeObservers(): void {/* TODO: Fix JSX expression */}
             }
-          });
-        });
+          };
+        };
         // Largest Contentful Paint;
         this.observeEntry('largest-contentful-paint', entries => {/* TODO: Fix JSX expression */}
-          })
-        });
+          }
+        };
         // First Input Delay;
         this.observeEntry('first-input', entries => {/* TODO: Fix JSX expression */}
-          })
-        });
+          }
+        };
         // Cumulative Layout Shift;
         this.observeEntry('layout-shift', (entries) => {/* TODO: Fix JSX expression */}
             }
-          });
+          };
           if (clsValue > 0) {/* TODO: Fix JSX expression */}
           }
 
@@ -114,11 +114,11 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
     } catch (error) {}
       logger.error('Failed to initialize performance observers', error as Error);
         // Largest Contentful Paint;
-        this.observeEntry('largest-contentful-paint', entries => {/* TODO: Fix JSX expression */,)}})
-        })
+        this.observeEntry('largest-contentful-paint', entries => {/* TODO: Fix JSX expression */,)}}
+        }
         // First Input Delay;
-        this.observeEntry('first-input', entries => {/* TODO: Fix JSX expression */,)}})
-        })
+        this.observeEntry('first-input', entries => {/* TODO: Fix JSX expression */,)}}
+        }
         // Cumulative Layout Shift;
         this.observeEntry('layout-shift', (entries) => {/* TODO: Fix JSX expression */,}}
     } catch (error) {}logger.error('Failed to initialize performance observers', error as Error);
@@ -133,7 +133,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
           }
         }
 
-      observer.observe({ entryTypes: ['paint'] });
+      observer.observe({ entryTypes: ['paint'] };
       this.observers.push(observer);
     } catch (error) {}
       }
@@ -144,36 +144,36 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
         this.metrics.lcp = lastEntry.startTime;
         this.logMetric('lcp', lastEntry.startTime);
 
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] };
       this.observers.push(observer);
   private observePaint(nam,;)
           this.metrics.fid = (entry as any).processingStart - entry.startTime;
           this.logMetric('fid', this.metrics.fid);
         }
 
-      observer.observe({ entryTypes: ['first-input'] });
+      observer.observe({ entryTypes: ['first-input'] };
       this.observers.push(observer);
             clsValue += (entry as any).value;
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
+      };
+      observer.observe({/* TODO: Fix JSX expression */}
+  s: ['paint'] };
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */}
       }
   }
   private observeLCP(): void {/* TODO: Fix JSX expression */}
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+      };
+      observer.observe({/* TODO: Fix JSX expression */}
+  s: ['largest-contentful-paint'] };
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */}
       }
   }
   private observeFID(): void {/* TODO: Fix JSX expression */}
         }
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
+      };
+      observer.observe({/* TODO: Fix JSX expression */}
+  s: ['first-input'] };
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */}
       }
@@ -184,12 +184,12 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
         this.metrics.cls = clsValue;
         this.logMetric('cls', clsValue);
 
-      observer.observe({ entryTypes: ['layout-shift'] });
+      observer.observe({ entryTypes: ['layout-shift'] };
       this.observers.push(observer);
     } catch (error) {}
       }
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['first-input'] ,})
+      observer.observe({/* TODO: Fix JSX expression */,)}
+  s: ['first-input'] ,}
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
@@ -197,7 +197,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
         }
         this.metrics.cls = clsValue;
         this.logMetric('cls', clsValue);
-observer.observe({entryTypes: ['layout-shift'] ,)})
+observer.observe({entryTypes: ['layout-shift'] ,)}
       this.observers.push(observer);
     } catch (error) {}}
   }
@@ -228,7 +228,7 @@ observer.observe({entryTypes: ['layout-shift'] ,)})
           }
         }
 
-      observer.observe({ entryTypes: ['resource'] });
+      observer.observe({ entryTypes: ['resource'] };
       this.observers.push(observer);
     const duration = entry.responseEnd - entry.startTime;
     const size = entry.transferSize || 0;
@@ -309,9 +309,9 @@ observer.observe({entryTypes: ['layout-shift'] ,)})
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   }
   generateReport(): string {}
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+      };
+      observer.observe({/* TODO: Fix JSX expression */}
+  s: ['layout-shift'] };
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */}
       }
@@ -328,12 +328,12 @@ observer.observe({entryTypes: ['layout-shift'] ,)})
   private setupResourceTiming(): void {/* TODO: Fix JSX expression */}
           }
         }
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] });
+      };
+      observer.observe({/* TODO: Fix JSX expression */}
+  s: ['resource'] };
       this.observers.push(observer);
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['resource'] ,})
+      observer.observe({/* TODO: Fix JSX expression */,)}
+  s: ['resource'] ,}
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
@@ -361,7 +361,7 @@ observer.observe({entryTypes: ['layout-shift'] ,)})
     }
     // Send to analytics if available;
     if (typeof window !== 'undefined' && (window as any).gtag) {/* TODO: Fix JSX expression */}
-      });
+      };
     }
   }
   getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */}
@@ -377,3 +377,4 @@ Metrics: ${JSON.stringify(metrics, null, 2</div>
   }
 
 
+)

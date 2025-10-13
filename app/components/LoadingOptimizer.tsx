@@ -71,7 +71,7 @@ export function PreloadResources() {
       link.as = 'image';
       link.href = src;
       document.head.appendChild(link);
-    });
+    };
 
     // Preload critical fonts
     const fontLink = document.createElement('link');
@@ -101,7 +101,7 @@ export function LazyImage({
   alt: string;
   className?: string;
   placeholder?: string;
-}) {
+} {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = React.useRef<HTMLImageElement>(null);
@@ -114,8 +114,7 @@ export function LazyImage({
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
-    );
+      { threshold: 0.1 };
 
     if (imgRef.current) {
       observer.observe(imgRef.current);
@@ -144,4 +143,4 @@ export function LazyImage({
       )}
     </div>
   );
-}
+})))

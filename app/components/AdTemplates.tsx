@@ -51,7 +51,7 @@ interface AdTemplatesProps {
   className?: string;
 }
 
-const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
+const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' } => {
   const [templates, setTemplates] = useState<AdTemplate[]>([]);
   const [selectedTemplate, setSelectedTemplate] = useState<AdTemplate | null>(null);
   const [isCreating, setIsCreating] = useState(false);
@@ -154,7 +154,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
                          template.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          template.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesType && matchesSearch;
-  });
+  };
 
   const sortedTemplates = [...filteredTemplates].sort((a, b) => {
     switch (sortBy) {
@@ -169,7 +169,7 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
       default:
         return 0;
     }
-  });
+  };
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -546,4 +546,4 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
   );
 };
 
-export default AdTemplates;
+export default AdTemplates;)))

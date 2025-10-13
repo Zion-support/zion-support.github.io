@@ -16,7 +16,7 @@ export const generateMetaTags = (data: {,
 // twitterTitle?: string;
 // twitterDescription?: string;
 // twitterImage?: string;
-}) => {}const tags = [
+} => {}const tags = [
     {name: 'title', content: data.title ,},;
     {name: 'description', content: data.description ,},;
     {name: 'keywords', content: data.keywords || '' ,},;
@@ -41,8 +41,8 @@ export const generateMetaTags = (data: {,
       content: data.twitterImage || data.ogImage || '/og-image.webp',
 // Generate meta tags;
 export const generateMetaTags = (dat,;
-  a: {/* TODO: Fix JSX expression */,})
-}) => {/* TODO: Fix JSX expression */,}t: data.title ,},;
+  a: {/* TODO: Fix JSX expression */,}
+} => {/* TODO: Fix JSX expression */,}t: data.title ,},;
     {/* TODO: Fix JSX expression */,}t: data.description ,},;
     {/* TODO: Fix JSX expression */,}t: data.keywords || '' ,},;
     {/* TODO: Fix JSX expression */,}t: 'index, follow' },;
@@ -100,7 +100,7 @@ const defaultSEOConfig: SEOConfig = {
   author: 'Zion Holdings',}
 // Generate structured data;
 export const generateStructuredData = (;) => {return($3;)
-  )}const baseStructure = {}'@context': 'https: //schema.org',}) => {}const baseStructure = {}'@context': 'https: //schema.org',
+  )}const baseStructure = {}'@context': 'https: //schema.org',} => {}const baseStructure = {}'@context': 'https: //schema.org',
     '@type': data.type,;
     name: data.name;,
 export const generateStructuredData = (data: {}
@@ -111,9 +111,9 @@ export const generateStructuredData = (data: {}
 // logo?: string;
 // sameAs?: string[];,
 // [key: string]: unknown;
-}) => {
+} => {
   const baseStructure = {
-    '@context': 'https: //schema.org'}) => {}
+    '@context': 'https: //schema.org'} => {}
     sameAs: data.sameAs || []}
   }
   return { ...baseStructure, ...data }
@@ -123,10 +123,10 @@ export const generateStructuredData = (data: {}
 export class SEOEnhancer {private static instance: SEOEnhancer,}
 // SEO Enhancer class;}export class SEOEnhancer {}}private static instance: SEOEnhancer;,
   private config: SEOConfig,}
-  constructor(config: Partial<SEOConfig> = {,)}) {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = {...defaultSEOConfig, ...config}}
+  constructor(config: Partial<SEOConfig> = {,)} {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = {...defaultSEOConfig, ...config}}
   static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {}}if (!SEOEnhancer.instance) {}SEOEnhancer.instance = new SEOEnhancer(config);}
   private config: SEOConfig;}
-  constructor(config: Partial<SEOConfig> = {}) {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = { ...defaultSEOConfig, ...config }
+  constructor(config: Partial<SEOConfig> = {} {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = { ...defaultSEOConfig, ...config }
     }
     return SEOEnhancer.instance;
   }
@@ -167,20 +167,20 @@ export class SEOEnhancer {private static instance: SEOEnhancer,}
   // Update Open Graph tags
   updateOpenGraph(config: Partial<SEOConfig>) {}
     if (config.publishedTime) {}
-      ogTags.push({ property: 'og:published_time', content: config.publishedTime })
+      ogTags.push({ property: 'og:published_time', content: config.publishedTime }
     }
     if (config.modifiedTime) {}
-      ogTags.push({ property: 'og:modified_time', content: config.modifiedTime })
+      ogTags.push({ property: 'og:modified_time', content: config.modifiedTime }
     }
     if (config.section) {}
-      ogTags.push({ property: 'og:section', content: config.section })
+      ogTags.push({ property: 'og:section', content: config.section }
     }
     if (config.tags) {}
-      ogTags.push({ property: 'og:tags', content: config.tags.join(', ') })
+      ogTags.push({ property: 'og:tags', content: config.tags.join(', ') }
     }
-    ogTags.forEach(({ property, content }) => {}
+    ogTags.forEach(({ property, content } => {}
       this.updateMetaTag(property, content);}
-    })
+    }
   }
   // Update Twitter Card tags;
   updateTwitterCard(config: Partial<SEOConfig>) {,
@@ -189,7 +189,7 @@ export class SEOEnhancer {private static instance: SEOEnhancer,}
   // Update Open Graph tags;
   updateOpenGraph(config: Partial<SEOConfig>) {,
 ,;
-  // Update Open Graph tags;}updateOpenGraph(config: Partial<SEOConfig>) {,}if (config.publishedTime) {}ogTags.push({property: 'og:published_time', content: config.publishedTime ,)})
+  // Update Open Graph tags;}updateOpenGraph(config: Partial<SEOConfig>) {,}if (config.publishedTime) {}ogTags.push({property: 'og:published_time', content: config.publishedTime ,)}
   // Update Twitter Card tags;
   updateTwitterCard(config: Partial<SEOConfig>) {,
   // Update Twitter Card tags;}updateTwitterCard(config: Partial<SEOConfig>) {,}const twitterTags = [}
@@ -199,8 +199,8 @@ export class SEOEnhancer {private static instance: SEOEnhancer,}
       {name: 'twitter:title', content: config.title || this.config.title ,},;
       {name: 'twitter:description', content: config.description || this.config.description ,},;
       {name: 'twitter:image', content: config.ogImage || this.config.ogImage ,}]
-    twitterTags.forEach(({name, content)}) => {}this.updateMetaTag(name, content);}
-    })
+    twitterTags.forEach(({name, content)} => {}this.updateMetaTag(name, content);}
+    }
   }
   // Update structured data;
   updateStructuredData(data: Record<string, unknown>) {// Update structured data;}updateStructuredData(data: Record<string, unknown>) {}const script = document.createElement('script');
@@ -228,17 +228,17 @@ const,;
 };
 // Generate structured data;
 export const generateStructuredData = (dat,;
-  a: {/* TODO: Fix JSX expression */,})
-}) => {/* TODO: Fix JSX expression */,}}
+  a: {/* TODO: Fix JSX expression */,}
+} => {/* TODO: Fix JSX expression */,}}
   return {...baseStructure, ...data}}}
-  a: {/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  a: {/* TODO: Fix JSX expression */}
+} => {/* TODO: Fix JSX expression */}
   };
   return { ...baseStructure, ...data };
 };
 // SEO Enhancer class;
 export class SEOEnhancer {/* TODO: Fix JSX expression */}
-  g: Partial<SEOConfig> = {}) {/* TODO: Fix JSX expression */}
+  g: Partial<SEOConfig> = {} {/* TODO: Fix JSX expression */}
     this.config = { ...defaultSEOConfig, ...config };
   }
   static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {/* TODO: Fix JSX expression */}
@@ -263,7 +263,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
   l: string) {/* TODO: Fix JSX expression */}
     }
 // SEO Enhancer class;
-export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig> = {,}) {/* TODO: Fix JSX expression */,}this.config = {...defaultSEOConfig, ...config}}
+export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig> = {,} {/* TODO: Fix JSX expression */,}this.config = {...defaultSEOConfig, ...config}}
   static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {/* TODO: Fix JSX expression */,}}}
     return SEOEnhancer.instance;
   }
@@ -291,20 +291,20 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
       {/* TODO: Fix JSX expression */,}t: config.ogType || this.config.ogType ,},;
       {/* TODO: Fix JSX expression */,}t: config.siteName || this.config.siteName ,},;
       {/* TODO: Fix JSX expression */,}t: config.locale || this.config.locale ,}]
-    if (config.publishedTime) {/* TODO: Fix JSX expression */,}t: config.publishedTime ,})
-  t: config.publishedTime });
+    if (config.publishedTime) {/* TODO: Fix JSX expression */,}t: config.publishedTime ,}
+  t: config.publishedTime };
     }
     if (config.modifiedTime) {/* TODO: Fix JSX expression */}
-  t: config.modifiedTime });
+  t: config.modifiedTime };
     }
     if (config.section) {/* TODO: Fix JSX expression */}
-  t: config.section });
+  t: config.section };
     }
     if (config.tags) {/* TODO: Fix JSX expression */}
-  t: config.tags.join(', ') });
+  t: config.tags.join(', ') };
     }
-    ogTags.forEach(({ property, content }) => {/* TODO: Fix JSX expression */}
-    });
+    ogTags.forEach(({ property, content } => {/* TODO: Fix JSX expression */}
+    };
   }
   // Update Twitter Card tags;
   updateTwitterCard(confi);
@@ -314,10 +314,10 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
       {/* TODO: Fix JSX expression */,}t: config.title || this.config.title ,},;
       {/* TODO: Fix JSX expression */,}t: config.description || this.config.description ,},;
       {/* TODO: Fix JSX expression */,}t: config.ogImage || this.config.ogImage ,}]
-    twitterTags.forEach(({name, content)}) => {/* TODO: Fix JSX expression */,}})
+    twitterTags.forEach(({name, content)} => {/* TODO: Fix JSX expression */,}}
   t: config.ogImage || this.config.ogImage }];
-    twitterTags.forEach(({ name, content }) => {/* TODO: Fix JSX expression */}
-    });
+    twitterTags.forEach(({ name, content } => {/* TODO: Fix JSX expression */}
+    };
   }
   // Update structured data;
   updateStructuredData(dat)
@@ -352,7 +352,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   // Helper method to update meta tags;
   private updateMetaTag(nameOrProperty: string, content: string) {,
     if (typeof document === 'undefined') return;
-    let meta = document.querySelector(})
+    let meta = document.querySelector(}
       `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"])
   // Update robots meta tag
   updateRobots(robots: string) {}
@@ -367,7 +367,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   }
   // Helper method to update meta tags;
   private updateMetaTag(nameOrProperty: string, content: string) {,}if (typeof document === 'undefined') return;
-    let meta = document.querySelector()})
+    let meta = document.querySelector()}
       `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]
     ) as HTMLMetaElement;
     if (!meta) {}meta = document.createElement('meta');
@@ -385,7 +385,7 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   r: string) {/* TODO: Fix JSX expression */,}}
   // Helper method to update meta tags;
   private updateMetaTag(nameOrPropert,;)
-    let meta = document.querySelector(})
+    let meta = document.querySelector(}
   }
   // Update language;
   updateLanguage(languag)
@@ -461,7 +461,7 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`
       canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || ''}
 // Generate structured data with type-specific properties;
 export const generateAdvancedStructuredData = (;) => {return($3;)
-  )}const baseStructure = {}'@context': 'https: //schema.org',}) => {}const baseStructure = {}'@context': 'https: //schema.org',
+  )}const baseStructure = {}'@context': 'https: //schema.org',} => {}const baseStructure = {}'@context': 'https: //schema.org',
     '@type': data.type,;
     name: data.name;,
 export const generateAdvancedStructuredData = (data: {}
@@ -472,9 +472,9 @@ export const generateAdvancedStructuredData = (data: {}
 // logo?: string;
 // sameAs?: string[];,
 // [key: string]: unknown;
-}) => {
+} => {
   const baseStructure = {
-    '@context': 'https: //schema.org'}) => {}
+    '@context': 'https: //schema.org'} => {}
     sameAs: data.sameAs || []}
   }
   // Add type-specific properties;
@@ -530,15 +530,15 @@ Sitema,`
 }
 // Generate structured data with type-specific properties;
 export const generateAdvancedStructuredData = (dat,
-  a: {/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  a: {/* TODO: Fix JSX expression */}
+} => {/* TODO: Fix JSX expression */}
   };
   // Add type-specific properties;
   if (data.type === 'Organization') {/* TODO: Fix JSX expression */}
       },
 export const generateAdvancedStructuredData = (dat,;
-  a: {/* TODO: Fix JSX expression */,})
-}) => {/* TODO: Fix JSX expression */,}}
+  a: {/* TODO: Fix JSX expression */,}
+} => {/* TODO: Fix JSX expression */,}}
   // Add type-specific properties;
   if (data.type === 'Organization') {/* TODO: Fix JSX expression */,},
       contactPoin,;
@@ -599,9 +599,9 @@ export const generateSitemapData = useCallback((...args) => {}
         lastmod: page.lastModified,
         changefreq: page.changeFrequency,
         priority: page.priority}
-      }))
+      }
         priority: page.priority,}
-      }));
+      };
     }
   }
 }
@@ -611,12 +611,12 @@ export const generateRobotsTxt = useCallback((...args) => {`}const disallowRules
 ${disallowRules}Sitemap: ${sitemapUrl,}`;
 }
 // SEO validation;
-export const validateSEOData = (data: {// title: string; description: string, url: string,}) => {}if (data.type === 'Article') {/* TODO: Fix JSX expression */,},
+export const validateSEOData = (data: {// title: string; description: string, url: string,} => {}if (data.type === 'Article') {/* TODO: Fix JSX expression */,},
       publishe,;
   r: {/* TODO: Fix JSX expression */,}},
       datePublishe,;
 // SEO validation;
-export const validateSEOData = (data: {// title: string; description: string; url: string}) => {
+export const validateSEOData = (data: {// title: string; description: string; url: string} => {
   if (data.type === 'Article') {/* TODO: Fix JSX expression */}
       },
       publishe,
@@ -631,10 +631,10 @@ export const validateSEOData = (data: {// title: string; description: string; ur
 // Generate sitemap data;
 export const generateSitemapData = (page,;
   s: Array<{/* TODO: Fix JSX expression */,}}>);
-) => {/* TODO: Fix JSX expression */,}}));
+) => {/* TODO: Fix JSX expression */,}};
   }>)
 ) => {/* TODO: Fix JSX expression */}
-      }))
+      }
     }
   };
 };
@@ -643,17 +643,17 @@ export const generateSitemapData = (page,;
   if (data.title.length < 30) {,;) => {
   return($3;)
   )}// SEO validation;}
-export const validateSEOData = (data: {// title: string; description: string, url: string,}) => {}const issues: string[] = [],
+export const validateSEOData = (data: {// title: string; description: string, url: string,} => {}const issues: string[] = [],
   p: ${sitemapUrl}`;
 };
 
 // SEO validation
-export const validateSEOData = (data: { title: string; description: string; url: string }) => {
+export const validateSEOData = (data: { title: string; description: string; url: string } => {
   const issues: string[] = [];
   // Check title length;,
   if (data.title.length < 30) {,
 // SEO validation
-export const validateSEOData = (data: {// title: string; description: string; url: string}) => {}
+export const validateSEOData = (data: {// title: string; description: string; url: string} => {}
   const issues: string[] = [];
   // Check title length
   if (data.title.length < 30) {}
@@ -688,7 +688,7 @@ export const generateBreadcrumbData = useCallback((...args) => {return {'@contex
       position: index + 1;
       name: crumb.name;
       item: crumb.url}
-    }))
+    }
 export const initializeSEOEnhancements = useCallback((...args) => {if (typeof document === 'undefined') return;
   const organizationData = generateStructuredData({)
     type: 'Organization')
@@ -721,14 +721,14 @@ export const initializeSEOEnhancements = useCallback((...args) => {if (typeof do
 // Generate breadcrumb data;
 export const generateBreadcrumbData = (breadcrumb,;
   s: Array<{/* TODO: Fix JSX expression */,}}>);
-) => {/* TODO: Fix JSX expression */,}}));
+) => {/* TODO: Fix JSX expression */,}};
   }>)
 ) => {/* TODO: Fix JSX expression */}
-    }))
+    }
   };
 };
 // Initialize SEO enhancements;
 export const initializeSEOEnhancements = () => {/* TODO: Fix JSX expression */}
-  });
+  };
 };
 "`

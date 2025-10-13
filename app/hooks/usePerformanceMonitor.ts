@@ -1,6 +1,6 @@
 
             value: Math.round(loadTime)
-          });
+          };
 
         }
 
@@ -25,13 +25,13 @@
               event_category: 'Performance,
               event_label: resource.name,
               value: Math.round(loadTime)
-            });
+            };
 
           }
 
         }
 
-      });
+      };
 
     }
 
@@ -55,7 +55,7 @@
             event_category: 'Performance,
             event_label: 'Memory Usage,
             value: memoryUsage.used
-          });
+          };
 
         }
 
@@ -121,3 +121,4 @@ export const usePerformanceMonitor = () => {useEffect(() => {
     // Run monitoring after page load;
     if (document.readyState === 'complete') {monitorWebVitals();}else {window.addEventListener('load', monitorWebVitals);}}return () => {window.removeEventListener('load', monitorWebVitals);}}, []);
 }
+))

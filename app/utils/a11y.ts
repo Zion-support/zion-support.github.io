@@ -57,7 +57,7 @@ export function isKeyboardAccessible(element: HTMLElement): boolean {,}
  */;
 export function makeKeyboardAccessible(;)
   element: HTMLElement,
-    tabindex?: number;}} = {}): () => void {}}const {role = 'button', tabindex = 0}}= options;
+    tabindex?: number;}} = {}: () => void {}}const {role = 'button', tabindex = 0}}= options;
 element.setAttribute('role', role);
   element.setAttribute('tabindex', tabindex.toString());
 const handleKeyDown = (;
@@ -102,8 +102,8 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
   skipLink.style.padding = '8px';
   skipLink.style.textDecoration = 'none';
   skipLink.style.zIndex = '100';
-skipLink.addEventListener('focus', () => {skipLink.style.top = '0'}})
-skipLink.addEventListener('blur', () => {skipLink.style.top = '-40px'}})
+skipLink.addEventListener('focus', () => {skipLink.style.top = '0'}}
+skipLink.addEventListener('blur', () => {skipLink.style.top = '-40px'}}
 return skipLink;
 }
 /**;
@@ -117,7 +117,7 @@ export function prefersDarkMode(): boolean {return window.matchMedia('(prefers-c
 /**;
  * Get ARIA label for form validation error;
  */;
-export function getAriaInvalid(hasError: boolean): Record<string, string> {return {}}...(hasError && {'aria-describedby': generateId('error')})
+export function getAriaInvalid(hasError: boolean): Record<string, string> {return {}}...(hasError && {'aria-describedby': generateId('error')}
   }
 }
 /**;

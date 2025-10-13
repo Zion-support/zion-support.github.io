@@ -76,14 +76,14 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   enableScreenReaderSupport = true,
   enableHighContrast = false,
   enableFocusManagement = true
-}) => {
+} => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: enableHighContrast,
     reducedMotion: false,
     fontSize: 'medium',
     screenReader: enableScreenReaderSupport,
     keyboardNavigation: enableKeyboardNavigation
-  });
+  };
 
   useEffect(() => {
     // Apply accessibility settings
@@ -147,7 +147,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   }, [settings.keyboardNavigation]);
 
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
-    setSettings(prev => ({ ...prev, [key]: value }));
+    setSettings(prev => ({ ...prev, [key]: value };
   };
 
   return (
@@ -251,3 +251,4 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 };
 
 export default EnhancedAccessibility;
+))))

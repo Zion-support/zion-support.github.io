@@ -1,22 +1,11 @@
 
 export const PageLoader: React.FC = () => {
 import React from 'react';
-<<<<<<< HEAD
 
 export default function LoadingStates() {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
   return (
     <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
       <div className="text-center">
-<<<<<<< HEAD
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto mb-4"></div>
-        <p className="text-lg">Loading...</p>
-      </div>
-    </div>
-  );
-}
-=======
         <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
           <Loader2 className="w-8 h-8 text-slate-900 animate-spin" />
         </div>
@@ -32,7 +21,7 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
   type = 'loading', 
   message, 
   variant = 'futuristic' 
-}) => {
+} => {
   const getIcon = () => {
     switch (type) {
       case 'ai':
@@ -182,7 +171,7 @@ interface LoadingSpinnerProps {
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   className = '' 
-}) => {
+} => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-6 h-6',
@@ -221,7 +210,7 @@ export const PageLoader: React.FC = () => (
   </div>
 );
 
-export const ServiceLoader: React.FC<{ service: string }> = ({ service }) => {
+export const ServiceLoader: React.FC<{ service: string }> = ({ service } => {
   const serviceIcons = {
     ai: Brain,
     cloud: Cloud,
@@ -246,7 +235,7 @@ export const ServiceLoader: React.FC<{ service: string }> = ({ service }) => {
   );
 };
 
-export const CardLoader: React.FC<{ count?: number }> = ({ count = 3 }) => (
+export const CardLoader: React.FC<{ count?: number }> = ({ count = 3 } => (
   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
     {[...Array(count)].map((_, i) => (
       <div key={i} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 animate-pulse">
@@ -264,7 +253,7 @@ export const CardLoader: React.FC<{ count?: number }> = ({ count = 3 }) => (
 export const TableLoader: React.FC<{ rows?: number; cols?: number }> = ({ 
   rows = 5, 
   cols = 4 
-}) => (
+} => (
   <div className="overflow-hidden rounded-lg border border-gray-700/50 animate-pulse">
     <div className="bg-slate-800/50 p-4">
       <div className="grid gap-4" style={{ gridTemplateColumns: `repeat(${cols}, 1fr)` }}>
@@ -285,14 +274,14 @@ export const TableLoader: React.FC<{ rows?: number; cols?: number }> = ({
   </div>
 );
 
-export const ButtonLoader: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => (
+export const ButtonLoader: React.FC<{ text?: string }> = ({ text = 'Loading...' } => (
   <div className="flex items-center justify-center">
     <LoadingSpinner size="sm" className="mr-2" />
     <span>{text}</span>
   </div>
 );
 
-export const InlineLoader: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => (
+export const InlineLoader: React.FC<{ text?: string }> = ({ text = 'Loading...' } => (
   <div className="flex items-center text-gray-400 text-sm">
     <LoadingSpinner size="sm" className="mr-2" />
     <span>{text}</span>
@@ -301,7 +290,7 @@ export const InlineLoader: React.FC<{ text?: string }> = ({ text = 'Loading...' 
 
 export const FullScreenLoader: React.FC<{ message?: string }> = ({ 
   message = 'Loading...' 
-}) => (
+} => (
   <div className="fixed inset-0 bg-slate-900/95 backdrop-blur-sm z-50 flex items-center justify-center">
     <div className="text-center">
       <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
@@ -317,12 +306,12 @@ export const SkeletonLoader: React.FC<{
   width?: string | number;
   height?: string | number;
   className?: string;
-}> = ({ width = '100%', height = '1rem', className = '' }) => (
+}> = ({ width = '100%', height = '1rem', className = '' } => (
   <div
     className={`bg-gray-700/50 rounded animate-pulse ${className}`}
     style={{ width, height }}
-  />
+  /></div>
 );
 
 export default PageLoader;
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
+)))))))))

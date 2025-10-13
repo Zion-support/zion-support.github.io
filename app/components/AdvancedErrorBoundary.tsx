@@ -32,7 +32,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     this.setState({
       error,
       errorInfo,
-    });
+    };
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -67,7 +67,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     //   method: 'POST',
     //   headers: { 'Content-Type': 'application/json' },
     //   body: JSON.stringify(errorData)
-    // });
+    // };
   };
 
   handleReset = () => {
@@ -76,7 +76,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       error: undefined, 
       errorInfo: undefined,
       errorId: undefined 
-    });
+    };
   };
 
   handleReportError = () => {
@@ -187,4 +187,4 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default AdvancedErrorBoundary;
+export default AdvancedErrorBoundary;)))

@@ -1,17 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-export default function DemoPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Demo</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-=======
 const DemoPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -20,14 +8,14 @@ const DemoPage: React.FC = () => {
     phone: '',
     service: '',
     message: ''
-  });
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    };
   };
 
     },
@@ -142,7 +130,7 @@ export default function Demo() {
 const DemoPage: React.FC = () => {
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>Demo - Zion Tech Group</title>
         <meta name="description" content="Demo services from Zion Tech Group" />
       </Helmet>
@@ -159,7 +147,7 @@ const DemoPage: React.FC = () => {
       interests: prev.interests.includes(interest)
         ? prev.interests.filter(i => i !== interest)
         : [...prev.interests, interest]
-    }));
+    };
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -171,7 +159,7 @@ const DemoPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>Request Demo - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Schedule a personalized demo of our AI and IT solutions. See how Zion Tech Group can transform your business." />
         <meta name="keywords" content="AI demo, IT demo, technology demonstration, business consultation, AI solutions demo" />
@@ -427,7 +415,6 @@ const DemoPage: React.FC = () => {
       
       <Footer />
     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
   );
 };
 
@@ -491,7 +478,7 @@ export default DemoPage;
                   </ul>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 bg-gradient-to-r from-cyan-600 to-purple-600">
+        <section className="py-16 px-4 bg-gradient-to-r from-cyan-600 to-purple-600"></section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-4">Ready to See More?</h2>
             <p className="text-xl text-gray-100 mb-8">
@@ -511,3 +498,4 @@ export default DemoPage;
     </>
 );
 }
+}))))

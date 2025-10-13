@@ -106,7 +106,7 @@ export default function ZionAIEmailAnalyzer() {
 
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>Zion AI Email Analyzer - AI-Powered Email Analysis | Zion Tech Group</title>
         <meta
           name="description"
@@ -361,4 +361,4 @@ export default function ZionAIEmailAnalyzer() {
       </div>
     </>
   );
-}
+}})

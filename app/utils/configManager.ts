@@ -107,7 +107,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */,}}overrides: Partial<
     valu,;
   e: AppConfig[K][NK]),
     value?: AppConfig[K][NK]);
-  ): void {/* TODO: Fix JSX expression */,}}this.config[key] = Object.assign({)}, currentValue, {/* TODO: Fix JSX expression */,})
+  ): void {/* TODO: Fix JSX expression */,}}this.config[key] = Object.assign({)}, currentValue, {/* TODO: Fix JSX expression */,}
   /**;
    * Get default value for a config key;
    */;

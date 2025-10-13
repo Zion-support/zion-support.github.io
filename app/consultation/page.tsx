@@ -1,4 +1,4 @@
-  });
+  };
 
   const consultationTypes: ConsultationType[] = [
     {}
@@ -78,7 +78,7 @@
         'Competitive advantages
       ]
       ],
-      popular: false});)}
+      popular: false};)}
 
 const ConsultationPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -90,7 +90,7 @@ const ConsultationPage: React.FC = () => {
     message: '',
     preferredTime: '',
     budget: ''
-  });
+  };
 
   const services = [
     {
@@ -124,7 +124,7 @@ const ConsultationPage: React.FC = () => {
       role: 'AI & Machine Learning Consultant,
       experience: '15+ years,
       expertise: ['AI Strategy', 'Machine Learning', 'Data Science],
-      image: '/images/experts/sarah-chen.jpg});)
+      image: '/images/experts/sarah-chen.jpg};)
 },
     {
       name: 'Michael Rodriguez,
@@ -137,7 +137,7 @@ const ConsultationPage: React.FC = () => {
       role: 'Cybersecurity Consultant,
       experience: '10+ years,
       expertise: ['Security Audits', 'Compliance', 'Risk Management],
-      image: '/images/experts/alex-thompson.jpg});)
+      image: '/images/experts/alex-thompson.jpg};)
 }
 
   ];
@@ -145,7 +145,7 @@ const ConsultationPage: React.FC = () => {
   const handleBooking = (typeId: string) => {;
     setSelectedType(typeId);
 
-    console.log(`Booking consultation: ${typeId});
+    console.log(`Booking consultation: ${typeId};
 
     }
 
@@ -158,7 +158,7 @@ const ConsultationPage: React.FC = () => {
     setFormData(prev => ({}
       ...prev,
       [name]: value
-    }));
+    };
 
   };
 
@@ -177,13 +177,13 @@ const PagePage: React.FC = () => {}
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
+    };
   };
 
   return (
 
     <>
-      <Helmet>
+      </><Helmet>
         <title>Consultation - Zion Tech Group | Expert AI & IT Consulting</title>
         <meta name="description" content="Get expert consultation on AI implementation, digital transformation, and IT strategy. Free discovery calls and comprehensive planning sessions available. />
         <meta name="keywords" content="AI consultation, IT consulting, digital transformation, technology strategy, business consulting />
@@ -578,7 +578,7 @@ const PagePage: React.FC = () => {}
       currentChallenges: prev.currentChallenges.includes(challenge)
         ? prev.currentChallenges.filter(c => c !== challenge)
         : [...prev.currentChallenges, challenge]
-    }));
+    };
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -589,7 +589,7 @@ const PagePage: React.FC = () => {}
 
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>Free Consultation - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Get a free consultation with our AI and IT experts. Discover how we can help transform your business with cutting-edge technology." />
         <meta name="keywords" content="free consultation, AI consulting, IT consulting, business transformation, technology strategy" />
@@ -941,3 +941,4 @@ export default ConsultationPage;      <section className="py-16 px-4>
 
 export default PagePage;
 export default ConsultationPage;
+)))

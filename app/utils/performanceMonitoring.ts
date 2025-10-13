@@ -19,7 +19,7 @@ export const getMetrics = (): Record<string, MetricData> => {/* TODO: Fix JSX ex
   result: Record<string, MetricData> = {};
   simpleMetrics.forEach((value, key) => {/* TODO: Fix JSX expression */}
     result[key] = { ...value };
-  });
+  };
   return result;
 };
 export const clearMetrics = () => {/* TODO: Fix JSX expression */}
@@ -34,11 +34,11 @@ export const measureAsyncFunction = async <T>(nam,
 };
 export const getPerformanceScore = (): number => {/* TODO: Fix JSX expression */}
     }
-  });
+  };
   const sum = scores.reduce((a: number, b: number) => a + b, 0);
   return Math.round(sum / scores.length);
 };
-export const getMetrics = (): Record<string, MetricData> => {/* TODO: Fix JSX expression */,}result: Record<string, MetricData> = {}simpleMetrics.forEach((value, key) => {/* TODO: Fix JSX expression */,}result[key] = {...value}})
+export const getMetrics = (): Record<string, MetricData> => {/* TODO: Fix JSX expression */,}result: Record<string, MetricData> = {}simpleMetrics.forEach((value, key) => {/* TODO: Fix JSX expression */,}result[key] = {...value}}
   return result;
 export const clearMetrics = () => {/* TODO: Fix JSX expression */,}}
 export const measureFunction = <T>(nam,;

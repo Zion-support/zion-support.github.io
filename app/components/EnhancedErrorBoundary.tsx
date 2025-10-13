@@ -43,7 +43,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.setState({
       error,
       errorInfo
-    });
+    };
 
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
@@ -51,7 +51,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
 
     // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
+    // Example: errorReportingService.captureException(error, { extra: errorInfo };
   }
 
   handleRetry = () => {
@@ -59,21 +59,21 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null
-    });
+    };
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-    this.setState({ error, errorInfo });
+    this.setState({ error, errorInfo };
 
     // Log to analytics service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.message,
         fatal: false,
-      });
+      };
     }
   }
 
@@ -163,7 +163,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         error: null,
         errorInfo: null,
         errorId: '',
-      })
+      }
     }
   }
 
@@ -427,7 +427,7 @@ interface ErrorFallbackProps {
   errorInfo?: ErrorInfo;
 }
 
-const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, errorInfo }) => {
+const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, errorInfo } => {
   const handleRefresh = () => {
     window.location.reload();
   };
@@ -502,3 +502,4 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, errorInfo }) => {
 }
 
 export default EnhancedErrorBoundary;
+})))))))))

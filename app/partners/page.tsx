@@ -10,7 +10,7 @@ interface Partner {}
 
   website?: string;
 
-  tier: 'strategic' | 'preferred' | 'certified});)
+  tier: 'strategic' | 'preferred' | 'certified};)
 }
 
 const PartnersPage: React.FC = () => {}
@@ -30,7 +30,7 @@ const PartnersPage: React.FC = () => {}
       website: 'https://aws.amazon.com,
       tier: 'strategic
     },
-      tier: 'strategic});)},
+      tier: 'strategic};)},
     {
       name: 'Google Cloud,
       logo: '/images/partners/google-cloud.png,
@@ -52,7 +52,7 @@ const PartnersPage: React.FC = () => {}
       description: 'Customer relationship management and business automation,
       description: 'Customer relationship management and business automation platform',      category: 'CRM & Automation,
       website: 'https://salesforce.com,
-      tier: 'preferred});)
+      tier: 'preferred};)
 },
     {
       name: 'Oracle,
@@ -60,7 +60,7 @@ const PartnersPage: React.FC = () => {}
       description: 'Database solutions and enterprise applications,
       category: 'Database & Enterprise,
       website: 'https://oracle.com,
-      tier: 'preferred});)
+      tier: 'preferred};)
 },
     {
       name: 'ServiceNow,
@@ -68,7 +68,7 @@ const PartnersPage: React.FC = () => {}
       description: 'IT service management and workflow automation,
       category: 'IT Management,
       website: 'https://servicenow.com,
-      tier: 'certified});)
+      tier: 'certified};)
 },
     {
       name: 'Splunk,
@@ -271,7 +271,7 @@ const PartnersPage: React.FC = () => {
                     </button>
                   </div>
                 );
-              })}
+              }}
             </div>
           </div>
         </section>
@@ -323,7 +323,7 @@ const PartnersPage: React.FC = () => {
       website: 'https://aws.amazon.com',
       tier: 'strategic'
     },
-      tier: 'strategic'});;)
+      tier: 'strategic'};;)
 },
     {}
       name: 'Google Cloud',
@@ -348,7 +348,7 @@ const PartnersPage: React.FC = () => {
       description: 'Customer relationship management and business automation platform',
       category: 'CRM & Automation',
       website: 'https://salesforce.com',
-      tier: 'preferred'});;)
+      tier: 'preferred'};;)
 },
     {}
       name: 'Splunk',
@@ -368,14 +368,14 @@ const PartnersPage: React.FC = () => {
 
   const getTierInfo = (tier: string) => {;;
 
-    return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]});)
+    return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]};)
 };
 
 const PagePage: React.FC = () => {}
   return (
 
     <>
-      <Helmet>
+      </><Helmet>
         <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
         <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions. />
         <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions />
@@ -454,7 +454,7 @@ const PagePage: React.FC = () => {}
                 return (
 
     <>
-      <div></div>
+      </><div></div>
                     <div></div>
                       <div></div>
                         <di></di>{partner.name.charAt(0);</div>}
@@ -480,7 +480,7 @@ const PagePage: React.FC = () => {}
                   </div>
                 );
 
-              })}
+              }}
 
             </div>
           </div>
@@ -696,7 +696,7 @@ const PagePage: React.FC = () => {}
                     <li>• Priority support</li>
                     {tier.name === 'Platinum' && (
                       <>
-                        <li>• Dedicated success manager</li>
+                        </><li>• Dedicated success manager</li>
                         <li>• Custom integration support</li>
                         <li>• Revenue sharing</li>
                       </>

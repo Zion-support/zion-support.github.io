@@ -55,7 +55,7 @@ export class ResourceErrorHandler {
 
   private handleFetchError(url: string, status: number): void {
     if (url.includes('res.cloudinary.com') && url.includes('dpfhynunl')) {
-      console.warn(`Cloudinary fetch failed (${status}): ${url}`);
+      console.warn(`Cloudinary fetch failed (${status}: ${url}`);
       this.failedResources.add(url);
     }
   }
@@ -73,4 +73,4 @@ export class ResourceErrorHandler {
 export const resourceErrorHandler = ResourceErrorHandler.getInstance();
 
 // Export for use in components
-export default resourceErrorHandler;
+export default resourceErrorHandler;)

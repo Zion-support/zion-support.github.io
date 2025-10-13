@@ -161,7 +161,7 @@ export default function CybersecuritySolutions() {
               </div>
 const CybersecuritySolutionsPage: React.FC = () => {,
   return(<>)
-      <Helmet />
+      </><Helmet />
         <title>Cybersecurity Solutions - Zion Tech Group</title>
         <meta name="description" content="Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management." />
         <meta name="keywords" content="cybersecurity solutions, threat detection, vulnerability assessment, security monitoring, compliance management, data protection" />
@@ -257,3 +257,4 @@ const CybersecuritySolutionsPage: React.FC = () => {,
       </div>
     </>
   );};
+}}))

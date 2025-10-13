@@ -281,7 +281,7 @@ const Navigation: React.FC = () => {,
                 Contact;
               </Link>
               
-              {/* Mobile Contact Info */} <div className="border-t border-white/10 pt-3 mt-3">
+              {/* Mobile Contact Info */} <div className="border-t border-white/10 pt-3 mt-3"></div>
                 <a href="tel: +13024640950" className="flex items-center text-cyan-400 hover:text-cyan-300 px-3 py-2 rounded-md text-base font-medium">,
                   <Phone className="w-4 h-4 mr-2" />
                   +1 302 464 0950;
@@ -289,3 +289,4 @@ const Navigation: React.FC = () => {,
                 <a href="mailto: kleber@ziontechgroup.com" className="flex items-center text-cyan-400 hover:text-cyan-300 px-3 py-2 rounded-md text-base font-medium">,
                   <Mail className="w-4 h-4 mr-2" />
                   kleber@ziontechgroup.com;
+}}}}}))))))))))

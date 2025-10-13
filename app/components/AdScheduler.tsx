@@ -40,7 +40,7 @@ interface AdSchedulerProps {
   className?: string;
 }
 
-const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
+const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' } => {
   const [scheduledAds, setScheduledAds] = useState<ScheduledAd[]>([]);
   const [isCreating, setIsCreating] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
@@ -62,7 +62,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
     priority: 'medium' as 'low' | 'medium' | 'high',
     budget: 0,
     targetAudience: ''
-  });
+  };
 
   // Mock data
   useEffect(() => {
@@ -110,7 +110,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
   const filteredSchedules = scheduledAds.filter(schedule => {
     const matchesFilter = filter === 'all' || schedule.status === filter;
     return matchesFilter;
-  });
+  };
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -152,7 +152,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
       priority: 'medium',
       budget: 0,
       targetAudience: ''
-    });
+    };
   };
 
   const handleEdit = (schedule: ScheduledAd) => {
@@ -170,7 +170,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
       priority: schedule.priority,
       budget: schedule.budget,
       targetAudience: schedule.targetAudience
-    });
+    };
     setIsEditing(true);
   };
 
@@ -223,7 +223,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
       daysOfWeek: prev.daysOfWeek.includes(day)
         ? prev.daysOfWeek.filter(d => d !== day)
         : [...prev.daysOfWeek, day]
-    }));
+    };
   };
 
   return (
@@ -321,7 +321,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                     <div>
                       <span className="text-gray-500">Time:</span>
                       <p className="font-medium">
-                        {schedule.startTime} - {schedule.endTime} ({schedule.timezone})
+                        {schedule.startTime} - {schedule.endTime} ({schedule.timezone}
                       </p>
                     </div>
                     <div>
@@ -441,7 +441,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                       <input
                         type="text"
                         value={formData.title}
-                        onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
+                        onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         required
                       />
@@ -451,7 +451,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                       <input
                         type="text"
                         value={formData.adId}
-                        onChange={(e) => setFormData(prev => ({ ...prev, adId: e.target.value }))}
+                        onChange={(e) => setFormData(prev => ({ ...prev, adId: e.target.value }}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         required
                       />
@@ -462,7 +462,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                     <label className="block text-sm font-medium text-gray-700 mb-2">Description</label>
                     <textarea
                       value={formData.description}
-                      onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
+                      onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }}
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       rows={3}
                     />
@@ -474,7 +474,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                       <input
                         type="date"
                         value={formData.startDate}
-                        onChange={(e) => setFormData(prev => ({ ...prev, startDate: e.target.value }))}
+                        onChange={(e) => setFormData(prev => ({ ...prev, startDate: e.target.value }}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         required
                       />
@@ -484,7 +484,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                       <input
                         type="date"
                         value={formData.endDate}
-                        onChange={(e) => setFormData(prev => ({ ...prev, endDate: e.target.value }))}
+                        onChange={(e) => setFormData(prev => ({ ...prev, endDate: e.target.value }}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         required
                       />
@@ -497,7 +497,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                       <input
                         type="time"
                         value={formData.startTime}
-                        onChange={(e) => setFormData(prev => ({ ...prev, startTime: e.target.value }))}
+                        onChange={(e) => setFormData(prev => ({ ...prev, startTime: e.target.value }}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         required
                       />
@@ -507,7 +507,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                       <input
                         type="time"
                         value={formData.endTime}
-                        onChange={(e) => setFormData(prev => ({ ...prev, endTime: e.target.value }))}
+                        onChange={(e) => setFormData(prev => ({ ...prev, endTime: e.target.value }}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         required
                       />
@@ -539,7 +539,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                       <label className="block text-sm font-medium text-gray-700 mb-2">Priority</label>
                       <select
                         value={formData.priority}
-                        onChange={(e) => setFormData(prev => ({ ...prev, priority: e.target.value as any }))}
+                        onChange={(e) => setFormData(prev => ({ ...prev, priority: e.target.value as any }}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       >
                         <option value="low">Low</option>
@@ -552,7 +552,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                       <input
                         type="number"
                         value={formData.budget}
-                        onChange={(e) => setFormData(prev => ({ ...prev, budget: Number(e.target.value) }))}
+                        onChange={(e) => setFormData(prev => ({ ...prev, budget: Number(e.target.value) }}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         min="0"
                       />
@@ -561,7 +561,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                       <label className="block text-sm font-medium text-gray-700 mb-2">Timezone</label>
                       <select
                         value={formData.timezone}
-                        onChange={(e) => setFormData(prev => ({ ...prev, timezone: e.target.value }))}
+                        onChange={(e) => setFormData(prev => ({ ...prev, timezone: e.target.value }}
                         className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       >
                         <option value="UTC">UTC</option>
@@ -577,7 +577,7 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
                     <input
                       type="text"
                       value={formData.targetAudience}
-                      onChange={(e) => setFormData(prev => ({ ...prev, targetAudience: e.target.value }))}
+                      onChange={(e) => setFormData(prev => ({ ...prev, targetAudience: e.target.value }}
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -608,4 +608,4 @@ const AdScheduler: React.FC<AdSchedulerProps> = ({ className = '' }) => {
   );
 };
 
-export default AdScheduler;
+export default AdScheduler;))))))))))))))))))))))))))))))

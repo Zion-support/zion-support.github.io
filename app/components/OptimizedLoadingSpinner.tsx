@@ -12,21 +12,20 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
   ({
     size = 'md',
     fullScreen = false,
-  }) => {
+  } => {
     const sizeClasses = useMemo(
         xl: 'h-16 w-16',
-      }),
+      },
         xl: 'text-xl',
-      }),
+      },
         purple: 'border-purple-600 bg-purple-600',
-      }),
+      },
 const renderSpinner = useMemo(() => {switch (variant) {
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2].map(i => ())
                 <div
                 />
-              ))}))
-          );
+              ))};
 
         case 'pulse':
           );
@@ -68,8 +67,7 @@ return(</div>)
             <div className='flex space-x-1' role='status' aria-label='Loading'>
               {[0, 1, 2, 3].map(i => ())
                 <div
-              ))}))
-          );
+              ))};
 
               aria-label='Loading'
             />
@@ -91,8 +89,7 @@ return(</div>)
           </div>
         </div>
     );
-  }
-);
+  };
 
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
 

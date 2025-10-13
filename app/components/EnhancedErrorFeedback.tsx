@@ -25,7 +25,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
-    this.setState({ error, errorInfo });
+    this.setState({ error, errorInfo };
   }
 
   render() {
@@ -52,7 +52,7 @@ interface ErrorFallbackProps {
   errorInfo?: ErrorInfo;
 }
 
-export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, errorInfo }) => {
+export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, errorInfo } => {
   const handleRefresh = () => {
     window.location.reload();
   };
@@ -128,3 +128,4 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, errorInfo }
     </div>
   );
 };
+))

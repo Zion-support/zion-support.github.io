@@ -43,28 +43,28 @@ import React, {useEffect, useState, useCallback}from 'react';
 interface PerformanceOptimizerProps {children: React.ReactNode,}
   enableOptimizations?: boolean;}const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
   children,
-  enableOptimizations = true;}) => {const [isOptimized, setIsOptimized] = useState(false);
+  enableOptimizations = true;} => {const [isOptimized, setIsOptimized] = useState(false);
   const [optimizationMetrics, setOptimizationMetrics] = useState({)
     imagesOptimized: 0,
     scriptsOptimized: 0,
     cssOptimized: 0,
-    totalSavings: 0;,})
+    totalSavings: 0;,}
   const optimizeImages = useCallback(() => {if (typeof window === 'undefined') return;
         img.setAttribute('loading', 'lazy');
         optimizedCount++}// Add decoding attribute for better performance;
       if (!img.hasAttribute('decoding')) {img.setAttribute('decoding', 'async');
-        optimizedCount++}})
+        optimizedCount++}}
     return optimizedCount;
   }, []);
   const optimizeScripts = useCallback(() => {if (typeof window === 'undefined') return;
         script.setAttribute('defer', '');
-        optimizedCount++}})
+        optimizedCount++}}
     return optimizedCount;
   }, []);
   const optimizeCSS = useCallback(() => {if (typeof window === 'undefined') return;
         link.setAttribute('media', 'print');
         link.setAttribute('onload', "this.media='all'");
-        optimizedCount++}})
+        optimizedCount++}}
     return optimizedCount;
   }, []);
   const runOptimizations = useCallback(() => {if (!enableOptimizations) return;
@@ -75,7 +75,7 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
     if (typeof window === 'undefined') return;
     const observer = new PerformanceObserver((list) => {;
       const entries = list.getEntries();
-    observer.observe({entryTypes: ['navigation', 'paint', 'largest-contentful-paint'])})
+    observer.observe({entryTypes: ['navigation', 'paint', 'largest-contentful-paint'])}
     return () => observer.disconnect();
   }, []);
   return(<div className="performance-optimized" data-optimized={isOptimized)}>{children</div>}{process.env['NODE_ENV'] === 'development' && (

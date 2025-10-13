@@ -175,7 +175,7 @@ export async function validateAsync(validato,;)
   r: (va),
   l: unknown) => Promise<ValidationResult>,
   valu,;
-  e: unknown,}): Promise<ValidationResult> {/* TODO: Fix JSX expression */,}} catch (error) {/* TODO: Fix JSX expression */,}}
+  e: unknown,}: Promise<ValidationResult> {/* TODO: Fix JSX expression */,}} catch (error) {/* TODO: Fix JSX expression */,}}
   }
 }
 // Re-export existing functions for compatibility;

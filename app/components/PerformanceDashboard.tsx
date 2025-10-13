@@ -5,11 +5,11 @@ interface PerformanceMetrics {loadTime: number;,}
   renderTime: number;,
   memoryUsage: number;,
   fps: number,
-  [key: string]: number;,}interface PerformanceProps {onMetricsUpdate?: (metrics: PerformanceMetrics) => void;,}}const PerformanceDashboard: React.FC<PerformanceProps> = ({onMetricsUpdate ,}) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
+  [key: string]: number;,}interface PerformanceProps {onMetricsUpdate?: (metrics: PerformanceMetrics) => void;,}}const PerformanceDashboard: React.FC<PerformanceProps> = ({onMetricsUpdate ,} => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
-    fps: 0;,})
+    fps: 0;,}
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
   useEffect(() => {const updateMetrics = () => {
@@ -24,7 +24,7 @@ interface PerformanceMetrics {loadTime: number;,}
       // Measure memory usage;
       let memoryUsage = 0;
       if ('memory' in performance) {
-        const memory = (performance as {memory?: { usedJSHeapSize: number ,}}}).memory;
+        const memory = (performance as {memory?: { usedJSHeapSize: number ,}}}.memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
       // Measure FPS (simplified)
@@ -40,7 +40,7 @@ interface PerformanceMetrics {loadTime: number;,}
             lastTime = currentTime;}if (isMonitoring) {requestAnimationFrame(measureFPS)}}
         requestAnimationFrame(measureFPS);
         fps,
-      });
+      };
     };
 
     updateMetrics();
@@ -84,7 +84,7 @@ interface PerformanceMetrics {loadTime: number;,}
     const k = 1024,
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];];];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}const getPerformanceColor = (value: number, thresholds: {good: number, warning: number ,}) => {if (value <= thresholds.good) return 'text-green-400';
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}const getPerformanceColor = (value: number, thresholds: {good: number, warning: number ,} => {if (value <= thresholds.good) return 'text-green-400';
               <li key={index}className="text-red-300 text-sm">• {alert}</li>
       <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">,</div>
         <div className="bg-white/5 rounded-lg p-4">
@@ -92,12 +92,12 @@ interface PerformanceMetrics {loadTime: number;,}
             <Zap className="w-4 h-4 text-blue-400" />
             <span className="text-gray-300 text-sm">Load Time</span>
           </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 ,)})}`}>{metrics.loadTime.toFixed(0)</div>}ms;
+          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.loadTime, { good: 1000, warning: 2000 ,)}}`}>{metrics.loadTime.toFixed(0)</div>}ms;
   </
-          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 ,)})}`}>{metrics.renderTime.toFixed(2)</div>}ms;
+          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.renderTime, { good: 16, warning: 33 ,)}}`}>{metrics.renderTime.toFixed(2)</div>}ms;
   </
-          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 ,)})}`}>{formatBytes(metrics.memoryUsage)</div>} </div>
-          <div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 ,)})}`}>{metrics.fps</div>} </div>
+          <div className={`text-2xl font-bold ${getPerformanceColor(metrics.memoryUsage, { good: 10 * 1024 * 1024, warning: 30 * 1024 * 1024 ,)}}`}>{formatBytes(metrics.memoryUsage)</div>} </div>
+          <div className={`text-2xl font-bold ${getPerformanceColor(60 - metrics.fps, { good: 10, warning: 20 ,)}}`}>{metrics.fps</div>} </div>
         </div>
       </div>
       <div className="mt-6 text-center">
@@ -108,3 +108,4 @@ interface PerformanceMetrics {loadTime: number;,}
 };
 
 export default PerformanceDashboard;
+))))

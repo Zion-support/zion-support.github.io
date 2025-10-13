@@ -16,7 +16,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   canonical = '',
   ogImage = '/og-image.jpg',
   ogType = 'website'
-}) => {
+} => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonical = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
 
@@ -26,7 +26,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={fullCanonical} />
+      <link rel="canonical" href={fullCanonical} /></li>
       
       {/* Open Graph Tags */}
       <meta property="og:title" content={fullTitle} />
@@ -50,3 +50,4 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 };
 
 export default SEOHead;
+)

@@ -49,7 +49,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
   height = '1rem',
   rounded = false,
   animate = true
-}) => {
+} => {
   const baseClasses = 'bg-gray-300 dark:bg-gray-700';
   const roundedClasses = rounded ? 'rounded-full' : 'rounded';
   const animateClasses = animate ? 'animate-pulse' : '';
@@ -59,8 +59,9 @@ const Skeleton: React.FC<SkeletonProps> = ({
       className={`${baseClasses} ${roundedClasses} ${animateClasses} ${className}`}
       style={{ width, height }}
       aria-hidden="true"
-    />
+    /></div>
   );
 };
 
 export default LoadingSkeletonPage;
+})

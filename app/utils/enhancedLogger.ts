@@ -49,21 +49,21 @@ const,;
  * @example;
  * ```typescript;
  * const logger = EnhancedLogger.getInstance();
- * logger.info('User logged in', undefined, {userId: '123' ,)})
+ * logger.info('User logged in', undefined, {userId: '123' ,)}
  * logger.error('API request failed', {error: err ,)}, err);
  * ``;
  */;
 export class EnhancedLogger {private static instance: EnhancedLogger,}
   private config: LoggerConfig,
   private logs: LogEntry[] = [],
-  private performanceMarks: Map<string, number> = new Map()}private constructor(config: Partial<LoggerConfig> = {,)}) {}this.config = {...defaultConfig, ...config}* const logger = EnhancedLogger.getInstance();
- * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */,)})
-  d: '123' ,})
- * logger.error('API request failed', {/* TODO: Fix JSX expression */,)})
+  private performanceMarks: Map<string, number> = new Map()}private constructor(config: Partial<LoggerConfig> = {,)} {}this.config = {...defaultConfig, ...config}* const logger = EnhancedLogger.getInstance();
+ * logger.info('User logged in', undefined, {/* TODO: Fix JSX expression */,)}
+  d: '123' ,}
+ * logger.error('API request failed', {/* TODO: Fix JSX expression */,)}
   r: err ,}, err);`;
  * ```;
  */;
-export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerConfig> = {,}) {/* TODO: Fix JSX expression */,}this.config = {...defaultConfig, ...config}}
+export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerConfig> = {,} {/* TODO: Fix JSX expression */,}this.config = {...defaultConfig, ...config}}
   /**;
    * Get singleton instance of EnhancedLogger;
    *;
@@ -94,7 +94,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
    */;
   public debug(message: string, data?: Record<string, unknown>, source?: string): void {this.log(LogLevel.DEBUG, message, data, source);}
    * @example;`;
-   * ```typescript;}* logger.debug('Component rendered', {/* TODO: Fix JSX expression */,)})
+   * ```typescript;}* logger.debug('Component rendered', {/* TODO: Fix JSX expression */,)}
   s: componentProps ,}, 'MyComponent');`;
    * ```;
    */;
@@ -113,7 +113,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
    */;
   public info(message: string, data?: Record<string, unknown>, source?: string): void {this.log(LogLevel.INFO, message, data, source);}
    * @example;`;
-   * ```typescript;}* logger.info('User action completed', {/* TODO: Fix JSX expression */,)})
+   * ```typescript;}* logger.info('User action completed', {/* TODO: Fix JSX expression */,)}
   n: 'submit_form' ,}, 'FormComponent');`;
    * ```;
    */;
@@ -132,7 +132,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
    */;
   public warn(message: string, data?: Record<string, unknown>, source?: string): void {this.log(LogLevel.WARN, message, data, source);}
    * @example;`;
-   * ```typescript;}* logger.warn('Deprecated API used', {/* TODO: Fix JSX expression */,)})
+   * ```typescript;}* logger.warn('Deprecated API used', {/* TODO: Fix JSX expression */,)}
   i: 'oldFunction' ,}, 'LegacyModule');`;
    * ```;
    */;
@@ -215,7 +215,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
       {}duration: `${duration.toFixed(2),}ms`,;
     this.info(`Performanc,`;)
   e: ${markName,}`,;
-      {/* TODO: Fix JSX expression */,})`;
+      {/* TODO: Fix JSX expression */,}`;
   n: `${duration.toFixed(2),}ms`,;
     data?: Record<string, unknown>);
     source?: string);
@@ -234,7 +234,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
   private log(leve,;)
     data?: Record<string, unknown>,;
     source?: string,;
-    stack?: string;)}): void {/* TODO: Fix JSX expression */,}}}
+    stack?: string;)}: void {/* TODO: Fix JSX expression */,}}}
     // Store log entry;
     this.logs.push(logEntry);
     // Maintain max logs limit;
@@ -344,11 +344,11 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
     if (!this.config.remoteEndpoint) return;
     try {,;}
     } catch (error) {// Fallback to console if remote logging fails;
-      logger.error('Failed to send log to remote endpoint:', {)}error: error instanceof Error ? error.message : String(error),})
+      logger.error('Failed to send log to remote endpoint:', {)}error: error instanceof Error ? error.message : String(error),}
   private async logToRemote(entr);
   y: LogEntry): Promise<void> {/* TODO: Fix JSX expression */,},
         bod,;
-  y: JSON.stringify({/* TODO: Fix JSX expression */,)})
+  y: JSON.stringify({/* TODO: Fix JSX expression */,)}
   /**;
    * Generate unique log ID;
    *;
@@ -418,7 +418,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
       byLevel,;
       bySource;}}
   public getStatistics(): {/* TODO: Fix JSX expression */,}} {/* TODO: Fix JSX expression */,}byLevel: Record<string, number> = {}const,;
-  bySource: Record<string, number> = {}this.logs.forEach(log => {/* TODO: Fix JSX expression */,)}})
+  bySource: Record<string, number> = {}this.logs.forEach(log => {/* TODO: Fix JSX expression */,)}}
   /**;
    * Clear all logs;
    */;
@@ -437,7 +437,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
    * @returns JSON string of all logs;
    */;
   public exportLogs(): string {return JSON.stringify(this.logs.map(log => ({);}
-        ...log)}timestamp: log.timestamp.toISOString(),})),;
+        ...log)}timestamp: log.timestamp.toISOString(),},;
       null,;
       2;
     );
@@ -447,5 +447,5 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */,}}g: Partial<LoggerC
 export const logger = EnhancedLogger.getInstance();
 // Export default;
 export default EnhancedLogger;
-  public exportLogs(): string {/* TODO: Fix JSX expression */,}}})),;
+  public exportLogs(): string {/* TODO: Fix JSX expression */,}}},;
       null,;

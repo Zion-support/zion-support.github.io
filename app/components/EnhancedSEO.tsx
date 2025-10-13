@@ -23,10 +23,10 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   ogImage = '/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image'
-}) => {
+} => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonical = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;
-}) => {
+} => {
   ogImage = '/og-image.svg',
   ogType = 'website'
   ogUrl,
@@ -43,7 +43,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   section,
   tags = [],
   readingTime
-}) => {
+} => {
   const siteUrl = 'https://ziontechgroup.com';
   const defaultImage = 'https://ziontechgroup.com/og-image.jpg';
   
@@ -149,7 +149,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       {readingTime && <meta name="twitter:data1" content={`${readingTime} min read`} />}
 
       {/* Canonical URL */}
-      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
+      {fullCanonical && <link rel="canonical" href={fullCanonical} /></li>}
 
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={ogTitle || fullTitle} />
@@ -188,15 +188,15 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
       {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" /></li>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></li>
+      <link rel="preconnect" href="https://www.google-analytics.com" /></li>
+      <link rel="preconnect" href="https://www.googletagmanager.com" /></li>
       
       {/* Favicon and Icons */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="apple-touch-icon" href="/logo192.png" />
-      <link rel="manifest" href="/manifest.json" />
+      <link rel="icon" type="image/svg+xml" href="/favicon.svg" /></li>
+      <link rel="apple-touch-icon" href="/logo192.png" /></li>
+      <link rel="manifest" href="/manifest.json" /></li>
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -204,8 +204,8 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       </script>
       
       {/* Additional Performance Hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></li>
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" /></li>
       
       {/* Default Structured Data for Organization */}
       {!structuredData && (
@@ -235,7 +235,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
               "https://twitter.com/ziontechgroup",
               "https://linkedin.com/company/ziontechgroup"
             ]
-          })}
+          }}
         </script>
       )}
     </Helmet>
@@ -275,7 +275,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
               <span>EnhancedSEO;</span>
             <p>Transform your business with our advanced enhancedseo solutions.;</p>

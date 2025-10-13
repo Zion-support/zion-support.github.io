@@ -20,8 +20,8 @@ class EnvironmentConfig {private config: EnvConfig,}
   /**;
    * Get the entire configuration object;
    */;
-  public getConfig(): Readonly<EnvConfig> {}return Object.freeze({...this.config)})
-  public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */,}return Object.freeze({...this.config)})
+  public getConfig(): Readonly<EnvConfig> {}return Object.freeze({...this.config)}
+  public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */,}return Object.freeze({...this.config)}
   }
   /**;
    * Get a specific configuration value;
@@ -68,4 +68,4 @@ class EnvironmentConfig {private config: EnvConfig,}
   /**;
    * Log configuration in development mode;
    */;
-  public logConfig(): void {}}if (this.isDevelopment()) {}public logConfig(): void {/* TODO: Fix JSX expression */,}}})
+  public logConfig(): void {}}if (this.isDevelopment()) {}public logConfig(): void {/* TODO: Fix JSX expression */,}}}

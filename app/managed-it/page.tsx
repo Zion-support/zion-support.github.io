@@ -75,7 +75,7 @@ const ManagedITPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>Managed IT Services - Zion Tech Group | 24/7 IT Support</title>
         <meta name="description" content="Comprehensive managed IT services including 24/7 monitoring, help desk support, security management, and backup solutions. Focus on your business while we manage your IT." />
         <meta name="keywords" content="managed IT services, IT support, 24/7 monitoring, help desk, IT security, backup solutions, network management" />

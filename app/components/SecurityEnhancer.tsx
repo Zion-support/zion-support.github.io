@@ -96,7 +96,7 @@ const headers = new Headers(init?.headers);;
         ...init,
         headers,
         credentials: 'same-origin
-      })    };
+      }    };
 
     // Input sanitization for forms;
 
@@ -124,14 +124,14 @@ const target = e.target as HTMLInputElement;;
 
         }
 
-      })
-    })
+      }
+    }
     // Console warning for security
     // console.log removed for production
 // console.log removed for production
 }, [enableCSP, enableHSTS, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffing]);
 
-  return <React.Fragment>{children}</React.Fragment>;
+  return </><React.Fragment>{children}</React.Fragment>;
 
 import React from 'react';
 import React, { useEffect } from 'react';
@@ -140,8 +140,9 @@ interface SecurityEnhancerProps {
   children: React.ReactNode;
 }
 
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
+const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children } => {
   return <>{children}</>;
 };
 
 export default SecurityEnhancer;
+)))

@@ -15,3 +15,4 @@ import { Helmet } from 'react-helmet-async';
               This page is under development. Please check back later for updates.
             </p>
           </div>
+)

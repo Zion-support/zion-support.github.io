@@ -83,7 +83,7 @@ export default FAQPage;
             </p>
           </div>
         </section>
-        <section className="py-16 px-4">
+        <section className="py-16 px-4"></section>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-4">{faqs.map((faq, index) => (</div>
                 <div key={index}className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">

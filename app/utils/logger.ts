@@ -63,7 +63,7 @@ class Logger {
     } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
     }
 
-    this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack })
+    this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack }
   }
 
   fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata)
@@ -79,7 +79,7 @@ class Logger {
   ): void {/* TODO: Fix JSX expression */,}}} else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */,}t: errorOrContextOrMetadata ,}
       meta = contextOrMetadata as Record<string>
     } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */,}}
-this.log(LogLevel.ERROR, message, context, {...meta, error: error?.stack ,)})
+this.log(LogLevel.ERROR, message, context, {...meta, error: error?.stack ,)}
 fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata)}}}
 private log(level: LogLevel,),;
     metadata?: Record<string>
@@ -185,10 +185,10 @@ this.logs.push(logEntry);
   e: string, entr)
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
     }
-    //   headers: {// 'Content-Type': 'application/json'})
+    //   headers: {// 'Content-Type': 'application/json'}
     //   body: JSON.stringify(entry),
-    // }).catch(err => {)
-    //   // });
+    // }.catch(err => {)
+    //   // };
   }
 
   exportLogs(): string {
@@ -202,8 +202,8 @@ export const logger = new Logger();
   y: LogMetadata): void {/* TODO: Fix JSX expression */,}}s: {// 'Content-Type': 'application/json',},;
     //   bod,;
   y: JSON.stringify(entry)
-    // }).catch(err => {/* TODO: Fix JSX expression */})
-    //   // });
+    // }.catch(err => {/* TODO: Fix JSX expression */}
+    //   // };
   }
   /**
   /**;

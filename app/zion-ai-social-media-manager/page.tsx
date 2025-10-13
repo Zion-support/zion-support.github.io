@@ -106,7 +106,7 @@ export default function ZionAISocialMediaManager() {
 
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>Zion AI Social Media Manager - AI-Powered Social Media Management | Zion Tech Group</title>
         <meta
           name="description"
@@ -361,4 +361,4 @@ export default function ZionAISocialMediaManager() {
       </div>
     </>
   );
-}
+}})

@@ -65,3 +65,4 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */,}}`;
 }`;
+)

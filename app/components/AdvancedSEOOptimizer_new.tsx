@@ -62,7 +62,7 @@ interface SEOOptimizerProps {title?: string;}
   ogImage = '/images/og-image.jpg',
   twitterCard = 'summary_large_image',
   structuredData,
-  children;}) => {const [seoScore, setSeoScore] = useState(0);
+  children;} => {const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
   const analyzeSEO = useCallback(() => {;
     if (typeof window === 'undefined') return;
@@ -89,7 +89,7 @@ interface SEOOptimizerProps {title?: string;}
         <title>{title}</title>
         <meta name="description" content={description}/>
         <meta name="keywords" content={keywords}/>
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl}/></li>}
         {/* Open Graph */} <meta property="og: title" content={title,}/>
         <meta property="og: description" content={description,}/>
         <meta property="og: image" content={ogImage,}/>
@@ -215,7 +215,7 @@ interface SEOOptimizerProps {title?: string;}
           {recommendations.length > 0 && (
             <div>
               <div>Recommendations: </div>,
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' ,}}>
+              <ul style={{ margin: '5px 0', paddingLeft: '15px' ,}}></ul>
   );
 };
 

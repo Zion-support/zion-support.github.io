@@ -21,7 +21,7 @@ const LoadingPage: React.FC = () => {,
       <Helmet />
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     <>
-      <Helmet>
+      </><Helmet>
         <title>Loading - Zion Tech Group</title>
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
           <div className="max-w-7xl mx-auto">

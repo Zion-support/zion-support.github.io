@@ -17,7 +17,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableLazyLoading = true,
   enablePreloading = true,
   enableCodeSplitting = true
-}) => {
+} => {
   useEffect(() => {
     // Preload critical resources
     if (enablePreloading) {
@@ -38,4 +38,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   );
 };
 
-export default PerformanceOptimizer;
+export default PerformanceOptimizer;)

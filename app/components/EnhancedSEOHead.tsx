@@ -48,7 +48,7 @@ const EnhancedSEOHead: React.FC<EnhancedSEOHeadProps> = ({
   modifiedTime,
   section = 'Technology,
   tags = []
-}) => {
+} => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group;;
 
   const fullDescription = description.length > 160 ? description.substring(0, 157) + ... : description;;
@@ -66,7 +66,7 @@ const SEOHead: React.FC = () => {
       <meta name="keywords" content={fullKeywords.join(', )} />
       <meta name="author content={author} />
       <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow} />
-      <link rel="canonical href={canonicalUrl} />
+      <link rel="canonical href={canonicalUrl} /></li>
       
       {/* Open Graph Tags */}
 
@@ -97,16 +97,16 @@ const SEOHead: React.FC = () => {
       
       {/* Favicon */}
 
-      <link rel="icon" type="image/x-icon" href="/favicon.ico />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png />
-      <link rel="manifest" href="/site.webmanifest />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico /></li>
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png /></li>
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png /></li>
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png /></li>
+      <link rel="manifest" href="/site.webmanifest /></li>
       
       {/* Preconnect to external domains */}
 
-      <link rel="preconnect" href="https://fonts.googleapis.com />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous />
+      <link rel="preconnect" href="https://fonts.googleapis.com /></li>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous /></li>
       
       {/* Article specific tags */}
 
@@ -163,7 +163,7 @@ const SEOHead: React.FC = () => {
             'https://linkedin.com/company/ziontechgroup,
             https://twitter.com/ziontechgroup
           ]
-        })}
+        }}
 
       </script>
     </Helmet>
@@ -181,7 +181,7 @@ export default EnhancedSEOHead;
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       
       {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} /></li>}
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
@@ -197,7 +197,7 @@ export default EnhancedSEOHead;
       {/* Twitter Card Meta Tags */}
       <meta name="description" content={description} />
       {keywords.length > 0 && <meta name="keywords" content={keywordsString} />}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} /></li>}
       
       {/* Robots */}
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
@@ -241,17 +241,18 @@ export default EnhancedSEOHead;
       </script>
       
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" /></li>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></li>
+      <link rel="preconnect" href="https://www.google-analytics.com" /></li>
+      <link rel="preconnect" href="https://www.googletagmanager.com" /></li>
       
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></li>
+      <link rel="dns-prefetch" href="//www.google-analytics.com" /></li>
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" /></li>
     </Helmet>
   );
 };
 
 export default SEOHead;
+)

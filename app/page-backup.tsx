@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {,
 
   // Analytics tracking for phone clicks - optimized;
   const handlePhoneClick = useCallback(() => {if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag;
+      const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}.gtag;
       gtag('event', 'phone_click', {)
       benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']},
     {icon: Cloud,
@@ -80,7 +80,7 @@ const HomePage: React.FC = () => {,
               <br />
               <span className="text-white">Solutions</span>
     <>
-      <SEOOptimizer
+      </><SEOOptimizer
       <PerformanceOptimizer;
         enableImageOptimization={true}enableLazyLoading={true}enablePreloading={true}enableCodeSplitting={true}>
         <AccessibilityEnhancer;
@@ -352,3 +352,4 @@ const HomePage: React.FC = memo(() => {,
 };
 
 export default PageBackupPage;
+))))))

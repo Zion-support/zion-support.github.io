@@ -184,6 +184,7 @@ const ContentPromotionBanner: React.FC = () => {,
 
 export default ContentPromotionBannerPage;
   );
-});
+};
 
 export default ContentPromotionBanner;
+)))

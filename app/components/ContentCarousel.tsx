@@ -108,9 +108,8 @@ const ContentCarousel: React.FC = React.memo((props) => {
       {/* Dots indicator */} <div className="flex justify-center mt-6 space-x-2">{slides.map((_, index) => (</div>
           <button;
             key={index}onClick={() =>setCurrentSlide(index)</button>}className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'}`}
-  );
-});
+              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'}`};
+};
 
 export default ContentCarousel;
       description: 'Worldwide deployment and support for international businesses'
@@ -291,3 +290,4 @@ export default ContentCarousel;
 };
 
 export default ContentCarouselPage;
+}}}})))))

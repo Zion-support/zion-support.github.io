@@ -35,7 +35,7 @@ export class MessageHandler {
       if (event.data && typeof event.data === 'object') {
         this.handleMessage(event);
       }
-    });
+    };
 
     // Listen for chrome extension messages
     if (typeof window !== 'undefined' && (window as WindowWithChrome).chrome?.runtime) {
@@ -47,10 +47,10 @@ export class MessageHandler {
           return true; // Indicate we will send a response asynchronously
         } catch (error) {
           console.warn('Chrome message handling error:', error);
-          sendResponse({ error: 'Message handling failed' });
+          sendResponse({ error: 'Message handling failed' };
           return false;
         }
-      });
+      };
     }
   }
 
@@ -75,13 +75,13 @@ export class MessageHandler {
     const messageData = message as { type?: string };
     switch (messageData.type) {
       case 'PING':
-        sendResponse({ status: 'pong' });
+        sendResponse({ status: 'pong' };
         break;
       case 'GET_DATA':
-        sendResponse({ data: 'No data available' });
+        sendResponse({ data: 'No data available' };
         break;
       default:
-        sendResponse({ error: 'Unknown message type' });
+        sendResponse({ error: 'Unknown message type' };
     }
   }
 
@@ -117,7 +117,7 @@ export class MessageHandler {
   public cleanup(): void {
     this.pendingMessages.forEach((handler) => {
       window.removeEventListener('message', handler);
-    });
+    };
     this.pendingMessages.clear();
   }
 }
@@ -126,4 +126,4 @@ export class MessageHandler {
 export const messageHandler = MessageHandler.getInstance();
 
 // Export for use in components
-export default messageHandler;
+export default messageHandler;)))))))

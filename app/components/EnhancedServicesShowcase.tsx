@@ -62,7 +62,7 @@ return(<section className="py-20 px-4">)</section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-                {service.features.map((feature, featureIndex) => (} <li>
+                {service.features.map((feature, featureIndex) => (} <li></li>
                     <CheckCircle />
 
         <div className="text-center mt-12">
@@ -79,3 +79,4 @@ return(<section className="py-20 px-4">)</section>
 };
 
 export default EnhancedServicesShowcase;
+))))

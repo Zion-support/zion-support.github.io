@@ -25,7 +25,7 @@ private applyConfig(): void {if (typeof document === 'undefined') return;}
     if (this.config.section) {this.updateMetaTag('article:section', this.config.section)}}
 // Update tags;
     if (this.config.tags) {this.config.tags.forEach(tag => {)
-        this.addMetaTag('article:tag', tag)}})
+        this.addMetaTag('article:tag', tag)}}
     }
   }
 private updateMetaTag(name: string, content: string): void {,}
@@ -48,17 +48,17 @@ const ogTags = [}{ property: 'og:title', content: this.config.ogTitle || this.co
       {property: 'og:type', content: this.config.ogType || 'website' ,},;
       {property: 'og:url', content: this.config.canonicalUrl || window.location.href ,},;
     ]
-if (this.config.ogImage) {}ogTags.push({property: 'og:image', content: this.config.ogImage ,)})
+if (this.config.ogImage) {}ogTags.push({property: 'og:image', content: this.config.ogImage ,)}
 ogTags.forEach(tag => {)
-    this.updateMetaTagByProperty(tag.property, tag.content)}})
+    this.updateMetaTagByProperty(tag.property, tag.content)}}
 private updateTwitterTags(): void {if (typeof document === 'undefined') return;}
 const twitterTags = [}{ name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' ,},;
       {name: 'twitter:title', content: this.config.twitterTitle || this.config.title ,},;
       {name: 'twitter:description', content: this.config.twitterDescription || this.config.description ,},;
     ]
-if (this.config.twitterImage) {}twitterTags.push({name: 'twitter:image', content: this.config.twitterImage ,)})
+if (this.config.twitterImage) {}twitterTags.push({name: 'twitter:image', content: this.config.twitterImage ,)}
 twitterTags.forEach(tag => {)
-    this.updateMetaTag(tag.name, tag.content)}})
+    this.updateMetaTag(tag.name, tag.content)}}
   }
 private updateMetaTagByProperty(property: string, content: string): void {,}
     if (typeof document === 'undefined') return;}let meta = document.querySelector(`meta[property="${property)}"]`) as HTMLMetaElement;

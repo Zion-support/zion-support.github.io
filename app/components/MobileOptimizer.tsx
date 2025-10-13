@@ -18,7 +18,7 @@ export default function MobileOptimizer() {
         if (!button.classList.contains('touch-friendly')) {
           button.classList.add('touch-friendly', 'min-h-[44px]', 'min-w-[44px]');
         }
-      });
+      };
     };
 
     // Initial setup
@@ -26,7 +26,7 @@ export default function MobileOptimizer() {
 
     // Re-run on DOM changes
     const observer = new MutationObserver(addTouchClasses);
-    observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(document.body, { childList: true, subtree: true };
 
     // Handle orientation changes
     const handleOrientationChange = () => {
@@ -44,4 +44,4 @@ export default function MobileOptimizer() {
   }, []);
 
   return null;
-}
+}))

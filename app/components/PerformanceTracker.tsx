@@ -41,7 +41,7 @@ const PerformanceTracker: React.FC = () => {
           load_time: Math.round(metrics.loadTime),
           fcp: Math.round(metrics.firstContentfulPaint),
           lcp: Math.round(metrics.largestContentfulPaint),
-        });
+        };
       }
     };
 
@@ -62,3 +62,4 @@ const PerformanceTracker: React.FC = () => {
 };
 
 export default PerformanceTracker;
+)

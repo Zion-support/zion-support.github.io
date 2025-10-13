@@ -14,7 +14,7 @@ export class AccessibilityManager {
   private config: AccessibilityConfig;
   private announcementElement: HTMLElement | null = null;
 
-  constructor(config: AccessibilityConfig = {}) {
+  constructor(config: AccessibilityConfig = {} {
     this.config = {
       enableKeyboardNavigation: true,
       enableScreenReaderSupport: true,
@@ -69,7 +69,7 @@ export class AccessibilityManager {
         event.preventDefault();
         this.focusNavigation();
       }
-    });
+    };
   }
 
   private setupScreenReaderSupport(): void {
@@ -129,7 +129,7 @@ export class AccessibilityManager {
         console.warn(`Heading hierarchy issue: ${heading.tagName} follows h${previousLevel}`);
       }
       previousLevel = level;
-    });
+    };
   }
 
   private addAriaLabels(): void {
@@ -139,7 +139,7 @@ export class AccessibilityManager {
       if (!button.textContent?.trim()) {
         button.setAttribute('aria-label', 'Button');
       }
-    });
+    };
 
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
@@ -148,7 +148,7 @@ export class AccessibilityManager {
       if (!label) {
         input.setAttribute('aria-label', input.getAttribute('placeholder') || 'Input field');
       }
-    });
+    };
   }
 
   public announce(message: string): void {
@@ -191,7 +191,7 @@ export const focusElement = (selector: string): void => {
   const element = document.querySelector(selector) as HTMLElement;
   if (element) {
     element.focus();
-    element.scrollIntoView({ behavior: 'smooth' });
+    element.scrollIntoView({ behavior: 'smooth' };
   }
 };
 
@@ -269,3 +269,4 @@ export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0)
     element.setAttribute('tabindex', tabIndex.toString())}}
 export const removeElementFocus = (element: HTMLElement): void => {,
     element.setAttribute('tabindex', '-1')}}
+))))

@@ -156,7 +156,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 Email Us
               </button>
     <>
-      <Helmet>
+      </><Helmet>
         <title>Global Error - Zion Tech Group</title>
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
           <div className="max-w-7xl mx-auto">

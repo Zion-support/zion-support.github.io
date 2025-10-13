@@ -1,6 +1,6 @@
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>AI Automated Reporting | Zion Tech Group</title>
         <meta name="description" content="Transform your business intelligence with AI-powered automated reporting. Generate insights, analytics, and reports automatically with our advanced AI reporting solutions." />
         <meta name="keywords" content="AI reporting, automated reports, business intelligence, data analytics, smart reporting, AI insights" />
@@ -314,3 +314,4 @@
         </section>
       </div>
     </>
+)

@@ -18,7 +18,7 @@ export const preloadCriticalResources = useCallback((...args) => {if (typeof win
     const link = document.createElement('link');
     link.rel = 'preload';
     document.head.appendChild(link</div>
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */,}})
+export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */,}}
   // Preload critical images;
   const criticalImages = [
     '/images/hero-bg.webp',
@@ -49,10 +49,10 @@ export const optimizeImages = useCallback((...args) => {if (typeof window === 'u
   if ('IntersectionObserver' in window) {const imageObserver = new IntersectionObserver((entries) => {
             imageObserver.unobserve(img</div>
   ];
-  criticalImages.forEach(src => {/* TODO: Fix JSX expression */})
+  criticalImages.forEach(src => {/* TODO: Fix JSX expression */}
 export const preloadRoute = (rout);
   e: string) => {/* TODO: Fix JSX expression */,}}
-export const optimizeImages = () => {/* TODO: Fix JSX expression */,}})
+export const optimizeImages = () => {/* TODO: Fix JSX expression */,}}
   // Add intersection observer for lazy loading;
   if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */,}}
 export const optimizeThirdPartyScripts = useCallback((...args) => {if (typeof window === 'undefined') return;
@@ -60,7 +60,7 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {if (typeof wi
   scripts.forEach(script => {)
     script.setAttribute('defer', ''</div>
       loadAnalytics(</div>
-    })
+    }
   } else {}
     loadAnalytics(</div>
 const loadAnalytics = useCallback((...args) => {// Load Google Analytics after page load;}const loadAnalytics = useCallback((...args) => {}// Load Google Analytics after page load;
@@ -68,9 +68,10 @@ const loadAnalytics = useCallback((...args) => {// Load Google Analytics after p
   gaScript.async = true;
   gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID',
   document.head.appendChild(gaScript)}
-export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */,}})
+export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */,}}
   // Load analytics after page load;
-  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */,}})
+  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */,}}
   } else {/* TODO: Fix JSX expression */,}}}
 const loadAnalytics = () => {/* TODO: Fix JSX expression */,}}
 }
+))))))))))))))))

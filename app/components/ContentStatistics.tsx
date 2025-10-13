@@ -9,7 +9,7 @@ const ContentStatisticsPage: React.FC = () => {
 import React, {useState, useEffect}from 'react';
 import {CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock}}from 'lucide-react';
     years: 0
-    years: 0;,});
+    years: 0;,};
   const targetCounters = {clients: 500,
     projects: 1000,
     satisfaction: 99,
@@ -87,7 +87,7 @@ const ContentStatistics: React.FC = React.memo((props) => {
     const timers = Object.keys(targetCounters).map(key => {;
       const timer = setInterval(() => {
         setCounters(prev => {;
-    });
+    };
 
     return () => {timers.forEach(timer => clearInterval(timer));};
   }, []);
@@ -179,9 +179,9 @@ const ContentStatistics: React.FC = React.memo((props) => {
         setCounters(prev => ({
           ...prev,
           [key]: Math.floor(current)
-        }));
+        };
       }, stepDuration);
-    });
+    };
 
     return () => {
       timers.forEach(timer => clearInterval(timer));
@@ -207,7 +207,7 @@ const ContentStatistics: React.FC = React.memo((props) => {
                   <p className="text-gray-300">{achievement.description</p>}</p>
                 </div>
   );
-});
+};
 
 export default ContentStatistics;
           ))
@@ -280,3 +280,4 @@ export default ContentStatistics;
         </div>
       </section>
 export default ContentStatisticsPage;
+}}}}}}})))))))))))))

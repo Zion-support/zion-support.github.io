@@ -50,12 +50,12 @@ export const usePerformanceMonitor = () => {
           if (entry.entryType === 'layout-shift') {
             console.log('CLS:', (entry as any).value);
           }
-        });
-      });
+        };
+      };
 
       observer.observe({ 
         entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] 
-      });
+      };
 
       return () => observer.disconnect();
     }
@@ -70,3 +70,4 @@ declare global {
   }
 }
 export default AnalyticsProvider;
+))

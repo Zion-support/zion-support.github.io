@@ -29,7 +29,7 @@ const SupportPage: React.FC = () => {
       answer: 'Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business. We\'ll guide you through the entire process from planning to implementation.,
       category: 'general
     },
-      category: 'general});)},
+      category: 'general};)},
     {
       question: 'What support do you provide after implementation?,
       answer: 'We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.,
@@ -37,38 +37,38 @@ const SupportPage: React.FC = () => {
       answer: 'Contact our team for a free consultation where we\'ll assess your needs and recommend the best AI solutions for your business. We\'ll provide a detailed implementation plan and timeline.',
       category: 'general'
     },
-      category: 'general'});;)
+      category: 'general'};;)
 },
     {}
       question: 'What support do you provide after implementation?',
       answer: 'We provide 24/7 technical support, regular maintenance, updates, and ongoing optimization to ensure your systems run smoothly. Our support includes monitoring, troubleshooting, and performance optimization.',
       category: 'support'
     },
-      category: 'support});)},
+      category: 'support};)},
     {
       question: 'How long does implementation typically take?,
       answer: 'Implementation time varies based on project complexity. Simple solutions can be deployed in 2-4 weeks, while complex enterprise systems may take 3-6 months. We provide detailed timelines during the planning phase.,
-      category: 'implementation});)
+      category: 'implementation};)
 },
     {
       question: 'Do you offer training for our team?,
       answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions. Training includes hands-on workshops, documentation, and ongoing support.,
-      category: 'training});)
+      category: 'training};)
 },
     {
       question: 'What security measures do you have in place?,
       answer: 'We implement enterprise-grade security including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA.,
-      category: 'security});)
+      category: 'security};)
 },
     {
       question: 'Can you integrate with our existing systems?,
       answer: 'Absolutely. We specialize in seamless integration with existing systems and can work with most platforms, databases, and APIs to ensure smooth data flow and functionality.,
-      category: 'integration});)
+      category: 'integration};)
 },
     {
       question: 'What happens if we need to scale up?,
       answer: 'Our solutions are designed to scale with your business. We can easily add more capacity, features, or users as your needs grow, with minimal disruption to your operations.,
-      category: 'scaling});)
+      category: 'scaling};)
 },
     {
       question: 'Do you provide custom development?,
@@ -93,7 +93,7 @@ const SupportPage: React.FC = () => {
       availability: '24/7 Available,
       color: 'text-blue-400
     },
-      color: 'text-blue-400});)},
+      color: 'text-blue-400};)},
     {
       name: 'Email Support,
       description: 'Get detailed responses to your questions,
@@ -102,14 +102,14 @@ const SupportPage: React.FC = () => {
       availability: 'Response within 2 hours,
       color: 'text-green-400
     },
-      color: 'text-green-400});)},
+      color: 'text-green-400};)},
     {
       name: 'Live Chat,
       description: 'Instant help when you need it most,
       icon: MessageCircle,
       contact: 'Available on website,
       availability: 'Mon-Fri 9AM-6PM EST,
-      color: 'text-purple-400});)
+      color: 'text-purple-400};)
 },
     {
       name: 'Emergency Support,
@@ -117,7 +117,7 @@ const SupportPage: React.FC = () => {
       icon: Zap,
       contact: '+1 (555) 911-TECH,
       availability: '24/7 Critical Support,
-      color: 'text-red-400});)
+      color: 'text-red-400};)
 }
 
       question: 'Do you offer training for my team?',
@@ -139,21 +139,11 @@ const SupportPage: React.FC = () => {
 const PagePage: React.FC = () => {}
 import React from 'react';
 
-<<<<<<< HEAD
-export default function SupportPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Support</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-=======
 const SupportPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
     return matchesSearch && matchesCategory;
-  });
+  };
       title: 'Email Support',
       description: 'Get help via email within 24 hours',
       icon: Mail,
@@ -359,7 +349,6 @@ const SupportPage: React.FC = () => {
             Get help and support for our services.
           </p>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
       </div>
     </div>
   );
@@ -371,7 +360,6 @@ const SupportPage: React.FC = () => {
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
               ))}
-            ))
           </div>
         </div>
       </section>

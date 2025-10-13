@@ -35,7 +35,7 @@ class ErrorHandler extends Component<Props, State> {
     this.setState({
       error,
       errorInfo
-    })
+    }
 
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
@@ -53,7 +53,7 @@ class ErrorHandler extends Component<Props, State> {
     try {
       // Replace with your actual error reporting service
       .toISOString()
-      })
+      }
     } catch (reportingError) {
       }
   }
@@ -63,7 +63,7 @@ class ErrorHandler extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null
-    })
+    }
   }
 
   handleGoHome = () => {
@@ -142,4 +142,4 @@ class ErrorHandler extends Component<Props, State> {
   }
 }
 
-export default ErrorHandler
+export default ErrorHandler))

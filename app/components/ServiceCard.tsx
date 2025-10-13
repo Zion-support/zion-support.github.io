@@ -86,3 +86,4 @@ export default ServiceCardPage;
 export default ServiceCardPage;
 export default ServiceCard;
   </ServiceCardProps>
+})

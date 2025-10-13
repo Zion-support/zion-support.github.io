@@ -13,7 +13,7 @@ export default function AccessibilityEnhancer() {
     largeText: false,
     reducedMotion: false,
     focusVisible: false
-  });
+  };
 
   const [isVisible, setIsVisible] = useState(false);
             skipLink.focus();
@@ -28,7 +28,7 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children } => {
   useEffect(() => {
     // Accessibility enhancements
     const enhanceAccessibility = () => {
@@ -41,7 +41,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       document.body.insertBefore(skipLink, document.body.firstChild);
 
         }
-      });
+      };
     };
 
         // Close dropdowns with Escape key
@@ -51,7 +51,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           openDropdowns.forEach(dropdown => {
             (dropdown as HTMLElement).setAttribute('aria-expanded', 'false);
 
-          })        }
+          }        }
 
       };
 
@@ -70,7 +70,7 @@ export default function AccessibilityEnhancer() {
 
     // Check for system preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    setSettings(prev => ({ ...prev, reducedMotion: prefersReducedMotion }));
+    setSettings(prev => ({ ...prev, reducedMotion: prefersReducedMotion };
 
     // Apply settings
     applySettings(settings);
@@ -82,8 +82,8 @@ export default function AccessibilityEnhancer() {
             (focusableElements[nextIndex] as HTMLElement)?.focus();
             e.preventDefault();
           }
-        });
-      });
+        };
+      };
 
       document.addEventListener('keydown', handleKeyDown);
       return () => document.removeEventListener('keydown', handleKeyDown);
@@ -108,7 +108,7 @@ export default function AccessibilityEnhancer() {
     const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     const handleHighContrastChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, highContrast: e.matches }));
+      setSettings(prev => ({ ...prev, highContrast: e.matches };
       if (e.matches) {
         document.documentElement.classList.add('high-contrast');
       } else {
@@ -117,7 +117,7 @@ export default function AccessibilityEnhancer() {
     };
 
     const handleReducedMotionChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
+      setSettings(prev => ({ ...prev, reducedMotion: e.matches };
       if (e.matches) {
         document.documentElement.classList.add('reduced-motion');
       } else {
@@ -131,13 +131,13 @@ export default function AccessibilityEnhancer() {
     // Keyboard navigation enhancement
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        setSettings(prev => ({ ...prev, focusVisible: true }));
+        setSettings(prev => ({ ...prev, focusVisible: true };
         document.body.classList.add('keyboard-navigation');
       }
     };
 
     const handleMouseDown = () => {
-      setSettings(prev => ({ ...prev, focusVisible: false }));
+      setSettings(prev => ({ ...prev, focusVisible: false };
       document.body.classList.remove('keyboard-navigation');
     };
 
@@ -181,7 +181,7 @@ export default function AccessibilityEnhancer() {
       observer.observe(document.body, {
         childList: true,
         subtree: true,
-      });
+      };
 
       addLiveRegion();
 
@@ -263,7 +263,7 @@ export default function AccessibilityEnhancer() {
   return (
     <>
       {/* Toggle Button */}
-      <button
+      </><button
         onClick={togglePanel}
         className="fixed top-4 right-4 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50"
         aria-label="Toggle accessibility settings"
@@ -387,7 +387,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableScreenReaderSupport = true,
   enableHighContrast = false,
   enableFocusManagement = true
-}) => {
+} => {
   const [isHighContrast, setIsHighContrast] = useState(enableHighContrast);
   const [fontSize, setFontSize] = useState(16);
 
@@ -480,7 +480,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
             modal.addEventListener('keydown', handleTabKey);
           }
-        });
+        };
       };
 
       manageFocus();
@@ -559,7 +559,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableScreenReaderSupport = true,
   enableHighContrast = false,
   enableFocusManagement = true
-}) => {
+} => {
   const [isHighContrast, setIsHighContrast] = useState(enableHighContrast);
 
   useEffect(() => {
@@ -595,11 +595,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       
       skipLink.addEventListener('focus', () => {
         skipLink.style.top = '6px';
-      });
+      };
       
       skipLink.addEventListener('blur', () => {
         skipLink.style.top = '-40px';
-      });
+      };
 
       document.body.insertBefore(skipLink, document.body.firstChild);
 
@@ -631,11 +631,11 @@ const AccessibilityEnhancer: React.FC = () => {
     skipLink.addEventListener('focus', () => {
       skipLink.style.left = '16px'
       skipLink.style.top = '16px'
-    })
+    }
     
     skipLink.addEventListener('blur', () => {
       skipLink.style.left = '-9999px'
-    })
+    }
     
     document.body.insertBefore(skipLink, document.body.firstChild)
 
@@ -922,3 +922,4 @@ export default AccessibilityEnhancer
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
 export default AccessibilityEnhancer;
+)))))))))))))))))))

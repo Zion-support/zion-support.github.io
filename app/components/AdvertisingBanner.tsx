@@ -24,7 +24,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
   variant = 'default',
   size = 'medium',
   className = ''
-}) => {
+} => {
   const sizeClasses = {
     small: 'py-4 px-6',
     medium: 'py-8 px-12',
@@ -110,4 +110,4 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
   );
 };
 
-export default AdvertisingBanner;
+export default AdvertisingBanner;)

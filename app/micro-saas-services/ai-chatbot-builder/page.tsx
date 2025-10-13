@@ -24,3 +24,4 @@ import { Helmet } from 'react-helmet-async';
             </p>
           </div>
         </div>
+)

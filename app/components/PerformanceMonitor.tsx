@@ -24,14 +24,14 @@ interface PerformanceMonitorProps {
   showInProduction?: boolean;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showInProduction = false }) => {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showInProduction = false } => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,
     cls: null,
     fcp: null,
     ttfb: null
-  });
+  };
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -51,7 +51,7 @@ export default function PerformanceMonitor() {
       const renderTime = fcp ? fcp.startTime : 0;
 
       // Measure memory usage
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number } }.memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / memory.totalJSHeapSize : 0;
 
       // Measure FPS
@@ -79,7 +79,7 @@ export default function PerformanceMonitor() {
         renderTime: Math.round(renderTime),
         memoryUsage: Math.round(memoryUsage * 100),
         fps
-      });
+      };
       }
     };
 
@@ -141,11 +141,11 @@ export default PerformanceMonitor
               domContentLoaded: entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart,
               loadComplete: entry.loadEventEnd - entry.loadEventStart,
               totalTime: entry.loadEventEnd - entry.navigationStart
-            });
+            };
           }
         }
-      });
-      observer.observe({ entryTypes: ['navigation'] });
+      };
+      observer.observe({ entryTypes: ['navigation'] };
     }
   }, []);
 
@@ -171,7 +171,7 @@ export default PerformanceMonitor;
   }, []);
 
     try {
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] })
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] }
     } catch (error) {
       console.warn('Performance Observer not supported:', error)
     }
@@ -182,14 +182,14 @@ export default PerformanceMonitor;
       setMetrics(prev => ({ 
         ...prev, 
         ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
-      }))
+      }
     }
 
     // Log performance metrics for debugging
     if (process.env['NODE_ENV'] === 'development') {
       console.log('Performance Metrics:', metrics)
     }
-    observer.observe({ entryTypes: ['resource'] });
+    observer.observe({ entryTypes: ['resource'] };
 
     return () => observer.disconnect();
   }, [analytics]);
@@ -208,7 +208,7 @@ export default PerformanceMonitor;
         tcp: navigation.connectEnd - navigation.connectStart,
         request: navigation.responseStart - navigation.requestStart,
         response: navigation.responseEnd - navigation.responseStart
-      });
+      };
     }
   }, [analytics]);
 
@@ -220,7 +220,7 @@ export default PerformanceMonitor;
         usedJSHeapSize: memory.usedJSHeapSize,
         totalJSHeapSize: memory.totalJSHeapSize,
         jsHeapSizeLimit: memory.jsHeapSizeLimit
-      });
+      };
     }
   }, [analytics]);
 
@@ -233,7 +233,7 @@ export default PerformanceMonitor;
         downlink: connection.downlink,
         rtt: connection.rtt,
         saveData: connection.saveData
-      });
+      };
     }
   }, [analytics]);
 
@@ -244,7 +244,7 @@ export default PerformanceMonitor;
         width: window.innerWidth,
         height: window.innerHeight,
         devicePixelRatio: window.devicePixelRatio
-      });
+      };
     };
 
     window.addEventListener('resize', trackViewport);
@@ -265,11 +265,11 @@ export default PerformanceMonitor;
           scrollX: window.scrollX,
           documentHeight: document.documentElement.scrollHeight,
           viewportHeight: window.innerHeight
-        });
+        };
       }, 100);
     };
 
-    window.addEventListener('scroll', trackScroll, { passive: true });
+    window.addEventListener('scroll', trackScroll, { passive: true };
     return () => {
       observer.disconnect();
     };
@@ -328,13 +328,13 @@ export default PerformanceMonitor;
         lineno: event.lineno,
         colno: event.colno,
         error: event.error?.toString()
-      });
+      };
     };
 
     const trackUnhandledRejection = (event: PromiseRejectionEvent) => {
       analytics.trackEvent('unhandled_promise_rejection', {
         reason: event.reason?.toString()
-      });
+      };
     };
 
     window.addEventListener('error', trackError);
@@ -354,3 +354,4 @@ export default PerformanceMonitor;
 };
 
 export default PerformanceMonitor;
+))))))))))))))))

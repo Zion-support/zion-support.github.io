@@ -16,7 +16,7 @@ const SkipLink: React.FC = () => {}
         if (mainContent) {
           mainContent.focus();
 
-          mainContent.scrollIntoView({ behavior: smooth });
+          mainContent.scrollIntoView({ behavior: smooth };
 
         }
 
@@ -30,3 +30,4 @@ const SkipLink: React.FC = () => {}
 };
 
 export default SkipLink;
+)

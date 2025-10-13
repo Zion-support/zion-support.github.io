@@ -9,15 +9,15 @@ interface FormData {name: string,}
 }
 
 const ContactForm: React.FC = () => {
-    message: '',})
+    message: '',}
 
   const [status, setStatus] = useState<FormStatus>({type: 'idle',
-    message: '',})
+    message: '',}
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
     const {name, value}}= e.target;
     setFormData(prev => ({)
-      [name]: value;}));
+      [name]: value;};
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -33,7 +33,7 @@ const ContactForm: React.FC = () => {
         company: "",
         message: "",
         service: "",
-      });
+      };
     } catch (error) {
       } finally {
       setIsSubmitting(false);
@@ -58,9 +58,9 @@ const ContactForm: React.FC = () => {
       setStatus({
         type: 'success',
         message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.'
-      });
+      };
 
-        message: 'Sorry, there was an error sending your message. Please try again.'})
+        message: 'Sorry, there was an error sending your message. Please try again.'}
     'Other'
   ]
 
@@ -166,12 +166,12 @@ const ContactForm: React.FC = () => {
             disabled={status.type === 'loading'}className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2",
           >{status.type === 'loading' ? (</button>
               <>
-                <div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                </><div className="h-5 w-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
                 <span>Sending...</span>
               </>
             ) : (
               <>
-                <Send className="h-5 w-5" />
+                </><Send className="h-5 w-5" />
                 <span>Send Message</span>
               </>
             )} </button>
@@ -203,3 +203,4 @@ const ContactForm: React.FC = () => {
 };
 
 export default ContactForm;
+)))))))

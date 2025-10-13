@@ -48,9 +48,9 @@ export default function FuturisticBackground({ children, className = '' }: Futur
         // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(6, 182, 212, ${particle.opacity})`;
+        ctx.fillStyle = `rgba(6, 182, 212, ${particle.opacity}`;
         ctx.fill();
-      });
+      };
 
       // Draw connections between nearby particles
       particles.forEach((particle, i) => {
@@ -63,12 +63,12 @@ export default function FuturisticBackground({ children, className = '' }: Futur
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.strokeStyle = `rgba(6, 182, 212, ${0.1 * (1 - distance / 100)})`;
+            ctx.strokeStyle = `rgba(6, 182, 212, ${0.1 * (1 - distance / 100)}`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
-        });
-      });
+        };
+      };
 
       animationId = requestAnimationFrame(animate);
     };
@@ -94,3 +94,4 @@ export default function FuturisticBackground({ children, className = '' }: Futur
 };
 
 export default FuturisticBackground;
+)))))

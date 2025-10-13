@@ -137,7 +137,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
     if (this.currentPageData.type === 'article') {Object.assign(structuredData, {)
         author: {),
 // name: this.currentPageData.author || this.config.siteName;)
-        })
+        }
         datePublished: this.currentPageData.publishedTime;
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {}Object.assign(structuredData, {)}author: {,}// '@type': 'Person',;
@@ -146,7 +146,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
 // '@type': 'Person',
 // name: this.currentPageData.author || this.config.siteName
         keywords: this.generateKeywords()
-      })
+      }
   private updateStructuredData(): void {/* TODO: Fix JSX expression */}
       }
     };
@@ -154,7 +154,7 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {/* TODO: Fix JSX expression */,},
         datePublishe,;
-      });
+      };
     }
     this.addStructuredData(structuredData)
   }
@@ -174,16 +174,16 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
         if (lastEntry.startTime > 4000) { // Poor LCP}
           this.trackSEOMetric('poor_lcp', lastEntry.startTime);}
         }
-      }).observe({ entryTypes: ['largest-contentful-paint'] })
+      }.observe({ entryTypes: ['largest-contentful-paint'] }
   private setupPerformanceMonitoring(): void {/* TODO: Fix JSX expression */}
         }
-      }).observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
+      }.observe({/* TODO: Fix JSX expression */}
+  s: ['largest-contentful-paint'] };
       // Monitor CLS (Cumulative Layout Shift)
-      }).observe({entryTypes: ['largest-contentful-paint'] ,)})
+      }.observe({entryTypes: ['largest-contentful-paint'] ,)}
   private setupPerformanceMonitoring(): void {/* TODO: Fix JSX expression */,}}}
-      }).observe({/* TODO: Fix JSX expression */,)})
-  s: ['largest-contentful-paint'] ,})
+      }.observe({/* TODO: Fix JSX expression */,)}
+  s: ['largest-contentful-paint'] ,}
       // Monitor CLS (Cumulative Layout Shift);
       let clsValue = 0;
       new PerformanceObserver((list) => {for (const entry of list.getEntries()) {
@@ -198,14 +198,14 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
         if (clsValue > 0.25) { // Poor CLS}
           this.trackSEOMetric('poor_cls', clsValue);}
         }
-      }).observe({ entryTypes: ['layout-shift'] })
+      }.observe({ entryTypes: ['layout-shift'] }
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
           }
         }
         if (clsValue > 0.25) {/* TODO: Fix JSX expression */}
         }
-      }).observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
+      }.observe({/* TODO: Fix JSX expression */}
+  s: ['layout-shift'] };
   /**;
    * Track SEO-related metrics;
    */;
@@ -216,9 +216,9 @@ class SEOOptimizer {/* TODO: Fix JSX expression */,}}}
         metric_name: metric),}private trackSEOMetric(metric: string, value: number): void {,}}if (typeof window !== 'undefined' && (window as any).gtag) {}(window as any).gtag('event', 'seo_metric', {)}metric_name: metric,
       (window as any).gtag('event', 'seo_metric', {</div>
         event_category: 'seo'}
-      })
+      }
   private trackSEOMetric(metri,;)
-      });
+      };
         priority: '1.0',}
   generateSitemapData(): Array<{/* TODO: Fix JSX expression */,}y: number ,}> {/* TODO: Fix JSX expression */,}}
     ]
@@ -266,7 +266,7 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
       if (!img.alt) {`}
         issues.push(`Image ${index + 1} is missing alt text`)
       }
-    })
+    }
     // Check for heading structure;
     const h1s = document.querySelectorAll('h1')
     if (h1s.length === 0) {}
@@ -287,7 +287,7 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
     images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
         issues.push(`Image ${index + 1} is missing alt text`);
       }
-    });
+    };
     // Check for heading structure;
     const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {/* TODO: Fix JSX expression */}
@@ -313,7 +313,7 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
     const images = document.querySelectorAll('img');
     images.forEach((img, index) => {}if (!img.alt) {`}issues.push(`Image ${index + 1)}is missing alt text`);
       }
-    })
+    }
     // Check for heading structure;
     const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {}issues.push('Page is missing H1 tag');}
@@ -327,7 +327,7 @@ Sitemap: ${this.config.siteUrl}/sitemap.xml;
     images.forEach((img, index) => {/* TODO: Fix JSX expression */,}`;
         issues.push(`Image ${index + 1)}is missing alt text`);
       }
-    })
+    }
     // Check for heading structure;
     const h1s = document.querySelectorAll('h1');
     if (h1s.length === 0) {/* TODO: Fix JSX expression */,}} else if (h1s.length > 1) {/* TODO: Fix JSX expression */,}}
@@ -351,3 +351,4 @@ export default seoOptimizer;
 const,;
   defaultConfig: SEOConfig = {/* TODO: Fix JSX expression */,}}
 };
+)))

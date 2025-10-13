@@ -16,7 +16,7 @@ interface PerformanceOptimizerProps {}
   enableCodeSplitting?: boolean;
 
 }
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children } => {
   useEffect(() => {
     // Performance optimization logic
     const optimizePerformance = () => {
@@ -44,7 +44,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         }
         
         document.head.appendChild(link);
-      });
+      };
       // Optimize images
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries) => {
@@ -55,8 +55,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
             img.classList.remove('lazy');
             imageObserver.unobserve(img);
           }
-        });
-      });
+        };
+      };
       images.forEach(img => imageObserver.observe(img));
       // Add performance monitoring
       if ('performance' in window) {
@@ -67,9 +67,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
             window.gtag('event', 'page_load_time', {
               value: Math.round(perfData.loadEventEnd - perfData.loadEventStart),
               custom_parameter: 'performance_optimizer'
-            });
+            };
           }
-        });
+        };
       }
     };
     optimizePerformance();
@@ -83,7 +83,7 @@ interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children } => {
   useEffect(() => {
     // Performance optimization logic
     const optimizeImages = () => {
@@ -99,7 +99,7 @@ export default PerformanceOptimizer;
     
     // Re-optimize on route changes
     const observer = new MutationObserver(optimizeImages);
-    observer.observe(document.body, { childList: true, subtree: true });
+    observer.observe(document.body, { childList: true, subtree: true };
 
     return () => observer.disconnect();
   }, [optimizeImages]);
@@ -121,7 +121,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
   enableImageOptimization = true,
   enableLazyLoading = true,
   enablePreloading = true,
-  enableCodeSplitting = true;}) => {useEffect(() => {
+  enableCodeSplitting = true;} => {useEffect(() => {
     // Preload critical resources;
     if (enablePreloading && typeof window !== 'undefined') {
       // Preload critical fonts;
@@ -151,7 +151,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
           link.crossOrigin = 'anonymous'
         }
         document.head.appendChild(link)
-      })
+      }
     }
 
     // Optimize images
@@ -163,7 +163,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
           imageElement['src'] = imageElement.dataset['src']
           imageElement.removeAttribute('data-src')
         }
-      })
+      }
     }
 
     // Lazy load non-critical components
@@ -176,10 +176,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
               element.classList.add('loaded')
               observer.unobserve(element)
             }
-          })
+          }
         },
         { threshold: 0.1 }
-      )
 
       const lazyElements = document.querySelectorAll('[data-lazy]')
       lazyElements.forEach(el => observer.observe(el))
@@ -187,15 +186,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
 
     // Monitor Core Web Vitals
     const monitorWebVitals = () => {
-      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
-        onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
-        onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
-        onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
-        onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
-        onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
-      }).catch(() => {
+      import('web-vitals').then(({ onCLS, onFID, onFCP, onLCP, onTTFB } => {
+        onCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value }
+        onFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value }
+        onFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value }
+        onLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value }
+        onTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value }
+      }.catch(() => {
         // Silently fail if web-vitals is not available
-      })
+      }
     }
 
       }
@@ -203,8 +202,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
         // Add error handling
         img.addEventListener('error', () => {
           img['src'] = '/placeholder-image.jpg';
-        });
-      });
+        };
+      };
     };
 
     // Optimize third-party scripts
@@ -215,7 +214,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
         if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
           script.setAttribute('defer', '');
         }
-      });
+      };
     };
 
     // Initialize optimizations
@@ -226,8 +225,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
     // Re-run optimizations on DOM changes
     const observer = new MutationObserver(() => {
       optimizeImages();
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
+    };
+    observer.observe(document.body, { childList: true, subtree: true };
 
     return () => {
       observer.disconnect();
@@ -236,3 +235,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
 
   return null;
 }
+}}}))))))))))))))))))))))))))))))))))))))

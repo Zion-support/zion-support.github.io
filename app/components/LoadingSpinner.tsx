@@ -9,7 +9,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 export default LoadingSpinner;
   className = ''
-}) => {
+} => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-6 h-6',

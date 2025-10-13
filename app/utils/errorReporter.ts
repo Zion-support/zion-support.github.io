@@ -40,8 +40,8 @@ export class ErrorReporter {}
   private config: ErrorReporterConfig
   private errorQueue: ErrorReport[] = []
   private errorCount: Map<string, number> = new Map();}
-  private constructor(config: Partial<ErrorReporterConfig> = {}) {}
-  private constructor(config: Partial<ErrorReporterConfig> = {,)}) {}this.config = {...defaultConfig, ...config}export interface ErrorReport {/* TODO: Fix JSX expression */,}}}
+  private constructor(config: Partial<ErrorReporterConfig> = {} {}
+  private constructor(config: Partial<ErrorReporterConfig> = {,)} {}this.config = {...defaultConfig, ...config}export interface ErrorReport {/* TODO: Fix JSX expression */,}}}
 export interface ErrorReporterConfig {/* TODO: Fix JSX expression */,}}}
 const,;
   defaultConfig: ErrorReporterConfig = {/* TODO: Fix JSX expression */,}}
@@ -50,14 +50,14 @@ const,;
 /**;
  * ErrorReporter class for comprehensive error handling;
  */;
-export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorReporterConfig> = {,}) {/* TODO: Fix JSX expression */,}this.config = {...defaultConfig, ...config}}
+export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorReporterConfig> = {,} {/* TODO: Fix JSX expression */,}this.config = {...defaultConfig, ...config}}
   /**;
    * Get singleton instance;
    */;
   static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {}}if (!ErrorReporter.instance) {}ErrorReporter.instance = new ErrorReporter(config);}
   static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {/* TODO: Fix JSX expression */,}}}
     return ErrorReporter.instance;
-  g: Partial<ErrorReporterConfig> = {}) {/* TODO: Fix JSX expression */}
+  g: Partial<ErrorReporterConfig> = {} {/* TODO: Fix JSX expression */}
     this.config = { ...defaultConfig, ...config };
   static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {}
     if (!ErrorReporter.instance) {}
@@ -81,7 +81,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorRep
   reportError(),
     error: Error,
     severity: ErrorReport['severity'] = 'medium',
-    context?: Record<string, unknown>}): void {}}const errorReport: ErrorReport = {,}message: error.message,
+    context?: Record<string, unknown>}: void {}}const errorReport: ErrorReport = {,}message: error.message,
       severity,;
       context: this.config.captureContext ? context : undefined,}
     }
@@ -198,7 +198,7 @@ export class ErrorReporter {/* TODO: Fix JSX expression */,}}g: Partial<ErrorRep
         },
         bod,
   y: JSON.stringify(report)
-      });
+      };
     } catch (error) {/* TODO: Fix JSX expression */}
       }
     }
@@ -277,7 +277,7 @@ export const captureComponentError = (;
   const report = ErrorReporter.getInstance(),;
   report.reportError(error, 'high', {);
     componentName);
-  componentName: string;,}): void => {}const report = ErrorReporter.getInstance();
+  componentName: string;,}: void => {}const report = ErrorReporter.getInstance();
   report.reportError(error, 'high', {)}componentName,;
     componentStack: errorInfo.componentStack,}
   report.reportError(error, 'high', {</div>
@@ -297,8 +297,8 @@ export const captureComponentError = (;
   componentNam,;
   e: string;)
 ): void => {/* TODO: Fix JSX expression */}
-  });
+  };
 };
 export default ErrorReporter;
   e: string;),
-): void => {/* TODO: Fix JSX expression */,}})
+): void => {/* TODO: Fix JSX expression */,}}

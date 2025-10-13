@@ -25,7 +25,7 @@ interface SEOData {
   ogImage = '/images/og-image.jpg',
   twitterCard = 'summary_large_image',
   structuredData,
-  children;}) => {const [seoScore, setSeoScore] = useState(0);
+  children;} => {const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
 
   const analyzeSEO = useCallback(() => {;
@@ -52,9 +52,9 @@ interface SEOData {
   const generateStructuredData = () => {const defaultStructuredData = {
         "https: //linkedin.com/company/ziontechgroup",
       ]}return structuredData || defaultStructuredData;
-      (window as unknown as {gtag: (command: string, targetId: string, config: Record<string, unknown>) => void}}).gtag('config', 'GA_MEASUREMENT_ID', {)
+      (window as unknown as {gtag: (command: string, targetId: string, config: Record<string, unknown>) => void}}.gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: config.title,
-        page_location: config.canonicalUrl,})
+        page_location: config.canonicalUrl,}
 const AdvancedSEOOptimizerPage: React.FC = () => {
   const features = [
     {
@@ -81,13 +81,13 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
       window.addEventListener('load', () => {;
         const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
-          (window as unknown as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag('event', 'page_load_performance', {)
+          (window as unknown as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}.gtag('event', 'page_load_performance', {)
   return(<>)
-      <Helmet />
+      </><Helmet />
         <title>{title}</title>
         <meta name="description" content={description}/>
         <meta name="keywords" content={keywords}/>
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl}/></li>}
         
         {/* Open Graph */} <meta property="og: title" content={title,}/>
         <meta property="og: description" content={description,}/>
@@ -134,7 +134,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
           {recommendations.length > 0 && (
             <div>
               <div>Recommendations: </div>,
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' ,}}>
+              <ul style={{ margin: '5px 0', paddingLeft: '15px' ,}}></ul>
       )}
 
       {/* Features Section */}
@@ -219,7 +219,7 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
         ))
       </section>
     </div>
-      {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
+      {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/></li>}
 
       {/* Structured Data */} <script type="application/ld+json">
         {JSON.stringify(generateStructuredData())} </script>
@@ -228,3 +228,4 @@ const AdvancedSEOOptimizerPage: React.FC = () => {
 };
 
 export default AdvancedSEOOptimizerPage;
+))

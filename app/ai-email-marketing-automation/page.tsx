@@ -13,13 +13,13 @@
     'Gain competitive advantage with advanced technology';
   ]
 return(<>)
-      <Helmet />
+      </><Helmet />
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6"></h1>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                 Page
               </span>
@@ -34,7 +34,7 @@ return(<>)
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
               Ai Email Marketing Automation
             <p>Advanced AI-powered ai email marketing automation solution for modern businesses.</p>
             </p>
@@ -120,7 +120,7 @@ return(<>)
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
                   {feature.benefits && (;
                     <ul>
-                      {feature.benefits.map((benefit, idx) => (} <li>
+                      {feature.benefits.map((benefit, idx) => (} <li></li>
                           <CheckCircle />
         {/* Benefits Section */} <section className="py-20 px-4">
                     </ul>
@@ -151,3 +151,4 @@ return(<>)
         {/* CTA Section */}
         <section className="py-20 px-4">
         </section>
+))))

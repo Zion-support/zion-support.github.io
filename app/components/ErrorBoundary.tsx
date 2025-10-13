@@ -44,14 +44,14 @@ export class ErrorBoundary extends Component<Props, State> {
     this.setState({
       error,
       errorInfo
-    });
+    };
 
     // You can also log the error to an error reporting service here
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
         description: error.message,
         fatal: false
-      });
+      };
     }
   }
   };
@@ -269,7 +269,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-function DefaultErrorFallback({ error }: { error?: Error }) {
+function DefaultErrorFallback({ error }: { error?: Error } {
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-900 via-gray-900 to-red-900 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-xl p-6 text-center">
@@ -335,7 +335,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   private handleRetry = () => {
-    this.setState({ hasError: false, error: undefined })
+    this.setState({ hasError: false, error: undefined }
   }
 
   public render() {
@@ -381,3 +381,4 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
+)))))

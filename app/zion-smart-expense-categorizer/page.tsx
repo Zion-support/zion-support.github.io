@@ -106,7 +106,7 @@ export default function ZionSmartExpenseCategorizer() {
 
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>Zion Smart Expense Categorizer - AI-Powered Expense Management | Zion Tech Group</title>
         <meta
           name="description"
@@ -361,4 +361,4 @@ export default function ZionSmartExpenseCategorizer() {
       </div>
     </>
   );
-}
+}})

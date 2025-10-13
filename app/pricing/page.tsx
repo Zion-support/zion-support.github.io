@@ -8,17 +8,6 @@ import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
 
 const PagePage: React.FC = () => {}
 import React from 'react';
-<<<<<<< HEAD
-
-export default function PricingPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Pricing</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-=======
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -195,7 +184,6 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
       </div>
     </div>
   );
@@ -438,7 +426,7 @@ export default PricingPage;
                     <span>{tab.label}</span>
                   </button>
                 );
-              })}
+              }}
             </div>
           </div>
 

@@ -9,7 +9,7 @@ interface PerformanceMetrics {
 }
 
 export const usePerformance = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({})
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({}
 
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -20,18 +20,18 @@ export const usePerformance = () => {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
-        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }))
-      })
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }
+      }
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }
 
       // First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry: any) => {
-          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }))
-        })
-      })
-      fidObserver.observe({ entryTypes: ['first-input'] })
+          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }
+        }
+      }
+      fidObserver.observe({ entryTypes: ['first-input'] }
 
       // Cumulative Layout Shift (CLS)
       let clsValue = 0
@@ -40,27 +40,27 @@ export const usePerformance = () => {
         entries.forEach((entry: any) => {
           if (!entry.hadRecentInput) {
             clsValue += entry.value
-            setMetrics(prev => ({ ...prev, cls: clsValue }))
+            setMetrics(prev => ({ ...prev, cls: clsValue }
           }
-        })
-      })
-      clsObserver.observe({ entryTypes: ['layout-shift'] })
+        }
+      }
+      clsObserver.observe({ entryTypes: ['layout-shift'] }
 
       // First Contentful Paint (FCP)
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
+            setMetrics(prev => ({ ...prev, fcp: entry.startTime }
           }
-        })
-      })
-      fcpObserver.observe({ entryTypes: ['paint'] })
+        }
+      }
+      fcpObserver.observe({ entryTypes: ['paint'] }
 
       // Time to First Byte (TTFB)
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }))
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }
       }
 
       // Cleanup observers after 10 seconds
@@ -85,4 +85,4 @@ export const usePerformance = () => {
   }, [])
 
   return metrics
-}
+}))))))))))))))))))))))

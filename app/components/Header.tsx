@@ -5,12 +5,12 @@ import Navigation from './Navigation';
 const Header: React.FC = () => {,
   return(<React.Fragment>)</React.Fragment>
       <Navigation />
-      {/* Spacer to prevent content from going under fixed header */} <div className="h-16 lg: h-20" />,
+      {/* Spacer to prevent content from going under fixed header */} <div className="h-16 lg: h-20" /></div>,
     </React.Fragment>
     <>
-      <Navigation />
+      </><Navigation />
       {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" />
+      <div className="h-16 lg:h-20" /></div>
     </>
   );
 };
@@ -20,7 +20,7 @@ export default Header;
   </>
       <Navigation />
       {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" />
+      <div className="h-16 lg:h-20" /></div>
 
     </>
   );

@@ -58,7 +58,7 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   enableFocusManagement = true,
   enableVoiceNavigation = false,
   enableReducedMotion = false
-}) => {
+} => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     ...defaultSettings,
     enableKeyboardNavigation,
@@ -67,10 +67,10 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     enableFocusManagement,
     enableVoiceNavigation,
     enableReducedMotion
-  });
+  };
 
   const updateSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
-    setSettings(prev => ({ ...prev, ...newSettings }));
+    setSettings(prev => ({ ...prev, ...newSettings };
   }, []);
 
   const resetSettings = useCallback(() => {
@@ -99,7 +99,7 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
     const element = document.getElementById(elementId);
     if (element) {
       element.focus();
-      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' };
     }
   }, [settings.enableFocusManagement]);
 
@@ -221,10 +221,10 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
           window.location.href = '/contact';
           break;
         case 'scroll up':
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: 'smooth' };
           break;
         case 'scroll down':
-          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' };
           break;
         default:
           console.log('Unknown voice command:', command);
@@ -253,4 +253,4 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   );
 };
 
-export default AccessibilityProvider;
+export default AccessibilityProvider;)))))))

@@ -258,7 +258,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               >
                 {isLoading ? (
                   <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
+                    </><div className="animate-spin rounded-full h-5 w-5 border-b-2 border-purple-600 mr-2"></div>
                     Subscribing...
 
                 ) : (
@@ -298,6 +298,7 @@ export default ContentNewsletterSignupPage;
         <div className="text-sm">
           <div className="text-2xl font-bold text-blue-400">10K+</div>
   );
-});
+};
 
 export default ContentNewsletterSignup;
+}}}}}})))

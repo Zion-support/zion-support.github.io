@@ -106,7 +106,7 @@ export default function ZionAIPerformanceOptimizer() {
 
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>Zion AI Performance Optimizer - AI-Powered Performance Optimization | Zion Tech Group</title>
         <meta
           name="description"
@@ -361,4 +361,4 @@ export default function ZionAIPerformanceOptimizer() {
       </div>
     </>
   );
-}
+}})

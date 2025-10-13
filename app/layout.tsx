@@ -13,11 +13,11 @@
         <meta name="googlebot" content="index, follow" />
         
         {/* Favicons */}
-        <link rel='icon' href='/favicon.ico' />
-        <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
-        <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
-        <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
-        <link rel='manifest' href='/site.webmanifest' />
+        <link rel='icon' href='/favicon.ico' /></li>
+        <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' /></li>
+        <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' /></li>
+        <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' /></li>
+        <link rel='manifest' href='/site.webmanifest' /></li>
         <meta name='theme-color' content='#4f46e5' />
         {/* Enhanced SEO meta tags */}
         <meta name='publisher' content='Zion Tech Group' />
@@ -34,14 +34,14 @@
         <meta name='application-name' content='Zion Tech Group' />
         <meta name='msapplication-TileColor' content='#4f46e5' />
         <meta name='msapplication-config' content='/browserconfig.xml' />
-        <link rel='canonical' href='https://ziontechgroup.com' />
-        <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' />
+        <link rel='canonical' href='https://ziontechgroup.com' /></li>
+        <link rel='alternate' hrefLang='en' href='https://ziontechgroup.com' /></li>
         
         {/* Resource hints for better performance */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" /></li>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /></li>
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" /></li>
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" /></li>
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />

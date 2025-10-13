@@ -26,7 +26,7 @@ export class CacheManager<T = unknown> {}private cache: Map<string, CacheEntry<T
     entries: 0,}}
   private config: Required<CacheConfig>,
   private config: Required<CacheConfig>,
-constructor(config: CacheConfig = {,)}) {}this.config = {}storage: config.storage || CacheStorage.Memory,
+constructor(config: CacheConfig = {,)} {}this.config = {}storage: config.storage || CacheStorage.Memory,
       defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes,
     }
   }
@@ -46,7 +46,7 @@ export interface CacheEntry<T> {/* TODO: Fix JSX expression */,}}
 export interface CacheStats {/* TODO: Fix JSX expression */,}}}
 export class CacheManager {/* TODO: Fix JSX expression */,}}s: 0 ,}
   constructor(confi);
-  g: CacheConfig = {,}) {/* TODO: Fix JSX expression */,}}
+  g: CacheConfig = {,} {/* TODO: Fix JSX expression */,}}
   /**;
    * Start periodic cleanup of expired entries;
    */;
@@ -120,7 +120,7 @@ export interface CacheEntry<T> {/* TODO: Fix JSX expression */}
   set<T>(ke,
   y: string, valu,
   e: T, option)
-  s: { ttl?: number } = {}): void {/* TODO: Fix JSX expression */}
+  s: { ttl?: number } = {}: void {/* TODO: Fix JSX expression */}
     };`
     performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count');
     if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */}
@@ -136,7 +136,7 @@ export interface CacheEntry<T> {/* TODO: Fix JSX expression */}
   }
 
   e: T, option);
-  s: {ttl?: number ,}= {}): void {/* TODO: Fix JSX expression */,}}}`;
+  s: {ttl?: number ,}= {}: void {/* TODO: Fix JSX expression */,}}}`;
     performanceMonitoring.recordCustomMetric(`cache_set_${key)}`, 1, 'count');
     if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */,}} else if(this.storage === CacheStorage.LocalStorage &&;)
       typeof window !== 'undefined' &&;
@@ -313,8 +313,8 @@ this.stats.entries = this.cache.size;
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {// Save to persistent storage if needed;}if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}this.saveToStorage();
     }
 return cleaned;
-    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */,)})
-  e: this.storage ,})
+    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */,)}
+  e: this.storage ,}
     if (this.config.storage !== CacheStorage.Memory) {}
       this.clearStorage();
     }
@@ -349,25 +349,24 @@ return cleaned;
     }
 
     return cleaned;
-    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */})
-  e: this.storage });
+    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */}
+  e: this.storage };
   getOrSet<T>(ke,
   y: string,
     f)
   n: () => T | Promise<T>,
     option,
-  s: { ttl?: number } = {}
-  ): T | Promise<T> {/* TODO: Fix JSX expression */}
+  s: { ttl?: number } = {}: T | Promise<T> {/* TODO: Fix JSX expression */}
     }
     option,;
-  s: {ttl?: number ,}= {}): T | Promise<T> {/* TODO: Fix JSX expression */,}}
+  s: {ttl?: number ,}= {}: T | Promise<T> {/* TODO: Fix JSX expression */,}}
     const start = performance.now();
     const value = fn();
     const duration = performance.now() - start;`;
     performanceMonitoring.recordCustomMetric(`cache_compute_${key)}`, duration, 'ms');
     // Handle both sync and async values;
     if (value instanceof Promise) {/* TODO: Fix JSX expression */}
-      });
+      };
     }
     this.set(key, value, options);
     return value;
@@ -386,11 +385,10 @@ return cleaned;
     f)
   n: () => Promise<T> | T,
     option,
-  s: { ttl?: number } = {}
-  ): Promise<T> {/* TODO: Fix JSX expression */}
+  s: { ttl?: number } = {}: Promise<T> {/* TODO: Fix JSX expression */}
     }
     option,;
-  s: {ttl?: number ,}= {}): Promise<T> {/* TODO: Fix JSX expression */,}}
+  s: {ttl?: number ,}= {}: Promise<T> {/* TODO: Fix JSX expression */,}}
     const start = performance.now();
     const value = await fn();
     const duration = performance.now() - start;`;
@@ -398,7 +396,7 @@ return cleaned;
     this.set(key, value, options);
     return value;
     option,;
-  s: {/* TODO: Fix JSX expression */,}s: TArgs) => string ,} = {}): (...arg);
+  s: {/* TODO: Fix JSX expression */,}s: TArgs) => string ,} = {}: (...arg);
   s: TArgs) => TResult {/* TODO: Fix JSX expression */,}}const {keyGenerator, ...cacheOptions}}= options;
     const { keyGenerator, ...cacheOptions } = options;
     return (...arg);
@@ -442,14 +440,14 @@ try {}}const storage = this.getStorage();
 try {}}const storage = this.getStorage();
       if (storage) {}const data = storage.getItem('cache-manager');
         if (data) {}const parsed = JSON.parse(data);
-          this.cache = new Map(Object.entries(parsed.entries || {)}));
+          this.cache = new Map(Object.entries(parsed.entries || {)};
           this.stats = {...this.stats, ...parsed.stats}}
       }
     } catch (error) {}* Get cache count;
    */;
   getStats(): {/* TODO: Fix JSX expression */,}} {/* TODO: Fix JSX expression */,}}
           const parsed = JSON.parse(data);
-          this.cache = new Map(Object.entries(parsed.entries || {}));
+          this.cache = new Map(Object.entries(parsed.entries || {};
           this.stats = { ...this.stats, ...parsed.stats };
         }
       }
@@ -480,11 +478,11 @@ try {}}const storage = this.getStorage();
 switch (this.config.storage) {case CacheStorage.LocalStorage: return window.localStorage;,}switch (this.config.storage) {}case CacheStorage.LocalStorage: ;,
         return window.localStorage;
 // Create singleton instances for different use cases;
-export const memoryCache = new CacheManager({storage: CacheStorage.Memory ,)})
+export const memoryCache = new CacheManager({storage: CacheStorage.Memory ,)}
 export const localStorageCache = new CacheManager({)
         return null;
 // Create singleton instances for different use cases;
-export const memoryCache = new CacheManager({ storage: CacheStorage.Memory });
+export const memoryCache = new CacheManager({ storage: CacheStorage.Memory };
 export const localStorageCache = new CacheManager({)
   storage: CacheStorage.LocalStorage)
   defaultTTL: 30 * 60 * 1000 // 30 minutes;

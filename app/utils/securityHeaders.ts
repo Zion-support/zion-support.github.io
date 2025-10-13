@@ -44,8 +44,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {,}// Content Secur
   }
   if (config.referrerPolicy) {}
     headers['Referrer-Policy'] = config.referrerPolicy;}
-  }
-): Record<string, string> {}const config = {...defaultSecurityHeaders, ...customConfig}const headers: Record<string, string> = {}'X-XSS-Protection': '1; mode=block',;
+  }: Record<string, string> {}const config = {...defaultSecurityHeaders, ...customConfig}const headers: Record<string, string> = {}'X-XSS-Protection': '1; mode=block',;
   if (config.permissionsPolicy) {}headers['Permissions-Policy'] = config.permissionsPolicy;}
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */,}}}
 export const,;
@@ -63,8 +62,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig 
   if (config.xFrameOptions) {/* TODO: Fix JSX expression */,}}
   if (config.xContentTypeOptions) {/* TODO: Fix JSX expression */,}}
   if (config.referrerPolicy) {/* TODO: Fix JSX expression */,}}
-  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */,}}
-): Record<string, string> {/* TODO: Fix JSX expression */}
+  if (config.permissionsPolicy) {/* TODO: Fix JSX expression */,}}: Record<string, string> {/* TODO: Fix JSX expression */}
   const config = { ...defaultSecurityHeaders, ...customConfig };
   const,
   headers: Record<string, string> = {/* TODO: Fix JSX expression */}
@@ -77,7 +75,7 @@ export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig 
  */;
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
 ): Array<{key: string, value: string ,}> {export function getNextSecurityHeaders();
-  customConfig?: Partial<SecurityHeadersConfig>}): Array<{key: string, value: string ,}> {}const headers = getSecurityHeaders(customConfig);
+  customConfig?: Partial<SecurityHeadersConfig>}: Array<{key: string, value: string ,}> {}const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({}key,;
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>)
 ): Array<{ key: string; value: string }> {
@@ -88,15 +86,15 @@ export function getNextSecurityHeaders()
   return Object.entries(headers).map(([key, value]) => ({}
     key,
     value}
-  }))
+  }
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig></SecurityHeadersConfig>)
 ): Array<{/* TODO: Fix JSX expression */}
   e: string }> {/* TODO: Fix JSX expression */}
-  }));
+  };
   const headers = getSecurityHeaders(customConfig);
   return Object.entries(headers).map(([key, value]) => ({}
     key,
     value}
-  }));
+  };
 export function getNextSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig />);
-): Array<{/* TODO: Fix JSX expression */,}e: string ,}> {/* TODO: Fix JSX expression */,}}));
+): Array<{/* TODO: Fix JSX expression */,}e: string ,}> {/* TODO: Fix JSX expression */,}};

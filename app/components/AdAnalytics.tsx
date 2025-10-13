@@ -36,7 +36,7 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
   adId, 
   dateRange = '30d', 
   className = '' 
-}) => {
+} => {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedMetric, setSelectedMetric] = useState<'impressions' | 'clicks' | 'conversions' | 'revenue'>('impressions');
@@ -58,7 +58,7 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
           conversions: Math.floor(Math.random() * 50) + 10,
           spent: Math.floor(Math.random() * 1000) + 200,
           revenue: Math.floor(Math.random() * 2000) + 500
-        });
+        };
       }
       
       return data;
@@ -78,7 +78,7 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
       conversions: totals.conversions + day.conversions,
       spent: totals.spent + day.spent,
       revenue: totals.revenue + day.revenue
-    }), { impressions: 0, clicks: 0, conversions: 0, spent: 0, revenue: 0 });
+    }, { impressions: 0, clicks: 0, conversions: 0, spent: 0, revenue: 0 };
   };
 
   const calculateTrends = () => {
@@ -93,7 +93,7 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
       conversions: avg.conversions + day.conversions / firstHalf.length,
       spent: avg.spent + day.spent / firstHalf.length,
       revenue: avg.revenue + day.revenue / firstHalf.length
-    }), { impressions: 0, clicks: 0, conversions: 0, spent: 0, revenue: 0 });
+    }, { impressions: 0, clicks: 0, conversions: 0, spent: 0, revenue: 0 };
     
     const secondHalfAvg = secondHalf.reduce((avg, day) => ({
       impressions: avg.impressions + day.impressions / secondHalf.length,
@@ -101,7 +101,7 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
       conversions: avg.conversions + day.conversions / secondHalf.length,
       spent: avg.spent + day.spent / secondHalf.length,
       revenue: avg.revenue + day.revenue / secondHalf.length
-    }), { impressions: 0, clicks: 0, conversions: 0, revenue: 0 });
+    }, { impressions: 0, clicks: 0, conversions: 0, revenue: 0 };
     
     return {
       impressions: ((secondHalfAvg.impressions - firstHalfAvg.impressions) / firstHalfAvg.impressions) * 100,
@@ -286,7 +286,7 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
                   title={`${day.date}: ${day[selectedMetric].toLocaleString()}`}
                 />
               );
-            })}
+            }}
           </div>
         </div>
 
@@ -374,4 +374,4 @@ const AdAnalytics: React.FC<AdAnalyticsProps> = ({
   );
 };
 
-export default AdAnalytics;
+export default AdAnalytics;)))))))))

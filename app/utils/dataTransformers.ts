@@ -26,8 +26,7 @@ export function flattenObject(ob,;)
 export function unflattenObject(ob,;)
   j: Record<string, unknown>,;
 ): Pick<T, K> {/* TODO: Fix JSX expression */,}const result = {}as Pick<T>
-  keys.forEach(key => {/* TODO: Fix JSX expression */,)}})
-): Omit<T, K> {/* TODO: Fix JSX expression */,}const result = {...obj}keys.forEach(key => {/* TODO: Fix JSX expression */,)})
+  keys.forEach(key => {/* TODO: Fix JSX expression */,)}}: Omit<T, K> {/* TODO: Fix JSX expression */,}const result = {...obj}keys.forEach(key => {/* TODO: Fix JSX expression */,)}
   ke,;
   y: keyof T | ((ite),
 ): Record<string, T[]> {/* TODO: Fix JSX expression */,},
@@ -40,7 +39,7 @@ export function unflattenObject(ob,;)
 export function unique<T>(arra);
   y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */,}}
   const seen = new Set();
-  return array.filter(item => {/* TODO: Fix JSX expression */,)}})
+  return array.filter(item => {/* TODO: Fix JSX expression */,)}}
     seen.add(value);
     return true;
 ): T[] {/* TODO: Fix JSX expression */,}}
@@ -57,7 +56,7 @@ export function unique<T>(arra);
       if (aComp > bComp) return order === 'asc' ? 1 : -1;
     }
     return 0;
-  })
+  }
 }
 /**;
  * Chunk array into smaller arrays;
@@ -90,7 +89,7 @@ export function formatNumber(nu);
  * Format currency;
  */;
 export function formatCurrency(amoun);
-  t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */,}}}).format(amount);
+  t: number, currency = 'USD', locale = 'en-US'): string {/* TODO: Fix JSX expression */,}}}.format(amount);
 }
 /**;
  * Format date;

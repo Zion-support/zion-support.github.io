@@ -5,7 +5,7 @@
 };
 // Intersection Observer hook for lazy loading;
   option,;
-  s: IntersectionObserverInit = {,}) => {/* TODO: Fix JSX expression */,}})
+  s: IntersectionObserverInit = {,} => {/* TODO: Fix JSX expression */,}}
         : null,;
   );
   const observe = useCallback((elemen);
@@ -37,8 +37,7 @@ export const useLazyImage = useCallback((...args) => {const [imageSrc, setImageS
             }
             img.onerror = () => {}
               setIsError(true);}
-            }
-  );
+            };
   const disconnect = useCallback(() => {/* TODO: Fix JSX expression */}
     }
   }, [observer]);
@@ -63,15 +62,14 @@ export const useLazyImage = (sr);
     )
   )
   return { imageSrc, isLoaded, isError, observe }
-}
-    );
+};
   );
   return {imageSrc, isLoaded, isError, observe}}}
 // Performance monitoring hook;
 export const usePerformanceMonitoring = useCallback((...args) => {const [metrics, setMetrics] = useState<{
     cls?: number;
     ttfb?: number;}
-  }>({})
+  }>({}
   useEffect(() => {
     if (typeof window === 'undefined') return;
   useEffect(() => {if (typeof window === 'undefined') return;
@@ -85,7 +83,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {const [metrics
       setMetrics({);
         fcp);
         lcp)}ttfb: navigation?.responseStart - navigation?.requestStart,}
-      })
+      }
     }
     // Monitor performance after page load;
     if (document.readyState === 'complete') {// Performance monitoring hook;}export const usePerformanceMonitoring = useCallback((...args) => {}const [metrics, setMetrics] = useState<{}fcp?: number;
@@ -93,7 +91,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {const [metrics
     fid?: number;
     cls?: number;
     ttfb?: number;}
-  }>({})
+  }>({}
   useEffect(() => {}if (typeof window === 'undefined') return;
     const updateMetrics = useCallback((...args) => {}const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
@@ -103,27 +101,27 @@ export const usePerformanceMonitoring = useCallback((...args) => {const [metrics
         lcp,;
         ttfb: navigation?.responseStart - navigation?.requestStart,}
         ttfb: navigation?.responseStart - navigation?.requestStart}
-      })
+      }
     }
     // Monitor performance after page load;
       setMetrics({</div>
         fcp,
         lcp,
         ttfb: navigation?.responseStart - navigation?.requestStart}
-      })
+      }
     }
     // Monitor performance after page load;
     if (document.readyState === 'complete') {}updateMetrics();}
     } else {}}window.addEventListener('load', updateMetrics);}
     }
     // Monitor Core Web Vitals;
-    if ('web-vitals' in window) {}import('web-vitals').then(({getCLS, getFID, getFCP, getLCP, getTTFB)}) => {}getCLS((metric) => setMetrics(prev => ({...prev, cls: metric.value ,)})));
-        getFID((metric) => setMetrics(prev => ({...prev, fid: metric.value ,)})));
-        getFCP((metric) => setMetrics(prev => ({...prev, fcp: metric.value ,)})));
-        getLCP((metric) => setMetrics(prev => ({...prev, lcp: metric.value ,)})));
-        getTTFB((metric) => setMetrics(prev => ({...prev, ttfb: metric.value ,)})));
+    if ('web-vitals' in window) {}import('web-vitals').then(({getCLS, getFID, getFCP, getLCP, getTTFB)} => {}getCLS((metric) => setMetrics(prev => ({...prev, cls: metric.value ,)};
+        getFID((metric) => setMetrics(prev => ({...prev, fid: metric.value ,)};
+        getFCP((metric) => setMetrics(prev => ({...prev, fcp: metric.value ,)};
+        getLCP((metric) => setMetrics(prev => ({...prev, lcp: metric.value ,)};
+        getTTFB((metric) => setMetrics(prev => ({...prev, ttfb: metric.value ,)};
     // Monitor Core Web Vitals;
-      })
+      }
     }
     return () => {}
       window.removeEventListener('load', updateMetrics);}
@@ -134,7 +132,7 @@ export const usePerformanceMonitoring = useCallback((...args) => {const [metrics
 export const useMemoryMonitoring = useCallback((...args) => {const [memoryInfo, setMemoryInfo] = useState<{
     totalJSHeapSize?: number;
     jsHeapSizeLimit?: number;}
-  }>({})
+  }>({}
   useEffect(() => {
     if (typeof window === 'undefined' || !('memory' in performance)) return;
   useEffect(() => {if (typeof window === 'undefined' || !('memory' in performance)) return;
@@ -145,21 +143,20 @@ export const useMemoryMonitoring = useCallback((...args) => {const [memoryInfo, 
 // Memory usage monitoring;}export const useMemoryMonitoring = useCallback((...args) => {}const [memoryInfo, setMemoryInfo] = useState<{}usedJSHeapSize?: number;
     totalJSHeapSize?: number;
     jsHeapSizeLimit?: number;}
-  }>({})
+  }>({}
   useEffect(() => {}if (typeof window === 'undefined' || !('memory' in performance)) return;
     const updateMemoryInfo = useCallback((...args) => {}const memory = (performance as any).memory;
       if (memory) {}setMemoryInfo({)}usedJSHeapSize: memory.usedJSHeapSize,
         setMemoryInfo({</div>
           jsHeapSizeLimit: memory.jsHeapSizeLimit}
-        })
-  );
+        };
   return { imageSrc, isLoaded, isError, observe };
 };
 // Performance monitoring hook;
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
-  }>({});
+  }>({};
   useEffect(() => {/* TODO: Fix JSX expression */}
-      });
+      };
     };
     // Monitor performance after page load;
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
@@ -167,17 +164,17 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
     }
     // Monitor Core Web Vitals;
     if ('web-vitals' in window) {/* TODO: Fix JSX expression */}
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
-  s: metric.value })));
-        getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  d: metric.value })));
-        getFCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value })));
-        getLCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value })));
-        getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  b: metric.value })));
-      });
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB } => {/* TODO: Fix JSX expression */}
+  s: metric.value };
+        getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */}
+  d: metric.value };
+        getFCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */}
+  p: metric.value };
+        getLCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */}
+  p: metric.value };
+        getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */}
+  b: metric.value };
+      };
     }
     return () => {/* TODO: Fix JSX expression */}
     };
@@ -186,36 +183,36 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 };
 // Memory usage monitoring;
 export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
-  }>({});
+  }>({};
   useEffect(() => {/* TODO: Fix JSX expression */}
-        });
+        };
   );
   return {imageSrc, isLoaded, isError, observe}}}
 // Performance monitoring hook;
-export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */,}}>({})
-  useEffect(() => {/* TODO: Fix JSX expression */,}})
+export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */,}}>({}
+  useEffect(() => {/* TODO: Fix JSX expression */,}}
     }
     // Monitor performance after page load;
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
     // Monitor Core Web Vitals;
-    if ('web-vitals' in window) {/* TODO: Fix JSX expression */,}import('web-vitals').then(({getCLS, getFID, getFCP, getLCP, getTTFB)}) => {/* TODO: Fix JSX expression */,}s: metric.value ,})));
-        getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */,)})
-  d: metric.value ,})));
-        getFCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */,)})
-  p: metric.value ,})));
-        getLCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */,)})
-  p: metric.value ,})));
-        getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */,)})
-  b: metric.value ,})));
-      })
+    if ('web-vitals' in window) {/* TODO: Fix JSX expression */,}import('web-vitals').then(({getCLS, getFID, getFCP, getLCP, getTTFB)} => {/* TODO: Fix JSX expression */,}s: metric.value ,};
+        getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */,)}
+  d: metric.value ,};
+        getFCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */,)}
+  p: metric.value ,};
+        getLCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */,)}
+  p: metric.value ,};
+        getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */,)}
+  b: metric.value ,};
+      }
     }
     return () => {/* TODO: Fix JSX expression */,}}
   }, []);
   return metrics;
 }
 // Memory usage monitoring;
-export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */,}}>({})
-  useEffect(() => {/* TODO: Fix JSX expression */,}})
+export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */,}}>({}
+  useEffect(() => {/* TODO: Fix JSX expression */,}}
   return memoryInfo;
 // Resource preloading utility;
 export const preloadResource = useCallback((...args) => {if (typeof window === 'undefined') return;
@@ -230,7 +227,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {const [bundleSi
     jsSize?: number;
     cssSize?: number;
     imageSize?: number;}
-  }>({})
+  }>({}
   useEffect(() => {
     if (typeof window === 'undefined') return;
   useEffect(() => {if (typeof window === 'undefined') return;
@@ -246,7 +243,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {const [bundleSi
     jsSize?: number;
     cssSize?: number;
     imageSize?: number;}
-  }>({})
+  }>({}
   useEffect(() => {}if (typeof window === 'undefined') return;
     const calculateBundleSize = useCallback((...args) => {}const resources = performance.getEntriesByType('resource');
       let totalSize = 0;
@@ -259,13 +256,13 @@ export const useBundleSizeMonitoring = useCallback((...args) => {const [bundleSi
         } else if (resource.name.includes('.css')) {}cssSize += size;}
         } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {}imageSize += size;}
         }
-      })
+      }
       setBundleSize({)
     );
         totalSize);
         jsSize);
         cssSize)}imageSize}
-      })
+      }
     }
     // Calculate after page load;
     if (document.readyState === 'complete') {}setBundleSize({)}totalSize,;
@@ -276,7 +273,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {const [bundleSi
         jsSize)
         cssSize)
         imageSize}
-      })
+      }
     }
     // Calculate after page load;
     if (document.readyState === 'complete') {
@@ -285,7 +282,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {const [bundleSi
         jsSize,
         cssSize,
         imageSize}
-      })
+      }
     }
     // Calculate after page load;
     if (document.readyState === 'complete') {}calculateBundleSize();}
@@ -314,10 +311,10 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
 };
 // Bundle size monitoring;
 export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
-  }>({});
-      });
-      setBundleSize({/* TODO: Fix JSX expression */})
-      });
+  }>({};
+      };
+      setBundleSize({/* TODO: Fix JSX expression */}
+      };
     };
     // Calculate after page load;
     // Calculate after page load;
@@ -331,3 +328,4 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
 };
 export default {/* TODO: Fix JSX expression */}
 };
+))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))

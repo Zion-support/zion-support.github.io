@@ -49,9 +49,9 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
         name,
         href: currentPath,
         current: isLast
-      });
+      };
 
-    });
+    };
 
     return breadcrumbs;
 
@@ -66,7 +66,7 @@ const Breadcrumb: React.FC = () => {
     ...pathSegments.map((segment, index) => ({
       label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
       href: index === pathSegments.length - 1 ? undefined : `/${pathSegments.slice(0, index + 1).join('/')}`
-    }))
+    }
   ];
 
   return (
@@ -123,7 +123,7 @@ interface BreadcrumbProps {
   items: BreadcrumbItem[];
 }
 
-const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
+const Breadcrumb: React.FC<BreadcrumbProps> = ({ items } => {
   return (
     <nav className="bg-slate-800/50 border-b border-cyan-500/20 py-3">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -185,8 +185,8 @@ const Breadcrumb: React.FC = () => {
   pathSegments.forEach((segment, index) => {
     const path = '/' + pathSegments.slice(0, index + 1).join('/');
     const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
-    breadcrumbItems.push({ name, path, icon: null });
-  });
+    breadcrumbItems.push({ name, path, icon: null };
+  };
 
   return (
     <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
@@ -299,7 +299,7 @@ export default function Breadcrumb() {
                 )}
               </li>
             );
-          })}
+          }}
         </ol>
       </div>
     </nav>
@@ -308,3 +308,4 @@ export default function Breadcrumb() {
 
 export default Breadcrumb;
 export default Breadcrumb;
+}}}}}))))))))))))))))))))

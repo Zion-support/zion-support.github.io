@@ -27,7 +27,7 @@ interface AdDashboardProps {
   className?: string;
 }
 
-const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
+const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' } => {
   const [activeTab, setActiveTab] = useState<'overview' | 'management' | 'analytics' | 'scheduler' | 'templates' | 'preview'>('overview');
 
   const tabs = [
@@ -322,4 +322,4 @@ const AdDashboard: React.FC<AdDashboardProps> = ({ className = '' }) => {
   );
 };
 
-export default AdDashboard;
+export default AdDashboard;)

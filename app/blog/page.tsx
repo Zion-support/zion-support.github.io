@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function BlogPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Blog</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-=======
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -145,17 +132,17 @@ const BlogPage: React.FC = () => {
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === "all" || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  });
+  };
 
   const featuredPosts = posts.filter(post => post.featured);
 
   return (
     <>
-      <Helmet>
+      </><Helmet>
         <title>Tech Insights & Innovation Blog | Zion Tech Group</title>
         <meta name="description" content="Stay ahead with the latest trends, insights, and best practices in AI, cybersecurity, cloud computing, and technology innovation." />
         <meta name="keywords" content="tech blog, AI insights, cybersecurity, cloud computing, technology trends, innovation" />
-        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+        <link rel="canonical" href="https://ziontechgroup.com/blog" /></li>
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
@@ -362,7 +349,7 @@ const BlogPage: React.FC = () => {
                       : "bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-cyan-500/20"
                   }`}
                 >
-                  {category.name} ({category.count})
+                  {category.name} ({category.count}
                 </button>
               ))}
             </div>
@@ -489,7 +476,7 @@ const BlogPage: React.FC = () => {
                     : 'bg-white/10 text-gray-300 hover:bg-white/20'
                 }`}
               >
-                {category.name} ({category.count})
+                {category.name} ({category.count}
               </button>
             ))}
           </div>
@@ -590,7 +577,6 @@ const BlogPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
     </div>
   );
 };
@@ -599,8 +585,7 @@ export default BlogPage;
       </div>
     </>
   );
-}
-          )}
+}}
 
           {/* Newsletter Signup */}
           <div className="mt-20">
@@ -629,3 +614,4 @@ export default BlogPage;
 };
 
 export default BlogPage;
+))

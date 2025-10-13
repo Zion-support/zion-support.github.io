@@ -145,7 +145,7 @@ interface SidebarProps {
         newSet.add(section);
       }
       return newSet;
-    });
+    };
   }, []);
 
   const services = useMemo(() => [
@@ -249,11 +249,11 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   return (
     <>
       {/* Overlay */}
-      <div 
+      </><div 
         className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
     <>
       {/* Backdrop */}
-      <div
+      </><div
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
         onClick={onClose}
       />
@@ -386,3 +386,4 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 };
 
 export default Sidebar;
+))

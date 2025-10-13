@@ -35,8 +35,8 @@
       caches.open(CACHE_NAME).then(cache => {
         cache.addAll(CACHE_URLS).catch(err => {
           console.warn('Failed to cache some resources:', err)
-        })
-      })
+        }
+      }
     }
 
     // Memory cache for API responses
@@ -52,10 +52,10 @@
         // Check cache first
         const cached = memoryCache.get(cacheKey)
         if (cached && Date.now() - cached.timestamp < cached.ttl) {
-          setStats(prev => ({ ...prev, hits: prev.hits + 1 }))
+          setStats(prev => ({ ...prev, hits: prev.hits + 1 }
           return new Response(JSON.stringify(cached.data), {
             headers: { 'Content-Type': 'application/json' }
-          })
+          }
         }
 
         // Fetch from network
@@ -69,13 +69,13 @@
               data,
               timestamp: Date.now(),
               ttl: 5 * 60 * 1000 // 5 minutes
-            })
-            setStats(prev => ({ ...prev, misses: prev.misses + 1 }))
+            }
+            setStats(prev => ({ ...prev, misses: prev.misses + 1 }
           }
           
           return response
         } catch (error) {
-          setStats(prev => ({ ...prev, misses: prev.misses + 1 }))
+          setStats(prev => ({ ...prev, misses: prev.misses + 1 }
           throw error
         }
       }
@@ -107,7 +107,7 @@
             if (item) {
               try {
                 const parsed = JSON.parse(item)
-                items.push({ key, timestamp: parsed.timestamp || 0 })
+                items.push({ key, timestamp: parsed.timestamp || 0 }
               } catch {
                 localStorage.removeItem(key)
               }
@@ -125,7 +125,7 @@
       setInterval(cleanupOldItems, 10 * 60 * 1000) // Every 10 minutes
       
       // Update cache size
-      setStats(prev => ({ ...prev, size: getCacheSize() }))
+      setStats(prev => ({ ...prev, size: getCacheSize() }
     }
 
     // Preload critical resources
@@ -145,7 +145,7 @@
           link.crossOrigin = 'anonymous'
         }
         document.head.appendChild(link)
-      })
+      }
     }
 
     // Initialize everything
@@ -157,7 +157,7 @@
       setStats(prev => ({
         ...prev,
         size: getCacheSize()
-      }))
+      }
     }, 30000) // Every 30 seconds
 
     return () => {
@@ -184,8 +184,8 @@
           if (name.startsWith('zion-tech-cache')) {
             caches.delete(name)
           }
-        })
-      })
+        }
+      }
     }
 
     // Clear localStorage cache
@@ -204,7 +204,7 @@
       hits: 0,
       misses: 0,
       size: 0
-    }))
+    }
   }
 
   const formatBytes = (bytes: number) => {
@@ -275,7 +275,7 @@
           Clear All Cache
         </button>
         <button
-          onClick={() => setStats(prev => ({ ...prev, hits: 0, misses: 0 }))}
+          onClick={() => setStats(prev => ({ ...prev, hits: 0, misses: 0 }}
           className="w-full bg-gray-500 text-white px-3 py-2 rounded text-sm hover:bg-gray-600 transition-colors"
         >
           Reset Stats
@@ -286,3 +286,4 @@
 }
 
 export default CacheManager
+)))))))))))))))))))))

@@ -5,8 +5,7 @@ declare global {
       action: string,
       parameters?: {
         [key: string]: string | number | boolean;
-      }
-    ) => void;
+      } => void;
     __PERFORMANCE_METRICS__?: {
       loadTime: number;
       firstContentfulPaint: number;
@@ -18,3 +17,4 @@ declare global {
 }
 
 export {};
+)
