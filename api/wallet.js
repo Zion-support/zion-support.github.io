@@ -11,12 +11,7 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
   const { address, type, name, userId } = req.body;
-
-=======
-const { address, type, name, userId } = req.body;
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   if (!address || !type) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Address and type are required' }));

@@ -11,12 +11,7 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
   const { email, name } = req.body;
-
-=======
-const { email, name } = req.body;
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   if (!email) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));

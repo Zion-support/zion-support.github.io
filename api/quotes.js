@@ -14,12 +14,7 @@ export default async function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
-
     // Process the quote request
-=======
-// Process the quote request
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     const quote = {
       id: Date.now().toString(),
       name,

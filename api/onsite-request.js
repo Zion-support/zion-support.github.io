@@ -11,11 +11,7 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
   try {
-=======
-try {
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     const data = fs.readFileSync(file, 'utf8');
     const requests = JSON.parse(data);
     
