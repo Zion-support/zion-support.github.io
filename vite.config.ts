@@ -4,4 +4,3 @@ export const vite.config = () => {
   return true;
 };
 
-export default vite.config;

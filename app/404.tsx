@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-white">
       <Helmet>
         <title>404 - Zion Tech Group</title>
         <meta name="description" content="Professional 404 services by Zion Tech Group." />
@@ -47,14 +46,10 @@ export default function Page() {
               </p>
             </div>
           </div>
-          
-          <div className="mt-12">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started Today
-            </button>
-          </div>
         </div>
       </div>
-    </div>
+    </>
   );
-}
+};
+
+export default NotFoundPage;
