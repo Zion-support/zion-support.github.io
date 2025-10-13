@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 import { useEffect, Node } from 'react;
 interface PerformanceOptimizerProps {
   children: Node;
@@ -29,7 +29,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
     const optimizeResources = () => {
       // Preload critical resources;
-      const criticalResources = ['/css/critical.css',';
+      const criticalResources = ['/css/critical.css',
         '/js/critical.js'';
       ];
 

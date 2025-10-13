@@ -1,35 +1,35 @@
 <<<<<<< HEAD
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { Link } from 'react-router-dom;
-import { Right, Circle } from 'lucide-react;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Right, Circle } from 'lucide-react';
 const SupportPage: React.FC = () => {
   const supportOptions = [{
-      icon: 'Chat',';
-      title: 'Live Chat',';
-      description: 'Get instant help from our support team',';
-      action: 'Start Chat',';
+      icon: 'Chat',
+      title: 'Live Chat',
+      description: 'Get instant help from our support team',
+      action: 'Start Chat',
       color: 'from-blue-500 to-cyan-500'';
     },
     {
-      icon: 'Phone',';
-      title: 'Phone Support',';
-      description: 'Call us for immediate assistance',';
-      action: 'Call Now',';
+      icon: 'Phone',
+      title: 'Phone Support',
+      description: 'Call us for immediate assistance',
+      action: 'Call Now',
       color: 'from-green-500 to-emerald-500'';
     },
     {
-      icon: 'Email',';
-      title: 'Email Support',';
-      description: 'Send us a detailed message',';
-      action: 'Send Email',';
+      icon: 'Email',
+      title: 'Email Support',
+      description: 'Send us a detailed message',
+      action: 'Send Email',
       color: 'from-purple-500 to-pink-500'';
     },
     {
-      icon: 'Book',';
-      title: 'Documentation',';
-      description: 'Browse our comprehensive guides',';
-      action: 'View Docs',';
+      icon: 'Book',
+      title: 'Documentation',
+      description: 'Browse our comprehensive guides',
+      action: 'View Docs',
       color: 'from-orange-500 to-red-500'';
 =======
 import React from 'react';
@@ -78,19 +78,19 @@ const SupportPage: React.FC = () => {
   ];
 
   const faqs = [{
-      question: 'How do I get started with your AI services?',';
+      question: 'How do I get started with your AI services?',
       answer: 'Getting started is easy! Contact our team for a consultation, and we\'ll help you identify the best AI solutions for your business needs.'';
     },
     {
-      question: 'What is your response time for support requests?',';
+      question: 'What is your response time for support requests?',
       answer: 'We typically respond to support requests within 2-4 hours during business hours, and within 24 hours for non-urgent matters.'';
     },
     {
-      question: 'Do you offer training for your solutions?',';
+      question: 'Do you offer training for your solutions?',
       answer: 'Yes! We provide comprehensive training programs for all our solutions, including documentation, video tutorials, and live training sessions.'';
     },
     {
-      question: 'What if I need custom development?',';
+      question: 'What if I need custom development?',
       answer: 'We offer custom development services for unique requirements. Contact our team to discuss your specific needs and get a quote.'';
     }
   ];
