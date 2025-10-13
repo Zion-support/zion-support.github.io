@@ -53,7 +53,11 @@ const AdvancedPerformanceMonitor = () => {
           reportMetric('TTFB', metric.value)
         })
       } catch (error) {
+<<<<<<< HEAD
         console.warn('Performance monitoring error:', error);
+=======
+        console.error('Failed to measure web vitals:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-c834
       }
     }
 
@@ -98,7 +102,11 @@ const AdvancedPerformanceMonitor = () => {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
+<<<<<<< HEAD
         console.log('Performance metric:', { name, value, timestamp: Date.now() });
+=======
+        console.log(`Performance Metric: ${name} = ${value}`);
+>>>>>>> cursor/fix-errors-and-merge-to-main-c834
       }
     }
 
@@ -112,8 +120,8 @@ const AdvancedPerformanceMonitor = () => {
             
             // Report slow resources
             if (loadTime > 1000) {
-              reportMetric('Slow Resource', loadTime)
-              }
+              reportMetric('Slow Resource', loadTime);
+            }
           }
         })
       })
