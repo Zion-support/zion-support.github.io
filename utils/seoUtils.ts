@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-interface SeoUtilsConfig {
-  enabled: boolean;
-}
-
-export class SeoUtils {
-  private config: SeoUtilsConfig;
-
-  constructor(config: Partial<SeoUtilsConfig> = {}) {
-    this.config = {
-      enabled: true,
-=======
 interface SeoConfig {
   enabled: boolean;
   metaTags: boolean;
@@ -24,19 +12,13 @@ export class SeoUtils {
       enabled: true,
       metaTags: true,
       structuredData: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d
       ...config
     };
   }
 
   init(): void {
     if (this.config.enabled) {
-<<<<<<< HEAD
-      console.log('SeoUtils initialized');
-    }
-  }
-=======
-      console.log('SEO utils initialized');
+console.log('SEO utils initialized');
     }
   }
 
@@ -60,7 +42,6 @@ export class SeoUtils {
     }
     return '';
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d
 }
 
 export const seoUtils = new SeoUtils();

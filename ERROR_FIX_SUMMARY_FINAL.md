@@ -8,12 +8,7 @@ All errors have been identified, fixed, and the codebase is now fully functional
 
 ### 1. Merge Conflicts
 
-<<<<<<< HEAD
-- **app/page.tsx**: Resolved merge conflict markers (``, `
-- **app/5g-implementation/page.tsx**: Fixed merge conflict in features array declaration
-=======
 - **app/page.tsx**: Resolved merge conflict markers (`- **app/5g-implementation/page.tsx**: Fixed merge conflict in features array declaration
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 - **app/accessibility-page/page.tsx**: Resolved merge conflicts and fixed component structure
 - **app/accessibility/page.tsx**: Fixed merge conflicts and component definitions
 

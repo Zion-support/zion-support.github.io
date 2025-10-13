@@ -14,13 +14,8 @@ import {
   AlertTriangle,
   Cpu,
   Globe,
-<<<<<<< HEAD
-  Heart,
-  MousePointer
-=======
-  MousePointer,
+MousePointer,
   Heart
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d
 } from 'lucide-react';
 
 const ZionAICustomerChurnPredictorProPage: React.FC = () => {
