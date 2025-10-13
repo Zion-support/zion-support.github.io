@@ -1,83 +1,83 @@
-import { ArrowRight, Brain, BarChart3, TrendingUp, Users, Shield, Zap, CheckCircle, Mail, Phone, MapPin, Star, Target, Globe, Database } from "lucide-react";
+import { ArrowRight, Brain, Calendar, Users, Target, BarChart3, Zap, Shield, CheckCircle, Mail, Phone, MapPin, Clock, TrendingUp, AlertCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIBusinessIntelligenceZionTechGroup() {
+export default function AIProjectManagerPro() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Analytics",
-      description: "Advanced machine learning algorithms analyze your data to uncover hidden patterns and insights"
+      title: "AI-Powered Planning",
+      description: "Intelligent project planning with automated task breakdown, resource allocation, and timeline optimization"
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Dashboards",
-      description: "Interactive dashboards with live data visualization and customizable reporting"
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Predictive Modeling",
-      description: "Forecast future trends and outcomes with 90% accuracy using advanced statistical models"
+      icon: <Target className="w-6 h-6" />,
+      title: "Smart Task Management",
+      description: "AI-driven task prioritization, dependency mapping, and automatic deadline adjustments"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Customer Insights",
-      description: "Deep understanding of customer behavior, preferences, and lifetime value"
+      title: "Team Collaboration",
+      description: "Real-time collaboration tools with AI-powered team matching and workload balancing"
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Data Security",
-      description: "Enterprise-grade security with encryption, access controls, and compliance reporting"
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Predictive Analytics",
+      description: "Forecast project risks, budget overruns, and delivery delays with 90% accuracy"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Reports",
-      description: "Generate comprehensive reports automatically with AI-powered insights and recommendations"
+      title: "Automated Workflows",
+      description: "Streamline processes with AI-powered automation for routine tasks and approvals"
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Enterprise Security",
+      description: "Bank-level security with role-based access control and compliance reporting"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams",
       features: [
-        "Up to 5 data sources",
-        "Basic analytics",
-        "Standard dashboards",
+        "Up to 5 projects",
+        "10 team members",
+        "Basic AI features",
         "Email support",
-        "Monthly reports"
+        "Standard integrations"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$79",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "Ideal for growing teams",
       features: [
-        "Up to 20 data sources",
+        "Unlimited projects",
+        "50 team members",
         "Advanced AI analytics",
-        "Custom dashboards",
         "Priority support",
-        "Real-time reporting",
-        "API access"
+        "Full integrations",
+        "Custom workflows"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited data sources",
+        "Unlimited everything",
+        "Unlimited team members",
         "AI-powered insights",
-        "White-label dashboards",
-        "Dedicated support",
-        "Custom integrations",
-        "SLA guarantees"
+        "24/7 dedicated support",
+        "Custom AI models",
+        "White-label options"
       ],
       popular: false
     }
@@ -86,46 +86,46 @@ export default function AIBusinessIntelligenceZionTechGroup() {
   const benefits = [
     {
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "40% Faster Decisions",
-      description: "AI-powered insights help you make data-driven decisions 40% faster than traditional methods"
+      title: "40% Faster Delivery",
+      description: "AI-optimized workflows reduce project completion time by an average of 40%"
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: "90% Accuracy",
-      description: "Predictive models with 90% accuracy help you anticipate market changes and opportunities"
+      title: "95% On-Time Delivery",
+      description: "Predictive analytics help prevent delays and ensure projects stay on schedule"
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "300% ROI Increase",
-      description: "Data-driven strategies typically deliver 300% higher return on investment"
+      title: "25% Cost Reduction",
+      description: "Smart resource allocation and automated processes reduce project costs significantly"
     },
     {
       icon: <Users className="w-8 h-8" />,
-      title: "Better Customer Understanding",
-      description: "Deep customer insights lead to 60% higher customer satisfaction and retention"
+      title: "Higher Team Productivity",
+      description: "AI-powered task matching and workload balancing boost team efficiency"
     }
   ];
 
   const testimonials = [
     {
-      name: "David Chen",
-      company: "TechCorp Solutions",
+      name: "David Kim",
+      company: "Tech Innovations LLC",
+      role: "Project Director",
+      content: "AI Project Manager Pro transformed how we handle complex projects. We've reduced delivery time by 45% and our team productivity has never been higher.",
+      rating: 5
+    },
+    {
+      name: "Lisa Martinez",
+      company: "Digital Solutions Inc.",
+      role: "Operations Manager",
+      content: "The predictive analytics are incredible. We can now spot potential issues weeks before they become problems. It's like having a crystal ball for project management.",
+      rating: 5
+    },
+    {
+      name: "James Wilson",
+      company: "Creative Agency Co.",
       role: "CEO",
-      content: "AI Business Intelligence transformed our decision-making process. We've increased revenue by 250% and reduced costs by 30% in just 6 months.",
-      rating: 5
-    },
-    {
-      name: "Sarah Martinez",
-      company: "E-commerce Plus",
-      role: "Data Director",
-      content: "The predictive analytics are incredibly accurate. We can now forecast sales trends and optimize inventory with confidence.",
-      rating: 5
-    },
-    {
-      name: "Michael Johnson",
-      company: "Financial Services Inc.",
-      role: "CFO",
-      content: "Our data was scattered across multiple systems. AI Business Intelligence unified everything and gave us insights we never had before.",
+      content: "Our project success rate increased from 70% to 95% since implementing AI Project Manager Pro. The ROI was immediate and substantial.",
       rating: 5
     }
   ];
@@ -133,16 +133,16 @@ export default function AIBusinessIntelligenceZionTechGroup() {
   return (
     <>
       <Helmet>
-        <title>AI Business Intelligence - Zion Tech Group | Advanced Analytics Platform</title>
+        <title>AI Project Manager Pro - Zion Tech Group | Intelligent Project Management Platform</title>
         <meta
           name="description"
-          content="Transform your data into actionable insights with AI-powered business intelligence. Real-time dashboards, predictive analytics, and automated reporting. Boost ROI by 300%."
+          content="Revolutionary AI-powered project management platform with predictive analytics, automated workflows, and intelligent resource allocation. Boost productivity by 40% and ensure 95% on-time delivery."
         />
         <meta
           name="keywords"
-          content="business intelligence, AI analytics, data visualization, predictive modeling, business insights, data analysis, reporting, dashboards"
+          content="AI project management, project planning, team collaboration, predictive analytics, workflow automation, resource allocation, project tracking, agile management"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-business-intelligence" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-project-manager-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -156,19 +156,19 @@ export default function AIBusinessIntelligenceZionTechGroup() {
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
                 <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Analytics</span>
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Project Management</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                AI Business
+                AI Project Manager
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  {" "}Intelligence
+                  {" "}Pro
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your data into actionable insights with our advanced AI-powered business intelligence platform. 
-                Make faster, smarter decisions with real-time analytics and predictive modeling.
+                Revolutionize your project management with AI-powered planning, predictive analytics, and intelligent automation. 
+                Deliver projects 40% faster with 95% on-time completion rate.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -176,7 +176,7 @@ export default function AIBusinessIntelligenceZionTechGroup() {
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                 >
-                  Get Started
+                  Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
@@ -192,19 +192,19 @@ export default function AIBusinessIntelligenceZionTechGroup() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
-                  <div className="text-gray-300 text-sm">Faster Decisions</div>
+                  <div className="text-gray-300 text-sm">Faster Delivery</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">90%</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+                  <div className="text-gray-300 text-sm">On-Time Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-pink-400 mb-2">25%</div>
+                  <div className="text-gray-300 text-sm">Cost Reduction</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">90%</div>
                   <div className="text-gray-300 text-sm">Prediction Accuracy</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">300%</div>
-                  <div className="text-gray-300 text-sm">ROI Increase</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">Real-time</div>
-                  <div className="text-gray-300 text-sm">Analytics</div>
                 </div>
               </div>
             </div>
@@ -216,13 +216,13 @@ export default function AIBusinessIntelligenceZionTechGroup() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Proven Business
+                Proven Results for
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Results
+                  {" "}Your Business
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses that have transformed their decision-making with AI-powered insights.
+                Join thousands of teams that have transformed their project management with AI-powered insights and automation.
               </p>
             </div>
             
@@ -252,13 +252,13 @@ export default function AIBusinessIntelligenceZionTechGroup() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Analytics
+                Powerful Features for
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Features
+                  {" "}Smart Management
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to turn your data into competitive advantage.
+                Our AI-powered platform provides everything you need to manage projects efficiently and deliver results consistently.
               </p>
             </div>
             
@@ -288,13 +288,13 @@ export default function AIBusinessIntelligenceZionTechGroup() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Flexible Analytics
+                Simple, Transparent
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                   {" "}Pricing
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your data needs and business size.
+                Choose the perfect plan for your team size and project complexity. All plans include our core AI features.
               </p>
             </div>
             
@@ -355,13 +355,13 @@ export default function AIBusinessIntelligenceZionTechGroup() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Business
+                Trusted by Project
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Leaders
+                  {" "}Managers Worldwide
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what executives say about AI Business Intelligence
+                See what our clients say about AI Project Manager Pro
               </p>
             </div>
             
@@ -391,10 +391,10 @@ export default function AIBusinessIntelligenceZionTechGroup() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Data into Insights?
+              Ready to Transform Your Project Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using AI Business Intelligence to make smarter decisions and drive growth.
+              Join thousands of teams using AI Project Manager Pro to deliver projects faster, more efficiently, and with higher success rates.
             </p>
             
             {/* Contact Information */}
@@ -427,7 +427,7 @@ export default function AIBusinessIntelligenceZionTechGroup() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Get Started
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link

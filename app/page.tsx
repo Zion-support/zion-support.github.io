@@ -40,25 +40,32 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform",
-      price: "From $29/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro"
-    },
-    {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection",
+      name: "AI Sentiment Analyzer Pro",
+      description: "Real-time sentiment analysis with 95% accuracy",
       price: "From $49/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield"
+      icon: <Brain className="w-6 h-6" />,
+      link: "/ai-sentiment-analyzer-pro"
     },
     {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $9/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
+      name: "AI Project Manager Pro",
+      description: "AI-powered project management platform",
+      price: "From $29/month",
+      icon: <Target className="w-6 h-6" />,
+      link: "/ai-project-manager-pro"
+    },
+    {
+      name: "AI Cyber Shield Enterprise",
+      description: "Enterprise-grade cybersecurity protection",
+      price: "From $199/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/ai-cyber-shield-enterprise"
+    },
+    {
+      name: "AI Marketing Automation Pro",
+      description: "Intelligent marketing automation platform",
+      price: "From $99/month",
+      icon: <Target className="w-6 h-6" />,
+      link: "/ai-marketing-automation-pro"
     }
   ];
 

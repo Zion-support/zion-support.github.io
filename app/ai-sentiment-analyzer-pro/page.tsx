@@ -1,131 +1,108 @@
-import { ArrowRight, Brain, BarChart3, TrendingUp, Users, Shield, Zap, CheckCircle, Mail, Phone, MapPin, Star, Target, Globe, Database } from "lucide-react";
+import { ArrowRight, Brain, TrendingUp, BarChart3, Users, Shield, Zap, Star, CheckCircle, Mail, Phone, MapPin } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIBusinessIntelligenceZionTechGroup() {
+export default function AISentimentAnalyzerPro() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Analytics",
-      description: "Advanced machine learning algorithms analyze your data to uncover hidden patterns and insights"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Dashboards",
-      description: "Interactive dashboards with live data visualization and customizable reporting"
+      title: "Real-time Sentiment Analysis",
+      description: "Analyze customer sentiment across all channels in real-time with 95% accuracy"
     },
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Predictive Modeling",
-      description: "Forecast future trends and outcomes with 90% accuracy using advanced statistical models"
+      title: "Trend Detection",
+      description: "Identify emerging trends and sentiment shifts before they impact your business"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive dashboards with sentiment scoring, emotion mapping, and predictive insights"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Customer Insights",
-      description: "Deep understanding of customer behavior, preferences, and lifetime value"
+      title: "Multi-language Support",
+      description: "Analyze sentiment in 50+ languages with cultural context understanding"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Data Security",
-      description: "Enterprise-grade security with encryption, access controls, and compliance reporting"
+      title: "Privacy Compliant",
+      description: "GDPR, CCPA, and SOC 2 compliant with enterprise-grade security"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Reports",
-      description: "Generate comprehensive reports automatically with AI-powered insights and recommendations"
+      title: "API Integration",
+      description: "Easy integration with existing CRM, social media, and customer support tools"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$49",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 5 data sources",
-        "Basic analytics",
-        "Standard dashboards",
+        "Up to 10,000 analyses/month",
+        "3 social media platforms",
+        "Basic sentiment scoring",
         "Email support",
-        "Monthly reports"
+        "Standard API access"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$149",
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-        "Up to 20 data sources",
-        "Advanced AI analytics",
-        "Custom dashboards",
+        "Up to 100,000 analyses/month",
+        "Unlimited social platforms",
+        "Advanced analytics & trends",
         "Priority support",
-        "Real-time reporting",
-        "API access"
+        "Full API access",
+        "Custom dashboards"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited data sources",
+        "Unlimited analyses",
+        "All platforms & channels",
         "AI-powered insights",
-        "White-label dashboards",
-        "Dedicated support",
+        "24/7 dedicated support",
         "Custom integrations",
-        "SLA guarantees"
+        "White-label options"
       ],
       popular: false
     }
   ];
 
-  const benefits = [
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "40% Faster Decisions",
-      description: "AI-powered insights help you make data-driven decisions 40% faster than traditional methods"
-    },
-    {
-      icon: <Target className="w-8 h-8" />,
-      title: "90% Accuracy",
-      description: "Predictive models with 90% accuracy help you anticipate market changes and opportunities"
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "300% ROI Increase",
-      description: "Data-driven strategies typically deliver 300% higher return on investment"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Better Customer Understanding",
-      description: "Deep customer insights lead to 60% higher customer satisfaction and retention"
-    }
-  ];
-
   const testimonials = [
     {
-      name: "David Chen",
-      company: "TechCorp Solutions",
+      name: "Sarah Chen",
+      company: "TechStart Inc.",
+      role: "Marketing Director",
+      content: "Zion's Sentiment Analyzer helped us understand our customers better than ever. We increased customer satisfaction by 40% in just 3 months.",
+      rating: 5
+    },
+    {
+      name: "Michael Rodriguez",
+      company: "E-commerce Solutions",
       role: "CEO",
-      content: "AI Business Intelligence transformed our decision-making process. We've increased revenue by 250% and reduced costs by 30% in just 6 months.",
+      content: "The real-time insights are game-changing. We can now respond to customer concerns before they become problems.",
       rating: 5
     },
     {
-      name: "Sarah Martinez",
-      company: "E-commerce Plus",
-      role: "Data Director",
-      content: "The predictive analytics are incredibly accurate. We can now forecast sales trends and optimize inventory with confidence.",
-      rating: 5
-    },
-    {
-      name: "Michael Johnson",
-      company: "Financial Services Inc.",
-      role: "CFO",
-      content: "Our data was scattered across multiple systems. AI Business Intelligence unified everything and gave us insights we never had before.",
+      name: "Emily Johnson",
+      company: "Digital Marketing Agency",
+      role: "Client Success Manager",
+      content: "Our clients love the detailed sentiment reports. It's like having a crystal ball for customer emotions.",
       rating: 5
     }
   ];
@@ -133,16 +110,16 @@ export default function AIBusinessIntelligenceZionTechGroup() {
   return (
     <>
       <Helmet>
-        <title>AI Business Intelligence - Zion Tech Group | Advanced Analytics Platform</title>
+        <title>AI Sentiment Analyzer Pro - Zion Tech Group | Real-time Customer Sentiment Analysis</title>
         <meta
           name="description"
-          content="Transform your data into actionable insights with AI-powered business intelligence. Real-time dashboards, predictive analytics, and automated reporting. Boost ROI by 300%."
+          content="Advanced AI-powered sentiment analysis platform with real-time monitoring, trend detection, and multi-language support. Boost customer satisfaction with 95% accuracy sentiment insights."
         />
         <meta
           name="keywords"
-          content="business intelligence, AI analytics, data visualization, predictive modeling, business insights, data analysis, reporting, dashboards"
+          content="sentiment analysis, AI analytics, customer sentiment, social media monitoring, brand reputation, customer insights, real-time analytics, emotion detection"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-business-intelligence" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-sentiment-analyzer-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -160,15 +137,15 @@ export default function AIBusinessIntelligenceZionTechGroup() {
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                AI Business
+                AI Sentiment Analyzer
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  {" "}Intelligence
+                  {" "}Pro
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your data into actionable insights with our advanced AI-powered business intelligence platform. 
-                Make faster, smarter decisions with real-time analytics and predictive modeling.
+                Transform customer feedback into actionable insights with our advanced AI-powered sentiment analysis platform. 
+                Monitor brand sentiment across all channels with 95% accuracy and real-time alerts.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -176,7 +153,7 @@ export default function AIBusinessIntelligenceZionTechGroup() {
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
                 >
-                  Get Started
+                  Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
@@ -191,74 +168,39 @@ export default function AIBusinessIntelligenceZionTechGroup() {
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
-                  <div className="text-gray-300 text-sm">Faster Decisions</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
+                  <div className="text-gray-300 text-sm">Accuracy Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">90%</div>
-                  <div className="text-gray-300 text-sm">Prediction Accuracy</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+                  <div className="text-gray-300 text-sm">Languages</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">300%</div>
-                  <div className="text-gray-300 text-sm">ROI Increase</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">Real-time</div>
+                  <div className="text-gray-300 text-sm">Analysis</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">Real-time</div>
-                  <div className="text-gray-300 text-sm">Analytics</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
+                  <div className="text-gray-300 text-sm">Monitoring</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Proven Business
+                Powerful Features for
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Results
+                  {" "}Smart Analytics
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of businesses that have transformed their decision-making with AI-powered insights.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
-                >
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto text-white group-hover:scale-110 transition-transform">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {benefit.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Analytics
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Features
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to turn your data into competitive advantage.
+                Our AI-powered sentiment analysis platform provides comprehensive insights to help you understand 
+                and respond to customer emotions across all touchpoints.
               </p>
             </div>
             
@@ -284,17 +226,17 @@ export default function AIBusinessIntelligenceZionTechGroup() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Flexible Analytics
+                Simple, Transparent
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                   {" "}Pricing
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your data needs and business size.
+                Choose the perfect plan for your business needs. All plans include our core sentiment analysis features.
               </p>
             </div>
             
@@ -351,17 +293,17 @@ export default function AIBusinessIntelligenceZionTechGroup() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Business
+                Trusted by Industry
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                   {" "}Leaders
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what executives say about AI Business Intelligence
+                See what our clients say about AI Sentiment Analyzer Pro
               </p>
             </div>
             
@@ -391,10 +333,10 @@ export default function AIBusinessIntelligenceZionTechGroup() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Data into Insights?
+              Ready to Understand Your Customers Better?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using AI Business Intelligence to make smarter decisions and drive growth.
+              Join thousands of businesses using AI Sentiment Analyzer Pro to boost customer satisfaction and drive growth.
             </p>
             
             {/* Contact Information */}
@@ -427,7 +369,7 @@ export default function AIBusinessIntelligenceZionTechGroup() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Get Started
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link

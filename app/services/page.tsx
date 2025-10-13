@@ -23,6 +23,42 @@ export default function Services() {
       features: ["Multi-language Support", "Sentiment Analysis", "CRM Integration", "Live Chat Handoff"]
     },
     {
+      title: "AI Sentiment Analyzer Pro",
+      description: "Advanced AI-powered sentiment analysis with real-time monitoring, trend detection, and multi-language support. Boost customer satisfaction with 95% accuracy.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/ai-sentiment-analyzer-pro",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $49/month",
+      features: ["Real-time Analysis", "Trend Detection", "Multi-language", "API Integration"]
+    },
+    {
+      title: "AI Project Manager Pro",
+      description: "Revolutionary AI-powered project management with predictive analytics, automated workflows, and intelligent resource allocation. Deliver projects 40% faster.",
+      icon: <Target className="w-8 h-8" />,
+      path: "/ai-project-manager-pro",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $29/month",
+      features: ["AI Planning", "Predictive Analytics", "Team Collaboration", "Automated Workflows"]
+    },
+    {
+      title: "AI Cyber Shield Enterprise",
+      description: "Enterprise-grade AI-powered cybersecurity with 99.9% threat detection accuracy, 24/7 monitoring, and automated incident response.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/ai-cyber-shield-enterprise",
+      color: "from-red-500 to-orange-500",
+      price: "Starting at $199/month",
+      features: ["AI Threat Detection", "24/7 Monitoring", "Zero-Trust Security", "Compliance"]
+    },
+    {
+      title: "AI Marketing Automation Pro",
+      description: "Intelligent marketing automation with AI-powered personalization, predictive analytics, and cross-channel campaigns. Boost ROI by 300%.",
+      icon: <Target className="w-8 h-8" />,
+      path: "/ai-marketing-automation-pro",
+      color: "from-pink-500 to-rose-500",
+      price: "Starting at $99/month",
+      features: ["AI Personalization", "Predictive Analytics", "Multi-channel", "Lead Scoring"]
+    },
+    {
       title: "AI Content Generation Suite",
       description: "Create high-quality content at scale with our AI-powered writing tools. Blog posts, social media content, product descriptions, and more.",
       icon: <FileText className="w-8 h-8" />,
@@ -30,15 +66,6 @@ export default function Services() {
       color: "from-purple-500 to-pink-500",
       price: "Starting at $149/month",
       features: ["SEO Optimization", "Brand Voice Training", "Multi-format Output", "Plagiarism Detection"]
-    },
-    {
-      title: "AI Cybersecurity Monitor",
-      description: "Advanced threat detection and response system. Real-time monitoring, automated incident response, and compliance reporting.",
-      icon: <Shield className="w-8 h-8" />,
-      path: "/ai-cybersecurity",
-      color: "from-red-500 to-orange-500",
-      price: "Starting at $399/month",
-      features: ["Threat Detection", "Automated Response", "Compliance Reports", "24/7 Monitoring"]
     },
     {
       title: "5G Network Infrastructure",
@@ -77,15 +104,6 @@ export default function Services() {
       features: ["Code Generation", "Bug Detection", "Performance Optimization", "Documentation"]
     },
     {
-      title: "AI Marketing Automation",
-      description: "End-to-end marketing automation with AI-driven personalization. Email campaigns, social media management, and lead scoring.",
-      icon: <Target className="w-8 h-8" />,
-      path: "/ai-marketing-automation",
-      color: "from-pink-500 to-rose-500",
-      price: "Starting at $199/month",
-      features: ["Email Automation", "Social Media", "Lead Scoring", "A/B Testing"]
-    },
-    {
       title: "AI Document Processing",
       description: "Intelligent document analysis, extraction, and processing. OCR, form recognition, and automated data entry solutions.",
       icon: <FileText className="w-8 h-8" />,
@@ -93,24 +111,6 @@ export default function Services() {
       color: "from-emerald-500 to-green-500",
       price: "Starting at $159/month",
       features: ["OCR Technology", "Form Recognition", "Data Extraction", "Workflow Automation"]
-    },
-    {
-      title: "AI Sales CRM Assistant",
-      description: "Intelligent CRM with AI-powered lead qualification, sales forecasting, and automated follow-ups. Integration with major CRM platforms.",
-      icon: <Users className="w-8 h-8" />,
-      path: "/ai-crm-assistant",
-      color: "from-violet-500 to-purple-500",
-      price: "Starting at $229/month",
-      features: ["Lead Scoring", "Sales Forecasting", "Automated Follow-ups", "CRM Integration"]
-    },
-    {
-      title: "AI Financial Analytics",
-      description: "Advanced financial modeling and risk assessment. Automated reporting, fraud detection, and investment analysis tools.",
-      icon: <TrendingUp className="w-8 h-8" />,
-      path: "/ai-financial-analytics",
-      color: "from-amber-500 to-yellow-500",
-      price: "Starting at $349/month",
-      features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
     }
   ];
 

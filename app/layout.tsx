@@ -55,13 +55,70 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         About
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
                       </Link>
-                      <Link
-                        to="/services"
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
-                      >
-                        Services
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
-                      </Link>
+                      <div className="relative group">
+                        <Link
+                          to="/services"
+                          className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                        >
+                          Services
+                          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                        </Link>
+                        {/* Services Dropdown */}
+                        <div className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                          <div className="p-4">
+                            <div className="grid grid-cols-1 gap-3">
+                              <Link to="/ai-business-intelligence" className="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors">
+                                <Brain className="w-5 h-5 text-cyan-400 mr-3" />
+                                <div>
+                                  <div className="text-white font-medium">AI Business Intelligence</div>
+                                  <div className="text-gray-400 text-sm">Advanced analytics platform</div>
+                                </div>
+                              </Link>
+                              <Link to="/ai-customer-support" className="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors">
+                                <Bot className="w-5 h-5 text-green-400 mr-3" />
+                                <div>
+                                  <div className="text-white font-medium">AI Customer Support</div>
+                                  <div className="text-gray-400 text-sm">Intelligent chatbots & automation</div>
+                                </div>
+                              </Link>
+                              <Link to="/ai-sentiment-analyzer-pro" className="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors">
+                                <Brain className="w-5 h-5 text-cyan-400 mr-3" />
+                                <div>
+                                  <div className="text-white font-medium">AI Sentiment Analyzer Pro</div>
+                                  <div className="text-gray-400 text-sm">Real-time sentiment analysis</div>
+                                </div>
+                              </Link>
+                              <Link to="/ai-project-manager-pro" className="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors">
+                                <Target className="w-5 h-5 text-purple-400 mr-3" />
+                                <div>
+                                  <div className="text-white font-medium">AI Project Manager Pro</div>
+                                  <div className="text-gray-400 text-sm">AI-powered project management</div>
+                                </div>
+                              </Link>
+                              <Link to="/ai-cyber-shield-enterprise" className="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors">
+                                <Shield className="w-5 h-5 text-red-400 mr-3" />
+                                <div>
+                                  <div className="text-white font-medium">AI Cyber Shield Enterprise</div>
+                                  <div className="text-gray-400 text-sm">Enterprise cybersecurity</div>
+                                </div>
+                              </Link>
+                              <Link to="/ai-marketing-automation-pro" className="flex items-center p-3 rounded-lg hover:bg-white/10 transition-colors">
+                                <Target className="w-5 h-5 text-pink-400 mr-3" />
+                                <div>
+                                  <div className="text-white font-medium">AI Marketing Automation Pro</div>
+                                  <div className="text-gray-400 text-sm">Intelligent marketing automation</div>
+                                </div>
+                              </Link>
+                              <div className="border-t border-white/10 pt-3 mt-3">
+                                <Link to="/services" className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center">
+                                  View All Services
+                                  <ArrowRight className="w-4 h-4 ml-1" />
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <Link
                         to="/contact"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
@@ -88,7 +145,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-12 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-8">
                     {/* Company Info */}
                     <div className="space-y-4">
                       <h3 className="text-xl font-bold text-white mb-4">
@@ -127,7 +184,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
                     {/* Services */}
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">Services</h4>
+                      <h4 className="text-lg font-semibold text-white">Popular Services</h4>
                       <div className="space-y-2">
                         <Link to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Business Intelligence
@@ -135,11 +192,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <Link to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Customer Support
                         </Link>
-                        <Link to="/ai-content-generation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Content Generation
+                        <Link to="/ai-sentiment-analyzer-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Sentiment Analyzer Pro
                         </Link>
-                        <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Cybersecurity
+                        <Link to="/ai-project-manager-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Project Manager Pro
+                        </Link>
+                        <Link to="/ai-cyber-shield-enterprise" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Cyber Shield Enterprise
+                        </Link>
+                        <Link to="/ai-marketing-automation-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Marketing Automation Pro
+                        </Link>
+                        <Link to="/services" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
+                          View All Services →
                         </Link>
                       </div>
                     </div>
