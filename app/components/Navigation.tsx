@@ -1,5 +1,25 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  ChevronDown, 
+  X, 
+  Menu, 
+  ArrowRight, 
+  Cloud, 
+  Shield, 
+  Code, 
+  Database, 
+  BarChart3, 
+  Brain, 
+  Zap, 
+  Globe, 
+  Star,
+  Menu
+} from 'lucide-react'
+import FuturisticButton from './FuturisticButton'
 
 interface NavigationProps {
   onSidebarToggle?: () => void
@@ -165,7 +185,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
               aria-label="Toggle sidebar"
             >
-              <SidebarIcon className="w-5 h-5" />
+              <Menu className="w-5 h-5" />
             </button>
             
             {mainNavItems.map((item) => (
