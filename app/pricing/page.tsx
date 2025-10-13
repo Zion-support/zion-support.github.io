@@ -3,7 +3,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function Pricing() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50

@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -16,6 +17,9 @@ export default function BusinessIntelligencePage() {
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function Page() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 interface StructuredDataProps {
   className?: string;

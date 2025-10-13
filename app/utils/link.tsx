@@ -4,7 +4,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 interface linkProps {
   className?: string;

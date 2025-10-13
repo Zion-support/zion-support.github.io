@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,6 +25,9 @@ const NotFoundPage = () => {
       {children}
 =======
 import { Helmet } from 'react-helmet-async';
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function NotFound() {
   return (

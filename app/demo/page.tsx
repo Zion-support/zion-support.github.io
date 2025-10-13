@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -11,6 +12,9 @@ import { Link } from 'react-router-dom';
 import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar } from 'lucide-react';
 
 import { useState } from 'react';
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 export default function Page() {
   const [currentDemo, setCurrentDemo] = useState(0);

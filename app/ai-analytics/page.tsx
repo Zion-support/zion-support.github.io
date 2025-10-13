@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -213,6 +214,9 @@ export default function page() {
       popular: false
     }
   ];
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

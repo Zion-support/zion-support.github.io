@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useState, useRef, useEffect } from 'react';
@@ -14,6 +15,9 @@ import React from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 interface OptimizedImageProps {
   className?: string;

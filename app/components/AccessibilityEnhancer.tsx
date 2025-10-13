@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
@@ -8,6 +9,9 @@ import React from 'react';
 
 =======
 import React from 'react';
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 interface AccessibilityEnhancerProps {
