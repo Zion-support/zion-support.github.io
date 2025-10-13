@@ -432,6 +432,230 @@ export default function ITServices() {
     }
   ];
 
+export default function ItServices() {
+  const itServices = [
+    {
+      title: "Cloud Infrastructure Management",
+      description: "Comprehensive cloud solutions with automated scaling, backup, disaster recovery, and multi-cloud support for enterprise-grade reliability.",
+      icon: <Cloud className="w-8 h-8" />,
+      path: "/cloud-infrastructure",
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $249/month",
+      features: ["Auto-scaling", "Disaster Recovery", "Cost Optimization", "Security Hardening", "Multi-cloud Support", "24/7 Monitoring"],
+      category: "Cloud Services",
+      popularity: "Most Popular"
+    },
+    {
+      title: "Cybersecurity Solutions",
+      description: "Enterprise-grade security services including threat detection, vulnerability assessment, compliance management, and incident response.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/cybersecurity-solutions",
+      color: "from-red-500 to-orange-500",
+      price: "Starting at $399/month",
+      features: ["Threat Detection", "Vulnerability Scanning", "Compliance Management", "Incident Response", "Security Training", "Penetration Testing"],
+      category: "Security",
+      popularity: "Enterprise"
+    },
+    {
+      title: "Web Development Services",
+      description: "Custom web applications, e-commerce solutions, and responsive websites built with modern technologies and best practices.",
+      icon: <Code className="w-8 h-8" />,
+      path: "/web-development",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $2,999/project",
+      features: ["Custom Development", "E-commerce Solutions", "Responsive Design", "SEO Optimization", "Performance Optimization", "Maintenance"],
+      category: "Development",
+      popularity: "Popular"
+    },
+    {
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile applications for iOS and Android with modern UI/UX design and seamless performance.",
+      icon: <Smartphone className="w-8 h-8" />,
+      path: "/mobile-development",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $4,999/project",
+      features: ["Native Development", "Cross-platform", "UI/UX Design", "App Store Optimization", "Push Notifications", "Analytics Integration"],
+      category: "Development",
+      popularity: "Trending"
+    },
+    {
+      title: "Database Management",
+      description: "Comprehensive database services including design, optimization, migration, backup, and performance tuning for all major database systems.",
+      icon: <Database className="w-8 h-8" />,
+      path: "/database-management",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $199/month",
+      features: ["Database Design", "Performance Tuning", "Migration Services", "Backup & Recovery", "Security Hardening", "Monitoring"],
+      category: "Data Services",
+      popularity: "Recommended"
+    },
+    {
+      title: "Custom Software Development",
+      description: "Tailored software solutions designed to meet specific business requirements with scalable architecture and modern development practices.",
+      icon: <Settings className="w-8 h-8" />,
+      path: "/custom-software",
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $5,999/project",
+      features: ["Custom Solutions", "Scalable Architecture", "API Development", "Integration Services", "Quality Assurance", "Documentation"],
+      category: "Development",
+      popularity: "Best Value"
+    },
+    {
+      title: "Network Infrastructure",
+      description: "Complete network design, implementation, and management including LAN, WAN, wireless networks, and network security solutions.",
+      icon: <Wifi className="w-8 h-8" />,
+      path: "/network-infrastructure",
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $299/month",
+      features: ["Network Design", "Implementation", "Security Configuration", "Performance Monitoring", "Troubleshooting", "Upgrades"],
+      category: "Infrastructure",
+      popularity: "Hot"
+    },
+    {
+      title: "Data Analytics & BI",
+      description: "Advanced data analytics services with business intelligence dashboards, reporting, and data visualization for informed decision making.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      path: "/data-analytics",
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $179/month",
+      features: ["Data Visualization", "Business Intelligence", "Custom Reports", "Data Integration", "Predictive Analytics", "Real-time Dashboards"],
+      category: "Analytics",
+      popularity: "New"
+    },
+    {
+      title: "IT Consulting & Strategy",
+      description: "Strategic IT consulting services to help businesses align technology with business goals and optimize their IT infrastructure.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/it-consulting",
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $150/hour",
+      features: ["IT Strategy", "Technology Assessment", "Digital Transformation", "Process Optimization", "Vendor Management", "ROI Analysis"],
+      category: "Consulting",
+      popularity: "Expert"
+    },
+    {
+      title: "DevOps & CI/CD",
+      description: "DevOps implementation with continuous integration, continuous deployment, and automated testing for faster, more reliable software delivery.",
+      icon: <Zap className="w-8 h-8" />,
+      path: "/devops-services",
+      color: "from-emerald-500 to-green-500",
+      price: "Starting at $229/month",
+      features: ["CI/CD Pipeline", "Automated Testing", "Infrastructure as Code", "Monitoring & Logging", "Deployment Automation", "Performance Optimization"],
+      category: "DevOps",
+      popularity: "Trending"
+    },
+    {
+      title: "IT Support & Maintenance",
+      description: "Comprehensive IT support services including help desk, system maintenance, updates, and troubleshooting for uninterrupted operations.",
+      icon: <Users className="w-8 h-8" />,
+      path: "/it-support",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $99/month",
+      features: ["24/7 Help Desk", "System Maintenance", "Software Updates", "Hardware Support", "Remote Assistance", "Preventive Maintenance"],
+      category: "Support",
+      popularity: "Essential"
+    },
+    {
+      title: "Cloud Migration Services",
+      description: "Seamless migration to cloud platforms with minimal downtime, data integrity, and optimized performance for your applications.",
+      icon: <Server className="w-8 h-8" />,
+      path: "/cloud-migration",
+      color: "from-pink-500 to-rose-500",
+      price: "Starting at $1,999/project",
+      features: ["Migration Planning", "Data Transfer", "Application Modernization", "Testing & Validation", "Go-live Support", "Post-migration Optimization"],
+      category: "Cloud Services",
+      popularity: "Popular"
+    }
+  ];
+
+  const categories = ["All", "Cloud Services", "Security", "Development", "Data Services", "Infrastructure", "Analytics", "Consulting", "DevOps", "Support"];
+
+  const stats = [
+    { number: "500+", label: "Projects Completed", icon: <Code className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <Clock className="w-6 h-6" /> },
+    { number: "50+", label: "IT Services", icon: <Settings className="w-6 h-6" /> }
+  ];
+
+  const testimonials = [
+    {
+      name: "David Thompson",
+      company: "Enterprise Solutions Inc.",
+      role: "CTO",
+      content: "Zion's IT services transformed our entire infrastructure. The cloud migration was seamless and our systems are now 40% more efficient.",
+      rating: 5,
+      avatar: "DT"
+    },
+    {
+      name: "Lisa Wang",
+      company: "TechStart Ventures",
+      role: "CEO",
+      content: "Outstanding cybersecurity solutions and support. Our security posture improved dramatically with their comprehensive approach.",
+      rating: 5,
+      avatar: "LW"
+    },
+    {
+      name: "Robert Martinez",
+      company: "Digital Agency",
+      role: "Operations Director",
+      content: "The custom software development exceeded our expectations. Professional, reliable, and delivered on time and within budget.",
+      rating: 5,
+      avatar: "RM"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Basic IT Support",
+      price: "$99",
+      period: "/month",
+      description: "Essential IT support for small businesses",
+      features: [
+        "24/7 Help Desk",
+        "Remote Support",
+        "Basic Maintenance",
+        "Email Support",
+        "System Monitoring",
+        "Monthly Reports"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional IT Services",
+      price: "$299",
+      period: "/month",
+      description: "Comprehensive IT services for growing businesses",
+      features: [
+        "All Basic Features",
+        "Proactive Monitoring",
+        "Security Management",
+        "Cloud Services",
+        "Priority Support",
+        "Quarterly Reviews",
+        "Backup & Recovery",
+        "Software Updates"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise IT Solutions",
+      price: "$599",
+      period: "/month",
+      description: "Full-service IT solutions for large organizations",
+      features: [
+        "All Professional Features",
+        "Dedicated Account Manager",
+        "Custom Solutions",
+        "Advanced Security",
+        "Disaster Recovery",
+        "Compliance Management",
+        "Strategic Consulting",
+        "Unlimited Support"
+      ],
+      popular: false
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -742,45 +966,6 @@ export default function ITServices() {
                   </div>
                   
                   <p className="text-gray-300 italic">"{testimonial.content}"</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="py-16 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Transform Your IT Infrastructure?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get a free consultation and discover how our IT services can drive your business forward.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                Get Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
-              >
-                <DollarSign className="mr-2 h-5 w-5" />
-                View Pricing
-              </Link>
-            </div>
-
-            <div className="mt-8 text-sm text-gray-400">
-              <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
-              <p className="mt-2">Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            </div>
-          </div>
-        </div>
       </div>
     </>
   );
