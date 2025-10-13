@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -251,6 +248,215 @@ export default function MicroSaaSSolutionsPage() {
       benefits: ["40% open rates", "Personalized content", "Optimized timing"],
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
       href: "/ai-email-marketing"
+    },
+    {
+      title: "AI Voice Assistant Platform",
+      description: "Custom voice assistant solution with natural language processing, multi-language support, and business integration.",
+      icon: PhoneIcon,
+      features: [
+        "Natural language processing",
+        "Multi-language support",
+        "Custom voice training",
+        "Business integrations",
+        "Analytics dashboard",
+        "API access"
+      ],
+      color: "from-violet-500 to-purple-500",
+      price: "$399/month",
+      setupFee: "$2,500",
+      benefits: ["95% accuracy", "24/7 availability", "Multi-language"],
+      useCases: ["Customer service", "Voice commands", "Accessibility"],
+      href: "/ai-voice-assistant"
+    },
+    {
+      title: "AI Video Analytics Platform",
+      description: "Advanced video analytics with AI-powered content analysis, engagement tracking, and performance optimization.",
+      icon: ChartBarIcon,
+      features: [
+        "Content analysis",
+        "Engagement tracking",
+        "Sentiment analysis",
+        "Performance metrics",
+        "Automated insights",
+        "Real-time monitoring"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "$349/month",
+      setupFee: "$1,800",
+      benefits: ["Real-time insights", "Automated analysis", "Performance boost"],
+      useCases: ["Video marketing", "Content optimization", "Audience analysis"],
+      href: "/ai-video-analytics"
+    },
+    {
+      title: "AI Legal Document Analyzer",
+      description: "Intelligent legal document analysis with contract review, compliance checking, and risk assessment.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Contract analysis",
+        "Compliance checking",
+        "Risk assessment",
+        "Legal research",
+        "Document comparison",
+        "Automated summaries"
+      ],
+      color: "from-slate-500 to-gray-500",
+      price: "$599/month",
+      setupFee: "$3,000",
+      benefits: ["90% time savings", "Risk reduction", "Compliance assurance"],
+      useCases: ["Legal firms", "Contract management", "Compliance"],
+      href: "/ai-legal-analyzer"
+    },
+    {
+      title: "AI Real Estate Assistant",
+      description: "Comprehensive real estate management with property valuation, market analysis, and lead generation.",
+      icon: GlobeAltIcon,
+      features: [
+        "Property valuation",
+        "Market analysis",
+        "Lead generation",
+        "Price optimization",
+        "Investment insights",
+        "Client management"
+      ],
+      color: "from-emerald-500 to-teal-500",
+      price: "$279/month",
+      setupFee: "$1,500",
+      benefits: ["Accurate valuations", "Market insights", "Lead generation"],
+      useCases: ["Real estate agents", "Property management", "Investment analysis"],
+      href: "/ai-real-estate"
+    },
+    {
+      title: "AI Healthcare Analytics",
+      description: "Advanced healthcare analytics with patient insights, treatment optimization, and predictive diagnostics.",
+      icon: CpuChipIcon,
+      features: [
+        "Patient analytics",
+        "Treatment optimization",
+        "Predictive diagnostics",
+        "Health monitoring",
+        "Risk assessment",
+        "Compliance tracking"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "$799/month",
+      setupFee: "$4,000",
+      benefits: ["Improved outcomes", "Risk reduction", "Cost savings"],
+      useCases: ["Hospitals", "Clinics", "Health systems"],
+      href: "/ai-healthcare-analytics"
+    },
+    {
+      title: "AI Supply Chain Optimizer",
+      description: "Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.",
+      icon: CloudIcon,
+      features: [
+        "Demand forecasting",
+        "Route optimization",
+        "Cost analysis",
+        "Supplier management",
+        "Risk assessment",
+        "Performance tracking"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "$449/month",
+      setupFee: "$2,200",
+      benefits: ["20% cost reduction", "Optimized routes", "Risk mitigation"],
+      useCases: ["Logistics", "Manufacturing", "Retail"],
+      href: "/ai-supply-chain"
+    },
+    {
+      title: "AI Energy Management System",
+      description: "Smart energy management with consumption optimization, cost reduction, and sustainability tracking.",
+      icon: CogIcon,
+      features: [
+        "Consumption optimization",
+        "Cost analysis",
+        "Sustainability tracking",
+        "Predictive maintenance",
+        "Energy forecasting",
+        "Carbon footprint"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "$329/month",
+      setupFee: "$1,800",
+      benefits: ["30% energy savings", "Cost reduction", "Sustainability"],
+      useCases: ["Manufacturing", "Buildings", "Utilities"],
+      href: "/ai-energy-management"
+    },
+    {
+      title: "AI Fraud Detection System",
+      description: "Advanced fraud detection with real-time monitoring, pattern recognition, and automated alerts.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Real-time monitoring",
+        "Pattern recognition",
+        "Automated alerts",
+        "Risk scoring",
+        "Transaction analysis",
+        "Compliance reporting"
+      ],
+      color: "from-red-500 to-rose-500",
+      price: "$499/month",
+      setupFee: "$2,500",
+      benefits: ["99.9% accuracy", "Real-time detection", "Cost savings"],
+      useCases: ["Banking", "E-commerce", "Financial services"],
+      href: "/ai-fraud-detection"
+    },
+    {
+      title: "AI Learning Management System",
+      description: "Intelligent learning platform with personalized content, progress tracking, and adaptive learning paths.",
+      icon: UserGroupIcon,
+      features: [
+        "Personalized content",
+        "Progress tracking",
+        "Adaptive learning",
+        "Skill assessment",
+        "Certification management",
+        "Analytics dashboard"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "$199/month",
+      setupFee: "$1,000",
+      benefits: ["Personalized learning", "Better outcomes", "Engagement boost"],
+      useCases: ["Education", "Corporate training", "Online courses"],
+      href: "/ai-learning-management"
+    },
+    {
+      title: "AI Quality Assurance Platform",
+      description: "Automated quality assurance with AI-powered testing, defect detection, and performance monitoring.",
+      icon: CheckCircleIcon,
+      features: [
+        "Automated testing",
+        "Defect detection",
+        "Performance monitoring",
+        "Code analysis",
+        "Test generation",
+        "Quality metrics"
+      ],
+      color: "from-teal-500 to-cyan-500",
+      price: "$379/month",
+      setupFee: "$1,900",
+      benefits: ["90% test coverage", "Faster delivery", "Quality improvement"],
+      useCases: ["Software development", "Manufacturing", "Quality control"],
+      href: "/ai-quality-assurance"
+    },
+    {
+      title: "AI Event Management Suite",
+      description: "Comprehensive event management with AI-powered planning, attendee insights, and performance optimization.",
+      icon: RocketLaunchIcon,
+      features: [
+        "Event planning",
+        "Attendee insights",
+        "Performance optimization",
+        "Registration management",
+        "Networking facilitation",
+        "Analytics dashboard"
+      ],
+      color: "from-pink-500 to-rose-500",
+      price: "$249/month",
+      setupFee: "$1,200",
+      benefits: ["Better engagement", "Optimized planning", "Success metrics"],
+      useCases: ["Conferences", "Webinars", "Corporate events"],
+      href: "/ai-event-management"
     }
   ];
 
