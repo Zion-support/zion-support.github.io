@@ -1,13 +1,16 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 const CybersecurityPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cybersecurity | Zion Tech Group</title>
-        <meta name="description" content="Advanced cybersecurity solutions to protect your business from threats" />
+        <meta
+          name="description"
+          content="Advanced cybersecurity solutions to protect your business from threats"
+        />
       </Helmet>
 
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -18,7 +21,8 @@ const CybersecurityPage = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Advanced cybersecurity solutions to protect your business from threats
+            Advanced cybersecurity solutions to protect your business from
+            threats
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

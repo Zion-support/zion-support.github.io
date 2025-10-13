@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,48 +10,90 @@ const __dirname = path.dirname(__filename);
 // Function to fix common JSX syntax errors
 function fixJSXContent(content) {
   // Remove duplicate function declarations
-  content = content.replace(/export default function \w+\(\) \{\s*return \(\s*export default function \w+\(\) \{\s*return \(/g, 'export default function Page() {\n  return (');
-  
+  content = content.replace(
+    /export default function \w+\(\) \{\s*return \(\s*export default function \w+\(\) \{\s*return \(/g,
+    "export default function Page() {\n  return (",
+  );
+
   // Fix malformed JSX tags
-  content = content.replace(/<div><div><\/div><\/div><\/div>/g, '');
-  content = content.replace(/<div><\/div>/g, '');
-  content = content.replace(/<div><div>/g, '<div>');
-  content = content.replace(/<\/div><\/div>/g, '</div>');
-  
+  content = content.replace(/<div><div><\/div><\/div><\/div>/g, "");
+  content = content.replace(/<div><\/div>/g, "");
+  content = content.replace(/<div><div>/g, "<div>");
+  content = content.replace(/<\/div><\/div>/g, "</div>");
+
   // Fix broken closing tags
-  content = content.replace(/<title>([^<]+)<div><div><\/title>/g, '<title>$1</title>');
-  content = content.replace(/<meta([^>]+)><div><\/meta><\/div><\/div><\/div>/g, '<meta$1 />');
-  content = content.replace(/<Helmet><\/div><\/div>/g, '</Helmet>');
-  content = content.replace(/<p([^>]+)><div><\/p>/g, '<p$1></p>');
-  
+  content = content.replace(
+    /<title>([^<]+)<div><div><\/title>/g,
+    "<title>$1</title>",
+  );
+  content = content.replace(
+    /<meta([^>]+)><div><\/meta><\/div><\/div><\/div>/g,
+    "<meta$1 />",
+  );
+  content = content.replace(/<Helmet><\/div><\/div>/g, "</Helmet>");
+  content = content.replace(/<p([^>]+)><div><\/p>/g, "<p$1></p>");
+
   // Fix broken Link components
-  content = content.replace(/<Link;<\/Link><div><\/Link><\/div><\/div><\/div>/g, '');
-  content = content.replace(/<Link([^>]*)><\/Link>/g, '<Link$1>Contact Us</Link>');
-  content = content.replace(/Contact Us;/g, 'Contact Us');
-  
+  content = content.replace(
+    /<Link;<\/Link><div><\/Link><\/div><\/div><\/div>/g,
+    "",
+  );
+  content = content.replace(
+    /<Link([^>]*)><\/Link>/g,
+    "<Link$1>Contact Us</Link>",
+  );
+  content = content.replace(/Contact Us;/g, "Contact Us");
+
   // Fix broken ArrowRight components
-  content = content.replace(/<ArrowRight className="w-5h-5ml-2"><\/ArrowRight>/g, '<ArrowRight className="w-5 h-5 ml-2" />');
-  content = content.replace(/<ArrowRight className="ml-2 h-5 w-5" \/>/g, '<ArrowRight className="ml-2 h-5 w-5" />');
-  
+  content = content.replace(
+    /<ArrowRight className="w-5h-5ml-2"><\/ArrowRight>/g,
+    '<ArrowRight className="w-5 h-5 ml-2" />',
+  );
+  content = content.replace(
+    /<ArrowRight className="ml-2 h-5 w-5" \/>/g,
+    '<ArrowRight className="ml-2 h-5 w-5" />',
+  );
+
   // Fix malformed JSX structure
-  content = content.replace(/<div className="min-h-screen[^"]*"><\/div><div><div><\/div><\/div><\/div>/g, '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">');
-  content = content.replace(/<div className="max-w-7xl[^"]*"><div><\/div><\/div><\/div><\/div>/g, '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">');
-  
+  content = content.replace(
+    /<div className="min-h-screen[^"]*"><\/div><div><div><\/div><\/div><\/div>/g,
+    '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">',
+  );
+  content = content.replace(
+    /<div className="max-w-7xl[^"]*"><div><\/div><\/div><\/div><\/div>/g,
+    '<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">',
+  );
+
   // Remove orphaned closing tags
-  content = content.replace(/<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g, '</div>');
-  content = content.replace(/<\/div><\/div>\s*<\/div>\s*<\/div>/g, '</div>');
-  
+  content = content.replace(
+    /<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g,
+    "</div>",
+  );
+  content = content.replace(/<\/div><\/div>\s*<\/div>\s*<\/div>/g, "</div>");
+
   // Fix missing imports
-  if (content.includes('Helmet') && !content.includes("import { Helmet }")) {
-    content = content.replace(/import React from 'react';/, `import React from 'react';\nimport { Helmet } from 'react-helmet-async';`);
+  if (content.includes("Helmet") && !content.includes("import { Helmet }")) {
+    content = content.replace(
+      /import React from 'react';/,
+      `import React from 'react';\nimport { Helmet } from 'react-helmet-async';`,
+    );
   }
-  if (content.includes('Link') && !content.includes("import { Link }")) {
-    content = content.replace(/import React from 'react';/, `import React from 'react';\nimport { Link } from 'react-router-dom';`);
+  if (content.includes("Link") && !content.includes("import { Link }")) {
+    content = content.replace(
+      /import React from 'react';/,
+      `import React from 'react';\nimport { Link } from 'react-router-dom';`,
+    );
   }
-  if (content.includes('ArrowRight') && !content.includes("import { ArrowRight }")) {
-    content = content.replace(/import React from 'react';/, `import React from 'react';\nimport { ArrowRight } from 'lucide-react';`);
+  if (
+    content.includes("ArrowRight") &&
+    !content.includes("import { ArrowRight }")
+  ) {
+    content = content.replace(
+      /import React from 'react';/,
+      `import React from 'react';\nimport { ArrowRight } from 'lucide-react';`,
+    );
   }
-  
+
   return content;
 }
 
@@ -90,26 +132,36 @@ export default function ${pageName}() {
 // Function to process a single file
 function processFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
+    const content = fs.readFileSync(filePath, "utf8");
+
     // Check if file is severely corrupted
-    if (content.includes('export default function') && content.split('export default function').length > 2) {
+    if (
+      content.includes("export default function") &&
+      content.split("export default function").length > 2
+    ) {
       console.log(`Fixing severely corrupted file: ${filePath}`);
-      
+
       // Extract page name from file path
-      const pathParts = filePath.split('/');
+      const pathParts = filePath.split("/");
       const fileName = pathParts[pathParts.length - 2]; // Get directory name
-      const pageName = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('') + 'Page';
-      
-      const title = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join(' ');
-      
+      const pageName =
+        fileName
+          .split("-")
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join("") + "Page";
+
+      const title = fileName
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+
       const description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`;
-      
-      const newContent = createProperPageStructure(pageName, title, description);
+
+      const newContent = createProperPageStructure(
+        pageName,
+        title,
+        description,
+      );
       fs.writeFileSync(filePath, newContent);
       console.log(`Fixed: ${filePath}`);
     } else {
@@ -128,28 +180,32 @@ function processFile(filePath) {
 // Function to recursively find all .tsx files
 function findTsxFiles(dir) {
   const files = [];
-  
+
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+
+      if (
+        stat.isDirectory() &&
+        !item.startsWith(".") &&
+        item !== "node_modules"
+      ) {
         traverse(fullPath);
-      } else if (item.endsWith('.tsx') && !item.includes('.original')) {
+      } else if (item.endsWith(".tsx") && !item.includes(".original")) {
         files.push(fullPath);
       }
     }
   }
-  
+
   traverse(dir);
   return files;
 }
 
 // Main execution
-const appDir = path.join(__dirname, 'app');
+const appDir = path.join(__dirname, "app");
 const tsxFiles = findTsxFiles(appDir);
 
 console.log(`Found ${tsxFiles.length} .tsx files to process`);

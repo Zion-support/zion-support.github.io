@@ -1,13 +1,13 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import { AnalyticsProvider } from './components/AnalyticsProvider';
-import PerformanceMonitor from './components/PerformanceMonitor';
-import { ErrorBoundary } from 'react-error-boundary';
-import ErrorFallback from './components/ErrorFallback';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { AnalyticsProvider } from "./components/AnalyticsProvider";
+import PerformanceMonitor from "./components/PerformanceMonitor";
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallback from "./components/ErrorFallback";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -22,10 +22,16 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <PerformanceMonitor />
             <Helmet>
               <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-              <meta name="description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
-              <meta name="keywords" content="AI solutions, IT services, digital transformation, business automation, technology consulting" />
+              <meta
+                name="description"
+                content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses."
+              />
+              <meta
+                name="keywords"
+                content="AI solutions, IT services, digital transformation, business automation, technology consulting"
+              />
             </Helmet>
-            
+
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
               <header className="bg-black/20 backdrop-blur-sm border-b border-white/10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,13 +40,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       Zion Tech Group
                     </Link>
                     <nav className="hidden md:flex space-x-8">
-                      <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                      <Link
+                        to="/about"
+                        className="text-gray-300 hover:text-white transition-colors"
+                      >
                         About
                       </Link>
-                      <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                      <Link
+                        to="/services"
+                        className="text-gray-300 hover:text-white transition-colors"
+                      >
                         Services
                       </Link>
-                      <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                      <Link
+                        to="/contact"
+                        className="text-gray-300 hover:text-white transition-colors"
+                      >
                         Contact
                       </Link>
                     </nav>
@@ -54,11 +69,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   </div>
                 </div>
               </header>
-              
-              <main>
-                {children}
-              </main>
-              
+
+              <main>{children}</main>
+
               <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-8">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                   <p className="text-gray-300">

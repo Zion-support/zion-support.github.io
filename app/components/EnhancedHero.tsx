@@ -1,6 +1,6 @@
-import React from 'react';
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface EnhancedHeroProps {
   title?: string;
@@ -25,11 +25,11 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
   description = "Revolutionize your operations with cutting-edge artificial intelligence technology. Our advanced solutions deliver measurable results and drive unprecedented growth.",
   primaryCta = {
     text: "Get Started",
-    href: "/contact"
+    href: "/contact",
   },
   secondaryCta = {
     text: "Learn More",
-    href: "/about"
+    href: "/about",
   },
   benefits = [
     "Advanced AI technology integration",
@@ -37,38 +37,40 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
     "Enterprise-grade security and compliance",
     "Scalable and flexible solutions",
     "24/7 technical support",
-    "Custom implementation and training"
+    "Custom implementation and training",
   ],
   backgroundImage = "/api/placeholder/1920/1080",
-  className = ""
+  className = "",
 }) => {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9 AM-6 PM PST'
+      title: "Call Us",
+      details: "+1 (555) 123-4567",
+      description: "Mon-Fri 9 AM-6 PM PST",
     },
     {
       icon: Mail,
-      title: 'Email Us',
-      details: 'info@ziontechgroup.com',
-      description: 'We respond within 24 hours'
+      title: "Email Us",
+      details: "info@ziontechgroup.com",
+      description: "We respond within 24 hours",
     },
     {
       icon: MapPin,
-      title: 'Visit Us',
-      details: '123 Tech Street, San Francisco, CA',
-      description: 'Schedule a meeting'
-    }
+      title: "Visit Us",
+      details: "123 Tech Street, San Francisco, CA",
+      description: "Schedule a meeting",
+    },
   ];
 
   return (
-    <div className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}>
+    <div
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}
+    >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {backgroundImage && (
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
             style={{ backgroundImage: `url(${backgroundImage})` }}
           />
@@ -87,9 +89,7 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
               <p className="text-xl text-cyan-400 mb-4 font-semibold">
                 {subtitle}
               </p>
-              <p className="text-lg text-gray-300 mb-8">
-                {description}
-              </p>
+              <p className="text-lg text-gray-300 mb-8">{description}</p>
             </div>
 
             {/* CTA Buttons */}
@@ -135,7 +135,9 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = ({
                     <div>
                       <h4 className="text-white font-medium">{info.title}</h4>
                       <p className="text-gray-300">{info.details}</p>
-                      <p className="text-gray-400 text-sm">{info.description}</p>
+                      <p className="text-gray-400 text-sm">
+                        {info.description}
+                      </p>
                     </div>
                   </div>
                 ))}

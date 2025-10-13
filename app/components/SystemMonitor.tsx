@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SystemMonitorProps {
   children?: React.ReactNode;
@@ -9,9 +9,9 @@ interface SystemMonitorProps {
 
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
   children,
-  className = '',
+  className = "",
   title,
-  description
+  description,
 }) => {
   return (
     <div className={`enhanced-component ${className}`}>

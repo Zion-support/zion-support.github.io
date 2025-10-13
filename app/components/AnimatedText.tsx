@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 interface AnimatedTextProps {
   text: string;
@@ -9,18 +9,18 @@ interface AnimatedTextProps {
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({
   text,
-  className = '',
+  className = "",
   delay = 0,
-  speed = 100
+  speed = 100,
 }) => {
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     if (currentIndex < text.length) {
       const timeout = setTimeout(() => {
-        setDisplayedText(prev => prev + text[currentIndex]);
-        setCurrentIndex(prev => prev + 1);
+        setDisplayedText((prev) => prev + text[currentIndex]);
+        setCurrentIndex((prev) => prev + 1);
       }, delay + speed);
 
       return () => clearTimeout(timeout);
@@ -28,11 +28,7 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
     return undefined;
   }, [currentIndex, text, delay, speed]);
 
-  return (
-    <span className={className}>
-      {displayedText}
-    </span>
-  );
+  return <span className={className}>{displayedText}</span>;
 };
 
 export default AnimatedText;

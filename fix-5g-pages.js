@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 const pages = [
-  '5g-edge-computing',
-  '5g-mobile-applications', 
-  '5g-network-infrastructure',
-  '5g-private-networks',
-  '5g-smart-city-solutions',
-  '5g-data-analytics',
-  '5g-implementation',
-  '5g-iot-solutions',
-  '5g-solutions'
+  "5g-edge-computing",
+  "5g-mobile-applications",
+  "5g-network-infrastructure",
+  "5g-private-networks",
+  "5g-smart-city-solutions",
+  "5g-data-analytics",
+  "5g-implementation",
+  "5g-iot-solutions",
+  "5g-solutions",
 ];
 
 const template = `import React from 'react';
@@ -44,71 +44,72 @@ export default function {FUNCTION_NAME}() {
 }`;
 
 const pageData = {
-  '5g-edge-computing': {
-    functionName: 'FiveGEdgeComputingPage',
-    title: '5G Edge Computing',
-    description: 'Professional 5G edge computing services coming soon.'
+  "5g-edge-computing": {
+    functionName: "FiveGEdgeComputingPage",
+    title: "5G Edge Computing",
+    description: "Professional 5G edge computing services coming soon.",
   },
-  '5g-mobile-applications': {
-    functionName: 'FiveGMobileApplicationsPage', 
-    title: '5G Mobile Applications',
-    description: 'Advanced 5G mobile application development coming soon.'
+  "5g-mobile-applications": {
+    functionName: "FiveGMobileApplicationsPage",
+    title: "5G Mobile Applications",
+    description: "Advanced 5G mobile application development coming soon.",
   },
-  '5g-network-infrastructure': {
-    functionName: 'FiveGNetworkInfrastructurePage',
-    title: '5G Network Infrastructure', 
-    description: 'Comprehensive 5G network infrastructure solutions coming soon.'
+  "5g-network-infrastructure": {
+    functionName: "FiveGNetworkInfrastructurePage",
+    title: "5G Network Infrastructure",
+    description:
+      "Comprehensive 5G network infrastructure solutions coming soon.",
   },
-  '5g-private-networks': {
-    functionName: 'FiveGPrivateNetworksPage',
-    title: '5G Private Networks',
-    description: 'Secure 5G private network solutions coming soon.'
+  "5g-private-networks": {
+    functionName: "FiveGPrivateNetworksPage",
+    title: "5G Private Networks",
+    description: "Secure 5G private network solutions coming soon.",
   },
-  '5g-smart-city-solutions': {
-    functionName: 'FiveGSmartCitySolutionsPage',
-    title: '5G Smart City Solutions',
-    description: 'Innovative 5G smart city solutions coming soon.'
+  "5g-smart-city-solutions": {
+    functionName: "FiveGSmartCitySolutionsPage",
+    title: "5G Smart City Solutions",
+    description: "Innovative 5G smart city solutions coming soon.",
   },
-  '5g-data-analytics': {
-    functionName: 'FiveGDataAnalyticsPage',
-    title: '5G Data Analytics',
-    description: 'Advanced 5G data analytics solutions coming soon.'
+  "5g-data-analytics": {
+    functionName: "FiveGDataAnalyticsPage",
+    title: "5G Data Analytics",
+    description: "Advanced 5G data analytics solutions coming soon.",
   },
-  '5g-implementation': {
-    functionName: 'FiveGImplementationPage',
-    title: '5G Implementation',
-    description: 'Complete 5G network implementation services coming soon.'
+  "5g-implementation": {
+    functionName: "FiveGImplementationPage",
+    title: "5G Implementation",
+    description: "Complete 5G network implementation services coming soon.",
   },
-  '5g-iot-solutions': {
-    functionName: 'FiveGIoTSolutionsPage',
-    title: '5G IoT Solutions',
-    description: 'Revolutionary 5G IoT solutions coming soon.'
+  "5g-iot-solutions": {
+    functionName: "FiveGIoTSolutionsPage",
+    title: "5G IoT Solutions",
+    description: "Revolutionary 5G IoT solutions coming soon.",
   },
-  '5g-solutions': {
-    functionName: 'FiveGSolutionsPage',
-    title: '5G Solutions',
-    description: 'Comprehensive 5G technology solutions coming soon.'
-  }
+  "5g-solutions": {
+    functionName: "FiveGSolutionsPage",
+    title: "5G Solutions",
+    description: "Comprehensive 5G technology solutions coming soon.",
+  },
 };
 
 function fixPage(pageName) {
   const data = pageData[pageName];
   if (!data) return;
-  
+
   const filePath = `./app/${pageName}/page.tsx`;
   const content = template
     .replace(/{FUNCTION_NAME}/g, data.functionName)
     .replace(/{TITLE}/g, data.title)
     .replace(/{DESCRIPTION}/g, data.description);
-  
+
   try {
-    fs.writeFileSync(filePath, content, 'utf8');
+    fs.writeFileSync(filePath, content, "utf8");
     console.log(`Fixed: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-console.log('Fixing 5G pages...');
+console.log("Fixing 5G pages...");
 pages.forEach(fixPage);
-console.log('Done!');
+console.log("Done!");

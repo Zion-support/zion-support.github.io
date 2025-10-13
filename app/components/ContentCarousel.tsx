@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Slide {
   id: number;
@@ -19,32 +19,38 @@ interface ContentCarouselProps {
 const defaultSlides: Slide[] = [
   {
     id: 1,
-    title: 'AI-Powered Solutions',
-    description: 'Transform your business with cutting-edge artificial intelligence technologies.',
-    image: '/api/placeholder/600/400',
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision']
+    title: "AI-Powered Solutions",
+    description:
+      "Transform your business with cutting-edge artificial intelligence technologies.",
+    image: "/api/placeholder/600/400",
+    features: [
+      "Machine Learning",
+      "Natural Language Processing",
+      "Computer Vision",
+    ],
   },
   {
     id: 2,
-    title: 'Cloud Infrastructure',
-    description: 'Scalable and secure cloud solutions for modern businesses.',
-    image: '/api/placeholder/600/400',
-    features: ['Scalable Architecture', '99.9% Uptime', 'Global CDN']
+    title: "Cloud Infrastructure",
+    description: "Scalable and secure cloud solutions for modern businesses.",
+    image: "/api/placeholder/600/400",
+    features: ["Scalable Architecture", "99.9% Uptime", "Global CDN"],
   },
   {
     id: 3,
-    title: 'Cybersecurity',
-    description: 'Protect your digital assets with enterprise-grade security solutions.',
-    image: '/api/placeholder/600/400',
-    features: ['Threat Detection', 'Data Encryption', 'Compliance']
-  }
+    title: "Cybersecurity",
+    description:
+      "Protect your digital assets with enterprise-grade security solutions.",
+    image: "/api/placeholder/600/400",
+    features: ["Threat Detection", "Data Encryption", "Compliance"],
+  },
 ];
 
-export default function ContentCarousel({ 
-  slides = defaultSlides, 
-  autoPlay = true, 
+export default function ContentCarousel({
+  slides = defaultSlides,
+  autoPlay = true,
   interval = 5000,
-  className = ''
+  className = "",
 }: ContentCarouselProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -74,7 +80,7 @@ export default function ContentCarousel({
     <div className={`relative w-full ${className}`}>
       {/* Carousel Container */}
       <div className="relative overflow-hidden rounded-lg">
-        <div 
+        <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
         >
@@ -83,11 +89,16 @@ export default function ContentCarousel({
               <div className="bg-gray-800 p-8 rounded-lg border border-gray-700">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
-                    <h3 className="text-2xl font-bold text-white mb-4">{slide.title}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      {slide.title}
+                    </h3>
                     <p className="text-gray-300 mb-6">{slide.description}</p>
                     <ul className="space-y-2">
                       {slide.features.map((feature, index) => (
-                        <li key={index} className="flex items-center text-gray-300">
+                        <li
+                          key={index}
+                          className="flex items-center text-gray-300"
+                        >
                           <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
                           {feature}
                         </li>
@@ -116,7 +127,7 @@ export default function ContentCarousel({
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
-      
+
       <button
         onClick={goToNext}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 hover:bg-gray-700 text-white p-2 rounded-full transition-colors"
@@ -132,7 +143,7 @@ export default function ContentCarousel({
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${
-              index === currentSlide ? 'bg-cyan-400' : 'bg-gray-600'
+              index === currentSlide ? "bg-cyan-400" : "bg-gray-600"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />

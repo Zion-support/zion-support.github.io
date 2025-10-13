@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface PerformanceEnhancerProps {
   children?: React.ReactNode;
@@ -7,13 +7,9 @@ interface PerformanceEnhancerProps {
 
 const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   children,
-  className = ''
+  className = "",
 }) => {
-  return (
-    <div className={className}>
-      {children}
-    </div>
-  );
+  return <div className={className}>{children}</div>;
 };
 
 export default PerformanceEnhancer;

@@ -2,16 +2,16 @@
 
 export const Apiclient = {
   init: () => {
-    console.log('Apiclient initialized');
+    console.log("Apiclient initialized");
   },
-  
+
   process: (data: any) => {
     return data;
   },
-  
+
   cleanup: () => {
-    console.log('Apiclient cleaned up');
-  }
+    console.log("Apiclient cleaned up");
+  },
 };
 
 export default Apiclient;

@@ -1,30 +1,33 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     // Monitor Core Web Vitals
-    if (typeof window !== 'undefined' && 'performance' in window) {
+    if (typeof window !== "undefined" && "performance" in window) {
       // Monitor Largest Contentful Paint (LCP)
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            console.log('LCP:', entry.startTime);
+          if (entry.entryType === "largest-contentful-paint") {
+            console.log("LCP:", entry.startTime);
           }
         }
       });
-      
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      observer.observe({ entryTypes: ["largest-contentful-paint"] });
 
       // Monitor First Input Delay (FID)
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', (entry as any).processingStart - entry.startTime);
+          if (entry.entryType === "first-input") {
+            console.log(
+              "FID:",
+              (entry as any).processingStart - entry.startTime,
+            );
           }
         }
       });
-      
-      fidObserver.observe({ entryTypes: ['first-input'] });
+
+      fidObserver.observe({ entryTypes: ["first-input"] });
 
       // Monitor Cumulative Layout Shift (CLS)
       let clsValue = 0;
@@ -34,10 +37,10 @@ const PerformanceMonitor: React.FC = () => {
             clsValue += (entry as any).value;
           }
         }
-        console.log('CLS:', clsValue);
+        console.log("CLS:", clsValue);
       });
-      
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      clsObserver.observe({ entryTypes: ["layout-shift"] });
 
       return () => {
         observer.disconnect();
