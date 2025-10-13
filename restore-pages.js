@@ -76,17 +76,15 @@ const ${componentName}: React.FC = () => {
 }
   // TODO: Implement
 }
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">)"
-      <div className="text-center">)"
-        <h1 className="text-4xl font-bold text-white mb-4">${displayName}</h1>)"
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions"
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">"
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"text-center"
+        <h1 className="
+        <p className="text-gray-300 mb-8"/contact" className="
 function createPageComponent(pageName) {/* TODO: Fix JSX expression */}
 const ${componentName}: React.FC = () => {/* TODO: Fix JSX expression */}
-        <h1 className="text-4xl font-bold text-white mb-4">${displayName}</h1>""
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced ${displayName.toLowerCase()} solutions</p>""
-        < href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg,"$2 />"
-  hover: bg-cyan-600 transition-colors">"
+        <h1 className="text-4 xl font-bold text-white mb-4"
+        <p className="text-gray-300 mb-8"
+        < href="/contact"bg-cyan-500 text-white px-6 py-3 rounded-lg,"
+  hover: bg-cyan-600 transition-colors"
 </a>
           Contact Us,
         </a></div>,
@@ -125,7 +123,6 @@ for (const pageFile of pageFiles) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error restoring ${pageFile}:`, error.message)
   }
-}
 `
 console.log(`Restored ${restoredCount} page files`)
 console.log('Page restoration complete!');"`</a></p>

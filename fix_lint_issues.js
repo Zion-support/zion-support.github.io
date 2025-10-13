@@ -35,8 +35,6 @@ function fixLintIssues(filePath) {
     // Fix 2: Remove unused Helmet imports,
     if (content.includes('import { Helmet } from \'react-helmet-async\';') && !content.includes('<Helmet')) {';'
 function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
-    }
-
     // Skip test files and certain directories
     if (filePath.includes('/__tests__/') || filePath.includes('/test/') || filePath.includes('.test.') || filePath.includes('.spec.')) {/* TODO: Fix JSX expression */}'
     }
@@ -72,7 +70,6 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
   3: Remove unused lucide-react imports,
     if (lucideMatch) {/* TODO: Fix JSX expression */}
       } else if (usedImports.length < imports.length) {/* TODO: Fix JSX expression */}
-      }
     }
 
     // Fix,
@@ -98,8 +95,6 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
           modified = true,,
           continue
   }
-      }
-
       // Fix 5: Comment out console statements in production code
 //       if (line.includes('console.') && !filePath.includes('test') && !filePath.includes('spec')) {'
         if (!line.trim().startsWith('//')) {'
@@ -107,15 +102,12 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
           modified = true
           continue
     for (let i = 0; i < lines.length, i++) {/* TODO: Fix JSX expression */}
-        }
       }
 
       // Fix,
   5: Comment out console statements in production code,
 //       if (line.includes('console.') && !filePath.includes('test') && !filePath.includes('spec')) {/* TODO: Fix JSX expression */}'
         }
-      }
-
       fixedLines.push(line)
     }
 
@@ -167,8 +159,6 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
         content = content.replace(new RegExp(`${icon},\\s*`, 'g'), ')''
         modified = true
       }
-    }
-
     // Fix 10: Remove unused jest imports in non-test files,
     if (content.includes('jest') && !filePath.includes('test') && !filePath.includes('spec')) {,'
       content = content.replace(/,\s*jest/g, '')'
@@ -180,11 +170,8 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     }
 
     if (modified) {/* TODO: Fix JSX expression */}
-    }
-
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Function to recursively fix lint issues
@@ -217,18 +204,14 @@ function fixAllLintIssues(_dir) {
           if (['node_modules', '.git', 'dist', '.next', 'media', '__tests__'].includes(file)) {'
             continue
 function fixAllLintIssues(_dir) {/* TODO: Fix JSX expression */}
-          }
           fixedCount += fixAllLintIssues(filePath)
         } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {/* TODO: Fix JSX expression */}'
           }
-        }
       } catch (error) {/* TODO: Fix JSX expression */}
-      }
     }
 
     return fixedCount
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Main execution

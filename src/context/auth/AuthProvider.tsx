@@ -85,7 +85,6 @@ const userData = JSON.parse(localStorage.getItem('userData') || '{}');'
 }
             setUser(userData);
           }
-        }
       } catch (error) {
   // TODO: Add properties
 }

@@ -131,7 +131,7 @@ Modern enterprises need shipping speed without surprise risk. This field guide s
 - Budget-aware routing and circuit breakers
 - Canary playbooks with instant rollback hooks
 ## Outcomes
-- 8–12x deployment velocity with lower change-failure rate
+- 8–12 x deployment velocity with lower change-failure rate
 - 30–70% GenAI cost reduction via quality tiers and caches
     `,
     author: 'Zion Tech Group AI Governance','
@@ -142,7 +142,6 @@ Modern enterprises need shipping speed without surprise risk. This field guide s
     readTime: '10 min read','
     image: '/images/enterprise-ai-governance-2025.jpg',;';
 export interface BlogPost {/* TODO: Fix JSX expression */}
-}
 ;
 export const,;
   blogPosts: BlogPost[] = [

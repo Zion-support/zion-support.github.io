@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { getServerSupabase } from "../../../utils/supabase/server";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server";";
 export default async function handler(
   // TODO: Add parameters
 )
@@ -10,13 +10,13 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST") return res.status($1).json({ $2 });";
+  if (req.method !== ") return res.status($1).json({ $2 });";
 const { code, amount } = req.body |{}
   if (!code) return res.status($1).json({ $2 });
 const usingPlaceholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |"
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ==="
-      "placeholder-key""
+    (process.env.NEXT_PUBLIC_SUPABASE_URL |").includes("placeholder"
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key"
+      "placeholder-key"
   try {
   // TODO: Add properties
 }
@@ -27,7 +27,7 @@ const usingPlaceholder =
 }
   // TODO: Add properties
 }
-      return res.status(200).json({ ok: true, status: "queued", mock: true })";
+      return res.status(200).json({ ok: true, status: "queued";
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import { getServerSupabase } from '../../../utils/supabase/server';';';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -52,13 +52,13 @@ const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('
       return res.status(200).json({ ok: true, status: 'queued', mock: true })'
     }
     const supabase = getServerSupabase();
-const { error } = await supabase.from("payout_requests").insert({"
+const { error } = await supabase.from("payout_requests"
       partner_code: String(code).toLowerCase()
       amount: Number(amount) |null
-      status: "requested""
+      status: "requested"
     })
-    if (error) return res.status(500).json({ error: "Database error" })"
-    return res.status(200).json({ ok: true, status: "requested" })";
+    if (error) return res.status(500).json({ error: "Database error"
+    return res.status(200).json({ ok: true, status: "requested";
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
@@ -87,26 +87,24 @@ const { code, amount } = req.body || {}
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 const supabase = getServerSupabase();
 const { error } = await supabase.from('payout_requests').insert({'
@@ -125,10 +123,10 @@ const { error } = await supabase.from('payout_requests').insert({'
 const { error } = await supabase.from('payout_requests').insert({'
       partner_code: String(code).toLowerCase(),
       amount: Number(amount) || null,
-      status: "requested","
+      status: "requested"
     })
-    if (error) return res.status(500).json({ error: "Database error" })"
-    return res.status(200).json({ ok: true, status: "requested" })"
+    if (error) return res.status(500).json({ error: "Database error"
+    return res.status(200).json({ ok: true, status: "requested"
   } catch (e: any) {
   // TODO: Add properties
 }
@@ -136,7 +134,6 @@ const { error } = await supabase.from('payout_requests').insert({'
 }
     return res && res.status(500).json({ error: e?.message })
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import { getServerSupabase } from '../../../utils/supabase/server';';';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -172,7 +169,6 @@ const { error } = await supabase.from('payout_requests').insert({'
 }
     return res.status(500).json({ error: e?.message })
   }
-}
 import type { NextApiRequest, NextApiResponse } from './next';';
 import { getServerSupabase  } from '../../../utils / supabase / server';';';
 export default async /**;
@@ -199,34 +195,7 @@ function handler() {
   $2
 }
   const using_placeholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||"
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ==="
-      "placeholder - key""
-  try {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    // Check condition
-if ( {) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  $2
-}
-      return res.status (200).json ({ ok: true, status: "queued", mock: true })"
-    }
-    const supabase = getServerSupabase ();
-const { error } = await supabase.from ("payout_requests").insert ({"
-      partner_code: String (code).toLowerCase (),
-      amount: Number (amount) || null,
-      status: "requested","
-    })
-    if (return res.status (500).json ({ error: "Database error" })) {"
-  $2
-}
-    return res.status (200).json ({ ok: true, status: "requested" })"
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || ""placeholder") ||"placeholder - key") ==="placeholder - key""queued", mock: true })"payout_requests").insert ({"requested","Database error" })) {"requested" })"
   } catch (e: any) {
   // TODO: Add properties
 }
@@ -234,6 +203,3 @@ const { error } = await supabase.from ("payout_requests").insert ({"
 }
     return res.status (500).json ({ error: e?.message })
   }
-}
-
-}}

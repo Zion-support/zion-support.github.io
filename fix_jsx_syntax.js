@@ -20,14 +20,11 @@ async function main() {
         content = keyPropFix
         modified = true
 async function main() {/* TODO: Fix JSX expression */}
-}
   //Find all TSX files in src/components
   //   files.forEach(file => {/* TODO: Fix JSX expression */}
   placement: <div>\nkey={...} ->
 <\nkey={...})$2 />
       if (keyPropFix !== content) {/* TODO: Fix JSX expression */}
-      }
-
       //2. Fix onClick prop,
   placement: <button>\nonClick={...} ->
 <\nonClick={...}$2 />;
@@ -36,8 +33,6 @@ const onClickFix = content.replace()
         '<$1\nonClick={$2}''
       )
       if (onClickFix !== content) {/* TODO: Fix JSX expression */}
-      }
-
       //3. Fix className prop,
   placement: <div>\nclassName={...} ->
 <\nclassName={...}$2 />;
@@ -46,14 +41,10 @@ const classNameFix = content.replace()
         '<$1\nclassName={$2}''
       )
       if (classNameFix !== content) {/* TODO: Fix JSX expression */}
-      }
-
       //4. Fix style prop,
   placement: <div>\nstyle={...} ->
 <\nstyle={...}$2 />
       if (styleFix !== content) {/* TODO: Fix JSX expression */}
-      }
-
       //5. Fix template literal syntax: ${
   // TODO: Add properties
 }
@@ -92,8 +83,6 @@ const inputFix = content.replace(
 <br />,
       //5. Fix template literal,
   syntax: ${/* TODO: Fix JSX expression */}
-      }
-
       //6. Fix unclosed input,
   tags: <input\n...\n\n<button ->
 <input\n...\n/>\n\n<button>;
@@ -102,15 +91,11 @@ const inputFix = content.replace()
         '<input$1\n/>\n\n<'$2 />'
       )
       if (inputFix !== content) {/* TODO: Fix JSX expression */}
-      }
-
       //7. Fix unclosed br,
   tags: <br> ->
 <br />
       //       const brFix = content.replace(/<br>/g, '<br />')'
       if (brFix !== content) {/* TODO: Fix JSX expression */}
-      }
-
       if (modified) {/* TODO: Fix JSX expression */}
         //         }
     } catch (error) {/* TODO: Fix JSX expression */}

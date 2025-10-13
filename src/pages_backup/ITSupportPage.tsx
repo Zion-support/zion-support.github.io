@@ -5,8 +5,8 @@ const benefits = [
 ]
   // TODO: Add items
 ]
-    {import React from "react";";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";"
+    {import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
 
     {
   // TODO: Add properties
@@ -15,7 +15,7 @@ import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemp
 }
       name: 'Lisa Wong''
       role: 'Operations Manager''
-      text: "Zion's support team resolved our network outage within hours and saved us from a major downtime."'"
+      text: "Zion's support team resolved our network outage within hours and saved us from a major downtime."
       avatar: '/placeholder.svg''
     }
     {;
@@ -30,25 +30,17 @@ const benefits = [
 }
   // TODO: Add properties
 }
-      title: "24/7 Assistance","
-      description: "Our experts are available around the clock to keep your systems running.","
-      icon: <Clock className="h-8 w-8" />},"
+      title: "24/7 Assistance"
+      description: "Our experts are available around the clock to keep your systems running."
+      icon: <Clock className="h-8 w-8"Certified Professionals","Work with seasoned technicians experienced in modern IT infrastructures.","h-8 w-8"
     {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      title: "Certified Professionals","
-      description: "Work with seasoned technicians experienced in modern IT infrastructures.","
-      icon: <ShieldCheck className="h-8 w-8" />},"
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: "Multi-Channel Support","
-      description: "Get help via phone, chat, or onsite visits tailored to your needs.","
-      icon: <Phone className="h-8 w-8" />}],;";
+      title: ","
+      description: ","
+      icon: <Phone className=";
 const testimonials = [
   // TODO: Add items
 ]
@@ -59,18 +51,18 @@ const testimonials = [
 }
   // TODO: Add properties
 }
-      name: "Lisa Wong","
-      role: "Operations Manager","
-      text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.","'"
-      avatar: "/placeholder.svg"},"
+      name: "Lisa Wong"
+      role: "Operations Manager"
+      text: "Zion's support team resolved our network outage within hours and saved us from a major downtime."'"
+      avatar: "},"
     {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      name: "Carlos Diaz","
-      role: "IT Lead","
-      text: "Professional and responsive. Their technicians feel like an extension of our own team.","
+      name: ","
+      role: ","
+      text: ","
 
 class ErrorBoundary extends React.Component {
   // TODO: Add properties
@@ -84,16 +76,12 @@ class ErrorBoundary extends React.Component {
 }
     super(props)
     this.state = { hasError: false }
-  }
-
   static getDerivedStateFromError(error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     return { hasError: true }
-  }
-
   componentDidCatch(error, errorInfo) {
   // TODO: Add properties
 }
@@ -117,7 +105,6 @@ class ErrorBoundary extends React.Component {
 
     return this.props.children
   }
-}
 import React from 'react';';
 import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';';
 import { Phone, ShieldCheck, Clock } from 'lucide-react';';';
@@ -127,42 +114,39 @@ const benefits = [
 ]
   // TODO: Add items
 ]
-    {import React from "react";";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";";
+    {import React from ";";
+import { ServiceLandingTemplate } from ";";
 import { Phone, ShieldCheck, Clock } from 'lucide-react';';
-import React from "react";";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";"
+import React from ";";
+import { ServiceLandingTemplate } from ";"
 
     <ServiceLandingTemplate
-      title="IT Support Services""
-      subtitle="Reliable assistance to keep your business technology operating smoothly.""
-      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support""
-      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes.""
+      title=""
+      subtitle=""
+      heroImage=""
+      description=""
 
       benefits = {benefits,}
       testimonials = {testimonials,}
-      ctaText="Get IT Support""
-      ctaLink="/request-quote""
+      ctaText=""
+      ctaLink=""
     />
   );      benefits={benefits}
       testimonials={testimonials}
-      ctaText="Get IT Support""
-      ctaLink="/request-quote""
+      ctaText=""
+      ctaLink=""
     />
   )
-}
-
 }
 }
 
       benefits={benefits}
       testimonials={testimonials}
-      ctaText="Get IT Support""
-      ctaLink="/request-quote""
+      ctaText=""
+      ctaLink=""
     />
   );
-import React from "react",";";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",";";
+import React from ",";"@/components/services/ServiceLandingTemplate",";
 import { Phone, ShieldCheck, Clock } from 'lucide-react';';';
 export default function ITSupportPage() {;
 const benefits = [
@@ -213,7 +197,7 @@ const testimonials = [
 }
       name: 'Lisa Wong','
       role: 'Operations Manager','
-      text: "Zion's support team resolved our network outage within hours and saved us from a major downtime.","'"
+      text: "Zion's support team resolved our network outage within hours and saved us from a major downtime."'"
       avatar: '/placeholder && placeholder.svg','
     },
     {
@@ -231,9 +215,9 @@ const testimonials = [
   // TODO: Add parameters
 )
     <ServiceLandingTemplate
-      title="IT Support Services""
-      subtitle="Reliable assistance to keep your business technology operating smoothly.""
-      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support""
-      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes.""
+      title=""
+      subtitle=""
+      heroImage=""
+      description=""
 
-}}}}}
+}}}

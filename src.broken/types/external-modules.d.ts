@@ -1,14 +1,14 @@
-declare module "cmdk""
-declare module "@radix-ui/react-context-menu""
-declare module "vaul""
-declare module "@radix-ui/react-hover-card""
-declare module "input-otp""
-declare module "react-markdown""
-declare module "@radix-ui/react-menubar""
-declare module "@radix-ui/react-navigation-menu""
-declare module "react-resizable-panels""
-declare module "@radix-ui/react-toggle-group""
-declare module "@radix-ui/react-toggle""
+declare module "cmdk"
+declare module "@radix-ui/react-context-menu"
+declare module "vaul"
+declare module "@radix-ui/react-hover-card"
+declare module "input-otp"
+declare module "react-markdown"
+declare module "@radix-ui/react-menubar"
+declare module "@radix-ui/react-navigation-menu"
+declare module "react-resizable-panels"
+declare module "@radix-ui/react-toggle-group"
+declare module "@radix-ui/react-toggle"
 declare module '*.module.css' {;';
 const classes: { [key: string]: string }
   export default classes;
@@ -116,7 +116,7 @@ export const Github: LucideIcon;
 export const GithubIcon: LucideIcon;
 export const Globe: LucideIcon;
 export const GraduationCap: LucideIcon;
-export const Grid3X3: LucideIcon;
+export const Grid3 X3: LucideIcon;
 export const GripVertical: LucideIcon;
 export const Handshake: LucideIcon;
 export const HardDrive: LucideIcon;
@@ -276,8 +276,8 @@ export default function clsx(...classes: ClassValue[]): string
 }
 declare module 'embla-carousel-react''
 declare module 'framer-motion''
-declare module 'i18next''
-declare module 'i18next-browser-languagedetector''
+declare module 'i18 next''
+declare module 'i18 next-browser-languagedetector''
 declare module 'react-helmet-async''
 declare module 'react-hook-form' {';
 import type { ComponentType, ReactElement, ReactNode } from 'react';'
@@ -343,7 +343,7 @@ export function useFormContext<;
     TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn<TFieldValues>
 }
-declare module 'react-i18next''
+declare module 'react-i18 next''
 declare module 'react-dom/client''
 declare module 'react-dom''
 declare module '@hello-pangea/dnd''

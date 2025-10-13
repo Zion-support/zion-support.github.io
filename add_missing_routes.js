@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
 export default function Component() {
   return (
     <div>
@@ -11,55 +9,42 @@ export default function Component() {
 }
 // Read the broken links (pages that exist but have no routes)
 const brokenLinks = fs
-  .readFileSync("/workspace/broken_links.txt", "utf8")
-  .split("\n")
+  .readFileSync("/workspace/broken_links.txt"utf8")
+  .split(")
   .filter(Boolean);
 
 // Read the current App.tsx
-let appContent = fs.readFileSync("/workspace/App.tsx", "utf8");
+let appContent = fs.readFileSync("/workspace/App.tsx"utf8");
 
 // Define missing pages (this should come from analysis data)
 const missingPages = brokenLinks;
 
 // Generate import statements for all missing pages
-<<<<<<< HEAD
 const importStatements = missingPages
   .map((page) => {
     const componentName =
 //       page
-        .split("-")
+        .split(")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join("") + "Page";
-    return `import ${componentName} from './app/${page}/page'`;
+        .join(""Page";
+return `import ${componentName} from './app/${page}/page'`;
   })
-  .join("\n");
+  .join(");
 
 // Generate route statements
 const routeStatements = missingPages
   .map((page) => {
     const componentName =
 //       page
-        .split("-")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join("") + "Page";
-    return `                  <Route path="/${page}" element={<${componentName} />} />`;
-  })
-  .join("\n");
+        .split("-"") + ";
+    return `                  <Route path="/${page}"\n");
 // Add imports after the last import;
-const lastImportIndex = appContent.lastIndexOf("import");
-const lastImportLineEnd = appContent.indexOf("\n", lastImportIndex) + 1;
-const beforeImports = appContent.substring(0, lastImportLineEnd);
-const afterImports = appContent.substring(lastImportLineEnd);
-const newImports = beforeImports + "\n" + imports + "\n";
+const lastImportIndex = appContent.lastIndexOf(");
+const lastImportLineEnd = appContent.indexOf("\n"\n" + imports + ";
 // Add routes before the 404 route;
-const routeInsertionPoint = appContent.indexOf("{/* 404 Page */}");
-const beforeRoutes = appContent.substring(0, routeInsertionPoint);
-const afterRoutes = appContent.substring(routeInsertionPoint);
-const newRoutes =
-  beforeRoutes +
-  "\n                  {/* Auto-generated routes for existing pages */}\n" +
+const routeInsertionPoint = appContent.indexOf("{/* 404 Page */}"\n                  {/* Auto-generated routes for existing pages */}\n" +
 //   routes +
-//   "\n\n                  " +
+//   " +
   afterRoutes;
 // Combine everything;
 const newAppContent =
@@ -69,12 +54,9 @@ const newAppContent =
     newRoutes.substring(lastImportLineEnd, routeInsertionPoint),
   );
 // Write the updated App.tsx;
-fs.writeFileSync("/workspace/App.tsx", newAppContent);
-.join(", "),
-//   "... and more",
+fs.writeFileSync("/workspace/App.tsx", "),
+//   ",
 );
-=======
-=======
 const importStatements = brokenLinks.map(page => {
   const componentName = page.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)

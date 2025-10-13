@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -33,7 +32,6 @@ function fixMalformedPage(filePath) {
         pageName = fileName.split('-').map(word => 
           word.charAt(0).toUpperCase() + word.slice(1)
         ).join('') + 'Page';
-=======
 #!/usr/bin/env node;
 import fs from 'fs';'
 // List of page files that still need fixing;
@@ -82,8 +80,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||'
         (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))'
       ) {/* TODO: Fix JSX expression */}
-      }
-      
       const title = fileName.split('-').map(word => 
         word.charAt(0).toUpperCase() + word.slice(1)
       ).join(' ');
@@ -95,18 +91,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function ${pageName}() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            ${title}
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" content="${description}"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
           </p>
         </div>
@@ -119,15 +104,12 @@ export default function ${pageName}() {
       console.log(`Fixed malformed page: ${filePath}`);
       return true;
     }
-<<<<<<< HEAD
     
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Function to recursively find and fix malformed page files
 function fixMalformedPages(dirPath) {
   const items = fs.readdirSync(dirPath);
@@ -147,7 +129,6 @@ function fixMalformedPages(dirPath) {
       if (fixMalformedPage(fullPath)) {
         fixedCount++;
       }
-    }
   }
   
   return fixedCount;
@@ -157,7 +138,6 @@ function fixMalformedPages(dirPath) {
 console.log('Starting malformed page fixes...');
 const fixedCount = fixMalformedPages('/workspace/app');
 console.log(`Fixed ${fixedCount} malformed page files.`);
-=======
 
     content = filteredLines.join('\n')'
     // Clean up extra empty lines
@@ -178,14 +158,11 @@ console.log(`Fixed ${fixedCount} malformed page files.`);
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`)
         modified = true
       }
-    }
-
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}'
     }
 
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Process all files

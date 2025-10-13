@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'anchor-links-auto-fixer'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'anchor-links-auto-fixer'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'anchor-links-auto-fixer',' source: event.source || 'unknown', fixing: {' status: 'active', linksProcessed: 0,'
         lastFix: new Date().toISOString() } }) } return result; } catch (error) {

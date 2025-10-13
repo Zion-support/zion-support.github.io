@@ -99,7 +99,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     useCases: ['Autonomous delivery', 'Logistics optimization', 'Fleet management', 'Route planning', 'Safety monitoring'],'
     roi: 'Logistics companies achieve 600% ROI through reduced operational costs and improved efficiency.','
     competitors: ['Traditional fleet management', 'Autonomous vehicle platforms', 'Logistics software'],'
-    marketSize: '$6.8B market','
+    marketSize: '$6.8 B market','
     growthRate: '280% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -162,7 +162,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     useCases: ['Drug discovery', 'Genomic research', 'Clinical trials', 'Personalized medicine', 'Disease research'],'
     roi: 'Pharmaceutical companies achieve 800% ROI through accelerated drug discovery and research efficiency.','
     competitors: ['Traditional bioinformatics', 'Research platforms', 'Laboratory software'],'
-    marketSize: '$9.2B market','
+    marketSize: '$9.2 B market','
     growthRate: '320% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -226,7 +226,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     useCases: ['Healthcare analytics', 'Financial modeling', 'Government research', 'Academic research', 'Privacy-sensitive AI'],'
     roi: 'Healthcare organizations achieve 500% ROI through secure data analysis while maintaining privacy compliance.','
     competitors: ['Traditional AI platforms', 'Privacy tools', 'Encryption solutions'],'
-    marketSize: '$7.5B market','
+    marketSize: '$7.5 B market','
     growthRate: '250% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -290,7 +290,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     useCases: ['Grid optimization', 'Renewable integration', 'Industrial efficiency', 'Smart city energy', 'Sustainability optimization'],'
     roi: 'Utility companies achieve 700% ROI through improved grid efficiency and reduced energy costs.','
     competitors: ['Traditional energy management', 'Grid optimization tools', 'Sustainability platforms'],'
-    marketSize: '$12.8B market','
+    marketSize: '$12.8 B market','
     growthRate: '300% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -354,7 +354,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     useCases: ['Manufacturing automation', 'Quality control', 'Predictive maintenance', 'Supply chain optimization', 'Safety monitoring'],'
     roi: 'Manufacturing companies achieve 800% ROI through improved efficiency and reduced operational costs.','
     competitors: ['Traditional automation', 'Manufacturing software', 'Industrial IoT platforms'],'
-    marketSize: '$18.5B market','
+    marketSize: '$18.5 B market','
     growthRate: '280% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -418,7 +418,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     useCases: ['Quantum education', 'Advanced mathematics', 'Technology training', 'Corporate learning', 'Academic research'],'
     roi: 'Educational institutions achieve 400% ROI through improved learning outcomes and student engagement.','
     competitors: ['Traditional education platforms', 'Online learning tools', 'Technology training platforms'],'
-    marketSize: '$5.2B market','
+    marketSize: '$5.2 B market','
     growthRate: '220% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -482,7 +482,7 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     useCases: ['Video creation', 'Audio production', 'Marketing content', 'Educational materials', 'Entertainment content'],'
     roi: 'Content creators achieve 500% ROI through automated content generation and improved engagement.','
     competitors: ['Traditional content tools', 'Video editing software', 'Content creation platforms'],'
-    marketSize: '$8.5B market','
+    marketSize: '$8.5 B market','
     growthRate: '260% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -502,7 +502,6 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [;
     rating: 4.8,
     reviews: 267
   }
-}
 export const nextGenInnovations2025: NextGenInnovation2025[] = [;
   // TODO: Add items
 ]
@@ -575,30 +574,30 @@ export const,;
       email: 'kleber@ziontechgroup.com','
       address: '364 E Main St STE 1008 Middletown DE 19709'}'
   }
-];      mobile: "+1 302 464 0950","
-      email: "kleber@ziontechgroup.com","
-      address: "364 E Main St STE 1008 Middletown DE 19709"}"
+];      mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
   }
 ]
-    id: "next-gen-ai-suite""
-    id: "next-gen-ai-suite","
-    name: "Next-Gen AI Suite","
-    tagline: "Future-ready AI solutions","
-    price: "$179/month","
-    description: "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.","
+    id: "next-gen-ai-suite"
+    id: "next-gen-ai-suite"
+    name: "Next-Gen AI Suite"
+    tagline: "Future-ready AI solutions"
+    price: "$179/month"
+    description: "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities."
     features: [,
-      "Next-gen AI models","
-      "Advanced capabilities","
-      "Future-ready features","
-      "Innovation platform","
-      "Expert support""
+      "Next-gen AI models"
+      "Advanced capabilities"
+      "Future-ready features"
+      "Innovation platform"
+      "Expert support"
     ],
-    link: "/services/next-gen-ai-suite""
-    category: "Next-Gen Innovations 2025""
+    link: "/services/next-gen-ai-suite"
+    category: "Next-Gen Innovations 2025"
     realImplementation: true
     contactInfo: unknown,
-      email: "kleber@ziontechgroup.com","
-      address: "364 E Main St STE 1008 Middletown DE 19709","
+      email: "kleber@ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     lin,
   k: '/services/next-gen-ai-suite''
     categor,
@@ -613,73 +612,54 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ];      mobil,
-  e: "+1 302 464 0950","
-  emai,""
-  l: "kleber@ziontechgroup.com""
-      addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709""
+  e: "+1 302 464 0950"
+  emai,""kleber@ziontechgroup.com"""
+  s: ""
     }
-  }
 ]
-    i,""
-  d: "next-gen-ai-suite","
-    nam,""
-  e: "Next-Gen AI Suite","
-    taglin,""
-  e: "Future-ready AI solutions","
-    pric,""
-  e: "$179/month","
-    descriptio,""
-  n: "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.","
-    feature,
-  s: [,""
-      "Next-gen AI models",""
-      "Advanced capabilities",""
-      "Future-ready features",""
-      "Innovation platform",""
-      "Expert support""
-    ],
-    lin,""
-  k: "/services/next-gen-ai-suite","
-    categor,""
-  y: "Next-Gen Innovations 2025","
+    i,"
+  d: "next-gen-ai-suite"
+    nam,""Next-Gen AI Suite",""
+  e: ","
+    pric,"
+  e: "$179/month"
+    descriptio,""Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.",""
+      ",""Advanced capabilities","
+      "Future-ready features""
+      ",""Expert support"""
+  k: ","
+    categor,"
+  y: "Next-Gen Innovations 2025"
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      emai,""
-  l: "kleber@ziontechgroup.com","
-      addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709""
+      emai,""kleber@ziontechgroup.com",""
+  s: ""
     }
-  }
 ]]],
-      mobil,""
-  e: "+1 302 464 0950","
+      mobil,"
+  e: "+1 302 464 0950"
       mobil,
   e: '+1 302 464 0950','
       emai,
   l: 'kleber@ziontechgroup.com','
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}}'
-];      mobile: "+1 302 464 0950","
-      mobile: "+1 302 464 0950","
-      mobile: "+1 302 464 0950","
-      email: "kleber@ziontechgroup.com","
-      address: "364 E Main St STE 1008 Middletown DE 19709"],      mobil,""
-  e: "+1 302 464 0950","
-      mobil,""
-  e: "+1 302 464 0950","
-      mobil,""
-  e: "+1 302 464 0950","
-      emai,""
-  l: "kleber@ziontechgroup.com","
-      addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709""
+];      mobile: "+1 302 464 0950"
+      mobile: "+1 302 464 0950"
+      mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709""
+  e: ","
+      mobil,"
+  e: "+1 302 464 0950"
+      mobil,""+1 302 464 0950",""
+  l: ","
+      addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ]]
 ]],
 i,
@@ -705,29 +685,21 @@ i,
   contactInfo: ' mobil,'
   e: '+1 302 464 0950' emai,''
   l: 'kleber@ziontechgroup.com' addres,''
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; mobil,"'"
-  e: "+1 302 464 0950","
-  emai,""
-  l: "kleber@ziontechgroup.com" addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ] i,""
-  d: "next-gen-ai-suite", nam,""
-  e: "Next-Gen AI Suite", taglin,""
-  e: "Future-ready AI solutions", pric,""
-  e: "$179/month", descriptio,""
-  n: "Next-generation AI suite that provides cutting-edge artificial intelligence capabilities.", feature,""
-  s: [ "Next-gen AI models", "Advanced capabilities", "Future-ready features", "Innovation platform", "Expert support" ], lin,""
-  k: "/services/next-gen-ai-suite", categor,""
-  y: "Next-Gen Innovations 2025", realImplementatio,"
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; mobil,"'"+1 302 464 0950",""
+  l: " addres,""364 E Main St STE 1008 Middletown DE 19709" } } ] i,"
+  d: "next-gen-ai-suite""
+  e: ", taglin,""Future-ready AI solutions", pric,"
+  e: "$179/month""
+  n: ", feature,""Next-gen AI models", ", "Future-ready features"Innovation platform", " ], lin,""/services/next-gen-ai-suite", categor,"
+  y: "Next-Gen Innovations 2025"
   n: true, contactInf,
-  o: emai,""
-  l: "kleber@ziontechgroup.com", addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]]], mobil,""
-  e: "+1 302 464 0950",' mobil,'"
+  o: emai,""kleber@ziontechgroup.com", addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709""
+  e: ",' mobil,'"
   e: '+1 302 464 0950',' emai,'
   l: 'kleber@ziontechgroup.com',' addres,'
-  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,"'"
-  e: "+1 302 464 0950", mobil,""
-  e: "+1 302 464 0950", mobil,""
-  e: "+1 302 464 0950", emai,""
-  l: "kleber@ziontechgroup.com", addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]]; ]], '"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,"
+  e: "+1 302 464 0950""
+  e: ", mobil,""+1 302 464 0950", emai,"
+  l: "kleber@ziontechgroup.com""
+  s: " } } ]]; ]], '"

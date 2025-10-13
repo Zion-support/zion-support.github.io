@@ -1,72 +1,17 @@
 // Accessibility improvements to implement
 // 1. Add ARIA labels to interactive elements
 // Example JSX:
-// <button aria-label="Close dialog">×"
-// <input aria-describedby="email-help" type="email" />"
-// <div id="email-help">Enter your email address"
-// 2. Implement focus management;
-const trapFocus = (element) => {;
-const focusableElements = element.querySelectorAll(
-  // TODO: Add parameters
-)
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])''"
-  );
-const firstElement = focusableElements[0];
-const lastElement = focusableElements[focusableElements.length - 1]
-  element.addEventListener('keydown', (e) => {'
-    if (e.key === 'Tab') {'
-      if (e.shiftKey) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        if (document.activeElement === firstElement) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          lastElement.focus()
-          e.preventDefault()
-        }
-      } else {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        if (document.activeElement === lastElement) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          firstElement.focus()
-          e.preventDefault()
-        }
-      }
-    }
-  })
-}
-// 3. Add live regions for dynamic content
-// Example JSX:
-// <div aria-live="polite" aria-atomic="true" className="sr-only">"
-//   {announcement}
-//
-// 4. Ensure proper heading hierarchy
-// Example JSX:
-// <h1>Main Page Title
-// <h2>Section Title
-// <h3>Subsection Title
-// 5. Add skip links
-// Example JSX:
-// <a href="#main-content" className="skip-link">"
+// <button aria-label="Close dialog"
+// <input aria-describedby="email-help"email" />"email-help">Enter your email address"-1"])''"polite" aria-atomic=" className="sr-only"#main-content" className="
 //   Skip to main content
 //
 // 6. Use semantic HTML
 // Example JSX:
 // <main>
-//   <nav aria-label="Main navigation">"
+//   <nav aria-label="Main navigation"
 //     <ul>
 //       <li>
-<a href="/">Home</a></li>"
+<a href="/"
 //     </ul>
 //   </nav>
 //   <section>
@@ -81,14 +26,14 @@ const lastElement = focusableElements[focusableElements.length - 1]
 // <form>
 //   <fieldset>
 //     <legend>Contact Information</legend>
-//     <label htmlFor="email">Email Address</label>"
+//     <label htmlFor="email"
 //     <input
-//       id="email" "
-//       type="email" "
+//       id="email"
+//       type="email"
 //       required
-//       aria-describedby="email-error""
+//       aria-describedby="email-error"
 //     />
-//     <div id="email-error" role="alert" aria-live="polite">"
+//     <div id="email-error"alert" aria-live=">"
 //       {emailError}
 //     </div>
 //   </fieldset>
@@ -96,9 +41,9 @@ const lastElement = focusableElements[focusableElements.length - 1]
 
 // 8. Image accessibility;
 // <img
-//   src="chart.png" "
-//   alt="Sales chart showing 25% increase in Q3 2024""
-//   role="img""
+//   src=" "
+//   alt=""
+//   role=""
 // />
 // 9. Color contrast considerations;
 // Ensure sufficient contrast ratios: // - Normal text: 4.5:1;

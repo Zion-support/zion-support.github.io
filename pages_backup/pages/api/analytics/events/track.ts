@@ -44,7 +44,6 @@ function ensureLogFile() {
   if () fs.writeFileSync (LOG_FILE, '')) {'
   $2
 }
-}
 export default async /**;
  * handler - Function description
  */
@@ -105,7 +104,6 @@ const event = {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

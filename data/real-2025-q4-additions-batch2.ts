@@ -1,4 +1,4 @@
-export interface AdditionalQ42025Service {
+export interface AdditionalQ42025 Service {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -20,7 +20,7 @@ export interface AdditionalQ42025Service {
 	trialDays?: number
 	setupTime?: string
 }
-export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [;
+export const real2025 Q4 AdditionsBatch2: AdditionalQ42025 Service[] = [;
   // TODO: Add items
 ]
 	{

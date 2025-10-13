@@ -245,7 +245,7 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       'API for security tools integration'],'
     benefit,
   s: [,
-      'Detect threats 10x faster than traditional methods','
+      'Detect threats 10 x faster than traditional methods','
       'Reduce false positives by 80%','
       'Prevent 95% of cyber attacks','
       'Automate 70% of security operations','
@@ -962,7 +962,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     review,
   s: 1900}
 export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
-  }
 ]
 }
 ];
@@ -987,7 +986,6 @@ export interface CybersecurityQuantumService {
     trialDays: number,
     setupTime: string}
     enterprise: string}
-  }
   features: string[]
   benefits: string[]
   targetAudience: string[]
@@ -1097,7 +1095,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 ]
   // TODO: Add items
 ]
-      'Detect threats 10x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksAutomate 70% of security operationsImprove incident response time by 90%''
+      'Detect threats 10 x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksAutomate 70% of security operationsImprove incident response time by 90%''
     ],
     targetAudience: [,
       'Security operations centersCybersecurity teamsIT security professionalsManaged security providersGovernment agenciesFinancial institutions'];,'
@@ -1294,7 +1292,6 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   e: string}
     enterpris,
   e: string}
-  }
   feature,
   s: string[],
   benefit,
@@ -1433,7 +1430,7 @@ export const,;
     ]
     benefit,
   s: [,
-      'Detect threats 10x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksAutomate 70% of security operationsImprove incident response time by 90%''
+      'Detect threats 10 x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksAutomate 70% of security operationsImprove incident response time by 90%''
     ]
     targetAudienc,
   e: [,
@@ -1759,7 +1756,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   e: '1 - 2 weeks',' enterpris,'
   e: 'Custom pricing'}, feature,'
   s: [,' 'Autonomous threat hunting',' 'AI - powered attack pattern analysis',' 'Real - time threat intelligence',' 'Behavioral anomaly detection',' 'Predictive threat modeling',' 'Automated incident response',' 'Advanced analytics dashboard',' 'Multi - source data correlation',' 'Custom threat hunting rules',' 'API for security tools integration'], benefit,'
-  s: [,' 'Detect threats 10x faster than traditional methods',' 'Reduce false positives by 80%',' 'Prevent 95% of cyber attacks',' 'Automate 70% of security operations',' 'Improve incident response time by 90%'], target_audienc,'
+  s: [,' 'Detect threats 10 x faster than traditional methods',' 'Reduce false positives by 80%',' 'Prevent 95% of cyber attacks',' 'Automate 70% of security operations',' 'Improve incident response time by 90%'], target_audienc,'
   e: [,' 'Security operations centers',' 'Cybersecurity teams',' 'IT security professionals',' 'Managed security providers',' 'Government agencies',' 'Financial institutions'], market_positio,'
   n:  ,' 'Leading AI - powered threat hunting platform. Competes with CrowdStrike ($8.99 - 15 / user), SentinelOne ($4.99 - 8.99 / user), and Carbon Black ($6.27 - 8.57 / user). Our,'
   advantage: Autonomous threat hunting and AI intelligence.',' competitor,'
@@ -2022,7 +2019,7 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   e: '1-2 weeks'}' enterpris,'
   e: 'Custom pricing' } feature,'
   s: [,' 'Autonomous threat huntingAI-powered attack pattern analysisReal-time threat intelligenceBehavioral anomaly detectionPredictive threat modelingAutomated incident responseAdvanced analytics dashboardMulti-source data correlation';' 'Custom threat hunting rulesAPI for security tools integration' ]; benefit,'
-  s: [,' 'Detect threats 10x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksAutomate 70% of security operationsImprove incident response time by 90%' ]; targetAudienc,'
+  s: [,' 'Detect threats 10 x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksAutomate 70% of security operationsImprove incident response time by 90%' ]; targetAudienc,'
   e: [,' 'Security operations centersCybersecurity teamsIT security professionalsManaged security providersGovernment agenciesFinancial institutions' ];' marketPositio,'
   n: 'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8.99-15/user), SentinelOne ($4.99-8.99/user), and Carbon Black ($6.27-8.57/user). Our,'
   advantage: Autonomous threat hunting and AI intelligence.',' competitor,'

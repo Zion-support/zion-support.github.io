@@ -55,59 +55,32 @@ const {
 let metaTags = '''
     // Basic meta tags
     metaTags += `<title>${this.escapeHtml(title)}</title>\n`
-    metaTags += `<meta name="description" content="${this.escapeHtml(description)}">\n`"
-    metaTags += `<meta name="keywords" content="${keywords.join(', ')}">\n`"'"
-    metaTags += `<meta name="author" content="${this.escapeHtml(author)}">\n`"
-    metaTags += `<meta name="robots" content="${robots}">\n`"
+    metaTags += `<meta name="description"${this.escapeHtml(description)}">\n`"keywords" content=">\n`"'"author" content=">\n`"
+    metaTags += `<meta name=" content="${robots}"
     // Canonical URL
-    metaTags += `<link rel="canonical" href="${canonicalUrl}">\n`"
-    // Open Graph tags
-    metaTags += `<meta property="og:title" content="${this.escapeHtml(title)}">\n`"
-    metaTags += `<meta property="og:description" content="${this.escapeHtml(description)}">\n`"
-    metaTags += `<meta property="og:url" content="${canonicalUrl}">\n`"
-    metaTags += `<meta property="og:type" content="${ogType}">\n`"
-    metaTags += `<meta property="og:image" content="${ogImage}">\n`"
-    metaTags += `<meta property="og:site_name" content="Zion Tech Group">\n`"
-    // Twitter Card tags
-    metaTags += `<meta name="twitter:card" content="${twitterCard}">\n`"
-    metaTags += `<meta name="twitter:title" content="${this.escapeHtml(title)}">\n`"
-    metaTags += `<meta name="twitter:description" content="${this.escapeHtml(description)}">\n`"
-    metaTags += `<meta name="twitter:image" content="${ogImage}">\n`"
-    metaTags += `<meta name="twitter:site" content="@ziontechgroup">\n`"
-    metaTags += `<meta name="twitter:creator" content="@ziontechgroup">\n`"
-    // Additional meta tags
-    if (publishedTime) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      metaTags += `<meta property="article:published_time" content="${publishedTime}">\n`"
+    metaTags += `<link rel="canonical"${canonicalUrl}">\n`"og:title" content=">\n`"
+    metaTags += `<meta property=" content="${this.escapeHtml(description)}"
+    metaTags += `<meta property="og:url"${canonicalUrl}">\n`"og:type" content=">\n`"
+    metaTags += `<meta property=" content="${ogImage}"
+    metaTags += `<meta property="og:site_name"Zion Tech Group">\n`"twitter:card" content=">\n`"
+    metaTags += `<meta name=" content="${this.escapeHtml(title)}"
+    metaTags += `<meta name="twitter:description"${this.escapeHtml(description)}">\n`"twitter:image" content=">\n`"
+    metaTags += `<meta name=" content="@ziontechgroup"
+    metaTags += `<meta name="twitter:creator"@ziontechgroup">\n`"article:published_time" content=">\n`"
     }
     if (modifiedTime) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      metaTags += `<meta property="article:modified_time" content="${modifiedTime}">\n`"
+      metaTags += `<meta property=" content="${modifiedTime}"
     }
     if (section) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      metaTags += `<meta property="article:section" content="${this.escapeHtml(section)}">\n`"
-    }
-    if (tags && tags.length > 0) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      tags.forEach(tag => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        metaTags += `<meta property="article:tag" content="${this.escapeHtml(tag)}">\n`"
+      metaTags += `<meta property="article:section"${this.escapeHtml(section)}">\n`"article:tag" content=">\n`"
       })
     }
 
@@ -127,61 +100,36 @@ let metaTags = '''
 }
   // TODO: Add properties
 }
-      "@context": "https://schema.org","
-      "@type": "Organization","
-      "name": "Zion Tech Group","
-      "url": "https://ziontechgroup.com","
-      "logo": "https://ziontechgroup.com/logo.png","
-      "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.","
-      "foundingDate": "2020","
-      "numberOfEmployees": "50-100","
-      "industry": "Technology","
-      "contactPoint": {"
-        "@type": "ContactPoint","
-        "telephone": "+1-302-464-0950","
-        "contactType": "Customer Service","
-        "areaServed": "US","
-        "availableLanguage": "en""
-      },
-      "address": {"
-        "@type": "PostalAddress","
-        "streetAddress": "364 E Main St STE 1008","
-        "addressLocality": "Middletown","
-        "addressRegion": "DE","
-        "postalCode": "19709","
-        "addressCountry": "US""
-      },
-      "sameAs": ["
-        "https://twitter.com/ziontechgroup","
-        "https://linkedin.com/company/ziontechgroup""
-      ],
-      "offers": {"
-        "@type": "AggregateOffer","
-        "offerCount": "50+","
-        "offers": ["
+      ": "https://schema.org"
+      "@type"Organization","name": ","
+      ": "https://ziontechgroup.com"
+      "logo"https://ziontechgroup.com/logo.png","description": ","
+      ": "2020"
+      "numberOfEmployees"50-100","industry": ","
+      ": {"
+        ": "ContactPoint"
+        "telephone"+1-302-464-0950","contactType": ","
+        ": "US"
+        "availableLanguage"en""address": {"@type": ","
+        ": "364 E Main St STE 1008"
+        "addressLocality"Middletown","addressRegion": ","
+        ": "19709"
+        "addressCountry"US""sameAs": ["https://twitter.com/ziontechgroup","https://linkedin.com/company/ziontechgroup""offers": {"@type": ","
+        ": "50+"
+        "offers"
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            "@type": "Offer","
-            "name": "AI Services","
-            "description": "AI-powered enterprise solutions","
-            "priceRange": "$1,500-$5,000/month""
-          },
-          {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-            "@type": "Offer","
-            "name": "IT Services","
-            "description": "Comprehensive IT solutions","
-            "priceRange": "$800-$3,000/month""
+            "@type"Offer","name": ","
+            ": "AI-powered enterprise solutions"
+            "priceRange"$1,500-$5,000/month""@type": ","
+            ": "IT Services"
+            "description"Comprehensive IT solutions","priceRange": ""
           }
         ]
       }
-    }
   }
 
   /**
@@ -197,19 +145,15 @@ let metaTags = '''
 }
   // TODO: Add properties
 }
-      "@context": "https://schema.org","
-      "@type": "FAQPage","
-      "mainEntity": faqs.map(faq => ({"
-        "@type": "Question","
-        "name": faq.question,"
-        "acceptedAnswer": {"
-          "@type": "Answer","
-          "text": faq.answer"
+      ": "https://schema.org"
+      "@type"FAQPage","mainEntity": faqs.map(faq => ({"@type": ","
+        ": faq.question,"
+        ": {"
+          ": "Answer"
+          "text"
         }
       }))
     }
-  }
-
   /**
    * Generate breadcrumb structured data
    */
@@ -223,17 +167,14 @@ let metaTags = '''
 }
   // TODO: Add properties
 }
-      "@context": "https://schema.org","
-      "@type": "BreadcrumbList","
-      "itemListElement": breadcrumbs.map((crumb, index) => ({"
-        "@type": "ListItem","
-        "position": index + 1,"
-        "name": crumb.name,"
-        "item": crumb.url"
+      "@context"https://schema.org","@type": ","
+      ": breadcrumbs.map((crumb, index) => ({"
+        ": "ListItem"
+        "position"
+        "name"
+        "item"
       }))
     }
-  }
-
   /**
    * Generate service structured data
    */
@@ -257,29 +198,25 @@ let metaTags = '''
 }
   // TODO: Add properties
 }
-      "@context": "https://schema.org","
-      "@type": "Service","
-      "name": service.name,"
-      "description": service.description,"
-      "provider": {"
-        "@type": "Organization","
-        "name": service.provider"
+      "@context"https://schema.org","@type": ","
+      ": service.name,"
+      ": service.description,"
+      ": {"
+        ": "Organization"
+        "name"
       },
-      "category": service.category,"
-      "offers": {"
-        "@type": "Offer","
-        "price": service.price,"
-        "priceCurrency": "USD""
+      "category"
+      "offers"
+        "@type"Offer","price": service.price,"priceCurrency": ""
       }
-    }
   }
 
   /**
    * Generate sitemap data
    */
   static generateSitemapData(pages: Array<{url: string, lastmod: string, changefreq: string, priority: string}>): string {;
-let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n''"
-    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n''"
+let sitemap = '<?xml version=" encoding="UTF-8"
+    sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     pages.forEach(page => {
   // TODO: Add properties
 }
@@ -342,8 +279,6 @@ let optimized = '''
 }
         break
       }
-    }
-
     return optimized || title.substring(0, maxLength - 3) + '...''
   }
 
@@ -374,8 +309,6 @@ const test = optimized + (optimized ? '. ' : ') + sentence''
 }
         break
       }
-    }
-
     return optimized || description.substring(0, maxLength - 3) + '...''
   }
 
@@ -425,19 +358,7 @@ const seoPattern = /^[a-z0-9\-/]+$/
 }
   // TODO: Add properties
 }
-    return '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">''"
-  }
-
-  /**
-   * Generate preconnect tags for performance
-   */
-  static generatePreconnectTags(domains: string[]): string {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return domains.map(domain =>
-      `<link rel="preconnect" href="${domain}" crossorigin>`"
+    return '<meta name="viewport"width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">''"preconnect" href=" crossorigin>`"
     ).join('\n')'
   }
 
@@ -453,12 +374,11 @@ const map: Record<string, string> = {
       '&': '&amp;','
       '<': '&lt;','
       '>': '&gt;','
-      '"': '&quot;','"
-      "'": '&#039;''"
+      '"
+      "'"
     }
     return text.replace(/[&<>"']/g, (m) => map[m])'"
   }
-}
 ;
 export default SEOUtils</$1></li>;
 </li>

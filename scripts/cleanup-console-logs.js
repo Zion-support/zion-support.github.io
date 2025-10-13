@@ -27,7 +27,6 @@ function removeConsoleLogs(filePath) {/* TODO: Fix JSX expression */}
 
     return modified
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Function to process all TypeScript and JavaScript files
@@ -37,7 +36,6 @@ async function processFiles() {
   // TODO: Add properties
 }
 async function processFiles() {/* TODO: Fix JSX expression */}
-}
   const patterns = [
   // TODO: Add items
 ]

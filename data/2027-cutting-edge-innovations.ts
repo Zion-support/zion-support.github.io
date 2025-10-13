@@ -1,4 +1,4 @@
-export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 2027''
+export const cuttingEdge2027 Innovations = [{name: 'Cutting Edge AI Innovation 2027''
     path: '/services/cutting-edge-ai-innovation-2027','
     description: 'Next-generation AI innovations for 2027','
     icon: 'Brain','
@@ -20,7 +20,7 @@ export const cuttingEdge2027Innovations = [{name: 'Cutting Edge AI Innovation 20
     icon: 'Zap','
     category: 'Technology Innovation','
     features: [,;
-export const cuttingEdge2027Innovations = [{/* TODO: Fix JSX expression */}
+export const cuttingEdge2027 Innovations = [{/* TODO: Fix JSX expression */}
   l: '$1399/month'}'
       enterpris,
   e: 'Custom''
@@ -56,7 +56,6 @@ export const cuttingEdge2027Innovations = [{/* TODO: Fix JSX expression */}
       enterpris,
   e: 'Custom''
     }
-  }
 ];
 export const cuttingEdge2027 Categories = [;
   // TODO: Add items
@@ -66,12 +65,12 @@ export const cuttingEdge2027 Categories = [;
   'Future Tech','
   'Advanced Solutions''
 ];
-export const cuttingEdge2027Stats =;
+export const cuttingEdge2027 Stats =;
   totalServices: 2
   categories: 4
   averageRating: 4.9
   activeUsers: 3500,;
-export const cuttingEdge2027Stats = {}
+export const cuttingEdge2027 Stats = {}
   totalService,
   s: 2,
   categorie,
@@ -80,7 +79,7 @@ export const cuttingEdge2027Stats = {}
   g: 4.9,
   activeUser,
   s: 3500}
-export const cuttingEdge2027Innovations = [ nam,;
+export const cuttingEdge2027 Innovations = [ nam,;
   e: 'Cutting Edge AI Innovation 2027',' pat,'
   h: '/services/cutting-edge-ai-innovation-2027',' descriptio,'
   n: 'Next-generation AI innovations for 2027',' ico,'
@@ -100,10 +99,10 @@ export const cuttingEdge2027Innovations = [ nam,;
   g: ' starte,'
   r: '$599/month',' professiona,'
   l: '$1199/month',' enterpris,'
-  e: 'Custom' } } ]; export const cuttingEdge2027Categories = [' 'AI & Innovation',' 'Technology Innovation',' 'Future Tech',' 'Advanced Solutions' ]; export const cuttingEdge2027Stats = totalService,';'
+  e: 'Custom' } } ]; export const cuttingEdge2027 Categories = [' 'AI & Innovation',' 'Technology Innovation',' 'Future Tech',' 'Advanced Solutions' ]; export const cuttingEdge2027 Stats = totalService,';'
   s: 2, categorie,
   s: 4, averageRatin,
   g: 4.9, activeUser,
   s: 3500 }''
 }
-export const cuttingEdge2027Innovations = [ name: 'Cutting Edge AI Innovation 2027',' path: '/services/cutting-edge-ai-innovation-2027',' description: 'Next-generation AI innovations for 2027',' icon: 'Brain',' category: 'AI & Innovation', features: [' 'Advanced AI algorithms',' 'Innovative solutions',' 'Future-ready technology',' 'Performance optimization' ], pricing: ' starter: '$699/month',' professional: '$1399/month',' enterprise: 'Custom' } }, ' name: 'Cutting Edge Tech Innovation 2027',' path: '/services/cutting-edge-tech-innovation-2027',' description: 'Revolutionary technology innovations for 2027',' icon: 'Zap',' category: 'Technology Innovation', features: [' 'Revolutionary technology',' 'Innovative solutions',' 'Future-ready platform',' 'Advanced capabilities' ], pricing: ' starter: '$599/month',' professional: '$1199/month',' enterprise: 'Custom' } } ]; export const cuttingEdge2027Categories = [' 'AI & Innovation',' 'Technology Innovation',' 'Future Tech',' 'Advanced Solutions' ]; export const cuttingEdge2027Stats = totalServices: 2, categories: 4, averageRating: 4.9, activeUsers: 3500 };';'
+export const cuttingEdge2027 Innovations = [ name: 'Cutting Edge AI Innovation 2027',' path: '/services/cutting-edge-ai-innovation-2027',' description: 'Next-generation AI innovations for 2027',' icon: 'Brain',' category: 'AI & Innovation', features: [' 'Advanced AI algorithms',' 'Innovative solutions',' 'Future-ready technology',' 'Performance optimization' ], pricing: ' starter: '$699/month',' professional: '$1399/month',' enterprise: 'Custom' } }, ' name: 'Cutting Edge Tech Innovation 2027',' path: '/services/cutting-edge-tech-innovation-2027',' description: 'Revolutionary technology innovations for 2027',' icon: 'Zap',' category: 'Technology Innovation', features: [' 'Revolutionary technology',' 'Innovative solutions',' 'Future-ready platform',' 'Advanced capabilities' ], pricing: ' starter: '$599/month',' professional: '$1199/month',' enterprise: 'Custom' } } ]; export const cuttingEdge2027 Categories = [' 'AI & Innovation',' 'Technology Innovation',' 'Future Tech',' 'Advanced Solutions' ]; export const cuttingEdge2027 Stats = totalServices: 2, categories: 4, averageRating: 4.9, activeUsers: 3500 };';'

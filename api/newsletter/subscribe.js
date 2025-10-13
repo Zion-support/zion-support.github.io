@@ -78,6 +78,4 @@ const { email } = req.body || {}
       details: process.env.NODE_ENV === 'development' ? error.message : undefined'
     }))
   }
-}
-
 module.exports = withSentry(handler)

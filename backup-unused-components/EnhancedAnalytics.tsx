@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface EnhancedAnalyticsProps {
   className?: string;
   children?: React.ReactNode;
@@ -7,7 +6,6 @@ interface EnhancedAnalyticsProps {
 
 export default function EnhancedAnalytics({ className = '', children }: EnhancedAnalyticsProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -17,8 +15,6 @@ export default function EnhancedAnalytics({ className = '', children }: Enhanced
   </div>
   );
 }
-}
-
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 //   children,
   trackingId = 'G-XXXXXXXXXX'
@@ -121,7 +117,6 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         } else if (maxScroll >= 90) {
           trackEvent('scroll_depth', { depth: '90%' });
         }
-      }
     };
 
     window.addEventListener('scroll', trackScrollDepth, { passive: true });
@@ -178,7 +173,6 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 //             file_url: link.href,
           });
         }
-      }
     };
 
     document.addEventListener('click', trackDownloads);
@@ -206,8 +200,5 @@ declare global {
     trackFormSubmission: (formName: string, formType: string) => void;
     trackButtonClick: (buttonName: string, buttonLocation: string) => void;
   }
-}
-
 export default EnhancedAnalytics;
-=======
   );

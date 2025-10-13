@@ -54,11 +54,9 @@ function processFile(filePath) {
           lastClosingTagIndex = i
           break
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-        }
       }
 
       if (lastClosingTagIndex !== -1) {/* TODO: Fix JSX expression */}
-      }
     }
 
     // Fix function declarations
@@ -77,21 +75,13 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`)
         modified = true
       }
-    }
-
     // Fix any remaining syntax issues
-    content = content.replace(/\{\s*title:\s*['"`][^'"`]*['"`]\s*,\s*description:\s*['"`][^'"`]*['"`]\s*,\s*type:\s*['"`][^'"`]*['"`]\s*,\s*url:\s*['"`][^'"`]*['"`]\s*\}/g)"'"
-      '''
-    content = content.replace(/\{/* TODO: Fix JSX expression */}`
-  l:\s*['"`][^'"`]*['"`]\s*\}/g,"'"
+    content = content.replace(/\{\s*title:\s*['"`][^'"`]\s*,\s*description:\s*['"`][^'"`]\s*,\s*type:\s*['"`][^'"`]\s*,\s*url:\s*['"`][^'"`]\s*\}/g)"'"`][^'"`]*['"'"
       ')''
     )
     if (modified) {/* TODO: Fix JSX expression */}
-    }
-
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Process all files

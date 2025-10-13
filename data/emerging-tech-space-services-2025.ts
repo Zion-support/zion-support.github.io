@@ -83,7 +83,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
     color: 'from-slate-800 to-slate-900','
     textColor: 'text-slate-300','
     link: 'https://ziontechgroup.com/quantum-space-mining-platform','
-    marketPosition: 'First quantum space mining platform. Traditional space mining: $50,000+/month. Our quantum platform: $12,999/month with 20x better resource detection.','
+    marketPosition: 'First quantum space mining platform. Traditional space mining: $50,000+/month. Our quantum platform: $12,999/month with 20 x better resource detection.','
     targetAudience: 'Space mining companies, Aerospace companies, Government space agencies, Research institutions, Investment firms, Technology companies','
     trialDays: 14,
     setupTime: '4-6 weeks','
@@ -94,7 +94,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
     useCases: ['Asteroid mining', 'Lunar resource extraction', 'Space resource mapping', 'Mining optimization', 'Supply chain management', 'Investment analysis'],'
     roi: 'Space mining companies report 2000% ROI through quantum-powered resource detection. Investment firms see 1500% ROI in space ventures.','
     competitors: ['No direct competitors', 'Space mining tools: $50,000+/month', 'Satellite services: $25,000+/month'],'
-    marketSize: '$3.8B space mining market','
+    marketSize: '$3.8 B space mining market','
     growthRate: '400% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -157,7 +157,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
     useCases: ['Space mission communication', 'Satellite networks', 'Interplanetary communication', 'Secure data transmission', 'Emergency communications', 'Research collaboration'],'
     roi: 'Space agencies report 800% ROI through secure communication. Satellite companies see 600% ROI in network reliability.','
     competitors: ['Traditional space communication: $30,000+/month', 'Satellite services: $25,000+/month', 'Quantum communication: $50,000+/month'],'
-    marketSize: '$12B space communication market','
+    marketSize: '$12 B space communication market','
     growthRate: '280% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -221,7 +221,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
     useCases: ['Lunar base automation', 'Mars habitat management', 'Space station automation', 'Colony expansion', 'Research facility automation', 'Emergency response'],'
     roi: 'Space agencies report 1500% ROI through automation. Research institutions see 1000% ROI in colony efficiency.','
     competitors: ['No direct competitors', 'Industrial automation: $100,000+/month', 'Life support systems: $50,000+/month'],'
-    marketSize: '$2.5B space habitat market','
+    marketSize: '$2.5 B space habitat market','
     growthRate: '350% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -285,7 +285,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
     useCases: ['Deep space missions', 'Interplanetary travel', 'Space exploration', 'Satellite propulsion', 'Space station propulsion', 'Research missions'],'
     roi: 'Space agencies report 2000% ROI through revolutionary propulsion. Aerospace companies see 1500% ROI in mission capabilities.','
     competitors: ['Traditional propulsion: $100,000+/month', 'Advanced propulsion: $75,000+/month', 'Research propulsion: $50,000+/month'],'
-    marketSize: '$8B space propulsion market','
+    marketSize: '$8 B space propulsion market','
     growthRate: '250% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -316,7 +316,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
     tagline: 'AI-powered automation for space research and development','
     price: '$6,999','
     period: '/month','
-    description: 'Comprehensive AI platform that automates space research processes, from data collection and analysis to mission planning and execution. Accelerate space research by 10x while maintaining scientific accuracy.','
+    description: 'Comprehensive AI platform that automates space research processes, from data collection and analysis to mission planning and execution. Accelerate space research by 10 x while maintaining scientific accuracy.','
     features: [
   // TODO: Add items
 ]
@@ -338,7 +338,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
     color: 'from-violet-600 to-purple-700','
     textColor: 'text-violet-400','
     link: 'https://ziontechgroup.com/space-research-automation-platform','
-    marketPosition: 'First space research automation platform. Traditional research tools: $20,000+/month. Our platform: $6,999/month with 10x productivity improvement.','
+    marketPosition: 'First space research automation platform. Traditional research tools: $20,000+/month. Our platform: $6,999/month with 10 x productivity improvement.','
     targetAudience: 'Space research institutions, Universities, Government agencies, Aerospace companies, Technology companies, Research organizations','
     trialDays: 30,
     setupTime: '3-4 weeks','
@@ -349,7 +349,7 @@ export const emergingTechSpaceServices2025: EmergingTechSpaceService2025[] = [;
     useCases: ['Space research', 'Mission planning', 'Data analysis', 'Collaborative research', 'Publication assistance', 'Resource optimization'],'
     roi: 'Research institutions report 800% ROI through automation. Government agencies see 600% ROI in research efficiency.','
     competitors: ['Traditional research tools: $20,000+/month', 'AI platforms: $10,000+/month', 'Research automation: $15,000+/month'],'
-    marketSize: '$5B space research market','
+    marketSize: '$5 B space research market','
     growthRate: '200% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {

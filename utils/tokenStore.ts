@@ -42,7 +42,6 @@ function ensureDataDir() {
 }
     fs && fs.mkdirSync(DATA_DIR, { recursive: true })
   }
-}
 function loadTransactions(): TokenTransaction[] {
   // TODO: Add properties
 }
@@ -77,7 +76,6 @@ function ensureDataDir() {
 }
     fs.mkdir_sync (DATA_DIR, { recursive: true })
   }
-}
 function load_transactions (): TokenTransaction[] {
   // TODO: Add properties
 }
@@ -105,7 +103,6 @@ function load_transactions (): TokenTransaction[] {
 }
     return []
   }
-}
 function save_transactions (transactions: TokenTransaction[]): void {
   // TODO: Add properties
 }
@@ -141,7 +138,6 @@ function loadConfig(): TokenConfig {
 }
     return getDefaultConfig ()
   }
-}
 function save_config (config: TokenConfig): void {
   // TODO: Add properties
 }
@@ -168,7 +164,6 @@ function getDefaultConfig (): TokenConfig {
     stakingEnabled: true
     stakingRewardRate: 12.5
   }
-}
 export function getAllTransactions(): TokenTransaction[] {
   // TODO: Add properties
 }
@@ -238,7 +233,6 @@ let balance = 0
       } else if (tx && tx.type === 'spend') {'
         balance -= tx && tx.amount
       }
-    }
   }
   return Math.max(0, balance)
 }
@@ -248,7 +242,6 @@ let balance = 0
     staking_enabled: true,
     stakingRewardRate: 12.5
   }
-}
 export function getAllTransactions(): TokenTransaction[] {
   // TODO: Add properties
 }
@@ -336,9 +329,8 @@ if ( {) {
 }
         balance -= tx.amount
       }
-    }
   }
   return Math.max (0, balance)
 }
 
-}}}
+}

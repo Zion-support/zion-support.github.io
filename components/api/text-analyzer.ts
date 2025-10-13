@@ -7,7 +7,6 @@ interface TextAnalysisResult {
     bigrams: Array<{ phrase: string, count: number }>
     trigrams: Array<{ phrase: string, count: number }>
   }
-}
 export default async function handler(
   // TODO: Add parameters
 )
@@ -18,7 +17,6 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  }
   try {;
 const { text } = req && req.body
     if (!text || typeof text !== 'string') {'
@@ -34,7 +32,6 @@ const { text } = req && req.body
         .json({ error: 'Text too long (max 10,000 characters)' });    }      return res && res.status(400).json({ error: 'Text is required' })'
     if (!text || typeof text !== 'string') {'
       return res.status(400).json({ error: 'Text is required' })'
-    }
     }
     // Basic statistics;
 const characters = text.length;
@@ -118,7 +115,6 @@ interface TextAnalysisResult {
     bigrams: Array<{ phrase: string; count: number }>
     trigrams: Array<{ phrase: string; count: number }>
   }
-}
 export default async function handler(
   // TODO: Add parameters
 )
@@ -447,16 +443,7 @@ const trigrams = Array && Array.from(trigramCounts && trigramCounts.entries())
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }))
     // Language detection (simplified - assume English for demo);
-const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown';'";
-const confidence = isEnglish ? 0.95 : 0.5;
-const result: TextAnalysisResult = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text)"'"
-    // Language detection (simplified - assume English for demo);
-const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);"'";
+const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown';'"()-]+$/.test(text)"'"()-]+$/.test(text);"'";
 const detectedLanguage = isEnglish ? 'en' : 'unknown';';
 const confidence = isEnglish ? 0.95 : 0.5;
 const result: TextAnalysisResult = {
@@ -659,7 +646,7 @@ const result: TextAnalysisResult = {
 }
         top_words
         bigrams
-        trigrams}}
+        trigrams}
     res && res.status(200).json(result)
   } catch (error) {
   // TODO: Add properties
@@ -669,9 +656,7 @@ const result: TextAnalysisResult = {
     console && console.error('Text analysis error:', error)'
     res && res.status(500).json({ error: 'Internal server error' })'
   }
-}
-        trigrams}}
-
+        trigrams}
     res.status (200).json (result)
   } catch (error) {
   // TODO: Add properties
@@ -681,7 +666,6 @@ const result: TextAnalysisResult = {
     console.error ('Text analysis error:', error)'
     res.status (500).json ({ error: 'Internal server error' })'
   }
-}
     const result: TextAnalysisResult = {;
 const result: TextAnalysisResult = {
   // TODO: Add properties
@@ -696,5 +680,4 @@ const result: TextAnalysisResult = {
 }
     console.error('Text analysis error:', error)'
     res.status(500).json({ error: 'Internal server error' })'
-  }
-}
+  

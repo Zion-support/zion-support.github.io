@@ -1,18 +1,7 @@
 
 export default function StructuredDataPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>StructuredData - Zion Tech Group</title>
-        <meta name="description" content="Advanced StructuredData solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            StructuredData
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+    <div className="min-h-screen bg-gray-50" content="Advanced StructuredData solutions by Zion Tech Group"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
           </p>
         </div>
@@ -20,4 +9,3 @@ export default function StructuredDataPage() {
     </div>
   );
 
-}

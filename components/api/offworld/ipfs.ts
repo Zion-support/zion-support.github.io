@@ -67,7 +67,6 @@ const ok = await publishManifesto(
 }
     return res.status(500).json({ error: e.message })
 }
-  }
 }
   try {
   // TODO: Add properties
@@ -92,5 +91,3 @@ const ok = await publishManifesto(OFFWORLD_TOPICS.manifesto, body?.message || ''
     return res.status(500).json({ error: e.message })
   }
 }
-
-}}}

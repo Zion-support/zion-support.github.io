@@ -11,7 +11,7 @@ const missingPages = analysisData.missingPagesList
 // Check which routes are missing from App.tsx;
 const missingRoutes = []
 for (const route of missingPages) {;
-const routePattern = `path="${route}"`"
+const routePattern = `path="${route}"
   if (!appContent.includes(routePattern)) {
   // TODO: Add properties
 }
@@ -19,8 +19,6 @@ const routePattern = `path="${route}"`"
 }
     missingRoutes.push(route)
   }
-}
-
 console.log(`Found ${missingRoutes.length} routes missing from App.tsx: `)
 missingRoutes.forEach(route => console.log(`- ${route}`))
 // Generate import statements for missing routes;
@@ -31,7 +29,7 @@ const componentName = route.split('/').pop().replace(/-/g, ').replace(/\b\w/g, l
 // Generate route statements;
 const generateRouteStatement = (route) => {;
 const componentName = route.split('/').pop().replace(/-/g, ').replace(/\b\w/g, l => l.toUpperCase()) + 'Page''
-  return `            <Route path="${route}" element={<${componentName} />} />`"
+  return `            <Route path="${route}"
 }
 if (missingRoutes.length > 0) {
   // TODO: Add properties

@@ -82,19 +82,17 @@ const exists = fs.existsSync(node.path)
     exists,
     children: node.children?.map(markExistenceRecursive)
   }
-}
     connected: false,
     branch: 'main''
   }
-}
 export function getSourceMapWithExistence(): SourceNode[] {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-import fs from "fs";";
-import path from "path";";";
-export type SourceNodeType = "folder" | "file";";";
+import fs from "fs";
+import path from "path";";
+export type SourceNodeType = " | "file";";
 export interface SourceNode {
   // TODO: Add properties
 }
@@ -128,7 +126,7 @@ function withPath(base: string, segment: string): string {
 }
   // TODO: Add properties
 }
-  if (base === "/") return `/${segment}`"
+  if (base === ") return `/${segment}`"
   return `${base}/${segment}`
 }
 function folder(name: string, basePath: string, children: string[] = []): SourceNode {;
@@ -140,10 +138,9 @@ const fullPath = withPath(basePath, name)
 }
     name,
     path: fullPath,
-    type: "folder","
-    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" })),"
+    type: ","
+    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: " })),"
   }
-}
 export function buildZionSourceMap(): SourceNode[] {;
 const map: SourceNode[] = [
   // TODO: Add items
@@ -156,23 +153,20 @@ const map: SourceNode[] = [
 }
   // TODO: Add properties
 }
-      name: "core","
-      path: "/core","
-      type: "folder","
+      name: ","
+      path: ","
+      type: ","
       children: [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-        { name: "auth", path: "/core/auth", type: "folder" },"
-        { name: "user", path: "/core/user", type: "folder" },"
-        { name: "marketplace", path: "/core/marketplace", type: "folder" },"
-        { name: "payments", path: "/core/payments", type: "folder" },"
-        { name: "messaging", path: "/core/messaging", type: "folder" },"
-        { name: "analytics", path: "/core/analytics", type: "folder" },"
-        { name: "roles", path: "/core/roles", type: "folder" },"
-        { name: "talent", path: "/core/talent", type: "folder" },"
-        { name: "client", path: "/core/client", type: "folder" },"
+        { name: ", path: "/core/auth"folder" },"user", path: ", type: "folder"
+        { name: "marketplace"/core/marketplace", type: " },"
+        { name: ", path: "/core/payments"folder" },"messaging", path: ", type: "folder"
+        { name: "analytics"/core/analytics", type: " },"
+        { name: ", path: "/core/roles"folder" },"talent", path: ", type: "folder"
+        { name: "client"/core/client", type: " },"
       ],
     },
     // 2. /ai
@@ -181,20 +175,18 @@ const map: SourceNode[] = [
 }
   // TODO: Add properties
 }
-      name: "ai","
-      path: "/ai","
-      type: "folder","
+      name: ","
+      path: ","
+      type: ","
       children: [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-        { name: "gpt", path: "/ai/gpt", type: "folder" },"
-        { name: "resume-generator", path: "/ai/resume-generator", type: "folder" },"
-        { name: "proposal-writer", path: "/ai/proposal-writer", type: "folder" },"
-        { name: "contract-writer", path: "/ai/contract-writer", type: "folder" },"
-        { name: "assistant", path: "/ai/assistant", type: "folder" },"
-        { name: "prompts", path: "/ai/prompts", type: "folder" },"
+        { name: ", path: "/ai/gpt"folder" },"resume-generator", path: ", type: "folder"
+        { name: "proposal-writer"/ai/proposal-writer", type: " },"
+        { name: ", path: "/ai/contract-writer"folder" },"assistant", path: ", type: "folder"
+        { name: "prompts"/ai/prompts", type: " },"
       ],
     },
     // 3. /dao
@@ -203,19 +195,17 @@ const map: SourceNode[] = [
 }
   // TODO: Add properties
 }
-      name: "dao","
-      path: "/dao","
-      type: "folder","
+      name: ","
+      path: ","
+      type: ","
       children: [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-        { name: "proposals", path: "/dao/proposals", type: "folder" },"
-        { name: "voting", path: "/dao/voting", type: "folder" },"
-        { name: "quorum", path: "/dao/quorum", type: "folder" },"
-        { name: "staking", path: "/dao/staking", type: "folder" },"
-        { name: "snapshot-integration", path: "/dao/snapshot-integration", type: "folder" },"
+        { name: ", path: "/dao/proposals"folder" },"voting", path: ", type: "folder"
+        { name: "quorum"/dao/quorum", type: " },"
+        { name: ", path: "/dao/staking"folder" },"snapshot-integration", path: ", type: "folder"
       ],
     },
     // 4. /token
@@ -224,40 +214,21 @@ const map: SourceNode[] = [
 }
   // TODO: Add properties
 }
-      name: "token","
-      path: "/token","
-      type: "folder","
+      name: "token"
+      path: "/token"
+      type: "folder"
       children: [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-        { name: "rewards", path: "/token/rewards", type: "folder" },"
-        { name: "pricing-engine", path: "/token/pricing-engine", type: "folder" },"
-        { name: "escrow", path: "/token/escrow", type: "folder" },"
-        { name: "payout-engine", path: "/token/payout-engine", type: "folder" },"
-        { name: "wallet", path: "/token/wallet", type: "folder" },"
-      ],
-    },
-    // 5. /academy
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      name: "academy","
-      path: "/academy","
-      type: "folder","
-      children: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-        { name: "courses", path: "/academy/courses", type: "folder" },"
-        { name: "certifications", path: "/academy/certifications", type: "folder" },"
-        { name: "quiz", path: "/academy/quiz", type: "folder" },"
-        { name: "video", path: "/academy/video", type: "folder" },"
-        { name: "ai-tutor", path: "/academy/ai-tutor", type: "folder" },"
+        { name: "rewards"/token/rewards", type: " },"
+        { name: ", path: "/token/pricing-engine"folder" },"escrow", path: ", type: "folder"
+        { name: "payout-engine"/token/payout-engine", type: " },"
+        { name: ", path: "/token/wallet"folder" },"academy","/academy","folder","courses", path: ", type: "folder"
+        { name: "certifications"/academy/certifications", type: " },"
+        { name: ", path: "/academy/quiz"folder" },"video", path: ", type: "folder"
+        { name: "ai-tutor"/academy/ai-tutor", type: " },"
       ],
     },
     // 6. /governance
@@ -266,38 +237,19 @@ const map: SourceNode[] = [
 }
   // TODO: Add properties
 }
-      name: "governance","
-      path: "/governance","
-      type: "folder","
+      name: ","
+      path: ","
+      type: ","
       children: [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-        { name: "manifesto", path: "/governance/manifesto", type: "folder" },"
-        { name: "constitution", path: "/governance/constitution", type: "folder" },"
-        { name: "roadmap", path: "/governance/roadmap", type: "folder" },"
-        { name: "changelog", path: "/governance/changelog", type: "folder" },"
-      ],
-    },
-    // 7. /deployments
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      name: "deployments","
-      path: "/deployments","
-      type: "folder","
-      children: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-        { name: "multiverse", path: "/deployments/multiverse", type: "folder" },"
-        { name: "subdomains", path: "/deployments/subdomains", type: "folder" },"
-        { name: "config-templates", path: "/deployments/config-templates", type: "folder" },"
-        { name: "environments", path: "/deployments/environments", type: "folder" },"
+        { name: ", path: "/governance/manifesto"folder" },"constitution", path: ", type: "folder"
+        { name: "roadmap"/governance/roadmap", type: " },"
+        { name: ", path: "/governance/changelog"folder" },"deployments","/deployments","folder","multiverse", path: ", type: "folder"
+        { name: "subdomains"/deployments/subdomains", type: " },"
+        { name: ", path: "/deployments/config-templates"folder" },"environments", path: ", type: "folder"
       ],
     },
     // 8. /api
@@ -306,18 +258,17 @@ const map: SourceNode[] = [
 }
   // TODO: Add properties
 }
-      name: "api","
-      path: "/api","
-      type: "folder","
+      name: "api"
+      path: "/api"
+      type: "folder"
       children: [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-        { name: "docs", path: "/api/docs", type: "folder" },"
-        { name: "partners", path: "/api/partners", type: "folder" },"
-        { name: "integrations", path: "/api/integrations", type: "folder" },"
-        { name: "webhooks", path: "/api/webhooks", type: "folder" },"
+        { name: "docs"/api/docs", type: " },"
+        { name: ", path: "/api/partners"folder" },"integrations", path: ", type: "folder"
+        { name: "webhooks"/api/webhooks", type: " },"
       ],
     },
   ]
@@ -366,7 +317,6 @@ export function ensureDirectory(dirPath: string): void {
 }
     fs && fs.mkdirSync(dirPath, { recursive: true })
   }
-}
 export function deployBasicTemplateForPath(
   // TODO: Add parameters
 )
@@ -405,7 +355,6 @@ const readme = `# ${path && path.basename(absoluteDir)}\n\nThis module is part o
   }
   return { createdPaths, skippedPaths }
   return { createdPaths, skippedPaths }
-}
   return { createdPaths, skippedPaths }
 export interface SourcePosition {
   // TODO: Add properties
@@ -452,7 +401,6 @@ const sourceMap = this.getSourceMap(filePath)
       source: sourceMap.sources[0],
       name: sourceMap.names[0]
     }
-  }
   findGeneratedPosition(originalFile: string, line: number, column: number): SourcePosition | null {
   // TODO: Add properties
 }
@@ -479,7 +427,6 @@ const sourceMap = this.getSourceMap(filePath)
           column,
           source: filePath
         }
-      }
     }
     return null
   }
@@ -497,7 +444,6 @@ const sourceMap = this.getSourceMap(filePath)
 }
     this.sourceMaps.clear()
   }
-}
 // Singleton instance;
 export const sourceMapManager = new SourceMapManager()
 // Utility functions;
@@ -520,7 +466,6 @@ export function parseSourceMap(sourceMapJson: string): SourceMapInfo | null {
     console.error('Failed to parse source map:', error)'
     return null
   }
-}
 export function generateSourceMap(
   // TODO: Add parameters
 )
@@ -544,7 +489,6 @@ export function generateSourceMap(
     mappings,
     file
   }
-}
   created_paths: string[]
   skipped_paths: string[];
 export function ensure_directory (dir_path: string): void {
@@ -558,7 +502,6 @@ export function ensure_directory (dir_path: string): void {
   // TODO: Add properties
 }
   $2
-}
 }
 }
     const readme = `# ${path.basename (absolute_dir)}\n\n_this module is part of the Zion OS modular source tree. Customize as needed.\n`
@@ -593,19 +536,18 @@ export function ensureDirectory(dirPath: string): void {
 }
     fs.mkdirSync(dirPath, { recursive: true })
   }
-}
 export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemplateResult {;
 const absoluteDir = path.join(ROOT, repoRelativePath);
 const createdPaths: string[] = [];
 const skippedPaths: string[] = []
   ensureDirectory(absoluteDir);
-const keepFile = path.join(absoluteDir, ".keep")"
+const keepFile = path.join(absoluteDir, ")"
   if (!fs.existsSync(keepFile)) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    fs.writeFileSync(keepFile, "")"
+    fs.writeFileSync(keepFile, ")"
     createdPaths.push(keepFile)
   } else {
   // TODO: Add properties
@@ -614,7 +556,7 @@ const keepFile = path.join(absoluteDir, ".keep")"
 }
     skippedPaths.push(keepFile)
   }
-  const readmeFile = path.join(absoluteDir, "README.md")"
+  const readmeFile = path.join(absoluteDir, ")"
   if (!fs.existsSync(readmeFile)) {;
 const readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`
     fs.writeFileSync(readmeFile, readme)
@@ -627,6 +569,3 @@ const readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zi
     skippedPaths.push(readmeFile)
   }
   return { createdPaths, skippedPaths }
-}
-
-}

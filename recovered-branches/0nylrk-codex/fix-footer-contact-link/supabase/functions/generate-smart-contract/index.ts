@@ -1,5 +1,5 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";";
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts";
 const corsHeaders = {
   // TODO: Add properties
 }
@@ -99,7 +99,7 @@ const response = await fetch('https://api.openai.com/v1/chat/completions', {'
 }
   // TODO: Add properties
 }
-        model: 'gpt-4o','
+        model: 'gpt-4 o','
         messages: [
   // TODO: Add items
 ]

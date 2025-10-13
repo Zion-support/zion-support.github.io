@@ -15,8 +15,6 @@ export interface ErrorContext {
  */;
 export interface ErrorContext {// TODO: Add content
   }
-
-}
   component?: string
   action?: string
   userId?: string
@@ -85,7 +83,6 @@ $4})
 $4})
       })
     }
-  }
   public trackError(error: Error, _context: ErrorContext = {}): void {
   // TODO: Add properties
 }
@@ -168,7 +165,6 @@ const trackedError: TrackedError = {
         component: error.context.component
       })
     }
-  }
   public getErrors(): TrackedError[] {
   // TODO: Add properties
 }
@@ -209,7 +205,6 @@ const byComponent: Record<string, number> = {}
       byComponent,
       recent: this.errors.slice(-10)
     }
-  }
 }
 // Export singleton instance;
 export const errorTracker = new EnhancedErrorTracker();
@@ -219,8 +214,6 @@ export default errorTracker;
 }
 export interface TrackedError {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-
   message: string
   stack?: string,,
     contex,
@@ -240,8 +233,6 @@ class EnhancedErrorTracker {
 }
     // TODO: Add content
   }
-
-}
   private,
   errors: TrackedError[] = []
   private maxErrors = 100,
@@ -249,27 +240,21 @@ class EnhancedErrorTracker {
   sessionId: string,
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     this.sessionId = this.generateSessionId()
     this.setupGlobalErrorHandler()
   }
   private generateSessionId(): string {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`
   }
   private setupGlobalErrorHandler(): void {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
       window.addEventListener('error', event => {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
         this.trackError(event.error, {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   componen,
   t: 'Global','
           actio,
@@ -281,8 +266,6 @@ class EnhancedErrorTracker {
 })
         this.trackError(new Error(event.reason), {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-
   component: 'Global','
           action: 'Unhandled Promise Rejection''
 
@@ -291,8 +274,6 @@ class EnhancedErrorTracker {
       }
   )
     }
-  }
-
   public trackError(error: Error, _context: ErrorContext = {}): void {
   // TODO: Add properties
 }
@@ -300,13 +281,10 @@ class EnhancedErrorTracker {
 }
     // TODO: Add content
   }
-
-}
     if (typeof window === 'undefined') return'
     const,
   trackedError: TrackedError = {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   messag,
   e: error.message,
       stac,
@@ -314,7 +292,6 @@ class EnhancedErrorTracker {
       contex,
   t: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
 //         ...context,
         sessionI,
   d: this.sessionId,
@@ -329,7 +306,6 @@ class EnhancedErrorTracker {
     // Keep only the most recent errors
     if (this.errors.length > this.maxErrors) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       this.errors.shift()
     }
     // Log to console in development
@@ -342,13 +318,11 @@ class EnhancedErrorTracker {
   private sendToAnalytics(erro)
   r: TrackedError): void {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     if ()
       typeof window !== 'undefined' &&'
 //       ()
         window as {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
           gtag?: (comman,
   d: string, actio,
   n: string, parameter,
@@ -357,11 +331,9 @@ class EnhancedErrorTracker {
         }
 // ).gtag) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
 //       ()
         window as unknown as {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   gta,
   g: (comman,
   d: string, actio,
@@ -371,7 +343,6 @@ class EnhancedErrorTracker {
         }
       ).gtag('event', 'exception', {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
   descriptio,
   n: error.message,
         fata,
@@ -380,20 +351,16 @@ class EnhancedErrorTracker {
   t: error.context.component,)
       })
     }
-  }
   public getErrors(): TrackedError[] {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     return [...this.errors]
   }
   public clearErrors(): void {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     this.errors = []
   }
   public getErrorStats(): {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   tota,
   l: number,,
     byComponen,
@@ -403,7 +370,6 @@ class EnhancedErrorTracker {
   t: TrackedError[],
   } {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     const,
   byComponent: Record,
           <string, number> = {}
@@ -417,15 +383,12 @@ class EnhancedErrorTracker {
     })
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-
   total: this.errors.length,
 
 //       byComponent,
       recen,
   t: this.errors.slice(-10)
     }
-  }
 }
 // Export singleton instance;
 export const errorTracker = new EnhancedErrorTracker();

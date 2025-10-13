@@ -23,7 +23,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-operation a l-tru s t-v4')'
         />),
       <div, className='container, m, x-auto, p, x-6, p, y-16'>'
-<h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>'
+<h1, className='te, x, t-4 xl, m, d:te, x, t-5 xl, fon, t-bold, m, b-4'>'
           Ai, 2025, Oct 01, Operational, Trust V4
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>'
           Learn, about, ai 2025, oct, 01 operational, trust, v4 and, how, it can, benefit, your enterpri, s, e.
@@ -41,4 +41,3 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: 
 </div></div>
 </Link></Link>
 </p></h1>
-}

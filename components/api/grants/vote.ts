@@ -94,7 +94,6 @@ function ensure_dir() {
 }
   $2
 }
-}
 /**
  * grant_path - Function description
  */
@@ -326,8 +325,6 @@ if ( {) {
 }
 }
 }
-}
-}
     res.status(400).json({ error: 'Missing fields' })';
 import { v4 as uuidv4 } from 'uuid';';
 import type { GrantApplication, VotePayload } from '../../../types/grants';';';
@@ -392,4 +389,4 @@ const vote = { id: uuidv4(), voter: payload.voter, choice: payload.choice, creat
   res.status(200).json({ record: g })
 }
 
-}}}}}
+}}}

@@ -69,6 +69,5 @@ const paymentIntent = {
       details: process.env.NODE_ENV === 'development' ? error.message : undefined'
     }));
   }
-}
 ;
 export default withErrorLogging(handler)

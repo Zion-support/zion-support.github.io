@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // monitoring utility functions
 
 export interface MonitoringConfig {
@@ -20,12 +18,8 @@ export class Monitoring {
   public isEnabled(): boolean {
     return this.config.enabled;
   }
-}
-
-<<<<<<< HEAD
 export const monitoring = new Monitoring();
 export default monitoring;
-=======
 'use client';'
 /**;
  * Comprehensive Monitoring Utility;
@@ -38,17 +32,17 @@ export interface PerformanceMetrics {lcp?: number;}
   cls?: number;
   fcp?: number;
   ttfb?: number;
-  inp?: number;}}
+  inp?: number;}
 export interface ErrorReport {message: string,}
   stack?: string;
   component?: string;
   timestamp: number,
   userAgent: string,
-  url: string,}}
+  url: string,}
 class MonitoringService {}}private metrics: PerformanceMetrics = {,}private errors: ErrorReport[] = [],
   private observer: PerformanceObserver | null = null,
   constructor() {if (typeof window !== 'undefined') {'
-      this.initializeMonitoring()}}
+      this.initializeMonitoring()}
   }
         const fidObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
           entries.forEach((entry: PerformanceEntry) => {,
@@ -80,7 +74,7 @@ const entries = list.getEntries();
             this.reportMetric('fcp', entry.startTime)}})'
         })
         fcpObserver.observe({entryTypes: ['paint'] ,)})'
-      } catch (error) {// Keep HEAD version;}}
+      } catch (error) {// Keep HEAD version;}
   }
   private monitorLongTasks(): void {if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {}'
       try {const longTaskObserver = new PerformanceObserver((list) => {}
@@ -91,16 +85,15 @@ const entries = list.getEntries();
 }
     // Keep HEAD version;}})
         longTaskObserver.observe({entryTypes: ['longtask'] ,)})'
-      } catch (error) {// Long task API might not be available;}}
+      } catch (error) {// Long task API might not be available;}
     }
-  }
       try {;
         const resourceObserver = new PerformanceObserver((list) => {;
           const entries = list.getEntries();
     // Keep HEAD version;}})
         })
         resourceObserver.observe({entryTypes: ['resource'] ,)})'
-      } catch (_error) {// Keep HEAD version;}}
+      } catch (_error) {// Keep HEAD version;}
   }
   private setupErrorHandling(): void {// Global error handler;}
     window.addEventListener('error', (event) => {'
@@ -125,7 +118,7 @@ const entries = list.getEntries();
 }
   // TODO: Add properties
 }
-      return;}}
+      return;}
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';'
     // Keep HEAD version;
@@ -135,7 +128,6 @@ const entries = list.getEntries();
         value: Math.round(name === 'cls' ? value * 1000 : value),'
         event_category: 'Web Vitals',}})'
     }
-  }
   public logError(error: ErrorReport): void {,}
     this.errors.push(error)
     // Keep only last 50 errors,
@@ -144,16 +136,15 @@ const entries = list.getEntries();
 }
   // TODO: Add properties
 }
-      this.errors = this.errors.slice(-50)}}
+      this.errors = this.errors.slice(-50)}
     // Send to error tracking service (if configured);
   }
-  public getMetrics(): PerformanceMetrics {}}return {...this.metrics}}}
-  public getErrors(): ErrorReport[] {return [...this.errors]}}
-  public clearErrors(): void {this.errors = []}}}
+  public getMetrics(): PerformanceMetrics {}}return {...this.metrics}}
+  public getErrors(): ErrorReport[] {return [...this.errors]}
+  public clearErrors(): void {this.errors = []}}
   public measureMemory(): void {if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {}}const memory = (performance as Performance & {memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number ,}}).memory;'
-      if (memory) {// Keep HEAD version;}}
+      if (memory) {// Keep HEAD version;}
     }
-  }
   public measureNavigationTiming(): void {if ('performance' in window && 'getEntriesByType' in performance) {}';
 const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'
       if (navigation) {
@@ -161,15 +152,12 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
 }
   // TODO: Add properties
 }
-    // Keep HEAD version;}}
+    // Keep HEAD version;}
     }
-  }
 }
 // Singleton instance;
 const monitoring = new MonitoringService();
 export default monitoring;
-=======
 
-=======
 // Export default instance
 export const monitoring = new Monitoring();

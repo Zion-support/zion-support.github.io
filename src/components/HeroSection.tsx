@@ -6,82 +6,59 @@ export default function HeroSection() {
   return (
   // TODO: Add parameters
 )
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">"
+    <section id="home"relative min-h-screen flex items-center justify-center overflow-hidden"
       {/* Background Effects */}
-      <div className="absolute inset-0 particle-field">"
-<div className="absolute inset-0 cyber-scan-effect">"
-      {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
-<div className="space-y-8">"
+      <div className="
+<div className="absolute inset-0 cyber-scan-effect"relative z-10 max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+<div className="
           {/* Main Heading */}
-          <h1 className="text-4xl md: text-6xl lg:text-7xl font-bold leading-tight">"
-<span className="block holographic-text cyber-text-3d">"
+          <h1 className="text-4 xl md: text-6 xl lg:text-7 xl font-bold leading-tight"block holographic-text cyber-text-3 d"
               Zion Tech Group
 
-            <span className="block text-white mt-4">"
+            <span className="
               Advanced AI & IT Solutions,
 
           </h1>
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">"
-            Transforming businesses through cutting-edge artificial intelligence,
-            machine learning, and innovative IT solutions. We build the future, today.
-          {/* Key Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">"
-<div className="cyber-card p-6 text-center">"
-<div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-<svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />"
-<h3 className="text-lg font-semibold text-white mb-2">AI Solutions"
-              <p className="text-gray-400 text-sm">Custom AI implementations for your business needs"
-            <div className="cyber-card p-6 text-center">"
-<div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-<svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />"
-<h3 className="text-lg font-semibold text-white mb-2">IT Services"
-              <p className="text-gray-400 text-sm">Comprehensive technology solutions and support"
-            <div className="cyber-card p-6 text-center">"
-<div className="w-16 h-16 bg-gradient-to-r from-green-400 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">"
-<svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />"
-<h3 className="text-lg font-semibold text-white mb-2">Innovation"
-              <p className="text-gray-400 text-sm">Leading-edge technology and digital transformation"
+          <p className="text-xl md:text-2 xl text-gray-300 max-w-4 xl mx-auto leading-relaxed"grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4 xl mx-auto mt-12"
+<div className="
+<div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4"w-8 h-8 text-black"none"currentColor" viewBox=">"
+<path strokeLinecap=" strokeLinejoin="round"M9.663 17 h4.673 M12 3 v1 m6.364 1.636 l-.707.707 M21 12 h-1 M4 12 H3 m3.343-5.657 l-.707-.707 m2.828 9.9 a5 5 0 117.072 0 l-.548.547 A3.374 3.374 0 0014 18.469 V19 a2 2 0 11-4 0 v-.531 c0-.895-.356-1.754-.988-2.386 l-.548-.547 z" />"text-lg font-semibold text-white mb-2"
+              <p className="
+            <div className="cyber-card p-6 text-center"w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4"
+<svg className="none" stroke=" viewBox="0 0 24 24"
+<path strokeLinecap="round"round" strokeWidth={2} d=" />"
+<h3 className="
+              <p className="text-gray-400 text-sm"cyber-card p-6 text-center"
+<div className="
+<svg className="w-8 h-8 text-black" stroke="currentColor"0 0 24 24">"round" strokeLinejoin=" strokeWidth={2} d="M13 10 V3 L4 14 h7 v7 l9-11 h-7 z"
+<h3 className="text-lg font-semibold text-white mb-2"text-gray-400 text-sm"
           {/* CTA Buttons */}
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mt-12">"
+          <div className="
 <$2 />
-              href="#services""
-              className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">"
-              Explore Services
-
-            <$2 />
-              href="#contact""
-              className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">"
+              href="#services"
+              className="cyber-button px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"#contact""px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow"
               Get Started,
 
           </div>
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-16">"
-<div className="text-center">"
-<div className="text-3xl md:text-4xl font-bold text-cyan-400 neon-pulse">500+"
-              <div className="text-gray-400 text-sm mt-2">Projects Completed"
-            <div className="text-center">"
-<div className="text-3xl md:text-4xl font-bold text-purple-400 neon-pulse">50+"
-              <div className="text-gray-400 text-sm mt-2">Happy Clients"
-            <div className="text-center">"
-<div className="text-3xl md:text-4xl font-bold text-green-400 neon-pulse">99%"
-              <div className="text-gray-400 text-sm mt-2">Success Rate"
-            <div className="text-center">"
-<div className="text-3xl md:text-4xl font-bold text-yellow-400 neon-pulse">24/7"
-              <div className="text-gray-400 text-sm mt-2">Support"
+          <div className="
+<div className="text-center"text-3 xl md:text-4 xl font-bold text-cyan-400 neon-pulse"
+              <div className="
+            <div className="text-center"text-3 xl md:text-4 xl font-bold text-purple-400 neon-pulse"
+              <div className="
+            <div className="text-center"text-3 xl md:text-4 xl font-bold text-green-400 neon-pulse"
+              <div className="
+            <div className="text-center"text-3 xl md:text-4 xl font-bold text-yellow-400 neon-pulse"
+              <div className="
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">"
-<div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">"
-<div className="w-1 h-3 bg-cyan-400 rounded-full mt-2 animate-pulse"></div>"
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center"
+<div className="
 </div></div>
 </section>
   )
 }
-export default HeroSection;"`";"
+export default HeroSection;"`"
   </a></a>
 </span></span>
 </div></div>

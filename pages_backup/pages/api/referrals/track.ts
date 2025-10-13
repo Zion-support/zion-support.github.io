@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { getServerSupabase } from "../../../utils/supabase/server";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server";";
 export default async function handler(
   // TODO: Add parameters
 )
@@ -10,13 +10,13 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST") return res.status($1).json({ $2 });";
+  if (req.method !== ") return res.status($1).json({ $2 });";
 const { code, event, url, referrer } = req.body |{}
   if (!code |!event) return res.status($1).json({ $2 });
 const usingPlaceholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |"
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ==="
-      "placeholder-key""
+    (process.env.NEXT_PUBLIC_SUPABASE_URL |").includes("placeholder"
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key"
+      "placeholder-key"
   try {
   // TODO: Add properties
 }
@@ -30,18 +30,18 @@ const usingPlaceholder =
       return res && res.status(200).json({ saved: false, mock: true })
     }
     const supabase = getServerSupabase();
-const { error } = await supabase && supabase.from("referral_events").insert({"
+const { error } = await supabase && supabase.from("referral_events"
       partner_code: String(code).toLowerCase(),
       event: String(event),
       url: url || null,
       referrer: referrer || null,
-      user_agent: req && req.headers["user-agent"] || null,"
+      user_agent: req && req.headers["user-agent"
       ip_address:
-        (req.headers["x-forwarded-for"] as string) |"
+        (req.headers["x-forwarded-for"
         req.socket.remoteAddress |
         null
     })
-    if (error) return res && res.status(500).json({ error: "Database error" })"
+    if (error) return res && res.status(500).json({ error: "Database error"
     return res && res.status(200).json({ saved: true })
   } catch (e: any) {
   // TODO: Add properties
@@ -87,7 +87,6 @@ const { error } = await supabase.from('referral_events').insert({'
 }
     return res.status(200).json({ saved: false, error: e?.message })
   }
-}
     return res.status(200).json({ saved: false, error: e?.message });
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -119,18 +118,18 @@ if ( {) {
       return res.status (200).json ({ saved: false, mock: true })
     }
     const supabase = getServerSupabase ();
-const { error } = await supabase.from ("referral_events").insert ({"
+const { error } = await supabase.from ("referral_events"
       partner_code: String (code).toLowerCase (),
       event: String (event),
       url: url || null,
       referrer: referrer || null,
-      user_agent: req.headers["user - agent"] || null,"
+      user_agent: req.headers["user - agent"
       ip_address:
-        (req.headers["x - forwarded - for"] as string) ||"
+        (req.headers["x - forwarded - for"
         req.socket.remote_address ||
         null,
     })
-    if (return res.status (500).json ({ error: "Database error" })) {"
+    if (return res.status (500).json ({ error: "Database error"
   $2
 }
     return res.status (200).json ({ saved: true })
@@ -141,16 +140,14 @@ const { error } = await supabase.from ("referral_events").insert ({"
 }
     return res.status (200).json ({ saved: false, error: e?.message })
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 const supabase = getServerSupabase();
 const { error } = await supabase.from('referral_events').insert({'
@@ -167,48 +164,44 @@ const { error } = await supabase.from('referral_events').insert({'
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

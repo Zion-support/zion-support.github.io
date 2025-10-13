@@ -1,6 +1,5 @@
 );
 }
-<<<<<<< HEAD
 
 export default function AdvancedErrorBoundary({ className = '', children }: AdvancedErrorBoundaryProps) {
   return (
@@ -109,7 +108,6 @@ class AdvancedErrorBoundary extends Component;
                     kleber@ziontechgroup.com;
   );
 }
-=======
 'use client'';
 import React, { Component, ErrorInfo, ReactNode } from 'react';'
 interface ErrorBoundaryState {
@@ -167,7 +165,6 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       errorInfo: null,
       errorId: null
     }
-  }
   static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
   // TODO: Add properties
 }
@@ -182,7 +179,6 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
-  }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
   // TODO: Add properties
 }
@@ -204,7 +200,6 @@ class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     // Send error report in production
     if (process.env.NODE_ENV === 'production') {'
     this.reportError(error, errorInfo)
-  }
   }
   private reportError = async (error: Error, errorInfo: ErrorInfo) => {
   // TODO: Add properties
@@ -247,7 +242,6 @@ const errorReport: ErrorReport = {
 }
     console.error('Failed to report error:', reportError)'
   }
-  }
   private handleRetry = () => {
   // TODO: Implement
 }
@@ -280,7 +274,6 @@ const errorReport: ErrorReport = {
     if (typeof window !== 'undefined') {'
       window.location.reload()
   }
-  }
   render() {
   // TODO: Add properties
 }
@@ -301,46 +294,28 @@ const errorReport: ErrorReport = {
       return (
   // TODO: Add parameters
 )
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">"
-<div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">"
-<div className="flex items-center mb-4">"
-<div className="flex-shrink-0">"
-<svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">"
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />"
-<div className="ml-3">"
-<h3 className="text-lg font-medium text-gray-900">Something went wrong"
-                <p className="text-sm text-gray-500">"
-                  We're sorry, but something unexpected happened.'
-            {process.env.NODE_ENV === 'development' && this.state.error && ('
-              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">"
-<h4 className="text-sm font-medium text-red-800 mb-2">Error Details:"
-                <pre className="text-xs text-red-700 overflow-auto">"
-                  {this.state.error.message}
-                  {this.state.error.stack && `\n\n${this.state.error.stack}`}
-            )}
-            <div className="flex space-x-3">"
+        <div className="min-h-screen flex items-center justify-center bg-gray-50"max-w-md w-full bg-white shadow-lg rounded-lg p-6"
+<div className="
+<div className="flex-shrink-0"h-8 w-8 text-red-500"none"0 0 24 24" stroke=">"
+<path strokeLinecap=" strokeLinejoin="round"M12 9 v2 m0 4 h.01 m-6.938 4 h13.856 c1.54 0 2.502-1.667 1.732-2.5 L13.732 4 c-.77-.833-1.964-.833-2.732 0 L3.732 16.5 c-.77.833.192 2.5 1.732 2.5 z" />"ml-3"
+<h3 className="
+                <p className="text-sm text-gray-500"mb-4 p-3 bg-red-50 border border-red-200 rounded-md"
+<h4 className="
+                <pre className="text-xs text-red-700 overflow-auto"flex space-x-3"
 <$2 />
                 onClick={this.handleRetry}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">"
+                className="
                 Try Again,
 
               <$2 />
                 onClick={this.handleReload}
-                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">"
-                Reload Page,
-
-            </div>
-            {this.state.errorId && (
-  // TODO: Add parameters
-)
-              <p className="mt-4 text-xs text-gray-500 text-center">"
+                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"mt-4 text-xs text-gray-500 text-center"
                 Error ID: {this.state.errorId}
             )}
       )
     }
     return this.props.children
   }
-}
 export default AdvancedErrorBoundary</div></div>;
 </div></div>
 </div></div>
@@ -348,4 +323,3 @@ export default AdvancedErrorBoundary</div></div>;
 </p></p>
 </p></h3>
 </h4>
-=======

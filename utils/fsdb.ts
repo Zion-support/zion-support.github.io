@@ -28,12 +28,10 @@ const content = fs.readFileSync(filePath, 'utf8')'
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   }
-}
 export function writeJson<T>(filePath: string, data: T): void {
   // TODO: Add properties
 }
@@ -72,10 +70,9 @@ const dir = path && path.dirname(filePath),
       fs && fs.mkdirSync(dir, { recursive: true })
     }
     fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2))
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
@@ -137,7 +134,6 @@ async function ensureBaseFiles() {
 }
     await writeFile(DISPUTES_FILE, JSON.stringify({ disputes: [] }, null, 2), 'utf8')'
   }
-}
 export async function readAllDisputes(): Promise<DisputeCase[]> {
   // TODO: Add properties
 }
@@ -196,7 +192,6 @@ const dir = getDisputeUploadDir(caseId)
   await mkdir(dir, { recursive: true })
   return dir
 }
-}
 export function getDisputeUploadDir(caseId: string): string {
   // TODO: Add properties
 }
@@ -208,6 +203,4 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
 const dir = getDisputeUploadDir(caseId)
   await mkdir(dir, { recursive: true })
   return dir
-}
-}
 }

@@ -70,8 +70,6 @@ const caching = createAdvancedCaching()
     console.log('Caching files:', Object.keys(caching))'
     console.log('Advanced app improvements completed!')'
   }
-}
-
 if (require.main === module) {
   // TODO: Add properties
 }
@@ -87,4 +85,3 @@ module.exports = {
 }
   createAdvancedMonitoring,
   createAdvancedCaching
-}

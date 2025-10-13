@@ -27,5 +27,4 @@ const data = await res.json().catch(() => ({}))
 }
     console.error('Login request failed', error)'
     throw error
-  }
-}
+  

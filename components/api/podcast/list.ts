@@ -110,7 +110,6 @@ const simplified = episodes.map((e) => ({
     audio: e.audio || {}}))
   return res.status (200).json ({ episodes: simplified })
 }
-}
   ensureStorage();
 const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];';
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json')'
@@ -139,6 +138,3 @@ const simplified = episodes.map((e) => ({
     audio: e.audio || {},
   }))
   return res.status(200).json({ episodes: simplified })
-}
-
-}

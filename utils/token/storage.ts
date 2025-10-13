@@ -47,18 +47,17 @@ export interface TokenStoreData {
 }
   // TODO: Add properties
 }
-  }
 export interface TokenStoreData {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-import fs from "fs";";
-import path from "path";";
-import { TokenConfig, TokenTransaction, Wallet } from "./types";";
-import { DEFAULT_TOKEN_CONFIG } from "./rules";";";
-const DATA_DIR = path.join(process.cwd(), "data");";
-const STORE_FILE = path.join(DATA_DIR, "token_store.json");";
+import fs from "fs";
+import path from "path";
+import { TokenConfig, TokenTransaction, Wallet } from "./types";
+import { DEFAULT_TOKEN_CONFIG } from "./rules";";
+const DATA_DIR = path.join(process.cwd(), ");";
+const STORE_FILE = path.join(DATA_DIR, ");";
 export interface TokenStoreData {
   // TODO: Add properties
 }
@@ -93,7 +92,6 @@ function ensureDataDir(): void {
 }
     if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
   } catch {}
-}
 function readFromDisk(): TokenStoreData | null {
   // TODO: Add properties
 }
@@ -106,7 +104,7 @@ function readFromDisk(): TokenStoreData | null {
 }
     ensureDataDir()
     if (!fs.existsSync(STORE_FILE)) return null;
-const raw = fs.readFileSync(STORE_FILE, "utf8");";
+const raw = fs.readFileSync(STORE_FILE, ");";
 const parsed = JSON.parse(raw) as TokenStoreData
     return parsed
   } catch {
@@ -124,7 +122,6 @@ const parsed = JSON.parse(raw) as TokenStoreData
     return this && this.data
   }
 }
-}
 function writeToDisk(data: TokenStoreData): void {
   // TODO: Add properties
 }
@@ -136,9 +133,8 @@ function writeToDisk(data: TokenStoreData): void {
   // TODO: Add properties
 }
     ensureDataDir()
-    fs.writeFileSync(STORE_FILE, JSON.stringify(data, null, 2), "utf8")"
+    fs.writeFileSync(STORE_FILE, JSON.stringify(data, null, 2), ")"
   } catch {}
-}
 class InMemoryTokenStore {
   // TODO: Add properties
 }
@@ -157,7 +153,6 @@ const fromDisk = readFromDisk()
         transactions: [],
         config: DEFAULT_TOKEN_CONFIG,
       }
-  }
   getData(): TokenStoreData {
   // TODO: Add properties
 }
@@ -172,7 +167,6 @@ const fromDisk = readFromDisk()
 }
     writeToDisk(this.data)
   }
-}
 const store = new InMemoryTokenStore();
 export const tokenStore = {
   // TODO: Add properties
@@ -226,4 +220,4 @@ const txs = store.getData().transactions
     return txs.filter((t) => t.userId === userId)
   },
 }
-}}}
+}

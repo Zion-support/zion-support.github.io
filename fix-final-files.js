@@ -29,7 +29,6 @@ const filesToFix = [
   'src/types/next-stubs.d.ts']'
 function createBasicComponent(filePath) {/* TODO: Fix JSX expression */}
 interface ${componentName}Props {/* TODO: Fix JSX expression */}
-}
 const ${componentName}: React.FC<${componentName}Props> = ({
   // TODO: Add properties
 }
@@ -49,12 +48,7 @@ const ${componentName}: React.FC<${componentName}Props> = ({
       {children || (
   // TODO: Add parameters
 )
-        <div className="p-4 text-center text-gray-600">;";
-const ${componentName}: React.FC<${componentName}Props> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-    <div className={\`${componentName.toLowerCase()}-component \${className}\`}>
-      {/* TODO: Fix JSX expression */}
-          <h3 className="text-lg font-semibold mb-2">${componentName}"
+        <div className="p-4 text-center text-gray-600"text-lg font-semibold mb-2"
           <p>Component</p> placeholder - implementation needed
       )}
   )
@@ -90,10 +84,8 @@ export default {
   } else if (isTs) {/* TODO: Fix JSX expression */}`
     return `//${componentName} - TypeScript definitions and utilities;
 export interface ${componentName}Config {/* TODO: Fix JSX expression */}
-}
 export const default${componentName}Confi,
   g: ${componentName}Config = {/* TODO: Fix JSX expression */}
-}
 export default {/* TODO: Fix JSX expression */}
   default${componentName}Config
 };`
@@ -113,13 +105,10 @@ export const ${componentName} = {
   } else {/* TODO: Fix JSX expression */}`
     return `//${componentName} - JavaScript module;
 export const ${componentName} = {/* TODO: Fix JSX expression */}
-}
 export default ${componentName};`
 `
   }
-}
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
-    }
     // Check if file has severe corruption
     if (
   // TODO: Add parameters
@@ -138,9 +127,8 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       //       })
   } catch (error) {/* TODO: Fix JSX expression */}
     //     }
-}
 // filesToFix.forEach(fixFile)
 //
 
-}"`</div></div>"
+}"
 </div></h3>)

@@ -105,13 +105,13 @@ const fallback = () => {
   if (!apiKey) return fallback()
   try {;
 const client = new OpenAI({ apiKey });
-const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;";
+const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions"question":string,":string[],"answerIndex";
 const completion = await client && client.chat.completions && completions.create({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini','
+      model: 'gpt-4 o-mini','
       messages: [
   // TODO: Add items
 ]
@@ -147,7 +147,7 @@ const completion = await client.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini','
+      model: 'gpt-4 o-mini','
       messages: [
   // TODO: Add items
 ]
@@ -206,7 +206,6 @@ const json = JSON.parse (text)
     return fallback()
 }
 }
-}
       return res.status(200).json(json);
 const text = completion.choices?.[0]?.message?.content ?? '''
     try {;
@@ -224,5 +223,4 @@ const json = JSON.parse(text)
   // TODO: Add properties
 }
     return fallback()
-  }
-}
+  

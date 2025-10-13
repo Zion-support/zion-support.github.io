@@ -27,7 +27,7 @@ const fixes = [
   // TODO: Add properties
 }
     pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g'
-    replacement: "$1: '$2',\n  $3: "},"'"
+    replacement: "$1: '$2',\n  $3: "'"
   //Fix malformed JSX - unclosed tags
   {
   // TODO: Add properties
@@ -140,15 +140,7 @@ const fixes = [
   // TODO: Add properties
 }
     pattern: /(\w+):\s*'([^']+)'\s*(\w+):/g'
-    replacement: "$1: '$2',\n  $3: "},"'"
-  //Fix missing commas in object properties
-  {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    pattern: /(\w+):\s*'([^']+)'\s*\n\s*(\w+):/g'
-    replacement: "$1: '$2',\n  $3: "},"'"
+    replacement: "},"'"$1: '$2',\n  $3: "},"
   //Fix malformed JSX structure
   {
   // TODO: Add properties
@@ -225,22 +217,15 @@ function fixFile(filePath) {
   t: 'return (\n    <div>{/* content */}'}]'
 )
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
-      }
     })
     if (modified) {/* TODO: Fix JSX expression */}
-    }
-
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 async function main() {/* TODO: Fix JSX expression */}
-}
   //   const blogDir = path.join(process.cwd(), 'app', 'blog')'
   if (!fs.existsSync(blogDir)) {/* TODO: Fix JSX expression */}
-  }
-
   //Find all .tsx and .jsx files in blog directory
   //   const pattern = path.join(blogDir, '**/*.{tsx,jsx}')'
   //   let fixedCount = 0

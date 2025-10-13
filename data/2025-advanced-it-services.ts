@@ -3,23 +3,23 @@ export const advancedITServices2025 = [;
   // TODO: Add items
 ]
     }
-    marketSize: '$15 && 15.7B','
+    marketSize: '$15 && 15.7 B','
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms''
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration''
-    market_size: '$15.7B','
+    market_size: '$15.7 B','
     target_audience: unknown,
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms','
     competitive_advantage: unknown,
       'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'}];      phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com','
     marketSiz,
-  e: '$15 && 15.7B','
+  e: '$15 && 15.7 B','
     targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms''
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration''
     market_siz,
-  e: '$15.7B','
+  e: '$15.7 B','
     target_audienc,
   e: unknown,
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms','
@@ -31,7 +31,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$178.9B','
+  e: '$178.9 B','
     targetAudienc,
   e: 'Enterprise businesses, cloud providers, research institutions, government agencies''
     competitiveAdvantag,
@@ -82,7 +82,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$43.4B','
+  e: '$43.4 B','
     targetAudienc,
   e: 'IoT companies, telecommunications, manufacturing, smart cities''
     competitiveAdvantag,
@@ -132,7 +132,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$173.5B','
+  e: '$173.5 B','
     targetAudienc,
   e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies''
     competitiveAdvantag,
@@ -181,7 +181,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$19.9B','
+  e: '$19.9 B','
     targetAudienc,
   e: 'Financial institutions, supply chain companies, healthcare providers, government agencies''
     competitiveAdvantag,
@@ -232,7 +232,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$8.2B','
+  e: '$8.2 B','
     targetAudienc,
   e: 'Development teams, DevOps engineers, software companies, enterprise businesses''
     competitiveAdvantag,
@@ -253,11 +253,11 @@ export const advancedITServices2025 = [;
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
-  s: ['Up to 1GbpsBasic quantum featuresStandard support'] }'
+  s: ['Up to 1 GbpsBasic quantum featuresStandard support'] }'
       professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
-  s: ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] }'
+  s: ['Up to 10 GbpsAdvanced quantum featuresCustom protocolsPriority support'] }'
       enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
@@ -283,7 +283,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$12.8B','
+  e: '$12.8 B','
     targetAudienc,
   e: 'Telecommunications, financial institutions, government agencies, research institutions''
     competitiveAdvantag,
@@ -333,7 +333,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$28.7B','
+  e: '$28.7 B','
     targetAudienc,
   e: 'IT operations teams, system administrators, enterprise businesses, managed service providers''
     competitiveAdvantag,
@@ -384,7 +384,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$89.3B','
+  e: '$89.3 B','
     targetAudienc,
   e: 'Data center operators, cloud providers, enterprise businesses, government agencies''
     competitiveAdvantag,
@@ -434,7 +434,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$173.5B','
+  e: '$173.5 B','
     targetAudienc,
   e: 'IT security teams, cybersecurity firms, government agencies, financial institutions''
     competitiveAdvantag,
@@ -484,7 +484,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$15.7B','
+  e: '$15.7 B','
     targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms''
     competitiveAdvantag,
@@ -804,7 +804,7 @@ export const advancedITServices2025 = [;
     tags: ['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'],'
     contact: phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com'}'
-    marketSize: '$15.7B','
+    marketSize: '$15.7 B','
     targetAudience:,
     categor,
   y: 'Cloud Migration','
@@ -817,7 +817,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$15.7B''
+  e: '$15.7 B''
     targetAudienc,
   e:
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms''
@@ -829,7 +829,7 @@ export const advancedITServices2025 = [;
   e: '+1 302 464 0950''
     }
     marketSiz,
-  e: '$15 && 15.7B','
+  e: '$15 && 15.7 B','
     targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms''
     competitiveAdvantag,
@@ -837,14 +837,14 @@ export const advancedITServices2025 = [;
   }
 ]
       email: 'kleber@ziontechgroup.com'}'
-    marketSize: '$15.7B','
+    marketSize: '$15.7 B','
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms''
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration''
       emai,
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$15.7B''
+  e: '$15.7 B''
     targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms''
     competitiveAdvantag,
@@ -899,7 +899,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$178.9B','
+  e: '$178.9 B','
     targetAudienc,
   e: 'Enterprise businesses, cloud providers, research institutions, government agencies''
     competitiveAdvantag,
@@ -950,7 +950,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$43.4B','
+  e: '$43.4 B','
     targetAudienc,
   e: 'IoT companies, telecommunications, manufacturing, smart cities''
     competitiveAdvantag,
@@ -1000,7 +1000,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$173.5B','
+  e: '$173.5 B','
     targetAudienc,
   e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies''
     competitiveAdvantag,
@@ -1049,7 +1049,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$19.9B','
+  e: '$19.9 B','
     targetAudienc,
   e: 'Financial institutions, supply chain companies, healthcare providers, government agencies''
     competitiveAdvantag,
@@ -1100,7 +1100,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$8.2B','
+  e: '$8.2 B','
     targetAudienc,
   e: 'Development teams, DevOps engineers, software companies, enterprise businesses''
     competitiveAdvantag,
@@ -1121,11 +1121,11 @@ export const advancedITServices2025 = [;
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
-  s: ['Up to 1GbpsBasic quantum featuresStandard support'] }'
+  s: ['Up to 1 GbpsBasic quantum featuresStandard support'] }'
       professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
-  s: ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] }'
+  s: ['Up to 10 GbpsAdvanced quantum featuresCustom protocolsPriority support'] }'
       enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
@@ -1151,7 +1151,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$12.8B','
+  e: '$12.8 B','
     targetAudienc,
   e: 'Telecommunications, financial institutions, government agencies, research institutions''
     competitiveAdvantag,
@@ -1201,7 +1201,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$28.7B','
+  e: '$28.7 B','
     targetAudienc,
   e: 'IT operations teams, system administrators, enterprise businesses, managed service providers''
     competitiveAdvantag,
@@ -1252,7 +1252,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$89.3B','
+  e: '$89.3 B','
     targetAudienc,
   e: 'Data center operators, cloud providers, enterprise businesses, government agencies''
     competitiveAdvantag,
@@ -1302,7 +1302,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$173.5B','
+  e: '$173.5 B','
     targetAudienc,
   e: 'IT security teams, cybersecurity firms, government agencies, financial institutions''
     competitiveAdvantag,
@@ -1352,7 +1352,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$15.7B','
+  e: '$15.7 B','
     targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms''
     competitiveAdvantag,
@@ -1361,14 +1361,14 @@ export const advancedITServices2025 = [;
 ]
   }
 ]
-    market_size: '$15.7B','
+    market_size: '$15.7 B','
     target_audience: unknown,
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms','
     competitive_advantage: unknown,
       'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'}];      phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com','
     market_siz,
-  e: '$15.7B','
+  e: '$15.7 B','
     target_audienc,
   e: unknown,
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms','
@@ -1380,7 +1380,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$178.9B','
+  e: '$178.9 B','
     targetAudienc,
   e: 'Enterprise businesses, cloud providers, research institutions, government agencies''
     competitiveAdvantag,
@@ -1431,7 +1431,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$43.4B','
+  e: '$43.4 B','
     targetAudienc,
   e: 'IoT companies, telecommunications, manufacturing, smart cities''
     competitiveAdvantag,
@@ -1481,7 +1481,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$173.5B','
+  e: '$173.5 B','
     targetAudienc,
   e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies''
     competitiveAdvantag,
@@ -1530,7 +1530,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$19.9B','
+  e: '$19.9 B','
     targetAudienc,
   e: 'Financial institutions, supply chain companies, healthcare providers, government agencies''
     competitiveAdvantag,
@@ -1581,7 +1581,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$8.2B','
+  e: '$8.2 B','
     targetAudienc,
   e: 'Development teams, DevOps engineers, software companies, enterprise businesses''
     competitiveAdvantag,
@@ -1602,11 +1602,11 @@ export const advancedITServices2025 = [;
     pricin,
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
-  s: ['Up to 1GbpsBasic quantum featuresStandard support'] }'
+  s: ['Up to 1 GbpsBasic quantum featuresStandard support'] }'
       professiona,
   l: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
-  s: ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] }'
+  s: ['Up to 10 GbpsAdvanced quantum featuresCustom protocolsPriority support'] }'
       enterpris,
   e: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
@@ -1632,7 +1632,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$12.8B','
+  e: '$12.8 B','
     targetAudienc,
   e: 'Telecommunications, financial institutions, government agencies, research institutions''
     competitiveAdvantag,
@@ -1682,7 +1682,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$28.7B','
+  e: '$28.7 B','
     targetAudienc,
   e: 'IT operations teams, system administrators, enterprise businesses, managed service providers''
     competitiveAdvantag,
@@ -1733,7 +1733,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$89.3B','
+  e: '$89.3 B','
     targetAudienc,
   e: 'Data center operators, cloud providers, enterprise businesses, government agencies''
     competitiveAdvantag,
@@ -1783,7 +1783,7 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$173.5B','
+  e: '$173.5 B','
     targetAudienc,
   e: 'IT security teams, cybersecurity firms, government agencies, financial institutions''
     competitiveAdvantag,
@@ -1833,14 +1833,14 @@ export const advancedITServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$15.7B','
+  e: '$15.7 B','
     targetAudienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms''
     competitiveAdvantag,
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration''
     }
     market_siz,
-  e: '$15.7B','
+  e: '$15.7 B','
     target_audienc,
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms''
     competitive_advantag,
@@ -1850,15 +1850,15 @@ export const advancedITServices2025 = [;
 }
 ];
 export const advancedITServices2025 = [ } marketSiz,;
-  e: '$15 && 15.7B',' targetAudienc,'
+  e: '$15 && 15.7 B',' targetAudienc,'
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms' competitiveAdvantag,''
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' ' market_siz,'
-  e: '$15.7B', target_audienc,'
+  e: '$15.7 B', target_audienc,'
   e:  ,' 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms', competitive_advantag,'
   e:  ,' 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'},' ]; phon,'
   e: '+1 302 464 0950' emai,''
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$178.9B',' targetAudienc,'
+  e: '$178.9 B',' targetAudienc,'
   e: 'Enterprise businesses, cloud providers, research institutions, government agencies';' competitiveAdvantag,'
   e: 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network' } {/* TODO: Fix JSX expression */}'
   s: [,' 'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management' ]} pricin,'
@@ -1878,7 +1878,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$43.4B',' targetAudienc,'
+  e: '$43.4 B',' targetAudienc,'
   e: 'IoT companies, telecommunications, manufacturing, smart cities';' competitiveAdvantag,'
   e: 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center' ]} pricin,'
@@ -1897,7 +1897,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$173.5B',' targetAudienc,'
+  e: '$173.5 B',' targetAudienc,'
   e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';' competitiveAdvantag,'
   e: 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support' ]} pricin,'
@@ -1915,7 +1915,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$19.9B',' targetAudienc,'
+  e: '$19.9 B',' targetAudienc,'
   e: 'Financial institutions, supply chain companies, healthcare providers, government agencies';' competitiveAdvantag,'
   e: 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring' ]} pricin,'
@@ -1935,16 +1935,16 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$8.2B',' targetAudienc,'
+  e: '$8.2 B',' targetAudienc,'
   e: 'Development teams, DevOps engineers, software companies, enterprise businesses';' competitiveAdvantag,'
   e: 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support' ]} pricin,'
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
-  s: ['Up to 1GbpsBasic quantum featuresStandard support'] }' professiona,'
+  s: ['Up to 1 GbpsBasic quantum featuresStandard support'] }' professiona,'
   l: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
-  s: ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] }' enterpris,'
+  s: ['Up to 10 GbpsAdvanced quantum featuresCustom protocolsPriority support'] }' enterpris,'
   e: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
   s: ['Unlimited bandwidthCustom quantum solutionsWhite-label platformDedicated support'] } }' categor,'
@@ -1955,7 +1955,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$12.8B',' targetAudienc,'
+  e: '$12.8 B',' targetAudienc,'
   e: 'Telecommunications, financial institutions, government agencies, research institutions';' competitiveAdvantag,'
   e: 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations' ]} pricin,'
@@ -1974,7 +1974,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$28.7B',' targetAudienc,'
+  e: '$28.7 B',' targetAudienc,'
   e: 'IT operations teams, system administrators, enterprise businesses, managed service providers';' competitiveAdvantag,'
   e: 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support' ]} pricin,'
@@ -1994,7 +1994,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$89.3B',' targetAudienc,'
+  e: '$89.3 B',' targetAudienc,'
   e: 'Data center operators, cloud providers, enterprise businesses, government agencies';' competitiveAdvantag,'
   e: 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations' ]} pricin,'
@@ -2013,7 +2013,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$173.5B',' targetAudienc,'
+  e: '$173.5 B',' targetAudienc,'
   e: 'IT security teams, cybersecurity firms, government agencies, financial institutions';' competitiveAdvantag,'
   e: 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection' } {/* TODO: Fix JSX expression */}'
   s: [,' 'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support' ]} pricin,'
@@ -2032,7 +2032,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$15.7B',' targetAudienc,'
+  e: '$15.7 B',' targetAudienc,'
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';' competitiveAdvantag,'
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ]; export const advancedITServices2025 = [ }' categor,';'
   y: 'IT Operations' tag,'
@@ -2112,15 +2112,15 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: ' phon,'
   e: '+1 302 464 0950' emai,''
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$15.7B' targetAudienc,'
+  e: '$15.7 B' targetAudienc,'
   e:' 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms' competitiveAdvantag,'
   e: ' 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' }' 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'}' ]; phon,'
   e: '+1 302 464 0950' }' marketSiz,'
-  e: '$15 && 15.7B',' targetAudienc,'
+  e: '$15 && 15.7 B',' targetAudienc,'
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms' competitiveAdvantag,''
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ];' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$15.7B' targetAudienc,''
+  e: '$15.7 B' targetAudienc,''
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms' competitiveAdvantag,''
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ]; export const advancedITServices2025 = [ {/* TODO: Fix JSX expression */}'
   s: [,' 'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing networkIntegration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support' ]} pricin,'
@@ -2140,7 +2140,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$178.9B',' targetAudienc,'
+  e: '$178.9 B',' targetAudienc,'
   e: 'Enterprise businesses, cloud providers, research institutions, government agencies';' competitiveAdvantag,'
   e: 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network' } {/* TODO: Fix JSX expression */}'
   s: [,' 'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management' ]} pricin,'
@@ -2160,7 +2160,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$43.4B',' targetAudienc,'
+  e: '$43.4 B',' targetAudienc,'
   e: 'IoT companies, telecommunications, manufacturing, smart cities';' competitiveAdvantag,'
   e: 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center' ]} pricin,'
@@ -2179,7 +2179,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$173.5B',' targetAudienc,'
+  e: '$173.5 B',' targetAudienc,'
   e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';' competitiveAdvantag,'
   e: 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support' ]} pricin,'
@@ -2197,7 +2197,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$19.9B',' targetAudienc,'
+  e: '$19.9 B',' targetAudienc,'
   e: 'Financial institutions, supply chain companies, healthcare providers, government agencies';' competitiveAdvantag,'
   e: 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring' ]} pricin,'
@@ -2217,16 +2217,16 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$8.2B',' targetAudienc,'
+  e: '$8.2 B',' targetAudienc,'
   e: 'Development teams, DevOps engineers, software companies, enterprise businesses';' competitiveAdvantag,'
   e: 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support' ]} pricin,'
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
-  s: ['Up to 1GbpsBasic quantum featuresStandard support'] }' professiona,'
+  s: ['Up to 1 GbpsBasic quantum featuresStandard support'] }' professiona,'
   l: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
-  s: ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] }' enterpris,'
+  s: ['Up to 10 GbpsAdvanced quantum featuresCustom protocolsPriority support'] }' enterpris,'
   e: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
   s: ['Unlimited bandwidthCustom quantum solutionsWhite-label platformDedicated support'] } }' categor,'
@@ -2237,7 +2237,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$12.8B',' targetAudienc,'
+  e: '$12.8 B',' targetAudienc,'
   e: 'Telecommunications, financial institutions, government agencies, research institutions';' competitiveAdvantag,'
   e: 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations' ]} pricin,'
@@ -2256,7 +2256,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$28.7B',' targetAudienc,'
+  e: '$28.7 B',' targetAudienc,'
   e: 'IT operations teams, system administrators, enterprise businesses, managed service providers';' competitiveAdvantag,'
   e: 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support' ]} pricin,'
@@ -2276,7 +2276,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$89.3B',' targetAudienc,'
+  e: '$89.3 B',' targetAudienc,'
   e: 'Data center operators, cloud providers, enterprise businesses, government agencies';' competitiveAdvantag,'
   e: 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations' ]} pricin,'
@@ -2295,7 +2295,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$173.5B',' targetAudienc,'
+  e: '$173.5 B',' targetAudienc,'
   e: 'IT security teams, cybersecurity firms, government agencies, financial institutions';' competitiveAdvantag,'
   e: 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection' } {/* TODO: Fix JSX expression */}'
   s: [,' 'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support' ]} pricin,'
@@ -2314,15 +2314,15 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$15.7B',' targetAudienc,'
+  e: '$15.7 B',' targetAudienc,'
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';' competitiveAdvantag,'
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' } ]; } ];' market_siz,'
-  e: '$15.7B', target_audienc,'
+  e: '$15.7 B', target_audienc,'
   e:  ,' 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms', competitive_advantag,'
   e:  ,' 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration'},' ]; phon,'
   e: '+1 302 464 0950' emai,''
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$178.9B',' targetAudienc,'
+  e: '$178.9 B',' targetAudienc,'
   e: 'Enterprise businesses, cloud providers, research institutions, government agencies';' competitiveAdvantag,'
   e: 'Industry-first quantum-enhanced cloud infrastructure, advanced security with quantum encryption, and global edge computing network' } {/* TODO: Fix JSX expression */}'
   s: [,' 'AI-powered resource optimizationReal-time edge processingDistributed computing orchestrationAdvanced load balancingIntegration with IoT devicesAdvanced analytics and monitoringCustom edge algorithmsGlobal edge network management' ]} pricin,'
@@ -2342,7 +2342,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$43.4B',' targetAudienc,'
+  e: '$43.4 B',' targetAudienc,'
   e: 'IoT companies, telecommunications, manufacturing, smart cities';' competitiveAdvantag,'
   e: 'Advanced AI-powered edge orchestration, comprehensive distributed computing optimization, and extensive IoT device integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Continuous identity verificationMicro-segmentation and access controlAdvanced threat detectionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security policies24/7 security operations center' ]} pricin,'
@@ -2361,7 +2361,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$173.5B',' targetAudienc,'
+  e: '$173.5 B',' targetAudienc,'
   e: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';' competitiveAdvantag,'
   e: 'Comprehensive zero-trust implementation, advanced threat detection, and extensive security tool integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Enterprise blockchain infrastructureSmart contract developmentAdvanced consensus mechanismsRegulatory compliance toolsIntegration with business systemsAdvanced analytics and reportingCustom blockchain solutions24/7 platform support' ]} pricin,'
@@ -2379,7 +2379,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$19.9B',' targetAudienc,'
+  e: '$19.9 B',' targetAudienc,'
   e: 'Financial institutions, supply chain companies, healthcare providers, government agencies';' competitiveAdvantag,'
   e: 'Enterprise-grade blockchain infrastructure, comprehensive compliance tools, and seamless business system integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'AI-powered CI/CD automationIntelligent deployment optimizationAutomated testing and quality assuranceReal-time performance monitoringIntegration with development toolsAdvanced analytics and reportingCustom automation workflows24/7 platform monitoring' ]} pricin,'
@@ -2399,16 +2399,16 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$8.2B',' targetAudienc,'
+  e: '$8.2 B',' targetAudienc,'
   e: 'Development teams, DevOps engineers, software companies, enterprise businesses';' competitiveAdvantag,'
   e: 'Advanced AI-powered DevOps automation, comprehensive workflow optimization, and extensive development tool integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Quantum entanglement communicationUltra-secure quantum encryptionHigh-speed quantum networkingAdvanced routing algorithmsIntegration with existing networksAdvanced monitoring and analyticsCustom quantum protocols24/7 network support' ]} pricin,'
   g: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
-  s: ['Up to 1GbpsBasic quantum featuresStandard support'] }' professiona,'
+  s: ['Up to 1 GbpsBasic quantum featuresStandard support'] }' professiona,'
   l: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
-  s: ['Up to 10GbpsAdvanced quantum featuresCustom protocolsPriority support'] }' enterpris,'
+  s: ['Up to 10 GbpsAdvanced quantum featuresCustom protocolsPriority support'] }' enterpris,'
   e: {/* TODO: Fix JSX expression */}
   d: 'month'} feature,'
   s: ['Unlimited bandwidthCustom quantum solutionsWhite-label platformDedicated support'] } }' categor,'
@@ -2419,7 +2419,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$12.8B',' targetAudienc,'
+  e: '$12.8 B',' targetAudienc,'
   e: 'Telecommunications, financial institutions, government agencies, research institutions';' competitiveAdvantag,'
   e: 'Industry-first quantum networking platform, ultra-secure quantum encryption, and advanced routing algorithms' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Self-managing infrastructureAI-powered issue predictionAutomated performance optimizationReal-time system monitoringIntegration with IT toolsAdvanced analytics and reportingCustom automation rules24/7 autonomous operations' ]} pricin,'
@@ -2438,7 +2438,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$28.7B',' targetAudienc,'
+  e: '$28.7 B',' targetAudienc,'
   e: 'IT operations teams, system administrators, enterprise businesses, managed service providers';' competitiveAdvantag,'
   e: 'Advanced autonomous IT operations, comprehensive issue prediction, and extensive IT tool integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Quantum-enhanced computingAdvanced cooling and power managementUltra-secure quantum storageReal-time performance optimizationIntegration with cloud platformsAdvanced monitoring and analyticsCustom quantum solutions24/7 data center support' ]} pricin,'
@@ -2458,7 +2458,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$89.3B',' targetAudienc,'
+  e: '$89.3 B',' targetAudienc,'
   e: 'Data center operators, cloud providers, enterprise businesses, government agencies';' competitiveAdvantag,'
   e: 'Industry-first quantum-enhanced data center, advanced energy efficiency, and comprehensive quantum computing integration' } {/* TODO: Fix JSX expression */}'
   s: [,' 'Quantum-resistant encryptionAdvanced threat detectionQuantum key distributionReal-time security monitoringIntegration with security toolsAdvanced analytics and reportingCustom security solutions24/7 quantum security operations' ]} pricin,'
@@ -2477,7 +2477,7 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$173.5B',' targetAudienc,'
+  e: '$173.5 B',' targetAudienc,'
   e: 'IT security teams, cybersecurity firms, government agencies, financial institutions';' competitiveAdvantag,'
   e: 'Industry-first quantum cybersecurity platform, unbreakable quantum encryption, and advanced threat detection' } {/* TODO: Fix JSX expression */}'
   s: [,' 'AI-powered migration planningQuantum-enhanced migration toolsZero-downtime migrationReal-time migration monitoringIntegration with cloud platformsAdvanced analytics and reportingCustom migration strategies24/7 migration support' ]} pricin,'
@@ -2496,9 +2496,9 @@ export const advancedITServices2025 = [ } marketSiz,;
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$15.7B',' targetAudienc,'
+  e: '$15.7 B',' targetAudienc,'
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';' competitiveAdvantag,'
   e: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration' }' market_siz,'
-  e: '$15.7B',' target_audienc,'
+  e: '$15.7 B',' target_audienc,'
   e: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms' competitive_advantag,''
   e: 'Industry - first quantum - enhanced migration platform, zero - downtime migration, and comprehensive cloud platform integration' } ]; } ]; '

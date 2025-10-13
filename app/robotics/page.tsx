@@ -36,45 +36,19 @@ const benefits = [
     'Enterprise-grade security and compliance','
     'Scalable and flexible solutions','
 
-
 export default function PagePage() {
   return (
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Robotics - Zion Tech Group</title>
-        <meta name="description" content="Advanced robotics solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-        </div>
-      </div>
-    </>
-  );
-        </section></div>
-</div></section>
-      {/* Features Section */} </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" content="Advanced robotics solutions by Zion Tech Group"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600 mb-8"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
               </div>
             ))}
           </div></div>
 </section>
-<section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>"
+<section className="
 </div>
             ))}
-              <p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-</div>
-            ))}
-
-          </div></div>
-</section>
-<section className="py-20 px-4 sm:px-6 lg:px-8">"
-<p className="text-xl text-gray-300">Section description</p></div>"
+              <p className="text-xl text-gray-300"py-20 px-4 sm:px-6 lg:px-8"
+<p className="
 </div>
         </section>
           </div></div>
@@ -88,42 +62,27 @@ export default RoboticsPage;
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
               Comprehensive solution for your business requirements.
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+          <div className="bg-white rounded-lg shadow-md p-6">Feature 2</h3>
             <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
               Scalable and secure implementation.
             </p>
           </div>
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Robotics
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <h1 className="text-4 xl font-bold text-gray-900 mb-6">
             Advanced robotics solutions by Zion Tech Group.
           </p>
         </div>
       </div>
     </div>
   );
-}

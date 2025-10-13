@@ -135,4 +135,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await supabase.from('trust_peer_reviews').insert(review)'
   } catch {}
   return res.status(200).json({ ok: true, review })
-}

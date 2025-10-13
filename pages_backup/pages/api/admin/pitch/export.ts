@@ -16,15 +16,15 @@ const { slides, format, version } = req.body |{}
 const html = `<!doctype html>
 <html>
 <head>
-<meta charset="utf-8">"
+<meta charset="utf-8"
 <title>Pitch ${version |''}</title></head>'
 <body>` +
-    slides.map((s: any, i: number) => `<section style="page-break-after: always, font-family: Arial, sans-serif, padding: 24px,">"
+    slides.map((s: any, i: number) => `<section style="page-break-after: always, font-family: Arial, sans-serif, padding: 24 px,"
 <h1>${i + 1}. ${escapeHtml(s.title |'')}</h1>'
-<pre style="white-space: pre-wrap, font: inherit,">${escapeHtml(s.content |'')}</pre></section>`).join(') +''"
+<pre style="white-space: pre-wrap, font: inherit,"
 `</body></html>`
   res.setHeader('Content-Typeapplication/octet-stream')'
-  res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version |'draft'}.html"`)"'"
+  res.setHeader('Content-Disposition', `attachment, filename="pitch-deck-${version |'draft'}.html"'"
   res.status(200).send(html)
 }
 function escapeHtml(str: string) {
@@ -36,7 +36,7 @@ function escapeHtml(str: string) {
 .replace(/&/g, '&amp,')'
     .replace(/</g, '&lt,')'
     .replace(/>/g, '&gt,')'
-    .replace(/"/g, '&quot,')'"
+    .replace(/"
     .replace(/'/g, '&#039,')'
 }
     .replace(/'/g, '&#039,')'
@@ -77,8 +77,7 @@ const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-'
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 </p>

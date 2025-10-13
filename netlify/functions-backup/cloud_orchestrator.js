@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'cloud_orchestrator'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'cloud_orchestrator'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'cloud_orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'active', cloudServices: 0,'
         lastOrchestration: new Date().toISOString() } }) } return result; } catch (error) {

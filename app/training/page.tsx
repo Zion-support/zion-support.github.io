@@ -63,57 +63,21 @@ const benefits = [
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Training - Zion Tech Group</title>
-        <meta name="description" content="Advanced training solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-        </div>
-      </div>
-    </>
-  );
-            </p></div>
-  )
-}
-export default PagePage;
-'use client'';
-import React from 'react';';
-import { Helmet } from 'react-helmet-async';';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';'
-  ]
-  return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" content="Advanced training solutions by Zion Tech Group"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600 mb-8"min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
 <Helmet>
 <title>Page | Zion Tech Group
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
-<meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />"
-      {/* Hero Section */}
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}"
-                <p className="text-gray-300">{feature.description}"
+        <meta name=" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business."
+<meta name="keywords"page, AI solutions, IT services, Zion Tech Group, page" />"text-xl font-semibold text-white mb-3"
+                <p className="
             ))}
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Key Benefits"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
+            <h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4"text-xl text-gray-300 max-w-3 xl mx-auto"
               Experience the power of our page solutions for your business.
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
+            <h2 className="
               Ready to Get Started?
-            <p className="text-xl text-purple-100 mb-8">"
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">"
-<Phone className="mr-2 h-5 w-5" />"
-                Call Now
-              </button>
-<button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">"
-<Mail className="mr-2 h-5 w-5" />"
+            <p className="text-xl text-purple-100 mb-8"flex flex-col sm:flex-row gap-4 justify-center"
+<button className="
+<Phone className="mr-2 h-5 w-5"border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center"
+<Mail className="
                 Email Us
               </button></div>
 </div></div>
@@ -131,42 +95,27 @@ export default TrainingPage;
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
               Comprehensive solution for your business requirements.
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+          <div className="bg-white rounded-lg shadow-md p-6">Feature 2</h3>
             <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
               Scalable and secure implementation.
             </p>
           </div>
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Training
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <h1 className="text-4 xl font-bold text-gray-900 mb-6">
             Advanced training solutions by Zion Tech Group.
           </p>
         </div>
       </div>
     </div>
   );
-}

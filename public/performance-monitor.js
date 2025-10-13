@@ -27,7 +27,6 @@ const _entries = list.getEntries()
   // TODO: Add properties
 }
 (function() {/* TODO: Fix JSX expression */}
-}
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}'
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] })'
@@ -39,13 +38,10 @@ const _entries = list.getEntries()
       // CLS;
 let _clsValue = 0
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
-          }
         })
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] })'
     }
-  }
-
   // Start monitoring when DOM is ready
   if (document.readyState === 'loading') {'
     document.addEventListener('DOMContentLoaded', observeWebVitals)'
@@ -57,5 +53,4 @@ let _clsValue = 0
     observeWebVitals()
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}'
   } else {/* TODO: Fix JSX expression */}
-  }
 })()

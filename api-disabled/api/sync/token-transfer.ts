@@ -14,7 +14,6 @@ const _state = readState()
   }
 ;
 const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {/* TODO: Fix JSX expression */}
-  }
   if (!txId || !token || typeof amount !== 'number' || !fromSubnet || !toSubnet) {'
     return res.status(400).json({)
       error: 'txId, token, amount, fromSubnet, toSubnet required')'
@@ -73,7 +72,6 @@ const event = {/* TODO: Fix JSX expression */}
       .map(async peer => {/* TODO: Fix JSX expression */})
   t: 5000 })
         } catch {/* TODO: Fix JSX expression */}
-        }
       })
   )
   return res.status(200).json({)
@@ -82,4 +80,3 @@ const event = {/* TODO: Fix JSX expression */}
     eventId: event.eventId),
   return res.status(200).json({/* TODO: Fix JSX expression */})
   })
-}

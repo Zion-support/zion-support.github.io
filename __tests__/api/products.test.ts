@@ -8,7 +8,9 @@ const mPrismaClient = {
 }
   // TODO: Add properties
 }
-import { NextApiRequest, NextApiResponse } from 'next';import { createMocks, createRequest as _createRequest, createResponse as _createResponse } from node-mocks-http';import productHandler from @/pages/api/products/index';import { PrismaClient } from @prisma/client';'
+import { NextApiRequest, NextApiResponse } from 'next';
+import { createMocks, createRequest as _createRequest, createResponse as _createResponse } from node-mocks-http';import productHandler from @/pages/api/products/index';
+import { PrismaClient } from @prisma/client';'
 // Mock Prisma Client
 jest.mock('@prisma/client', () => {'  const mPrismaClient = {'
     product: {
@@ -84,7 +86,7 @@ let _res: ReturnType<typeof _createResponse>
     })
   })
   describe('GET /api/products with fuzzy search', () => {'
-    it('should return products matching "gpt" with similarity >= 0.8', async () => {;'";
+    it('should return products matching "gpt";
 const mockRawResults = [
   // TODO: Add items
 ]
@@ -153,12 +155,12 @@ const idsFromResponse = responseData.map((p: ProductLike) => p.id)
 }
   // TODO: Add properties
 }
-        where: { id: { in: expectedProductIds } }
+        where: { id: { in: expectedProductIds }
       })
     })
   })
 })
-  describe('GET /api/products with fuzzy search', () => {'    it('should return products matching "gpt" with similarity >= 0.8', async () => {'      // 1. Mock database responses;'";
+  describe('GET /api/products with fuzzy search', () => {'    it('should return products matching "gpt";
 const mockRawResults = [
   // TODO: Add items
 ]
@@ -174,7 +176,7 @@ const mockProductsData = [
 ]
         { id: product-gpt-high-score', name: Super GPT Model', description: Latest generation AI', images: [], price: null, currency: USD', tags: [] },        { id: product-gpt-medium-score', name: Advanced GPT Assistant', description: Your personal AI helper powered by GPT', images: [], price: null, currency: USD', tags: [] },        // Not expecting product-other' to be fetched by findMany if threshold is 0.3 and it's filtered out by raw query logic'      ]'
       // The actual API logic filters by similarity >= 0.3 in $queryRawUnsafe
-      // and then orders. Let's refine mockRawResults to reflect what $queryRawUnsafe would return'      // based on "WHERE similarity(name, $1) >= 0.3 OR similarity(description, $1) >= 0.3"      const filteredMockRawResults = mockRawResults.filter(""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""'"
+      // and then orders. Let's refine mockRawResults to reflect what $queryRawUnsafe would return'      // based on "WHERE similarity(name, $1) >= 0.3 OR similarity(description, $1) >= 0.3"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
         p => p.name_similarity >= 0.3 || p.description_similarity >= 0.3
       ).sort((a,b) =>
         Math.max(b.name_similarity, b.description_similarity) - Math.max(a.name_similarity, a.description_similarity)
@@ -211,7 +213,7 @@ const responseData = JSON.parse(res._getData())
       // Check if at least one product effectively had a high similarity.
       // The API doesn't return similarity scores directly in the final product data.'      // We rely on the ordering and the mock data setup.'
       // The first item should be product-gpt-high-score' due to sorting by GREATEST similarity.'      expect(responseData[0].id).toBe('product-gpt-high-score');      expect(responseData[0].name).toBe('Super GPT Model')'
-      // The problem statement: "asserts that at least one result with a similarity score >= 0.8 is returned"      // Since scores aren't in the response, we infer this from our mock setup.'      // `filteredMockRawResults` contains products that passed the >=0.3 threshold.'"
+      // The problem statement: "asserts that at least one result with a similarity score >= 0.8 is returned"
       // We know `product-gpt-high-score` had 0.9 and `product-gpt-medium-score` had 0.85. Both are >= 0.8.
       // The test ensures these are present and correctly ordered.;
 const idsFromResponse = responseData.map((p: unknown) => p.id)
@@ -238,7 +240,6 @@ const idsFromResponse = responseData.map((p: unknown) => p.id)
 }
             in: expectedProductIds
           }
-        }
       })
     })
   })

@@ -21,7 +21,6 @@ const stat = fs.statSync(fullPath)
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {'
         files.push(fullPath)
       }
-    }
   }
   scanDirectory(srcDir)
   return files
@@ -52,8 +51,6 @@ const newName = oldName.replace(/\s+/g, '').replace(/^([a-z])/, (match, letter) 
           content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/\s+/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`)'
           modified = true
         }
-      }
-
       // Fix title in JSX;
 const titleMatch = content.match(/<h1[^>]*>([^<]+)<\/h1>/)
       if (titleMatch) {;
@@ -67,8 +64,6 @@ const newTitle = oldTitle.replace(/\b([a-z])/g, (match, letter) => letter.toUppe
           content = content.replace(oldTitle, newTitle)
           modified = true
         }
-      }
-
       if (modified) {
   // TODO: Add properties
 }
@@ -85,8 +80,6 @@ const newTitle = oldTitle.replace(/\b([a-z])/g, (match, letter) => letter.toUppe
 }
       console.error(`Error fixing ${filePath}:`, error.message)
     }
-  }
-
   console.log(`Fixed ${fixedCount} files!`)
 }
 fixComponentNames()</h1>

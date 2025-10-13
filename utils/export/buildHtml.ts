@@ -2,12 +2,12 @@ import type { BookProject } from '../book/bookTypes',;';';
 export function buildPrintableHtml(project: BookProject): string {;
 const { meta, chapters, visuals } = project,;
 const quotesHtml = visuals.quoteCallouts
-    .map((q) => `<blockquote class="quote">"
+    .map((q) => `<blockquote class="quote"
 <p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : '}</blockquote>`)''
     .join('\n'),';
 import type { BookProject } from '../book/bookTypes';';';
 const quotesHtml = visuals.quoteCallouts
-    .map((q) => `<blockquote class="quote">"
+    .map((q) => `<blockquote class="quote"
 <p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : '}</blockquote>`)''
     .join('\n');';
 const chapterHtml = chapters
@@ -15,9 +15,9 @@ const chapterHtml = chapters
   // TODO: Add parameters
 )
       (c) => `
-      <section class="chapter">"
+      <section class="chapter"
 <h2>${escape_html (c.title)}</h2>
-<div class="content">${paragraphize (c.content)}</div></$1>"
+<div class="content"
     `)
     .join('\n\n'),;';
 const visualsHtml = [
@@ -28,8 +28,8 @@ const visualsHtml = [
     ...visuals.timelineImages,
     ...visuals.daoVoteCharts,
     ...visuals.uiScreens]
-    .map((src) => `<figure class="visual">"
-<img src="${src}" /></figure>`) // base64 ok"
+    .map((src) => `<figure class="visual"
+<img src="${src}"
     .join('\n'),'
     .join('\n\n');';
 const visualsHtml = [
@@ -40,50 +40,37 @@ const visualsHtml = [
     ...visuals.timelineImages
     ...visuals.daoVoteCharts
     ...visuals.uiScreens]
-    .map((src) => `<figure class="visual">"
-<img src="${src}" /></figure>`) // base64 ok"
+    .map((src) => `<figure class="visual"
+<img src="${src}"
     .join('\n');';
-const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '''"
-    .join ('\n\n'),;';
-const visuals_html = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    ...visuals.timeline_images,
-    ...visuals.daoVoteCharts,
-    ...visuals.ui_screens]
-    .map ((src) => `<figure class="visual">"
-<img src="${src}" /></figure>`) // base64 ok"
-    .join ('\n'),;';
-const barcode = meta.isbn ? `<img class="barcode" src="/api / barcode / isbn?code=${encodeURIComponent (meta.isbn)}" />` : '''"
+const barcode = meta.isbn ? `<img class="barcode"/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '''"visual">"${src}" /></figure>`) // base64 ok"barcode" src=" />` : '''"
   return `<!doctype html>
 <html>
 <head>
-<meta charset="utf - 8" />"
+<meta charset=" />"
 <title>${escape_html (meta.title)}</title>
 <style>
-  @page { margin: 1in }
+  @page { margin: 1 in }
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }'
-  .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh }
-  .cover h1 { font-size: 40px, margin: 0 }
-  .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444 }
-  .cover .by { margin-top: 24px, color: #666 }
-  .barcode { margin-top: 24px, height: 64px }
-  .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333 }
-  .quote cite { display: block, margin-top:6px, color:#666, font-style: normal }
+  .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90 vh }
+  .cover h1 { font-size: 40 px, margin: 0 }
+  .cover h3 { font-size: 20 px, margin: 8 px 0 0 0, color: #444 }
+  .cover .by { margin-top: 24 px, color: #666 }
+  .barcode { margin-top: 24 px, height: 64 px }
+  .quote { border-left: 4 px solid #222, padding-left: 12 px, margin: 16 px 0, color: #333 }
+  .quote cite { display: block, margin-top:6 px, color:#666, font-style: normal }
   .chapter { break-before: page }
-  .chapter h2 { font-size: 28px, margin: 0 0 12px 0 }
-  .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap }
-  .visual { break-inside: avoid, margin: 12px 0 }
+  .chapter h2 { font-size: 28 px, margin: 0 0 12 px 0 }
+  .content p { line-height: 1.6, margin: 0 0 12 px 0, white-space: pre-wrap }
+  .visual { break-inside: avoid, margin: 12 px 0 }
   .visual img { max-width: 100%, height: auto }
 </style></$1>
 <body>
-<section class="cover">"
+<section class=">"
 <div>${escapeHtml(meta.publisher |'')}</div>'
 <h1>${escapeHtml(meta.title)}</h1>
 <h3>${escapeHtml(meta.subtitle |'')}</h3>'
-<div class="by">By ${escapeHtml(meta.author)}</div>"
+<div class=">By ${escapeHtml(meta.author)}</div>"
     ${barcode}
   </section>
   ${quotesHtml}
@@ -104,135 +91,121 @@ function escapeHtml(s: string): string {
   // TODO: Add properties
 }
   return s
-  @page { margin: 1in   } catch (error) {
+  @page { margin: 1 in   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111   } catch (error) {'
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-  .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90vh   } catch (error) {
+  .cover { break-after: page, display: flex, flex-direction: column, justify-content: center, height: 90 vh   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-  .cover h1 { font-size: 40px, margin: 0   } catch (error) {
+  .cover h1 { font-size: 40 px, margin: 0   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-  .cover h3 { font-size: 20px, margin: 8px 0 0 0, color: #444   } catch (error) {
+  .cover h3 { font-size: 20 px, margin: 8 px 0 0 0, color: #444   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-  .cover .by { margin-top: 24px, color: #666   } catch (error) {
+  .cover .by { margin-top: 24 px, color: #666   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-  .barcode { margin-top: 24px, height: 64px   } catch (error) {
+  .barcode { margin-top: 24 px, height: 64 px   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-  .quote { border-left: 4px solid #222, padding-left: 12px, margin: 16px 0, color: #333   } catch (error) {
+  .quote { border-left: 4 px solid #222, padding-left: 12 px, margin: 16 px 0, color: #333   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-  .quote cite { display: block, margin-top:6px, color:#666, font-style: normal   } catch (error) {
+  .quote cite { display: block, margin-top:6 px, color:#666, font-style: normal   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   .chapter { break-before: page   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-  .chapter h2 { font-size: 28px, margin: 0 0 12px 0   } catch (error) {
+  .chapter h2 { font-size: 28 px, margin: 0 0 12 px 0   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-  .content p { line-height: 1.6, margin: 0 0 12px 0, white-space: pre-wrap   } catch (error) {
+  .content p { line-height: 1.6, margin: 0 0 12 px 0, white-space: pre-wrap   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-  .visual { break-inside: avoid, margin: 12px 0   } catch (error) {
+  .visual { break-inside: avoid, margin: 12 px 0   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   .visual img { max-width: 100%, height: auto   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 </style></$1>
 <body>
-<section class="cover">"
+<section class=">"
 <div>${escapeHtml(meta.publisher |'')}</div>'
 <h1>${escapeHtml(meta.title)}</h1>
 <h3>${escapeHtml(meta.subtitle |'')}</h3>'
-<div class="by">By ${escapeHtml(meta.author)}</div>"
+<div class=">By ${escapeHtml(meta.author)}</div>"
     ${barcode}
   </section>
   ${quotesHtml}
@@ -252,39 +225,34 @@ function paragraphize(text: string): string {if (!text) return '''
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   ${chapterHtml  } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   ${visualsHtml  } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 </body></$1>`
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-
 function paragraphize(text: string): string {
   // TODO: Add properties
 }
@@ -294,23 +262,22 @@ function paragraphize(text: string): string {
     .replace(/&/g, '&amp,')'
     .replace(/</g, '<')'
     .replace(/>/g, '>')'
-    .replace(/"/g, '"')'"
+    .replace(/"')'"
     .replace(/'/g, '&#039,')'
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 }
 import type { BookProject } from '../book/bookTypes';';';
 export function buildPrintableHtml(project: BookProject): string {;
 const { meta, chapters, visuals } = project;
 const quotesHtml = visuals.quoteCallouts
-    .map((q) => `<blockquote class="quote">"
+    .map((q) => `<blockquote class=">"
 <p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : '}</blockquote>`)''
     .join('\n');';
 const chapterHtml = chapters
@@ -318,9 +285,9 @@ const chapterHtml = chapters
   // TODO: Add parameters
 )
       (c) => `
-      <section class="chapter">"
+      <section class=">"
 <h2>${escapeHtml(c.title)}</h2>
-<div class="content">${paragraphize(c.content)}</div></section>"
+<div class=">${paragraphize(c.content)}</div></section>"
     `,
     )
     .join('\n\n');';
@@ -333,37 +300,37 @@ const visualsHtml = [
     ...visuals.daoVoteCharts,
     ...visuals.uiScreens,
   ]
-    .map((src) => `<figure class="visual">"
-<img src="${src}" /></figure>`) // base64 ok"
+    .map((src) => `<figure class=">"
+<img src=" /></figure>`) // base64 ok"
     .join('\n');';
-const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '''"
+const barcode = meta.isbn ? `<img class=" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}"
   return `<!doctype html>
 <html>
 <head>
-<meta charset="utf-8" />"
+<meta charset="utf-8"
 <title>${escapeHtml(meta.title)}</title>
 <style>
-  @page { margin: 1in; }
+  @page { margin: 1 in; }
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif; color: #111; }'
-  .cover { break-after: page; display: flex; flex-direction: column; justify-content: center; height: 90vh; }
-  .cover h1 { font-size: 40px; margin: 0; }
-  .cover h3 { font-size: 20px; margin: 8px 0 0 0; color: #444; }
-  .cover .by { margin-top: 24px; color: #666; }
-  .barcode { margin-top: 24px; height: 64px; }
-  .quote { border-left: 4px solid #222; padding-left: 12px; margin: 16px 0; color: #333; }
-  .quote cite { display:block; margin-top:6px; color:#666; font-style: normal; }
+  .cover { break-after: page; display: flex; flex-direction: column; justify-content: center; height: 90 vh; }
+  .cover h1 { font-size: 40 px; margin: 0; }
+  .cover h3 { font-size: 20 px; margin: 8 px 0 0 0; color: #444; }
+  .cover .by { margin-top: 24 px; color: #666; }
+  .barcode { margin-top: 24 px; height: 64 px; }
+  .quote { border-left: 4 px solid #222; padding-left: 12 px; margin: 16 px 0; color: #333; }
+  .quote cite { display:block; margin-top:6 px; color:#666; font-style: normal; }
   .chapter { break-before: page; }
-  .chapter h2 { font-size: 28px; margin: 0 0 12px 0; }
-  .content p { line-height: 1.6; margin: 0 0 12px 0; white-space: pre-wrap; }
-  .visual { break-inside: avoid; margin: 12px 0; }
+  .chapter h2 { font-size: 28 px; margin: 0 0 12 px 0; }
+  .content p { line-height: 1.6; margin: 0 0 12 px 0; white-space: pre-wrap; }
+  .visual { break-inside: avoid; margin: 12 px 0; }
   .visual img { max-width: 100%; height: auto; }
 </style></head>
 <body>
-<section class="cover">"
+<section class="cover"
 <div>${escapeHtml(meta.publisher || '')}</div>'
 <h1>${escapeHtml(meta.title)}</h1>
 <h3>${escapeHtml(meta.subtitle || '')}</h3>'
-<div class="by">By ${escapeHtml(meta.author)}</div>"
+<div class="by"
     ${barcode}
   </section>
   ${quotesHtml}
@@ -393,4 +360,3 @@ function escapeHtml(s: string): string {
     .replace(/>/g, '&gt;')'
     .replace(/"/g, '&quot;')'"
     .replace(/'/g, '&#039;')'
-}

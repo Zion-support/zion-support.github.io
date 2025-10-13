@@ -60,8 +60,6 @@ const sectionDivReplacement = (match, sectionAttrs) => {
     console.error(`Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 function findTsxFiles(dir) {;
 const files = [];
 const items = fs.readdirSync(dir)
@@ -73,8 +71,6 @@ const stat = fs.statSync(fullPath)
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {'
       files.push(fullPath)
     }
-  }
-
   return files
 }
 

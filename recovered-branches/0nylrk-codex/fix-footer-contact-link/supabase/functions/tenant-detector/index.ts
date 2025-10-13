@@ -120,7 +120,6 @@ const subdomainResult = await supabase
 }
             tenantInfo = subdomainResult.data as TenantInfo
           }
-        }
       } else if (data) {
   // TODO: Add properties
 }
@@ -128,7 +127,6 @@ const subdomainResult = await supabase
 }
         tenantInfo = data as TenantInfo
       }
-    }
     return new Response(
   // TODO: Add parameters
 )

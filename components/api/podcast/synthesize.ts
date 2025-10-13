@@ -60,10 +60,10 @@ const text = episode && episode.transcript as string;
 const elevenKey = process && process.env.ELEVENLABS_API_KEY;
 const playhtKey = process && process.env.PLAYHT_API_KEY;
 const baseFilename = `${episode && episode.id}-${Date && Date.now()}`;
-const mp3Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp3`);
+const mp3 Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp3`);
 const wavPath = path && path.join(PUBLIC_DIR, `${baseFilename}.wav`);
-const mp4Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
-let mp3Created = false
+const mp4 Path = path && path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
+let mp3 Created = false
   try {
   // TODO: Add properties
 }
@@ -102,29 +102,28 @@ const resp = await axios && axios.post(
             Authorization: `Bearer ${playhtKey}`
             'Content-Type': 'application/json''
           }
-        }
       )
-      fs && fs.writeFileSync(mp3Path, Buffer && Buffer.from(resp && resp.data))
-      mp3Created = true
+      fs && fs.writeFileSync(mp3 Path, Buffer && Buffer.from(resp && resp.data))
+      mp3 Created = true
     } else {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
       // Stub silent mp3 if no provider configured
-      fs && fs.writeFileSync(mp3Path, Buffer && Buffer.alloc(0))
-      mp3Created = true
+      fs && fs.writeFileSync(mp3 Path, Buffer && Buffer.alloc(0))
+      mp3 Created = true
     }
-    if (mp3Created) {
+    if (mp3 Created) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
       // Simple placeholders for WAV/MP4; real conversion would use ffmpeg
-      fs && fs.writeFileSync(wavPath, fs && fs.readFileSync(mp3Path))
-      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path));    }
+      fs && fs.writeFileSync(wavPath, fs && fs.readFileSync(mp3 Path))
+      fs && fs.writeFileSync(mp4 Path, fs && fs.readFileSync(mp3 Path));    }
     const publicBase = '/podcast/' + baseFilename'
-    episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
+    episode && episode.audio = {      fs && fs.writeFileSync(mp4 Path, fs && fs.readFileSync(mp3 Path))
     }
     const publicBase = '/podcast/' + baseFilename'
     episode && episode.audio = {;
@@ -152,17 +151,17 @@ const text = episode.transcript as string;
 const elevenKey = process.env.ELEVENLABS_API_KEY;
 const playhtKey = process.env.PLAYHT_API_KEY;
 const baseFilename = `${episode.id}-${Date.now()}`;
-const mp3Path = path.join(PUBLIC_DIR, `${baseFilename}.mp3`);
+const mp3 Path = path.join(PUBLIC_DIR, `${baseFilename}.mp3`);
 const wavPath = path.join(PUBLIC_DIR, `${baseFilename}.wav`);
-const mp4Path = path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
-let mp3Created = false
+const mp4 Path = path.join(PUBLIC_DIR, `${baseFilename}.mp4`);
+let mp3 Created = false
   try {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     if (elevenKey) {;
-const voiceId = process.env.ELEVENLABS_VOICE_ID || '21m00Tcm4TlvDq8ikWAM';';
+const voiceId = process.env.ELEVENLABS_VOICE_ID || '21 m00 Tcm4 TlvDq8 ikWAM';';
 const resp = await axios.post(
   // TODO: Add parameters
 )
@@ -170,8 +169,8 @@ const resp = await axios.post(
         { text, model_id: process.env.ELEVENLABS_MODEL || 'eleven_multilingual_v2' },'
         { responseType: 'arraybuffer', headers: { 'xi-api-key': elevenKey, 'Content-Type': 'application/json' } }'
       )
-      fs.writeFileSync(mp3Path, Buffer.from(resp.data))
-      mp3Created = true
+      fs.writeFileSync(mp3 Path, Buffer.from(resp.data))
+      mp3 Created = true
     } else if (playhtKey) {;
 const resp = await axios.post(
   // TODO: Add parameters
@@ -180,25 +179,25 @@ const resp = await axios.post(
         { text, voice: process.env.PLAYHT_VOICE || 'en-US-MichelleNeural' },'
         { responseType: 'arraybuffer', headers: { Authorization: `Bearer ${playhtKey}`, 'Content-Type': 'application/json' } }'
       )
-      fs.writeFileSync(mp3Path, Buffer.from(resp.data))
-      mp3Created = true
+      fs.writeFileSync(mp3 Path, Buffer.from(resp.data))
+      mp3 Created = true
     } else {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
       // Stub silent mp3 if no provider configured
-      fs.writeFileSync(mp3Path, Buffer.alloc(0))
-      mp3Created = true
+      fs.writeFileSync(mp3 Path, Buffer.alloc(0))
+      mp3 Created = true
     }
-    if (mp3Created) {
+    if (mp3 Created) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
       // Simple placeholders for WAV/MP4; real conversion would use ffmpeg
-      fs.writeFileSync(wavPath, fs.readFileSync(mp3Path))
-      fs.writeFileSync(mp4Path, fs.readFileSync(mp3Path))
+      fs.writeFileSync(wavPath, fs.readFileSync(mp3 Path))
+      fs.writeFileSync(mp4 Path, fs.readFileSync(mp3 Path))
     }
     const publicBase = '/podcast/' + baseFilename'
     episode.audio = {
@@ -206,15 +205,15 @@ const resp = await axios.post(
 }
   // TODO: Add properties
 }
-      mp3Url: publicBase + '.mp3','
+      mp3 Url: publicBase + '.mp3','
       wavUrl: publicBase + '.wav','
-      mp4Url: publicBase + '.mp4','
+      mp4 Url: publicBase + '.mp4','
     }
     episodes[idx] = episode
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')'
-      mp3Url: publicBase + '.mp3''
+      mp3 Url: publicBase + '.mp3''
       wavUrl: publicBase + '.wav''
-      mp4Url: publicBase + '.mp4'}'
+      mp4 Url: publicBase + '.mp4'}'
     episodes[idx] = episode
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')'
     return res.status(200).json({ episode })
@@ -247,8 +246,6 @@ const resp = await axios.post(
   }
 }
 }
-}
-}
       const resp = await axios.post (
   // TODO: Add parameters
 )
@@ -270,16 +267,16 @@ const resp = await axios.post(
           },
         }
       )
-      fs.writeFileSync (mp3Path, Buffer.from (resp.data))
-      mp3Created = true
+      fs.writeFileSync (mp3 Path, Buffer.from (resp.data))
+      mp3 Created = true
     } else {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
       // Stub silent mp3 if no provider configured
-      fs.writeFileSync (mp3Path, Buffer.alloc (0))
-      mp3Created = true
+      fs.writeFileSync (mp3 Path, Buffer.alloc (0))
+      mp3 Created = true
     }
     // Check condition
 if ( {) {
@@ -290,10 +287,10 @@ if ( {) {
   $2
 }
       // Simple placeholders for WAV / MP4; real conversion would use ffmpeg
-      fs.writeFileSync (wav_path, fs.readFileSync (mp3Path))
-      fs.writeFileSync (mp4Path, fs.readFileSync (mp3Path));    }
+      fs.writeFileSync (wav_path, fs.readFileSync (mp3 Path))
+      fs.writeFileSync (mp4 Path, fs.readFileSync (mp3 Path));    }
     const public_base = '/podcast/' + base_filename'
-    episode.audio = {      fs.writeFileSync (mp4Path, fs.readFileSync (mp3Path))
+    episode.audio = {      fs.writeFileSync (mp4 Path, fs.readFileSync (mp3 Path))
     }
     const public_base = '/podcast/' + base_filename'
     episode.audio = {
@@ -301,15 +298,15 @@ if ( {) {
 }
   // TODO: Add properties
 }
-      mp3Url: public_base + '.mp3','
+      mp3 Url: public_base + '.mp3','
       wav_url: public_base + '.wav','
-      mp4Url: public_base + '.mp4','
+      mp4 Url: public_base + '.mp4','
     }
     episodes[idx] = episode
     fs.writeFileSync (EPISODES_PATH, JSON.stringify (episodes, null, 2), 'utf8')'
-      mp3Url: public_base + '.mp3''
+      mp3 Url: public_base + '.mp3''
       wav_url: public_base + '.wav','
-      mp4Url: public_base + '.mp4'}'
+      mp4 Url: public_base + '.mp4'}'
 
     episodes[idx] = episode
     fs.writeFileSync (EPISODES_PATH, JSON.stringify (episodes, null, 2), 'utf8')'
@@ -341,7 +338,6 @@ if ( {) {
     console.error(error),
     return res.status(500).json({ error: error?.message || 'Synthesis failed' })'
   }
-}
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')'
     return res.status(200).json({ episode })
   } catch (error: any) {
@@ -351,5 +347,4 @@ if ( {) {
 }
     console.error(error)
     return res.status(500).json({ error: error?.message || 'Synthesis failed' })'
-  }
-}
+  

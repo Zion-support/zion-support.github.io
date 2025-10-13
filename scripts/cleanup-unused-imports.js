@@ -27,40 +27,10 @@ const consoleRegex = /^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm
   }
 
     // Remove unused imports (basic cleanup);
-const importRegex = /^import\s+{[^}]*}\s+from\s+['"][^'"]+['"];?\s*$/gm;";'";
-const imports = content.match(importRegex) || [];
-imports.forEach(importStatement => {)
-      // Extract imported items;);
-const match = importStatement.match(/import\s+{([^}]+)}\s+from/);
-      if (match) {;
-const importedItems = match[1].split(',').map(item => item.trim());';
-const unusedItems = importedItems.filter(item => {);
-const itemName = item.split(' as ')[0].trim()'
-          // Check if the imported item is actually used in the file;
-const usageRegex = new RegExp(`\\b${itemName}\\b`, 'g');';
-const matches = content.match(usageRegex) || []
-          return matches.length <= 1; // Only appears in the import statement
-        })
-        if (unusedItems.length === importedItems.length) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    // Remove entire import if all items are unused
-          content = content.replace(importStatement, '')'
-          modified = true
-  } else if (unusedItems.length > 0) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          // Remove unused items from import;
-const usedItems = importedItems.filter(item => !unusedItems.includes(item));
-const newImport = `import { ${usedItems.join(', ')} } from ${importStatement.match(/from\s+['"][^'"]+['"]/)[0]}`";'"
+const importRegex = /^import\s+{[^}]*}\s+from\s+['"][^'"];?\s*$/gm;";'"][^'"]+['";'"
           content = content.replace(importStatement, newImport)
           modified = true
         }
-      }
     })
     if (modified) {
   // TODO: Add properties
@@ -80,8 +50,6 @@ const newImport = `import { ${usedItems.join(', ')} } from ${importStatement.mat
     console.error(`❌ Error cleaning ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;';
 let files = []
@@ -106,7 +74,6 @@ const stat = fs.statSync(fullPath)
 }
     files.push(fullPath)
   }
-    }
   } catch (error) {
   // TODO: Add properties
 }

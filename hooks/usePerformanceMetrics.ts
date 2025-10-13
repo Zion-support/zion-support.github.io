@@ -129,4 +129,3 @@ const entries = list.getEntries();
   }, []);
 
   return { metrics, isSupported };
-}

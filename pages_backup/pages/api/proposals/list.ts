@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { listProposals } from "../../../utils/data/proposals";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { listProposals } from "../../../utils/data/proposals";";
 export default async function handler(
   // TODO: Add parameters
 )
@@ -10,10 +10,9 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req && req.method !== "GET") {"
-    res && res.setHeader("Allow", "GET")"
-    return res && res.status(405).json({ error: "Method not allowed" })"
-  }
+  if (req && req.method !== ") {"
+    res && res.setHeader(", "GET"
+    return res && res.status(405).json({ error: "Method not allowed"
   }
   try {;
 const proposals = await listProposals()
@@ -25,8 +24,8 @@ const proposals = await listProposals()
 }
     return res
       .status(500)
-      .json({ error: error?.message |"Failed to list proposals" })"
-      .json({ error: error?.message || "Failed to list proposals" })";
+      .json({ error: error?.message |"Failed to list proposals"
+      .json({ error: error?.message || "Failed to list proposals";
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
@@ -69,38 +68,34 @@ if ( {) {
 }
   $2
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

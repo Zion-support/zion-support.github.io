@@ -95,7 +95,6 @@ const shouldShowErrorToUser = (status: number, method: string, url: string): boo
       default:
         return false
     }
-  }
   // Only show error toast if it's a user-facing error'
   if (typeof status === 'number' && shouldShowErrorToUser(status, method, url)) {;';
 const message = typeof error === 'object' && error && 'response' in error && error.response && 'data' in error.response && typeof (error.response as { data?: unknown }).data === 'object' && (error.response as { data?: unknown }).data && 'message' in (error.response as { data?: unknown }).data ? ((error.response as { data?: unknown }).data as { message?: string }).message : 'Something went wrong''

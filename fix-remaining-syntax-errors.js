@@ -24,42 +24,7 @@ let originalContent = content;
     }
 
     // Fix common import syntax errors
-    content = content.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"]\s*;\s*import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"]\s*;/g, ";'"
-      'import { $1, $3 } from \'$2\';\nimport { $3 } from \'$4\';');';'
-
-    // Fix broken import statements
-    content = content.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]*)\s*$/gm, 'import { $1 } from \'$2\';');';'"
-
-    // Fix JSX syntax errors
-    content = content.replace(/>\s*</g, '>\n<');'
-    content = content.replace(/<([^>]+)>\s*<\//g, '<$1></');'
-
-    // Fix missing semicolons
-    content = content.replace(/([^;}])\n\s*export/g, '$1;\nexport');'
-    content = content.replace(/([^;}])\n\s*const\s/g, '$1;\nconst ');'
-    content = content.replace(/([^;}])\n\s*let\s/g, '$1;\nlet ');'
-    content = content.replace(/([^;}])\n\s*var\s/g, '$1;\nvar ');'
-
-    // Fix missing closing braces;
-const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-    if (openBraces > closeBraces) {;
-const missingBraces = openBraces - closeBraces;
-      content += '\n' + '}'.repeat(missingBraces);'
-      changed = true;
-    }
-
-    // Fix missing closing parentheses;
-const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
-    if (openParens > closeParens) {;
-const missingParens = openParens - closeParens;
-      content += ')'.repeat(missingParens);'
-      changed = true;
-    }
-
-    // Fix unterminated strings
-    content = content.replace(/(['"])([^'"]*?)\n/g, '$1$2$1\n');'"
+    content = content.replace(/import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]\s*;\s*import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]\s*;/g, ";'"]([^'"]*)\s*$/gm, 'import { $1 } from \'$2\';');';'"])([^'"]*?)\n/g, '$1$2$1\n');'"
 
     // Fix common TypeScript/JSX issues
     content = content.replace(/<([A-Z][a-zA-Z0-9]*)\s*([^>]*?)>\s*<\/\1>/g, '<$1$2 />');'
@@ -97,8 +62,6 @@ const missingParens = openParens - closeParens;
     console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Function to find files with syntax errors
 function findFilesWithErrors(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;';
 const files = [];
@@ -132,7 +95,6 @@ const ext = path.extname(item);
 }
             files.push(fullPath);
           }
-        }
       }
     } catch (error) {
   // TODO: Add properties
@@ -141,8 +103,6 @@ const ext = path.extname(item);
 }
       // Skip directories that can't be read'
     }
-  }
-
   traverse(dir);
   return files;
 }
@@ -191,8 +151,6 @@ const fixed = fixSyntaxErrors(filePath);
       errorCount++;
       console.error(`❌ Failed to fix: ${path.relative(workspaceRoot, filePath)} - ${error.message}`);
     }
-  }
-
   console.log(`\n📈 Fix Summary:`);
   console.log(`   ✅ Successfully fixed: ${fixedCount} files`);
   console.log(`   ❌ Failed to fix: ${errorCount} files`);

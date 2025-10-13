@@ -33,15 +33,15 @@ const { data, error } = await supabase
       if (error) throw error
       // Create activity record
       await recordMilestoneActivity(data.id, 'created', null, 'pending', 'Milestone created')'
-      toast.success("Milestone created successfully")"
+      toast.success("Milestone created successfully"
       return data
     } catch (err: any) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      console.error("Error creating milestone:", err)"
-      toast.error("Failed to create milestone: " + err.message)"
+      console.error("Error creating milestone:"
+      toast.error("Failed to create milestone: "
       return null
     } finally {
   // TODO: Add properties
@@ -50,7 +50,6 @@ const { data, error } = await supabase
 }
       setIsSubmitting(false)
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -58,5 +57,4 @@ const { data, error } = await supabase
 }
     createMilestone,
     isSubmitting
-  }
-}
+  

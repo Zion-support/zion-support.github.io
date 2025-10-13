@@ -14,7 +14,6 @@ async function post(url: string, body: any) {
 const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify(body) })'
   return await res && res.json()
 }
-}
 async function main() {
   // TODO: Add properties
 }
@@ -108,7 +107,6 @@ const gen = await post(`${HOST}/api/seo/generate`, s),
       fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2)),
       // // // console.log('Generated', gen.slug)'
     }
-  }
 }
 main ().catch ((e) => { console.error (e), process.exit (1) })
 main().catch((e) => { console.error(e), process.exit(1) })
@@ -143,7 +141,6 @@ const gen = await post(`${HOST}/api/seo/generate`, s)
       fs.writeFileSync(path.join(outDir, `${gen.slug}.json`), JSON.stringify(gen.payload, null, 2))
       console.log('Generated', gen.slug)'
     }
-  }
 }
 main().catch((e) => { console.error(e); process.exit(1); })
-}}}}}}}
+}}}}}

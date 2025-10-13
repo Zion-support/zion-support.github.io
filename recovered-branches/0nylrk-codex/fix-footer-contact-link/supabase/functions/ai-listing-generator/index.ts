@@ -1,20 +1,19 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";";
-import { Configuration, OpenAIApi } from "npm:openai@4.28.0";";";
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { Configuration, OpenAIApi } from "npm:openai@4.28.0";";
 const corsHeaders = {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  "Access-Control-Allow-Origin": "*","
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type","
+  ": "*"
+  "Access-Control-Allow-Headers"authorization, x-client-info, apikey, content-type"}"Access-Control-Allow-Headers": ","
 }
 serve(async (req) => {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  if (req.method === "OPTIONS") {"
+  if (req.method === ") {"
     return new Response(null, { headers: corsHeaders })
   }
   try {;
@@ -32,7 +31,7 @@ const { title, category, keyFeatures, targetAudience } = await req.json()
 }
   // TODO: Add properties
 }
-          error: "Missing required fields: title and category are required" "
+          error: " "
         }),
         {
   // TODO: Add properties
@@ -40,7 +39,7 @@ const { title, category, keyFeatures, targetAudience } = await req.json()
   // TODO: Add properties
 }
           status: 400,
-          headers: { ...corsHeaders, "Content-Type": "application/json" } "
+          headers: { ...corsHeaders, ": "application/json"
         }
       )
     }
@@ -56,8 +55,8 @@ const openai = new OpenAIApi(configuration);
 const prompt = `Generate an optimized marketplace listing for the following product:
 Title: ${title}
 Category: ${category}
-Key Features: ${keyFeatures || "Not specified"}"
-Target Audience: ${targetAudience || "General users"}"
+Key Features: ${keyFeatures || "Not specified"
+Target Audience: ${targetAudience || "General users"
 Please create:
 1. A compelling, SEO-friendly description (100-150 words) that highlights benefits and use cases
 2. A list of 5-7 relevant tags for the listing
@@ -69,18 +68,17 @@ Format the response as a JSON object with the following structure:
 }
   // TODO: Add properties
 }
-  "description": "The optimized description here...","
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],"
-  "suggestedPrice": { "min": number, "max": number },"
-  "keyPoints": ["point1", "point2", "point3"]"
+  "description"The optimized description here...","tags": [", "tag2"tag3", ", "tag5"
+  "suggestedPrice"min": number, ": number },"
+  ": ["point1"point2", "]"
 }`;
 const completion = await openai.chat.completions.create({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      model: "gpt-4o-mini","
-      messages: [{ role: "user", content: prompt }],"
+      model: ","
+      messages: [{ role: ", content: prompt }],"
       temperature: 0.7})
       temperature: 0.7,
     });
@@ -103,20 +101,19 @@ const jsonString = jsonMatch[1].trim()
 }
   // TODO: Add properties
 }
-      console.error("Failed to parse AI response as JSON:", error)"
-      console.log("Raw response:", responseText)"
+      console.error(", error)"
+      console.log(", responseText)"
       // Provide a fallback structured response
       parsedResponse = {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        description: "An error occurred while generating the optimized description. Please try again.","
+        description: ","
         tags: [],
         suggestedPrice: { min: 0, max: 0 },
         keyPoints: []
       }
-    }
     return new Response(
   // TODO: Add parameters
 )
@@ -132,7 +129,7 @@ const jsonString = jsonMatch[1].trim()
 }
   // TODO: Add properties
 }
-        headers: { ...corsHeaders, "Content-Type": "application/json" } "
+        headers: { ...corsHeaders, ": "application/json"
       }
     )
   } catch (error) {
@@ -140,7 +137,7 @@ const jsonString = jsonMatch[1].trim()
 }
   // TODO: Add properties
 }
-    console.error("Error in AI listing generator:", error)"
+    console.error("Error in AI listing generator:"
     return new Response(
   // TODO: Add parameters
 )
@@ -149,7 +146,7 @@ const jsonString = jsonMatch[1].trim()
 }
   // TODO: Add properties
 }
-        error: "Failed to generate optimized listing content","
+        error: "Failed to generate optimized listing content"
         details: error.message
       }),
       {
@@ -158,7 +155,7 @@ const jsonString = jsonMatch[1].trim()
   // TODO: Add properties
 }
         status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" } "
+        headers: { ...corsHeaders, "Content-Type"application/json" } "
       }
     )
   }

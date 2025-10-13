@@ -1,8 +1,8 @@
-import { useState } from "react";";
-import { supabase } from "@/integrations/supabase/client";";
-import { toast } from "@/hooks/use-toast";";
-import type { UserProfile } from "@/types/auth";";
-import { cleanupAuthState } from "@/utils/authUtils";";";
+import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import type { UserProfile } from "@/types/auth";
+import { cleanupAuthState } from "@/utils/authUtils";";
 export const useEmailAuth = (
   // TODO: Add parameters
 )
@@ -41,29 +41,28 @@ const { data, error } = await supabase.auth.signInWithPassword({
 }
   // TODO: Add properties
 }
-          title: "Login failed","
+          title: ","
           description: error.message,
-          variant: "destructive"})"
-          variant: "destructive","
+          variant: "})"
+          variant: ","
         })
         return { error }
-      }
       return { data }
     } catch (error: any) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      console.error("Login error:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Login failed","
-        description: error.message || "An unexpected error occurred","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: error.message || ","
+        variant: "})"
+        variant: ","
       })
       return { error }
     } finally {
@@ -73,7 +72,6 @@ const { data, error } = await supabase.auth.signInWithPassword({
 }
       setIsLoading(false)
     }
-  }
   const signup = async (email: string, password: string, userData?: any) => {
   // TODO: Add properties
 }
@@ -100,7 +98,7 @@ const { data, error } = await supabase.auth.signInWithPassword({
   // TODO: Add properties
 }
         // Continue even if signout fails
-        console.log("Sign out before signup failed:", err)"
+        console.log(", err)"
       }
       // Create a proper options object;
 const { data, error } = await supabase.auth.signUp({
@@ -121,7 +119,7 @@ const { data, error } = await supabase.auth.signUp({
 }
   // TODO: Add properties
 }
-            display_name: userData?.displayName ?? userData?.name ?? """
+            display_name: userData?.displayName ?? userData?.name ?? ""
           }}})
           },
         },
@@ -136,21 +134,20 @@ const { data, error } = await supabase.auth.signUp({
 }
   // TODO: Add properties
 }
-          title: "Signup failed","
+          title: ","
           description: error.message,
-          variant: "destructive"})"
-          variant: "destructive","
+          variant: "})"
+          variant: ","
         })
         return { error }
-      }
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Signup successful","
-        description: "Check your email for verification instructions."})"
-        description: "Check your email for verification instructions.","
+        title: ","
+        description: "})"
+        description: ","
       })
       return { data }
     } catch (error: any) {
@@ -158,16 +155,16 @@ const { data, error } = await supabase.auth.signUp({
 }
   // TODO: Add properties
 }
-      console.error("Signup error:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Signup failed","
-        description: error.message || "An unexpected error occurred","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: error.message || ","
+        variant: "})"
+        variant: ","
       })
       return { error }
     } finally {
@@ -177,7 +174,6 @@ const { data, error } = await supabase.auth.signUp({
 }
       setIsLoading(false)
     }
-  }
   const resetPassword = async (email: string) => {
   // TODO: Add properties
 }
@@ -207,21 +203,20 @@ const { error } = await supabase.auth.resetPasswordForEmail(email, {
 }
   // TODO: Add properties
 }
-          title: "Password reset failed","
+          title: ","
           description: error.message,
-          variant: "destructive"})"
-          variant: "destructive","
+          variant: "})"
+          variant: ","
         })
         return { error }
-      }
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Password reset email sent","
-        description: "Check your email for password reset instructions."})"
-        description: "Check your email for password reset instructions.","
+        title: ","
+        description: "})"
+        description: ","
       })
       return {}
     } catch (error: any) {
@@ -229,16 +224,16 @@ const { error } = await supabase.auth.resetPasswordForEmail(email, {
 }
   // TODO: Add properties
 }
-      console.error("Password reset error:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Password reset failed","
-        description: error.message || "An unexpected error occurred","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: error.message || ","
+        variant: "})"
+        variant: ","
       })
       return { error }
     } finally {
@@ -248,6 +243,4 @@ const { error } = await supabase.auth.resetPasswordForEmail(email, {
 }
       setIsLoading(false)
     }
-  }
-  return { login, signup, resetPassword }
-}
+  return { login, signup, resetPassword 

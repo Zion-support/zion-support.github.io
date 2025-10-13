@@ -13,8 +13,7 @@
 }
   // TODO: Add properties
 }
-        animationFrame = requestAnimationFrame(animate);}}
-
+        animationFrame = requestAnimationFrame(animate);}
     animationFrame = requestAnimationFrame(animate);
 
     return () => {if (animationFrame) {
@@ -22,7 +21,7 @@
 }
   // TODO: Add properties
 }
-        cancelAnimationFrame(animationFrame);}}
+        cancelAnimationFrame(animationFrame);}
   }, [end, duration]);
 
   return(<span className={className)}>{prefix</span>}{count.toLocaleString()}{suffix} </span>

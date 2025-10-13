@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'auto-discovery-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'auto-discovery-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'auto-discovery-runner',' source: event.source || 'unknown', discovery: {' status: 'scanning', itemsFound: 0,'
         lastScan: new Date().toISOString() } }) } return result; } catch (error) {

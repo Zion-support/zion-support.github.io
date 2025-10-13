@@ -27,7 +27,6 @@ export function formatDate(date: Date | string | undefined): string {
     console.error('Error formatting date:', e)'
     return '-''
   }
-}
 /**
  * Stores referral code in localStorage when detected in URL
  */;
@@ -100,5 +99,4 @@ const response = await fetch('/api/track-referral', {'
   // TODO: Add properties
 }
     console.error('Error tracking referral:', error)'
-  }
-}
+  

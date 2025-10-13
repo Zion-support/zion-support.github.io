@@ -14,7 +14,6 @@ type EventRow = {
   at: string
 },
       } catch {}
-    }
     return rows;
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import fs from 'fs';';
@@ -29,7 +28,6 @@ import { ensureAdminFromApi } from '../../../../utils/auth';'
 }
     return []
   }
-}
 function featureFromPath(page?: string): string {
   // TODO: Add properties
 }
@@ -123,8 +121,6 @@ const funnel_stages = ['VisitAI Prompt UsedPost CreatedMessage Sent'],;';
 const funnel = funnel_stages.map ((stage) => ({ label: stage, value: by_event[stage] || 0 })),
   res.status (200).json ({ pagesMostUsed, events, line, funnel })
 }
-
-}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
@@ -148,7 +144,6 @@ const events = parseLines(start as string, end as string)
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

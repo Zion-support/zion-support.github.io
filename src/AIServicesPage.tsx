@@ -148,53 +148,41 @@ const categories = ['all', ...Array.from(new Set(AI_SERVICES.map(service => serv
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"relative py-20 px-4 sm:px-6 lg:px-8"
+<div className="
 <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center""
-          >
-<h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">"
+            initial={{ opacity: 0, y: 20 }
+            animate={{ opacity: 1, y: 0 }
+            transition={{ duration: 0.6 }
+            className="text-center"text-4 xl md:text-6 xl font-bold text-gray-900 mb-6"
               AI-Powered Services
             </h1>
-<p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">"
+<p className="
               Transform your business with cutting-edge artificial intelligence solutions.
               From chatbots to analytics, we provide the AI tools you need to succeed.
             </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<Button size="lg" className="bg-blue-600 hover:bg-blue-700">"
+<div className="flex flex-col sm:flex-row gap-4 justify-center"lg" className="
                 Get Started
-                <ArrowRight className="ml-2 h-4 w-4" /></Button>"
-<Button size="lg" variant="outline">"
+                <ArrowRight className="ml-2 h-4 w-4"lg" variant=">"
                 View Pricing
               </Button></div>
 </motion.div></div>
 </section>
 
       {/* Search and Filters */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="flex flex-col md:flex-row gap-4 mb-8">"
-<div className="flex-1">"
-<div className="relative">"
-<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4" />"
+      <section className="
+<div className="max-w-7 xl mx-auto"flex flex-col md:flex-row gap-4 mb-8"
+<div className="
+<div className="relative"absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-4 w-4"
 <input
-                  type="text""
-                  placeholder="Search AI services...""
+                  type=""
+                  placeholder=""
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""
+                  className="
                 />
 </div></div>
-<div className="flex gap-2">"
-<select
-                value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500""
+<div className="flex gap-2"px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
               >
                 {categories.map(category => (
   // TODO: Add parameters
@@ -207,84 +195,59 @@ const categories = ['all', ...Array.from(new Set(AI_SERVICES.map(service => serv
 <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500""
+                className="
               >
-<option value="popularity">Sort by Popularity</option>"
-<option value="price">Sort by Price</option>"
-<option value="name">Sort by Name</option></select>"
+<option value="popularity"
+<option value="price"
+<option value="name"
 </div></div>
 </div></section>
 
       {/* Services Grid */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">"
-<div className="max-w-7xl mx-auto">"
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+      <section className="py-12 px-4 sm:px-6 lg:px-8"max-w-7 xl mx-auto"
+<div className="
             {filteredServices.map((service, index) => (
   // TODO: Add parameters
 )
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 20 }
+                animate={{ opacity: 1, y: 0 }
+                transition={{ duration: 0.6, delay: index * 0.1 }
               >
-<Card className="h-full hover:shadow-lg transition-shadow duration-300">"
-<CardHeader>
-<div className="flex items-center justify-between mb-4">"
+<Card className="h-full hover:shadow-lg transition-shadow duration-300"flex items-center justify-between mb-4"
 <div className={`p-3 rounded-lg bg-gradient-to-r ${service.color}`}>
-<service.icon className="h-6 w-6 text-white" /></div>"
+<service.icon className="
                       {service.popular && (
   // TODO: Add parameters
 )
-                        <Badge variant="secondary" className="bg-green-100 text-green-800">"
+                        <Badge variant="secondary"bg-green-100 text-green-800"
                           Popular
                         </Badge>
                       )}
                     </div>
-<CardTitle className="text-xl">{service.name}</CardTitle>"
-<CardDescription className="text-gray-600">"
-                      {service.description}
-                    </CardDescription></CardHeader>
-<CardContent>
-<div className="mb-4">"
-<span className="text-3xl font-bold text-gray-900">{service.price}</span>"
-<span className="text-gray-500">{service.period}</span></div>"
-<ul className="space-y-2 mb-6">"
+<CardTitle className="
+<CardDescription className="text-gray-600"mb-4"
+<span className="
+<span className="text-gray-500"space-y-2 mb-6"
                       {service.features.map((feature, featureIndex) => (
   // TODO: Add parameters
 )
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
-<CheckCircle className="h-4 w-4 text-green-500 mr-2" />"
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-<Button className="w-full" variant="outline">"
+                        <li key={featureIndex} className="
+<CheckCircle className="h-4 w-4 text-green-500 mr-2"w-full"outline"
                       Learn More
-                      <ArrowRight className="ml-2 h-4 w-4" /></Button>"
-</CardContent></Card>
-</motion.div>
-            ))}
-          </div></div>
-</section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">"
-<div className="max-w-4xl mx-auto text-center">"
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-6">"
-            Ready to Transform Your Business with AI?
-          </h2>
-<p className="text-xl text-gray-300 mb-8">"
+                      <ArrowRight className="ml-2 h-4 w-4"py-20 px-4 sm:px-6 lg:px-8 bg-gray-900"
+<div className="
+<h2 className="text-3 xl md:text-4 xl font-bold text-white mb-6"text-xl text-gray-300 mb-8"
             Get started with our AI services today and see the difference artificial intelligence can make.
           </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<Button size="lg" className="bg-blue-600 hover:bg-blue-700">"
+<div className="
+<Button size="lg"bg-blue-600 hover:bg-blue-700"
               Start Your Free Trial
             </Button>
-<Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-gray-900">"
+<Button size=" variant="outline"text-white border-white hover:bg-white hover:text-gray-900"
               Contact Sales
             </Button></div>
 </div></section>
 </div>
   );
-}

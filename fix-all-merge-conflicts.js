@@ -68,8 +68,6 @@ const branchText = branchContent.join('\n')'
 }
             chosenContent = branchContent
           }
-        }
-
         resolvedLines.push(...chosenContent)
         continue
       }
@@ -91,8 +89,6 @@ const branchText = branchContent.join('\n')'
 }
         resolvedLines.push(line)
       }
-    }
-
     // Write resolved content;
 const resolvedContent = resolvedLines.join('\n')'
     fs.writeFileSync(filePath, resolvedContent, 'utf8')'
@@ -105,8 +101,6 @@ const resolvedContent = resolvedLines.join('\n')'
     console.error(`❌ Error resolving conflicts in ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to find all files with merge conflicts
 function findFilesWithConflicts(dir) {;
 const files = []
@@ -130,10 +124,7 @@ const content = fs.readFileSync(fullPath, 'utf8');'
 }
           // Skip files that can't be read'
         }
-      }
     }
-  }
-
   traverse(dir)
   return files
 }
@@ -174,8 +165,6 @@ let failedCount = 0
 }
       failedCount++
     }
-  }
-
   console.log(`\n📊 Resolution Summary:`)
   console.log(`  ✅ Successfully resolved: ${resolvedCount} files`)
   console.log(`  ❌ Failed to resolve: ${failedCount} files`)
@@ -194,4 +183,3 @@ let failedCount = 0
 }
   console.error('❌ Error during merge conflict resolution:', error.message)'
   process.exit(1)
-}

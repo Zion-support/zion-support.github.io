@@ -1,49 +1,14 @@
-import { useState } from "react";";
-import { TALENT_PROFILES } from "@/data/talentData";";
-import { JOB_POSTS } from "@/data/jobsData";";
-import { PROJECTS } from "@/data/projectsData";";";
+import { useState } from "react";
+import { TALENT_PROFILES } from "@/data/talentData";
+import { JOB_POSTS } from "@/data/jobsData";
+import { PROJECTS } from "@/data/projectsData";";
 export interface SearchResult {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
   id: string
-  type: "talent" | "job" | "project""
-  title: string
-  description: string
-}
-interface SearchFilters {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  type?: string | null
-  skills?: string[] | null
-  location?: string | null
-  budget?: { min: number; max: number } | null
-  availability?: string | null
-}
-export function useAISearch() {;
-const [results, setResults] = useState<SearchResult[]>([]);
-const [loading, setLoading] = useState(false);
-const search = async (query: string) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    setLoading(true)
-    try {;
-const response = await fetch(
-  // TODO: Add parameters
-)
-        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search","
-        {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          method: "POST","
-          headers: { "Content-Type": "application/json" },"
+  type: " | "job"project""https://ziontechgroup.functions.supabase.co/functions/v1/ai-search","POST","Content-Type": " },"
           body: JSON.stringify({ query })}
           body: JSON.stringify({ query }),
         }
@@ -61,7 +26,7 @@ const matchSkill = (skills: string[] | undefined) => {
           filters.skills!.some((f) => s.toLowerCase().includes(f.toLowerCase()))
         )
       }
-      if (!filters.type || filters.type === "talent" || filters.type === "all") {"
+      if (!filters.type || filters.type === " || filters.type === "all"
         TALENT_PROFILES.forEach((t) => {
   // TODO: Add properties
 }
@@ -69,26 +34,16 @@ const matchSkill = (skills: string[] | undefined) => {
 }
           if (filters.location && !t.location?.toLowerCase().includes(filters.location.toLowerCase())) return
           if (!matchSkill(t.skills)) return
-          items.push({ id: t.id, type: "talent", title: t.full_name, description: t.professional_title })"
+          items.push({ id: t.id, type: "talent"
         })
       }
-      if (!filters.type || filters.type === "job" || filters.type === "all") {"
-        JOB_POSTS.forEach((j) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          if (!matchSkill(j.skills)) return
-          items.push({ id: j.id, type: "job", title: j.title, description: j.description })"
-        })
-      }
-      if (!filters.type || filters.type === "project" || filters.type === "all") {"
+      if (!filters.type || filters.type === "job"all") {"job", title: j.title, description: j.description })"project" || filters.type === ") {"
         PROJECTS.forEach((p) => {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-          items.push({ id: p.id, type: "project", title: p.job?.title || "Project", description: p.scope_summary })"
+          items.push({ id: p.id, type: ", title: p.job?.title || "Project"
         })
       }
       setResults(items)
@@ -97,7 +52,7 @@ const matchSkill = (skills: string[] | undefined) => {
 }
   // TODO: Add properties
 }
-      console.error("search error", err)"
+      console.error("search error"
       setResults([])
     } finally {
   // TODO: Add properties
@@ -106,6 +61,4 @@ const matchSkill = (skills: string[] | undefined) => {
 }
       setLoading(false)
     }
-  }
-  return { results, loading, search }
-}
+  return { results, loading, search 

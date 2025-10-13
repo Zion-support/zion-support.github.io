@@ -8,4 +8,3 @@ export const env-polyfill = {
   // TODO: Add properties
 }
   // TODO: Implement utility functions
-}

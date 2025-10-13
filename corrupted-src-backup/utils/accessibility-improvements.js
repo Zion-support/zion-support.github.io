@@ -7,7 +7,7 @@ export const accessibilityUtils = {
   // Focus management
   trapFocus: element => {,;
 const focusableElements = element.querySelectorAll()
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])''"
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"
     );
 const _firstElement = focusableElements[0];
 const _lastElement = focusableElements[focusableElements.length - 1]
@@ -26,11 +26,8 @@ const _lastElement = focusableElements[focusableElements.length - 1]
             lastElement.focus()
             e.preventDefault();
 export const accessibilityUtils = {/* TODO: Fix JSX expression */}
-          }
         } else {/* TODO: Fix JSX expression */}
-          }
         }
-      }
     })
   },
 
@@ -97,5 +94,4 @@ const [rs, gs, bs] = [r, g, b].map(c => {)
       meetsAA: ratio >= 4.5
       meetsAAA: ratio >= 7,
     return {/* TODO: Fix JSX expression */}
-    }
-  }}
+  

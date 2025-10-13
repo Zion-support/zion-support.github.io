@@ -13,13 +13,13 @@ const run = cmd => execSync(cmd) {stdio: 'inherit'} shell: true,'
     run('node automation/repo-knowledge-graph.cjs || true')'
     run('node automation/repo-radar-metrics.cjs || true')'
     // Commit and push
-    run('git config user.name "zion-bot"')'"
-    run('git config user.email "bot@zion.app"')'"
+    run('git config user.name "zion-bot"
+    run('git config user.email "bot@zion.app"
     run('git add -A')'
     run(
   // TODO: Add parameters
 )
-      'git commit -m "chore(reports): auto-generate reports and indexes [skip ci]" || true')'"
+      'git commit -m "chore(reports): auto-generate reports and indexes [skip ci]"
     run('git push origin main || true')}'
     return {
   // TODO: Add properties
@@ -50,10 +50,9 @@ const run = cmd => execSync(cmd) {/* TODO: Fix JSX expression */}
   } catch (e) {/* TODO: Fix JSX expression */}
       })
     }
-  }
 }
 exports.config = { schedule: '*/5 * * * *' } exports.handler = async function() {' const { execSync } = require('child_process');' const run = (cmd) => execSync(cmd) {stdio: 'inherit'} shell: true,'
-      }); try {// Generate site reports and search indexes' run('node scripts/seo-audit.js || true');' run('node scripts/generate-search-index.js || true');' run('node scripts/ai-trends-radar.js || true'); // Repo intelligence and docs indexing' run('node automation/docs-pages-indexer.cjs || true');' run('node automation/repo-knowledge-graph.cjs || true');' run('node automation/repo-radar-metrics.cjs || true'); // Commit and push' run('git config user.name "zion-bot"');' run('git config user.email "bot@zion.app"');' run('git add -A');' run('git commit -m "chore(reports): auto-generate reports and indexes [skip ci]" || true');' run('git push origin main || true')} ' return { statusCode: 200,'"
+      }); try {// Generate site reports and search indexes' run('node scripts/seo-audit.js || true');' run('node scripts/generate-search-index.js || true');' run('node scripts/ai-trends-radar.js || true'); // Repo intelligence and docs indexing' run('node automation/docs-pages-indexer.cjs || true');' run('node automation/repo-knowledge-graph.cjs || true');' run('node automation/repo-radar-metrics.cjs || true'); // Commit and push' run('git config user.name "zion-bot"bot@zion.app"');' run('git add -A');' run('git commit -m " || true');' run('git push origin main || true')} ' return { statusCode: 200,'"
         body: JSON.stringify({ok: true),
         tool: 'auto-reports-suite' }) } } catch (e) {return { statusCode: 200,'
         body: JSON.stringify({ok: false),
@@ -62,6 +61,4 @@ exports.config = {/* TODO: Fix JSX expression */}
   e: '*/5 * * * *' } exports.handler = async function() {' const { execSync } = require('child_process');' const run = (cmd) => execSync(cmd) {/* TODO: Fix JSX expression */}'
   o: 'inherit'} shel,'
   l: true,
-      }); try {// Generate site reports and search indexes' run('node scripts/seo-audit.js || true');' run('node scripts/generate-search-index.js || true');' run('node scripts/ai-trends-radar.js || true'); // Repo intelligence and docs indexing' run('node automation/docs-pages-indexer.cjs || true');' run('node automation/repo-knowledge-graph.cjs || true');' run('node automation/repo-radar-metrics.cjs || true'); // Commit and push' run('git config user.name "zion-bot"');' run('git config user.email "bot@zion.app"');' run('git add -A');' run('git commit -m "chore(reports): auto-generate reports and indexes [skip ci]" || true');' run('git push origin main || true')} ' return {/* TODO: Fix JSX expression */}'"
-  l: 'auto-reports-suite' }) } } catch (e) {/* TODO: Fix JSX expression */}'
-      }) } } }'"'"
+      }); try {// Generate site reports and search indexes' run('node scripts/seo-audit.js || true');' run('node scripts/generate-search-index.js || true');' run('node scripts/ai-trends-radar.js || true'); // Repo intelligence and docs indexing' run('node automation/docs-pages-indexer.cjs || true');' run('node automation/repo-knowledge-graph.cjs || true');' run('node automation/repo-radar-metrics.cjs || true'); // Commit and push' run('git config user.name "');' run('git config user.email "bot@zion.app"chore(reports): auto-generate reports and indexes [skip ci]" || true');' run('git push origin main || true')} ' return {/* TODO: Fix JSX expression */}'"'"

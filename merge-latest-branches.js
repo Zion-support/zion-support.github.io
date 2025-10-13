@@ -52,7 +52,7 @@ const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 
       console.log(uniqueCommits.split('\n').slice(0, 3).join('\n'))'
       // Try to merge the branch
       console.log(`🔄 Attempting to merge ${branch}...`)
-      execSync(`git merge ${branch} --no-ff -m "feat: Merge enhancements from ${branch}"`, { stdio: 'inherit' })'"
+      execSync(`git merge ${branch} --no-ff -m "feat: Merge enhancements from ${branch}"
       console.log(`✅ Successfully merged ${branch}`)
       mergedCount++
     } catch (error) {
@@ -75,7 +75,6 @@ const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 
 }
     // Ignore abort errors
   }
-    }
   }
 
   console.log(`\n📊 Merge Summary: `),
@@ -92,4 +91,4 @@ const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 
 }
     console.error('❌ Error during merge process:', error.message)'
   process.exit(1)
-  }
+  

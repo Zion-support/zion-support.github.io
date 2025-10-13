@@ -22,7 +22,6 @@ export default ${fileName.replace('.ts', '').replace(/[-_]/g, '')};
 function createMinimalComponent(fileName) {
   const componentName = fileName.replace('.tsx', '').replace(/[-_]/g, '');
   return `import React from 'react';
-
 export default function ${componentName}() {
   return (
     <div>
@@ -68,8 +67,6 @@ function fixSpecificFile(filePath) {
     console.error(`Error fixing file ${filePath}:`, error.message);
     return false;
   }
-}
-
 // List of specific files that need fixing
 const filesToFix = [
   'app/cloud-infrastructure/page.tsx',
@@ -118,7 +115,6 @@ function main() {
       if (fixSpecificFile(fullPath)) {
         fixedCount++;
       }
-    }
   }
   
   console.log(`Fixed ${fixedCount} remaining broken files`);
@@ -131,8 +127,6 @@ function main() {
   } catch (error) {
     console.log('Type check still has errors, but fixed some files.');
   }
-}
-
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }

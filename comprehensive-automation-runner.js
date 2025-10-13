@@ -1,4 +1,4 @@
-// ursor/fix-syntax-push-and-merge-to-main-40de origin/automation-improvements-final #!/usr/bin/env node const {execSync}spawn } = require('child_process'); const fs = require('fs') const path = require('path') class ComprehensiveAutomationRunner {/* TODO: Fix JSX expression */}'
+// ursor/fix-syntax-push-and-merge-to-main-40 de origin/automation-improvements-final #!/usr/bin/env node const {execSync}spawn } = require('child_process'); const fs = require('fs') const path = require('path') class ComprehensiveAutomationRunner {/* TODO: Fix JSX expression */}'
   d: 0} optimization,
   s: 0} error,
   s: []}} ensureLogDir() {if () { fs.mkdirSync(this.logDir}{/* TODO: Fix JSX expression */})
@@ -172,9 +172,8 @@
   failed: ${error.message}`)'ERROR'); throw error} } } if() {const runner = new ComprehensiveAutomationRunner;(;)} runner.run().catch(console.error) } module.exports = ComprehensiveAutomationRunner; #!/usr/bin/env node /** * Comprehensive Automation Runner; * Runs all automation scripts and provides comprehensive testing and improvement; */' const {execSync} spawn } = require('child_process');' const fs = require('fs')' const path = require('path') class ComprehensiveAutomationRunner {/* TODO: Fix JSX expression */}'
   d: 0} optimization,
   s: 0} error,`
-  s: []}} ensureLogDir() {if () { fs.mkdir_sync (this.log_dir} { "recursive": true })} } log() { const timestamp = new Date().toISOString()const logMessage = `[${timestamp }] [${level}] ${message) { ) { fs.mkdir_sync (this.log_dir} { "recursive": true })} } log () { const timestamp = new Date ().toISOString ()const log_message = `[${timestamp }] [${level}] ${message}}" console.log (log_message); //Write to log file;' const logFile = path.join(this.logDir) 'comprehensive-automation.log');' fs.appendFileSync(logFile) logMessage + '\n')} async runCommand() { this.log("🔧 ${description }"); try {const result = execSync(command) { ' "encoding": 'utf8'} ' "stdio": 'pip;e;' timeou,"'"
-  t: timeout })this.log ("✅ ${description} completed successfully");' return {/* TODO: Fix JSX expression */}"'"
-  output: result }} catch (error) { this.log ("❌ ${description } "failed": ${error.message}") 'ERROR'); this.results.errors.push ({command) description} "error": error.message }); return {/* TODO: Fix JSX expression */}"'"
+  s: []}} ensureLogDir() {if () { fs.mkdir_sync (this.log_dir} { "recursive"recursive": true })} } log () { const timestamp = new Date ().toISOString ()const log_message = `[${timestamp }] [${level}] ${message}}"🔧 ${description }"); try {const result = execSync(command) { ' ": 'utf8'} ' "stdio"'"
+  t: timeout })this.log (");' return {/* TODO: Fix JSX expression */}"'"❌ ${description } "failed") 'ERROR'); this.results.errors.push ({command) description} "error"'"
   error: error.message }} } ' async runSyntaxFixes () {/* TODO: Fix JSX expression */}'
   lint: fi}x,'' descriptio,'
   n: 'ESLint Auto-fi}x'},{/* TODO: Fix JSX expression */}'

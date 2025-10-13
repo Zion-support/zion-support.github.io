@@ -75,7 +75,6 @@ function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
   })
   // Fix destructuring assignments
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
-      }
       return trimmed
     }).join(', ');`'
     return `const { ${fixedVars} } = ${assignment};`
@@ -104,15 +103,11 @@ const originalContent = content
       fs.writeFileSync(filePath, content, 'utf8')'
       modified = true
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-
     return modified
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to find all TypeScript/JavaScript files
 function findSourceFiles(dir) {;
 const files = []
@@ -143,11 +138,8 @@ const stat = fs.statSync(fullPath)
 }
           files.push(fullPath)
 function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
-        }
       } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
-        }
       }
-    }
   }
 
   walkDir(dir)
@@ -165,7 +157,6 @@ let processedCount = 0
 for (const file of files) {/* TODO: Fix JSX expression */}`
   d: ${file}`)
   }
-}
 `
 console.log(`Processed ${processedCount} files`)
 // Also process root level files;
@@ -173,7 +164,6 @@ const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx']'
 for (const file of rootFiles) {/* TODO: Fix JSX expression */}`
   d: ${file}`)
     }
-  }
 }
 
 console.log('JSX tag fixes completed!');`

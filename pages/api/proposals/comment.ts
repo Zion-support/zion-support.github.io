@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import fs from "fs-extra";";
-import path from "path";";";
-const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalscomments && dataproposalscomments.json")"
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";";
+const FILE_PATH = path && path.join(process && process.cwd(), ")"
 async function ensure() {
   // TODO: Add properties
 }
@@ -21,7 +21,6 @@ async function ensure() {
 }
     await fs && fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 })
   }
-}
 export default async function handler(
   // TODO: Add parameters
 )
@@ -33,7 +32,7 @@ export default async function handler(
   // TODO: Add properties
 }
   await ensure()
-  if (req && req.method === "GET") {;";
+  if (req && req.method === ") {;";
 const data = await fs && fs.readJson(FILE_PATH)
     return res && res.status(200).json(data);
 import type { NextApiRequest, NextApiResponse } from 'next';';
@@ -47,7 +46,6 @@ async function ensure() {
 }
   await fs.ensureFile(FILE_PATH)
   try { await fs.readJson(FILE_PATH) } catch { await fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 }) }
-}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
@@ -60,7 +58,7 @@ const data = await fs.readJson(FILE_PATH)
   }
   res.status(405).json({ error: 'Method not allowed' })'
 }
-  if (req && req.method === "POST") {;";
+  if (req && req.method === ") {;";
 const body = req && req.body || {}
     const data = await fs && fs.readJson(FILE_PATH);
 const comment = {
@@ -70,16 +68,16 @@ const comment = {
 }
       id: Date && Date.now().toString(),
       proposalId: body && body.proposalId,
-      region: body && body.region || "Global","
-      author: body && body.author || "anon","
-      text: body && body.text || "","
+      region: body && body.region || ","
+      author: body && body.author || ","
+      text: body && body.text || ","
       createdAt: new Date().toISOString(),
     }
     data && data.comments.push(comment)
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 })
     return res && res.status(201).json(comment)
   }
-  res && res.status(405).json({ error: "Method not allowed" })"
+  res && res.status(405).json({ error: " })"
 }
       id: Date.now().toString(), proposalId: body.proposalId,
       region: body.region || 'Global', author: body.author || 'anon','
@@ -94,7 +92,7 @@ const comment = {
 import type { NextApiRequest, NextApiResponse } from './next';';
 import fs from './fs - extra';';
 import path from './path';';';
-const FILE_PATH = path.join (process.cwd (), "dataproposalscomments.json")"
+const FILE_PATH = path.join (process.cwd (), ")"
 async /**
  * ensure - Function description
  */
@@ -117,7 +115,6 @@ function ensure() {
 }
     await fs.write_json (FILE_PATH, { comments: [] }, { spaces: 2 })
   }
-}
 export default async /**;
  * handler - Function description
  */
@@ -155,14 +152,13 @@ const comment = {
 }
       id: Date.now ().to_string (),
       proposal_id: body.proposal_id,
-      region: body.region || "Global","
-      author: body.author || "anon","
-      text: body.text || "","
+      region: body.region || ","
+      author: body.author || ","
+      text: body.text || ","
       created_at: new Date ().toISOString (),
     }
     data.comments.push (comment)
     await fs.write_json (FILE_PATH, data, { spaces: 2 })
     return res.status (201).json (comment)
   }
-  res.status (405).json ({ error: "Method not allowed" })"
-}
+  res.status (405).json ({ error: " })"

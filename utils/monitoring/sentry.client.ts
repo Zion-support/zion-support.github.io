@@ -29,6 +29,3 @@ if (typeof window !== 'undefined') {'
     integrations: [],
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN),
   })
-}
-
-}

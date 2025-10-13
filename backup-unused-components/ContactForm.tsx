@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface ContactFormProps {
   className?: string;
   children?: React.ReactNode;
 }
-import React, { useState } from "react";
-import { MessageSquare } from "lucide-react";
+import React, { useState } from "react"lucide-react";
 interface FormData;
   name: string;
   email: string;
@@ -24,21 +21,17 @@ interface FormData ,
 
 const ContactForm: React.FC = () =>
   const [formData, setFormData] = useState<FormData>(,
-    name: "",
-      email: "",
-      phone: "",
-      company: "",
-      message: "",
-      service: "",
+    name: ",
+      email: """,
+      company: ",
+      message: """,
 );
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-//     name: "",
-//     email: "",
-//     phone: "",
-//     company: "",
-//     message: "",
-//     service: "",
+//     name: ",
+//     email: """,
+//     company: ",
+//     message: """,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -74,30 +67,24 @@ const ContactForm: React.FC = () => {
       await new Promise()resolve) => setTimeout(resolve, 1000();
       setIsSubmitted(true);
       setFormData(
-        name: "",
-        email: "",
-        phone: "",
-        company: "",
-        message: "",
-        service: "",
+        name: ",
+        email: """,
+        company: ",
+        message: """,
       setFormData(,
-    name: "",
-          email: "",
-          phone: "",
-          company: "",
-          message: "",
-          service: "",
+    name: ",
+          email: """,
+          company: ",
+          message: """,
 );
  catch (error)
  finally;
  finally
       setFormData({
-//         name: "",
-//         email: "",
-//         phone: "",
-//         company: "",
-//         message: "",
-//         service: "",
+//         name: ",
+//         email: """,
+//         company: ",
+//         message: """,
       });
 
     } catch (error) {
@@ -107,298 +94,87 @@ const ContactForm: React.FC = () => {
 ;
   if (isSubmitted)
     return (
-      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center"></div>
-        <MessageSquare className="w-8 h-8 mx-auto mb-2" />
-        <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
-        <p></p>
-          Your message has been sent successfully. We'll get back to you soon.
-        </p>
-  </div>
-      </div>
-//         <p>
-//           Your message has been sent successfully. We'll get back to you soon.
-</p>
-</div>
-    );
-
-export default function ContactForm({ className = '', children }: ContactFormProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-    <form onSubmit="{handleSubmit}" className="space-y-6"></form>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+      <div className="w-8 h-8 mx-auto mb-2" />
+        <h3 className="{handleSubmit}" className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
         <div></div>
           <label;
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          <label>
-  htmlFor="name">
-  className="block text-sm font-medium text-gray-700 mb-2"
-          >
-            Full Name *
-          </label>
-          <input;
-    <form onSubmit="{handleSubmit}" className="space-y-6"></form>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+            htmlFor="
+            className="block text-sm font-medium text-gray-700 mb-2">
+  className="block text-sm font-medium text-gray-700 mb-2" className="space-y-6"></div>
         <div></div>
           <label
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 //         <div>
 //           <label
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-700 mb-2"
-//           >
-//             Full Name *
-//           </label>
-//           <input
-            type="text"
-            id="name"
-            name="name"
+            htmlFor="name"block text-sm font-medium text-gray-700 mb-2"text"name"
+            name="
             value={formData.name}
             onChange={handleChange}
             required;
 //             required
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-  id="name"
-            name="name">
-  value={formData.name}>
-  onChange={handleChange}>
-  required>
-  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-          />
-  </div>
-        <div></div>
-          <label;
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          <label>
-  htmlFor="email">
-  className="block text-sm font-medium text-gray-700 mb-2"
-          >
-            Email Address *
-          </label>
-          <input;
-          <label
-//           />
-</div>
-
-//         <div>
-//           <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700 mb-2"
-//           >
-//             Email Address *
-//           </label>
-//           <input
-            type="email"
-            id="email"
-            name="email"
+            name="name"w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"email"block text-sm font-medium text-gray-700 mb-2"email"block text-sm font-medium text-gray-700 mb-2"email"block text-sm font-medium text-gray-700 mb-2"email"email"
+            name="
             value={formData.email}
             onChange={handleChange}
             required;
 //             required
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-  id="email"
-            name="email">
-  value={formData.email}>
-  onChange={handleChange}>
-  required>
-  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-          />
-  </div>
-  </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-        <div></div>
-          <label;
-            htmlFor="phone"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          <label>
-  htmlFor="phone">
-  className="block text-sm font-medium text-gray-700 mb-2"
-          >
-            Phone Number;
-          </label>
-          <input;
-          <label
-//           />
-</div>
-</div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            name="email"w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"grid grid-cols-1 md:grid-cols-2 gap-6"phone"
+            className="phone">
+  className="grid grid-cols-1 md:grid-cols-2 gap-6">
 //         <div>
 //           <label
-            htmlFor="phone"
+            htmlFor="
             className="block text-sm font-medium text-gray-700 mb-2"
-//           >
-//             Phone Number
-//           </label>
-//           <input
-            type="tel"
-            id="phone"
-            name="phone"
+            id="phone"phone"
             value={formData.phone}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-  id="phone">
-  name="phone">
+            className="phone">
+  name=">
   value={formData.phone}>
   onChange={handleChange}>
   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-          />
-  </div>
-        <div></div>
-          <label;
-            htmlFor="company"
-            className="block text-sm font-medium text-gray-700 mb-2"
-          <label>
-  htmlFor="company">
+            className="block text-sm font-medium text-gray-700 mb-2">
   className="block text-sm font-medium text-gray-700 mb-2"
-          >
-            Company;
-          </label>
-          <input;
-          <label
-//           />
-</div>
-
-//         <div>
-//           <label
-            htmlFor="company"
             className="block text-sm font-medium text-gray-700 mb-2"
-//           >
-//             Company
-//           </label>
-//           <input
-            type="text"
-            id="company"
-            name="company"
+            id="company"company"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-  id="company">
-  name="company">
+            className="company">
+  name=">
   value={formData.company}>
   onChange={handleChange}>
   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-          />
-  </div>
-  </div>
-      <div></div>
-        <label;
-          htmlFor="service"
-          className="block text-sm font-medium text-gray-700 mb-2"
-        <label>
-  htmlFor="service">
+          className="block text-sm font-medium text-gray-700 mb-2">
   className="block text-sm font-medium text-gray-700 mb-2"
-        >
-          Service Interest;
-        </label>
-        <select;
-        <label
-//           />
-</div>
-</div>
-
-//       <div>
-//         <label
-          htmlFor="service"
           className="block text-sm font-medium text-gray-700 mb-2"
-//         >
-//           Service Interest
-//         </label>
-//         <select
-          id="service"
-          name="service"
-          value={formData.service}
-          onChange={handleChange}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-//         >
-        <select
-          id="service">
-  name="service">
+          name="service"w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"service"service">
   value={formData.service}>
   onChange={handleChange}>
-  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-        >
-=======
-export default function ContactForm({ className = '', children }: ContactFormProps) {
-  return (
-            type="text"
-            type="email"
-            type="tel"
-            type="text"
-          <option value="">Select a service</option>
-          <option value="ai-solutions">AI Solutions</option>
-          <option value="it-services">IT Services</option>
-          <option value="micro-saas">Micro SAAS</option>
-          <option value="consulting">Consulting</option>
-          <option value="other">Other</option>
-<<<<<<< HEAD
+  className="text"
+            type="
+            type="tel"text"
+          <option value=">Select a service</option>
+          <option value="ai-solutions"it-services">IT Services</option>
+          <option value=">Micro SAAS</option>
+          <option value="consulting"other">Other</option>
         </select>
   </div>
       <div></div>
         <label;
-          htmlFor="message"
-          className="block text-sm font-medium text-gray-700 mb-2"
-        <label>
-  htmlFor="message">
+          htmlFor="
+          className="block text-sm font-medium text-gray-700 mb-2">
   className="block text-sm font-medium text-gray-700 mb-2"
-        >
-          Message *
-        </label>
-        <textarea;
-        <label
-//         </select>
-</div>
-
-//       <div>
-//         <label
-          htmlFor="message"
           className="block text-sm font-medium text-gray-700 mb-2"
-//         >
-//           Message *
-//         </label>
-//         <textarea
-          id="message"
-  name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required;
-//           required
-          rows={5}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-          placeholder="Tell us about your project or requirements..."
-  onChange={handleChange}>
-  required>
-  rows={5}>
-  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
-  placeholder="Tell us about your project or requirements..."
-        />
-  </div>
-      <button;
-      </div>
-      <button
-//         />
-</div>
-
-//       <button
-        type="submit"
+  name="message"w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"Tell us about your project or requirements..."w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"Tell us about your project or requirements..."submit"
         disabled={isSubmitting}
-        className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-//       >
-      <button>
-  type="submit">
+        className="submit">
   disabled={isSubmitting}>
-  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-=======
-          id="message"
-  name="message"
+  className="message"
+  name="
           value={formData.message}
-        {isSubmitting ? "Sending..." : "Send Message"}
+        {isSubmitting ? "Sending..."Send Message"}
 </button>
     </form>
   );
-}

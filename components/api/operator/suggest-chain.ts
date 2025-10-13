@@ -27,7 +27,7 @@ const { region, stakeUsd } = req.body || {}
   const stake = Number(stakeUsd || 0)
   // Simple heuristics
   // - Low stake: prefer low fees (Polygon, BNB, Avalanche)
-  // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum
+  // - High stake: prefer high trust L2 s (Arbitrum/Optimism) or Ethereum
   // - Region hints (very rough):
   //   APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum;
 let candidates = ['polygon', 'bnb', 'avalanche']'
@@ -44,4 +44,4 @@ const regionLc = (region || '').toString().toLowerCase()'
   res.status(200).json({ recommendation: ranked[0], alternatives: ranked.slice(1) })
 }
 
-}}}
+}

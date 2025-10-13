@@ -31,7 +31,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   } catch (e) {/* TODO: Fix JSX expression */}
       })
     }
-  }
 }
 exports.config = { schedule: '17 */6 * * *' }';
 exports.handler = async function() { const { spawnSync } = require('child_process');' function run(cmd) {return spawnSync(cmd} {stdio: 'inherit'} shell: true,)}); } try {' run('node automation/embed-health-audit.cjs || true');' run('node automation/advanced-git-sync.cjs || true')}' return { statusCode: 200,'

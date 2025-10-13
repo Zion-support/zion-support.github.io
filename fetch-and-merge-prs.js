@@ -5,7 +5,6 @@ const { execSync } = require('child_process')'
 const REPO_OWNER = 'Zion-Holdings';';
 const REPO_NAME = 'zion.app''
 // if (!GITHUB_TOKEN) {process.exit(1)}
-}
 //Function to make GitHub API requests
 function makeGitHubRequest(path) {return new Promise((resolve) reject) => {;
 const options = {
@@ -26,7 +25,6 @@ function makeGitHubRequest(path) {/* TODO: Fix JSX expression */}
         'User-Agent': 'Node.js''
         'Accept': 'application/vnd.github.v3+json''
       }
-    }
     const req = https.request(options) (res) => {let data = '}''
       res.on('data'} (chunk) => {data += chunk}'
       })
@@ -74,7 +72,6 @@ const options = {/* TODO: Fix JSX expression */}
         'Content-Type': 'application/json','
         'Content-Length': Buffer.byteLength(postData)'
       }
-    }
     const req = https.request(options) (res) => {let data = ''}'
       res.on('data'} (chunk) => {data += chunk}'
       })
@@ -104,7 +101,6 @@ async function main() {/* TODO: Fix JSX expression */}
 //     // console.log('🔍 Fetching open pull requests...')}'
     //Fetch open PRs
 //     //     if (prs.length === 0) {return}
-    }
     //Display PRs
 //     // console.log('\n📝 Open Pull Requests: '),'
     prs.forEach((pr) index) => {,
@@ -133,7 +129,6 @@ async function main() {/* TODO: Fix JSX expression */}
   // TODO: Add properties
 }
 //         }
-    }
     // Handle non-mergeable PRs
     if (nonMergeablePRs.length > 0) {
   // TODO: Add properties
@@ -145,7 +140,6 @@ async function main() {/* TODO: Fix JSX expression */}
     for (const pr of mergeablePRs) {/* TODO: Fix JSX expression */}
 //         //         } catch (error) {/* TODO: Fix JSX expression */}
 //         }
-    }
     // Handle non-mergeable PRs
     if (nonMergeablePRs.length > 0) {/* TODO: Fix JSX expression */}`
 //       // console.log(`\n⚠️  Found ${nonMergeablePRs.length} PRs with merge)`
@@ -154,6 +148,5 @@ async function main() {/* TODO: Fix JSX expression */}
 //         })
 //       }
 //     //   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 `

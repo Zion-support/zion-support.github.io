@@ -35,7 +35,3 @@ if (updates.commission_rate = commission_rate, ) {
     return res.status (500).json ({ error: e?.message })
   }
 }
-}
-
-  }
-}

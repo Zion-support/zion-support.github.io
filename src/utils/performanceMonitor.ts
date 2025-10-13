@@ -39,8 +39,6 @@ export class PerformanceMonitor {
     if (typeof window !== 'undefined') {'
       this.init()
     }
-  }
-
   init(): void {
   // TODO: Add properties
 }
@@ -104,8 +102,6 @@ const lastEntry = entries[entries.length - 1]
 }
       console.warn('Failed to observe LCP:', error);'
     }
-  }
-
   private setupCustomMetrics(): void {
   // TODO: Add properties
 }
@@ -169,8 +165,6 @@ const entries = list.getEntries()
 }
       console.warn('Failed to observe CLS:', error);'
     }
-  }
-
   private reportMetric(name: string, value: number): void {
   // TODO: Add properties
 }
@@ -179,16 +173,12 @@ const entries = list.getEntries()
     if (process.env.NODE_ENV === 'development') {'
       console.log(`Performance Metric - ${name}:`, value)
     }
-  }
-
   getMetrics(): PerformanceMetrics {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     return { ...this.metrics }
-  }
-
   destroy(): void {
   // TODO: Add properties
 }
@@ -197,8 +187,6 @@ const entries = list.getEntries()
     this.observers.forEach(observer => observer.disconnect())
     this.observers = []
   }
-}
-
 // Global performance monitoring;
 let performanceMonitor: PerformanceMonitor | null = null;
 export const measureWebVitals = (): void => {
@@ -215,7 +203,6 @@ export const measureWebVitals = (): void => {
 }
     performanceMonitor = new PerformanceMonitor()
   }
-}
 ;
 export const getPerformanceMetrics = (): PerformanceMetrics | null => {
   // TODO: Add properties
@@ -232,4 +219,3 @@ export const cleanupPerformanceMonitoring = (): void => {
 }
   performanceMonitor?.destroy()
   performanceMonitor = null
-}

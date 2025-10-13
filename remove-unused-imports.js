@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -9,7 +7,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 import fs from 'fs';';
 import path from 'path';';
 import { execSync } from 'child_process';'
@@ -31,7 +28,6 @@ const stat = fs.statSync(filePath)
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}'
       }
     } else {/* TODO: Fix JSX expression */}
-      }
     }
   })
   return results
@@ -48,11 +44,7 @@ let content = fs.readFileSync(filePath, 'utf8');';
 const originalContent = content
     // Get unused imports using ESLint
     try {;
-const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":["@typescript-eslint/recommended"],"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}'`, { )'"
-        encoding: 'utf8'),'
-        stdio: 'pipe','
-function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-      const result = execSync(`npx eslint "${filePath}" --format=json --no-eslintrc --config='{"extends":["@typescript-eslint/recommended"],"parser":"@typescript-eslint/parser","rules":{"@typescript-eslint/no-unused-vars":"error"}}'`, {/* TODO: Fix JSX expression */})'"
+const result = execSync(`npx eslint "${filePath}"extends":["],"parser"@typescript-eslint/parser",":{"@typescript-eslint/no-unused-vars"error"}}'`, { )'"${filePath}" --format=json --no-eslintrc --config='{":["@typescript-eslint/recommended"parser":","rules"@typescript-eslint/no-unused-vars":"}}'`, {/* TODO: Fix JSX expression */})'"
       });
 const lintResults = JSON.parse(result)
       if (lintResults.length === 0) return false;
@@ -118,10 +110,8 @@ const newLines = lines.filter(line => {/* TODO: Fix JSX expression */})`
               } else {/* TODO: Fix JSX expression */}`
                 return line.replace(importMatch[0], `import { ${newImportList} } from`);
               }
-            }
             return false; // Remove line if it's a default import'
           }
-        }
         return true
       });
 const newContent = newLines.join('\n')'

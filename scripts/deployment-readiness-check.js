@@ -12,18 +12,14 @@ const colors = {
 }
   // TODO: Add properties
 }
-  reset: '\x1b[0m''
-  red: '\x1b[31m','
-  green: '\x1b[32m','
-  yellow: '\x1b[33m','
-  blue: '\x1b[34m','
-  cyan: '\x1b[36m',;';
+  reset: '\x1 b[0 m''
+  red: '\x1 b[31 m','
+  green: '\x1 b[32 m','
+  yellow: '\x1 b[33 m','
+  blue: '\x1 b[34 m','
+  cyan: '\x1 b[36 m',;';
 const colors = {/* TODO: Fix JSX expression */}
-}
-
 class DeploymentReadinessChecker {/* TODO: Fix JSX expression */}
-  }
-
   log(message, color = 'reset') {/* TODO: Fix JSX expression */}'
 //     }
 
@@ -48,18 +44,13 @@ class DeploymentReadinessChecker {/* TODO: Fix JSX expression */}
         if (result.message) {/* TODO: Fix JSX expression */}`
           this.log(`   ${result.message}`, result.severity === 'warning' ? 'yellow' : 'red')'
         }
-      }
       return result.success
     } catch (error) {/* TODO: Fix JSX expression */}
   r: error.message });`
       this.log(`❌ ${check.name}: ERROR - ${error.message}`, 'red')'
       return false
     }
-  }
-
   async runAll() {/* TODO: Fix JSX expression */}
-    }
-
     this.printSummary()
     return this.failures.length === 0
   }
@@ -85,10 +76,7 @@ class DeploymentReadinessChecker {/* TODO: Fix JSX expression */}
     this.log('\n' + '='.repeat(60), 'blue')'
     if (this.failures.length === 0) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-    }
   }
-}
-
 // Define all checks
 function setupChecks(checker) {
   // TODO: Add properties
@@ -117,8 +105,6 @@ const _pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'))'
           success: false,
           message: 'package.json missing required fields (name, version)''
         }
-      }
-
       return {
   // TODO: Add properties
 }
@@ -140,14 +126,12 @@ const _pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'))'
         success: false
         message: error.message,
 function setupChecks(checker) {/* TODO: Fix JSX expression */}
-        }
       }
 
       return {/* TODO: Fix JSX expression */}`
   e: `${pkg.name}@${pkg.version}`
       }
     } catch (error) {/* TODO: Fix JSX expression */}
-      }
     }
   })
   // Check 2: Dependencies installed,
@@ -189,11 +173,8 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
   2: Dependencies installed,
   checker.addCheck('Dependencies Check', async () => {/* TODO: Fix JSX expression */}'
         }
-      }
       return {/* TODO: Fix JSX expression */}
-      }
     } catch (error) {/* TODO: Fix JSX expression */}
-      }
     }
   })
   // Check 3: Linting,
@@ -228,9 +209,7 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
   checker.addCheck('Linting', async () => {/* TODO: Fix JSX expression */}'
   o: 'pipe' })'
       return {/* TODO: Fix JSX expression */}
-      }
     } catch (error) {/* TODO: Fix JSX expression */}
-      }
     }
   })
   // Check 4: Type checking,
@@ -265,9 +244,7 @@ function setupChecks(checker) {/* TODO: Fix JSX expression */}
   checker.addCheck('Type Checking', async () => {/* TODO: Fix JSX expression */}'
   o: 'pipe' })'
       return {/* TODO: Fix JSX expression */}
-      }
     } catch (error) {/* TODO: Fix JSX expression */}
-      }
     }
   })
   // Check 5: Tests,
@@ -306,7 +283,6 @@ const _match = result.match(/(\d+) passed/)
   e: `${passedTests} tests passed`
       }
     } catch (error) {/* TODO: Fix JSX expression */}
-      }
     }
   })
   // Check 6: Build,
@@ -333,8 +309,6 @@ const _match = result.match(/(\d+) passed/)
       // Check if dist folder exists
       if (!fs.existsSync('dist')) {/* TODO: Fix JSX expression */}'
         }
-      }
-
       // Check dist size
 //       const stats = fs.statSync('dist')'
       return {
@@ -357,9 +331,7 @@ const _match = result.match(/(\d+) passed/)
         success: false,
         message: 'Build failed','
       return {/* TODO: Fix JSX expression */}
-      }
     } catch (error) {/* TODO: Fix JSX expression */}
-      }
     }
   })
   // Check 7: Environment variables (warning only),
@@ -380,8 +352,6 @@ const _missing = requiredEnvVars.filter(v => !process.env[v])
         severity: 'warning','
         message: `Missing env vars: ${missing.join(', ')}`'
       }
-    }
-
     return {
   // TODO: Add properties
 }
@@ -423,19 +393,14 @@ const _missing = requiredEnvVars.filter(v => !process.env[v])
   checker.addCheck('Environment Variables', async () => {/* TODO: Fix JSX expression */}`'
   vars: ${missing.join(', ')}`'
       }
-    }
-
     return {/* TODO: Fix JSX expression */}
-    }
   })
   // Check,
   8: Security audit (warning only)
   checker.addCheck('Security Audit', async () => {/* TODO: Fix JSX expression */}'
   o: 'pipe' })'
       return {/* TODO: Fix JSX expression */}
-      }
     } catch (error) {/* TODO: Fix JSX expression */}
-      }
     }
   })
   // Check 9: Git status,
@@ -486,13 +451,10 @@ const _missing = requiredEnvVars.filter(v => !process.env[v])
   checker.addCheck('Git Status', async () => {/* TODO: Fix JSX expression */}'
   o: 'pipe' }).toString().trim()'
       if (status) {/* TODO: Fix JSX expression */}
-        }
       }
 
       return {/* TODO: Fix JSX expression */}
-      }
     } catch (error) {/* TODO: Fix JSX expression */}
-      }
     }
   })
   // Check 10: Branch check,
@@ -511,8 +473,6 @@ const branch = execSync('git rev-parse --abbrev-ref HEAD', { stdio: 'pipe' })'
           severity: 'warning','
           message: `Deploying from branch: ${branch}`
         }
-      }
-
       return {
   // TODO: Add properties
 }
@@ -543,13 +503,10 @@ const branch = execSync('git rev-parse --abbrev-ref HEAD', { stdio: 'pipe' })'
       if (branch !== 'main' && branch !== 'master') {/* TODO: Fix JSX expression */}`'
   branch: ${branch}`
         }
-      }
-
       return {/* TODO: Fix JSX expression */}`
   e: `On ${branch} branch`
       }
     } catch (error) {/* TODO: Fix JSX expression */}
-      }
     }
   })
 }
@@ -561,7 +518,6 @@ async function main() {
   // TODO: Add properties
 }
 async function main() {/* TODO: Fix JSX expression */}
-}
   const _checker = new DeploymentReadinessChecker()
   setupChecks(checker)
 //   const success = await checker.runAll()

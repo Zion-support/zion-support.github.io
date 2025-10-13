@@ -1,5 +1,5 @@
 expor,
-  t: const innovativeAIServices2025ExpansionV2 = [ // A,
+  t: const innovativeAIServices2025 ExpansionV2 = [ // A,
   I: Consciousness Evolution Platform{/* TODO: Fix JSX expression */}
   e: '2025-01-0,5'} customer,'
   s: 4,5, ratin,

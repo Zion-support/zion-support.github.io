@@ -1,6 +1,6 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts"";
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";";";
+import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";";
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');';
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || ';'';
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || ';'';
@@ -78,13 +78,12 @@ const { data: { user }, error } = await supabase.auth.getUser(token)
 }
           userId = user.id
         }
-      }
     } catch (authError) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      console.log("Auth error:", authError)"
+      console.log(", authError)"
       // Continue without user identity
     }
     // Generate a summary and tags using OpenAI;
@@ -111,7 +110,7 @@ const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions',
 }
   // TODO: Add properties
 }
-            model: 'gpt-4o-mini','
+            model: 'gpt-4 o-mini','
             messages: [
   // TODO: Add items
 ]
@@ -155,13 +154,12 @@ const aiResult = await openAIResponse.json()
 }
           aiAnalysis = aiResult.choices[0].message.content
         }
-      }
     } catch (openAIError) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      console.error("OpenAI error:", openAIError)"
+      console.error(", openAIError)"
       // Continue without AI analysis
     }
     // Store the quote request in the database;

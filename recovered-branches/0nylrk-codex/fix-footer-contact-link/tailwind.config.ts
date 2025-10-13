@@ -1,23 +1,23 @@
-import { Config } from "tailwindcss";";
-import { fontFamily } from "tailwindcss/defaultTheme";";
-import plugin from "tailwindcss/plugin";";
-import animatePlugin from "tailwindcss-animate";";";
+import { Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
+import plugin from "tailwindcss/plugin";
+import animatePlugin from "tailwindcss-animate";";
 const config: Config = {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  darkMode: ["class"],"
+  darkMode: ["],"
   content: [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-    "./pages/**/*.{ts,tsx}","
-    "./components/**/*.{ts,tsx}","
-    "./app/**/*.{ts,tsx}","
-    "./src/**/*.{ts,tsx}"],"
-    "./src/**/*.{ts,tsx}","
+    ","
+    ","
+    ","
+    "],"
+    ","
   ],
   safelist: ['border-border'],'
   theme: {
@@ -31,195 +31,31 @@ const config: Config = {
   // TODO: Add properties
 }
       center: true,
-      padding: "2rem","
+      padding: ","
       screens: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        "2xl": "1400px"}},"
-        "2xl": "1400px","
-      },
-    },
-    extend: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      colors: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        border: "hsl(var(--border))","
-        input: "hsl(var(--input))","
-        ring: "hsl(var(--ring))","
-        background: "hsl(var(--background))","
-        foreground: "hsl(var(--foreground))","
-        primary: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          DEFAULT: "hsl(var(--primary))","
-          foreground: "hsl(var(--primary-foreground))"},"
-        secondary: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          DEFAULT: "hsl(var(--secondary))","
-          foreground: "hsl(var(--secondary-foreground))"},"
-        destructive: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          DEFAULT: "hsl(var(--destructive))","
-          foreground: "hsl(var(--destructive-foreground))"},"
-        muted: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          DEFAULT: "hsl(var(--muted))","
-          foreground: "hsl(var(--muted-foreground))"},"
-        accent: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          DEFAULT: "hsl(var(--accent))","
-          foreground: "hsl(var(--accent-foreground))"},"
-        popover: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          DEFAULT: "hsl(var(--popover))","
-          foreground: "hsl(var(--popover-foreground))"},"
-        card: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          DEFAULT: "hsl(var(--card))","
-          foreground: "hsl(var(--card-foreground))"},"
-          foreground: "hsl(var(--primary-foreground))","
+        ": "1400 px"
+        "2 xl"1400 px","hsl(var(--border))","hsl(var(--input))","hsl(var(--ring))","hsl(var(--background))","hsl(var(--foreground))","hsl(var(--primary))","hsl(var(--primary-foreground))"},"hsl(var(--secondary))","hsl(var(--secondary-foreground))"},"hsl(var(--destructive))","hsl(var(--destructive-foreground))"},"hsl(var(--muted))","hsl(var(--muted-foreground))"},"hsl(var(--accent))","hsl(var(--accent-foreground))"},"hsl(var(--popover))","hsl(var(--popover-foreground))"},"hsl(var(--card))","hsl(var(--card-foreground))"},"hsl(var(--primary-foreground))","hsl(var(--secondary))","hsl(var(--secondary-foreground))","hsl(var(--destructive))","hsl(var(--destructive-foreground))","hsl(var(--muted))","hsl(var(--muted-foreground))","hsl(var(--accent))","hsl(var(--accent-foreground))","hsl(var(--popover))","hsl(var(--popover-foreground))","hsl(var(--card))","hsl(var(--card-foreground))","zion-blue": {"#0 a0 f1 f","#1 e263 b","#090 c1 a"},"zion-purple": {"#a855 f7","#d8 b4 fe","#9333 ea"},"zion-cyan": {"#00 e5 ff","#7 df9 ff","#00 c4 cc"},"zion-slate": {"#94 A3 B8","#CBD5 E1","#64748 B"}},"var(--radius)","calc(var(--radius) - 2 px)","calc(var(--radius) - 4 px)"},"var(--font-sans)", ...fontFamily.sans]},"accordion-down": {"0" },"var(--radix-accordion-content-height)" }},"accordion-up": {"var(--radix-accordion-content-height)" },"0" }}},"accordion-down": ","
+        ": "accordion-up 0.2 s ease-out"
+          dark: "#090 c1 a"
         },
-        secondary: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          DEFAULT: "hsl(var(--secondary))","
-          foreground: "hsl(var(--secondary-foreground))","
+        "zion-purple"
+          DEFAULT: "#a855 f7"
+          light: "#d8 b4 fe"
+          dark: "#9333 ea"
         },
-        destructive: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          DEFAULT: "hsl(var(--destructive))","
-          foreground: "hsl(var(--destructive-foreground))","
+        "zion-cyan"
+          DEFAULT: "#00 e5 ff"
+          light: "#7 df9 ff"
+          dark: "#00 c4 cc"
         },
-        muted: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          DEFAULT: "hsl(var(--muted))","
-          foreground: "hsl(var(--muted-foreground))","
-        },
-        accent: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          DEFAULT: "hsl(var(--accent))","
-          foreground: "hsl(var(--accent-foreground))","
-        },
-        popover: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          DEFAULT: "hsl(var(--popover))","
-          foreground: "hsl(var(--popover-foreground))","
-        },
-        card: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          DEFAULT: "hsl(var(--card))","
-          foreground: "hsl(var(--card-foreground))","
-        },
-        // Custom Zion colors
-        "zion-blue": {"
-          DEFAULT: "#0a0f1f","
-          light: "#1e263b","
-          dark: "#090c1a"},"
-        "zion-purple": {"
-          DEFAULT: "#a855f7","
-          light: "#d8b4fe","
-          dark: "#9333ea"},"
-        "zion-cyan": {"
-          DEFAULT: "#00e5ff","
-          light: "#7df9ff","
-          dark: "#00c4cc"},"
-        "zion-slate": {"
-          DEFAULT: "#94A3B8","
-          light: "#CBD5E1","
-          dark: "#64748B"}},"
-      borderRadius: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        lg: "var(--radius)","
-        md: "calc(var(--radius) - 2px)","
-        sm: "calc(var(--radius) - 4px)"},"
-      fontFamily: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        sans: ["var(--font-sans)", ...fontFamily.sans]},"
-      keyframes: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        "accordion-down": {"
-          from: { height: "0" },"
-          to: { height: "var(--radix-accordion-content-height)" }},"
-        "accordion-up": {"
-          from: { height: "var(--radix-accordion-content-height)" },"
-          to: { height: "0" }}},"
-      animation: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        "accordion-down": "accordion-down 0.2s ease-out","
-        "accordion-up": "accordion-up 0.2s ease-out"}}},"
-          dark: "#090c1a","
-        },
-        "zion-purple": {"
-          DEFAULT: "#a855f7","
-          light: "#d8b4fe","
-          dark: "#9333ea","
-        },
-        "zion-cyan": {"
-          DEFAULT: "#00e5ff","
-          light: "#7df9ff","
-          dark: "#00c4cc","
-        },
-        "zion-slate": {"
-          DEFAULT: "#94A3B8","
-          light: "#CBD5E1","
-          dark: "#64748B","
+        "zion-slate"
+          DEFAULT: "#94 A3 B8"
+          light: "#CBD5 E1"
+          dark: "#64748 B"
         },
       },
       borderRadius: {
@@ -227,29 +63,29 @@ const config: Config = {
 }
   // TODO: Add properties
 }
-        lg: "var(--radius)","
-        md: "calc(var(--radius) - 2px)","
-        sm: "calc(var(--radius) - 4px)","
+        lg: "var(--radius)"
+        md: "calc(var(--radius) - 2 px)"
+        sm: "calc(var(--radius) - 4 px)"
       },
       fontFamily: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        sans: ["var(--font-sans)", ...fontFamily.sans],"
+        sans: ["var(--font-sans)"
       },
       keyframes: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        "accordion-down": {"
-          from: { height: "0" },"
-          to: { height: "var(--radix-accordion-content-height)" },"
+        "accordion-down"
+          from: { height: "0"
+          to: { height: "var(--radix-accordion-content-height)"
         },
-        "accordion-up": {"
-          from: { height: "var(--radix-accordion-content-height)" },"
-          to: { height: "0" },"
+        "accordion-up"
+          from: { height: "var(--radix-accordion-content-height)"
+          to: { height: "0"
         },
       },
       animation: {
@@ -257,8 +93,7 @@ const config: Config = {
 }
   // TODO: Add properties
 }
-        "accordion-down": "accordion-down 0.2s ease-out","
-        "accordion-up": "accordion-up 0.2s ease-out","
+        "accordion-down"accordion-down 0.2 s ease-out","accordion-up": ","
       },
     },
   },

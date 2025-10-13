@@ -50,7 +50,7 @@ const importFixes = [
   // TODO: Add properties
 }
         pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,';'
-        replacement: "import { $1 } from '$2';";'"
+        replacement: "import { $1 } from '$2';"
       },
       // Fix missing commas in imports
       {
@@ -59,7 +59,7 @@ const importFixes = [
   // TODO: Add properties
 }
         pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,';'
-        replacement: "import { $1, $2 } from '$3';";'"
+        replacement: "import { $1, $2 } from '$3';"
       },
       // Fix malformed import with semicolon
       {
@@ -68,7 +68,7 @@ const importFixes = [
   // TODO: Add properties
 }
         pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,';'
-        replacement: "import { $1 } from '$2';";'"
+        replacement: "import { $1 } from '$2';"
       }
     ]
     for (const fix of importFixes) {;
@@ -81,8 +81,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
         content = newContent
         modified = true
       }
-    }
-
     // Fix malformed function declarations;
 const functionFixes = [
   // TODO: Add items
@@ -127,8 +125,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
         content = newContent
         modified = true
       }
-    }
-
     // Fix malformed object literals;
 const objectFixes = [
   // TODO: Add items
@@ -164,8 +160,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
         content = newContent
         modified = true
       }
-    }
-
     // Fix malformed JSX;
 const jsxFixes = [
   // TODO: Add items
@@ -178,8 +172,8 @@ const jsxFixes = [
 }
   // TODO: Add properties
 }
-        pattern: /(\w+)="([^"]*)"\s*(\w+)/g,"
-        replacement: '$1="$2" $3''"
+        pattern: /(\w+)="([^"\s*(\w+)/g,"
+        replacement: '$1=" $3''"
       },
       // Fix malformed JSX closing tags
       {
@@ -201,8 +195,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
         content = newContent
         modified = true
       }
-    }
-
     if (modified) {
   // TODO: Add properties
 }
@@ -222,8 +214,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
     console.error(`Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Main execution
 console.log('Starting comprehensive syntax error resolution...');';
 let fixedCount = 0
@@ -239,6 +229,4 @@ for (const file of filesToFix) {
 }
     fixedCount++
   }
-}
-
 console.log(`Fixed syntax errors in ${fixedCount} files`)))))

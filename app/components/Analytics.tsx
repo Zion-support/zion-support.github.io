@@ -2,7 +2,6 @@
 export default function AnalyticsPage() {
   return (
           }
-        }
       })
 observer.observe({entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'])})'
 // Monitor page load time;
@@ -15,7 +14,6 @@ observer.observe({entryTypes: ['largest-contentful-paint', 'first-input', 'layou
           trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart))}}'
       })
     }
-  }
 const initializeErrorTracking = (;
     // Track JavaScript errors;
     window.addEventListener('error', (event) => {trackEvent('error', 'javascript_error', {)'
@@ -105,7 +103,6 @@ const trackEvent = (;
   )}value: typeof value === 'number' ? value : undefined,}'
       })
     }
-  }
 return null
 }
       {children}
@@ -118,4 +115,3 @@ return null
       {children}
     </div>
   );
-}

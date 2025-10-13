@@ -73,4 +73,3 @@ export interface NewMessageInput {
   attachmentBase64?: string; // data URL or raw base64
   attachmentName?: string; // optional filename
   context?: ConversationContext
-}

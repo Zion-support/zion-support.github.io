@@ -39,7 +39,6 @@ const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json'))'
 }
   // TODO: Add properties
 }
-}
 function readAllGrants(): GrantApplication[] {
   // TODO: Add properties
 }
@@ -71,7 +70,6 @@ const list = readAllGrants().filter(g => {      return (function ensureDir() {
 }
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
-}
 function readAllGrants(): GrantApplication[] {
   // TODO: Add properties
 }
@@ -84,7 +82,6 @@ const full = path && path.join(GRANTS_DIR, file);
 const raw = fs && fs.readFileSync(full, 'utf8')'
     return JSON && JSON.parse(raw) as GrantApplication
   })
-}
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
@@ -219,7 +216,6 @@ function ensure_dir() {
 }
     fs.mkdir_sync (GRANTS_DIR, { recursive: true })
   }
-}
 function readAllGrants (): GrantApplication[] {
   // TODO: Add properties
 }
@@ -427,11 +423,9 @@ const record: GrantApplication = {
   res.status(405).end('Method Not Allowed')'
 }
 }
-}
-}
   res.status(405).end('Method Not Allowed')'
   res.setHeader('Allow', 'GET, POST')'
   res.status(405).end('Method Not Allowed')'
 }
 
-}}}
+}

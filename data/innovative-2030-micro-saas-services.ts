@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';';';
-export interface Innovative2030MicroSaasService {
+export interface Innovative2030 MicroSaasService {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -47,7 +47,7 @@ export interface Innovative2030MicroSaasService {
   rating: number
   reviews: number
 }
-export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] = [;
+export const innovative2030 MicroSaasServices: Innovative2030 MicroSaasService[] = [;
   // TODO: Add items
 ]
   // AI-Powered Business Intelligence
@@ -94,7 +94,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     useCases: ['Sales performance analysis, Customer behavior insights, Operational efficiency optimization, Financial forecasting, Marketing campaign ROI analysis'],'
     roi: 'Average customer sees 450% ROI within 6 months through improved decision-making and operational efficiency.','
     competitors: ['Tableau, Power BI, Looker, QlikView, Sisense'],'
-    marketSize: '$29.5B market','
+    marketSize: '$29.5 B market','
     growthRate: '220% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -158,7 +158,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     useCases: ['Endpoint protection, Network security, Cloud security, Compliance management, Incident response, Security training'],'
     roi: 'Average customer sees 600% ROI within 12 months through reduced security incidents and compliance automation.','
     competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Symantec'],'
-    marketSize: '$45.2B market','
+    marketSize: '$45.2 B market','
     growthRate: '280% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -222,7 +222,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     useCases: ['Customer personalization, Journey optimization, Customer retention, Conversion optimization, Customer feedback analysis'],'
     roi: 'Average customer sees 380% ROI within 4 months through improved customer engagement and retention.','
     competitors: ['Segment, Amplitude, Mixpanel, Hotjar, FullStory'],'
-    marketSize: '$15.8B market','
+    marketSize: '$15.8 B market','
     growthRate: '190% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -286,7 +286,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     useCases: ['Product traceability, Supplier management, Compliance automation, Quality control, Sustainability tracking, Risk management'],'
     roi: 'Average customer sees 520% ROI within 8 months through improved efficiency and compliance automation.','
     competitors: ['IBM Blockchain, SAP, Oracle, Microsoft Azure Blockchain, Amazon Managed Blockchain'],'
-    marketSize: '$12.3B market','
+    marketSize: '$12.3 B market','
     growthRate: '250% annual growth','
     variant: 'blockchain-futuristic','
     contactInfo: {
@@ -350,7 +350,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     useCases: ['Recruitment automation, Employee onboarding, Performance management, Compliance management, Payroll processing'],'
     roi: 'Average customer sees 420% ROI within 6 months through improved efficiency and reduced administrative overhead.','
     competitors: ['Workday, BambooHR, Gusto, Zenefits, Rippling'],'
-    marketSize: '$18.7B market','
+    marketSize: '$18.7 B market','
     growthRate: '210% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -414,7 +414,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     useCases: ['Financial modeling, Drug discovery, Climate modeling, Logistics optimization, Cryptography, Machine learning acceleration'],'
     roi: 'Average customer sees 800% ROI within 12 months through accelerated research and development.','
     competitors: ['IBM Quantum, Google Quantum, Amazon Braket, Microsoft Azure Quantum, D-Wave'],'
-    marketSize: '$8.9B market','
+    marketSize: '$8.9 B market','
     growthRate: '350% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -478,7 +478,7 @@ export const innovative2030MicroSaasServices: Innovative2030MicroSaasService[] =
     useCases: ['IoT application deployment, Edge analytics, Real-time processing, Content delivery, Industrial automation, Smart cities'],'
     roi: 'Average customer sees 450% ROI within 8 months through improved performance and reduced latency.','
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry, KubeEdge'],'
-    marketSize: '$11.2B market','
+    marketSize: '$11.2 B market','
     growthRate: '240% annual growth','
     variant: 'edge-futuristic','
     contactInfo: {

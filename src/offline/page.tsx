@@ -15,41 +15,30 @@ const,
   }
   const handleGoHome = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     window.location.href = '/''
   return (<div>Coming Soon</div>)
   )
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>""
-      <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"></div>""
-        <div className="w-16 h-16 mx-auto mb-6 bg-orange-500/20 rounded-full flex items-center justify-center"></div>""
-          <WifiOff className="w-8 h-8 text-orange-400" /></div>""
-        <h1 className="text-2xl font-bold text-white mb-4">"
-// You're Offline</$1>""'"
-        <p className="text-gray-300 mb-6">"
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"
+      <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2 xl p-8 text-center border border-white/20"
+        <div className="w-16 h-16 mx-auto mb-6 bg-orange-500/20 rounded-full flex items-center justify-center"
+          <WifiOff className="w-8 h-8 text-orange-400"
+        <h1 className="text-2 xl font-bold text-white mb-4""'"text-gray-300 mb-6"
           It looks like you're not connected to the internet. Please check your connection and try again.'
-        </p>""
-        <div className="space-y-3">"
-<button>
-            onClick={handleRetry}""
-            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-cyan-500,""
-  hover: bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium""
-// >
-          ""
-          <RefreshCwclassName="w-4 h-4" / />"
+        </p>"
+        <div className="space-y-3""
+            className="
+  hover: bg-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium"""
+          <RefreshCwclassName="
 // Try Again,
           </button>
-onClick={handleGoHome}""
-            className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10,""
-  hover: bg-white/20 text-white rounded-lg transition-colors duration-200 font-medium border border-white/20"""
-            <HomeclassName="w-4 h-4" / />"
-            Go Home;""
-        <div className="mt-6 text-sm text-gray-400"></div>""
-          <p className="flex items-center justify-center gap-2"></p>""
-            <Wifi className="w-4 h-4" />"
-            Check your internet connection;""
-        <div className="mt-8 p-4 bg-black/20 rounded-lg"></div>""
-          <h3 className="text-sm font-medium text-white mb-2">Available Offline</h3>""
-          <p className="text-xs text-gray-400">"
+onClick={handleGoHome}""w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10,"
+  hover: bg-white/20 text-white rounded-lg transition-colors duration-200 font-medium border border-white/20""
+            <HomeclassName="
+            Go Home;""mt-6 text-sm text-gray-400""flex items-center justify-center gap-2""w-4 h-4"
+            Check your internet connection;"
+        <div className="mt-8 p-4 bg-black/20 rounded-lg"
+          <h3 className="text-sm font-medium text-white mb-2"
+          <p className="text-xs text-gray-400"
             Some content may be available offline thanks to our service worker.
             Try refreshing the page once you're back online.'
   ),

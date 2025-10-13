@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -48,8 +46,6 @@ function resolveMergeConflicts(filePath) {
       if (!inConflict) {
         resolvedLines.push(line);
       }
-    }
-
     // Write the resolved content back to the file
     const resolvedContent = resolvedLines.join('\n');
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
@@ -66,7 +62,6 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
   );
-=======
 }
 
 // Function to find all TypeScript/JavaScript files
@@ -90,10 +85,7 @@ function findSourceFiles(dir) {
         if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
           files.push(fullPath);
         }
-      }
     }
-  }
-
   traverse(dir);
   return files;
 }
@@ -110,13 +102,11 @@ function main() {
     if (resolveMergeConflicts(file)) {
       resolvedCount++;
     }
-  }
-
   console.log(`Resolved merge conflicts in ${resolvedCount} files`);
 
   // Run a quick check to see if there are any remaining conflicts
   try {
-    const result = execSync('grep -r "<<<<<<<" app/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" || true', { encoding: 'utf8' });
+    const result = execSync('grep -r "<<<<<<<"*.ts" --include=" --include="*.js"*.jsx" || true', { encoding: 'utf8' });
     if (result.trim()) {
       console.log('Warning: Some merge conflicts may still exist:');
       console.log(result);
@@ -126,15 +116,11 @@ function main() {
   } catch (error) {
     console.log('Could not check for remaining conflicts, but resolution completed.');
   }
-}
-
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
 export { resolveMergeConflicts, findSourceFiles };
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
 import fs from 'fs';';
 import path from 'path';'
@@ -178,7 +164,6 @@ const originalContent = content
     console.error(`✗ Error processing ${filePath}:`, error.message)
     return false
   }
-}
 ;
 let fixedCount = 0;
 let errorCount = 0
@@ -211,4 +196,3 @@ console.log(`\nSummary:`)
 console.log(`- Files processed: ${conflictFiles.length}`)
 console.log(`- Files fixed: ${fixedCount}`)
 console.log(`- Errors: ${errorCount}`)))
-=======

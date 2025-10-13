@@ -35,8 +35,6 @@ let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8')'
     console.error('Error fixing main page:', error.message)'
     return false
   }
-}
-
 console.log('🔧 Fixing main page.tsx...')'
 fixMainPage()
 console.log('🎉 Main page fixes completed!')</div></div>'

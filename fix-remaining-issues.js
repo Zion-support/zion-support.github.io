@@ -32,7 +32,6 @@ const unusedImports = [
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
         const regex = new RegExp(`import\\s+${importName}\\s+from[^;]+;\\s*`, 'g')';'
         if (content.match(regex)) {/* TODO: Fix JSX expression */}
-        }
       })
       // Fix unused error parameter
       content = content.replace(/\(error\) => \{/, '() => {')'
@@ -70,8 +69,6 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       content = content.replace(/export default AIWritingAssistantPage;/, '')'
       modified = true
       content = content.replace(/\(error\) => \{/* TODO: Fix JSX expression */}
-    }
-
     // Fix about/page.tsx - remove unused imports and fix export;
     if (filePath.includes('about/page.tsx')) {/* TODO: Fix JSX expression */}'
     }
@@ -94,8 +91,6 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.log(`✗ Error processing ${filePath}: ${error.message}`)
   }
-}
-
 // Main execution
 console.log('🔧 Fixing remaining issues...\n');';
 const filesToFix = [
@@ -110,7 +105,6 @@ const filesToFix = [
   'src/ai-writing-assistant/page.tsx''
 ]
 for (const file of filesToFix) {/* TODO: Fix JSX expression */}
-  }
 }
 
 console.log('\n✅ Fixes complete!')'

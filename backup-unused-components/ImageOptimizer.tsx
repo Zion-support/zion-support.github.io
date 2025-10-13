@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-
 interface ImageOptimizerProps {
   src: string;
   alt: string;
@@ -80,66 +78,10 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     return (
 //       <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
+        style={{ width, height }
 //       >
-        <span className="text-gray-500 text-sm">Image failed to load</span>
-</div>
-    );
-  }
-
-  if (priority) {
-    return (
-//       <img
-        ref={imgRef}
-        src={optimizedSrc}
-        srcSet={srcSet}
-        alt={alt}
-        className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
-        width={width}
-        height={height}
-        onLoad={handleLoad}
-        onError={handleError}
-        loading="eager"
-        decoding="async"
-//       />
-    );
-  }
-
-=======
-interface ImageOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function ImageOptimizer({ className = '', children }: ImageOptimizerProps) {
-  return (
-<<<<<<< HEAD
-    <div className={`${className}`}>
-      {children}
-    </div>
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-//     <LazyLoadImage
-      src={optimizedSrc}
-      srcSet={srcSet}
-      alt={alt}
-      className={`${className} ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`}
-      width={width}
-      height={height}
-      effect={effect}
-      placeholderSrc={placeholder}
-      threshold={threshold}
-      onLoad={handleLoad}
-      onError={handleError}
-      loading="lazy"
-      decoding="async"
+        <span className="text-gray-500 text-sm"
+        decoding="async"lazy"
+      decoding="
 //     />
-=======
   );
-}

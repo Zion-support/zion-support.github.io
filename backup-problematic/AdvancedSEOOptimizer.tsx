@@ -25,9 +25,7 @@ interface SEOData {
  section?: string
  tags?: string[]
 interface SEOData {/* TODO: Fix JSX expression */}
-}
 interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-}
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  seoData
  enableStructuredData = true,
@@ -213,7 +211,7 @@ const _faqData = generateFAQStructuredData()
  // Update page title and meta description for better SEO
  if (typeof document !== 'undefined') {'
  document.title = seoData.title;
-let _metaDescription = document.querySelector('meta[name="description"]')'"
+let _metaDescription = document.querySelector('meta[name="description"
  if (!metaDescription) {
   // TODO: Add properties
 }
@@ -223,12 +221,10 @@ let _metaDescription = document.querySelector('meta[name="description"]')'"
  metaDescription.setAttribute('name', 'description')'
  document.head.appendChild(metaDescription)
  useEffect(() => {/* TODO: Fix JSX expression */}
- }
  metaDescription.setAttribute('content', seoData.description)'
  // Update canonical URL;
-let _canonicalLink = document.querySelector('link[rel="canonical"]')'"
+let _canonicalLink = document.querySelector('link[rel="canonical"
  if (!canonicalLink) {/* TODO: Fix JSX expression */}
- }
  canonicalLink.setAttribute('href', seoData.canonicalUrl)'
  }
  }, [seoData])
@@ -243,7 +239,7 @@ let _canonicalLink = document.querySelector('link[rel="canonical"]')'"
 }
   // TODO: Add properties
 }
- // let canonicalLink = document.querySelector('link[rel="canonical"]') as HTMLLinkElement'"
+ // let canonicalLink = document.querySelector('link[rel="canonical"
  // ,
  // if (canonicalLink) {,
  // canonicalLink.href = url
@@ -307,7 +303,6 @@ const _trackPageView = (confi)
   g: Record<string, unknown>) => void }).gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})'
  })
  }
- }
  const _trackPerformanceMetrics = () => {
   // TODO: Implement
 }
@@ -335,89 +330,61 @@ const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
  return(<Helmet>)
  {/* Basic Meta Tags */})
  <title>{seoData.title}</title>)
- <meta name="description" content={seoData.description} />)"
- <meta name="keywords" content={seoData.keywords.join(', ')} />'"
-<link rel="canonical" href={seoData.canonicalUrl} />"
+ <meta name="description"
+ <meta name="keywords"
+<link rel="canonical"
  {/* Open Graph Tags */}
  {enableOpenGraph && (
   // TODO: Add parameters
 )
  <React.Fragment>
-<meta property="og:title" content={seoData.title} />"
-<meta property="og: image:height" content="630" />,"
- <meta property="og:site_name" content="Zion Tech Group" />,"
- <meta property="og:locale" content="en_US" />,"
+<meta property="og:title"
+<meta property="og: image:height"630" />,"og:site_name" content=" />,"
+ <meta property=" content="en_US"
  </React.Fragment>)}
  {/* Twitter Card Tags */}
  {enableTwitterCards && (
   // TODO: Add parameters
 )
  <React.Fragment>
-<meta name="twitter: card" content="summary_large_image" />,"
- <meta name="twitter:title" content={seoData.title} />"
-<meta name="twitter:description" content={seoData.description} />"
-<meta name="twitter:image" content={seoData.ogImage} />"
-<meta name="twitter: site" content="@ziontechgroup" />,"
- <meta name="twitter:creator" content="@ziontechgroup" />,"
+<meta name="twitter: card"summary_large_image" />,"twitter:title" content={seoData.title} />"twitter:description" content={seoData.description} />"twitter:image" content={seoData.ogImage} />"twitter: site" content=" />,"
+ <meta name=" content="@ziontechgroup"
  </React.Fragment>)}
  {/* Additional SEO Meta Tags */}
- <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,"
- <meta name="googlebot" content="index, follow" />"
-<meta name="bingbot" content="index, follow" />"
-<meta name="author" content="Zion Tech Group" />"
-<meta name="publisher" content="Zion Tech Group" />"
-<meta name="copyright" content="Zion Tech Group" />"
-<meta name="language" content="en" />"
-<meta name="revisit-after" content="7 days" />"
-<meta name="distribution" content="global" />"
-<meta name="rating" content="general" />"
-<meta name="theme-color" content="#4F46E5" />"
+ <meta name="robots"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,"googlebot" content=" />"
+<meta name=" content="index, follow"
+<meta name="author"Zion Tech Group" />"publisher" content=" />"
+<meta name=" content="Zion Tech Group"
+<meta name="language"en" />"revisit-after" content=" />"
+<meta name=" content="global"
+<meta name="rating"general" />"theme-color" content=" />"
  return (<Helmet>
  {/* Basic Meta Tags */}
- <title>{seoData.title}</title>""
- <meta name="description" content={seoData.description} /></meta>")"
- <meta name="keywords" content={seoData.keywords.join(', ')} /></meta>"'"
- <link rel="canonical" href={seoData.canonicalUrl} />"
- {/* Open Graph Tags */}
- {/* TODO: Fix JSX expression */}""
-  g:title" content={seoData.title} />"
-</meta>""
- <meta property="o,"
-  g:imag,""
-  e:height" content="630" /></meta>""
- <meta property="o,""
-  g:site_name" content="Zion Tech Group" /></meta>""
- <meta property="o,""
-  g:locale" content="en_US" />"
- )}
- {/* Twitter Card Tags */}
- {/* TODO: Fix JSX expression */}""
-  r:title" content={seoData.title} />"
-</meta>""
- <meta name="twitte,""
-  r:description" content={seoData.description} /></meta>""
- <meta name="twitte,""
-  r:image" content={seoData.ogImage} /></meta>""
- <meta name="twitte,""
-  r:site" content="@ziontechgroup" /></meta>""
- <meta name="twitte,""
-  r:creator" content="@ziontechgroup" />"
- )}
- {/* Additional SEO Meta Tags */}""
- <meta name="robots" content="index, follow, max-snippe,"
-  t:-1, max-image-previe,
-  w:large, max-video-previe,""
-  w:-1" /></meta>""
- <meta name="googlebot" content="index, follow" /></meta>""
- <meta name="bingbot" content="index, follow" /></meta>""
- <meta name="author" content="Zion Tech Group" /></meta>""
- <meta name="publisher" content="Zion Tech Group" /></meta>""
- <meta name="copyright" content="Zion Tech Group" /></meta>""
- <meta name="language" content="en" /></meta>""
- <meta name="revisit-after" content="7 days" /></meta>""
- <meta name="distribution" content="global" /></meta>""
- <meta name="rating" content="general" /></meta>""
- <meta name="theme-color" content="#4F46E5" />"
+ <title>{seoData.title}</title>"
+ <meta name="description")"
+ <meta name=" content={seoData.keywords.join(', ')} /></meta>"'"canonical" href={seoData.canonicalUrl} />""
+  g:title"
+</meta>""o,"
+  g:imag,"
+  e:height" content=" /></meta>""o,"" content="Zion Tech Group""
+ <meta property=""
+  g:locale"en_US" />""
+  r:title"
+</meta>""twitte,"" content={seoData.description} /></meta>""twitte,"" content={seoData.ogImage} /></meta>""twitte,"" content="@ziontechgroup""
+ <meta name=""
+  r:creator"@ziontechgroup" />""
+ <meta name=" content="index, follow, max-snippe,""
+  w:-1""
+ <meta name=" content="index, follow""
+ <meta name=" content="index, follow""
+ <meta name=" content="Zion Tech Group""
+ <meta name=" content="Zion Tech Group""
+ <meta name=" content="Zion Tech Group""
+ <meta name=" content="en""
+ <meta name=" content="7 days""
+ <meta name=" content="global""
+ <meta name=" content="general""
+ <meta name=" content="#4 F46 E5"
  {/* Structured Data */}
  {/* TODO: Fix JSX expression */}
  {JSON.stringify(structuredData)}
@@ -429,34 +396,24 @@ const _trackPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
  {JSON.stringify(faqData)}
  )}
  {/* Preconnect to external domains for performance */}
- <link rel="preconnect" href="https: //fonts.googleapis.com" />,"
- <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,"
- <link rel="preconnect" href="https://www.google-analytics.com" />,"
- <link rel="preconnect" href="https://www.googletagmanager.com" />,"
+ <link rel="preconnect"https: //fonts.googleapis.com" />,"preconnect" href=" crossOrigin="anonymous"
+ <link rel="preconnect"https://www.google-analytics.com" />,"preconnect" href=" />,"
 ,
  {/* DNS Prefetch for better performance */}
- <link rel="dns-prefetch" href="//fonts.googleapis.com" />"
-<link rel="dns-prefetch" href="//www.google-analytics.com" />"
-<link rel="dns-prefetch" href="//www.googletagmanager.com" />"
- {/* Preconnect to external domains for performance */}""
- <nk rel="preconnect" href="http,"$2 />"
-  s://fonts.googleapis.com" />"
-</link>""
- <nk rel="preconnect" href="http,"$2 />"
-  s://fonts.gstatic.com" crossOrigin="anonymous" />"
-</link>""
- <nk rel="preconnect" href="http,"$2 />"
-  s://www.google-analytics.com" />"
-</link>""
- <nk rel="preconnect" href="http,"$2 />"
-  s://www.googletagmanager.com" />"
- {/* DNS Prefetch for better performance */}""
- <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>""
- <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>""
- <link rel="dns-prefetch" href="//www.googletagmanager.com" />"
+ <link rel=" href="//fonts.googleapis.com"
+<link rel="dns-prefetch"//www.google-analytics.com" />"dns-prefetch" href=" />"
+ {/* Preconnect to external domains for performance */}"
+ <nk rel="preconnect"http,"$2 />" />"
+</link>"
+ <nk rel="preconnect"http,"$2 />" crossOrigin="anonymous"
+</link>""preconnect" href="$2 />"
+  s://www.google-analytics.com"
+</link>""preconnect" href="$2 />"
+  s://www.googletagmanager.com"
+ {/* DNS Prefetch for better performance */}""dns-prefetch" href=" /></link>""dns-prefetch" href=" /></link>""dns-prefetch" href=" />"
  )
 }
-export default AdvancedSEOOptimizer;"</li></li>";"
+export default AdvancedSEOOptimizer;";"
 </li></li>
 </li></li>
 </li></li>

@@ -14,9 +14,9 @@ const result = match.match(/href:\s*'([^']+)'/)'
 }).filter(Boolean) : []
 // Read the navigation component to extract all links;
 const navContent = fs.readFileSync('/workspace/app/components/Navigation.tsx', 'utf8');';
-const navMatches = navContent.match(/to="([^"]+)"/g);";
+const navMatches = navContent.match(/to="([^"/g);";
 const navLinks = navMatches ? navMatches.map(match => {;
-const result = match.match(/to="([^"]+)"/)"
+const result = match.match(/to="]+)"/)"
   return result ? result[1] : null
 }).filter(Boolean) : []
 // Combine all links;
@@ -40,7 +40,6 @@ const stat = fs.statSync(fullPath)
 const route = fullPath.replace('/workspace/app', ').replace('/page.tsx', ') || '/''
       existingPages.push(route)
     }
-  }
 }
 
 scanDirectory(appDir)
@@ -59,8 +58,6 @@ for (const link of allLinks) {
 }
     missingPages.push(link)
   }
-}
-
 console.log('=== MISSING PAGES ANALYSIS ===')'
 console.log(`Total links found: ${allLinks.length}`)
 console.log(`Existing pages: ${existingPages.length}`)

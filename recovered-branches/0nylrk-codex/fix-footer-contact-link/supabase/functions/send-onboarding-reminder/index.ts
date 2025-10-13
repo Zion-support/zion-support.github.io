@@ -1,18 +1,18 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";";
-import { Resend } from "npm:resend@1.0.0";";";
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));";
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;";
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;";
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.7.1";
+import { Resend } from "npm:resend@1.0.0";";
+const resend = new Resend(Deno.env.get("));";
+const supabaseUrl = Deno.env.get(")!;";
+const supabaseServiceKey = Deno.env.get(")!;";
 const corsHeaders = {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  "Access-Control-Allow-Origin": "*","
-  "Access-Control-Allow-Headers":"
-    "authorization, x-client-info, apikey, content-type"}"
-    "authorization, x-client-info, apikey, content-type","
+  ": "*"
+  "Access-Control-Allow-Headers"
+    "authorization, x-client-info, apikey, content-type"
+    "authorization, x-client-info, apikey, content-type"
 }
 interface ReminderPayload {
   // TODO: Add properties
@@ -29,7 +29,7 @@ serve(async (req: Request) => {
   // TODO: Add properties
 }
   // Handle CORS
-  if (req.method === "OPTIONS") {"
+  if (req.method === "OPTIONS"
     return new Response(null, {
   // TODO: Add properties
 }
@@ -57,23 +57,22 @@ const { user_id, missing_milestone, role } = payload
       return new Response(
   // TODO: Add parameters
 )
-        JSON.stringify({ error: "Missing required fields" }),"
+        JSON.stringify({ error: "Missing required fields"
         {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
           status: 400,
-          headers: { "Content-Type": "application/json", ...corsHeaders }}"
-          headers: { "Content-Type": "application/json", ...corsHeaders },"
+          headers: { "Content-Type"application/json", ...corsHeaders }}"Content-Type": ", ...corsHeaders },"
         }
       )
     }
     // Get user data;
 const { data: userData, error: userError } = await supabase
-      .from("profiles")"
-      .select("email, display_name")"
-      .eq("id", user_id)"
+      .from(")"
+      .select(")"
+      .eq(", user_id)"
       .single()
     if (userError || !userData) {
   // TODO: Add properties
@@ -83,77 +82,33 @@ const { data: userData, error: userError } = await supabase
       return new Response(
   // TODO: Add parameters
 )
-        JSON.stringify({ error: "User not found", details: userError }),"
+        JSON.stringify({ error: ", details: userError }),"
         {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
           status: 404,
-          headers: { "Content-Type": "application/json", ...corsHeaders }}"
-          headers: { "Content-Type": "application/json", ...corsHeaders },"
-        }
-      )
-    }
-    // Create message based on role and missing milestone;
-const milestoneMessages = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      talent: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        profile_completed: "complete your profile to get discovered by clients","
-        skills_added: "add your skills to get better job matches","
-        availability_set: "set your availability to help clients know when you can work"},"
-      client: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        job_posted: "post your first job to start finding talent","
-        match_viewed: "check out your AI-matched talent suggestions","
-        talent_invited: "invite talent to speed up your hiring process"}}"
-        availability_set: "set your availability to help clients know when you can work","
-      },
-      client: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        job_posted: "post your first job to start finding talent","
-        match_viewed: "check out your AI-matched talent suggestions","
-        talent_invited: "invite talent to speed up your hiring process","
-      },
-    }
-    const name = userData.display_name || "there";";
-const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-      missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]"
-    ] || "complete your next step""
+          headers: { ": "application/json"
+          headers: { "Content-Type"application/json", ...corsHeaders },"complete your profile to get discovered by clients","add your skills to get better job matches","set your availability to help clients know when you can work"},"post your first job to start finding talent","check out your AI-matched talent suggestions","invite talent to speed up your hiring process"}}"set your availability to help clients know when you can work","post your first job to start finding talent","check out your AI-matched talent suggestions","invite talent to speed up your hiring process","there";"talent" | "]"
+    ] || ""
     // Send email;
 const { data: emailData, error: emailError } = await resend.emails.send({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      from: "Zion AI Marketplace <notifications@zion.ai>","
+      from: ","
       to: userData.email,
-      subject: "Complete your next step on Zion AI Marketplace","
+      subject: ","
       html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">"
+        <div style=">"
 <h2>Hi ${name},</h2>
 <p>You're making great progress in setting up your ${role} profile on Zion AI Marketplace!</p>'
 <p>Your next step is to <strong>${action}</strong>.</p>
 <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
-<div style="margin: 30px 0;">"
-<a href="https://zion.ai/dashboard" style="background-color: #9b87f5; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px; font-weight: bold;">"
+<div style=">"
+<a href=" style="background-color: #9 b87 f5; color: white; padding: 12 px 20 px; text-decoration: none; border-radius: 4 px; font-weight: bold;"
               Continue my setup
             </a></div>
 <p>The Zion AI Marketplace Team</p></div>
@@ -168,15 +123,14 @@ const { data: emailData, error: emailError } = await resend.emails.send({
       return new Response(
   // TODO: Add parameters
 )
-        JSON.stringify({ error: "Failed to send email", details: emailError }),"
+        JSON.stringify({ error: "Failed to send email"
         {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
           status: 500,
-          headers: { "Content-Type": "application/json", ...corsHeaders }}"
-          headers: { "Content-Type": "application/json", ...corsHeaders },"
+          headers: { "Content-Type"application/json", ...corsHeaders }}"Content-Type": ", ...corsHeaders },"
         }
       )
     }
@@ -184,17 +138,17 @@ const { data: emailData, error: emailError } = await resend.emails.send({
 const { data: notification, error: notificationError } = await supabase.rpc(
   // TODO: Add parameters
 )
-      "create_notification","
+      ","
       {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
         _user_id: user_id,
-        _title: "Complete your next step","
+        _title: ","
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,'
-        _type: "onboarding"}"
-        _type: "onboarding","
+        _type: "}"
+        _type: ","
       }
     )
     if (notificationError) {
@@ -202,7 +156,7 @@ const { data: notification, error: notificationError } = await supabase.rpc(
 }
   // TODO: Add properties
 }
-      console.error("Failed to create notification:", notificationError)"
+      console.error(", notificationError)"
     }
     return new Response(
   // TODO: Add parameters
@@ -212,7 +166,7 @@ const { data: notification, error: notificationError } = await supabase.rpc(
 }
   // TODO: Add properties
 }
-        message: "Reminder sent successfully","
+        message: ","
         notification_id: notification}),
       {
   // TODO: Add properties
@@ -220,7 +174,7 @@ const { data: notification, error: notificationError } = await supabase.rpc(
   // TODO: Add properties
 }
         status: 200,
-        headers: { "Content-Type": "application/json", ...corsHeaders }}"
+        headers: { ": "application/json"
         notification_id: notification,
       }),
       {
@@ -229,27 +183,8 @@ const { data: notification, error: notificationError } = await supabase.rpc(
   // TODO: Add properties
 }
         status: 200,
-        headers: { "Content-Type": "application/json", ...corsHeaders },"
-      }
-    )
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error(error)
-    return new Response(
-  // TODO: Add parameters
-)
-      JSON.stringify({ error: "Internal server error", details: error.message }),"
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        status: 500,
-        headers: { "Content-Type": "application/json", ...corsHeaders }}"
-        headers: { "Content-Type": "application/json", ...corsHeaders },"
+        headers: { "Content-Type"application/json", ...corsHeaders },"Internal server error", details: error.message }),"Content-Type": ", ...corsHeaders }}"
+        headers: { ": "application/json"
       }
     )
   }

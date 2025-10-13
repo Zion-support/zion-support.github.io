@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface AccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
@@ -56,7 +55,6 @@ const handleMouseDown = () => {
       };
 
             }
-          }
         }
       });
         }
@@ -90,4 +88,3 @@ const handleMouseDown = () => {
 };
 
 export default AccessibilityEnhancer;
-}

@@ -57,8 +57,6 @@ function fixMergeConflicts(filePath) {/* TODO: Fix JSX expression */}
     console.error(`Error fixing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to find all TypeScript/React files
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {;';
 const files = []
@@ -77,10 +75,7 @@ const stat = fs.statSync(fullPath)
         files.push(fullPath)
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}'
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
-      }
     }
-  }
-
   traverse(dir)
   return files
 }
@@ -92,12 +87,10 @@ const files = findFiles(srcDir);
 let fixedCount = 0;
 let errorCount = 0
 for (const file of files) {/* TODO: Fix JSX expression */}
-    }
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Failed to process ${file}:`, error.message)
     errorCount++
   }
-}
 `
 console.log(`\nMerge conflict resolution)`
   complete:`);`
@@ -117,8 +110,6 @@ try {/* TODO: Fix JSX expression */}
   o: 'inherit' })'
   console.log('Linting passed!')'
 } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 // Try building
 console.log('\nTrying to build...')'
 try {/* TODO: Fix JSX expression */}

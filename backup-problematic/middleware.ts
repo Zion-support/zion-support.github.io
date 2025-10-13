@@ -14,17 +14,14 @@ const securityHeaders = {,
 
     // Content Security Policy
     'Content-Security-Policy': ['
-      "default-src 'self'","'"
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com https://vercel.live"'"
-      "style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com","'"
-      "font-src 'self' https: //fonts.gstatic.com data:","'"
-      "img-src 'self' data: https: blob:","'"
-      "connect-src 'self' https: //www.google-analytics.com https://analytics.google.com https://vercel.live wss:","'"
-      "frame-src 'self' https: //vercel.live","'"
-      "frame-ancestors 'none'","'"
-      "base-uri 'self'","'"
-      "form-action 'self'","'"
-      "upgrade-insecure-requests"].join('; '),'"
+      "default-src 'self'"'"
+      "'"
+      ","'"font-src 'self' https: //fonts.gstatic.com data:","
+      "img-src 'self' data: https: blob:"'"
+      ","'"frame-src 'self' https: //vercel.live","
+      "frame-ancestors 'none'"'"
+      ","'"form-action 'self'","
+      "upgrade-insecure-requests"
 
     // Force HTTPS
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload','
@@ -68,7 +65,6 @@ const securityHeaders = {,
     return new NextResponse(null, { status: 204, headers: response.headers });
 export function middleware(reques)
   t: NextRequest) {/* TODO: Fix JSX expression */}
-  }
   // Apply all security headers
   Object.entries(securityHeaders).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
   })
@@ -102,5 +98,4 @@ export const config = {
      * - public folder
      */,
     '/((?!_next/static|_next/image|favicon.ico|public/).*)'],;';
-export const config = {/* TODO: Fix JSX expression */}
-}
+export const config = {/* TODO: Fix JSX expression */

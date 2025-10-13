@@ -29,8 +29,6 @@ function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.log(`✗ Error processing ${filePath}: ${error.message}`)
   }
-}
-
 // Main execution
 console.log('🔧 Fixing blog files...\n');';
 const blogFiles = [
@@ -58,7 +56,6 @@ const blogFiles = [
   'src/blog/ai-trends-2026-future-enterprise-transformation/page.tsx''
 ]
 for (const file of blogFiles) {/* TODO: Fix JSX expression */}
-  }
 }
 
 console.log('\n✅ Blog files fixed!');`

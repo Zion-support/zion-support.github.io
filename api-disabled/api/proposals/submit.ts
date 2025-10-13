@@ -45,7 +45,6 @@ async function submitByEmail(t,
   attachment,
   s: unknown[] = [])
 ) {/* TODO: Fix JSX expression */}
-  }
 ;
 const transporter = nodemailer.createTransporter({/* TODO: Fix JSX expression */}
   h: { user, pass })
@@ -126,10 +125,9 @@ const updated = updateProposalMeta(id, m => ({)
     let,
   ensRecordHash: string | undefined
     try {/* TODO: Fix JSX expression */}`
-      ensRecordHash = `0x${hash}`
+      ensRecordHash = `0 x${hash}`
       updateArtifacts(id, { ensRecordHash })
     } catch {/* TODO: Fix JSX expression */}
-    }
 ;
 const updated = updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */})
     }))
@@ -139,5 +137,4 @@ const updated = updateProposalMeta(id, m => ({/* TODO: Fix JSX expression */})
   r: unknown) {/* TODO: Fix JSX expression */}
   r: error?.message || 'Submission failed' })'
   }
-}
 `

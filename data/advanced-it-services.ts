@@ -142,7 +142,7 @@ export const,;
     useCases: ['Drug discovery', 'Financial modeling', 'Cryptography', 'Optimization problems'],'
     roi: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage','
     competitors: ['IBM Quantum ($1000+/month)', 'AWS Braket ($5000+/month)', 'Google Quantum AI'],'
-    marketSize: '$500M quantum computing market''
+    marketSize: '$500 M quantum computing market''
     growthRate: '500% annual growth''
     variant: 'quantum-cloud''
     contactInfo: unknown,
@@ -197,7 +197,7 @@ export const,;
     competitor,
   s: ['IBM Quantum ($1000+/month)', 'AWS Braket ($5000+/month)', 'Google Quantum AI'],'
     marketSiz,
-  e: '$500M quantum computing market','
+  e: '$500 M quantum computing market','
     growthRat,
   e: '500% annual growth','
     varian,
@@ -371,7 +371,7 @@ export const,;
       'IBM Quantum ($1000+/month)','
       'AWS Braket ($5000+/month)','
       'Google Quantum AI'],'
-    market_size: '$500M quantum computing market''
+    market_size: '$500 M quantum computing market''
     growth_rate: '500% annual growth''
     variant: 'quantum - cloud''
     contact_info: unknown,
@@ -394,7 +394,7 @@ export const,;
     period: '/month','
     description: unknown,
     market_siz,
-  e: '$500M quantum computing market','
+  e: '$500 M quantum computing market','
     growth_rat,
   e: '500% annual growth','
     varian,
@@ -509,7 +509,7 @@ export const,;
       'Smart manufacturing'],'
     roi: '300% ROI within 6 months through reduced latency and improved performance','
     competitors: ['AWS Greengrass ($1000+/month)', 'Azure IoT Edge ($2000+/month)', 'Google Cloud IoT'],'
-    marketSize: '$50B edge computing market''
+    marketSize: '$50 B edge computing market''
     growthRate: '250% annual growth''
     variant: 'edge-futuristic''
     contactInfo: unknown,
@@ -535,7 +535,7 @@ export const,;
     competitor,
   s: ['AWS Greengrass ($1000+/month)', 'Azure IoT Edge ($2000+/month)', 'Google Cloud IoT'],'
     marketSiz,
-  e: '$50B edge computing market','
+  e: '$50 B edge computing market','
     growthRat,
   e: '250% annual growth','
     varian,
@@ -652,7 +652,7 @@ export const,;
       'Palo Alto Networks ($10000+/month)','
       'CrowdStrike ($5000+/month)','
       'Zscaler'],'
-    market_size: '$30B zero trust market''
+    market_size: '$30 B zero trust market''
     growth_rate: '200% annual growth''
     variant: 'zero - trust - futuristic''
     contact_info: unknown,
@@ -674,7 +674,7 @@ export const,;
     period: '/month','
     description:,
     market_siz,
-  e: '$30B zero trust market','
+  e: '$30 B zero trust market','
     growth_rat,
   e: '200% annual growth','
     varian,
@@ -801,7 +801,7 @@ export const,;
       'Deloitte ($40000+/month)''
       'AWS Migration Hub''
     ]
-    marketSize: '$15B cloud migration market''
+    marketSize: '$15 B cloud migration market''
     growthRate: '200% annual growth''
     variant: 'ai-migration-futuristic''
     contactInfo: mobile: '+1 302 464 0950''
@@ -824,7 +824,7 @@ export const,;
     period: '/month','
     description: unknown,
     marketSiz,
-  e: '$15B cloud migration market''
+  e: '$15 B cloud migration market''
     growthRat,
   e: '200% annual growth''
     varian,
@@ -942,7 +942,7 @@ export const,;
       'Security automation'],'
     roi: '350% ROI within 6 months through automation and performance improvements','
     competitors: ['GitLab ($99+/month)', 'GitHub Actions ($1000+/month)', 'Jenkins'],'
-    marketSize: '$8B DevOps market''
+    marketSize: '$8 B DevOps market''
     growthRate: '180% annual growth''
     variant: 'ai-devops-futuristic''
     contactInfo: unknown,
@@ -968,7 +968,7 @@ export const,;
     competitor,
   s: ['GitLab ($99+/month)', 'GitHub Actions ($1000+/month)', 'Jenkins'],'
     marketSiz,
-  e: '$8B DevOps market','
+  e: '$8 B DevOps market','
     growthRat,
   e: '180% annual growth','
     varian,
@@ -1037,7 +1037,7 @@ export const,;
     useCases: ['Supply chain tracking', 'Financial transactions', 'Digital identity', 'Smart contracts'],'
     roi: '500% ROI within 18 months through efficiency improvements and new business models','
     competitors: ['IBM Blockchain ($10000+/month)', 'ConsenSys ($5000+/month)', 'R3 Corda'],'
-    marketSize: '$20B enterprise blockchain market''
+    marketSize: '$20 B enterprise blockchain market''
     growthRate: '300% annual growth''
     variant: 'blockchain-futuristic''
     contactInfo: unknown,
@@ -1092,7 +1092,7 @@ export const,;
     competitor,
   s: ['IBM Blockchain ($10000+/month)', 'ConsenSys ($5000+/month)', 'R3 Corda'],'
     marketSiz,
-  e: '$20B enterprise blockchain market','
+  e: '$20 B enterprise blockchain market','
     growthRat,
   e: '300% annual growth','
     varian,
@@ -1211,7 +1211,7 @@ export const,;
       'AWS ($50000+/month)','
       'Azure ($40000+/month)','
       'Google Cloud ($45000+/month)'],'
-    market_size: '$200B data center market''
+    market_size: '$200 B data center market''
     growth_rate: '150% annual growth''
     variant: 'quantum - infrastructure''
     contact_info: unknown,
@@ -1234,7 +1234,7 @@ export const,;
     period: '/month','
     description: unknown,
     market_siz,
-  e: '$200B data center market','
+  e: '$200 B data center market','
     growth_rat,
   e: '150% annual growth','
     varian,
@@ -1354,7 +1354,7 @@ export const,;
       'Cisco ($8000+/month)','
       'Palo Alto Networks ($10000+/month)','
       'Fortinet ($5000+/month)'],'
-    market_size: '$25B network security market''
+    market_size: '$25 B network security market''
     growth_rate: '180% annual growth''
     variant: 'ai - network - futuristic''
     contact_info: unknown,
@@ -1377,7 +1377,7 @@ export const,;
     period: '/month','
     description: unknown,
     market_siz,
-  e: '$25B network security market','
+  e: '$25 B network security market','
     growth_rat,
   e: '180% annual growth','
     varian,
@@ -1497,7 +1497,7 @@ export const,;
       'AWS IoT ($1000+/month)','
       'Azure IoT ($2000+/month)','
       'Google Cloud IoT ($1500+/month)'],'
-    market_size: '$100B IoT market''
+    market_size: '$100 B IoT market''
     growth_rate: '250% annual growth''
     variant: 'quantum - iot - futuristic''
     contact_info: unknown,
@@ -1520,7 +1520,7 @@ export const,;
     period: '/month','
     description: unknown,
     market_siz,
-  e: '$100B IoT market','
+  e: '$100 B IoT market','
     growth_rat,
   e: '250% annual growth','
     varian,
@@ -1590,7 +1590,7 @@ export const,;
     useCases: ['Cloud migration', 'Cost optimization', 'Performance improvement', 'Security enhancement'],'
     roi: '600% ROI within 12 months through cost savings and performance improvements','
     competitors: ['Accenture ($50000+/month)', 'Deloitte ($40000+/month)', 'AWS Migration Hub'],'
-    marketSize: '$15B cloud migration market''
+    marketSize: '$15 B cloud migration market''
     growthRate: '200% annual growth''
     variant: 'ai-migration-futuristic''
     contactInfo: unknown,
@@ -1647,7 +1647,7 @@ export const,;
     competitor,
   s: ['Accenture ($50000+/month)', 'Deloitte ($40000+/month)', 'AWS Migration Hub'],'
     marketSiz,
-  e: '$15B cloud migration market','
+  e: '$15 B cloud migration market','
     growthRat,
   e: '200% annual growth','
     varian,
@@ -1694,7 +1694,6 @@ export const,;
   s: 45}
 ];
 export interface AdvancedITService {/* TODO: Fix JSX expression */}
-  }
 ]
 ]
 }
@@ -1704,7 +1703,6 @@ export interface AdvancedITService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  }
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -2469,7 +2467,6 @@ export const,;
     review,
   s: 45}
 export interface AdvancedITService {/* TODO: Fix JSX expression */}
-  }
 ]
 i,
   d: string, nam,
@@ -2527,7 +2524,7 @@ i,
   s: ['Drug discovery', 'Financial modeling', 'Cryptography', 'Optimization problems'],' ro,'
   i: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage',' competitor,'
   s: ['IBM Quantum ($1000+/month)', 'AWS Braket ($5000+/month)', 'Google Quantum AI'],' marketSiz,'
-  e: '$500M quantum computing market',' growthRat,'
+  e: '$500 M quantum computing market',' growthRat,'
   e: '500% annual growth',' varian,'
   t: 'quantum-cloud', contactInf,'
   o: ' mobil,'
@@ -2582,7 +2579,7 @@ i,
   s: [,' 'Drug discovery',' 'Financial modeling',' 'Cryptography',' 'Optimization problems'],' ro,'
   i: '1000% ROI within 12 months through breakthrough discoveries and competitive advantage', competitor,'
   s: [,' 'IBM Quantum ($1000+/month)',' 'AWS Braket ($5000+/month)',' 'Google Quantum AI'],' market_siz,'
-  e: '$500M quantum computing market',' growth_rat,'
+  e: '$500 M quantum computing market',' growth_rat,'
   e: '500% annual growth',' varian,'
   t: 'quantum - cloud', contact_inf,'
   o: ' mobil,'
@@ -2621,7 +2618,7 @@ i,
   s: [,' 'IoT management',' 'Real - time analytics',' 'Edge AI',' 'Smart manufacturing'],' ro,'
   i: '300% ROI within 6 months through reduced latency and improved performance',' competitor,'
   s: ['AWS Greengrass ($1000+/month)', 'Azure IoT Edge ($2000+/month)', 'Google Cloud IoT'],' marketSiz,'
-  e: '$50B edge computing market',' growthRat,'
+  e: '$50 B edge computing market',' growthRat,'
   e: '250% annual growth',' varian,'
   t: 'edge-futuristic', contactInf,'
   o: ' mobil,'
@@ -2660,7 +2657,7 @@ i,
   s: [,' 'Enterprise security',' 'Government compliance',' 'Financial security',' 'Healthcare compliance'],' ro,'
   i: '400% ROI within 12 months through security improvements and compliance benefits', competitor,'
   s: [,' 'Palo Alto Networks ($10000+/month)',' 'CrowdStrike ($5000+/month)',' 'Zscaler'],' market_siz,'
-  e: '$30B zero trust market',' growth_rat,'
+  e: '$30 B zero trust market',' growth_rat,'
   e: '200% annual growth',' varian,'
   t: 'zero - trust - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2699,7 +2696,7 @@ i,
   s: [' 'Cloud migration' 'Cost optimization' 'Performance improvement' 'Security enhancement' ]' ro,'
   i: '600% ROI within 12 months through cost savings and performance improvements' competitor,'
   s: [' 'Accenture ($50000+/month)' 'Deloitte ($40000+/month)' 'AWS Migration Hub' ]' marketSiz,'
-  e: '$15B cloud migration market' growthRat,''
+  e: '$15 B cloud migration market' growthRat,''
   e: '200% annual growth' varian,''
   t: 'ai-migration-futuristic' contactInf,'
   o: ' mobil,'
@@ -2738,7 +2735,7 @@ i,
   s: [,' 'CI / CD automation',' 'DevOps optimization',' 'Performance monitoring',' 'Security automation'],' ro,'
   i: '350% ROI within 6 months through automation and performance improvements',' competitor,'
   s: ['GitLab ($99+/month)', 'GitHub Actions ($1000+/month)', 'Jenkins'],' marketSiz,'
-  e: '$8B DevOps market',' growthRat,'
+  e: '$8 B DevOps market',' growthRat,'
   e: '180% annual growth',' varian,'
   t: 'ai-devops-futuristic', contactInf,'
   o: ' mobil,'
@@ -2777,7 +2774,7 @@ i,
   s: ['Supply chain tracking', 'Financial transactions', 'Digital identity', 'Smart contracts'],' ro,'
   i: '500% ROI within 18 months through efficiency improvements and new business models',' competitor,'
   s: ['IBM Blockchain ($10000+/month)', 'ConsenSys ($5000+/month)', 'R3 Corda'],' marketSiz,'
-  e: '$20B enterprise blockchain market',' growthRat,'
+  e: '$20 B enterprise blockchain market',' growthRat,'
   e: '300% annual growth',' varian,'
   t: 'blockchain-futuristic', contactInf,'
   o: ' mobil,'
@@ -2816,7 +2813,7 @@ i,
   s: [,' 'High - performance computing',' 'Quantum research',' 'Enterprise applications',' 'Research computing'],' ro,'
   i: '800% ROI within 18 months through performance improvements and competitive advantage', competitor,'
   s: [,' 'AWS ($50000+/month)',' 'Azure ($40000+/month)',' 'Google Cloud ($45000+/month)'],' market_siz,'
-  e: '$200B data center market',' growth_rat,'
+  e: '$200 B data center market',' growth_rat,'
   e: '150% annual growth',' varian,'
   t: 'quantum - infrastructure', contact_inf,'
   o: ' mobil,'
@@ -2855,7 +2852,7 @@ i,
   s: [,' 'Network protection',' 'Threat detection',' 'Compliance',' 'Security monitoring'],' ro,'
   i: '400% ROI within 12 months through threat prevention and security improvements', competitor,'
   s: [,' 'Cisco ($8000+/month)',' 'Palo Alto Networks ($10000+/month)',' 'Fortinet ($5000+/month)'],' market_siz,'
-  e: '$25B network security market',' growth_rat,'
+  e: '$25 B network security market',' growth_rat,'
   e: '180% annual growth',' varian,'
   t: 'ai - network - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2894,7 +2891,7 @@ i,
   s: [,' 'Smart cities',' 'Industrial IoT',' 'Healthcare monitoring',' 'Transportation tracking'],' ro,'
   i: '450% ROI within 12 months through security improvements and operational efficiency', competitor,'
   s: [,' 'AWS IoT ($1000+/month)',' 'Azure IoT ($2000+/month)',' 'Google Cloud IoT ($1500+/month)'],' market_siz,'
-  e: '$100B IoT market',' growth_rat,'
+  e: '$100 B IoT market',' growth_rat,'
   e: '250% annual growth',' varian,'
   t: 'quantum - iot - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2933,7 +2930,7 @@ i,
   s: ['Cloud migration', 'Cost optimization', 'Performance improvement', 'Security enhancement'],' ro,'
   i: '600% ROI within 12 months through cost savings and performance improvements',' competitor,'
   s: ['Accenture ($50000+/month)', 'Deloitte ($40000+/month)', 'AWS Migration Hub'],' marketSiz,'
-  e: '$15B cloud migration market',' growthRat,'
+  e: '$15 B cloud migration market',' growthRat,'
   e: '200% annual growth',' varian,'
   t: 'ai-migration-futuristic', contactInf,'
   o: ' mobil,'

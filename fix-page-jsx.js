@@ -59,7 +59,7 @@ const fixes = [
 <\/\w+>/g, replacement: (match) => {;
 const firstTag = match.match(/<\/(\w+)>/)[1]
         return `</${firstTag}>`
-      }}
+      }
     ];
 let modified = false
     for (const fix of fixes) {;
@@ -72,8 +72,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
         content = newContent
         modified = true
       }
-    }
-
     // Additional specific fixes for common patterns
     content = content.replace(/<(\w+)([^>]*)>([^<]*?)(?![^<]*<\/\1>)(?=\s*<)/g, '<$1$2>$3</$1>')'
     if (modified) {
@@ -95,8 +93,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
     console.error('Error fixing app/page.tsx:', error.message)'
     return false
   }
-}
-
 fixPageJSX()</div></span>
 </button></a>
 </p></h1>

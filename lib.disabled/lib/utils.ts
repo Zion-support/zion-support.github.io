@@ -7,7 +7,6 @@ export function formatPhoneNumber(phone: string): string {,;
 const _cleaned = phone.replace(/\D/g, '');';
 export function cn(...input)
   s: ClassValue[]) {/* TODO: Fix JSX expression */}
-}
 ;
 export function formatPhoneNumber(phon)
   e: string): string {/* TODO: Fix JSX expression */}
@@ -33,7 +32,6 @@ let timeout: NodeJS.Timeout
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
-}
 ;
 export function throttle<T extends (...args: unknown[]) => any>(
   // TODO: Add parameters
@@ -53,7 +51,6 @@ let inThrottle: boolean
       setTimeout(() => (inThrottle = false), limit);
 export function formatEmail(emai)
   l: string): string {/* TODO: Fix JSX expression */}
-}
 ;
 export function debounce<T extends (...arg)
   s: unknown[]) => any>(fun,
@@ -62,7 +59,6 @@ export function debounce<T extends (...arg)
   t: number;)
 ): (...arg)
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
-  }
 }
 ;
 export function throttle<T extends (...arg)
@@ -72,6 +68,5 @@ export function throttle<T extends (...arg)
   t: number;)
 ): (...arg)
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
-    }
   }
 }`

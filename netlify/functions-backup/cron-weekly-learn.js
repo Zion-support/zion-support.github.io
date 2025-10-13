@@ -6,7 +6,7 @@ exports && exports.handler = async function () {try { const usersPath = path && 
     updated_at: Date.now (), totals: { users: Object.keys (users).length, courses: courses.length, completions: Object.values (users).reduce((acc),
         u) => acc + (u.certifications?.length || 0), 0
   } }, top_badges: Object.values (users).reduce((map),
-        u) => {(u.badges || []).for_each (boolean => { map[b] = (map[b] || 0) + 1} }); return map; }, {})} } "topBadges": Object.values(users).reduce((map)"
+        u) => {(u.badges || []).for_each (boolean => { map[b] = (map[b] || 0) + 1} }); return map; }, {})} } "topBadges"
         u) => {
   // TODO: Add properties
 }
@@ -20,6 +20,6 @@ exports && exports.handler = async function () {try { const usersPath = path && 
         u) => {(u && u.badges || []).forEach(b => {' const fs = require ('fs'),' const path = require ('path')}' const { upsert_file } = require ('./_lib / github'); exports.handler = async function () {try {' const users_path = path.join (process.cwd (), 'data', 'learn', 'users.json'); const courses_path = path.join ( process.cwd (),' 'data',' 'learn',' 'courses.json');' const users = JSON.parse (fs.readFileSync (users_path) 'utf - 8'));' const courses = JSON.parse (fs.readFileSync (courses_path) 'utf - 8'))} const users_path = path.join (process.cwd (), 'datalearnusers.json'),' const courses_path = path.join (process.cwd (), 'datalearncourses.json'),' const users = JSON.parse (fs.readFileSync (users_path) 'utf - 8')),' const courses = JSON.parse (fs.readFileSync (courses_path) 'utf - 8')), const summary = {/* TODO: Fix JSX expression */}'
       } }, top_badge,
   s: Object.values (users).reduce ((map)
-        u) => {(u.badges || []).for_each (boolean => { map[b] = (map[b] || 0) + 1} }); return map; }, {})} } "topBadges": Object.values(users).reduce((map)"
+        u) => {(u.badges || []).for_each (boolean => { map[b] = (map[b] || 0) + 1} }); return map; }, {})} } "topBadges"
         u) => {/* TODO: Fix JSX expression */}
-      }) return map; }, {}) } '""'"
+      }) return map; }, {}) } '""

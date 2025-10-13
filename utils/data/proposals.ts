@@ -52,10 +52,9 @@ export type ProposalMeta = {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 },;
 export type ProposalPayload = {
   // TODO: Add properties
@@ -75,7 +74,6 @@ export type ProposalPayload = {
     ensRecordHash?: string
     signature?: string
   }
-}
 export type ProposalPayload = {
   // TODO: Add properties
 }
@@ -105,10 +103,9 @@ function ensureDirs() {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export function createProposal(payload: ProposalPayload): ProposalMeta {
   // TODO: Add properties
@@ -159,7 +156,7 @@ const meta: ProposalMeta = {id
   // TODO: Add properties
 }
       markdownPath: `/proposals/${id}/proposal.md`
-      jsonPath: path.relative(process.cwd(), jsonPath)}}
+      jsonPath: path.relative(process.cwd(), jsonPath)}
   fs.writeFileSync(markdownPath, payload.contentMarkdown, 'utf8')'
   fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8');';
 const metaPath = path.join(proposalDir, 'meta.json')'
@@ -231,8 +228,7 @@ const metaPath = path.join(dataDir, id, 'meta.json')'
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta'
   } catch {return null
   }
-}
-export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs()
+export function savePdf(id: string, pdfBytes: Uint8 Array): string {ensureDirs()
     markdownPath?: string,
     jsonPath?: string,
     pdfPath?: string,
@@ -356,9 +352,8 @@ const metaPath = path.join(dataDir, id, 'meta.json'),'
 }
     return null
   }
-}
 ;
-export function savePdf(id: string, pdfBytes: Uint8Array): string {
+export function savePdf(id: string, pdfBytes: Uint8 Array): string {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -376,10 +371,9 @@ const pdfPath = path.join(publicProposalDir, 'proposal.pdf'),'
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 },;
 export type ProposalPayload = {
   // TODO: Add properties
@@ -410,10 +404,9 @@ function ensureDirs() {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export function createProposal(payload: ProposalPayload): ProposalMeta {
   // TODO: Add properties
@@ -463,10 +456,9 @@ const metaPath = path.join(proposalDir, 'meta.json')'
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {
   // TODO: Add properties
@@ -485,10 +477,9 @@ const next = updater({ ...current, updatedAt: new Date().toISOString() }),
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export function listProposals(): ProposalMeta[] {
   // TODO: Add properties
@@ -507,10 +498,9 @@ const metaPath = path.join(dataDir, id, 'meta.json')'
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export function getProposal(id: string): ProposalMeta | null {
   // TODO: Add properties
@@ -532,21 +522,19 @@ const metaPath = path.join(dataDir, id, 'meta.json')'
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
-export function savePdf(id: string, pdfBytes: Uint8Array): string {
+export function savePdf(id: string, pdfBytes: Uint8 Array): string {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -568,8 +556,7 @@ const metaPath = path.join(dataDir, id, 'meta.json')'
 }
     return null
   }
-}
-export function savePdf(id: string, pdfBytes: Uint8Array): string {
+export function savePdf(id: string, pdfBytes: Uint8 Array): string {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -589,10 +576,9 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {'
   return updateProposalMeta(id, (meta) => ({
@@ -603,7 +589,6 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
     ...meta
     artifacts: { ...meta.artifacts, ...artifacts }}))
 }
-}
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {'
   return updateProposalMeta(id, (meta) => ({
   // TODO: Add properties
@@ -613,4 +598,3 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
     ...meta,
     artifacts: { ...meta.artifacts, ...artifacts },
   }))
-}

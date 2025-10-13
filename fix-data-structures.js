@@ -124,8 +124,6 @@ const match = line.match(/^([^(]+)\((\d+),(\d+)\):/)
 }
     return []
   }
-}
-
 // Main function
 function main() {
   // TODO: Add properties
@@ -166,6 +164,4 @@ let fixedCount = 0
 }
     console.log('⚠️  Some errors remain, continuing...')'
   }
-}
-
 main())

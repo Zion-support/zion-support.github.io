@@ -3,4 +3,4 @@ import Navigation from '../components/Navigation';';
 import Footer from '../components/Footer';'
   )
 }
-export default Ai2026AutonomousEnterpriseArchitecturePage;
+export default Ai2026 AutonomousEnterpriseArchitecturePage;

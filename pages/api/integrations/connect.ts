@@ -20,7 +20,7 @@ function handler() {
   if (
   // TODO: Add parameters
 )
-    return res.status (405).json ({ error: "Method not allowed" })) {"
+    return res.status (405).json ({ error: "Method not allowed"
   $2
 }
   const { provider_id, sync_rules } = req.body as {
@@ -38,7 +38,7 @@ function handler() {
 }
   $2
 }
-    return res.status (400).json ({ error: "Invalid provider_id" })"
+    return res.status (400).json ({ error: "Invalid provider_id"
   }
   const now = Date.now ();
 const updated = write_state ((state) => {;
@@ -53,9 +53,9 @@ const connection: ProviderConnection = {
   // TODO: Add properties
 }
       provider_id: provider_id as any,
-      status: "connected","
-      access_token: "mock_access_token","
-      refresh_token: "mock_refresh_token","
+      status: "connected"
+      access_token: "mock_access_token"
+      refresh_token: "mock_refresh_token"
       expires_at: now + 1000 * 60 * 60,
       connected_at: now,
       sync_rules: sync_rules || {},
@@ -79,8 +79,8 @@ if (state.connections[existing_idx] = connection) {
       id: `${now}-${provider_id}-connect`,
       timestamp: now,
       provider_id: provider_id as any,
-      level: "info","
-      action: "connect","
+      level: "info"
+      action: "connect"
       details: { sync_rules },
     })
   })

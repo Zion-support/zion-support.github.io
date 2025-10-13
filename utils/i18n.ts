@@ -7,7 +7,7 @@ export function isRtl(locale: string): boolean {
 }
   return ['ar', 'he', 'fa', 'ur'].includes(locale)'
 }
-export const i18n = {
+export const i18 n = {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -18,13 +18,13 @@ export const i18n = {
   language: 'en','
   resolvedLanguage: 'en''
 }
-import i18n from 'i18next';';
-import { initReactI18next } from 'react-i18next';';
-import LanguageDetector from 'i18next-browser-languagedetector';';
-import Backend from 'i18next-http-backend';';';
+import i18 n from 'i18 next';';
+import { initReactI18 next } from 'react-i18 next';';
+import LanguageDetector from 'i18 next-browser-languagedetector';';
+import Backend from 'i18 next-http-backend';';';
 export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;';';
 export type SupportedLocale = typeof supportedLocales[number];
-export const isRtl = (lng?: string) => (lng || i18n.language)?.startsWith('ar');';
+export const isRtl = (lng?: string) => (lng || i18 n.language)?.startsWith('ar');';
 export const resources: Record<string, { translation: Record<string, string> }> = {
   // TODO: Add properties
 }
@@ -35,15 +35,15 @@ export const resources: Record<string, { translation: Record<string, string> }> 
   es: { translation: {} },
   ar: { translation: {} },
 }
-if (!i18n.isInitialized) {
+if (!i18 n.isInitialized) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  i18n
+  i18 n
     .use(Backend)
     .use(LanguageDetector)
-    .use(initReactI18next)
+    .use(initReactI18 next)
     .init({
   // TODO: Add properties
 }
@@ -73,4 +73,4 @@ if (!i18n.isInitialized) {
       defaultNS: 'common','
     } as any)
 }
-export default i18n;
+export default i18 n;

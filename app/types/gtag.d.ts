@@ -10,4 +10,3 @@ interface Window {
   // TODO: Add properties
 }
   gtag?: (command: GtagCommand, targetId: string, config?: GtagEvent) => void;
-}

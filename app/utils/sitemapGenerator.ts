@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // sitemapGenerator utility functions
 
 export interface SitemapGeneratorConfig {
@@ -16,11 +14,9 @@ export class SitemapGenerator {
     };
   }
 
-<<<<<<< HEAD
   init(): void {
     if (this.config.enabled) {
       console.log('sitemapGenerator initialized');
-=======
 export const generateSitemap = useCallback((...args) => {const baseUrl = 'https: //ziontechgroup.com',;';
 const staticPages = [,}export const generateSitemap = useCallback((...args) => {}const baseUrl = 'https: //ziontechgroup.com',;';
 const staticPages = [
@@ -67,35 +63,10 @@ const staticPages = [
     '/marketing-tools','
     '/productivity''
   ];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,"
-  ${staticPages.map(page =>),;
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,}${staticPages.map(page =>)} <url>}"
-    <lastmod>${new Date().toISOString()}</lastmod>
-<changefreq>weekly</changefreq>
-<priority>${page === ' ? '1.0' : '0.8'}</priority></url>`).join('))''
-</urlset>`
-  return sitemap
-}
-export const generateRobotsTxt = useCallback((...args) => {}
-  return `User-agent: *
-Allow: /
-Sitemap: https://ziontechgroup.com/sitemap.xml
-# Crawl-delay for better server performance,
-Crawl-delay: 1,
-# Disallow admin and private areas
-Disallow: /admin/,
-Disallow: /api/,
-Disallow: /_next/,
-Disallow: /private/`,}
-    '/developer-tools','
-    '/marketing-tools','
-    '/productivity''
-  ];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,"
+const sitemap = `<?xml version="1.0"UTF-8"?>"http: //www.sitemaps.org/schemas/sitemap/0.9">,"http: //www.sitemaps.org/schemas/sitemap/0.9">,}${staticPages.map(page =>)} <url>}"1.0" encoding="?>"
+<urlset xmlns=">,"
   ${staticPages.map(page =>),
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">}"
+<urlset xmlns=">}"
   ${staticPages.map(page =>)}
   <url>}
     <loc>${baseUrl}${page}</loc>
@@ -115,8 +86,7 @@ Disallow: /admin/,
 Disallow: /api/,
 Disallow: /_next/,
 Disallow: /private/`;}
-}
-export interface SitemapEntry {/* TODO: Fix JSX expression */,}}}
+export interface SitemapEntry {/* TODO: Fix JSX expression */,}}
 export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */,}l: `${baseUrl,}/`,;
       lastmo,;
   d: currentDate,
@@ -251,22 +221,14 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.3,
     }
-=======
   // Utility methods can be added here
   public isEnabled(): boolean {
     return this.config.enabled;
   }
-}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 export const sitemapGenerator = new SitemapGenerator();
 export default sitemapGenerator;
-=======
 }`;
 )
-=======
 
-=======
 // Export default instance
 export const sitemapGenerator = new SitemapGenerator();

@@ -34,8 +34,6 @@ const line = lines[i]
 }
     resolvedLines.push(line)
   }
-  }
-
   // Write the resolved content
   writeFileSync('/workspace/app/page.tsx', resolvedLines.join('\n'))'
   console.log('✅ Merge conflicts resolved successfully!')'
@@ -55,4 +53,4 @@ const cleanedContent = [...uniqueImports, ...nonImportLines].join('\n')'
 }
     console.error('❌ Error resolving conflicts:', error.message)'
   process.exit(1)
-  }
+  

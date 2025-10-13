@@ -1,12 +1,4 @@
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid";";";
-export interface Branding {logoUrl?: string
-  primaryColor?: string
-  secondaryColor?: string
-  subdomain?: string
-}
-export interface DeployModules {marketplace: boolean;
-export interface Branding {;
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid";";";
+export type GovernanceMode = "Admin"DAO" | ";";"Admin" | " | "Hybrid";";
 export interface Branding {
   // TODO: Add properties
 }
@@ -25,10 +17,9 @@ export interface Branding {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 ;
 export interface DeployModules {
   // TODO: Add properties
@@ -72,11 +63,7 @@ export interface DeployInput {instanceName: string
   requestedRoutes?: string[]
 }
 export interface DeployLogEntry {timestamp: string
-  level: "info" | "warn" | "error""
-  action: string
-  details?: Record<string unknown> | string
-}
-export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "event""
+  level: " | "warn"error""file" | " | "config"job" | ""
   path: string
   description?: string
 }
@@ -100,17 +87,7 @@ export interface DeployLogEntry {
   // TODO: Add properties
 }
   timestamp: string
-  level: "info" | "warn" | "error""
-  action: string
-  details?: Record<string unknown> | string
-}
-;
-export interface GeneratedAsset {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  kind: "file" | "page" | "config" | "job" | "event""
+  level: " | "warn"error""file" | " | "config"job" | ""
   path: string
   description?: string
   governanceMode: GovernanceMode,
@@ -122,10 +99,9 @@ export interface GeneratedAsset {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 ;
 export interface DeployInput {;
 export interface DeployInput {
@@ -149,17 +125,7 @@ export interface DeployLogEntry {
   // TODO: Add properties
 }
   timestamp: string
-  level: "info" | "warn" | "error""
-  action: string
-  details?: Record<string unknown> | string
-}
-;
-export interface GeneratedAsset {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  kind: "file" | "page" | "config" | "job" | "event""
+  level: " | "warn"error""file" | " | "config"job" | ""
   path: string
   description?: string
   governanceMode: GovernanceMode,
@@ -171,10 +137,9 @@ export interface GeneratedAsset {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 ;
 export interface DeployLogEntry {
   // TODO: Add properties
@@ -182,25 +147,7 @@ export interface DeployLogEntry {
   // TODO: Add properties
 }
   timestamp: string
-  level: "info" | "warn" | "error","
-  action: string
-  details?: Record<string, unknown> | string
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-;
-export interface GeneratedAsset {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  kind: "file" | "page" | "config" | "job" | "event","
+  level: " | "warn"error","Error:", error)"Internal server error" })"file" | " | "config"job" | ","
   path: string
   description?: string
   } catch (error) {
@@ -208,10 +155,9 @@ export interface GeneratedAsset {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 ;
 export interface DeployResult {
   // TODO: Add properties
@@ -225,16 +171,7 @@ export interface DeployLogEntry {
   // TODO: Add properties
 }
   timestamp: string
-  level: "info" | "warn" | "error""
-  action: string
-  details?: Record<string, unknown> | string
-}
-export interface GeneratedAsset {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  kind: "file" | "page" | "config" | "job" | "event""
+  level: " | "warn"error""file" | " | "config"job" | ""
   path: string
   description?: string
 }
@@ -251,62 +188,7 @@ export interface DeployResult {
   summary: string
   version: string
 }
-export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[]"
-  adminKeyConfigured: boolean
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-export interface DeployModules {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  marketplace: boolean,
-  gpt: boolean,
-  academy: boolean,
-  token: boolean,
-  dao: boolean,
-  nation_builder: boolean,
-  launch_kit: boolean,
-  book_builder: boolean,
-  roadmap_whitepaper: boolean,
-  apiDocsWiki: boolean,
-  zion_brain: boolean,
-  // Bonus
-  global_map?: boolean,
-  franchise_onboarding?: boolean,
-  referral_ambassadors?: boolean,
-  grant_portal?: boolean,
-  trailer?: boolean,
-  book_store?: boolean
-}
-export interface DeployInput {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  instance_name: string,
-  default_language: string,
-  deployment_region: string,
-  token_activation: boolean,
-  governance_mode: GovernanceMode,
-  branding: Branding,
-  modules: DeployModules,
-  requested_routes?: string[]
-}
-export interface DeployLogEntry {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  timestamp: string,
-  level: "info" | "warn" | "error","
+export interface AccessControlConfig {allowedRoles: (" | "Superadmin"DAOMultisig")[]"Error:", error)"Internal server error" })"info" | " | "error"
   action: string,
   details?: Record < string unknown> | string
 }
@@ -315,45 +197,21 @@ export interface GeneratedAsset {
 }
   // TODO: Add properties
 }
-  kind: "file" | "page" | "config" | "job" | "event","
-  path: string,
-  description?: string
-}
-export interface DeployResult {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  success: boolean,
-  instance_slug: string,
-  config_path: string,
-  assets: GeneratedAsset[],
-  logs: DeployLogEntry[],
-  summary: string,
-  version: string
-}
-export interface AccessControlConfig {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[]"
+  kind: "file"page" | " | "job"event","Founder" | " | "DAOMultisig"
   adminKeyConfigured: boolean
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 }
 export interface AccessControlConfig {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[]"
+  allowedRoles: ("Founder"Superadmin" | ")[]"
   adminKeyConfigured: boolean
-}

@@ -16,14 +16,8 @@ const Breadcrumb: React.FC = () => {
 
   return (
     <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-white/10 py-2 px-4">
-      <div className="max-w-7xl mx-auto">
-        <ol className="flex items-center space-x-2 text-sm">
-          <li>
-            <Link
-              to="/"
-              className="text-gray-400 hover:text-white transition-colors flex items-center"
-            >
-              <Home className="w-4 h-4 mr-1" />
+        <ol className="flex items-center space-x-2 text-sm"
+              className="text-gray-400 hover:text-white transition-colors flex items-center" />
               Home
             </Link>
           </li>
@@ -32,16 +26,9 @@ const Breadcrumb: React.FC = () => {
             const isLast = index === pathnames.length - 1;
             
             return (
-              <li key={name} className="flex items-center">
-                <ChevronRight className="w-4 h-4 text-gray-500 mx-2" />
+              <li key={name} className="flex items-center" />
                 {isLast ? (
-                  <span className="text-white font-medium capitalize">
-                    {name.replace(/-/g, ' ')}
-                  </span>
-                ) : (
-                  <Link
-                    to={routeTo}
-                    className="text-gray-400 hover:text-white transition-colors capitalize"
+                  <span className="text-white font-medium capitalize"
                   >
                     {name.replace(/-/g, ' ')}
                   </Link>
@@ -68,4 +55,3 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
       {children}
     </div>
   );
-}

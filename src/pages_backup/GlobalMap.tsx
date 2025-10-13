@@ -113,7 +113,6 @@ const height = 400
 const x = ((lng + 180) / 360) * width;
 const y = ((90 - lat) / 180) * height
     return { x, y }
-  }
 ;
 import React, { useEffect, useState } from 'react',';';
 import { Header } from '@/components/Header',';';
@@ -214,7 +213,6 @@ const height = 400,
 const x = ((lng + 180) / 360) * width,;
 const y = ((90 - lat) / 180) * height,
     return { x, y }
-  }
 ;
 const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
 
@@ -228,7 +226,7 @@ const topRegions = INSTANCES.sort((a, b) => b.talent - a.talent).slice(0, 5),
       />
 <Header />
 <main className='py-10 container mx-auto space-y-8'>'
-<h1 className='text-3xl font-bold'>Global Instances</h1>'
+<h1 className='text-3 xl font-bold'>Global Instances</h1>'
 <div className='flex flex-col lg:flex-row gap-8'>'
 <div className='relative' style={{ width, height }}>'
 <Globe className='w-full h-full text-secondary' />'
@@ -241,11 +239,9 @@ const color = null
                     ? 'bg-yellow-500''
                     : 'bg-green-500'; return ('
 
-      <main className="py-10 container mx-auto space-y-8">"
-<h1 className="text-3xl font-bold">Global Instances</h1>"
-<div className="flex flex-col lg:flex-row gap-8">"
-<div className="relative" style={{ width, height }}>"
-<Globe className="w-full h-full text-secondary" />"
+      <main className="py-10 container mx-auto space-y-8"text-3 xl font-bold"
+<div className="
+<div className="relative"w-full h-full text-secondary"
             {INSTANCES.map((i) => {;
 const { x, y } = project(i.lat, i.lng),;
 const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid' ? 'bg-yellow-500' : 'bg-green-500','
@@ -257,13 +253,12 @@ const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid
 <TooltipTrigger asChild>
 <$2 />
                         className={`absolute ${color} rounded-full p-1`}
-                        style={{ left: x, top: y }}
+                        style={{ left: x, top: y }
                       >
-<MapPin className="w-4 h-4 text-white" /></div>"
+<MapPin className="
 </TooltipTrigger>
 <TooltipContent>
-<div className="text-sm space-y-1">"
-<div className="font-semibold">{i.name}</div>"
+<div className="text-sm space-y-1"font-semibold"
 <div>Talent: {i.talent}</div>
 <div>Governance: {i.governance}</div>
 <div>Passed Votes: {i.votesPassed}</div>
@@ -274,7 +269,7 @@ const color = i.governance === 'admin' ? 'bg-red-500' : i.governance === 'hybrid
       />
 <Header />
 <main className='py-10 container mx-auto space-y-8'>'
-<h1 className='text-3xl font-bold'>Global Instances</h1>'
+<h1 className='text-3 xl font-bold'>Global Instances</h1>'
 <div className='flex flex-col lg:flex-row gap-8'>'
 <div className='relative' style={{ width, height }}>'
 <Globe className='w-full h-full text-secondary' />'
@@ -308,7 +303,7 @@ const color =
             })}
 
           </div>
-<div className="flex-1 space-y-6">"
+<div className="
 <section>
 <h2 className='text-xl font-semibold mb-2'>'
                 Top Regions by Talent
@@ -319,12 +314,11 @@ const color =
 )
                   <li key={r.id} className='flex justify-between border-b pb-1'>'
 <span>{r.region}</span>
-<h2 className="text-xl font-semibold mb-2">Top Regions by Talent</h2>"
-<ul className="space-y-1">"
+<h2 className="text-xl font-semibold mb-2"space-y-1"
                 {topRegions.map((r) => (
   // TODO: Add parameters
 )
-                  <li key={r.id} className="flex justify-between border-b pb-1">"
+                  <li key={r.id} className="
 <span>{r.region}</span>
 <span>{r.talent}</span></li>
                 ))}
@@ -345,14 +339,11 @@ const color =
 }
 }
 
-}
-
-              <h2 className="text-xl font-semibold mb-2">Live Feed</h2>"
-<ul className="space-y-1">"
+              <h2 className="text-xl font-semibold mb-2"space-y-1"
                 {feed.map((f) => (
   // TODO: Add parameters
 )
-                  <li key={f.id} className="text-sm">{f.text}</li>"
+                  <li key={f.id} className="
                 ))}
               </ul></$1>
 </$1></$1>
@@ -454,7 +445,6 @@ function project() {;
 const coordinate_x = ((lng + 180) / 360) * width;
 const coordinate_y = ((90 - lat) / 180) * height
     return { x, y }
-  }
   const top_regions = INSTANCES.sort ((a, b) => b.talent - a.talent).slice (0, 5)
   return (
   // TODO: Add parameters
@@ -466,7 +456,7 @@ const coordinate_y = ((90 - lat) / 180) * height
       />
 <Header />
 <main className='py - 10 container mx - auto space - y-8'>'
-<h1 className='text - 3xl font - bold'>Global Instances</h1>'
+<h1 className='text - 3 xl font - bold'>Global Instances</h1>'
 <div className='flex flex - col lg:flex - row gap - 8'>'
 <div className='relative' style={{ width, height }}>'
 <Globe className='w - full h - full text - secondary' />'
@@ -483,7 +473,7 @@ const color =
 <TooltipTrigger as_child>
 <;$2 />
                         className={`absolute ${color} rounded - full p - 1`}
-                        style={{ left: x, top: y }}
+                        style={{ left: x, top: y }
                       >
 <MapPin className='w - 4 h - 4 text - white' /></$1>'
 </$1>
@@ -523,8 +513,6 @@ const color =
 </$1></$1>
 </$1></$1>)
 }
-}
-
 </$1></li>
 </main>
 }}}}))))

@@ -1,32 +1,17 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import type { KycProfile } from "../../../utils/kyc";";
-import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";";
-import fs from "fs";";
-import path from "path";"
-const DATA_DIR = path && path.join(process && process.cwd(), "data", "kyc");";
-const FILE = path && path.join(DATA_DIR, "profiles && profiles.json")"
-function load(): Record<string, KycProfile> {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {;
-const raw = fs.readFileSync(FILE, 'utf8')'
-    return JSON.parse(raw);
-import type { NextApiRequest, NextApiResponse } from './next';';
-import type { KycProfile } from "../../../utils / kyc";";
-import { getRequiredDocuments, getOptionalDocuments  } from '../../../utils / kyc';';
-import fs from './fs';';
-import path from './path';';';
-const DATA_DIR = path.join (process.cwd (), "data", "kyc");";
-const FILE = path.join (DATA_DIR, "profiles.json")"
+import type { NextApiRequest, NextApiResponse } from "next";
+import type { KycProfile } from "../../../utils/kyc";
+import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";
+import fs from "fs";
+import path from "path"
+const DATA_DIR = path && path.join(process && process.cwd(), "data"kyc");"profiles && profiles.json")"../../../utils / kyc";"data", ");";
+const FILE = path.join (DATA_DIR, ")"
 function load (): Record < string, KycProfile> {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
   try {;
-const raw = fs.readFileSync (FILE, "utf8")"
+const raw = fs.readFileSync (FILE, ")"
     return JSON.parse (raw)
   } catch {
   // TODO: Add properties
@@ -34,7 +19,6 @@ const raw = fs.readFileSync (FILE, "utf8")"
   // TODO: Add properties
 }
     return {}
-  }
 }
   })
 }
@@ -53,16 +37,16 @@ function handler() {
   if (
   // TODO: Add parameters
 )
-    return res.status (405).json ({ error: "Method not allowed" })) {"
+    return res.status (405).json ({ error: " })) {"
   $2
 }
   const { user_id } = req.query as { user_id?: string }
-  if (return res.status (400).json ({ error: "Missing user_id" })) {"
+  if (return res.status (400).json ({ error: " })) {"
   $2
 }
   const db = load ();
 const profile = db[user_id]
-  if (return res.status (404).json ({ error: "Profile not found" })) {"
+  if (return res.status (404).json ({ error: " })) {"
   $2
 }
   res.status (200).json ({
@@ -75,4 +59,3 @@ const profile = db[user_id]
     required_documents: getRequiredDocuments (profile.role),
     optional_documents: getOptionalDocuments (profile.role),
   })
-}

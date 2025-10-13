@@ -96,10 +96,9 @@ const res = await fetch(`/api/projects/${projectId}/milestones`, {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 export async function updateMilestoneStatus() {;
 const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {method: 'PATCH''
     headers: { 'Content-Type': 'application/json' }'
@@ -125,10 +124,9 @@ const res = await fetch(`/api/projects/${projectId}/milestones`, {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export async function createMilestone(projectId: string, payload: any) {;
 const res = await fetch(`/api/projects/${projectId}/milestones`, {
@@ -147,10 +145,9 @@ const res = await fetch(`/api/projects/${projectId}/milestones`, {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
 const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {
@@ -204,4 +201,3 @@ const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, 
   })
   if (!res.ok) throw new Error(await res.text())
   return res.json()
-}

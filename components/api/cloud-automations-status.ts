@@ -6,9 +6,9 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 }
   // TODO: Add properties
 }
-import type { NextApiRequest, NextApiResponse } from "next";";
-import fs from "fs";";
-import path from "path";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";";
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
@@ -18,7 +18,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';';
 import fs from 'fs';';
 import path from 'path';';';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
-const dir = path.resolve(process.cwd(), "data/cloud-automations");";
+const dir = path.resolve(process.cwd(), ");";
 const data: Record<string, any> = {}
   try {
   // TODO: Add properties
@@ -35,9 +35,9 @@ const data: Record<string, any> = {}
 }
   // TODO: Add properties
 }
-        if (f.endsWith(".json")) {;";
+        if (f.endsWith(")) {;";
 const fp = path.join(dir, f);
-const dir = path && path.resolve(process && process.cwd(), "data/cloud-automations");";
+const dir = path && path.resolve(process && process.cwd(), ");";
 const data: Record<string, any> = {}
   try {
   // TODO: Add properties
@@ -54,10 +54,10 @@ const data: Record<string, any> = {}
 }
   // TODO: Add properties
 }
-        if (f && f.endsWith(".json")) {;";
+        if (f && f.endsWith(")) {;";
 const fp = path && path.join(dir, f)
-          data[f && f.replace(".json", ")] = JSON && JSON.parse(""
-            fs && fs.readFileSync(fp, "utf8"),";
+          data[f && f.replace(", ")] = JSON && JSON.parse("
+            fs && fs.readFileSync(fp, "utf8";
 import type { NextApiRequest, NextApiResponse } from './next';';
 import fs from './fs';';
 import path from './path';';';
@@ -65,7 +65,7 @@ export default /**;
  * handler - Function description
  */
 function handler() {;
-const dir = path.resolve (process.cwd (), "data / cloud - automations");";
+const dir = path.resolve (process.cwd (), "data / cloud - automations";
 const data: Record < string, any> = {}
   try {
   // TODO: Add properties
@@ -92,14 +92,11 @@ const data: Record < string, any> = {}
   $2
 }
           const fp = path.join (dir, f)
-          data[f.replace (".json", ")] = JSON.parse (""
-            fs.readFileSync (fp, "utf8"),"
+          data[f.replace (".json")] = JSON.parse (""utf8"),".json", ""
+            fs.readFileSync(fp, ")"
           )
-          data[f.replace(".json", ")] = JSON.parse(""
-            fs.readFileSync(fp, "utf8")"
-          )
-data[f && f.replace(".json", ")] = JSON && JSON.parse(""
-            fs && fs.readFileSync(fp, "utf8"),"
+data[f && f.replace(", ")] = JSON && JSON.parse("
+            fs && fs.readFileSync(fp, "utf8"
           )
 const dir = path.resolve(process.cwd(), 'data/cloud-automations');';
 const data: Record<string, any> = {}
@@ -122,7 +119,6 @@ const data: Record<string, any> = {}
 const fp = path.join(dir, f)
           data[f.replace('.json', ')] = JSON.parse(fs.readFileSync(fp, 'utf8'))'
         }
-      }
     }
   } catch (e) {
   // TODO: Add properties
@@ -146,4 +142,4 @@ res.status(200).json({ ok: true, data })
   res.status(200).json({ ok: true, data })
 }
 
-}}}}}}}}}}}
+}}}}}}}}}

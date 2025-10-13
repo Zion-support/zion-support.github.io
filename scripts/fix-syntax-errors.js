@@ -141,8 +141,6 @@ const objectMethodPattern = /(\w+:\s*\([^)]*\)\s*=>\s*\{[^}]*)\s*$/gm
   // Clean up multiple empty lines
   newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n')'
   return { content: newContent, fixed }
-}
-
 function processFile(filePath) {
   // TODO: Add properties
 }
@@ -169,8 +167,6 @@ const result = fixSyntaxErrors(content)
 }
     console.error(`❌ Error processing ${filePath}:`, error.message)
   }
-}
-
 async function main() {
   // TODO: Add properties
 }

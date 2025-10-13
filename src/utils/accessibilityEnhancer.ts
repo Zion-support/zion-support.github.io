@@ -46,11 +46,8 @@ class AccessibilityEnhancer {
           // Handle tab navigation
           console.log('Tab navigation detected')'
         }
-      }
   )
     }
-  }
-
   private setupFocusIndicators(): void {if (typeof document !== 'undefined') {}'
       // Add focus indicators;
 const style = document.createElement('style')'
@@ -61,23 +58,20 @@ const style = document.createElement('style')'
 }
   // TODO: Add properties
 }
-    outline: 2px solid #0066cc
+    outline: 2 px solid #0066 cc
   }
-          outline-offset: 2px,
+          outline-offset: 2 px,
         }
 
       `
       document.head.appendChild(style)
     }
-  }
-
   public cleanup(): void {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     // Cleanup accessibility enhancements
-  }
   }
 }
 ;

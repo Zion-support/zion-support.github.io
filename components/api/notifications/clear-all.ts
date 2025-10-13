@@ -58,7 +58,6 @@ const { error } = await supabase
 }
     return res.status(500).json({ error: 'Unexpected error' })'
 }
-}
     const { error} = await supabase
       .from('notifications')'
       .delete()
@@ -72,7 +71,6 @@ const { error } = await supabase
 }
     return res.status(500).json({ error: 'Unexpected error' })'
   }
-}
     if (error) return res.status(200).json({ ok: true })
     return res.status(200).json({ ok: true })
   } catch (e) {
@@ -82,6 +80,3 @@ const { error } = await supabase
 }
     return res.status(500).json({ error: 'Unexpected error' })'
   }
-}
-
-}}

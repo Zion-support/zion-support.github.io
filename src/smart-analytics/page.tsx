@@ -86,46 +86,33 @@ const pricingPlans = [
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<div className="container mx-auto px-4 py-16">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"container mx-auto px-4 py-16"
         {/* Hero Section */}
-        <section className="text-center mb-16">"
-<h1 className="text-5xl md: text-6xl font-bold text-white mb-6">"
-            Smart Analytics
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 max-w-4xl mx-auto">"
+        <section className="
+<h1 className="text-5 xl md: text-6 xl font-bold text-white mb-6"text-xl md:text-2 xl text-cyan-400 mb-8 max-w-4 xl mx-auto"
             Transform your data into actionable insights with AI-powered analytics that drive real business results
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+          <div className="
 <$2 />
-              href="tel:+13024640950""
-              className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors">"
-              📞 Call: (302) 464-0950
-
-            <$2 />
-              to="/contact""
-              className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors""
+              href="tel:+13024640950"
+              className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"/contact""bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               Get Free Consultation,
 
           </div></section>
         {/* Features Section */}
-        <section className="mb-16">"
-<h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">"
-            Powerful Analytics Features,
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"
+        <section className="
+<h2 className="text-3 xl md: text-4 xl font-bold text-white mb-12 text-center"grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             {features.map((feature, index) => (
   // TODO: Add parameters
 )
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">"
-<div className="flex items-center mb-4">"
-<feature.icon className="w-8 h-8 text-cyan-400 mr-3" />"
-<h3 className="text-xl font-semibold text-white">{feature.title}"
-                <p className="text-gray-300 mb-4">{feature.description}"
-                <div className="text-cyan-400 font-medium">{feature.benefit}"
+              <div key={index} className="
+<div className="flex items-center mb-4"w-8 h-8 text-cyan-400 mr-3"
+<h3 className="
+                <p className="text-gray-300 mb-4"text-cyan-400 font-medium"
             ))}
         {/* Pricing Section */}
             Simple, Transparent Pricing
-          <div className="grid md:grid-cols-3 gap-8">"
+          <div className="
             {pricingPlans.map((plan, index) => (
   // TODO: Add parameters
 )
@@ -141,33 +128,17 @@ const pricingPlans = [
                 {plan.popular && (
   // TODO: Add parameters
 )
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
-<span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular"
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium"
                 )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}"
-                <p className="text-gray-300 mb-4">{plan.description}"
-                <div className="mb-6">"
-<span className="text-4xl font-bold text-white">{plan.price}"
-                  <span className="text-gray-400">{plan.period}"
-                <ul className="space-y-3 mb-8">"
+                <h3 className="
+                <p className="text-gray-300 mb-4"mb-6"
+<span className="
+                  <span className="text-gray-400"space-y-3 mb-8"
                   {plan.features.map((feature, featureIndex) => (
   // TODO: Add parameters
 )
-                    <li key={featureIndex} className="flex items-center text-gray-300">"
-<CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      {feature}
-                  className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                    plan.popular
-                      ? 'bg-cyan-600 text-white hover:bg-cyan-700''
-                      : 'bg-gray-600 text-white hover:bg-gray-700''
-                  }`}
-                  Get Started
-        {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">";
+                    <li key={featureIndex} className="
+<CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2 xl p-12";
 import { Link } from 'react-router-dom';';';
 const SmartAnalyticsPage: React.FC = () => {;
 const features = [],
@@ -176,7 +147,6 @@ const features = [],
 )
     {// TODO: Add content
   }
-}
   ico,
   n: BarChart,
       titl,
@@ -184,7 +154,7 @@ const features = [],
       descriptio,
   n: 'Monitor your business performance with live dashboards that update automatically and provide instant insights.','
       benefi,
-  t: 'Make decisions 10x faster''
+  t: 'Make decisions 10 x faster''
     },
       icon: Brain,
       title: 'AI-Powered Insights','
@@ -204,17 +174,13 @@ const PagePage: React.FC = () => {
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
+    <div className="
 <Navigation />
-<main className="container mx-auto px-4 py-16 pt-24">"
-<section className="text-center mb-16">"
-<h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
+<main className="container mx-auto px-4 py-16 pt-24"text-center mb-16"
+<h1 className="
             Page
 
-          <p className="text-xl text-cyan-400 mb-8 font-medium">"
-            Coming Soon,
-
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">"
+          <p className="text-xl text-cyan-400 mb-8 font-medium"text-lg text-gray-300 max-w-4 xl mx-auto mb-8 leading-relaxed"
             This page is under development. Please check back soon for updates.
       <Footer />
       icon: Shield,
@@ -235,59 +201,28 @@ const pricingPlans = [
       descriptio,
   n: 'Advanced analytics for growing businesses','
                 {plan.popular && ()}
-          <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>""
-                    <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-medium">"
+          <div className=""
+                    <span className="
 // Most Popular
-                )}""
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
-                <p className="text-gray-300 mb-4">{plan.description}</p>""
-                <div className="mb-6"></div>""
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>""
-                  <span className="text-gray-400">{plan.period}</span>""
-                <ul className="space-y-3 mb-8">"
-                  {plan.features.map((feature, featureIndex) => ()}""
-          <li key={featureIndex} className="flex items-center text-gray-300"></li>""
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      {feature}
-                  className={`w-full block text-center py-3 rounded-lg font-semibold transition-colors ${}
-  // TOD,
-  O: Add content,
-}
-//                     plan.popular
-                      ? 'bg-cyan-600 text-white,'
-  hover:bg-cyan-700''
-                      : 'bg-gray-600 text-white,'
-  hover:bg-gray-700'`'
-                  }`}
-                  Get Started
-        {/* CTA Section */}
-          <section className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">"
-<h2 className="text-3xl md: text-4xl font-bold text-white mb-6">"
+                )}""text-2 xl font-bold text-white mb-2""text-gray-300 mb-4""mb-6""text-4 xl font-bold text-white""text-gray-400""space-y-3 mb-8"
+                  {plan.features.map((feature, featureIndex) => ()}"
+          <li key={featureIndex} className="flex items-center text-gray-300"
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2 xl p-12"
+<h2 className="
             Ready to Transform Your Data?
-          <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">"
-            Join thousands of businesses that have revolutionized their decision-making with our smart analytics platform.
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors""
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors""
+          <p className="text-xl text-cyan-100 mb-8 max-w-2 xl mx-auto"bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="
               Get Free Demo
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors" Get Free Demo,"
-        {/* Contact Info */}
-        <section className="mt-16 text-center">"
-<div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">"
-<h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>"
-<div className="grid md: grid-cols-3 gap-6 text-gray-300">"
-<div className="flex items-center justify-center">"
-<Phone className="w-5 h-5 mr-2 text-cyan-400" />"
-<a href="tel:+13024640950" className="hover:text-white transition-colors">"
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"mt-16 text-center"
+<div className="
+<h3 className="text-2 xl font-bold text-white mb-6"grid md: grid-cols-3 gap-6 text-gray-300"
+<div className="
+<Phone className="w-5 h-5 mr-2 text-cyan-400"tel:+13024640950" className="
                   +1 (302) 464-0950
-                <Mail className="w-5 h-5 mr-2 text-cyan-400" />"
-<a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">"
+                <Mail className="w-5 h-5 mr-2 text-cyan-400"mailto:kleber@ziontechgroup.com" className="
                   kleber@ziontechgroup.com
-                <MapPin className="w-5 h-5 mr-2 text-cyan-400" />"
-+1 (302) 464-0950
-                <Mail className="w-5 h-5 mr-2 text-cyan-400" />"
-<a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">"
-                  kleber@ziontechgroup.com,
-                <MapPin className="w-5 h-5 mr-2 text-cyan-400" />"
+                <MapPin className="w-5 h-5 mr-2 text-cyan-400"w-5 h-5 mr-2 text-cyan-400"
+<a href=" className="hover:text-white transition-colors"w-5 h-5 mr-2 text-cyan-400"
 <span>364 E Main St STE 1008, Middletown DE 19709</span>
   )
 }

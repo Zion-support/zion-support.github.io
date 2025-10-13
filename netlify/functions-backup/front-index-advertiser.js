@@ -25,7 +25,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   } catch (e) {/* TODO: Fix JSX expression */}
       })
     }
-  }
 }
 exports.config = { schedule: '*/10 * * * *' }';
 exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/front-index-advertiser.cjs || true') { stdio: 'inherit'} shell: true,'

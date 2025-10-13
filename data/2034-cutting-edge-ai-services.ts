@@ -562,7 +562,6 @@ export const,;
   real_servic,
   e: true}
 export type CuttingEdgeAIService = {/* TODO: Fix JSX expression */}
-	}
 ];
 export type CuttingEdgeAIService = {
   // TODO: Add properties

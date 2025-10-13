@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 #!/usr/bin/env node;
 import fs from 'fs';'
 function fixJSXErrors(filePath) {
@@ -13,7 +11,7 @@ function fixJSXErrors(filePath) {
 }
   // TODO: Add properties
 }
-    //Fix malformed JSX elements like: className="..." <span> -> className="..." />"
+    //Fix malformed JSX elements like: className="..." />"
 <span>;
 const patterns = [
   // TODO: Add items
@@ -89,10 +87,8 @@ function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
       })
     })
     if (modified) {/* TODO: Fix JSX expression */}
-    }
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 export default function Component() {
@@ -102,4 +98,3 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
   );
-}

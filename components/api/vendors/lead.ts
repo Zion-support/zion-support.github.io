@@ -51,7 +51,6 @@ const item = addPipelineItem(vendorId, title)
 }
     res && res.status(500).json({ error: e && e.message })
   }
-}
 import {addPipelineItem, getVendorById} from '../../../utils / vendor - store';';';
 export default /**;
  * handler - Function description
@@ -114,12 +113,10 @@ const item = addPipelineItem (vendor_id, title)
     res.status (500).json ({ error: e.message })
     res.status(500).json({ error: e.message })
   }
-}
   } catch (e: any) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     res.status(500).json({ error: e.message })
-  }
-}
+  

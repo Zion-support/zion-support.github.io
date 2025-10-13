@@ -10,4 +10,3 @@ export default function ImprovedSidebar({ className = '', children }: ImprovedSi
       {children}
     </div>
   );
-}

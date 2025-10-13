@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
@@ -46,7 +45,7 @@ const microSaasPages = [
   'zion-ai-document-ai';
 ];
 const emergingTechPages = [
-//   '5g-implementation', 'ai-3d-generation', 'ai-holographic-workspace',
+//   '5 g-implementation', 'ai-3 d-generation', 'ai-holographic-workspace',
 //   'ai-autonomous-systems', 'ai-blockchain-solutions', 'quantum-computing',
   'ar-vr-solutions', 'iot-integration', 'machine-learning';
 ];
@@ -71,14 +70,13 @@ const allPages = [
         <title>${title} - Zion Tech Group</title>
                 ${title}
               Professional ${title.toLowerCase()} services by Zion Tech Group.
-            <h2 className = "text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <h2 className = "text-2 xl font-bold text-white mb-4">Coming Soon</h2>
               We're working on bringing you comprehensive ${title.toLowerCase()} solutions.
               Contact us to learn more about our services.;
               Contact Us;
   );
 };
 
-=======
 export default function Component() {
   return (
     <div>
@@ -86,4 +84,3 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
   );
-}

@@ -51,7 +51,6 @@ const text = await generateText(prompt, 'You are a matching engine. Output stric
   return res.status(200).json({ matches: text })
 }
 }
-}
     return res
       .status (400)
       .json ({ error: 'job_description and candidate_profiles[] required' });';
@@ -79,4 +78,3 @@ const text = await generateText(prompt, 'You are a matching engine. Output stric
   return res.status(200).json({ matches: text })
 }
 
-}}

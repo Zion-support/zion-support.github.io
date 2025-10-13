@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // analyticsTracker utility functions
 
 export interface AnalyticsTrackerConfig {
@@ -20,12 +18,8 @@ export class AnalyticsTracker {
   public isEnabled(): boolean {
     return this.config.enabled;
   }
-}
-
-<<<<<<< HEAD
 export const analyticsTracker = new AnalyticsTracker();
 export default analyticsTracker;
-=======
 'use client';';
 import React from 'react';';';
 import {Helmet}}from 'react-helmet-async';';';
@@ -66,74 +60,43 @@ const benefits = [
     'Easy integration with existing systems','
     'Cost-effective pricing plans','
   ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)"
-      <Helmet />
-<title>AnalyticsTracker | Zion Tech Group</title>
-<meta />
-<meta /></Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center">"
-<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
-<span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">"
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"relative py-20 px-4 sm:px-6 lg:px-8"
+<div className="
+<div className="text-center"text-4 xl md:text-6 xl font-bold text-white mb-6"
+<span className="
                 AnalyticsTracker
               </span>
 <br>
-<span className="text-white">Solutions</span></h1>"
-<p>Transform your business with our advanced analyticstracker solutions.;</p>
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
+<span className="text-white"flex flex-col sm: flex-row gap-4 justify-center"
               <button>Get Started;</button>
 <ArrowRight></button>
 <button>Learn More,</button></button>
 </div></div>
 </div></section>
-<section className="py-20 px-4 sm:px-6 lg:px-8"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
+<section className="
+<div className="max-w-7 xl mx-auto"text-center mb-16"
+<h2 className="
               Why Choose Our AnalyticsTracker?
-        <div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
+        <div className="max-w-7 xl mx-auto"text-center mb-16"
 <h2>Why Choose Our AnalyticsTracker?,</h2>
             </h2>
 <p>Our analyticstracker solutions deliver unmatched performance, security, and scalability.;</p></p>
 </div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,"
-            {features.map((feature, index) => (} <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"></div>,"
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>"
+<div className="
+            {features.map((feature, index) => (} <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover: bg-white/20 transition-all duration-300"flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"
 <feature></div>
-<h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
-<p className="text-gray-300">{feature.description</p>}</p></div>"
-            )</div></div>
-</div></section>
-<section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
+<h3 className="
+<p className="text-gray-300"py-20 px-4 sm:px-6 lg:px-8 bg-white/5"
+<div className="
+<div className="text-center mb-16"text-3 xl md:text-4 xl font-bold text-white mb-4"
               Key Benefits
-        <div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>Key Benefits;</h2>
-            </h2>
-<p>Experience the power of our analyticstracker solutions for your business.,</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,"
-            {benefits.map((benefit, index) => (} <div key={index}className="flex items-start space-x-3"></div>"
+        <div className="
+<div className="text-center mb-16"grid grid-cols-1 md: grid-cols-2 gap-6"
+            {benefits.map((benefit, index) => (} <div key={index}className="
 <CheckCircle />
-<p className="text-gray-300 text-lg">{benefit</p>}</p></div>"
-            )</div></div>
-        ))
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>"
-<div className="max-w-4xl mx-auto text-center">"
-<div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">"
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
+<p className="text-gray-300 text-lg"py-20 px-4 sm:px-6 lg:px-8"
+<div className="
+<div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2 xl p-8 md:p-12"text-3 xl md:text-4 xl font-bold text-white mb-4"
               Ready to Get Started?
               </button></div>
 </div>
@@ -143,8 +106,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 };
 ;
 export default AnalyticsTrackerPage;
-=======
 
-=======
 // Export default instance
 export const analyticsTracker = new AnalyticsTracker();

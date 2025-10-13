@@ -57,7 +57,7 @@ const openPositions = [
         'Knowledge of cloud services and DevOps practices','
         'Strong attention to detail and code quality''
       ],
-      benefits: ['Competitive salary', 'Health insurance', '401k matching', 'Remote work options', 'Learning budget']'
+      benefits: ['Competitive salary', 'Health insurance', '401 k matching', 'Remote work options', 'Learning budget']'
     },
     {
   // TODO: Add properties
@@ -217,160 +217,105 @@ const culture = [
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Navigation />
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">"
-<div className="max-w-7xl mx-auto text-center">"
-<h1 className="text-5xl md: text-6xl font-bold text-white mb-6">"
-            Join Our <span className="text-cyan-400">Team</span></h1>"
-<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"relative py-20 px-4"
+<div className="
+<h1 className="text-5 xl md: text-6 xl font-bold text-white mb-6"text-cyan-400"
+<p className="
             Be part of the future of AI and IT solutions. We're looking for passionate individuals who want to make a real impact.'
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<$2 />
-              to="#open-positions""
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"#open-positions""bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
               View Open Positions
 
             <$2 />
-              to="/contact""
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">"
+              to=""
+              className="
               Contact Us,
 
           </div></div>
 </section>
       {/* Why Work With Us */}
-      <section className="py-20 bg-white">"
-<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
-<div className="text-center mb-16">"
-<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
-              Why Work With Us?
-            </h2>
-<p className="text-xl text-gray-600">"
+      <section className="py-20 bg-white"max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8"
+<div className="
+<h2 className="text-3 xl md:text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600"
               We offer more than just a job - we offer a career and a community,
 
           </div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+<div className="
             {benefits.map((benefit, index) => (
   // TODO: Add parameters
 )
-              <div key={index} className="text-center">"
-<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-<benefit.icon className="w-8 h-8 text-white" />"
-<h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}"
-                <p className="text-gray-600">{benefit.description}"
+              <div key={index} className="text-center"w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4"
+<benefit.icon className="
+<h3 className="text-xl font-bold text-gray-900 mb-3"text-gray-600"
             ))}
       {/* Company Culture */}
-      <section className="py-20 bg-gray-50">"
-<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
+      <section className="
+<div className="max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8"grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
 <div>
-<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">"
+<h2 className="
                 Our Culture,
 
-              <p className="text-lg text-gray-600 mb-8">"
-                At Zion Tech Group, we believe that great technology comes from great people.
-                We foster an environment where innovation thrives, collaboration is encouraged,
-                and everyone has the opportunity to grow and succeed.
-              <ul className="space-y-4">"
+              <p className="text-lg text-gray-600 mb-8"space-y-4"
                 {culture.map((item, index) => (
   // TODO: Add parameters
 )
-                  <li key={index} className="flex items-start">"
-<CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />"
-<span className="text-gray-600">{item}"
+                  <li key={index} className="
+<CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0"text-gray-600"
                 ))}
-            <div className="bg-white rounded-xl shadow-lg p-8">"
-<h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Stats"
-              <div className="grid grid-cols-2 gap-6">"
-<div className="text-center">"
-<div className="text-3xl font-bold text-cyan-600 mb-2">50+"
-                  <div className="text-gray-600">Team Members"
-                <div className="text-center">"
-<div className="text-3xl font-bold text-blue-600 mb-2">15+"
-                  <div className="text-gray-600">Years Experience"
-                <div className="text-center">"
-<div className="text-3xl font-bold text-purple-600 mb-2">25+"
-                  <div className="text-gray-600">Countries"
-                <div className="text-center">"
-<div className="text-3xl font-bold text-green-600 mb-2">99%"
-                  <div className="text-gray-600">Satisfaction"
+            <div className="
+<h3 className="text-2 xl font-bold text-gray-900 mb-6"grid grid-cols-2 gap-6"
+<div className="
+<div className="text-3 xl font-bold text-cyan-600 mb-2"text-gray-600"
+                <div className="
+<div className="text-3 xl font-bold text-blue-600 mb-2"text-gray-600"
+                <div className="
+<div className="text-3 xl font-bold text-purple-600 mb-2"text-gray-600"
+                <div className="
+<div className="text-3 xl font-bold text-green-600 mb-2"text-gray-600"
       {/* Open Positions */}
-      <section id="open-positions" className="py-20 bg-white">"
-<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">"
-<div className="text-center mb-16">"
-<h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">"
-              Open Positions
-
-            <p className="text-xl text-gray-600">"
+      <section id=" className="py-20 bg-white"max-w-7 xl mx-auto px-4 sm: px-6 lg:px-8"
+<div className="
+<h2 className="text-3 xl md:text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600"
               Find your next career opportunity with us,
 
           </div>
-<div className="space-y-8">"
+<div className="
             {openPositions.map((position) => (
   // TODO: Add parameters
 )
-              <div key={position.id} className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow">"
-<div className="p-8">"
-<div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">"
+              <div key={position.id} className="bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow"p-8"
+<div className="
 <div>
-<h3 className="text-2xl font-bold text-gray-900 mb-2">{position.title}"
-                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600">"
-<span className="flex items-center">"
-<Briefcase className="w-4 h-4 mr-1" />"
-                          {position.department}
-                        <span className="flex items-center">"
-<MapPin className="w-4 h-4 mr-1" />"
+<h3 className="text-2 xl font-bold text-gray-900 mb-2"flex flex-wrap items-center gap-4 text-sm text-gray-600"
+<span className="
+<Briefcase className="w-4 h-4 mr-1"flex items-center"
+<MapPin className="
                           {position.location}
-                        <span className="flex items-center">"
-<Clock className="w-4 h-4 mr-1" />"
+                        <span className="flex items-center"w-4 h-4 mr-1"
                           {position.type}
-                        <span className="flex items-center">"
-<Users className="w-4 h-4 mr-1" />"
-                          {position.experience}
-                    <$2 />
-                      to="/contact""
-                      className="mt-4 md:mt-0 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-medium transition-colors inline-flex items-center">"
-                      Apply Now <ArrowRight className="w-4 h-4 ml-2" />"
-<p className="text-gray-600 mb-6">{position.description}"
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+                        <span className="
+<Users className="w-4 h-4 mr-1"/contact""mt-4 md:mt-0 bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg font-medium transition-colors inline-flex items-center"
+                      Apply Now <ArrowRight className="
+<p className="text-gray-600 mb-6"grid grid-cols-1 md:grid-cols-2 gap-6"
 <div>
-<h4 className="font-semibold text-gray-900 mb-3">Requirements"
-                      <ul className="space-y-2">"
-                        {position.requirements.map((req, index) => (
-  // TODO: Add parameters
-)
-                          <li key={index} className="flex items-start text-sm text-gray-600">"
-<CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />"
+<h4 className="
+                      <ul className="space-y-2"flex items-start text-sm text-gray-600"
+<CheckCircle className="
                             {req}
                         ))}
                     <div>
-<h4 className="font-semibold text-gray-900 mb-3">Benefits"
-                      <ul className="space-y-2">"
+<h4 className="font-semibold text-gray-900 mb-3"space-y-2"
                         {position.benefits.map((benefit, index) => (
   // TODO: Add parameters
 )
-                          <li key={index} className="flex items-start text-sm text-gray-600">"
-<CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />"
-                            {benefit}
-                        ))}
-            ))}
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">"
-<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">"
-<h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
-            Don't See Your Perfect Role?'
-          <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">"
+                          <li key={index} className="
+<CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0"py-20 bg-gradient-to-r from-cyan-600 to-blue-600"
+<div className="
+<h2 className="text-3 xl md:text-4 xl font-bold text-white mb-4"text-xl text-cyan-100 mb-8 max-w-3 xl mx-auto"
             We're always looking for talented individuals. Send us your resume and let us know how you'd like to contribute to our mission.'
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+          <div className="
 <$2 />
-              to="/contact""
-              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">"
-              Send Us Your Resume
-
-            <$2 />
-              to="/team""
-              className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">"
+              to="/contact"
+              className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300"/team""bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300"
               Meet Our Team
 
           </div></div>

@@ -94,7 +94,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [;
     useCases: ['Network security', 'Access control', 'Threat prevention', 'Compliance management', 'Security monitoring', 'Incident response'],'
     roi: 'Large enterprises see 500% ROI through improved security and reduced breach risks.','
     competitors: ['Traditional network security', 'Custom security solutions', 'Government security systems'],'
-    marketSize: '$40B market','
+    marketSize: '$40 B market','
     growthRate: '300% annual growth','
     variant: 'enterprise-futuristic','
     contactInfo: {
@@ -158,7 +158,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [;
     useCases: ['Edge computing management', 'Performance optimization', 'Resource management', 'IoT orchestration', 'Real-time analytics', 'Load balancing'],'
     roi: 'Tech companies see 600% ROI through optimized edge computing and improved performance.','
     competitors: ['Traditional cloud management', 'Custom orchestration solutions', 'Basic edge computing tools'],'
-    marketSize: '$30B market','
+    marketSize: '$30 B market','
     growthRate: '350% annual growth','
     variant: 'enterprise-futuristic','
     contactInfo: {
@@ -178,24 +178,24 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [;
     rating: 4.8,
     reviews: 156
   },
-  // 5G Private Network Solutions
+  // 5 G Private Network Solutions
   {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    id: '5g-private-network-solutions','
-    name: '5G Private Network Solutions','
-    tagline: 'High-speed private networks with 5G technology','
+    id: '5 g-private-network-solutions','
+    name: '5 G Private Network Solutions','
+    tagline: 'High-speed private networks with 5 G technology','
     price: '$5,999','
     period: '/month','
-    description: 'Advanced 5G private network solutions that provide high-speed, low-latency connectivity for enterprises, with custom network configurations and advanced security.','
+    description: 'Advanced 5 G private network solutions that provide high-speed, low-latency connectivity for enterprises, with custom network configurations and advanced security.','
     features: [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-      '5G private networks','
+      '5 G private networks','
       'Custom network configurations','
       'Low-latency connectivity','
       'Advanced security protocols','
@@ -210,19 +210,19 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [;
     icon: '📡','
     color: 'from-green-500 to-emerald-600','
     textColor: 'text-green-400','
-    link: 'https://ziontechgroup.com/5g-private-network-solutions','
-    marketPosition: 'Leading 5G private network solution. Competes with traditional network providers.','
+    link: 'https://ziontechgroup.com/5 g-private-network-solutions','
+    marketPosition: 'Leading 5 G private network solution. Competes with traditional network providers.','
     targetAudience: 'Large enterprises, Manufacturing companies, Healthcare providers, Government agencies, Tech companies, Research institutions','
     trialDays: 30,
     setupTime: '6-8 weeks','
-    category: 'Enterprise IT & 5G Networks','
+    category: 'Enterprise IT & 5 G Networks','
     realService: true,
-    technology: ['5G Technology', 'Private Networks', 'Network Security', 'Real-time Monitoring', 'Custom Configurations', 'Advanced Analytics'],'
+    technology: ['5 G Technology', 'Private Networks', 'Network Security', 'Real-time Monitoring', 'Custom Configurations', 'Advanced Analytics'],'
     integrations: ['Enterprise systems', 'Manufacturing platforms', 'Healthcare systems', 'Government platforms', 'Tech infrastructure', 'Research systems'],'
     useCases: ['Private network deployment', 'High-speed connectivity', 'Low-latency applications', 'Network security', 'Custom configurations', 'Performance monitoring'],'
     roi: 'Large enterprises see 700% ROI through improved network performance and reduced latency.','
     competitors: ['Traditional network providers', 'Custom network solutions', 'Government network systems'],'
-    marketSize: '$45B market','
+    marketSize: '$45 B market','
     growthRate: '400% annual growth','
     variant: 'enterprise-futuristic','
     contactInfo: {
@@ -236,7 +236,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [;
       website: 'https://ziontechgroup.com''
     },
     realImplementation: true,
-    implementationDetails: 'Advanced 5G private network solution with custom configurations, advanced security, and comprehensive monitoring capabilities.','
+    implementationDetails: 'Advanced 5 G private network solution with custom configurations, advanced security, and comprehensive monitoring capabilities.','
     launchDate: '2026-02-15','
     customers: 95,
     rating: 4.9,
@@ -286,7 +286,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [;
     useCases: ['Financial transactions', 'Supply chain tracking', 'Identity verification', 'Smart contracts', 'Decentralized applications', 'Asset management'],'
     roi: 'Financial institutions see 500% ROI through improved security and reduced transaction costs.','
     competitors: ['Specialized blockchain solutions', 'Custom blockchain development', 'Traditional financial systems'],'
-    marketSize: '$35B market','
+    marketSize: '$35 B market','
     growthRate: '320% annual growth','
     variant: 'enterprise-futuristic','
     contactInfo: {
@@ -350,7 +350,7 @@ export const enterpriseITSolutions2026: EnterpriseITSolutions2026[] = [;
     useCases: ['IT process automation', 'Predictive maintenance', 'Incident response', 'Performance optimization', 'Infrastructure management', 'Real-time monitoring'],'
     roi: 'Large enterprises see 600% ROI through automated IT operations and improved efficiency.','
     competitors: ['Traditional IT management', 'Custom automation solutions', 'Basic monitoring tools'],'
-    marketSize: '$40B market','
+    marketSize: '$40 B market','
     growthRate: '350% annual growth','
     variant: 'enterprise-futuristic','
     contactInfo: {

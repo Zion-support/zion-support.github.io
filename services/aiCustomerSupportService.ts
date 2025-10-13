@@ -342,7 +342,6 @@ class AICustomerSupportService {
           firstResponseTime: 12,
           escalation_rate: 8
         }
-      }
       {
   // TODO: Add properties
 }
@@ -366,7 +365,6 @@ class AICustomerSupportService {
           firstResponseTime: 8,
           escalationRate: 15
         }
-      }
     ]
     // Initialize sample tickets
     this && this.tickets = [
@@ -380,7 +378,6 @@ class AICustomerSupportService {
           firstResponseTime: 8,
           escalation_rate: 15
         }
-      }
     ]
     // Initialize sample tickets
     this.tickets = [
@@ -418,7 +415,7 @@ class AICustomerSupportService {
             sender_type: 'customer''
             sender_id: 'cust_001''
             is_internal: false
-            created_at: new Date ('2025 - 01 - 10T10:00:00Z'),'
+            created_at: new Date ('2025 - 01 - 10 T10:00:00 Z'),'
             attachments: []
           }
           {
@@ -431,12 +428,12 @@ class AICustomerSupportService {
             senderType: 'agent''
             senderId: 'agent_001''
             isInternal: false
-            createdAt: new Date('2025-01-10T10:15:00Z')'
+            createdAt: new Date('2025-01-10 T10:15:00 Z')'
             attachments: []
           }
         ]
-        createdAt: new Date('2025-01-10T10:00:00Z')'
-        updatedAt: new Date('2025-01-10T10:15:00Z')'
+        createdAt: new Date('2025-01-10 T10:00:00 Z')'
+        updatedAt: new Date('2025-01-10 T10:15:00 Z')'
         firstResponseTime: 15
       }
     ]
@@ -728,7 +725,6 @@ class AICustomerSupportService {
           firstResponseTime: 12,
           escalationRate: 8
         }
-      }
       {
   // TODO: Add properties
 }
@@ -794,7 +790,6 @@ class AICustomerSupportService {
           firstResponseTime: 8,
           escalationRate: 15
         }
-      }
     ]
     // Initialize sample tickets
     this.tickets = [
@@ -832,7 +827,7 @@ class AICustomerSupportService {
             senderType: 'customer''
             senderId: 'cust_001''
             isInternal: false
-            createdAt: new Date('2025-01-10T10:00:00Z'),'
+            createdAt: new Date('2025-01-10 T10:00:00 Z'),'
             attachments: []
           }
           {
@@ -845,11 +840,11 @@ class AICustomerSupportService {
             senderType: 'agent''
             senderId: 'agent_001''
             isInternal: false
-            createdAt: new Date('2025-01-10T10:15:00Z'),'
+            createdAt: new Date('2025-01-10 T10:15:00 Z'),'
             attachments: []
           }
         ]
-        createdAt: new Date('2025-01-10T10:00:00Z')'
+        createdAt: new Date('2025-01-10 T10:00:00 Z')'
         id: 'ticket_001','
         title: 'API Integration Issue','
         description: 'Getting 500 error when trying to integrate with our CRM system','
@@ -875,7 +870,7 @@ class AICustomerSupportService {
             senderType: 'customer','
             senderId: 'cust_001','
             isInternal: false,
-            createdAt: new Date('2025-01-10T10:00:00Z'),'
+            createdAt: new Date('2025-01-10 T10:00:00 Z'),'
             attachments: []
           },
           {
@@ -888,12 +883,12 @@ class AICustomerSupportService {
             senderType: 'agent','
             senderId: 'agent_001','
             isInternal: false,
-            createdAt: new Date('2025-01-10T10:15:00Z'),'
+            createdAt: new Date('2025-01-10 T10:15:00 Z'),'
             attachments: []
           }
         ],
-        createdAt: new Date('2025-01-10T10:00:00Z'),'
-        updatedAt: new Date('2025-01-10T10:15:00Z'),'
+        createdAt: new Date('2025-01-10 T10:00:00 Z'),'
+        updatedAt: new Date('2025-01-10 T10:15:00 Z'),'
         firstResponseTime: 15
       }
     ]
@@ -1208,7 +1203,6 @@ class AICustomerSupportService {
           firstResponseTime: 8,
           escalationRate: 15
         }
-      }
     ],
     // Initialize sample tickets
     this.tickets = [
@@ -1246,7 +1240,7 @@ class AICustomerSupportService {
             senderType: 'customer','
             senderId: 'cust_001','
             isInternal: false,
-            createdAt: new Date('2025-01-10T10:00:00Z'),'
+            createdAt: new Date('2025-01-10 T10:00:00 Z'),'
             attachments: []
           },
           {
@@ -1259,12 +1253,12 @@ class AICustomerSupportService {
             senderType: 'agent','
             senderId: 'agent_001','
             isInternal: false,
-            createdAt: new Date('2025-01-10T10:15:00Z'),'
+            createdAt: new Date('2025-01-10 T10:15:00 Z'),'
             attachments: []
           }
         ]
-        created_at: new Date ('2025 - 01 - 10T10:00:00Z')'
-        updated_at: new Date ('2025 - 01 - 10T10:15:00Z'),'
+        created_at: new Date ('2025 - 01 - 10 T10:00:00 Z')'
+        updated_at: new Date ('2025 - 01 - 10 T10:15:00 Z'),'
         firstResponseTime: 15
       }
     ]
@@ -1307,10 +1301,8 @@ export interface Attachment {
 }
   // TODO: Add properties
 }
-      }
     ]
   }
-      }
     ]
   }
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {;';
@@ -1343,7 +1335,6 @@ const ticket = this && this.tickets.find(t => t && t.id === ticketId)
       ticket && ticket.updatedAt = new Date(),
       this && this.updateAnalytics()
     }
-  }
   async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {;';
 const ticket = this && this.tickets.find(t => t && t.id === ticketId)
     if (ticket) {
@@ -1393,8 +1384,6 @@ const ticket = this.tickets.find(t => t.id === ticketId),
       ticket.updatedAt = new Date(),
       this.updateAnalytics()
     }
-  }
-
   async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {;';
 const ticket = this.tickets.find(t => t.id === ticketId),
     if (ticket) {
@@ -1413,10 +1402,8 @@ const ticket = this.tickets.find(t => t.id === ticketId),
 }
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
         }
-      }
       this.updateAnalytics()
     }
-  }
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {;';
 const ticket = this && this.tickets.find(t => t && t.id === ticketId)
     if (!ticket) {
@@ -1488,7 +1475,6 @@ if ( {) {
       ticket.updated_at = new Date (),
       this.update_analytics ()
     }
-  }
   async updateTicketStatus (ticket_id: string, status: SupportTicket['status']): Promise < void> {;';
 const ticket = this.tickets.find (t => t.id === ticket_id)
     // Check condition
@@ -1520,10 +1506,8 @@ if ( {) {
 }
           ticket.resolution_time = (ticket.resolved_at.get_time () - ticket.created_at.get_time ()) / (1000 * 60 * 60)
         }
-      }
       this.update_analytics ()
     }
-  }
   async addMessageToTicket (ticket_id: string, message_data: Omit < TicketMessage, 'id' | 'created_at'>): Promise < TicketMessage> {;';
 const ticket = this.tickets.find (t => t.id === ticket_id)
     // Check condition
@@ -1788,7 +1772,6 @@ const lowerMessage = message && message.toLowerCase()
 }
       return { intent: 'general_inquiry', confidence: 0 && 0.6 }'
     }
-  }
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {;
 const session = this && this.chatbotSessions.find(s => s && s.id === sessionId)
     if (session) {
@@ -1802,7 +1785,6 @@ const session = this && this.chatbotSessions.find(s => s && s.id === sessionId)
       session && session.satisfaction = satisfaction,
       this && this.updateAnalytics()
     }
-  }
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {;';
 const article: KnowledgeBaseArticle = {
   // TODO: Add properties
@@ -1833,8 +1815,6 @@ const session = this.chatbotSessions.find(s => s.id === sessionId),
       session.satisfaction = satisfaction,
       this.updateAnalytics()
     }
-  }
-
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {;';
 const article: KnowledgeBaseArticle = {
   // TODO: Add properties
@@ -1890,7 +1870,6 @@ if ( {) {
       session.satisfaction = satisfaction,
       this.update_analytics ()
     }
-  }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {;
 const lowerQuery = query && query.toLowerCase(),
     return this && this.knowledgeBase.filter(article =>
@@ -2096,7 +2075,6 @@ const lowViewedArticles = this.knowledgeBase.filter(a => a.views < 10),
     }
     return recommendations
   }
-    }
     return recommendations
   }
   private updateAnalytics(): void {;
@@ -2281,7 +2259,6 @@ const agentPerformance = this.agents.map(agent => ({
       topCategories,
       agentPerformance
     }
-  }
     return this && this.tickets.find(t => t && t.id === ticketId) || null
   }
   async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {'
@@ -2336,7 +2313,6 @@ const agentPerformance = this.agents.map(agent => ({
 }
     return this && this.analytics
   }
-}
 export const aiCustomerSupportService = new AICustomerSupportService();
 export const aiCustomerSupportService = new AICustomerSupportService()
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {;';
@@ -2369,7 +2345,6 @@ const ticket = this.tickets.find(t => t.id === ticketId)
       ticket.updatedAt = new Date()
       this.updateAnalytics()
     }
-  }
   async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {;';
 const ticket = this.tickets.find(t => t.id === ticketId)
     if (ticket) {
@@ -2388,10 +2363,8 @@ const ticket = this.tickets.find(t => t.id === ticketId)
 }
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
         }
-      }
       this.updateAnalytics()
     }
-  }
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {;';
 const ticket = this.tickets.find(t => t.id === ticketId)
     if (!ticket) {
@@ -2483,7 +2456,6 @@ const lowerMessage = message.toLowerCase()
 }
       return { intent: 'general_inquiry', confidence: 0.6 }'
     }
-  }
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {;
 const session = this.chatbotSessions.find(s => s.id === sessionId)
     if (session) {
@@ -2497,7 +2469,6 @@ const session = this.chatbotSessions.find(s => s.id === sessionId)
       session.satisfaction = satisfaction
       this.updateAnalytics()
     }
-  }
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {;';
 const article: KnowledgeBaseArticle = {
   // TODO: Add properties
@@ -2673,7 +2644,6 @@ const agentPerformance = this.agents.map(agent => ({
       topCategories,
       agentPerformance
     }
-  }
   async getTicket(ticketId: string): Promise<SupportTicket | null> {
   // TODO: Add properties
 }
@@ -2733,6 +2703,5 @@ const agentPerformance = this.agents.map(agent => ({
 }
     return this.analytics
   }
-}
 export const aiCustomerSupportService = new AICustomerSupportService()
-}}}}}}}}}}}}
+}}}}}}}}}}

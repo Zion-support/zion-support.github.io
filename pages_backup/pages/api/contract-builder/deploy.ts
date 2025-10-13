@@ -62,7 +62,6 @@ const tx = {
 }
     return res.status(400).json({ error: e?.message || 'Failed to prepare deployment tx' })'
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import { Interface } from 'ethers';'
 // Simple ABI for demonstration (release/refund);
@@ -90,10 +89,7 @@ export default async function handler(req, res) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   }
-}
-}

@@ -32,7 +32,6 @@ const route = basePath + '/' + item'
       // Recursively scan subdirectories
       scanDirectory(fullPath, basePath + '/' + item)'
     }
-  }
 }
 
 // Scan the app directory for pages
@@ -45,92 +44,7 @@ allPages.forEach(page => {),
 const footerFile = path.join(__dirname, '..', 'app', 'components', 'Footer.tsx');';
 const footerContent = fs.readFileSync(footerFile, 'utf8')'
 // Extract all href links from Footer;
-const hrefRegex = /href: \s*['"`]([^'"`]+)['"`]/g;"'";
-const footerLinks = [];
-let match,
-,
-while ((match = hrefRegex.exec(footerContent)) !== null) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    ,
-  footerLinks.push(match[1])
-  }
-
-console.log(`\n🔗 Found ${footerLinks.length} links in Footer: `),
-footerLinks.forEach(link => {),
-  console.log(`  📎 ${link}`)
-})
-// Check which footer links are missing pages;
-const missingPages = [];
-const existingRoutes = allPages.map(p => p.path)
-footerLinks.forEach(link => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    )
-  if (link.startsWith('/') && !existingRoutes.includes(link)) {'
-    missingPages.push(link)
-  }
-})
-console.log(`\n❌ Missing pages (${missingPages.length}):`)
-missingPages.forEach(page => {)
-  console.log(`  🚫 ${page}`)
-})
-// Check for other common missing pages;
-const commonPages = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-  '/about','
-  '/contact','
-  '/team','
-  '/careers','
-  '/case-studies','
-  '/blog','
-  '/pricing','
-  '/support','
-  '/docs','
-  '/api-docs','
-  '/status','
-  '/health','
-  '/privacy','
-  '/terms','
-  '/cookies','
-  '/gdpr','
-  '/security','
-  '/compliance''
-];
-const additionalMissing = commonPages.filter(page => )
-  !existingRoutes.includes(page) && !missingPages.includes(page)
-)
-if (additionalMissing.length > 0) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  console.log(`\n📋 Additional common pages to consider (${additionalMissing.length}):`)
-  additionalMissing.forEach(page => {)
-    console.log(`  💡 ${page}`)
-  })
-}
-
-// Check for broken internal links in existing pages
-console.log(`\n🔍 Checking for broken internal links in existing pages...`);
-const brokenLinks = []
-allPages.forEach(page => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    )
-  try {);
-const content = fs.readFileSync(page.file, 'utf8')'
-    // Find all internal links in the page;
-const internalLinkRegex = /href: \s*['"`](\/[^'"`]+)['"`]/g;"'";
+const hrefRegex = /href: \s*['"`]([^'"`]/g;"'"`](\/[^'"`]+)['"'";
 let linkMatch
     while ((linkMatch = internalLinkRegex.exec(content)) !== null) {;
 const link = linkMatch[1],
@@ -140,7 +54,6 @@ const link = linkMatch[1],
           brokenLink: link
   })
       }
-    }
   } catch (error) {
   // TODO: Add properties
 }

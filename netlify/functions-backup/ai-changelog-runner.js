@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'ai-changelog-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'ai-changelog-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'ai-changelog-runner',' source: event.source || 'unknown', changelog: {' status: 'generated', entries: 0,'
         lastGenerated: new Date().toISOString() } }) } return result; } catch (error) {

@@ -53,7 +53,6 @@ export type ZgpTemplate = {
     votingOptions: string[]
     fundingNeeded: ZgpFunding
   }
-}
 const DATA_DIR = path.join(process.cwd(), 'data');';
 const PROPOSALS_FILE = path.join(DATA_DIR, 'zgp-proposals.json');';
 const TEMPLATES_FILE = path.join(DATA_DIR, 'zgp-templates.json')'
@@ -76,7 +75,6 @@ function ensureDataFilesExist(): void {
 }
     fs.writeFileSync(PROPOSALS_FILE, JSON.stringify({ proposals: [] }, null, 2))
   }
-}
 export function loadTemplates(): ZgpTemplate[] {;
 const raw = fs.readFileSync(TEMPLATES_FILE, 'utf8')'
   return JSON.parse(raw) as ZgpTemplate[]
@@ -226,4 +224,3 @@ const nextVersion: ZgpProposalVersion = {
   proposals[index] = next
   saveProposals(proposals)
   return next
-}

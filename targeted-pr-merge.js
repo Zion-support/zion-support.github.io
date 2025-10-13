@@ -24,8 +24,6 @@ const targetBranches = [,
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})'
   o: 'inherit' })'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 //Step,
   2: Define specific branches to merge (most recent and important);
 const targetBranches = [
@@ -34,31 +32,31 @@ const targetBranches = [
   // TODO: Add items
 ]
   //Recent cursor branches from today,
-  'cursor/fix-errors-and-merge-to-main-100d','
-  'cursor/fix-errors-and-merge-to-main-2f1b','
-  'cursor/fix-errors-and-merge-to-main-4800','
-  'cursor/fix-errors-and-merge-to-main-494 d','
-  'cursor/fix-errors-and-merge-to-main-5696','
-  'cursor/fix-errors-and-merge-to-main-6 ee3','
-  'cursor/fix-errors-and-merge-to-main-7318','
-  'cursor/fix-errors-and-merge-to-main-97 a6','
-  'cursor/fix-errors-and-merge-to-main-9 bdd','
-  'cursor/fix-errors-and-merge-to-main-9 caa','
-  'cursor/fix-errors-and-merge-to-main-9 f74','
-  'cursor/fix-errors-and-merge-to-main-a0 d2','
-  'cursor/fix-errors-and-merge-to-main-b8 f9','
-  'cursor/fix-errors-and-merge-to-main-cefe','
-  'cursor/fix-errors-and-merge-to-main-d0 f7','
-  'cursor/fix-errors-and-merge-to-main-dc65','
-  'cursor/fix-errors-and-merge-to-main-f4 fa','
-  'cursor/fix-errors-and-merge-to-main-fbf8','
-  'cursor/fix-errors-and-merge-to-main-fcbc','
-  'cursor/fix-errors-and-merge-to-main-3 b04','
-  'cursor/fix-errors-and-merge-to-main-b122','
-  'cursor/fix-errors-and-merge-to-main-ffaa','
-  'cursor/fix-errors-and-merge-to-main-ffab','
-  'cursor/fix-errors-and-merge-to-main-ffee','
-  'cursor/fix-errors-and-merge-to-main-dc0f','
+  '','
+  '','
+  '','
+  ' d','
+  '','
+  ' ee3','
+  '','
+  ' a6','
+  ' bdd','
+  ' caa','
+  ' f74','
+  ' d2','
+  ' f9','
+  '','
+  ' f7','
+  '','
+  ' fa','
+  '','
+  '','
+  ' b04','
+  '','
+  '','
+  '','
+  '','
+  '','
   //Content and feature branches
   'add-new-2026-content','
   'ai-2027-content-integration','
@@ -76,15 +74,7 @@ function mergeBranch(branchName) {,
     //Check if branch exists
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' })'
     //Check if already merged;
-const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`)"
-      { encoding: 'utf8' }'
-// //Step,
-  3: Enhanced merge function with conflict resolution,
-function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
-    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' })'
-    //Check if already merged;`;
-const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,"
+const isMerged = execSync(`git branch --merged main | grep -q "${branchName}"not_merged"`)"${branchName}" || echo "`,"
       {/* TODO: Fix JSX expression */}
   g: 'utf8' })'
     ).trim()
@@ -98,7 +88,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 }
   // TODO: Add properties
 }
-      execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`)"
+      execSync(`git merge origin/${branchName} --no-ff -m "`)"
         { stdio: 'inherit' }'
       )
 //       return { success: true, method: 'direct' }'
@@ -114,7 +104,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
   // TODO: Add properties
 }
         //Strategy 1: Use theirs,
-        execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`)"
+        execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "`)"
           { stdio: 'inherit' }'
         )
 //         return { success: true, method: 'theirs' }'
@@ -129,24 +119,17 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
   // TODO: Add properties
 }
           //Strategy 2: Use ours,
-          execSync(`git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`)"
+          execSync(`git merge origin/${branchName} --strategy-option=ours --no-ff -m "`)"
             { stdio: 'inherit' }'
-    try {/* TODO: Fix JSX expression */}"`"
-        `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`,"
+    try {/* TODO: Fix JSX expression */}"
+        `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"
         {/* TODO: Fix JSX expression */}
   o: 'inherit' }'
       )
 //       return {/* TODO: Fix JSX expression */}
   d: 'direct' }'
-    } catch (mergeError) {/* TODO: Fix JSX expression */}"`"
-          `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,"
-          {/* TODO: Fix JSX expression */}
-  o: 'inherit' }'
-        )
-//         return {/* TODO: Fix JSX expression */}
-  d: 'theirs' }'
-      } catch (theirsError) {/* TODO: Fix JSX expression */}"`"
-            `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`,"
+    } catch (mergeError) {/* TODO: Fix JSX expression */}"`"Merge ${branchName}: using theirs strategy"`,"`"
+            `git merge origin/${branchName} --strategy-option=ours --no-ff -m "`,"
             {/* TODO: Fix JSX expression */}
   o: 'inherit' }'
           )
@@ -155,13 +138,10 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
         } catch (oursError) {/* TODO: Fix JSX expression */}
   d: 'failed' }'
         }
-      }
     }
   } catch (error) {/* TODO: Fix JSX expression */}
   d: 'not_found' }'
   }
-}
-
 //Step 4: Process all target branches;
 const results = {
   // TODO: Add properties
@@ -192,8 +172,7 @@ const results = {
 //Step,
   4: Process all target branches,;
 const results = {/* TODO: Fix JSX expression */}
-    }}}
-
+    }}
 // for (const branch of targetBranches) {
   // TODO: Add properties
 }
@@ -229,8 +208,6 @@ const results = {/* TODO: Fix JSX expression */}
     results.summary.failed++
     results.summary.methods[result.method]++
   }
-}
-
 //Step 5: Generate report,
 // const report = {,
   ...results
@@ -254,8 +231,6 @@ fs.writeFileSync('targeted-pr-merge-report.json')'
 //Step,
   5: Generate report,
 // const report = {/* TODO: Fix JSX expression */}
-}
-
 fs.writeFileSync('targeted-pr-merge-report.json')'
   JSON.stringify(report, null, 2)
 )
@@ -268,4 +243,4 @@ fs.writeFileSync('targeted-pr-merge-report.json')'
 
 // Step,
   7: Summary,
-// // // // // // // // // // // // // // "`"
+// // // // // // // // // // // // // // "

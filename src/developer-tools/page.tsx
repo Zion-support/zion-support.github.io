@@ -89,44 +89,31 @@ $4}
     <React.Fragment>
 <Helmet>
 <title>Developer Tools - Zion Tech Group
-        <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />"
-<meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" />"
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
+        <meta name="description"AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." />"keywords" content=" />"
+<div className="
 <Navigation />
         {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4">"
-<div className="max-w-7xl mx-auto text-center">"
-<h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">"
+        <section className="pt-24 pb-16 px-4"max-w-7 xl mx-auto text-center"
+<h1 className="
               Developer Tools
 
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-              AI-powered development tools that accelerate your coding workflow and improve productivity,
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
-<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
-<div className="text-3xl font-bold text-cyan-400 mb-2">60%"
-                <div className="text-gray-300">Productivity Boost"
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
-<div className="text-3xl font-bold text-green-400 mb-2">50+"
-                <div className="text-gray-300">Tools Available"
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
-<div className="text-3xl font-bold text-purple-400 mb-2">10K+"
-                <div className="text-gray-300">Active Developers"
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
-<div className="text-3xl font-bold text-orange-400 mb-2">99.9%"
-                <div className="text-gray-300">Uptime"
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto"grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
+<div className="
+<div className="text-3 xl font-bold text-cyan-400 mb-2"text-gray-300"
+              <div className="
+<div className="text-3 xl font-bold text-green-400 mb-2"text-gray-300"
+              <div className="
+<div className="text-3 xl font-bold text-purple-400 mb-2"text-gray-300"
+              <div className="
+<div className="text-3 xl font-bold text-orange-400 mb-2"text-gray-300"
             {/* Contact Info */}
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">"
-<div className="flex flex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">"
-<div className="flex items-center space-x-2">"
-<Phone className="w-5 h-5" />"
-<span className="text-white font-medium">+1 302 464 0950"
-                <div className="flex items-center space-x-2">"
-<Mail className="w-5 h-5" />"
-<span className="text-white font-medium">kleber@ziontechgroup.com"
-                <div className="flex items-center space-x-2">"
-<MapPin className="w-5 h-5" />"
+            <div className="
+<div className="flex flex-col md: flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8"flex items-center space-x-2"
+<Phone className="
+<span className="text-white font-medium"flex items-center space-x-2"
+<Mail className="
+<span className="text-white font-medium"flex items-center space-x-2"
+<MapPin className="
 <div>Coming Soon</div>
   ),
 }
@@ -140,7 +127,6 @@ $4}
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   titl,
   e: 'AI Code Generator','
       descriptio,
@@ -156,7 +142,6 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   titl,
   e: 'API Testing Suite','
       descriptio,
@@ -172,7 +157,6 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   titl,
   e: 'Database Management Tool','
       descriptio,
@@ -188,7 +172,6 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   titl,
   e: 'DevOps Automation','
       descriptio,
@@ -204,7 +187,6 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   titl,
   e: 'Code Review Assistant','
       descriptio,
@@ -220,7 +202,6 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   titl,
   e: 'Performance Profiler','
       descriptio,
@@ -240,189 +221,132 @@ $4}
           <React.Fragment>
 <Helmet>
 <title>Developer Tools - Zion Tech Group
-        <meta name="description" content="AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." /></meta>""
-        <meta name="keywords" content="developer tools, AI code generation, API testing, database management, DevOps automation, code review" /></Helmet>""
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Navigation />
-        {/* Hero Section */}""
-        <section className="pt-24 pb-16 px-4"></section>""
-          <div className="max-w-7xl mx-auto text-center"></div>""
-            < className="text-4xl,$2 />"
-  sm:text-5xl,""
-  md: text-6xl font-bold text-white mb-6">"
+        <meta name="description"AI-powered developer tools and productivity suites. Code generation, API testing, database management, and DevOps automation tools." /></meta>"
+        <meta name="keywords"developer tools, AI code generation, API testing, database management, DevOps automation, code review" /></Helmet>"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900""
+        <section className=""
+          <div className=""
+            < className=""
+  md: text-6 xl font-bold text-white mb-6"
 </h1>
 // Developer Tools
-          </h1>""
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>"
+          </h1>""text-xl text-gray-300 mb-8 max-w-3 xl mx-auto"
 // AI-powered development tools that accelerate your coding workflow and improve productivity,
           </p>
-            {/* Stats */}""
-            < className="grid grid-cols-2,"$2 />"
-  md:grid-cols-4 gap-6 mb-12">"
-</div>""
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>""
-                <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>""
-                <div className="text-gray-300">Productivity Boost"
-              </div>""
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>""
-                <div className="text-3xl font-bold text-green-400 mb-2">50+</div>""
-                <div className="text-gray-300">Tools Available"
-              </div>""
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>""
-                <div className="text-3xl font-bold text-purple-400 mb-2">10K+</div>""
-                <div className="text-gray-300">Active Developers"
-              </div>""
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>""
-                <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>""
-                <div className="text-gray-300">Uptime"
-            {/* Contact Info */}""
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>""
-              < className="flex flex-col,$2 />"
-  md:flex-row items-center justify-center space-y-4,
-  md:space-y-0,""
-  md:space-x-8">"
-</div>""
-                <div className="flex items-center space-x-2"></div>""
-                  <PhoneclassName="w-5 h-5" / />""
-                  <span className="text-white font-medium">+1 302 464 0950"
-                </div>""
-                <div className="flex items-center space-x-2"></div>""
-                  <MailclassName="w-5 h-5" / />""
-                  <span className="text-white font-medium">kleber@ziontechgroup.com"
-                </div>""
-                <div className="flex items-center space-x-2"></div>""
-                  <MapPinclassName="w-5 h-5" / />""
-                  <span className="text-white font-medium">Middletown, DE"
+            {/* Stats */}"
+            < className="grid grid-cols-2,">"
+</div>"
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
+                <div className="text-3 xl font-bold text-cyan-400 mb-2"
+                <div className="text-gray-300""
+              <div className=""
+                <div className=""
+                <div className="
+              </div>""bg-white/10 backdrop-blur-sm rounded-lg p-6""text-3 xl font-bold text-purple-400 mb-2""text-gray-300"
+              </div>"
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
+                <div className="text-3 xl font-bold text-orange-400 mb-2"
+                <div className="text-gray-300""
+            <div className=""
+              < className=""
+  md:space-x-8"
+</div>""flex items-center space-x-2""w-5 h-5""text-white font-medium"
+                </div>"
+                <div className="flex items-center space-x-2"
+                  <MailclassName="w-5 h-5"
+                  <span className="text-white font-medium""
+                <div className=""
+                  <MapPinclassName=""
+                  <span className="
         {/* Tools Grid */}
-        <section className="py-16 px-4">"
-<div className="max-w-7xl mx-auto">"
-<h2 className="text-3xl font-bold text-white text-center mb-12">Our Developer Tools"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-              {devTools.map((tool, index) => (
-  // TODO: Add parameters
-)
-                <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">"
-<div className="text-center mb-6">"
-<div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">"
-<tool.icon className="w-8 h-8 text-white" />"
-<h3 className="text-xl font-bold text-gray-900 mb-2">{tool.title}"
-                    <p className="text-gray-600 text-sm">{tool.description}"
-                  <div className="mb-6">"
-<div className="text-2xl font-bold text-green-600 mb-4">{tool.price}"
-                  <div className="mb-6">"
-<h4 className="font-semibold text-gray-900 mb-3">Key Features:"
-                    <ul className="space-y-2">"
+        <section className="py-16 px-4"max-w-7 xl mx-auto"
+<h2 className="
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"bg-white rounded-xl shadow-lg p-6 hover:shadow-2 xl transition-all duration-300 hover:scale-105"
+<div className="
+<div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"w-8 h-8 text-white"
+<h3 className="
+                    <p className="text-gray-600 text-sm"mb-6"
+<div className="
+                  <div className="mb-6"font-semibold text-gray-900 mb-3"
+                    <ul className="
                       {tool.features.map((feature, featureIndex) => (
   // TODO: Add parameters
 )
-                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
-<CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />"
-        {/* Tools Grid */}""
-        <section className="py-16 px-4"></section>""
-          <div className="max-w-7xl mx-auto"></div>""
-            <h2 className="text-3xl font-bold text-white text-center mb-12">"
-// Our Developer Tools</$1>""
-            < className="grid grid-cols-1,$2 />"
-  md:grid-cols-2,""
-  lg:grid-cols-3 gap-8">"
-              {devTools.map((tool, index) => ()}""
-          < key={index} className="bg-white rounded-xl shadow-lg p-6,$2 />"
-  hover:shadow-2xl transition-all duration-300,""
-  hover:scale-105">"
-</div>""
-                  <div className="text-center mb-6"></div>""
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>""
-                      <tool.icon className="w-8 h-8 text-white" /></div>""
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{tool.title}</h3>""
-                    <p className="text-gray-600 text-sm">{tool.description}"
-                  </div>""
-                  <div className="mb-6"></div>""
-                    <div className="text-2xl font-bold text-green-600 mb-4">{tool.price}"
-                  </div>""
-                  <div className="mb-6"></div>""
-                    <h4 className="font-semibold text-gray-900 mb-3">Key,"
-  Features:</h4>""
-                    <ul className="space-y-2">"
-                      {tool.features.map((feature, featureIndex) => ()}""
-          <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>""
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />"
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600"w-4 h-4 text-green-500 mr-2 flex-shrink-0"
+        {/* Tools Grid */}"
+        <section className="py-16 px-4"
+          <div className="max-w-7 xl mx-auto"
+            <h2 className="text-3 xl font-bold text-white text-center mb-12""
+            < className=""
+  lg:grid-cols-3 gap-8"
+              {devTools.map((tool, index) => ()}""bg-white rounded-xl shadow-lg p-6,$2 />"">"
+</div>"
+                  <div className="text-center mb-6"
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4"
+                      <tool.icon className="w-8 h-8 text-white"
+                    <h3 className="text-xl font-bold text-gray-900 mb-2"
+                    <p className="text-gray-600 text-sm""
+                  <div className=""
+                    <div className="
+                  </div>""mb-6""font-semibold text-gray-900 mb-3"
+  Features:</h4>"
+                    <ul className="space-y-2""
+          <li key={featureIndex} className=""
+                          <CheckCircle className="
                           {feature}
                       ))}
-                  <div className="mb-6">"
-<h4 className="font-semibold text-gray-900 mb-3">Benefits:"
-                    <ul className="space-y-1">"
+                  <div className="mb-6"font-semibold text-gray-900 mb-3"
+                    <ul className="
                       {tool.benefits.map((benefit, benefitIndex) => (
   // TODO: Add parameters
 )
-                        <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">"
-<TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" /></div>""
-                  <div className="mb-6"></div>""
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefit,"
-  s:</h4>""
-                    <ul className="space-y-1">"
-                      {tool.benefits.map((benefit, benefitIndex) => ()}""
-          <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"></li>""
-                          <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />"
+                        <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"w-3 h-3 text-blue-500 mr-2 flex-shrink-0""mb-6""font-semibold text-gray-900 mb-3"
+  s:</h4>"
+                    <ul className="space-y-1""
+          <li key={benefitIndex} className=""
+                          <TrendingUp className="
                           {benefit}
                       ))}
-                  <div className="text-center">"
-<$2 />
-                      href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
-                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">"
+                  <div className="text-center"w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block"
                       Get Started Now,
 
-                  </div>""
-                  <div className="text-center"></div>"
-<a></a>
-                      href={/* TODO: Fix JSX expression */}
-  o:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}""
-                      className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,"
-  hover:from-purple-700,""
-  hover: to-blue-700 transition-all inline-block""
+                  </div>"
+                  <div className="text-center""
+                      className=""
+  hover: to-blue-700 transition-all inline-block"
 // >
 //                       Get Started Now,
           </a></div>
 </div>
               ))}
         {/* CTA Section */}
-        <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">"
-<div className="max-w-4xl mx-auto text-center">"
-<h2 className="text-3xl font-bold text-white mb-6">"
+        <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"max-w-4 xl mx-auto text-center"
+<h2 className="
               Ready to Supercharge Your Development?
-            <p className="text-xl text-purple-100 mb-8">"
-              Join thousands of developers who have accelerated their productivity with our AI-powered tools.
-            </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center">"
+            <p className="text-xl text-purple-100 mb-8"flex flex-col sm: flex-row gap-4 justify-center"
 <$2 />
-                href="tel:+13024640950""
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">"
+                href=""
+                className="
                 Call (302) 464-0950
 
               <$2 />
-                href="mailto:kleber@ziontechgroup.com""
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">"
-                Email Us,
-
-            </div></div>
-</section>
-<Footer />
-        {/* CTA Section */}""
-        <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>""
-          <div className="max-w-4xl mx-auto text-center"></div>""
-            <h2 className="text-3xl font-bold text-white mb-6">"
+                href="mailto:kleber@ziontechgroup.com"
+                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors""
+        <section className=""
+          <div className=""
+            <h2 className="
 // Ready to Supercharge Your Development?
-          </h2>""
-            <p className="text-xl text-purple-100 mb-8">"
+          </h2>""text-xl text-purple-100 mb-8"
 // Join thousands of developers who have accelerated their productivity with our AI-powered tools.
           </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center">"
+<div className="
 <$2 />
-                href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors""
+                href="tel:+13024640950"bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
 // >
 //                 Call (302) 464-0950
           </a>
 <$2 />
-                href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors""
+                href=" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
 // >
 //                 Email Us
           </a></div>

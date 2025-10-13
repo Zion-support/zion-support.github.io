@@ -13,7 +13,6 @@ exports.handler = async () => {const logs = []}
     } catch (e) {/* TODO: Fix JSX expression */}`
       logs.push(`error=${String(e)}`)
     }
-  }
   step('node automation/dead-code-scanner.cjs || true')'
   step('node automation/external-link-check.cjs || true')'
   step('node automation/security-audit.cjs || true')'

@@ -24,7 +24,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
     res.status(500).json({ error: e?.message ?? 'Failed to load course' })'
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
@@ -52,39 +51,36 @@ const course = courses.find((c: any) => c.id === id)
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

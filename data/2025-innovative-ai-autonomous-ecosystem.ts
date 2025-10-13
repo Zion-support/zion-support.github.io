@@ -1,4 +1,4 @@
-export const innovative2025AIAutonomousEcosystem = [;
+export const innovative2025 AIAutonomousEcosystem = [;
   // TODO: Add items
 ]
   // AI-Powered Autonomous Content Creation Platform
@@ -73,7 +73,7 @@ export const innovative2025AIAutonomousEcosystem = [;
       'Corporate communications','
       'Influencer marketing''
     ],
-    marketSize: '$45.2B by 2025','
+    marketSize: '$45.2 B by 2025','
     targetAudience: 'Marketing agencies, e-commerce businesses, content creators, digital marketers, SEO professionals','
     competitiveAdvantage: 'First fully autonomous content creation platform with advanced SEO and semantic analysis','
     contact: 'kleber@ziontechgroup.com','
@@ -156,7 +156,7 @@ export const innovative2025AIAutonomousEcosystem = [;
       'Government agencies','
       'Non-profit organizations''
     ],
-    marketSize: '$38.7B by 2025','
+    marketSize: '$38.7 B by 2025','
     targetAudience: 'Customer service teams, support managers, business owners, customer experience professionals','
     competitiveAdvantage: 'First autonomous customer service platform with emotional intelligence and automated problem resolution','
     contact: 'kleber@ziontechgroup.com','
@@ -230,7 +230,7 @@ export const innovative2025AIAutonomousEcosystem = [;
 ]
       'Sales teams','
       'Marketing agencies','
-      'B2B companies','
+      'B2 B companies','
       'SaaS businesses','
       'Real estate agencies','
       'Financial services','
@@ -239,7 +239,7 @@ export const innovative2025AIAutonomousEcosystem = [;
       'Healthcare providers','
       'Educational institutions''
     ],
-    marketSize: '$52.1B by 2025','
+    marketSize: '$52.1 B by 2025','
     targetAudience: 'Sales managers, business development teams, marketing professionals, sales operations','
     competitiveAdvantage: 'First autonomous sales intelligence platform with predictive analytics and automated outreach','
     contact: 'kleber@ziontechgroup.com','
@@ -322,7 +322,7 @@ export const innovative2025AIAutonomousEcosystem = [;
       'Compliance officers','
       'Audit firms''
     ],
-    marketSize: '$67.3B by 2025','
+    marketSize: '$67.3 B by 2025','
     targetAudience: 'Financial institutions, investment professionals, risk managers, compliance officers','
     competitiveAdvantage: 'First autonomous financial analysis platform with real-time insights and predictive modeling','
     contact: 'kleber@ziontechgroup.com','
@@ -405,7 +405,7 @@ export const innovative2025AIAutonomousEcosystem = [;
       'Government health agencies','
       'Medical schools''
     ],
-    marketSize: '$89.4B by 2025','
+    marketSize: '$89.4 B by 2025','
     targetAudience: 'Healthcare providers, radiologists, medical imaging professionals, healthcare administrators','
     competitiveAdvantage: 'First autonomous healthcare diagnostics platform with AI-powered medical imaging analysis','
     contact: 'kleber@ziontechgroup.com','

@@ -21,29 +21,23 @@ const fixedLines = [];
 let line = lines[i];
 
       // Check for unterminated single quotes
-      if (line.includes("'") && !line.match(/'.*'/) && !line.match(/'.*$/)) {'"
+      if (line.includes("'"
         // Find the last single quote and add a closing quote;
-const lastQuoteIndex = line.lastIndexOf("'");'"
+const lastQuoteIndex = line.lastIndexOf("'"
         if (lastQuoteIndex > 0) {
   // TODO: Add properties
 }
-          line = line.substring(0, lastQuoteIndex + 1) + "'" + line.substring(lastQuoteIndex + 1);'"
+          line = line.substring(0, lastQuoteIndex + 1) + "'"
           changed = true;
         }
-      }
-
       // Check for unterminated double quotes
-      if (line.includes('"') && !line.match(/".*"/) && !line.match(/".*$/)) {'"
-        // Find the last double quote and add a closing quote;
-const lastQuoteIndex = line.lastIndexOf('"');'"
+      if (line.includes('"') && !line.match(/"/) && !line.match(/".*$/)) {'"');'"
         if (lastQuoteIndex > 0) {
   // TODO: Add properties
 }
-          line = line.substring(0, lastQuoteIndex + 1) + '"' + line.substring(lastQuoteIndex + 1);'"
+          line = line.substring(0, lastQuoteIndex + 1) + '"
           changed = true;
         }
-      }
-
       // Fix common import statement issues
       if (line.includes('import') && line.includes('from') && !line.endsWith(';')) {;'
         line = line + ';';'
@@ -75,8 +69,6 @@ const fixedContent = fixedLines.join('\n');'
     console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Function to find files with string literal issues
 function findFilesWithStringIssues(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {';
 const files = [];
@@ -104,7 +96,7 @@ const ext = path.extname(item);
 }
             try {;
 const content = fs.readFileSync(fullPath, 'utf8');'
-              if (content.includes("'") || content.includes('"')) {'"
+              if (content.includes("'"')) {'"
                 files.push(fullPath);
               }
             } catch (error) {
@@ -112,16 +104,12 @@ const content = fs.readFileSync(fullPath, 'utf8');'
 }
               // Skip files that can't be read'
             }
-          }
         }
-      }
     } catch (error) {
   // TODO: Add properties
 }
       // Skip directories that can't be read'
     }
-  }
-
   traverse(dir);
   return files;
 }
@@ -162,8 +150,6 @@ const fixed = fixStringLiterals(filePath);
       errorCount++;
       console.error(`❌ Failed to fix: ${path.relative(workspaceRoot, filePath)} - ${error.message}`);
     }
-  }
-
   console.log(`\n📈 Fix Summary:`);
   console.log(`   ✅ Successfully fixed: ${fixedCount} files`);
   console.log(`   ❌ Failed to fix: ${errorCount} files`);

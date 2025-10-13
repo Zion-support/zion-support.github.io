@@ -1,4 +1,4 @@
-import { serve } from "https://deno.land/std@0.177.0/http/server.ts";";
+import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0';'
 interface CreateKeyRequest {
   // TODO: Add properties
@@ -17,8 +17,8 @@ interface RegenerateKeyRequest {
   keyId: string
 }
 // Create a Supabase client;
-const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;";
-const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;";
+const supabaseUrl = Deno.env.get("SUPABASE_URL";
+const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY";
 const supabase = createClient(supabaseUrl, supabaseKey)
 serve(async (req) => {
   // TODO: Add properties
@@ -95,7 +95,6 @@ const limit = url.searchParams.get('limit') ? parseInt(url.searchParams.get('lim
 const offset = url.searchParams.get('offset') ? parseInt(url.searchParams.get('offset')!) : 0'
         return await getApiLogs(user.id, limit, offset)
       }
-    }
     return new Response(JSON.stringify({ error: 'Invalid action' }), {'
       status: 400,
       headers: { 'Content-Type': 'application/json' }})'
@@ -215,7 +214,6 @@ const { data: insertData, error: insertError } = await supabase
       headers: { 'Content-Type': 'application/json' },'
     })
   }
-}
 async function getUserApiKeys(userId: string) {
   // TODO: Add properties
 }
@@ -260,7 +258,6 @@ const { data, error } = await supabase
       headers: { 'Content-Type': 'application/json' },'
     })
   }
-}
 async function regenerateApiKey(userId: string, keyId: string) {
   // TODO: Add properties
 }
@@ -374,7 +371,6 @@ const { data: updateData, error: updateError } = await supabase
       headers: { 'Content-Type': 'application/json' },'
     })
   }
-}
 async function revokeApiKey(userId: string, keyId: string) {
   // TODO: Add properties
 }
@@ -427,7 +423,6 @@ const { data, error } = await supabase
       headers: { 'Content-Type': 'application/json' },'
     })
   }
-}
 async function getApiLogs(userId: string, limit = 50, offset = 0) {
   // TODO: Add properties
 }
@@ -510,5 +505,4 @@ const { data: logs, error: logsError, count } = await supabase
       headers: { 'Content-Type': 'application/json' }})'
       headers: { 'Content-Type': 'application/json' },'
     })
-  }
-}
+  

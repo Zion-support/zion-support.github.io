@@ -22,5 +22,5 @@
   t: text }); } res.status (200).json ({/* TODO: Fix JSX expression */})
   s: drafted }); } ; res.status(200).json({/* TODO: Fix JSX expression */})
   s: drafted }); } catch (error) {/* TODO: Fix JSX expression */}
-  r: "Internal server error" }); } ''"
+  r: "Internal server error"
 "`

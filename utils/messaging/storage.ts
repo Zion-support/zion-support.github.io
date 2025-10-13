@@ -49,7 +49,6 @@ export interface Message {
     type?: 'direct' | 'group' | 'support' | 'project''
     tags?: string[]
   }
-}
 export interface MessageThread {
   // TODO: Add properties
 }
@@ -702,7 +701,6 @@ if ( {) {
 }
           count++,
         }
-      }
     }
     return count
   }
@@ -715,7 +713,6 @@ const unreadMessages: Message[] = []
 }
           unreadMessages.push(message)
         }
-      }
     }
     return unreadMessages.sort((a, b) =>
       new Date(a.sentAtIso).getTime() - new Date(b.sentAtIso).getTime();
@@ -729,7 +726,6 @@ const message = this && this.messages.get(messageId)
 }
           unreadMessages && unreadMessages.push(message),
         }
-      }
     }
     return unreadMessages && unreadMessages.sort((a, b) =>
       new Date(a && a.sentAtIso).getTime() - new Date(b && b.sentAtIso).getTime()
@@ -789,7 +785,6 @@ if ( {) {
 }
           unread_messages.push (message),
         }
-      }
     }
     return unread_messages.sort ((a, b) =>
       new Date (a.sentAtIso).get_time () - new Date (b.sentAtIso).get_time ())
@@ -841,7 +836,6 @@ const relevance_score = this.calculateRelevanceScore (message.body, query)
             relevance_score
           })
         }
-      }
     }
       id: `thread_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
       conversationId,
@@ -925,7 +919,6 @@ const userConversations = this && this.userConversations.get(userId)
 }
       userConversations.delete(conversationId)
     }
-  }
   private addToConversationMessages(conversationId: string, messageId: string): void {
   // TODO: Add properties
 }
@@ -963,7 +956,6 @@ const queryWords = queryLower.split(/\s+/)
   // TODO: Add properties
 }
   // TODO: Add properties
-}
 }
     if () {) {
   // TODO: Add properties
@@ -1044,7 +1036,6 @@ if ( {) {
 }
       user_conversations.delete (conversation_id),
     }
-  }
   private addToConversationMessages (conversation_id: string, message_id: string): void {
   // TODO: Add properties
 }
@@ -1103,7 +1094,6 @@ const matches = (textLower && textLower.match(new RegExp(word, 'g')) || []).leng
       totalThreads: this && this.threads.size,
       activeUsers: this && this.userConversations.size
     }
-  }
 }
 // Singleton instance;
 export const messagingStorage = new MessagingStorage()
@@ -1172,7 +1162,6 @@ export async function getConversationsByUser(userId: string, includeArchived?: b
 }
   // TODO: Add properties
 }
-}
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
   // TODO: Add properties
 }
@@ -1216,7 +1205,6 @@ export async function getUnreadMessageCount(userId: string): Promise<number> {
   // TODO: Add properties
 }
   return messagingStorage.getUnreadMessageCount(userId)
-}
 }
   return messagingStorage.markAsRead(id)
 }
@@ -1309,7 +1297,6 @@ export function createMessageData(
     body,
     ...additionalData
   }
-}
 export function createConversationData(
   // TODO: Add parameters
 )
@@ -1327,7 +1314,6 @@ export function createConversationData(
     isMuted: false
     ...additionalData
   }
-}
 export function generateMessageId(): string {
   // TODO: Add properties
 }
@@ -1353,7 +1339,6 @@ export function formatMessageTime(isoString: string): string {
     isMuted: false,
     ...additionalData
   }
-}
 export function generateMessageId(): string {
   // TODO: Add properties
 }
@@ -1402,7 +1387,6 @@ const diffInHours = (now && now.getTime() - date && date.getTime()) / (1000 * 60
     isMuted: false,
     ...additionalData
   }
-}
 export function generateMessageId(): string {
   // TODO: Add properties
 }
@@ -1565,7 +1549,6 @@ let changed = false
       m.status = 'read''
       changed = true
     }
-  }
   if (changed) writeJson(MESSAGES_FILE, messages)
   // Update conversation unreadBy;
 const conv = conversations.find((c) => c.id === conversationId)
@@ -1578,7 +1561,6 @@ const conv = conversations.find((c) => c.id === conversationId)
     conv.lastMessageAt = now; // keep order fresh
     writeJson(CONVERSATIONS_FILE, conversations)
   }
-}
 function saveAttachmentIfProvided(base64?: string, name?: string): string | undefined {
   // TODO: Add properties
 }
@@ -1601,7 +1583,6 @@ const filepath = path.join(UPLOADS_DIR, filename)
 }
     return undefined
   }
-}
 export function createOrGetConversation(
   // TODO: Add parameters
 )
@@ -1678,5 +1659,3 @@ const message: Message = {
   writeJson(CONVERSATIONS_FILE, conversations)
   return { conversation, message }
 }
-
-}}}

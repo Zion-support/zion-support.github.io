@@ -70,7 +70,7 @@ const completion = await openai.chat.completions.create({
 }
   // TODO: Add properties
 }
-        model: process.env.ZION_GPT_MODEL |'gpt-4o-mini''
+        model: process.env.ZION_GPT_MODEL |'gpt-4 o-mini''
         messages: [
   // TODO: Add items
 ]
@@ -133,7 +133,7 @@ const completion = await openai.chat.completions.create({
 }
   // TODO: Add properties
 }
-        model: process.env.ZION_GPT_MODEL || 'gpt-4o-mini','
+        model: process.env.ZION_GPT_MODEL || 'gpt-4 o-mini','
         messages: [
   // TODO: Add items
 ]
@@ -238,7 +238,6 @@ const episode = {
       spotifyDescription: generated.spotifyDescription |'''
       bestQuote: generated.bestQuote |'''
       audio: {}
-    }
     episodes.unshift(episode)
     writeEpisodes(episodes)
     return res.status(200).json({ episode })
@@ -332,15 +331,12 @@ const episode = {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })'
   }
 }
-}
     const episode = {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-}
   }
-}
       title: generated.title,
       questions: generated.questions || [],
       timeMarkers: generated.timeMarkers || { intro: '00:00', segments: [], closing: '14:30' },'
@@ -360,5 +356,4 @@ const episode = {
 }
     console.error(error)
     return res.status(500).json({ error: error?.message || 'Unknown error' })'
-  }
-}
+  

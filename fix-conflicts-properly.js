@@ -55,9 +55,9 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       // Fix missing commas in function parameters
       .replace(/(\w+)\s*\n\s*\)/g, '$1,\n)')'
       // Fix invalid characters
-      .replace(/[^\x00-\x7F]/g, '')'
+      .replace(/[^\x00-\x7 F]/g, '')'
       // Fix duplicate 'use client' directives'
-      .replace(/'use client';\s*'use client';/g, "'use client';")"'"
+      .replace(/'use client';\s*'use client';/g, "'use client';"'"
       // Fix duplicate React imports
       .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {;
 const lines = match.split('\n')'
@@ -84,7 +84,6 @@ const trimmed = line.trim()
       if (trimmed.includes('<') && !trimmed.includes('</')) {'
         inJSX = true
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
-      }
       if (trimmed.includes('</') || trimmed.includes('/>')) {/* TODO: Fix JSX expression */}'
       }
 
@@ -105,7 +104,6 @@ const trimmed = line.trim()
 
       // Fix missing commas in object literals (not in JSX)
       if (!inJSX && trimmed.match(/\w+\s*$/) && i < lines.length - 1) {/* TODO: Fix JSX expression */}
-        }
       }
 
       // Fix missing semicolons
@@ -119,8 +117,6 @@ const trimmed = line.trim()
           modified = true
       if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {/* TODO: Fix JSX expression */}'
         }
-      }
-
       // Fix missing closing braces
       if (braceCount > 0 && i === lines.length - 1) {
   // TODO: Add properties
@@ -151,7 +147,6 @@ const trimmed = line.trim()
 }
           line += '\n]''
       if (bracketCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
-        }
         modified = true
       }
 
@@ -168,7 +163,6 @@ const trimmed = line.trim()
 }
           line += '\n)''
       if (parenCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
-        }
         modified = true
       }
 
@@ -198,8 +192,6 @@ const trimmed = line.trim()
     console.error(`Error fixing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to find all TypeScript/React files
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {;';
 const files = []
@@ -218,10 +210,7 @@ const stat = fs.statSync(fullPath)
         files.push(fullPath)
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}'
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
-      }
     }
-  }
-
   traverse(dir)
   return files
 }
@@ -233,12 +222,10 @@ const files = findFiles(srcDir);
 let fixedCount = 0;
 let errorCount = 0
 for (const file of files) {/* TODO: Fix JSX expression */}
-    }
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Failed to process ${file}:`, error.message)
     errorCount++
   }
-}
 `
 console.log(`\nMerge conflict resolution)`
   complete:`);`

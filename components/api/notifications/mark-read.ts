@@ -75,7 +75,6 @@ const { error } = await supabase
     return res && res.status(500).json({ error: 'Unexpected error' })'
   }
 }
-}
   return 'demo - user - 1';';
 export default async /**;
  * handler - Function description
@@ -157,7 +156,6 @@ const { id } = req.body as { id?: string }
 }
     return res.status(500).json({ error: 'Unexpected error' })'
 }
-}
     if (error) return res.status(200).json({ ok: true }); // tolerate in dev
     return res.status(200).json({ ok: true })
   } catch (e) {
@@ -167,6 +165,3 @@ const { id } = req.body as { id?: string }
 }
     return res.status(500).json({ error: 'Unexpected error' })'
   }
-}
-
-}}

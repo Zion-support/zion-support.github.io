@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -19,8 +18,6 @@ export class PerformanceUtils {
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
     }
-  }
-
   measureRenderTime() {
     if (typeof window !== 'undefined' && window.performance) {
       const paintEntries = window.performance.getEntriesByType('paint');
@@ -28,7 +25,6 @@ export class PerformanceUtils {
       if (fcp) {
         this.metrics.renderTime = fcp.startTime;
       }
-    }
   }
 
   measureMemoryUsage() {
@@ -36,8 +32,6 @@ export class PerformanceUtils {
       const memory = (window as unknown as { performance: { memory: { usedJSHeapSize: number } } }).performance.memory;
       this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
     }
-  }
-
   measureFPS() {
     let lastTime = performance.now();
     let frameCount = 0;
@@ -68,11 +62,8 @@ export class PerformanceUtils {
       renderTime: 0,
       memoryUsage: 0,
       fps: 0
-=======
 interface PerformanceUtilsConfig {
   enabled: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Utility functions;
 export function utilityFunction() {
   // Implementation here;
@@ -81,14 +72,12 @@ export function utilityFunction() {
 
 export class performanceUtils {
   private config: performanceUtilsConfig;
-=======
   monitoring: boolean;
   optimization: boolean;
 }
 
 export class PerformanceUtils {
   private config: PerformanceUtilsConfig;
-=======
   measureCoreWebVitals?: boolean;
   measureResourceTiming?: boolean;
   measureUserTiming?: boolean;
@@ -103,10 +92,8 @@ export class PerformanceUtils {
   constructor(config: Partial<PerformanceUtilsConfig> = {}) {
     this.config = {
       enabled: true,
-<<<<<<< HEAD
       monitoring: true,
       optimization: true,
-=======
       measureCoreWebVitals: true,
       measureResourceTiming: true,
       measureUserTiming: true,
@@ -118,11 +105,8 @@ export class PerformanceUtils {
 
   init(): void {
     if (this.config.enabled) {
-<<<<<<< HEAD
       console.log('Performance utils initialized');
     }
-  }
-
   measurePerformance(name: string, fn: () => void): void {
     if (this.config.monitoring) {
       const start = performance.now();
@@ -132,65 +116,12 @@ export class PerformanceUtils {
     } else {
       fn();
     }
-  }
-
   optimizeImages(): void {
     if (this.config.optimization) {
       console.log('Optimizing images...');
     }
-  }
 }
 
-<<<<<<< HEAD
-export const performanceutils = new performanceUtils();
-export default performanceutils;
-export default utilityFunction;
-  optimizeImages() {
-    // Lazy load images
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              observer.unobserve(img);
-            }
-          }
-        });
-      });
-
-      document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-      });
-    }
-  },
-
-  setupLazyLoading() {
-    // Preload critical resources
-    const criticalResources = [
-//       '/app/styles/futuristic.css',
-//       '/app/styles/futuristic-enhanced.css'
-    ];
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = 'style';
-      document.head.appendChild(link);
-    });
-  },
-
-  cleanup() {
-    // Cleanup performance monitoring
-    if (typeof window !== 'undefined') {
-      // Remove any performance observers
-      const observers = (window as any).__performanceObservers || [];
-      observers.forEach((observer: any) => observer.disconnect());
-    }
-=======
 /**
  * Performance utility functions
  */;
@@ -198,11 +129,9 @@ export const measurePerformance = (nam,
   e: string, f)
   n: () => void) => {/* TODO: Fix JSX expression */}
     //     } else {/* TODO: Fix JSX expression */}
-  }
 }
 ;
 export const getPageLoadTime = (): number | null => {/* TODO: Fix JSX expression */}
-  }
   return null
 }
 ;
@@ -225,7 +154,6 @@ const _images = document.querySelectorAll('img')'
 }
         img.loading = 'lazy';';
 export const optimizeImages = () => {/* TODO: Fix JSX expression */}
-      }
     })
   }
 };
@@ -266,7 +194,6 @@ export const optimizeBundle = {
       link.href = routePath;
       document.head.appendChild(link);
     }
-  }
 };
 
 // Memory optimization
@@ -304,22 +231,17 @@ export const cacheOptimizer = {
         });
       });
     }
-  }
 };
 
 export default performanceOptimizer;
-=======
 export const performanceUtils = new PerformanceUtils();
 export default performanceUtils;
-=======
       this.setupCoreWebVitals();
       this.setupResourceTiming();
       this.setupUserTiming();
       this.setupNavigationTiming();
       console.log('PerformanceUtils initialized');
     }
-  }
-
   private setupCoreWebVitals(): void {
     if (!this.config.measureCoreWebVitals) return;
 
@@ -451,8 +373,6 @@ export default performanceUtils;
     if (typeof window !== 'undefined' && 'performance' in window) {
       performance.mark(name);
     }
-  }
-
   measure(name: string, startMark: string, endMark: string): void {
     if (typeof window !== 'undefined' && 'performance' in window) {
       try {
@@ -464,7 +384,6 @@ export default performanceUtils;
       } catch (error) {
         console.warn(`Failed to measure ${name}:`, error);
       }
-    }
   }
 
   getMetric(name: string): number | undefined {
@@ -486,8 +405,6 @@ export default performanceUtils;
         event_category: 'Performance'
       });
     }
-  }
-
   // Public method for measuring component renders
   measureComponentRender: (componentName: string, renderFn: () => void) => void = () => {};
 
@@ -504,8 +421,6 @@ export default performanceUtils;
       this.measure(`${name}-error`, `${name}-start`, `${name}-error`);
       throw error;
     }
-  }
-
   // Method to measure function execution time
   measureFunction<T extends any[], R>(name: string, fn: (...args: T) => R) {
     return (...args: T): R => {
@@ -520,14 +435,9 @@ export default performanceUtils;
         this.measure(`${name}-error`, `${name}-start`, `${name}-error`);
         throw error;
       }
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
+
     };
   }
-}
-
-<<<<<<< HEAD
-export default PerformanceUtils;
-=======
 export const performanceUtils = new PerformanceUtils();
 export default performanceUtils;
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
+

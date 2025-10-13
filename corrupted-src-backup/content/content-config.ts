@@ -1,8 +1,6 @@
 export interface BlogPost {/* TODO: Fix JSX expression */}
-}
 ;
 export interface CaseStudy {/* TODO: Fix JSX expression */}
-}
 ;
 export interface Service {
   // TODO: Add properties
@@ -17,7 +15,6 @@ export interface Service {
     starting: string
     popular?: boolean,;
 export interface Service {/* TODO: Fix JSX expression */}
-  }
   feature,
   s: string[],
   primar,
@@ -46,4 +43,3 @@ const _bTime = 'date' in b ? new Date((b as {/* TODO: Fix JSX expression */})'
       return bTime - aTime
     })
     .slice(0, limit)
-}

@@ -271,7 +271,7 @@ export const,;
   i: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business performance.', competitor,'
   s: ['TableauPower BIQlikViewLooker'],'
     marketSiz,
-  e: '$7.8B business intelligence market', growthRat,'
+  e: '$7.8 B business intelligence market', growthRat,'
   e: '28% annual growth','
     varian,
   t: 'ai-business-intelligence','
@@ -467,7 +467,7 @@ realImplementation: true,
     competitor,
   s: ['Gong', 'Chorus.ai', 'SalesLoft', 'Outreach']'
     marketSiz,
-  e: '$5.2B sales intelligence market''
+  e: '$5.2 B sales intelligence market''
     growthRat,
   e: '30% annual growth''
     varian,
@@ -623,7 +623,7 @@ realImplementation: true,
     competitor,
   s: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout']'
     marketSiz,
-  e: '$4.8B customer service market''
+  e: '$4.8 B customer service market''
     growthRat,
   e: '22% annual growth''
     varian,
@@ -779,7 +779,7 @@ realImplementation: true,
     competitor,
   s: ['Workday', 'BambooHR', 'Greenhouse', 'Lever']'
     marketSiz,
-  e: '$6.2B HR technology market''
+  e: '$6.2 B HR technology market''
     growthRat,
   e: '26% annual growth''
     varian,
@@ -935,7 +935,7 @@ realImplementation: true,
     competitor,
   s: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv']'
     marketSiz,
-  e: '$8.5B financial analytics market''
+  e: '$8.5 B financial analytics market''
     growthRat,
   e: '32% annual growth''
     varian,
@@ -1093,7 +1093,7 @@ realImplementation: true,
     competitor,
   s: ['Asana', 'Monday.com', 'ClickUp', 'Notion']'
     marketSiz,
-  e: '$5.5B project management market''
+  e: '$5.5 B project management market''
     growthRat,
   e: '24% annual growth''
     varian,
@@ -1148,7 +1148,6 @@ export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  }
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -1179,7 +1178,6 @@ realImplementation: true,
     email: string
     address: string}
     website: string}
-  }
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -1287,7 +1285,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     ],
     roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business performance.','
     competitors: ['Tableau', 'Power BI', 'QlikView', 'Looker'],'
-    marketSize: '$7 && 7.8B business intelligence market','
+    marketSize: '$7 && 7.8 B business intelligence market','
     growthRate: '28% annual growth','
     variant: 'ai-business-intelligence','
     contactInfo: {
@@ -1388,7 +1386,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'],'
     roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business window.window.window.performance.','
     competitors: ['TableauPower BIQlikViewLooker'],'
-    marketSize: '$7.8B business intelligence market','
+    marketSize: '$7.8 B business intelligence market','
     growthRate: '28% annual growth','
     variant: 'ai-business-intelligence','
     contactInfo: {
@@ -1857,7 +1855,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     useCases: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'],'
     roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business window.window.window.performance.','
     competitors: ['TableauPower BIQlikViewLooker'],'
-    marketSize: '$7.8B business intelligence market','
+    marketSize: '$7.8 B business intelligence market','
     growthRate: '28% annual growth','
     variant: 'ai-business-intelligence','
     contactInfo: {
@@ -1885,7 +1883,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     useCases: ['Business analytics', 'Performance monitoring', 'Predictive insights', 'Decision support', 'Business optimization'],'
     roi: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business performance.','
     competitors: ['Tableau', 'Power BI', 'QlikView', 'Looker'],'
-    marketSize: '$7.8B business intelligence market','
+    marketSize: '$7.8 B business intelligence market','
     growthRate: '28% annual growth','
     variant: 'ai-business-intelligence','
     contactInfo: {
@@ -1949,7 +1947,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     useCases: ['Marketing automation', 'Campaign optimization', 'Customer engagement', 'Lead generation', 'Marketing analytics'],'
     roi: 'Marketing teams report 320% ROI with 45% improvement in campaign performance and 35% increase in customer acquisition.','
     competitors: ['HubSpot', 'Marketo', 'Pardot', 'ActiveCampaign'],'
-    marketSize: '$6.5B marketing automation market','
+    marketSize: '$6.5 B marketing automation market','
     growthRate: '25% annual growth','
     variant: 'ai-marketing','
     contactInfo: {
@@ -2013,7 +2011,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     useCases: ['Lead scoring', 'Sales forecasting', 'Performance optimization', 'Pipeline management', 'Revenue acceleration'],'
     roi: 'Sales teams report 400% ROI with 50% improvement in conversion rates and 40% increase in revenue.','
     competitors: ['Gong', 'Chorus.ai', 'SalesLoft', 'Outreach'],'
-    marketSize: '$5.2B sales intelligence market','
+    marketSize: '$5.2 B sales intelligence market','
     growthRate: '30% annual growth','
     variant: 'ai-sales','
     contactInfo: {
@@ -2077,7 +2075,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     useCases: ['Customer support automation', 'Chatbot implementation', 'Ticket management', 'Customer experience optimization', 'Support analytics'],'
     roi: 'Customer service teams report 350% ROI with 60% reduction in support costs and 45% improvement in customer satisfaction.','
     competitors: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout'],'
-    marketSize: '$4.8B customer service market','
+    marketSize: '$4.8 B customer service market','
     growthRate: '22% annual growth','
     variant: 'ai-customer-service','
     contactInfo: {
@@ -2141,7 +2139,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     useCases: ['Recruitment automation', 'Workforce planning', 'Performance management', 'Talent development', 'HR analytics'],'
     roi: 'HR teams report 320% ROI with 50% improvement in recruitment efficiency and 40% increase in employee engagement.','
     competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Lever'],'
-    marketSize: '$6.2B HR technology market','
+    marketSize: '$6.2 B HR technology market','
     growthRate: '26% annual growth','
     variant: 'ai-hr','
     contactInfo: {
@@ -2205,7 +2203,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     useCases: ['Financial analysis', 'Risk management', 'Financial forecasting', 'Cost optimization', 'Performance monitoring'],'
     roi: 'Finance teams report 450% ROI with 60% improvement in financial decision-making and 50% reduction in financial risks.','
     competitors: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv'],'
-    marketSize: '$8.5B financial analytics market','
+    marketSize: '$8.5 B financial analytics market','
     growthRate: '32% annual growth','
     variant: 'ai-financial','
     contactInfo: {
@@ -2269,7 +2267,7 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     useCases: ['Project planning', 'Resource optimization', 'Risk management', 'Performance monitoring', 'Team collaboration'],'
     roi: 'Project teams report 350% ROI with 50% improvement in project delivery and 40% reduction in project costs.','
     competitors: ['Asana', 'Monday.com', 'ClickUp', 'Notion'],'
-    marketSize: '$5.5B project management market','
+    marketSize: '$5.5 B project management market','
     growthRate: '24% annual growth','
     variant: 'ai-project-management','
     contactInfo: {
@@ -2459,7 +2457,7 @@ i,
   s: ['Business analyticsPerformance monitoringPredictive insightsDecision supportBusiness optimization'],' ro,'
   i: 'Organizations report 380% ROI with 50% improvement in decision-making and 40% increase in business performance.', competitor,'
   s: ['TableauPower BIQlikViewLooker'],' marketSiz,'
-  e: '$7.8B business intelligence market', growthRat,'
+  e: '$7.8 B business intelligence market', growthRat,'
   e: '28% annual growth',' varian,'
   t: 'ai-business-intelligence', contactInf,'
   o: ' mobil,'
@@ -2507,7 +2505,7 @@ i,
   s: [' 'Lead scoring' 'Sales forecasting' 'Performance optimization' 'Pipeline management' 'Revenue acceleration' ]' ro,'
   i: 'Sales teams report 400% ROI with 50% improvement in conversion rates and 40% increase in revenue.' competitor,''
   s: ['Gong', 'Chorus.ai', 'SalesLoft', 'Outreach']' marketSiz,'
-  e: '$5.2B sales intelligence market' growthRat,''
+  e: '$5.2 B sales intelligence market' growthRat,''
   e: '30% annual growth' varian,''
   t: 'ai-sales' contactInf,'
   o: ' mobil,'
@@ -2546,7 +2544,7 @@ i,
   s: [' 'Customer support automation' 'Chatbot implementation' 'Ticket management' 'Customer experience optimization' 'Support analytics' ]' ro,'
   i: 'Customer service teams report 350% ROI with 60% reduction in support costs and 45% improvement in customer satisfaction.' competitor,''
   s: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout']' marketSiz,'
-  e: '$4.8B customer service market' growthRat,''
+  e: '$4.8 B customer service market' growthRat,''
   e: '22% annual growth' varian,''
   t: 'ai-customer-service' contactInf,'
   o: ' mobil,'
@@ -2585,7 +2583,7 @@ i,
   s: [' 'Recruitment automation' 'Workforce planning' 'Performance management' 'Talent development' 'HR analytics' ]' ro,'
   i: 'HR teams report 320% ROI with 50% improvement in recruitment efficiency and 40% increase in employee engagement.' competitor,''
   s: ['Workday', 'BambooHR', 'Greenhouse', 'Lever']' marketSiz,'
-  e: '$6.2B HR technology market' growthRat,''
+  e: '$6.2 B HR technology market' growthRat,''
   e: '26% annual growth' varian,''
   t: 'ai-hr' contactInf,'
   o: ' mobil,'
@@ -2624,7 +2622,7 @@ i,
   s: [' 'Financial analysis' 'Risk management' 'Financial forecasting' 'Cost optimization' 'Performance monitoring' ]' ro,'
   i: 'Finance teams report 450% ROI with 60% improvement in financial decision-making and 50% reduction in financial risks.' competitor,''
   s: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv']' marketSiz,'
-  e: '$8.5B financial analytics market' growthRat,''
+  e: '$8.5 B financial analytics market' growthRat,''
   e: '32% annual growth' varian,''
   t: 'ai-financial' contactInf,'
   o: ' mobil,'
@@ -2663,7 +2661,7 @@ i,
   s: [' 'Project planning' 'Resource optimization' 'Risk management' 'Performance monitoring' 'Team collaboration' ]' ro,'
   i: 'Project teams report 350% ROI with 50% improvement in project delivery and 40% reduction in project costs.' competitor,''
   s: ['Asana', 'Monday.com', 'ClickUp', 'Notion']' marketSiz,'
-  e: '$5.5B project management market' growthRat,''
+  e: '$5.5 B project management market' growthRat,''
   e: '24% annual growth' varian,''
   t: 'ai-project-management' contactInf,'
   o: ' mobil,'
@@ -2688,7 +2686,8 @@ i,
   e: '2025-05-01' customer,'
   s: 38, ratin,
   g: 4.7,
-  reviews: 26 } ];' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}';'
+  reviews: 26 } ];' import { ServiceVariant } from '../types/service-variants';
+export interface InnovativeBusinessSolution {/* TODO: Fix JSX expression */}';'
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,

@@ -5,15 +5,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   // TODO: Add properties
 }
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { store } from "../../../../../utils/data/enterpriseStore";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { store } from "../../../../../utils/data/enterpriseStore";";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 const { companyId } = req.query
-  if (!companyId |typeof companyId !== "string") {"
-    return res.status(400).json({ error: "companyId required" })"
+  if (!companyId |typeof companyId !== ") {"
+    return res.status(400).json({ error: " })"
   }
   const company = store && store.getCompanyById(companyId)
-  if (!company) return res && res.status(404).json({ error: "company_not_found" })"
+  if (!company) return res && res.status(404).json({ error: " })"
   return res && res.status(200).json(company && company.activity)
 }
 import type { NextApiRequest, NextApiResponse } from 'next';';';
@@ -39,18 +39,17 @@ const { companyId } = req.query
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-    return res.status (400).json ({ error: "company_id required" })";
+    return res.status (400).json ({ error: " })";
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
@@ -74,18 +73,18 @@ const { companyId } = req.query
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
   const company = store.getCompanyById (company_id)
-  if (return res.status (404).json ({ error: "company_not_found" })) {"
+  if (return res.status (404).json ({ error: " })) {"
   $2
 }
   return res.status (200).json (company.activity)
@@ -95,12 +94,11 @@ const { companyId } = req.query
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   const company = store.getCompanyById(companyId)
-  if (!company) return res.status(404).json({ error: "company_not_found" })"
+  if (!company) return res.status(404).json({ error: " })"
   return res.status(200).json(company.activity)
 }
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })'
@@ -109,23 +107,21 @@ const { companyId } = req.query
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
+  

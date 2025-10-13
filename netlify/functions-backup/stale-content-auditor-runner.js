@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'stale-content-auditor-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'stale-content-auditor-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'stale-content-auditor-runner',' source: event.source || 'unknown', audit: {' status: 'active', contentAudited: 0, staleFound: 0,'
         lastAudit: new Date().toISOString() } }) } return result; } catch (error) {

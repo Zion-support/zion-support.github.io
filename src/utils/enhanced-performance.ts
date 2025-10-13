@@ -22,8 +22,6 @@ export class PerformanceMonitor {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {'
       this.initializeObservers()
   }
-  }
-
   /**
    * Initialize performance observers
    */
@@ -141,13 +139,10 @@ const layoutShiftEntry = entry as LayoutShift
             clsValue += layoutShiftEntry.value
             this.recordMetric('cls', clsValue)'
   }
-        }
       })
       clsObserver.observe({ entryTypes: ['layout-shift'] })'
       this.observers.push(clsObserver)
     }
-  }
-
   /**
    * Record a metric
    */
@@ -175,8 +170,6 @@ const values = this.metrics.get(name) || []
       fid: this.getMetric('fid'),'
       cls: this.getMetric('cls'),'
       ttfb: this.getTTFB()}
-  }
-
   /**
    * Get a specific metric
    */
@@ -223,8 +216,6 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
     if (typeof performance !== 'undefined' && performance.mark) {'
       performance.mark(name)
   }
-  }
-
   /**
    * Measure between two marks
    */
@@ -251,8 +242,6 @@ const measures = performance.getEntriesByName(name, 'measure')'
     //       // console.error('Performance measurement failed:', error)'
       return 0
   }
-  }
-
   /**
    * Clear all metrics
    */
@@ -266,8 +255,6 @@ const measures = performance.getEntriesByName(name, 'measure')'
       performance.clearMarks()
       performance.clearMeasures()
   }
-  }
-
   /**
    * Get performance report
    */
@@ -282,8 +269,6 @@ const webVitals = this.getWebVitals()
       resources: this.getResourceStats(),
       memory: this.getMemoryStats(),
       timestamp: Date.now()}
-  }
-
   /**
    * Get resource loading statistics
    */
@@ -294,7 +279,6 @@ const webVitals = this.getWebVitals()
 }
     if (typeof performance === 'undefined') {'
       return { total: 0, scripts: 0, styles: 0, images: 0, fonts: 0 }
-    }
     ;
 const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]'
     return {
@@ -330,8 +314,6 @@ const memory = (performance as PerformanceWithMemory).memory
       usedJSHeapSize: memory.usedJSHeapSize,
       totalJSHeapSize: memory.totalJSHeapSize,
       jsHeapSizeLimit: memory.jsHeapSizeLimit}
-  }
-
   /**
    * Disconnect all observers
    */
@@ -343,8 +325,6 @@ const memory = (performance as PerformanceWithMemory).memory
     this.observers.forEach(observer => observer.disconnect())
     this.observers = []
   }
-}
-
 // Types;
 import type {
   // TODO: Add properties
@@ -418,8 +398,6 @@ let timeoutId: NodeJS.Timeout | null = null,
     fn(...args)
   }, delay)
   }
-}
-
 /**
  * Throttle function
  */;
@@ -439,7 +417,6 @@ const now = Date.now()
 }
       lastCall = now,
       fn(...args)
-  }
   }
 }
 
@@ -465,8 +442,6 @@ export function runWhenIdle(callback: () => void, timeout = 1000): void {
 }
     setTimeout(callback, 0)
   }
-}
-
 /**
  * Default performance monitor instance
  */;
@@ -475,7 +450,6 @@ export default PerformanceMonitor;
 import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';';
 import type {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
 /**
  * Enhanced Performance Monitoring
  * Comprehensive performance tracking and optimization utilities
@@ -483,7 +457,6 @@ import type {/* TODO: Fix JSX expression */}
  * Performance Observer Wrapper;
 export class PerformanceMonitor {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   private,
   metrics: Map,
           <string, number[]> = new Map()
@@ -491,16 +464,13 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
   observers: PerformanceObserver[] = [],
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
       this.initializeObservers()
     }
    * Initialize performance observers
   private initializeObservers(): void {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     // Monitor navigation timing
     if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {for (const entry of list.getEntries()) {}'
   // TOD,
@@ -540,17 +510,14 @@ export function throttle;
 export function runWhenIdle(callbac)
   k: () => void, timeout = 1000): void {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   if (typeof window === 'undefined') {'
     return
   }
   if ('requestIdleCallback' in window) {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
     window.requestIdleCallback(callback, { timeout })
   } else {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     setTimeout(callback, 0)
 * Default performance monitor instance;
 export const performanceMonitor = new PerformanceMonitor()

@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react';
-
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -100,8 +98,6 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
           mainContent.focus();
           mainContent.scrollIntoView({ behavior: 'smooth' });
         }
-      }
-
       // Toggle accessibility panel
       if (event.key === 'Tab' && event.altKey && event.ctrlKey) {
         event.preventDefault();
@@ -151,7 +147,6 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
     });
   };
 
-=======
 interface ImprovedAccessibilityProps {
   className?: string;
   children?: React.ReactNode;
@@ -159,7 +154,6 @@ interface ImprovedAccessibilityProps {
 
 export default function ImprovedAccessibility({ className = '', children }: ImprovedAccessibilityProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -178,150 +172,7 @@ export default function ImprovedAccessibility({ className = '', children }: Impr
 //       <button
         onClick={() => setIsVisible(!isVisible)}
         className="fixed top-4 right-4 z-50 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover:bg-slate-700/90 transition-colors"
-        title="Accessibility Settings"
-        aria-label="Open accessibility settings"
-//       >
-        <Eye className="w-5 h-5" />
-</button>
-
-      {/* Accessibility Panel */}
-      {isVisible && (
-        <div className="fixed top-16 right-4 z-50 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold">Accessibility Settings</h3>
-//             <button
-              onClick={() => setIsVisible(false)}
-              className="text-gray-400 hover:text-white"
-              aria-label="Close accessibility settings"
-//             >
-//               ×
-</button>
-</div>
-
-          <div className="space-y-4">
-            {/* High Contrast */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Eye className="w-4 h-4" />
-                <span className="text-sm">High Contrast</span>
-</div>
-//               <button
-                onClick={() => toggleSetting('highContrast')}
-                className={`w-12 h-6 rounded-full transition-colors ${
-//                   settings.highContrast ? 'bg-cyan-500' : 'bg-gray-600'
-                }`}
-                aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast`}
-//               >
-//                 <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${
-//                     settings.highContrast ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-//                 />
-</button>
-</div>
-
-            {/* Large Text */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Type className="w-4 h-4" />
-                <span className="text-sm">Large Text</span>
-</div>
-//               <button
-                onClick={() => toggleSetting('largeText')}
-                className={`w-12 h-6 rounded-full transition-colors ${
-//                   settings.largeText ? 'bg-cyan-500' : 'bg-gray-600'
-                }`}
-                aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text`}
-//               >
-//                 <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${
-//                     settings.largeText ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-//                 />
-</button>
-</div>
-
-            {/* Reduced Motion */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <MousePointer className="w-4 h-4" />
-                <span className="text-sm">Reduced Motion</span>
-</div>
-//               <button
-                onClick={() => toggleSetting('reducedMotion')}
-                className={`w-12 h-6 rounded-full transition-colors ${
-//                   settings.reducedMotion ? 'bg-cyan-500' : 'bg-gray-600'
-                }`}
-                aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
-//               >
-//                 <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${
-//                     settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-//                 />
-</button>
-</div>
-
-            {/* Screen Reader */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                {settings.screenReader ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
-                <span className="text-sm">Screen Reader</span>
-</div>
-//               <button
-                onClick={() => toggleSetting('screenReader')}
-                className={`w-12 h-6 rounded-full transition-colors ${
-//                   settings.screenReader ? 'bg-cyan-500' : 'bg-gray-600'
-                }`}
-                aria-label={`${settings.screenReader ? 'Disable' : 'Enable'} screen reader`}
-//               >
-//                 <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${
-//                     settings.screenReader ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-//                 />
-</button>
-</div>
-
-            {/* Keyboard Navigation */}
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <Keyboard className="w-4 h-4" />
-                <span className="text-sm">Keyboard Navigation</span>
-</div>
-//               <button
-                onClick={() => toggleSetting('keyboardNavigation')}
-                className={`w-12 h-6 rounded-full transition-colors ${
-//                   settings.keyboardNavigation ? 'bg-cyan-500' : 'bg-gray-600'
-                }`}
-                aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation`}
-//               >
-//                 <div
-                  className={`w-5 h-5 bg-white rounded-full transition-transform ${
-//                     settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-0.5'
-                  }`}
-//                 />
-</button>
-</div>
-</div>
-
-          {/* Keyboard Shortcuts */}
-          <div className="mt-6 pt-4 border-t border-white/10">
-            <h4 className="text-sm font-semibold mb-2">Keyboard Shortcuts</h4>
-            <div className="text-xs text-gray-400 space-y-1">
-              <p>Alt + Shift + Tab: Skip to main content</p>
-<p>Alt + Ctrl + Tab: Toggle this panel</p>
-<p>Tab: Navigate elements</p>
-<p>Enter/Space: Activate elements</p>
-</div>
-</div>
-</div>
-      )}
-
-      {/* Skip to main content link */}
-//       <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50"
+        aria-label="Open accessibility settings"w-5 h-5"fixed top-16 right-4 z-50 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white"flex items-center justify-between mb-4"text-lg font-semibold"text-gray-400 hover:text-white"Close accessibility settings"space-y-4"flex items-center justify-between"flex items-center gap-2"w-4 h-4"text-sm"flex items-center justify-between"flex items-center gap-2"w-4 h-4"text-sm"flex items-center justify-between"flex items-center gap-2"w-4 h-4"text-sm"flex items-center justify-between"flex items-center gap-2"w-4 h-4"w-4 h-4"text-sm"flex items-center justify-between"flex items-center gap-2"w-4 h-4"text-sm"mt-6 pt-4 border-t border-white/10"text-sm font-semibold mb-2"text-xs text-gray-400 space-y-1"#main-content"sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50"
         onClick={(e) => {
           e.preventDefault();
           const mainContent = document.getElementById('main-content');
@@ -329,7 +180,7 @@ export default function ImprovedAccessibility({ className = '', children }: Impr
             mainContent.focus();
             mainContent.scrollIntoView({ behavior: 'smooth' });
           }
-        }}
+        }
 //       >
 //         Skip to main content
 </a>
@@ -348,38 +199,38 @@ export default function ImprovedAccessibility({ className = '', children }: Impr
         }
 
         .large-text {
-          font-size: 1.125rem;
+          font-size: 1.125 rem;
         }
 
-        .large-text h1 { font-size: 3.5rem; }
-        .large-text h2 { font-size: 2.5rem; }
-        .large-text h3 { font-size: 2rem; }
-        .large-text h4 { font-size: 1.5rem; }
-        .large-text h5 { font-size: 1.25rem; }
-        .large-text h6 { font-size: 1.125rem; }
+        .large-text h1 { font-size: 3.5 rem; }
+        .large-text h2 { font-size: 2.5 rem; }
+        .large-text h3 { font-size: 2 rem; }
+        .large-text h4 { font-size: 1.5 rem; }
+        .large-text h5 { font-size: 1.25 rem; }
+        .large-text h6 { font-size: 1.125 rem; }
 
         .reduced-motion * {
-          animation-duration: 0.01ms !important;
+          animation-duration: 0.01 ms !important;
           animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
+          transition-duration: 0.01 ms !important;
         }
 
         .keyboard-navigation *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
+          outline: 2 px solid #06 b6 d4 !important;
+          outline-offset: 2 px !important;
         }
 
         .focus-visible *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
+          outline: 2 px solid #06 b6 d4 !important;
+          outline-offset: 2 px !important;
         }
 
         .sr-only {
           position: absolute;
-          width: 1px;
-          height: 1px;
+          width: 1 px;
+          height: 1 px;
           padding: 0;
-          margin: -1px;
+          margin: -1 px;
           overflow: hidden;
           clip: rect(0, 0, 0, 0);
           white-space: nowrap;
@@ -390,7 +241,7 @@ export default function ImprovedAccessibility({ className = '', children }: Impr
           position: static;
           width: auto;
           height: auto;
-          padding: 0.5rem 1rem;
+          padding: 0.5 rem 1 rem;
           margin: 0;
           overflow: visible;
           clip: auto;
@@ -398,6 +249,4 @@ export default function ImprovedAccessibility({ className = '', children }: Impr
         }
       `}</style>
 //     </>
-=======
   );
-}

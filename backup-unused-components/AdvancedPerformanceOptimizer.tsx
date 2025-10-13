@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface AdvancedPerformanceOptimizerProps {
   className?: string;
   children?: React.ReactNode;
@@ -7,7 +6,6 @@ interface AdvancedPerformanceOptimizerProps {
 
 export default function AdvancedPerformanceOptimizer({ className = '', children }: AdvancedPerformanceOptimizerProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -17,8 +15,6 @@ export default function AdvancedPerformanceOptimizer({ className = '', children 
   </div>
   );
 }
-}
-
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
   enablePreloading = true,
@@ -33,15 +29,10 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
-      // Add loading="lazy" to images below the fold
-      if (img.getBoundingClientRect().top > window.innerHeight) {
-        img.setAttribute('loading', 'lazy');
-      }
-
-      // Add decoding="async" for better performance
+      // Add loading="lazy"async" for better performance
       img.setAttribute('decoding', 'async');
 
-      // Add fetchpriority="high" for above-the-fold images
+      // Add fetchpriority=" for above-the-fold images
       if (img.getBoundingClientRect().top <= window.innerHeight) {
         img.setAttribute('fetchpriority', 'high');
       }
@@ -55,7 +46,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     // Preload critical CSS
     const criticalCSS = document.createElement('link');
     criticalCSS.rel = 'preload';
-    criticalCSS.href = '/assets/index-Dq8n7JAm.css';
+    criticalCSS.href = '/assets/index-Dq8 n7 JAm.css';
     criticalCSS.as = 'style';
     criticalCSS.onload = () => {
       criticalCSS.rel = 'stylesheet';
@@ -154,7 +145,7 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const target = entry.target as HTMLElement;
-            const componentName = target.dataset.lazyComponent;
+const componentName = target.dataset.lazyComponent;
 
             if (componentName) {
               // Mark component as loaded
@@ -162,7 +153,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
               observer.unobserve(target);
             }
-          }
         });
       });
 
@@ -190,7 +180,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             // LCP is too slow, trigger optimization
             optimizeImages();
           }
-        }
       });
     });
 
@@ -207,7 +196,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (window.gc) {
             window.gc();
           }
-        }
       };
 
       setInterval(checkMemory, 30000); // Check every 30 seconds
@@ -263,12 +251,11 @@ const getNextLikelyPage = (currentPath: string): string | null => {
 //     '/services': '/contact',
 //     '/ai-services': '/ai-analytics',
 //     '/micro-saas': '/zion-analytics-pro',
-//     '/5g-solutions': '/5g-implementation',
+//     '/5 g-solutions': '/5 g-implementation',
   };
 
   return likelyPages[currentPath] || null;
 };
 
 export default AdvancedPerformanceOptimizer;
-=======
   );

@@ -1,117 +1,66 @@
 import React from 'react';
-<<<<<<< HEAD
-
 interface SEOEnhancerProps {
   className?: string;
   children?: React.ReactNode;
 }
-import StructuredData from "../components/StructuredData";
-import { Helmet } from 'react-helmet-async';
-interface SEOEnhancerProps;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  noIndex?: boolean;
-  noFollow?: boolean;
-
-const SEOEnhancer: React.FC<SEOEnhancerProps> = (
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.",
-  keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group",
-  canonical = "https://ziontechgroup.com",
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  ogType = "website",
-  twitterCard = "summary_large_image",
+import StructuredData from "../components/StructuredData"Zion Tech Group - Advanced AI and IT Solutions",
+  description = ",
+  keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group"https://ziontechgroup.com",
+  ogImage = ",
+  ogType = "website"summary_large_image",
 //   structuredData,
   noIndex = false,
   noFollow = false;
-  noFollow = false
+noFollow = false
 ) =>
   const defaultStructuredData =
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.svg",
-    "description": description,
-    "address":
+    ": "https://schema.org"@type": ",
+    "name"Zion Tech Group",
+    ": "https://ziontechgroup.com"logo": ",
+    "description"address":
 }) => {
   const defaultStructuredData = {
-//     "@context": "https://schema.org",
-    "@type": "Organization",
-//     "name": "Zion Tech Group",
-//     "url": "https://ziontechgroup.com",
-//     "logo": "https://ziontechgroup.com/logo.svg",
-//     "description": description,
-    "address": {
-      "@type": "PostalAddress",
-//       "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
+//     ": "https://schema.org"@type": ",
+//     "name"Zion Tech Group",
+//     ": "https://ziontechgroup.com"logo": ",
+//     "description"address": {
+      ": "PostalAddress"streetAddress": ",
+      "addressLocality"Middletown",
+      ": "DE"postalCode": ",
+      "addressCountry"US"
 ,
-    "contactPoint":
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+    ":
+      "@type"ContactPoint",
+      ": "+1-302-464-0950"contactType": ",
+      "email"kleber@ziontechgroup.com"
 ,
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
+    ": [
+      "https://twitter.com/ziontechgroup"https://linkedin.com/company/ziontechgroup"
     ],
-    "offers": [
+    ": [
 
-//       "addressRegion": "DE",
-//       "postalCode": "19709",
-//       "addressCountry": "US"
+//       "addressRegion"DE",
+//       ": "19709"addressCountry": "
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-//       "telephone": "+1-302-464-0950",
-//       "contactType": "customer service",
-//       "email": "kleber@ziontechgroup.com"
+    "contactPoint"@type": ",
+//       "telephone"+1-302-464-0950",
+//       ": "customer service"email": "
     },
-//     "sameAs": [
-//       "https://twitter.com/ziontechgroup",
-//       "https://linkedin.com/company/ziontechgroup"
+//     "sameAs"https://twitter.com/ziontechgroup",
+//       "
 //     ],
-//     "offers": [
-      {
-        "@type": "Offer",
-//         "name": "AI Solutions",
-        "description": "Artificial intelligence and machine learning services"
-,
-
-        "@type": "Offer",
-        "name": "Cybersecurity",
-        "description": "Advanced cybersecurity solutions and protection"
-,
-
-        "@type": "Offer",
-        "name": "Cloud Infrastructure",
-        "description": "Cloud computing and infrastructure services"
-
-export default function SEOEnhancer({ className = '', children }: SEOEnhancerProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-    ]
-;
-//         "name": "Cybersecurity",
-//         "description": "Advanced cybersecurity solutions and protection"
+//     "offers"@type": ",
+//         "name"AI Solutions",
+        ": "Artificial intelligence and machine learning services"@type": ",
+        "name"Cybersecurity",
+        ": "Advanced cybersecurity solutions and protection"@type": ",
+        "name"Cloud Infrastructure",
+        ": "Cloud computing and infrastructure services"name": ",
+//         "description"Advanced cybersecurity solutions and protection"
       },
       {
-        "@type": "Offer",
-//         "name": "Cloud Infrastructure",
-//         "description": "Cloud computing and infrastructure services"
+        ": "Offer"name": ",
+//         "description"Cloud computing and infrastructure services"
       }
 //     ]
   };
@@ -122,67 +71,40 @@ export default function SEOEnhancer({ className = '', children }: SEOEnhancerPro
 //     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta name="description" content="{description}" />
-      <meta name="keywords" content="{keywords}" />
-      <link rel="canonical" href="{canonical}" />
+      <meta name=" content="{description}"keywords" content=" />
+      <link rel="canonical"{canonical}" />
       {/* Robots */}
-      <meta name="robots" content="{`${noIndex" ? 'noindex' : 'index'},${noFollow ? 'nofollow' : 'follow'}`} />
-      {/* Open Graph */}
-      <meta property="og:type" content="{ogType}" />
-      <meta property="og:url" content="{canonical}" />
-      <meta property="og:title" content="{title}" />
-      <meta property="og:description" content="{description}" />
-      <meta property="og:image" content="{ogImage}" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="{title}" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta name=" content="{`${noIndex"og:type" content=" />
+      <meta property="og:url"{canonical}" />
+      <meta property=" content="{title}"og:description" content=" />
+      <meta property="og:image"{ogImage}" />
+      <meta property=" content="1200"og:image:height" content=" />
+      <meta property="og:image:alt"{title}" />
+      <meta property=" content="Zion Tech Group"og:locale" content=" />
       {/* Twitter */}
-      <meta name="twitter:card" content="{twitterCard}" />
-      <meta name="twitter:url" content="{canonical}" />
-      <meta name="twitter:title" content="{title}" />
-      <meta name="twitter:description" content="{description}" />
-      <meta name="twitter:image" content="{ogImage}" />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:card"{twitterCard}" />
+      <meta name=" content="{canonical}"twitter:title" content=" />
+      <meta name="twitter:description"{description}" />
+      <meta name=" content="{ogImage}"twitter:site" content=" />
+      <meta name="twitter:creator"@ziontechgroup" />
       {/* Additional SEO Tags */}
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      <meta name="language" content="en" />
-      <meta name="revisit-after" content="7 days" />
-      <meta name="rating" content="general" />
-      <meta name="distribution" content="global" />
-      {/* Mobile Optimization */}
-      <meta name="viewport" content="width="device-width," initial-scale="1," viewport-fit=cover" />
-      <meta name="theme-color" content="#8b5cf6" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-      {/* Performance Hints */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+      <meta name=" content="Zion Tech Group"publisher" content=" />
+      <meta name="copyright"Zion Tech Group" />
+      <meta name=" content="en"revisit-after" content=" />
+      <meta name="rating"general" />
+      <meta name=" content="global"viewport" content="device-width," initial-scale=" viewport-fit=cover" />
+      <meta name=" content="#8 b5 cf6"mobile-web-app-capable" content=" />
+      <meta name="apple-mobile-web-app-capable"yes" />
+      <meta name=" content="black-translucent"preconnect" href=" />
+      <link rel="preconnect"https://fonts.gstatic.com" crossorigin />
+      <link rel=" href="https://fonts.googleapis.com"dns-prefetch" href=" />
       {/* Structured Data */}
-      <script type="application/ld+json"></script>
-        {JSON.stringify(finalStructuredData)}
-      </script>
-//       </script>
-
-      {/* Additional Meta Tags for Better SEO */}
-      <meta name="google-site-verification" content="your-google-verification-code" />
-      <meta name="msvalidate.01" content="your-bing-verification-code" />
-      <meta name="yandex-verification" content="your-yandex-verification-code" />
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+      <script type="application/ld+json"google-site-verification" content=" />
+      <meta name="msvalidate.01"your-bing-verification-code" />
+      <meta name=" content="your-yandex-verification-code"X-Content-Type-Options" content=" />
+      <meta httpEquiv="X-Frame-Options"DENY" />
+      <meta httpEquiv=" content="1; mode=block"Referrer-Policy" content=" />
       {/* Cache Control */}
-      <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
+      <meta httpEquiv="Cache-Control"public, max-age=31536000" />
 //     </Helmet>
-=======
   );
-}

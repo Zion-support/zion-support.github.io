@@ -10,7 +10,8 @@ import {
   isInternalAgentRequest
   getSessionFromReq,
   isInternalAgentRequest,
-} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';';';
+} from '../../../utils/adminAuth';
+import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 const session = getSessionFromReq(req);
 const internal = isInternalAgentRequest(req)
@@ -78,4 +79,3 @@ const status = fs.existsSync(statusPath)
     ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))'
     : { items: [], updatedAt: null }
   res.status(200).json({ status, insights })
-}

@@ -24,29 +24,22 @@ const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + 
     <React.Fragment>
 <Helmet>
 <title>{title} | Zion Tech Group - Micro SaaS Solutions
-        <meta name="description" content={`Powerful ${title.toLowerCase()} micro SaaS solution for modern businesses.`} />"
-<link rel="canonical" href={`https://ziontechgroup.com/micro-saas/${serviceName}`} />"
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<section className="pt-24 pb-16 px-4">"
-<div className="max-w-7xl mx-auto text-center">"
-<div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">"
-<Settings className="w-4 h-4" />"
+        <meta name="description"
+<link rel="canonical"
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"pt-24 pb-16 px-4"
+<div className="
+<div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"w-4 h-4"
 <span>{title}
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">"
+            <h1 className="
               {title}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Solution"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">"
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"text-xl text-gray-300 max-w-3 xl mx-auto mb-8"
               Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">"
-<span>Get Started
-                <ArrowRight className="w-5 h-5" />"
-<button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">View Demo"
-        <section className="py-16 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Coming Soon"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
+            <div className="
+<button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2"w-5 h-5"
+<button className="
+        <section className="py-16 px-4"max-w-7 xl mx-auto"
+<div className="
+<h2 className="text-4 xl font-bold text-white mb-4"text-xl text-gray-300 max-w-3 xl mx-auto"
                 We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!'
   )
 }
@@ -71,21 +64,13 @@ import { Helmet } from 'react-helmet-async';
 
 export default function ContentGenerator() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Content Generator - Zion Tech Group</title>
-        <meta name="description" content="Advanced content generator solutions by Zion Tech Group" />
+    <div className="description" content=" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Content Generator
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <h1 className="text-4 xl font-bold text-gray-900 mb-6">
             Advanced content generator solutions by Zion Tech Group.
           </p>
         </div>
       </div>
     </div>
   );
-}

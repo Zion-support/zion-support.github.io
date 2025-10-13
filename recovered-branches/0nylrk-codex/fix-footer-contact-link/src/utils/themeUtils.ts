@@ -29,12 +29,12 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
   // TODO: Add properties
 }
         primaryColor,
-        backgroundColor: '#0f172a','
-        textColor: '#e2e8f0','
+        backgroundColor: '#0 f172 a','
+        textColor: '#e2 e8 f0','
         accentColor: primaryColor,
         buttonColor: primaryColor,
-        cardBackground: '#1e293b'}'
-        cardBackground: '#1e293b','
+        cardBackground: '#1 e293 b'}'
+        cardBackground: '#1 e293 b','
       }
     case 'neon':'
       return {
@@ -44,11 +44,11 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 }
         primaryColor,
         backgroundColor: '#030712','
-        textColor: '#f8fafc','
-        accentColor: '#00ffbb','
+        textColor: '#f8 fafc','
+        accentColor: '#00 ffbb','
         buttonColor: primaryColor,
-        cardBackground: '#0f172a'}'
-        cardBackground: '#0f172a','
+        cardBackground: '#0 f172 a'}'
+        cardBackground: '#0 f172 a','
       }
     case 'corporate':'
       return {
@@ -57,7 +57,7 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
   // TODO: Add properties
 }
         primaryColor,
-        backgroundColor: '#f8fafc','
+        backgroundColor: '#f8 fafc','
         textColor: '#334155','
         accentColor: primaryColor,
         buttonColor: primaryColor,
@@ -71,12 +71,12 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
   // TODO: Add properties
 }
         primaryColor,
-        backgroundColor: '#16181d','
+        backgroundColor: '#16181 d','
         textColor: '#fafafa','
-        accentColor: '#ff7f50','
+        accentColor: '#ff7 f50','
         buttonColor: primaryColor,
-        cardBackground: '#1e2127'}'
-        cardBackground: '#1e2127','
+        cardBackground: '#1 e2127'}'
+        cardBackground: '#1 e2127','
       }
     case 'light':'
     default:
@@ -87,13 +87,12 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 }
         primaryColor,
         backgroundColor: '#ffffff','
-        textColor: '#0f172a','
+        textColor: '#0 f172 a','
         accentColor: primaryColor,
         buttonColor: primaryColor,
-        cardBackground: '#f8fafc'}'
-        cardBackground: '#f8fafc','
+        cardBackground: '#f8 fafc'}'
+        cardBackground: '#f8 fafc','
       }
-  }
 }
 // Apply theme colors to document CSS variables;
 export function applyThemeColors(colors: ThemeColors) {;
@@ -107,4 +106,3 @@ const root = document.documentElement
   // Set background and text colors on body
   document.body.style.backgroundColor = colors.backgroundColor
   document.body.style.color = colors.textColor
-}

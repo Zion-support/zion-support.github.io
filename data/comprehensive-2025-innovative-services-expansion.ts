@@ -648,7 +648,6 @@ export interface ComprehensiveInnovativeService {
     email: string,
     address: string}
     website: string}
-  }
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -856,7 +855,7 @@ export const,;
     competitor,
   s: ['Okta, Ping Identity, ForgeRock, CyberArk']'
     market_siz,
-  e: '$25B+ identity and access management market''
+  e: '$25 B+ identity and access management market''
     growth_rat,
   e: '140% YoY''
     varian,
@@ -969,7 +968,7 @@ export const,;
     competitor,
   s: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps']'
     market_siz,
-  e: '$18B+ DevOps tools market''
+  e: '$18 B+ DevOps tools market''
     growth_rat,
   e: '160% YoY''
     varian,
@@ -1082,7 +1081,7 @@ export const,;
     competitor,
   s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry']'
     market_siz,
-  e: '$12B+ edge computing market''
+  e: '$12 B+ edge computing market''
     growth_rat,
   e: '220% YoY''
     varian,
@@ -1195,7 +1194,7 @@ export const,;
     competitor,
   s: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic']'
     market_siz,
-  e: '$28B+ medical imaging market''
+  e: '$28 B+ medical imaging market''
     growth_rat,
   e: '190% YoY''
     varian,
@@ -1302,7 +1301,7 @@ export const,;
     competitor,
   s: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global']'
     market_siz,
-  e: '$32B+ risk management market''
+  e: '$32 B+ risk management market''
     growth_rat,
   e: '170% YoY''
     varian,
@@ -1409,7 +1408,7 @@ export const,;
     competitor,
   s: ['Coursera, Udemy, Khan Academy, Duolingo']'
     market_siz,
-  e: '$15B+ edtech market''
+  e: '$15 B+ edtech market''
     growth_rat,
   e: '200% YoY''
     varian,
@@ -1516,7 +1515,7 @@ export const,;
     competitor,
   s: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates']'
     market_siz,
-  e: '$22B+ supply chain management market''
+  e: '$22 B+ supply chain management market''
     growth_rat,
   e: '160% YoY''
     varian,
@@ -1629,7 +1628,7 @@ export const,;
     competitor,
   s: ['Schneider Electric, Siemens, GE Digital, ABB']'
     market_siz,
-  e: '$18B+ energy management market''
+  e: '$18 B+ energy management market''
     growth_rat,
   e: '180% YoY''
     varian,
@@ -1656,7 +1655,6 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  }
   realImplementatio,
   n: boolean,
   implementationDetail,
@@ -1753,7 +1751,6 @@ export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  }
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -1869,7 +1866,7 @@ i,
   s: ['Enterprise security, Government compliance, Financial security, Healthcare security'];' ro,'
   i: 'Reduce security incidents by 90% and compliance costs by 60%', ' competitor,'
   s: ['Okta, Ping Identity, ForgeRock, CyberArk'];' market_siz,'
-  e: '$25B+ identity and access management market' growth_rat,''
+  e: '$25 B+ identity and access management market' growth_rat,''
   e: '140% YoY' varian,''
   t: 'cybersecurity - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -1918,7 +1915,7 @@ i,
   s: ['CI / CD automation, Testing automation, Infrastructure management, Performance optimization'];' ro,'
   i: 'Reduce deployment time by 70% and increase team productivity by 50%',' competitor,'
   s: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'];' market_siz,'
-  e: '$18B+ DevOps tools market' growth_rat,''
+  e: '$18 B+ DevOps tools market' growth_rat,''
   e: '160% YoY' varian,''
   t: 'devops - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -1967,7 +1964,7 @@ i,
   s: ['Industrial monitoring, Smart city management, Energy optimization, Manufacturing automation'];' ro,'
   i: 'Reduce latency by 80% and improve operational efficiency by 45%',' competitor,'
   s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry'];' market_siz,'
-  e: '$12B+ edge computing market' growth_rat,''
+  e: '$12 B+ edge computing market' growth_rat,''
   e: '220% YoY' varian,''
   t: 'edge - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -2016,7 +2013,7 @@ i,
   s: ['Radiology diagnosis, Early disease detection, Treatment planning, Research studies'];' ro,'
   i: 'Improve diagnostic accuracy by 25% and reduce reading time by 60%',' competitor,'
   s: ['Aidoc, Zebra Medical Vision, Arterys, Enlitic'];' market_siz,'
-  e: '$28B+ medical imaging market' growth_rat,''
+  e: '$28 B+ medical imaging market' growth_rat,''
   e: '190% YoY' varian,''
   t: 'healthcare - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -2062,7 +2059,7 @@ i,
   s: ['Risk assessment, Fraud detection, Compliance monitoring, Portfolio management'];' ro,'
   i: 'Reduce risk losses by 40% and compliance costs by 50%',' competitor,'
   s: ['RiskMetrics, Bloomberg Risk, MSCI, S & P Global'];' market_siz,'
-  e: '$32B+ risk management market' growth_rat,''
+  e: '$32 B+ risk management market' growth_rat,''
   e: '170% YoY' varian,''
   t: 'financial - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -2108,7 +2105,7 @@ i,
   s: ['K - 12 education, Higher education, Corporate training, Skills development'];' ro,'
   i: 'Improve learning outcomes by 35% and reduce dropout rates by 50%', ' competitor,'
   s: ['Coursera, Udemy, Khan Academy, Duolingo'];' market_siz,'
-  e: '$15B+ edtech market' growth_rat,''
+  e: '$15 B+ edtech market' growth_rat,''
   e: '200% YoY' varian,''
   t: 'education - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -2154,7 +2151,7 @@ i,
   s: ['Inventory management, Demand forecasting, Logistics optimization, Supplier management'];' ro,'
   i: 'Reduce inventory costs by 30% and improve delivery times by 40%', ' competitor,'
   s: ['SAP Ariba, Oracle SCM, Blue Yonder, Manhattan Associates'];' market_siz,'
-  e: '$22B+ supply chain management market' growth_rat,''
+  e: '$22 B+ supply chain management market' growth_rat,''
   e: '160% YoY' varian,''
   t: 'logistics - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -2203,7 +2200,7 @@ i,
   s: ['Renewable energy management, Energy optimization, Grid integration, Sustainability reporting'];' ro,'
   i: 'Reduce energy costs by 25% and improve sustainability metrics by 40%',' competitor,'
   s: ['Schneider Electric, Siemens, GE Digital, ABB'];' market_siz,'
-  e: '$18B+ energy management market' growth_rat,''
+  e: '$18 B+ energy management market' growth_rat,''
   e: '180% YoY' varian,''
   t: 'energy - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -2213,7 +2210,8 @@ i,
   s: 78, ratin,
   g: 4 && 4.6, review,
   s: 56, benefit,
-  s: [,' '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking' ], ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}';'
+  s: [,' '25% energy cost reduction40% sustainability improvement_renewable integration_grid optimization_carbon tracking' ], ' import { ServiceVariant } from '../types/service-variants';
+export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}';'
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,
@@ -2232,7 +2230,8 @@ i,
   comprehensiveInnovativeServices: ComprehensiveInnovativeService[] = [; // AI & Machine Learning Services, {/* TODO: Fix JSX expression */}
   s: [,' '80% faster content creation40% increase in engagementSEO optimization built-inMulti-language supportBrand voice consistency' ]} capabilitie,'
   s: [,' 'Renewable energy management_energy optimization_grid integration_sustainability reporting_predictive maintenance' ]}' market_advantag,'
-  e: 'Advanced AI energy platform with comprehensive sustainability features' } ]; export default comprehensiveInnovativeServices; ' import { ServiceVariant } from '../types/service-variants'; export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}';'
+  e: 'Advanced AI energy platform with comprehensive sustainability features' } ]; export default comprehensiveInnovativeServices; ' import { ServiceVariant } from '../types/service-variants';
+export interface ComprehensiveInnovativeService {/* TODO: Fix JSX expression */}';'
   s: string} websit,
   e: string} } realImplementatio,
   n: boolean, implementationDetail,

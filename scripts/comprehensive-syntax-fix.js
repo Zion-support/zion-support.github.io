@@ -12,7 +12,7 @@ const fixes = [
   // TODO: Add items
 ]
   // Fix semicolons in object properties
-  { pattern: /color: 'text-\w+-\d+'\}/g, replacement: "color: 'text-\\w+-\\d+'" },"'"
+  { pattern: /color: 'text-\w+-\d+'\}/g, replacement: "color: 'text-\\w+-\\d+'"'"
   // Fix semicolons in JSX attributes
   { pattern: /className=\{`[^`]+`\}/g, replacement: (match) => match.replace(',', ') },''
   // Fix semicolons in JSX props
@@ -60,8 +60,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
     console.error(`❌ Error fixing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;';
 let files = []
@@ -85,7 +83,6 @@ const stat = fs.statSync(fullPath)
 }
     files.push(fullPath)
   }
-    }
   } catch (error) {
   // TODO: Add properties
 }

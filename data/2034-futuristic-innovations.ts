@@ -29,7 +29,7 @@ export interface Service2034 {
   contact: string
   website: string
 }
-export const futuristic2034Services: Service2034[] = [;
+export const futuristic2034 Services: Service2034[] = [;
   // TODO: Add items
 ]
   {
@@ -92,7 +92,7 @@ export const futuristic2034Services: Service2034[] = [;
       'Real-time signal processing','
       'Neural network optimization''
     ],
-    marketSize: '$25.8B by 2035','
+    marketSize: '$25.8 B by 2035','
     competitors: ['Neuralink', 'Kernel', 'CTRL-labs'],'
     competitiveAdvantage: 'Only platform combining quantum computing with brain interface technology','
     implementationTime: '6-12 months','
@@ -125,7 +125,7 @@ export const futuristic2034Services: Service2034[] = [;
   // TODO: Add items
 ]
       'Quantum DNA encoding algorithms','
-      'Massive data compression (1TB in 1 gram DNA)','
+      'Massive data compression (1 TB in 1 gram DNA)','
       'Quantum error correction','
       'DNA synthesis automation','
       'Quantum retrieval systems','
@@ -169,7 +169,7 @@ export const futuristic2034Services: Service2034[] = [;
       'Quantum retrieval protocols','
       'Advanced bioinformatics''
     ],
-    marketSize: '$18.7B by 2035','
+    marketSize: '$18.7 B by 2035','
     competitors: ['Microsoft', 'Catalog', 'Twist Bioscience'],'
     competitiveAdvantage: 'Only platform combining quantum computing with DNA storage','
     implementationTime: '4-8 months','
@@ -246,7 +246,7 @@ export const futuristic2034Services: Service2034[] = [;
       'Machine learning systems','
       'Space-grade hardware''
     ],
-    marketSize: '$42.3B by 2035','
+    marketSize: '$42.3 B by 2035','
     competitors: ['SpaceX', 'Blue Origin', 'NASA'],'
     competitiveAdvantage: 'Only comprehensive autonomous space colony management platform','
     implementationTime: '8-16 months','
@@ -323,7 +323,7 @@ export const futuristic2034Services: Service2034[] = [;
       'Quantum machine learning','
       'Emotional pattern recognition''
     ],
-    marketSize: '$12.4B by 2035','
+    marketSize: '$12.4 B by 2035','
     competitors: ['Affectiva', 'Emotient', 'Realeyes'],'
     competitiveAdvantage: 'Only platform using quantum computing for emotional intelligence','
     implementationTime: '3-6 months','
@@ -400,7 +400,7 @@ export const futuristic2034Services: Service2034[] = [;
       'Multi-modal AI systems','
       'Quantum machine learning''
     ],
-    marketSize: '$31.2B by 2035','
+    marketSize: '$31.2 B by 2035','
     competitors: ['OpenAI', 'Midjourney', 'Stable Diffusion'],'
     competitiveAdvantage: 'Only platform combining quantum computing with AI creativity','
     implementationTime: '4-8 months','
@@ -477,7 +477,7 @@ export const futuristic2034Services: Service2034[] = [;
       'Predictive analytics','
       'Risk modeling systems''
     ],
-    marketSize: '$67.8B by 2035','
+    marketSize: '$67.8 B by 2035','
     competitors: ['Bloomberg', 'Reuters', 'FactSet'],'
     competitiveAdvantage: 'Only platform using quantum computing for financial predictions','
     implementationTime: '6-12 months','

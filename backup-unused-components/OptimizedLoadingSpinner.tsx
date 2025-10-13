@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface OptimizedLoadingSpinnerProps {
-import React, { memo, useMemo } from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-interface OptimizedLoadingSpinnerProps;
-  size?: "xs" | "sm" | "md" | "lg" | "xl";
-  variant?: "dots" | "pulse" | "spinner" | "skeleton" | "bars";
+import React, { memo, useMemo } from "react"react-helmet-async";
+import { Link } from ";
+import { ArrowRight } from "lucide-react"xs" | " | "md"lg" | ";
+variant?: "dots"pulse" | " | "skeleton"bars";
   text?: string;
   className?: string;
   children?: React.ReactNode;
@@ -23,189 +18,111 @@ export default function OptimizedLoadingSpinner({ className = '', children }: Op
 }
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(</OptimizedLoadingSpinnerProps>
   (
-    size = "md",
-    variant = "spinner",
-    text = "Loading...",
-    className = "",
-    color = "blue",
+    size = ",
+    variant = "spinner"Loading...",
+    className = "blue",
     fullScreen = false,
 ) =>
     const sizeClasses = useMemo(
       () => (
-        xs: "h-3 w-3",
-        sm: "h-4 w-4",
-        md: "h-8 w-8",
-        lg: "h-12 w-12",
-        xl: "h-16 w-16",
-      () => (,
-    xs: "h-3 w-3",
-          sm: "h-4 w-4",
-          md: "h-8 w-8",
-          lg: "h-12 w-12",
-          xl: "h-16 w-16",
+        xs: ",
+        sm: "h-4 w-4"h-8 w-8",
+        lg: ",
+        xl: "h-16 w-16"h-3 w-3",
+          sm: ",
+          md: "h-8 w-8"h-12 w-12",
+          xl: ",
 ),
       [],
       () => ({
-//         xs: "h-3 w-3",
-//         sm: "h-4 w-4",
-//         md: "h-8 w-8",
-//         lg: "h-12 w-12",
-//         xl: "h-16 w-16",
+//         xs: "h-3 w-3"h-4 w-4",
+//         md: ",
+//         lg: "h-12 w-12"h-16 w-16",
       }),
 //       [],
     );
     const textSizeClasses = useMemo(
       () => (
-        xs: "text-xs",
-        sm: "text-sm",
-        md: "text-base",
-        lg: "text-lg",
-        xl: "text-xl",
-      () => (,
-    xs: "text-xs",
-          sm: "text-sm",
-          md: "text-base",
-          lg: "text-lg",
-          xl: "text-xl",
+        xs: ",
+        sm: "text-sm"text-base",
+        lg: ",
+        xl: "text-xl"text-xs",
+          sm: ",
+          md: "text-base"text-lg",
+          xl: ",
 ),
       [],
       () => ({
-//         xs: "text-xs",
-//         sm: "text-sm",
-//         md: "text-base",
-//         lg: "text-lg",
-//         xl: "text-xl",
+//         xs: "text-xs"text-sm",
+//         md: ",
+//         lg: "text-lg"text-xl",
       }),
 //       [],
     );
     const colorClasses = useMemo(
       () => (
-        blue: "text-blue-500",
-        gray: "text-gray-500",
-        green: "text-green-500",
-        red: "text-red-500",
-        purple: "text-purple-500",
-      () => (,
-    blue: "text-blue-500",
-          gray: "text-gray-500",
-          green: "text-green-500",
-          red: "text-red-500",
-          purple: "text-purple-500",
+        blue: ",
+        gray: "text-gray-500"text-green-500",
+        red: ",
+        purple: "text-purple-500"text-blue-500",
+          gray: ",
+          green: "text-green-500"text-red-500",
+          purple: ",
 ),
       [],
     );
     const renderSpinner = () =>
       switch (variant)
-        case "dots":
-          return (
-            <div className="flex space-x-1"></div>
-
-                <div;
-                <div
-      () => ({
-//         blue: "text-blue-500",
-//         gray: "text-gray-500",
-//         green: "text-green-500",
-//         red: "text-red-500",
-//         purple: "text-purple-500",
+        case "dots"flex space-x-1"text-blue-500"text-gray-500",
+//         green: ",
+//         red: "text-red-500"text-purple-500",
       }),
 //       [],
     );
 
     const renderSpinner = () => {
       switch (variant) {
-//         case "dots":
+//         case ":
           return (
-            <div className="flex space-x-1">
-              {[0, 1, 2].map((i) => (
-//                 <div
-                  key={i}
-                  className="{`${sizeClasses[size]}" ${colorClasses[color]} rounded-full animate-pulse`}
+            <div className="flex space-x-1" ${colorClasses[color]} rounded-full animate-pulse`}
                   style={}
                     animationDelay: `${i * 0.2}s`,
-                    animationDuration: "1s",
-                  key={i}>
-  className="{`${sizeClasses[size]}" ${colorClasses[color]} rounded-full animate-pulse`}>
-  style={},>
-  animationDelay: `${i * 0.2}s`,>,
-    animationDuration: "1s",
-                  {}
-                />
-  </div>
-
-            </div>
-//                     animationDuration: "1s",
-                  }}
+                    animationDuration: "1 s"{`${sizeClasses[size]}"1 s"1 s",
+                  }
 //                 />
               ))}
 </div>
           );
-//         case "pulse":
+//         case ":
           return (
             <div;
             <div
               className="{`${sizeClasses[size]}" ${colorClasses[color]} rounded-full animate-pulse`}
-            <div>
-  className="{`${sizeClasses[size]}" ${colorClasses[color]} rounded-full animate-pulse`}
             />
 //             <div
               className={`${sizeClasses[size]} ${colorClasses[color]} rounded-full animate-pulse`}
 //             />
           );
-//         case "spinner":
+//         case "spinner"{`${sizeClasses[size]}"{`${sizeClasses[size]}"skeleton":
           return (
-            <div;
-            <div
-              className="{`${sizeClasses[size]}" ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`}
-            <div>
-  className="{`${sizeClasses[size]}" ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`}
-            />
-          );
-        case "skeleton":
+            <div className="{`h-4" bg-gray-300 rounded animate-pulse`} />
+              <div className="skeleton":
           return (
-            <div className="space-y-2"></div>
-              <div className="{`h-4" bg-gray-300 rounded animate-pulse`} />
-              <div className="{`h-4" bg-gray-300 rounded animate-pulse w-3/4`} />
-  </div>
-            </div>
-//             <div
-              className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`}
-//             />
-          );
-        case "skeleton":
+            <div className="bars":
           return (
-            <div className="space-y-2">
-              <div className={`h-4 bg-gray-300 rounded animate-pulse`} />
-              <div className={`h-4 bg-gray-300 rounded animate-pulse w-3/4`} />
-</div>
-          );
-//         case "bars":
-          return (
-            <div className="flex space-x-1"></div>
-
-                <div;
-                <div
             <div className="flex space-x-1">
               {[0, 1, 2, 3].map((i) => (
 //                 <div
                   key={i}
-                  className="{`w-1" ${colorClasses[color]} animate-pulse`}
-                  style={}
-                    height: `${8 + i * 4}px`,
-                    animationDelay: `${i * 0.1}s`,
-                    animationDuration: "0.8s",
-  className="{`w-1" ${colorClasses[color]} animate-pulse`}>
-  style={},>
-  height: `${8 + i * 4}px`,>
-  animationDelay: `${i * 0.1}s`,>,
-    animationDuration: "0.8s",
+                  className="0.8 s",
+  className="0.8 s",
                   {}
                 />
   </div>
 
             </div>
-//                     animationDuration: "0.8s",
-                  }}
+//                     animationDuration: ",
+                  }
 //                 />
               ))}
 </div>
@@ -215,11 +132,6 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(</O
             <div;
             <div
               className="{`${sizeClasses[size]}" ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`}
-          );,
-    default:
-          return (
-            <div>
-  className="{`${sizeClasses[size]}" ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`}
             />
 //             <div
               className={`${sizeClasses[size]} ${colorClasses[color]} border-2 border-current border-t-transparent rounded-full animate-spin`}
@@ -228,33 +140,17 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(</O
 
 ;
     const containerClasses = fullScreen;
-      ? "fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
-      : "flex flex-col items-center justify-center space-y-4";
+      ? "fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"flex flex-col items-center justify-center space-y-4";
     return (
       <>
         <Helmet></Helmet>
           <title>Loading - Zion Tech Group</title>
         </Helmet>
-        <div className="{`${containerClasses}" ${className}`}></div>
-          {renderSpinner()}
-
-            <p;
-              className="{`${textSizeClasses[size]}" ${colorClasses[color]} mt-2`}
+        <div className="{`${textSizeClasses[size]}" ${colorClasses[color]} mt-2`}
             <p>
-  className="{`${textSizeClasses[size]}" ${colorClasses[color]} mt-2`}
-            >
-              {text}
-            </p>
-
-          <Link;
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          <Link>
-  to="/contact">
-  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us;
-            <ArrowRight className="w-5 h-5 ml-2" />
+  className="/contact"
+            className="/contact">
+  className="w-5 h-5 ml-2" />
           </Link>
   </div>
       </>
@@ -273,11 +169,8 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(</O
 </p>
           )}
 //           <Link
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-//           >
-//             Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
+            to="
+            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" />
 </Link>
 </div>
 //       </>
@@ -290,7 +183,5 @@ export default OptimizedLoadingSpinner;
   </div>
   </div>
   </div>
-=======
 className?: string;
   children?: React.ReactNode;
-}

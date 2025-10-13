@@ -34,16 +34,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function ${functionName}() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${title} solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">${title}</h1>
-          <p className="text-xl text-gray-300 mb-8">
+    <div className="min-h-screen bg-gray-900 text-white" content="${title} solutions by Zion Tech Group"container mx-auto px-4 py-20"text-center"text-4 xl font-bold mb-8"text-xl text-gray-300 mb-8">
             This page is under development. Please check back later.
           </p>
         </div>
@@ -56,15 +47,15 @@ export default function ${functionName}() {
 // List of specific files that need fixing
 const filesToFix = [
   'app/404/page.tsx',
-  'app/5g-data-analytics/page.tsx',
-  'app/5g-edge-computing/page.tsx',
-  'app/5g-implementation/page.tsx',
-  'app/5g-iot-solutions/page.tsx',
-  'app/5g-mobile-applications/page.tsx',
-  'app/5g-network-infrastructure/page.tsx',
-  'app/5g-private-networks/page.tsx',
-  'app/5g-smart-city-solutions/page.tsx',
-  'app/5g-solutions/page.tsx',
+  'app/5 g-data-analytics/page.tsx',
+  'app/5 g-edge-computing/page.tsx',
+  'app/5 g-implementation/page.tsx',
+  'app/5 g-iot-solutions/page.tsx',
+  'app/5 g-mobile-applications/page.tsx',
+  'app/5 g-network-infrastructure/page.tsx',
+  'app/5 g-private-networks/page.tsx',
+  'app/5 g-smart-city-solutions/page.tsx',
+  'app/5 g-solutions/page.tsx',
   'app/contact/page-broken2.tsx',
   'app/not-found.tsx',
   'app/service-template.tsx',
@@ -91,7 +82,6 @@ function fixFile(filePath) {
     } else if (isHook) {
       newContent = `// usePerformanceMonitor hook
 import { useEffect, useRef } from 'react';
-
 export function usePerformanceMonitor() {
   const metricsRef = useRef({});
 
@@ -113,7 +103,6 @@ export default usePerformanceMonitor;
       // For other files, create a simple component
       const componentName = fileName.replace('.tsx', '').replace(/[-_]/g, '');
       newContent = `import React from 'react';
-
 interface ${componentName}Props {
   className?: string;
   children?: React.ReactNode;
@@ -135,8 +124,6 @@ export default function ${componentName}({ className = '', children }: ${compone
     console.error(`Error fixing file ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Main execution
 function main() {
   const workspaceDir = process.cwd();
@@ -151,7 +138,6 @@ function main() {
       if (fixFile(fullPath)) {
         fixedCount++;
       }
-    }
   }
   
   console.log(`Fixed ${fixedCount} files`);
@@ -164,8 +150,6 @@ function main() {
   } catch (error) {
     console.log('Type check still has errors, but fixed some files.');
   }
-}
-
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }

@@ -38,53 +38,7 @@ const { data, error } = await supabase
         .select('id')'
         .single()
       if (error) throw error
-      showSuccessToast("Resume created", "Your resume has been created successfully")"
-      return data.id
-    } catch (e: any) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      return handleResumeError(e, 'Could not create resume') ? null : null'
-    } finally {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      setIsLoading(false)
-    }
-  }
-  const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    if (!user) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      setError('You must be logged in to update a resume')'
-      return false
-    }
-    setIsLoading(true)
-    setError(null)
-    try {;
-const { error } = await supabase
-        .from('talent_resumes')'
-        .update({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          title: basicInfo.title,
-          headline: basicInfo.headline,
-          summary: basicInfo.summary
-        })
-        .eq('id', resumeId)'
-        .eq('user_id', user.id)'
-      if (error) throw error
-      return showSuccessToast("Resume updated", "Your resume information has been updated")"
+      showSuccessToast("Resume created"Your resume has been created successfully")"Resume updated", ")"
     } catch (e: any) {
   // TODO: Add properties
 }
@@ -98,7 +52,6 @@ const { error } = await supabase
 }
       setIsLoading(false)
     }
-  }
   const setActiveResume = async (resumeId: string): Promise<boolean> => {
   // TODO: Add properties
 }
@@ -132,7 +85,7 @@ const { error } = await supabase
         .eq('id', resumeId)'
         .eq('user_id', user.id)'
       if (error) throw error
-      return showSuccessToast("Active resume set", "Your selected resume is now marked as active")"
+      return showSuccessToast(", "Your selected resume is now marked as active"
     } catch (e: any) {
   // TODO: Add properties
 }
@@ -146,7 +99,6 @@ const { error } = await supabase
 }
       setIsLoading(false)
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -158,5 +110,4 @@ const { error } = await supabase
     updateBasicInfo,
     setActiveResume}
     setActiveResume,
-  }
-}
+  

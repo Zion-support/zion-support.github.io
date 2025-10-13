@@ -11,20 +11,19 @@ export const securityHeaders = {// Content Security Policy;
 }
   // TODO: Add properties
 }
-      defaultSrc: ["'self'"],"'"
+      defaultSrc: ["'self'"'"
       scriptSrc: [,
-        "'self'","'"
-        "'unsafe-inline'","'"
-        "'unsafe-eval'","'"
+        ","'"'unsafe-inline'","
+        "'unsafe-eval'"'"
         'https: //www.googletagmanager.com','
         'https: //www.google-analytics.com','
       ],
-      styleSrc: ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],'"
-      fontSrc: ["'self'", 'https: //fonts.gstatic.com'],'"
-      imgSrc: ["'self'", 'data:', 'https:', 'blob: '],'"
-      connectSrc: ["'self'", 'https://www.google-analytics.com', 'https: //analytics.google.com'],'"
-      frameSrc: ["'self'"],"'"
-      objectSrc: ["'none'"],"'"
+      styleSrc: [", "'unsafe-inline'"
+      fontSrc: ["'self'"
+      imgSrc: ["'self'"
+      connectSrc: ["'self'"
+      frameSrc: ["'self'"'"
+      objectSrc: ["],"'"
   // Security Headers;
   headers: {,
     'X-DNS-Prefetch-Control': 'on','
@@ -53,7 +52,7 @@ export const corsConfig = {
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],'
   allowedHeaders: ['Content-Type', 'Authorization'],'
   credentials: true,
-  maxAge: 86400, // 24 hours;}}
+  maxAge: 86400, // 24 hours;}
 /**;
  * Session configuration;
  */;
@@ -81,17 +80,17 @@ export function sanitizeInput(input: string): string {,}
     .replace(/[<>]/g, '') // Remove < and >'
     .replace(/javascript:/gi, '') // Remove javascript: protocol,'
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;'
-    .trim()}}
+    .trim()}
 /**;
  * Validate email address;
  */;
 export function validateEmail(email: string): boolean {,}
-    return validationPatterns.email.test(email)}}
+    return validationPatterns.email.test(email)}
 /**;
  * Validate URL;
  */;
 export function validateUrl(url: string): boolean {,}
-    return validationPatterns.url.test(url)}}
+    return validationPatterns.url.test(url)}
 /**;
  * Generate secure token;
  */;
@@ -103,7 +102,7 @@ export function generateSecureToken(length: number = 32): string {,}
 }
   // TODO: Add properties
 }
-      array[i] = Math.floor(Math.random() * 256)}}
+      array[i] = Math.floor(Math.random() * 256)}
   }
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(')''
 }
@@ -115,4 +114,4 @@ export default {securityHeaders,;}
   sanitizeInput,;
   validateEmail,;
   validateUrl,;
-  generateSecureToken,}}
+  generateSecureToken,

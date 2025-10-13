@@ -29,13 +29,10 @@ export interface UnifiedPromotionalBannerProps {
   bad, g, e?: string
   date ?  : str, i, n, g;
 export interface FeaturedItem {/* TODO: Fix JSX expression */}
- }
 export interface UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */}
- }
 const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   } const buttonTheme, s = {/* TODO: Fix JSX expression */}
-  }
   // Icon selection const IconCompone n t = {/* TODO: Fix JSX expression */}
   }[ic, o, n]
   // Varia n t-specific styles const variantClass e s = {
@@ -57,13 +54,13 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
       `}
     >
       {/* Header, Sectio, n */})
-      <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>)'
+      <div, classNam, e = 'm, a, x-w-7 xl, m, x-au, t, o'>)'
         {/* Badge, and, Date */})
         {  (bad, g, e || d, a, t, e) && (
   // TODO: Add parameters
 )
       {/* Header, Sectio, n */}
-      <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>'
+      <div, classNam, e = 'm, a, x-w-7 xl, m, x-au, t, o'>'
         {/* Badge, and, Date */}
         {  (bad, g, e || d, a, t, e) && (
   // TODO: Add parameters
@@ -77,7 +74,7 @@ const UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerPro, p, s> = 
 <IconComponent, className='w-4 h-4' / >   }'
     >
       {/* Header, Sectio, n */}
-      <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>'
+      <div, classNam, e = 'm, a, x-w-7 xl, m, x-au, t, o'>'
         {/* Badge, and, Date */}
         {/* TODO: Fix JSX expression */}
                 {IconCompone, n, t  && <IconComponent, className='w-4 h-4' / >   }'

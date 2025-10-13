@@ -16,7 +16,6 @@ const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}'
     stder,
   r: res.stderr || '','
   }
-}
 exports.handler = async () => {const logs = []}
   function logStep(name} fn) {/* TODO: Fix JSX expression */}
     logs.push(`\n=== ${name} ===`);

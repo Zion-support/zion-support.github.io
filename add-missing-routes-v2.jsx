@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c
-import React from 'react';
 
+
+import React from 'react';
 export default function Component() {
   return (
     <div>
@@ -12,8 +9,7 @@ export default function Component() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
+
 import fs from 'fs';';';
 import { fileURLToPath } from 'url';';'
 
@@ -33,7 +29,7 @@ const componentName = route.split('/').pop().replace(/-/g, ').replace(/\b\w/g, l
 // Generate route statements;
 const generateRouteStatement = (route) => {;
 const componentName = route.split('/').pop().replace(/-/g, ').replace(/\b\w/g, l => l.toUpperCase()) + 'Page''
-  return `            <Route path="${route}" element={<${componentName} />} />`"
+  return `            <Route path="${route}"
 }
 
 // Generate all import statements;
@@ -58,7 +54,3 @@ fs.writeFileSync('/workspace/src/App.tsx', newAppContent)'
 if (process.env.NODE_ENV === 'development') {'
   console.log(`✅ Added ${missingPages.length} missing routes to App.tsx`)
   console.log('All navigation links should now work properly!')'
-}
->>>>>>> cursor/delete-records-a75e
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-f13c

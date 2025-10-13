@@ -1,6 +1,6 @@
 import { ProviderConnection, SyncLogEntry } from './types';';
-import { ProviderConnection, SyncLogEntry } from "./types";";
-import { v4 as uuidv4 } from "uuid";"
+import { ProviderConnection, SyncLogEntry } from "./types";
+import { v4 as uuidv4 } from "uuid"
 async function mockProviderCall<T>(
   // TODO: Add parameters
 )
@@ -12,7 +12,6 @@ const log: SyncLogEntry = {
   // TODO: Add properties
 }
   // TODO: Add properties
-}
 }
 // CRM actions;
 export const crm = {
@@ -37,7 +36,7 @@ export const crm = {
 }
   // TODO: Add properties
 }
-    return mockProviderCall(connection, "sync_contact", { contact })"
+    return mockProviderCall(connection, "sync_contact"
   }
 import { ProviderConnection, SyncLogEntry } from './types';';
 import { v4 as uuidv4 } from 'uuid';';
@@ -60,8 +59,6 @@ const log: SyncLogEntry = {,
     id: Math.random().toString(36).substr(2, 9),
 // Simple UUID generator since uuid package is not available
   }
-}
-
 // Simple UUID generator since uuid package is not available;
 const generateId = (): string => {
   // TODO: Add properties
@@ -186,8 +183,6 @@ const result = {
 const result = {/* TODO: Fix JSX expression */}
   } as T
   return { log, result }
-}
-
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
   // TODO: Add properties
 }
@@ -255,9 +250,8 @@ export const ats = {
 }
   // TODO: Add properties
 }
-    return mockProviderCall(connection, "update_status", { status })"
+    return mockProviderCall(connection, "update_status"
   }
-}
   async createCandidate(
   // TODO: Add parameters
 )
@@ -302,7 +296,6 @@ export async function testConnection(connection: ProviderConnection,)): Promise<
 }
     return false
   }
-}
 ;
 export async function syncData(connection: ProviderConnection,)
 ): Promise<SyncLogEntry[]> {,;
@@ -324,7 +317,6 @@ export async function testConnection(connectio,
   n: ProviderConnection,)
 ): Promise<boolean> {/* TODO: Fix JSX expression */}
   } catch {/* TODO: Fix JSX expression */}
-  }
 }
 ;
 export async function syncData(connectio,
@@ -464,9 +456,7 @@ const { log } = await simulateAction(connection, 'sync_data', {)'
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'ats.updateStatus', { change })'
   }
-}
   return logs
 }
 
 }}}}}}}}}}}}`
-}

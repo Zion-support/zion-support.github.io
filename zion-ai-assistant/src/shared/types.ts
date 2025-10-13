@@ -1,6 +1,4 @@
-export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other";";";
-export interface MilestoneSuggestionInput {scopeOfWork: string;
-export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",;";";
+export type ProjectType = "Web Dev"AI/ML" | " | "Mobile"Data Engineering" | ";";"Web Dev" | " | "DevOps"Mobile" | " | "Other";";
 export interface MilestoneSuggestionInput {
   // TODO: Add properties
 }
@@ -22,7 +20,7 @@ export interface SuggestedMilestoneItem {
   description: string,
   suggestedDueDateIso: string
   estimatedEffortHours: number, // estimated hours
-  tags?: string[], // e.g., ["AI Suggested"]"
+  tags?: string[], // e.g., ["]"
 }
 export interface MilestoneSuggestionResponse {milestones: SuggestedMilestoneItem[];
 export interface MilestoneSuggestionResponse {
@@ -32,7 +30,7 @@ export interface MilestoneSuggestionResponse {
 }
   milestones: SuggestedMilestoneItem[]
 }
-export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other";";";
+export type ProjectType = " | "AI/ML"DevOps" | " | "Data Engineering"Other";";
 export interface MilestoneSuggestionInput {
   // TODO: Add properties
 }
@@ -52,7 +50,7 @@ export interface SuggestedMilestoneItem {
   description: string
   suggestedDueDateIso: string
   estimatedEffortHours: number; // estimated hours
-  tags?: string[]; // e.g., ["AI Suggested"]"
+  tags?: string[]; // e.g., ["AI Suggested"
 }
 export interface MilestoneSuggestionResponse {
   // TODO: Add properties
@@ -62,4 +60,4 @@ export interface MilestoneSuggestionResponse {
   milestones: SuggestedMilestoneItem[]
 }
 
-}}}
+}

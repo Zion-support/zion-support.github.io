@@ -1,5 +1,4 @@
 export interface NewArticle {/* TODO: Fix JSX expression */}
-}
 ;
 export const newArticles2025: NewArticle[] = [;
   // TODO: Add items
@@ -11,7 +10,7 @@ export const newArticles2025: NewArticle[] = [;
 }
     id: 'ai-automation-2025''
     title: 'AI Automation Trends 2025: The Future of Work''
-    excerpt: "Explore the latest trends in AI automation and how they're reshaping the workplace."'"
+    excerpt: "Explore the latest trends in AI automation and how they're reshaping the workplace."
     author: 'Zion Tech Group','
     publishedAt: '2025-10-01','
     category: 'AI Automation','

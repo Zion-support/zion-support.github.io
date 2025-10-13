@@ -13,7 +13,7 @@ const r = await fetch(
     );
 const metrics = await r && r.json();
 const jobs24 =
-      metrics?.marketplace?.find((m: any) => m && m.key === 'jobs_24h')?.value || 0;';
+      metrics?.marketplace?.find((m: any) => m && m.key === 'jobs_24 h')?.value || 0;';
 const voters =
       metrics?.dao?.find((m: any) => m.key === 'voter_participation')?.value |'
       0;
@@ -29,7 +29,7 @@ const summary = [
 ]
   // TODO: Add items
 ]
-      `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`
+      `Marketplace steady: ${jobs24} jobs posted in the last 24 h, fill rates improving`
       `DAO engagement at ${voters}% voter participation with active delegates`
       `Token momentum: ${wallets} active wallets; daily volume around ${Number(tx).toLocaleString()}`
       `Multiverse scale: ${instances} active sub-instances with cross-instance flows`
@@ -53,7 +53,7 @@ const r = await fetch (
       `${req.headers['x - forwarded - proto'] || 'http'}://${req.headers.host}/api / metrics`);';
 const metrics = await r.json ();
 const jobs24 =
-      metrics?.marketplace?.find ((m: any) => m.key === 'jobs_24h')?.value || 0;';
+      metrics?.marketplace?.find ((m: any) => m.key === 'jobs_24 h')?.value || 0;';
 const voters =
       metrics?.dao?.find ((m: any) => m.key === 'voter_participation')?.value ||'
       0;
@@ -69,7 +69,7 @@ const summary = [
 ]
   // TODO: Add items
 ]
-      `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`,
+      `Marketplace steady: ${jobs24} jobs posted in the last 24 h, fill rates improving`,
       `DAO engagement at ${voters}% voter participation with active delegates`,
       `Token momentum: ${wallets} active wallets; daily volume around ${Number (tx).toLocaleString ()}`,
       `Multiverse scale: ${instances} active sub - instances with cross - instance flows`,
@@ -83,7 +83,6 @@ const summary = [
 }
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' })'
   }
-}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
@@ -92,7 +91,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {;
 const r = await fetch(`${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`);';
 const metrics = await r.json();
-const jobs24 = metrics?.marketplace?.find((m: any) => m.key === 'jobs_24h')?.value || 0;';
+const jobs24 = metrics?.marketplace?.find((m: any) => m.key === 'jobs_24 h')?.value || 0;';
 const voters = metrics?.dao?.find((m: any) => m.key === 'voter_participation')?.value || 0;';
 const wallets = metrics?.token?.find((m: any) => m.key === 'active_wallets')?.value || 0;';
 const tx = metrics?.token?.find((m: any) => m.key === 'tx_volume_daily')?.value || 0;';
@@ -102,7 +101,7 @@ const summary = [
 ]
   // TODO: Add items
 ]
-      `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`,
+      `Marketplace steady: ${jobs24} jobs posted in the last 24 h, fill rates improving`,
       `DAO engagement at ${voters}% voter participation with active delegates`,
       `Token momentum: ${wallets} active wallets; daily volume around ${Number(tx).toLocaleString()}`,
       `Multiverse scale: ${instances} active sub-instances with cross-instance flows`,
@@ -115,5 +114,4 @@ const summary = [
   // TODO: Add properties
 }
     res.status(200).json({ summary: [], error: 'Failed to compute summary' })'
-  }
-}
+  

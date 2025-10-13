@@ -23,12 +23,11 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/re a l-ti m e-decisi o n-engin e s-20 2 6')'
         />),
       <div, className='container, m, x-auto, p, x-6, p, y-16'>'
-<h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>'
+<h1, className='te, x, t-4 xl, m, d:te, x, t-5 xl, fon, t-bold, m, b-4'>'
           Real, Time, Decision Engines, 202, 6
             This, comprehensive, guide covers, real, time decision, engines, 2026 and, provides, practical insights, for, enterprise implementati, o, n.
             This, comprehensive, guide covers, real, time decision, engines, 2026 and, provides, practical insights, for, enterprise implementati, o, n.
 }
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
-}
 </div></div>
 </div></h1>

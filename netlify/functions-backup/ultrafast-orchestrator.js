@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'ultrafast-orchestrator'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'ultrafast-orchestrator'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'ultrafast-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'ultrafast', services: 0,'
         lastOrchestration: new Date().toISOString() } }) } return result; } catch (error) {

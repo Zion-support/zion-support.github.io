@@ -52,7 +52,6 @@ const incoming = req && req.body || {}
   res && res.setHeader('AllowGET, PUT')'
   return res && res.status(405).json({ error: 'Method not allowed' })'
 }
-}
     const current = await getTrustWeights ()
     return res.status (200).json ({ current, defaults: getDefaultWeights () });  }
 export default async /**;
@@ -109,4 +108,3 @@ const incoming = req.body || {}
   }
   res.setHeader('Allow', 'GET, PUT')'
   return res.status(405).json({ error: 'Method not allowed' })'
-}

@@ -15,13 +15,12 @@ class InterceptorManager {
 }
     this.handlers.push({ fulfilled, rejected })
   }
-}
 export interface AxiosInstance {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  defaults: { headers: { common: Record<string, string> } }
+  defaults: { headers: { common: Record<string, string> }
   interceptors: { response: InterceptorManager }
   get(url: string, config?: { params?: Record<string, any> } & RequestInit): Promise<any>
   post(url: string, data?: any, config?: RequestInit): Promise<any>
@@ -64,7 +63,7 @@ const headers = {
         ...(init as any).headers}
       const opts = { ...init, body: JSON.stringify(data), headers } as RequestInit
       return request(baseURL + url, 'POST', opts)'
-    }}
+    }
         ...(init as any).headers,
       }
       const opts = { ...init, body: JSON.stringify(data), headers } as RequestInit
@@ -90,7 +89,6 @@ const token = safeStorage.getItem('auth-token')'
 }
           config.headers.Authorization = `Bearer ${token}`
         }
-      }
       return config
     },
     (error: any) => {
@@ -121,7 +119,6 @@ const token = safeStorage.getItem('auth-token')'
           safeStorage.removeItem('auth-token')'
           window.location.href = '/auth/login''
         }
-      }
       return Promise.reject(error)
     }
   )

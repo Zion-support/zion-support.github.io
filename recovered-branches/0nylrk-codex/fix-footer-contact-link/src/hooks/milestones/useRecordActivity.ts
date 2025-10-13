@@ -45,15 +45,13 @@ const { data, error } = await supabase
 }
   // TODO: Add properties
 }
-      console.error("Error recording activity:", err)"
+      console.error("Error recording activity:"
       return null
     }
-  }
   return {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     recordMilestoneActivity
-  }
-}
+  

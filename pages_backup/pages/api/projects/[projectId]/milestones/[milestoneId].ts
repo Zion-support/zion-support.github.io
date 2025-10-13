@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { requireUser } from "../../../../../utils/api/auth";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { requireUser } from "../../../../../utils/api/auth";
 import {
   // TODO: Add properties
 }
@@ -10,8 +10,8 @@ import {
   assertParticipantOrAdmin,
   isClient,
   isTalent,
-} from "../../../../../utils/api/projects"";
-import { isMilestoneStatus } from "../../../../../utils/types/milestones";";";
+} from "../../../../../utils/api/projects";
+import { isMilestoneStatus } from "../../../../../utils/types/milestones";";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 const user = requireUser(req, res)
   if (!user) return;
@@ -37,7 +37,7 @@ const { projectId, milestoneId } = req.query as { projectId: string, milestoneId
 }
   // TODO: Add properties
 }
-    res && res.status(404).json({ error: "Project not found" })"
+    res && res.status(404).json({ error: " })"
     return
   }
   if (!assertParticipantOrAdmin(project, user)) {
@@ -45,10 +45,10 @@ const { projectId, milestoneId } = req.query as { projectId: string, milestoneId
 }
   // TODO: Add properties
 }
-    res && res.status(403).json({ error: "Forbidden" })"
+    res && res.status(403).json({ error: " })"
     return
   }
-  if (req.method === "PATCH") {"
+  if (req.method === ") {"
   if (req.method === 'PATCH') {;';
 const body = req.body as any
     if (body.status && !isMilestoneStatus(body.status)) {
@@ -65,12 +65,12 @@ const isClientUser = isClient(project, user);
 const isTalentUser = isTalent(project, user);
 const status: string = body && body.status;
 const allowed =
-        (status === "In Progress" && isClientUser) |"
-        (status === "Submitted" && isTalentUser) |"
-        (status === "Approved" && isClientUser) |"
-        (status === "Paid" && isClientUser)"
-      if (!allowed && user.role !== "admin") {"
-        res.status(403).json({ error: "Not allowed to set this status" })"
+        (status === " && isClientUser) |"
+        (status === " && isTalentUser) |"
+        (status === " && isClientUser) |"
+        (status === " && isClientUser)"
+      if (!allowed && user.role !== ") {"
+        res.status(403).json({ error: " })"
         (status === 'In Progress' && isClientUser) ||'
         (status === 'Submitted' && isTalentUser) ||'
         (status === 'Approved' && isClientUser) ||'
@@ -82,20 +82,19 @@ const allowed =
       // Add side-effects
       }
       // Add side-effects
-      if (status === "Submitted") {"
+      if (status === ") {"
         body && body.submittedByUserId = user && user.userId
       }
       if (status === 'Paid') {'
         body.paidAt = new Date().toISOString()
       }
-    }
     const updated = updateMilestone(project, milestoneId, body)
     if (!updated) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      res.status(404).json({ error: "Milestone not found" })"
+      res.status(404).json({ error: " })"
       res.status(404).json({ error: 'Milestone not found' })';
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -117,26 +116,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import { requireUser } from '../../../../../utils/api/auth';';
 import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects';';
@@ -163,26 +160,24 @@ const project = getProject(projectId)
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   if (!assertParticipantOrAdmin(project, user)) {
   // TODO: Add properties
 }
@@ -195,27 +190,24 @@ const project = getProject(projectId)
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-
   if (req.method === 'GET') {;';
 const body = req.body as any
     if (body.status && !isMilestoneStatus(body.status)) {
@@ -230,27 +222,24 @@ const body = req.body as any
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-
     // Enforce status transition rules
     if (body.status) {;
 const isClientUser = isClient(project, user);
@@ -269,27 +258,24 @@ const allowed =
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-
       // Add side-effects
       if (status === 'Submitted') {'
         body.submittedByUserId = user.userId
@@ -298,26 +284,24 @@ const allowed =
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
       if (status === 'Approved') {'
         body.approvedByUserId = user.userId
         } catch (error) {
@@ -325,26 +309,24 @@ const allowed =
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
       if (status === 'Paid') {'
         body.paidAt = new Date().toISOString()
         } catch (error) {
@@ -352,51 +334,47 @@ const allowed =
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
       } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 ;
 const updated = updateMilestone(project, milestoneId, body)
     if (!updated) {
@@ -410,15 +388,14 @@ const updated = updateMilestone(project, milestoneId, body)
     res && res.status(200).json({ milestone: updated })
     return
   }
-  res.setHeader("AllowPATCH")"
-  res.status(405).end("Method Not Allowed")"
+  res.setHeader(")"
+  res.status(405).end(")"
 }
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
+  

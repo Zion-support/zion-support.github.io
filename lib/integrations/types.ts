@@ -100,7 +100,6 @@ export interface IntegrationProviderMeta {
   category: 'crm' | 'ats' | 'hr','
   description: string
   }
-}
 ;
 export type SyncStatus = 'connected' | 'warning' | 'disconnected';';';
 export interface ProviderConnection {
@@ -279,9 +278,6 @@ export type SyncStatus = 'connected' | 'warning' | 'disconnected';'
   lastSync?: number
   createdAt: number,
 }
-
-}
-
   lastSync?: Date
   config: Record<string></string>createdAt</string>: Date
   updatedAt: Date,
@@ -300,7 +296,6 @@ export interface SyncLogEntry {
 
   details?: Record<string></string>
 }
-}
 ;
 export interface ManualOverride {
   // TODO: Add properties
@@ -311,7 +306,6 @@ export interface ManualOverride {
   disableCrmSync?: boolean,
   disableAtsSync?: boolean
   }
-}
 ;
 export interface ZapierEvent {
   // TODO: Add properties
@@ -352,7 +346,6 @@ export interface IntegrationOverride {
   }
 ;
 export interface IntegrationEvent {/* TODO: Fix JSX expression */}
-}
 ;
 export interface ZapierEvent {
   // TODO: Add properties
@@ -393,8 +386,6 @@ export interface IntegrationsState {
   overrides: ManualOverride[]
   events: ZapierEvent[]
   lastError?: string | null
-}
-}
 }
 }
 }
@@ -430,7 +421,6 @@ export interface IntegrationsState {
   overrides: ManualOverride[],
   events: ZapierEvent[]
 }
-}
 ;
 export interface IntegrationProviderMeta {
   // TODO: Add properties
@@ -452,7 +442,6 @@ export interface IntegrationsState {
   logs: SyncLogEntry[]
   overrides: ManualOverride[]
   events: ZapierEvent[]
-}
 }
 ;
 export interface ProviderConnection {
@@ -486,7 +475,6 @@ export interface IntegrationProviderMeta {
 }
   payload: Record<string></string>
 }
-}
 ;
 export interface IntegrationsState {
   // TODO: Add properties
@@ -510,7 +498,6 @@ export interface IntegrationsState {
 }
   payload: Record<string, any>
 }
-}
 ;
 export interface IntegrationsState {
   // TODO: Add properties
@@ -523,11 +510,8 @@ export interface IntegrationsState {
   events: ZapierEvent[]
   lastError?: string | null;}
 }
-}
   overrides: IntegrationOverride[]
   events: IntegrationEvent[]
 }
-}
   overrides: IntegrationOverride[]
   events: IntegrationEvent[],
-}

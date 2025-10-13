@@ -1,5 +1,5 @@
 
-export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform','
+export const real2036 ITServices = [{id: 'quantum-cloud-infrastructure-platform','
     name: 'Quantum Cloud Infrastructure Platform','
     tagline: 'Next-generation quantum cloud computing','
     description:,
@@ -18,7 +18,7 @@ export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform',
     icon: '','
     marketPrice: '$8,000-15,000/month''
     benefits: [}
-export const real2036ITServices = [{/* TODO: Fix JSX expression */}
+export const real2036 ITServices = [{/* TODO: Fix JSX expression */}
   s: [}
       'Access to quantum computing power''
       'Hybrid classical-quantum processing''
@@ -261,7 +261,7 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$6,000-10,000/month''
     benefit,
   s: [,
-      '1000x faster database queries''
+      '1000 x faster database queries''
       'Quantum data compression''
       'Advanced search capabilities''
       'Future-proof data management''
@@ -505,7 +505,7 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$7,000-12,000/month''
     benefit,
   s: [,
-      '100x data compression''
+      '100 x data compression''
       'Quantum data encoding''
       'Advanced storage optimization''
       'Future-proof storage technology''
@@ -618,7 +618,7 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
     ]
   }
 ];
-export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform','
+export const real2036 ITServices = [{id: 'quantum-cloud-infrastructure-platform','
     name: 'Quantum Cloud Infrastructure Platform','
     tagline: 'Next-generation quantum cloud computing','
     description:,
@@ -637,7 +637,7 @@ export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform',
     icon: '','
     marketPrice: '$8,000-15,000/month''
     benefits: [}
-export const real2036ITServices = [{/* TODO: Fix JSX expression */}
+export const real2036 ITServices = [{/* TODO: Fix JSX expression */}
   s: [}
       'Access to quantum computing power''
       'Hybrid classical-quantum processing''
@@ -880,7 +880,7 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$6,000-10,000/month''
     benefit,
   s: [,
-      '1000x faster database queries''
+      '1000 x faster database queries''
       'Quantum data compression''
       'Advanced search capabilities''
       'Future-proof data management''
@@ -1124,7 +1124,7 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$7,000-12,000/month''
     benefit,
   s: [,
-      '100x data compression''
+      '100 x data compression''
       'Quantum data encoding''
       'Advanced storage optimization''
       'Future-proof storage technology''
@@ -1191,7 +1191,7 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Reduced recovery time''
     ]
     useCases: [;
-export const real2036ITServices = [{id: 'quantum - cloud - infrastructure - platform''
+export const real2036 ITServices = [{id: 'quantum - cloud - infrastructure - platform''
     name: 'Quantum Cloud Infrastructure Platform','
     tagline: 'Next - generation quantum cloud computing','
     description: unknown,
@@ -1225,7 +1225,7 @@ export const real2036ITServices = [{id: 'quantum - cloud - infrastructure - plat
     description: unknown,
     useCase,
   s: [,;
-export const real2036ITServices = [{/* TODO: Fix JSX expression */}
+export const real2036 ITServices = [{/* TODO: Fix JSX expression */}
     ]}
   },
     i,
@@ -1414,7 +1414,7 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$6, 000 - 10, 000 / month','
     benefit,
   s: [,
-      '1000x faster database queries','
+      '1000 x faster database queries','
       'Quantum data compression','
       'Advanced search capabilities','
       'Future - proof data management'],'
@@ -1614,7 +1614,7 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$7, 000 - 12, 000 / month','
     benefit,
   s: [,
-      '100x data compression','
+      '100 x data compression','
       'Quantum data encoding','
       'Advanced storage optimization','
       'Future - proof storage technology'],'
@@ -1688,7 +1688,7 @@ export const real2036 ITServices = [;
       'Business continuity']}'
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
     ];
-export const real2036ITServices = [;
+export const real2036 ITServices = [;
   // TODO: Add items
 ]
   {
@@ -1718,7 +1718,6 @@ export const real2036ITServices = [;
     useCases: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -1746,7 +1745,6 @@ export const real2036ITServices = [;
     useCases: [}
       'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -1774,7 +1772,6 @@ export const real2036ITServices = [;
     useCases: [}
       'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -1802,7 +1799,6 @@ export const real2036ITServices = [;
     useCases: [}
       'IoT applicationsReal-time analyticsEdge AI processingDistributed computing''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -1826,11 +1822,10 @@ export const real2036ITServices = [;
     icon: ',''
     marketPrice: '$6,000-10,000/month''
     benefits: [,
-      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management'];,'
+      '1000 x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management'];,'
     useCases: [}
       'Big data analyticsReal-time searchData warehousingBusiness intelligence''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -1858,7 +1853,6 @@ export const real2036ITServices = [;
     useCases: [}
       'Enterprise network securityCloud securityIoT securityRemote work security''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -1886,7 +1880,6 @@ export const real2036ITServices = [;
     useCases: [}
       'Government communicationsFinancial networksResearch networksQuantum internet backbone''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -1914,7 +1907,6 @@ export const real2036ITServices = [;
     useCases: [}
       'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -1938,11 +1930,10 @@ export const real2036ITServices = [;
     icon: ',''
     marketPrice: '$7,000-12,000/month''
     benefits: [,
-      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology'];,'
+      '100 x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology'];,'
     useCases: [}
       'Big data storageData archivingCloud storageData backup''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -1972,57 +1963,47 @@ export const real2036ITServices = [;
   s: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'IoT applicationsReal-time analyticsEdge AI processingDistributed computing''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Big data analyticsReal-time searchData warehousingBusiness intelligence''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Enterprise network securityCloud securityIoT securityRemote work security''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Government communicationsFinancial networksResearch networksQuantum internet backbone''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Big data storageData archivingCloud storageData backup''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
     ]}
-  }
 ]
 }
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
     ];
-export const real2036ITServices = [;
+export const real2036 ITServices = [;
   // TODO: Add items
 ]
   {
@@ -2052,7 +2033,6 @@ export const real2036ITServices = [;
     useCases: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -2080,7 +2060,6 @@ export const real2036ITServices = [;
     useCases: [}
       'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -2108,7 +2087,6 @@ export const real2036ITServices = [;
     useCases: [}
       'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -2136,7 +2114,6 @@ export const real2036ITServices = [;
     useCases: [}
       'IoT applicationsReal-time analyticsEdge AI processingDistributed computing''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -2160,11 +2137,10 @@ export const real2036ITServices = [;
     icon: ',''
     marketPrice: '$6,000-10,000/month''
     benefits: [,
-      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management'];,'
+      '1000 x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management'];,'
     useCases: [}
       'Big data analyticsReal-time searchData warehousingBusiness intelligence''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -2192,7 +2168,6 @@ export const real2036ITServices = [;
     useCases: [}
       'Enterprise network securityCloud securityIoT securityRemote work security''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -2220,7 +2195,6 @@ export const real2036ITServices = [;
     useCases: [}
       'Government communicationsFinancial networksResearch networksQuantum internet backbone''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -2248,7 +2222,6 @@ export const real2036ITServices = [;
     useCases: [}
       'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -2272,11 +2245,10 @@ export const real2036ITServices = [;
     icon: ',''
     marketPrice: '$7,000-12,000/month''
     benefits: [,
-      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology'];,'
+      '100 x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology'];,'
     useCases: [}
       'Big data storageData archivingCloud storageData backup''
     ]}
-  }
   {
   // TODO: Add properties
 }
@@ -2306,54 +2278,44 @@ export const real2036ITServices = [;
   s: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'IoT applicationsReal-time analyticsEdge AI processingDistributed computing''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Big data analyticsReal-time searchData warehousingBusiness intelligence''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Enterprise network securityCloud securityIoT securityRemote work security''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Government communicationsFinancial networksResearch networksQuantum internet backbone''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Big data storageData archivingCloud storageData backup''
     ]}
-  }
   {/* TODO: Fix JSX expression */}
   s: [}
       'Data center recoveryCloud recoveryApplication recoveryBusiness continuity''
     ]}
-  }
 ];
-export const real2036ITServices = [ i,;
+export const real2036 ITServices = [ i,;
   d: 'quantum-cloud-infrastructure-platform' nam,''
   e: 'Quantum Cloud Infrastructure Platform' taglin,''
   e: 'Next-generation quantum cloud computing' descriptio,'
@@ -2416,7 +2378,7 @@ export const real2036ITServices = [ i,;
   y: 'Quantum Database' ico,''
   n: '🗄️⚛️' marketPric,''
   e: '$6,000-10,000/month' benefit,'
-  s: [' '1000x faster database queries' 'Quantum data compression' 'Advanced search capabilities' 'Future-proof data management' ] useCase,'
+  s: [' '1000 x faster database queries' 'Quantum data compression' 'Advanced search capabilities' 'Future-proof data management' ] useCase,'
   s: [' 'Big data analytics' 'Real-time search' 'Data warehousing' 'Business intelligence' ] } ' i,'
   d: 'ai-powered-network-security' nam,''
   e: 'AI-Powered Network Security' taglin,''
@@ -2468,7 +2430,7 @@ export const real2036ITServices = [ i,;
   y: 'Quantum Storage' ico,''
   n: '💾⚛️' marketPric,''
   e: '$7,000-12,000/month' benefit,'
-  s: [' '100x data compression' 'Quantum data encoding' 'Advanced storage optimization' 'Future-proof storage technology' ] useCase,'
+  s: [' '100 x data compression' 'Quantum data encoding' 'Advanced storage optimization' 'Future-proof storage technology' ] useCase,'
   s: [' 'Big data storage' 'Data archiving' 'Cloud storage' 'Data backup' ] } ' i,'
   d: 'ai-powered-disaster-recovery' nam,''
   e: 'AI-Powered Disaster Recovery' taglin,''
@@ -2488,7 +2450,7 @@ export const real2036ITServices = [ i,;
   n: '☁️⚛️' marketPric,''
   e: '$8,000-15,000/month' benefit,'
   s: [' 'Access to quantum computing power' 'Hybrid classical-quantum processing' 'Future-proof cloud infrastructure' 'Quantum advantage in the cloud' ] useCase,'
-  s: [' 'Scientific research computing' 'Financial modeling' 'Drug discovery' 'Climate simulation' ] } ' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] } ]; export const real2036ITServices = [ ' i,';'
+  s: [' 'Scientific research computing' 'Financial modeling' 'Drug discovery' 'Climate simulation' ] } ' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] } ]; export const real2036 ITServices = [ ' i,';'
   d: 'quantum-cloud-infrastructure-platform' nam,''
   e: 'Quantum Cloud Infrastructure Platform' taglin,''
   e: 'Next-generation quantum cloud computing' descriptio,'
@@ -2551,7 +2513,7 @@ export const real2036ITServices = [ i,;
   y: 'Quantum Database' ico,''
   n: '🗄️⚛️' marketPric,''
   e: '$6,000-10,000/month' benefit,'
-  s: [' '1000x faster database queries' 'Quantum data compression' 'Advanced search capabilities' 'Future-proof data management' ] useCase,'
+  s: [' '1000 x faster database queries' 'Quantum data compression' 'Advanced search capabilities' 'Future-proof data management' ] useCase,'
   s: [' 'Big data analytics' 'Real-time search' 'Data warehousing' 'Business intelligence' ] } ' i,'
   d: 'ai-powered-network-security' nam,''
   e: 'AI-Powered Network Security' taglin,''
@@ -2603,7 +2565,7 @@ export const real2036ITServices = [ i,;
   y: 'Quantum Storage' ico,''
   n: '💾⚛️' marketPric,''
   e: '$7,000-12,000/month' benefit,'
-  s: [' '100x data compression' 'Quantum data encoding' 'Advanced storage optimization' 'Future-proof storage technology' ] useCase,'
+  s: [' '100 x data compression' 'Quantum data encoding' 'Advanced storage optimization' 'Future-proof storage technology' ] useCase,'
   s: [' 'Big data storage' 'Data archiving' 'Cloud storage' 'Data backup' ] } ' i,'
   d: 'ai-powered-disaster-recovery' nam,''
   e: 'AI-Powered Disaster Recovery' taglin,''
@@ -2617,7 +2579,7 @@ export const real2036ITServices = [ i,;
   n: '🔄🤖' marketPric,''
   e: '$4,500-7,000/month' benefit,'
   s: [' 'Automated recovery procedures' 'Intelligent backup management' 'Predictive recovery planning' 'Reduced recovery time' ] useCase,'
-  s: [ export const real2036ITServices = [, ' i,';'
+  s: [ export const real2036 ITServices = [, ' i,';'
   d: 'quantum - cloud - infrastructure - platform',' nam,'
   e: 'Quantum Cloud Infrastructure Platform',' taglin,'
   e: 'Next - generation quantum cloud computing', descriptio,'
@@ -2680,7 +2642,7 @@ export const real2036ITServices = [ i,;
   y: 'Quantum Database',' ico,'
   n: '🗄️⚛️',' market_pric,'
   e: '$6, 000 - 10, 000 / month', benefit,'
-  s: [,' '1000x faster database queries',' 'Quantum data compression',' 'Advanced search capabilities',' 'Future - proof data management'], use_case,'
+  s: [,' '1000 x faster database queries',' 'Quantum data compression',' 'Advanced search capabilities',' 'Future - proof data management'], use_case,'
   s: [,' 'Big data analytics',' 'Real - time search',' 'Data warehousing',' 'Business intelligence']}, ' i,'
   d: 'ai - powered - network - security',' nam,'
   e: 'AI - Powered Network Security',' taglin,'
@@ -2732,7 +2694,7 @@ export const real2036ITServices = [ i,;
   y: 'Quantum Storage',' ico,'
   n: '💾⚛️',' market_pric,'
   e: '$7, 000 - 12, 000 / month', benefit,'
-  s: [,' '100x data compression',' 'Quantum data encoding',' 'Advanced storage optimization',' 'Future - proof storage technology'], use_case,'
+  s: [,' '100 x data compression',' 'Quantum data encoding',' 'Advanced storage optimization',' 'Future - proof storage technology'], use_case,'
   s: [,' 'Big data storage',' 'Data archiving',' 'Cloud storage',' 'Data backup']}, ' i,'
   d: 'ai - powered - disaster - recovery',' nam,'
   e: 'AI - Powered Disaster Recovery',' taglin,'
@@ -2746,7 +2708,7 @@ export const real2036ITServices = [ i,;
   n: '🔄🤖',' market_pric,'
   e: '$4, 500 - 7, 000 / month', benefit,'
   s: [,' 'Automated recovery procedures',' 'Intelligent backup management',' 'Predictive recovery planning',' 'Reduced recovery time'], use_case,'
-  s: [,' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']}' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] }' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [ ' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']}' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [ {/* TODO: Fix JSX expression */}'
+  s: [,' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']}' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] }' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036 ITServices = [ ' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']}' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036 ITServices = [ {/* TODO: Fix JSX expression */}'
   s: [}' 'Scientific research computingFinancial modelingDrug discoveryClimate simulation' ]} } {/* TODO: Fix JSX expression */}'
   s: [}' 'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting' ]} } {/* TODO: Fix JSX expression */}'
   s: [}' 'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure' ]} } {/* TODO: Fix JSX expression */}'
@@ -2756,7 +2718,7 @@ export const real2036ITServices = [ i,;
   s: [}' 'Government communicationsFinancial networksResearch networksQuantum internet backbone' ]} } {/* TODO: Fix JSX expression */}'
   s: [}' 'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure' ]} } {/* TODO: Fix JSX expression */}'
   s: [}' 'Big data storageData archivingCloud storageData backup' ]} } {/* TODO: Fix JSX expression */}'
-  s: [}' 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ]} } ]; }' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [ {/* TODO: Fix JSX expression */}'
+  s: [}' 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ]} } ]; }' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036 ITServices = [ {/* TODO: Fix JSX expression */}'
   s: [}' 'Scientific research computingFinancial modelingDrug discoveryClimate simulation' ]} } {/* TODO: Fix JSX expression */}'
   s: [}' 'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting' ]} } {/* TODO: Fix JSX expression */}'
   s: [}' 'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure' ]} } {/* TODO: Fix JSX expression */}'

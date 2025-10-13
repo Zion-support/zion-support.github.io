@@ -65,4 +65,3 @@ const { id, metric } = req.query
 const post = incrementMetric(id, metric as 'views' | 'likes' | 'shares')'
   if (!post) return res.status(404).json({ error: 'Not found' })'
   return res.status(200).json({ ok: true, metrics: post.metrics })
-}

@@ -10,5 +10,4 @@ if (_root) {
       <App />)
     </React.StrictMode>)
   )
-if (_root) {/* TODO: Fix JSX expression */}
-}
+if (_root) {/* TODO: Fix JSX expression */

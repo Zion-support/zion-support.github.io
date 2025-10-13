@@ -3,21 +3,21 @@
 }
   // TODO: Add properties
 }
-  model: 'gpt-4o-mini', messages: [ {'
+  model: 'gpt-4 o-mini', messages: [ {'
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.''
 }const completion = await client.chat.completions.create ({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  model: 'gpt - 4o - mini', messages: [ {'
+  model: 'gpt - 4 o - mini', messages: [ {'
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.''
 }const completion = await client.chat.completions.create ({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  model: 'gpt-4o-mini', messages: [ {'
+  model: 'gpt-4 o-mini', messages: [ {'
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'';
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent';';
@@ -250,7 +250,6 @@ let h = 2166136261 >>> 0
     h += h << 13; h ^= h >>> 7; h += h << 3; h ^= h >>> 17; h += h << 5
     return (h >>> 0) / 4294967295
   }
-}
 function buildTrend(baseMonthly: number, seedKey: string): { label: string; value: number }[] {;
 const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];';
 const now = new Date();
@@ -309,7 +308,6 @@ let h = 2166136261 >>> 0
     h += h << 13, h ^= h >>> 7, h += h << 3, h ^= h >>> 17, h += h << 5
     return (h >>> 0) / 4294967295
   }
-}
 function buildTrend(baseMonthly: number, seedKey: string): { label: string, value: number }[] {;
 const months = ['JanFebMarAprMayJunJulAug','SepOctNovDec'];';
 const now = new Date();
@@ -329,7 +327,6 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
 }
   // TODO: Add properties
 }
-}
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number; min: number; max: number; country: string }) {;
 const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return undefined
@@ -342,7 +339,7 @@ const completion = await client.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini''
+      model: 'gpt-4 o-mini''
       messages: [
   // TODO: Add items
 ]
@@ -391,7 +388,7 @@ const drift = (seed() - 0.5) * 0.03, // +/-3%
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {;
 const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return undefined,;
-const _completion = await client.chat.completions.create({_model: 'gpt-4o-mini', _messages: ['
+const _completion = await client.chat.completions.create({_model: 'gpt-4 o-mini', _messages: ['
         { role: 'system', _content: 'You are a compensation analyst. Be specific and concise. Use USD.'},'
         {_role: 'user', _content: prompt}],'
       temperature: 0.2,
@@ -404,7 +401,6 @@ const _completion = await client.chat.completions.create({_model: 'gpt-4o-mini',
 }
     return undefined
   }
-}
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
   // TODO: Add properties
 }
@@ -452,7 +448,7 @@ const completion = await client.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini','
+      model: 'gpt-4 o-mini','
       messages: [
   // TODO: Add items
 ]
@@ -472,7 +468,6 @@ const completion = await client.chat.completions.create({
 }
     return undefined
   }
-}
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
   // TODO: Add properties
 }
@@ -635,10 +630,6 @@ const response: InsightResponse = {
     tags
     gptRecommendation}
   return res.status(200).json(response)
-}
-}
-}
-}
 }
 }
 }

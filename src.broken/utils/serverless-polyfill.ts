@@ -15,4 +15,3 @@ export const serverless-polyfill = {
   // TODO: Add properties
 }
   // TODO: Implement utility functions
-}

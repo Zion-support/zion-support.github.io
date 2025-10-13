@@ -108,7 +108,6 @@ const linkText = anchor.textContent.trim()
 }
         console.log(`Invalid URL: ${href}`)
       }
-    }
   })
   // Extract form actions;
 const forms = document.querySelectorAll('form[action]')'
@@ -133,7 +132,6 @@ const absoluteUrl = new URL(action, baseUrl).href
 }
         console.log(`Invalid form action: ${action}`)
       }
-    }
   })
   return links
 }
@@ -155,8 +153,6 @@ const baseObj = new URL(baseUrl)
 }
     return false
   }
-}
-
 // Analyze a single URL
 async function analyzeUrl(url, depth = 0) {
   // TODO: Add properties
@@ -202,7 +198,6 @@ const links = extractLinks(response.body, url)
 }
             await analyzeUrl(link.url, depth + 1)
           }
-        }
       }
     } else if (response.statusCode === 404) {
   // TODO: Add properties
@@ -245,8 +240,6 @@ const links = extractLinks(response.body, url)
       error: error.message
     })
   }
-}
-
 // Main analysis function
 async function analyzeWebsite() {
   // TODO: Add properties
@@ -349,8 +342,6 @@ const recommendations = []
 }
     console.error('Analysis failed:', error)'
   }
-}
-
 // Run the analysis
 analyzeWebsite()
 class WebsiteAnalyzer {
@@ -394,8 +385,6 @@ class WebsiteAnalyzer {
 }
       console.error('❌ Analysis failed:', error.message)'
     }
-  }
-
   async crawlWebsite(url, depth) {
   // TODO: Add properties
 }
@@ -443,7 +432,6 @@ const links = this.extractLinks(document, url)
 }
             await this.crawlWebsite(link.href, depth + 1)
           }
-        }
       }
     } catch (err) {
   // TODO: Add properties
@@ -453,8 +441,6 @@ const links = this.extractLinks(document, url)
       console.error(`❌ Error analyzing ${url}:`, err.message)
       this.brokenLinks.push({ url, error: err.message })
     }
-  }
-
   async fetchPage(url) {
   // TODO: Add properties
 }
@@ -532,8 +518,6 @@ const absoluteUrl = this.resolveUrl(href, baseUrl)
 }
       return href
     }
-  }
-
   isInternalLink(url) {
   // TODO: Add properties
 }
@@ -550,8 +534,6 @@ const baseUrlObj = new URL(this.baseUrl)
 }
       return false
     }
-  }
-
   generateReport() {
   // TODO: Add properties
 }
@@ -612,8 +594,6 @@ const report = {
     fs.writeFileSync('website-analysis-report.json', JSON.stringify(report, null, 2))'
     console.log('\n💾 Report saved to website-analysis-report.json')'
   }
-}
-
 // Run the analysis;
 const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com')'
 analyzer.analyze().catch(console.error)

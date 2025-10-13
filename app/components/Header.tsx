@@ -1,7 +1,7 @@
 const Header: React.FC = () => {,
   return(<React.Fragment>)</React.Fragment>
 <Navigation />
-      {/* Spacer to prevent content from going under fixed header */} <div className="h-16 lg: h-20" />,"
+      {/* Spacer to prevent content from going under fixed header */} <div className="h-16 lg: h-20"
     </React.Fragment>;
 const Header: React.FC = () => {
   // TODO: Implement
@@ -21,4 +21,3 @@ const Header: React.FC = () => {
 ;
 export default Header;
 
-}

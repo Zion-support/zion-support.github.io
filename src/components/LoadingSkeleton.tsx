@@ -6,7 +6,6 @@ interface SkeletonProps {
 }
     // TODO: Add content
   }
-}
   className?: string
   width?: string | number
   height?: string | number
@@ -17,7 +16,6 @@ const,
   Skeleton: React.FC,
           <SkeletonProps> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   className = ',''
 //   width,
 //   height,
@@ -30,83 +28,56 @@ const roundedClasses = rounded ? 'rounded' : '''
   return (
   // TODO: Add parameters
 )
-    <div className="loadingskeleton">"
-      {/* Component content */}
-    </div>)
-  )
-}
-          ""
-          <div className="bg-white rounded-lg shadow-lg p-6">"
-<Skeleton height="24px" width="75%" className="mb-4" />"
-<Skeleton height="16px" width="100%" className="mb-2" />"
-<Skeleton height="16px" width="90%" className="mb-4" />"
-<Skeleton height="40px" width="120px" rounded />"
-);
-export const,;
-  TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => ()
-  ""
-          <div className="space-y-2">"
+    <div className="loadingskeleton""
+          <div className="
+<Skeleton height="24 px"75%" className="
+<Skeleton height="16 px"100%" className="
+<Skeleton height="16 px"90%" className="
+<Skeleton height="40 px"120 px" rounded />""
+          <div className="
     {/* TODO: Fix JSX expression */}
   h: lines }).map((_, index) => ()
           <Skeleton>
-        key={index}""
-        height="16px""
-        width={index === lines - 1 ? '75%' : '100%'}'
-// />
-    ))}
-);
-export const,;
-  ImageSkeleton: React.FC<{ aspectRatio?: string }> = ({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  aspectRatio = '16/9')'
-}) => (""
-          < className="bg-gray-200 rounded-lg animate-pulse"$2 />"
-    style={{ aspectRatio }}""
-    role="status"""
-    aria-label="Loading image"""
+        key={index}""16 px"""
+          < className="
+    style={{ aspectRatio }}""status""
+    aria-label="Loading image""
   >
-<span className="sr-only">Loading image...</span></div>)"
+<span className="
 );
 export const,;
   ListSkeleton: React.FC<{ items?: number }> = ({ items = 5 }) => ()
-  ""
-          <div className="space-y-3">"
+  ""space-y-3"
     {/* TODO: Fix JSX expression */}
-  h: items }).map((_, index) => (""
-<div key={index} className="flex items-center space-x-3">"
-<Skeleton height="40px" width="40px" rounded />"
-<div className="flex-1 space-y-2">"
-<Skeleton height="16px" width="80%" />"
-<Skeleton height="14px" width="60%" /></div>"
+  h: items }).map((_, index) => ("
+<div key={index} className="flex items-center space-x-3"40 px" width=" rounded />"
+<div className="
+<Skeleton height="16 px"80%" />"14 px" width=" /></div>"
 </div>)
     ))}
 );
 export const,;
   TableSkeleton: React.FC<{ rows?: number, columns?: number }> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   rows = 5,
   columns = 4;)
-}) => (""
-          <div className="overflow-hidden">"
-< className="grid gap-4 mb-4" style={/* TODO: Fix JSX expression */})$2 />"
-  s: `repeat(${columns}, 1fr)` }}>
+}) => ("
+          <div className="overflow-hidden"grid gap-4 mb-4"
+  s: `repeat(${columns}, 1 fr)` }}>
       {/* TODO: Fix JSX expression */}
   h: columns }).map((_, index) => ()
-        ""
-          <Skeleton key={index} height="20px" />"
+        "
+          <Skeleton key={index} height="20 px"
       ))}
     {/* TODO: Fix JSX expression */}
-  h: rows }).map((_, rowIndex) => (<div></div>""
-        key={rowIndex} className="grid gap-4 mb-2""
+  h: rows }).map((_, rowIndex) => (<div></div>""grid gap-4 mb-2"
         style={/* TODO: Fix JSX expression */})`
-  s: `repeat(${columns}, 1fr)` }}
+  s: `repeat(${columns}, 1 fr)` }
 // >
         {/* TODO: Fix JSX expression */}
   h: columns }).map((_, colIndex) => ()
-          ""
-          <Skeleton key={colIndex} height="16px" />"
+          "
+          <Skeleton key={colIndex} height="16 px"
         ))}
     ))}
 );

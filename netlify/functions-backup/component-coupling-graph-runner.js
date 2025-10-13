@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'component-coupling-graph-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'component-coupling-graph-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'component-coupling-graph-runner',' source: event.source || 'unknown', graph: {' status: 'generating', components: 0, relationships: 0,'
         lastGenerated: new Date().toISOString() } }) } return result; } catch (error) {

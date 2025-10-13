@@ -108,7 +108,7 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     useCases: ['Content creation', 'Social media management', 'Engagement optimization', 'Marketing automation', 'Brand building'],'
     roi: 'Increase engagement by 300% and save 20+ hours per week','
     competitors: ['Hootsuite ($99/month)', 'Buffer ($15/month)', 'None for AI content creation'],'
-    marketSize: '$15B social media management market','
+    marketSize: '$15 B social media management market','
     growthRate: '200% annual growth','
     contactInfo: contact,
     realImplementation: true,
@@ -166,7 +166,7 @@ export const innovativeMicroSaasSolutions2025: InnovativeMicroSaasSolution[] = [
     useCases: ['Customer feedback analysis', 'Sentiment monitoring', 'Product improvement', 'Customer satisfaction tracking', 'Competitive analysis'],'
     roi: 'Improve customer satisfaction by 40% and reduce churn by 25%','
     competitors: ['MonkeyLearn ($299/month)', 'Lexalytics ($500/month)', 'None with 95.8% accuracy'],'
-    marketSize: '$8B customer experience market','
+    marketSize: '$8 B customer experience market','
     growthRate: '150% annual growth','
     contactInfo: contact,
     realImplementation: true,

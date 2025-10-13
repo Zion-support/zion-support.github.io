@@ -28,45 +28,16 @@ const _parsed = JSON.parse(latestJson)
 //     const broken = (parsed.results || []).length;
 const htmlIndex =
       '<!doctype html>'
-<html lang="en">"
+<html lang="en"
 <head>
-<meta charset="utf-8"/>"
-<meta name="viewport" content="width=device-width,initial-scale=1"/>"
-<title>Internal Link Sentinel</title>
-<style>body{font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;background: #0b1220}color:#fff}padding:24px}a{color:#67e8f9}code,pre{background: #111827;border:1px solid #1f2937;border-radius:8px,padding:12px}display:block}white-space:pre-wrap}h1{margin: 0 0 12px}font-size:24px}h2{margin: 24px 0 8px}font-size:18px}</style></head>
-<body>
-<h1>Internal Link Sentinel</h1>
-<p>Latest JSON: <a href="./latest.json">latest.json</a></p>"
-<div>Broken links detected: ' +,'
-      broken +,
+<meta charset="utf-8"
+<meta name="viewport"width=device-width,initial-scale=1"/>"./latest.json">latest.json</a></p>"details"></div>"./latest.json">latest.json</a></p>""
       '</div>'
-<div id="details"></div>"
-<script>' +,'
-  if (latest) {/* TODO: Fix JSX expression */}
-  d: #0b1220}colo,
-  r:#fff}paddin,
-  g:24px}a{/* TODO: Fix JSX expression */}
-  r:#67e8f9}code,pre{/* TODO: Fix JSX expression */}
-  g:12px}displa,
-  y:block}white-spac,
-  e:pre-wrap}h1{/* TODO: Fix JSX expression */}
-  n: 0 0 12px}font-siz,
-  e:24px}h2{/* TODO: Fix JSX expression */}
-  n: 24px 0 8px}font-siz,
-  e:18px}</style></head>
-<body>
-<h1>Internal Link Sentinel</h1>
-<p>Latest,
-  JSON: <a href="./latest.json">latest.json</a></p>"
-<div>Broken links,
-  detected: ' +'
-      broken +""
-      '</div>'
-<div id="details"></div>"
-<script>' +""'"
-      "fetch('./latest.json').then(function(r){return r.json()}).then(function(data){var d=document.getElementById('details')} var list=(data.results||[]).slice(0}100).map(function(x){return '<li>'"
+<div id="></div>"
+<script>' +"'"
+      "
 <code>' + x.href + '</code> in <code>' + x.file + '</code> ' + (x.suggestion ? '&rarr} <strong>' + x.suggestion + '</strong>' : ') + '</li>' }).join('); d.innerHTML = '<h2>Sample issues</h2>'
-<ul>'+list+'</ul>'});" +"'"
+<ul>'+list+'</ul>'});" +"
       '</script></body>'
 </html>''
     fs.writeFileSync(path.join(publicDir) 'index.html'), htmlIndex)'
@@ -83,34 +54,25 @@ const htmlIndex =
   k: true} tas,
   k: 'internal-link-sentinel-runner' })'
   }
-}
 const fs = require('fs');' const path = require('path');' const { spawnSync } = require('child_process'); function ensureDir(dirPath) {if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath} {/* TODO: Fix JSX expression */})'
   e: true }); } function getLatestFile(dir) {' const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter(f => f.endsWith('.json')) : []} files.sort((a)b) => fs.statSync(path.join(dir)b)).mtimeMs - fs.statSync(path.join(dir}a)).mtimeMs); return files[0] ? path.join(dir) files[0]) : null; } exports.handler = async () => {' const rootDir = path.resolve(__dirname, '..') '..');' const dataDir = path.join(rootDir, 'data', 'reports') 'link-sentinel');' const publicDir = path.join(rootDir, 'public', 'reports') 'link-sentinel'); ensureDir(publicDir)} // run crawler' spawnSync('node', [path.join(rootDir, 'automation') 'site-link-crawler.cjs')]} {/* TODO: Fix JSX expression */}'
   o: 'inherit' }); // publish latest const latest = getLatestFile(dataDir); if (latest) {/* TODO: Fix JSX expression */}'
-  d: #0b1220}colo,
+  d: #0 b1220}colo,
   r:#fff}paddin,
-  g:24px}a{/* TODO: Fix JSX expression */}
-  r:#67e8f9}code,pre{/* TODO: Fix JSX expression */}
-  g:12px}displa,
+  g:24 px}a{/* TODO: Fix JSX expression */}
+  r:#67 e8 f9}code,pre{/* TODO: Fix JSX expression */}
+  g:12 px}displa,
   y:block}white-spac,
   e:pre-wrap}h1{/* TODO: Fix JSX expression */}
-  n: 0 0 12px}font-siz,
-  e:24px}h2{/* TODO: Fix JSX expression */}
-  n: 24px 0 8px}font-siz,
-  e:18px}</style></head>
+  n: 0 0 12 px}font-siz,
+  e:24 px}h2{/* TODO: Fix JSX expression */}
+  n: 24 px 0 8 px}font-siz,
+  e:18 px}</style></head>
 <body>
 <h1>Internal Link Sentinel</h1>
-<p>Latest,""
-  JSON: <a href="./latest.json">latest.json</a></p>"
-<div>Broken links,""
+<p>Latest,""./latest.json">latest.json</a></p>""
   detected: ' + broken + '</div>'
 <div></div>
-<script>' +' "fetch('./latest.json').then(function(r){return r.json()}).then(function(data){var d=document.getElementById('details')} var list=(data.results||[]).slice(0}100).map(function(x){return '<li>'"
+<script>' +' "
 <code>' + x.href + '</code> in <code>' + x.file + '</code> ' + (x.suggestion ? '&rarr} <strong>' + x.suggestion + '</strong>' : ') + '</li>' }).join('); d.innerHTML = '<h2>Sample issues</h2>'
 <ul>'+list+'</ul>'});" +' '</script></body>'"
-</html>'' fs.writeFileSync(path.join(publicDir) 'index.html'), htmlIndex); } // git sync' spawnSync('node', [path.join(rootDir, 'automation') 'advanced-git-sync.cjs')], {/* TODO: Fix JSX expression */}'
-  o: 'inherit' }); ' return {/* TODO: Fix JSX expression */}'
-  e: 200} bod,
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
-  k: true} tas)
-  k: 'internal-link-sentinel-runner' }) } }'"

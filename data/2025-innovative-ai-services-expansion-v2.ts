@@ -1,4 +1,4 @@
-export const innovativeAIServices2025ExpansionV2 = [;
+export const innovativeAIServices2025 ExpansionV2 = [;
   // TODO: Add items
 ]
   // AI Consciousness Evolution Platform
@@ -43,7 +43,7 @@ export const innovativeAIServices2025ExpansionV2 = [;
     useCases: ['AI consciousness research', 'Emotional AI development', 'Cognitive computing', 'Human-AI interaction'],'
     roi: 'Accelerate AI consciousness research by 200% and create breakthrough AI systems','
     competitors: ['No direct competitors', 'Research institutions', 'AI consciousness projects'],'
-    marketSize: '$5B+ AI consciousness research market','
+    marketSize: '$5 B+ AI consciousness research market','
     growthRate: '45% CAGR','
     variant: 'quantum-matrix','
     contactInfo: {
@@ -105,7 +105,7 @@ export const innovativeAIServices2025ExpansionV2 = [;
     useCases: ['Quantum AI research', 'Superintelligent systems', 'Complex problem solving', 'Advanced learning'],'
     roi: 'Accelerate AI development by 300% and solve previously unsolvable problems','
     competitors: ['No direct competitors', 'Quantum computing companies', 'AI research institutions'],'
-    marketSize: '$8B+ quantum AI market','
+    marketSize: '$8 B+ quantum AI market','
     growthRate: '52% CAGR','
     variant: 'quantum-matrix','
     contactInfo: {
@@ -167,7 +167,7 @@ export const innovativeAIServices2025ExpansionV2 = [;
     useCases: ['Autonomous research', 'Scientific discovery', 'Experimental design', 'Research collaboration'],'
     roi: 'Accelerate research by 400% and enable breakthrough discoveries','
     competitors: ['No direct competitors', 'Research tools', 'AI assistants'],'
-    marketSize: '$12B+ research automation market','
+    marketSize: '$12 B+ research automation market','
     growthRate: '38% CAGR','
     variant: 'quantum-matrix','
     contactInfo: {
@@ -229,7 +229,7 @@ export const innovativeAIServices2025ExpansionV2 = [;
     useCases: ['Mental health support', 'Educational assistance', 'Social interaction', 'Therapeutic applications'],'
     roi: 'Improve mental health outcomes by 60% and enhance human-AI relationships','
     competitors: ['Replika', 'Woebot', 'Wysa', 'Ginger', 'Talkspace'],'
-    marketSize: '$18B+ mental health AI market','
+    marketSize: '$18 B+ mental health AI market','
     growthRate: '42% CAGR','
     variant: 'quantum-matrix','
     contactInfo: {
@@ -287,11 +287,11 @@ export const innovativeAIServices2025ExpansionV2 = [;
     category: 'Quantum AI & Metaverse','
     realService: true,
     technology: ['Quantum computing', 'AI consciousness', 'Metaverse technology', 'VR/AR', 'Next.js', 'PostgreSQL'],'
-    integrations: ['VR headsets', 'AR devices', 'Gaming platforms', 'Social media', 'Educational tools', '3D engines'],'
+    integrations: ['VR headsets', 'AR devices', 'Gaming platforms', 'Social media', 'Educational tools', '3 D engines'],'
     useCases: ['Virtual worlds', 'Gaming experiences', 'Educational simulations', 'Social interaction'],'
     roi: 'Create unprecedented metaverse experiences and accelerate virtual world development by 500%','
     competitors: ['Meta', 'Roblox', 'Decentraland', 'Sandbox', 'VRChat'],'
-    marketSize: '$65B+ metaverse market','
+    marketSize: '$65 B+ metaverse market','
     growthRate: '48% CAGR','
     variant: 'quantum-matrix','
     contactInfo: {
@@ -353,7 +353,7 @@ export const innovativeAIServices2025ExpansionV2 = [;
     useCases: ['Business analysis', 'Strategic planning', 'Performance optimization', 'Market intelligence'],'
     roi: 'Improve business decision making by 80% and accelerate strategic planning by 300%','
     competitors: ['Tableau', 'Power BI', 'QlikView', 'Looker', 'Domo'],'
-    marketSize: '$28B+ business intelligence market','
+    marketSize: '$28 B+ business intelligence market','
     growthRate: '26% CAGR','
     variant: 'quantum-matrix','
     contactInfo: {
@@ -503,7 +503,7 @@ export const innovativeAIServices2025ExpansionV2 = [;
 ]
   // TODO: Add items
 ]
-      'Detect threats 10x faster than traditional methods','
+      'Detect threats 10 x faster than traditional methods','
       'Reduce false positives by 80%','
       'Automate 70% of security responses','
       'Improve threat detection accuracy by 95%','
@@ -855,7 +855,7 @@ export const innovativeAIServices2025ExpansionV2 = [;
 ]
   // TODO: Add items
 ]
-      'Generate insights 10x faster','
+      'Generate insights 10 x faster','
       'Improve decision-making by 40%','
       'Reduce data analysis time by 80%','
       'Identify trends and patterns','

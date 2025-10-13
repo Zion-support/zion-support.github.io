@@ -84,7 +84,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     textColor: 'text-green-400','
     link: 'https://ziontechgroup.com/ai-marketing-automation','
     marketPosition: 'Competes with HubSpot ($45/month), Marketo ($895/month), Pardot ($1,250/month). Our advantage: AI automation increases conversion rates by 45% and reduces customer acquisition costs by 30%.','
-    targetAudience: 'Marketing teams, Digital agencies, E-commerce companies, B2B companies, Startups','
+    targetAudience: 'Marketing teams, Digital agencies, E-commerce companies, B2 B companies, Startups','
     trialDays: 14,
     setupTime: '3-5 hours','
     category: 'AI Marketing & Automation','
@@ -94,7 +94,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     useCases: ['Lead generation, Customer segmentation, Campaign automation, Content personalization, Performance optimization'],'
     roi: 'Marketing teams report 400% ROI through improved conversion rates and reduced acquisition costs.','
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign'],'
-    marketSize: '$25.6B marketing automation market','
+    marketSize: '$25.6 B marketing automation market','
     growthRate: '19% annual growth','
     variant: 'ai-marketing-enterprise','
     contactInfo: {
@@ -148,7 +148,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     textColor: 'text-yellow-400','
     link: 'https://ziontechgroup.com/ai-sales-intelligence','
     marketPosition: 'Competes with Salesforce ($25/month), Pipedrive ($15/month), HubSpot Sales ($45/month). Our advantage: AI intelligence increases sales conversion by 50% and reduces sales cycle by 35%.','
-    targetAudience: 'Sales teams, Sales managers, B2B companies, Enterprise organizations, Startups','
+    targetAudience: 'Sales teams, Sales managers, B2 B companies, Enterprise organizations, Startups','
     trialDays: 14,
     setupTime: '2-4 hours','
     category: 'AI Sales & Intelligence','
@@ -158,7 +158,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     useCases: ['Lead qualification, Sales forecasting, Pipeline management, Performance tracking, Customer insights'],'
     roi: 'Sales teams report 350% ROI through improved conversion rates and reduced sales cycles.','
     competitors: ['Salesforce, Pipedrive, HubSpot Sales, Zoho CRM'],'
-    marketSize: '$18.9B sales intelligence market','
+    marketSize: '$18.9 B sales intelligence market','
     growthRate: '21% annual growth','
     variant: 'ai-sales-enterprise','
     contactInfo: {
@@ -222,7 +222,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     useCases: ['Recruitment automation, Performance management, Employee engagement, Compliance monitoring, Talent analytics'],'
     roi: 'HR teams report 300% ROI through improved hiring efficiency and employee retention.','
     competitors: ['BambooHR, Workday, ADP, Gusto'],'
-    marketSize: '$22.4B HR management market','
+    marketSize: '$22.4 B HR management market','
     growthRate: '18% annual growth','
     variant: 'ai-hr-enterprise','
     contactInfo: {
@@ -286,7 +286,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     useCases: ['Financial planning, Risk management, Expense tracking, Cash flow management, Investment analysis'],'
     roi: 'Finance teams report 450% ROI through improved forecasting accuracy and risk management.','
     competitors: ['QuickBooks, Xero, FreshBooks, Sage'],'
-    marketSize: '$28.7B financial software market','
+    marketSize: '$28.7 B financial software market','
     growthRate: '16% annual growth','
     variant: 'ai-finance-enterprise','
     contactInfo: {
@@ -350,7 +350,7 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     useCases: ['Demand forecasting, Inventory management, Supplier optimization, Logistics planning, Cost reduction'],'
     roi: 'Supply chain teams report 500% ROI through reduced costs and improved efficiency.','
     competitors: ['SAP, Oracle, Infor, Manhattan Associates'],'
-    marketSize: '$31.2B supply chain management market','
+    marketSize: '$31.2 B supply chain management market','
     growthRate: '17% annual growth','
     variant: 'ai-supply-chain-enterprise','
     contactInfo: {

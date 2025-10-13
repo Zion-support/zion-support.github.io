@@ -23,7 +23,6 @@ interface BlogPost {
     views: number,
     engagement: number
   }
-}
 export default function BlogPage() {;
 const [posts, setPosts] = useState<BlogPost[]>([]);
 const [loading, setLoading] = useState(true);
@@ -39,8 +38,8 @@ const blogPosts: BlogPost[] = useMemo(() => [
   // TODO: Add properties
 }
       id: 'ai-enterprise-transformation-2025','
-      title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint','
-      description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.','
+      title: 'AI Enterprise Transformation: $50 M Annual Savings Blueprint','
+      description: 'Discover how Fortune 500 companies achieve $50 M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.','
       category: 'Success Story','
       readTime: '50 min read','
       date: '2025-01-28','
@@ -160,7 +159,6 @@ const blogPosts: BlogPost[] = useMemo(() => [
       image: '📚','
       featured: false,
       stats: { views: 11200, engagement: 93 }
-    }
   ], [])
   useEffect(() => {;
 const timer = setTimeout(() => {
@@ -190,34 +188,26 @@ const featuredPosts = posts.filter(post => post.featured)
     return (
   // TODO: Add parameters
 )
-      <div className="min-h-screen bg-gray-50">"
-<div className="container mx-auto px-4 py-8">"
-<div className="text-center mb-12">"
-<div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse">"
-<div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse">"
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+      <div className="min-h-screen bg-gray-50"container mx-auto px-4 py-8"
+<div className="
+<div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"
+<div className="
             {[1, 2, 3, 4, 5, 6].map(item => (
   // TODO: Add parameters
 )
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">"
-<div className="h-48 bg-gray-200 rounded-lg mb-4">"
-<div className="h-6 bg-gray-200 rounded mb-2">"
-<div className="h-4 bg-gray-200 rounded mb-2">"
-<div className="h-4 bg-gray-200 rounded w-3/4">"
+              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse"h-48 bg-gray-200 rounded-lg mb-4"
+<div className="
+<div className="h-4 bg-gray-200 rounded mb-2"h-4 bg-gray-200 rounded w-3/4"
             ))}
     )
   }
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gray-50">"
-<div className="container mx-auto px-4 py-8">"
-        {/* Header */}
-        <header className="text-center mb-12">"
-<h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog"
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Latest insights on AI, enterprise automation, and digital transformation from our expert team"
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">"
+    <div className="
+<div className="container mx-auto px-4 py-8"text-center mb-12"
+<h1 className="
+          <p className="text-xl text-gray-600 max-w-3 xl mx-auto"flex flex-wrap justify-center gap-2 mb-12"
           {categories.map((category) => (
   // TODO: Add parameters
 )
@@ -238,9 +228,8 @@ const featuredPosts = posts.filter(post => post.featured)
           ))}
         {/* Featured Posts */}
         {selectedCategory === 'all' && ('
-          <section className="mb-16">"
-<h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">🌟 Featured Articles"
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">"
+          <section className="
+<h2 className="text-3 xl font-bold text-gray-900 mb-8 text-center"grid grid-cols-1 lg:grid-cols-3 gap-8"
               {featuredPosts.map((post) => (
   // TODO: Add parameters
 )
@@ -252,27 +241,16 @@ const featuredPosts = posts.filter(post => post.featured)
         )}
         {/* All Posts */}
         <section>
-<h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">"
+<h2 className="
             {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}'
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
-            {filteredPosts.map((post) => (
-  // TODO: Add parameters
-)
-              <ContentPreviewCard
-                key={post.id}
-                {...post}
-              />
-            ))}
-        {/* Newsletter CTA */}
-        <div className="mt-16 text-center">"
-<div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">"
-<h3 className="text-2xl font-bold text-gray-900 mb-4">Never Miss an Update"
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"mt-16 text-center"
+<div className="
+<h3 className="text-2 xl font-bold text-gray-900 mb-4"text-gray-600 mb-6 max-w-2 xl mx-auto"
               Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides,
               and breakthrough content delivered directly to your inbox.
             <$2 />
-              to="/""
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">"
+              to=""
+              className="
               Subscribe to Newsletter
 
           </div></div>

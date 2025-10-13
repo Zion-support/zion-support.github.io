@@ -65,11 +65,11 @@ const aiServices = [,
 }
   // TODO: Add properties
 }
-      title: 'AI 3D & AR Solutions','
-      description: 'Create 3D models, environments, and augmented reality experiences','
+      title: 'AI 3 D & AR Solutions','
+      description: 'Create 3 D models, environments, and augmented reality experiences','
       icon: Cube
       price: '$1,600/month','
-      features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],'
+      features: ['3 D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Support'],'
       color: 'text-pink-400'},'
     {
   // TODO: Add properties
@@ -140,77 +140,62 @@ const aiServices = [,
   ]
   return(<>
 <SEOOptimizer
-        title="AI Services - Zion Tech Group""
-        description="Advanced AI services including machine learning, natural language processing, computer vision, and automation solutions for enterprise applications.""
+        title="AI Services - Zion Tech Group"
+        description="Advanced AI services including machine learning, natural language processing, computer vision, and automation solutions for enterprise applications."
         keywords={['AI services', 'machine learning', 'NLP', 'computer vision', 'automation', 'artificial intelligence']}'
-        canonicalUrl="https: //ziontechgroup.com/ai-services""
+        canonicalUrl="https: //ziontechgroup.com/ai-services"
       />)
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">)"
-        <Navigation />)
-        <main className="container mx-auto px-4 py-16 pt-24">),"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field"container mx-auto px-4 py-16 pt-24"
           {/* Hero Section */}
-          <section className="text-center mb-16">"
-<h1 className="text-5xl md: text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse glitch">"
-              AI Services
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect">"
+          <section className="
+<h1 className="text-5 xl md: text-6 xl font-bold text-white mb-6 cyber-text-3 d neon-pulse glitch"text-xl md:text-2 xl text-cyan-400 mb-8 font-medium neon-pulse cyber-scan-effect"
               Advanced Artificial Intelligence Solutions
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">"
+            <p className="
               Transform your business with our cutting-edge AI services. From machine learning to computer vision)
               we provide comprehensive artificial intelligence solutions that drive innovation and growth.
             </p>,
           </section>,
 ,
           {/* Services Grid */}
-          <section className="mb-16">"
-<div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">,"
+          <section className="mb-16"grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
               {aiServices.map((service, index) => (
   // TODO: Add parameters
 )
-                <article key={index} className="quantum-card p-6 energy-pulse hover: scale-105 transition-all duration-300">,"
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto">,"
-                    <service.icon className="w-8 h-8 text-white" />,"
+                <article key={index} className="
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"w-8 h-8 text-white"
                   </div>,
-                  <h3 className="text-xl font-bold text-white mb-3 text-center neon-text">{service.title}"
-                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed">"
-                    {service.description}
-                  <div className="mb-4">"
-<h4 className="text-sm font-semibold text-purple-400 mb-2">Features: </h4>,"
-                    <ul className="space-y-1" role="list">,"
+                  <h3 className="
+                  <p className="text-gray-300 mb-4 text-center text-sm leading-relaxed"mb-4"
+<h4 className="
+                    <ul className="space-y-1">,"
                       {service.features.map((feature, featureIndex) => (
   // TODO: Add parameters
 )
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-300">"
-<div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0">"
-                          {feature}
-                      ))}
-                  <div className="text-center">"
+                        <li key={featureIndex} className="
+<div className="w-2 h-2 bg-green-400 rounded-full mr-2 flex-shrink-0"text-center"
 <div className={\`text-lg font-bold mb-2 neon-text \${service.color}\`}>{service.price}
                     <$2 />
-                      href="/contact""
+                      href=""
                       className={\`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 \${service.color} border border-current hover:bg-current hover:text-slate-900\`}
-                      aria-label="Get Started""
+                      aria-label=""
                     >
                       Get Started
               ))}
           {/* CTA Section */}
-          <section className="text-center">"
-<div className="cyber-card p-8 max-w-4 xl mx-auto">"
-<h2 className="text-3 xl font-bold text-white mb-4 neon-text"></h>Ready</h> to Transform Your Business with AI?"
-              <p className="text-gray-300 mb-6 text-lg">"
+          <section className="
+<div className="cyber-card p-8 max-w-4 xl mx-auto"text-3 xl font-bold text-white mb-4 neon-text"
+              <p className="
                 Our AI experts are ready to help you implement cutting-edge artificial intelligence solutions
                 that will revolutionize your business operations and drive unprecedented growth.
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
-<$2 />
-                  href="/contact""
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300""
-                  aria-label="Get Free Consultation""
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"/contact""cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                  aria-label=""
                 >
                   Get Free Consultation
                 <$2 />
-                  href="tel:+13024640950""
-                  className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300""
+                  href=""
+                  className="
                 >
-<Phone className="w-5 h-5" />"
+<Phone className="w-5 h-5"
                   +1 302 464 0950
         <Footer /></div>,
     </>)

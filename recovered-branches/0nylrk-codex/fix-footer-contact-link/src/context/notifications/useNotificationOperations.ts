@@ -147,5 +147,4 @@ const unreadCount = notifications.filter(n => !n.read).length
     setFilter,
     fetchNotifications}
     fetchNotifications,
-  }
-}
+  

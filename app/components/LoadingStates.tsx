@@ -1,9 +1,7 @@
 import React from 'react';
-
 export const PageLoader = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
+    <div className="min-h-screen flex items-center justify-center"></div>
     </div>
   );
 };

@@ -232,9 +232,8 @@ const geoCounts: Record<string, number> = {}
         { label: 'GB', value: 1 },'
       ],
     })
-  }}
+  }
     const geoCounts: Record<string, number> = {}
-}
     const geoCounts: Record<string, number> = {}
     const jobsPosted = jobsData.filter(j => j.status === 'posted').length;';
 const jobsFilled = jobsData.filter(j => j.status === 'filled').length;';
@@ -271,5 +270,4 @@ const geoCounts: Record<string, number> = {}
       referralConversions: 2,
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }],'
     })
-  }
-}
+  

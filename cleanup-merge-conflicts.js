@@ -1,20 +1,17 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from 'fs';
 import path from 'path';
-=======
 import fs from 'fs';';';
 import path from 'path';';'
 
 // Function to clean merge conflicts from a file
 function cleanMergeConflicts(filePath) {
-<<<<<<< HEAD
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    if (!content.includes('<<<<<<<') && !content.includes(')) {
       return false; // No conflicts to clean
     }
     
@@ -36,7 +33,7 @@ function cleanMergeConflicts(filePath) {
         continue;
       }
       
-      if (line.startsWith('=======')) {
+      if (line.startsWith('')) {
         continue; // Skip separator line
       }
       
@@ -44,15 +41,14 @@ function cleanMergeConflicts(filePath) {
         inConflict = false;
         conflictEnd = i;
         
-        // For now, we'll keep the first version (before =======)
+        // For now, we'll keep the first version (before )
         // In a real scenario, you'd want to manually review these
         if (conflictStart >= 0) {
           // Keep lines from before the conflict
           for (let j = conflictStart; j < i; j++) {
-            if (!lines[j].startsWith('<<<<<<<') && !lines[j].startsWith('=======')) {
+            if (!lines[j].startsWith('<<<<<<<') && !lines[j].startsWith('')) {
               cleanedLines.push(lines[j]);
             }
-          }
         }
         conflictStart = -1;
         conflictEnd = -1;
@@ -62,8 +58,6 @@ function cleanMergeConflicts(filePath) {
       if (!inConflict) {
         cleanedLines.push(line);
       }
-    }
-    
     // Write cleaned content back to file
     const cleanedContent = cleanedLines.join('\n');
     fs.writeFileSync(filePath, cleanedContent, 'utf8');
@@ -73,8 +67,6 @@ function cleanMergeConflicts(filePath) {
     console.error(`Error cleaning ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Function to recursively find and clean files
 function cleanDirectory(dirPath) {
   const items = fs.readdirSync(dirPath);
@@ -96,10 +88,7 @@ function cleanDirectory(dirPath) {
         if (cleanMergeConflicts(fullPath)) {
           cleanedCount++;
         }
-      }
     }
-  }
-  
   return cleanedCount;
 }
 
@@ -107,7 +96,6 @@ function cleanDirectory(dirPath) {
 console.log('Starting merge conflict cleanup...');
 const cleanedCount = cleanDirectory('/workspace');
 console.log(`Cleaned merge conflicts in ${cleanedCount} files.`);
-=======
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -136,8 +124,6 @@ let content = fs.readFileSync(filePath, 'utf8');'
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
-}
-
 function findTsxFiles(dir) {;
 const files = [];
 
@@ -153,7 +139,6 @@ const fullPath = path.join(currentDir, item);
       } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {'
         files.push(fullPath);
       }
-    }
   }
 
   traverse(dir);
@@ -177,7 +162,5 @@ for (const file of files) {
 }
     cleanedCount++;
   }
-}
-
 console.log(`Cleaned merge conflicts in ${cleanedCount} files`);
 )))

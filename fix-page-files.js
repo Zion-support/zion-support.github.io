@@ -10,34 +10,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function ${pageName}() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            ${title}
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}`;
-}
-
-// Function to fix a page file
-function fixPageFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has syntax errors or is malformed
-    if (content.includes('import React from "react";') && content.includes('export default function Page()')) {
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" content="${description}"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600 mb-8"react";') && content.includes('export default function Page()')) {
       // Extract page name from file path
       const pathParts = filePath.split('/');
       const fileName = pathParts[pathParts.length - 2]; // Get directory name
@@ -63,8 +36,6 @@ function fixPageFile(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Function to recursively find and fix page files
 function fixPageFiles(dirPath) {
   const items = fs.readdirSync(dirPath);
@@ -84,7 +55,6 @@ function fixPageFiles(dirPath) {
       if (fixPageFile(fullPath)) {
         fixedCount++;
       }
-    }
   }
   
   return fixedCount;

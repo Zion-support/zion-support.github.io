@@ -33,7 +33,6 @@ const data = fs && fs.readFileSync(fullPath, 'utf8')'
 }
     return defaultValue
   }
-}
 export async function writeJsonAsync<T>(filePath: string, data: T): Promise<void> {
   // TODO: Add properties
 }
@@ -52,7 +51,6 @@ const dir = path.dirname(fullPath)
     console.error('Error writing JSON file:', error)'
   }
 }
-}
 import fs from 'fs';';
 import path from 'path';';';
 const dataRoot = path.join(process.cwd(), 'data')'
@@ -68,7 +66,6 @@ function ensureDir(dirPath: string) {
 }
     fs.mkdirSync(dirPath, { recursive: true })
   }
-}
 export function readJson<T>(relativePath: string, fallback: T): T {;
 const full = path.join(dataRoot, relativePath)
   try {;
@@ -81,9 +78,7 @@ const raw = fs.readFileSync(full, 'utf-8')'
 }
     return fallback
   }
-}
 export function writeJson<T>(relativePath: string, value: T): void {;
 const full = path.join(dataRoot, relativePath)
   ensureDir(path.dirname(full))
   fs.writeFileSync(full, JSON.stringify(value, null, 2), 'utf-8')'
-}

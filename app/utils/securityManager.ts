@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // securityManager utility functions
 
 export interface SecurityManagerConfig {
@@ -20,28 +18,24 @@ export class SecurityManager {
   public isEnabled(): boolean {
     return this.config.enabled;
   }
-}
-
-<<<<<<< HEAD
 export const securityManager = new SecurityManager();
 export default securityManager;
-=======
 import React from 'react';';'
 'use client';'
 /**;
  * Enhanced Security Utilities;
- * Generated: 2025-10-08T02:06:22.083Z,
+ * Generated: 2025-10-08 T02:06:22.083 Z,
  * Enhanced Security Utilities;
  * Generated: 2025-10-08 T02:06:22.083 Z,
  */}export class SecurityManager {}}private static instance: SecurityManager,}
   private constructor() {}static getInstance(): SecurityManager {}}if (!SecurityManager.instance) {}SecurityManager.instance = new SecurityManager();}
  * Enhanced Security Utilities;
  * Generate,
-  d: 2025-10-08T0,
+  d: 2025-10-08 T0,
   2: 0,
-  6: 22.083Z;,
+  6: 22.083 Z;,
  */,;
-export class SecurityManager {/* TODO: Fix JSX expression */,}}private constructor() {}static getInstance(): SecurityManager {/* TODO: Fix JSX expression */,}}}
+export class SecurityManager {/* TODO: Fix JSX expression */,}}private constructor() {}static getInstance(): SecurityManager {/* TODO: Fix JSX expression */,}}
     return SecurityManager.instance;
   }
   /**;
@@ -55,7 +49,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
       .replace(/javascript:/gi, '');'
       .replace(/on\w+=/gi, '')}.trim();}'
   sanitizeInput(inpu);
-  t: string): string {/* TODO: Fix JSX expression */,}}}
+  t: string): string {/* TODO: Fix JSX expression */,}}
   /**;
    * Validate and sanitize URL;
    */;
@@ -69,9 +63,9 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
       return parsed.toString();
     } catch {}}return '';}'
   sanitizeUrl(ur);
-  l: string): string {/* TODO: Fix JSX expression */,}}}
+  l: string): string {/* TODO: Fix JSX expression */,}}
       return parsed.toString();
-    } catch {/* TODO: Fix JSX expression */,}}}
+    } catch {/* TODO: Fix JSX expression */,}}
   }
   /**;
    * Generate secure random token;
@@ -79,10 +73,10 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
   generateSecureToken(length: number = 32): string {,}
     ,
       // Fallback for Node.js environment;
-      const crypto = import("crypto");"
+      const crypto = import("crypto"
       crypto.randomFillSync(array);}
   generateSecureToken(lengt);
-  h: number = 32): string {/* TODO: Fix JSX expression */,}}} else {/* TODO: Fix JSX expression */,}}}
+  h: number = 32): string {/* TODO: Fix JSX expression */,}}} else {/* TODO: Fix JSX expression */,}}
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(');''
   }
   /**;
@@ -109,20 +103,17 @@ const validRequests = requests.filter((time: number) => time > windowStart)
   checkRateLimit(ke,
   y: string, limi,
   t: number, windowM);
-  s: number): boolean {/* TODO: Fix JSX expression */,}}}
+  s: number): boolean {/* TODO: Fix JSX expression */,}}
     validRequests.push(now);
     storage.set(key, validRequests);
     return true;
   }}</React.Fragment>
   private getRateLimitStorage(): Map<string, number[]> {}if (!global._rateLimitStorage) {}global._rateLimitStorage = new Map();}
-  private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */,}}
+  private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */,}
     return global._rateLimitStorage;
   }
-}
 export default SecurityManager.getInstance()</string>;
 export default SecurityManager.getInstance()
-=======
 
-=======
 // Export default instance
 export const securityManager = new SecurityManager();

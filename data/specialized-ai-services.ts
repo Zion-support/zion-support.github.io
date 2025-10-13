@@ -92,7 +92,7 @@ export const specializedAIServices: SpecializedAIService[] = [;
     useCases: ['Contract review', 'Risk assessment', 'Compliance checking', 'Legal research'],'
     roi: '400% ROI within 6 months through time savings and risk reduction','
     competitors: ['DocuSign ($25+/month)', 'ContractPodAi ($500+/month)', 'Evisort'],'
-    marketSize: '$15B legal tech market','
+    marketSize: '$15 B legal tech market','
     growthRate: '200% annual growth','
     variant: 'legal-ai-futuristic','
     contactInfo: {
@@ -155,7 +155,7 @@ export const specializedAIServices: SpecializedAIService[] = [;
     useCases: ['Candidate screening', 'Hiring optimization', 'Performance prediction', 'HR analytics'],'
     roi: '350% ROI within 6 months through improved hiring quality and time savings','
     competitors: ['Workday ($100+/month)', 'BambooHR ($200+/month)', 'Greenhouse'],'
-    marketSize: '$25B HR tech market','
+    marketSize: '$25 B HR tech market','
     growthRate: '180% annual growth','
     variant: 'hr-ai-futuristic','
     contactInfo: {
@@ -218,7 +218,7 @@ export const specializedAIServices: SpecializedAIService[] = [;
     useCases: ['Market analysis', 'Competitive intelligence', 'Consumer insights', 'Strategy planning'],'
     roi: '450% ROI within 6 months through improved decision making and market insights','
     competitors: ['Nielsen ($5000+/month)', 'McKinsey ($10000+/month)', 'Forrester'],'
-    marketSize: '$20B market research market','
+    marketSize: '$20 B market research market','
     growthRate: '220% annual growth','
     variant: 'market-ai-futuristic','
     contactInfo: {
@@ -281,7 +281,7 @@ export const specializedAIServices: SpecializedAIService[] = [;
     useCases: ['Lead generation', 'Sales optimization', 'Performance tracking', 'Process automation'],'
     roi: '500% ROI within 6 months through increased sales and process efficiency','
     competitors: ['Salesforce ($25+/month)', 'HubSpot ($45+/month)', 'Pipedrive'],'
-    marketSize: '$30B sales automation market','
+    marketSize: '$30 B sales automation market','
     growthRate: '200% annual growth','
     variant: 'sales-ai-futuristic','
     contactInfo: {
@@ -344,7 +344,7 @@ export const specializedAIServices: SpecializedAIService[] = [;
     useCases: ['Video editing', 'Content creation', 'Marketing videos', 'Social media content'],'
     roi: '300% ROI within 6 months through time savings and content quality improvement','
     competitors: ['Adobe Premiere ($20+/month)', 'Final Cut Pro ($300)', 'DaVinci Resolve'],'
-    marketSize: '$15B video editing market','
+    marketSize: '$15 B video editing market','
     growthRate: '180% annual growth','
     variant: 'video-ai-futuristic','
     contactInfo: {
@@ -407,7 +407,7 @@ export const specializedAIServices: SpecializedAIService[] = [;
     useCases: ['Website optimization', 'Conversion improvement', 'User experience', 'E-commerce optimization'],'
     roi: '400% ROI within 6 months through increased conversions and user engagement','
     competitors: ['Optimizely ($1000+/month)', 'VWO ($500+/month)', 'Google Optimize'],'
-    marketSize: '$12B personalization market','
+    marketSize: '$12 B personalization market','
     growthRate: '200% annual growth','
     variant: 'personalization-ai-futuristic','
     contactInfo: {
@@ -470,7 +470,7 @@ export const specializedAIServices: SpecializedAIService[] = [;
     useCases: ['Customer support', 'Ticket automation', 'Satisfaction optimization', 'Service analytics'],'
     roi: '350% ROI within 6 months through improved customer satisfaction and support efficiency','
     competitors: ['Zendesk ($25+/month)', 'Intercom ($39+/month)', 'Freshdesk'],'
-    marketSize: '$18B customer service market','
+    marketSize: '$18 B customer service market','
     growthRate: '180% annual growth','
     variant: 'customer-service-ai-futuristic','
     contactInfo: {
@@ -533,7 +533,7 @@ export const specializedAIServices: SpecializedAIService[] = [;
     useCases: ['Business intelligence', 'Predictive analytics', 'Data visualization', 'Performance monitoring'],'
     roi: '500% ROI within 6 months through improved decision making and business insights','
     competitors: ['Tableau ($70+/month)', 'Power BI ($10+/month)', 'QlikView'],'
-    marketSize: '$35B business intelligence market','
+    marketSize: '$35 B business intelligence market','
     growthRate: '200% annual growth','
     variant: 'analytics-ai-futuristic','
     contactInfo: {
@@ -596,7 +596,7 @@ export const specializedAIServices: SpecializedAIService[] = [;
     useCases: ['Content optimization', 'Search ranking improvement', 'Keyword research', 'Performance tracking'],'
     roi: '400% ROI within 6 months through improved search rankings and organic traffic','
     competitors: ['Ahrefs ($99+/month)', 'SEMrush ($119+/month)', 'Moz Pro'],'
-    marketSize: '$8B SEO market','
+    marketSize: '$8 B SEO market','
     growthRate: '180% annual growth','
     variant: 'seo-ai-futuristic','
     contactInfo: {

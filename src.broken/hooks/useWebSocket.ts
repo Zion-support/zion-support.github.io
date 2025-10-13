@@ -46,7 +46,6 @@ const data: unknown = JSON.parse(event.data)
 }
           options.onMessage?.(event.data)
         }
-      }
       ws.onclose = () => {
   // TODO: Implement
 }
@@ -71,7 +70,6 @@ const data: unknown = JSON.parse(event.data)
             options.reconnectInterval || 3000,
           )
         }
-      }
       ws.onerror = (event) => {
   // TODO: Add properties
 }
@@ -170,5 +168,4 @@ const sendMessage: unknown = useCallback(
     sendMessage,
     disconnect,
     connect
-  }
-}
+  

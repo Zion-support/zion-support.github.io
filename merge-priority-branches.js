@@ -24,8 +24,6 @@ const priorityBranches = [,
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})'
   o: 'inherit' })'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 //Step,
   2: Define priority branches (most recent and important);
 const priorityBranches = [
@@ -34,31 +32,31 @@ const priorityBranches = [
   // TODO: Add items
 ]
   //Recent cursor branches from today,
-  'cursor/fix-errors-and-merge-to-main-f4fa','
-  'cursor/fix-errors-and-merge-to-main-100d','
-  'cursor/fix-errors-and-merge-to-main-9f74','
-  'cursor/fix-errors-and-merge-to-main-2f1b','
-  'cursor/fix-errors-and-merge-to-main-494d','
-  'cursor/fix-errors-and-merge-to-main-7318','
-  'cursor/fix-errors-and-merge-to-main-97a6','
-  'cursor/fix-errors-and-merge-to-main-9bdd','
-  'cursor/fix-errors-and-merge-to-main-a0d2','
-  'cursor/fix-errors-and-merge-to-main-d0f7','
+  '','
+  '','
+  '','
+  '','
+  '','
+  '','
+  '','
+  '','
+  '','
+  '','
   //Content branches
   'add-new-2026-content','
   'add-revolutionary-content-2026','
   'ai-2027-content-integration','
   'ai-dashboard-improvements','
   //Resolved branches
-  '0nylrk-codex-fix-footer-contact-link-resolved','
-  '0parff-codex-centralize-api-error-handling-resolved','
-  '0smfo8-codex-fix-404-error-resolved','
+  '0 nylrk-codex-fix-footer-contact-link-resolved','
+  '0 parff-codex-centralize-api-error-handling-resolved','
+  '0 smfo8-codex-fix-404-error-resolved','
   //Important candidate branches
   'candidate/netlify-build-fix-2025-09-17','
   'candidate/netlify-fix','
   //Important chore branches
-  'chore/a11y-reduced-motion','
-  'chore/a11y-single-main','
+  'chore/a11 y-reduced-motion','
+  'chore/a11 y-single-main','
   'chore/add-2027-content-and-homepage-promo','
   'chore/analysis-fixes-and-navigation','
   'chore/animated-section-typing-fix','
@@ -71,15 +69,7 @@ function mergeBranch(branchName) {,
     //Check if branch exists
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' })'
     //Check if already merged;
-const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`)"
-      { encoding: 'utf8' }'
-// //Step,
-  3: Merge function with conflict resolution,
-function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
-    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' })'
-    //Check if already merged;`;
-const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,"
+const isMerged = execSync(`git branch --merged main | grep -q "${branchName}"not_merged"`)"${branchName}" || echo "`,"
       {/* TODO: Fix JSX expression */}
   g: 'utf8' })'
     ).trim()
@@ -93,7 +83,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 }
   // TODO: Add properties
 }
-      execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`)"
+      execSync(`git merge origin/${branchName} --no-ff -m "`)"
         { stdio: 'inherit' }'
       )
 //       return { success: true, method: 'direct' }'
@@ -109,7 +99,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
   // TODO: Add properties
 }
         //Strategy 1: Use theirs,
-        execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`)"
+        execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "`)"
           { stdio: 'inherit' }'
         )
 //         return { success: true, method: 'theirs' }'
@@ -124,24 +114,17 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
   // TODO: Add properties
 }
           //Strategy 2: Use ours,
-          execSync(`git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`)"
+          execSync(`git merge origin/${branchName} --strategy-option=ours --no-ff -m "`)"
             { stdio: 'inherit' }'
-    try {/* TODO: Fix JSX expression */}"`"
-        `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`,"
+    try {/* TODO: Fix JSX expression */}"
+        `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"
         {/* TODO: Fix JSX expression */}
   o: 'inherit' }'
       )
 //       return {/* TODO: Fix JSX expression */}
   d: 'direct' }'
-    } catch (mergeError) {/* TODO: Fix JSX expression */}"`"
-          `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,"
-          {/* TODO: Fix JSX expression */}
-  o: 'inherit' }'
-        )
-//         return {/* TODO: Fix JSX expression */}
-  d: 'theirs' }'
-      } catch (theirsError) {/* TODO: Fix JSX expression */}"`"
-            `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`,"
+    } catch (mergeError) {/* TODO: Fix JSX expression */}"`"Merge ${branchName}: using theirs strategy"`,"`"
+            `git merge origin/${branchName} --strategy-option=ours --no-ff -m "`,"
             {/* TODO: Fix JSX expression */}
   o: 'inherit' }'
           )
@@ -150,13 +133,10 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
         } catch (oursError) {/* TODO: Fix JSX expression */}
   d: 'failed' }'
         }
-      }
     }
   } catch (error) {/* TODO: Fix JSX expression */}
   d: 'not_found' }'
   }
-}
-
 //Step 4: Process all priority branches;
 const results = {
   // TODO: Add properties
@@ -187,8 +167,7 @@ const results = {
 //Step,
   4: Process all priority branches,;
 const results = {/* TODO: Fix JSX expression */}
-    }}}
-
+    }}
 // for (const branch of priorityBranches) {
   // TODO: Add properties
 }
@@ -224,8 +203,6 @@ const results = {/* TODO: Fix JSX expression */}
     results.summary.failed++
     results.summary.methods[result.method]++
   }
-}
-
 //Step 5: Generate report,
 // const report = {,
   ...results
@@ -249,8 +226,6 @@ fs.writeFileSync('priority-branches-merge-report.json')'
 //Step,
   5: Generate report,
 // const report = {/* TODO: Fix JSX expression */}
-}
-
 fs.writeFileSync('priority-branches-merge-report.json')'
   JSON.stringify(report, null, 2)
 )
@@ -263,4 +238,4 @@ fs.writeFileSync('priority-branches-merge-report.json')'
 
 // Step,
   7: Summary,
-// // // // // // // // // // // // // // "`"
+// // // // // // // // // // // // // // "

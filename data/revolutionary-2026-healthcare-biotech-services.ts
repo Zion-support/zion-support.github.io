@@ -1,5 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';';';
-export interface Revolutionary2026HealthcareBiotechService {
+export interface Revolutionary2026 HealthcareBiotechService {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -47,7 +47,7 @@ export interface Revolutionary2026HealthcareBiotechService {
   rating: number
   reviews: number
 }
-export const revolutionary2026HealthcareBiotechServices: Revolutionary2026HealthcareBiotechService[] = [;
+export const revolutionary2026 HealthcareBiotechServices: Revolutionary2026 HealthcareBiotechService[] = [;
   // TODO: Add items
 ]
   // AI Drug Discovery Platform
@@ -94,7 +94,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     useCases: ['Drug discovery', 'Clinical trials', 'Personalized medicine', 'Drug repurposing', 'Target identification', 'Toxicity testing'],'
     roi: 'Average customer sees 800% ROI within 18 months through accelerated drug discovery and development.','
     competitors: ['Atomwise', 'Insilico Medicine', 'BenevolentAI', 'Exscientia', 'Recursion Pharmaceuticals'],'
-    marketSize: '$45.6B market','
+    marketSize: '$45.6 B market','
     growthRate: '28.9% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -158,7 +158,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     useCases: ['Diagnosis assistance', 'Treatment planning', 'Patient monitoring', 'Risk assessment', 'Quality improvement', 'Clinical research'],'
     roi: 'Average customer sees 600% ROI within 12 months through improved patient outcomes and operational efficiency.','
     competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Amazon Comprehend Medical', 'Cerner'],'
-    marketSize: '$67.4B market','
+    marketSize: '$67.4 B market','
     growthRate: '25.3% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -222,7 +222,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     useCases: ['Scientific research', 'AI model optimization', 'Complex problem solving', 'Cross-domain research', 'Breakthrough discoveries', 'Research automation'],'
     roi: 'Average customer sees 1000% ROI within 15 months through research acceleration and breakthrough discoveries.','
     competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Quantum', 'Amazon Braket', 'Rigetti'],'
-    marketSize: '$78.9B market','
+    marketSize: '$78.9 B market','
     growthRate: '31.2% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -286,7 +286,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     useCases: ['Legal research', 'Case analysis', 'Risk assessment', 'Compliance monitoring', 'Contract review', 'Legal education'],'
     roi: 'Average customer sees 400% ROI within 8 months through research automation and outcome prediction.','
     competitors: ['Westlaw', 'LexisNexis', 'Bloomberg Law', 'Casetext', 'Ravel Law'],'
-    marketSize: '$23.7B market','
+    marketSize: '$23.7 B market','
     growthRate: '19.8% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -350,7 +350,7 @@ export const revolutionary2026HealthcareBiotechServices: Revolutionary2026Health
     useCases: ['Genetic research', 'Drug discovery', 'Personalized medicine', 'Clinical trials', 'Biomarker research', 'Disease modeling'],'
     roi: 'Average customer sees 700% ROI within 14 months through research acceleration and breakthrough discoveries.','
     competitors: ['Benchling', 'LabArchives', 'Labguru', 'Quartzy', 'LabCollector'],'
-    marketSize: '$34.8B market','
+    marketSize: '$34.8 B market','
     growthRate: '26.4% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {

@@ -23,7 +23,6 @@ const benefits = [
     'Enterprise-grade security and compliance','
     'Scalable and flexible solutions','
 
-
 export default function LoadingPage() {
   return (
 
@@ -33,4 +32,3 @@ export default function Loading({ className = '', children }: LoadingProps) {
       {children}
     </div>
   );
-}

@@ -1,58 +1,16 @@
   return (
     <div className="min-h-screen bg-gray-50">
-export default function SystemIntegrationPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
           </p>
         <title>System Integration - Zion Tech Group</title>
-        <meta name="description" content="System Integration services by Zion Tech Group. Professional AI and IT solutions." />
-        <meta name="keywords" content="system-integration, AI solutions, IT services" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            System Integration
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional system integration services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced system integration solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
-        </div>
-export default SystemIntegrationPage;
-
-        <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Get Started
-          </button>
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function SystemIntegration() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>System Integration - Zion Tech Group</title>
-        <meta name="description" content="Advanced system integration solutions by Zion Tech Group" />
+        <meta name="description"System Integration services by Zion Tech Group. Professional AI and IT solutions." />
+        <meta name=" content="system-integration, AI solutions, IT services"min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"container mx-auto px-4 py-20"text-5 xl font-bold text-white mb-6"text-xl text-gray-300 mb-8 max-w-3 xl"bg-slate-800 p-8 rounded-lg"text-2 xl font-bold text-white mb-4"text-gray-300"text-center mt-12"bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"description" content=" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            System Integration
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <h1 className="text-4 xl font-bold text-gray-900 mb-6">
             Advanced system integration solutions by Zion Tech Group.
           </p>
         </div>
       </div>
     </div>
   );
-}

@@ -30,7 +30,7 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {
             Back, to, Blog
               <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>'
                 Octo, b, e, r , 1, 20, 2, 5 • 20, min, read
-            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>'
+            <h1, classNam, e = 'te, x, t-5 xl, m, d: te, x, t-6 xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>'
               Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-cy, a, n-400, m, t-2, tex, t-4, x, l'>'
                 How, A, I-Powered, Workflows, Are Redefining, Business, Operations
@@ -46,7 +46,7 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {
 <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>'
 <li, classNam, e='flex, item, s-start, ga, p-2'>'
 <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />'
-<h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>'
+<h2, classNam, e='te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>'
 <Brain, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />'
                   Ne, x, t-Gen, Automation, Capabilities;
 const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expression */}
@@ -58,11 +58,11 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
 <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>'
 <li, className='flex, item, s-start, ga, p-2'>'
 <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />'
-<h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>'
+<h2, className='te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>'
 <Brain, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />'
 <li, className='flex, item, s-start, ga, p-2'>'
 <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />'
-<h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>'
+<h2, className='te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>'
 <Brain, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />'
                   Ne, x, t-Gen, Automation, Capabilities
                     <, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'$2 />'
@@ -75,7 +75,7 @@ const NextGenIntelligentAutomationBreakthroug, h = () => {/* TODO: Fix JSX expre
                             {capabili, t, y.title}
                           <p, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>'
                             {capabili, t, y.description}
-                <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>'
+                <h2, classNam, e = 'te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>'
 <TrendingUp, className='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />'
                   Industry, Application, s & Resul, t, s
                       industry: 'Reta, i, l & E-comme, r, c, e','

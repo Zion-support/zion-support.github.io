@@ -3,7 +3,6 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-
 console.log('🧹 Starting aggressive cleanup...');
 
 // Function to create a basic page template
@@ -16,18 +15,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function ${pageName}Page() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>${pageName} - Zion Tech Group</title>
-        <meta name="description" content="Advanced ${pageName} solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            ${pageName}
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+    <div className="min-h-screen bg-gray-50" content="Advanced ${pageName} solutions by Zion Tech Group"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
           </p>
         </div>
@@ -43,7 +31,6 @@ function createBasicComponentTemplate(filePath) {
   const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
   
   return `import React from 'react';
-
 interface ${componentName}Props {
   className?: string;
   children?: React.ReactNode;
@@ -105,8 +92,6 @@ function fixFile(filePath) {
     console.error(`❌ Error fixing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
   const files = [];
@@ -128,10 +113,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
         if (extensions.includes(ext)) {
           files.push(fullPath);
         }
-      }
     }
-  }
-  
   traverse(dir);
   return files;
 }
@@ -155,8 +137,6 @@ async function main() {
       console.error(`❌ Error processing ${file}:`, error.message);
       errorCount++;
     }
-  }
-  
   console.log(`\n✅ Aggressive cleanup complete!`);
   console.log(`🔧 Fixed: ${fixedCount} files`);
   console.log(`❌ Errors: ${errorCount} files`);
@@ -169,6 +149,4 @@ async function main() {
   } catch (error) {
     console.log('⚠️  Type check still has issues, but many files were fixed');
   }
-}
-
 main().catch(console.error);

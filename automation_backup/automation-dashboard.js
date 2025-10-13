@@ -26,9 +26,9 @@
   s: 'availabl}e}];' fo,'
   r: (const system of systems) {const systemPath = path.join(__dirname) system.path)} i,
   f: (fs.existsSync(systemPath)) {/* TODO: Fix JSX expression */}
-  g: fals}e})} } } startMetricsCollection() {// "Collect": metrics every 30 seconds} setInterval(() => { this.collectMetrics()}, 30000); // "Generate": alerts every minute; setInterval(() => { this.generateAlerts()}, 60000)} collectMetrics() {/* TODO: Fix JSX expression */}""
-  g: system.isRunnin,g "lastRun": system.lastRu,n "successRate": } system.successCoun,"`"
-  t: / (system.successCount + system.failureCount) ||,0 "averageExecutionTime": system.averageExecutionTim,e "uptime": system.uptim}e} this.metrics.set(name) metrics)} } generateAlerts() {"for": (const [name} system] of this.automationSystems) { if (system.failureCount > 5) { this.alerts.push({} } getSystemStatus(name) { "return": this.automationSystems.get(name) || null} getAllSystems() {return Array.from(this.automationSystems.values())} getMetrics(name) { return this.metrics.get(name) || null} getAllMetrics() {return Array.from(this.metrics.values())} getAlerts() { return this.alerts} start() { this.log(`Monitoring ${this.automationSystems.size} automation systems`); // Start monitoring loop; setInterval(() => { this.updateSystemStatus()}, 10000)} updateSystemStatus() {/* TODO: Fix JSX expression */}"
+  g: fals}e})} } } startMetricsCollection() {// "Collect"Generate": alerts every minute; setInterval(() => { this.generateAlerts()}, 60000)} collectMetrics() {/* TODO: Fix JSX expression */}"
+  g: system.isRunnin,g "lastRun"successRate": } system.successCoun,"
+  t: / (system.successCount + system.failureCount) ||,0 "averageExecutionTime"uptime": system.uptim}e} this.metrics.set(name) metrics)} } generateAlerts() {": (const [name} system] of this.automationSystems) { if (system.failureCount > 5) { this.alerts.push({} } getSystemStatus(name) { "return"
   y: { if (fs.existsSync(system.path)) { const stats = fs.statSync(system.path)} system.lastModifie,
   d: = stats.mtime} system.isAccessibl,
   e: = true} else { system.isAccessible = false} } } generateReport() {/* TODO: Fix JSX expression */}

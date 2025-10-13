@@ -66,18 +66,13 @@ function fixFile(filePath) {
 }
       return
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
-}
-
 // Function to fix specific files
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-
     // Apply fixes
     content = fixConsoleStatements(content)
     content = fixUnusedVariables(content)
     fs.writeFileSync(fullPath, content)
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Files that need fixing;

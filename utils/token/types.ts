@@ -1,13 +1,13 @@
 export type TokenTransactionType =;
-  | "earn""
-  | "burn""
-  | "issue""
-  | "revoke""
-  | "redeem";";
+  | "earn"
+  | "burn"
+  | "issue"
+  | "revoke"
+  | "redeem";
 export interface TokenTransaction {id: string
   userId: string
   type: TokenTransactionType
-  | "redeem",;";
+  | "redeem";
 export interface TokenTransaction {
   // TODO: Add properties
 }
@@ -40,7 +40,7 @@ export interface WalletSummary {
   wallet: Wallet,
   transactions: TokenTransaction[]
   config: TokenConfig
-  | "redeem",;";
+  | "redeem";
 export interface TokenTransaction {
   // TODO: Add properties
 }
@@ -58,10 +58,9 @@ export interface TokenTransaction {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export interface Wallet {
   // TODO: Add properties
@@ -75,10 +74,9 @@ export interface Wallet {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export interface TokenConfig {
   // TODO: Add properties
@@ -96,10 +94,9 @@ export interface TokenConfig {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export interface WalletSummary {
   // TODO: Add properties
@@ -114,19 +111,17 @@ export interface WalletSummary {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
 }
-}
-}
-export type TokenSymbol = "ZION$";";";
+export type TokenSymbol = "ZION$";";
 export type TokenTransactionType =;
-  | "earn""
-  | "burn""
-  | "issue""
-  | "revoke""
-  | "redeem";";
+  | ""
+  | ""
+  | ""
+  | ""
+  | ";";
 export interface TokenTransaction {
   // TODO: Add properties
 }
@@ -166,4 +161,3 @@ export interface WalletSummary {
   wallet: Wallet
   transactions: TokenTransaction[]
   config: TokenConfig
-}

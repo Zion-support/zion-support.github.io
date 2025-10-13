@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -59,10 +57,10 @@ function fixFile(filePath) {
 // Focus on the most problematic files first;
 const criticalFiles = [
 //   '/workspace/app/about/page.tsx',
-//   '/workspace/app/5g-implementation/page.tsx',
+//   '/workspace/app/5 g-implementation/page.tsx',
 //   '/workspace/app/accessibility/page.tsx',
 //   '/workspace/app/accessibility-page/page.tsx',
-//   '/workspace/app/ai-3d-generation/page.tsx',
+//   '/workspace/app/ai-3 d-generation/page.tsx',
 //   '/workspace/app/ai-accounting-assistant/page.tsx',
 //   '/workspace/app/ai-analytics/page.tsx',
 //   '/workspace/app/ai-api-management/page.tsx',
@@ -284,5 +282,4 @@ for (const file, of, criticalFiles) {
   if (fs.existsSync(file)) {
     if (fixFile(file)) {
       fixedCount++;
-=======
 

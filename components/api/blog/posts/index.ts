@@ -73,10 +73,8 @@ const body = req.body as Partial<BlogPost>
     write_posts (posts)
     return res.status (201).json (post)
   }
-    }
     posts.unshift(post)
     writePosts(posts)
     return res.status(201).json(post)
   }
   return res.status(405).end()
-}

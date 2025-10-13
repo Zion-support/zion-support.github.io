@@ -18,7 +18,7 @@ const importFixes = [
   // TODO: Add properties
 }
       pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,';'
-      replacement: "import { $1, $2, $3 } from '$4';";'"
+      replacement: "import { $1, $2, $3 } from '$4';"
     },
     // Fix malformed import statements with missing commas
     {
@@ -27,7 +27,7 @@ const importFixes = [
   // TODO: Add properties
 }
       pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,';'
-      replacement: "import { $1, $2 } from '$3';";'"
+      replacement: "import { $1, $2 } from '$3';"
     },
     // Fix malformed import statements
     {
@@ -36,7 +36,7 @@ const importFixes = [
   // TODO: Add properties
 }
       pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,';'
-      replacement: "import { $1 } from '$2';";'"
+      replacement: "import { $1 } from '$2';"
     }
   ]
   for (const fix of importFixes) {;
@@ -49,8 +49,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
       content = newContent
       modified = true
     }
-  }
-
   // Fix malformed function declarations;
 const functionFixes = [
   // TODO: Add items
@@ -95,8 +93,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
       content = newContent
       modified = true
     }
-  }
-
   // Fix malformed object literals;
 const objectFixes = [
   // TODO: Add items
@@ -141,8 +137,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
       content = newContent
       modified = true
     }
-  }
-
   // Fix malformed JSX;
 const jsxFixes = [
   // TODO: Add items
@@ -155,8 +149,8 @@ const jsxFixes = [
 }
   // TODO: Add properties
 }
-      pattern: /(\w+)="([^"]*)"\s*(\w+)/g,"
-      replacement: '$1="$2" $3''"
+      pattern: /(\w+)="([^"\s*(\w+)/g,"
+      replacement: '$1=" $3''"
     },
     // Fix malformed JSX closing tags
     {
@@ -187,8 +181,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
       content = newContent
       modified = true
     }
-  }
-
   // Fix malformed comments;
 const commentFixes = [
   // TODO: Add items
@@ -224,11 +216,7 @@ const newContent = content.replace(fix.pattern, fix.replacement)
       content = newContent
       modified = true
     }
-  }
-
   return { content, modified }
-}
-
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
   // TODO: Add properties
@@ -261,8 +249,6 @@ const result = fixCommonSyntaxErrors(content)
     console.error(`Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to find files with syntax errors
 function findFilesWithSyntaxErrors() {
   // TODO: Add properties
@@ -270,7 +256,7 @@ function findFilesWithSyntaxErrors() {
   // TODO: Add properties
 }
   try {;
-const result = execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | grep "^/workspace" | sort -u 2>/dev/null || true', { encoding: 'utf8' })'"
+const result = execSync('npm run lint 2>&1 | grep -B1 " | grep "^/workspace"
     return result.trim().split('\n').filter(file => file.length > 0)'
   } catch (error) {
   // TODO: Add properties
@@ -280,8 +266,6 @@ const result = execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | g
     console.error('Error finding files with syntax errors:', error.message)'
     return []
   }
-}
-
 // Main execution
 console.log('Starting comprehensive syntax error resolution...');';
 const filesWithErrors = findFilesWithSyntaxErrors()
@@ -299,12 +283,10 @@ for (const file of filesWithErrors) {
 }
     fixedCount++
   }
-}
-
 console.log(`Fixed syntax errors in ${fixedCount} files`)
 // Verify no more syntax errors exist
 try {;
-const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8' });'";
+const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error"0"', { encoding: 'utf8' });'";
 const count = parseInt(remainingErrors.trim())
   if (count === 0) {
   // TODO: Add properties

@@ -9,4 +9,3 @@ export default function FuturisticCardEnhanced({ className = '', children }: Fut
       {children}
     </div>
   );
-}

@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
-=======
+import { type ClassValue, clsx } from "clsx"tailwind-merge";
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-<<<<<<< HEAD
 export function formatDate(date: Date | string): string {
   const d = new Date(date);
   return d.toLocaleDateString('en-US', {
@@ -81,8 +75,6 @@ export function isValidUrl(url: string): boolean {
   } catch {
     return false;
   }
-}
-
 export function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -149,7 +141,6 @@ export function deepClone<T>(obj: T): T {
       if (Object.prototype.hasOwnProperty.call(obj, key)) {
         clonedObj[key] = deepClone(obj[key]);
       }
-    }
     return clonedObj;
   }
   return obj;
@@ -176,9 +167,7 @@ export function pick<T extends Record<string, any>, K extends keyof T>(
   });
   return result;
 }
-=======
 
-=======
 export interface UtilsConfig {
   enabled: boolean;
 }
@@ -197,7 +186,5 @@ export class Utils {
   public isEnabled(): boolean {
     return this.config.enabled;
   }
-}
-
 // Export default instance
 export const utils = new Utils();

@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'canonical-auditor'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'canonical-auditor'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'canonical-auditor',' source: event.source || 'unknown', auditing: {' status: 'active', pagesAudited: 0, issuesFound: 0,'
         lastAudit: new Date().toISOString() } }) } return result; } catch (error) {

@@ -51,7 +51,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Agent reliability', 'SLO tracking', 'Incident reduction'],'
 		roi: 'Reduce AI agent failures by 30–60%','
 		competitors: ['Langfuse', 'Arize', 'WhyLabs'],'
-		marketSize: '$3B AI Observability','
+		marketSize: '$3 B AI Observability','
 		growthRate: 'High','
 		variant: 'monitoring-futuristic','
 		contactInfo: contact,
@@ -101,7 +101,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['GDPR/CCPA scans', 'Access reviews', 'Audit readiness'],'
 		roi: 'Cut privacy review time by 50–70%','
 		competitors: ['BigID', 'OneTrust'],'
-		marketSize: '$8B Data Privacy','
+		marketSize: '$8 B Data Privacy','
 		growthRate: 'High','
 		variant: 'security-futuristic','
 		contactInfo: contact,
@@ -151,7 +151,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['RAG tuning', 'Cost optimization', 'Latency SLOs'],'
 		roi: 'Improve recall 10–30% with same budget','
 		competitors: ['Self-built harnesses'],'
-		marketSize: '$1B Vector DB Tools','
+		marketSize: '$1 B Vector DB Tools','
 		growthRate: 'Strong','
 		variant: 'data-futuristic','
 		contactInfo: contact,
@@ -201,7 +201,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Pre-prod safety testing', 'Policy hardening', 'Regulatory readiness'],'
 		roi: 'Reduce safety incidents 40%','
 		competitors: ['Promptfoo', 'Guardrails libraries'],'
-		marketSize: '$1B AI Safety','
+		marketSize: '$1 B AI Safety','
 		growthRate: 'Emerging','
 		variant: 'security-futuristic','
 		contactInfo: contact,
@@ -251,7 +251,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Security questionnaires', 'RFPs', 'DDQs'],'
 		roi: 'Cut response time 60–80%','
 		competitors: ['Loopio', 'Responsive'],'
-		marketSize: '$2B RFP Tech','
+		marketSize: '$2 B RFP Tech','
 		growthRate: 'Strong','
 		variant: 'ai-futuristic','
 		contactInfo: contact,
@@ -301,7 +301,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Regressions', 'Risk scoring', 'Audit evidence'],'
 		roi: 'Reduce time-to-fix 30%','
 		competitors: ['External red team services'],'
-		marketSize: '$1B AI Security','
+		marketSize: '$1 B AI Security','
 		growthRate: 'High','
 		variant: 'security-futuristic','
 		contactInfo: contact,
@@ -351,7 +351,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['QA automation', 'Churn detection', 'Upsell triggers'],'
 		roi: 'Improve CSAT and AHT 10–20%','
 		competitors: ['Gong', 'Chorus', 'Observe.AI'],'
-		marketSize: '$6B Speech Analytics','
+		marketSize: '$6 B Speech Analytics','
 		growthRate: 'High','
 		variant: 'ai-futuristic','
 		contactInfo: contact,
@@ -401,7 +401,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Privacy-safe analytics', 'Model pretraining', 'QA sandboxes'],'
 		roi: 'Reduce manual data prep 50%','
 		competitors: ['Gretel.ai', 'Mostly AI'],'
-		marketSize: '$2B Synthetic Data','
+		marketSize: '$2 B Synthetic Data','
 		growthRate: 'High','
 		variant: 'data-futuristic','
 		contactInfo: contact,
@@ -451,7 +451,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Realtime personalization', 'Fraud', 'Recommendations'],'
 		roi: 'Accelerate feature shipping 2×','
 		competitors: ['Feast', 'Tecton (enterprise)'],'
-		marketSize: '$1B Feature Platforms','
+		marketSize: '$1 B Feature Platforms','
 		growthRate: 'Growing','
 		variant: 'data-futuristic','
 		contactInfo: contact,
@@ -501,7 +501,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Governance', 'Rollouts', 'Compliance'],'
 		roi: 'Reduce release risk 20–40%','
 		competitors: ['MLflow (self-hosted)'],'
-		marketSize: '$1B MLOps','
+		marketSize: '$1 B MLOps','
 		growthRate: 'High','
 		variant: 'ai-futuristic','
 		contactInfo: contact,
@@ -551,7 +551,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Pipeline reliability', 'Trust in metrics', 'ML health'],'
 		roi: 'Reduce incidents and firefighting 30%','
 		competitors: ['Monte Carlo', 'Bigeye'],'
-		marketSize: '$2B Data Reliability','
+		marketSize: '$2 B Data Reliability','
 		growthRate: 'High','
 		variant: 'monitoring-futuristic','
 		contactInfo: contact,
@@ -601,7 +601,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['DSAR automation', 'Deletion workflows', 'Export compliance'],'
 		roi: 'Reduce manual work 70%','
 		competitors: ['Transcend', 'OneTrust'],'
-		marketSize: '$4B Privacy Ops','
+		marketSize: '$4 B Privacy Ops','
 		growthRate: 'High','
 		variant: 'security-futuristic','
 		contactInfo: contact,
@@ -651,7 +651,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Personalization', 'Lifecycle marketing', 'Attribution'],'
 		roi: 'Increase conversion 5–15%','
 		competitors: ['Twilio Segment', 'mParticle'],'
-		marketSize: '$5B CDP','
+		marketSize: '$5 B CDP','
 		growthRate: 'High','
 		variant: 'data-futuristic','
 		contactInfo: contact,
@@ -701,7 +701,7 @@ export const newRealServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Feature rollout', 'Experimentation', 'Optimization'],'
 		roi: 'Ship safer and faster','
 		competitors: ['Optimizely', 'VWO'],'
-		marketSize: '$2B Experimentation','
+		marketSize: '$2 B Experimentation','
 		growthRate: 'Strong','
 		variant: 'cloud-futuristic','
 		contactInfo: contact,

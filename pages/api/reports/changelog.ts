@@ -79,6 +79,3 @@ const data = fs && fs.readFileSync(p, 'utf8')'
 }
       return res && res.status(500).json({ error: 'Failed to update changelog' })'
     }
-  }
-
-}}

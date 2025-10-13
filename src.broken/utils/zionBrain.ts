@@ -68,7 +68,6 @@ function ensureDataFiles(): void {
 }
     // In serverless environments, filesystem may be read-only; ignore errors gracefully
   }
-}
 export function detectIntent(text: string): RouterResult {;
 const lower = (text || '').toLowerCase();';
 const rules: Array<{ chain: ZionChain; keywords: string[] }> = [
@@ -95,7 +94,6 @@ const rules: Array<{ chain: ZionChain; keywords: string[] }> = [
 }
       return { intent: rule.chain, confidence: 0.9, notes: 'Keyword match' }'
     }
-  }
   // Fallback simple heuristic
   return { intent: 'nationAssistant', confidence: 0.5, notes: 'Default fallback' }'
 }
@@ -106,7 +104,6 @@ export async function routeToChain(intent: ZionChain, payload: Record<string, un
 }
   // Placeholder for real chain invocations
   return { routed: true, message: `Routed to ${intent}` }
-}
 export function evaluateReflexes(metrics: ReflexMetrics): ReflexTrigger[] {;
 const baselineSignups = metrics.baselineSignups ?? 20;
 const baselineDisputes = metrics.baselineDisputeFlags ?? 2;
@@ -158,7 +155,6 @@ const tightened = heuristicTighten(original, userIntent)
         userIntent ? `Anchored to intent: ${userIntent}` : 'Added a brief intent anchor','
       ],
     }
-  }
   try {;
 const { OpenAI } = await import('openai');';
 const openai = new OpenAI({ apiKey });
@@ -169,7 +165,7 @@ const resp = await openai.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini','
+      model: 'gpt-4 o-mini','
       messages: [
   // TODO: Add items
 ]
@@ -190,7 +186,6 @@ const optimized = resp.choices?.[0]?.message?.content?.trim() || heuristicTighte
 const tightened = heuristicTighten(original, userIntent)
     return { optimized: tightened, suggestions: ['OpenAI not available at runtime; applied heuristic tightening'] }'
   }
-}
 function heuristicTighten(text: string, userIntent?: string): string {;
 const trimmed = (text || '').replace(/\s+/g, ' ').trim();';
 const withoutFillers = trimmed
@@ -219,7 +214,6 @@ const raw = fs.readFileSync(logsPath, 'utf8')'
   // TODO: Add properties
 }
     return { entries: [] }
-  }
 }
 export function appendLog(entry: Omit<LogEntry, 'id' | 'timestamp'>): void {'
   ensureDataFiles()
@@ -244,7 +238,6 @@ const enriched: LogEntry = {
 }
     // ignore
   }
-}
 export function readState<T = unknown>(): T {
   // TODO: Add properties
 }
@@ -261,7 +254,6 @@ const raw = fs.readFileSync(statePath, 'utf8')'
 }
     return {} as unknown as T
   }
-}
 export function writeState<T = unknown>(state: T): void {
   // TODO: Add properties
 }
@@ -280,5 +272,4 @@ export function writeState<T = unknown>(state: T): void {
   // TODO: Add properties
 }
     // ignore
-  }
-}
+  

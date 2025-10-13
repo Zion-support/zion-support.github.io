@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface AnalyticsProviderProps {
   className?: string;
   children?: React.ReactNode;
@@ -8,7 +6,6 @@ interface AnalyticsProviderProps {
 
 export default function AnalyticsProvider({ className = '', children }: AnalyticsProviderProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -17,7 +14,6 @@ export default function AnalyticsProvider({ className = '', children }: Analytic
       <p>This component is under construction.</p>
   </div>
   );
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';'
 interface AnalyticsContextType {
   // TODO: Add properties
@@ -93,7 +89,6 @@ const track = (event: string, properties?: Record<string, any>) => {
     if (process.env.NODE_ENV === 'development') {'
     console.log('Analytics Event:', event, properties)'
   }
-  }
   const page = (name: string, properties?: Record<string, any>) => {
   // TODO: Add properties
 }
@@ -109,7 +104,6 @@ const track = (event: string, properties?: Record<string, any>) => {
     if (process.env.NODE_ENV === 'development') {'
     console.log('Analytics Page:', name, properties)'
   }
-  }
   const identify = (userId: string, traits?: Record<string, any>) => {
   // TODO: Add properties
 }
@@ -123,7 +117,6 @@ const track = (event: string, properties?: Record<string, any>) => {
     // Also log in development
     if (process.env.NODE_ENV === 'development') {'
     console.log('Analytics Identify:', userId, traits)'
-  }
   }
   const value: AnalyticsContextType = {
   // TODO: Add properties
@@ -166,7 +159,4 @@ declare global {
     dataLayer: any[],
     gtag: (...args: any[]) => void
   }
-}
-=======
   );
-}

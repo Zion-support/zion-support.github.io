@@ -406,7 +406,6 @@ export type InnovativeMicroSaas = {
 }
   // TODO: Add properties
 }
-	}
 ];
 export type InnovativeMicroSaas = {
   // TODO: Add properties
@@ -924,7 +923,6 @@ export const,;
   real_servic,
   e: true}
 export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
-	}
 ];
 export type InnovativeMicroSaas = {
   // TODO: Add properties

@@ -24,7 +24,7 @@ const githubBranch = process.env.GIT_BRANCH || 'main''
 const headers = {)
       Authorization: `token ${githubToken}`)
       'Content-Type': 'application/json')'
-      'User-Agent': 'netlify-i18n-seed-runner')'
+      'User-Agent': 'netlify-i18 n-seed-runner')'
     }
     let sha
     try {;
@@ -53,13 +53,11 @@ let sha
         { headers })
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = json.sha}
-      }
     } catch {}
     const body = {message,
       content: Buffer.from(content).toString('base64'),'
       branch: githubBranch,
       sha}
-    }
     const putRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)
       }`)
       {method: 'PUT', headers)'
@@ -85,7 +83,6 @@ let error
 }
     error = String(e
   }
-      }
     })
     return {ok)
         status; error })
@@ -107,11 +104,8 @@ let error
         error: `Fetch ${res.status}` })
       } catch (e) {/* TODO: Fix JSX expression */}
       }
-      }
-    }
     return {/* TODO: Fix JSX expression */}
         status; error }
-  }
   try {/* TODO: Fix JSX expression */}
   r: 'No base URL' })'
       }
@@ -140,15 +134,14 @@ let m
 const _entries = {}
     for (const t of unique) {/* TODO: Fix JSX expression */}
       if (!entries[k]) entries[k] = t}
-    }
     const content = JSON.stringify({locale: en),
         generatedAt: new Date().toISOString()} entries },;
 const content = JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()} entries },
       null,
       2);
-const path = 'data/i18n-seed.json'`'
-//     const msg = `chore(i18n): update i18n seed from homepage (${new Date().toISOString()})`
+const path = 'data/i18 n-seed.json'`'
+//     const msg = `chore(i18 n): update i18 n seed from homepage (${new Date().toISOString()})`
 //     const resCommit = await commitFile(path, content)
         msg)
     return {statusCode: 200,
@@ -175,13 +168,12 @@ const path = 'data/i18n-seed.json'`'
   } catch (e) {/* TODO: Fix JSX expression */}
       })
     }
-  }
 }
 exports.config = { schedule: '*/20 * * * *' } exports.handler = async function () {' const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || ').replace(/\/$/) '');' const githubToken = process.env.GITHUB_TOKEN || '}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app' const githubBranch = process.env.GIT_BRANCH || 'main' function keyify(text) {' return text.toLowerCase().replace(/[^a-z0-9]+/g) '_').replace(/^_+|_+$/g) ').slice(0)''
         60) || 'text' } async function commitFile(path, content)'
         message) {' if(!githubToken)'
         return { ok: false),
-        status: 0, error: 'No GITHUB_TOKEN provided' } const headers = { Authorization: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-i18n-seed-runner' } let sha; try { const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)'
+        status: 0, error: 'No GITHUB_TOKEN provided' } const headers = { Authorization: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-i18 n-seed-runner' } let sha; try { const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${encodeURIComponent(path;)'
       }?ref=${encodeURIComponent(githubBranch;)
       }`, { headers;)
       }); if (getRes.ok) {const json = await getRes.json(); sha = json.sha} } } catch {}' const body = {message, content: Buffer.from(content).toString('base64'), branch: githubBranch,'
@@ -198,7 +190,7 @@ exports.config = { schedule: '*/20 * * * *' } exports.handler = async function (
         error: `Fetch ${res.status}` }) } const html = await res.text(); // naive extraction of visible strings inside common tags const tagRegex = /<(h1|h2|h3|p|a|button)[^>]*>([\\s\\S]*?)<\\/\\1>/gi; const raw = []; let m; while ((m = tagRegex.exec(html)) !== null) {' let text = m[2].replace(/<[^>]*>/g) ' ').replace(/\s+/g} ' ').trim(); if(text && text.length >= 3 && text.length <= 140)'
         raw.push(text); } const unique = Array.from(new Set(raw)).slice(0)
         200); const entries = {} for (const t of unique) {const k = keyify(t); if (!entries[k]) entries[k] = t} } ' const content = JSON.stringify({locale: en),'
-        generatedAt: new Date().toISOString()} entries }, null, 2);' const path = 'data/i18n-seed.json' const msg = `chore(i18n): update i18n seed from homepage (${new Date().toISOString()})`; const resCommit = await commitFile(path, content)'
+        generatedAt: new Date().toISOString()} entries }, null, 2);' const path = 'data/i18 n-seed.json' const msg = `chore(i18 n): update i18 n seed from homepage (${new Date().toISOString()})`; const resCommit = await commitFile(path, content)'
         msg); return {
   // TODO: Add properties
 }
@@ -214,7 +206,7 @@ exports.config = {/* TODO: Fix JSX expression */}
         60) || 'text' } async function commitFile(path, content)'
         message) {/* TODO: Fix JSX expression */}
   r: 'No GITHUB_TOKEN provided' } const headers = {/* TODO: Fix JSX expression */}`'
-  n: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-i18n-seed-runner' } let sha; try {/* TODO: Fix JSX expression */}'
+  n: `token ${githubToken}`,' 'Content-Type': 'application/json',' 'User-Agent': 'netlify-i18 n-seed-runner' } let sha; try {/* TODO: Fix JSX expression */}'
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}
       }?ref=${/* TODO: Fix JSX expression */}`
       }`, {/* TODO: Fix JSX expression */}
@@ -230,7 +222,7 @@ exports.config = {/* TODO: Fix JSX expression */}
   r: `Fetch ${res.status}` }) } const html = await res.text(); // naive extraction of visible strings inside common tags const tagRegex = /<(h1|h2|h3|p|a|button)[^>]*>([\\s\\S]*?)<\\/\\1>/gi; const raw = []; let m; while ((m = tagRegex.exec(html)) !== null) {' let text = m[2].replace(/<[^>]*>/g) ' ').replace(/\s+/g} ' ').trim(); if (text && text.length >= 3 && text.length <= 140)'
         raw.push(text); } const unique = Array.from(new Set(raw)).slice(0)
         200); const entries = {} for (const t of unique) {const k = keyify(t); if (!entries[k]) entries[k] = t} } ' const content = JSON.stringify({/* TODO: Fix JSX expression */})`'
-  t: new Date().toISOString()} entries }, null, 2);' const path = 'data/i18n-seed.json' const msg = `chore(i18n): update i18n seed from homepage (${new Date().toISOString()})`; const resCommit = await commitFile(path, content)'
+  t: new Date().toISOString()} entries }, null, 2);' const path = 'data/i18 n-seed.json' const msg = `chore(i18 n): update i18 n seed from homepage (${new Date().toISOString()})`; const resCommit = await commitFile(path, content)'
         msg); return {/* TODO: Fix JSX expression */}
       }) } } catch (e) {/* TODO: Fix JSX expression */}
       }) } } }'`'

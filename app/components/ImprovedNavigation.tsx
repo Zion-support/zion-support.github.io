@@ -10,4 +10,3 @@ export default function ImprovedNavigation({ className = '', children }: Improve
       {children}
     </div>
   );
-}

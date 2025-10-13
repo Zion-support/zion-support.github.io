@@ -4,7 +4,7 @@ export default defineConfig({
 }
   // TODO: Add properties
 }
-  e2e: {
+  e2 e: {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -16,13 +16,13 @@ export default define_config ({
 }
   // TODO: Add properties
 }
-  e2e: {
+  e2 e: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     baseUrl: 'http://localhost:3000', // Standard Next && Next.js port'
-    supportFile: 'cypress/support/e2e && e2e.ts','
+    supportFile: 'cypress/support/e2 e && e2 e.ts','
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
   // TODO: Add properties
@@ -33,7 +33,7 @@ export default define_config ({
         if (browser && browser.family === 'chromium') {'
           launchOptions && launchOptions.args.push('--disable-ipv6')'
     base_url: 'http://localhost:3000', // Standard Next.js port'
-    support_file: 'cypress / support / e2e.ts','
+    support_file: 'cypress / support / e2 e.ts','
     experimentalModifyObstructiveThirdPartyCode: true,    // Disable IPv6 in Chromium - based browsers to avoid socket errors
     setupNodeEvents (on, config) {
   // TODO: Add properties
@@ -57,7 +57,7 @@ if ( {) {
 }
   // TODO: Add properties
 }
-  e2e: {
+  e2 e: {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -68,13 +68,13 @@ export default defineConfig({
 }
   // TODO: Add properties
 }
-  e2e: {
+  e2 e: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     baseUrl: 'http://localhost:3000', // Standard Next.js port'
-    supportFile: 'cypress/support/e2e.ts','
+    supportFile: 'cypress/support/e2 e.ts','
     experimentalModifyObstructiveThirdPartyCode: true,
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
@@ -87,7 +87,7 @@ export default defineConfig({
           launchOptions.args.push('--disable-ipv6')'
         }
         return launchOptions
-    supportFile: 'cypress/support/e2e.ts''
+    supportFile: 'cypress/support/e2 e.ts''
     experimentalModifyObstructiveThirdPartyCode: true
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
@@ -148,8 +148,8 @@ export default defineConfig({
     toConsole: true
   },});    mochaFile: 'cypress/results/junit-[hash].xml''
     baseUrl: 'http://localhost:3000', // Standard Next.js port'
-    supportFile: 'cypress/support/e2e.ts', experimentalModifyObstructiveThirdPartyCode: true,'
-    supportFile: 'cypress/support/e2e.ts','
+    supportFile: 'cypress/support/e2 e.ts', experimentalModifyObstructiveThirdPartyCode: true,'
+    supportFile: 'cypress/support/e2 e.ts','
     experimentalModifyObstructiveThirdPartyCode: true,
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {
@@ -192,13 +192,13 @@ export default defineConfig({
 }
   // TODO: Add properties
 }
-  e2e: {
+  e2 e: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     baseUrl: 'http://localhost:3000', // Standard Next.js port'
-    supportFile: 'cypress/support/e2e.ts','
+    supportFile: 'cypress/support/e2 e.ts','
     experimentalModifyObstructiveThirdPartyCode: true,
     // Disable IPv6 in Chromium-based browsers to avoid socket errors
     setupNodeEvents(on, config) {

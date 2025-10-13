@@ -57,11 +57,11 @@ const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string; status: QuoteStatus }) =>
       quoteRequestService.updateStatus(id, status),
     onSuccess: (_, variables) => {;
-let message = "Status updated""
+let message = "Status updated"
       if (variables.status === 'in_review') {'
-        message = "Quote marked as viewed""
+        message = "Quote marked as viewed"
       } else if (variables.status === 'responded') {'
-        message = "Quote marked as responded""
+        message = "Quote marked as responded"
       }
       toast({
   // TODO: Add properties
@@ -69,7 +69,7 @@ let message = "Status updated""
   // TODO: Add properties
 }
         title: message,
-        description: "The quote request status has been updated""
+        description: "The quote request status has been updated"
       })
       queryClient.invalidateQueries({ queryKey: ['quotes', 'talent', talentId] })'
     },
@@ -83,9 +83,9 @@ let message = "Status updated""
 }
   // TODO: Add properties
 }
-        title: "Error","
-        description: "Failed to update status: " + error.message,"
-        variant: "destructive""
+        title: "Error"
+        description: "Failed to update status: "
+        variant: "destructive"
       })
     }
   })
@@ -107,26 +107,7 @@ const toggleArchiveMutation = useMutation({
 }
   // TODO: Add properties
 }
-        title: variables.isArchived ? "Quote archived" : "Quote unarchived","
-        description: variables.isArchived
-          ? "The quote request has been archived" "
-          : "The quote request has been moved back to active quotes""
-      })
-      queryClient.invalidateQueries({ queryKey: ['quotes', 'talent', talentId] })'
-    },
-    onError: (error: Error) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      toast({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        title: "Error","
-        description: "Failed to update quote: " + error.message,"
-        variant: "destructive""
+        title: variables.isArchived ? "Quote archived"Quote unarchived","The quote request has been archived" "The quote request has been moved back to active quotes""Error","Failed to update quote: " + error.message,"destructive""
       })
     }
   })
@@ -150,5 +131,4 @@ const toggleArchiveMutation = useMutation({
     toggleArchive: (id: string, isArchived: boolean) =>
       toggleArchiveMutation.mutate({ id, isArchived })}
       toggleArchiveMutation.mutate({ id, isArchived }),
-  }
-}
+  

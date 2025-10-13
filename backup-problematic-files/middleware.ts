@@ -1,5 +1,5 @@
-import { NextResponse } from "next/server";";
-import type { NextRequest } from "next/server";"
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server"
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY')'
   response.headers.set('X-Content-Type-Options', 'nosniff')'
@@ -10,7 +10,7 @@ import type { NextRequest } from "next/server";"
   // TODO: Add parameters
 )
     'Content-Security-Policy','
-    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"'"
+    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   )
   // Permissions Policy
   response.headers.set(
@@ -45,7 +45,7 @@ const ip = request.ip || request.headers.get('x-forwarded-for') || 'unknown''
   response.headers.delete('Server')'
   return response
 }
-ursor/fix-lint-push-and-merge-to-main-ae4e
+ursor/fix-lint-push-and-merge-to-main-ae4 e
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY')'
   response.headers.set('X-Content-Type-Options', 'nosniff')'
@@ -56,7 +56,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   // TODO: Add parameters
 )
     'Content-Security-Policy','
-    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"'"
+    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   )
   return response
   return response
@@ -71,7 +71,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   // TODO: Add parameters
 )
     'Content-Security-Policy','
-    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"'"
+    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
   )
   return response
 return response
@@ -82,14 +82,13 @@ export const config = {
 }
   // TODO: Add properties
 }
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]"
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"
 }
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],"
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"
 }
 export const config = {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],"
-}
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"

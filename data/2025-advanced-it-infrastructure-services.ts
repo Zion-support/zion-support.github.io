@@ -29,7 +29,6 @@
     email: string
     address: string}
     website: string}
-  }
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -103,7 +102,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     color: 'from-indigo-600 to-purple-600','
     textColor: 'text-indigo-400','
     link: 'https://ziontechgroup.com/quantum-enhanced-cloud-infrastructure','
-    marketPosition: 'Competes with AWS ($0.10/hour), Azure ($0.10/hour), GCP ($0.10/hour). Our advantage: Quantum processing capabilities provide 1000x performance for specific workloads.','
+    marketPosition: 'Competes with AWS ($0.10/hour), Azure ($0.10/hour), GCP ($0.10/hour). Our advantage: Quantum processing capabilities provide 1000 x performance for specific workloads.','
     targetAudience: ['Research institutions', 'AI companies', 'Financial services', 'Pharmaceutical companies', 'Government agencies'],'
     trialDays: 14,
     setupTime: '1-2 weeks','
@@ -114,7 +113,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Multi-cloud management, Cost optimization, Workload migration, Disaster recovery, Compliance'],'
     roi: 'Organizations report 400% ROI through reduced cloud costs and improved efficiency.','
     competitors: ['HashiCorp, Terraform Cloud, CloudBolt, RightScale'],'
-    marketSize: '$25B multi-cloud management market','
+    marketSize: '$25 B multi-cloud management market','
     growthRate: '35% annual growth','
     variant: 'multi-cloud-enterprise','
     technology: ['Quantum computing, Kubernetes, Docker, React, Node.js, PostgreSQL, Redis'],'
@@ -122,7 +121,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['AI model training, Scientific simulations, Financial modeling, Drug discovery, Cryptography'],'
     roi: 'Organizations report 2000% ROI through quantum-accelerated computations and reduced processing time.','
     competitors: ['AWS, Azure, GCP, IBM Cloud, Google Cloud'],'
-    marketSize: '$45.2B cloud computing market','
+    marketSize: '$45.2 B cloud computing market','
     growthRate: '50% annual growth','
     variant: 'quantum-cloud-enterprise','
     contactInfo: {
@@ -163,7 +162,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       'Real-time data processing','
       'Intelligent load balancing','
       'Edge AI inference','
-      '5G network optimization','
+      '5 G network optimization','
       'IoT device orchestration','
       'Edge security and privacy','
       'Performance monitoring','
@@ -182,11 +181,11 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     category: 'Edge Computing & IoT','
     realService: true,
     technology: ['Kubernetes, Docker, React, Node.js, PostgreSQL, Redis, TensorFlow'],'
-    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, 5G networks, IoT devices'],'
-    useCases: ['IoT data processing, Real-time analytics, Edge AI, 5G optimization, Smart manufacturing'],'
+    integrations: ['AWS IoT, Azure IoT, Google Cloud IoT, 5 G networks, IoT devices'],'
+    useCases: ['IoT data processing, Real-time analytics, Edge AI, 5 G optimization, Smart manufacturing'],'
     roi: 'Organizations report 500% ROI through reduced latency, improved performance, and lower operational costs.','
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'],'
-    marketSize: '$12.8B edge computing market','
+    marketSize: '$12.8 B edge computing market','
     growthRate: '45% annual growth','
     variant: 'edge-computing-enterprise','
     contactInfo: {
@@ -217,7 +216,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     tagline: 'Comprehensive zero-trust security architecture for modern networks','
     price: '$1,599','
     period: '/month','
-    description: 'Advanced zero-trust network security platform that implements the principle of "never trust, always verify" across all network resources. Provides micro-segmentation, continuous authentication, and comprehensive threat protection.','"
+    description: 'Advanced zero-trust network security platform that implements the principle of "never trust, always verify"
     features: [
   // TODO: Add items
 ]
@@ -283,14 +282,14 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Network security, Access control, Compliance, Threat protection, Audit reporting'],'
     roi: 'Organizations report 350% ROI through improved security posture and reduced incidents.','
     competitors: ['Traditional network security vendors, Zero-trust startups'],'
-    marketSize: '$40B network security market','
+    marketSize: '$40 B network security market','
     growthRate: '30% annual growth in zero-trust segment','
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Kubernetes'],'
     integrations: ['Active Directory, LDAP, SAML, OAuth, SIEM systems, Firewalls'],'
     useCases: ['Identity management, Network security, Access control, Threat detection, Compliance'],'
     roi: 'Organizations report 600% ROI through reduced security incidents, improved compliance, and automated security.','
     competitors: ['Palo Alto, Cisco, Fortinet, Check Point, Juniper'],'
-    marketSize: '$22.5B cybersecurity market','
+    marketSize: '$22.5 B cybersecurity market','
     growthRate: '40% annual growth','
     variant: 'zero-trust-enterprise','
     contactInfo: {
@@ -335,7 +334,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Identity management, Network security, Access control, Threat detection, Compliance'],'
     roi: 'Organizations report 600% ROI through reduced security incidents, improved compliance, and automated security.','
     competitors: ['Palo Alto, Cisco, Fortinet, Check Point, Juniper'],'
-    marketSize: '$22.5B cybersecurity market','
+    marketSize: '$22.5 B cybersecurity market','
     growthRate: '40% annual growth','
     variant: 'zero-trust-enterprise','
     contactInfo: {
@@ -399,7 +398,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['CI/CD automation, Infrastructure management, Testing automation, Performance optimization, Incident management'],'
     roi: 'Teams report 300% ROI through reduced deployment time and improved reliability.','
     competitors: ['GitLab, GitHub Actions, Jenkins, CircleCI, Travis CI'],'
-    marketSize: '$8B DevOps market','
+    marketSize: '$8 B DevOps market','
     growthRate: '28% annual growth','
     variant: 'ai-devops-enterprise','
     contactInfo: {
@@ -463,7 +462,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Secure data storage, Compliance management, Disaster recovery, Data protection, Archive storage'],'
     roi: 'Organizations report 400% ROI through improved security and compliance benefits.','
     competitors: ['Traditional storage vendors, Quantum-resistant startups'],'
-    marketSize: '$50B data storage market','
+    marketSize: '$50 B data storage market','
     growthRate: '40% annual growth in quantum-resistant segment','
     variant: 'quantum-storage-enterprise','
     contactInfo: {
@@ -527,7 +526,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Energy optimization, Environmental monitoring, Predictive maintenance, Resource management, Cost reduction'],'
     roi: 'Data centers report 500% ROI through energy savings and improved efficiency.','
     competitors: ['Schneider Electric, Siemens, Honeywell, Johnson Controls'],'
-    marketSize: '$12B data center management market','
+    marketSize: '$12 B data center management market','
     growthRate: '32% annual growth','
     variant: 'intelligent-datacenter-enterprise','
     contactInfo: {
@@ -591,7 +590,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Privacy-preserving AI, Distributed learning, Healthcare AI, Financial AI, Research collaboration'],'
     roi: 'Organizations report 600% ROI through improved AI capabilities while maintaining privacy.','
     competitors: ['Traditional AI platforms, Federated learning startups'],'
-    marketSize: '$3B federated learning market','
+    marketSize: '$3 B federated learning market','
     growthRate: '50% annual growth','
     variant: 'federated-learning-enterprise','
     contactInfo: {
@@ -655,7 +654,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Quantum research', 'Financial modeling', 'Drug discovery', 'Optimization problems', 'Cryptography'],'
     roi: 'Research institutions report 1000%+ ROI with access to quantum computing power and breakthrough research capabilities.','
     competitors: ['None - First to market'],'
-    marketSize: '$50B+ potential market','
+    marketSize: '$50 B+ potential market','
     growthRate: '800%+ annual growth','
     variant: 'quantum-cloud','
     contactInfo: {
@@ -719,7 +718,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['IoT deployment', 'Edge computing management', 'Distributed applications', 'Real-time processing', 'Latency optimization'],'
     roi: 'IoT companies report 450% ROI with 70% reduction in latency and 55% improvement in edge computing efficiency.','
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'Kubernetes Edge'],'
-    marketSize: '$12.5B edge computing market','
+    marketSize: '$12.5 B edge computing market','
     growthRate: '35% annual growth','
     variant: 'edge-computing','
     contactInfo: {
@@ -783,7 +782,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Identity verification', 'Access control', 'Threat prevention', 'Compliance management', 'Security monitoring'],'
     roi: 'Large enterprises report 550% ROI with 85% reduction in security incidents and 75% improvement in compliance scores.','
     competitors: ['Okta', 'Ping Identity', 'ForgeRock', 'CyberArk'],'
-    marketSize: '$12.8B zero trust security market','
+    marketSize: '$12.8 B zero trust security market','
     growthRate: '38% annual growth','
     variant: 'zero-trust','
     contactInfo: {
@@ -876,7 +875,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Data center automation', 'Infrastructure optimization', 'Energy efficiency', 'Performance monitoring', 'Maintenance automation'],'
     roi: 'Data center operators report 600% ROI with 70% reduction in operational costs and 80% improvement in energy efficiency.','
     competitors: ['None - First to market'],'
-    marketSize: '$35B+ potential market','
+    marketSize: '$35 B+ potential market','
     growthRate: '500%+ annual growth','
     variant: 'autonomous-infrastructure','
     technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Kubernetes'],'
@@ -884,7 +883,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Infrastructure management, Capacity planning, Performance optimization, Cost optimization, Disaster recovery'],'
     roi: 'Organizations report 800% ROI through reduced operational costs, improved reliability, and automated management.','
     competitors: ['Equinix, Digital Realty, CyrusOne, CoreSite, QTS'],'
-    marketSize: '$35.8B data center market','
+    marketSize: '$35.8 B data center market','
     growthRate: '35% annual growth','
     variant: 'data-center-enterprise','
     contactInfo: {
@@ -929,7 +928,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Infrastructure management, Capacity planning, Performance optimization, Cost optimization, Disaster recovery'],'
     roi: 'Organizations report 800% ROI through reduced operational costs, improved reliability, and automated management.','
     competitors: ['Equinix, Digital Realty, CyrusOne, CoreSite, QTS'],'
-    marketSize: '$35.8B data center market','
+    marketSize: '$35.8 B data center market','
     growthRate: '35% annual growth','
     variant: 'data-center-enterprise','
     contactInfo: {
@@ -1026,7 +1025,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Secure communications', 'Government networks', 'Financial transactions', 'Defense applications', 'Research networks'],'
     roi: 'Government agencies report 900% ROI with 100% security compliance and unbreakable communication channels.','
     competitors: ['None - First to market'],'
-    marketSize: '$45B+ potential market','
+    marketSize: '$45 B+ potential market','
     growthRate: '700%+ annual growth','
     variant: 'quantum-networking','
     technology: ['Quantum computing, Python, React, Node.js, PostgreSQL, Redis, Kubernetes'],'
@@ -1034,7 +1033,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Secure communications, Network optimization, Quantum encryption, Government networks, Financial networks'],'
     roi: 'Organizations report 1000% ROI through unbreakable security, improved performance, and quantum optimization.','
     competitors: ['Cisco, Juniper, Arista, Huawei, Nokia'],'
-    marketSize: '$28.5B networking market','
+    marketSize: '$28.5 B networking market','
     growthRate: '55% annual growth','
     variant: 'quantum-networking-enterprise','
     contactInfo: {
@@ -1117,7 +1116,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Quantum research', 'Financial modeling', 'Drug discovery', 'Optimization problems', 'Cryptography'],'
     roi: 'Research institutions report 1000%+ ROI with access to quantum computing power and breakthrough research capabilities.','
     competitors: ['None - First to market'],'
-    marketSize: '$50B+ potential market','
+    marketSize: '$50 B+ potential market','
     growthRate: '800%+ annual growth','
     color: 'from-cyan-500 to-blue-600','
     textColor: 'text-cyan-400','
@@ -1133,7 +1132,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Quantum computing research', 'Financial modeling', 'Drug discovery', 'Cryptography', 'Optimization problems'],'
     roi: 'Research institutions report 800% ROI with access to quantum computing capabilities and accelerated research breakthroughs.','
     competitors: ['IBM Quantum Cloud', 'Amazon Braket', 'Azure Quantum', 'Google Quantum Cloud'],'
-    marketSize: '$45B+ potential market','
+    marketSize: '$45 B+ potential market','
     growthRate: '600%+ annual growth','
     variant: 'quantum-cloud','
     contactInfo: {
@@ -1214,7 +1213,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['IoT deployment', 'Edge computing management', 'Distributed applications', 'Real-time processing', 'Latency optimization'],'
     roi: 'IoT companies report 450% ROI with 70% reduction in latency and 55% improvement in edge computing efficiency.','
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'Kubernetes Edge'],'
-    marketSize: '$12.5B edge computing market','
+    marketSize: '$12.5 B edge computing market','
     growthRate: '35% annual growth','
     variant: 'edge-computing','
     contactInfo: {
@@ -1286,7 +1285,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Identity verification', 'Access control', 'Threat prevention', 'Compliance management', 'Security monitoring'],'
     roi: 'Large enterprises report 550% ROI with 85% reduction in security incidents and 75% improvement in compliance scores.','
     competitors: ['Okta', 'Ping Identity', 'ForgeRock', 'CyberArk'],'
-    marketSize: '$12.8B zero trust security market','
+    marketSize: '$12.8 B zero trust security market','
     growthRate: '38% annual growth','
     growthRate: '40% annual growth','
     variant: 'zero-trust','
@@ -1362,12 +1361,12 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Data center automation', 'Infrastructure optimization', 'Energy efficiency', 'Performance monitoring', 'Maintenance automation'],'
     roi: 'Data center operators report 600% ROI with 70% reduction in operational costs and 80% improvement in energy efficiency.','
     competitors: ['None - First to market'],'
-    marketSize: '$35B+ potential market','
+    marketSize: '$35 B+ potential market','
     integrations: ['Data center management systems', 'Monitoring tools', 'Power management systems', 'Cooling systems', 'Network equipment'],'
     useCases: ['Data center automation', 'Infrastructure optimization', 'Energy efficiency', 'Performance monitoring', 'Predictive maintenance'],'
     roi: 'Data center operators report 700% ROI with 60% reduction in operational costs and 80% improvement in energy efficiency.','
     competitors: ['None - First to market'],'
-    marketSize: '$25B+ potential market','
+    marketSize: '$25 B+ potential market','
     growthRate: '500%+ annual growth','
     variant: 'autonomous-infrastructure','
     contactInfo: {
@@ -1440,7 +1439,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Secure communications', 'Government networks', 'Financial transactions', 'Defense applications', 'Research networks'],'
     roi: 'Government agencies report 900% ROI with 100% security compliance and unbreakable communication channels.','
     competitors: ['None - First to market'],'
-    marketSize: '$45B+ potential market','
+    marketSize: '$45 B+ potential market','
     growthRate: '700%+ annual growth','
     variant: 'quantum-networking','
     contactInfo: {
@@ -1528,7 +1527,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Infrastructure monitoring', 'Resource optimization', 'Performance optimization', 'Cost management', 'Automation'],'
     roi: 'Infrastructure teams report 480% ROI with 65% reduction in management time and 55% improvement in resource utilization.','
     competitors: ['ServiceNow', 'BMC Helix', 'BMC TrueSight', 'IBM Tivoli'],'
-    marketSize: '$15.2B infrastructure management market','
+    marketSize: '$15.2 B infrastructure management market','
     marketPosition: 'Advanced AI-powered infrastructure management platform with intelligent automation, optimization, and comprehensive management capabilities.','
     targetAudience: ['Infrastructure engineers', 'Cloud architects', 'DevOps teams', 'IT operations', 'Technology companies'],'
     trialDays: 30,
@@ -1540,7 +1539,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Infrastructure automation', 'Resource provisioning', 'Scaling optimization', 'Cost management', 'Security automation'],'
     roi: 'Infrastructure teams report 480% ROI with 65% reduction in provisioning time and 55% improvement in resource utilization.','
     competitors: ['Terraform', 'Ansible', 'Chef', 'Puppet'],'
-    marketSize: '$12.8B infrastructure management market','
+    marketSize: '$12.8 B infrastructure management market','
     growthRate: '32% annual growth','
     variant: 'ai-infrastructure','
     contactInfo: {
@@ -1606,7 +1605,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Multi-cloud management', 'Workload distribution', 'Cost optimization', 'Performance monitoring', 'Cloud integration'],'
     roi: 'Multi-cloud organizations report 420% ROI with 60% reduction in cloud management complexity and 50% improvement in cost efficiency.','
     competitors: ['Terraform', 'Ansible', 'Kubernetes', 'Cloud Foundry'],'
-    marketSize: '$18.5B hybrid cloud market','
+    marketSize: '$18.5 B hybrid cloud market','
     tagline: 'Seamless multi-cloud and hybrid cloud management','
     price: '$9,500','
     period: '/month','
@@ -1643,7 +1642,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     useCases: ['Multi-cloud management', 'Hybrid cloud integration', 'Workload optimization', 'Cloud migration', 'Resource optimization'],'
     roi: 'Multi-cloud organizations report 420% ROI with 50% reduction in cloud costs and 60% improvement in resource utilization.','
     competitors: ['Terraform', 'Kubernetes', 'Cloud Foundry', 'OpenShift'],'
-    marketSize: '$15.2B hybrid cloud market','
+    marketSize: '$15.2 B hybrid cloud market','
     growthRate: '28% annual growth','
     variant: 'hybrid-cloud','
     contactInfo: {

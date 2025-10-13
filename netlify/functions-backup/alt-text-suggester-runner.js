@@ -9,7 +9,6 @@ const res = spawnSync('node', [abs, ...args], {)'
     stdout: res.stdout || ''}'
     stderr: res.stderr || '','
   }
-}
 exports.config = {schedule: '0 */2 * * *'} // every 2 hours;';
 const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}'
   g: 'utf8'})'
@@ -19,7 +18,6 @@ const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}'
     stder,
   r: res.stderr || '','
   }
-}
 exports.config = {/* TODO: Fix JSX expression */}
   e: '0 */2 * * *'} // every 2 hours'
 }

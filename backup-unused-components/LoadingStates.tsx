@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface LoadingStatesProps {
   className?: string;
   children?: React.ReactNode;
@@ -7,7 +6,6 @@ interface LoadingStatesProps {
 
 export default function LoadingStates({ className = '', children }: LoadingStatesProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -20,9 +18,6 @@ export default function LoadingStates({ className = '', children }: LoadingState
       <p>This component is under construction.</p>
     </div>
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="text-center">
 </div>
 </div>
-=======
   );
-}

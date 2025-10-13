@@ -25,8 +25,6 @@ function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
     console.error(`Error fixing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Main function
 function main() {
   // TODO: Add properties
@@ -34,7 +32,6 @@ function main() {
   // TODO: Add properties
 }
 function main() {/* TODO: Fix JSX expression */}
-}
   const files = [
   // TODO: Add items
 ]
@@ -67,7 +64,6 @@ let fixedCount = 0
 }
         fixedCount++
   files.forEach(file => {/* TODO: Fix JSX expression */}
-      }
     })
   })
   `

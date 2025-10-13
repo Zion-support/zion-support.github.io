@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 require('@testing-library/jest-dom');
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-require('@testing-library/jest-dom');
-=======
+
 /* eslint-env jest */
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');';
@@ -156,8 +151,6 @@ global.IntersectionObserver = class IntersectionObserver {
     return []
   }
   unobserve() {}
-}
-
 // Suppress console errors in tests;
 const originalError = console.error
 beforeAll(() => {
@@ -201,6 +194,4 @@ afterAll(() => {
 }
     console.error = originalError
   })
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-c832

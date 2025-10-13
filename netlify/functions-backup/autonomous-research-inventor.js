@@ -13,7 +13,6 @@ exports.handler = async () => {const logs = []}
     } catch (e) {/* TODO: Fix JSX expression */}`
       logs.push(`error=${String(e)}`)
     }
-  }
   step('node automation/auto-discovery-runner.cjs')'
   step('node automation/repo-knowledge-graph.cjs')'
   step('node automation/repo-radar-metrics.cjs')'

@@ -77,7 +77,6 @@ const currentCount = Math.floor(easeOutQuart * end)
 }
         animationFrame = requestAnimationFrame(animate)
   }
-    }
     animationFrame = requestAnimationFrame(animate)
     return () => {
   // TODO: Implement
@@ -95,7 +94,6 @@ const currentCount = Math.floor(easeOutQuart * end)
 }
         cancelAnimationFrame(animationFrame)
   }
-    }
   }, [isVisible, end, duration])
   return (
   // TODO: Add parameters

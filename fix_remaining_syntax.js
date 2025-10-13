@@ -17,8 +17,6 @@ const stat = fs.statSync(fullPath)
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {'
       files.push(fullPath)
     }
-  }
-
   return files
 }
 
@@ -96,8 +94,6 @@ const componentName = content.match(/const\s+(\w+):\s*React\.FC/g)
 }
         content = content.replace(/}\s*$/, `}\n\nexport default ${componentName[1]};`)
       }
-    }
-
     // 9. Fix extra semicolons in object properties
     content = content.replace(/,\s*;/g, ',')'
     // 10. Fix missing commas in object arrays
@@ -124,8 +120,6 @@ const componentName = content.match(/const\s+(\w+):\s*React\.FC/g)
     console.error(`✗ Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Get all TypeScript files;
 const tsFiles = getAllTsFiles('./app')'
 console.log(`Found ${tsFiles.length} TypeScript files to check for remaining syntax errors`);

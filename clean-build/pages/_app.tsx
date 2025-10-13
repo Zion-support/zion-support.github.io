@@ -6,12 +6,10 @@ export default function App({ Component, pageProps }: AppProps) {
 }
   return(<React.Fragment>
 <Head>
-<meta charSet="utf-8" />"
-<meta name="viewport" content="width=device-width, initial-scale=1" />"
-<meta name="theme-color" content="#1e40af" />"
-<link rel="icon" href="/favicon.ico" />"
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />"
-<link rel="manifest" href="/manifest.json" /></Head>)"
+<meta charSet="utf-8"
+<meta name="viewport"width=device-width, initial-scale=1" />"theme-color" content=" />"
+<link rel=" href="/favicon.ico"
+<link rel="apple-touch-icon"/apple-touch-icon.png" />"manifest" href=" /></Head>)"
       <Component {...pageProps} />)
     </React.Fragment>);
 export default function App({ Component, pageProps }: AppProps) {/* TODO: Fix JSX expression */}

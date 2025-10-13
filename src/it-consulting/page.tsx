@@ -38,83 +38,55 @@ const consultingServices = [
   return (<React.Fragment>
 <Helmet>
 <title>IT Consulting Services - Zion Tech Group
-        <meta name="description" content="Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>""
-        <meta name="keywords" content="IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" />"
-      ""
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"
-<Navigation/ />""
-        <main className="pt-24 pb-16 px-4"></main>""
-          <div className="max-w-7xl mx-auto"></div>""
-            <div className="text-center mb-16"></div>""
-              < className="text-4xl,"$2 />"
-  md: text-6xl font-bold text-gray-900 mb-6">"
+        <meta name="description"Expert IT consulting services to transform your business. Strategic planning, digital transformation, cloud migration, and cybersecurity solutions." /></meta>"
+        <meta name="keywords"IT consulting, digital transformation, cloud migration, cybersecurity, technology strategy" />""
+      <div className="
+<Navigation/ />""pt-24 pb-16 px-4""max-w-7 xl mx-auto""text-center mb-16""text-4 xl,"
+  md: text-6 xl font-bold text-gray-900 mb-6"
 </h1>
                 IT Consulting Services,
-              </h1>""
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>"
+              </h1>""text-xl text-gray-600 max-w-3 xl mx-auto"
                 Transform your business with expert IT consulting. We provide strategic guidance,
                 digital transformation, and technology solutions that drive growth and efficiency.
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">"
+            <div className="
               {consultingServices.map((service, index) => (
   // TODO: Add parameters
 )
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">"
-<div className="flex items-center mb-6">"
-<div className="p-3 bg-blue-100 rounded-xl mr-4">"
-<service.icon className="w-8 h-8 text-blue-600" />"
-<div>
-<h3 className="text-2xl font-bold text-gray-900">{service.title}"
-                      <p className="text-gray-600">{service.description}"
-                  <div className="mb-6">"
-<h4 className="font-semibold text-gray-900 mb-3">Key Features:"
-                    <ul className="space-y-2">"
+                <div key={index} className="bg-white rounded-2 xl p-8 shadow-lg hover:shadow-xl transition-shadow"flex items-center mb-6"
+<div className="
+<service.icon className="w-8 h-8 text-blue-600"text-2 xl font-bold text-gray-900"
+                      <p className="
+                  <div className="mb-6"font-semibold text-gray-900 mb-3"
+                    <ul className="
                       {service.features.map((feature, idx) => (
   // TODO: Add parameters
 )
-                        <li key={idx} className="flex items-center text-gray-600">"
-<CheckCircle className="w-5 h-5 text-green-500 mr-2" />"
+                        <li key={idx} className="flex items-center text-gray-600"w-5 h-5 text-green-500 mr-2"
                           {feature}
                         </li>)
                       ))}
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:"
-                    <ul className="space-y-2">"
+                    <h4 className="
+                    <ul className="space-y-2"flex items-center text-gray-600"
+<ArrowRight className="
+                          {benefit}
+                      ))}
+                    <h4 className="font-semibold text-gray-900 mb-3"space-y-2"
                       {service.benefits.map((benefit, idx) => (
   // TODO: Add parameters
 )
-                        <li key={idx} className="flex items-center text-gray-600">"
-<ArrowRight className="w-5 h-5 text-blue-500 mr-2" />"
-                          {benefit}
-                      ))}
-                    <h4 className="font-semibold text-gray-900 mb-3">Benefits:"
-                    <ul className="space-y-2">"
-                      {service.benefits.map((benefit, idx) => (
-  // TODO: Add parameters
-)
-                        <li key={idx} className="flex items-center">"
-<ArrowRight className="w-5 h-5 text-blue-500 mr-2" />"
-                          {benefit}
-                      ))}
-                    <div className="text-center">"
-<div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>"
-<button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-colors">"
-                        Get Started,
-
-                    </div></div>
-</div>
-              ))}
-          {/* CTA Section */}
-          <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gray-50">"
-<div className="max-w-4xl mx-auto text-center">"
-<h2 className="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your IT?"
-              <p className="text-xl text-gray-600 mb-8">"
+                        <li key={idx} className="
+<ArrowRight className="w-5 h-5 text-blue-500 mr-2"text-center"
+<div className="
+<button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover: bg-blue-700 transition-colors"py-16 px-4 sm: px-6 lg:px-8 bg-gray-50"
+<div className="
+<h2 className="text-3 xl font-bold text-gray-900 mb-6"text-xl text-gray-600 mb-8"
                 Contact our experts for a free consultation and discover how we can help your business.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">"
-<Phone className="w-5 h-5 inline mr-2" />"
+              <div className="
+<button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors"w-5 h-5 inline mr-2"
                   Call Us
 
-                <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">"
-<Mail className="w-5 h-5 inline mr-2" />"
+                <button className="
+<Mail className="w-5 h-5 inline mr-2"
                   Email Us
 
               </div></div>

@@ -30,18 +30,14 @@ function getAllFiles(_dir, fileList = []) {
       if (!file.startsWith('.') && file !== 'node_modules') {'
         getAllFiles(filePath, fileList);
 const config = {/* TODO: Fix JSX expression */}
-}
-
 // Helper function to read files recursively
 function getAllFiles(_dir, fileList = []) {/* TODO: Fix JSX expression */}
-      }
     } else if ()
       file.endsWith('.ts') ||'
       file.endsWith('.tsx') ||'
       file.endsWith('.js') ||'
       file.endsWith('.jsx')'
     ) {/* TODO: Fix JSX expression */}
-    }
   })
   return fileList
 }
@@ -76,8 +72,8 @@ const unwrappedConsoleRegex =
       if (
   // TODO: Add parameters
 )
-        !content.includes("from '../utils/logger'") &&"'"
-        !content.includes('from "./utils/logger"')'"
+        !content.includes("from '../utils/logger'"'"
+        !content.includes('from "')'"
       ) {
   // TODO: Add properties
 }
@@ -99,8 +95,6 @@ function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
         } else {/* TODO: Fix JSX expression */}`
           newContent = `import { logger } from '${loggerPath}';\n\n${content}`';'
         }
-      }
-
       // Replace console statements
       newContent = newContent.replace(/console\.log\(/g, 'logger.info(')'
       newContent = newContent.replace(/console\.warn\(/g, 'logger.warn(')'
@@ -108,12 +102,8 @@ function improveLogging(content, filePath) {/* TODO: Fix JSX expression */}
       newContent = newContent.replace(/console\.debug\(/g, 'logger.debug(')'
       improved = true
     }
-  }
-
   return {/* TODO: Fix JSX expression */}
   t: newContent }
-}
-
 // Improvement 2: Add error boundaries to components that don't have them,'
 function addErrorHandling(content, filePath) {
   // TODO: Add properties
@@ -147,8 +137,6 @@ function addErrorHandling(content, filePath) {/* TODO: Fix JSX expression */}`
 
   return {/* TODO: Fix JSX expression */}
   t: newContent }
-}
-
 // Improvement 3: Check for security best practices,
 function checkSecurity(content, filePath) {
   // TODO: Add properties
@@ -206,12 +194,8 @@ function optimizeImports(content) {
 // Improvement,
   4: Optimize imports,
 function optimizeImports(content) {/* TODO: Fix JSX expression */}
-  }
-
   return {/* TODO: Fix JSX expression */}
   t: newContent }
-}
-
 // Main processing function
 function processFile(filePath) {
   // TODO: Add properties
@@ -237,11 +221,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
     }
 
     if (errorHandlingResult.improved) {/* TODO: Fix JSX expression */}
-    }
-
     if (securityIssues.length > 0) {/* TODO: Fix JSX expression */}
-    }
-
     if (importsResult.improved) {/* TODO: Fix JSX expression */}`
   in: ${path.relative(process.cwd(), filePath)}`)
     }
@@ -255,15 +235,11 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}`
       fs.writeFileSync(filePath, newContent, 'utf8')'
       return true
     if (fileImproved && newContent !== content) {/* TODO: Fix JSX expression */}
-    }
-
     return false
   } catch (error) {/* TODO: Fix JSX expression */}`
     config.errors.push(`Error processing ${filePath}: ${error.message}`)
     return false
   }
-}
-
 // Run improvements
 // const files = getAllFiles(config.appDir)
 files.forEach(file => {

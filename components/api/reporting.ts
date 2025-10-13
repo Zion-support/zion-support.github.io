@@ -16,7 +16,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
   }>
 }
 const FILE = 'reporting.json';';
-const FALLBACK: ReportingData = { byTenant: {} }
+const FALLBACK: ReportingData = { byTenant: {}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 const method = (req.method |'GET').toUpperCase();';
 const method = (req.method || 'GET').toUpperCase(),;';
@@ -44,7 +44,6 @@ const { funnel, timeToHireDays, costPerHireUsd } = req.body |{};    const entry 
     updated_at: string
   }>
 }
-  }
   if (method === 'POST') {'
 const updated = updateJsonFile<ReportingData>(
   // TODO: Add parameters
@@ -69,7 +68,6 @@ const next = curr && curr.byTenant || {}
           updatedAt: new Date().toISOString()
         }
         return { byTenant: next }
-      }
       FALLBACK
     )
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
@@ -92,7 +90,7 @@ const next = curr && curr.byTenant || {}
 return res.status(405).json({ error: 'Method not allowed' })'
 }
 const FILE = 'reporting.json';';
-const FALLBACK: ReportingData = { by_tenant: {} }
+const FALLBACK: ReportingData = { by_tenant: {}
 ;
 export default /**;
  * handler - Function description
@@ -211,7 +209,7 @@ interface ReportingData {
   }>
 }
 const FILE = 'reporting.json';';
-const FALLBACK: ReportingData = { byTenant: {} }
+const FALLBACK: ReportingData = { byTenant: {}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 const method = (req.method || 'GET').toUpperCase();';
 const auth = authenticateRequest(req, method === 'GET')'
@@ -241,4 +239,3 @@ const next = curr.byTenant || {}
     return res.status(200).json(updated.byTenant[tenantId])
   }
   return res.status(405).json({ error: 'Method not allowed' })'
-}

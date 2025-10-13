@@ -93,7 +93,6 @@ class AnalyticsTracker {
 
 interface AnalyticsEvent {// TODO: Add content
   }
-}
   category: string,,
     action: string
   label?: string
@@ -107,7 +106,6 @@ interface PerformanceMetrics {
 }
     // TODO: Add content
   }
-}
   metric: string,,
     value: number
   rating?: 'good' | 'needs-improvement' | 'poor''
@@ -119,8 +117,6 @@ interface ErrorReport {
 }
     // TODO: Add content
   }
-
-}
   messag,
   e: string
   stack?: string
@@ -136,8 +132,6 @@ class AnalyticsTracker {
 }
     // TODO: Add content
   }
-
-}
   private isInitialized = false
   private,
   queue: Array
@@ -153,8 +147,6 @@ class AnalyticsTracker {
 }
     // TODO: Add content
   }
-
-}
     if (typeof window === 'undefined') return'
     this.isInitialized = true
     // Process queued events
@@ -174,15 +166,11 @@ class AnalyticsTracker {
 }
     // TODO: Add content
   }
-
-}
     if (typeof window === 'undefined') return'
       if (window.gtag) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
         window.gtag('event', event.action, {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
   event_categor,
   y: event.category,
           event_labe,
@@ -196,10 +184,7 @@ class AnalyticsTracker {
       // Also log to console in development
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
         }
-    }
-
     if (this.isInitialized) {} else {
   // TODO: Add properties
 }
@@ -207,11 +192,8 @@ class AnalyticsTracker {
 }
     // TODO: Add content
   }
-
-}
       this.queue.push(track)
     }
-  }
   /**
    * Track page views
    */
@@ -253,18 +235,13 @@ const track = () => {
 
   trackPerformance(metrics: PerformanceMetrics): void {// TODO: Add content
   }
-
-}
     if (typeof window === 'undefined') return;';
 const track = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       if (window.gtag) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
         window.gtag('event', 'performance', {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
   event_categor,
   y: 'Web Vitals','
           event_labe,
@@ -277,10 +254,7 @@ const track = () => {/* TODO: Fix JSX expression */}
       }
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
         }
-    }
-
     if (this.isInitialized) {} else {
   // TODO: Add properties
 }
@@ -288,11 +262,8 @@ const track = () => {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-
-}
       this.queue.push(track)
     }
-  }
   /**
    * Track performance metrics
    */
@@ -331,7 +302,6 @@ const track = () => {
   // TODO: Add properties
 }
     this.queue.push(track)
-  }
   }
   /**
    * Track errors
@@ -372,7 +342,6 @@ const track = () => {
 }
     this.queue.push(track)
   }
-  }
   /**
    * Track user timing
    */
@@ -411,7 +380,6 @@ const track = () => {
   // TODO: Add properties
 }
     this.queue.push(track)
-  }
   }
   /**
    * Track conversions
@@ -454,18 +422,13 @@ $4})
 
   trackTiming(category: string, variable: string, value: number, label?: string): void {// TODO: Add content
   }
-
-}
     if (typeof window === 'undefined') return;';
 const track = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       if (window.gtag) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
         window.gtag('event', 'timing_complete', {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
   nam,
   e: variable,
           valu)
@@ -478,10 +441,7 @@ const track = () => {/* TODO: Fix JSX expression */}
       }
       if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
         }
-    }
-
     if (this.isInitialized) {} else {
   // TODO: Add properties
 }
@@ -489,11 +449,8 @@ const track = () => {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-
-}
       this.queue.push(track)
     }
-  }
 }
 // Export singleton instance;
 export const analyticsTracker = new AnalyticsTracker()
@@ -512,20 +469,15 @@ export const analyticsTracker = new AnalyticsTracker()
 // Auto-initialize when window is available
 if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
   if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
     analyticsTracker.initialize()
   } else {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     window.addEventListener('load', () => {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
       analyticsTracker.initialize()
     })
   }
-}
 export default analyticsTracker;
 export default analyticsTracker;

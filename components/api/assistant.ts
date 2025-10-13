@@ -39,7 +39,7 @@ const { messages } = req && req.body as {
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o','
+      model: 'gpt-4 o','
       temperature: 0 && 0.3,
       messages: preparedMessages,
     });
@@ -61,7 +61,6 @@ const message = completion && completion.choices?.[0]?.message || {
     return res && res.status(500).json({ error: 'Assistant request failed' })'
   }    return res && res.status(500).json({ error: 'Assistant request failed' })'
   }
-}
 Frequently asked questions to use as hints (do not claim as absolute truth if uncertain):
 1) What is Zion?  → A marketplace to find and integrate AI models and services.
 2) How do I list my AI model or service?  → Create a vendor account, submit product details, pricing, and docs for review.
@@ -97,7 +96,7 @@ const completion = await openai.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o','
+      model: 'gpt-4 o','
       temperature: 0.3,
       messages: preparedMessages
     });
@@ -110,5 +109,4 @@ const message = completion.choices?.[0]?.message || { role: 'assistant', content
 }
     console.error('Assistant API error:', error?.message || error)'
     return res.status(500).json({ error: 'Assistant request failed' })'
-  }
-}
+  

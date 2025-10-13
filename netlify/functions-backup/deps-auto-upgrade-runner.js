@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'deps-auto-upgrade-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'deps-auto-upgrade-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'deps-auto-upgrade-runner',' source: event.source || 'unknown', upgrade: {' status: 'checking', dependencies: 0, updatesAvailable: 0,'
         lastCheck: new Date().toISOString() } }) } return result; } catch (error) {

@@ -94,7 +94,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
     useCases: ['DevOps automation, Infrastructure automation, Deployment optimization, Performance optimization'],'
     roi: 'Revolutionary DevOps technology with potential for massive efficiency gains and operational excellence.','
     competitors: ['Limited competition in autonomous DevOps'],'
-    marketSize: 'Growing market - $250B+ potential','
+    marketSize: 'Growing market - $250 B+ potential','
     growthRate: '1500%+ annual growth potential','
     variant: 'it-futuristic','
     contactInfo: {
@@ -158,7 +158,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
     useCases: ['Network security, Identity verification, Threat detection, Security automation'],'
     roi: 'Revolutionary security technology with potential for complete network protection.','
     competitors: ['Limited competition in zero trust security'],'
-    marketSize: 'Growing market - $180B+ potential','
+    marketSize: 'Growing market - $180 B+ potential','
     growthRate: '1200%+ annual growth potential','
     variant: 'security-futuristic','
     contactInfo: {
@@ -222,7 +222,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
     useCases: ['Edge computing, IoT processing, Real-time analytics, Distributed computing'],'
     roi: 'Revolutionary edge computing technology with potential for massive performance improvements.','
     competitors: ['Limited competition in edge orchestration'],'
-    marketSize: 'Growing market - $150B+ potential','
+    marketSize: 'Growing market - $150 B+ potential','
     growthRate: '1000%+ annual growth potential','
     variant: 'edge-futuristic','
     contactInfo: {
@@ -286,7 +286,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
     useCases: ['IT operations, Infrastructure monitoring, Predictive maintenance, Operations optimization'],'
     roi: 'Revolutionary IT technology with potential for massive efficiency gains and operational excellence.','
     competitors: ['Limited competition in AI IT operations'],'
-    marketSize: 'Growing market - $200B+ potential','
+    marketSize: 'Growing market - $200 B+ potential','
     growthRate: '1300%+ annual growth potential','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -350,7 +350,7 @@ export const enterpriseITServices2030: EnterpriseITService2030[] = [;
     useCases: ['Infrastructure security, Quantum encryption, Critical systems protection, Security validation'],'
     roi: 'Revolutionary quantum security technology with potential for complete infrastructure protection.','
     competitors: ['None - First to market'],'
-    marketSize: 'Emerging market - $300B+ potential','
+    marketSize: 'Emerging market - $300 B+ potential','
     growthRate: '2000%+ annual growth potential','
     variant: 'quantum-futuristic','
     contactInfo: {

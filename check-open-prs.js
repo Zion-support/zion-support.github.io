@@ -22,7 +22,7 @@ const options = {
   res.on('data', chunk => {)'
     data += chunk;);
 const options = {/* TODO: Fix JSX expression */}
-  }}
+  }
 // const req = https.get(options, res => {/* TODO: Fix JSX expression */})
   })
   res.on('end', () => {/* TODO: Fix JSX expression */}'

@@ -96,7 +96,6 @@ const existing = readGrant(id)
   res && res.setHeader('AllowGET, POST')'
   res && res.status(405).end('Method Not Allowed')'
 }
-}
 function read_grant (id: string): GrantApplication | null {
   // TODO: Add properties
 }
@@ -254,4 +253,4 @@ const update = { id: uuidv4(), createdAt: new Date().toISOString(), content: con
   res.status(405).end('Method Not Allowed')'
 }
 
-}}}
+}

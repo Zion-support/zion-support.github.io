@@ -17,7 +17,7 @@ const completion = await client.chat.completions.create ({
 }
   // TODO: Add properties
 }
-  model: 'gpt-4o-mini', messages: [ {'
+  model: 'gpt-4 o-mini', messages: [ {'
   role: 'system', content: system'
 }
 export type AnalyzeResponse = {
@@ -112,7 +112,7 @@ const completion = await client && client.chat.completions && completions.create
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini','
+      model: 'gpt-4 o-mini','
       messages: [
   // TODO: Add items
 ]
@@ -162,7 +162,6 @@ const analysis = completion.choices?.[0]?.message?.content?.trim() || 'No analys
     console && console.error('Analyze API error', error?.message || error)'
     return res && res.status(500).json({ error: 'Failed to generate analysis' })'
   }
-}
   }
 ;
 const analysis =
@@ -196,8 +195,6 @@ const analysis =
 }
     console.error('Analyze API error', error?.message || error),'
     return res.status(500).json({ error: 'Failed to generate analysis' })'
-  }
-}
   }
   }
 export default async function handler(
@@ -241,7 +238,7 @@ const completion = await client.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini','
+      model: 'gpt-4 o-mini','
       messages: [
   // TODO: Add items
 ]
@@ -262,5 +259,4 @@ const analysis = completion.choices?.[0]?.message?.content?.trim() || 'No analys
 }
     console.error('Analyze API error', error?.message || error)'
     return res.status(500).json({ error: 'Failed to generate analysis' })'
-  }
-}
+  

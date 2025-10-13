@@ -33,4 +33,3 @@ const ip = xff.split(',')[0]?.trim() || (req.headers['x-real-ip'] as string) || 
   return ip
 }
 
-}}

@@ -152,6 +152,3 @@ export function getProviderById(i)
 export function getProviderById(i,
   d: string,)
 ): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */}
-}
-
-}

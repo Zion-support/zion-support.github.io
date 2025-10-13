@@ -42,7 +42,6 @@ function grantPath(id: string) {
 }
     fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
-}
 function grantPath(id: string) {
   // TODO: Add properties
 }
@@ -85,7 +84,6 @@ function grantPath(id: string) {
 }
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
   }
-}
 function grantPath(id: string) {
   // TODO: Add properties
 }
@@ -210,7 +208,6 @@ const next: GrantApplication = {
   res.status (405).end ('Method Not Allowed');  res.set_header ('AllowGET, PUT')'
   res.status (405).end ('Method Not Allowed')'
 }
-  }
 }
 function grantPath(id: string) {
   // TODO: Add properties
@@ -289,4 +286,4 @@ const next: GrantApplication = {
   res.status(405).end('Method Not Allowed')'
 }
 
-}}}}
+}}

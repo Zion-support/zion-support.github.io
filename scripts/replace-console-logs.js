@@ -22,9 +22,8 @@ files.forEach(file => {
   let fileReplacements = 0;
 
   // Check if file already imports logger
-  const hasLoggerImport = content.includes("import logger from '../../utils/logger'") || 
-                         content.includes("import logger from '../../../utils/logger'") ||
-                         content.includes("import logger from '../../../../utils/logger'");
+  const hasLoggerImport = content.includes("import logger from '../../utils/logger'"import logger from '../../../utils/logger'") ||
+                         content.includes(");
 
   // Apply replacements
   consolePatterns.forEach(({ pattern, replacement }) => {
@@ -43,15 +42,13 @@ files.forEach(file => {
     const importPath = '../'.repeat(depth) + 'utils/logger';
     
     // Add import after the first import statement
-    const firstImportMatch = content.match(/^import\s+.*?from\s+['"][^'"]+['"];?\s*$/m);
+    const firstImportMatch = content.match(/^import\s+.*?from\s+['"][^'"];?\s*$/m);
     if (firstImportMatch) {
       const insertIndex = firstImportMatch.index + firstImportMatch[0].length;
       content = content.slice(0, insertIndex) + 
                 `\nimport logger from '${importPath}';` + 
                 content.slice(insertIndex);
     }
-  }
-
   if (hasReplacements) {
     fs.writeFileSync(filePath, content);
     console.log(`Updated ${file}: ${fileReplacements} replacements`);

@@ -60,5 +60,4 @@ const closeMobileFilter = () => {
     toggleSection,
     closeMobileFilter}
     closeMobileFilter,
-  }
-}
+  

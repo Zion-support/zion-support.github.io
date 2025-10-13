@@ -46,7 +46,6 @@ const res = await postJson(`${HOST}/api/seo/generate`, p)
     fs && fs.writeFileSync(file, JSON && JSON.stringify(res && res.payload, null, 2))
     console && console.log('Wrote', file)'
   }
-}
 main().catch((e) => {
   // TODO: Add properties
 }
@@ -85,7 +84,6 @@ if ( {) {
     fs.writeFileSync (file, JSON.stringify (res.payload, null, 2))
     console.log ('Wrote', file)'
   }
-}
 main ().catch ((e) => {
   // TODO: Add properties
 }
@@ -151,7 +149,6 @@ const res = await postJson(`${HOST}/api/seo/generate`, p)
     fs.writeFileSync(file, JSON.stringify(res.payload, null, 2))
     console.log('Wrote', file)'
   }
-}
 main().catch((e) => {
   // TODO: Add properties
 }

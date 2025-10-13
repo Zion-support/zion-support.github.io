@@ -1,6 +1,4 @@
 import React from 'react';
-
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -67,8 +65,8 @@ class WebsiteAnalyzer {
 
   extractLinks(html, baseUrl) {
     const links = [];
-    const linkRegex = /<a[^>]+href=["']([^"']+)["'][^>]*>/gi;
-    const routerLinkRegex = /<Link[^>]+to=["']([^"']+)["'][^>]*>/gi;
+    const linkRegex = /<a[^>]+href=["']([^"'][^>]*>/gi;
+    const routerLinkRegex = /<Link[^>]+to=["']([^"'][^>]*>/gi;
 
     let match;
     while ((match = linkRegex.exec(html)) !== null) {
@@ -80,7 +78,6 @@ class WebsiteAnalyzer {
         } catch (e) {
           // Invalid URL, skip
         }
-      }
     }
 
     while ((match = routerLinkRegex.exec(html)) !== null) {
@@ -92,7 +89,6 @@ class WebsiteAnalyzer {
         } catch (e) {
           // Invalid URL, skip
         }
-      }
     }
 
     return links;
@@ -194,7 +190,6 @@ class WebsiteAnalyzer {
               }
             });
           }
-        }
       } else {
         this.brokenLinks.push(result);
         - ${result.error || 'Not found'}`);
@@ -240,11 +235,7 @@ class WebsiteAnalyzer {
 
     return report;
   }
-}
-
 // Run the analysis
 const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
 analyzer.analyzeWebsite().then(report => {
-=======
   );
-}

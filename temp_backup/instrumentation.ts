@@ -45,7 +45,7 @@ const mockSentry = await import('./src/utils/sentry-mock')'
   // TODO: Add properties
 }
         console.log('instrumentation.ts: Valid Sentry DSN found, attempting to load actual @sentry/nextjs for Node.js.');';
-const sentryModule = await import("@sentry/nextjs")"
+const sentryModule = await import("@sentry/nextjs"
         Sentry = sentryModule
         // If ./sentry has specific onRequestError, it should be imported here too.
         // For now, assuming @sentry/nextjs covers it or it's not critical for this path.'
@@ -70,7 +70,6 @@ const mockSentry = await import('./src/utils/sentry-mock')'
     // The instrumentation hook (register function) primarily runs server-side (Node or Edge).
     console.log('instrumentation.ts: Client-side context detected, Sentry init deferred to client-specific logic.')'
   }
-}
 // Call initializeSentryOrMock at module load time.
 // The register function will then use the initialized Sentry object.
 // We need to handle the promise here or make register async and await this.;
@@ -82,9 +81,9 @@ export async function register() {
   // TODO: Add properties
 }
   await sentryInitializationPromise; // Ensure initialization is complete
-  console.log("instrumentation.ts: register() called")"
+  console.log("instrumentation.ts: register() called"
   if (!Sentry || typeof Sentry.init !== 'function') {'
-    console.log("instrumentation.ts: Sentry SDK not available or not correctly initialized, skipping Sentry.init().")"
+    console.log("instrumentation.ts: Sentry SDK not available or not correctly initialized, skipping Sentry.init()."
     return
   }
   const SENTRY_DSN = process.env['SENTRY_DSN'] || process.env['NEXT_PUBLIC_SENTRY_DSN'];';
@@ -106,13 +105,13 @@ const isInvalidDsn = !SENTRY_DSN ||
   // TODO: Add properties
 }
     if (process.env.NODE_ENV === 'development') {'
-      console.log("instrumentation.ts: Sentry disabled in development (no valid DSN configured)")"
+      console.log("instrumentation.ts: Sentry disabled in development (no valid DSN configured)"
     } else {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      console.warn("instrumentation.ts: Sentry DSN not configured for production environment")"
+      console.warn("instrumentation.ts: Sentry DSN not configured for production environment"
     }
     return
   }
@@ -138,7 +137,7 @@ const isInvalidDsn = !SENTRY_DSN ||
 }
         // Drop events without meaningful exception messages
         if (event.exception?.values?.[0]?.value === '' || event.exception?.values?.[0]?.value === undefined) {'
-          console.log("instrumentation.ts: Sentry event dropped due to empty exception value.")"
+          console.log("instrumentation.ts: Sentry event dropped due to empty exception value."
           return null
         }
         // Filter out common development noise
@@ -149,7 +148,6 @@ const errorMessage = hint.originalException?.toString() || '''
               errorMessage.includes('Loading chunk')) {'
             return null; // Skip these development-only errors
           }
-        }
         return event
       },
       initialScope: (scope: any) => {
@@ -162,31 +160,14 @@ const errorMessage = hint.originalException?.toString() || '''
 }
   // TODO: Add properties
 }
-          scope.setTag("release", SENTRY_RELEASE)"
+          scope.setTag("release"
         }
         if (SENTRY_ENVIRONMENT) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-          scope.setTag("environment", SENTRY_ENVIRONMENT)"
+          scope.setTag("environment"
         }
-        scope.setTag("runtime", "server-side")"
-        return scope
-      },
-      // Enable debug logging only in development
-      debug: process.env.NODE_ENV === 'development','
-      // Optimize for production performance
-      maxBreadcrumbs: process.env.NODE_ENV === 'production' ? 50 : 100,'
-      attachStacktrace: true,
-      sendDefaultPii: false, // Don't send personally identifiable information'
-    })
-    console.log("instrumentation.ts: Server-side Sentry initialized successfully")"
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("instrumentation.ts: Failed to initialize Sentry:", error)"
-  }
-}
+        scope.setTag("runtime"server-side")"instrumentation.ts: Server-side Sentry initialized successfully")"instrumentation.ts: Failed to initialize Sentry:", error)"
+  

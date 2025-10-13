@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { OpenAI } from "openai";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { OpenAI } from "openai";";
 export default async function handler(
   // TODO: Add parameters
 )
@@ -10,9 +10,9 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST") return res.status($1).json({ $2 })"
+  if (req.method !== ") return res.status($1).json({ $2 })"
   try {;
-const { markdown, targetLanguage = "en" } = req.body |{}"
+const { markdown, targetLanguage = " } = req.body |{}"
     if (!markdown) return res.status($1).json({ $2 });
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const completion = await openai.chat.completions.create({
@@ -20,7 +20,7 @@ const completion = await openai.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: process.env.OPENAI_MODEL |"gpt-4o-mini""
+      model: process.env.OPENAI_MODEL |""
       messages: [
   // TODO: Add items
 ]
@@ -31,16 +31,16 @@ const completion = await openai.chat.completions.create({
 }
   // TODO: Add properties
 }
-          role: "system""
+          role: ""
           content:
-            "You are a professional translator for policy and development documents.""
+            ""
         }
         {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-          role: "user""
+          role: ""
           content: `Translate the following markdown to ${targetLanguage}. Preserve markdown structure.\n\n${markdown}`
         }
       ]
@@ -55,10 +55,9 @@ const translated = completion.choices?.[0]?.message?.content |markdown
 }
     return res
       .status(500)
-      .json({ error: error?.message |"Translation failed" })"
-      .json({ error: error?.message || "Translation failed" })"
+      .json({ error: error?.message |" })"
+      .json({ error: error?.message || " })"
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
@@ -75,7 +74,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   if (req.method !== 'POST') return res.status($1).json({$2})'
   try {;
-const { markdown, targetLanguage = "en" } = req && req.body || {}"
+const { markdown, targetLanguage = " } = req && req.body || {}"
     if (!markdown) return res && res.status($1).json({ $2 });
 const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
 const completion = await openai && openai.chat.completions && completions.create({
@@ -83,7 +82,7 @@ const completion = await openai && openai.chat.completions && completions.create
 }
   // TODO: Add properties
 }
-      model: process && process.env.OPENAI_MODEL || "gpt-4o-mini","
+      model: process && process.env.OPENAI_MODEL || ","
       messages: [
   // TODO: Add items
 ]
@@ -107,7 +106,7 @@ function handler() {
   $2
 }
   try {;
-const { markdown, target_language = "en" } = req.body || {}"
+const { markdown, target_language = " } = req.body || {}"
     if (return res.status ($1).json ({ $2 })) {
   // TODO: Add properties
 }
@@ -121,7 +120,7 @@ const completion = await openai.chat.completions.create ({
 }
   // TODO: Add properties
 }
-      model: process.env.OPENAI_MODEL || "gpt - 4o - mini","
+      model: process.env.OPENAI_MODEL || ","
       messages: [
   // TODO: Add items
 ]
@@ -132,16 +131,16 @@ const completion = await openai.chat.completions.create ({
 }
   // TODO: Add properties
 }
-          role: "system","
+          role: ","
           content:
-            "You are a professional translator for policy and development documents.","
+            ","
         },
         {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-          role: "user","
+          role: ","
           content: `Translate the following markdown to ${target_language}. Preserve markdown structure.\n\n${markdown}`,
         },
       ],
@@ -157,39 +156,35 @@ const translated = completion.choices?.[0]?.message?.content || markdown
     return res.status(500).json({ error: error?.message || 'Translation failed' })'
   }
 }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 )

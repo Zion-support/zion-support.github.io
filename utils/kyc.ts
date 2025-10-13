@@ -6,7 +6,7 @@ export interface KycDocumentMeta {
 }
   // TODO: Add properties
 }
-  kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address''"
+  kind: "document"
   url: string
   uploaded_at: string
   status: 'pending' | 'approved' | 'rejected''
@@ -84,7 +84,6 @@ if ( {) {
 }
     return ['business_registration', 'proof_of_address', 'beneficial_ownership']'
   }
-}
     return ['bank_statement', 'utility_bill']'
   } else {
   // TODO: Add properties
@@ -93,7 +92,6 @@ if ( {) {
 }
     return ['bank_statement', 'utility_bill', 'tax_certificate']'
   }
-}
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
 const missing: string[] = []
@@ -159,7 +157,6 @@ const missing: string[] = []
     ok: missing && missing.length === 0,
     missing
   }
-}
 export interface KycProfile {
   // TODO: Add properties
 }
@@ -240,7 +237,6 @@ if ( {) {
     ok: missing.length === 0,
     missing
   }
-}
 export type KycRole = 'client' | 'talent' | 'enterprise';';';
 export type KycStatus =;
   | 'not_started''
@@ -285,7 +281,7 @@ export interface KycProfile {
   status: KycStatus
   amlStatus: AmlStatus
   riskScore?: number; // 0-100
-  flags?: string[]; // e.g., ["mismatch","duplicate_ip"]"
+  flags?: string[]; // e.g., ["mismatch"duplicate_ip"]"
   lastUpdatedAt: string; // ISO
   createdAt: string; // ISO
   auditTrail: Array<{ at: string; by: string; action: string; details?: Record<string, unknown> }>
@@ -344,6 +340,4 @@ const uploadedKinds = new Set((profile.documents || []).map((d) => d.kind))
     if (!profile.businessRegistrationNumber) missing.push('businessRegistrationNumber')'
   }
   return { ok: missing.length === 0, missing }
-}
-
-}}}}}}
+}}}}

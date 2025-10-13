@@ -23,17 +23,14 @@ const { projectId } = req && req.query as { projectId: string }
     res.status(403).json({ error: 'Forbidden' })'
     return
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
   if (req.method === 'GET') {'
     res.status(200).json({ milestones: project.milestones })
     return
@@ -42,27 +39,24 @@ const { projectId } = req && req.query as { projectId: string }
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
   if (req.method === 'GET') {'
     if (!isClient(project, user)) {
   // TODO: Add properties
@@ -76,26 +70,24 @@ const { projectId } = req && req.query as { projectId: string }
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
     const body = req.body as Partial<Milestone>
     if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {'
       res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' })'
@@ -105,26 +97,24 @@ const { projectId } = req && req.query as { projectId: string }
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
     const created = addMilestone(project, {
   // TODO: Add properties
 }
@@ -142,27 +132,24 @@ const { projectId } = req && req.query as { projectId: string }
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
   res.setHeader('AllowGET, POST')'
   res.status(405).end('Method Not Allowed')'
   } catch (error) {
@@ -170,30 +157,29 @@ const { projectId } = req && req.query as { projectId: string }
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-  if (req.method === "GET") {"
+  if (req.method === "GET"
     res.status(200).json({ milestones: project.milestones })
     return
   }
-  if (req.method === "POST") {"
+  if (req.method === "POST"
     if (!isClient(project, user)) {
   // TODO: Add properties
 }
@@ -209,7 +195,7 @@ const { projectId } = req && req.query as { projectId: string }
       !body |
       !body.title |
       !body.dueDate |
-      typeof body.amountUsd !== "number""
+      typeof body.amountUsd !== "number"
     ) {
   // TODO: Add properties
 }
@@ -217,7 +203,7 @@ const { projectId } = req && req.query as { projectId: string }
 }
       res
         .status(400)
-        .json({ error: "Missing required fields: title, dueDate, amountUsd" })"
+        .json({ error: "Missing required fields: title, dueDate, amountUsd"
       return
     }
     const created = addMilestone(project, {
@@ -248,85 +234,5 @@ const { projectId } = req && req.query as { projectId: string }
     res && res.status(201).json({ milestone: created })
     return
   }
-  res.setHeader("Allow", "GET, POST")"
-  res.status(405).end("Method Not Allowed")"
-}
-  res.setHeader('AllowGET, POST')'
-  res.status(405).end('Method Not Allowed')'
-}
-}
-    res.status (404).json ({ error: "Project not found" })"
-    return
-  }
-  if () {) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  $2
-}
-    res.status (403).json ({ error: "Forbidden" })"
-    return
-  }
-  // Check condition
-if ( {) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  $2
-}
-    res.status (200).json ({ milestones: project.milestones })
-    return
-  }
-  // Check condition
-if ( {) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  $2
-}
-    if () {) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  $2
-}
-      res
-        .status (403)
-        .json ({ error: "Only client (or admin) can add milestones" })"
-      return
-    }
-    const body = req.body as Partial < Milestone>
-    // Check condition
-if ( {) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  $2
-}
-      res
-        .status (400)
-        .json ({ error: "Missing required fields: title, due_date, amount_usd" })"
-      return
-    }
-    const created = add_milestone (project, {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: body.title,
-      description: body.description,
-      due_date: body.due_date,
-      amount_usd: body.amount_usd,
-      attachments: body.attachments || [],
-    })
-    res.status (201).json ({ milestone: created })
-    return
-  }
-  res.set_header ("Allow", "GET, POST")"
-  res.status (405).end ("Method Not Allowed")"
-}
+  res.setHeader("Allow"GET, POST")"Method Not Allowed")"Project not found" })"Forbidden" })"Only client (or admin) can add milestones" })"Missing required fields: title, due_date, amount_usd" })"Allow", ")"
+  res.status (405).end (")"

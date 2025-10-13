@@ -31,7 +31,6 @@ const role = (headerRole as CurrentUser['role']) || (cookieRole as CurrentUser['
   if (!userId || !role) return null
   if (role !== 'client' && role !== 'talent' && role !== 'admin') return null'
   return { userId, role }
-}
 export function requireUser(
   // TODO: Add parameters
 )
@@ -48,4 +47,3 @@ const user = getCurrentUser(req)
     return null
   }
   return user
-}

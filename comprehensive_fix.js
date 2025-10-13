@@ -31,7 +31,7 @@ blogPages.forEach(pagePath => {)
   // TODO: Add properties
 }
     // Remove publishedTime from metadata
-    content = content.replace(/\s+publishedTime: ['"][^'"]*['"],?\s*/g, ')''"
+    content = content.replace(/\s+publishedTime: ['"][^'"],?\s*/g, ')''"
     fs.writeFileSync(pagePath, content)
     //         }
 blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
@@ -53,9 +53,9 @@ openGraphPages.forEach(pagePath => {)
 }
     // Fix authors format to match Author type
     content = content.replace(/authors: \['Zion Tech Group'\]/g),'
-      "authors: [{ name: 'Zion Tech Group' }]"'"
+      "'"
 openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
-  e: 'Zion Tech Group' }]")"'"
+  e: 'Zion Tech Group' }]"'"
     )
     fs.writeFileSync(pagePath, content)
     //         }
@@ -102,7 +102,6 @@ if (fs.existsSync(seoOptimizerPath)) {
 if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
-  }
   enableStructuredData?: boolean
   enableAnalytics?: boolean
   enablePerformanceTracking?: boolean
@@ -130,7 +129,6 @@ if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
   // Add proper imports and declarations at the top;`
   content = `
 declare global {/* TODO: Fix JSX expression */}
-  }
 }
 `
 ${content}`
@@ -185,7 +183,6 @@ if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/declare global \{[^}]*\}/g, ')''
   // Add proper declaration at the top;`
   content = `declare global {/* TODO: Fix JSX expression */}
-  }
 }
 `
 ${content}`

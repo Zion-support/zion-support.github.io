@@ -73,4 +73,4 @@ const text = await generateText(prompt, 'You are a recruiting ops specialist wit
   return res.status(200).json({ email: text })
 }
 
-}}}
+}

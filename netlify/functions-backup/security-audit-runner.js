@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'security-audit-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'security-audit-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'security-audit-runner',' source: event.source || 'unknown', audit: {' status: 'active', vulnerabilities: 0,'
         lastAudit: new Date().toISOString() } }) } return result; } catch (error) {

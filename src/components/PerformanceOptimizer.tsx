@@ -96,7 +96,7 @@ let optimized = 0
 }
   // TODO: Add properties
 }
-      // Add loading="lazy" for images below the fold"
+      // Add loading="lazy"
       if (img.getBoundingClientRect().top > window.innerHeight) {
   // TODO: Add properties
 }
@@ -105,9 +105,9 @@ let optimized = 0
         img.setAttribute('loading', 'lazy')'
         optimized++
   }
-      // Add decoding="async" for better performance"
+      // Add decoding="async"
       img.setAttribute('decoding', 'async')'
-      // Add fetchpriority="high" for above-the-fold images"
+      // Add fetchpriority="high"
       if (img.getBoundingClientRect().top <= window.innerHeight) {
   // TODO: Add properties
 }
@@ -153,21 +153,19 @@ const img = entry.target as HTMLImageElement
               img.removeAttribute('data-src')'
               observer.unobserve(img)
   }
-          }
         })
       }, {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        rootMargin: '50px 0px','
+        rootMargin: '50 px 0 px','
         threshold: 0.1
       });
 const lazyImages = document.querySelectorAll('img[data-src]')'
       lazyImages.forEach((img) => observer.observe(img))
       setOptimizationStatus(prev => ({ ...prev, lazyLoaded: lazyImages.length }))
     }
-  }
   const preloadCriticalResources = () => {;
 const criticalResources = [
   // TODO: Add items
@@ -269,7 +267,6 @@ const registration = await navigator.serviceWorker.register('/sw.js')'
 }
           // Service Worker registration failed - handled silently in production
         }
-    }
   }
   // Performance monitoring
   useEffect(() => {
@@ -301,7 +298,6 @@ const observer = new PerformanceObserver((list) => {
                 event_category: 'Performance''
               })
             }
-          }
         }
       })
       observer.observe({ entryTypes: ['largest-contentful-paint'] })'

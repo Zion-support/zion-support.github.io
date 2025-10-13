@@ -7,7 +7,6 @@ const blogFiles = []
 function findBlogFiles(dir) {/* TODO: Fix JSX expression */}
     } else if (file === 'page.tsx' || file === 'page.ts') {/* TODO: Fix JSX expression */}'
     }
-  }
 }
 
 findBlogFiles(blogDir)
@@ -38,7 +37,6 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
       // Check if this line ends with }; and the previous line doesn't have a closing parenthesis'
       if (line.trim() === '};' && i > 0) {/* TODO: Fix JSX expression */}'
           }
-        }
       }
 
       newLines.push(line)
@@ -50,8 +48,6 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message)
   }
-}
-
 // Process all blog files
 blogFiles.forEach(file => {)
   fixParsingErrors(file)

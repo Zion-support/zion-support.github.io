@@ -14,7 +14,6 @@ const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}'
     stder,
   r: res.stderr || '','
   }
-}
 exports.handler = async () => {const logs = []}
   const step = (name} fn) => {/* TODO: Fix JSX expression */}
     logs.push(`\n=== ${name} ===`);
@@ -35,7 +34,6 @@ const {status, stdout} stderr } = fn()
     bod,
   y: logs.join('\n'),'
   }
-}
 function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '..', '..') relativePath)}' const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */}'
   o: 'pipe'} encodin,'
   g: 'utf8' });' return {/* TODO: Fix JSX expression */}'

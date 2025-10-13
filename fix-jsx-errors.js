@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -12,16 +9,14 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
     </div>
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from "fs"path";
+import { fileURLToPath } from ";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 // #!/usr/bin/env node
 // Find all TypeScript/JSX files in the app directory
 const files = glob.sync('app/**/*.{ts,tsx}', { cwd: __dirname });
-=======
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -29,14 +24,14 @@ import path from 'path';
 
 // List of files with errors (from the previous command output)
 const filesWithErrors = [
-  'app/5g-edge-computing/page.tsx',
-  'app/5g-implementation/page.tsx',
-  'app/5g-iot-solutions/page.tsx',
-  'app/5g-mobile-applications/page.tsx',
-  'app/5g-network-infrastructure/page.tsx',
-  'app/5g-private-networks/page.tsx',
-  'app/5g-smart-city-solutions/page.tsx',
-  'app/5g-solutions/page.tsx',
+  'app/5 g-edge-computing/page.tsx',
+  'app/5 g-implementation/page.tsx',
+  'app/5 g-iot-solutions/page.tsx',
+  'app/5 g-mobile-applications/page.tsx',
+  'app/5 g-network-infrastructure/page.tsx',
+  'app/5 g-private-networks/page.tsx',
+  'app/5 g-smart-city-solutions/page.tsx',
+  'app/5 g-solutions/page.tsx',
   'app/about/page.tsx',
   'app/accessibility-page/page.tsx',
   'app/accessibility/page.tsx'
@@ -61,47 +56,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function ${pageName.replace(/\s+/g, '')}Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="Advanced ${title.toLowerCase()} solutions by Zion Tech Group" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            ${title}
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT solutions for your business needs.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
-              Comprehensive solution for your business requirements.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-            <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
-              Scalable and secure implementation.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" content="Advanced ${title.toLowerCase()} solutions by Zion Tech Group"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600 mb-8"grid md:grid-cols-2 lg:grid-cols-3 gap-8"bg-white rounded-lg shadow-md p-6"text-xl font-semibold text-gray-900 mb-4"text-gray-600"bg-white rounded-lg shadow-md p-6"text-xl font-semibold text-gray-900 mb-4"text-gray-600"bg-white rounded-lg shadow-md p-6"text-xl font-semibold text-gray-900 mb-4"text-gray-600"text-center mt-12"bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
         </div>
@@ -111,13 +66,11 @@ export default function ${pageName.replace(/\s+/g, '')}Page() {
 }`;
 }
 
-<<<<<<< HEAD
 // Function to process a single file
 function processFile(filePath) {
 files.forEach(file => {
   const filePath = path.join(__dirname, file);
 
-=======
   );
 }
   try {
@@ -133,7 +86,6 @@ files.forEach(file => {
           // This is a complex fix that would need more sophisticated parsing
           return match;
         }
-=======
 #!/usr/bin/env node;
 import fs from 'fs';';
 import path from 'path';';
@@ -164,8 +116,6 @@ const stat = fs.statSync(fullPath)
 }
       files.push(fullPath)
     }
-  }
-
   return files
 }
 
@@ -195,12 +145,10 @@ const jsxFixes = [
       },
       // Fix missing closing div tags
       {
-<<<<<<< HEAD
         pattern: /<div[^>]*>(?![\s\S]*<\/div>)/g,
         replacement: (match) => {
           return match;
         }
-=======
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -210,7 +158,6 @@ const jsxFixes = [
       },
       // Fix misplaced imports
       {
-<<<<<<< HEAD
         pattern: /const\s+\w+\s*=\s*\(\)\s*=>\s*{\s*import\s+/g,
         replacement: 'const $1 = () => {\n  // Import moved to top\n'
       },
@@ -236,7 +183,6 @@ const jsxFixes = [
     }
   } catch (error) {
     console.error(`Error processing ${file}:`, error.message);
-=======
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -255,8 +201,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
         content = newContent
         modified = true
       }
-    }
-
     // Fix specific syntax errors;
 const syntaxFixes = [
   // TODO: Add items
@@ -310,8 +254,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
         content = newContent
         modified = true
       }
-    }
-
     // Fix specific parsing errors;
 const parsingFixes = [
   // TODO: Add items
@@ -356,8 +298,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
         content = newContent
         modified = true
       }
-    }
-
     if (modified) {
   // TODO: Add properties
 }
@@ -376,7 +316,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
 }
     console.error(`Error fixing JSX errors in ${filePath}:`, error.message)
     return false
-=======
 // Function to fix a single file
 function fixFile(filePath) {
   try {
@@ -388,10 +327,7 @@ function fixFile(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Main execution
-<<<<<<< HEAD
 console.log('Starting JSX error fixes...');';
 const appDir = path.join(__dirname, 'app');';
 const files = findFiles(appDir);
@@ -424,10 +360,7 @@ for (const file of files) {
   }
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 console.log('JSX error fixing completed');
-=======
 console.log(`\nFixed ${fixedCount} files`)
 console.log(`Errors: ${errorCount} files`)
 // Run linting to check remaining issues
@@ -446,9 +379,7 @@ try {
   console.log('Linting completed with some remaining issues to fix manually')'
 }</div></main>
 </section>
-=======
 console.log('JSX error fixing completed');
-=======
 console.log('Starting to fix JSX errors...');
 
 let fixedCount = 0;

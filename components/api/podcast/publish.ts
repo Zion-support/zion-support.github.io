@@ -54,4 +54,3 @@ const rssUrl = (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml
   return res.status(200).json({ ok: true, rssUrl })
 }
 
-}}

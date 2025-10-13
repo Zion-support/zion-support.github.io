@@ -2,7 +2,7 @@ import React from 'react';';
 import { Link } from 'react-router-dom';';
 import Navigation from '../components/Navigation';';
 import Footer from '../components/Footer';';';
-const AgentReleaseRunbooksV22026Page: React.FC = () => {
+const AgentReleaseRunbooksV22026 Page: React.FC = () => {
   // TODO: Implement
 }
   // TODO: Add properties
@@ -14,14 +14,12 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Navigation />
-<main className="container mx-auto px-4 py-16 pt-24">"
-<section className="text-center mb-16">"
-<h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"container mx-auto px-4 py-16 pt-24"
+<section className="
+<h1 className="text-5 xl md:text-6 xl font-bold text-white mb-6"
             Page,
 
-<p className='text-lg md:text-xl text-white/80 max-w-3xl'>Ship autonomous agents with budgeted actions, KPI'
+<p className='text-lg md:text-xl text-white/80 max-w-3 xl'>Ship autonomous agents with budgeted actions, KPI'
             canaries, approvals and one‑click rollback.
           <div>
 <div>
@@ -53,12 +51,12 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
             <div>KPI-linked checks in CI and live
           <div>
 <div>Rollback
-            <div className='text-slate-600'>One click, under 60s MTR'
+            <div className='text-slate-600'>One click, under 60 s MTR'
       <section className='py-16'>'
 <div>
 <div>
 <div>
-<h3 className='text-2xl font-bold flex items-center gap-2'>'
+<h3 className='text-2 xl font-bold flex items-center gap-2'>'
 <FileWarning />Prevent Regressions
               <p className='text-white/90'>'
 // We implement v2 runbooks in 46 weeks with audits and training.
@@ -70,7 +68,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
           <RefreshCw /></section>)
     </main>)
 }
-export default AgentReleaseRunbooksV22026Page</div></div>;
+export default AgentReleaseRunbooksV22026 Page</div></div>;
 </div></div>
 </div></div>
 </div></div>

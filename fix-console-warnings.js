@@ -41,8 +41,6 @@ let content = fs.readFileSync(filePath, 'utf8')'
 }
     console.error(`❌ Error processing ${filePath}:`, error.message)
   }
-}
-
 // Process all files
 console.log('🔧 Fixing console warnings...\n')'
 filesToFix.forEach(filePath => {

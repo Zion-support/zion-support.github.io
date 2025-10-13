@@ -103,7 +103,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     useCases: ['Customer satisfaction tracking', 'Product improvement insights', 'Service quality monitoring', 'Market research'],'
     roi: 'Average 35% improvement in customer satisfaction scores and 25% reduction in customer churn.','
     competitors: ['Qualtrics', 'SurveyMonkey', 'Typeform', 'Hotjar', 'UserVoice'],'
-    marketSize: '$3.8B customer feedback market','
+    marketSize: '$3.8 B customer feedback market','
     growthRate: '120% annual growth','
     variant: 'ai-futuristic','
     contactInfo: contact,
@@ -131,7 +131,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
   // TODO: Add items
 ]
       'Customizable virtual meeting spaces','
-      '3D avatar customization','
+      '3 D avatar customization','
       'Interactive whiteboards and tools','
       'Screen sharing and presentations','
       'Breakout room functionality','
@@ -154,10 +154,10 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     realService: true,
     technology: ['Unity', 'WebXR', 'Three.js', 'React', 'Node.js', 'WebRTC', 'WebGL'],'
     integrations: ['Zoom', 'Teams', 'Google Calendar', 'Outlook', 'Slack', 'Custom APIs'],'
-    useCases: ['Remote team collaboration', 'Virtual training sessions', '3D presentations', 'Design reviews'],'
+    useCases: ['Remote team collaboration', 'Virtual training sessions', '3 D presentations', 'Design reviews'],'
     roi: 'Average 40% improvement in meeting engagement and 30% reduction in travel costs.','
     competitors: ['Spatial', 'VRChat', 'AltspaceVR', 'Rec Room', 'Horizon Workrooms'],'
-    marketSize: '$2.1B VR collaboration market','
+    marketSize: '$2.1 B VR collaboration market','
     growthRate: '190% annual growth','
     variant: 'ar-futuristic','
     contactInfo: contact,
@@ -201,7 +201,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     textColor: 'text-green-400','
     link: 'https://ziontechgroup.com/ai-inventory-optimization','
     marketPosition: 'Competitive with TradeGecko and Zoho Inventory, but with advanced AI capabilities and better forecasting accuracy.','
-    targetAudience: 'E-commerce businesses, Retail stores, Manufacturing companies, Wholesale distributors, 3PL providers','
+    targetAudience: 'E-commerce businesses, Retail stores, Manufacturing companies, Wholesale distributors, 3 PL providers','
     trialDays: 21,
     setupTime: '1-2 weeks','
     category: 'Inventory Management & AI','
@@ -211,7 +211,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     useCases: ['Demand forecasting', 'Stock optimization', 'Purchase planning', 'Cost reduction'],'
     roi: 'Average 25% reduction in inventory costs and 30% improvement in stock turnover.','
     competitors: ['TradeGecko', 'Zoho Inventory', 'Fishbowl', 'Sage', 'NetSuite'],'
-    marketSize: '$4.2B inventory management market','
+    marketSize: '$4.2 B inventory management market','
     growthRate: '110% annual growth','
     variant: 'ai-futuristic','
     contactInfo: contact,
@@ -265,7 +265,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     useCases: ['Product traceability', 'Compliance tracking', 'Quality assurance', 'Supply chain optimization'],'
     roi: 'Average 35% improvement in supply chain transparency and 20% reduction in compliance costs.','
     competitors: ['IBM Food Trust', 'VeChain', 'OriginTrail', 'Ambrosus', 'WaltonChain'],'
-    marketSize: '$3.1B blockchain supply chain market','
+    marketSize: '$3.1 B blockchain supply chain market','
     growthRate: '180% annual growth','
     variant: 'blockchain-futuristic','
     contactInfo: contact,
@@ -319,7 +319,7 @@ export const innovativeMicroSaas2026: InnovativeMicroSaas2026[] = [;
     useCases: ['Content scheduling', 'Performance optimization', 'Engagement analysis', 'Competitor monitoring'],'
     roi: 'Average 45% improvement in engagement rates and 30% increase in follower growth.','
     competitors: ['Buffer', 'Hootsuite', 'Sprout Social', 'Later', 'Planoly'],'
-    marketSize: '$2.8B social media management market','
+    marketSize: '$2.8 B social media management market','
     growthRate: '130% annual growth','
     variant: 'ai-futuristic','
     contactInfo: contact,

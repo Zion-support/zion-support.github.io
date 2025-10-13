@@ -95,15 +95,11 @@ function findCorruptedFiles() {
   // TODO: Add properties
 }
 function findCorruptedFiles() {/* TODO: Fix JSX expression */}
-}
   //   const blogDir = path.join(process.cwd(), 'app', 'blog')'
   function walkDir(_dir) {/* TODO: Fix JSX expression */}
       } else if (file.endsWith('.tsx') && !file.includes('backup')) {/* TODO: Fix JSX expression */}'
         }
-      }
     }
-  }
-
   walkDir(blogDir)
   return corruptedFiles
 }
@@ -115,16 +111,11 @@ function main() {
   // TODO: Add properties
 }
 function main() {/* TODO: Fix JSX expression */}
-}
   //   const corruptedFiles = findCorruptedFiles()
   //   if (corruptedFiles.length === 0) {/* TODO: Fix JSX expression */}
-  }
-
   //   for (const filePath of corruptedFiles) {/* TODO: Fix JSX expression */}
       //       } catch (error) {/* TODO: Fix JSX expression */}
       //       }
-  }
-
   //   }
 
 `))))

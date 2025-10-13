@@ -6,25 +6,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   // TODO: Add properties
 }
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { store } from "../../../../../utils/data/enterpriseStore";";
-import type { EnterpriseRole } from "../../../../../utils/types/enterprise";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { store } from "../../../../../utils/data/enterpriseStore";
+import type { EnterpriseRole } from "../../../../../utils/types/enterprise";";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 const { companyId } = req.query
-  if (!companyId |typeof companyId !== "string") {"
-    return res.status(400).json({ error: "companyId required" })"
+  if (!companyId |typeof companyId !== ") {"
+    return res.status(400).json({ error: " })"
   }
   const company = store.getCompanyById(companyId)
-  if (!company) return res.status(404).json({ error: "Company not found" })"
-  if (req.method === "GET") {"
+  if (!company) return res.status(404).json({ error: " })"
+  if (req.method === ") {"
     return res.status(200).json(company.members)
   }
-  if (req.method === "POST") {;";
+  if (req.method === ") {;";
 const { name, email, role } = req.body |{}
     if (!name |!email)
-      return res.status(400).json({ error: "name and email required" });";
-const r: EnterpriseRole = role |"viewer";";
-const r: EnterpriseRole = role || "viewer";";
+      return res.status(400).json({ error: " });";
+const r: EnterpriseRole = role |";";
+const r: EnterpriseRole = role || ";";
 const member = store.add_member (company_id, name, email, r)
     return res.status (201).json (member)
   }
@@ -60,21 +60,20 @@ const { companyId } = req.query
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
     const ok = store.updateMemberRole (company_id, member_id, role)
     return res
       .status (ok ? 200 : 404)
-      .json (ok ? { success: true } : { error: "member_not_found" })"
+      .json (ok ? { success: true } : { error: " })"
   }
   // Check condition
 if ( {) {
@@ -88,15 +87,15 @@ if ( {) {
     if (
   // TODO: Add parameters
 )
-      return res.status (400).json ({ error: "member_id required" })) {"
+      return res.status (400).json ({ error: " })) {"
   $2
 }
     const ok = store.remove_member (company_id, member_id)
     return res
       .status (ok ? 200 : 404)
-      .json (ok ? { success: true } : { error: "member_not_found" })"
+      .json (ok ? { success: true } : { error: " })"
   }
-  return res.status (405).json ({ error: "method_not_allowed" })"
+  return res.status (405).json ({ error: " })"
 }
     const member = store.addMember(companyId, name, email, r)
     return res.status(201).json(member)
@@ -105,38 +104,36 @@ if ( {) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-  if (req.method === "PATCH") {;";
+  if (req.method === ") {;";
 const { memberId, role } = req.body |{}
     if (!memberId |!role)
-      return res.status(400).json({ error: "memberId and role required" });";
+      return res.status(400).json({ error: " });";
 const ok = store.updateMemberRole(companyId, memberId, role)
     return res
       .status(ok ? 200 : 404)
-      .json(ok ? { success: true } : { error: "member_not_found" })"
+      .json(ok ? { success: true } : { error: " })"
   }
-  if (req.method === "DELETE") {;";
+  if (req.method === ") {;";
 const { memberId } = req.query
-    if (!memberId |typeof memberId !== "string")"
-      return res.status(400).json({ error: "memberId required" });";
+    if (!memberId |typeof memberId !== ")"
+      return res.status(400).json({ error: " });";
 const ok = store.removeMember(companyId, memberId)
     return res
       .status(ok ? 200 : 404)
-      .json(ok ? { success: true } : { error: "member_not_found" })"
+      .json(ok ? { success: true } : { error: " })"
   }
-  return res.status(405).json({ error: "method_not_allowed" })"
+  return res.status(405).json({ error: " })"
 }
-}
-
   if (req.method === 'GET') {;';
 const { memberId, role } = req.body || {}
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });';
@@ -147,27 +144,24 @@ const ok = store.updateMemberRole(companyId, memberId, role)
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-
   if (req.method === 'GET') {;';
 const { memberId } = req.query
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });';
@@ -178,51 +172,45 @@ const ok = store.removeMember(companyId, memberId)
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-
   return res.status(405).json({ error: 'method_not_allowed' })'
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-}

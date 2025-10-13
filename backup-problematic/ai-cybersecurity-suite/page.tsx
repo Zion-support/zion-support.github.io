@@ -1,33 +1,14 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function aiCybersecuritySuite() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Ai Cybersecurity Suite - Zion Tech Group</title>
-        <meta name="description" content="Ai Cybersecurity Suite solutions by Zion Tech Group" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">Ai Cybersecurity Suite</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8"></h1>
-        <div className="prose prose-invert max-w-none">
+    <div className="min-h-screen bg-gray-900 text-white" content="Ai Cybersecurity Suite solutions by Zion Tech Group"container mx-auto px-4 py-20"text-center"text-4 xl font-bold mb-8"text-xl text-gray-300 mb-8"container mx-auto px-4 py-16"text-4 xl font-bold mb-8"prose prose-invert max-w-none">
           <p>This page is under construction. Please check back later for  solutions.</p>
   </div>
   </div>
   </div>
   );
-}
 }
 export default function AICybersecuritySuitePage() {
   return (
@@ -70,5 +51,4 @@ export default function AICybersecuritySuitePage() {
               Get Started;
               View Pricing;
   );
-=======
 

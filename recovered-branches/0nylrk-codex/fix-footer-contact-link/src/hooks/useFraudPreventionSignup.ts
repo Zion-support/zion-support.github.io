@@ -22,7 +22,6 @@ const data = await response.json()
       console.error('Error getting IP:', error)'
       return undefined
     }
-  }
   // Check if the signup attempt might be fraudulent;
 const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
   // TODO: Add properties
@@ -74,10 +73,10 @@ const { error } = await supabase.from('fraud_flags').insert({'
 }
   // TODO: Add properties
 }
-            title: "Signup blocked","
-            description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.","
-            variant: "destructive"})"
-            variant: "destructive","
+            title: "Signup blocked"
+            description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
+            variant: "destructive"
+            variant: "destructive"
           })
           return false
         }
@@ -110,5 +109,4 @@ const { error } = await supabase.from('fraud_flags').insert({'
     isCheckingFraud,
     checkFraudBeforeSignup}
     checkFraudBeforeSignup,
-  }
-}
+  

@@ -32,7 +32,7 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],'
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;","'"
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"'"
   },
   async headers() {
   // TODO: Add properties

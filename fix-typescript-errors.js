@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -35,8 +33,6 @@ function fixFile(filePath) {
         if (lastIndex !== -1) {
           openTags.splice(lastIndex, 1);
         }
-      }
-
       fixedLines.push(line);
     }
 
@@ -89,8 +85,6 @@ function fixFile(filePath) {
         );
         modified = true;
       }
-    }
-
     if (modified) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
       console.log(`Fixed: ${filePath}`);
@@ -101,7 +95,6 @@ function fixFile(filePath) {
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
-=======
 import fs from 'fs';';
 import path from 'path';';
 import { fileURLToPath } from 'url';';';
@@ -194,187 +187,64 @@ const patterns = [
   t: '$1(' }]'
 )
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
-      }
       return match
     })
     // Fix 2: Fix malformed JSX attributes with quotes;
-const malformedJsxPattern = /(\w+)=['"]([^'"]*['"][^'"]*)['"]/g"'"
+const malformedJsxPattern = /(\w+)=['"]([^'"][^'"]*)['"'"
     content = content.replace(malformedJsxPattern, (match, attr, value) => {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      if (value.includes('"') && value.includes("'")) {"'"
+      if (value.includes('"'")) {"
         modified = true;
-const fixedValue = value.replace(/"/g, '&quot;').replace(/'/g, '&#39;')'"
-        return `${attr}="${fixedValue}"`"
-      }
-      return match
-    })
-    // Fix 3: Fix missing closing tags in JSX;
-const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm
-    content = content.replace(unclosedTagPattern, (match, tagName, attributes) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      // Check if this is actually unclosed by looking ahead;
-const lines = content.split('\n');';
-const matchIndex = content.indexOf(match);
-const lineIndex = content.substring(0, matchIndex).split('\n').length - 1'
-      if (lineIndex < lines.length - 1) {;
-const nextLine = lines[lineIndex + 1]
-        if (nextLine.trim().startsWith('</') || nextLine.trim().startsWith('<')) {'
-          return match
-        }
-      }
-
-      modified = true
-      return `${match}</${tagName}>`
-    })
-    // Fix 4: Fix missing commas in object literals;
-const missingCommaPattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g
-    content = content.replace(missingCommaPattern, (match, key1, value1, key2) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      if (!value1.trim().endsWith(',') && !value1.trim().endsWith('}')) {'
-        modified = true
-        return `${key1}: ${value1.trim()},\n    ${key2}:`
-      }
-      return match
-    })
-    // Fix 5: Fix malformed SVG URLs in className;
-const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^']+)'\)\]/g'
-    content = content.replace(svgUrlPattern, (match, svgContent) => {;
-const encodedSvg = encodeURIComponent(svgContent)
-      modified = true
-      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`'
-    })
-    // Fix 6: Fix missing closing parentheses in function calls;
-const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g
-    content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      if (!funcCall.includes(')') && !nextToken.startsWith(')')) {'
-        modified = true
-        return `${funcCall})\n    ${nextToken}`
-      }
-      return match
-    })
-    // Fix 7: Fix reserved word usage (like 'false' as identifier);';
-const reservedWordPattern = /:\s*(false|true|null|undefined)\s*([}])/g
-    content = content.replace(reservedWordPattern, (match, reserved, separator) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      modified = true
-      return `: ${reserved}${separator}`
-    })
-    if (modified) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      fs.writeFileSync(filePath, content, 'utf8')'
-      console.log(`Fixed: ${filePath}`)
-      return true
-    if (modified) {/* TODO: Fix JSX expression */}
-    }
-
-    return false
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error(`Error fixing ${filePath}:`, error.message)
-    return false
-  }
-import React from 'react';
-
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-import fs from "fs";
-import { glob } from "glob";
+const fixedValue = value.replace(/"/g, '&quot;').replace(/'/g, '&#39;')'"${fixedValue}"`"fs";
+import { glob } from ";
 // #!/usr/bin/env node
 
 // Common Lucide React icons used across pages
 const commonIcons = [
-//   "ArrowRight",
-//   "Brain",
-//   "Shield",
-//   "Zap",
-//   "Globe",
-//   "CheckCircle",
-//   "Star",
-//   "Phone",
-//   "Mail",
-//   "Clock",
-//   "Target",
-//   "BarChart3",
-//   "TrendingUp",
-//   "Settings",
-//   "Users",
-//   "DollarSign",
-//   "BarChart",
-//   "Cloud",
-//   "Cpu",
-//   "Database",
-//   "Server",
-//   "Layers",
-//   "PieChart",
-//   "Activity",
-//   "Award",
-//   "BookOpen",
-//   "Briefcase",
-//   "Building",
-//   "Calendar",
-//   "Camera",
-//   "Code",
-//   "Command",
-//   "CreditCard",
-//   "FileText",
-  "Gift",
-//   "Heart",
-//   "Home",
-//   "Image",
-//   "Laptop",
-//   "Lock",
-//   "MessageCircle",
-//   "Monitor",
-  "Palette",
-//   "PieChart",
-//   "Play",
-//   "Search",
-//   "ShoppingCart",
-//   "Smartphone",
-  "Tablet",
-//   "Terminal",
-//   "Truck",
-  "Wifi",
-];
-
-function fixPageFile(filePath) {
-  let content = fs.readFileSync(filePath, "utf8");
+//   "ArrowRight"Brain",
+//   ",
+//   "Zap"Globe",
+//   ",
+//   "Star"Phone",
+//   ",
+//   "Clock"Target",
+//   ",
+//   "TrendingUp"Settings",
+//   ",
+//   "DollarSign"BarChart",
+//   ",
+//   "Cpu"Database",
+//   ",
+//   "Layers"PieChart",
+//   ",
+//   "Award"BookOpen",
+//   ",
+//   "Building"Calendar",
+//   ",
+//   "Code"Command",
+//   ",
+//   "FileText"Gift",
+//   ",
+//   "Home"Image",
+//   ",
+//   "Lock"MessageCircle",
+//   ",
+  "Palette"PieChart",
+//   ",
+//   "Search"ShoppingCart",
+//   ",
+  "Tablet"Terminal",
+//   ",
+  "Wifi"utf8");
   let modified = false;
 
   // Remove unused React import if it's not used
   if (
-    content.includes("import React from 'react';") &&
-    !content.includes("React.")
-  ) {
-    content = content.replace("import React from 'react';\n", "");
+    content.includes(") &&
+    !content.includes("React."import React from 'react';\n", ");
     modified = true;
   }
 
@@ -389,59 +259,16 @@ function fixPageFile(filePath) {
   if (usedIcons.length > 0) {
     // Check if lucide-react is already imported
     const lucideImportMatch = content.match(
-      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/,
-    );
-
-    if (lucideImportMatch) {
-      // Add to existing import
-      const existingIcons = lucideImportMatch[1]
-        .split(",")
+      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['",")
         .map((i) => i.trim());
       const allIcons = [...new Set([...existingIcons, ...usedIcons])];
       content = content.replace(
 //         lucideImportMatch[0],
-        `import { ${allIcons.join(", ")} } from 'lucide-react';`,
+        `import { ${allIcons.join(")} } from 'lucide-react';`,
       );
     } else {
-      // Add new import
-      content = `import { ${usedIcons.join(", ")} } from 'lucide-react';\n${content}`;
-    }
-    modified = true;
-=======
-console.log('Starting TypeScript error fixes...');';
-let fixedCount = 0
-filesToFix.forEach(filePath => {;
-const fullPath = path.join(__dirname, filePath)
-  if (fs.existsSync(fullPath)) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-async function main() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  files.forEach(file => {)
-    if (fixFile(fullPath)) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      fixedCount++
-    }
-  } else {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.log(`File not found: ${filePath}`)
-  }
-
-  // Fix missing variable declarations
-  if (
-    content.includes("chatbotFeatures") &&
-    !content.includes("const chatbotFeatures")
+      // Add new import content = `import { ${usedIcons.join(", "chatbotFeatures") &&
+    !content.includes(")
   ) {
     content = content.replace(
       /const EnhancedServicesShowcase/,
@@ -450,8 +277,7 @@ async function main() {
     { category: 'Integration', items: ['API Integration', 'CRM Integration', 'Database Connectivity', 'Third-party Tools'] },
     { category: 'Analytics', items: ['Conversation Analytics', 'Performance Metrics', 'User Insights', 'Custom Reports'] }
   ];
-
-  const pricingPlans = [
+const pricingPlans = [
     { name: 'Starter', price: '$299', features: ['Basic chatbot', 'Email support', 'Standard templates'] },
     { name: 'Professional', price: '$799', features: ['Advanced AI', 'Priority support', 'Custom integrations'] },
     { name: 'Enterprise', price: '$1999', features: ['Full customization', '24/7 support', 'Dedicated manager'] }
@@ -470,9 +296,6 @@ const EnhancedServicesShowcase`,
   if (modified) {
     fs.writeFileSync(filePath, content);
     }
-=======
-}
-
 // Function to find all TypeScript/JSX files;
 function findFiles(dir) {
   const files = [];
@@ -493,10 +316,7 @@ function findFiles(dir) {
         if (['.tsx', '.ts'].includes(ext)) {
           files.push(fullPath);
         }
-      }
     }
-  }
-
   scanDirectory(dir);
   return files;
 }
@@ -511,7 +331,6 @@ for (const file of allFiles) {
   if (fixFile(file)) {>
   fixedCount++;
   }
-}
 >
   console.log(`✅ Fixed ${fixedCount} files`);>
   console.log('🎉 TypeScript error fixing complete!');

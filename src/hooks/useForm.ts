@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -111,7 +108,6 @@ const formErrors = getFormErrors(validationResults);
  errorArray.length === 0);
     validateAllFields;
   };
-=======
 import React from 'react';'
 'use client''
 /**
@@ -126,8 +122,6 @@ import {
 }
     // TODO: Add content
   }
-
-}
 //   ValidationRule,
 //   validateField,
 //   validateForm,
@@ -138,7 +132,6 @@ import {
 export interface UseFormConfig;
           <T extends Record<string, unknown>> {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   initialValue,
   s: T
   validationSchema?: Partial,
@@ -151,7 +144,6 @@ export interface UseFormConfig;
 }
 export interface UseFormReturn<T extends Record<string, unknown>> {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   value,
   s: T,,
     error,
@@ -177,14 +169,11 @@ export function useForm<T extends Record<string, unknown>>({
 }
     // TODO: Add content
   }
-
-}
   initialValues, validationSchema = {}, onSubmi,
   t: _onSubmit, validateOnChange = true, validateOnBlur = true
 }: UseFormConfig;)
           <T>): UseFormReturn<T> {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   const [values, setValues] = useState
           <T>(initialValues);
 const [errors, setErrors] = useState<Record<keyof T, string[]>>({} as Record<keyof T, string[]>);
@@ -195,14 +184,12 @@ const validateSingleField = useCallback()
     (fiel)
   d: keyof T): void => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       if (!validationSchema[field]) return;
 const fieldValue = values[field];
 const rules = validationSchema[field];
 const result = validateField(fieldValue, rules)
       setErrors(prev => ({/* TODO: Fix JSX expression */}
   O: Add content,}
-}
 //         ...prev,
         [field]: result.errors;)
       }))
@@ -212,7 +199,6 @@ const result = validateField(fieldValue, rules)
   // Validate all fields;
 const validateAllFields = useCallback((): boolean => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     if (Object.keys(validationSchema).length === 0) return true;
 const validationResults = validateForm(values, validationSchema as Record;)
           <keyof T, ValidationRule[]>);
@@ -225,7 +211,6 @@ const handleChange = useCallback()
     (e: ChangeEvent,)
           <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       const { name, value, type } = e.target;
 const fieldName = name as keyof T
       // Handle checkbox inputs
@@ -233,7 +218,6 @@ let,
   fieldValue: unknown = value,
       if (type === 'checkbox' && 'checked' in e.target) {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
         fieldValue = (e.target as HTMLInputElement).checked
       setValues(prev => ({
   // TODO: Add properties
@@ -245,7 +229,6 @@ let,
       // Validate on change if enabled;)
       if (validateOnChange && touched[fieldName]) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
         setTimeout(() => validateSingleField(fieldName), 0)
     [validateOnChange, touched, validateSingleField]
   // Handle input blur;
@@ -261,7 +244,6 @@ const fieldName = e.target.name as keyof T
       // Validate on blur if enabled;)
       if (validateOnBlur) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
         validateSingleField(fieldName)
 [validateOnBlur, validateSingleField]
   // Handle form submission;
@@ -276,13 +258,10 @@ const handleSubmit = useCallback(
 }
     // TODO: Add content
   }
-
-}
       e.preventDefault()
       // Mark all fields as touched;
 const allTouched = Object.keys(values).reduce((acc, key) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
         acc[key as keyof T] = true
         return acc
       }, {} as Record
@@ -323,7 +302,6 @@ const setFieldValue = useCallback((fiel,
   }
     if (validateOnChange && touched[field]) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       setTimeout(() => validateSingleField(field), 0)
   }, [validateOnChange, touched, validateSingleField])
 // Set field error programmatically;
@@ -381,7 +359,4 @@ const isValid = Object.keys(errors).length === 0 ||
 
     validateField: validateSingleField,
     validateAllFields
-  }
-
-=======
-
+  

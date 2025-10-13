@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'netlify-auto-healer-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'netlify-auto-healer-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'netlify-auto-healer-runner',' source: event.source || 'unknown', healing: {' status: 'active', issuesHealed: 0,'
         lastHeal: new Date().toISOString() } }) } return result; } catch (error) {

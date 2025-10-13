@@ -143,11 +143,9 @@ let message = err.message || 'An unexpected error occurred while loading tenant 
 }
         setIsLoading(false)
       }
-    }
     loadTenant()
   }, [externalSubdomain])
   return { tenant, isLoading, error }
-}
 // Hook to check if current user is a tenant admin;
 export function useTenantAdminStatus(tenantId?: string) {;
 const [isAdmin, setIsAdmin] = useState(false);
@@ -203,8 +201,6 @@ const { data, error } = await supabase
 }
         setIsLoading(false)
       }
-    }
     checkAdminStatus()
   }, [tenantId])
-  return { isAdmin, isLoading }
-}
+  return { isAdmin, isLoading 

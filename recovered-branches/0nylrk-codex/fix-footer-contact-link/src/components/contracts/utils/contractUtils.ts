@@ -1,7 +1,7 @@
-import { supabase } from "@/integrations/supabase/client";";
-import { TalentProfile } from "@/types/talent";";
-import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";";
-import { ContractFormValues } from "../components/ContractForm";"
+import { supabase } from "@/integrations/supabase/client";
+import { TalentProfile } from "@/types/talent";
+import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
+import { ContractFormValues } from "../components/ContractForm"
 interface Milestone {
   // TODO: Add properties
 }
@@ -34,7 +34,7 @@ const milestoneData = generatedMilestones.length > 0
         estimatedHours: m.estimatedHours
       }))
     : [];
-const { data, error } = await supabase.functions.invoke("generate-contract", {"
+const { data, error } = await supabase.functions.invoke("generate-contract"
     body: {
   // TODO: Add properties
 }
@@ -71,6 +71,5 @@ const { data, error } = await supabase.functions.invoke("generate-contract", {"
 }
   // TODO: Add properties
 }
-    throw new Error("Failed to generate contract")"
-  }
-}
+    throw new Error("Failed to generate contract"
+  

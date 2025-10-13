@@ -2,8 +2,6 @@ import fs from 'fs';';
 import path from 'path';';
 import { fileURLToPath } from 'url';'
 function getRelativePath(fromPath, toPath) {/* TODO: Fix JSX expression */}
-}
-
 function processFile(filePath) {
   // TODO: Add properties
 }
@@ -31,8 +29,6 @@ function processFile(filePath) {
       typesPath = '../types/''
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     } else if (isInComponents) {/* TODO: Fix JSX expression */}
-    }
-
     // Define replacements with dynamic paths;
 const replacements = [
   // TODO: Add items
@@ -96,17 +92,14 @@ const replacements = [
   // TODO: Add properties
 }
         pattern: /'use client';/g'
-        replacement: "// 'use client'; // Removed for Vite compatibility","'"
+        replacement: "// 'use client'; // Removed for Vite compatibility"'"
       {/* TODO: Fix JSX expression */}
       }]
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
-      }
     })
     if (modified) {/* TODO: Fix JSX expression */}
-    }
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 function processDirectory(dirPath) {
@@ -132,7 +125,6 @@ function processDirectory(dirPath) {
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}'
       }
-    }
   })
   return totalFixed
 }

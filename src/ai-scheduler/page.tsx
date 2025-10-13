@@ -119,131 +119,78 @@ const testimonials = [
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-16 pt-24">"
-<div className="text-center mb-16">"
-<div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6">"
-<Calendar className="w-10 h-10 text-white" /></div>"
-<h1 className="text-4xl md: text-6xl font-bold text-white mb-6">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"container mx-auto px-4 py-16 pt-24"
+<div className="
+<div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full mb-6"w-10 h-10 text-white"
+<h1 className="
             AI Scheduler
 
-          <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">"
-            Intelligent Meeting & Event Scheduling,
-
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">"
+          <p className="text-xl md:text-2 xl text-cyan-400 mb-8 font-medium"text-lg text-gray-300 max-w-4 xl mx-auto mb-8 leading-relaxed"
             Never miss another meeting with our AI-powered scheduling assistant. Automatically find
             the best meeting times, coordinate complex team schedules, and optimize your calendar
             for maximum productivity.
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
+          <div className="
 <$2 />
-              href="tel:+13024640950""
-              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center">"
-<Phone className="w-5 h-5 mr-2" />"
+              href="tel:+13024640950"
+              className="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-purple-600 transition-all duration-300 flex items-center"w-5 h-5 mr-2"
               Call: (302) 464-0950
 
             <$2 />
-              href="/contact""
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300""
+              href=""
+              className="
               Start Free Trial,
 
         {/* Key Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">"
-<div className="text-center">"
-<div className="text-4xl font-bold text-cyan-400 mb-2">5+"
-            <div className="text-white font-semibold mb-2">Hours Saved"
-            <div className="text-gray-300 text-sm">Per week on scheduling tasks"
-            <div className="text-4xl font-bold text-purple-400 mb-2">95%"
-            <div className="text-white font-semibold mb-2">Accuracy"
-            <div className="text-gray-300 text-sm">In meeting time predictions"
-            <div className="text-4xl font-bold text-green-400 mb-2">60%"
-            <div className="text-white font-semibold mb-2">Fewer No-shows"
-            <div className="text-gray-300 text-sm">With smart reminders"
-            <div className="text-4xl font-bold text-orange-400 mb-2">100%"
-            <div className="text-white font-semibold mb-2">Conflict-Free"
-            <div className="text-gray-300 text-sm">Scheduling guaranteed"
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16"text-center"
+<div className="
+            <div className="text-white font-semibold mb-2"text-gray-300 text-sm"
+            <div className="
+            <div className="text-white font-semibold mb-2"text-gray-300 text-sm"
+            <div className="
+            <div className="text-white font-semibold mb-2"text-gray-300 text-sm"
+            <div className="
+            <div className="text-white font-semibold mb-2"text-gray-300 text-sm"
         {/* Features Section */}
-        <section className="mb-16">"
-<h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">"
-            Smart Scheduling Features,
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+        <section className="
+<h2 className="text-3 xl md: text-4 xl font-bold text-white mb-12 text-center"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             {features.map((feature, index) => (
   // TODO: Add parameters
 )
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">"
-<feature.icon className="w-12 h-12 text-cyan-400 mb-4" />"
-<h3 className="text-xl font-bold text-white mb-3">{feature.title}"
-                <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}"
-                <div className="text-cyan-400 font-semibold text-sm">{feature.benefit}"
-            ))}
-        {/* Integrations Section */}
-            Works with Your Favorite Tools
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">"
+              <div key={index} className="
+<feature.icon className="w-12 h-12 text-cyan-400 mb-4"text-xl font-bold text-white mb-3"
+                <p className="
+                <div className="text-cyan-400 font-semibold text-sm"grid grid-cols-2 md:grid-cols-4 gap-6"
             {integrations.map((integration, index) => (
   // TODO: Add parameters
 )
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 text-center hover:border-cyan-400/40 transition-all duration-300">"
-<div className="text-4xl mb-3">{integration.icon}"
-                <h3 className="text-lg font-bold text-white mb-2">{integration.name}"
-                <p className="text-gray-300 text-sm">{integration.description}"
+              <div key={index} className="
+<div className="text-4 xl mb-3"text-lg font-bold text-white mb-2"
+                <p className="
         {/* Pricing Section */}
             Simple, Transparent Pricing
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">"
-            {pricingPlans.map((plan, index) => (
-  // TODO: Add parameters
-)
-              < key={index} className={`bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border-2 transition-all duration-300 ${$2 />
-                plan.popular
-                  ? 'border-cyan-400 scale-105' '
-                  : 'border-slate-700 hover:border-cyan-500/50''
-              }`}>
-                {plan.popular && (
-  // TODO: Add parameters
-)
-                  <div className="bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4">"
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6 xl mx-auto"bg-cyan-400 text-slate-900 px-4 py-2 rounded-full text-sm font-semibold text-center mb-4"
                     Most Popular
                 )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}"
-                <p className="text-gray-300 mb-6">{plan.description}"
-                <div className="mb-6">"
-<span className="text-4xl font-bold text-white">{plan.price}"
-                  <span className="text-gray-300">{plan.period}"
-                <ul className="space-y-3 mb-8">"
+                <h3 className="
+                <p className="text-gray-300 mb-6"mb-6"
+<span className="
+                  <span className="text-gray-300"space-y-3 mb-8"
                   {plan.features.map((feature, featureIndex) => (
   // TODO: Add parameters
 )
-                    <li key={featureIndex} className="flex items-center text-gray-300">"
-<CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
-                      {feature}
-                    </li></ul>
-< className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${$2 />
-                    ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600''
-                    : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white''
-                  Get Started,
-
-        {/* Testimonials */}
-            What Our Users Say
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+                    <li key={featureIndex} className="
+<CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"grid grid-cols-1 md:grid-cols-3 gap-8"
             {testimonials.map((testimonial, index) => (
   // TODO: Add parameters
 )
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">"
-<div className="flex items-center mb-4">"
-                  {[...Array(testimonial.rating)].map((_, i) => (
-  // TODO: Add parameters
-)
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />"
-<p className="text-gray-300 mb-4 italic">"{testimonial.content}""
-                <div>
-<div className="font-semibold text-white">{testimonial.name}"
-                  <div className="text-cyan-400 text-sm">{testimonial.role}"
-                  <div className="text-gray-400 text-sm">{testimonial.company}"
-        {/* CTA Section */}
-        <section className="text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20">"
-<h2 className="text-3xl md: text-4xl font-bold text-white mb-6">"
+              <div key={index} className="
+<div className="flex items-center mb-4"w-5 h-5 text-yellow-400 fill-current"
+<p className="{testimonial.content}""font-semibold text-white"
+                  <div className="
+                  <div className="text-gray-400 text-sm"text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg p-12 border border-cyan-500/20"
+<h2 className="
             Ready to Master Your Schedule?
-          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">"
+          <p className="text-lg text-gray-300 mb-8 max-w-2 xl mx-auto"
             Join thousands of professionals using AI Scheduler to eliminate scheduling headaches
             and maximize productivity.
   ),

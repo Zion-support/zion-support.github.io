@@ -104,8 +104,6 @@ export class AccessibilityUtils {
 }
       this.setupVoiceNavigation()
     }
-  }
-
   private setupKeyboardNavigation() {;
 const handleKeyDown = (event: KeyboardEvent) => {
   // TODO: Add properties
@@ -126,7 +124,6 @@ const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {'
         this.handleTabNavigation()
       }
-    }
     document.addEventListener('keydown', handleKeyDown)'
     this.eventListeners.push({ element: document, event: 'keydown', handler: handleKeyDown })'
   }
@@ -169,7 +166,6 @@ const handleContrastChange = (e: MediaQueryListEvent) => {
         document.body.classList.remove('high-contrast')'
         this.announceToScreenReader('High contrast mode disabled')'
       }
-    }
     if (mediaQuery.matches) {
   // TODO: Add properties
 }
@@ -194,8 +190,8 @@ const style = document.createElement('style')'
 }
   // TODO: Add properties
 }
-        outline: 2px solid #3b82f6
-        outline-offset: 2px
+        outline: 2 px solid #3 b82 f6
+        outline-offset: 2 px
       }
 
       .keyboard-navigation button:focus,
@@ -204,9 +200,9 @@ const style = document.createElement('style')'
 }
   // TODO: Add properties
 }
-        outline: 2px solid #00ffff
-        outline-offset: 2px
-        box-shadow: 0 0 0 4px rgba(0, 255, 255, 0.2)
+        outline: 2 px solid #00 ffff
+        outline-offset: 2 px
+        box-shadow: 0 0 0 4 px rgba(0, 255, 255, 0.2)
       }
 
       .sr-only {
@@ -215,10 +211,10 @@ const style = document.createElement('style')'
   // TODO: Add properties
 }
         position: absolute
-        width: 1px
-        height: 1px
+        width: 1 px
+        height: 1 px
         padding: 0
-        margin: -1px
+        margin: -1 px
         overflow: hidden
         clip: rect(0, 0, 0, 0)
         white-space: nowrap
@@ -233,7 +229,7 @@ const style = document.createElement('style')'
         position: static
         width: auto
         height: auto
-        padding: 0.5rem
+        padding: 0.5 rem
         margin: 0
         overflow: visible
         clip: auto
@@ -253,9 +249,9 @@ const style = document.createElement('style')'
 }
   // TODO: Add properties
 }
-        animation-duration: 0.01ms !important
+        animation-duration: 0.01 ms !important
         animation-iteration-count: 1 !important
-        transition-duration: 0.01ms !important
+        transition-duration: 0.01 ms !important
       }
     `
     document.head.appendChild(style)
@@ -323,7 +319,6 @@ const handleMotionChange = (e: MediaQueryListEvent) => {
         document.body.classList.remove('reduced-motion')'
         this.announceToScreenReader('Reduced motion mode disabled')'
       }
-    }
     if (mediaQuery.matches) {
   // TODO: Add properties
 }
@@ -344,8 +339,6 @@ const handleMotionChange = (e: MediaQueryListEvent) => {
       // Add voice navigation controls
       this.addVoiceNavigationControls()
     }
-  }
-
   private handleEscapeKey() {
   // TODO: Add properties
 }
@@ -370,7 +363,7 @@ const escapeEvent = new CustomEvent('accessibility-escape')'
 const focusableElements = document.querySelectorAll(
   // TODO: Add parameters
 )
-      'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, [tabindex]:not([tabindex="-1"])''"
+      'a[href], button, textarea, input[type="text"radio"], input[type="], select, [tabindex]:not([tabindex="-1"
     );
 const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element)
     if (currentIndex !== -1) {;
@@ -380,8 +373,6 @@ const nextIndex = event.key === 'ArrowDown' '
       (focusableElements[nextIndex] as HTMLElement)?.focus()
       event.preventDefault()
     }
-  }
-
   private handleTabNavigation() {
   // TODO: Add properties
 }
@@ -399,8 +390,6 @@ const target = event.target as HTMLElement
 }
       this.announceToScreenReader(`Focused on ${this.getElementDescription(target)}`)
     }
-  }
-
   private handleFocusOut(event: FocusEvent) {
   // TODO: Add properties
 }
@@ -474,7 +463,7 @@ const images = document.querySelectorAll('img:not([alt])')'
     // Add ARIA labels to form inputs;
 const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])')'
     inputs.forEach((input) => {;
-const label = document.querySelector(`label[for="${input.id}"]`)"
+const label = document.querySelector(`label[for="${input.id}"
       if (label) {
   // TODO: Add properties
 }
@@ -537,19 +526,14 @@ const icon = element.querySelector('svg')'
 }
         element.setAttribute('aria-label', 'Button')'
       }
-    }
-
     if (element.tagName === 'IMG' && !element.getAttribute('alt')) {'
       element.setAttribute('alt', 'Image')'
     }
-  }
-
   private addVoiceNavigationControls() {;
 const voiceControls = document.createElement('div')'
     voiceControls.className = 'voice-controls sr-only''
     voiceControls.innerHTML = `
-      <button id="voice-read-page" aria-label="Read page content">Read Page</button>"
-<button id="voice-stop" aria-label="Stop reading">Stop</button>"
+      <button id="voice-read-page"Read page content">Read Page</button>"voice-stop" aria-label=">Stop</button>"
     `
     document.body.appendChild(voiceControls)
     // Add event listeners for voice controls;
@@ -570,8 +554,6 @@ const stopButton = document.getElementById('voice-stop')'
 }
       stopButton.addEventListener('click', () => this.stopReading())'
     }
-  }
-
   private readPageContent() {
   // TODO: Add properties
 }
@@ -584,8 +566,6 @@ const utterance = new SpeechSynthesisUtterance(content)
       utterance.pitch = 1
       speechSynthesis.speak(utterance)
     }
-  }
-
   private stopReading() {
   // TODO: Add properties
 }
@@ -594,8 +574,6 @@ const utterance = new SpeechSynthesisUtterance(content)
     if ('speechSynthesis' in window) {'
       speechSynthesis.cancel()
     }
-  }
-
   private announceToScreenReader(message: string) {;
 const liveRegion = document.getElementById('accessibility-announcements')'
     if (liveRegion) {
@@ -605,8 +583,6 @@ const liveRegion = document.getElementById('accessibility-announcements')'
 }
       liveRegion.textContent = message
     }
-  }
-
   private getElementDescription(element: HTMLElement): string {;
 const tagName = element.tagName.toLowerCase();
 const text = element.textContent?.trim() || '';';
@@ -638,7 +614,7 @@ const title = element.getAttribute('title')'
 const focusableElements = container.querySelectorAll(
   // TODO: Add parameters
 )
-      'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, [tabindex]:not([tabindex="-1"])''"
+      'a[href], button, textarea, input[type="], input[type="radio"checkbox"], select, [tabindex]:not([tabindex="])''"
     );
 const firstElement = focusableElements[0] as HTMLElement;
 const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -674,9 +650,7 @@ const handleTabKey = (e: KeyboardEvent) => {
             firstElement.focus()
             e.preventDefault()
           }
-        }
       }
-    }
     container.addEventListener('keydown', handleTabKey)'
     return () => {
   // TODO: Implement
@@ -689,8 +663,6 @@ const handleTabKey = (e: KeyboardEvent) => {
 }
       container.removeEventListener('keydown', handleTabKey)'
     }
-  }
-
   public cleanup() {
   // TODO: Add properties
 }
@@ -710,6 +682,5 @@ const handleTabKey = (e: KeyboardEvent) => {
     this.eventListeners = []
     this.observers = []
   }
-}
 ;
 export default AccessibilityUtils;

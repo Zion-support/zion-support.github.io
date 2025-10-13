@@ -33,7 +33,6 @@
     email: string
     address: string}
     website: string}
-  }
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -127,7 +126,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     useCases: ['Rapid prototyping, Code review automation, Security auditing, Performance optimization, Team onboarding'],'
     roi: 'Development teams report 400% ROI through faster development cycles and reduced bugs.','
     competitors: ['GitHub Copilot, Tabnine, Kite, IntelliCode'],'
-    marketSize: '$8.2B AI development tools market','
+    marketSize: '$8.2 B AI development tools market','
     growthRate: '25% annual growth','
     variant: 'ai-code-enterprise','
     contactInfo: {
@@ -191,7 +190,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     useCases: ['Continuous deployment, Infrastructure automation, Incident management, Performance optimization, Cost management'],'
     roi: 'Organizations report 350% ROI through reduced deployment time and improved reliability.','
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'],'
-    marketSize: '$12.8B DevOps market','
+    marketSize: '$12.8 B DevOps market','
     growthRate: '20% annual growth','
     variant: 'ai-devops-enterprise','
     contactInfo: {
@@ -255,7 +254,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     useCases: ['Customer support, Order inquiries, Technical support, Product information, Complaint resolution'],'
     roi: 'Reduce support costs by 75% and improve response time by 90%','
     competitors: ['Intercom, Zendesk, Freshdesk, Help Scout'],'
-    marketSize: '$18B customer experience market','
+    marketSize: '$18 B customer experience market','
     growthRate: '120% YoY','
     contactInfo: contact,
     realImplementation: true,
@@ -308,7 +307,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     useCases: ['Equipment monitoring, Predictive maintenance, Cost optimization, Performance tracking, Safety compliance'],'
     roi: 'Reduce maintenance costs by 40% and increase equipment uptime by 25%','
     competitors: ['Uptake, C3.ai, GE Digital, Siemens Mindsphere'],'
-    marketSize: '$6.5B predictive maintenance market','
+    marketSize: '$6.5 B predictive maintenance market','
     growthRate: '95% annual growth','
     contactInfo: contact,
     realImplementation: true,
@@ -351,7 +350,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     textColor: 'text-green-400','
     link: 'https://ziontechgroup.com/ai-marketing-optimization','
     marketPosition: 'Competes with Marin Software ($500/month), Kenshoo ($1,000/month). Our advantage: 35% better ROI through autonomous optimization.','
-    targetAudience: ['Marketing agencies', 'E-commerce businesses', 'B2B companies', 'Digital marketers', 'Brand managers'],'
+    targetAudience: ['Marketing agencies', 'E-commerce businesses', 'B2 B companies', 'Digital marketers', 'Brand managers'],'
     trialDays: 14,
     setupTime: '2 weeks','
     category: 'Digital Marketing','
@@ -361,7 +360,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     useCases: ['PPC optimization, Social media advertising, Display advertising, Retargeting campaigns, Brand awareness'],'
     roi: 'Increase marketing ROI by 35% and reduce manual optimization time by 80%','
     competitors: ['Marin Software, Kenshoo, Acquisio, AdRoll'],'
-    marketSize: '$12B marketing automation market','
+    marketSize: '$12 B marketing automation market','
     growthRate: '110% annual growth','
     contactInfo: contact,
     realImplementation: true,
@@ -414,7 +413,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     useCases: ['Investment planning, Portfolio management, Financial advice, Risk management, Tax optimization'],'
     roi: 'Improve investment returns by 15-25% through AI-driven optimization','
     competitors: ['Betterment, Wealthfront, Personal Capital, Acorns'],'
-    marketSize: '$8.2B robo-advisory market','
+    marketSize: '$8.2 B robo-advisory market','
     growthRate: '85% annual growth','
     contactInfo: contact,
     realImplementation: true,
@@ -467,7 +466,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     useCases: ['Demand forecasting, Inventory management, Supplier optimization, Logistics planning, Cost reduction'],'
     roi: 'Reduce supply chain costs by 30% and improve delivery times by 40%','
     competitors: ['SAP Ariba, Oracle SCM, JDA Software, Manhattan Associates'],'
-    marketSize: '$15B supply chain management market','
+    marketSize: '$15 B supply chain management market','
     growthRate: '75% annual growth','
     contactInfo: contact,
     realImplementation: true,
@@ -481,7 +480,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
 export default advancedAIAutomationServices2025;
     link: 'https://ziontechgroup.com/ai-customer-support-automation','
     marketPosition: 'Competes with Intercom ($39/month), Zendesk ($25/month), Freshdesk ($15/month). Our advantage: AI-powered automation, predictive analytics, and multi-language support.','
-    targetAudience: 'Customer support teams, E-commerce businesses, SaaS companies, B2B services, Enterprise companies','
+    targetAudience: 'Customer support teams, E-commerce businesses, SaaS companies, B2 B services, Enterprise companies','
     trialDays: 14,
     setupTime: '1-3 days','
     category: 'Customer Support & Automation','
@@ -491,7 +490,7 @@ export default advancedAIAutomationServices2025;
     useCases: ['24/7 customer support, Ticket automation, Customer satisfaction improvement, Support team efficiency, Multi-language support'],'
     roi: 'Companies report 280% ROI through reduced support costs and improved customer satisfaction.','
     competitors: ['Intercom, Zendesk, Freshdesk, Help Scout, Zoho Desk'],'
-    marketSize: '$18.5B customer support market','
+    marketSize: '$18.5 B customer support market','
     growthRate: '18% annual growth','
     variant: 'ai-support-enterprise','
     contactInfo: {
@@ -545,7 +544,7 @@ export default advancedAIAutomationServices2025;
     textColor: 'text-pink-400','
     link: 'https://ziontechgroup.com/ai-marketing-automation','
     marketPosition: 'Competes with HubSpot ($45/month), Marketo ($1,250/month), Pardot ($1,250/month). Our advantage: AI-powered optimization, predictive analytics, and affordable pricing.','
-    targetAudience: 'Marketing teams, Digital agencies, E-commerce businesses, B2B companies, Startups','
+    targetAudience: 'Marketing teams, Digital agencies, E-commerce businesses, B2 B companies, Startups','
     trialDays: 21,
     setupTime: '3-5 days','
     category: 'Marketing & Automation','
@@ -555,7 +554,7 @@ export default advancedAIAutomationServices2025;
     useCases: ['Campaign automation, Customer personalization, Lead generation, ROI optimization, Multi-channel marketing'],'
     roi: 'Marketing teams report 320% ROI through improved campaign performance and customer engagement.','
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'],'
-    marketSize: '$25.1B marketing automation market','
+    marketSize: '$25.1 B marketing automation market','
     growthRate: '22% annual growth','
     variant: 'ai-marketing-enterprise','
     contactInfo: {
@@ -609,7 +608,7 @@ export default advancedAIAutomationServices2025;
     textColor: 'text-yellow-400','
     link: 'https://ziontechgroup.com/ai-sales-intelligence','
     marketPosition: 'Competes with Salesforce ($25/month), Pipedrive ($15/month), HubSpot ($45/month). Our advantage: AI-powered insights, predictive analytics, and affordable pricing.','
-    targetAudience: 'Sales teams, B2B companies, Sales managers, Account executives, Sales operations','
+    targetAudience: 'Sales teams, B2 B companies, Sales managers, Account executives, Sales operations','
     trialDays: 14,
     setupTime: '2-4 days','
     category: 'Sales & Intelligence','
@@ -619,7 +618,7 @@ export default advancedAIAutomationServices2025;
     useCases: ['Lead qualification, Sales forecasting, Customer insights, Performance optimization, Revenue growth'],'
     roi: 'Sales teams report 380% ROI through improved conversion rates and sales efficiency.','
     competitors: ['Salesforce, HubSpot, Pipedrive, Zoho CRM, Freshsales'],'
-    marketSize: '$21.3B sales intelligence market','
+    marketSize: '$21.3 B sales intelligence market','
     growthRate: '24% annual growth','
     variant: 'ai-sales-enterprise','
     contactInfo: {

@@ -4,11 +4,7 @@
  */
 
 interface PerformanceData {/* TODO: Fix JSX expression */}
-}
-
 interface PerformanceThresholds {/* TODO: Fix JSX expression */}
-}
-
 class AdvancedPerformanceMonitor {
   // TODO: Add properties
 }
@@ -37,7 +33,6 @@ class AdvancedPerformanceMonitor {
       ...thresholds,
 class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
   s: Partial<PerformanceThresholds> = {}) {/* TODO: Fix JSX expression */}
-    }
   }
 
   /**
@@ -50,15 +45,12 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
    * Stop performance monitoring
    */
   public stopMonitoring(): void {/* TODO: Fix JSX expression */}
-    }
     //     }
 
   /**
    * Get performance data
    */
   public getPerformanceData(): PerformanceData[] {/* TODO: Fix JSX expression */}
-  }
-
   /**
    * Get performance summary
    */
@@ -96,7 +88,6 @@ class AdvancedPerformanceMonitor {/* TODO: Fix JSX expression */}
         performanceScore: 0,
   public getPerformanceSummary(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
-      }
     }
 ;
 const _avgLoadTime = this.data.reduce((sum, d) => sum + d.loadTime, 0) / this.data.length;
@@ -127,7 +118,6 @@ const performanceScore = this.calculatePerformanceScore({)
 const performanceScore = this.calculatePerformanceScore({/* TODO: Fix JSX expression */})
     })
     return {/* TODO: Fix JSX expression */}
-    }
   }
 
   /**
@@ -159,8 +149,6 @@ const _entries = list.getEntries()
       })
     } catch (error) {/* TODO: Fix JSX expression */}
       //       }
-  }
-
   /**
    * Setup Web Vitals monitoring
    */
@@ -234,7 +222,6 @@ import('web-vitals')'
    * Setup memory monitoring
    */
   private setupMemoryMonitoring(): void {/* TODO: Fix JSX expression */}
-      }
     }
 
     // Check memory every 30 seconds
@@ -246,7 +233,6 @@ import('web-vitals')'
    * Setup network monitoring
    */
   private setupNetworkMonitoring(): void {/* TODO: Fix JSX expression */}
-    }
   }
 
   /**
@@ -258,10 +244,7 @@ const data: Partial<PerformanceData> = {,
       url: window.location.href,
   private handlePerformanceEntry(entr)
   y: PerformanceEntry): void {/* TODO: Fix JSX expression */}
-    }
-
     switch (entry.entryType) {/* TODO: Fix JSX expression */}
-        }
         break
       case 'largest-contentful-paint':'
         data.largestContentfulPaint = entry.startTime
@@ -269,7 +252,6 @@ const data: Partial<PerformanceData> = {,
       case 'layout-shift':;';
 const _layoutShiftEntry = entry as any
         if (!layoutShiftEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
-        }
         break
     }
 
@@ -281,7 +263,6 @@ const _layoutShiftEntry = entry as any
       // More than just timestamp and url
       this.addPerformanceData(data as PerformanceData)
     if (Object.keys(data).length > 2) {/* TODO: Fix JSX expression */}
-    }
   }
 
   /**
@@ -316,8 +297,6 @@ const _latestData = this.data[this.data.length - 1],
     } else {/* TODO: Fix JSX expression */}
       } as PerformanceData)
     }
-  }
-
   /**
    * Add performance data
    */
@@ -332,8 +311,6 @@ const _latestData = this.data[this.data.length - 1],
       this.data = this.data.slice(-100)
   private addPerformanceData(dat)
   a: PerformanceData): void {/* TODO: Fix JSX expression */}
-    }
-
     // Check thresholds and log warnings
     this.checkThresholds(data)
   }
@@ -400,8 +377,6 @@ const warnings: string[] = [],
 
     if (warnings.length > 0) {/* TODO: Fix JSX expression */}
       //       }
-  }
-
   /**
    * Calculate performance score
    */
@@ -434,8 +409,6 @@ let _score = 100
   private calculatePerformanceScore(metric,
   s: {/* TODO: Fix JSX expression */})
   }): number {/* TODO: Fix JSX expression */}
-  }
-
   /**
    * Export performance data
    */
@@ -460,7 +433,6 @@ let _score = 100
    * Clear performance data
    */
   public clearData(): void {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Export singleton instance

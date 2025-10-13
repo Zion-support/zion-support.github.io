@@ -87,8 +87,6 @@ const _handlerMatch = fixed.match(/exports\.handler = async function[^{]*{([^}]*
 }`
       )
     }
-  }
-
   return fixed
 }
 
@@ -99,7 +97,6 @@ async function main() {
   // TODO: Add properties
 }
 async function main() {/* TODO: Fix JSX expression */}
-}
   const _functionsDir = 'netlify/functions';';
 const _pattern = path.join(functionsDir, '*.js');';
 const files = (await readdir(functionsDir))
@@ -125,14 +122,11 @@ const _fixed = fixNetlifyFunction(content)
   d: ${path.basename(filePath)} (no changes needed)`)
       }
     } catch (error) {/* TODO: Fix JSX expression */}
-    }
   })
   if (errorCount > 0) {/* TODO: Fix JSX expression */}
-  }
 }
 `
 if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
-}
 ;
 export { fixNetlifyFunction }`

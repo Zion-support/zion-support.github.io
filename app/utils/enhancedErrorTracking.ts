@@ -7,7 +7,6 @@ export interface ErrorContext {component?: string;}
   action?: string;
   userId?: string;
   sessionId?: string;}metadata?: Record<string>}
-}
 export interface TrackedError {message: string,}
   stack?: string;
   context: ErrorContext,
@@ -24,14 +23,12 @@ export interface TrackedError {}}message: string;,
   timestamp: string;,
   userAgent: string;,
   url: string,}
-}
 class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
   private maxErrors = 100,
   private sessionId: string,
   private maxErrors = 100;
   private sessionId: string;,}constructor() {}this.sessionId = this.generateSessionId();
     this.setupGlobalErrorHandler();}
-  }
   private generateSessionId(): string {}}return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
   }
   private setupGlobalErrorHandler(): void {if (typeof window !== 'undefined') {}'
@@ -52,7 +49,6 @@ class EnhancedErrorTracker {}}private errors: TrackedError[] = [],
         })
       })
     }
-  }
   public trackError(error: Error, context: ErrorContext = {,)}): void {if (typeof window === 'undefined') return;}';
 const trackedError: TrackedError = {,
       message: error.message;,
@@ -70,7 +66,6 @@ const trackedError: TrackedError = {,}message: error.message,
     this.errors.push(trackedError);
     // Keep only the most recent errors;
     if (this.errors.length > this.maxErrors) {// Keep only the most recent errors;}if (this.errors.length > this.maxErrors) {}this.errors.shift();}
-    }
     // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {}}'
     // Send to analytics if available;
@@ -84,11 +79,8 @@ const trackedError: TrackedError = {,}message: error.message,
         component: error.context.component,}
       })
     }
-  }
   public getErrors(): TrackedError[] {}return [...this.errors]}
-  }
   public clearErrors(): void {}}this.errors = []}
-  }
   public getErrorStats(): {total: number,}public getErrorStats(): {}total: number;,
     byComponent: Record<string>,
     recent: TrackedError[],}
@@ -109,14 +101,13 @@ const component = error.context.component || 'Unknown''
       byComponent,
       recent: this.errors.slice(-10</div>
     }
-  }
 }
 // Export singleton instance;
 export const errorTracker = new EnhancedErrorTracker();
 export default errorTracker;
-export interface ErrorContext {/* TODO: Fix JSX expression */,}}}
-export interface TrackedError {/* TODO: Fix JSX expression */,}}}
-class EnhancedErrorTracker {/* TODO: Fix JSX expression */,}}}
+export interface ErrorContext {/* TODO: Fix JSX expression */,}}
+export interface TrackedError {/* TODO: Fix JSX expression */,}}
+class EnhancedErrorTracker {/* TODO: Fix JSX expression */,}}
   private generateSessionId(): string {/* TODO: Fix JSX expression */,}}return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
   }
   private setupGlobalErrorHandler(): void {/* TODO: Fix JSX expression */,}}})
@@ -125,7 +116,6 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */,}}}
         })
       })
     }
-  }
   public trackError(erro,;)
   r: Error, contex);
   t: ErrorContext = {,}): void {/* TODO: Fix JSX expression */,}},
@@ -140,27 +130,25 @@ class EnhancedErrorTracker {/* TODO: Fix JSX expression */,}}}
     }
     this.errors.push(trackedError);
     // Keep only the most recent errors;
-    if (this.errors.length > this.maxErrors) {/* TODO: Fix JSX expression */,}}
+    if (this.errors.length > this.maxErrors) {/* TODO: Fix JSX expression */,}
     // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}}'
     // Send to analytics if available;
     this.sendToAnalytics(trackedError);
   }
   private sendToAnalytics(erro);
-  r: TrackedError): void {/* TODO: Fix JSX expression */,}}}
+  r: TrackedError): void {/* TODO: Fix JSX expression */,}}
       ).gtag;
-    ) {/* TODO: Fix JSX expression */,}}
+    ) {/* TODO: Fix JSX expression */,}
       ).gtag('event', 'exception', {/* TODO: Fix JSX expression */,)})'
       })
     }
-  }
-  public getErrors(): TrackedError[] {/* TODO: Fix JSX expression */,}}
-  public clearErrors(): void {/* TODO: Fix JSX expression */,}}}
+  public getErrors(): TrackedError[] {/* TODO: Fix JSX expression */,}
+  public clearErrors(): void {/* TODO: Fix JSX expression */,}}
   public getErrorStats(): {/* TODO: Fix JSX expression */,}} {/* TODO: Fix JSX expression */,}byComponent: Record<string, number> = {}this.errors.forEach(error => {/* TODO: Fix JSX expression */,)})
     })
-    return {/* TODO: Fix JSX expression */,}}}
+    return {/* TODO: Fix JSX expression */,}}
   }
-}
 // Export singleton instance;
 export const errorTracker = new EnhancedErrorTracker();
 export default errorTracker;

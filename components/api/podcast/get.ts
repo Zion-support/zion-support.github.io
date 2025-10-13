@@ -23,7 +23,6 @@ const episode = episodes.find(e => e.id === id)
   if (!episode) return res.status(404).json({ error: 'Not found' })'
   return res.status(200).json({ episode })
 }
-}
   if ()) {
   // TODO: Add properties
 }
@@ -53,7 +52,6 @@ const dir = path.dirname (EPISODES_PATH)
 }
     fs.writeFileSync (EPISODES_PATH, '[]', 'utf8');  if () fs.writeFileSync (EPISODES_PATH, '[]utf8')) {'
   $2
-}
 }
 export default /**;
  * handler - Function description
@@ -93,4 +91,3 @@ const { id } = req.query as { id?: string }
 const episode = episodes.find((e) => e.id === id)
   if (!episode) return res.status(404).json({ error: 'Not found' })'
   return res.status(200).json({ episode })
-}

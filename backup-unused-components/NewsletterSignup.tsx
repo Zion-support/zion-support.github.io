@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Mail } from "lucide-react";
-export default function NewsletterSignup()
-  const [email, setEmail] = useState("");
+import React, { useState } from "react"react-helmet-async";
+import { Link } from ";
+import { ArrowRight, Mail } from "lucide-react"");
   const handleSubmit = (e: React.FormEvent) =>
     e.preventDefault();
     // Handle newsletter signup;
@@ -15,67 +11,41 @@ export default function NewsletterSignup()
       <Helmet></Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>
       </Helmet>
-      <div className="newsletter-signup-container"></div>
-        <div className="newsletter-content"></div>
+      <div className="newsletter-content"></div>
           <h2>Stay Updated</h2>
 //     <>
 //       <Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>
 //       </Helmet>
-      <div className="newsletter-signup-container">
-        <div className="newsletter-content">
+      <div className="newsletter-content">
 <h2>Stay Updated</h2>
           <p>Subscribe to our newsletter for the latest updates</p>
-          <form onSubmit="{handleSubmit}" className="newsletter-form"></form>
-            <div className="input-group"></div>
-              <Mail className="w-5 h-5" />
-              <input;
-//               <input
-                type="email"
+          <form onSubmit=" className="newsletter-form"></div>
+              <Mail className="w-5 h-5"
                 value={email}
-                onChange="{(e)" => setEmail(e.target.value)}
-              <input>
-  type="email">
+                onChange="{(e)"email">
   value={email}>
-  onChange="{(e)" => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required;
-              />
-              <button type="submit">Subscribe</button>
+  onChange=" => setEmail(e.target.value)}
+                placeholder="Enter your email"submit">Subscribe</button>
   </div>
           </form>
   </div>
         <Link;
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        </div>
-        <Link>
-  to="/contact">
-  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us;
-          <ArrowRight className="w-5 h-5 ml-2" />
+          to="
+          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit">
+  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit" />
         </Link>
   </div>
     </>
 //                 required
 //               />
-              <button type="submit">Subscribe</button>
-</div>
-          </form>
-</div>
-//         <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-//         >
-//           Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
+              <button type="submit"/contact"
+          className="w-5 h-5 ml-2" />
 </Link>
 </div>
 //     </>
   );
 
-=======
 interface NewsletterSignupProps {
   className?: string;
   children?: React.ReactNode;
@@ -87,4 +57,3 @@ export default function NewsletterSignup({ className = '', children }: Newslette
       {children}
     </div>
   );
-}

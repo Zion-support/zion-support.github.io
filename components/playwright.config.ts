@@ -162,7 +162,7 @@ default defineConfig({
 }
   // TODO: Add properties
 }
-  testDir: tests/e2e',  use: {'
+  testDir: tests/e2 e',  use: {'
     baseURL: http://localhost:3000',    // Ensures that the trace viewer assets are downloaded, useful for debugging.'
     trace: on-first-retry',  },'
   reporter: [

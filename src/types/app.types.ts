@@ -33,7 +33,6 @@ export interface PerformanceReport {
 }
     // TODO: Add content
   }
-}
   webVitals: Partial,
 
           <PerformanceMetrics>,
@@ -55,7 +54,6 @@ export interface ResourceStats {
 }
     // TODO: Add content
   }
-}
   total: number,,
     scripts: number,,
     styles: number,,
@@ -74,7 +72,6 @@ export interface MemoryStats {
 }
     // TODO: Add content
   }
-}
   usedJSHeapSize: number,,
     totalJSHeapSize: number,,
     jsHeapSizeLimit: number
@@ -91,7 +88,6 @@ export interface PerformanceAlert {
 }
     // TODO: Add content
   }
-}
   type: 'warning' | 'error' | 'info',,'
     message: string,,
     metric: keyof PerformanceMetrics,,
@@ -111,7 +107,6 @@ export interface LayoutShift extends PerformanceEntry {
 }
     // TODO: Add content
   }
-}
   value: number,,
     hadRecentInput: boolean
 
@@ -127,17 +122,11 @@ export interface PerformanceWithMemory extends Performance {
 }
     // TODO: Add content
   }
-
-}
   memor,
   y: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-
   usedJSHeapSize: number,,
     totalJSHeapSize: number,,
     jsHeapSizeLimit: number
 
-  }
-}
-
+  

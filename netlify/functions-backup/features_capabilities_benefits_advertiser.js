@@ -44,7 +44,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
   p: new Date().toISOString()}
       })
     }
-  }
 }
         timestam,
   p: new Date().toISOString() }) } } }'

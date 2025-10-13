@@ -6,8 +6,6 @@
  * Interface for accessibility issues
  */
 interface AccessibilityIssue {/* TODO: Fix JSX expression */}
-}
-
 /**
  * Accessibility auditor class
  */;
@@ -50,8 +48,6 @@ const _images = document.querySelectorAll('img')'
           `img[${index}]`)
           'Missing alt attribute');';
 export class AccessibilityAuditor {/* TODO: Fix JSX expression */}
-  }
-
   private checkImages(): void {/* TODO: Fix JSX expression */}
           `img[${index}]`,
           'Missing alt attribute','
@@ -103,7 +99,7 @@ const _links = document.querySelectorAll('a')'
   private checkLinks(): void {/* TODO: Fix JSX expression */}`
           `a[${index}]`,
           'Link without href','
-          'Add href attribute or role="button"''"
+          'Add href attribute or role="button"
         )
       }
     })
@@ -175,8 +171,6 @@ const focusableElements = document.querySelectorAll('button, a, input, select, t
           `element[${index}]`)
           'Focusable element hidden from keyboard')'
   private checkColorContrast(): void {/* TODO: Fix JSX expression */}
-  }
-
   private checkKeyboardNavigation(): void {/* TODO: Fix JSX expression */}`
           `element[${index}]`,
           'Focusable element hidden from keyboard','
@@ -273,13 +267,9 @@ const _elementsWithAria = document.querySelectorAll('[aria-label], [aria-labelle
       minor: this.getIssuesBySeverity('minor').length,'
   public getSummary(): {/* TODO: Fix JSX expression */}
   } {/* TODO: Fix JSX expression */}
-    }
   }
-}
-
 /**
  * Utility function to run accessibility audit
  */;
 export const runAccessibilityAudit = (): AccessibilityIssue[] => {/* TODO: Fix JSX expression */}
-}
 "`

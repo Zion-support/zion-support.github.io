@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -47,8 +45,6 @@ class Logger {
     if (this.isProduction && (level === 'error' || level === 'warn')) {
       this.sendToExternalService(level, message, ...args);
     }
-  }
-
   private sendToExternalService(level: LogLevelType, message: string, ...args: any[]): void {
     // This is where you would send logs to an external service like Sentry, LogRocket, etc.
     // For now, we'll just store them in localStorage for debugging
@@ -72,8 +68,6 @@ class Logger {
     } catch (e) {
       console.error(e);
     }
-  }
-
   error(message: string, ...args: any[]): void {
     this.log(LOG_LEVELS.ERROR, message, ...args);
   }
@@ -97,19 +91,13 @@ class Logger {
     } catch {
       return [];
     }
-  }
-
   // Utility method to clear logs
   clearLogs(): void {
     localStorage.removeItem('app-logs');
   }
-}
-
 export const logger = new Logger();
 export default logger;
-=======
 
-=======
 // logger utility functions
 
 export interface LoggerConfig {
@@ -130,7 +118,5 @@ export class Logger {
   public isEnabled(): boolean {
     return this.config.enabled;
   }
-}
-
 // Export default instance
 export const logger = new Logger();

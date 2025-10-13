@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -51,51 +50,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
   
   return (
-    <div className="fixed inset-0 z-50 md:hidden">
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
+    <div className="fixed inset-0 z-50 md:hidden" onClick={onClose} />
       <div className="fixed top-0 right-0 h-full w-64 bg-slate-900 p-4">
-        <button onClick={onClose} className="text-white mb-4">
-          <X className="w-6 h-6" />
-        </button>
-        <nav className="space-y-4">
-          <a href="/" className="block text-white hover:text-cyan-400">Home</a>
-          <a href="/services" className="block text-white hover:text-cyan-400">Services</a>
-          <a href="/about" className="block text-white hover:text-cyan-400">About</a>
-          <a href="/contact" className="block text-white hover:text-cyan-400">Contact</a>
-        </nav>
-      </div>
-    </div>
-  );
-};
-
-export default Sidebar;`;
-          break;
-          
-        case 'Footer':
-          componentContent = `import React from 'react';
-
-const Footer = () => {
-  return (
-    <footer className="bg-slate-900 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center text-gray-400">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-  );
-};
-
-export default Footer;`;
-          break;
-          
-        case 'LoadingStates':
-          componentContent = `import React from 'react';
-
-export const LoadingPage = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-white text-xl">Loading...</div>
+          <X className="w-6 h-6">
+          <a href="/"block text-white hover:text-cyan-400"/services"block text-white hover:text-cyan-400"/about"block text-white hover:text-cyan-400"/contact"block text-white hover:text-cyan-400"bg-slate-900 border-t border-white/10"max-w-7 xl mx-auto px-4 py-8"text-center text-gray-400"min-h-screen flex items-center justify-center"text-white text-xl">Loading...</div>
     </div>
   );
 };`;
@@ -103,7 +61,6 @@ export const LoadingPage = () => {
           
         case 'EnhancedErrorFeedback':
           componentContent = `import React from 'react';
-
 export const GlobalErrorBoundary = ({ children }: { children: React.ReactNode }) => {
   return <>{children}</>;
 };`;
@@ -111,7 +68,6 @@ export const GlobalErrorBoundary = ({ children }: { children: React.ReactNode })
           
         default:
           componentContent = `import React from 'react';
-
 const ${componentName} = ({ children }: { children?: React.ReactNode }) => {
   return <>{children}</>;
 };

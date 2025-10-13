@@ -1,4 +1,4 @@
-export type Zion2026AIMarketplaceService =;
+export type Zion2026 AIMarketplaceService =;
   id: string
   name: string
   description: string
@@ -23,7 +23,6 @@ export type Zion2026AIMarketplaceService =;
     website: string
     address: string,
   }
-}
 export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [,;
     id: 'ai-marketplace-001','
     name: 'Zion AI Service Marketplace Platform','
@@ -78,9 +77,8 @@ export const zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [
   e: string,
     addres,
   s: string}
-}
 export const,;
-  zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [,
+  zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [,
     i,
   d: 'ai-marketplace-001','
     nam,
@@ -590,9 +588,8 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ];
-export type Zion2026AIMarketplaceService = i,;
+export type Zion2026 AIMarketplaceService = i,;
   d: string, nam,
   e: string, descriptio,
   n: string, categor,
@@ -615,7 +612,7 @@ export type Zion2026AIMarketplaceService = i,;
   l: string, websit,
   e: string, addres,
   s: string} } export const,;
-  zion2026AIMarketplaceServices: Zion2026AIMarketplaceService[] = [ ' i,'
+  zion2026 AIMarketplaceServices: Zion2026 AIMarketplaceService[] = [ ' i,'
   d: 'ai-marketplace-001',' nam,'
   e: 'Zion AI Service Marketplace Platform',' descriptio,'
   n: 'A comprehensive AI service marketplace that connects businesses with AI service providers, featuring automated matching, quality assurance, and seamless integration.',' categor,'

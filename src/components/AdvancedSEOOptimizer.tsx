@@ -52,16 +52,13 @@ const baseStructuredData = {
 }
   // TODO: Add properties
 }
-    "@context": "https://schema.org","
-    "@type": "Organization","
-    "name": "Zion Tech Group","
-    "description": "Leading AI and IT solutions provider","
-    "url": "https://ziontechgroup.com","
-    "logo": "https://ziontechgroup.com/logo.png","
-    "contactPoint": {"
-      "@type": "ContactPoint","
-      "telephone": "+1-302-464-0950","
-      "contactType": "customer service""
+    "@context"https://schema.org","@type": ","
+    ": "Zion Tech Group"
+    "description"Leading AI and IT solutions provider","url": ","
+    ": "https://ziontechgroup.com/logo.png"
+    "contactPoint"
+      "@type"ContactPoint","telephone": ","
+      ": "customer service"
     }
   };
 ;
@@ -74,29 +71,14 @@ const finalStructuredData = structuredData || baseStructuredData;
 <Helmet>
         {/* Basic Meta Tags */}
         <title>{title}</title>
-<meta name="description" content={description} />"
-<meta name="keywords" content={keywords.join(', ')} />'"
-<meta name="author" content="Zion Tech Group" />"
-<meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />'"
-
-        {/* Canonical URL */}
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}"
-
-        {/* Open Graph Tags */}
-        <meta property="og:title" content={title} />"
-<meta property="og:description" content={description} />"
-<meta property="og:type" content="website" />"
-<meta property="og:url" content={canonicalUrl || "https://ziontechgroup.com"} />"
-        {ogImage && <meta property="og:image" content={ogImage} />}"
+<meta name="description"
+<meta name="keywords"
+<meta name="author"Zion Tech Group" />"robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />'"canonical" href={canonicalUrl} />}"og:title" content={title} />"og:description" content={description} />"og:type" content=" />"
+<meta property=" content={canonicalUrl || "https://ziontechgroup.com"
+        {ogImage && <meta property="og:image"
 
         {/* Twitter Card Tags */}
-        <meta name="twitter:card" content="summary_large_image" />"
-<meta name="twitter:title" content={title} />"
-<meta name="twitter:description" content={description} />"
-        {ogImage && <meta name="twitter:image" content={ogImage} />}"
-
-        {/* Structured Data */}
-        <script type="application/ld+json">"
+        <meta name="twitter:card"summary_large_image" />"twitter:title" content={title} />"twitter:description" content={description} />"twitter:image" content={ogImage} />}"application/ld+json">"
           {JSON.stringify(finalStructuredData)}
         </script></Helmet>
       {children}

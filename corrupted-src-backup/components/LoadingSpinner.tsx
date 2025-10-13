@@ -1,6 +1,5 @@
 import React from 'react';'
 interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
-}
 const,
   LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = ' }) => {/* TODO: Fix JSX expression */}''
   }

@@ -1,19 +1,19 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { readState } from "../../../../lib/integrations/fileStore";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState } from "../../../../lib/integrations/fileStore";";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  if (req && req.method !== "GET")"
-    return res && res.status(405).json({ error: "Method not allowed" });";
+  if (req && req.method !== ")"
+    return res && res.status(405).json({ error: " });";
 const { since } = req && req.query as { since?: string }
   const state = readState();
 const sinceTs = since ? Number(since) : 0;
 const events = state.events.filter(
   // TODO: Add parameters
 )
-    (e) => e.type === "zion.talent.matched" && e.timestamp > sinceTs"
+    (e) => e.type === " && e.timestamp > sinceTs"
   )
   res.status(200).json({ events })
 }
@@ -42,17 +42,16 @@ export default function handler(req, res) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 }
   const { since } = req.query as { since?: string }
   const state = read_state ();
@@ -60,7 +59,6 @@ const since_ts = since ? Number (since) : 0;
 const events = state.events.filter (
   // TODO: Add parameters
 )
-    (e) => e.type === "zion.talent.matched" && e.timestamp > since_ts,"
+    (e) => e.type === " && e.timestamp > since_ts,"
   )
   res.status (200).json ({ events })
-}

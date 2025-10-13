@@ -3,7 +3,6 @@
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
-
 console.log('🧹 Starting comprehensive file cleanup...');
 
 // Function to clean a single file
@@ -52,7 +51,6 @@ function cleanFile(filePath) {
           functionEnd = i;
           break;
         }
-      }
     }
     
     // If we found a complete function, use it
@@ -67,8 +65,6 @@ function cleanFile(filePath) {
     console.error(`❌ Error cleaning ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
   const files = [];
@@ -90,10 +86,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
         if (extensions.includes(ext)) {
           files.push(fullPath);
         }
-      }
     }
-  }
-  
   traverse(dir);
   return files;
 }
@@ -117,8 +110,6 @@ async function main() {
       console.error(`❌ Error processing ${file}:`, error.message);
       errorCount++;
     }
-  }
-  
   console.log(`\n✅ Cleanup complete!`);
   console.log(`🧹 Cleaned: ${cleanedCount} files`);
   console.log(`❌ Errors: ${errorCount} files`);
@@ -131,6 +122,4 @@ async function main() {
   } catch (error) {
     console.log('⚠️  Type check still has issues, but many files were cleaned');
   }
-}
-
 main().catch(console.error);

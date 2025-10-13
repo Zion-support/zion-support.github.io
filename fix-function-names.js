@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 import fs from 'fs';';
 import path from 'path';'
@@ -55,8 +54,6 @@ let line = lines[i]
     console.error(`❌ Error fixing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;';
 const files = []
@@ -88,7 +85,6 @@ const ext = path.extname(item)
 }
             files.push(fullPath)
           }
-        }
       }
     } catch (error) {
   // TODO: Add properties
@@ -97,8 +93,6 @@ const ext = path.extname(item)
 }
       // Skip directories we can't read'
     }
-  }
-
   traverse(dir)
   return files
 }
@@ -134,8 +128,6 @@ for (const file of files) {
     console.error(`❌ Error processing ${file}:`, error.message)
     errorCount++
   }
-}
-
 console.log(`\n📊 Summary: `)
 console.log(`✅ Files fixed: ${fixedCount}`)
 console.log(`❌ Errors: ${errorCount}`)
@@ -153,7 +145,6 @@ if (fixedCount > 0) {
 }
   console.log('\n✨ No function names needed fixing.')'
 }))))
-=======
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -161,14 +152,14 @@ import path from 'path';
 
 // List of files that need function name fixes
 const filesToFix = [
-  'app/5g-edge-computing/page.tsx',
-  'app/5g-implementation/page.tsx',
-  'app/5g-iot-solutions/page.tsx',
-  'app/5g-mobile-applications/page.tsx',
-  'app/5g-network-infrastructure/page.tsx',
-  'app/5g-private-networks/page.tsx',
-  'app/5g-smart-city-solutions/page.tsx',
-  'app/5g-solutions/page.tsx',
+  'app/5 g-edge-computing/page.tsx',
+  'app/5 g-implementation/page.tsx',
+  'app/5 g-iot-solutions/page.tsx',
+  'app/5 g-mobile-applications/page.tsx',
+  'app/5 g-network-infrastructure/page.tsx',
+  'app/5 g-private-networks/page.tsx',
+  'app/5 g-smart-city-solutions/page.tsx',
+  'app/5 g-solutions/page.tsx',
   'app/contact/page-broken2.tsx',
   'app/not-found.tsx',
   'app/service-template.tsx',
@@ -190,8 +181,8 @@ function fixFunctionName(filePath) {
     });
     
     // Fix specific cases
-    content = content.replace(/export default function 5g([a-zA-Z]+)Page\(\)/g, 'export default function FiveG$1Page()');
-    content = content.replace(/export default function 5G([a-zA-Z]+)Page\(\)/g, 'export default function FiveG$1Page()');
+    content = content.replace(/export default function 5 g([a-zA-Z]+)Page\(\)/g, 'export default function FiveG$1 Page()');
+    content = content.replace(/export default function 5 G([a-zA-Z]+)Page\(\)/g, 'export default function FiveG$1 Page()');
     
     fs.writeFileSync(filePath, content, 'utf8');
     console.log(`Fixed function name in: ${filePath}`);
@@ -200,8 +191,6 @@ function fixFunctionName(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Main execution
 console.log('Fixing function names...');
 

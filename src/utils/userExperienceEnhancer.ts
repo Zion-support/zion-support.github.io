@@ -136,7 +136,7 @@ $4})
 }
     if (!this.config.enableLoadingStates) return
     // Add loading states to buttons;
-const buttons = document.querySelectorAll('button[type="submit"], button[data-loading]')'"
+const buttons = document.querySelectorAll('button[type="submit"
     buttons.forEach(button => {
   // TODO: Add properties
 }
@@ -216,7 +216,7 @@ const spinner = button.querySelector('.spinner'),'
     this.loadingStates.set(button.id || 'button', false)'
   }
   private showFormLoadingState(form: HTMLFormElement): void {;
-const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement,'"
+const submitButton = form.querySelector('button[type="submit"
     if (submitButton) {
   // TODO: Add properties
 }
@@ -282,7 +282,6 @@ const spinner = document.createElement('span')'
   // TODO: Add properties
 }
     this.reportError(error, type)
-  }
   }
   private setupReactErrorBoundary(): void {
   // TODO: Add properties
@@ -421,7 +420,6 @@ const metrics = {
         this.sendAnalytics('performance_metrics', metrics)'
       })
     }
-  }
   private trackUserSatisfaction(): void {
   // TODO: Add properties
 }
@@ -460,7 +458,6 @@ const interactionTime = Date.now() - lastInteractionTime
     if (typeof gtag !== 'undefined') {'
       gtag('event', event, data)'
   }
-  }
   private reportError(error: Error, type: string): void {;
 const errorData = {
   // TODO: Add properties
@@ -487,7 +484,6 @@ const errorData = {
     if ('Notification' in window && Notification.permission === 'default') {'
       Notification.requestPermission()
   }
-  }
   private showNotification(title: string, body: string, icon?: string): void {
   // TODO: Add properties
 }
@@ -504,7 +500,6 @@ const errorData = {
         badge:       ,
 $4})
     }
-  }
   private setupProgressiveWebApp(): void {
   // TODO: Add properties
 }
@@ -529,9 +524,9 @@ const metaTags = [
       { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },'
       { name: 'apple-mobile-web-app-title', content: 'Zion Tech Group' },'
       { name: 'application-name', content: 'Zion Tech Group' },'
-      { name: 'msapplication-TileColor', content: '#4f46e5' },'
+      { name: 'msapplication-TileColor', content: '#4 f46 e5' },'
       { name: 'msapplication-config', content: '/browserconfig.xml' },'
-      { name: 'theme-color', content: '#4f46e5' }'
+      { name: 'theme-color', content: '#4 f46 e5' }'
     ]
     metaTags.forEach(tag => {;
 const meta = document.createElement('meta')'
@@ -564,7 +559,6 @@ const meta = document.createElement('meta')'
   })
       })
     }
-  }
   private setupInstallPrompt(): void {;
 let deferredPrompt: any,
 
@@ -636,7 +630,6 @@ const offlineDiv = document.createElement('div')'
 }
         indicator.remove()
   }
-    }
   }
   private setupPushNotifications(): void {
   // TODO: Add properties
@@ -662,7 +655,6 @@ const offlineDiv = document.createElement('div')'
         this.subscribeToPush(registration)
   })
     }
-  }
   private subscribeToPush(registration: ServiceWorkerRegistration): void {
   // TODO: Add properties
 }
@@ -815,11 +807,9 @@ const observer = new PerformanceObserver((list) => {
           if (entry.entryType === 'measure') {'
             this.metrics.performanceScore = this.calculatePerformanceScore(entry)
   }
-        }
       })
       observer.observe({ entryTypes: ['measure'] })'
     }
-  }
   private setupAccessibilityMonitoring(): void {
   // TODO: Add properties
 }
@@ -907,7 +897,6 @@ ${this.metrics.performanceScore < 80 ? '- Optimize performance' : '}''
     `
     return report.trim()
   }
-}
 ;
 export default UserExperienceEnhancer;
 // UserExperienceEnhancer utility
@@ -988,14 +977,10 @@ class UserExperienceEnhancer {
   private setupSmoothScrolling(): void {if (typeof document !== 'undefined' && this.config.enableSmoothScrolling) {}'
       document.documentElement.style.scrollBehavior = 'smooth''
     }
-  }
-
   private setupLoadingStates(): void {if (typeof document !== 'undefined' && this.config.enableLoadingStates) {}'
       // Add loading state management
       console.log('Loading states enabled')'
     }
-  }
-
   public getMetrics(): UXMetrics {
   // TODO: Add properties
 }
@@ -1003,15 +988,12 @@ class UserExperienceEnhancer {
 }
     return this.metrics
   }
-  }
-
   public cleanup(): void {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     // Cleanup UX enhancements
-  }
   }
 }
 ;

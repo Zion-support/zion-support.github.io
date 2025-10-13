@@ -22,10 +22,8 @@ const bannerComponents = {
     () => import('./CognitiveOrchestrationMegaBanner')'
   ),;
 const bannerComponents = {/* TODO: Fix JSX expression */}
-}
 type BannerKey = keyof typeof bannerComponents
 interface BannerRotationManagerProps {/* TODO: Fix JSX expression */}
-}
 /**
  * BannerRotationManager - Manages the rotation and display of promotional banners
  *
@@ -91,7 +89,6 @@ export const,;
     return () => clearInterval(interval)
   }, [visibleBanners.length, rotationInterval])
   if (visibleBanners.length === 0) {/* TODO: Fix JSX expression */}
-  }
 //   const currentBanner = visibleBanners[currentIndex]
 //   const BannerComponent = bannerComponents[currentBanner]
   return(<div className={`banner-rotation-manager ${className}`}>
@@ -104,7 +101,6 @@ export const,;
           <div className='flex items-center justify-center py-16'>'
 <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>}'
           </div>}
-        }
       >
 <BannerComponent /></Suspense>)
 )
@@ -129,7 +125,6 @@ export const,;
   return (<div className={`banner-rotation-manager ${className}`}>
 <Suspense>
         fallback={/* TODO: Fix JSX expression */}
-        }
       >
 <BannerComponent />
       {/* Banner indicators */}

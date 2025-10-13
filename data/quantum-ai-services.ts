@@ -92,7 +92,7 @@ export const quantumAIServices: QuantumAIService[] = [;
     useCases: ['Cognitive research', 'Medical diagnosis', 'AI training', 'Neural interface development', 'Brain-computer communication', 'Cognitive enhancement'],'
     roi: 'Revolutionary technology with 1000% ROI potential through breakthrough discoveries and patents.','
     competitors: ['Neuralink', 'Kernel', 'Basic neural interfaces'],'
-    marketSize: '$1.5B BCI market','
+    marketSize: '$1.5 B BCI market','
     growthRate: '300% annual growth','
     variant: 'quantum-ai-futuristic','
     contactInfo: {
@@ -155,7 +155,7 @@ export const quantumAIServices: QuantumAIService[] = [;
     useCases: ['Learning enhancement', 'Memory improvement', 'Focus optimization', 'Problem-solving training', 'Cognitive performance monitoring', 'Brain training'],'
     roi: 'Average user improves cognitive performance by 500% and learning efficiency by 300% within 3 months.','
     competitors: ['Basic cognitive training apps', 'Traditional learning tools'],'
-    marketSize: '$2.1B cognitive enhancement market','
+    marketSize: '$2.1 B cognitive enhancement market','
     growthRate: '400% annual growth','
     variant: 'quantum-ai-futuristic','
     contactInfo: {
@@ -218,7 +218,7 @@ export const quantumAIServices: QuantumAIService[] = [;
     useCases: ['Blockchain security', 'Smart contract protection', 'Cryptocurrency security', 'DeFi platform protection', 'NFT marketplace security', 'Digital asset protection'],'
     roi: 'Protect against future quantum attacks and ensure long-term blockchain security. ROI through risk mitigation and competitive advantage.','
     competitors: ['Traditional blockchain security', 'Basic cryptography tools'],'
-    marketSize: '$3.2B blockchain security market','
+    marketSize: '$3.2 B blockchain security market','
     growthRate: '350% annual growth','
     variant: 'quantum-ai-futuristic','
     contactInfo: {
@@ -281,7 +281,7 @@ export const quantumAIServices: QuantumAIService[] = [;
     useCases: ['Network security', 'Data protection', 'Threat detection', 'Incident response', 'Compliance management', 'Security monitoring'],'
     roi: 'Protect against future quantum attacks and ensure long-term security. ROI through risk mitigation and competitive advantage.','
     competitors: ['Traditional cybersecurity', 'Basic security tools'],'
-    marketSize: '$150B cybersecurity market','
+    marketSize: '$150 B cybersecurity market','
     growthRate: '300% annual growth','
     variant: 'quantum-ai-futuristic','
     contactInfo: {
@@ -344,7 +344,7 @@ export const quantumAIServices: QuantumAIService[] = [;
     useCases: ['Energy optimization', 'Cost reduction', 'Efficiency improvement', 'Renewable integration', 'Smart grid management', 'Predictive maintenance'],'
     roi: 'Average customer reduces energy costs by 60% and improves efficiency by 300% within 6 months.','
     competitors: ['Traditional energy management', 'Basic optimization tools'],'
-    marketSize: '$8.5B energy management market','
+    marketSize: '$8.5 B energy management market','
     growthRate: '280% annual growth','
     variant: 'quantum-ai-futuristic','
     contactInfo: {
@@ -407,7 +407,7 @@ export const quantumAIServices: QuantumAIService[] = [;
     useCases: ['Algorithmic trading', 'Portfolio optimization', 'Risk management', 'Market prediction', 'Automated trading', 'Performance analysis'],'
     roi: 'Average user achieves 500% better returns than traditional trading methods within 12 months.','
     competitors: ['Traditional trading platforms', 'Basic algorithmic trading'],'
-    marketSize: '$12B algorithmic trading market','
+    marketSize: '$12 B algorithmic trading market','
     growthRate: '320% annual growth','
     variant: 'quantum-ai-futuristic','
     contactInfo: {
@@ -470,7 +470,7 @@ export const quantumAIServices: QuantumAIService[] = [;
     useCases: ['Internet security', 'Network protection', 'Data encryption', 'Threat prevention', 'Compliance management', 'Secure communications'],'
     roi: 'Protect against future quantum attacks and ensure long-term internet security. ROI through risk mitigation and competitive advantage.','
     competitors: ['Traditional internet security', 'Basic encryption tools'],'
-    marketSize: '$150B cybersecurity market','
+    marketSize: '$150 B cybersecurity market','
     growthRate: '300% annual growth','
     variant: 'quantum-ai-futuristic','
     contactInfo: {
@@ -533,7 +533,7 @@ export const quantumAIServices: QuantumAIService[] = [;
     useCases: ['IoT security', 'Device management', 'Performance optimization', 'Predictive maintenance', 'Energy efficiency', 'Smart automation'],'
     roi: 'Protect IoT devices from future quantum attacks and improve operational efficiency by 200%.','
     competitors: ['Traditional IoT platforms', 'Basic device management'],'
-    marketSize: '$18B IoT platform market','
+    marketSize: '$18 B IoT platform market','
     growthRate: '250% annual growth','
     variant: 'quantum-ai-futuristic','
     contactInfo: {
@@ -596,7 +596,7 @@ export const quantumAIServices: QuantumAIService[] = [;
     useCases: ['Route optimization', 'Supply chain optimization', 'Inventory management', 'Demand forecasting', 'Cost reduction', 'Performance improvement'],'
     roi: 'Average customer reduces logistics costs by 40% and improves efficiency by 300% within 6 months.','
     competitors: ['Traditional logistics platforms', 'Basic optimization tools'],'
-    marketSize: '$15B logistics optimization market','
+    marketSize: '$15 B logistics optimization market','
     growthRate: '220% annual growth','
     variant: 'quantum-ai-futuristic','
     contactInfo: {
@@ -633,7 +633,7 @@ export const quantumAIServices: QuantumAIService[] = [;
   // TODO: Add items
 ]
       'Quantum AI world generation','
-      'Advanced 3D graphics engine','
+      'Advanced 3 D graphics engine','
       'Real-time collaboration tools','
       'Virtual asset marketplace','
       'AI-powered NPCs','
@@ -654,12 +654,12 @@ export const quantumAIServices: QuantumAIService[] = [;
     setupTime: '2 weeks','
     category: 'Quantum AI & Metaverse','
     realService: true,
-    technology: ['Quantum Computing', '3D Graphics', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'VR/AR Integration'],'
+    technology: ['Quantum Computing', '3 D Graphics', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'VR/AR Integration'],'
     integrations: ['VR headsets', 'AR devices', 'Gaming platforms', 'Social media', 'Payment systems', 'Cloud services'],'
     useCases: ['Virtual world creation', 'Gaming development', 'Educational experiences', 'Training simulations', 'Virtual events', 'Digital commerce'],'
     roi: 'Create revolutionary metaverse experiences and monetize virtual assets. ROI through innovation and market leadership.','
     competitors: ['Traditional metaverse platforms', 'Basic VR development'],'
-    marketSize: '$800B metaverse market','
+    marketSize: '$800 B metaverse market','
     growthRate: '400% annual growth','
     variant: 'quantum-ai-futuristic','
     contactInfo: {
@@ -722,7 +722,7 @@ export const quantumAIServices: QuantumAIService[] = [;
     useCases: ['Manufacturing automation', 'Healthcare assistance', 'Service automation', 'Research and development', 'Safety and security', 'Performance optimization'],'
     roi: 'Revolutionary robotics technology with superior decision making and automation capabilities. ROI through innovation and market leadership.','
     competitors: ['Traditional robotics platforms', 'Basic automation tools'],'
-    marketSize: '$25B robotics market','
+    marketSize: '$25 B robotics market','
     growthRate: '350% annual growth','
     variant: 'quantum-ai-futuristic','
     contactInfo: {

@@ -37,9 +37,6 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
     content = content.replace(/\s*\/>\s*<(\w+)/g, ' <$1')'
     content = content.replace(/\s*\/>\s*<\/(\w+)>/g, '</$1>')'
     if (content !== originalContent) {/* TODO: Fix JSX expression */}
-    }
   } catch (error) {/* TODO: Fix JSX expression */}
 //     }
-}
-
 // `

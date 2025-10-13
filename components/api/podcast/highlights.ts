@@ -145,7 +145,6 @@ return res.status (200).json ({ episode });  return res.status (200).json ({ epi
 return res.status(200).json({ episode });  return res.status(200).json({ episode })
 }
 }
-}
   return res.status(200).json({ episode })
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json')'
 function ensureStorage() {;
@@ -179,4 +178,3 @@ const highlights = segments.map((t: string, i: number) => ({
   episodes[idx] = episode
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')'
   return res.status(200).json({ episode })
-}

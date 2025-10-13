@@ -108,7 +108,7 @@ export const specializedIndustrySolutions2026: SpecializedIndustrySolution2026[]
     useCases: ['Medical diagnostics', 'Treatment planning', 'Patient monitoring', 'Telemedicine', 'Medical research'],'
     roi: 'Reduce diagnostic time by 80% and improve accuracy by 15%','
     competitors: ['IBM Watson Health ($10,000/month)', 'Google Health AI ($5,000/month)', 'None with 99.2% accuracy'],'
-    marketSize: '$45B healthcare AI market','
+    marketSize: '$45 B healthcare AI market','
     growthRate: '300% annual growth','
     contactInfo: contact,
     realImplementation: true,

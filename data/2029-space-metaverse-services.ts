@@ -46,7 +46,6 @@ export interface SpaceMetaverseService2029 {
     website: string
     address: string
   }
-}
 export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
   // TODO: Add items
 ]
@@ -98,7 +97,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
       'Resource supply chains','
       'Space infrastructure development''
     ],
-    marketSize: '$3.8T by 2029','
+    marketSize: '$3.8 T by 2029','
     competitors: ['Planetary Resources', 'Deep Space Industries', 'Asteroid Mining Corp'],'
     technology: ['AI/ML', 'Robotics', 'Space Technology', 'Automation'],'
     integration: ['Space systems', 'Ground control', 'Resource processing'],'
@@ -121,7 +120,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
     affiliate: '10% commission for referrals','
     referral: '$500,000 bonus for partnerships','
     partnership: 'Strategic space partnerships','
-    funding: 'Series D funding, $2B valuation','
+    funding: 'Series D funding, $2 B valuation','
     exit: 'IPO or space acquisition','
     contact: {
   // TODO: Add properties
@@ -149,7 +148,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
 ]
   // TODO: Add items
 ]
-      'Photorealistic 3D environments','
+      'Photorealistic 3 D environments','
       'AI-powered NPCs and interactions','
       'Cross-platform compatibility','
       'Real-time collaboration tools','
@@ -182,9 +181,9 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
       'Digital commerce','
       'Virtual real estate''
     ],
-    marketSize: '$936.6B by 2029','
+    marketSize: '$936.6 B by 2029','
     competitors: ['Meta', 'Microsoft', 'Roblox', 'Decentraland'],'
-    technology: ['VR/AR', 'AI/ML', '3D Graphics', 'Blockchain'],'
+    technology: ['VR/AR', 'AI/ML', '3 D Graphics', 'Blockchain'],'
     integration: ['VR headsets', 'Mobile devices', 'Web browsers'],'
     support: ['24/7 metaverse support', 'VR experts', 'Implementation team'],'
     compliance: ['Data privacy', 'Content moderation', 'Virtual safety'],'
@@ -205,7 +204,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
     affiliate: '25% commission for referrals','
     referral: '$25,000 bonus for partnerships','
     partnership: 'Strategic metaverse partnerships','
-    funding: 'Series B funding, $300M valuation','
+    funding: 'Series B funding, $300 M valuation','
     exit: 'IPO or tech acquisition','
     contact: {
   // TODO: Add properties
@@ -266,7 +265,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
       'Research institutions','
       'Pharmaceutical companies''
     ],
-    marketSize: '$67.8B by 2029','
+    marketSize: '$67.8 B by 2029','
     competitors: ['IBM Watson Health', 'Cerner', 'Epic', 'Allscripts'],'
     technology: ['AI/ML', 'Predictive Analytics', 'Healthcare Data', 'Machine Learning'],'
     integration: ['EHR systems', 'Health devices', 'Insurance platforms'],'
@@ -289,7 +288,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
     affiliate: '20% commission for referrals','
     referral: '$35,000 bonus for partnerships','
     partnership: 'Healthcare provider partnerships','
-    funding: 'Series C funding, $200M valuation','
+    funding: 'Series C funding, $200 M valuation','
     exit: 'IPO or healthcare acquisition','
     contact: {
   // TODO: Add properties
@@ -350,7 +349,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
       'Performance management','
       'Risk management''
     ],
-    marketSize: '$22.1B by 2029','
+    marketSize: '$22.1 B by 2029','
     competitors: ['Monday.com', 'Asana', 'Trello', 'Notion'],'
     technology: ['AI/ML', 'Process Automation', 'Predictive Analytics', 'RPA'],'
     integration: ['ERP systems', 'CRM platforms', 'Accounting software'],'
@@ -373,7 +372,7 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
     affiliate: '20% commission for referrals','
     referral: '$15,000 bonus for partnerships','
     partnership: 'Strategic business partnerships','
-    funding: 'Series B funding, $100M valuation','
+    funding: 'Series B funding, $100 M valuation','
     exit: 'IPO or enterprise acquisition','
     contact: {
   // TODO: Add properties
@@ -385,5 +384,4 @@ export const spaceMetaverseServices2029: SpaceMetaverseService2029[] = [;
       website: 'https://ziontechgroup.com','
       address: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ]

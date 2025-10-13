@@ -1,7 +1,6 @@
 'use client'';
 import React, { useEffect, useCallback, useState } from 'react';'
 interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
-}
 /**
  * Accessibility Enhancer Component
  * Provides comprehensive accessibility improvements
@@ -55,7 +54,6 @@ const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')'
 const handleChange = (e: MediaQueryListEvent) => {,
  setIsReducedMotion(e.matches)
  useEffect(() => {/* TODO: Fix JSX expression */}
- }
  mediaQuery.addEventListener('change', handleChange);';
 const _titleElement = document.querySelector('title')'
  if (titleElement) {
@@ -73,10 +71,9 @@ const _titleElement = document.querySelector('title')'
  })
  }
  const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */}
- }
  highContrastQuery.addEventListener('change', handleContrastChange)'
  // Check for font size preference;
-const fontSizeQuery = window.matchMedia('(min-width: 1px)');';
+const fontSizeQuery = window.matchMedia('(min-width: 1 px)');';
 const computedStyle = getComputedStyle(document.documentElement);
 const rootFontSize = parseFloat(computedStyle.fontSize)
  setFontSize(rootFontSize)
@@ -85,12 +82,11 @@ const rootFontSize = parseFloat(computedStyle.fontSize)
  mediaQuery.removeEventListener('change', handleChange)'
  highContrastQuery.removeEventListener('change', handleContrastChange);';
 const fontSizeQuery = window.matchMedia('(min-widt)'
-  h: 1px)');';
+  h: 1 px)');';
 const computedStyle = getComputedStyle(document.documentElement);
 const rootFontSize = parseFloat(computedStyle.fontSize)
  setFontSize(rootFontSize)
  return () => {/* TODO: Fix JSX expression */}
- }
  }, [])
  // Apply accessibility styles
  useEffect(() => {
@@ -119,7 +115,6 @@ const _main = document.querySelector('main')'
  useEffect(() => {/* TODO: Fix JSX expression */}
   r: 'smooth' })'
  }
- }
  // Skip to navigation with Alt + N
  if (e.altKey && e.key === 'n') {'
  e.preventDefault();
@@ -134,12 +129,9 @@ const _nav = document.querySelector('nav')'
  if (e.altKey && e.key === 'n') {/* TODO: Fix JSX expression */}'
   r: 'smooth' })'
  }
- }
  // Close modals/dropdowns with Escape
  if (e.key === 'Escape') {;';
-const _modals = document.querySelectorAll('[role="dialog"][aria-modal="true"]')'"
- modals.forEach((modal) => {;
-const _closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*="dismiss" i]')'"
+const _modals = document.querySelectorAll('[role="dialog"true"]')'"close" i], [aria-label*=" i]')'"
  if (closeButton) {
   // TODO: Add properties
 }
@@ -153,7 +145,6 @@ const _closeButton = modal.querySelector('[aria-label*="close" i], [aria-label*=
  // Navigate through interactive elements with Tab (visual indicator)
  if (e.key === 'Tab') {/* TODO: Fix JSX expression */}'
  }
- }
  // Remove keyboard navigation class on mouse use;
 const handleMouseDown = () => {
   // TODO: Implement
@@ -166,7 +157,6 @@ const handleMouseDown = () => {
 }
  document.body.classList.remove('keyboard-navigation');origin/;';
 const handleMouseDown = () => {/* TODO: Fix JSX expression */}
- }
  document.addEventListener('keydown', handleKeyDown)'
  return () => document.removeEventListener('keydown', handleKeyDown)'
  }, [])
@@ -201,19 +191,16 @@ const _style = document.createElement('style')'
 }
   // TODO: Add properties
 }
- outline: 3px solid #3B82F6 !important
- outline-offset: 2px !important;
+ outline: 3 px solid #3 B82 F6 !important
+ outline-offset: 2 px !important;
 const handleFocusIn = useCallback((even)
   t: FocusEvent) => {/* TODO: Fix JSX expression */}
- }
  }, []);
 const handleFocusOut = useCallback((even)
   t: FocusEvent) => {/* TODO: Fix JSX expression */}
  }, [])
  useEffect(() => {/* TODO: Fix JSX expression */}
- }
  .sr-only {/* TODO: Fix JSX expression */}
- }
  .sr-only-focusable: focus
  .sr-only-focusable:active {
   // TODO: Add properties
@@ -230,24 +217,20 @@ const handleFocusOut = useCallback((even)
   e:focus,
  .sr-only-focusabl,
   e:active {/* TODO: Fix JSX expression */}
- }
  /* Skip link styles */
  .skip-link {/* TODO: Fix JSX expression */}
- }
  .skip-link: focus {,
  top: 0
  }
  /* High contrast mode support */
  @media (prefers-contrast: high) {,
  * {,
- border-width: 2px !important
+ border-width: 2 px !important
  .skip-lin,
   k:focus {/* TODO: Fix JSX expression */}
- }
  /* High contrast mode support */
  @media (prefers-contras)
   t: high) {/* TODO: Fix JSX expression */}
- }
  }
  /* Reduced motion support */
  @media (prefers-reduced-motion: reduce) {,
@@ -265,19 +248,16 @@ const handleFocusOut = useCallback((even)
  @media (prefers-reduced-motio)
   n: reduce) {/* TODO: Fix JSX expression */}
  }
- }
  /* Focus visible polyfill */
  *:focus: not(:focus-visible) {,
  outline: none
  *:focu,
   s:not(:focus-visible) {/* TODO: Fix JSX expression */}
- }
  *:focus-visible {/* TODO: Fix JSX expression */}
  }`
  `
  document.head.appendChild(style);origin/
  return () => {/* TODO: Fix JSX expression */}
- }
  }, [handleFocusIn, handleFocusOut])
  // Screen reader announcements;
 const announceToScreenReader = useCallback((message: string) => {,;
@@ -327,7 +307,6 @@ const announceToScreenReader = useCallback((messag)
  return(<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : '} ${isReducedMotion ? 'reduced-motion' : '}`}>)''
  {children})
  useEffect(() => {/* TODO: Fix JSX expression */}
- }
  }, [announceToScreenReader])
 `
  return (<div className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : '} ${isReducedMotion ? 'reduced-motion' : '}`}>''

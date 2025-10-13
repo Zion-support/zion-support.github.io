@@ -129,7 +129,6 @@ const fullResume: Resume = {
 }
       setIsLoading(false)
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -140,5 +139,4 @@ const fullResume: Resume = {
     resume,
     fetchResume}
     fetchResume,
-  }
-}
+  

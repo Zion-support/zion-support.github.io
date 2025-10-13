@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'intelligent-meta-orchestrator'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'intelligent-meta-orchestrator'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'intelligent-meta-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'intelligent',' mode: 'meta'} lastOrchestration: new Date().toISOString() } }) } return result; } catch (error) {'
     ' // console.error('Error in intelligent-meta-orchestrator: ') error'

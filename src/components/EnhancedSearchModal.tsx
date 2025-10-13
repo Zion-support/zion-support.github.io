@@ -164,7 +164,6 @@ const handleKeyDown = (e: KeyboardEvent) => {
     e.preventDefault()
         handleResultClick(results[selectedIndex])
   }
-    }
     document.addEventListener('keydown', handleKeyDown)'
     return () => document.removeEventListener('keydown', handleKeyDown)'
   }, [isOpen, results, selectedIndex, onClose]);
@@ -249,7 +248,6 @@ const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2
       default:
         return '🔍''
   }
-  }
   const getTypeColor = (type: string) => {
   // TODO: Add properties
 }
@@ -271,68 +269,50 @@ const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2
       default:
         return 'text-gray-400''
   }
-  }
   if (!isOpen) return null
   return (
   // TODO: Add parameters
 )
-    <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16">"
-      {/* Backdrop */}
-      <$2 />
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm""
+    <div className="fixed inset-0 z-50 flex min-h-screen items-start justify-center p-4 pt-16"fixed inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
       />
       {/* Modal */}
-      <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md rounded-xl shadow-2xl border border-cyan-400/20">"
+      <div className="
         {/* Header */}
-        <div className="flex items-center p-4 border-b border-cyan-400/20">"
-<Search className="w-5 h-5 text-cyan-400 mr-3" />"
+        <div className="flex items-center p-4 border-b border-cyan-400/20"w-5 h-5 text-cyan-400 mr-3"
 <input
             ref={inputRef}
-            type="text""
-            placeholder="Search services, pages, documentation...""
+            type=""
+            placeholder=""
             value={query}
             onChange={handleInputChange}
-            className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none text-lg""
+            className="
           />
 <$2 />
             onClick={onClose}
-            className="p-2 text-gray-400 hover:text-white transition-colors">"
-<X className="w-5 h-5" />"
+            className="p-2 text-gray-400 hover:text-white transition-colors"w-5 h-5"
         {/* Content */}
-        <div className="max-h-96 overflow-y-auto">"
+        <div className="
           {showSuggestions && !query && (
   // TODO: Add parameters
 )
-            <div className="p-4 space-y-6">"
-              {/* Recent Searches */}
-              <div>
-<h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">"
-<Clock className="w-4 h-4 mr-2" />"
+            <div className="p-4 space-y-6"text-sm font-semibold text-gray-400 mb-3 flex items-center"
+<Clock className="
                   Recent Searches
-                <div className="flex flex-wrap gap-2">"
-                  {recentSearches.map((search, index) => (
-  // TODO: Add parameters
-)
-                    <$2 />
-                      key={index}
-                      onClick={() => handleSuggestionClick(search)}
-                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">"
+                <div className="flex flex-wrap gap-2"px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors"
                       {search}
                   ))}
               {/* Popular Searches */}
               <div>
-<h3 className="text-sm font-semibold text-gray-400 mb-3 flex items-center">"
-<TrendingUp className="w-4 h-4 mr-2" />"
-                  Popular Searches
-                <div className="flex flex-wrap gap-2">"
+<h3 className="
+<TrendingUp className="w-4 h-4 mr-2"flex flex-wrap gap-2"
                   {popularSearches.map((search, index) => (
   // TODO: Add parameters
 )
                     <$2 />
                       key={index}
                       onClick={() => handleSuggestionClick(search)}
-                      className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-full text-sm hover:bg-cyan-400/20 hover:text-cyan-400 transition-colors">"
+                      className="
                       {search}
                   ))}
           )}
@@ -340,65 +320,33 @@ const bRelevance = b.title.toLowerCase().includes(searchQuery.toLowerCase()) ? 2
           {query && (
   // TODO: Add parameters
 )
-            <div className="p-4">"
-              {isSearching ? (
-  // TODO: Add parameters
-)
-                <div className="flex items-center justify-center py-8">"
-<div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400">"
+            <div className="p-4"flex items-center justify-center py-8"
+<div className="
               ) : results.length > 0 ? (
   // TODO: Add parameters
 )
-                <div className="space-y-2">"
-                  {results.map((result, index) => (
-  // TODO: Add parameters
-)
-                    <$2 />
-                      key={result.id}
-                      onClick={() => handleResultClick(result)}
-                      className={`w-full text-left p-3 rounded-lg transition-colors ${
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                        index === selectedIndex
-                          ? 'bg-cyan-400/20 text-cyan-400''
-                          : 'hover:bg-slate-800/50 text-gray-300''
-                      }`}
-                    >
-<div className="flex items-start justify-between">"
-<div className="flex-1">"
-<div className="flex items-center space-x-2 mb-1">"
-<span className="text-lg">{getCategoryIcon(result.category)}"
-                            <h3 className="font-medium">{result.title}"
+                <div className="space-y-2"flex items-start justify-between"
+<div className="
+<div className="flex items-center space-x-2 mb-1"text-lg"
+                            <h3 className="
                             <span className={`text-xs px-2 py-1 rounded ${getTypeColor(result.type)} bg-slate-800/50`}>
                               {result.type}
-                          <p className="text-sm text-gray-400 mb-2">{result.description}"
-                          <div className="flex items-center space-x-4 text-xs text-gray-500">"
+                          <p className="text-sm text-gray-400 mb-2"flex items-center space-x-4 text-xs text-gray-500"
 <span>{result.category}
                             {result.popularity && (
   // TODO: Add parameters
 )
-                              <div className="flex items-center space-x-1">"
-<Star className="w-3 h-3" />"
-<span>{result.popularity}%
-                            )}
-                            {result.lastModified && (
-  // TODO: Add parameters
-)
-                              <span>Updated {result.lastModified}
-                            )}
-                        <ArrowRight className="w-4 h-4 text-gray-400" />"
+                              <div className="
+<Star className="w-3 h-3"w-4 h-4 text-gray-400"
                   ))}
               ) : (
   // TODO: Add parameters
 )
-                <div className="text-center py-8">"
-<Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />"
-<h3 className="text-lg font-medium text-gray-300 mb-2">No results found"
-                  <p className="text-sm text-gray-500">"
+                <div className="
+<Search className="w-12 h-12 text-gray-600 mx-auto mb-4"text-lg font-medium text-gray-300 mb-2"
+                  <p className="
                     Try searching for something else or check your spelling
-                  <div className="text-sm text-gray-500 mt-4">"
+                  <div className="text-sm text-gray-500 mt-4"
                     Popular searches: AI Analytics, Quantum Computing, Workflow Automation
               )}
           )}

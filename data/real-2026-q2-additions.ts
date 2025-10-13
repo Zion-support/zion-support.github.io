@@ -17,7 +17,7 @@ export const real2026 Q2 Additions = [;
     market_position: 'Strong enterprise traction with compliance - led buyers','
     roi: 'Reduce audit prep by 60% and non - compliance risk by 40%','
     link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub'},;';
-export const real2026Q2Additions = [{id: 'ai-governance-compliance-hub','
+export const real2026 Q2 Additions = [{id: 'ai-governance-compliance-hub','
     name: 'AI Governance & Compliance Hub','
     category: 'AI & Data','
     tagline:,
@@ -49,7 +49,7 @@ export const real2026Q2Additions = [{id: 'ai-governance-compliance-hub','
     lin,
   k: 'http,'
   s://ziontechgroup.com / services / ai - governance - compliance - hub'},;';
-export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
+export const real2026 Q2 Additions = [{/* TODO: Fix JSX expression */}
   s: [}
       'Enterprise AI model governance''
       'Regulatory readiness and audits''
@@ -264,7 +264,8 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   e:
       'Monitor LLM quality, costs, latency, and hallucinations with guardrails.''
     descriptio,
-  n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk; with playbooks for mitigation and auto-rollbacks.''
+  n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk;
+with playbooks for mitigation and auto-rollbacks.''
     feature,
   s: [,
       'Token and cost telemetry with budgets''
@@ -484,7 +485,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   // TODO: Add items
 ]
       'Public trust for SaaS''
-      'B2B vendor requirements','
+      'B2 B vendor requirements','
       'Platform reliability communications'],'
     integrations: ['AWS CloudWatch', 'Datadog', 'New Relic', 'PagerDuty']'
     competitors: ['Statuspage', 'Better Uptime']'
@@ -529,7 +530,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     useCase,
   s: [,
       'Public trust for SaaS''
-      'B2B vendor requirements''
+      'B2 B vendor requirements''
       'Platform reliability communications''
     ]
     integration,
@@ -644,7 +645,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
       'Ticketing and customer portals''
     ]
     useCases: [,;
-export const real2026Q2Additions = [,;
+export const real2026 Q2 Additions = [,;
     useCase,
   s: [,
       'Developer portals''
@@ -693,7 +694,7 @@ export const real2026Q2Additions = [,;
     ]
     useCase,
   s: [,;
-export const real2026Q2Additions = [;
+export const real2026 Q2 Additions = [;
   // TODO: Add items
 ]
       'Jira','
@@ -874,7 +875,7 @@ export const real2026 Q2 Additions = [{id: 'ai - synthetic - data - factory','
     lin,
   k: 'http,'
   s://ziontechgroup.com / services / ecommerce - returns - orchestrator'},;';
-export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
+export const real2026 Q2 Additions = [{/* TODO: Fix JSX expression */}
     ]}
     use_case,
   s: [,
@@ -1528,7 +1529,8 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   e:
       'Monitor LLM quality, costs, latency, and hallucinations with guardrails.''
     descriptio,
-  n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk; with playbooks for mitigation and auto-rollbacks.''
+  n: 'Drop-in SDK and UI to capture prompts, tokens, latencies, costs, moderation flags, and hallucination risk;
+with playbooks for mitigation and auto-rollbacks.''
     feature,
   s: [,
       'Token and cost telemetry with budgets''
@@ -1748,7 +1750,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
   // TODO: Add items
 ]
       'Public trust for SaaS''
-      'B2B vendor requirements','
+      'B2 B vendor requirements','
       'Platform reliability communications'],'
     integrations: ['AWS CloudWatch', 'Datadog', 'New Relic', 'PagerDuty']'
     competitors: ['Statuspage', 'Better Uptime']'
@@ -1793,7 +1795,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     useCase,
   s: [,
       'Public trust for SaaS''
-      'B2B vendor requirements''
+      'B2 B vendor requirements''
       'Platform reliability communications''
     ]
     integration,
@@ -2048,7 +2050,7 @@ export const real2026Q2Additions = [{/* TODO: Fix JSX expression */}
     market_position: 'Cost - effective RMM for partners and IT teams''
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%''
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops';';
-export const real2026Q2Additions = [;
+export const real2026 Q2 Additions = [;
   // TODO: Add items
 ]
   {
@@ -2155,7 +2157,7 @@ export const real2026Q2Additions = [;
     lin,
   k: 'http,'
   s://ziontechgroup.com / services / msp - remote - device - ops';';
-export const real2026Q2Additions = [;
+export const real2026 Q2 Additions = [;
   // TODO: Add items
 ]
   {/* TODO: Fix JSX expression */}
@@ -2353,7 +2355,7 @@ export const real2026Q2Additions = [;
   s: [}
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding''
     ]
-    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']'
+    useCases: ['Public trust for SaaSB2 B vendor requirementsPlatform reliability communications']'
     integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty']'
     competitors: ['StatuspageBetter Uptime']'
     price: '$79''
@@ -2364,7 +2366,7 @@ export const real2026Q2Additions = [;
     roi: 'Improve uptime communications and reduce churn risk','
     link: 'https://ziontechgroup.com/services/status-slo-plus','
     useCase,
-  s: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'],'
+  s: ['Public trust for SaaSB2 B vendor requirementsPlatform reliability communications'],'
     integration,
   s: ['AWS CloudWatchDatadogNew RelicPagerDuty'],'
     competitor,
@@ -2574,7 +2576,7 @@ perio,
   s://ziontechgroup.com/services/msp-remote-device-ops''
   }
 ];
-export const real2026Q2Additions = [;
+export const real2026 Q2 Additions = [;
   // TODO: Add items
 ]
   {/* TODO: Fix JSX expression */}
@@ -2772,7 +2774,7 @@ export const real2026Q2Additions = [;
   s: [}
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding''
     ]
-    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']'
+    useCases: ['Public trust for SaaSB2 B vendor requirementsPlatform reliability communications']'
     integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty']'
     competitors: ['StatuspageBetter Uptime']'
     price: '$79''
@@ -2783,7 +2785,7 @@ export const real2026Q2Additions = [;
     roi: 'Improve uptime communications and reduce churn risk','
     link: 'https://ziontechgroup.com/services/status-slo-plus','
     useCase,
-  s: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'],'
+  s: ['Public trust for SaaSB2 B vendor requirementsPlatform reliability communications'],'
     integration,
   s: ['AWS CloudWatchDatadogNew RelicPagerDuty'],'
     competitor,
@@ -2971,7 +2973,7 @@ export const real2026 Q2 Additions = [;
   s://ziontechgroup.com/services/msp-remote-device-ops''
   }
 ];
-export const real2026Q2Additions = [;
+export const real2026 Q2 Additions = [;
   // TODO: Add items
 ]
   {/* TODO: Fix JSX expression */}
@@ -3169,7 +3171,7 @@ export const real2026Q2Additions = [;
   s: [}
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding''
     ]
-    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']'
+    useCases: ['Public trust for SaaSB2 B vendor requirementsPlatform reliability communications']'
     integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty']'
     competitors: ['StatuspageBetter Uptime']'
     price: '$79''
@@ -3180,7 +3182,7 @@ export const real2026Q2Additions = [;
     roi: 'Improve uptime communications and reduce churn risk','
     link: 'https://ziontechgroup.com/services/status-slo-plus','
     useCase,
-  s: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'],'
+  s: ['Public trust for SaaSB2 B vendor requirementsPlatform reliability communications'],'
     integration,
   s: ['AWS CloudWatchDatadogNew RelicPagerDuty'],'
     competitor,
@@ -3331,7 +3333,7 @@ export const real2026Q2Additions = [;
     market_position: 'Cost - effective RMM for partners and IT teams''
     roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%''
     link: 'https://ziontechgroup.com / services / msp - remote - device - ops';';
-export const real2026Q2Additions = [;
+export const real2026 Q2 Additions = [;
   // TODO: Add items
 ]
   {
@@ -3407,7 +3409,7 @@ export const real2026Q2Additions = [;
     lin,
   k: 'http,'
   s://ziontechgroup.com / services / msp - remote - device - ops';';
-export const real2026Q2Additions = [;
+export const real2026 Q2 Additions = [;
   // TODO: Add items
 ]
   {/* TODO: Fix JSX expression */}
@@ -3605,7 +3607,7 @@ export const real2026Q2Additions = [;
   s: [}
       'Multiple environments and componentsSLOs and error budget burn trackingIncident templates and RCAsSubscriber notifications and webhooksCustom domains and branding''
     ]
-    useCases: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications']'
+    useCases: ['Public trust for SaaSB2 B vendor requirementsPlatform reliability communications']'
     integrations: ['AWS CloudWatchDatadogNew RelicPagerDuty']'
     competitors: ['StatuspageBetter Uptime']'
     price: '$79''
@@ -3616,7 +3618,7 @@ export const real2026Q2Additions = [;
     roi: 'Improve uptime communications and reduce churn risk','
     link: 'https://ziontechgroup.com/services/status-slo-plus','
     useCase,
-  s: ['Public trust for SaaSB2B vendor requirementsPlatform reliability communications'],'
+  s: ['Public trust for SaaSB2 B vendor requirementsPlatform reliability communications'],'
     integration,
   s: ['AWS CloudWatchDatadogNew RelicPagerDuty'],'
     competitor,
@@ -3753,7 +3755,7 @@ export const real2026Q2Additions = [;
   s://ziontechgroup.com/services/msp-remote-device-ops''
   }
 ];
-export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',' 'Azure OpenAI',' 'Vertex AI',' 'Datadog'],' competitor,';'
+export const real2026 Q2 Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',' 'Azure OpenAI',' 'Vertex AI',' 'Datadog'],' competitor,';'
   s: ['Monitaur', 'CalypsoAI', 'Credo AI'],' pric,'
   e: '$2, 500',' perio,'
   d: '/month', trial_day,'
@@ -3762,7 +3764,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Strong enterprise traction with compliance - led buyers',' ro,'
   i: 'Reduce audit prep by 60% and non - compliance risk by 40%',' lin,'
   k: 'http,'
-  s://ziontechgroup.com / services / ai - governance - compliance - hub'}, export const real2026Q2Additions = [ ' i,';'
+  s://ziontechgroup.com / services / ai - governance - compliance - hub'}, export const real2026 Q2 Additions = [ ' i,';'
   d: 'ai-governance-compliance-hub' nam,''
   e: 'AI Governance & Compliance Hub' categor,''
   y: 'AI & Data' taglin,'
@@ -3871,7 +3873,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   e:' 'One-click status pages with SLOs, error budgets, and subscribers.' descriptio,'
   n: ' 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.' feature,';'
   s: [' 'Multiple environments and components' 'SLOs and error budget burn tracking' 'Incident templates and RCAs' 'Subscriber notifications and webhooks' 'Custom domains and branding' ] useCase,'
-  s: [' 'Public trust for SaaS' 'B2B vendor requirements' 'Platform reliability communications' ]' integration,'
+  s: [' 'Public trust for SaaS' 'B2 B vendor requirements' 'Platform reliability communications' ]' integration,'
   s: ['AWS CloudWatch', 'Datadog', 'New Relic', 'PagerDuty']' competitor,'
   s: ['Statuspage', 'Better Uptime']' pric,'
   e: '$79' perio,''
@@ -3924,7 +3926,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n:' 'MSP-grade remote monitoring and management for SMB,'
   fleets: inventory, patching, scripts, alerts, and remote access with compliance-ready logs.' feature,'
   s: [' 'Windows/macOS/Linux agent and lightweight mode' 'Patch automation and health policies' 'Remote scripts and secure sessions' 'Inventory, software metering, and alerts' 'Ticketing and customer portals' ] useCase,'
-  s: [ export const real2026Q2Additions = [ ' 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',' 'Azure OpenAI',' 'Vertex AI',' 'Datadog'],' competitor,';'
+  s: [ export const real2026 Q2 Additions = [ ' 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',' 'Azure OpenAI',' 'Vertex AI',' 'Datadog'],' competitor,';'
   s: ['Monitaur', 'CalypsoAI', 'Credo AI'],' pric,'
   e: '$2, 500',' perio,'
   d: '/month', trial_day,'
@@ -3974,7 +3976,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Ideal for mid - market brands and marketplaces',' ro,'
   i: 'Reduce manual handling by 70% and increase exchanges by 20%', ' lin,'
   k: 'http,'
-  s://ziontechgroup.com / services / ecommerce - returns - orchestrator'}, export const real2026Q2Additions = [ ' i,';'
+  s://ziontechgroup.com / services / ecommerce - returns - orchestrator'}, export const real2026 Q2 Additions = [ ' i,';'
   d: 'ai - synthetic - data - factory',' nam,'
   e: 'AI Synthetic Data Factory',' categor,'
   y: 'AI & Data', taglin,'
@@ -4071,7 +4073,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   e:  ,' 'One - click status pages with SLOs, error budgets, and subscribers.', descriptio,'
   n:  ,' 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.', feature,';'
   s: [,' 'Multiple environments and components',' 'SLOs and error budget burn tracking',' 'Incident templates and RCAs',' 'Subscriber notifications and webhooks',' 'Custom domains and branding'], use_case,'
-  s: [, ' 'Public trust for SaaS',' 'B2B vendor requirements',' 'Platform reliability communications'],' integration,'
+  s: [, ' 'Public trust for SaaS',' 'B2 B vendor requirements',' 'Platform reliability communications'],' integration,'
   s: ['AWS CloudWatch', 'Datadog', 'New Relic', 'PagerDuty'],' competitor,'
   s: ['Statuspage', 'Better Uptime'],' pric,'
   e: '$79',' perio,'
@@ -4224,7 +4226,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   e:' 'One-click status pages with SLOs, error budgets, and subscribers.' descriptio,'
   n: ' 'Publish incidents, SLOs, error budgets, and historical uptime with integrations to cloud and observability. Add subscribers and SLA exports.' feature,';'
   s: [' 'Multiple environments and components' 'SLOs and error budget burn tracking' 'Incident templates and RCAs' 'Subscriber notifications and webhooks' 'Custom domains and branding' ] useCase,'
-  s: [' 'Public trust for SaaS' 'B2B vendor requirements' 'Platform reliability communications' ]' integration,'
+  s: [' 'Public trust for SaaS' 'B2 B vendor requirements' 'Platform reliability communications' ]' integration,'
   s: ['AWS CloudWatch', 'Datadog', 'New Relic', 'PagerDuty']' competitor,'
   s: ['Statuspage', 'Better Uptime']' pric,'
   e: '$79' perio,''
@@ -4327,7 +4329,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost - effective RMM for partners and IT teams' ro,''
   i: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',' lin,'
   k: 'http,'
-  s://ziontechgroup.com / services / msp - remote - device - ops' export const real2026Q2Additions = [ {/* TODO: Fix JSX expression */}'
+  s://ziontechgroup.com / services / msp - remote - device - ops' export const real2026 Q2 Additions = [ {/* TODO: Fix JSX expression */}'
   n: 'Strong enterprise traction with compliance-led buyers'}' ro,'
   i: 'Reduce audit prep by 60% and non-compliance risk by 40%'}' lin,'
   k: 'http,'
@@ -4375,7 +4377,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost-effective RMM for partners and IT teams' ro,''
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%' lin,''
   k: 'http,'
-  s://ziontechgroup.com/services/msp-remote-device-ops' } ]; export const real2026Q2Additions = [ {/* TODO: Fix JSX expression */}'
+  s://ziontechgroup.com/services/msp-remote-device-ops' } ]; export const real2026 Q2 Additions = [ {/* TODO: Fix JSX expression */}'
   n: 'Strong enterprise traction with compliance-led buyers'}' ro,'
   i: 'Reduce audit prep by 60% and non-compliance risk by 40%'}' lin,'
   k: 'http,'
@@ -4416,7 +4418,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost-effective RMM for partners and IT teams'}' ro,'
   i: 'Reduce mean-time-to-repair by 35% and manual toil by 50%' lin,''
   k: 'http,'
-  s://ziontechgroup.com/services/msp-remote-device-ops' } ];export const real2026Q2Additions = [ {/* TODO: Fix JSX expression */}'
+  s://ziontechgroup.com/services/msp-remote-device-ops' } ];export const real2026 Q2 Additions = [ {/* TODO: Fix JSX expression */}'
   n: 'Strong enterprise traction with compliance-led buyers'}' ro,'
   i: 'Reduce audit prep by 60% and non-compliance risk by 40%'}' lin,'
   k: 'http,'
@@ -4471,7 +4473,7 @@ export const real2026Q2Additions = [ 'Jira',' 'ServiceNow',' 'Slack',' 'GitHub',
   n: 'Cost - effective RMM for partners and IT teams' ro,''
   i: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',' lin,'
   k: 'http,'
-  s://ziontechgroup.com / services / msp - remote - device - ops' export const real2026Q2Additions = [ {/* TODO: Fix JSX expression */}'
+  s://ziontechgroup.com / services / msp - remote - device - ops' export const real2026 Q2 Additions = [ {/* TODO: Fix JSX expression */}'
   n: 'Strong enterprise traction with compliance-led buyers'}' ro,'
   i: 'Reduce audit prep by 60% and non-compliance risk by 40%'}' lin,'
   k: 'http,'

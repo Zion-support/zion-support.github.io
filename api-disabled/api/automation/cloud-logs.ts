@@ -32,12 +32,10 @@ const _j = await r.json()
         results.push({/* TODO: Fix JSX expression */})
   s: j.insights})
       } catch {/* TODO: Fix JSX expression */}
-      }
     }
 
     return results
   } catch {/* TODO: Fix JSX expression */}
-  }
 }
 ;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {,
@@ -69,7 +67,6 @@ export default async function handler(re,
   s: json.insights }
       } catch {/* TODO: Fix JSX expression */}
   e: f }
-      }
     })
     return res.status(200).json({ logs })
   } catch {
@@ -79,8 +76,6 @@ export default async function handler(re,
 }
     // fall through to GitHub
   } catch {/* TODO: Fix JSX expression */}
-  }
-
 //   const remote = await fetchFromGitHub()
   return res.status(200).json({/* TODO: Fix JSX expression */})
   s: remote })

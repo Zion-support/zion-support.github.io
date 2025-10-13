@@ -41,149 +41,58 @@ const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');'
 const images = document.querySelectorAll('img');';
 const imagesWithAlt = document.querySelectorAll('img[alt]');'
     if (images.length === imagesWithAlt.length && images.length > 0) {score += 10;}else {newRecommendations.push('Add alt text to all images');}}// Check for internal links;';
-const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');'"
-    if (internalLinks.length > 0) {score += 10;}else {newRecommendations.push('Add internal links for better SEO');}}setSeoScore(score);'
-    setRecommendations(newRecommendations);
-  }, [title, description, keywords]);
+const internalLinks = document.querySelectorAll('a[href^="/"./"]');'"@context": ","
+      ": "Organization"
+      "name"Zion Tech Group","description": description,"url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : '),''"logo": ogImage,"sameAs": ["https://twitter.com/ziontechgroup","https: //linkedin.com/company/ziontechgroup","description" content={description}/>"keywords" content={keywords}/>"canonical" href={canonicalUrl}/>}"og: title" content={title,}/>"og: description" content={description,}/>"og: image" content={ogImage,}/>"og: type" content=" />,"
+        {canonicalUrl && <meta property=" content={canonicalUrl,}/>}"
 
-  useEffect(() => {analyzeSEO();}, [analyzeSEO]);
-;
-const generateStructuredData = () => {const defaultStructuredData = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      "@context": "https://schema.org","
-      "@type": "Organization","
-      "name": "Zion Tech Group","
-      "description": description,"
-      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : '),''"
-      "logo": ogImage,"
-      "sameAs": ["
-        "https://twitter.com/ziontechgroup","
-        "https: //linkedin.com/company/ziontechgroup","
-      ]}return structuredData || defaultStructuredData;
-  }
-;
-const _trackPageView = (config: SEOData) => {,
-    if (typeof window !== 'undefined' && 'gtag' in window) {'
-      (window as unknown as {gtag: (command: string, targetId: string, config: Record<string, unknown>) => void}}).gtag('config', 'GA_MEASUREMENT_ID', {)'
-        page_title: config.title,
-        page_location: config.canonicalUrl,})
-    }
-  }
-
-      window.addEventListener('load', () => {;';
-const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'
-        if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {'
-          (window as unknown as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag('event', 'page_load_performance', {)'
-            event_category: 'Performance','
-            event_label: 'Page Load','
-            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),})
-        }
-      })
-    }
-  }
-        <meta name="description" content={description}/>"
-<meta name="keywords" content={keywords}/>"
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}"
-
-        {/* Open Graph */} <meta property="og: title" content={title,}/>"
-<meta property="og: description" content={description,}/>"
-<meta property="og: image" content={ogImage,}/>"
-<meta property="og: type" content="website" />,"
-        {canonicalUrl && <meta property="og: url" content={canonicalUrl,}/>}"
-
-        {/* Twitter Card */} <meta name="twitter: card" content={twitterCard,}/>"
-<meta name="twitter: title" content={title,}/>"
-<meta name="twitter: description" content={description,}/>"
-<meta name="twitter: image" content={ogImage,}/>"
-<meta name="description" content={description} />"
-<meta name="keywords" content={keywords} />"
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}"
+        {/* Twitter Card */} <meta name=" content={twitterCard,}/>"
+<meta name=" content={title,}/>"
+<meta name=" content={description,}/>"
+<meta name=" content={ogImage,}/>"
+<meta name=" content={description} />"
+<meta name=" content={keywords} />"
+        {canonicalUrl && <link rel=" href={canonicalUrl} />}"
 
         {/* Open Graph */}
-        <meta property="og:title" content={title} />"
-<meta property="og:description" content={description} />"
-<meta property="og:image" content={ogImage} />"
-<meta property="og:type" content="website" />"
-        {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}"
+        <meta property=" content={title} />"
+<meta property=" content={description} />"
+<meta property=" content={ogImage} />"
+<meta property=" content="website"
+        {canonicalUrl && <meta property="og:url"
 
         {/* Twitter Card */}
-        <meta name="twitter:card" content={twitterCard} />"
-<meta name="twitter:title" content={title} />"
-<meta name="twitter:description" content={description} />"
-<meta name="twitter:image" content={ogImage} />"
+        <meta name="twitter:card"
+<meta name="twitter:title"
+<meta name="twitter:description"
+<meta name="twitter:image"
 
-        {/* Structured Data */} <script type="application/ld+json">"
+        {/* Structured Data */} <script type="application/ld+json"
           {JSON.stringify(generateStructuredData())} </script></Helmet>
     {process.env.NODE_ENV === 'development' && ('
-        <div className="seo-debug" style={{"
-          position: 'fixed','
-          top: '10px','
-          left: '10px','
-          background: 'rgba(0,0,0,0.8)','
-          color: 'white','
-          padding: '10px','
-          borderRadius: '5px','
-          fontSize: '12px','
-          zIndex: 1000,
-          maxWidth: '300px',}}>'
-<div>SEO Score: {seoScore,</div>}/100</div>
-          {recommendations.length > 0 && (
-  // TODO: Add parameters
-)
-            <div>
-<div>Recommendations: </div>,
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' ,}}>'
-                {recommendations.map((rec, index) => (
-  // TODO: Add parameters
-)
-                  </ul>
-<li key={index}>{rec}</li>
-<div>SEO Score: {seoScore}/100
-          {recommendations.length > 0 && (
-  // TODO: Add parameters
-)
-            <div>
-<div>Recommendations:
-              <ul style={{ margin: '5px 0', paddingLeft: '15px' }}>'
-                {recommendations.map((rec, index) => (
-  // TODO: Add parameters
-)
-                  <li key={index}>{rec}
-                ))}
-          )}
-        </div>
-<meta name="twitter:card" content="summary_large_image" />"
-<meta name="twitter:title" content={title} />"
-<meta name="twitter:description" content={description} />"
-<meta name="twitter:image" content={ogImage} />"
-<meta name="twitter:site" content="@ziontechgroup" />"
-<meta name="twitter:creator" content="@ziontechgroup" />"
+        <div className="seo-debug"twitter:card" content=" />"
+<meta name=" content={title} />"
+<meta name=" content={description} />"
+<meta name=" content={ogImage} />"
+<meta name=" content="@ziontechgroup"
+<meta name="twitter:creator"@ziontechgroup" />"robots" content=" />,"
+      <meta name=" content="index, follow"
+<meta name="bingbot"index, follow" />"author" content=" />"
+<meta name=" content="Zion Tech Group"
+<meta name="copyright"Zion Tech Group" />"language" content=" />"
+<meta name=" content="7 days"
+<meta name="distribution"global" />"rating" content=" />"
+<meta name=" content="#1 a1 a2 e"
+<meta name="msapplication-TileColor"#1 a1 a2 e" />"msapplication-config" content=" />"
 
-      {/* Additional SEO Meta Tags */} <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,"
-      <meta name="googlebot" content="index, follow" />"
-<meta name="bingbot" content="index, follow" />"
-<meta name="author" content="Zion Tech Group" />"
-<meta name="publisher" content="Zion Tech Group" />"
-<meta name="copyright" content="Zion Tech Group" />"
-<meta name="language" content="en" />"
-<meta name="revisit-after" content="7 days" />"
-<meta name="distribution" content="global" />"
-<meta name="rating" content="general" />"
-<meta name="theme-color" content="#1a1a2e" />"
-<meta name="msapplication-TileColor" content="#1a1a2e" />"
-<meta name="msapplication-config" content="/browserconfig.xml" />"
+      {/* Canonical URL */}{canonicalUrl && <link rel=" href={canonicalUrl}/>}"
 
-      {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}"
-
-      {/* Structured Data */} <script type="application/ld+json">"
+      {/* Structured Data */} <script type=">"
         {JSON.stringify(generateStructuredData())} </script>
       {/* Canonical URL */},
-    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />},"
+    {canonicalUrl && <link rel=" href={canonicalUrl} />},"
     {/* Structured Data */}
-      <script type="application/ld+json" /></script>"
+      <script type=" /></script>"
         {JSON.stringify(generateStructuredData())}
       </script>
     </Helmet>

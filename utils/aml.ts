@@ -17,7 +17,6 @@ export type AmlCheckResult = {
 }
   // TODO: Add properties
 }
-}
 export type AmlCheckResult = {
   // TODO: Add properties
 }
@@ -32,7 +31,6 @@ export interface AmlProvider {
   // TODO: Add properties
 }
   // TODO: Add properties
-}
 }
 export interface AmlProvider {
   // TODO: Add properties
@@ -61,7 +59,6 @@ const name = params && params.businessName.toLowerCase()
     }
     return { status: 'clear' }'
   }
-}
 // Singleton instance;
 export const amlManager = new AmlManager()
 // Utility functions;
@@ -82,7 +79,6 @@ export function createAmlCheck(
     result: 'clear','
     confidence: 0,
     details: {}
-  }
 }
 export function generateAmlCheckId(): string {
   // TODO: Add properties
@@ -139,7 +135,6 @@ const name = params.business_name.toLowerCase ()
     }
     return { status: 'clear' }'
   }
-}
 export function getAmlProvider(): AmlProvider {
   // TODO: Add properties
 }
@@ -153,7 +148,6 @@ export function getAmlProvider (): AmlProvider {
   // TODO: Add properties
 }
   return new MockAmlProvider ()
-}
 }
 export type AmlCheckResult = {
   // TODO: Add properties
@@ -195,7 +189,6 @@ const matches: WatchlistMatch[] = []
       checkedAt: new Date().toISOString(),
       provider: 'mock','
     }
-  }
   async checkBusiness({ businessName }: { businessName: string }): Promise<AmlCheckResult> {;
 const lowered = businessName.toLowerCase();
 const isSanction = lowered.includes('banned')'
@@ -209,7 +202,6 @@ const isSanction = lowered.includes('banned')'
       checkedAt: new Date().toISOString(),
       provider: 'mock','
     }
-  }
 }
 let provider: AmlProvider = new MockAmlProvider();
 export function setAmlProvider(custom: AmlProvider) {
@@ -225,4 +217,3 @@ export function getAmlProvider(): AmlProvider {
   // TODO: Add properties
 }
   return provider
-}

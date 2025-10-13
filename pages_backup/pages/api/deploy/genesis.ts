@@ -16,129 +16,15 @@ const active = [
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ]
-  return active && active.length ? active && active.sort().join(", ") : "None""
-}
-function missionParagraph(
-  // TODO: Add parameters
-)
-  region: string
-  instanceName: string
-  modules: Record<string, boolean>
-  bonus: Record<string, boolean>
-) {;
-const activeCount =
-    Object && Object.values(modules).filter(Boolean).length +
-    Object && Object.values(bonus).filter(Boolean).length
-  return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`"
-}
-export default async function handler(
-  // TODO: Add parameters
-)
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (req && req.method !== "POST") {"
-    return res && res.status(405).json({ error: "Method not allowed" })"
-function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {;
-const active = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    ...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`),
-    ...Object.entries(bonus).filter(([, v]) => v).map(([k]) => `/${k}`)]
-  return active.length ? active.sort().join() : 'None''
-}
-function missionParagraph(region: string, instanceName: string, modules: Record<string, boolean>, bonus: Record<string, boolean>) {;
-const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length
-  return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`"
-}
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (req.method !== 'POST') {'
-    return res.status(405).json({ error: 'Method not allowed' })'
-  }
-  try {;
-const body = req && req.body || {}
-    const {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      instanceName,
-      defaultLanguage = "en","
-      deploymentRegion,
-      tokenActivation = false,
-      governanceMode = "democratic","
-      branding = {},
-      modules = {},
-      bonusModules = {},
-    } = body
-    if (!instanceName || !deploymentRegion) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      return res && res.status(400).json({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        error: "Missing required fields: instanceName, deploymentRegion","
-      })
-    }
-    // Simulated provisioning operations;
-const now = new Date().toISOString();
-const provisionId = `zion-${instanceName && instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date && Date.now()}`;";
-const outputActions = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      zionGPT: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        initialized: true
-        routes: ["/gpt", "/gpt/router"]"
-        agents: ["proposal-writer", "resume-generator"]"
+  return active && active.length ? active && active.sort().join(", "None""${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`"POST") {"Method not allowed" })"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`"en","democratic","Missing required fields: instanceName, deploymentRegion","-")}-${Date && Date.now()}`;"/gpt", "]"
+        agents: [", "resume-generator"
       }
       daoAndToken: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        token: tokenActivation ? "ZION$" : "disabled""
-        treasury: tokenActivation ? `${provisionId}-treasury` : null
-        governanceMode
-        votingDashboard: "/dao""
-      }
-import type { NextApiRequest, NextApiResponse } from './next';'
-/**
- * summarize_modules - Function description
- */
-function summarize_modules() {;
-const active = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    ...Object.entries (modules)
-      .filter (([, v]) => v)
-      .map (([k]) => `/${k}`),
-    ...Object.entries (bonus)
-      .filter (([, v]) => v)
-      .map (([k]) => `/${k}`),
-  ]
-  return active.length ? active.sort ().join (", ") : "None""
+        token: tokenActivation ? "ZION$"disabled""/dao"", ") : ""
 }
 /**
  * mission_paragraph - Function description
@@ -147,7 +33,7 @@ function mission_paragraph() {;
 const active_count =
     Object.values (modules).filter (Boolean).length +
     Object.values (bonus).filter (Boolean).length
-  return `"${instance_name}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${active_count} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`"
+  return `" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${active_count} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`"
 }
 export default async /**;
  * handler - Function description
@@ -165,7 +51,7 @@ if ( {) {
 }
   $2
 }
-    return res.status (405).json ({ error: "Method not allowed" })"
+    return res.status (405).json ({ error: " })"
   }
   try {;
 const body = req.body || {}
@@ -175,10 +61,10 @@ const body = req.body || {}
   // TODO: Add properties
 }
       instance_name,
-      default_language = "en","
+      default_language = ","
       deployment_region,
       token_activation = false,
-      governance_mode = "democratic","
+      governance_mode = ","
       branding = {},
       modules = {},
       bonus_modules = {},
@@ -196,12 +82,12 @@ if ( {) {
 }
   // TODO: Add properties
 }
-        error: "Missing required fields: instance_name, deployment_region","
+        error: ","
       })
     }
     // Simulated provisioning operations;
 const now = new Date ().toISOString ();
-const provision_id = `zion-${instance_name.toLowerCase ().replace (/[^a - z0 - 9]+/g, "-")}-${Date.now ()}`;";
+const provision_id = `zion-${instance_name.toLowerCase ().replace (/[^a - z0 - 9]+/g, ")}-${Date.now ()}`;";
 const output_actions = {
   // TODO: Add properties
 }
@@ -213,49 +99,42 @@ const output_actions = {
   // TODO: Add properties
 }
         initialized: true,
-        routes: ["/gpt", "/gpt / router"],"
-        agents: ["proposal - writer", "resume - generator"],"
-      },
-      daoAndToken: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        token: token_activation ? "ZION$" : "disabled","
+        routes: [", "/gpt / router"
+        agents: ["proposal - writer"resume - generator"],"ZION$" : ","
         treasury: token_activation ? `${provision_id}-treasury` : null,
         governance_mode,
-        voting_dashboard: "/dao","
+        voting_dashboard: ","
       },
       assets: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        whitepaper: "/whitepaper""
-        roadmap: "/roadmap""
+        whitepaper: ""
+        roadmap: ""
         book: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-          pdf: "/book/manifesto && manifesto.pdf","
-          trailerScript: "/trailer/script","
+          pdf: ","
+          trailerScript: ","
         },
-        summit: "/summit","
+        summit: ","
       },
       publicPages: [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-        "/about""
-        "/manifesto""
-        "/constitution""
-        "/partners""
-        "/academy""
-        "/marketplace""
-        "/dao""
-        `/nation/${defaultLanguage |"en"}`"
+        ""
+        ""
+        ""
+        ""
+        ""
+        ""
+        ""
+        `/nation/${defaultLanguage |"}`"
       ]
     }
     const operator = {
@@ -273,24 +152,24 @@ const output_actions = {
         bonusModules
       )
     }
-          pdf: "/book / manifesto.pdf","
-          trailer_script: "/trailer / script","
+          pdf: ","
+          trailer_script: ","
         },
-        summit: "/summit","
+        summit: ","
       },
       public_pages: [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-        "/about","
-        "/manifesto","
-        "/constitution","
-        "/partners","
-        "/academy","
-        "/marketplace","
-        "/dao","
-        `/nation/${default_language || "en"}`,"
+        ","
+        ","
+        ","
+        ","
+        ","
+        ","
+        ","
+        `/nation/${default_language || "}`,"
       ],
     }
 ;
@@ -315,528 +194,5 @@ const access = {
 }
   // TODO: Add properties
 }
-      roles: ["Founder", "Superadmin", "DAO Multisig"];";
-export: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        type: "application/json","
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
-      },
-    }
-      operator,
-      access,
-    })
-  } catch (err: any) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return res.status(500).json({ error: err.message |"Internal error" })"
-    return res.status(500).json({ error: err.message || "Internal error" })";
-import type { NextApiRequest, NextApiResponse } from 'next';';';
-export default async function handler(req, res) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (req.method !== 'POST') {'
-    return res.status(405).json({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      error: 'Method not allowed''
-    })
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-    const operator = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      activeModulesSummary: summarizeModules(modules, bonusModules),
-      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)}
-    const access = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      roles: ['FounderSuperadminDAO Multisig'],;';
-export: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        type: 'application/json','
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}}
-    return res.status(200).json({ outputActions, deployLog, access, operator })
-  } catch (err: any) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return res.status(500).json({ error: err.message || 'Internal error' })'
-  }
-}
-  try {;
-const body = req.body || {}
-    const {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      instanceName,
-      defaultLanguage,
-      deploymentRegion,
-      tokenActivation,
-      governanceMode,
-      branding,
-      modules = {},
-      bonusModules = {  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-    } = body
-    if (!instanceName || !deploymentRegion) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      return res.status(400).json({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        error: 'Missing required fields: instanceName, deploymentRegion''
-      })
-      } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-    // Simulated provisioning operations – replace with real infra hooks later;
-const now = new Date().toISOString();
-const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;';
-const outputActions = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      zionGPT: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        initialized: true,
-        routes: ['/gpt/gpt/router'],'
-        agents: ['proposal-writer', 'resume-generator']'
-      },
-      daoAndToken: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        token: tokenActivation ? 'ZION$' : 'disabled','
-        treasury: tokenActivation ? `${provisionId}-treasury` : null,
-        votingDashboard: '/dao''
-      },
-      assets: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        whitepaper: '/whitepaper','
-        roadmap: '/roadmap','
-        book: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          pdf: '/book/manifesto.pdf','
-          trailerScript: '/trailer/script''
-        },
-        summit: '/summit''
-      },
-      publicPages: []
-    }
-    res.status(200).json({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      success: true,
-      provisionId,
-      actions: outputActions,
-      timestamp: now
-    })
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    res.status(500).json({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      error: 'Internal server error''
-    });
-import type { NextApiRequest, NextApiResponse } from 'next';'
-function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {;
-const active = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    ...Object.entries(modules).filter(([ v]) => v).map(([k]) => `/${k}`)
-    ...Object.entries(bonus).filter(([ v]) => v).map(([k]) => `/${k}`)]
-  return active.length ? active.sort().join() : 'None''
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-function missionParagraph(region: string, instanceName: string, modules: Record<string, boolean>, bonus: Record<string, boolean>) {;
-const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length,
-  return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`"
-
-function missionParagraph(region: string, instanceName: string, modules: Record<string, boolean>, bonus: Record<string, boolean>) {;
-const activeCount = Object.values(modules).filter(Boolean).length + Object.values(bonus).filter(Boolean).length
-  return `"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`"
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-;
-export default async function handler(req, res) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (req.method !== '$1') {'
-    return res.status(405).json({ error: 'Method not allowed' })'
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-
-  try {;
-const body = req.body || {}
-    const {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      instanceName
-      defaultLanguage
-      deploymentRegion
-      tokenActivation,
-      governanceMode,
-      branding,
-      modules = {}
-      bonusModules = {}} = body
-    if (!instanceName || !deploymentRegion) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      return res.status(400).json({ error: 'Missing required fields: instanceName, deploymentRegion' })'
-      } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-
-    // Simulated provisioning operations – replace with real infra hooks later;
-const now = new Date().toISOString();
-const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`,;';
-const outputActions = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      zionGPT: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        initialized: true
-        routes: ['/gpt/gpt/router']'
-        agents: ['proposal-writerresume-generator']}'
-      daoAndToken: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        token: tokenActivation ? 'ZION$' : 'disabled''
-        treasury: tokenActivation ? `${provisionId}-treasury` : null,
-        governanceMode,
-        votingDashboard: '/dao'},'
-      assets: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        whitepaper: '/whitepaper','
-        roadmap: '/roadmap','
-        book: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          pdf: '/book/manifesto.pdf','
-          trailerScript: '/trailer/script'},'
-        summit: '/summit'},'
-      publicPages: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-        '/about/manifesto/constitution/partners/academy/marketplace/dao','
-        `/nation/${defaultLanguage || 'en'}`]},;';
-const deployLog = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      provisionId
-      instanceName
-      region: deploymentRegion
-      language: defaultLanguage || 'en''
-      governanceMode,
-      tokenActivation,
-      branding,
-      modules,
-      bonusModules,
-      createdAt: now,
-      version: 'Zion OS v1.0.0'},;';
-const operator = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      activeModulesSummary: summarizeModules(modules, bonusModules)
-      mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)},;
-const access = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      roles: ['FounderSuperadminDAO Multisig'];';
-export: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        type: 'application/json''
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}}
-    return res.status(200).json({ outputActions, deployLog, access, operator })
-  } catch (err: any) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return res.status(500).json({ error: err.message || 'Internal error' })'
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+      roles: [", "Superadmin"DAO Multisig"];"application/json","Internal error" })"Internal error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`"${instanceName}" activates a unified Zion OS in ${region}, connecting marketplace, intelligence, learning, and governance into one sovereign digital economy. With ${activeCount} modules enabled, the deployment aligns talent, capital, and builders to accelerate proposals into shipped outcomes while preserving community ownership and transparent coordination.`"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })"
+  

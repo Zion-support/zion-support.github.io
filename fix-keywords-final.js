@@ -23,17 +23,14 @@ const replacements = [
   // TODO: Add properties
 }
         pattern: /keywords:\s*'([^']+)',/g,'
-        replacement: "keywords: ['$1'],","'"
+        replacement: "keywords: ['$1'],"'"
 function processFile(filePath) {/* TODO: Fix JSX expression */}
       }]
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
-      }
     })
     if (modified) {/* TODO: Fix JSX expression */}
-    }
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 function processDirectory(dirPath) {
@@ -59,7 +56,6 @@ function processDirectory(dirPath) {
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}'
       }
-    }
   })
   return totalFixed
 }

@@ -31,7 +31,7 @@ blogPages.forEach(pagePath => {)
   // TODO: Add properties
 }
     // Remove publishedTime from metadata completely
-    content = content.replace(/\s+publishedTime: ['"][^'"]*['"],?\s*/g, ')''"
+    content = content.replace(/\s+publishedTime: ['"][^'"],?\s*/g, ')''"
     fs.writeFileSync(pagePath, content)
     //         }
 blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
@@ -53,72 +53,4 @@ openGraphPages.forEach(pagePath => {)
 }
     // Fix authors format to use string array
     content = content.replace(/authors: \[\{ name: 'Zion Tech Group' \}\]/g)'
-      "authors: ['Zion Tech Group']","'"
-openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
-  e: 'Zion Tech Group' \}\]/g,'
-      "author,""
-  s: ['Zion Tech Group']")"'"
-    ),
-,
-    fs.writeFileSync(pagePath, content)
-    //         }
-})
-// 4. Fix Calculator import - use a different icon
-// // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx''
-if (fs.existsSync(calculatorPagePath)) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // Replace Calculator with CalculatorIcon
-if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
-  content = content.replace(/import \{ CalculatorIcon \}/, 'import { Calculator }')'
-  content = content.replace(/<CalculatorIcon/g, '<Calculator')'
-  fs.writeFileSync(calculatorPagePath, content)
-  //     }
-
-// 5. Fix AnalyticsTracker dataLayer type conflict
-// // const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx''
-if (fs.existsSync(analyticsTrackerPath)) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // Fix dataLayer type to match existing declarations
-  content = content.replace(/dataLayer: unknown\[\],/, 'dataLayer: unknown[];'),'
-,
-  fs.writeFileSync(analyticsTrackerPath, content)
-if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
-  //     }
-
-// 6. Fix SystemMonitor - remove performanceEnhancer calls
-// // const systemMonitorPath = '/workspace/app/components/SystemMonitor.tsx''
-if (fs.existsSync(systemMonitorPath)) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // Replace performanceEnhancer calls with direct implementations
-  content = content.replace(
-  // TODO: Add parameters
-)
-    /const metrics = getMetrics\(\);/g,
-    'const metrics = []; // Placeholder for metrics''
-  )
-  content = content.replace(
-  // TODO: Add parameters
-)
-    /const score = getPerformanceScore\(\);/g,
-    'const score = 0; // Placeholder for performance score''
-  )
-  content = content.replace(/startMonitoring\(\);/g, '// startMonitoring(); // Placeholder')'
-  content = content.replace(/stopMonitoring\(\);/g, '// stopMonitoring(); // Placeholder')'
-  // Fix the exportData variable declaration issue;
-  content = content.replace(/const exportData = \{/g, 'const exportData: unknown = {'),'
-,
-  fs.writeFileSync(systemMonitorPath, content)
-if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}
-  //     }
-
-//
-}}"`
+      ","'"author,"")"'"`

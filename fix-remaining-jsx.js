@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -9,7 +7,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 #!/usr/bin/env node;
 import fs from 'fs';'
 function fixRemainingJsx() {
@@ -31,8 +28,6 @@ const nextLine = lines[i + 1]
         if (nextLine.trim() && (nextLine.includes('<') || nextLine.includes('{') || nextLine.includes('}'))) {'
           line = line.replace('/>', '>')'
         }
-      }
-
       fixedLines.push(line)
     }
 
@@ -52,12 +47,9 @@ const nextLine = lines[i + 1]
     console.error('Error fixing remaining JSX:', error.message)'
     return false
   }
-}
-
 console.log('🔧 Fixing remaining JSX issues...')'
 fixRemainingJsx()
 console.log('🎉 Remaining JSX fixes completed!')</div></div>'
 </div></div>
 </div></div>
 </div>
-}

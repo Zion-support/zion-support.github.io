@@ -76,65 +76,46 @@ const pricingPlans = [
 )
     <React.Fragment>
 <SEOOptimizer
-        title="AI Music Composer - Generate Royalty-Free Music with AI | Zion Tech Group""
-        description="Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at $99/month.""
+        title="AI Music Composer - Generate Royalty-Free Music with AI | Zion Tech Group"
+        description="Create professional, royalty-free music and soundtracks with AI Music Composer. Generate custom compositions in any genre starting at $99/month."
         keywords={['AI music composition', 'royalty-free music', 'AI music generation', 'background music', 'music automation', 'AI composer']}'
-        canonicalUrl="https://ziontechgroup.com/ai-music-composition""
+        canonicalUrl="https://ziontechgroup.com/ai-music-composition"
       />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Navigation />
-<main className="container mx-auto px-4 py-16 pt-24">"
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"container mx-auto px-4 py-16 pt-24"
           {/* Hero Section */}
-          <section className="text-center mb-16">"
-<div className="max-w-4xl mx-auto">"
-<div className="flex items-center justify-center mb-6">"
-<div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mr-4">"
-<Music className="w-8 h-8 text-white" />"
-<h1 className="text-4xl md:text-5xl font-bold text-white neon-text">"
+          <section className="
+<div className="max-w-4 xl mx-auto"flex items-center justify-center mb-6"
+<div className="
+<Music className="w-8 h-8 text-white"text-4 xl md:text-5 xl font-bold text-white neon-text"
                   AI Music Composer
-              <p className="text-xl text-gray-300 mb-8">"
+              <p className="
                 Generate royalty-free music and soundtracks with AI composition technology
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<$2 />
-                  href="/contact""
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">"
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"/contact""cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
                   Start Free Trial
                 <$2 />
-                  href="#demo""
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">"
-<Play className="w-5 h-5" />"
-                  Listen to Samples
-          {/* Features Section */}
-          <section className="mb-16">"
-<h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">"
+                  href=""
+                  className="
+<Play className="w-5 h-5"mb-16"
+<h2 className="
               AI Music Generation Features
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
-              {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">"
-<div className="flex items-center mb-4">"
-<CheckCircle className="w-5 h-5 text-green-400 mr-3" />"
-<h3 className="text-lg font-semibold text-white">{feature}"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"cyber-card p-6 hover:scale-105 transition-all duration-300"
+<div className="
+<CheckCircle className="w-5 h-5 text-green-400 mr-3"text-lg font-semibold text-white"
               ))}
           {/* Benefits Section */}
-          <section className="mb-16">"
-<h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">"
-              Why Choose AI Music Composer?
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+          <section className="
+<h2 className="text-3 xl font-bold text-white mb-8 text-center neon-text"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               {benefits.map((benefit, index) => (
   // TODO: Add parameters
 )
-                <div key={index} className="text-center">"
-<div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">"
-<Zap className="w-8 h-8 text-white" />"
-<h3 className="text-lg font-semibold text-white mb-2">{benefit}"
+                <div key={index} className="
+<div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"w-8 h-8 text-white"
+<h3 className="
               ))}
           {/* Pricing Section */}
-          <section className="mb-16">"
-<h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">"
+          <section className="mb-16"text-3 xl font-bold text-white mb-8 text-center neon-text"
               Simple, Transparent Pricing
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">"
+            <div className="
               {pricingPlans.map((plan, index) => (
   // TODO: Add parameters
 )
@@ -142,52 +123,25 @@ const pricingPlans = [
                   {plan.popular && (
   // TODO: Add parameters
 )
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
-<div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">"
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold"
                         Most Popular
                   )}
-                  <div className="text-center mb-6">"
-<h3 className="text-2xl font-bold text-white mb-2">{plan.name}"
-                    <div className="flex items-baseline justify-center">"
-<span className="text-4xl font-bold text-cyan-400">{plan.price}"
-                      <span className="text-gray-400 ml-1">{plan.period}"
-                  <ul className="space-y-3 mb-8">"
+                  <div className="
+<h3 className="text-2 xl font-bold text-white mb-2"flex items-baseline justify-center"
+<span className="
+                      <span className="text-gray-400 ml-1"space-y-3 mb-8"
                     {plan.features.map((feature, featureIndex) => (
   // TODO: Add parameters
 )
-                      <li key={featureIndex} className="flex items-center text-gray-300">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />"
-                        {feature}
-                    ))}
-                  <$2 />
-                    href="/contact""
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                      plan.popular
-                        ? 'cyber-button''
-                        : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900''
-                    }`}
-                  >
-                    Get Started
-              ))}
-          {/* CTA Section */}
-          <section className="text-center mb-16">"
-<div className="cyber-card p-12 max-w-4xl mx-auto">"
-<h2 className="text-3xl font-bold text-white mb-4 neon-text">"
-                Ready to Create Amazing Music?
-              <p className="text-xl text-gray-300 mb-8">"
+                      <li key={featureIndex} className="
+<CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0"/contact""text-center mb-16"
+<div className="
+<h2 className="text-3 xl font-bold text-white mb-4 neon-text"text-xl text-gray-300 mb-8"
                 Join thousands of creators using AI music technology</span>
-<div className="flex flex-col sm: flex-row gap-4 justify-center">"
+<div className="
 <$2 />
-                  href="/contact""
-                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">"
-                  Start Your Free Trial
-                <$2 />
-                  href="tel:+13024640950""
-                  className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">"
+                  href="/contact"
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"tel:+13024640950""flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <span>Call +1 302 464 0950
         <Footer /></div>
 </React.Fragment>

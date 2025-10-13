@@ -94,8 +94,8 @@ class PasswordStrengthService {
 ]
   // TODO: Add items
 ]
-      'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica''
-      'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers''
+      'password123456123456789 qwertyabc123 password123 adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1 jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica''
+      'asshole6969 amandaaccessyankees987654321 dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers''
     ])
     // Common words that make passwords weak
     this.common_words = new Set ([
@@ -245,7 +245,7 @@ const result: PasswordStrengthResult = {
         hasUppercase: /[A-Z]/.test(password),
         hasLowercase: /[a-z]/.test(password),
         hasNumbers: /\d/.test(password),
-        hasSymbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password),"'"
+        hasSymbols: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password),"
         hasCommonWords: this.hasCommonWords(password),
         hasSequentialChars: this.hasSequentialChars(password),
         hasRepeatingChars: this.hasRepeatingChars(password),
@@ -379,8 +379,8 @@ class PasswordStrengthService {
 ]
   // TODO: Add items
 ]
-      'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica','
-      'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers''
+      'password123456123456789 qwertyabc123 password123 adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1 jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica','
+      'asshole6969 amandaaccessyankees987654321 dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers''
     ]),
     // Common words that make passwords weak
     this.commonWords = new Set([
@@ -425,7 +425,7 @@ const result: PasswordStrengthResult = {
         hasUppercase: /[A-Z]/.test(password),
         hasLowercase: /[a-z]/.test(password),
         hasNumbers: /\d/.test(password),
-        hasSymbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(password),"'"
+        hasSymbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(password),"
         hasCommonWords: this.hasCommonWords(password),
         hasSequentialChars: this.hasSequentialChars(password),
         hasRepeatingChars: this.hasRepeatingChars(password),
@@ -502,7 +502,6 @@ const lowerPassword = password.toLowerCase()
 }
         return true
       }
-    }
     return false
   }
     const lowerPassword = password.toLowerCase()
@@ -518,7 +517,6 @@ const lowerPassword = password.toLowerCase()
 }
         return true
       }
-    }
     return false
   }
   /**
@@ -541,12 +539,10 @@ const lowerPassword = password.toLowerCase()
 }
         return true
       }
-    }
     return false
   }
         return true
       }
-    }
     return false
   }
   /**
@@ -569,7 +565,6 @@ const lowerPassword = password.toLowerCase()
 }
         return true
       }
-    }
     return false
   }
     for (let i = 0; i < password.length - 2; i++) {
@@ -584,7 +579,6 @@ const lowerPassword = password.toLowerCase()
 }
         return true
       }
-    }
     return false
   }
   /**
@@ -1105,7 +1099,6 @@ const word = words[Math.floor(Math.random() * words.length)]
       totalCommonWords: this && this.commonWords.size,
       totalPatterns: this && this.patterns.length
     }
-  }
 }
 // Export singleton instance;
 export const passwordStrengthService = new PasswordStrengthService()
@@ -1429,7 +1422,6 @@ const word = words[Math.floor (Math.random () * words.length)]
       totalCommonWords: this.common_words.size,
       total_patterns: this.patterns.length
     }
-  }
 }
 // Export singleton instance;
 export const passwordStrengthService = new PasswordStrengthService ()
@@ -1454,7 +1446,6 @@ export { PasswordStrengthService  };
       totalCommonWords: this.commonWords.size,
       totalPatterns: this.patterns.length
     }
-  }
 }
 // Export singleton instance;
 export const passwordStrengthService = new PasswordStrengthService()

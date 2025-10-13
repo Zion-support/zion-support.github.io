@@ -49,7 +49,4 @@ const { data, error, mutate } = useSWR('/api/auth/me', fetcher)'
     mutate}
 }
 }
-  }
-}
 
-}}

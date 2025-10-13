@@ -99,15 +99,10 @@ function fixJSXErrors(content) {
     if (!content.includes('</div>')) {'
       return match + '</div>''
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
-}
-
 // Function to fix any types
 function fixAnyTypes(content) {/* TODO: Fix JSX expression */}
-}
-
 // Function to fix JSX parsing errors
 function fixJSXErrors(content) {/* TODO: Fix JSX expression */}
-    }
     return match
   })
   // Fix JSX expressions with multiple parent elements
@@ -132,7 +127,7 @@ function removeUnusedImports(content) {
 const lines = content.split('\n');';
 const usedImports = new Set()
   // Find all used identifiers;
-const identifierRegex = /\b[a-zA-Z_$][a-zA-Z0-9_$]*\b/g;
+const identifierRegex = /\b[a-zA-Z_$][a-zA-Z0-9 _$]*\b/g;
 const body = lines.slice(1).join('\n'); // Skip first line (imports);';
 let match
   while ((match = identifierRegex.exec(body)) !== null) {
@@ -148,13 +143,10 @@ const filteredLines = lines.filter(line => {)
     if (line.trim().startsWith('import')) {'
       // Extract imported names
 function removeUnusedImports(content) {/* TODO: Fix JSX expression */}
-  }
-
   // Filter import lines;
 const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */});
 const importMatch = line.match(/import\s*{([^}]+)}/)
       if (importMatch) {/* TODO: Fix JSX expression */}
-      }
       return true; // Keep default imports and other patterns
     }
     return true
@@ -186,15 +178,11 @@ const originalContent = content
       fs.writeFileSync(filePath, content, 'utf8')'
       modified = true
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-
     return modified
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to find all TypeScript/JavaScript files
 function findSourceFiles(dir) {;
 const files = []
@@ -225,11 +213,8 @@ const stat = fs.statSync(fullPath)
 }
           files.push(fullPath)
 function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
-        }
       } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
-        }
       }
-    }
   }
 
   walkDir(dir)
@@ -247,7 +232,6 @@ let processedCount = 0
 for (const file of files) {/* TODO: Fix JSX expression */}`
   d: ${file}`)
   }
-}
 `
 console.log(`Processed ${processedCount} files`)
 // Also process root level files;
@@ -255,7 +239,6 @@ const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx']'
 for (const file of rootFiles) {/* TODO: Fix JSX expression */}`
   d: ${file}`)
     }
-  }
 }
 
 console.log('Lint issue fixes completed!');`

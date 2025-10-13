@@ -93,7 +93,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     useCases: ['Fraud detection', 'Market analysis', 'Risk assessment', 'Compliance monitoring', 'Investment research', 'Regulatory reporting'],'
     roi: 'Blockchain companies see 800% ROI through improved security and market insights.','
     competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'Traditional blockchain analytics'],'
-    marketSize: '$2B blockchain analytics market, quantum AI segment growing 600% annually','
+    marketSize: '$2 B blockchain analytics market, quantum AI segment growing 600% annually','
     growthRate: '600% annual growth','
     variant: 'quantum-cyberpunk','
     contactInfo: {
@@ -157,7 +157,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     useCases: ['Code review automation', 'Bug detection', 'Security scanning', 'Performance optimization', 'Code quality improvement', 'Team collaboration'],'
     roi: 'Development teams see 500% ROI through faster development and improved code quality.','
     competitors: ['SonarQube', 'CodeClimate', 'GitHub Copilot', 'Traditional code review tools'],'
-    marketSize: '$1.5B code review market, quantum AI segment growing 500% annually','
+    marketSize: '$1.5 B code review market, quantum AI segment growing 500% annually','
     growthRate: '500% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -221,7 +221,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     useCases: ['Business intelligence', 'Predictive analytics', 'Real-time monitoring', 'Research analysis', 'Performance optimization', 'Decision making'],'
     roi: 'Organizations see 600% ROI through improved insights and faster decision-making.','
     competitors: ['Tableau', 'Power BI', 'Qlik', 'Traditional analytics tools'],'
-    marketSize: '$25B data analytics market, quantum AI segment growing 700% annually','
+    marketSize: '$25 B data analytics market, quantum AI segment growing 700% annually','
     growthRate: '700% annual growth','
     variant: 'quantum-matrix','
     contactInfo: {
@@ -285,7 +285,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     useCases: ['Employee evaluation', 'Student assessment', 'Skill assessment', 'Performance review', 'Training evaluation', 'Competency mapping'],'
     roi: 'Organizations see 400% ROI through improved assessment accuracy and personalized development.','
     competitors: ['Traditional assessment tools', 'HR platforms', 'LMS systems'],'
-    marketSize: '$8B assessment market, quantum AI segment growing 600% annually','
+    marketSize: '$8 B assessment market, quantum AI segment growing 600% annually','
     growthRate: '600% annual growth','
     variant: 'neural-quantum','
     contactInfo: {
@@ -349,7 +349,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     useCases: ['AI safety monitoring', 'Ethical AI governance', 'Bias detection', 'Risk assessment', 'Compliance monitoring', 'Incident response'],'
     roi: 'AI companies see 700% ROI through improved safety and regulatory compliance.','
     competitors: ['Traditional AI safety tools', 'Governance platforms', 'Monitoring tools'],'
-    marketSize: '$3B AI safety market, quantum AI segment growing 800% annually','
+    marketSize: '$3 B AI safety market, quantum AI segment growing 800% annually','
     growthRate: '800% annual growth','
     variant: 'quantum-advanced','
     contactInfo: {
@@ -413,7 +413,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     useCases: ['Candidate screening', 'Skill assessment', 'Performance prediction', 'Cultural fit analysis', 'Diversity hiring', 'Compliance'],'
     roi: 'HR departments see 500% ROI through faster hiring and improved candidate quality.','
     competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Traditional HR tools'],'
-    marketSize: '$30B HR technology market, quantum AI segment growing 600% annually','
+    marketSize: '$30 B HR technology market, quantum AI segment growing 600% annually','
     growthRate: '600% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -477,7 +477,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     useCases: ['Smart city management', 'Industrial IoT', 'Healthcare monitoring', 'Consumer IoT', 'Energy management', 'Security monitoring'],'
     roi: 'IoT companies see 600% ROI through improved efficiency and security.','
     competitors: ['Traditional IoT platforms', 'Device management tools', 'Analytics platforms'],'
-    marketSize: '$1.5T IoT market, quantum AI segment growing 700% annually','
+    marketSize: '$1.5 T IoT market, quantum AI segment growing 700% annually','
     growthRate: '700% annual growth','
     variant: 'quantum-cyberpunk','
     contactInfo: {
@@ -541,7 +541,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     useCases: ['Contract review', 'Risk assessment', 'Compliance checking', 'Legal research', 'Document generation', 'Contract management'],'
     roi: 'Legal departments see 600% ROI through reduced review time and improved risk identification.','
     competitors: ['DocuSign', 'ContractPodAi', 'Ironclad', 'Traditional legal tools'],'
-    marketSize: '$20B legal technology market, quantum AI segment growing 700% annually','
+    marketSize: '$20 B legal technology market, quantum AI segment growing 700% annually','
     growthRate: '700% annual growth','
     variant: 'quantum-holographic','
     contactInfo: {
@@ -605,7 +605,7 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     useCases: ['Market analysis', 'Trend prediction', 'Consumer research', 'Competitive intelligence', 'Investment research', 'Strategic planning'],'
     roi: 'Businesses see 500% ROI through improved market insights and strategic decisions.','
     competitors: ['Nielsen', 'Gartner', 'Forrester', 'Traditional research tools'],'
-    marketSize: '$75B market research market, quantum AI segment growing 600% annually','
+    marketSize: '$75 B market research market, quantum AI segment growing 600% annually','
     growthRate: '600% annual growth','
     variant: 'holographic-matrix','
     contactInfo: {
@@ -668,8 +668,8 @@ export const aiFuturisticServices: AIFuturisticService[] = [;
     integrations: ['Phone systems', 'CRM platforms', 'Analytics tools', 'Voice platforms', 'Communication tools'],'
     useCases: ['Customer service', 'Sales calls', 'Appointment scheduling', 'Order processing', 'Support calls', 'Lead qualification'],'
     roi: 'Businesses see 600% ROI through improved customer satisfaction and 24/7 availability.','
-    competitors: ['Twilio', 'RingCentral', '8x8', 'Traditional phone systems'],'
-    marketSize: '$40B contact center market, quantum AI segment growing 700% annually','
+    competitors: ['Twilio', 'RingCentral', '8 x8', 'Traditional phone systems'],'
+    marketSize: '$40 B contact center market, quantum AI segment growing 700% annually','
     growthRate: '700% annual growth','
     variant: 'neural-quantum-cyberpunk','
     contactInfo: {

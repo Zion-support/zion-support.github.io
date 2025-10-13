@@ -111,7 +111,6 @@ const racePromises = [,
         200))])
       results.timeout = {/* TODO: Fix JSX expression */}
   n: Date.now() - timeoutStart}
-      }
     } catch (error) {results.timeout = {
   // TODO: Add properties
 }
@@ -121,12 +120,10 @@ const racePromises = [,
         status: 'timeout-occurred','
         error: error.message,
         duration: Date.now() - timeoutStart}
-      }
     }
     // Test 5: Retry logic,
     } catch (error) {/* TODO: Fix JSX expression */}
   n: Date.now() - timeoutStart}
-      }
     }
     // Test,
   5: Retry logic
@@ -169,7 +166,6 @@ let _retrySuccess = false,
 }
           // Final attempt failed
   }
-      }
     }
     results.retry = {type: 'retry''
       attempts: retryAttempts
@@ -209,7 +205,6 @@ const concurrencyMetrics = {totalDuration: totalDuration
 )
         Object.keys(results).length /
         (totalDuration / 1000)).toFixed(2,)}
-    }
     const result = {statusCode: 200
       body: JSON.stringify({)
         message: 'Async concurrency tester completed successfully')'
@@ -240,13 +235,10 @@ const concurrencyMetrics = {totalDuration: totalDuration
       try {/* TODO: Fix JSX expression */}
             resolve('retry-success')}'
           } else {/* TODO: Fix JSX expression */}
-          }
         })
         retrySuccess = true
       } catch (error) {/* TODO: Fix JSX expression */}
-        }
       }
-    }
     results.retry = {/* TODO: Fix JSX expression */}
   s: retrySuccess ? 'succeeded' : 'failed-after-retries'}'
     }
@@ -266,10 +258,8 @@ let previousResult = 'initial''
 //     const totalDuration = Date.now() - startTime
     // Calculate concurrency metrics;
 const concurrencyMetrics = {/* TODO: Fix JSX expression */}
-      }
     }
     const result = {/* TODO: Fix JSX expression */}
-      }
         },
         nextRu,
   n: new Date(Date.now() + 4 * 60 * 60 * 1000).toISOString(), // 4 hours from now
@@ -295,12 +285,10 @@ const concurrencyMetrics = {/* TODO: Fix JSX expression */}
         function: async-concurrency-tester),
         status: 'error'}'
   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
   s: 'error'}'
       })
     }
-  }
 }
 exports.handler = async function(event, context) {try { const timestamp = new Date().toISOString()} // Test different async operation patterns const asyncTests = {' sequential: 'sequential-operations',' parallel: 'parallel-operations',' race: 'race-conditions',' timeout: 'timeout-handling',' retry: 'retry-logic'}' waterfall: 'waterfall-operations' } const results = {} const startTime = Date.now(); // Test 1: Sequential operations const sequentialStart = Date.now(); const sequentialResults = []; for(let i = 0, i < 5),'
         i++) {await new Promise(resolve => setTimeout(resolve),

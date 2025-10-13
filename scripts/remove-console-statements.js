@@ -88,11 +88,8 @@ function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
     // console.error(`Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Main function
 async function main() {/* TODO: Fix JSX expression */}
-}
   // console.log('🧹 Removing console statements from production code...\n')'
   // Get all TypeScript and JavaScript files in the app directory;
 const patterns = [
@@ -110,7 +107,6 @@ const patterns = [
 let totalFiles = 0;
 let modifiedFiles = 0
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-      }
     })
     // Clean up empty lines that might be left behind
     newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n')'
@@ -132,8 +128,6 @@ let modifiedFiles = 0
 }
     console.error(`❌ Error processing ${filePath}:`, error.message)
   }
-}
-
 async function main() {
   // TODO: Add properties
 }
@@ -182,7 +176,6 @@ export { processFile, consolePatterns  };
   removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`)'
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Run the script

@@ -7,7 +7,7 @@ import: React { useState } from 'react.ts';' import: Link from 'next/link.ts',' 
 <a) key={index} href={contact.href}' target={contact.href.startsWith(' 'http') ?}' '_blank': '_self} ' rel={contact.href.startsWith('http)' ') ? 'noopener noreferrer}' ': '} className='flex items-center gap-2 text-xs text-zion-slate-light hover:text-zion-cyan transition-colors duration-200' >' <contact.icon className='w-3 h-3' />'
 <span className='truncate'>{contact.text}</span>'
 <' </a>' ))} </div> {/* Social Links */}' <div className='flex items-center gap-3 mb-4> {socialLinks.map((social) => ('</div>'
-<a key={social.name} href={social.href}' target='_blank' rel='noopener noreferrer' className={`p-2 hover: bg-white/10 rounded-lg transition-all duration-200 ${social.color}`} aria-label={social.name}` >`' <social.icon className='w-4 h-4' /></a>' ))} </div> {/* Copyright */}' <div className='text-xs text-zion-slate-light text-center> © {new Date().getFullYear()} Zion Tech Group" </div></div>"'"
+<a key={social.name} href={social.href}' target='_blank' rel='noopener noreferrer' className={`p-2 hover: bg-white/10 rounded-lg transition-all duration-200 ${social.color}`} aria-label={social.name}` >`' <social.icon className='w-4 h-4' /></a>' ))} </div> {/* Copyright */}' <div className='text-xs text-zion-slate-light text-center> © {new Date().getFullYear()} Zion Tech Group" </div></div>"
 </div></React.Fragment>)} ''
 impor,
   t: React { useState } from 'react.ts';' impor,'
@@ -43,6 +43,6 @@ impor,
   x: items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${`) isActive(item.href)} ' {renderNavSection('Resources,' ') navigation.resources} 'resources' ')}, {/* Comp Section */}, {renderNavSection(' ' 'Comp') navigation.company}' 'company')}' ' </div>'{/* Footer */}' <div className='p-4 border-t border-zion-blue-light> {/* Contact Info */} <div className='mb-4 space-y-2> {contactInfo.map((contact} index) => (' <) key={index} href={contact.href}' target={contact.href.startsWith(' 'http') ?}' '_blank': '_self} ' rel={contact.href.startsWith('http)' ') ? 'noopener noreferrer}' ': '} className='flex items-center gap-2 text-xs text-zion-slate-light,$2 />'
   hover:text-zion-cyan transition-colors duration-200'' >' <contact.icon className='w-3 h-3' />'
 <span className='truncate'>{contact.text}<' </a>' ))} </div> {/* Social Links */}' <div className='flex items-center gap-3 mb-4> {socialLinks.map((social) => (' < key={social.name} href={social.href}' target='_blank' rel='noopener noreferrer' className={/* TODO: Fix JSX expression */})`$2 />''
-  hover: bg-white/10 rounded-lg transition-all duration-200 ${social.color}`} aria-label={social.name}` >`' <social.icon className='w-4 h-4' /></a>' ))} </div> {/* Copyright */}' <div className='text-xs text-zion-slate-light text-center> © {new Date().getFullYear()} Zion Tech Group" </div></div>"'"
-</div></React.Fragment>)} '"`</span></span>"'"
+  hover: bg-white/10 rounded-lg transition-all duration-200 ${social.color}`} aria-label={social.name}` >`' <social.icon className='w-4 h-4' /></a>' ))} </div> {/* Copyright */}' <div className='text-xs text-zion-slate-light text-center> © {new Date().getFullYear()} Zion Tech Group" </div></div>"
+</div></React.Fragment>)} '"`</span></span>"
 </Link>

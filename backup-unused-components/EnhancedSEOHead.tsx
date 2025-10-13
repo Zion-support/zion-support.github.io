@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
-import React from "react";
-import StructuredData from "../components/StructuredData";
-import { Helmet } from "react-helmet-async";
+import React from "react"../components/StructuredData";
+import { Helmet } from ";
 interface SEOHeadProps;
   title?: string;
   description?: string;
@@ -26,50 +24,34 @@ export default function EnhancedSEOHead({ className = '', children }: EnhancedSE
       {children}
     </div>
 const SEOHead: React.FC<SEOHeadProps> = (
-  title = "Zion Tech Group - Advanced AI & IT Solutions",
-  description = "Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.",
-  keywords = "AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence",
-  canonical = "https://ziontechgroup.com",
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  ogType = "website",
-  twitterCard = "summary_large_image",
-//   structuredData,
-  noindex = false,
-  nofollow = false,
-) =>
-  const defaultStructuredData =
-    "@context": "https://schema.org",
-    "@type": "Organization",
-      name: "Zion Tech Group",
-      url: "https://ziontechgroup.com",
-      logo: "https://ziontechgroup.com/logo.png",
+  title = "Zion Tech Group - Advanced AI & IT Solutions"Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.",
+  keywords = ",
+  canonical = "https://ziontechgroup.com"https://ziontechgroup.com/og-image.jpg",
+  ogType = ",
+  twitterCard = "summary_large_image"@context": ",
+    "@type"Organization",
+      name: ",
+      url: "https://ziontechgroup.com"https://ziontechgroup.com/logo.png",
       description: description,
       address:
-      "@type": "PostalAddress",
-        addressCountry: "US",
-        addressRegion: "Delaware",
+      ": "PostalAddress"US",
+        addressRegion: ",
 ,
       sameAs: [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup"https://twitter.com/ziontechgroup",
     ],
 ;
 }) => {
   const defaultStructuredData = {
-//     "@context": "https://schema.org",
-    "@type": "Organization",
-//     name: "Zion Tech Group",
-//     url: "https://ziontechgroup.com",
-//     logo: "https://ziontechgroup.com/logo.png",
+//     ": "https://schema.org"@type": ",
+//     name: "Zion Tech Group"https://ziontechgroup.com",
+//     logo: ",
 //     description: description,
     address: {
-      "@type": "PostalAddress",
-//       addressCountry: "US",
-//       addressRegion: "Delaware",
-    },
-//     sameAs: [
-//       "https://linkedin.com/company/ziontechgroup",
-//       "https://twitter.com/ziontechgroup",
+      "@type"PostalAddress",
+//       addressCountry: ",
+//       addressRegion: "Delaware"https://linkedin.com/company/ziontechgroup",
+//       ",
 //     ],
   };
 
@@ -78,88 +60,75 @@ const SEOHead: React.FC<SEOHeadProps> = (
     <Helmet></Helmet>
 //     <Helmet>
       <title>{title}</title>
-      <meta name="description" content="{description}" />
-      <meta name="keywords" content="{keywords}" />
-      <link rel="canonical" href="{canonical}" />
+      <meta name="description"{description}" />
+      <meta name=" content="{keywords}"canonical" href=" />
       {/* Open Graph */}
-      <meta property="og:title" content="{title}" />
-      <meta property="og:description" content="{description}" />
-      <meta property="og:image" content="{ogImage}" />
-      <meta property="og:type" content="{ogType}" />
+      <meta property="og:title"{title}" />
+      <meta property=" content="{description}"og:image" content=" />
+      <meta property="og:type"{ogType}" />
       <meta;
-        property="og:url"
-        content="{canonical" || "https://ziontechgroup.com"}
+        property="
+        content="{canonical"https://ziontechgroup.com"}
       <meta>
-  property="og:url">
-  content="{canonical" || "https://ziontechgroup.com"}
+  property=">
+  content="{canonical"https://ziontechgroup.com"}
       />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      <meta property="og:type" content={ogType} />
+      <meta property=" content={title} />
+      <meta property="og:description"og:image" content={ogImage} />
+      <meta property=" content={ogType} />
 //       <meta
-        property="og:url"
-        content={canonical || "https://ziontechgroup.com"}
+        property="og:url"https://ziontechgroup.com"}
 //       />
 
       {/* Twitter Card */}
-      <meta name="twitter:card" content="{twitterCard}" />
-      <meta name="twitter:title" content="{title}" />
-      <meta name="twitter:description" content="{description}" />
-      <meta name="twitter:image" content="{ogImage}" />
-      {/* SEO */}
-      {noindex && <meta name="robots" content="noindex" />}</meta>
-      {nofollow && <meta name="robots" content="nofollow" />}</meta>
+      <meta name=" content="{twitterCard}"twitter:title" content=" />
+      <meta name="twitter:description"{description}" />
+      <meta name=" content="{ogImage}"robots" content=" />}</meta>
+      {nofollow && <meta name="robots"nofollow" />}</meta>
       {/* Structured Data */}
-      <script type="application/ld+json"></script>
+      <script type="></script>
         {JSON.stringify(finalStructuredData)}
       </script>
 //       </script>
 
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect"https://fonts.googleapis.com" />
       <link;
 //       <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="anonymous"
+        rel="
+        href="https://fonts.gstatic.com"anonymous"
       <link>
-  rel="preconnect">
-  href="https://fonts.gstatic.com">
-  crossOrigin="anonymous"
+  rel=">
+  href="https://fonts.gstatic.com"anonymous"
       />
-      <script type="application/ld+json"></script>
+      <script type="></script>
 
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-            name: "Zion Tech Group",
-            url: "https://ziontechgroup.com",
+          "@context"https://schema.org",
+          ": "WebSite"Zion Tech Group",
+            url: ",
             potentialAction:
-            "@type": "SearchAction",
-              target: "https://ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string",
+            "@type"SearchAction",
+              target: ",
+            "query-input"required name=search_term_string",
 ,
 
       </script>
 //       />
 
-      <script type="application/ld+json">
+      <script type=">
         {JSON.stringify({
-//           "@context": "https://schema.org",
-          "@type": "WebSite",
-//           name: "Zion Tech Group",
-//           url: "https://ziontechgroup.com",
+//           "@context"https://schema.org",
+          ": "WebSite"Zion Tech Group",
+//           url: ",
           potentialAction: {
-            "@type": "SearchAction",
-            target: "https://ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string",
+            "@type"SearchAction",
+            target: ",
+            "query-input"required name=search_term_string",
           },
         })}
 //       </script>
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv=" content="DENY" />
     </Helmet>
 //     </Helmet>
   );
 }
-=======
 );
-}

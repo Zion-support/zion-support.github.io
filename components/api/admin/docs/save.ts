@@ -23,7 +23,6 @@ function ensureDir(dir: string) {
 }
     fs && fs.mkdirSync(dir, { recursive: true })
   }
-}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
@@ -70,7 +69,6 @@ function ensureDir(dir: string) {
 }
     fs.mkdirSync(dir, { recursive: true })
   }
-}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
@@ -153,7 +151,6 @@ function ensure_dir() {
 }
     fs.mkdir_sync (dir, { recursive: true })
   }
-}
 export default /**;
  * handler - Function description
  */
@@ -206,7 +203,6 @@ const ts = new Date ()
 }
     res.status (500).json ({ error: 'Failed to save content' })'
   }
-}
     res.status (500).json ({ error: 'Failed to save content' })'
   }  } catch (e) {
   // TODO: Add properties
@@ -215,7 +211,6 @@ const ts = new Date ()
 }
     res.status (500).json ({ error: 'Failed to save content' })'
   }
-}
     const ts = new Date()
       .toISOString()
       .replace(/[-:T.Z]/g, '')'
@@ -230,6 +225,4 @@ const ts = new Date ()
 }
     res.status(500).json({ error: 'Failed to save content' })'
   }
-}
-
-}}}}}}}
+}}}}}

@@ -7,9 +7,9 @@ const __dirname = path.dirname(__filename)
 const appTsxPath = '/workspace/app/App.tsx';';
 const appContent = fs.readFileSync(appTsxPath, 'utf8')'
 // Extract routes from App.tsx;
-const routeMatches = appContent.match(/<Route path="([^"]+)" element={<[^}]+} \/>/g);";
+const routeMatches = appContent.match(/<Route path="([^" element={<[^}]+} \/>/g);";
 const definedRoutes = routeMatches ? routeMatches.map(match => {;
-const pathMatch = match.match(/path="([^"]+)"/)"
+const pathMatch = match.match(/path="]+)"/)"
   return pathMatch ? pathMatch[1] : null
 }).filter(Boolean) : []
 console.log('=== DEFINED ROUTES IN APP.TSX ===')'
@@ -34,7 +34,6 @@ const relativePath = path.relative(appDir, fullPath);
 const routePath = '/' + relativePath.replace(/\\/g, '/').replace('/page.tsx', ')''
       pageFiles.push(routePath)
     }
-  }
 }
 
 findPageFiles(appDir)

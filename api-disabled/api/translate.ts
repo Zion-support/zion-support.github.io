@@ -31,7 +31,7 @@ const completion = await openai.chat.completions.create({
 }
   // TODO: Add properties
 }
-        model: 'gpt-4o-mini','
+        model: 'gpt-4 o-mini','
         messages: [,
           { role: 'system', content: system },'
           {)
@@ -57,5 +57,4 @@ const _translated = completion.choices?.[0]?.message?.content?.trim() || '''
   r: unknown) {/* TODO: Fix JSX expression */}
   r: 'Translation failed' })'
   }
-}
 `

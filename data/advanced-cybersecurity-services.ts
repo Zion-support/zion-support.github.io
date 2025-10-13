@@ -93,7 +93,7 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     useCases: ['Threat detection', 'Incident response', 'Risk assessment', 'Compliance reporting', 'Security operations', 'Threat hunting'],'
     roi: 'Organizations report 500% ROI through reduced incident response time and improved threat detection.','
     competitors: ['CrowdStrike', 'Palo Alto Networks', 'Darktrace', 'FireEye'],'
-    marketSize: '$15B threat intelligence market','
+    marketSize: '$15 B threat intelligence market','
     growthRate: '300% annual growth','
     variant: 'cyberpunk-holographic','
     contactInfo: {
@@ -157,7 +157,7 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     useCases: ['Enterprise security', 'Government security', 'Financial security', 'Healthcare security', 'Educational security', 'Cloud security'],'
     roi: 'Organizations report 400% ROI through improved security posture and reduced breach risk.','
     competitors: ['Traditional security consulting', 'Zero trust platforms', 'Identity management vendors'],'
-    marketSize: '$25B zero trust market','
+    marketSize: '$25 B zero trust market','
     growthRate: '350% annual growth','
     variant: 'cyberpunk-advanced','
     contactInfo: {
@@ -221,7 +221,7 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     useCases: ['Security monitoring', 'Incident response', 'Threat hunting', 'Vulnerability management', 'Compliance reporting', 'Security consulting'],'
     roi: 'Organizations report 600% ROI through improved security posture and reduced incident response time.','
     competitors: ['Traditional SOC services', 'Security platforms', 'Managed security services'],'
-    marketSize: '$30B SOC market','
+    marketSize: '$30 B SOC market','
     growthRate: '250% annual growth','
     variant: 'cyberpunk-futuristic','
     contactInfo: {
@@ -285,7 +285,7 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     useCases: ['Data encryption', 'Key management', 'Secure communications', 'Compliance requirements', 'Government security', 'Financial security'],'
     roi: 'Organizations report 300% ROI through future-proof security and compliance benefits.','
     competitors: ['Traditional cryptography vendors', 'Quantum computing companies', 'Security platforms'],'
-    marketSize: '$5B quantum cryptography market','
+    marketSize: '$5 B quantum cryptography market','
     growthRate: '400% annual growth','
     variant: 'quantum-cyberpunk','
     contactInfo: {
@@ -349,7 +349,7 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     useCases: ['Vulnerability assessment', 'Risk management', 'Compliance reporting', 'Security operations', 'Incident response', 'Security consulting'],'
     roi: 'Organizations report 400% ROI through improved vulnerability management and reduced security risks.','
     competitors: ['Qualys', 'Rapid7', 'Tenable', 'Traditional vulnerability scanners'],'
-    marketSize: '$20B vulnerability management market','
+    marketSize: '$20 B vulnerability management market','
     growthRate: '250% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -413,7 +413,7 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     useCases: ['Cloud security', 'Compliance management', 'Risk assessment', 'Security operations', 'Incident response', 'Security consulting'],'
     roi: 'Organizations report 500% ROI through improved cloud security and compliance management.','
     competitors: ['Prisma Cloud', 'AWS Security Hub', 'Azure Security Center', 'Traditional security tools'],'
-    marketSize: '$35B cloud security market','
+    marketSize: '$35 B cloud security market','
     growthRate: '300% annual growth','
     variant: 'cyberpunk-futuristic','
     contactInfo: {
@@ -477,7 +477,7 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     useCases: ['Security testing', 'Vulnerability assessment', 'Compliance testing', 'Security consulting', 'Risk assessment', 'Security operations'],'
     roi: 'Organizations report 400% ROI through improved security posture and reduced security risks.','
     competitors: ['Traditional penetration testing', 'Security testing tools', 'Security consulting'],'
-    marketSize: '$15B penetration testing market','
+    marketSize: '$15 B penetration testing market','
     growthRate: '200% annual growth','
     variant: 'cyberpunk-advanced','
     contactInfo: {
@@ -541,7 +541,7 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     useCases: ['Smart contract auditing', 'Blockchain security', 'Compliance management', 'Risk assessment', 'Security operations', 'Security consulting'],'
     roi: 'Organizations report 600% ROI through improved blockchain security and compliance management.','
     competitors: ['Traditional blockchain security', 'Blockchain platforms', 'Security tools'],'
-    marketSize: '$10B blockchain security market','
+    marketSize: '$10 B blockchain security market','
     growthRate: '400% annual growth','
     variant: 'cyberpunk-futuristic','
     contactInfo: {
@@ -605,7 +605,7 @@ export const advancedCybersecurityServices: AdvancedCybersecurityService[] = [;
     useCases: ['IoT security', 'Device management', 'Threat detection', 'Compliance management', 'Security operations', 'Security consulting'],'
     roi: 'Organizations report 500% ROI through improved IoT security and device management.','
     competitors: ['Traditional IoT security', 'IoT platforms', 'Security tools'],'
-    marketSize: '$25B IoT security market','
+    marketSize: '$25 B IoT security market','
     growthRate: '300% annual growth','
     variant: 'cyberpunk-futuristic','
     contactInfo: {

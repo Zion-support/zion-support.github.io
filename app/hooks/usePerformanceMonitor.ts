@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect, useRef, useCallback } from 'react';
-
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
@@ -118,8 +114,6 @@ export function usePerformanceMonitor(): UsePerformanceMonitorReturn {
       } catch (error) {
         console.warn('CLS observer not supported:', error);
       }
-    }
-
     // Measure load time
     if (performance.timing) {
       const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
@@ -174,7 +168,6 @@ export function usePerformanceMonitor(): UsePerformanceMonitorReturn {
 }
 
 export default usePerformanceMonitor;
-=======
 export const usePerformanceMonitor = () => {useEffect(() => {
   // TODO: Implement
 }
@@ -206,11 +199,8 @@ const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
     // Run monitoring after page load;
     if (document.readyState === 'complete') {monitorWebVitals();}else {window.addEventListener('load', monitorWebVitals);}}return () => {window.removeEventListener('load', monitorWebVitals);}}, []);'
 }
-=======
 
-=======
 import { useState, useEffect } from 'react';
-
 export function usePerformanceMonitor() {
   const [data, setData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
@@ -229,20 +219,7 @@ export function usePerformanceMonitor() {
       setData(input);
       setError(null);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "An error occurred");
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const fetchData = async () => {
-    setLoading(true);
-    try {
-      // Fetch data logic here
-      setData(null);
-      setError(null);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "An error occurred");
+      setError(err instanceof Error ? err.message : "An error occurred"An error occurred");
     } finally {
       setLoading(false);
     }
@@ -255,4 +232,3 @@ export function usePerformanceMonitor() {
     processData,
     fetchData
   };
-}

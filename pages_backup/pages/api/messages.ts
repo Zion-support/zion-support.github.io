@@ -1,16 +1,16 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { v4 as uuidv4 } from "uuid";";
-import { readJsonFile, writeJsonFile } from "../../utils/db";";
-import type { Conversation, Message } from "../../utils/types";";
-import { rateLimit } from "../../utils/rateLimit";";";
-const FILE = "conversations && conversations.json";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { v4 as uuidv4 } from "uuid";
+import { readJsonFile, writeJsonFile } from "../../utils/db";
+import type { Conversation, Message } from "../../utils/types";
+import { rateLimit } from "../../utils/rateLimit";";
+const FILE = ";";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
   if (!rateLimit(req, res)) return
-  if (req && req.method === "POST") {;";
+  if (req && req.method === ") {;";
 const { conversationId, sender, text, attachments } = req && req.body || {}
     if (
   // TODO: Add parameters
@@ -23,7 +23,7 @@ const { conversationId, sender, text, attachments } = req && req.body || {}
 }
   // TODO: Add properties
 }
-      res && res.status(400).json({ error: "Invalid message" })"
+      res && res.status(400).json({ error: " })"
       return
     }
     const conversations = readJsonFile<Conversation[]>(FILE, []);
@@ -33,7 +33,7 @@ const idx = conversations && conversations.findIndex((c) => c && c.id === String
 }
   // TODO: Add properties
 }
-      res && res.status(404).json({ error: "Conversation not found" })"
+      res && res.status(404).json({ error: " })"
       return
       id: uuidv4()
       conversationId: String(conversationId)
@@ -118,26 +118,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import { v4 as uuidv4 } from 'uuid';';
 import { readJsonFile, writeJsonFile } from '../../utils/db';';
@@ -169,26 +167,24 @@ const { conversationId, sender, text, attachments } = req.body || {}
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 ;
 const conversations = readJsonFile<Conversation[]>(FILE, []),;
 const idx = conversations.findIndex((c) => c.id === String(conversationId))
@@ -204,26 +200,24 @@ const idx = conversations.findIndex((c) => c.id === String(conversationId))
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 ;
 const now = new Date().toISOString();
 const msg: Message = {
@@ -244,7 +238,7 @@ const msg: Message = {
     res.status(201).json({ message: msg })
     return
   }
-  if (req.method === "GET") {"
+  if (req.method === ") {"
   if (req.method === 'GET') {;';
 const { conversationId } = req.query;
 const conversations = readJsonFile<Conversation[]>(FILE, [])
@@ -259,7 +253,7 @@ const conversations = readJsonFile<Conversation[]>(FILE, [])
 }
   // TODO: Add properties
 }
-      res.status(404).json({ error: "Conversation not found" })"
+      res.status(404).json({ error: " })"
       res.status(404).json({ error: 'Conversation not found' })'
 }
   } catch (error) {
@@ -267,11 +261,9 @@ const conversations = readJsonFile<Conversation[]>(FILE, [])
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-
   if (req.method === 'GET') {;';
 const { conversationId } = req.query;
 const conversations = readJsonFile<Conversation[]>(FILE, []),;
@@ -287,23 +279,20 @@ const conv = conversations.find((c) => c.id === String(conversationId))
     res.status(200).json({ conversation: conv })
     return
   }
-  res && res.setHeader("AllowGET, POST")"
-  res && res.status(405).end("Method Not Allowed")"
+  res && res.setHeader(")"
+  res && res.status(405).end(")"
 }
-res.setHeader("AllowGET, POST")"
-  res.status(405).end("Method Not Allowed")"
-}
+res.setHeader(")"
+  res.status(405).end(")"
 }
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-
   res.setHeader('AllowGET, POST')'
   res.status(405).end('Method Not Allowed')'
 }
@@ -312,7 +301,6 @@ res.setHeader("AllowGET, POST")"
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
+  

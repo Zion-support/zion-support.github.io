@@ -63,8 +63,6 @@ const line = lines[i];
           otherLines = [];
           continue;
         }
-      }
-
       if (inConflict) {
   // TODO: Add properties
 }
@@ -82,8 +80,6 @@ const line = lines[i];
 }
         resolvedLines.push(line);
       }
-    }
-
     // Join lines back together;
 const resolvedContent = resolvedLines.join('\n');'
 
@@ -106,8 +102,6 @@ const resolvedContent = resolvedLines.join('\n');'
     console.error(`❌ Error processing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Function to recursively find all files with merge conflicts
 function findFilesWithConflicts(dir, extensions = ['.ts', '.tsx', '.js', '.jsx', '.css', '.html', '.json']) {;';
 const files = [];
@@ -151,9 +145,7 @@ const content = fs.readFileSync(fullPath, 'utf8');'
 }
               // Skip files that can't be read'
             }
-          }
         }
-      }
     } catch (error) {
   // TODO: Add properties
 }
@@ -161,8 +153,6 @@ const content = fs.readFileSync(fullPath, 'utf8');'
 }
       // Skip directories that can't be read'
     }
-  }
-
   traverse(dir);
   return files;
 }
@@ -211,8 +201,6 @@ const resolved = resolveMergeConflicts(filePath);
       errorCount++;
       console.error(`❌ Failed to resolve: ${path.relative(workspaceRoot, filePath)} - ${error.message}`);
     }
-  }
-
   console.log(`\n📈 Resolution Summary:`);
   console.log(`   ✅ Successfully resolved: ${resolvedCount} files`);
   console.log(`   ❌ Failed to resolve: ${errorCount} files`);

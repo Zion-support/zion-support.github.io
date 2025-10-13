@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";";
-import { supabase } from "@/integrations/supabase/client";";
-import type { UserProfile } from "@/types/auth";";
-import { toast } from "@/hooks/use-toast";";
-import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";";
-import { cleanupAuthState } from "@/utils/authUtils";";";
+import { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import type { UserProfile } from "@/types/auth";
+import { toast } from "@/hooks/use-toast";
+import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
+import { cleanupAuthState } from "@/utils/authUtils";";
 export function useAuthOperations(
   // TODO: Add parameters
 )
@@ -58,19 +58,18 @@ const { data, error } = await supabase.auth.signInWithPassword({
 }
   // TODO: Add properties
 }
-          variant: "destructive","
-          title: "Oh no! Something went wrong.","
+          variant: ","
+          title: ","
           description: error.message})
           description: error.message,
         })
         return { data: null, error: error.message }
-      }
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Login successful!","
+        title: ","
         description: `Welcome back, ${email}!`})
         description: `Welcome back, ${email}!`,
       })
@@ -85,12 +84,12 @@ const { data, error } = await supabase.auth.signInWithPassword({
 }
   // TODO: Add properties
 }
-        variant: "destructive","
-        title: "Oh no! Something went wrong.","
-        description: "Failed to sign in. Please check your credentials."})"
-        description: "Failed to sign in. Please check your credentials.","
+        variant: ","
+        title: ","
+        description: "})"
+        description: ","
       })
-      return { data: null, error: "Failed to sign in." }"
+      return { data: null, error: " }"
     } finally {
   // TODO: Add properties
 }
@@ -98,7 +97,6 @@ const { data, error } = await supabase.auth.signInWithPassword({
 }
       setIsLoading(false)
     }
-  }
   const signup = async ({ email, password, display_name }) => {
   // TODO: Add properties
 }
@@ -138,13 +136,12 @@ const { data, error } = await supabase.auth.signUp({
 }
   // TODO: Add properties
 }
-          variant: "destructive","
-          title: "Error during signup","
+          variant: ","
+          title: ","
           description: error.message})
           description: error.message,
         })
         return { data: null, error: error.message }
-      }
       // Add this after successful signup
       if (data?.user) {
   // TODO: Add properties
@@ -159,7 +156,7 @@ const { data, error } = await supabase.auth.signUp({
 }
   // TODO: Add properties
 }
-        title: "Signup successful!","
+        title: ","
         description: `Welcome, ${display_name}! Please check your email to verify your account.`})
         description: `Welcome, ${display_name}! Please check your email to verify your account.`,
       })
@@ -174,12 +171,12 @@ const { data, error } = await supabase.auth.signUp({
 }
   // TODO: Add properties
 }
-        variant: "destructive","
-        title: "Oh no! Something went wrong.","
-        description: "Failed to sign up. Please try again."})"
-        description: "Failed to sign up. Please try again.","
+        variant: ","
+        title: ","
+        description: "})"
+        description: ","
       })
-      return { data: null, error: "Failed to sign up." }"
+      return { data: null, error: " }"
     } finally {
   // TODO: Add properties
 }
@@ -187,7 +184,6 @@ const { data, error } = await supabase.auth.signUp({
 }
       setIsLoading(false)
     }
-  }
   const logout = async () => {
   // TODO: Implement
 }
@@ -210,8 +206,8 @@ const { error } = await supabase.auth.signOut()
 }
   // TODO: Add properties
 }
-          variant: "destructive","
-          title: "Oh no! Something went wrong.","
+          variant: ","
+          title: ","
           description: error.message})
           description: error.message,
         })
@@ -226,9 +222,9 @@ const { error } = await supabase.auth.signOut()
 }
   // TODO: Add properties
 }
-          title: "Logout successful!","
-          description: "You have been successfully logged out."})"
-          description: "You have been successfully logged out.","
+          title: ","
+          description: "})"
+          description: ","
         })
       }
     } catch (error) {
@@ -236,16 +232,16 @@ const { error } = await supabase.auth.signOut()
 }
   // TODO: Add properties
 }
-      console.error("Logout failed:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        variant: "destructive","
-        title: "Logout failed","
-        description: "There was an issue logging you out. Please try again."})"
-        description: "There was an issue logging you out. Please try again.","
+        variant: ","
+        title: ","
+        description: "})"
+        description: ","
       })
     } finally {
   // TODO: Add properties
@@ -254,7 +250,6 @@ const { error } = await supabase.auth.signOut()
 }
       setIsLoading(false)
     }
-  }
   const resetPassword = async (email: string) => {
   // TODO: Add properties
 }
@@ -280,19 +275,18 @@ const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
 }
   // TODO: Add properties
 }
-          variant: "destructive","
-          title: "Oh no! Something went wrong.","
+          variant: ","
+          title: ","
           description: error.message})
           description: error.message,
         })
         return { data: null, error: error.message }
-      }
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Password reset email sent!","
+        title: ","
         description: `Please check your email (${email}) for instructions on how to reset your password.`})
         description: `Please check your email (${email}) for instructions on how to reset your password.`,
       })
@@ -307,12 +301,12 @@ const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
 }
   // TODO: Add properties
 }
-        variant: "destructive","
-        title: "Oh no! Something went wrong.","
-        description: "Failed to send reset password email. Please try again."})"
-        description: "Failed to send reset password email. Please try again.","
+        variant: ","
+        title: ","
+        description: "})"
+        description: ","
       })
-      return { data: null, error: "Failed to send reset password email." }"
+      return { data: null, error: " }"
     } finally {
   // TODO: Add properties
 }
@@ -320,7 +314,6 @@ const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
 }
       setIsLoading(false)
     }
-  }
   const updateProfile = async (profileData: Partial<UserProfile>) => {
   // TODO: Add properties
 }
@@ -337,10 +330,10 @@ const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
 }
   // TODO: Add properties
 }
-        throw new Error("Profile data or user ID is missing.")"
+        throw new Error(")"
       }
       const { error } = await supabase
-        .from("profiles")"
+        .from(")"
         .update({
   // TODO: Add properties
 }
@@ -354,7 +347,7 @@ const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
           headline: profileData.headline})
           headline: profileData.headline,
         })
-        .eq("id", profileData.id)"
+        .eq(", profileData.id)"
       if (error) {
   // TODO: Add properties
 }
@@ -365,13 +358,12 @@ const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
 }
   // TODO: Add properties
 }
-          variant: "destructive","
-          title: "Failed to update profile","
+          variant: ","
+          title: ","
           description: error.message})
           description: error.message,
         })
         return { error: error.message }
-      }
       // Optimistically update the local user state
       setUser((prevUser) => {
   // TODO: Add properties
@@ -384,7 +376,6 @@ const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
   // TODO: Add properties
 }
           return { ...prevUser, ...profileData }
-        }
         return prevUser
       })
       toast({
@@ -392,9 +383,9 @@ const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
 }
   // TODO: Add properties
 }
-        title: "Profile updated!","
-        description: "Your profile has been successfully updated."})"
-        description: "Your profile has been successfully updated.","
+        title: ","
+        description: "})"
+        description: ","
       })
       return { error: null }
     } catch (error) {
@@ -402,18 +393,18 @@ const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
 }
   // TODO: Add properties
 }
-      console.error("Profile update failed:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        variant: "destructive","
-        title: "Profile update failed","
-        description: "There was an issue updating your profile. Please try again."})"
-        description: "There was an issue updating your profile. Please try again.","
+        variant: ","
+        title: ","
+        description: "})"
+        description: ","
       })
-      return { error: "Failed to update profile." }"
+      return { error: " }"
     } finally {
   // TODO: Add properties
 }
@@ -421,7 +412,6 @@ const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
 }
       setIsLoading(false)
     }
-  }
   const loginWithGoogle = async () => {
   // TODO: Implement
 }
@@ -438,8 +428,8 @@ const { data, error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-        provider: "google"})"
-        provider: "google","
+        provider: "})"
+        provider: ","
       })
       if (error) {
   // TODO: Add properties
@@ -451,8 +441,8 @@ const { data, error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-          variant: "destructive","
-          title: "Oh no! Something went wrong.","
+          variant: ","
+          title: ","
           description: error.message})
           description: error.message,
         })
@@ -464,7 +454,6 @@ const { data, error } = await supabase.auth.signInWithOAuth({
 }
       setIsLoading(false)
     }
-  }
   const loginWithFacebook = async () => {
   // TODO: Implement
 }
@@ -481,8 +470,8 @@ const { data, error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-        provider: "facebook"})"
-        provider: "facebook","
+        provider: "})"
+        provider: ","
       })
       if (error) {
   // TODO: Add properties
@@ -494,8 +483,8 @@ const { data, error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-          variant: "destructive","
-          title: "Oh no! Something went wrong.","
+          variant: ","
+          title: ","
           description: error.message})
           description: error.message,
         })
@@ -507,7 +496,6 @@ const { data, error } = await supabase.auth.signInWithOAuth({
 }
       setIsLoading(false)
     }
-  }
   const loginWithTwitter = async () => {
   // TODO: Implement
 }
@@ -524,8 +512,8 @@ const { data, error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-        provider: "twitter"})"
-        provider: "twitter","
+        provider: "})"
+        provider: ","
       })
       if (error) {
   // TODO: Add properties
@@ -537,8 +525,8 @@ const { data, error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-          variant: "destructive","
-          title: "Oh no! Something went wrong.","
+          variant: ","
+          title: ","
           description: error.message})
           description: error.message,
         })
@@ -550,7 +538,6 @@ const { data, error } = await supabase.auth.signInWithOAuth({
 }
       setIsLoading(false)
     }
-  }
   const loginWithWeb3 = async () => {
   // TODO: Implement
 }
@@ -568,7 +555,7 @@ const ethereum = (window as any).ethereum
 }
   // TODO: Add properties
 }
-        throw new Error("Web3 wallet not found")"
+        throw new Error(")"
       }
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });';
 const address = accounts[0]
@@ -616,7 +603,6 @@ const address = accounts[0]
 }
       setIsLoading(false)
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -632,5 +618,4 @@ const address = accounts[0]
     loginWithTwitter,
     loginWithWeb3}
     loginWithWeb3,
-  }
-}
+  

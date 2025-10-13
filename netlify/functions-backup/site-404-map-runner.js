@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'site-404-map-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'site-404-map-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'site-404-map-runner',' source: event.source || 'unknown', mapping: {' status: 'active', pagesMapped: 0,'
         lastMap: new Date().toISOString() } }) } return result; } catch (error) {

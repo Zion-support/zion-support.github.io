@@ -94,7 +94,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [;
     useCases: ['Satellite operations', 'Space exploration', 'Earth observation', 'Space debris monitoring', 'Mission planning', 'Space research'],'
     roi: 'Space companies see 800% ROI within 24 months through improved operational efficiency and new capabilities.','
     competitors: ['Maxar', 'Planet Labs', 'Airbus Defence', 'Lockheed Martin', 'Boeing', 'Northrop Grumman'],'
-    marketSize: '$447.5B market','
+    marketSize: '$447.5 B market','
     growthRate: '350% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -158,7 +158,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [;
     useCases: ['Asteroid mining', 'Lunar resource exploration', 'Space resource assessment', 'Investment analysis', 'Mission planning', 'Regulatory compliance'],'
     roi: 'Space mining companies see 1200% ROI within 36 months through successful resource extraction and commercialization.','
     competitors: ['Planetary Resources', 'Deep Space Industries', 'AstroForge', 'TransAstra', 'Kleos Space', 'Asteroid Mining Corporation'],'
-    marketSize: '$3.8B market','
+    marketSize: '$3.8 B market','
     growthRate: '500% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {
@@ -222,7 +222,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [;
     useCases: ['Satellite operations', 'Constellation management', 'Earth observation', 'Communications', 'Navigation', 'Scientific research'],'
     roi: 'Satellite operators see 600% ROI within 18 months through improved operational efficiency and reduced costs.','
     competitors: ['Maxar', 'Planet Labs', 'Spire', 'ICEYE', 'Capella Space', 'Umbra'],'
-    marketSize: '$279.8B market','
+    marketSize: '$279.8 B market','
     growthRate: '320% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -286,7 +286,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [;
     useCases: ['Collision avoidance', 'Satellite safety', 'Insurance assessment', 'Regulatory compliance', 'Research & development', 'Space traffic management'],'
     roi: 'Satellite operators see 800% ROI within 12 months through prevented collisions and insurance savings.','
     competitors: ['LeoLabs', 'Space-Track', 'ESA DISCOS', 'NORAD', 'Astroscale', 'ClearSpace'],'
-    marketSize: '$1.2B market','
+    marketSize: '$1.2 B market','
     growthRate: '280% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -350,7 +350,7 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [;
     useCases: ['Power grid protection', 'Satellite safety', 'Communication protection', 'Aviation safety', 'Research & development', 'Emergency preparedness'],'
     roi: 'Power utilities see 1000% ROI within 6 months through prevented blackouts and equipment damage.','
     competitors: ['NOAA Space Weather', 'ESA Space Weather', 'NASA Space Weather', 'Space Weather Prediction Center', 'Met Office', 'Bureau of Meteorology'],'
-    marketSize: '$2.8B market','
+    marketSize: '$2.8 B market','
     growthRate: '250% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {

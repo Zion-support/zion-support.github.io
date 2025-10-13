@@ -25,11 +25,7 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox",
-  },
-
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Fix for "self is not defined" error by providing a polyfill
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox"self is not defined" error by providing a polyfill
     if (isServer) {
       config.plugins.push(
         new webpack.DefinePlugin({
@@ -132,7 +128,7 @@ const nextConfig = {
           },
           {
             key: 'Content-Security-Policy',
-            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'",
+            value: ",
           },
         ],
       },

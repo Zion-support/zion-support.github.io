@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'newsroom-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'newsroom-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'newsroom-runner',' source: event.source || 'unknown', newsroom: {' status: 'active', articles: 0,'
         lastUpdate: new Date().toISOString() } }) } return result; } catch (error) {

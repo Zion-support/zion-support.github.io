@@ -67,7 +67,6 @@ const milestonesWithFlag = data.milestones.map((milestone: any) => ({
 }
       setIsGenerating(false)
     }
-  }
   const clearGeneratedMilestones = () => {
   // TODO: Implement
 }
@@ -89,5 +88,4 @@ const milestonesWithFlag = data.milestones.map((milestone: any) => ({
     isGenerating,
     clearGeneratedMilestones}
     clearGeneratedMilestones,
-  }
-}
+  

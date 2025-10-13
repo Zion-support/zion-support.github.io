@@ -40,8 +40,6 @@ const _keys2 = Object.keys(obj2)
         if (!deepEqual(obj1[key], obj2[key])) return false
   // Deep object comparison,
   deepEqual: (obj1, obj2) => {/* TODO: Fix JSX expression */}
-      }
-
       return true
     }
 
@@ -65,7 +63,6 @@ const later = () => {
         func(...args)
   // Debounce utility,
   debounce: (func, wait) => {/* TODO: Fix JSX expression */}
-      }
       clearTimeout(timeout)
       timeout = setTimeout(later, wait)
     }
@@ -89,7 +86,6 @@ let inThrottle
         setTimeout(() => (inThrottle = false), limit)
   // Throttle utility,
   throttle: (func, limit) => {/* TODO: Fix JSX expression */}
-      }
     }
   },
 
@@ -106,10 +102,9 @@ const _cache = new Map()
         return cache.get(key)
   // Memoization,
   memoize: fn => {/* TODO: Fix JSX expression */}
-      }
       //       const result = fn.apply(this, args)
       cache.set(key, result)
       return result
     }
-  }}
+  }
 `

@@ -29,7 +29,6 @@ const superToken = process && process.env.SUPERADMIN_TOKEN
     by_module[e.module] = (by_module[e.module] || 0) + 1
     by_type[String (e.type)] = (by_type[String (e.type)] || 0) + 1
   }
-}
 import { readLogs } from '@/utils/zionBrain';'
 function isAuthorized(req: NextApiRequest): boolean {;
 const token = req.headers['x-admin-token'] || req.query.token;';
@@ -62,4 +61,3 @@ const stuckOnly = req.query.stuck === '1' || req.query.stuck === 'true''
     byType[String(e.type)] = (byType[String(e.type)] || 0) + 1
   }
   return res.status(200).json({ entries: entries.slice(-200), byModule, byType, total: entries.length })
-}

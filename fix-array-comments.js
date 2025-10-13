@@ -22,11 +22,8 @@ for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
       lines[i] = '  // ' + line'
   if (inRealEstateArray && i > realEstateStartLine && !line.includes('// const _realEstateSaaS = [')) {/* TODO: Fix JSX expression */}'
     }
-  }
-
   if (inCategoriesArray && i > categoriesStartLine && !line.includes('// const _categories = [')) {/* TODO: Fix JSX expression */}'
     }
-  }
 }
 ;
 const fixedContent = lines.join('\n')'

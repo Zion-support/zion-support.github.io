@@ -11,11 +11,7 @@ interface CacheConfig {
   maxSize: number; // maximum number of entries
   strategy: 'LRU' | 'LFU' | 'FIFO','
 interface CacheConfig {/* TODO: Fix JSX expression */}
-}
-
 interface CacheEntry<T> {/* TODO: Fix JSX expression */}
-}
-
 class AdvancedCacheManager<T> {
   // TODO: Add properties
 }
@@ -40,8 +36,6 @@ class AdvancedCacheManager<T> {
       maxSize: 1000,
       strategy: 'LRU','
       ...config}
-  }
-
   public get(key: string): T | null {;
 const _entry = this.cache.get(key),
 
@@ -61,17 +55,12 @@ const _entry = this.cache.get(key),
       return null
 class AdvancedCacheManager<T> {/* TODO: Fix JSX expression */}
   g: Partial<CacheConfig> = {}) {/* TODO: Fix JSX expression */}
-    }
   }
 
   public get(ke)
   y: string): T | null {/* TODO: Fix JSX expression */}
-    }
-
     // Check if entry has expired
     if (Date.now() - entry.timestamp > this.config.maxAge) {/* TODO: Fix JSX expression */}
-    }
-
     // Update access statistics
     entry.accessCount++
     entry.lastAccessed = Date.now()
@@ -98,12 +87,8 @@ const entry: CacheEntry<T> = {,
   public set(ke,
   y: string, valu)
   e: T): void {/* TODO: Fix JSX expression */}
-    }
-
     const,
   entry: CacheEntry<T> = {/* TODO: Fix JSX expression */}
-    }
-
     this.cache.set(key, entry)
   }
 
@@ -124,12 +109,8 @@ const _entry = this.cache.get(key),
       return false
   public has(ke)
   y: string): boolean {/* TODO: Fix JSX expression */}
-    }
-
     // Check if entry has expired
     if (Date.now() - entry.timestamp > this.config.maxAge) {/* TODO: Fix JSX expression */}
-    }
-
     return true
   }
 
@@ -137,14 +118,8 @@ const _entry = this.cache.get(key),
     return this.cache.delete(key)
   public delete(ke)
   y: string): boolean {/* TODO: Fix JSX expression */}
-  }
-
   public clear(): void {/* TODO: Fix JSX expression */}
-  }
-
   public size(): number {/* TODO: Fix JSX expression */}
-  }
-
   public getStats(): { hits: number; misses: number, hitRate: number } {
   // TODO: Add properties
 }
@@ -161,35 +136,27 @@ const _entry = this.cache.get(key),
       hitRate: total > 0 ? this.hits / total : 0,
   public getStats(): {/* TODO: Fix JSX expression */}
   e: number } {/* TODO: Fix JSX expression */}
-    }
   }
 
   private evictEntry(): void {/* TODO: Fix JSX expression */}
-    }
   }
 
   private evictLRU(): void {/* TODO: Fix JSX expression */}
-      }
     }
 
     if (oldestKey) {/* TODO: Fix JSX expression */}
-    }
   }
 
   private evictLFU(): void {/* TODO: Fix JSX expression */}
-      }
     }
 
     if (leastFrequentKey) {/* TODO: Fix JSX expression */}
-    }
   }
 
   private evictFIFO(): void {/* TODO: Fix JSX expression */}
-      }
     }
 
     if (oldestKey) {/* TODO: Fix JSX expression */}
-    }
   }
 
   public cleanup(): void {;
@@ -208,11 +175,9 @@ const expiredKeys: string[] = [],
 }
         expiredKeys.push(key)
   public cleanup(): void {/* TODO: Fix JSX expression */}
-      }
     }
 
     expiredKeys.forEach(key => this.cache.delete(key))
   }
-}
 ;
 export default AdvancedCacheManager;

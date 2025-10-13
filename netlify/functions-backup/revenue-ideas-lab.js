@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'revenue-ideas-lab'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'revenue-ideas-lab'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'revenue-ideas-lab',' source: event.source || 'unknown', lab: {' status: 'active', ideas: 0,'
         lastIdea: new Date().toISOString() } }) } return result; } catch (error) {

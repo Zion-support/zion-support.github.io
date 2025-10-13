@@ -32,7 +32,4 @@ const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null
 }
   // TODO: Add properties
 }
-  }
-}
-  }
 }

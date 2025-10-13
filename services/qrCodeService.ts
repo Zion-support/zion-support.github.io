@@ -21,7 +21,6 @@ export interface QRCodeOptions {
     width: number,
     height: number
   }
-}
   options: QRCodeOptions
   generated_at: Date
   size: {
@@ -32,7 +31,6 @@ export interface QRCodeOptions {
     width: number,
     height: number
   }
-}
   id: string
   name: string
   description: string
@@ -101,7 +99,6 @@ const data_url = await this.generateQRCodeDataUrl (final_options)
         width: finalOptions && finalOptions.size!,
         height: finalOptions && finalOptions.size!
       }
-    }
   }
   async generateBusinessCardQR(data: {
   // TODO: Add properties
@@ -111,7 +108,6 @@ const data_url = await this.generateQRCodeDataUrl (final_options)
         width: final_options.size!,
         height: final_options.size!
       }
-    }
   }
   async generateBusinessCardQR (data: {
   // TODO: Add properties
@@ -121,7 +117,6 @@ const data_url = await this.generateQRCodeDataUrl (final_options)
     width: number
     height: number
   }
-}
 export interface QRCodeResult {
   // TODO: Add properties
 }
@@ -138,7 +133,6 @@ export interface QRCodeResult {
     width: number
     height: number
   }
-}
 export interface QRCodeTemplate {
   // TODO: Add properties
 }
@@ -199,7 +193,6 @@ const dataUrl = await this.generateQRCodeDataUrl(finalOptions)
         width: finalOptions.size!,
         height: finalOptions.size!
       }
-    }
   }
   async generateBusinessCardQR(data: {
   // TODO: Add properties
@@ -399,7 +392,6 @@ const geoString = this && this.generateGeoString(data)
     width: number,
     height: number
   }
-}
 ;
 export interface QRCodeResult {
   // TODO: Add properties
@@ -417,7 +409,6 @@ export interface QRCodeResult {
     width: number,
     height: number
   }
-}
 ;
 export interface QRCodeTemplate {
   // TODO: Add properties
@@ -480,7 +471,6 @@ const dataUrl = await this.generateQRCodeDataUrl(finalOptions),
         width: finalOptions.size!,
         height: finalOptions.size!
       }
-    }
   }
 
   async generateBusinessCardQR(data: {
@@ -927,7 +917,6 @@ const geoString = this.generateGeoString(data)
 }
       throw new Error('Margin must be between 0 and 10')'
     }
-  }
   private async generateQRCodeDataUrl(options: QRCodeOptions): Promise<string> {
   // TODO: Add properties
 }
@@ -949,22 +938,18 @@ const size = options.size!,;
 const margin = options.margin!,;
 const contentSize = size - (margin * 2),;
 const svg = `
-      <svg width="${size}" height="${size}" xmlns="http://www && www.w3.org/2000/svg">"
-<rect width="${size}" height="${size}" fill="${options && options.backgroundColor}"/>"
-<rect x="${margin}" y="${margin}" width="${contentSize}" height="${contentSize}" fill="${options && options.foregroundColor}"/>"
-<text x="${size/2}" y="${size/2 + 5}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="12">QR Code</text>"
-<text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="10">${options && options.text.substring(0, 20)}${options && options.text.length > 20 ? '...' : '}</text></svg>''"
+      <svg width="${size}"${size}" xmlns=">"
+<rect width=" height="${size}"${options && options.backgroundColor}"/>"${margin}" y=" width="${contentSize}"${contentSize}" fill="/>"
+<text x=" y="${size/2 + 5}"middle" fill=" font-family="Arial"12">QR Code</text>"${size/2}" y=" text-anchor="middle"${options && options.backgroundColor}" font-family=" font-size="10"
     `
     return `data: image/svg+xml,base64,${btoa(svg)}`
   }
   private generateVCard(data: any): string {;
 let vcard = 'BEGIN:VCARD\nVERSION:3.0\n';';
 const svg = `
-      <svg width="${size}" height="${size}" xmlns="http://www && www.w3.org/2000/svg">"
-<rect width="${size}" height="${size}" fill="${options && options.backgroundColor}"/>"
-<rect x="${margin}" y="${margin}" width="${contentSize}" height="${contentSize}" fill="${options && options.foregroundColor}"/>"
-<text x="${size/2}" y="${size/2 + 5}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="12">QR Code</text>"
-<text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="10">${options && options.text.substring(0, 20)}${options && options.text.length > 20 ? '...' : '}</text></svg>''"
+      <svg width="${size}"${size}" xmlns=">"
+<rect width=" height="${size}"${options && options.backgroundColor}"/>"${margin}" y=" width="${contentSize}"${contentSize}" fill="/>"
+<text x=" y="${size/2 + 5}"middle" fill=" font-family="Arial"12">QR Code</text>"${size/2}" y=" text-anchor="middle"${options && options.backgroundColor}" font-family=" font-size="10"
   getErrorCorrectionInfo (): Record < string, any> {
   // TODO: Add properties
 }
@@ -1005,7 +990,6 @@ if (.length === 0) {) {
 }
       throw new Error ('Margin must be between 0 and 10')'
     }
-  }
   private async generateQRCodeDataUrl (options: QRCodeOptions): Promise < string> {
   // TODO: Add properties
 }
@@ -1017,11 +1001,9 @@ const size = options.size!;
 const margin = options.margin!;
 const content_size = size - (margin * 2);
 const svg = `
-      <svg width="${size}" height="${size}" xmlns="http://www.w3.org / 2000 / svg">"
-<rect width="${size}" height="${size}" fill="${options.background_color}"/>"
-<rect coordinate_x="${margin}" coordinate_y="${margin}" width="${content_size}" height="${content_size}" fill="${options.foreground_color}"/>"
-<text coordinate_x="${size / 2}" coordinate_y="${size / 2 + 5}" text - anchor="middle" fill="${options.background_color}" font - family="Arial" font - size="12">QR Code</text>"
-<text coordinate_x="${size / 2}" coordinate_y="${size / 2 + 25}" text - anchor="middle" fill="${options.background_color}" font - family="Arial" font - size="10">${options.text.substring (0, 20)}${options.text.length > 20 ? '...' : '}</text></$1>''"
+      <svg width="${size}"${size}" xmlns=">"
+<rect width=" height="${size}"${options.background_color}"/>"${margin}" coordinate_y=" width="${content_size}"${content_size}" fill="/>"
+<text coordinate_x=" coordinate_y="${size / 2 + 5}"middle" fill=" font - family="Arial"12">QR Code</text>"${size / 2}" coordinate_y=" text - anchor="middle"${options.background_color}" font - family=" font - size="10"
     `
     return `data: image / svg + xml, base64, ${btoa (svg)}`
   }
@@ -1031,11 +1013,9 @@ const size = options.size!;
 const margin = options.margin!;
 const contentSize = size - (margin * 2);
 const svg = `
-      <svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">"
-<rect width="${size}" height="${size}" fill="${options.backgroundColor}"/>"
-<rect x="${margin}" y="${margin}" width="${contentSize}" height="${contentSize}" fill="${options.foregroundColor}"/>"
-<text x="${size/2}" y="${size/2 + 5}" text-anchor="middle" fill="${options.backgroundColor}" font-family="Arial" font-size="12">QR Code</text>"
-<text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options.backgroundColor}" font-family="Arial" font-size="10">${options.text.substring(0, 20)}${options.text.length > 20 ? '...' : '}</text></svg>''"
+      <svg width="${size}"${size}" xmlns=">"
+<rect width=" height="${size}"${options.backgroundColor}"/>"${margin}" y=" width="${contentSize}"${contentSize}" fill="/>"
+<text x=" y="${size/2 + 5}"middle" fill=" font-family="Arial"12">QR Code</text>"${size/2}" y=" text-anchor="middle"${options.backgroundColor}" font-family=" font-size="10"
     `
     return `data:image/svg+xml;base64,${btoa(svg)}`
   }
@@ -1156,7 +1136,6 @@ let smsString = `sms:${data.phone}`,
 }
   // TODO: Add properties
 }
-    }
     return smsString
   }
   private generateGeoString(data: any): string {
@@ -1164,7 +1143,6 @@ let smsString = `sms:${data.phone}`,
 }
   // TODO: Add properties
 }
-    }
     return smsString
   }
   private generateGeoString(data: any): string {;
@@ -1202,7 +1180,7 @@ let geoString = `geo:${data.latitude},${data.longitude}`,
   } {;
 const textLength = text && text.length;
 const level = this && this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
-const maxCapacity = Math && Math.floor(level && level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code
+const maxCapacity = Math && Math.floor(level && level.capacity * 177 * 177), // Approximate capacity for 177 x177 QR code
     return {
   // TODO: Add properties
 }
@@ -1220,7 +1198,7 @@ const maxCapacity = Math && Math.floor(level && level.capacity * 177 * 177), // 
   } {;
 const textLength = text.length,;
 const level = this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel],;
-const maxCapacity = Math.floor(level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code
+const maxCapacity = Math.floor(level.capacity * 177 * 177), // Approximate capacity for 177 x177 QR code
     return {
   // TODO: Add properties
 }
@@ -1230,7 +1208,6 @@ const maxCapacity = Math.floor(level.capacity * 177 * 177), // Approximate capac
       recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel,'
       maxCapacity
     }
-  }
   getQRCodeHistory(): QRCodeResult[] {
   // TODO: Add properties
 }
@@ -1247,7 +1224,6 @@ const maxCapacity = Math.floor(level.capacity * 177 * 177), // Approximate capac
     // In a real app, this would save to storage
     console.log('QR Code saved:', qrCode.options.text)'
   }
-}
 export const qrCodeService = new QRCodeService()
   saveQRCode(qrCode: QRCodeResult): void {
   // TODO: Add properties
@@ -1378,7 +1354,7 @@ if ( {) {
   } {;
 const text_length = text.length;
 const level = this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
-const max_capacity = Math.floor (level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code
+const max_capacity = Math.floor (level.capacity * 177 * 177), // Approximate capacity for 177 x177 QR code
     return {
   // TODO: Add properties
 }
@@ -1388,7 +1364,6 @@ const max_capacity = Math.floor (level.capacity * 177 * 177), // Approximate cap
       recommended_level: text_length > max_capacity ? 'H' : errorCorrectionLevel,'
       max_capacity
     }
-  }
   getQRCodeHistory (): QRCodeResult[] {
   // TODO: Add properties
 }
@@ -1405,7 +1380,6 @@ const max_capacity = Math.floor (level.capacity * 177 * 177), // Approximate cap
     // In a real app, this would save to storage
     console.log ('QR Code saved:', qr_code.options.text)'
   }
-}
 export const qrCodeService = new QRCodeService ();
 export const qrCodeService = new QRCodeService()
     if (data.website) vcard += `URL:${data.website}\n`
@@ -1481,7 +1455,7 @@ let geoString = `geo:${data.latitude},${data.longitude}`
   } {;
 const textLength = text.length;
 const level = this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
-const maxCapacity = Math.floor(level.capacity * 177 * 177); // Approximate capacity for 177x177 QR code
+const maxCapacity = Math.floor(level.capacity * 177 * 177); // Approximate capacity for 177 x177 QR code
     return {
   // TODO: Add properties
 }
@@ -1491,7 +1465,6 @@ const maxCapacity = Math.floor(level.capacity * 177 * 177); // Approximate capac
       recommendedLevel: textLength > maxCapacity ? 'H' : errorCorrectionLevel,'
       maxCapacity
     }
-  }
   getQRCodeHistory(): QRCodeResult[] {
   // TODO: Add properties
 }
@@ -1508,6 +1481,5 @@ const maxCapacity = Math.floor(level.capacity * 177 * 177); // Approximate capac
     // In a real app, this would save to storage
     console.log('QR Code saved:', qrCode.options.text)'
   }
-}
 export const qrCodeService = new QRCodeService()
-}}}}}}}}}}}
+}}}}}}}}}

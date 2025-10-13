@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -9,7 +7,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 #!/usr/bin/env node;
 import fs from 'fs';';
 import path from 'path';'
@@ -49,7 +46,7 @@ const criticalFiles = [
   // TODO: Add properties
 }
       path: '/workspace/src/vite-env.d.ts','
-      content: `/// <reference types="vite/client" />"
+      content: `/// <reference types="vite/client"
 
 interface ImportMetaEnv {
   // TODO: Add properties
@@ -102,7 +99,7 @@ export default function RootLayout({
   return (
   // TODO: Add parameters
 )
-    <html lang="en">"
+    <html lang="en"
 <head>
 <Analytics />
 <body>
@@ -132,7 +129,6 @@ export default function RootLayout({
 }
       console.error(`Error fixing ${file.path}:`, error.message)
     }
-  }
 }
 
 // Function to clean up other problematic files
@@ -188,7 +184,6 @@ let content = '''
 }
       console.error(`Error cleaning ${filePath}:`, error.message)
     }
-  }
 }
 
 // Main execution

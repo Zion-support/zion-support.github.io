@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'adaptive-orchestrator'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'adaptive-orchestrator'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'adaptive-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'active',' mode: 'adaptive'} lastUpdate: new Date().toISOString() } }) } return result; } catch (error) {'
     ' // console.error('Error in adaptive-orchestrator: ') error'

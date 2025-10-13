@@ -1,7 +1,6 @@
 :src/components/PerformanceMonitor.tsx;
 import React, { useEffect, useState } from 'react';'
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
-}
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   // TODO: Add properties
 }
@@ -74,7 +73,6 @@ const [, setLongTasks] = useState<PerformanceEntry[]>([])
     // Measure page load performance
 //     const pageLoadMetrics = performanceOptimizer.measurePageLoad()
     if (pageLoadMetrics) {/* TODO: Fix JSX expression */}
-      }
     }
     // Monitor long tasks if enabled
     if (enableLongTaskMonitoring) {;
@@ -83,9 +81,7 @@ const observer = performanceOptimizer.monitorLongTasks((entries: PerformanceEntr
     if (enableLongTaskMonitoring) {/* TODO: Fix JSX expression */}
 //         })
       return () => {/* TODO: Fix JSX expression */}
-        }
       }
-    }
   }, [enableReporting, enableLongTaskMonitoring])
   // Monitor Web Vitals using Performance Observer
   useEffect(() => {
@@ -119,19 +115,16 @@ const _entries = list.getEntries()
           if (enableReporting) {/* TODO: Fix JSX expression */}
   P: lcp })
           }
-        }
         if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}'
   D: fid }))
           if (enableReporting) {/* TODO: Fix JSX expression */}
   D: fid })
           }
-        }
         if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}'
   S: cls }))
           if (enableReporting) {/* TODO: Fix JSX expression */}
   S: cls })
           }
-        }
       })
     })
     try {/* TODO: Fix JSX expression */}
@@ -139,7 +132,6 @@ const _entries = list.getEntries()
     } catch (e) {/* TODO: Fix JSX expression */}
 //       }
     return () => {/* TODO: Fix JSX expression */}
-    }
   }, [enableReporting])
   // Development mode: Log performance metrics,
   useEffect(() => {,
@@ -152,7 +144,6 @@ const _entries = list.getEntries()
   return <React.Fragment>{children}
 import React, { useEffect, useState, useCallback } from 'react';'
 interface PerformanceMonitorProps {/* TODO: Fix JSX expression */}
-}
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   // TODO: Add properties
 }
@@ -161,8 +152,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     ,
   enabled = true
   budget = {,
-    maxBundleSize: 500, // 500KB
-    maxImageSize: 100, // 100KB
+    maxBundleSize: 500, // 500 KB
+    maxImageSize: 100, // 100 KB
     maxFirstLoad: 3000, // 3 seconds
     maxInteractive: 2000 // 2 seconds
   },
@@ -191,7 +182,6 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
 const _budgetCheck = performanceOptimizer.checkPerformanceBudget(budget)
       setBudgetStatus(budgetCheck)
       if (!budgetCheck.passed) {/* TODO: Fix JSX expression */}
-      }
     }
   }, [budget, onMetricsUpdate, onBudgetViolation])
   useEffect(() => {
@@ -242,7 +232,6 @@ const _paintEntry = entry as PerformancePaintTiming
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}'
   P: paintEntry.startTime })
             }
-          }
           if (entry.entryType === 'largest-contentful-paint') {/* TODO: Fix JSX expression */}'
   P: lcpEntry.startTime })
           }
@@ -251,24 +240,16 @@ const _paintEntry = entry as PerformancePaintTiming
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['paint', 'largest-contentful-paint'] })'
       return () => {/* TODO: Fix JSX expression */}
-      }
     }
     return () => {/* TODO: Fix JSX expression */}
-    }
   }, [enabled, updateMetrics])
   if (!enabled) return null
-  return(<div className="performance-monitor">)"
-      {/* Toggle button */})
-      <;)$2 />
-  return (
-  // TODO: Add parameters
-)
-    <div className="performance-monitor">"
+  return(<div className="performance-monitor"performance-monitor"
       {/* Toggle button */}
       <$2 />
         onClick={() => setIsVisible(!isVisible)}
-        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover: bg-blue-700 transition-colors""
-        aria-label="Toggle performance monitor","
+        className="
+        aria-label="Toggle performance monitor"
       >,
         📊,
       </button>,
@@ -277,109 +258,58 @@ const _paintEntry = entry as PerformancePaintTiming
       {isVisible && (
   // TODO: Add parameters
 )
-        <div className="fixed bottom-20 right-4 z-50 bg-white dark: bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">,"
-          <div className="flex justify-between items-center mb-3">,"
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Monitor</h3>,"
+        <div className="fixed bottom-20 right-4 z-50 bg-white dark: bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto"flex justify-between items-center mb-3"
+            <h3 className="
             <$2 />
-<div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">"
-<div className="flex justify-between items-center mb-3">"
-<h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Monitor"
+<div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto"flex justify-between items-center mb-3"
+<h3 className="
             <$2 />
               onClick={() => setIsVisible(false)}
-              className="text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-200""
-              aria-label="Close performance monitor""
-            >,
-              ✕,
-            </button>,
-          </div>,
-,
-          {/* Metrics */}
-          <div className="space-y-2 mb-4">"
-<div className="text-sm">"
-<span className="font-medium text-gray-700 dark: text-gray-300">FCP:</span>,"
-          <div className="space-y-2 mb-4">"
-<div className="text-sm">"
-<span className="font-medium text-gray-700 dark:text-gray-300">FCP:"
-              <span className={`ml-2 ${metrics.FCP && metrics.FCP < 1800 ? 'text-green-600' : 'text-red-600'}`}>'
-                {metrics.FCP ? `${Math.round(metrics.FCP)}ms` : 'N/A'}'
-            <div className="text-sm">"
-<span className="font-medium text-gray-700 dark: text-gray-300">LCP:</span>,"
-            <div className="text-sm">"
-<span className="font-medium text-gray-700 dark:text-gray-300">LCP:"
+              className="text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"Close performance monitor""space-y-2 mb-4"
+<div className="
+<span className="font-medium text-gray-700 dark: text-gray-300"space-y-2 mb-4"
+<div className="
+<span className="font-medium text-gray-700 dark:text-gray-300"text-sm"
+<span className="
+            <div className="text-sm"font-medium text-gray-700 dark:text-gray-300"
               <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}`}>'
                 {metrics.LCP ? `${Math.round(metrics.LCP)}ms` : 'N/A'}'
-            <div className="text-sm">"
-<span className="font-medium text-gray-700 dark: text-gray-300">TTFB:</span>,"
-            <div className="text-sm">"
-<span className="font-medium text-gray-700 dark:text-gray-300">TTFB:"
+            <div className="
+<span className="font-medium text-gray-700 dark: text-gray-300"text-sm"
+<span className="
               <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}>'
-  return (<div className="performance-monitor">"
-      {/* Toggle button */}
-      <button></button>)
-        onClick={() => setIsVisible(!isVisible)}""
-        className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg,""
-  hover:bg-blue-700 transition-colors"""
-        aria-label="Toggle performance monitor""
+  return (<div className="performance-monitor""
+        className="
+  hover:bg-blue-700 transition-colors""
+        aria-label="Toggle performance monitor"
       >
         📊
       {/* Performance panel */}
       {/* TODO: Fix JSX expression */}
-              onClick={() => setIsVisible(false)}""
-              className="text-gray-500,"
-  hover:text-gray-700,
-  dark:text-gray-400,
-  dark:hove,""
-  r:text-gray-200"""
-              aria-label="Close performance monitor""
-            >
-              ✕
-          {/* Metrics */}""
-          <div className="space-y-2 mb-4"></div>""
-            <div className="text-sm"></div>""
-              < className="font-medium text-gray-700,"$2 />"
-  dark:text-gray-300">FC,"
-  P:
-              <span className={`ml-2 ${metrics.FCP && metrics.FCP < 1800 ? 'text-green-600' : 'text-red-600'}`}></span>`'
-                {metrics.FCP ? `${Math.round(metrics.FCP)}ms` : 'N/A'}'
-            </div>""
-            <div className="text-sm"></div>""
-              < className="font-medium text-gray-700,"$2 />"
-  dark:text-gray-300">LC,"
-  P:</span>`
-              <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}`}></span>`'
-                {metrics.LCP ? `${Math.round(metrics.LCP)}ms` : 'N/A'}'
-            </div>""
-            <div className="text-sm"></div>""
-              < className="font-medium text-gray-700,"$2 />"
-  dark:text-gray-300">TTF,"
-  B:</span>`
-              <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}></span>`'
-                {metrics.TTFB ? `${Math.round(metrics.TTFB)}ms` : 'N/A'}'
-          {/* Budget Status */}
-          <div className="border-t pt-3">"
-<div className="flex items-center gap-2 mb-2">"
-<span className="text-sm font-medium text-gray-700 dark: text-gray-300">Budget Status:</span>,"
-          <div className="border-t pt-3">"
-<div className="flex items-center gap-2 mb-2">"
-<span className="text-sm font-medium text-gray-700 dark:text-gray-300">Budget Status:"
-              <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}`}>'
-                {budgetStatus.passed ? '✓ PASSED' : '✗ FAILED'}'
-            {budgetStatus.violations.length > 0 && (
-  // TODO: Add parameters
-)
-              <div className="text-xs text-red-600 dark: text-red-400">,"
+              onClick={() => setIsVisible(false)}""text-gray-500,""""Close performance monitor"""
+          <div className=""
+            <div className=""
+              < className="
+  dark:text-gray-300">FC,""
+            <div className=""
+              < className="
+  dark:text-gray-300">LC,""
+            <div className=""
+              < className="
+  dark:text-gray-300">TTF,"border-t pt-3"
+<div className="
+<span className="text-sm font-medium text-gray-700 dark: text-gray-300"border-t pt-3"
+<div className="
+<span className="text-sm font-medium text-gray-700 dark:text-gray-300"text-xs text-red-600 dark: text-red-400"
                 {budgetStatus.violations.map((violation, index) => (
   // TODO: Add parameters
 )
-              <div className="text-xs text-red-600 dark:text-red-400">"
+              <div className="
                 {budgetStatus.violations.map((violation, index) => (
   // TODO: Add parameters
 )
-          {/* Budget Status */}""
-          <div className="border-t pt-3"></div>""
-            <div className="flex items-center gap-2 mb-2"></div>""
-              < className="text-sm font-medium text-gray-700,"$2 />"
-  dark:text-gray-300">Budget,"
+          {/* Budget Status */}""border-t pt-3""flex items-center gap-2 mb-2""text-sm font-medium text-gray-700,"
+  dark:text-gray-300"
   Status:</span>`
               <span className={`text-sm font-bold ${budgetStatus.passed ? 'text-green-600' : 'text-red-600'}`}>'
                 {budgetStatus.passed ? '✓ PASSED' : '✗ FAILED'}'
@@ -388,36 +318,26 @@ const _paintEntry = entry as PerformancePaintTiming
                 ))}
             )}
           {/* Connection Quality */}
-          <div className="border-t pt-3 mt-3">"
-<div className="text-sm">"
-<span className="font-medium text-gray-700 dark: text-gray-300">Connection:</span>,"
-              <span className="ml-2 text-blue-600">,"
+          <div className="border-t pt-3 mt-3"text-sm"
+<span className="
+              <span className="ml-2 text-blue-600"text-sm"
+<span className="
+              <span className="ml-2 text-blue-600"border-t pt-3 mt-3"
+<div className="
+<span className="font-medium text-gray-700 dark:text-gray-300"ml-2 text-blue-600"
                 {performanceOptimizer.getConnectionQuality().toUpperCase()}
-            <div className="text-sm">"
-<span className="font-medium text-gray-700 dark: text-gray-300">WebP Support:</span>,"
-              <span className="ml-2 text-blue-600">,"
-          <div className="border-t pt-3 mt-3">"
-<div className="text-sm">"
-<span className="font-medium text-gray-700 dark:text-gray-300">Connection:"
-              <span className="ml-2 text-blue-600">"
-                {performanceOptimizer.getConnectionQuality().toUpperCase()}
-            <div className="text-sm">"
-<span className="font-medium text-gray-700 dark:text-gray-300">WebP Support:"
-              <span className="ml-2 text-blue-600">"
-          {/* Connection Quality */}""
-          <div className="border-t pt-3 mt-3"></div>""
-            <div className="text-sm"></div>""
-              < className="font-medium text-gray-700,"$2 />"
-  dark:text-gray-300">Connectio,"
-  n:</span>""
-              <span className="ml-2 text-blue-600">"
-                {performanceOptimizer.getConnectionQuality().toUpperCase()}
-            </div>""
-            <div className="text-sm"></div>""
-              < className="font-medium text-gray-700,"$2 />"
-  dark:text-gray-300">WebP,"
-  Support:</span>""
-              <span className="ml-2 text-blue-600">"
+            <div className="
+<span className="font-medium text-gray-700 dark:text-gray-300"ml-2 text-blue-600"
+          {/* Connection Quality */}"
+          <div className="border-t pt-3 mt-3"
+            <div className="text-sm"
+              < className="font-medium text-gray-700,">Connectio,"
+  n:</span>"
+              <span className="ml-2 text-blue-600""
+            <div className=""
+              < className="
+  dark:text-gray-300">WebP,""
+              <span className="
                 {performanceOptimizer.shouldUseWebP() ? 'YES' : 'NO'}'
       )}
     </div>

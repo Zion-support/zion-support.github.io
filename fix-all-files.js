@@ -22,12 +22,10 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
 }
   // TODO: Add properties
 }
-  return(<div className="min-h-screen bg-gray-50">)"
-      <div className="container mx-auto px-4 py-8">)"
-        <h1 className="text-3xl font-bold text-gray-900 mb-6">)"
+  return(<div className="min-h-screen bg-gray-50"container mx-auto px-4 py-8"
+        <h1 className="
           ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, ' ')}'
-        <div className="bg-white rounded-lg shadow-md p-6">"
-<p className="text-gray-600">"
+        <div className="bg-white rounded-lg shadow-md p-6"text-gray-600"
             This page is under development. Content will be added soon.
   )
 }`
@@ -65,10 +63,8 @@ export default function ${fileName.charAt(0).toUpperCase() + fileName.slice(1)}(
       {children || (
   // TODO: Add parameters
 )
-        <div className="p-4">"
-<h3 className="text-lg font-semibold mb-2">"
-            ${fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/([A-Z])/g, ' $1').trim()}'
-          <p className="text-gray-600">"
+        <div className="
+<h3 className="text-lg font-semibold mb-2"text-gray-600"
             Component content will be added here.
       )}
   )
@@ -89,7 +85,6 @@ export const ${fileName} = {
   init: () => {,
     console.log('${fileName} initialized')'
   }
-}
 export default ${fileName};`
   } else if (isType) {
   // TODO: Add properties
@@ -145,8 +140,6 @@ const content = createProperComponent(filePath)
     console.error(`❌ Error fixing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;';
 const files = []
@@ -178,7 +171,6 @@ const ext = path.extname(item)
 }
             files.push(fullPath)
           }
-        }
       }
     } catch (error) {
   // TODO: Add properties
@@ -187,8 +179,6 @@ const ext = path.extname(item)
 }
       // Skip directories we can't read'
     }
-  }
-
   traverse(dir)
   return files
 }
@@ -224,8 +214,6 @@ for (const file of files) {
     console.error(`❌ Error processing ${file}:`, error.message)
     errorCount++
   }
-}
-
 console.log(`\n📊 Summary: `)
 console.log(`✅ Files fixed: ${fixedCount}`)
 console.log(`❌ Errors: ${errorCount}`)

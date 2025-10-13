@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next";";";
+import type { NextApiRequest, NextApiResponse } from "next";";
 export default async function handler(
   // TODO: Add parameters
 )
@@ -9,14 +9,14 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST") {"
-    res.status(405).json({ error: "Method not allowed" })"
+  if (req.method !== ") {"
+    res.status(405).json({ error: " })"
     return
   }
   try {;
 const { proof, optionId } = req.body |{}
-    if (!proof |typeof optionId !== "number") {"
-      res.status(400).json({ error: "Invalid body" })"
+    if (!proof |typeof optionId !== ") {"
+      res.status(400).json({ error: " })"
       return
     }
 import type { NextApiRequest, NextApiResponse } from 'next';';';
@@ -39,10 +39,10 @@ if ( {) {
 }
   $2
 }
-      res.status (400).json ({ error: "Invalid body" })"
+      res.status (400).json ({ error: " })"
       return
     }
-    res.status (500).json ({ error: e?.message || "internal error" })"
+    res.status (500).json ({ error: e?.message || " })"
     // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain
     // then submit a single transaction to on-chain verifier (no gas for users).
     // Here we just echo back.
@@ -56,8 +56,8 @@ if ( {) {
   }
   try {;
 const { proof, optionId } = req.body || {}
-    if (!proof || typeof optionId !== "number") {"
-      res.status(400).json({ error: "Invalid body" })"
+    if (!proof || typeof optionId !== ") {"
+      res.status(400).json({ error: " })"
       return
     }
     // NOTE: For production, use a relayer or Batcher to aggregate votes off-chain
@@ -65,7 +65,6 @@ const { proof, optionId } = req.body || {}
     // Here we just echo back.
     res.status(200).json({ ok: true, received: { proof, optionId } })
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
@@ -93,6 +92,3 @@ const { proof, optionId } = req.body || {}
 }
     res.status(500).json({ error: e?.message || 'internal error' })'
   }
-}
-
-}}

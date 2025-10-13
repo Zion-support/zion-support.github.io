@@ -16,7 +16,7 @@ const status = execSync('git status --porcelain', { encoding: 'utf8' })'
 }
     console.log('⚠️  Working directory not clean, committing changes...')'
     execSync('git add .', { stdio: 'inherit' })'
-    execSync('git commit -m "Auto-commit before merge"', { stdio: 'inherit' })'"
+    execSync('git commit -m "Auto-commit before merge"
   }
 
   // Switch to main branch
@@ -65,14 +65,10 @@ const prs = [
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' })'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 //Pull latest changes
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' })'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 //Process each PR
 for (const pr of prs) {/* TODO: Fix JSX expression */}
         `git show-ref --verify --quiet refs/remotes/origin/${pr.branch}`,
@@ -80,15 +76,13 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
   o: 'pipe' }'
       )
 //       } catch (error) {/* TODO: Fix JSX expression */}
-    }
-
     //Try to merge the branch
     try {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      execSync(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`)"
+      execSync(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"
         { stdio: 'inherit' }'
       )
 //       } catch (error) {
@@ -108,7 +102,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
 //           //Reset the merge
           execSync('git merge --abort', { stdio: 'inherit' })'
     try {/* TODO: Fix JSX expression */}`
-        `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,"
+        `git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"
         {/* TODO: Fix JSX expression */}
   o: 'inherit' }'
       )
@@ -120,7 +114,6 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}
 //           }
       } catch (resolveError) {/* TODO: Fix JSX expression */}
 //         }
-    }
   } catch (error) {
   // TODO: Add properties
 }
@@ -153,8 +146,8 @@ const files = conflictFiles.trim().split('\n')'
 }
   // TODO: Add properties
 }
-            execSync(`git checkout --ours "${file}"`, { stdio: 'inherit' })'"
-            execSync(`git add "${file}"`, { stdio: 'inherit' })'"
+            execSync(`git checkout --ours "${file}"
+            execSync(`git add "${file}"
           } catch (e) {
   // TODO: Add properties
 }
@@ -162,15 +155,12 @@ const files = conflictFiles.trim().split('\n')'
 }
             console.log(`⚠️  Could not auto-resolve ${file}, manual intervention needed`)
           }
-        }
       }
 
       // Complete the merge
-      execSync('git commit -m "Resolve merge conflicts - accept website audit changes"', { stdio: 'inherit' })'"
+      execSync('git commit -m "Resolve merge conflicts - accept website audit changes"
       console.log('✅ Merge conflicts resolved!')'
     }
-  }
-
   // Push to main
   console.log('📤 Pushing changes to main...')'
   execSync('git push origin main', { stdio: 'inherit' })'
@@ -190,8 +180,6 @@ const files = conflictFiles.trim().split('\n')'
   }
   } catch (error) {/* TODO: Fix JSX expression */}
 //     }
-}
-
 // Push changes
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' })'

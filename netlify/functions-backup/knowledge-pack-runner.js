@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'knowledge-pack-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'knowledge-pack-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'knowledge-pack-runner',' source: event.source || 'unknown', knowledge: {' status: 'active', packs: 0,'
         lastPack: new Date().toISOString() } }) } return result; } catch (error) {

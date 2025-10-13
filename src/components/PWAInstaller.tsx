@@ -99,7 +99,6 @@ const { outcome } = await deferredPrompt.userChoice
 }
     console.error('Error installing PWA:', error)'
   }
-  }
   if (isInstalled || !showInstallButton) {
   // TODO: Add properties
 }
@@ -110,27 +109,18 @@ const { outcome } = await deferredPrompt.userChoice
   return (
   // TODO: Add parameters
 )
-    <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">"
-<div className="flex items-start space-x-3">"
-<div className="flex-shrink-0">"
-<div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">"
-            📱
-        <div className="flex-1 min-w-0">"
-<h3 className="text-sm font-semibold mb-1">Install App"
-          <p className="text-xs text-white/90 mb-3">"
-            Install Zion Tech Group app for a better experience with offline access and faster loading.
-          <div className="flex space-x-2">"
+    <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"flex items-start space-x-3"
+<div className="
+<div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center"flex-1 min-w-0"
+<h3 className="
+          <p className="text-xs text-white/90 mb-3"flex space-x-2"
 <$2 />
               onClick={handleInstallClick}
-              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200">"
+              className="
               Install
             <$2 />
               onClick={() => setShowInstallButton(false)}
-              className="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200">"
-              Maybe later
-        <$2 />
-          onClick={() => setShowInstallButton(false)}
-          className="flex-shrink-0 text-white/70 hover: text-white transition-colors duration-200">"
+              className="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200"flex-shrink-0 text-white/70 hover: text-white transition-colors duration-200"
           ×
         </button></div>
 </div>

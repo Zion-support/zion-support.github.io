@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'docs-index-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'docs-index-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'docs-index-runner',' source: event.source || 'unknown', indexing: {' status: 'active', documents: 0,'
         lastIndex: new Date().toISOString() } }) } return result; } catch (error) {

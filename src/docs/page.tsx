@@ -240,63 +240,46 @@ const getDifficultyColor = (difficulty: string) => {
       case 'Advanced': return 'text-red-400 bg-red-500/20','
       default: return 'text-gray-400 bg-gray-500/20''
   }
-  }
   return (
   // TODO: Add parameters
 )
     <React.Fragment>
 <SEOOptimizer
-        title="Documentation - Zion Tech Group""
-        description="Comprehensive documentation for Zion Tech Group AI services. Find guides, API references, tutorials, and integration examples.""
+        title="Documentation - Zion Tech Group"
+        description="Comprehensive documentation for Zion Tech Group AI services. Find guides, API references, tutorials, and integration examples."
         keywords={['documentation', 'API docs', 'guides', 'tutorials', 'integration', 'AI services']}'
-        canonicalUrl="https://ziontechgroup.com/docs""
+        canonicalUrl="https://ziontechgroup.com/docs"
       />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Navigation />
-<main className="container mx-auto px-4 py-16 pt-24">"
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"container mx-auto px-4 py-16 pt-24"
           {/* Hero Section */}
-          <section className="text-center mb-16">"
-<h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">"
-              Documentation
-
-            <p className="text-xl text-cyan-400 mb-8">"
+          <section className="
+<h1 className="text-4 xl md: text-6 xl font-bold text-white mb-6 neon-text"text-xl text-cyan-400 mb-8"
               Everything you need to build with AI,
 
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto">"
+            <p className="
               Comprehensive guides, API references, and tutorials to help you
               integrate and optimize our AI services for your business.
           {/* Search Section */}
-          <section className="mb-16">"
-<div className="max-w-2xl mx-auto">"
-<div className="relative">"
-<Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
-<input
-                  type="text""
-                  placeholder="Search documentation...""
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none""
+          <section className="mb-16"max-w-2 xl mx-auto"
+<div className="
+<Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"text""Search documentation...""w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
           {/* Quick Links */}
-          <section className="mb-16">"
-<h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Quick Links"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">"
+          <section className="
+<h2 className="text-3 xl font-bold text-white mb-8 text-center neon-text"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
               {quickLinks.map((link, index) => (
   // TODO: Add parameters
 )
                 <$2 />
                   key={index}
                   to={link.link}
-                  className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300 group">"
+                  className="
 <link.icon className={`w-12 h-12 mx-auto mb-4 ${link.color}`} />
-<h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">"
-                    {link.title}
-                  <p className="text-gray-300">{link.description}"
+<h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors"text-gray-300"
               ))}
           {/* Categories */}
-          <section className="mb-16">"
-<h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Browse by Category"
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">"
+          <section className="
+<h2 className="text-3 xl font-bold text-white mb-8 text-center neon-text"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8"
               {docCategories.map((category) => (
   // TODO: Add parameters
 )
@@ -313,59 +296,41 @@ const getDifficultyColor = (difficulty: string) => {
                       : 'bg-slate-800 text-white hover:bg-slate-700''
                   }`}
                 >
-<category.icon className="w-6 h-6 mx-auto mb-2" />"
-<div className="text-sm font-semibold">{category.name}"
-                  <div className="text-xs opacity-75">{category.count} docs"
+<category.icon className="
+<div className="text-sm font-semibold"text-xs opacity-75"
               ))}
           {/* Documentation List */}
-          <section className="mb-16">"
-<h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Documentation"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
+          <section className="
+<h2 className="text-3 xl font-bold text-white mb-8 text-center neon-text"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
               {searchResults.map((doc) => (
   // TODO: Add parameters
 )
-                <div key={doc.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">"
-<div className="flex items-start mb-4">"
-<doc.icon className="w-8 h-8 text-cyan-400 mr-4 flex-shrink-0" />"
-<div className="flex-1">"
-<div className="flex items-center gap-2 mb-2">"
-<span className={`px-2 py-1 rounded text-xs font-semibold ${getDifficultyColor(doc.difficulty)}`}>
-                          {doc.difficulty}
-                        <span className="text-gray-400 text-xs">{doc.readTime}"
-                  <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors">"
+                <div key={doc.id} className="
+<div className="flex items-start mb-4"w-8 h-8 text-cyan-400 mr-4 flex-shrink-0"
+<div className="
+<div className="flex items-center gap-2 mb-2"text-gray-400 text-xs"
+                  <h3 className="
                     {doc.title}
-                  <p className="text-gray-300 mb-4 leading-relaxed">"
-                    {doc.description}
-                  <p className="text-gray-400 text-sm mb-4">"
+                  <p className="text-gray-300 mb-4 leading-relaxed"text-gray-400 text-sm mb-4"
                     {doc.content}
-                  <div className="flex items-center justify-between">"
+                  <div className="
 <$2 />
                       to={`/docs/${doc.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-white transition-colors">"
-                      Read More
-                      <ArrowRight className="w-4 h-4 ml-2" />"
-<span className="text-gray-500 text-xs">"
+                      className="inline-flex items-center text-cyan-400 hover:text-white transition-colors"w-4 h-4 ml-2"
+<span className="
                       {doc.category}
               ))}
           {/* Getting Started CTA */}
-          <section className="text-center">"
-<div className="cyber-card p-12 max-w-4xl mx-auto">"
-<h2 className="text-3xl font-bold text-white mb-6 neon-text">"
+          <section className="text-center"cyber-card p-12 max-w-4 xl mx-auto"
+<h2 className="
                 Ready to Get Started?
               </h2>
-<p className="text-xl text-gray-300 mb-8">"
-                Start building with our AI services today
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+<p className="text-xl text-gray-300 mb-8"flex flex-col sm: flex-row gap-4 justify-center"
 <$2 />
-                  to="/contact""
-                  className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">"
-<MessageSquare className="w-5 h-5 mr-2" />"
-                  Contact Our Team
-
-                <$2 />
-                  to="/demo""
-                  className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">"
-<Play className="w-5 h-5 mr-2" />"
+                  to=""
+                  className="
+<MessageSquare className="w-5 h-5 mr-2"/demo""cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center"
+<Play className="
                   Request Demo
 
               </div></div>

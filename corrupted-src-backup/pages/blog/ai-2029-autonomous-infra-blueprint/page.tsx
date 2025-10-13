@@ -23,12 +23,11 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 9-autonomo u s-inf r a-bluepri n t')'
         />),
       <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>'
-<h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>'
+<h1, classNam, e='te, x, t-4 xl, m, d:te, x, t-5 xl, fon, t-bold, m, b-4'>'
           Ai, 2029, Autonomous Infra, Blueprin, t
   }
           Ai, 2029, Autonomous Infra, Blueprin, t
 }
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
-}
 </div></div>
 </div></h1>

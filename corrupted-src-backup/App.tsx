@@ -45,7 +45,6 @@ function App() {
 <div>
 <Router>
 function App() {/* TODO: Fix JSX expression */}
-}
   useEffect(() => {/* TODO: Fix JSX expression */}
       //       }
   }, [])
@@ -54,14 +53,12 @@ function App() {/* TODO: Fix JSX expression */}
 <Router />
 <Suspense fallback={<div>Loading...</div>}>
 <Routes>
-<Route path="/" element={<Home />} />""
-              <Route path="/about" element={<About />} />""
-              <Route path="/services" element={<Services />} />""
-              <Route path="/blog" element={<Blog />} />""
-              <Route path="/contact" element={<Contact />} />""
-              <Route path="/team" element={<Team />} />""
-              <Route path="/privacy" element={<Privacy />} />""
-              <Route path="/terms" element={<Terms />} />"
+<Route path="/""
+              <Route path=" element={<About />} />""/services" element={<Services />} />"
+              <Route path="/blog""
+              <Route path=" element={<Contact />} />""/team" element={<Team />} />"
+              <Route path="/privacy""
+              <Route path=" element={<Terms />} />"
 </Routes>)
           </Suspense>)
         </Router>)
@@ -78,10 +75,8 @@ class ErrorBoundary extends React.Component<
 > {/* TODO: Fix JSX expression */}
   n: React.ReactNode, fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
   r: false }
-  }
   static getDerivedStateFromError() {/* TODO: Fix JSX expression */}
   r: true }
-  }
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
     //     }
   render() {
@@ -95,9 +90,8 @@ class ErrorBoundary extends React.Component<
   // TODO: Add properties
 }
       return(this.props.fallback || ()
-          <div className="min-h-screen flex items-center justify-center bg-gray-50">)"
-            <div className="text-center">)"
-              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>)"
+          <div className="
+            <div className="text-center"text-2 xl font-bold text-gray-900 mb-4"
               <;)$2 />
       return (
   // TODO: Add parameters
@@ -105,20 +99,18 @@ class ErrorBoundary extends React.Component<
         this.props.fallback || (
   // TODO: Add parameters
 )
-          <div className="min-h-screen flex items-center justify-center bg-gray-50">"
-<div className="text-center">"
-<h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong"
+          <div className="
+<div className="text-center"text-2 xl font-bold text-gray-900 mb-4"
               <$2 />
                 onClick={() => this.setState({ hasError: false })}
-                className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700""
+                className="
   componentDidCatch(erro,
   r: Error, errorInf)
   o: React.ErrorInfo) {/* TODO: Fix JSX expression */}
     //     }
   render() {/* TODO: Fix JSX expression */}
-  r: false })}""
-                className="bg-blue-600 text-white px-4 py-2 rounded,""
-  hover: bg-blue-700""
+  r: false })}""bg-blue-600 text-white px-4 py-2 rounded,"
+  hover: bg-blue-700"
               >
                 Try again
               </button></div>
@@ -126,7 +118,6 @@ class ErrorBoundary extends React.Component<
     }
     return this.props.children
   }
-}
 export default App;
 "</div></div>"
 </div></div>

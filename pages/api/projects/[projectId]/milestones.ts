@@ -8,8 +8,7 @@ const { projectId } = req && req.query as { projectId: string }
 }
   // TODO: Add properties
 }
-  }
-  if (req && req.method === "POST") {"
+  if (req && req.method === "POST"
   if (req.method === 'POST') {'
     if (!isClient(project, user)) {
   // TODO: Add properties
@@ -20,7 +19,6 @@ const { projectId } = req && req.query as { projectId: string }
     res && res.status(201).json({ milestone: created })
     return
   }
-}
 import type { NextApiRequest, NextApiResponse } from './next';';
 import { require_user  } from '../../../../utils / api / auth';';
 import {
@@ -59,8 +57,7 @@ if ( {) {
   res.setHeader('AllowGET, POST')'
   res.status(405).end('Method Not Allowed')'
 }
-}
-    res.status (404).json ({ error: "Project not found" })"
+    res.status (404).json ({ error: "Project not found"
     return
   }
   if () {) {
@@ -70,7 +67,7 @@ if ( {) {
 }
   $2
 }
-    res.status (403).json ({ error: "Forbidden" })"
+    res.status (403).json ({ error: "Forbidden"
     return
   }
   // Check condition
@@ -101,7 +98,7 @@ if ( {) {
 }
       res
         .status (403)
-        .json ({ error: "Only client (or admin) can add milestones" })"
+        .json ({ error: "Only client (or admin) can add milestones"
       return
     }
     const body = req.body as Partial < Milestone>
@@ -115,7 +112,7 @@ if ( {) {
 }
       res
         .status (400)
-        .json ({ error: "Missing required fields: title, due_date, amount_usd" })"
+        .json ({ error: "Missing required fields: title, due_date, amount_usd"
       return
     }
     const created = add_milestone (project, {
@@ -132,6 +129,4 @@ if ( {) {
     res.status (201).json ({ milestone: created })
     return
   }
-  res.set_header ("Allow", "GET, POST")"
-  res.status (405).end ("Method Not Allowed")"
-}
+  res.set_header ("Allow"GET, POST")"Method Not Allowed")"

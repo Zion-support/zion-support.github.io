@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'broken-image-scanner-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'broken-image-scanner-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'broken-image-scanner-runner',' source: event.source || 'unknown', runner: {' status: 'active',' scannerStatus: 'running'} lastRun: new Date().toISOString() } }) } return result; } catch (error) {'
     ' // console.error('Error in broken-image-scanner-runner: ') error'

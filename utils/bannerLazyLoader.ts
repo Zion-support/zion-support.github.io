@@ -6,8 +6,6 @@
  */
 
 interface BannerModule {/* TODO: Fix JSX expression */}
-}
-
 /**
  * Lazy load a banner component with retry logic
  */;
@@ -61,8 +59,6 @@ export const preloadBanner = (importF)
         })
       })
   }
-}
-
 /**
  * Banner loader with intersection observer
  */;
@@ -81,13 +77,10 @@ const _importFn = element.dataset.bannerImport
             // Load the banner when it comes into view
             eval(importFn)();
 export const createBannerLoader = () => {/* TODO: Fix JSX expression */}
-          }
         }
       })
     },
     {/* TODO: Fix JSX expression */}
-  n: '50px' }'
+  n: '50 px' }'
   )
   return {/* TODO: Fix JSX expression */}
-  }
-}

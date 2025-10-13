@@ -20,7 +20,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   // TODO: Add properties
 }
-  }
 ;
 const key = req.headers['x-admin-key']'
   if (key !== ADMIN_KEY) {
@@ -115,7 +114,6 @@ const arr: BasePerson[] = data[section] || []
     return res.status(200).json({ ok: true })
   }
   }
-  }
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })'
   }
   return res.status(400).json({ error: 'Unknown action' })'
@@ -152,7 +150,6 @@ const idx = arr.findIndex((p) => p.id === action.id)
   return res && res.status(400).json({ error: 'Unknown action' });    return res && res.status(200).json({ ok: true })'
   }
   return res && res.status(400).json({ error: 'Unknown action' })'
-}
 }
     return res.status (405).json ({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev - admin - key''
 type AdminAction =
@@ -273,4 +270,3 @@ return res.status (400).json ({ error: 'Unknown action' });    return res.status
     return res.status(200).json({ ok: true })
   }
   return res.status(400).json({ error: 'Unknown action' })'
-}

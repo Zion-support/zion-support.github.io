@@ -40,7 +40,6 @@ const accounts = await window.ethereum.request ({
 }
     throw new Error ('Failed to connect to MetaMask')'
   }
-}
 export async function getAccounts(): Promise<string[]> {
   // TODO: Add properties
 }
@@ -83,7 +82,6 @@ const accounts = await window.ethereum.request ({
 }
     return []
   }
-}
 export async function getBalance(address: string): Promise<string> {
   // TODO: Add properties
 }
@@ -127,7 +125,6 @@ const balance = await window.ethereum.request ({
 }
     throw new Error ('Failed to get balance')'
   }
-}
 export async function signMessage(message: string, address: string): Promise<string> {
   // TODO: Add properties
 }
@@ -171,7 +168,6 @@ const signature = await window.ethereum.request ({
 }
     throw new Error ('Failed to sign message')'
   }
-}
 // Extend Window interface for TypeScript
 declare global {
   // TODO: Add properties
@@ -191,7 +187,6 @@ declare global {
       request: (args: { method: string; params?: any[] }) => Promise < any>
       on: (event: string, callback: (accounts: string[]) => void) => void
   }
-}
 export type WalletProvider = any;
 export function getEthereumProvider(): WalletProvider | null {
   // TODO: Add properties
@@ -216,7 +211,6 @@ const accounts: string[] = await provider.request({ method: 'eth_requestAccounts
 }
     return null
   }
-}
 export async function getAccounts(): Promise<string[] | null> {;
 const provider = getEthereumProvider()
   if (!provider) return null
@@ -230,6 +224,4 @@ const accounts: string[] = await provider.request({ method: 'eth_accounts' })'
 }
     return null
   }
-}
-
 }}}}}}}}}}}}}}}}}))))

@@ -17,7 +17,6 @@ export class PerformanceOptimizer {
 }
       PerformanceOptimizer.instance = new PerformanceOptimizer();
 export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
-    }
     return PerformanceOptimizer.instance
   }
 
@@ -37,7 +36,6 @@ const _img = entry.target as HTMLImageElement
               img.classList.remove('lazy')'
               imageObserver.unobserve(img)
   lazyLoadImages(): void {/* TODO: Fix JSX expression */}
-            }
           }
         })
       })
@@ -46,8 +44,6 @@ const _img = entry.target as HTMLImageElement
       document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})'
       })
     }
-  }
-
   // Preload critical resources
   preloadCriticalResources(): void {;
 const _criticalResources = ['/fonts/inter.woff2', '/images/hero-bg.jpg', '/images/logo.svg']'
@@ -59,7 +55,6 @@ const _link = document.createElement('link')'
       if (resource.endsWith('.woff2')) {'
         link.crossOrigin = 'anonymous''
   preloadCriticalResources(): void {/* TODO: Fix JSX expression */}
-      }
       document.head.appendChild(link)
     })
   }
@@ -79,10 +74,8 @@ const updateScrollPosition = () => {
       // Throttled scroll handling
       ticking = false
   optimizeScroll(): void {/* TODO: Fix JSX expression */}
-    }
 ;
 const requestTick = () => {/* TODO: Fix JSX expression */}
-      }
     }
 
     window.addEventListener('scroll', requestTick, {/* TODO: Fix JSX expression */})'
@@ -108,8 +101,6 @@ const _duration = end - start,
   n: () => void): void {/* TODO: Fix JSX expression */}
   e: ${name} took ${duration.toFixed(2)}ms`)
     }
-  }
-
   // Get performance metrics
   getMetrics(): Record<string, number> {
   // TODO: Add properties
@@ -159,8 +150,6 @@ const _link = document.createElement('link')'
         link.crossOrigin = hint.crossOrigin
   }
   getMetrics(): Record<string, number> {/* TODO: Fix JSX expression */}
-  }
-
   // Add critical resource hints method
   addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
   s://fonts.googleapis.com' },'
@@ -182,8 +171,6 @@ const _link = document.createElement('link')'
   reportWebVitals(metric)
   s: unknown): void {/* TODO: Fix JSX expression */}
       //       }
-  }
-
   // Add page load measurement method
   measurePageLoad(): unknown {
   // TODO: Add properties
@@ -203,11 +190,9 @@ const _timing = window.performance.timing
       loadTime: timing.loadEventEnd - timing.navigationStart
       interactiveTime: timing.domInteractive - timing.navigationStart,
   measurePageLoad(): unknown {/* TODO: Fix JSX expression */}
-    }
 ;
 const _timing = window.performance.timing
     return {/* TODO: Fix JSX expression */}
-    }
   }
 
   // Initialize all optimizations
@@ -220,7 +205,6 @@ const _timing = window.performance.timing
     this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources())'
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll())'
   initialize(): void {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Export singleton instance;

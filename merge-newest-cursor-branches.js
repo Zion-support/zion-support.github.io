@@ -9,10 +9,10 @@ const newestCursorBranches = [
 ]
   // TODO: Add items
 ]
-  'cursor/fix-errors-and-merge-to-main-2639','
-  'cursor/fix-errors-and-merge-to-main-7 e2 b','
-  'cursor/fix-errors-and-merge-to-main-9758','
-  'cursor/fix-errors-and-merge-to-main-dfd4']'
+  '','
+  ' e2 b','
+  '','
+  '']'
 // //Function to safely execute git commands
 function safeGitCommand(command, description) {
   // TODO: Add properties
@@ -38,7 +38,6 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
   s: true, result }
   } catch (error) {/* TODO: Fix JSX expression */}
   r: error.message }
-  }
 }
 
 //Function to check if branch exists
@@ -61,7 +60,6 @@ function branchExists(branchName) {/* TODO: Fix JSX expression */}
     )
     return true
   } catch {/* TODO: Fix JSX expression */}
-  }
 }
 
 //Ensure we're on main branch'
@@ -90,7 +88,7 @@ for (const branch of newestCursorBranches) {/* TODO: Fix JSX expression */}
   }
 
 //   //Try to merge the branch;
-const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`)"
+const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"
     `Merge ${branch}`
   )
   if (mergeResult.success) {
@@ -114,7 +112,7 @@ const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge
       status: 'conflict'),'
       error: mergeResult.error),
 //   //Try to merge the branch;`;
-const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`,`"
+const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"
     `Merge ${branch}`)
   )
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
@@ -124,8 +122,6 @@ const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge
     results.push({/* TODO: Fix JSX expression */})
     })
   }
-}
-
 //Run system checks
 // const typeCheck = safeGitCommand('pnpm run type-check')'
   'TypeScript type checking''
@@ -158,8 +154,6 @@ const buildCheck = safeGitCommand('pnpm run,'
 if (mergedCount > 0) {/* TODO: Fix JSX expression */}
 //     } else {/* TODO: Fix JSX expression */}
 //     }
-}
-
 //Generate comprehensive report;
 const report = {
   // TODO: Add properties

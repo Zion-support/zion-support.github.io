@@ -11,7 +11,6 @@ const features = [],
 )
     {// TODO: Add content
   }
-}
   ico,
   n: Eye,
       titl,
@@ -97,98 +96,71 @@ const PagePage: React.FC = () => {
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Navigation />
-<main className="container mx-auto px-4 py-16 pt-24">"
-<section className="text-center mb-16">"
-<h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">"
-// AI Computer Vision
-          </h1>
-<p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"container mx-auto px-4 py-16 pt-24"
+<section className="
+<h1 className="text-5 xl md:text-6 xl font-bold text-white mb-6 cyber-text-3 d neon-pulse"text-xl text-cyan-400 mb-8 font-medium neon-pulse"
 // Advanced Visual Intelligence Solutions,
           </p>
-<p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">"
+<p className="
 Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
             our AI-powered visual intelligence solutions help you see and understand the world like never before.
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
-<$2 />
-              href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300""
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"/contact" className="
 // >
 //               Get Started
           </a>
-              href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300""
-<Eye className="w-5 h-5" />"
+              href="tel:+13024640950"flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+<Eye className="
               +1 302 464 0950,
           </div></section>
         {/* Features Section */}
-        <section className="mb-16"></section>""
-          < className="text-3xl,"$2 />"
-  md: text-4xl font-bold text-white mb-12 text-center neon-text">"
+        <section className="mb-16"
+          < className="text-3 xl,">"
 </h2>
 // Core Capabilities,
-          </h2>""
+          </h2>"
           < className="grid grid-cols-1,$2 />"
-  md:grid-cols-2,""
-  lg:grid-cols-4 gap-8">"
-            {features.map((feature, index) => ()}""
-          < key={index} className="cyber-card p-6,"$2 />"
-  hover:scale-105 transition-all duration-300">"
-</div>""
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"></div>""
-                  <feature.icon className="w-8 h-8 text-white" /></feature>""
-                <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">"
+  lg:grid-cols-4 gap-8">""
+          < key={index} className="
+  hover:scale-105 transition-all duration-300">""
+                <div className=""
+                  <feature.icon className=""
+                <h3 className="
                   {feature.title}
-                </h3>""
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">"
-                  {feature.description}""
-                <ul className="space-y-2">"
-                  {feature.benefits.map((benefit, benefitIndex) => ()}""
-          <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>""
-                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />"
+                </h3>""text-gray-300 mb-6 text-center text-sm leading-relaxed"
+                  {feature.description}"
+                <ul className="space-y-2""
+          <li key={benefitIndex} className=""
+                      <CheckCircle className="
                       {benefit}
                   ))}
         {/* Applications Section */}
-            Industry Applications;""
-          < className="grid grid-cols-1,"$2 />"
-  md:grid-cols-2 gap-8">"
-            {applications.map((application, index) => ()}""
-          < key={index} className="quantum-card p-8,"$2 />"
-  hover:scale-105 transition-all duration-300">"
-</div>""
-                <div className="flex items-center mb-6"></div>""
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4"></div>""
-                    <application.icon className="w-6 h-6 text-white" /></application>""
-                  <h3 className="text-xl font-bold text-white neon-text">"
-                    {application.title}""
-                <p className="text-gray-300 mb-6 leading-relaxed">"
-                  {application.description}""
-                <div className="space-y-2"></div>""
-                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Use,"
+            Industry Applications;""grid grid-cols-1,"
+  md:grid-cols-2 gap-8"
+            {applications.map((application, index) => ()}""quantum-card p-8,"
+  hover:scale-105 transition-all duration-300"
+</div>""flex items-center mb-6""w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4""w-6 h-6 text-white""text-xl font-bold text-white neon-text"
+                    {application.title}"
+                <p className="text-gray-300 mb-6 leading-relaxed""
+                <div className=""
+                  <h4 className="
   Cases:
-                  {application.useCases.map((useCase, useCaseIndex) => ()}""
-          <div key={useCaseIndex} className="flex items-center text-sm text-gray-300"></div>""
-                      <ArrowRight className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />"
+                  {application.useCases.map((useCase, useCaseIndex) => ()}""flex items-center text-sm text-gray-300""w-4 h-4 text-green-400 mr-2 flex-shrink-0"
                       {useCase}
 {/* Pricing Section */}
-            Choose Your Plan;""
-          < className="grid grid-cols-1,"$2 />"
-  md:grid-cols-3 gap-8 max-w-6xl mx-auto">"
+            Choose Your Plan;"
+          < className="grid grid-cols-1,">"
             {pricing.map((plan, index) => ()}
           < key={index} className={/* TODO: Fix JSX expression */}$2 />
   hover:scale-105 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : '}`}>''
-                {plan.popular && ()}""
-          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>""
-                    <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold">"
-Most Popular
-                )}""
-                <div className="text-center mb-6"></div>""
-                  <h3 className="text-2xl font-bold text-white mb-2 neon-text">{plan.name}</h3>""
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{plan.price}</div>""
-                  <p className="text-gray-400 text-sm">{plan.description}</p>""
-                <ul className="space-y-3 mb-8">"
-                  {plan.features.map((feature, featureIndex) => ()}""
-          <li key={featureIndex} className="flex items-center text-sm text-gray-300"></li>""
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />"
+                {plan.popular && ()}"
+          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"
+                    <div className="bg-cyan-400 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold""
+                <div className=""
+                  <h3 className=""
+                  <div className=""
+                  <p className=""
+                <ul className="
+                  {plan.features.map((feature, featureIndex) => ()}""flex items-center text-sm text-gray-300""w-4 h-4 text-green-400 mr-3 flex-shrink-0"
                       {feature}`
                   className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
   // TOD,
@@ -201,17 +173,13 @@ Most Popular
   hover:text-slate-900'`'
                   }`}
         {/* CTA Section */}
-          ""
-          <section className="text-center"></section>""
-          <div className="cyber-card p-12 max-w-4xl mx-auto"></div>""
-            < className="text-3xl,"$2 />"
-  md:text-4xl font-bold text-white mb-6 neon-text">"
-Ready to See the Future?""
-            <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">"
-              Transform your business with AI-powered computer vision solutions that see, understand, and act.
-                Start Your Vision Journey
-                href="/demo" className="flex items-center gap-2 border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover: bg-purple-400 hover:text-slate-900 transition-all duration-300""
-                <Camera className="w-5 h-5" />"
+          "
+          <section className="text-center"
+          <div className="cyber-card p-12 max-w-4 xl mx-auto"
+            < className="text-3 xl,">"
+Ready to See the Future?"
+            <p className="text-lg text-gray-300 mb-8 max-w-2 xl mx-auto"/demo" className="
+                <Camera className="w-5 h-5"
                 Request Demo
       </main>
 <Footer/ />

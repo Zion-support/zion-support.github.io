@@ -69,7 +69,6 @@ const fixes = [
 const firstTag = match.match(/<\/(\w+)>/)[1]
       return `</${firstTag}>`
     }
-  }
 ]
 function fixFile(filePath) {
   // TODO: Add properties
@@ -90,8 +89,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
         content = newContent
         modified = true
       }
-    }
-
     if (modified) {
   // TODO: Add properties
 }
@@ -111,8 +108,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
     console.error(`Error fixing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Main function
 async function main() {
   // TODO: Add properties
@@ -157,8 +152,6 @@ let fixedCount = 0
 }
       fixedCount++
     }
-  }
-
   console.log(`Fixed ${fixedCount} files`)
 }
 

@@ -28,8 +28,6 @@ const result = execSync(command, { )
     console.log(`❌ ${description} failed: ${error.message}`)
     return null
   }
-}
-
 // List of important branches to merge;
 const importantBranches = [
   // TODO: Add items

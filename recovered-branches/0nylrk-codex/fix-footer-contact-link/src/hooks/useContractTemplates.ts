@@ -1,10 +1,10 @@
-import { useState } from "react";";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";";
-import { supabase } from "@/integrations/supabase/client";";
-import { useToast } from "@/hooks/use-toast";";
-import { useAuth } from "@/hooks/useAuth";";
-import { ContractTemplate } from "@/types/contracts";";
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";";";
+import { useState } from "react";
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { ContractTemplate } from "@/types/contracts";
+import { ContractFormValues } from "@/components/contracts/components/ContractForm";";
 export function useContractTemplates() {;
 const { user, isAuthenticated } = useAuth();
 const queryClient = useQueryClient();
@@ -84,7 +84,7 @@ const createTemplate = useMutation({
 }
   // TODO: Add properties
 }
-      if (!user) throw new Error("User not authenticated")"
+      if (!user) throw new Error(")"
       setIsLoading(true)
       try {
   // TODO: Add properties
@@ -143,9 +143,9 @@ const { data, error } = await supabase
 }
   // TODO: Add properties
 }
-        title: "Template saved","
-        description: "Contract template has been successfully saved."})"
-        description: "Contract template has been successfully saved.","
+        title: ","
+        description: "})"
+        description: ","
       })
     },
     onError: (error: Error) => {
@@ -153,16 +153,16 @@ const { data, error } = await supabase
 }
   // TODO: Add properties
 }
-      console.error("Error saving template:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Failed to save template","
-        description: "There was an error saving your contract template.","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: ","
+        variant: "})"
+        variant: ","
       })
     }
   })
@@ -195,7 +195,7 @@ const updateTemplate = useMutation({
 }
   // TODO: Add properties
 }
-      if (!user) throw new Error("User not authenticated")"
+      if (!user) throw new Error(")"
       setIsLoading(true)
       try {
   // TODO: Add properties
@@ -257,9 +257,9 @@ const { data, error } = await supabase
 }
   // TODO: Add properties
 }
-        title: "Template updated","
-        description: "Contract template has been successfully updated."})"
-        description: "Contract template has been successfully updated.","
+        title: ","
+        description: "})"
+        description: ","
       })
     },
     onError: (error: Error) => {
@@ -267,16 +267,16 @@ const { data, error } = await supabase
 }
   // TODO: Add properties
 }
-      console.error("Error updating template:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Failed to update template","
-        description: "There was an error updating your contract template.","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: ","
+        variant: "})"
+        variant: ","
       })
     }
   })
@@ -291,7 +291,7 @@ const deleteTemplate = useMutation({
 }
   // TODO: Add properties
 }
-      if (!user) throw new Error("User not authenticated")"
+      if (!user) throw new Error(")"
       setIsLoading(true)
       try {;
 const { error } = await supabase
@@ -323,9 +323,9 @@ const { error } = await supabase
 }
   // TODO: Add properties
 }
-        title: "Template deleted","
-        description: "Contract template has been successfully deleted."})"
-        description: "Contract template has been successfully deleted.","
+        title: ","
+        description: "})"
+        description: ","
       })
     },
     onError: (error: Error) => {
@@ -333,16 +333,16 @@ const { error } = await supabase
 }
   // TODO: Add properties
 }
-      console.error("Error deleting template:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Failed to delete template","
-        description: "There was an error deleting your contract template.","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: ","
+        variant: "})"
+        variant: ","
       })
     }
   })
@@ -357,7 +357,7 @@ const setDefaultTemplate = useMutation({
 }
   // TODO: Add properties
 }
-      if (!user) throw new Error("User not authenticated")"
+      if (!user) throw new Error(")"
       setIsLoading(true)
       try {
   // TODO: Add properties
@@ -400,9 +400,9 @@ const { error } = await supabase
 }
   // TODO: Add properties
 }
-        title: "Default template set","
-        description: "Default contract template has been updated."})"
-        description: "Default contract template has been updated.","
+        title: ","
+        description: "})"
+        description: ","
       })
     },
     onError: (error: Error) => {
@@ -410,16 +410,16 @@ const { error } = await supabase
 }
   // TODO: Add properties
 }
-      console.error("Error setting default template:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Failed to set default template","
-        description: "There was an error setting your default contract template.","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: ","
+        variant: "})"
+        variant: ","
       })
     }
   })
@@ -435,5 +435,4 @@ const { error } = await supabase
     updateTemplate,
     deleteTemplate,
     setDefaultTemplate
-  }
-}
+  

@@ -9,7 +9,6 @@ export class AppError extends Error {// Enhanced Error Handler;}}export class Ap
     this.timestamp = new Date().toISOString();
     Error.captureStackTrace(this, this.constructor);
   }
-}
 export const errorHandler = (error: AppError | Error) => {,}const isDevelopment = process.env.NODE_ENV === 'development';';
 const appError = error instanceof AppError ? error : new AppError(error.message);
 .toISOString();
@@ -19,13 +18,12 @@ const appError = error instanceof AppError ? error : new AppError(error.message)
     statusCode: appError.statusCode || 500;,}return {}}message: appError.isOperational ? appError.message : 'An unexpected error occurred','
     statusCode: appError.statusCode || 500,
   }
-}
 export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {,
     ,
   Promise.resolve(fn(req, res, next)).catch((error: unknown) => {,
     if (next && typeof next === 'function') {,}export const asyncHandler = (fn: (req: unknown, res: unknown, next: unknown) => unknown) => (req: unknown, res: unknown, next: unknown) => {,}Promise.resolve(fn(req, res, next)).catch((error: unknown) => {,}if (next && typeof next === 'function') {}next(error);'
 // Enhanced Error Handler;
-export class AppError extends Error {/* TODO: Fix JSX expression */,}}}
+export class AppError extends Error {/* TODO: Fix JSX expression */,}}
 }
 export const errorHandler = ();
 const appError = error instanceof AppError ? error : new AppError(error.message)
@@ -34,7 +32,7 @@ message: appError.message,
     timestamp: new Date().toISOString(),) => {return($3;)
   )}statusCode: appError.statusCode || 500,}
   })
-  return {/* TODO: Fix JSX expression */,}}}
+  return {/* TODO: Fix JSX expression */,}}
 }
 export const asyncHandler = (f,
   n: (re,
@@ -43,5 +41,4 @@ export const asyncHandler = (f,
   t: unknown) => unknown) => (re,
   q: unknown, re,
   s: unknown, nex);
-  t: unknown) => {/* TODO: Fix JSX expression */,}}
-}
+  t: unknown) => {/* TODO: Fix JSX expression */,}

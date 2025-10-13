@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'link-and-health-scheduler'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'link-and-health-scheduler'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'link-and-health-scheduler',' source: event.source || 'unknown', scheduling: {' status: 'active', linksScheduled: 0, healthChecks: 0,'
         lastSchedule: new Date().toISOString() } }) } return result; } catch (error) {

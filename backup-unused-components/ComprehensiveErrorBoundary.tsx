@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface ComprehensiveErrorBoundaryProps {
   className?: string;
   children?: React.ReactNode;
@@ -134,8 +132,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'production') {
       this.reportError(error, errorInfo, errorId);
     }
-  }
-
   private reportError = async (error: Error, errorInfo: ErrorInfo, errorId: string) => {
     try {
       const errorReport = {
@@ -206,8 +202,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
     if (this.retryTimeoutId) {
       clearTimeout(this.retryTimeoutId);
     }
-  }
-
   render() {
     if (this.state.hasError) {
       // Use custom fallback if provided
@@ -221,164 +215,59 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
       // Default error UI;
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4"></div>
-          <div className="max-w-2xl mx-auto text-center"></div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"></div>
-              <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center"></div>
-                <AlertTriangle className="w-8 h-8 text-red-400" />
-  </div>
-              <h1 className="text-3xl font-bold text-white mb-4"></h1>
+                <AlertTriangle className="w-8 h-8 text-red-400"></h1>
                 Oops! Something went wrong;
               </h1>
-              <p className="text-gray-300 mb-6 leading-relaxed"></p>
-                We're sorry, but something unexpected happened. Our team has been notified;
-                and is working to fix the issue. In the meantime, you can try refreshing;
-                the page or returning to the homepage.
-              </p>
-
-                <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left"></div>
-                  <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                  <p className="text-red-300 text-sm font-mono break-all"></p>
+              <p className="text-gray-300 mb-6 leading-relaxed"></div>
+                  <h3 className="text-red-400 font-semibold mb-2"></p>
                     {this.state.error.message}
                   </p>
 
-                    <details className="mt-2"></details>
-                      <summary className="text-red-400 cursor-pointer text-sm"></summary>
+                    <details className="mt-2"></summary>
                         Stack Trace;
                       </summary>
-                      <pre className="text-red-300 text-xs mt-2 overflow-auto"></pre>
-                        {this.state.error.stack}
-                      </pre>
-                    </details>
-  </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6"></div>
+                      <pre className="text-red-300 text-xs mt-2 overflow-auto"></div>
                 <button;
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-red-500/20">
             {/* Error Icon */}
-            <div className="w-20 h-20 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
-              <AlertTriangle className="w-10 h-10 text-red-400" />
+            <div className="w-20 h-20 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center" />
             </div>
 
             {/* Error Title */}
-            <h1 className="text-3xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
-
-            {/* Error Message */}
-            <p className="text-gray-300 mb-6 text-lg">
+            <h1 className="text-3 xl font-bold text-white mb-4">
               We're sorry, but something unexpected happened. Our team has been notified.
             </p>
 
             {/* Error Details (Development only) */}
             {process.env.NODE_ENV === 'development' && error && (
-              <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+              <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 mb-6 text-left">Error Details:</h3>
                 <p className="text-red-300 text-sm mb-2">
-                  <strong>Message:</strong> {error.message}
-                </p>
-                <p className="text-red-300 text-sm">
                   <strong>Error ID:</strong> {errorId}
                 </p>
                 {error.stack && (
-                  <details className="mt-2">
-                    <summary className="text-red-400 cursor-pointer text-sm">Stack Trace</summary>
+                  <details className="mt-2">Stack Trace</summary>
                     <pre className="text-red-300 text-xs mt-2 overflow-auto max-h-32">
-                      {error.stack}
-                    </pre>
-                  </details>
-                )}
-              </div>
-            )}
-
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {isRetryable && (
                 <button
                   onClick={this.handleRetry}
                   className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-                <button>
-  onClick={this.handleRetry}>
-  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
                 >
-                  <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
-                  Try Again;
-                </button>
-                <button;
-                  onClick={this.handleReload}
-                  className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
+                  <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform"
                 <button>
   onClick={this.handleReload}>
-  className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
-                >
-                  <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
+  className="border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group" />
                   Reload Page;
                 </button>
   </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <Link;
-                  to="/"
-                  className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
-                <Link>
-  to="/">
-  className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
-                >
-                  <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"
+                  className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group">
+  className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group" />
                   Go Home;
                 </Link>
                 <Link;
-                  to="/contact"
-                  className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
-                <Link>
-  to="/contact">
-  className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"
-                >
-                  <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                  Contact Support;
-                </Link>
-  </div>
-                <p className="text-gray-400 text-sm mt-6"></p>
-                  Error ID: {this.state.errorId}
-                </p>
-  </div>
-  </div>
-  </div>
-                  <RefreshCw className="w-5 h-5" />
-                  Try Again
-                </button>
-              )}
-
-              <button
-                onClick={this.handleReload}
-                className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-              >
-                <RefreshCw className="w-5 h-5" />
-                Reload Page
-              </button>
-
-              <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
-              >
-                <Home className="w-5 h-5" />
-                Go Home
-              </button>
-            </div>
-
-            {/* Report Bug Button */}
-            <div className="mt-6 pt-6 border-t border-gray-600">
-              <button
-                onClick={this.handleReportBug}
-                className="flex items-center justify-center gap-2 mx-auto text-gray-400 hover:text-white transition-colors"
-              >
-                <Bug className="w-4 h-4" />
-                Report this issue
-              </button>
-            </div>
-
-            {/* Error ID for support */}
-            {errorId && (
-              <div className="mt-4 text-xs text-gray-500">
+                  to="/contact"bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"/contact"bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group"w-5 h-5 mr-2 group-hover:scale-110 transition-transform"text-gray-400 text-sm mt-6"w-5 h-5"flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"w-5 h-5"flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"w-5 h-5"mt-6 pt-6 border-t border-gray-600"flex items-center justify-center gap-2 mx-auto text-gray-400 hover:text-white transition-colors"w-4 h-4"mt-4 text-xs text-gray-500">
                 Error ID: {errorId}
               </div>
             )}
@@ -389,10 +278,7 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
-}
-
 export default ComprehensiveErrorBoundary;
 </State>
 export default ComprehensiveErrorBoundary;
-=======
 

@@ -1,6 +1,4 @@
 import React from 'react';
-
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -23,14 +21,12 @@ class RouteFixer {
   // Get all existing routes from App.tsx
   getExistingRoutes() {
     const content = fs.readFileSync(this.appPath, 'utf8');
-    const routeRegex = /<Route\s+path="([^"]+)"\s+element={<[^>]+>}\s*\/>/g;
+    const routeRegex = /<Route\s+path="([^"\s+element={<[^>]+>}\s*\/>/g;
     let match;
 
     while ((match = routeRegex.exec(content)) !== null) {
       this.existingRoutes.add(match[1]);
     }
-  }
-
   // Get all pages from app directory
   getAllPages() {
     const pages = [];
@@ -49,7 +45,6 @@ class RouteFixer {
           const route = basePath ? `/${basePath}` : '/';
           pages.push(route);
         }
-      }
     };
 
     scanDirectory(this.appDir);
@@ -81,13 +76,7 @@ class RouteFixer {
     const importPath = route === '/' ?
 //       './app/page' :
       `./app${route}/page`;
-
-    return `const ${componentName} = React.lazy(() => import("${importPath}"));`;
-  }
-
-  // Generate route element
-  generateRouteElement(route, componentName) {
-    return `                  <Route path="${route}" element={<${componentName} />} />`;
+return `const ${componentName} = React.lazy(() => import("${importPath}"${route}" element={<${componentName} />} />`;
   }
 
   // Fix routes in App.tsx
@@ -101,8 +90,6 @@ class RouteFixer {
       if (!this.existingRoutes.has(page)) {
         this.missingRoutes.push(page);
       }
-    }
-
     if (this.missingRoutes.length === 0) {
       return;
     }
@@ -112,7 +99,7 @@ class RouteFixer {
 
     // Add import statements for missing routes
     const importStatements = [];
-    const routeElements = [];
+const routeElements = [];
 
     for (const route of this.missingRoutes) {
       const componentName = this.generateComponentName(route);
@@ -141,6 +128,4 @@ class RouteFixer {
 
     this.missingRoutes.forEach(route => {
       });
-  }
-=======
-}
+  

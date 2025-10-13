@@ -62,14 +62,12 @@ const metrics: PerformanceMetrics = {
 const,
   PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
- }
  setMetrics(metrics)
  // Check if performance is optimized;
 const isGoodPerformance =
  metrics.firstContentfulPaint < 1500 &&
  metrics.largestContentfulPaint < 2500
  setIsOptimized(isGoodPerformance)
- }
  }
  // Measure after page load
  if (document.readyState === 'complete') {'
@@ -100,7 +98,6 @@ const link = document.createElement('link')'
  document.head.appendChild(link);origin/
  if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}'
  } else {/* TODO: Fix JSX expression */}
- }
  // Preload critical resources;
 const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
  })
@@ -109,16 +106,15 @@ const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
 const optimizeImages = () => {;
 const images = document.querySelectorAll('img')'
  images.forEach(img => {)
- // Add loading="lazy" to non-critical images;)"
+ // Add loading="lazy"
  if (!img.hasAttribute('loading')) {'
  img.setAttribute('loading', 'lazy')'
  }
- // Add decoding="async" for better performance"
+ // Add decoding="async"
  if (!img.hasAttribute('decoding')) {'
  img.setAttribute('decoding', 'async');';
 const optimizeImages = () => {/* TODO: Fix JSX expression */}
- }
- // Add decoding="async" for better performance"
+ // Add decoding="async"
  if (!img.hasAttribute('decoding')) {/* TODO: Fix JSX expression */}'
  }
  })
@@ -141,7 +137,6 @@ const observer = new IntersectionObserver(
 }
  entry.target.classList.add('animate-fade-in');';
 const setupIntersectionObserver = () => {/* TODO: Fix JSX expression */}
- }
  })
  },
  {/* TODO: Fix JSX expression */}
@@ -166,6 +161,5 @@ const elements = document.querySelectorAll('.animate-on-scroll')'
 }
  // Cleanup if needed
  return () => {/* TODO: Fix JSX expression */}
- }
  }, [])
 }}}"

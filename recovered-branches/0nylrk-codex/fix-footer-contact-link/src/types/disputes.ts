@@ -41,7 +41,6 @@ export interface Dispute {
     display_name: string
     avatar_url?: string
   }
-}
 export interface DisputeMessage {
   // TODO: Add properties
 }
@@ -61,7 +60,6 @@ export interface DisputeMessage {
     display_name: string
     avatar_url?: string
   }
-}
 export interface DisputeAttachment {
   // TODO: Add properties
 }
@@ -98,4 +96,3 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {
   contract_terms: 'Contract Terms Disagreement','
   other: 'Other Issue'}'
   other: 'Other Issue','
-}

@@ -28,7 +28,7 @@ const diff = execSync('git diff HEAD origin/main --name-only', { encoding: 'utf8
   // Try to merge with origin/main
   console.log('🔄 Attempting to merge with origin/main...'),'
   try {,
-    execSync('git merge origin/main --no-ff -m "feat: Sync with latest main branch changes"', { stdio: 'inherit' })'"
+    execSync('git merge origin/main --no-ff -m "feat: Sync with latest main branch changes"
     console.log('✅ Successfully merged with origin/main')'
   } catch (mergeError) {
   // TODO: Add properties
@@ -51,7 +51,7 @@ const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encodin
   // TODO: Add properties
 }
         execSync('git add .', { stdio: 'inherit' })'
-        execSync('git commit -m "feat: Resolve merge conflicts with main branch"', { stdio: 'inherit' })'"
+        execSync('git commit -m "feat: Resolve merge conflicts with main branch"
         console.log('✅ Conflicts resolved and committed')'
       } catch (resolveError) {
   // TODO: Add properties
@@ -62,7 +62,6 @@ const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encodin
         console.log('Manual intervention needed for:', conflictFiles)'
         throw resolveError
   }
-    }
   }
 
   // Push changes
@@ -76,4 +75,4 @@ const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encodin
 }
     console.error('❌ Error syncing with main:', error.message)'
   process.exit(1)
-  }
+  

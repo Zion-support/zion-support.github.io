@@ -149,86 +149,47 @@ const useCases = [
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Iot Platform - Zion Tech Group</title>
-        <meta name="description" content="Advanced iot platform solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-        </div>
-      </div>
-    </>
-  );
-                  ))}
-                </ul></div>
-            ))}
-
-          </div></div>
-</section></section>
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">"
-              IoT Use Cases
-              <p className="text-xl text-gray-300">Section description</p></div>"
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" content="Advanced iot platform solutions by Zion Tech Group"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600 mb-8"max-w-7 xl mx-auto"
+<div className="
+<h2 className="text-4 xl font-bold text-white mb-4"text-xl text-gray-300"
 </div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2>IoT Use Cases;</h2></h2>
-<p>Our IoT platform supports a wide range of industries and applications,</p>
-              from smart manufacturing to connected cities.
-            </p></div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,"
-            {useCases.map((useCase, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,"
-                <div className="text-4xl mb-4">{useCase.icon</div>}</div>"
-<h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>"
-<p className="text-gray-300">{useCase.description</p>}</p></div>"
+<div className="
+<div className="text-center mb-16"grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"
+            {useCases.map((useCase, index) => (} <div key={index}className="
+                <div className="text-4 xl mb-4"text-xl font-semibold text-white mb-3"
+<p className="
             ))}
           </div></div>
 </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">IoT Use Cases"
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
+      <section className="py-20 px-4"max-w-7 xl mx-auto"
+<div className="
+<h2 className="text-4 xl font-bold text-white mb-4"text-xl text-gray-300 max-w-3 xl mx-auto"
               Our IoT platform supports a wide range of industries and applications,
               from smart manufacturing to connected cities.
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
+          <div className="
             {useCases.map((useCase, index) => (
   // TODO: Add parameters
 )
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">"
-<div className="text-4xl mb-4">{useCase.icon}"
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}"
-                <p className="text-gray-300">{useCase.description}"
-            ))}
-      {/* Benefits Section */}
-      <section className="py-20 px-4"></section>"
-< className="$2 /></div>"
-<div className="text-center mb-16"></div>"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-              <p className="text-xl text-gray-300">Section description</p></div>"
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"text-4 xl mb-4"
+                <h3 className="
+                <p className="text-gray-300"py-20 px-4"
+< className="text-center mb-16"></div>"text-4 xl font-bold text-white mb-4"
+              <p className="
 </div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
+<div className="max-w-7 xl mx-auto"text-center mb-16"
 <h2>Why Choose Our IoT Platform?</h2></h2>
 <p>Experience the benefits of a comprehensive IoT platform designed for scale,</p>
               security, and performance.
             </p></div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"></div>,"
+<div className="
             {benefits.map((benefit, index) => (
   // TODO: Add parameters
 )
-                <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>"
-<div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>"
+                <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"
 <CheckCircle />
-<h3 className="text-lg font-semibold text-white">{benefit}</h3></div>"
+<h3 className="
             ))}
           </div></div>
 </section>
@@ -252,42 +213,27 @@ export default IotPlatformPage;
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
               Comprehensive solution for your business requirements.
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+          <div className="bg-white rounded-lg shadow-md p-6">Feature 2</h3>
             <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
               Scalable and secure implementation.
             </p>
           </div>
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Iot Platform
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <h1 className="text-4 xl font-bold text-gray-900 mb-6">
             Advanced iot platform solutions by Zion Tech Group.
           </p>
         </div>
       </div>
     </div>
   );
-}

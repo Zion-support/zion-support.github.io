@@ -51,8 +51,8 @@ const mockWebhooks: Webhook[] = [
           url: 'https://api.example.com/webhooks/user-registration','
           events: ['user.created', 'user.updated'],'
           isActive: true,
-          createdAt: '2024-01-01T00:00:00Z','
-          lastTriggered: '2024-01-15T10:30:00Z''
+          createdAt: '2024-01-01 T00:00:00 Z','
+          lastTriggered: '2024-01-15 T10:30:00 Z''
         },
         {
   // TODO: Add properties
@@ -64,8 +64,8 @@ const mockWebhooks: Webhook[] = [
           url: 'https://api.example.com/webhooks/payment','
           events: ['payment.completed', 'payment.failed'],'
           isActive: true,
-          createdAt: '2024-01-02T00:00:00Z','
-          lastTriggered: '2024-01-14T15:45:00Z''
+          createdAt: '2024-01-02 T00:00:00 Z','
+          lastTriggered: '2024-01-14 T15:45:00 Z''
         }
       ];
       setWebhooks(mockWebhooks);

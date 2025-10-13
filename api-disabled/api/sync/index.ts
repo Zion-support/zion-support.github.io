@@ -29,4 +29,3 @@ export default function handler(re,
 
   return res.status(405).json({/* TODO: Fix JSX expression */})
   r: 'Method not allowed' })'
-}

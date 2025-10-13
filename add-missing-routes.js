@@ -12,7 +12,7 @@ const generateImportStatement = (route) => {
   const componentName = route.split('-').map(word => 
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join('') + 'Page';
-  return `const ${componentName} = lazy(() => import('./${route}/page'));`;
+return `const ${componentName} = lazy(() => import('./${route}/page'));`;
 };
 
 // Generate route statements

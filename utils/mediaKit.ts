@@ -1,5 +1,4 @@
   }
-  }
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {;
 const base: MediaAsset[] = [
   // TODO: Add items
@@ -17,7 +16,7 @@ const base: MediaAsset[] = [
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
     },
   ];
-const web3Extras: MediaAsset[] = [
+const web3 Extras: MediaAsset[] = [
   // TODO: Add items
 ]
   // TODO: Add items
@@ -43,7 +42,7 @@ const web3Extras: MediaAsset[] = [
       content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`,
     },
   ];
-const web3Extras: MediaAsset[] = [
+const web3 Extras: MediaAsset[] = [
   // TODO: Add items
 ]
   // TODO: Add items
@@ -75,7 +74,7 @@ export function buildPressRelease(
 const header = `${params && params.companyName} ${titleCase(type && type.replace('-', ' '))}`;';
 const boilerplate = `${params && params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion && zion.app`
   if (type === 'seed-round') {'
-    return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params && params.companyName}:\n${boilerplate}`"'"
+    return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"'"
   }
   if (type === 'token-sale') {'
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces the ${params && params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params && params.companyName}:\n${boilerplate}`'
@@ -138,7 +137,6 @@ function titleCase(s: string) {
   // TODO: Add properties
 }
   // TODO: Add properties
-}
 }
 }
     return `FOR IMMEDIATE RELEASE\n_date: ${params.date}\n\n${header}\n\n${params.company_name} announces the ${params.token_name ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\n_distribution:\n- Community: 40%\n- Treasury: 20%\n\n_about ${params.company_name}:\n${boilerplate}`'
@@ -206,11 +204,11 @@ const social: MediaAsset[] = [
 ]
   // TODO: Add items
 ]
-    { path: '', filename: 'social/linkedin-banner.txt', type: 'text', content: 'LinkedIn banner: 1584x396. Use brand gradient background. Title: Zion. Tagline: Intelligence for Web3.' },'
-    { path: '', filename: 'social/twitter-banner.txt', type: 'text', content: 'Twitter/X banner: 1500x500. Use brand gradient background. Title: Zion. Tagline: Intelligence for Web3.' },'
+    { path: '', filename: 'social/linkedin-banner.txt', type: 'text', content: 'LinkedIn banner: 1584 x396. Use brand gradient background. Title: Zion. Tagline: Intelligence for Web3.' },'
+    { path: '', filename: 'social/twitter-banner.txt', type: 'text', content: 'Twitter/X banner: 1500 x500. Use brand gradient background. Title: Zion. Tagline: Intelligence for Web3.' },'
   ];
 const generalLegal = buildLegalDocs('general');';
-const web3Legal = buildLegalDocs('web3');';
+const web3 Legal = buildLegalDocs('web3');';
 const institutionalLegal = buildLegalDocs('institutional');';
 const legalByBundle: Record<MediaBundle, MediaAsset[]> = {
   // TODO: Add properties
@@ -218,7 +216,7 @@ const legalByBundle: Record<MediaBundle, MediaAsset[]> = {
   // TODO: Add properties
 }
     general: generalLegal,
-    web3: web3Legal,
+    web3: web3 Legal,
     institutional: institutionalLegal,
   }
   const brandGuidelines: MediaAsset = { path: '', filename: 'brand/brand-guidelines.md', type: 'text', content: buildBrandGuidelines() }';
@@ -230,7 +228,7 @@ export function buildBrandGuidelines(): string {
 }
   // TODO: Add properties
 }
-  return `# Zion Brand Guidelines\n\n## Logo\n- Primary: Zion logomark (svg)\n- Clear space: 24px around\n\n## Colors\n- Primary: Zion Blue #0A84FF\n- Secondary: Deep Space #0B1220\n- Accent: Neon Lime #C3F53C\n\n## Typography\n- Headings: Inter, 700\n- Body: Inter, 400\n\n## Voice\n- Confident, precise, forward-looking\n`
+  return `# Zion Brand Guidelines\n\n## Logo\n- Primary: Zion logomark (svg)\n- Clear space: 24 px around\n\n## Colors\n- Primary: Zion Blue #0 A84 FF\n- Secondary: Deep Space #0 B1220\n- Accent: Neon Lime #C3 F53 C\n\n## Typography\n- Headings: Inter, 700\n- Body: Inter, 400\n\n## Voice\n- Confident, precise, forward-looking\n`
 }
 export function buildColorsAndTypography() {
   // TODO: Add properties
@@ -247,10 +245,10 @@ export function buildColorsAndTypography() {
 }
   // TODO: Add properties
 }
-      primary: '#0A84FF','
-      secondary: '#0B1220','
-      accent: '#C3F53C','
-      neutral: '#9CA3AF''
+      primary: '#0 A84 FF','
+      secondary: '#0 B1220','
+      accent: '#C3 F53 C','
+      neutral: '#9 CA3 AF''
     },
     typography: {
   // TODO: Add properties
@@ -260,7 +258,6 @@ export function buildColorsAndTypography() {
       heading: { family: 'Inter', weight: 700 },'
       body: { family: 'Inter', weight: 400 }'
     }
-  }
 }
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {;
 const base: MediaAsset[] = [
@@ -272,7 +269,7 @@ const base: MediaAsset[] = [
     { path: '', filename: 'legal/privacy-policy.md', type: 'text', content: `# Privacy Policy\n\nWe respect your privacy. Replace with counsel-approved language.` },'
     { path: '', filename: 'legal/jurisdictional-disclosures.md', type: 'text', content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.` },'
   ];
-const web3Extras: MediaAsset[] = [
+const web3 Extras: MediaAsset[] = [
   // TODO: Add items
 ]
   // TODO: Add items
@@ -280,7 +277,7 @@ const web3Extras: MediaAsset[] = [
     { path: '', filename: 'legal/token-sale-notice.md', type: 'text', content: `# Token Sale Notice (if applicable)\n\nThis document outlines token sale terms. Not an offer to sell securities.` },'
     { path: '', filename: 'legal/dao-disclaimer.md', type: 'text', content: `# DAO Disclaimer\n\nThis is not investment advice. Participation involves risks.` },'
   ]
-  if (kind === 'web3') return [...base, ...web3Extras]'
+  if (kind === 'web3') return [...base, ...web3 Extras]'
   return base
 }
 export function buildPressRelease(type: PressReleaseType, params: {
@@ -297,7 +294,7 @@ export function buildPressRelease(type: PressReleaseType, params: {
 const header = `${params.companyName} ${titleCase(type.replace('-', ' '))}`;';
 const boilerplate = `${params.companyName} builds AI agents for Web3 enterprises. Learn more at https://zion.app`
   if (type === 'seed-round') {'
-    return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} announces a seed round of ${params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"We are thrilled...\"\n\nAbout ${params.companyName}:\n${boilerplate}`"'"
+    return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} announces a seed round of ${params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes:\n- CEO: \"\n\nAbout ${params.companyName}:\n${boilerplate}`"'"
   }
   if (type === 'token-sale') {'
     return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} announces the ${params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params.companyName}:\n${boilerplate}`'

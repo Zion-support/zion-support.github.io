@@ -16,7 +16,6 @@ const { data, error } = await supabase.functions.invoke('escrow-service', {'
   })
   if (error) throw error
   return data as { paymentIntentId: string }
-}
 export async function releaseEscrow(paymentIntentId: string) {;
 const { data, error } = await supabase.functions.invoke('escrow-service', {'
     body: { action: 'release', paymentIntentId }})'
@@ -24,7 +23,6 @@ const { data, error } = await supabase.functions.invoke('escrow-service', {'
   })
   if (error) throw error
   return data as { message: string }
-}
 export async function disputeOrder(orderId: string) {;
 const { data, error } = await supabase.functions.invoke('escrow-service', {'
     body: { action: 'dispute', orderId }})'
@@ -32,5 +30,4 @@ const { data, error } = await supabase.functions.invoke('escrow-service', {'
   })
   if (error) throw error
   return data as { message: string }
-}
 export type EscrowStatus = OrderStatus;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface AdvancedPerformanceEnhancerProps {
   className?: string;
   children?: React.ReactNode;
@@ -7,7 +6,6 @@ interface AdvancedPerformanceEnhancerProps {
 
 export default function AdvancedPerformanceEnhancer({ className = '', children }: AdvancedPerformanceEnhancerProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -17,8 +15,6 @@ export default function AdvancedPerformanceEnhancer({ className = '', children }
   </div>
   );
 }
-}
-
 const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   enableImageOptimization = true,
   enablePreloading = true,
@@ -31,17 +27,12 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 
     const images = document.querySelectorAll('img');
     images.forEach((img) => {
-      // Add loading="lazy" if not already present
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
-      }
-
-      // Add decoding="async" for better performance
+      // Add loading="lazy"async" for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
       }
 
-      // Add fetchpriority="auto" for above-the-fold images
+      // Add fetchpriority=" for above-the-fold images
       if (img.getBoundingClientRect().top < window.innerHeight) {
         img.setAttribute('fetchpriority', 'high');
       }
@@ -118,10 +109,9 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
             img.removeAttribute('data-src');
             imageObserver.unobserve(img);
           }
-        }
       });
     }, {
-//       rootMargin: '50px 0px',
+//       rootMargin: '50 px 0 px',
 //       threshold: 0.01
     });
 
@@ -189,7 +179,6 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
           if ('gc' in window) {
             (window as any).gc();
           }
-        }
       };
 
       setInterval(checkMemory, 30000); // Check every 30 seconds
@@ -239,5 +228,4 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 };
 
 export default AdvancedPerformanceEnhancer;
-=======
   );

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import './index.css';
-
-ReactDOM.createRoot(document.getElementById("root")!).render(
-=======
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
@@ -16,12 +8,10 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
   <React.StrictMode>
     <App />
   </React.StrictMode>
 );
-<<<<<<< HEAD
 
 // Register service worker for PWA functionality
 if ("serviceWorker" in navigator) {
@@ -36,11 +26,3 @@ if ("serviceWorker" in navigator) {
       });
   });
 }
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee

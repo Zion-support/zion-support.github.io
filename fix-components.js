@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 import React from 'react';
 import fs from 'fs';
@@ -17,7 +16,6 @@ const componentsToFix = [
   );
 };
 
-=======
 import fs from 'fs';
 import path from 'path';
 
@@ -37,7 +35,6 @@ function fixComponentFile(filePath) {
       ).join('');
 
       const newContent = `import React from 'react';
-
 interface ${componentName}Props {
   className?: string;
   children?: React.ReactNode;
@@ -48,7 +45,6 @@ export default function ${componentName}({
   children
 }: ${componentName}Props) {
   return (
-<<<<<<< HEAD
     <div className={\`${fileName.toLowerCase()} \${className}\`}>
       {children}
     </div>
@@ -56,7 +52,6 @@ export default function ${componentName}({
       <h1>Component</h1>
       <p>This component is under construction.</p>
   </div>
-=======
   );
 }`;
 
@@ -70,8 +65,6 @@ export default function ${componentName}({
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Function to recursively find and fix component files
 function fixComponentFiles(dirPath) {
   const items = fs.readdirSync(dirPath);
@@ -92,7 +85,6 @@ function fixComponentFiles(dirPath) {
       if (fixComponentFile(fullPath)) {
         fixedCount++;
       }
-    }
   }
 
   return fixedCount;

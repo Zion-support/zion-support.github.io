@@ -104,7 +104,6 @@ const totalUnread = formattedConversations.reduce(
 }
       setIsLoading(false)
     }
-  }
   /**
    * Create a new conversation and send initial message
    */;
@@ -232,12 +231,11 @@ const { data: newConversation, error: createError } = await supabase
 }
   // TODO: Add properties
 }
-        title: "Failed to create conversation","
-        description: "Please try again later","
-        variant: "destructive""
+        title: "Failed to create conversation"
+        description: "Please try again later"
+        variant: "destructive"
       })
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -246,5 +244,4 @@ const { data: newConversation, error: createError } = await supabase
     fetchConversations,
     createConversation}
     createConversation,
-  }
-}
+  

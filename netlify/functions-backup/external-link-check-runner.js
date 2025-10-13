@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'external-link-check-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'external-link-check-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'external-link-check-runner',' source: event.source || 'unknown', checking: {' status: 'active', linksChecked: 0, brokenLinks: 0,'
         lastCheck: new Date().toISOString() } }) } return result; } catch (error) {

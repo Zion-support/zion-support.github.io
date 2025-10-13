@@ -34,7 +34,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   } catch (e) {/* TODO: Fix JSX expression */}
       })
     }
-  }
 }
 // netlify/functions/autonomous-innovation-studio.js exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/autonomous-innovation-studio.cjs') { stdio: 'inherit'} shell: true,'
       });' execSync('node automation/git-sync.cjs || true') {stdio: 'inherit'} shell: true,'

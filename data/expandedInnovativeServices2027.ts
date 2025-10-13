@@ -1543,7 +1543,7 @@ export const,;
     ],
     benefit,
   s: [,
-      '1000x faster financial calculations','
+      '1000 x faster financial calculations','
       'Superior risk assessment','
       'Enhanced portfolio returns','
       'Real-time market insights','
@@ -2663,7 +2663,7 @@ export const searchExpandedServices = (quer)
   y: 'Quantum Finance',' descriptio,'
   n: 'Revolutionary financial modeling platform that uses quantum computing to solve complex financial problems and optimize investment strategies', feature,'
   s: [' 'Quantum portfolio optimization',' 'Risk assessment algorithms',' 'Real-time market analysis',' 'Fraud detection systems',' 'Trading strategy optimization',' 'Regulatory compliance automation',' 'Performance analytics',' 'Multi-asset management' ], benefit,'
-  s: [' '1000x faster financial calculations',' 'Superior risk assessment',' 'Enhanced portfolio returns',' 'Real-time market insights',' 'Automated compliance',' 'Competitive advantage' ], useCase,'
+  s: [' '1000 x faster financial calculations',' 'Superior risk assessment',' 'Enhanced portfolio returns',' 'Real-time market insights',' 'Automated compliance',' 'Competitive advantage' ], useCase,'
   s: [' 'Portfolio optimization',' 'Risk management',' 'Algorithmic trading',' 'Fraud detection',' 'Regulatory reporting',' 'Investment analysis' ], targetAudienc,'
   e: [' 'Investment banks',' 'Hedge funds',' 'Asset management firms',' 'Insurance companies',' 'Trading firms',' 'Financial advisors' ], pricin,'
   g: ' mode,'

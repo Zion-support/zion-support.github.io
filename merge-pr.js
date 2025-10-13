@@ -42,7 +42,7 @@ const branchName = 'cursor/enhance-app-with-new-services-and-futuristic-design-c
 }
   // TODO: Add properties
 }
-    execSync(`git merge origin/${branchName} --no-ff -m "feat: Merge enhanced app with 50+ micro SAAS services and futuristic design"`, { stdio: 'inherit' })'"
+    execSync(`git merge origin/${branchName} --no-ff -m "feat: Merge enhanced app with 50+ micro SAAS services and futuristic design"
     console.log('✅ Merge successful!')'
   } catch (error) {
   // TODO: Add properties
@@ -61,7 +61,7 @@ const status = execSync('git status --porcelain', { encoding: 'utf8' })'
   // TODO: Add properties
 }
         execSync('git add .', { stdio: 'inherit' })'
-        execSync('git commit -m "feat: Resolve merge conflicts and integrate enhanced app features"', { stdio: 'inherit' })'"
+        execSync('git commit -m "feat: Resolve merge conflicts and integrate enhanced app features"
         console.log('✅ Conflicts resolved and committed!')'
       } catch (resolveError) {
   // TODO: Add properties
@@ -73,7 +73,6 @@ const status = execSync('git status --porcelain', { encoding: 'utf8' })'
         console.log(status),
         process.exit(1)
   }
-    }
   }
 
   // Push changes to main
@@ -88,4 +87,4 @@ const status = execSync('git status --porcelain', { encoding: 'utf8' })'
 }
     console.error('❌ Error during merge process:', error.message)'
   process.exit(1)
-  }
+  

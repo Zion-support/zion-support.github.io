@@ -41,7 +41,6 @@ const text = await generateText(
 const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.')'
   return res.status(200).json({ jobDescription: text })
 }
-}
   const auth = authenticate_request (req, false)
   if (return res.status (401).json ({ error: auth.error })) {
   // TODO: Add properties
@@ -90,6 +89,3 @@ const { title, level, location, skills, responsibilities } = req.body || {}
     `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`;
 const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.')'
   return res.status(200).json({ jobDescription: text })
-}
-
-}

@@ -5,7 +5,7 @@ import { ArrowRight, Play, Star, Users, Award, TrendingUp , SEO  } from 'lucide-
 import { SEO  } from '../components/SEO';';';
 import { ContentShowcase } from '../components/ContentShowcase';';';
 import NewContentShowcase from '../components/NewContentShowcase';';';
-import RevolutionaryContent2026Showcase from '../components/RevolutionaryContent2026Showcase';';';
+import RevolutionaryContent2026 Showcase from '../components/RevolutionaryContent2026 Showcase';';';
 import InteractiveTechDemo from '../components/InteractiveTechDemo';';';
 import { ServicesHighlight } from '../components/ServicesHighlight';';'
 ;
@@ -114,159 +114,87 @@ const testimonials = [
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen">"
-<SEO
-        title="Zion Tech Group - Leading Technology Solutions""
-        description="Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and data analytics solutions. Expert technology consulting and implementation.""
-        keywords="AI solutions, cybersecurity, cloud computing, data analytics, technology consulting""
-      />
-
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden">"
+    <div className="min-h-screen"Zion Tech Group - Leading Technology Solutions""Transform your business with cutting-edge AI, cybersecurity, cloud infrastructure, and data analytics solutions. Expert technology consulting and implementation.""AI solutions, cybersecurity, cloud computing, data analytics, technology consulting""relative bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white overflow-hidden"
         {/* Static background to avoid complex inline data URLs during build */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/10 to-slate-900/10 opacity-20"></div>"
-<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">"
-<div className="text-center">"
+        <div className="
+<div className="relative max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 py-24"text-center"
 <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6""
+              initial={{ opacity: 0, y: 30 }
+              animate={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8 }
+              className="
             >
               Transform Your Business with
-              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">"
-                Cutting-Edge Technology
-              </span></motion.h1>
-<motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto""
+              <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"text-xl sm:text-2 xl text-blue-100 mb-8 max-w-3 xl mx-auto"
             >
               Leading technology solutions in AI, cybersecurity, cloud infrastructure, and data analytics.
               Empowering businesses to thrive in the digital age.
             </motion.p>
 <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-12""
+              initial={{ opacity: 0, y: 30 }
+              animate={{ opacity: 1, y: 0 }
+              transition={{ duration: 0.8, delay: 0.4 }
+              className="
             >
 <Link
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105""
-              >
-                Get Free Consultation
-                <ArrowRight className="ml-2 w-5 h-5" /></Link>"
-<button className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">"
-<Play className="mr-2 w-5 h-5" />"
-                Watch Demo
-              </button></motion.div>
-
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto""
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition-all duration-300 hover:scale-105"ml-2 w-5 h-5"
+<button className="
+<Play className="mr-2 w-5 h-5"grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4 xl mx-auto"
             >
               {stats.map((stat, index) => {;
 const IconComponent = stat.icon;
                 return (
   // TODO: Add parameters
 )
-                  <div key={index} className="text-center">"
-<div className="flex justify-center mb-2">"
-<IconComponent className="w-8 h-8 text-blue-400" /></div>"
-<div className="text-3xl font-bold text-white mb-1">{stat.number}</div>"
-<div className="text-blue-200 text-sm">{stat.label}</div></div>"
-                );
-              })}
-            </motion.div></div>
-</div></section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">"
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-<div className="text-center mb-16">"
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">"
+                  <div key={index} className="
+<div className="flex justify-center mb-2"w-8 h-8 text-blue-400"
+<div className="
+<div className="text-blue-200 text-sm"py-20 bg-white"
+<div className="
+<div className="text-center mb-16"text-3 xl sm:text-4 xl font-bold text-gray-900 mb-4"
               Comprehensive Technology Solutions
             </h2>
-<p className="text-xl text-gray-600 max-w-3xl mx-auto">"
+<p className="
               From AI-powered automation to secure cloud infrastructure, we provide end-to-end
               technology solutions that drive innovation and growth.
             </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
-            {features.map((feature, index) => (
-  // TODO: Add parameters
-)
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center group""
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"text-center group"
               >
-<div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">"
+<div className="
                   {feature.icon}
                 </div>
-<h3 className="text-xl font-semibold text-gray-900 mb-3">"
-                  {feature.title}
-                </h3>
-<p className="text-gray-600 mb-4">"
+<h3 className="text-xl font-semibold text-gray-900 mb-3"text-gray-600 mb-4"
                   {feature.description}
                 </p>
 <Link
                   to={feature.link}
-                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors""
+                  className="
                 >
                   Learn More
-                  <ArrowRight className="ml-1 w-4 h-4" /></Link>"
-</motion.div>
-            ))}
-          </div></div>
-</section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">"
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
-<div className="text-center mb-16">"
-<h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">"
+                  <ArrowRight className="ml-1 w-4 h-4"py-20 bg-gray-50"
+<div className="
+<div className="text-center mb-16"text-3 xl sm:text-4 xl font-bold text-gray-900 mb-4"
               What Our Clients Say
             </h2>
-<p className="text-xl text-gray-600">"
+<p className="
               Don't just take our word for it - hear from the businesses we've transformed.'
             </p></div>
-<div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
-            {testimonials.map((testimonial, index) => (
-  // TODO: Add parameters
-)
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white rounded-lg shadow-md p-6""
+<div className="grid grid-cols-1 md:grid-cols-3 gap-8"bg-white rounded-lg shadow-md p-6"
               >
-<div className="flex items-center mb-4">"
+<div className="
                   {[...Array(testimonial.rating)].map((_, i) => (
   // TODO: Add parameters
 )
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />"
-                  ))}
-                </div>
-<p className="text-gray-600 mb-6 italic">"
-                  "{testimonial.content}""
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"text-gray-600 mb-6 italic"
+                  ""
                 </p>
-<div className="flex items-center">"
+<div className="
 <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
-                    className="w-12 h-12 rounded-full mr-4""
-                  />
-<div>
-<div className="font-semibold text-gray-900">{testimonial.name}</div>"
-<div className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</div></div>"
+                    className="w-12 h-12 rounded-full mr-4"font-semibold text-gray-900"
+<div className="
 </div></motion.div>
             ))}
           </div></div>
@@ -279,7 +207,7 @@ const IconComponent = stat.icon;
       <NewContentShowcase />
 
       {/* Revolutionary 2026 Content Showcase */}
-      <RevolutionaryContent2026Showcase />
+      <RevolutionaryContent2026 Showcase />
 
       {/* Interactive Demo */}
       <InteractiveTechDemo />
@@ -288,24 +216,17 @@ const IconComponent = stat.icon;
       <ContentShowcase />
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">"
-<h2 className="text-3xl sm:text-4xl font-bold mb-6">"
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white"max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+<h2 className="
             Ready to Transform Your Business?
           </h2>
-<p className="text-xl mb-8 max-w-2xl mx-auto text-blue-100">"
-            Join hundreds of companies that have already revolutionized their operations with our technology solutions.
-          </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
+<p className="text-xl mb-8 max-w-2 xl mx-auto text-blue-100"flex flex-col sm:flex-row gap-4 justify-center"
 <Link
-              to="/contact""
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors""
+              to=""
+              className="
             >
               Start Your Project
-              <ArrowRight className="ml-2 w-5 h-5" /></Link>"
-<Link
-              to="/case-studies""
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors""
+              <ArrowRight className="ml-2 w-5 h-5"/case-studies""inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               View Success Stories
             </Link></div>

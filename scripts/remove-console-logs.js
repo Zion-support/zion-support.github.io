@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -38,9 +35,6 @@ function removeConsoleLogs(filePath) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false;
   }
-=======
-}
-=======
 #!/usr/bin/env node;
 import fs from 'fs';';
 import path from 'path';';
@@ -63,8 +57,6 @@ const stat = fs.statSync(fullPath)
 }
     files.push(fullPath)
   }
-  }
-
   return files
 }
 
@@ -133,8 +125,6 @@ const removedCount = (originalContent.match(/console\.(log|warn|info|debug)\(/g)
       console.log(`✅ ${file}: Removed ${removedCount} console statement(s)`)
       totalRemoved += removedCount
     patterns.forEach(pattern => {/* TODO: Fix JSX expression */}
-      }
-
     // Remove empty lines that might be left behind;)
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n')'
     if (modified) {/* TODO: Fix JSX expression */}`
@@ -163,8 +153,6 @@ console.log(`\n💡 Not)`
     console.error(`Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Main execution;
 const srcDir = path.join(__dirname, '..', 'src');';
 const appDir = path.join(__dirname, '..', 'app')'
@@ -187,13 +175,10 @@ for (const file of allFiles) {
 }
     cleanedCount++
   }
-}
-
 console.log(`Cleaned console statements from ${cleanedCount} files`)
 console.log('Console.log removal completed!')'
 // Function to process all TypeScript and JavaScript files
 async function processFiles() {/* TODO: Fix JSX expression */}
-}
   const patterns = [
   // TODO: Add items
 ]

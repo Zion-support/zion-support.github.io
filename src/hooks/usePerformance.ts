@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -57,7 +56,6 @@ export default function Component() {
   }, []);
   return { metrics, isMonitoring };
 };
-=======
 import { useState, useEffect, useCallback } from 'react';'
 interface PerformanceMetrics {
   // TODO: Add properties
@@ -132,8 +130,6 @@ const memory = (performance as any).memory
           memoryUsage: memory ? memory.usedJSHeapSize : 0,
           networkLatency: navigation ? navigation.responseEnd - navigation.requestStart : 0})
       }
-    }
-
     measurePerformance()
   }, [])
   return {
@@ -143,13 +139,9 @@ const memory = (performance as any).memory
 }
     metrics,
     optimize}
-}
-
 'use client''
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-
   loadTime: number,,
     domContentLoaded: number,,
     firstContentfulPaint: number,,
@@ -168,18 +160,14 @@ export const _usePerformance = () => {
 }
     // TODO: Add content
   }
-
-}
   const [metrics, setMetrics] = useState
           <PerformanceMetrics | null>(null);
 const [isMonitoring, setIsMonitoring] = useState(false)
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     if (typeof window === 'undefined' || !('performance' in window)) return;';
 const measurePerformance = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       const navigation = performance.getEntriesByType()
 //         'navigation''
       )[0] as PerformanceNavigationTiming;
@@ -193,24 +181,18 @@ const largestContentfulPaint =
       if ('PerformanceObserver' in window) {'
     // TODO: Add content
   }
-
-}
         const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
             if ()
               entry.entryType === 'layout-shift' &&'
               !(entry as unknown as {/* TODO: Fix JSX expression */})
   t: boolean }).hadRecentInput) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-
               cumulativeLayoutShift += (entry as unknown as { value: number }).value
             }
-          }
         }
   )
         observer.observe({/* TODO: Fix JSX expression */}
@@ -222,28 +204,20 @@ const largestContentfulPaint =
       if ('PerformanceObserver' in window) {'
     // TODO: Add content
   }
-
-}
         const observer = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
 })
           for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
             if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
-
             if (entry.entryType === 'first-input') {'
     // TODO: Add content
   }
-}
-
               firstInputDelay =
                 (entry as unknown as {/* TODO: Fix JSX expression */})
   t: number }).processingStart - entry.startTime
             }
-          }
         }
   )
         observer.observe({/* TODO: Fix JSX expression */}
@@ -285,16 +259,11 @@ const largestContentfulPaint =
     if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}'
     } else {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       window.addEventListener('load', measurePerformance)'
     }
     return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       window.removeEventListener('load', measurePerformance)'
     }
   }, [])
-  return { metrics, isMonitoring }
-}
-
-=======
+  return { metrics, isMonitoring 

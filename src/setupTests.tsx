@@ -19,7 +19,6 @@ console.error = (...args) => {
 }
     // TODO: Add content
   }
-}
 // Suppress jsdom navigation warnings
 // eslint-disable-next-line no-console;
 const originalConsoleError = console.error
@@ -29,7 +28,6 @@ const message = args[0]?.toString?.() || args[0]?.message || '''
   if (message.includes('Not implemented: navigation') ||'
       message.includes('navigation (except hash changes)')) {// TODO: Add content'
   }
-}
     return
   }
   originalConsoleError(...args)
@@ -38,7 +36,6 @@ const message = args[0]?.toString?.() || args[0]?.message || '''
 Object.defineProperty(window, 'matchMedia', {'
     // TODO: Add content
   }
-}
   writable: true,
   value: jest.fn().mockImplementation(query => ({
   // TODO: Add properties
@@ -47,7 +44,6 @@ Object.defineProperty(window, 'matchMedia', {'
 }
     // TODO: Add content
   }
-}
   matches: false,
     media: query,
     onchange: null,
@@ -69,7 +65,6 @@ const localStorageMock = {
 }
     // TODO: Add content
   }
-}
   getItem: jest.fn(),
   setItem: jest.fn(),
   removeItem: jest.fn(),
@@ -77,7 +72,6 @@ const localStorageMock = {
 Object.defineProperty(window, 'localStorage', {'
     // TODO: Add content
   }
-}
   value: localStorageMock
 // Mock sessionStorage,;
 const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage', {}'
@@ -99,7 +93,6 @@ console.warn = (...args) => {
 }
     // TODO: Add content
   }
-}
 // eslint-disable-next-line no-console
 console.warn = (...args) => {;
 const message = args[0]?.toString?.() || '''
@@ -117,7 +110,6 @@ delete (window as unknown as Record
 }
     // TODO: Add content
   }
-}
 // eslint-disable-next-line no-console
 console.info = (...args) => {;
 const message = args[0]?.toString?.() || '''
@@ -143,7 +135,6 @@ global.PerformanceObserver = class MockPerformanceObserver {
 }
     return []
   }
-}
 // Suppress JSDOM navigation warnings
 // eslint-disable-next-line no-console
 console.error = (...args) => {

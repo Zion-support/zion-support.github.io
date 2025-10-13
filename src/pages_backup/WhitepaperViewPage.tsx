@@ -81,7 +81,7 @@ if ( {) {
 }
   $2
 }
-        set_error ("No whitepaper ID provided."),"
+        set_error ("No whitepaper ID provided."
         set_loading (false),
         return
       }
@@ -143,16 +143,12 @@ class ErrorBoundary extends React.Component {
 }
     super(props)
     this.state = { hasError: false }
-  }
-
   static getDerivedStateFromError(error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     return { hasError: true }
-  }
-
   componentDidCatch(error, errorInfo) {
   // TODO: Add properties
 }
@@ -245,10 +241,10 @@ const fetchWhitepaper = async () => {
 }
   // TODO: Add properties
 }
-        setError("No whitepaper ID provided.")"
+        setError("No whitepaper ID provided."
         setLoading(false)
         return
-        setError("No whitepaper ID provided."),"
+        setError("No whitepaper ID provided."
         setLoading(false),
         return;
 const WhitepaperViewPage: React.FC = () => {;
@@ -274,7 +270,7 @@ const fetchWhitepaper = async () => {
 }
   // TODO: Add properties
 }
-        setError("No whitepaper ID provided."),"
+        setError("No whitepaper ID provided."
         setLoading(false),
         return
       }
@@ -313,8 +309,6 @@ const { data: responseData, error: funcError } = await supabase.functions.invoke
 }
         setLoading(false)
       }
-
-    }
     },
     fetchWhitepaper()
   }, [id])
@@ -323,22 +317,9 @@ const { data: responseData, error: funcError } = await supabase.functions.invoke
 }
   // TODO: Add properties
 }
-    return <div className="flex justify-center items-center h-screen">"
-<p>Loading whitepaper...</p></div>
-  }
-  if (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return (
-  // TODO: Add parameters
-)
-      <div className="flex flex-col justify-center items-center h-screen text-red-600">"
+    return <div className="flex justify-center items-center h-screen"flex flex-col justify-center items-center h-screen text-red-600"
 <p>Error: {error}</p>
-<Button asChild variant="link" className="mt-4">"
-<Link href="/">"
-<ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link></Button>"
+<Button asChild variant=" className="mt-4"/">"mr-2 h-4 w-4"
 </div>
     )
   }
@@ -346,11 +327,11 @@ const { data: responseData, error: funcError } = await supabase.functions.invoke
     return (
   // TODO: Add parameters
 )
-         <div className="flex flex-col justify-center items-center h-screen">"
+         <div className="
 <p>Whitepaper not found.</p> {/* This can be a generic message */}
-            <Button asChild variant="link" className="mt-4">"
-<Link href="/">"
-<ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link></Button>"
+            <Button asChild variant="link"mt-4"
+<Link href=">"
+<ArrowLeft className="
 </div>
     )
   }
@@ -363,29 +344,19 @@ const { data: responseData, error: funcError } = await supabase.functions.invoke
     return (
   // TODO: Add parameters
 )
-      <div className="flex flex-col justify-center items-center h-screen">"
-<h2 className="text-2xl font-semibold mb-4">Access Denied</h2>"
-<p className="mb-4">This whitepaper is not public and you do not have permission to view it.</p>"
-<Button asChild variant="link">"
-<Link href="/">"
-<ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link></Button>"
-</div>
-    )
-  }
-  const { whitepaper_data: whitepaper } = sharedData
-  return (
-  // TODO: Add parameters
-)
-    <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">"
-<div className="mb-6 flex justify-between items-center">"
-<Button asChild variant="outline">"
-<Link href={isAdmin ? "/admin/whitepaper-generator" : "/"}> {/* Sensible back link */}"
-                    <ArrowLeft className="mr-2 h-4 w-4" /> Back"
+      <div className="flex flex-col justify-center items-center h-screen"text-2 xl font-semibold mb-4"
+<p className="
+<Button asChild variant="link"
+<Link href="/"
+<ArrowLeft className="mr-2 h-4 w-4"container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen"
+<div className="
+<Button asChild variant="outline"
+<Link href={isAdmin ? "/admin/whitepaper-generator"/"}> {/* Sensible back link */}"mr-2 h-4 w-4"
                  </Link></Button>
             {!sharedData.is_public && isAdmin && (
   // TODO: Add parameters
 )
-                <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">"
+                <span className="
                     Private (Admin View)
                 </span>
             )}
@@ -415,23 +386,9 @@ const { data: responseData, error: funcError } = await supabase && supabase.func
 }
   // TODO: Add properties
 }
-    return <div className="flex justify-center items-center h-screen">"
-<p>Loading whitepaper...</p></div>
-  }
-
-  if (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return (
-  // TODO: Add parameters
-)
-      <div className="flex flex-col justify-center items-center h-screen text-red-600">"
+    return <div className="flex justify-center items-center h-screen"flex flex-col justify-center items-center h-screen text-red-600"
 <p>Error: {error}</p>
-<Button asChild variant="link" className="mt-4">"
-<Link href="/">"
-<ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link></$1>"
+<Button asChild variant=" className="mt-4"/">"mr-2 h-4 w-4"
 </$1>
     )
   }
@@ -440,11 +397,11 @@ const { data: responseData, error: funcError } = await supabase && supabase.func
     return (
   // TODO: Add parameters
 )
-         <div className="flex flex-col justify-center items-center h-screen">"
+         <div className="
 <p>Whitepaper not found.</p> {/* This can be a generic message */}
-            <Button asChild variant="link" className="mt-4">"
-<Link href="/">"
-<ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link></$1>"
+            <Button asChild variant="link"mt-4"
+<Link href=">"
+<ArrowLeft className="
 </$1>
     )
   }
@@ -458,29 +415,18 @@ const { data: responseData, error: funcError } = await supabase && supabase.func
     return (
   // TODO: Add parameters
 )
-      <div className="flex flex-col justify-center items-center h-screen">"
-<h2 className="text-2xl font-semibold mb-4">Access Denied</h2>"
-<p className="mb-4">This whitepaper is not public and you do not have permission to view it.</p>"
-<Button asChild variant="link">"
-<Link href="/">"
-<ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link></$1>"
-</$1>
-    )
-  }
-;
-const { whitepaper_data: whitepaper } = sharedData,
-  return (
-  // TODO: Add parameters
-)
-    <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">"
-<div className="mb-6 flex justify-between items-center">"
-<Button asChild variant="outline">"
-<Link href={isAdmin ? "/admin/whitepaper-generator" : "/"}> {/* Sensible back link */}"
-                    <ArrowLeft className="mr-2 h-4 w-4" /> Back</$1></$1>"
+      <div className="flex flex-col justify-center items-center h-screen"text-2 xl font-semibold mb-4"
+<p className="
+<Button asChild variant="link"
+<Link href="/"
+<ArrowLeft className="mr-2 h-4 w-4"container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen"
+<div className="
+<Button asChild variant="outline"
+<Link href={isAdmin ? "/admin/whitepaper-generator"/"}> {/* Sensible back link */}"mr-2 h-4 w-4"
             {!sharedData && sharedData.is_public && isAdmin && (
   // TODO: Add parameters
 )
-                <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">"
+                <span className="
                     Private (Admin View)</$1>
             )}
         </div>
@@ -505,25 +451,9 @@ if ( {) {
 }
   $2
 }
-    return <div className="flex justify - center items - center h - screen">"
-<p > Loading whitepaper...</p></div>
-  }
-  // Check condition
-if ( {) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  $2
-}
-    return (
-  // TODO: Add parameters
-)
-      <div className="flex flex - col justify - center items - center h - screen text - red - 600">"
+    return <div className="flex justify - center items - center h - screen"flex flex - col justify - center items - center h - screen text - red - 600"
 <p > Error: {error}</p>
-<Button as_child variant="link" className="mt - 4">"
-<Link href="/">"
-<ArrowLeft className="mr - 2 h - 4 w - 4" /> Back to Home</Link></$1>"
+<Button as_child variant=" className="mt - 4"/">"mr - 2 h - 4 w - 4"
 </$1>)
   }
   // Check condition
@@ -537,11 +467,11 @@ if ( { // Check shared_data which includes the is_public flag) {
     return (
   // TODO: Add parameters
 )
-        <div className="flex flex - col justify - center items - center h - screen">"
+        <div className="
 <p > Whitepaper not found.</p> {/* This can be a generic message */}
-            <Button as_child variant="link" className="mt - 4">"
-<Link href="/">"
-<ArrowLeft className="mr - 2 h - 4 w - 4" /> Back to Home</Link></$1>"
+            <Button as_child variant="link"mt - 4"
+<Link href=">"
+<ArrowLeft className="
 </$1>)
   }
   // Access control based on is_public and admin role
@@ -556,27 +486,18 @@ if ( {) {
     return (
   // TODO: Add parameters
 )
-      <div className="flex flex - col justify - center items - center h - screen">"
-<h2 className="text - 2xl font - semibold mb - 4">Access Denied</h2>"
-<p className="mb - 4">This whitepaper is not public and you do not have permission to view it.</p>"
-<Button as_child variant="link">"
-<Link href="/">"
-<ArrowLeft className="mr - 2 h - 4 w - 4" /> Back to Home</Link></$1>"
-</$1>)
-  }
-  const { whitepaper_data: whitepaper } = shared_data,
-  return (
-  // TODO: Add parameters
-)
-    <div className="container mx - auto p - 4 md:p - 8 bg - gray - 50 min - h-screen">"
-<div className="mb - 6 flex justify - between items - center">"
-<Button as_child variant="outline">"
-<Link href={is_admin ? "/admin / whitepaper - generator" : "/"}> {/* Sensible back link */}"
-                    <ArrowLeft className="mr - 2 h - 4 w - 4" /> Back</$1></$1>"
+      <div className="flex flex - col justify - center items - center h - screen"text - 2 xl font - semibold mb - 4"
+<p className="
+<Button as_child variant="link"
+<Link href="/"
+<ArrowLeft className="mr - 2 h - 4 w - 4"container mx - auto p - 4 md:p - 8 bg - gray - 50 min - h-screen"
+<div className="
+<Button as_child variant="outline"
+<Link href={is_admin ? "/admin / whitepaper - generator"/"}> {/* Sensible back link */}"mr - 2 h - 4 w - 4"
             {!shared_data.is_public && is_admin && (
   // TODO: Add parameters
 )
-                <span className="px - 3 py - 1 text - xs font - semibold text - yellow - 800 bg - yellow - 200 rounded - full">"
+                <span className="
                     Private (Admin View)</$1>)}
         </div>
 <WhitepaperPreviewPanel
@@ -588,7 +509,7 @@ if ( {) {
 },;
 export default WhitepaperViewPage,;
 
-        setError("No whitepaper ID provided."),"
+        setError("No whitepaper ID provided."
         setLoading(false),
 
-}}}
+}

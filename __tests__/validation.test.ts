@@ -80,8 +80,8 @@ const longPassword = 'A'.repeat(129) + 'a1!''
 })
 describe('HTML Sanitization', () => {'
   test('sanitizes HTML special characters', () => {'
-    expect(sanitizeHTML('<script>alert("xss")</script>')).toBe('"
-      '&lt;script&gt;alert(&quot;xss&quot;)&lt;&#x2F;script&gt;''
+    expect(sanitizeHTML('<script>alert("xss"
+      '&lt;script&gt;alert(&quot;xss&quot;)&lt;&#x2 F;script&gt;''
     )
   })
   test('handles empty and non-string inputs', () => {'
@@ -122,7 +122,7 @@ describe('JSON Validation', () => {'
   test('validates correct JSON strings', () => {'
     expect(validateJSON('{}').isValid).toBe(true)'
     expect(validateJSON('[]').isValid).toBe(true)'
-    expect(validateJSON('{"key":"value"}').isValid).toBe(true)'"
+    expect(validateJSON('{"key"value"}').isValid).toBe(true)'"
     expect(validateJSON('[1,2,3]').isValid).toBe(true)'
   })
   test('rejects invalid JSON strings', () => {'

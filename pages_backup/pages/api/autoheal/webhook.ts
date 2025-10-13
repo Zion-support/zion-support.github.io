@@ -47,11 +47,9 @@ export default async function handler(req, res) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
   try {;
 const { app, severity, message, stack, metadata } = req.body || {},;
 const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,'
@@ -90,7 +88,6 @@ return res.status(200).json({ ok: true, issue: issue.data.number })
     console.error(e),
     return res.status(500).json({ error: 'Failed to process webhook' })'
   }
-}
     const { app, severity, message, stack, metadata } = req.body || {}
     const title = `[Autoheal] ${app || 'app'} crash: ${message?.slice(0, 64) || 'Unknown'}`,;';
 const octokit = new Octokit({ auth: GITHUB_TOKEN || undefined });
@@ -101,40 +98,33 @@ App: ${app  } catch (error) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 Severity: ${severity  } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 Message: ${message  } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
 Stack:\n\n${stack || 'n/a'  } catch (error) {'
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
 Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } catch (error) {'
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 `,;
 const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['autohealbug'] })'
     // trigger workflow dispatch
@@ -170,7 +160,6 @@ const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['
 }
       // ignore if missing
     }
-  }
 }
 
     return res.status(200).json({ ok: true, issue: issue.data.number })
@@ -186,18 +175,15 @@ const issue = await octokit.issues.create({ owner, repo, title, body, labels: ['
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-  }
-}
+  

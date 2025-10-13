@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'readme-advertiser'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'readme-advertiser'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'readme-advertiser',' source: event.source || 'unknown', advertising: {' status: 'active', readmesAdvertised: 0,'
         lastAd: new Date().toISOString() } }) } return result; } catch (error) {

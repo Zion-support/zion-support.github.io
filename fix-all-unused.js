@@ -4,38 +4,19 @@ import fs from 'fs';
 import { execSync } from 'child_process';
 
 // Get all TypeScript/JavaScript files
-const files = execSync('find app -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | grep -v node_modules', { encoding: 'utf8' })
-  .trim()
-  .split('\n')
-  .filter(file => file);
-
-console.log(`Found ${files.length} files to process`);
-
-files.forEach(filePath => {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    let newContent = content;
-    
-    // Remove all unused imports from lucide-react
-    const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
+const files = execSync('find app -name "*.tsx"*.ts" -o -name " -o -name "*.js"]lucide-react['"];?/);
     if (lucideImportMatch) {
       newContent = newContent.replace(lucideImportMatch[0], '');
     }
     
     // Remove unused React imports (if only default import and not used)
-    const reactImportMatch = content.match(/import\s+React\s+from\s+['"]react['"];?/);
+    const reactImportMatch = content.match(/import\s+React\s+from\s+['"];?/);
     if (reactImportMatch && !content.includes('React.')) {
       newContent = newContent.replace(reactImportMatch[0], '');
     }
     
     // Remove unused Helmet imports
-    const helmetImportMatch = content.match(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"];?/);
-    if (helmetImportMatch && !content.includes('<Helmet')) {
-      newContent = newContent.replace(helmetImportMatch[0], '');
-    }
-    
-    // Remove unused Link imports
-    const linkImportMatch = content.match(/import\s*{\s*Link\s*}\s*from\s*['"]react-router-dom['"];?/);
+    const helmetImportMatch = content.match(/import\s*{\s*Helmet\s*}\s*from\s*['"]react-helmet-async['"]react-router-dom['"];?/);
     if (linkImportMatch && !content.includes('<Link')) {
       newContent = newContent.replace(linkImportMatch[0], '');
     }
@@ -48,7 +29,7 @@ files.forEach(filePath => {
     ];
     
     componentImports.forEach(component => {
-      const regex = new RegExp(`import\\s+${component}\\s+from\\s+['"][^'"]+['"];?\\n?`, 'g');
+      const regex = new RegExp(`import\\s+${component}\\s+from\\s+['"]+['"];?\\n?`, 'g');
       newContent = newContent.replace(regex, '');
     });
     
@@ -68,8 +49,6 @@ files.forEach(filePath => {
           // Skip this line (remove unused variable)
           continue;
         }
-      }
-      
       newLines.push(line);
     }
     

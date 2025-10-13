@@ -20,16 +20,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function ${functionName}() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${title} solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">${title}</h1>
-          <p className="text-xl text-gray-300 mb-8">
+    <div className="min-h-screen bg-gray-900 text-white" content="${title} solutions by Zion Tech Group"container mx-auto px-4 py-20"text-center"text-4 xl font-bold mb-8"text-xl text-gray-300 mb-8">
             This page is under development. Please check back later.
           </p>
         </div>
@@ -43,7 +34,6 @@ export default function ${functionName}() {
 function createCleanUtilityComponent(fileName) {
   const componentName = fileName.replace('.tsx', '').replace(/[-_]/g, '');
   return `import React from 'react';
-
 interface ${componentName}Props {
   className?: string;
   children?: React.ReactNode;
@@ -99,8 +89,6 @@ function fixFile(filePath) {
     console.error(`Error fixing file ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Main execution
 function main() {
   const workspaceDir = process.cwd();
@@ -115,7 +103,6 @@ function main() {
       if (fixFile(fullPath)) {
         fixedCount++;
       }
-    }
   }
   
   console.log(`Fixed ${fixedCount} files`);
@@ -128,8 +115,6 @@ function main() {
   } catch (error) {
     console.log('Type check still has errors, but fixed some files.');
   }
-}
-
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }

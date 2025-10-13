@@ -17,8 +17,6 @@ declare global {
 }
     gtag?: (...args: unknown[]) => void
   }
-}
-
 // Types
 interface PerformanceMetric {;
 export interface Metric {
@@ -94,8 +92,7 @@ const THRESHOLDS = {
   FID: { good: 100, poor: 300 },
   FCP: { good: 1800, poor: 3000 },
   LCP: { good: 2500, poor: 4000 },
-  TTFB: { good: 800, poor: 1800 }}
-
+  TTFB: { good: 800, poor: 1800 }
 /**
  * Get performance rating based on thresholds
  */
@@ -300,8 +297,6 @@ const performanceMetric: PerformanceMetric = {
       // eslint-disable-next-line no-console;)
 //       })
   }
-}
-
 /**
  * Initialize performance monitoring
  */;
@@ -390,7 +385,6 @@ const metrics: PerformanceMetric[] = []
         'Content-Type': 'application/json'},'
       body: JSON.stringify(performanceMetric)}).catch(console.error)
   }
-}
 ;
 export function reportWebVitals(): void {
   // TODO: Add properties
@@ -488,8 +482,6 @@ export function markPerformance(name: string): void {
 }
     // eslint-disable-next-line no-console
 //     }
-}
-
 /**
  * Generate performance report
  */;
@@ -543,8 +535,6 @@ export function markPerformance(name: string): void {
 }
     // eslint-disable-next-line no-console
 //     }
-}
-
 /**;
 export function measureBetween(name: string, startMark: string, endMark: string): number {
   // TODO: Add properties
@@ -576,8 +566,6 @@ const _measure = performance.getEntriesByName(name)[0] as PerformanceEntry
     // eslint-disable-next-line no-console
 //     return 0
   }
-}
-
 /**
  * Get navigation timing metrics
  */;
@@ -623,7 +611,6 @@ const _entries = performance.getEntriesByName(name, 'measure')'
 }
     //       return 0
   }
-  }
   return 0
 }
 
@@ -655,8 +642,6 @@ const navigation = performance.getEntriesByType('navigation')'
       ? navigation.connectEnd - navigation.secureConnectionStart,,
       : 0
   }
-}
-
 /**
 
   try {
@@ -672,8 +657,6 @@ const navigation = performance.getEntriesByType('navigation')'
 }
     //     return []
   }
-}
-
 /**
  * Analyze slow resources
  */;
@@ -774,7 +757,6 @@ const memory = (
   // TODO: Add properties
 }
       performance: Performance & { memory?: PerformanceMemory }
-    }
   ).performance.memory
   return {
   // TODO: Add properties
@@ -793,8 +775,6 @@ const memory = (
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
     usedPercentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100
   }
-}
-
 /**
  * Generate performance report
  */
@@ -954,8 +934,6 @@ const _entries = list.getEntries()
     // eslint-disable-next-line no-console
 //     return null
   }
-}
-
 /**
  * Monitor layout shifts
  */
@@ -980,8 +958,6 @@ const _entries = list.getEntries()
     // eslint-disable-next-line no-console
 //     return null
   }
-}
-
 /**
  * Check if connection is slow
  */;
@@ -1043,16 +1019,10 @@ const performanceUtils = {
   isSlowConnection,
     userAgent: navigator.userAgent
   }
-}
-
     userAgent: navigator.userAgent,
   }
-}
-
     userAgent: navigator.userAgent,
   }
-}
-
 /**
  * Monitor long tasks
  */
@@ -1093,8 +1063,6 @@ const _entries = list.getEntries()
 }
     //     return null
   }
-}
-
 /**
  * Monitor layout shifts
  */;
@@ -1130,8 +1098,6 @@ const _entries = list.getEntries()
 }
     //     return null
   }
-}
-
 /**
   ) {
   // TODO: Add properties
@@ -1314,7 +1280,6 @@ export default {
   isSlowConnection}
   getPerformanceScore
 }
-}
   return connection?.effectiveType || null
 }
 
@@ -1351,7 +1316,6 @@ export function isPerformanceMonitoringSupported(): boolean {
 }
   return typeof window !== 'undefined' && 'performance' in window'
   }
-}
     id: metric.id,
   }
 
@@ -1397,7 +1361,6 @@ export function generatePerformanceReport(): PerformanceReport {
 }
   getConnectionType
 }
-}
   getConnectionType
 }
  * Performance monitoring hook for React components
@@ -1412,7 +1375,6 @@ export function usePerformanceMonitoring() {
   initPerformanceMonitoring()
   }
   getConnectionType}
-}
   getConnectionType}
 ;
 export default performanceUtils;

@@ -23,11 +23,10 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 5-se p t-30-consentle s s-journe y s-v2')'
         />),
       <div, className='container, m, x-auto, p, x-6, p, y-16'>'
-<h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>'
+<h1, className='te, x, t-4 xl, m, d:te, x, t-5 xl, fon, t-bold, m, b-4'>'
           Edge, 2025, Sept 30, Consentless, Journeys V2
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'></p>Learn</p>, about, edge 2025, sept, 30 consentless, journeys, v2 and, how, it can, benefit, your enterpri, s, e.'
     </d, i, v > );
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
  }</div></div>
 </div></h1>
-}

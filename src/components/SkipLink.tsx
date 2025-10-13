@@ -12,7 +12,7 @@ const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps
 )
     <$2 />
       href={to}
-      className="skip-link""
+      className="skip-link"
       style={{
   // TODO: Add properties
 }
@@ -30,7 +30,7 @@ const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps
         borderRadius: '4 px','
         fontSize: '14 px','
         fontWeight: 'bold''
-      }}
+      }
       onFocus={
   // TODO: Add properties
 }
@@ -42,7 +42,7 @@ const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps
   // TODO: Add properties
 }
         e.currentTarget.style.top = '6 px''
-  }}
+  }
       onBlur={
   // TODO: Add properties
 }
@@ -54,7 +54,7 @@ const SkipLink: React.FC<SkipLinkProps> = ({ to, children }) => {</SkipLinkProps
   // TODO: Add properties
 }
         e.currentTarget.style.top = '-40 px''
-  }}
+  }
     >
       {children}
     </a>

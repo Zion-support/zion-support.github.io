@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 
@@ -21,7 +20,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 //   width,
 //   height,
   priority = false,
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
+  placeholder = 'data:image/svg+xml;base64,PHN2 ZyB3 aWR0 aD0 iMjAwIiBoZWlnaHQ9 IjIwMCIgeG1 sbnM9 Imh0 dHA6 Ly93 d3 cudzMub3 JnLzIwMDAvc3 ZnIj48 cmVjdCB3 aWR0 aD0 iMTAwJSIgaGVpZ2 h0 PSIxMDAlIiBmaWxsPSIjZjNmNGY2 Ii8+PC9 zdmc+',
 //   onLoad,
 //   onError,
 }) => {
@@ -62,7 +61,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const imageSrc = isInView ? src : placeholder;
 
-=======
 interface OptimizedImageProps {
   className?: string;
   children?: React.ReactNode;
@@ -70,7 +68,6 @@ interface OptimizedImageProps {
 
 export default function OptimizedImage({ className = '', children }: OptimizedImageProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -85,17 +82,15 @@ export default function OptimizedImage({ className = '', children }: OptimizedIm
 //     <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
+      style={{ width, height }
 //     >
       {!isLoaded && !hasError && (
-        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
+        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center"></div>
 </div>
       )}
 
       {hasError ? (
-        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
-          <div className="text-gray-400 text-sm">Failed to load image</div>
+        <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">Failed to load image</div>
 </div>
       ) : (
 //         <img
@@ -111,6 +106,4 @@ export default function OptimizedImage({ className = '', children }: OptimizedIm
 //         />
       )}
 </div>
-=======
   );
-}

@@ -45,7 +45,6 @@ if ( {) {
     (error as any).status_code = 403
     throw error
   }
-}
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
   // TODO: Add properties
 }
@@ -105,7 +104,6 @@ const error = new Error('Forbidden')'
     (error as any).statusCode = 403
     throw error
   }
-}
 export async function ensureAdminFromApi(req: NextApiRequest): Promise<{ allowed: boolean }> {
   // TODO: Add properties
 }
@@ -121,7 +119,6 @@ const user = parseUserFromRequest(req)
   // TODO: Add properties
 }
     return { allowed: false }
-  }
 }
 // Additional auth utilities for login;
 export interface DemoUser {
@@ -160,7 +157,6 @@ export function ensureDemoUsers(): void {
       { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' }'
     )
   }
-}
 export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): DemoUser {'
   return {
   // TODO: Add properties
@@ -172,7 +168,6 @@ export function generateUser(name: string, role: 'admin' | 'user' | 'guest'): De
     role
     email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`'
   }
-}
 export function upsertUser(user: DemoUser): void {
   // TODO: Add properties
 }
@@ -183,7 +178,6 @@ export function upsertUser(user: DemoUser): void {
     role,
     email: `${name.toLowerCase().replace(/\s+/g, '.')}@zion.os`'
   }
-}
 export function upsertUser(user: DemoUser): void {;
 const index = demoUsers.findIndex(u => u.id === user.id)
   if (index >= 0) {
@@ -199,7 +193,6 @@ const index = demoUsers.findIndex(u => u.id === user.id)
 }
     demoUsers.push(user)
   }
-}
 export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
   // TODO: Add properties
 }
@@ -241,7 +234,6 @@ if ( {) {
       { id: 'user - 1', name: 'Regular User', role: 'user', email: 'user@zion.os' }'
     )
   }
-}
 export function generate_user (name: string, role: 'admin' | 'user' | 'guest'): DemoUser {'
   return {
   // TODO: Add properties
@@ -253,7 +245,6 @@ export function generate_user (name: string, role: 'admin' | 'user' | 'guest'): 
     role,
     email: `${name.toLowerCase ().replace (/\s+/g, '.')}@zion.os`'
   }
-}
 export function upsert_user (user: DemoUser): void {;
 const index = demo_users.find_index (u => u.id === user.id)
   // Check condition
@@ -272,7 +263,6 @@ if ( {) {
 }
     demo_users.push (user)
   }
-}
 export function setUserCookie (res: NextApiResponse, user: DemoUser): void {
   // TODO: Add properties
 }
@@ -304,11 +294,8 @@ if (return null) {
 }
     return null
   }
-}
   }
-}
   }
-}
 import type { NextApiRequest } from 'next';';';
 export function getRequestUserEmail(req: NextApiRequest): string | null {;
 const emailHeader = req.headers['x-user-email']'
@@ -323,4 +310,3 @@ export function isAdminEmail(email: string | null | undefined): boolean {
   if (!email) return false;
 const admins = (process.env.ADMIN_EMAILS || '').split(',').map((e) => e.trim().toLowerCase()).filter(Boolean)'
   return admins.includes(email.toLowerCase())
-}

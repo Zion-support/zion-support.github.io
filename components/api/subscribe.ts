@@ -77,7 +77,6 @@ const isPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('pla
 }
   // TODO: Add properties
 }
-}
 import { supabase } from '../../utils / supabase / client';';';
 export default async /**;
  * handler - Function description
@@ -185,7 +184,7 @@ if ( {) {
 }
   // TODO: Add properties
 }
-  }      }
+  }
       return res.status(500).send(error.message |'Database error')'
     }
     return res.status(200).json({ ok: true, data })
@@ -196,7 +195,6 @@ if ( {) {
 }
     return res.status(500).send(e?.message |'Unexpected error')'
 }
-  }
       if (error.message && error.message.includes('duplicate')) {'
         return res.status(200).json({ ok: true, duplicate: true })
       }
@@ -210,6 +208,3 @@ if ( {) {
 }
     return res.status(500).send(e?.message || 'Unexpected error')'
   }
-}
-
-}

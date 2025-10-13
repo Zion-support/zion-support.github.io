@@ -137,7 +137,7 @@ titletitle: 'Email Support','
 titletitle: 'Phone Support','
       description: 'Speak directly with our technical experts','
       icon: Phone,
-      availability: 'Mon-Fri 9AM-6PM EST','
+      availability: 'Mon-Fri 9 AM-6 PM EST','
       responseTime:       ,
 titletitle: 'Community Forum','
       description: 'Connect with other users and share knowledge','
@@ -177,30 +177,24 @@ const filteredArticles = getCurrentArticles().filter(article =>
 )
     <React.Fragment>
 <Navigation />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<div className="container mx-auto px-4 py-16 pt-24">"
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"container mx-auto px-4 py-16 pt-24"
           {/* Header */}
-          <div className="text-center mb-16">"
-<h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">"
-              Help Center,
-
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">"
+          <div className="
+<h1 className="text-4 xl md: text-5 xl font-bold text-white mb-6 neon-text"text-xl text-gray-300 max-w-3 xl mx-auto mb-8"
               Find answers, get support, and learn how to make the most of our AI and IT services.
               We're here to help you succeed.'
           {/* Search */}
-          <div className="max-w-2xl mx-auto mb-12">"
-<div className="relative">"
-<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
+          <div className="
+<div className="relative"absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"
 <input
-                type="text""
-                placeholder="Search help articles...""
+                type=""
+                placeholder=""
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 text-lg""
+                className="
               />
           {/* Categories */}
-          <div className="mb-12">"
-<div className="flex flex-wrap justify-center gap-4 mb-8">"
+          <div className="mb-12"flex flex-wrap justify-center gap-4 mb-8"
               {categories.map((category) => (
   // TODO: Add parameters
 )
@@ -217,47 +211,28 @@ const filteredArticles = getCurrentArticles().filter(article =>
                       : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent''
                   }`}
                 >
-<category.icon className="w-5 h-5 mr-2" />"
-<span className="font-medium">{category.name}"
-              ))}
-          {/* Articles */}
-          <div className="mb-16">"
-<h2 className="text-2xl font-bold text-white mb-8">{categories.find(cat => cat.id === activeCategory)?.name} Articles"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
-              {filteredArticles.map((article, index) => (
-  // TODO: Add parameters
-)
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">"
-<div className="flex items-start mb-4">"
+<category.icon className="
+<span className="font-medium"mb-16"
+<h2 className="
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300"
+<div className="
 <div className={`w-10 h-10 ${article.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-lg flex items-center justify-center mr-3`}>'
 <article.icon className={`w-5 h-5 ${article.color}`} />
-<div className="flex-1">"
-<h3 className="text-lg font-semibold text-white mb-2">{article.title}"
-                      <p className="text-gray-300 text-sm mb-3">{article.description}"
-                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">"
-<span>{article.readTime}
-                    < className={`px-2 py-1 rounded text-xs ${$2 />
-                      article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :'
-                      article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :'
-                      'bg-red-500/20 text-red-400''
-                    }`}>
-                      {article.difficulty}
-                  <button className="w-full text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors flex items-center justify-center">"
+<div className="flex-1"text-lg font-semibold text-white mb-2"
+                      <p className="
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4"w-full text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors flex items-center justify-center"
                     Read Article
-                    <ArrowRight className="w-4 h-4 ml-1" />"
+                    <ArrowRight className="
           {/* Resources */}
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">"
-              Additional Resources
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">"
+            <h2 className="text-3 xl font-bold text-white text-center mb-12 neon-text"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
               {resources.map((resource, index) => (
   // TODO: Add parameters
 )
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 text-center">"
+                <div key={index} className="
 <div className={`w-16 h-16 ${resource.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>'
 <resource.icon className={`w-8 h-8 ${resource.color}`} />
-<h3 className="text-lg font-semibold text-white mb-2">{resource.title}"
-                  <p className="text-gray-300 text-sm mb-3">{resource.description}"
-                  <div className="text-cyan-400 text-sm font-medium">{resource.count}"
+<h3 className="text-lg font-semibold text-white mb-2"text-gray-300 text-sm mb-3"
+                  <div className="
           {/* Support Channels */}
               Get Support
               {supportChannels.map((channel, index) => (
@@ -265,44 +240,27 @@ const filteredArticles = getCurrentArticles().filter(article =>
 )
                   <div className={`w-16 h-16 ${channel.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>'
 <channel.icon className={`w-8 h-8 ${channel.color}`} />
-<h3 className="text-lg font-semibold text-white mb-2">{channel.title}"
-                  <p className="text-gray-300 text-sm mb-3">{channel.description}"
-                  <div className="text-sm text-gray-400 mb-2">"
-<div className="font-medium">Availability: {channel.availability}"
-                    <div>Response: {channel.responseTime}
-                  <button className="w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors text-sm font-medium">"
+<h3 className="text-lg font-semibold text-white mb-2"text-gray-300 text-sm mb-3"
+                  <div className="
+<div className="font-medium"w-full bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors text-sm font-medium"
                     Contact Now
           {/* FAQ */}
               Frequently Asked Questions
-            <div className="max-w-4xl mx-auto">"
-<div className="space-y-6">"
-                {faqs.map((faq, index) => (
-  // TODO: Add parameters
-)
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">"
-<h3 className="text-lg font-semibold text-white mb-3">{faq.question}"
-                    <p className="text-gray-300">{faq.answer}"
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">"
-<h2 className="text-2xl font-bold text-white mb-4">"
+            <div className="
+<div className="space-y-6"bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"
+<h3 className="
+                    <p className="text-gray-300"bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2 xl p-8 text-center"
+<h2 className="
               Still Need Help?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">"
-              Can't find what you're looking for? Our support team is here to help you '
-              with any questions or issues you might have.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
+            <p className="text-gray-300 mb-6 max-w-2 xl mx-auto"flex flex-col sm: flex-row gap-4 justify-center items-center"
 <$2 />
-                href="/contact""
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105""
-                <MessageSquare className="w-5 h-5 mr-2" />"
-                Contact Support
-
-                href="tel:+13024640950""
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <Phone className="w-4 h-4 mr-2" />"
+                href=""
+                className="
+                <MessageSquare className="w-5 h-5 mr-2"tel:+13024640950""border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <Phone className="
                 (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com""
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <Mail className="w-4 h-4 mr-2" />"
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"w-4 h-4 mr-2"
                 Email Us
       <Footer />
   return (
@@ -320,7 +278,6 @@ const categories = [
 ]
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   i,
   d: 'getting-started','
       nam,
@@ -356,7 +313,6 @@ const categories = [
   ];
 const helpArticles = {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     'getting-started': ['
   titl,
   e: 'Setting Up Your First Dashboard','
@@ -408,13 +364,13 @@ const helpArticles = {/* TODO: Fix JSX expression */}
   n: Users,
       responseTim,
   e: 'Community driven''
-          <MessageSquare className="w-5 h-5 mr-2" />"
+          <MessageSquare className="
 // Contact Support
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <Phone className="w-4 h-4 mr-2" />"
+                href="tel:+13024640950"border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <Phone className="
                 (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <Mail className="w-4 h-4 mr-2" />"
+                href="mailto:kleber@ziontechgroup.com"border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <Mail className="
                 Email Us
       <Footer/ />
 </React.Fragment>;

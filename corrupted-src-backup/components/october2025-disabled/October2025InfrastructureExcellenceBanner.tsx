@@ -1,4 +1,4 @@
-const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expression */}
+const October2025 InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     },
@@ -6,9 +6,9 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
     }]; return(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>),'
       {/* Animated, background, effec, t, s */}
       <div, classNam, e = 'absolute, inse, t-0'>'
-<div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10" />"'"
+<div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10"
 <div, classNam, e = 'absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t' / />'
-<div, className='relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8'>,'
+<div, className='relative, m, x-auto, ma, x-w-7 xl, p, x-6, l, g: px-8'>,'
         {/* He, a, d, e, r */}
         <div, classNam, e = 'te, x, t-center, m, b-12'>'
 <div, className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4'>'
@@ -18,31 +18,31 @@ const October2025InfrastructureExcellenceBanne, r = () => {/* TODO: Fix JSX expr
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>'
       {/* Animated, background, effec, t, s */}
       <div, classNam, e = 'absolute, inse, t-0'>'
-<div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10" />"'"
+<div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10"
 <div, classNam, e = 'absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t' / />'
-<div, className='relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8'>'
+<div, className='relative, m, x-auto, ma, x-w-7 xl, p, x-6, l, g: px-8'>'
         {/* He, a, d, e, r */}
         <div, classNam, e = 'te, x, t-center, m, b-12'>'
 <div, className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4'>'
 <TrendingUp, className='h-5 w-5, tex, t-bl, u, e-4, 0, 0' />'
 <span, className='te, x, t-sm, fon, t-semibold, tex, t-bl, u, e-4, 0, 0'>'
               NEW, OCTOBER, 2025 CONTE, N, T
-          <h2, className='te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4'>'
+          <h2, className='te, x, t-4 xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5 xl, m, b-4'>'
   ]; return (<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>'
       {/* Animated, background, effec, t, s */}
       <div, classNam, e = 'absolute, inse, t-0'></div>)'
-        <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10" />"'"
+        <div, className="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10"
 <div, classNam, e = 'absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t' / />'
-<div, className='relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8'>'
+<div, className='relative, m, x-auto, ma, x-w-7 xl, p, x-6, l, g: px-8'>'
         {/* He, a, d, e, r */}
         <div, classNam, e = 'te, x, t-center, m, b-12'>'
 <div, className='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4'>'
 <TrendingUp, className='h-5 w-5, tex, t-bl, u, e-4, 0, 0' />'
 <span, className='te, x, t-sm, fon, t-semibold, tex, t-bl, u, e-4, 0, 0'>'
               NEW, OCTOBER, 2025 CONTE, N, T
-          <h2, className='te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4'>'
+          <h2, className='te, x, t-4 xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5 xl, m, b-4'>'
             Infrastructure, Excellenc, e
-          <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>'
+          <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3 xl, m, x-au, t, o'>'
             Master, productio, n-grade, architectures, for observabi, l, i, t, y, securi, t, y,
             and, rea, l-time, data, processing. Batt, l, e-tested, patterns, from
             enterprises, processing, billions of, events, daily.
@@ -54,7 +54,7 @@ const Ico, n = artic, l, e.ic, o, n; return (
 )
         <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'>'
           {/* TODO: Fix JSX expression */}
-              <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, relative, overflow-hidden, rounde, d-2xl, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-6, transitio, n-all, duratio, n-300, hove, r: bg-whi, t, e/10, hove, r:bord, e, r-whi, t, e/20, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'$2 />'
+              <, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } className='group, relative, overflow-hidden, rounde, d-2 xl, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-6, transitio, n-all, duratio, n-300, hove, r: bg-whi, t, e/10, hove, r:bord, e, r-whi, t, e/20, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'$2 />'
               >
                 {/* Gradient, acc, e, n, t */}
                 <, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opacity, duratio, n-30, 0`}$2 />
@@ -111,22 +111,22 @@ const Ico, n = artic, l, e.ic, o, n; return (
         {/* Stat, s, B, a, r */}
         <div, classNam, e = 'mt-12, grid, grid-co, l, s-2, ga, p-4, s, m: gr, i, d-co, l, s-4, tex, t-cent, e, r'></div>'
 <div, className='round, e, d-lg, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-4'></div>'
-<div, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>99.99%</div>'
+<div, className='te, x, t-2 xl, fon, t-bold, tex, t-whi, t, e'>99.99%</div>'
 <div, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>Observability, Coverag, e</div></div>'
 <div, className='round, e, d-lg, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-4'></div>'
-<div, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>1, 0, M+</div>'
+<div, className='te, x, t-2 xl, fon, t-bold, tex, t-whi, t, e'>1, 0, M+</div>'
 <div, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>Even, t, s/Seco, n, d</div></div>'
 <div, className='round, e, d-lg, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-4'></div>'
-<div, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>87%</div>'
+<div, className='te, x, t-2 xl, fon, t-bold, tex, t-whi, t, e'>87%</div>'
 <div, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>Faster, MTT, R</div></div>'
 <div, className='round, e, d-lg, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-4'></div>'
-<div, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>$2, 1, M+</div>'
+<div, className='te, x, t-2 xl, fon, t-bold, tex, t-whi, t, e'>$2, 1, M+</div>'
 <div, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>Annual, Saving, s</div></div>'
 </div></div>
 </div>
   )
 }
-export default October2025InfrastructureExcellenceBanner;
+export default October2025 InfrastructureExcellenceBanner;
 "`"
 </div></div>
 </div></div>

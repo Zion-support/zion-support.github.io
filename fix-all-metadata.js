@@ -57,10 +57,7 @@ function processFile(filePath) {
           description: 'Advanced AI and IT Solutions','
 function processFile(filePath) {/* TODO: Fix JSX expression */}
       } catch (e) {/* TODO: Fix JSX expression */}
-        }
       }
-    }
-
     // Remove the entire metadata export;
     content = content.replace(/export const metadata = \{[\s\S]*?\};/g, '')'
     // Remove any remaining broken metadata lines
@@ -77,20 +74,16 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
       if(skipUntilSemicolon &&)
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
-      }
-
       if (skipUntilSemicolon &&)
         (line.trim() === '};' ||'
           line.trim() === '}' ||'
           line.includes('const ') ||'
           line.includes('function '))'
       ) {/* TODO: Fix JSX expression */}
-        }
         continue
       }
 
       if (!skipUntilSemicolon) {/* TODO: Fix JSX expression */}
-      }
     }
 
     content = filteredLines.join('\n')'
@@ -112,8 +105,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`)
         modified = true
       }
-    }
-
     // Update Helmet with extracted metadata
     if (metadata.title || metadata.description) {
   // TODO: Add properties
@@ -125,23 +116,18 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 const newHelmet = `<Helmet>
     if (metadata.title || metadata.description) {/* TODO: Fix JSX expression */}
         <title>${metadata.title || 'Zion Tech Group'}'
-        <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" />"'"
-        ${/* TODO: Fix JSX expression */}"`"
-  g:type" content="${metadata.type}" />` : '}''"
-        ${/* TODO: Fix JSX expression */}"`"
-  g:url" content="${metadata.url}" />` : '}`''"
+        <meta name="description"${metadata.description || 'Advanced AI and IT Solutions'}" />"
+        ${/* TODO: Fix JSX expression */}"`" content="${metadata.type}"
+        ${/* TODO: Fix JSX expression */}"`" content="${metadata.url}"
       </Helmet>`
         content = content.replace(/(<Helmet />[\s\S]*?<\/Helmet>)/, newHelmet)
         modified = true
       }
-    }
-
     if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}'
     }
 
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Process all files

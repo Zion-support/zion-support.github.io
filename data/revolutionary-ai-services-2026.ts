@@ -94,7 +94,7 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [;
     useCases: ['Content creation', 'Research analysis', 'Media processing', 'Healthcare diagnostics', 'Government intelligence', 'Educational content'],'
     roi: 'Tech companies see 600% ROI through improved content creation and user experience.','
     competitors: ['Single-modal AI tools', 'Custom multimodal solutions', 'Research platforms'],'
-    marketSize: '$30B market','
+    marketSize: '$30 B market','
     growthRate: '320% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -158,7 +158,7 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [;
     useCases: ['Business process automation', 'Strategic decision making', 'Customer service automation', 'Financial management', 'Supply chain optimization'],'
     roi: 'Large enterprises see 800% ROI through complete automation and improved efficiency.','
     competitors: ['Partial automation tools', 'Custom AI solutions', 'Traditional business software'],'
-    marketSize: '$50B market','
+    marketSize: '$50 B market','
     growthRate: '400% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -222,7 +222,7 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [;
     useCases: ['Content creation', 'Marketing materials', 'Educational content', 'Entertainment production', 'Brand development', 'Creative collaboration'],'
     roi: 'Creative agencies see 500% ROI through unlimited content generation and reduced production time.','
     competitors: ['Specialized creative AI', 'Traditional creative tools', 'Custom AI solutions'],'
-    marketSize: '$25B market','
+    marketSize: '$25 B market','
     growthRate: '350% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -286,7 +286,7 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [;
     useCases: ['Patient monitoring', 'Diagnosis assistance', 'Health recommendations', 'Emergency response', 'Preventive care', 'Chronic disease management'],'
     roi: 'Healthcare providers see 600% ROI through improved patient outcomes and reduced costs.','
     competitors: ['Basic health apps', 'Telemedicine platforms', 'Custom healthcare AI'],'
-    marketSize: '$40B market','
+    marketSize: '$40 B market','
     growthRate: '380% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -350,7 +350,7 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [;
     useCases: ['Supply chain optimization', 'Route planning', 'Inventory management', 'Delivery scheduling', 'Cost optimization', 'Performance monitoring'],'
     roi: 'Logistics companies see 700% ROI through optimized operations and reduced costs.','
     competitors: ['Traditional logistics software', 'Custom optimization solutions', 'Basic route planning tools'],'
-    marketSize: '$35B market','
+    marketSize: '$35 B market','
     growthRate: '300% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: {

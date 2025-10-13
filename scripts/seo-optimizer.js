@@ -33,13 +33,13 @@ const htmlFiles = await glob('dist/**/*.html')'
 const content = fs.readFileSync(file, 'utf8')'
         // Check for essential meta tags;
 const hasTitle = content.includes('<title>');';
-const hasDescription = content.includes('name="description"');'";
-const hasViewport = content.includes('name="viewport"');'";
+const hasDescription = content.includes('name="description";
+const hasViewport = content.includes('name="viewport";
 const hasCharset = content.includes('charset=');';
-const hasOgTitle = content.includes('property="og: title"');'";
-const hasOgDescription = content.includes('property="og:description"');'";
-const hasOgImage = content.includes('property="og:image"');'";
-const hasTwitterCard = content.includes('name="twitter: card"'),'"
+const hasOgTitle = content.includes('property="og: title";
+const hasOgDescription = content.includes('property="og:description";
+const hasOgImage = content.includes('property="og:image";
+const hasTwitterCard = content.includes('name="twitter: card"
         ,
         if (!hasTitle) this.issues.push(`${file}: Missing title tag`)
         if (!hasDescription) this.issues.push(`${file}: Missing meta description`)
@@ -56,8 +56,6 @@ const hasTwitterCard = content.includes('name="twitter: card"'),'"
 }
         console.error(`   ❌ Error processing ${file}:`, error.message)
       }
-    }
-
     console.log(`   ✅ Checked ${htmlFiles.length} HTML files`)
     this.optimizations.push('Meta tags validation')'
   }
@@ -81,9 +79,9 @@ let headingIssues = 0
       try {;
 const content = fs.readFileSync(file, 'utf8')'
         // Check for h1 tags;
-const h1Count = (content.match(/</g) || []).length$2 />;
-const h2Count = (content.match(/</g) || []).length$2 />;
-const h3Count = (content.match(/</g) || []).length$2 />
+const h1 Count = (content.match(/</g) || []).length$2 />;
+const h2 Count = (content.match(/</g) || []).length$2 />;
+const h3 Count = (content.match(/</g) || []).length$2 />
         if (h1 Count === 0) {
   // TODO: Add properties
 }
@@ -110,8 +108,6 @@ const h3Count = (content.match(/</g) || []).length$2 />
 }
         console.error(`   ❌ Error processing ${file}:`, error.message)
       }
-    }
-
     console.log(`   ✅ Checked ${tsxFiles.length} TSX files`)
     if (headingIssues > 0) {
   // TODO: Add properties
@@ -152,8 +148,6 @@ const imgTags = content.match(/<img[^>]*>/g) || []
             this.issues.push(`${file}: Image without alt attribute`)
             altIssues++
           }
-        }
-
       } catch (error) {
   // TODO: Add properties
 }
@@ -161,8 +155,6 @@ const imgTags = content.match(/<img[^>]*>/g) || []
 }
         console.error(`   ❌ Error processing ${file}:`, error.message)
       }
-    }
-
     console.log(`   ✅ Checked ${tsxFiles.length} TSX files`)
     if (altIssues > 0) {
   // TODO: Add properties
@@ -193,7 +185,7 @@ let linkCount = 0
     try {;
 const content = fs.readFileSync(file, 'utf8')'
         // Count internal links;
-const internalLinks = content.match(/href=["']\/(?!\/)[^"']*["']/g) || []'"
+const internalLinks = content.match(/href=["']\/(?!\/)[^"']/g) || []'"
         linkCount += internalLinks.length
   } catch (error) {
   // TODO: Add properties
@@ -202,8 +194,6 @@ const internalLinks = content.match(/href=["']\/(?!\/)[^"']*["']/g) || []'"
 }
         console.error(`   ❌ Error processing ${file}:`, error.message)
       }
-    }
-
     console.log(`   ✅ Found ${linkCount} internal links`)
     this.optimizations.push('Internal links analysis')'
   }
@@ -290,7 +280,6 @@ const internalLinks = content.match(/href=["']\/(?!\/)[^"']*["']/g) || []'"
 }
     console.error('❌ SEO optimization failed:', error.message)'
   }
-  }
 }
 
 // Run the optimizer
@@ -302,7 +291,6 @@ const optimizer = new SEOOptimizer()
 export default SEOOptimizer;
 // SEO optimization script
 function optimizeSEO() {/* TODO: Fix JSX expression */}
-}
   // console.log('🔍 Starting SEO optimization...')'
   // 1. Generate sitemap
   // console.log('🗺️ Generating sitemap...')'
@@ -320,7 +308,6 @@ function optimizeSEO() {/* TODO: Fix JSX expression */}
 }
 
 function generateSitemap() {/* TODO: Fix JSX expression */}
-}
   const pages = [
   // TODO: Add items
 ]
@@ -380,9 +367,9 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
     '/task-manager-pro','
     '/team''
   ];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>""
-<urlset xmlns="htt,""
-  p://www.sitemaps.org/schemas/sitemap/0.9">"
+const sitemap = `<?xml version=" encoding="UTF-8""
+<urlset xmlns=""
+  p://www.sitemaps.org/schemas/sitemap/0.9"
 ${/* TODO: Fix JSX expression */}
   s://ziontechgroup.com${page}
     <lastmod>${new Date().toISOString().split('T')[0]}'
@@ -396,10 +383,7 @@ ${/* TODO: Fix JSX expression */}
 }
 
 function optimizeMetaTags() {/* TODO: Fix JSX expression */}
-}
   const metaOptimizations = {/* TODO: Fix JSX expression */}
-  }
-
   fs.writeFileSync()
     path.join(__dirname, '../seo-optimizations.json'),'
     JSON.stringify(metaOptimizations, null, 2)
@@ -442,16 +426,9 @@ Allo,
 }
 
 function generateStructuredData() {/* TODO: Fix JSX expression */}
-}
   const structuredData = {/* TODO: Fix JSX expression */}
-    },""
-    "address": {/* TODO: Fix JSX expression */}"
-    },""
-    "sameAs": [""
-      "http,""
-  s://twitter.com/ziontechgroup",""
-      "http,""
-  s://linkedin.com/company/ziontechgroup""
+    },""address": {/* TODO: Fix JSX expression */}""
+    ": [""http,"",""http,"""
     ]
   }
 
@@ -464,5 +441,5 @@ function generateStructuredData() {/* TODO: Fix JSX expression */}
 }
 
 // Run SEO optimization
-optimizeSEO();"`"
+optimizeSEO();"
 </p>

@@ -9,7 +9,7 @@ const contact = {
 	address: '364 E Main St STE 1008 Middletown DE 19709','
 	website: 'https://ziontechgroup.com''
 }
-export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
+export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   // TODO: Add items
 ]
 	{
@@ -51,7 +51,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['RFP responses', 'Security questionnaires', 'Vendor assessments'],'
 		roi: 'Reduce cycle time 30–60% and increase win rate via consistency.','
 		competitors: ['Loopio', 'RFPIO'],'
-		marketSize: '$1B+ proposal automation','
+		marketSize: '$1 B+ proposal automation','
 		growthRate: '18% CAGR','
 		variant: 'ai-futuristic','
 		contactInfo: contact,
@@ -99,7 +99,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['DB rightsizing', 'Backup cost control', 'Anomaly detection'],'
 		roi: 'Save 10–35% on database costs.','
 		competitors: ['CloudHealth', 'Kubecost (DB add-ons)'],'
-		marketSize: '$4B FinOps tooling','
+		marketSize: '$4 B FinOps tooling','
 		growthRate: '19% CAGR','
 		variant: 'cloud-futuristic','
 		contactInfo: contact,
@@ -147,7 +147,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Qual research', 'Portfolio insights', 'Voice of customer'],'
 		roi: 'Reduce analysis time 60–80%.','
 		competitors: ['Dovetail', 'Grain'],'
-		marketSize: '$800M research tooling','
+		marketSize: '$800 M research tooling','
 		growthRate: '16% CAGR','
 		variant: 'ai-creative','
 		contactInfo: contact,
@@ -195,7 +195,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Shadow IT discovery', 'EASM', 'Risk reduction'],'
 		roi: 'Reduce audit findings and breach exposure.','
 		competitors: ['Axonius', 'JupiterOne'],'
-		marketSize: '$4B ITAM/EASM','
+		marketSize: '$4 B ITAM/EASM','
 		growthRate: '14% CAGR','
 		variant: 'security-futuristic','
 		contactInfo: contact,
@@ -243,7 +243,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Cost control', 'Performance tuning', 'Standards enforcement'],'
 		roi: 'Reduce spend 10–25% on warehouses.','
 		competitors: ['SELECTStar', 'Metaplane'],'
-		marketSize: '$3B data tooling','
+		marketSize: '$3 B data tooling','
 		growthRate: '15% CAGR','
 		variant: 'data-futuristic','
 		contactInfo: contact,
@@ -261,7 +261,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 }
 		id: 'edge-ab-testing-kit','
 		name: 'Edge A/B Testing Kit','
-		tagline: 'Sub-50ms experiments at the edge with holdouts and metrics','
+		tagline: 'Sub-50 ms experiments at the edge with holdouts and metrics','
 		price: '$49','
 		period: '/month','
 		description: 'Run audience and geo-targeted experiments at the edge. Includes holdouts, guardrail metrics, exposure logging, and export to BI tools.',';'
@@ -291,7 +291,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Pricing tests', 'Landing page variants', 'Copy tests'],'
 		roi: 'Increase conversion and learning speed.','
 		competitors: ['Optimizely', 'VWO'],'
-		marketSize: '$6B experimentation','
+		marketSize: '$6 B experimentation','
 		growthRate: '12% CAGR','
 		variant: 'edge-futuristic','
 		contactInfo: contact,
@@ -339,7 +339,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['SLA compliance', 'Customer satisfaction', 'Capacity planning'],'
 		roi: 'Reduce breaches and escalations 20–40%.','
 		competitors: ['Zendesk add-ons'],'
-		marketSize: '$10B ITSM tooling','
+		marketSize: '$10 B ITSM tooling','
 		growthRate: '10% CAGR','
 		variant: 'itsm-futuristic','
 		contactInfo: contact,
@@ -387,7 +387,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['DSAR exports', 'Legal discovery', 'Vendor due diligence'],';'
 		roi: 'Reduce manual redaction time 80%+','
 		competitors: ['Very Good Security', 'Skyflow'],'
-		marketSize: '$2B privacy tooling','
+		marketSize: '$2 B privacy tooling','
 		growthRate: '14% CAGR','
 		variant: 'security-futuristic','
 		contactInfo: contact,
@@ -435,7 +435,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Latency budgets', 'Availability SLOs', 'On-call alerts'],'
 		roi: 'Reduce incidents and missed SLAs.','
 		competitors: ['Nobl9', 'Datadog SLO'],'
-		marketSize: '$18B observability','
+		marketSize: '$18 B observability','
 		growthRate: '20% CAGR','
 		variant: 'monitoring-futuristic','
 		contactInfo: contact,
@@ -483,7 +483,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['CWV improvements', 'SEO', 'Faster UX'],'
 		roi: 'Lift conversion via faster pages.','
 		competitors: ['Calibre', 'SpeedCurve'],'
-		marketSize: '$500M perf tooling','
+		marketSize: '$500 M perf tooling','
 		growthRate: '12% CAGR','
 		variant: 'monitoring-futuristic','
 		contactInfo: contact,
@@ -531,7 +531,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Contract review', 'Risk mitigation', 'Faster cycles'],'
 		roi: 'Shorten deal cycles by days.','
 		competitors: ['Evisort', 'Ironclad (AI features)'],'
-		marketSize: '$3B CLM tooling','
+		marketSize: '$3 B CLM tooling','
 		growthRate: '18% CAGR','
 		variant: 'legal-futuristic','
 		contactInfo: contact,
@@ -579,7 +579,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Vendor DDQs', 'Security reviews', 'RFPs'],'
 		roi: 'Cuts response time by 50–70%.','
 		competitors: ['Conveyor', 'Whistic'],'
-		marketSize: '$2B GRC','
+		marketSize: '$2 B GRC','
 		growthRate: '12% CAGR','
 		variant: 'enterprise-futuristic','
 		contactInfo: contact,
@@ -627,7 +627,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Policy enforcement', 'Compliance', 'Drift remediation'],'
 		roi: 'Reduce policy violations and audit time.','
 		competitors: ['Open Policy Agent ecosystem'],'
-		marketSize: '$3B platform tooling','
+		marketSize: '$3 B platform tooling','
 		growthRate: '13% CAGR','
 		variant: 'devops-futuristic','
 		contactInfo: contact,
@@ -675,7 +675,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Deliverability', 'Compliance', 'Inbox placement'],'
 		roi: 'Improved inboxing and revenue from email.','
 		competitors: ['DMARCian', 'Valimail'],'
-		marketSize: '$1B email tooling','
+		marketSize: '$1 B email tooling','
 		growthRate: '9% CAGR','
 		variant: 'marketing-futuristic','
 		contactInfo: contact,
@@ -723,7 +723,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Experiment tracking', 'Governance', 'Reproducibility'],'
 		roi: 'Better ML iteration speed and traceability.','
 		competitors: ['MLflow (self-managed)'],'
-		marketSize: '$2B MLOps','
+		marketSize: '$2 B MLOps','
 		growthRate: '20% CAGR','
 		variant: 'ai-revolutionary','
 		contactInfo: contact,
@@ -771,7 +771,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Least privilege', 'Audit prep', 'Remediation PRs'],'
 		roi: 'Reduce risk and audit findings.','
 		competitors: ['Sonrai', 'JupiterOne'],'
-		marketSize: '$5B cloud security','
+		marketSize: '$5 B cloud security','
 		growthRate: '15% CAGR','
 		variant: 'security-futuristic','
 		contactInfo: contact,
@@ -819,7 +819,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Reduce failures', 'Faster RCA', 'Stability'],'
 		roi: 'Shorter downtime and fewer re-runs.','
 		competitors: ['Monte Carlo (alerts)'],'
-		marketSize: '$3B data reliability','
+		marketSize: '$3 B data reliability','
 		growthRate: '16% CAGR','
 		variant: 'monitoring-futuristic','
 		contactInfo: contact,
@@ -858,7 +858,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Lead replies', 'Support L1', 'Internal triage'],'
 		roi: 'Reduce first-response time 60%+ and deflect 30–50% L1 tickets.','
 		competitors: ['Gmail Help Me Write', 'HubSpot AI Inbox'],'
-		marketSize: '$5B+ email automation','
+		marketSize: '$5 B+ email automation','
 		growthRate: '22% CAGR','
 		variant: 'ai-futuristic','
 		contactInfo: contact,
@@ -888,7 +888,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
 		link: '/services/mobile-first-surveys','
 		marketPosition: 'Simple alternative to Typeform for mobile use-cases.','
 		targetAudience: 'Marketing, Research, Founders',;';
-export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
+export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   // TODO: Add items
 ]
 	{
@@ -912,7 +912,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     useCases: ['Inbound triage', 'Nurture sequences', 'SLA reporting']'
     roi: 'Cuts manual email time by 6080%','
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add-ons']'
-    marketSize: '$10B+ email productivity','
+    marketSize: '$10 B+ email productivity','
     growthRate: '15% CAGR','
     variant: 'network-futuristic','
     contactInfo: contact
@@ -951,7 +951,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Superhuman AI', 'Front AI', 'Gmail add-ons']'
     marketSiz,
-  e: '$10B+ email productivity''
+  e: '$10 B+ email productivity''
     growthRat,
   e: '15% CAGR''
     varian,
@@ -990,7 +990,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     reviews: 12,
   }
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],'
-    market_size: '$10B+ email productivity''
+    market_size: '$10 B+ email productivity''
     growth_rate: '15% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -1016,7 +1016,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     useCases: ['Inbound triage', 'Nurture sequences', 'SLA reporting'],'
     roi: 'Cuts manual email time by 6080%','
     competitors: ['Superhuman AI', 'Front AI', 'Gmail add-ons'],'
-    marketSize: '$10B+ email productivity''
+    marketSize: '$10 B+ email productivity''
     growthRate: '15% CAGR''
     variant: 'network-futuristic''
     contactInfo: contact
@@ -1070,7 +1070,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],'
     market_siz,
-  e: '$10B+ email productivity','
+  e: '$10 B+ email productivity','
     growth_rat,
   e: '15% CAGR','
     varian,
@@ -1120,7 +1120,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Superhuman AI', 'Front AI', 'Gmail add-ons'],'
     marketSiz,
-  e: '$10B+ email productivity','
+  e: '$10 B+ email productivity','
     growthRat,
   e: '15% CAGR','
     varian,
@@ -1187,7 +1187,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['NPS', 'Feature feedback', 'Onboarding'],'
     roi: '24 x higher completion on mobile','
     competitors: ['Typeform', 'SurveyMonkey'],'
-    market_size: '$7B research tooling''
+    market_size: '$7 B research tooling''
     growth_rate: '9% CAGR''
     variant: 'holographic - matrix''
     contact_info: contact
@@ -1236,11 +1236,11 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_case,
   s: ['NPS', 'Feature feedback', 'Onboarding'],'
     ro,
-  i: '24x higher completion on mobile','
+  i: '24 x higher completion on mobile','
     competitor,
   s: ['Typeform', 'SurveyMonkey'],'
     market_siz,
-  e: '$7B research tooling','
+  e: '$7 B research tooling','
     growth_rat,
   e: '9% CAGR','
     varian,
@@ -1297,7 +1297,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Agency ops', 'Clinic ops', 'Boutique retail'],'
     roi: 'Saves 35 hrs / week per user','
     competitors: ['Notion templates', 'ClickUp'],'
-    market_size: '$3B productivity niche''
+    market_size: '$3 B productivity niche''
     growth_rate: '8% CAGR''
     variant: 'ai - futuristic''
     contact_info: contact
@@ -1350,7 +1350,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Notion templates', 'ClickUp'],'
     market_siz,
-  e: '$3B productivity niche','
+  e: '$3 B productivity niche','
     growth_rat,
   e: '8% CAGR','
     varian,
@@ -1407,7 +1407,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Webinars', 'Town halls', 'Customer training'],'
     roi: 'Saves 50% ops time per event','
     competitors: ['Eventbrite', 'Hopin (basic)'],'
-    market_size: '$6B event tooling''
+    market_size: '$6 B event tooling''
     growth_rate: '10% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -1458,7 +1458,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Eventbrite', 'Hopin (basic)'],'
     market_siz,
-  e: '$6B event tooling','
+  e: '$6 B event tooling','
     growth_rat,
   e: '10% CAGR','
     varian,
@@ -1513,7 +1513,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['SaaS referrals', 'Course affiliates', 'Partner programs'],'
     roi: '+1525% new revenue from partners','
     competitors: ['FirstPromoter', 'Rewardful'],'
-    market_size: '$12B affiliate''
+    market_size: '$12 B affiliate''
     growth_rate: '9% CAGR''
     variant: 'holographic - matrix''
     contact_info: contact
@@ -1564,7 +1564,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['FirstPromoter', 'Rewardful'],'
     market_siz,
-  e: '$12B affiliate','
+  e: '$12 B affiliate','
     growth_rat,
   e: '9% CAGR','
     varian,
@@ -1619,7 +1619,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Website analytics', 'Campaign tracking'],'
     roi: 'Clarity on what converts, 1020% lift','
     competitors: ['Fathom', 'Plausible'],'
-    market_size: '$2B privacy analytics''
+    market_size: '$2 B privacy analytics''
     growth_rate: '14% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -1671,7 +1671,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Fathom', 'Plausible'],'
     market_siz,
-  e: '$2B privacy analytics','
+  e: '$2 B privacy analytics','
     growth_rat,
   e: '14% CAGR','
     varian,
@@ -1727,7 +1727,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['IT support', 'Asset requests', 'Approvals'],'
     roi: '2540% faster resolution time','
     competitors: ['Freshservice', 'Jira Service Management'],'
-    market_size: '$10B ITSM SMB''
+    market_size: '$10 B ITSM SMB''
     growth_rate: '11% CAGR''
     variant: 'ai - futuristic''
     contact_info: contact
@@ -1779,7 +1779,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Freshservice', 'Jira Service Management'],'
     market_siz,
-  e: '$10B ITSM SMB','
+  e: '$10 B ITSM SMB','
     growth_rat,
   e: '11% CAGR','
     varian,
@@ -1835,7 +1835,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['RMAs', 'Return analytics'],'
     roi: 'Reduce returns costs by 1020%','
     competitors: ['Loop Returns', 'Happy Returns (PayPal)'],'
-    market_size: '$4B returns tooling''
+    market_size: '$4 B returns tooling''
     growth_rate: '13% CAGR''
     variant: 'holographic - matrix''
     contact_info: contact
@@ -1886,7 +1886,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Loop Returns', 'Happy Returns (PayPal)'],'
     market_siz,
-  e: '$4B returns tooling','
+  e: '$4 B returns tooling','
     growth_rat,
   e: '13% CAGR','
     varian,
@@ -1941,7 +1941,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Lead follow - up', 'Ticket nudges'],'
     roi: '+1025% more replies','
     competitors: ['Mailshake (lite)', 'GMass'],'
-    market_size: '$5B sales engagement (SMB)''
+    market_size: '$5 B sales engagement (SMB)''
     growth_rate: '10% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -1985,7 +1985,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Mailshake (lite)', 'GMass'],'
     market_siz,
-  e: '$5B sales engagement (SMB)','
+  e: '$5 B sales engagement (SMB)','
     growth_rat,
   e: '10% CAGR','
     varian,
@@ -2040,7 +2040,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Accessibility', 'SEO content'],'
     roi: 'Saves 24 hrs / episode','
     competitors: ['Rev', 'Descript (lite)'],'
-    market_size: '$1B+ transcription''
+    market_size: '$1 B+ transcription''
     growth_rate: '12% CAGR''
     variant: 'ai - futuristic''
     contact_info: contact
@@ -2092,7 +2092,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Rev', 'Descript (lite)'],'
     market_siz,
-  e: '$1B+ transcription','
+  e: '$1 B+ transcription','
     growth_rat,
   e: '12% CAGR','
     varian,
@@ -2148,7 +2148,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['SEO rewrites', 'Gap analysis'],'
     roi: '+2040% organic traffic lift','
     competitors: ['Surfer SEO', 'MarketMuse'],'
-    market_size: '$2B SEO tooling''
+    market_size: '$2 B SEO tooling''
     growth_rate: '11% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -2199,7 +2199,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Surfer SEO', 'MarketMuse'],'
     market_siz,
-  e: '$2B SEO tooling','
+  e: '$2 B SEO tooling','
     growth_rat,
   e: '11% CAGR','
     varian,
@@ -2254,7 +2254,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Content calendar', 'Repurposing'],'
     roi: 'Saves 46 hrs / week','
     competitors: ['Buffer', 'Hootsuite (lite)'],'
-    market_size: '$4B social tooling''
+    market_size: '$4 B social tooling''
     growth_rate: '10% CAGR''
     variant: 'holographic - matrix''
     contact_info: contact
@@ -2305,7 +2305,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Buffer', 'Hootsuite (lite)'],'
     market_siz,
-  e: '$4B social tooling','
+  e: '$4 B social tooling','
     growth_rat,
   e: '10% CAGR','
     varian,
@@ -2350,7 +2350,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     text_color: 'text - blue - 300','
     link: 'https://ziontechgroup.com / services / lead - enrichment - api','
     market_position: 'Usage - based simple pricing','
-    target_audience: 'B2B SaaS, sales ops','
+    target_audience: 'B2 B SaaS, sales ops','
     trial_days: 14,
     setup_time: '1 hour','
     category: 'Developer Tools','
@@ -2360,7 +2360,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Lead routing', 'Scoring'],'
     roi: 'Improves MQLSQL by 1020%','
     competitors: ['Clearbit (lite)', 'Apollo enrichment'],'
-    market_size: '$3B enrichment''
+    market_size: '$3 B enrichment''
     growth_rate: '9% CAGR''
     variant: 'ai - futuristic''
     contact_info: contact
@@ -2391,7 +2391,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     market_positio,
   n: 'Usage - based simple pricing','
     target_audienc,
-  e: 'B2B SaaS, sales ops','
+  e: 'B2 B SaaS, sales ops','
     trial_day,
   s: 14,
     setup_tim,
@@ -2411,7 +2411,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Clearbit (lite)', 'Apollo enrichment'],'
     market_siz,
-  e: '$3B enrichment','
+  e: '$3 B enrichment','
     growth_rat,
   e: '9% CAGR','
     varian,
@@ -2466,7 +2466,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Compliance', 'User trust'],'
     roi: 'Avoid fines, preserve UX','
     competitors: ['OneTrust (lite)', 'CookieYes'],'
-    market_size: '$4B privacy tooling''
+    market_size: '$4 B privacy tooling''
     growth_rate: '14% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -2517,7 +2517,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['OneTrust (lite)', 'CookieYes'],'
     market_siz,
-  e: '$4B privacy tooling','
+  e: '$4 B privacy tooling','
     growth_rat,
   e: '14% CAGR','
     varian,
@@ -2572,7 +2572,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Policy updates', 'Audits'],'
     roi: 'Automates tedious checks''
     competitors: ['Cookiebot (lite)']'
-    market_size: '$1B cookie tools''
+    market_size: '$1 B cookie tools''
     growth_rate: '8% CAGR''
     variant: 'holographic - matrix''
     contact_info: contact
@@ -2623,7 +2623,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Cookiebot (lite)'],'
     market_siz,
-  e: '$1B cookie tools','
+  e: '$1 B cookie tools','
     growth_rat,
   e: '8% CAGR','
     varian,
@@ -2678,7 +2678,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['SLA reports', 'Status page'],'
     roi: 'Reduce support tickets ~20%''
     competitors: ['Statuspage (lite)']'
-    market_size: '$1B status tools''
+    market_size: '$1 B status tools''
     growth_rate: '9% CAGR''
     variant: 'ai - futuristic''
     contact_info: contact
@@ -2729,7 +2729,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Statuspage (lite)'],'
     market_siz,
-  e: '$1B status tools','
+  e: '$1 B status tools','
     growth_rat,
   e: '9% CAGR','
     varian,
@@ -2775,7 +2775,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     integrations: ['HubSpot', 'Calendly'],'
     use_cases: ['Lead capture', 'Meeting booking'],'
     competitors: ['Drift (lite)', 'Intercom Fin'],'
-    market_size: '$3B chatbots''
+    market_size: '$3 B chatbots''
     growth_rate: '12% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -2807,7 +2807,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Drift (lite)', 'Intercom Fin'],'
     market_siz,
-  e: '$3B chatbots','
+  e: '$3 B chatbots','
     growth_rat,
   e: '12% CAGR','
     varian,
@@ -2851,7 +2851,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['DSAR fulfillment'],'
     roi: 'Avoid compliance toil and risk','
     competitors: ['Transcend (lite)', 'Osano'],'
-    market_size: '$6B privacy ops''
+    market_size: '$6 B privacy ops''
     growth_rate: '18% CAGR''
     variant: 'holographic - matrix''
     contact_info: contact
@@ -2875,7 +2875,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Transcend (lite)', 'Osano'],'
     market_siz,
-  e: '$6B privacy ops','
+  e: '$6 B privacy ops','
     growth_rat,
   e: '18% CAGR','
     varian,
@@ -2911,8 +2911,8 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     color: 'from - teal - 600 to - emerald - 700''
     text_color: 'text - teal - 300','
     link: 'https://ziontechgroup.com / services / agentic - lead - qualifier','
-    market_position: 'Focused on B2B lead capture','
-    target_audience: 'B2B SaaS, agencies','
+    market_position: 'Focused on B2 B lead capture','
+    target_audience: 'B2 B SaaS, agencies','
     trial_days: 14,
     setup_time: '30 minutes','
     category: 'AI & Data','
@@ -2922,7 +2922,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Lead capture', 'Meeting booking'],'
     roi: '+1530% qualified demos','
     competitors: ['Drift (lite)', 'Intercom Fin'],'
-    market_size: '$3B chatbots''
+    market_size: '$3 B chatbots''
     growth_rate: '12% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -2951,9 +2951,9 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
   k: 'http,'
   s://ziontechgroup.com / services / agentic - lead - qualifier','
     market_positio,
-  n: 'Focused on B2B lead capture','
+  n: 'Focused on B2 B lead capture','
     target_audienc,
-  e: 'B2B SaaS, agencies','
+  e: 'B2 B SaaS, agencies','
     trial_day,
   s: 14,
     setup_tim,
@@ -2973,7 +2973,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Drift (lite)', 'Intercom Fin'],'
     market_siz,
-  e: '$3B chatbots','
+  e: '$3 B chatbots','
     growth_rat,
   e: '12% CAGR','
     varian,
@@ -3028,7 +3028,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['DSAR fulfillment'],'
     roi: 'Avoid compliance toil and risk','
     competitors: ['Transcend (lite)', 'Osano'],'
-    market_size: '$6B privacy ops''
+    market_size: '$6 B privacy ops''
     growth_rate: '18% CAGR''
     variant: 'holographic - matrix''
     contact_info: contact
@@ -3079,7 +3079,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Transcend (lite)', 'Osano'],'
     market_siz,
-  e: '$6B privacy ops','
+  e: '$6 B privacy ops','
     growth_rat,
   e: '18% CAGR','
     varian,
@@ -3183,7 +3183,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
   competitor,
   s: ['LaunchDarkly add-ons'],'
     marketSiz,
-  e: '$1B flags''
+  e: '$1 B flags''
     growthRat,
   e: '10% CAGR''
     varian,
@@ -3223,7 +3223,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Cleanup debt', 'Reduce risk'],'
     roi: 'Avoid outages, reduce toil','
     competitors: ['LaunchDarkly add - ons']'
-    market_size: '$1B flags''
+    market_size: '$1 B flags''
     growth_rate: '10% CAGR''
     variant: 'ai - futuristic''
     contact_info: contact
@@ -3274,7 +3274,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['LaunchDarkly add - ons'],'
     market_siz,
-  e: '$1B flags','
+  e: '$1 B flags','
     growth_rat,
   e: '10% CAGR','
     varian,
@@ -3321,7 +3321,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['DB tuning', 'Perf boosts'],'
     roi: 'Cut query costs 2050%''
     competitors: ['pganalyze (adjacent)']'
-    market_size: '$2B DB tuning''
+    market_size: '$2 B DB tuning''
     growth_rate: '9% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -3348,7 +3348,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['pganalyze (adjacent)'],'
     market_siz,
-  e: '$2B DB tuning','
+  e: '$2 B DB tuning','
     growth_rat,
   e: '9% CAGR','
     varian,
@@ -3380,7 +3380,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Storage hygiene', 'Cost cuts'],'
     roi: 'Save 1030% storage spend''
     competitors: ['Kubecost (adjacent)']'
-    market_size: '$3B cloud cost''
+    market_size: '$3 B cloud cost''
     growth_rate: '12% CAGR''
     variant: 'holographic - matrix''
     contact_info: contact
@@ -3407,7 +3407,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Kubecost (adjacent)'],'
     market_siz,
-  e: '$3B cloud cost','
+  e: '$3 B cloud cost','
     growth_rat,
   e: '12% CAGR','
     varian,
@@ -3439,7 +3439,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Compliance audits', 'Risk reduction'],'
     roi: 'Avoid incidents and fines','
     competitors: ['Google DLP', 'AWS Macie'],'
-    market_size: '$5B data security''
+    market_size: '$5 B data security''
     growth_rate: '15% CAGR''
     variant: 'ai - futuristic''
     contact_info: contact
@@ -3466,7 +3466,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Schema governance', 'Release safety'],'
     roi: 'Fewer incidents, faster integration','
     competitors: ['Stoplight (adjacent)']'
-    market_size: '$1B API tooling''
+    market_size: '$1 B API tooling''
     growth_rate: '9% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -3500,7 +3500,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Google DLP', 'AWS Macie'],'
     market_siz,
-  e: '$5B data security','
+  e: '$5 B data security','
     growth_rat,
   e: '15% CAGR','
     varian,
@@ -3551,7 +3551,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Stoplight (adjacent)'],'
     market_siz,
-  e: '$1B API tooling','
+  e: '$1 B API tooling','
     growth_rat,
   e: '9% CAGR','
     varian,
@@ -3655,7 +3655,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['pganalyze (adjacent)'],'
     marketSiz,
-  e: '$2B DB tuning''
+  e: '$2 B DB tuning''
     growthRat,
   e: '9% CAGR''
     varian,
@@ -3765,7 +3765,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Kubecost (adjacent)'],'
     marketSiz,
-  e: '$3B cloud cost''
+  e: '$3 B cloud cost''
     growthRat,
   e: '12% CAGR''
     varian,
@@ -3869,7 +3869,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Google DLP', 'AWS Macie']'
     marketSiz,
-  e: '$5B data security''
+  e: '$5 B data security''
     growthRat,
   e: '15% CAGR''
     varian,
@@ -3909,7 +3909,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     useCases: ['Cleanup debt', 'Reduce risk']'
     roi: 'Avoid outages, reduce toil','
     competitors: ['LaunchDarkly add-ons']'
-    marketSize: '$1B flags''
+    marketSize: '$1 B flags''
     growthRate: '10% CAGR''
     variant: 'ai-futuristic''
     contactInfo: contact
@@ -3960,7 +3960,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['LaunchDarkly add-ons'],'
     marketSiz,
-  e: '$1B flags','
+  e: '$1 B flags','
     growthRat,
   e: '10% CAGR','
     varian,
@@ -4015,7 +4015,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['DB tuning', 'Perf boosts'],'
     roi: 'Cut query costs 2050%''
     competitors: ['pganalyze (adjacent)']'
-    market_size: '$2B DB tuning''
+    market_size: '$2 B DB tuning''
     growth_rate: '9% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -4066,7 +4066,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['pganalyze (adjacent)'],'
     market_siz,
-  e: '$2B DB tuning','
+  e: '$2 B DB tuning','
     growth_rat,
   e: '9% CAGR','
     varian,
@@ -4121,7 +4121,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Storage hygiene', 'Cost cuts'],'
     roi: 'Save 1030% storage spend''
     competitors: ['Kubecost (adjacent)']'
-    market_size: '$3B cloud cost''
+    market_size: '$3 B cloud cost''
     growth_rate: '12% CAGR''
     variant: 'holographic - matrix''
     contact_info: contact
@@ -4172,7 +4172,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Kubecost (adjacent)'],'
     market_siz,
-  e: '$3B cloud cost','
+  e: '$3 B cloud cost','
     growth_rat,
   e: '12% CAGR','
     varian,
@@ -4227,7 +4227,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Compliance audits', 'Risk reduction'],'
     roi: 'Avoid incidents and fines','
     competitors: ['Google DLP', 'AWS Macie'],'
-    market_size: '$5B data security''
+    market_size: '$5 B data security''
     growth_rate: '15% CAGR''
     variant: 'ai - futuristic''
     contact_info: contact
@@ -4285,7 +4285,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Google DLP', 'AWS Macie'],'
     market_siz,
-  e: '$5B data security','
+  e: '$5 B data security','
     growth_rat,
   e: '15% CAGR','
     varian,
@@ -4353,7 +4353,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Schema governance', 'Release safety'],'
     roi: 'Fewer incidents, faster integration','
     competitors: ['Stoplight (adjacent)']'
-    market_size: '$1B API tooling''
+    market_size: '$1 B API tooling''
     growth_rate: '9% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -4397,7 +4397,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Stoplight (adjacent)'],'
     market_siz,
-  e: '$1B API tooling','
+  e: '$1 B API tooling','
     growth_rat,
   e: '9% CAGR','
     varian,
@@ -4496,7 +4496,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
   competitor,
   s: ['Stoplight (adjacent)'],'
     marketSiz,
-  e: '$1B API tooling''
+  e: '$1 B API tooling''
     growthRat,
   e: '9% CAGR''
     varian,
@@ -4551,7 +4551,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Cleanup debt', 'Reduce risk'],'
     roi: 'Avoid outages, reduce toil','
     competitors: ['LaunchDarkly add - ons']'
-    market_size: '$1B flags''
+    market_size: '$1 B flags''
     growth_rate: '10% CAGR''
     variant: 'ai - futuristic''
     contact_info: contact
@@ -4602,7 +4602,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['LaunchDarkly add - ons'],'
     market_siz,
-  e: '$1B flags','
+  e: '$1 B flags','
     growth_rat,
   e: '10% CAGR','
     varian,
@@ -4657,7 +4657,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['DB tuning', 'Perf boosts'],'
     roi: 'Cut query costs 2050%''
     competitors: ['pganalyze (adjacent)']'
-    market_size: '$2B DB tuning''
+    market_size: '$2 B DB tuning''
     growth_rate: '9% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -4708,7 +4708,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['pganalyze (adjacent)'],'
     market_siz,
-  e: '$2B DB tuning','
+  e: '$2 B DB tuning','
     growth_rat,
   e: '9% CAGR','
     varian,
@@ -4763,7 +4763,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Storage hygiene', 'Cost cuts'],'
     roi: 'Save 1030% storage spend''
     competitors: ['Kubecost (adjacent)']'
-    market_size: '$3B cloud cost''
+    market_size: '$3 B cloud cost''
     growth_rate: '12% CAGR''
     variant: 'holographic - matrix''
     contact_info: contact
@@ -4814,7 +4814,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Kubecost (adjacent)'],'
     market_siz,
-  e: '$3B cloud cost','
+  e: '$3 B cloud cost','
     growth_rat,
   e: '12% CAGR','
     varian,
@@ -4869,7 +4869,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Compliance audits', 'Risk reduction'],'
     roi: 'Avoid incidents and fines','
     competitors: ['Google DLP', 'AWS Macie'],'
-    market_size: '$5B data security''
+    market_size: '$5 B data security''
     growth_rate: '15% CAGR''
     variant: 'ai - futuristic''
     contact_info: contact
@@ -4932,7 +4932,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Google DLP', 'AWS Macie'],'
     market_siz,
-  e: '$5B data security','
+  e: '$5 B data security','
     growth_rat,
   e: '15% CAGR','
     varian,
@@ -5002,7 +5002,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Schema governance', 'Release safety'],'
     roi: 'Fewer incidents, faster integration','
     competitors: ['Stoplight (adjacent)']'
-    market_size: '$1B API tooling''
+    market_size: '$1 B API tooling''
     growth_rate: '9% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -5053,7 +5053,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Stoplight (adjacent)'],'
     market_siz,
-  e: '$1B API tooling','
+  e: '$1 B API tooling','
     growth_rat,
   e: '9% CAGR','
     varian,
@@ -5108,7 +5108,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Regression checks', 'SLO monitoring'],'
     roi: 'Prevent broken funnels','
     competitors: ['Checkly', 'Datadog Synthetics'],'
-    market_size: '$2B testing / obs''
+    market_size: '$2 B testing / obs''
     growth_rate: '10% CAGR''
     variant: 'holographic - matrix''
     contact_info: contact
@@ -5160,7 +5160,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Checkly', 'Datadog Synthetics'],'
     market_siz,
-  e: '$2B testing / obs','
+  e: '$2 B testing / obs','
     growth_rat,
   e: '10% CAGR','
     varian,
@@ -5216,7 +5216,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Reduce blast radius']'
     roi: 'Reduce risk + audit toil''
     competitors: ['Cloud Custodian (DIY)']'
-    market_size: '$3B cloud sec''
+    market_size: '$3 B cloud sec''
     growth_rate: '13% CAGR''
     variant: 'ai - futuristic''
     contact_info: contact
@@ -5267,7 +5267,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Cloud Custodian (DIY)'],'
     market_siz,
-  e: '$3B cloud sec','
+  e: '$3 B cloud sec','
     growth_rat,
   e: '13% CAGR','
     varian,
@@ -5322,7 +5322,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Cost control', 'Ops hygiene'],'
     roi: '1030% lower DW costs''
     competitors: ['SelectStar (adjacent)']'
-    market_size: '$2B finops DW''
+    market_size: '$2 B finops DW''
     growth_rate: '12% CAGR''
     variant: 'network - futuristic''
     contact_info: contact
@@ -5373,7 +5373,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['SelectStar (adjacent)'],'
     market_siz,
-  e: '$2B finops DW','
+  e: '$2 B finops DW','
     growth_rat,
   e: '12% CAGR','
     varian,
@@ -5428,7 +5428,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Deliverability', 'Inbox tests'],'
     roi: 'Protects domain reputation','
     competitors: ['Warmup Inbox', 'Mailreach'],'
-    market_size: '$1B deliverability''
+    market_size: '$1 B deliverability''
     growth_rate: '9% CAGR''
     variant: 'holographic - matrix''
     contact_info: contact
@@ -5479,7 +5479,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     competitor,
   s: ['Warmup Inbox', 'Mailreach'],'
     market_siz,
-  e: '$1B deliverability','
+  e: '$1 B deliverability','
     growth_rat,
   e: '9% CAGR','
     varian,
@@ -5534,7 +5534,7 @@ export const real2035Q2Additions: EnhancedRealMicroSaasService[] = [;
     use_cases: ['Project follow - through']'
     roi: 'Close the loop on action items''
     competitors: ['Fathom + manual']'
-    market_size: '$2B productivity''
+    market_size: '$2 B productivity''
     growth_rate: '9% CAGR''
     variant: 'ai - futuristic''
     contact_info: contact
@@ -5583,7 +5583,7 @@ const contact =
     competitor,
   s: ['Fathom + manual'],'
     market_siz,
-  e: '$2B productivity','
+  e: '$2 B productivity','
     growth_rat,
   e: '9% CAGR','
     varian,
@@ -5613,7 +5613,7 @@ const contact =
   s://ziontechgroup.com''
 }
 export const,;
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
+  real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 		i,
   d: 'ai-email-responder', nam,'
   e: 'AI Email Responder','
@@ -6213,8 +6213,8 @@ export const,;
 		color: 'from-teal-600 to-emerald-700''
 		textColor: 'text-teal-300','
 		link: 'https://ziontechgroup && ziontechgroup.com/services/agentic-lead-qualifier','
-		marketPosition: 'Focused on B2B lead capture','
-		targetAudience: 'B2B SaaS, agencies''
+		marketPosition: 'Focused on B2 B lead capture','
+		targetAudience: 'B2 B SaaS, agencies''
 		trialDays: 14
 		setupTime: '30 minutes''
 		category: 'AI & Data''
@@ -7190,8 +7190,8 @@ export const,;
   color: 'from - teal - 600 to - emerald - 700''
   text_color: 'text - teal - 300','
   link: 'https://ziontechgroup.com / services / agentic - lead - qualifier','
-  market_position: 'Focused on B2B lead capture','
-  target_audience: 'B2B SaaS, agencies''
+  market_position: 'Focused on B2 B lead capture','
+  target_audience: 'B2 B SaaS, agencies''
   trial_days: 14
   setup_time: '30 minutes''
   category: 'AI & Data''
@@ -7638,7 +7638,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		customers: 48,
 		rating: 4.7}
 		reviews: 12}
-	}
 	{
   // TODO: Add properties
 }
@@ -7683,7 +7682,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		customers: 22,
 		rating: 4.6}
 		reviews: 9}
-	}
 	{
   // TODO: Add properties
 }
@@ -7728,7 +7726,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		customers: 18,
 		rating: 4.5}
 		reviews: 7}
-	}
 	{
   // TODO: Add properties
 }
@@ -7807,7 +7804,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Superhuman AIFront AIGmail add-ons'],'
 		marketSiz,
-  e: '$10B+ email productivity''
+  e: '$10 B+ email productivity''
 		growthRat,
   e: '15% CAGR''
 		varian,
@@ -7876,11 +7873,11 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		useCase,
   s: ['NPSFeature feedbackOnboarding'],'
 		ro,
-  i: '24x higher completion on mobile''
+  i: '24 x higher completion on mobile''
 		competitor,
   s: ['TypeformSurveyMonkey'],'
 		marketSiz,
-  e: '$7B research tooling''
+  e: '$7 B research tooling''
 		growthRat,
   e: '9% CAGR''
 		varian,
@@ -7953,7 +7950,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Notion templatesClickUp'],'
 		marketSiz,
-  e: '$3B productivity niche''
+  e: '$3 B productivity niche''
 		growthRat,
   e: '8% CAGR''
 		varian,
@@ -8026,7 +8023,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['EventbriteHopin (basic)'],'
 		marketSiz,
-  e: '$6B event tooling''
+  e: '$6 B event tooling''
 		growthRat,
   e: '10% CAGR''
 		varian,
@@ -8093,7 +8090,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['FirstPromoterRewardful'],'
 		marketSiz,
-  e: '$12B affiliate''
+  e: '$12 B affiliate''
 		growthRat,
   e: '9% CAGR''
 		varian,
@@ -8160,7 +8157,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['FathomPlausible'],'
 		marketSiz,
-  e: '$2B privacy analytics''
+  e: '$2 B privacy analytics''
 		growthRat,
   e: '14% CAGR''
 		varian,
@@ -8227,7 +8224,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['FreshserviceJira Service Management'],'
 		marketSiz,
-  e: '$10B ITSM SMB''
+  e: '$10 B ITSM SMB''
 		growthRat,
   e: '11% CAGR''
 		varian,
@@ -8294,7 +8291,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Loop ReturnsHappy Returns (PayPal)'],'
 		marketSiz,
-  e: '$4B returns tooling''
+  e: '$4 B returns tooling''
 		growthRat,
   e: '13% CAGR''
 		varian,
@@ -8361,7 +8358,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Mailshake (lite)GMass'],'
 		marketSiz,
-  e: '$5B sales engagement (SMB)''
+  e: '$5 B sales engagement (SMB)''
 		growthRat,
   e: '10% CAGR''
 		varian,
@@ -8428,7 +8425,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['RevDescript (lite)'],'
 		marketSiz,
-  e: '$1B+ transcription''
+  e: '$1 B+ transcription''
 		growthRat,
   e: '12% CAGR''
 		varian,
@@ -8495,7 +8492,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Surfer SEOMarketMuse'],'
 		marketSiz,
-  e: '$2B SEO tooling''
+  e: '$2 B SEO tooling''
 		growthRat,
   e: '11% CAGR''
 		varian,
@@ -8562,7 +8559,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['BufferHootsuite (lite)'],'
 		marketSiz,
-  e: '$4B social tooling''
+  e: '$4 B social tooling''
 		growthRat,
   e: '10% CAGR''
 		varian,
@@ -8609,7 +8606,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		marketPositio,
   n: 'Usage-based simple pricing','
 		targetAudienc,
-  e: 'B2B SaaS, sales ops''
+  e: 'B2 B SaaS, sales ops''
 		trialDay,
   s: 14,
 		setupTim,
@@ -8629,7 +8626,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Clearbit (lite)Apollo enrichment'],'
 		marketSiz,
-  e: '$3B enrichment''
+  e: '$3 B enrichment''
 		growthRat,
   e: '9% CAGR''
 		varian,
@@ -8696,7 +8693,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['OneTrust (lite)CookieYes'],'
 		marketSiz,
-  e: '$4B privacy tooling''
+  e: '$4 B privacy tooling''
 		growthRat,
   e: '14% CAGR''
 		varian,
@@ -8763,7 +8760,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Cookiebot (lite)'],'
 		marketSiz,
-  e: '$1B cookie tools''
+  e: '$1 B cookie tools''
 		growthRat,
   e: '8% CAGR''
 		varian,
@@ -8830,7 +8827,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Statuspage (lite)'],'
 		marketSiz,
-  e: '$1B status tools''
+  e: '$1 B status tools''
 		growthRat,
   e: '9% CAGR''
 		varian,
@@ -8875,9 +8872,9 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   k: 'http,'
   s://ziontechgroup && ziontechgroup.com/services/agentic-lead-qualifier''
 		marketPositio,
-  n: 'Focused on B2B lead capture','
+  n: 'Focused on B2 B lead capture','
 		targetAudienc,
-  e: 'B2B SaaS, agencies''
+  e: 'B2 B SaaS, agencies''
 		trialDay,
   s: 14,
 		setupTim,
@@ -8897,7 +8894,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Drift (lite)Intercom Fin'],'
 		marketSiz,
-  e: '$3B chatbots''
+  e: '$3 B chatbots''
 		growthRat,
   e: '12% CAGR''
 		varian,
@@ -8964,7 +8961,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Transcend (lite)Osano'],'
 		marketSiz,
-  e: '$6B privacy ops''
+  e: '$6 B privacy ops''
 		growthRat,
   e: '18% CAGR''
 		varian,
@@ -9031,7 +9028,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['LaunchDarkly add-ons'],'
 		marketSiz,
-  e: '$1B flags''
+  e: '$1 B flags''
 		growthRat,
   e: '10% CAGR''
 		varian,
@@ -9098,7 +9095,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['pganalyze (adjacent)'],'
 		marketSiz,
-  e: '$2B DB tuning''
+  e: '$2 B DB tuning''
 		growthRat,
   e: '9% CAGR''
 		varian,
@@ -9155,7 +9152,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		realServic,
   e: true,
 		technolog,
-  y: ['AWS S3Cost models'],'
+  y: ['AWS S3 Cost models'],'
 		integration,
   s: ['AWS'],'
 		useCase,
@@ -9165,7 +9162,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Kubecost (adjacent)'],'
 		marketSiz,
-  e: '$3B cloud cost''
+  e: '$3 B cloud cost''
 		growthRat,
   e: '12% CAGR''
 		varian,
@@ -9232,7 +9229,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Google DLPAWS Macie'],'
 		marketSiz,
-  e: '$5B data security''
+  e: '$5 B data security''
 		growthRat,
   e: '15% CAGR''
 		varian,
@@ -9299,7 +9296,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Stoplight (adjacent)'],'
 		marketSiz,
-  e: '$1B API tooling''
+  e: '$1 B API tooling''
 		growthRat,
   e: '9% CAGR''
 		varian,
@@ -9366,7 +9363,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['ChecklyDatadog Synthetics'],'
 		marketSiz,
-  e: '$2B testing/obs''
+  e: '$2 B testing/obs''
 		growthRat,
   e: '10% CAGR''
 		varian,
@@ -9433,7 +9430,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Cloud Custodian (DIY)'],'
 		marketSiz,
-  e: '$3B cloud sec''
+  e: '$3 B cloud sec''
 		growthRat,
   e: '13% CAGR''
 		varian,
@@ -9500,7 +9497,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['SelectStar (adjacent)'],'
 		marketSiz,
-  e: '$2B finops DW''
+  e: '$2 B finops DW''
 		growthRat,
   e: '12% CAGR''
 		varian,
@@ -9567,7 +9564,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Warmup InboxMailreach'],'
 		marketSiz,
-  e: '$1B deliverability''
+  e: '$1 B deliverability''
 		growthRat,
   e: '9% CAGR''
 		varian,
@@ -9634,7 +9631,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		competitor,
   s: ['Fathom + manual'],'
 		marketSiz,
-  e: '$2B productivity''
+  e: '$2 B productivity''
 		growthRat,
   e: '9% CAGR''
 		varian,
@@ -9708,7 +9705,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Superhuman AIFront AIGmail add - ons'],'
   market_siz,
-  e: '$10B+ email productivity''
+  e: '$10 B+ email productivity''
   growth_rat,
   e: '15% CAGR''
   varian,
@@ -9777,11 +9774,11 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   use_case,
   s: ['NPSFeature feedback_onboarding'],'
   ro,
-  i: '24x higher completion on mobile''
+  i: '24 x higher completion on mobile''
   competitor,
   s: ['TypeformSurveyMonkey'],'
   market_siz,
-  e: '$7B research tooling''
+  e: '$7 B research tooling''
   growth_rat,
   e: '9% CAGR''
   varian,
@@ -9854,7 +9851,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Notion templatesClickUp'],'
   market_siz,
-  e: '$3B productivity niche''
+  e: '$3 B productivity niche''
   growth_rat,
   e: '8% CAGR''
   varian,
@@ -9927,7 +9924,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['EventbriteHopin (basic)'],'
   market_siz,
-  e: '$6B event tooling''
+  e: '$6 B event tooling''
   growth_rat,
   e: '10% CAGR''
   varian,
@@ -9994,7 +9991,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['FirstPromoterRewardful'],'
   market_siz,
-  e: '$12B affiliate''
+  e: '$12 B affiliate''
   growth_rat,
   e: '9% CAGR''
   varian,
@@ -10061,7 +10058,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['FathomPlausible'],'
   market_siz,
-  e: '$2B privacy analytics''
+  e: '$2 B privacy analytics''
   growth_rat,
   e: '14% CAGR''
   varian,
@@ -10128,7 +10125,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['FreshserviceJira Service Management'],'
   market_siz,
-  e: '$10B ITSM SMB''
+  e: '$10 B ITSM SMB''
   growth_rat,
   e: '11% CAGR''
   varian,
@@ -10195,7 +10192,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Loop ReturnsHappy Returns (PayPal)'],'
   market_siz,
-  e: '$4B returns tooling''
+  e: '$4 B returns tooling''
   growth_rat,
   e: '13% CAGR''
   varian,
@@ -10262,7 +10259,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Mailshake (lite)GMass'],'
   market_siz,
-  e: '$5B sales engagement (SMB)''
+  e: '$5 B sales engagement (SMB)''
   growth_rat,
   e: '10% CAGR''
   varian,
@@ -10329,7 +10326,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['RevDescript (lite)'],'
   market_siz,
-  e: '$1B+ transcription''
+  e: '$1 B+ transcription''
   growth_rat,
   e: '12% CAGR''
   varian,
@@ -10396,7 +10393,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Surfer SEOMarketMuse'],'
   market_siz,
-  e: '$2B SEO tooling''
+  e: '$2 B SEO tooling''
   growth_rat,
   e: '11% CAGR''
   varian,
@@ -10463,7 +10460,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['BufferHootsuite (lite)'],'
   market_siz,
-  e: '$4B social tooling''
+  e: '$4 B social tooling''
   growth_rat,
   e: '10% CAGR''
   varian,
@@ -10510,7 +10507,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   market_positio,
   n: 'Usage - based simple pricing','
   target_audienc,
-  e: 'B2B SaaS, sales ops''
+  e: 'B2 B SaaS, sales ops''
   trial_day,
   s: 14,
   setup_tim,
@@ -10530,7 +10527,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Clearbit (lite)Apollo enrichment'],'
   market_siz,
-  e: '$3B enrichment''
+  e: '$3 B enrichment''
   growth_rat,
   e: '9% CAGR''
   varian,
@@ -10597,7 +10594,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['OneTrust (lite)CookieYes'],'
   market_siz,
-  e: '$4B privacy tooling''
+  e: '$4 B privacy tooling''
   growth_rat,
   e: '14% CAGR''
   varian,
@@ -10664,7 +10661,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Cookiebot (lite)'],'
   market_siz,
-  e: '$1B cookie tools''
+  e: '$1 B cookie tools''
   growth_rat,
   e: '8% CAGR''
   varian,
@@ -10731,7 +10728,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Statuspage (lite)'],'
   market_siz,
-  e: '$1B status tools''
+  e: '$1 B status tools''
   growth_rat,
   e: '9% CAGR''
   varian,
@@ -10776,9 +10773,9 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   k: 'http,'
   s://ziontechgroup.com / services / agentic - lead - qualifier''
   market_positio,
-  n: 'Focused on B2B lead capture','
+  n: 'Focused on B2 B lead capture','
   target_audienc,
-  e: 'B2B SaaS, agencies''
+  e: 'B2 B SaaS, agencies''
   trial_day,
   s: 14,
   setup_tim,
@@ -10798,7 +10795,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Drift (lite)Intercom Fin'],'
   market_siz,
-  e: '$3B chatbots''
+  e: '$3 B chatbots''
   growth_rat,
   e: '12% CAGR''
   varian,
@@ -10865,7 +10862,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Transcend (lite)Osano'],'
   market_siz,
-  e: '$6B privacy ops''
+  e: '$6 B privacy ops''
   growth_rat,
   e: '18% CAGR''
   varian,
@@ -10932,7 +10929,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['LaunchDarkly add - ons'],'
   market_siz,
-  e: '$1B flags''
+  e: '$1 B flags''
   growth_rat,
   e: '10% CAGR''
   varian,
@@ -10999,7 +10996,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['pganalyze (adjacent)'],'
   market_siz,
-  e: '$2B DB tuning''
+  e: '$2 B DB tuning''
   growth_rat,
   e: '9% CAGR''
   varian,
@@ -11056,7 +11053,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   real_servic,
   e: true,
   technolog,
-  y: ['AWS S3Cost models'],'
+  y: ['AWS S3 Cost models'],'
   integration,
   s: ['AWS'],'
   use_case,
@@ -11066,7 +11063,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Kubecost (adjacent)'],'
   market_siz,
-  e: '$3B cloud cost''
+  e: '$3 B cloud cost''
   growth_rat,
   e: '12% CAGR''
   varian,
@@ -11133,7 +11130,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Google DLPAWS Macie'],'
   market_siz,
-  e: '$5B data security''
+  e: '$5 B data security''
   growth_rat,
   e: '15% CAGR''
   varian,
@@ -11200,7 +11197,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Stoplight (adjacent)'],'
   market_siz,
-  e: '$1B API tooling''
+  e: '$1 B API tooling''
   growth_rat,
   e: '9% CAGR''
   varian,
@@ -11267,7 +11264,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['ChecklyDatadog Synthetics'],'
   market_siz,
-  e: '$2B testing / obs''
+  e: '$2 B testing / obs''
   growth_rat,
   e: '10% CAGR''
   varian,
@@ -11334,7 +11331,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Cloud Custodian (DIY)'],'
   market_siz,
-  e: '$3B cloud sec''
+  e: '$3 B cloud sec''
   growth_rat,
   e: '13% CAGR''
   varian,
@@ -11401,7 +11398,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['SelectStar (adjacent)'],'
   market_siz,
-  e: '$2B finops DW''
+  e: '$2 B finops DW''
   growth_rat,
   e: '12% CAGR''
   varian,
@@ -11468,7 +11465,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Warmup InboxMailreach'],'
   market_siz,
-  e: '$1B deliverability''
+  e: '$1 B deliverability''
   growth_rat,
   e: '9% CAGR''
   varian,
@@ -11535,7 +11532,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   competitor,
   s: ['Fathom + manual'],'
   market_siz,
-  e: '$2B productivity''
+  e: '$2 B productivity''
   growth_rat,
   e: '9% CAGR''
   varian,
@@ -11565,147 +11562,119 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   s://ziontechgroup.com''
 }
 export const,;
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
+  real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 12}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 9}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 7}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 11}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 5}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 8}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 6}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 8}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 6}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 10}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 7}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 4}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 10}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 5}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 7}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 6}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 6}
-	}
 ]
 // const contact = {
   // TODO: Add properties
@@ -11757,7 +11726,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		customers: 48,
 		rating: 4.7}
 		reviews: 12}
-	}
 	{
   // TODO: Add properties
 }
@@ -11802,7 +11770,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		customers: 22,
 		rating: 4.6}
 		reviews: 9}
-	}
 	{
   // TODO: Add properties
 }
@@ -11847,7 +11814,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
 		customers: 18,
 		rating: 4.5}
 		reviews: 7}
-	}
 	{
   // TODO: Add properties
 }
@@ -11899,237 +11865,191 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,;
   s://ziontechgroup.com''
 }
 export const,;
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
+  real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [,
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 12}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 9}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 7}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 11}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 5}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 8}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 6}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 8}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 6}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 10}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 7}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 4}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 10}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 5}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 7}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 6}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 6}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 10}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 7}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 4}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
   s: 10}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 5}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 7}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 5}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 6}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 3}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 4}
-	}
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
 		review,
   s: 6}
-	}
 ]
 'Intent classification + prioritization' 'On-brand response drafting' 'Automatic polite follow-ups' 'Lead/contact enrichment' 'Analytics and response SLAs' ] popula,'
   r: true' ico,'
@@ -12149,7 +12069,7 @@ export const,;
   s: ['Inbound triage', 'Nurture sequences', 'SLA reporting']' ro,'
   i: 'Cuts manual email time by 60–80%' competitor,''
   s: ['Superhuman AI', 'Front AI', 'Gmail add-ons']' marketSiz,'
-  e: '$10B+ email productivity' growthRat,''
+  e: '$10 B+ email productivity' growthRat,''
   e: '15% CAGR' varian,''
   t: 'network-futuristic' contactInf,'
   o: contact,
@@ -12176,7 +12096,7 @@ export const,;
   rating: 4.7,
   reviews: 12 }' competitor,'
   s: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],' market_siz,'
-  e: '$10B+ email productivity',' growth_rat,'
+  e: '$10 B+ email productivity',' growth_rat,'
   e: '15% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12201,7 +12121,7 @@ export const,;
   s: ['Inbound triage', 'Nurture sequences', 'SLA reporting'],' ro,'
   i: 'Cuts manual email time by 60–80%',' competitor,'
   s: ['Superhuman AI', 'Front AI', 'Gmail add-ons'],' marketSiz,'
-  e: '$10B+ email productivity',' growthRat,'
+  e: '$10 B+ email productivity',' growthRat,'
   e: '15% CAGR',' varian,'
   t: 'network-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -12233,9 +12153,9 @@ export const,;
   y: ['Twilio', 'Next.js', 'Vercel / Netlify'], ' integration,'
   s: ['HubSpot', 'Sheets', 'Slack'],' use_case,'
   s: ['NPS', 'Feature feedback', 'Onboarding'],' ro,'
-  i: '2–4x higher completion on mobile',' competitor,'
+  i: '2–4 x higher completion on mobile',' competitor,'
   s: ['Typeform', 'SurveyMonkey'],' market_siz,'
-  e: '$7B research tooling',' growth_rat,'
+  e: '$7 B research tooling',' growth_rat,'
   e: '9% CAGR',' varian,'
   t: 'holographic - matrix', contact_inf,'
   o: contact, real_implementatio,
@@ -12269,7 +12189,7 @@ export const,;
   s: ['Agency ops', 'Clinic ops', 'Boutique retail'],' ro,'
   i: 'Saves 3–5 hrs / week per user',' competitor,'
   s: ['Notion templates', 'ClickUp'],' market_siz,'
-  e: '$3B productivity niche',' growth_rat,'
+  e: '$3 B productivity niche',' growth_rat,'
   e: '8% CAGR',' varian,'
   t: 'ai - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12303,7 +12223,7 @@ export const,;
   s: ['Webinars', 'Town halls', 'Customer training'],' ro,'
   i: 'Saves 50% ops time per event',' competitor,'
   s: ['Eventbrite', 'Hopin (basic)'],' market_siz,'
-  e: '$6B event tooling',' growth_rat,'
+  e: '$6 B event tooling',' growth_rat,'
   e: '10% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12337,7 +12257,7 @@ export const,;
   s: ['SaaS referrals', 'Course affiliates', 'Partner programs'],' ro,'
   i: '+15–25% new revenue from partners',' competitor,'
   s: ['FirstPromoter', 'Rewardful'],' market_siz,'
-  e: '$12B affiliate',' growth_rat,'
+  e: '$12 B affiliate',' growth_rat,'
   e: '9% CAGR',' varian,'
   t: 'holographic - matrix', contact_inf,'
   o: contact, real_implementatio,
@@ -12371,7 +12291,7 @@ export const,;
   s: ['Website analytics', 'Campaign tracking'],' ro,'
   i: 'Clarity on what converts, 10–20% lift',' competitor,'
   s: ['Fathom', 'Plausible'],' market_siz,'
-  e: '$2B privacy analytics',' growth_rat,'
+  e: '$2 B privacy analytics',' growth_rat,'
   e: '14% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12405,7 +12325,7 @@ export const,;
   s: ['IT support', 'Asset requests', 'Approvals'],' ro,'
   i: '25–40% faster resolution time',' competitor,'
   s: ['Freshservice', 'Jira Service Management'],' market_siz,'
-  e: '$10B ITSM SMB',' growth_rat,'
+  e: '$10 B ITSM SMB',' growth_rat,'
   e: '11% CAGR',' varian,'
   t: 'ai - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12439,7 +12359,7 @@ export const,;
   s: ['RMAs', 'Return analytics'],' ro,'
   i: 'Reduce returns costs by 10–20%',' competitor,'
   s: ['Loop Returns', 'Happy Returns (PayPal)'],' market_siz,'
-  e: '$4B returns tooling',' growth_rat,'
+  e: '$4 B returns tooling',' growth_rat,'
   e: '13% CAGR',' varian,'
   t: 'holographic - matrix', contact_inf,'
   o: contact, real_implementatio,
@@ -12473,7 +12393,7 @@ export const,;
   s: ['Lead follow - up', 'Ticket nudges'],' ro,'
   i: '+10–25% more replies',' competitor,'
   s: ['Mailshake (lite)', 'GMass'],' market_siz,'
-  e: '$5B sales engagement (SMB)',' growth_rat,'
+  e: '$5 B sales engagement (SMB)',' growth_rat,'
   e: '10% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12507,7 +12427,7 @@ export const,;
   s: ['Accessibility', 'SEO content'],' ro,'
   i: 'Saves 2–4 hrs / episode',' competitor,'
   s: ['Rev', 'Descript (lite)'],' market_siz,'
-  e: '$1B+ transcription',' growth_rat,'
+  e: '$1 B+ transcription',' growth_rat,'
   e: '12% CAGR',' varian,'
   t: 'ai - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12541,7 +12461,7 @@ export const,;
   s: ['SEO rewrites', 'Gap analysis'],' ro,'
   i: '+20–40% organic traffic lift',' competitor,'
   s: ['Surfer SEO', 'MarketMuse'],' market_siz,'
-  e: '$2B SEO tooling',' growth_rat,'
+  e: '$2 B SEO tooling',' growth_rat,'
   e: '11% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12575,7 +12495,7 @@ export const,;
   s: ['Content calendar', 'Repurposing'],' ro,'
   i: 'Saves 4–6 hrs / week',' competitor,'
   s: ['Buffer', 'Hootsuite (lite)'],' market_siz,'
-  e: '$4B social tooling',' growth_rat,'
+  e: '$4 B social tooling',' growth_rat,'
   e: '10% CAGR',' varian,'
   t: 'holographic - matrix', contact_inf,'
   o: contact, real_implementatio,
@@ -12599,7 +12519,7 @@ export const,;
   k: 'http,'
   s://ziontechgroup.com / services / lead - enrichment - api',' market_positio,'
   n: 'Usage - based simple pricing',' target_audienc,'
-  e: 'B2B SaaS, sales ops', trial_day,'
+  e: 'B2 B SaaS, sales ops', trial_day,'
   s: 14,' setup_tim,'
   e: '1 hour', ' categor,'
   y: 'Developer Tools', real_servic,'
@@ -12609,7 +12529,7 @@ export const,;
   s: ['Lead routing', 'Scoring'],' ro,'
   i: 'Improves MQL→SQL by 10–20%',' competitor,'
   s: ['Clearbit (lite)', 'Apollo enrichment'],' market_siz,'
-  e: '$3B enrichment',' growth_rat,'
+  e: '$3 B enrichment',' growth_rat,'
   e: '9% CAGR',' varian,'
   t: 'ai - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12643,7 +12563,7 @@ export const,;
   s: ['Compliance', 'User trust'],' ro,'
   i: 'Avoid fines, preserve UX',' competitor,'
   s: ['OneTrust (lite)', 'CookieYes'],' market_siz,'
-  e: '$4B privacy tooling',' growth_rat,'
+  e: '$4 B privacy tooling',' growth_rat,'
   e: '14% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12677,7 +12597,7 @@ export const,;
   s: ['Policy updates', 'Audits'],' ro,'
   i: 'Automates tedious checks',' competitor,'
   s: ['Cookiebot (lite)'],' market_siz,'
-  e: '$1B cookie tools',' growth_rat,'
+  e: '$1 B cookie tools',' growth_rat,'
   e: '8% CAGR',' varian,'
   t: 'holographic - matrix', contact_inf,'
   o: contact, real_implementatio,
@@ -12711,7 +12631,7 @@ export const,;
   s: ['SLA reports', 'Status page'],' ro,'
   i: 'Reduce support tickets ~20%',' competitor,'
   s: ['Statuspage (lite)'],' market_siz,'
-  e: '$1B status tools',' growth_rat,'
+  e: '$1 B status tools',' growth_rat,'
   e: '9% CAGR',' varian,'
   t: 'ai - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12735,7 +12655,7 @@ export const,;
   s: ['HubSpot', 'Calendly'],' use_case,'
   s: ['Lead capture', 'Meeting booking'],' competitor,'
   s: ['Drift (lite)', 'Intercom Fin'],' market_siz,'
-  e: '$3B chatbots',' growth_rat,'
+  e: '$3 B chatbots',' growth_rat,'
   e: '12% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12757,7 +12677,7 @@ export const,;
   s: ['DSAR fulfillment'],' ro,'
   i: 'Avoid compliance toil and risk',' competitor,'
   s: ['Transcend (lite)', 'Osano'],' market_siz,'
-  e: '$6B privacy ops',' growth_rat,'
+  e: '$6 B privacy ops',' growth_rat,'
   e: '18% CAGR',' varian,'
   t: 'holographic - matrix', contact_inf,'
   o: contact, real_implementatio,
@@ -12776,8 +12696,8 @@ export const,;
   r: 'text - teal - 300',' lin,'
   k: 'http,'
   s://ziontechgroup.com / services / agentic - lead - qualifier',' market_positio,'
-  n: 'Focused on B2B lead capture',' target_audienc,'
-  e: 'B2B SaaS, agencies', trial_day,'
+  n: 'Focused on B2 B lead capture',' target_audienc,'
+  e: 'B2 B SaaS, agencies', trial_day,'
   s: 14,' setup_tim,'
   e: '30 minutes',' categor,'
   y: 'AI & Data', real_servic,'
@@ -12787,7 +12707,7 @@ export const,;
   s: ['Lead capture', 'Meeting booking'],' ro,'
   i: '+15–30% qualified demos',' competitor,'
   s: ['Drift (lite)', 'Intercom Fin'],' market_siz,'
-  e: '$3B chatbots',' growth_rat,'
+  e: '$3 B chatbots',' growth_rat,'
   e: '12% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12821,7 +12741,7 @@ export const,;
   s: ['DSAR fulfillment'],' ro,'
   i: 'Avoid compliance toil and risk',' competitor,'
   s: ['Transcend (lite)', 'Osano'],' market_siz,'
-  e: '$6B privacy ops',' growth_rat,'
+  e: '$6 B privacy ops',' growth_rat,'
   e: '18% CAGR',' varian,'
   t: 'holographic - matrix', contact_inf,'
   o: contact, real_implementatio,
@@ -12855,7 +12775,7 @@ export const,;
   s: ['Cleanup debt', 'Reduce risk']' ro,'
   i: 'Avoid outages, reduce toil' competitor,''
   s: ['LaunchDarkly add-ons']' marketSiz,'
-  e: '$1B flags' growthRat,''
+  e: '$1 B flags' growthRat,''
   e: '10% CAGR' varian,''
   t: 'ai-futuristic' contactInf,'
   o: contact,
@@ -12882,7 +12802,7 @@ export const,;
   s: ['Cleanup debt', 'Reduce risk'],' ro,'
   i: 'Avoid outages, reduce toil',' competitor,'
   s: ['LaunchDarkly add - ons'],' market_siz,'
-  e: '$1B flags',' growth_rat,'
+  e: '$1 B flags',' growth_rat,'
   e: '10% CAGR',' varian,'
   t: 'ai - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12907,7 +12827,7 @@ export const,;
   s: ['DB tuning', 'Perf boosts'],' ro,'
   i: 'Cut query costs 20–50%',' competitor,'
   s: ['pganalyze (adjacent)'],' market_siz,'
-  e: '$2B DB tuning',' growth_rat,'
+  e: '$2 B DB tuning',' growth_rat,'
   e: '9% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12925,7 +12845,7 @@ export const,;
   s: ['Storage hygiene', 'Cost cuts'],' ro,'
   i: 'Save 10–30% storage spend',' competitor,'
   s: ['Kubecost (adjacent)'],' market_siz,'
-  e: '$3B cloud cost',' growth_rat,'
+  e: '$3 B cloud cost',' growth_rat,'
   e: '12% CAGR',' varian,'
   t: 'holographic - matrix', contact_inf,'
   o: contact, real_implementatio,
@@ -12943,7 +12863,7 @@ export const,;
   s: ['Compliance audits', 'Risk reduction'],' ro,'
   i: 'Avoid incidents and fines',' competitor,'
   s: ['Google DLP', 'AWS Macie'],' market_siz,'
-  e: '$5B data security',' growth_rat,'
+  e: '$5 B data security',' growth_rat,'
   e: '15% CAGR',' varian,'
   t: 'ai - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -12968,7 +12888,7 @@ export const,;
   s: ['Schema governance', 'Release safety'],' ro,'
   i: 'Fewer incidents, faster integration',' competitor,'
   s: ['Stoplight (adjacent)'],' market_siz,'
-  e: '$1B API tooling',' growth_rat,'
+  e: '$1 B API tooling',' growth_rat,'
   e: '9% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -13002,7 +12922,7 @@ export const,;
   s: ['DB tuning', 'Perf boosts']' ro,'
   i: 'Cut query costs 20–50%' competitor,''
   s: ['pganalyze (adjacent)']' marketSiz,'
-  e: '$2B DB tuning' growthRat,''
+  e: '$2 B DB tuning' growthRat,''
   e: '9% CAGR' varian,''
   t: 'network-futuristic' contactInf,'
   o: contact,
@@ -13036,7 +12956,7 @@ export const,;
   s: ['Storage hygiene', 'Cost cuts']' ro,'
   i: 'Save 10–30% storage spend' competitor,''
   s: ['Kubecost (adjacent)']' marketSiz,'
-  e: '$3B cloud cost' growthRat,''
+  e: '$3 B cloud cost' growthRat,''
   e: '12% CAGR' varian,''
   t: 'holographic-matrix' contactInf,'
   o: contact,
@@ -13070,7 +12990,7 @@ export const,;
   s: ['Compliance audits', 'Risk reduction']' ro,'
   i: 'Avoid incidents and fines' competitor,''
   s: ['Google DLP', 'AWS Macie']' marketSiz,'
-  e: '$5B data security' growthRat,''
+  e: '$5 B data security' growthRat,''
   e: '15% CAGR' varian,''
   t: 'ai-futuristic' contactInf,'
   o: contact,
@@ -13097,7 +13017,7 @@ export const,;
   s: ['Cleanup debt', 'Reduce risk'];' ro,'
   i: 'Avoid outages, reduce toil',' competitor,'
   s: ['LaunchDarkly add-ons'],' marketSiz,'
-  e: '$1B flags',' growthRat,'
+  e: '$1 B flags',' growthRat,'
   e: '10% CAGR',' varian,'
   t: 'ai-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -13131,7 +13051,7 @@ export const,;
   s: ['DB tuning', 'Perf boosts'],' ro,'
   i: 'Cut query costs 20–50%',' competitor,'
   s: ['pganalyze (adjacent)'],' market_siz,'
-  e: '$2B DB tuning',' growth_rat,'
+  e: '$2 B DB tuning',' growth_rat,'
   e: '9% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -13165,7 +13085,7 @@ export const,;
   s: ['Storage hygiene', 'Cost cuts'],' ro,'
   i: 'Save 10–30% storage spend',' competitor,'
   s: ['Kubecost (adjacent)'],' market_siz,'
-  e: '$3B cloud cost',' growth_rat,'
+  e: '$3 B cloud cost',' growth_rat,'
   e: '12% CAGR',' varian,'
   t: 'holographic - matrix', contact_inf,'
   o: contact, real_implementatio,
@@ -13199,7 +13119,7 @@ export const,;
   s: ['Compliance audits', 'Risk reduction'],' ro,'
   i: 'Avoid incidents and fines',' competitor,'
   s: ['Google DLP', 'AWS Macie'],' market_siz,'
-  e: '$5B data security',' growth_rat,'
+  e: '$5 B data security',' growth_rat,'
   e: '15% CAGR',' varian,'
   t: 'ai - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -13239,7 +13159,7 @@ export const,;
   s: ['Schema governance', 'Release safety'],' ro,'
   i: 'Fewer incidents, faster integration',' competitor,'
   s: ['Stoplight (adjacent)'],' market_siz,'
-  e: '$1B API tooling',' growth_rat,'
+  e: '$1 B API tooling',' growth_rat,'
   e: '9% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -13267,7 +13187,7 @@ export const,;
   s: ['Schema governance', 'Release safety']' ro,'
   i: 'Fewer incidents, faster integration' competitor,''
   s: ['Stoplight (adjacent)']' marketSiz,'
-  e: '$1B API tooling' growthRat,''
+  e: '$1 B API tooling' growthRat,''
   e: '9% CAGR' varian,''
   t: 'network-futuristic' contactInf,'
   o: contact,
@@ -13301,7 +13221,7 @@ export const,;
   s: ['Cleanup debt', 'Reduce risk'],' ro,'
   i: 'Avoid outages, reduce toil',' competitor,'
   s: ['LaunchDarkly add - ons'],' market_siz,'
-  e: '$1B flags',' growth_rat,'
+  e: '$1 B flags',' growth_rat,'
   e: '10% CAGR',' varian,'
   t: 'ai - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -13335,7 +13255,7 @@ export const,;
   s: ['DB tuning', 'Perf boosts'],' ro,'
   i: 'Cut query costs 20–50%',' competitor,'
   s: ['pganalyze (adjacent)'],' market_siz,'
-  e: '$2B DB tuning',' growth_rat,'
+  e: '$2 B DB tuning',' growth_rat,'
   e: '9% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -13369,7 +13289,7 @@ export const,;
   s: ['Storage hygiene', 'Cost cuts'],' ro,'
   i: 'Save 10–30% storage spend',' competitor,'
   s: ['Kubecost (adjacent)'],' market_siz,'
-  e: '$3B cloud cost',' growth_rat,'
+  e: '$3 B cloud cost',' growth_rat,'
   e: '12% CAGR',' varian,'
   t: 'holographic - matrix', contact_inf,'
   o: contact, real_implementatio,
@@ -13403,7 +13323,7 @@ export const,;
   s: ['Compliance audits', 'Risk reduction'],' ro,'
   i: 'Avoid incidents and fines',' competitor,'
   s: ['Google DLP', 'AWS Macie'],' market_siz,'
-  e: '$5B data security',' growth_rat,'
+  e: '$5 B data security',' growth_rat,'
   e: '15% CAGR',' varian,'
   t: 'ai - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -13444,7 +13364,7 @@ export const,;
   s: ['Schema governance', 'Release safety'],' ro,'
   i: 'Fewer incidents, faster integration',' competitor,'
   s: ['Stoplight (adjacent)'],' market_siz,'
-  e: '$1B API tooling',' growth_rat,'
+  e: '$1 B API tooling',' growth_rat,'
   e: '9% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -13478,7 +13398,7 @@ export const,;
   s: ['Regression checks', 'SLO monitoring'],' ro,'
   i: 'Prevent broken funnels',' competitor,'
   s: ['Checkly', 'Datadog Synthetics'],' market_siz,'
-  e: '$2B testing / obs',' growth_rat,'
+  e: '$2 B testing / obs',' growth_rat,'
   e: '10% CAGR',' varian,'
   t: 'holographic - matrix', contact_inf,'
   o: contact, real_implementatio,
@@ -13512,7 +13432,7 @@ export const,;
   s: ['Reduce blast radius'],' ro,'
   i: 'Reduce risk + audit toil',' competitor,'
   s: ['Cloud Custodian (DIY)'],' market_siz,'
-  e: '$3B cloud sec',' growth_rat,'
+  e: '$3 B cloud sec',' growth_rat,'
   e: '13% CAGR',' varian,'
   t: 'ai - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -13546,7 +13466,7 @@ export const,;
   s: ['Cost control', 'Ops hygiene'],' ro,'
   i: '10–30% lower DW costs',' competitor,'
   s: ['SelectStar (adjacent)'],' market_siz,'
-  e: '$2B finops DW',' growth_rat,'
+  e: '$2 B finops DW',' growth_rat,'
   e: '12% CAGR',' varian,'
   t: 'network - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -13580,7 +13500,7 @@ export const,;
   s: ['Deliverability', 'Inbox tests'],' ro,'
   i: 'Protects domain reputation',' competitor,'
   s: ['Warmup Inbox', 'Mailreach'],' market_siz,'
-  e: '$1B deliverability',' growth_rat,'
+  e: '$1 B deliverability',' growth_rat,'
   e: '9% CAGR',' varian,'
   t: 'holographic - matrix', contact_inf,'
   o: contact, real_implementatio,
@@ -13614,7 +13534,7 @@ export const,;
   s: ['Project follow - through'],' ro,'
   i: 'Close the loop on action items',' competitor,'
   s: ['Fathom + manual'],' market_siz,'
-  e: '$2B productivity',' growth_rat,'
+  e: '$2 B productivity',' growth_rat,'
   e: '9% CAGR',' varian,'
   t: 'ai - futuristic', contact_inf,'
   o: contact, real_implementatio,
@@ -13629,7 +13549,7 @@ export const,;
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,'
   e: 'http,'
   s://ziontechgroup.com' } export const,';'
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [ ' i,'
+  real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [ ' i,'
   d: 'ai-email-responder', nam,'
   e: 'AI Email Responder',' taglin,'
   e: 'Autonomous email triage, drafting, and follow-ups for sales and support',' pric,'
@@ -13654,7 +13574,7 @@ export const,;
   s: ['Inbound triageNurture sequencesSLA reporting'],' ro,'
   i: 'Cuts manual email time by 60–80%' competitor,''
   s: ['Superhuman AIFront AIGmail add-ons'],' marketSiz,'
-  e: '$10B+ email productivity' growthRat,''
+  e: '$10 B+ email productivity' growthRat,''
   e: '15% CAGR' varian,''
   t: 'network-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -13686,9 +13606,9 @@ export const,;
   y: ['TwilioNext && TwilioNext.jsVercel/Netlify'],' integration,'
   s: ['HubSpotSheetsSlack'],' useCase,'
   s: ['NPSFeature feedbackOnboarding'],' ro,'
-  i: '2–4x higher completion on mobile' competitor,''
+  i: '2–4 x higher completion on mobile' competitor,''
   s: ['TypeformSurveyMonkey'],' marketSiz,'
-  e: '$7B research tooling' growthRat,''
+  e: '$7 B research tooling' growthRat,''
   e: '9% CAGR' varian,''
   t: 'holographic-matrix' contactInf,'
   o: contact, realImplementatio,
@@ -13722,7 +13642,7 @@ export const,;
   s: ['Agency opsClinic opsBoutique retail'],' ro,'
   i: 'Saves 3–5 hrs/week per user' competitor,''
   s: ['Notion templatesClickUp'],' marketSiz,'
-  e: '$3B productivity niche' growthRat,''
+  e: '$3 B productivity niche' growthRat,''
   e: '8% CAGR' varian,''
   t: 'ai-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -13756,7 +13676,7 @@ export const,;
   s: ['WebinarsTown hallsCustomer training'],' ro,'
   i: 'Saves 50% ops time per event' competitor,''
   s: ['EventbriteHopin (basic)'],' marketSiz,'
-  e: '$6B event tooling' growthRat,''
+  e: '$6 B event tooling' growthRat,''
   e: '10% CAGR' varian,''
   t: 'network-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -13790,7 +13710,7 @@ export const,;
   s: ['SaaS referralsCourse affiliatesPartner programs'],' ro,'
   i: '+15–25% new revenue from partners' competitor,''
   s: ['FirstPromoterRewardful'],' marketSiz,'
-  e: '$12B affiliate' growthRat,''
+  e: '$12 B affiliate' growthRat,''
   e: '9% CAGR' varian,''
   t: 'holographic-matrix' contactInf,'
   o: contact, realImplementatio,
@@ -13824,7 +13744,7 @@ export const,;
   s: ['Website analyticsCampaign tracking']' ro,'
   i: 'Clarity on what converts, 10–20% lift' competitor,''
   s: ['FathomPlausible'],' marketSiz,'
-  e: '$2B privacy analytics' growthRat,''
+  e: '$2 B privacy analytics' growthRat,''
   e: '14% CAGR' varian,''
   t: 'network-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -13858,7 +13778,7 @@ export const,;
   s: ['IT supportAsset requestsApprovals'],' ro,'
   i: '25–40% faster resolution time' competitor,''
   s: ['FreshserviceJira Service Management'],' marketSiz,'
-  e: '$10B ITSM SMB' growthRat,''
+  e: '$10 B ITSM SMB' growthRat,''
   e: '11% CAGR' varian,''
   t: 'ai-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -13892,7 +13812,7 @@ export const,;
   s: ['RMAsReturn analytics'],' ro,'
   i: 'Reduce returns costs by 10–20%' competitor,''
   s: ['Loop ReturnsHappy Returns (PayPal)'],' marketSiz,'
-  e: '$4B returns tooling' growthRat,''
+  e: '$4 B returns tooling' growthRat,''
   e: '13% CAGR' varian,''
   t: 'holographic-matrix' contactInf,'
   o: contact, realImplementatio,
@@ -13926,7 +13846,7 @@ export const,;
   s: ['Lead follow-upTicket nudges'],' ro,'
   i: '+10–25% more replies' competitor,''
   s: ['Mailshake (lite)GMass'],' marketSiz,'
-  e: '$5B sales engagement (SMB)' growthRat,''
+  e: '$5 B sales engagement (SMB)' growthRat,''
   e: '10% CAGR' varian,''
   t: 'network-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -13960,7 +13880,7 @@ export const,;
   s: ['AccessibilitySEO content'],' ro,'
   i: 'Saves 2–4 hrs/episode' competitor,''
   s: ['RevDescript (lite)'],' marketSiz,'
-  e: '$1B+ transcription' growthRat,''
+  e: '$1 B+ transcription' growthRat,''
   e: '12% CAGR' varian,''
   t: 'ai-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -13994,7 +13914,7 @@ export const,;
   s: ['SEO rewritesGap analysis'],' ro,'
   i: '+20–40% organic traffic lift' competitor,''
   s: ['Surfer SEOMarketMuse'],' marketSiz,'
-  e: '$2B SEO tooling' growthRat,''
+  e: '$2 B SEO tooling' growthRat,''
   e: '11% CAGR' varian,''
   t: 'network-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -14028,7 +13948,7 @@ export const,;
   s: ['Content calendarRepurposing'],' ro,'
   i: 'Saves 4–6 hrs/week' competitor,''
   s: ['BufferHootsuite (lite)'],' marketSiz,'
-  e: '$4B social tooling' growthRat,''
+  e: '$4 B social tooling' growthRat,''
   e: '10% CAGR' varian,''
   t: 'holographic-matrix' contactInf,'
   o: contact, realImplementatio,
@@ -14052,7 +13972,7 @@ export const,;
   k: 'http,'
   s://ziontechgroup && ziontechgroup.com/services/lead-enrichment-api'' marketPositio,'
   n: 'Usage-based simple pricing', ' targetAudienc,'
-  e: 'B2B SaaS, sales ops' trialDay,'
+  e: 'B2 B SaaS, sales ops' trialDay,'
   s: 14,' setupTim,'
   e: '1 hour' categor,''
   y: 'Developer Tools' realServic,'
@@ -14062,7 +13982,7 @@ export const,;
   s: ['Lead routingScoring'],' ro,'
   i: 'Improves MQL→SQL by 10–20%' competitor,''
   s: ['Clearbit (lite)Apollo enrichment'],' marketSiz,'
-  e: '$3B enrichment' growthRat,''
+  e: '$3 B enrichment' growthRat,''
   e: '9% CAGR' varian,''
   t: 'ai-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -14096,7 +14016,7 @@ export const,;
   s: ['ComplianceUser trust']' ro,'
   i: 'Avoid fines, preserve UX' competitor,''
   s: ['OneTrust (lite)CookieYes'],' marketSiz,'
-  e: '$4B privacy tooling' growthRat,''
+  e: '$4 B privacy tooling' growthRat,''
   e: '14% CAGR' varian,''
   t: 'network-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -14130,7 +14050,7 @@ export const,;
   s: ['Policy updatesAudits'],' ro,'
   i: 'Automates tedious checks' competitor,''
   s: ['Cookiebot (lite)'],' marketSiz,'
-  e: '$1B cookie tools' growthRat,''
+  e: '$1 B cookie tools' growthRat,''
   e: '8% CAGR' varian,''
   t: 'holographic-matrix' contactInf,'
   o: contact, realImplementatio,
@@ -14164,7 +14084,7 @@ export const,;
   s: ['SLA reportsStatus page'],' ro,'
   i: 'Reduce support tickets ~20%' competitor,''
   s: ['Statuspage (lite)'],' marketSiz,'
-  e: '$1B status tools' growthRat,''
+  e: '$1 B status tools' growthRat,''
   e: '9% CAGR' varian,''
   t: 'ai-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -14187,8 +14107,8 @@ export const,;
   r: 'text-teal-300' ' lin,'
   k: 'http,'
   s://ziontechgroup && ziontechgroup.com/services/agentic-lead-qualifier'' marketPositio,'
-  n: 'Focused on B2B lead capture', ' targetAudienc,'
-  e: 'B2B SaaS, agencies' trialDay,'
+  n: 'Focused on B2 B lead capture', ' targetAudienc,'
+  e: 'B2 B SaaS, agencies' trialDay,'
   s: 14,' setupTim,'
   e: '30 minutes' categor,''
   y: 'AI & Data' realServic,'
@@ -14198,7 +14118,7 @@ export const,;
   s: ['Lead captureMeeting booking'],' ro,'
   i: '+15–30% qualified demos' competitor,''
   s: ['Drift (lite)Intercom Fin'],' marketSiz,'
-  e: '$3B chatbots' growthRat,''
+  e: '$3 B chatbots' growthRat,''
   e: '12% CAGR' varian,''
   t: 'network-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -14232,7 +14152,7 @@ export const,;
   s: ['DSAR fulfillment'],' ro,'
   i: 'Avoid compliance toil and risk' competitor,''
   s: ['Transcend (lite)Osano'],' marketSiz,'
-  e: '$6B privacy ops' growthRat,''
+  e: '$6 B privacy ops' growthRat,''
   e: '18% CAGR' varian,''
   t: 'holographic-matrix' contactInf,'
   o: contact, realImplementatio,
@@ -14266,7 +14186,7 @@ export const,;
   s: ['Cleanup debtReduce risk']' ro,'
   i: 'Avoid outages, reduce toil' competitor,''
   s: ['LaunchDarkly add-ons'],' marketSiz,'
-  e: '$1B flags' growthRat,''
+  e: '$1 B flags' growthRat,''
   e: '10% CAGR' varian,''
   t: 'ai-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -14300,7 +14220,7 @@ export const,;
   s: ['DB tuningPerf boosts'],' ro,'
   i: 'Cut query costs 20–50%' competitor,''
   s: ['pganalyze (adjacent)'],' marketSiz,'
-  e: '$2B DB tuning' growthRat,''
+  e: '$2 B DB tuning' growthRat,''
   e: '9% CAGR' varian,''
   t: 'network-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -14329,12 +14249,12 @@ export const,;
   e: '1 hour' categor,''
   y: 'Cloud & FinOps' realServic,'
   e: true,' technolog,'
-  y: ['AWS S3Cost models'],' integration,'
+  y: ['AWS S3 Cost models'],' integration,'
   s: ['AWS'],' useCase,'
   s: ['Storage hygieneCost cuts'],' ro,'
   i: 'Save 10–30% storage spend' competitor,''
   s: ['Kubecost (adjacent)'],' marketSiz,'
-  e: '$3B cloud cost' growthRat,''
+  e: '$3 B cloud cost' growthRat,''
   e: '12% CAGR' varian,''
   t: 'holographic-matrix' contactInf,'
   o: contact, realImplementatio,
@@ -14368,7 +14288,7 @@ export const,;
   s: ['Compliance auditsRisk reduction'],' ro,'
   i: 'Avoid incidents and fines' competitor,''
   s: ['Google DLPAWS Macie'],' marketSiz,'
-  e: '$5B data security' growthRat,''
+  e: '$5 B data security' growthRat,''
   e: '15% CAGR' varian,''
   t: 'ai-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -14402,7 +14322,7 @@ export const,;
   s: ['Schema governanceRelease safety']' ro,'
   i: 'Fewer incidents, faster integration' competitor,''
   s: ['Stoplight (adjacent)'],' marketSiz,'
-  e: '$1B API tooling' growthRat,''
+  e: '$1 B API tooling' growthRat,''
   e: '9% CAGR' varian,''
   t: 'network-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -14436,7 +14356,7 @@ export const,;
   s: ['Regression checksSLO monitoring'],' ro,'
   i: 'Prevent broken funnels' competitor,''
   s: ['ChecklyDatadog Synthetics'],' marketSiz,'
-  e: '$2B testing/obs' growthRat,''
+  e: '$2 B testing/obs' growthRat,''
   e: '10% CAGR' varian,''
   t: 'holographic-matrix' contactInf,'
   o: contact, realImplementatio,
@@ -14470,7 +14390,7 @@ export const,;
   s: ['Reduce blast radius'],' ro,'
   i: 'Reduce risk + audit toil' competitor,''
   s: ['Cloud Custodian (DIY)'],' marketSiz,'
-  e: '$3B cloud sec' growthRat,''
+  e: '$3 B cloud sec' growthRat,''
   e: '13% CAGR' varian,''
   t: 'ai-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -14504,7 +14424,7 @@ export const,;
   s: ['Cost controlOps hygiene'],' ro,'
   i: '10–30% lower DW costs' competitor,''
   s: ['SelectStar (adjacent)'],' marketSiz,'
-  e: '$2B finops DW' growthRat,''
+  e: '$2 B finops DW' growthRat,''
   e: '12% CAGR' varian,''
   t: 'network-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -14538,7 +14458,7 @@ export const,;
   s: ['DeliverabilityInbox tests'],' ro,'
   i: 'Protects domain reputation' competitor,''
   s: ['Warmup InboxMailreach'],' marketSiz,'
-  e: '$1B deliverability' growthRat,''
+  e: '$1 B deliverability' growthRat,''
   e: '9% CAGR' varian,''
   t: 'holographic-matrix' contactInf,'
   o: contact, realImplementatio,
@@ -14572,7 +14492,7 @@ export const,;
   s: ['Project follow-through'],' ro,'
   i: 'Close the loop on action items' competitor,''
   s: ['Fathom + manual'],' marketSiz,'
-  e: '$2B productivity' growthRat,''
+  e: '$2 B productivity' growthRat,''
   e: '9% CAGR' varian,''
   t: 'ai-futuristic' contactInf,'
   o: contact, realImplementatio,
@@ -14606,7 +14526,7 @@ export const,;
   s: ['Inbound triage_nurture sequencesSLA reporting'],' ro,'
   i: 'Cuts manual email time by 60–80%' competitor,''
   s: ['Superhuman AIFront AIGmail add - ons'],' market_siz,'
-  e: '$10B+ email productivity' growth_rat,''
+  e: '$10 B+ email productivity' growth_rat,''
   e: '15% CAGR' varian,''
   t: 'network - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -14638,9 +14558,9 @@ export const,;
   y: ['TwilioNext.js_vercel / Netlify'],' integration,'
   s: ['HubSpotSheetsSlack'],' use_case,'
   s: ['NPSFeature feedback_onboarding'],' ro,'
-  i: '2–4x higher completion on mobile' competitor,''
+  i: '2–4 x higher completion on mobile' competitor,''
   s: ['TypeformSurveyMonkey'],' market_siz,'
-  e: '$7B research tooling' growth_rat,''
+  e: '$7 B research tooling' growth_rat,''
   e: '9% CAGR' varian,''
   t: 'holographic - matrix' contact_inf,'
   o: contact, real_implementatio,
@@ -14674,7 +14594,7 @@ export const,;
   s: ['Agency ops_clinic ops_boutique retail'],' ro,'
   i: 'Saves 3–5 hrs / week per user' competitor,''
   s: ['Notion templatesClickUp'],' market_siz,'
-  e: '$3B productivity niche' growth_rat,''
+  e: '$3 B productivity niche' growth_rat,''
   e: '8% CAGR' varian,''
   t: 'ai - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -14708,7 +14628,7 @@ export const,;
   s: ['WebinarsTown halls_customer training'],' ro,'
   i: 'Saves 50% ops time per event' competitor,''
   s: ['EventbriteHopin (basic)'],' market_siz,'
-  e: '$6B event tooling' growth_rat,''
+  e: '$6 B event tooling' growth_rat,''
   e: '10% CAGR' varian,''
   t: 'network - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -14742,7 +14662,7 @@ export const,;
   s: ['SaaS referrals_course affiliates_partner programs'],' ro,'
   i: '+15–25% new revenue from partners' competitor,''
   s: ['FirstPromoterRewardful'],' market_siz,'
-  e: '$12B affiliate' growth_rat,''
+  e: '$12 B affiliate' growth_rat,''
   e: '9% CAGR' varian,''
   t: 'holographic - matrix' contact_inf,'
   o: contact, real_implementatio,
@@ -14776,7 +14696,7 @@ export const,;
   s: ['Website analytics_campaign tracking'],' ro,'
   i: 'Clarity on what converts, 10–20% lift' competitor,''
   s: ['FathomPlausible'],' market_siz,'
-  e: '$2B privacy analytics' growth_rat,''
+  e: '$2 B privacy analytics' growth_rat,''
   e: '14% CAGR' varian,''
   t: 'network - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -14810,7 +14730,7 @@ export const,;
   s: ['IT support_asset requests_approvals'],' ro,'
   i: '25–40% faster resolution time' competitor,''
   s: ['FreshserviceJira Service Management'],' market_siz,'
-  e: '$10B ITSM SMB' growth_rat,''
+  e: '$10 B ITSM SMB' growth_rat,''
   e: '11% CAGR' varian,''
   t: 'ai - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -14844,7 +14764,7 @@ export const,;
   s: ['RMAsReturn analytics'],' ro,'
   i: 'Reduce returns costs by 10–20%' competitor,''
   s: ['Loop ReturnsHappy Returns (PayPal)'],' market_siz,'
-  e: '$4B returns tooling' growth_rat,''
+  e: '$4 B returns tooling' growth_rat,''
   e: '13% CAGR' varian,''
   t: 'holographic - matrix' contact_inf,'
   o: contact, real_implementatio,
@@ -14878,7 +14798,7 @@ export const,;
   s: ['Lead follow - up_ticket nudges'],' ro,'
   i: '+10–25% more replies' competitor,''
   s: ['Mailshake (lite)GMass'],' market_siz,'
-  e: '$5B sales engagement (SMB)' growth_rat,''
+  e: '$5 B sales engagement (SMB)' growth_rat,''
   e: '10% CAGR' varian,''
   t: 'network - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -14912,7 +14832,7 @@ export const,;
   s: ['AccessibilitySEO content'],' ro,'
   i: 'Saves 2–4 hrs / episode' competitor,''
   s: ['RevDescript (lite)'],' market_siz,'
-  e: '$1B+ transcription' growth_rat,''
+  e: '$1 B+ transcription' growth_rat,''
   e: '12% CAGR' varian,''
   t: 'ai - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -14946,7 +14866,7 @@ export const,;
   s: ['SEO rewrites_gap analysis'],' ro,'
   i: '+20–40% organic traffic lift' competitor,''
   s: ['Surfer SEOMarketMuse'],' market_siz,'
-  e: '$2B SEO tooling' growth_rat,''
+  e: '$2 B SEO tooling' growth_rat,''
   e: '11% CAGR' varian,''
   t: 'network - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -14980,7 +14900,7 @@ export const,;
   s: ['Content calendar_repurposing'],' ro,'
   i: 'Saves 4–6 hrs / week' competitor,''
   s: ['BufferHootsuite (lite)'],' market_siz,'
-  e: '$4B social tooling' growth_rat,''
+  e: '$4 B social tooling' growth_rat,''
   e: '10% CAGR' varian,''
   t: 'holographic - matrix' contact_inf,'
   o: contact, real_implementatio,
@@ -15004,7 +14924,7 @@ export const,;
   k: 'http,'
   s://ziontechgroup.com / services / lead - enrichment - api'' market_positio,'
   n: 'Usage - based simple pricing',' target_audienc,'
-  e: 'B2B SaaS, sales ops' trial_day,'
+  e: 'B2 B SaaS, sales ops' trial_day,'
   s: 14,' setup_tim,'
   e: '1 hour' categor,''
   y: 'Developer Tools' real_servic,'
@@ -15014,7 +14934,7 @@ export const,;
   s: ['Lead routing_scoring'],' ro,'
   i: 'Improves MQL→SQL by 10–20%' competitor,''
   s: ['Clearbit (lite)Apollo enrichment'],' market_siz,'
-  e: '$3B enrichment' growth_rat,''
+  e: '$3 B enrichment' growth_rat,''
   e: '9% CAGR' varian,''
   t: 'ai - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -15048,7 +14968,7 @@ export const,;
   s: ['ComplianceUser trust'],' ro,'
   i: 'Avoid fines, preserve UX' competitor,''
   s: ['OneTrust (lite)CookieYes'],' market_siz,'
-  e: '$4B privacy tooling' growth_rat,''
+  e: '$4 B privacy tooling' growth_rat,''
   e: '14% CAGR' varian,''
   t: 'network - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -15082,7 +15002,7 @@ export const,;
   s: ['Policy updates_audits'],' ro,'
   i: 'Automates tedious checks' competitor,''
   s: ['Cookiebot (lite)'],' market_siz,'
-  e: '$1B cookie tools' growth_rat,''
+  e: '$1 B cookie tools' growth_rat,''
   e: '8% CAGR' varian,''
   t: 'holographic - matrix' contact_inf,'
   o: contact, real_implementatio,
@@ -15116,7 +15036,7 @@ export const,;
   s: ['SLA reports_status page'],' ro,'
   i: 'Reduce support tickets ~20%' competitor,''
   s: ['Statuspage (lite)'],' market_siz,'
-  e: '$1B status tools' growth_rat,''
+  e: '$1 B status tools' growth_rat,''
   e: '9% CAGR' varian,''
   t: 'ai - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -15139,8 +15059,8 @@ export const,;
   r: 'text - teal - 300' lin,''
   k: 'http,'
   s://ziontechgroup.com / services / agentic - lead - qualifier'' market_positio,'
-  n: 'Focused on B2B lead capture',' target_audienc,'
-  e: 'B2B SaaS, agencies' trial_day,'
+  n: 'Focused on B2 B lead capture',' target_audienc,'
+  e: 'B2 B SaaS, agencies' trial_day,'
   s: 14,' setup_tim,'
   e: '30 minutes' categor,''
   y: 'AI & Data' real_servic,'
@@ -15150,7 +15070,7 @@ export const,;
   s: ['Lead capture_meeting booking'],' ro,'
   i: '+15–30% qualified demos' competitor,''
   s: ['Drift (lite)Intercom Fin'],' market_siz,'
-  e: '$3B chatbots' growth_rat,''
+  e: '$3 B chatbots' growth_rat,''
   e: '12% CAGR' varian,''
   t: 'network - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -15184,7 +15104,7 @@ export const,;
   s: ['DSAR fulfillment'],' ro,'
   i: 'Avoid compliance toil and risk' competitor,''
   s: ['Transcend (lite)Osano'],' market_siz,'
-  e: '$6B privacy ops' growth_rat,''
+  e: '$6 B privacy ops' growth_rat,''
   e: '18% CAGR' varian,''
   t: 'holographic - matrix' contact_inf,'
   o: contact, real_implementatio,
@@ -15218,7 +15138,7 @@ export const,;
   s: ['Cleanup debt_reduce risk'],' ro,'
   i: 'Avoid outages, reduce toil' competitor,''
   s: ['LaunchDarkly add - ons'],' market_siz,'
-  e: '$1B flags' growth_rat,''
+  e: '$1 B flags' growth_rat,''
   e: '10% CAGR' varian,''
   t: 'ai - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -15252,7 +15172,7 @@ export const,;
   s: ['DB tuning_perf boosts'],' ro,'
   i: 'Cut query costs 20–50%' competitor,''
   s: ['pganalyze (adjacent)'],' market_siz,'
-  e: '$2B DB tuning' growth_rat,''
+  e: '$2 B DB tuning' growth_rat,''
   e: '9% CAGR' varian,''
   t: 'network - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -15281,12 +15201,12 @@ export const,;
   e: '1 hour' categor,''
   y: 'Cloud & FinOps' real_servic,'
   e: true,' technolog,'
-  y: ['AWS S3Cost models'],' integration,'
+  y: ['AWS S3 Cost models'],' integration,'
   s: ['AWS'],' use_case,'
   s: ['Storage hygiene_cost cuts'],' ro,'
   i: 'Save 10–30% storage spend' competitor,''
   s: ['Kubecost (adjacent)'],' market_siz,'
-  e: '$3B cloud cost' growth_rat,''
+  e: '$3 B cloud cost' growth_rat,''
   e: '12% CAGR' varian,''
   t: 'holographic - matrix' contact_inf,'
   o: contact, real_implementatio,
@@ -15320,7 +15240,7 @@ export const,;
   s: ['Compliance audits_risk reduction'],' ro,'
   i: 'Avoid incidents and fines' competitor,''
   s: ['Google DLPAWS Macie'],' market_siz,'
-  e: '$5B data security' growth_rat,''
+  e: '$5 B data security' growth_rat,''
   e: '15% CAGR' varian,''
   t: 'ai - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -15354,7 +15274,7 @@ export const,;
   s: ['Schema governance_release safety'],' ro,'
   i: 'Fewer incidents, faster integration' competitor,''
   s: ['Stoplight (adjacent)'],' market_siz,'
-  e: '$1B API tooling' growth_rat,''
+  e: '$1 B API tooling' growth_rat,''
   e: '9% CAGR' varian,''
   t: 'network - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -15388,7 +15308,7 @@ export const,;
   s: ['Regression checksSLO monitoring'],' ro,'
   i: 'Prevent broken funnels' competitor,''
   s: ['ChecklyDatadog Synthetics'],' market_siz,'
-  e: '$2B testing / obs' growth_rat,''
+  e: '$2 B testing / obs' growth_rat,''
   e: '10% CAGR' varian,''
   t: 'holographic - matrix' contact_inf,'
   o: contact, real_implementatio,
@@ -15422,7 +15342,7 @@ export const,;
   s: ['Reduce blast radius'],' ro,'
   i: 'Reduce risk + audit toil' competitor,''
   s: ['Cloud Custodian (DIY)'],' market_siz,'
-  e: '$3B cloud sec' growth_rat,''
+  e: '$3 B cloud sec' growth_rat,''
   e: '13% CAGR' varian,''
   t: 'ai - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -15456,7 +15376,7 @@ export const,;
   s: ['Cost control_ops hygiene'],' ro,'
   i: '10–30% lower DW costs' competitor,''
   s: ['SelectStar (adjacent)'],' market_siz,'
-  e: '$2B finops DW' growth_rat,''
+  e: '$2 B finops DW' growth_rat,''
   e: '12% CAGR' varian,''
   t: 'network - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -15490,7 +15410,7 @@ export const,;
   s: ['DeliverabilityInbox tests'],' ro,'
   i: 'Protects domain reputation' competitor,''
   s: ['Warmup InboxMailreach'],' market_siz,'
-  e: '$1B deliverability' growth_rat,''
+  e: '$1 B deliverability' growth_rat,''
   e: '9% CAGR' varian,''
   t: 'holographic - matrix' contact_inf,'
   o: contact, real_implementatio,
@@ -15524,7 +15444,7 @@ export const,;
   s: ['Project follow - through'],' ro,'
   i: 'Close the loop on action items' competitor,''
   s: ['Fathom + manual'],' market_siz,'
-  e: '$2B productivity' growth_rat,''
+  e: '$2 B productivity' growth_rat,''
   e: '9% CAGR' varian,''
   t: 'ai - futuristic' contact_inf,'
   o: contact, real_implementatio,
@@ -15535,12 +15455,13 @@ export const,;
   g: 4.6, review,
   s: 6} ratin,
   g: 4.6,
-  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}';'
+  reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+const contact = {/* TODO: Fix JSX expression */}';'
   l: 'kleber@ziontechgroup.com'}' addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,'
   e: 'http,'
   s://ziontechgroup.com' } export const,';'
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
+  real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
   g: 4.7} review,
   s: 12} } {/* TODO: Fix JSX expression */}
   g: 4.6} review,
@@ -15596,12 +15517,13 @@ export const,;
   g: 4.5} review,
   s: 4} } {/* TODO: Fix JSX expression */}
   g: 4.6} review,
-  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}';'
+  s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+const contact = {/* TODO: Fix JSX expression */}';'
   l: 'kleber@ziontechgroup.com'}' addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709'}' websit,'
   e: 'http,'
   s://ziontechgroup.com' } export const,';'
-  real2035Q2Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
+  real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [, {/* TODO: Fix JSX expression */}
   g: 4.7} review,
   s: 12} } {/* TODO: Fix JSX expression */}
   g: 4.6} review,

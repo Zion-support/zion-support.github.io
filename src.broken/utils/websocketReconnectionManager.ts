@@ -67,5 +67,4 @@ const resetReconnection: unknown = useCallback(() => {
     attemptCount,
     attemptReconnection,
     resetReconnection
-  }
-}
+  

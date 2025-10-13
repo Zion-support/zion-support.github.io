@@ -54,7 +54,6 @@ const result = {
         message: error.message),
         function: 'features-capabilities-benefits-advertiser'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -63,7 +62,6 @@ const result = {
   n: 'features-capabilities-benefits-advertiser'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'features-capabilities-benefits-advertiser',' source: event.source || 'unknown', advertising: {' status: 'active', features: 0, capabilities: 0, benefits: 0,'
         lastAdvert: new Date().toISOString() } }) } return result; } catch (error) {

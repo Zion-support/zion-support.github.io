@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'roadmap-curator'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'roadmap-curator'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'roadmap-curator',' source: event.source || 'unknown', curation: {' status: 'active', roadmaps: 0,'
         lastCurated: new Date().toISOString() } }) } return result; } catch (error) {

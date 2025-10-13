@@ -52,22 +52,17 @@ const benefits = [
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Helmet>
-<title>AI Services | Zion Tech Group
-        <meta name="description" content="Advanced AI services solutions by Zion Tech Group." />"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"description" content=" />"
 <Navigation />
-<div className="container mx-auto px-4 py-16">"
-<div className="text-center">"
-<h1 className="text-5xl font-bold text-white mb-6">AI Services"
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">"
+<div className="
+<div className="text-center"text-5 xl font-bold text-white mb-6"
+          <p className="
             Coming Soon - Advanced AI services solutions that will transform your business.
           </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center">"
-<button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">"
+<div className="flex flex-col sm: flex-row gap-4 justify-center"bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
               Contact Us
 
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">"
+            <button className="
               Learn More
 
       <Footer />
@@ -320,128 +315,91 @@ const stats = [
     <React.Fragment>
 <Helmet>
 <title>AI Services - Zion Tech Group | Advanced AI Solutions & Pricing
-        <meta name="description" content="Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />"
-<meta name="keywords" content="AI services, artificial intelligence, machine learning, AI automation, AI analytics, AI customer support, AI content generation, AI cybersecurity, ML platform" />"
-<meta property="og:title" content="AI Services - Zion Tech Group" />"
-<meta property="og:description" content="Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions." />"
-<meta property="og:type" content="website" />"
-<meta property="og:url" content="https://ziontechgroup.com/ai-services" />"
-<div className="min-h-screen bg-slate-900 cyber-grid">"
-        {/* Hero Section */}
-        <section className="relative py-20 lg:py-32 overflow-hidden">"
-<div className="container mx-auto px-4">"
+        <meta name="description"Comprehensive AI services including automation, analytics, customer support, content generation, cybersecurity, and ML platforms. Get 300% ROI with our AI solutions." />"keywords" content=" />"
+<meta property=" content="AI Services - Zion Tech Group"
+<meta property="og:description"Transform your business with our comprehensive AI services. Achieve 300% ROI with intelligent automation, analytics, and AI-powered solutions." />"og:type" content=" />"
+<meta property=" content="https://ziontechgroup.com/ai-services"
+<div className="min-h-screen bg-slate-900 cyber-grid"relative py-20 lg:py-32 overflow-hidden"
+<div className="
 <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>'
-<h1 className="text-5xl lg:text-7xl font-bold mb-6">"
-<span className="holographic-text cyber-text">AI Services"
-              <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">"
+<h1 className="text-5 xl lg:text-7 xl font-bold mb-6"holographic-text cyber-text"
+              <p className="
                 Transform your business with cutting-edge AI solutions. Achieve 300% ROI, 70% cost reduction,
                 and 90% efficiency gains with our comprehensive AI services.
               </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center">"
-<$2 />
-                  href="tel:+13024640950""
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg">"
-<Phone className="w-5 h-5 mr-2" />"
+<div className="flex flex-col sm: flex-row gap-4 justify-center"tel:+13024640950""cyber-button inline-flex items-center px-8 py-4 text-lg"
+<Phone className="
                   (302) 464-0950
 
                 <$2 />
-                  href="mailto:kleber@ziontechgroup.com""
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg">"
-<Mail className="w-5 h-5 mr-2" />"
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="cyber-button inline-flex items-center px-8 py-4 text-lg"w-5 h-5 mr-2"
                   Get Quote,
 
               </div></div>
 </div></section>
         {/* Stats Section */}
-        <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-900/50">"
-<div className="container mx-auto px-4">"
-<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">"
+        <section className="
+<div className="container mx-auto px-4"grid grid-cols-2 lg:grid-cols-4 gap-8"
               {stats.map((stat, index) => (
   // TODO: Add parameters
 )
-                <div key={index} className="text-center">"
+                <div key={index} className="
 <div className={`w-16 h-16 mx-auto mb-4 ${stat.color} bg-gradient-to-br from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center`}>
-<stat.icon className="w-8 h-8" />"
-<div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}
-                  <div className="text-gray-300">{stat.label}"
+<stat.icon className="w-8 h-8"text-gray-300"
               ))}
         {/* Services Section */}
-        <section className="py-20">"
-<div className="container mx-auto px-4">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">"
-<span className="neon-text">Our AI Services"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
+        <section className="
+<div className="container mx-auto px-4"text-center mb-16"
+<h2 className="
+<span className="neon-text"text-xl text-gray-300 max-w-3 xl mx-auto"
                 Comprehensive AI solutions designed to transform your business operations and drive unprecedented growth.
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">"
+            <div className="
               {aiServices.map((service, index) => (
   // TODO: Add parameters
 )
                 <div key={service.id} className={`quantum-card p-8 ${service.popular ? 'energy-pulse' : '}`}>''
-<div className="flex items-start justify-between mb-6">"
-<div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center mb-4`}>
-<service.icon className="w-8 h-8 text-white" />"
+<div className="flex items-start justify-between mb-6"w-8 h-8 text-white"
                     {service.popular && (
   // TODO: Add parameters
 )
-                      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-sm font-bold">Most Popular"
+                      <div className="
                     )}
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}"
-                  <p className="text-gray-300 mb-6">{service.description}"
-                  <div className="mb-6">"
-<h4 className="text-lg font-semibold text-cyan-400 mb-3">Key Features:"
-                    <ul className="space-y-2">"
+                  <h3 className="text-2 xl font-bold text-white mb-4"text-gray-300 mb-6"
+                  <div className="
+<h4 className="text-lg font-semibold text-cyan-400 mb-3"space-y-2"
                       {service.features.map((feature, featureIndex) => (
   // TODO: Add parameters
 )
-                        <li key={featureIndex} className="flex items-center text-gray-300">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />"
-                          {feature}
-                      ))}
-                  <div className="border-t border-gray-700 pt-6">"
-<h4 className="text-lg font-semibold text-cyan-400 mb-4">Pricing:"
-                    <div className="space-y-3">"
-                      {Object.entries(service.pricing).map(([tier, details]) => (
-  // TODO: Add parameters
-)
-                        <div key={tier} className="flex justify-between items-center p-3 bg-slate-800/50 rounded-lg">"
+                        <li key={featureIndex} className="
+<CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0"border-t border-gray-700 pt-6"
+<h4 className="
+                    <div className="space-y-3"flex justify-between items-center p-3 bg-slate-800/50 rounded-lg"
 <div>
-<div className="text-white font-semibold capitalize">{tier}"
-                            <div className="text-sm text-gray-400">{details.features[0]}"
-                          <div className="text-right">"
-<div className="text-cyan-400 font-bold">{details.price}{details.period}"
+<div className="
+                            <div className="text-sm text-gray-400"text-right"
+<div className="
                       ))}
-                  <div className="mt-6 flex gap-3">"
-<$2 />
-                      href="tel: +13024640950""
-                      className="flex-1 cyber-button text-center py-3">"
+                  <div className="mt-6 flex gap-3"tel: +13024640950""flex-1 cyber-button text-center py-3"
                       Get Started
 
                     <$2 />
-                      href="mailto:kleber@ziontechgroup.com""
-                      className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover:bg-slate-700 transition-colors text-center">"
+                      href=""
+                      className="
                       Learn More,
 
                   </div></div>
               ))}
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20">"
-<div className="container mx-auto px-4 text-center">"
-<h2 className="text-4xl lg: text-5xl font-bold text-white mb-6">"
+        <section className="py-20 bg-gradient-to-r from-cyan-600/20 to-purple-600/20"container mx-auto px-4 text-center"
+<h2 className="
               Ready to Transform Your Business with AI?
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
-              Join 500+ companies already using our AI solutions to achieve unprecedented growth and efficiency.
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto"flex flex-col sm:flex-row gap-4 justify-center"
 <$2 />
-                href="tel:+13024640950""
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg">"
-<Phone className="w-5 h-5 mr-2" />"
-                Call (302) 464-0950
-
-              <$2 />
-                href="mailto:kleber@ziontechgroup.com""
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg">"
-<Mail className="w-5 h-5 mr-2" />"
+                href=""
+                className="
+<Phone className="w-5 h-5 mr-2"mailto:kleber@ziontechgroup.com""cyber-button inline-flex items-center px-8 py-4 text-lg"
+<Mail className="
                 Email Us
 
             </div></div>

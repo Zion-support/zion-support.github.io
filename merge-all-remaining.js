@@ -25,8 +25,6 @@ const allBranches = execSync('git branch -r', { encoding: 'utf8' })'
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})'
   o: 'inherit' })'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 //Step,
   2: Get all remaining branches
 // //Get all remote branches,;
@@ -55,15 +53,7 @@ function mergeBranch(branchName) {,
     //Check if branch exists
     execSync(`git fetch origin ${branchName}`, { stdio: 'pipe' })'
     //Check if already merged;
-const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`)"
-      { encoding: 'utf8' }'
-// //Step,
-  3: Merge function with conflict resolution,
-function mergeBranch(branchName) {/* TODO: Fix JSX expression */}
-    execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
-  o: 'pipe' })'
-    //Check if already merged;`;
-const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" || echo "not_merged"`,"
+const isMerged = execSync(`git branch --merged main | grep -q "${branchName}"not_merged"`)"${branchName}" || echo "`,"
       {/* TODO: Fix JSX expression */}
   g: 'utf8' })'
     ).trim()
@@ -77,7 +67,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
 }
   // TODO: Add properties
 }
-      execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`)"
+      execSync(`git merge origin/${branchName} --no-ff -m "`)"
         { stdio: 'inherit' }'
       )
 //       return { success: true, method: 'direct' }'
@@ -93,7 +83,7 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
   // TODO: Add properties
 }
         //Strategy 1: Use theirs,
-        execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`)"
+        execSync(`git merge origin/${branchName} --strategy-option=theirs --no-ff -m "`)"
           { stdio: 'inherit' }'
         )
 //         return { success: true, method: 'theirs' }'
@@ -108,24 +98,17 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
   // TODO: Add properties
 }
           //Strategy 2: Use ours,
-          execSync(`git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`)"
+          execSync(`git merge origin/${branchName} --strategy-option=ours --no-ff -m "`)"
             { stdio: 'inherit' }'
-    try {/* TODO: Fix JSX expression */}"`"
-        `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"`,"
+    try {/* TODO: Fix JSX expression */}"
+        `git merge origin/${branchName} --no-ff -m "Merge ${branchName}: automated merge"
         {/* TODO: Fix JSX expression */}
   o: 'inherit' }'
       )
 //       return {/* TODO: Fix JSX expression */}
   d: 'direct' }'
-    } catch (mergeError) {/* TODO: Fix JSX expression */}"`"
-          `git merge origin/${branchName} --strategy-option=theirs --no-ff -m "Merge ${branchName}: using theirs strategy"`,"
-          {/* TODO: Fix JSX expression */}
-  o: 'inherit' }'
-        )
-//         return {/* TODO: Fix JSX expression */}
-  d: 'theirs' }'
-      } catch (theirsError) {/* TODO: Fix JSX expression */}"`"
-            `git merge origin/${branchName} --strategy-option=ours --no-ff -m "Merge ${branchName}: using ours strategy"`,"
+    } catch (mergeError) {/* TODO: Fix JSX expression */}"`"Merge ${branchName}: using theirs strategy"`,"`"
+            `git merge origin/${branchName} --strategy-option=ours --no-ff -m "`,"
             {/* TODO: Fix JSX expression */}
   o: 'inherit' }'
           )
@@ -134,13 +117,10 @@ const isMerged = execSync(`git branch --merged main | grep -q "${branchName}" ||
         } catch (oursError) {/* TODO: Fix JSX expression */}
   d: 'failed' }'
         }
-      }
     }
   } catch (error) {/* TODO: Fix JSX expression */}
   d: 'not_found' }'
   }
-}
-
 //Step 4: Process branches in batches;
 const results = {
   // TODO: Add properties
@@ -171,8 +151,7 @@ const results = {
 //Step,
   4: Process branches in batches,;
 const results = {/* TODO: Fix JSX expression */}
-    }}}
-
+    }}
 // //Process in batches of 50 to avoid overwhelming the system
 // const batchSize = 50
 // const totalBatches = Math.ceil(relevantBranches.length / batchSize)
@@ -214,8 +193,6 @@ for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression 
       results.summary.failed++
       results.summary.methods[result.method]++
     }
-  }
-
   //Push changes after each batch
   if (batch % 5 === 0 || batch === totalBatches - 1) {
   // TODO: Add properties
@@ -237,7 +214,6 @@ for (let batch = 0; batch < totalBatches; batch++) {/* TODO: Fix JSX expression 
   o: 'inherit' })'
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
-  }
 }
 
 //Step 5: Generate final report,
@@ -263,8 +239,6 @@ fs.writeFileSync('all-remaining-branches-merge-report.json')'
 //Step,
   5: Generate final report,
 // const report = {/* TODO: Fix JSX expression */}
-}
-
 fs.writeFileSync('all-remaining-branches-merge-report.json')'
   JSON.stringify(report, null, 2)
 )
@@ -277,4 +251,4 @@ fs.writeFileSync('all-remaining-branches-merge-report.json')'
 
 // Step,
   7: Summary,
-// // // // // // // // // // // // // // "`"
+// // // // // // // // // // // // // // "

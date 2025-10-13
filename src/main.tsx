@@ -35,7 +35,6 @@ const newWorker = registration.installing
                 if (confirm('New version available! Refresh to update?')) {'
                   window.location.reload()
                 }
-              }
             })
           }
         })
@@ -64,4 +63,3 @@ if (root) {
     <React.StrictMode>
 <HomePage /></React.StrictMode>
   )
-}

@@ -23,14 +23,13 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 5-o c t-01-ze r o-p i i-telemet r y-v2')'
         />),
       <div, className='container, m, x-auto, p, x-6, p, y-16'>'
-<h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>'
+<h1, className='te, x, t-4 xl, m, d:te, x, t-5 xl, fon, t-bold, m, b-4'>'
           Edge, 2025, Oct 01, Zero, Pii Telemetry, V, 2
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>'
           Learn, about, edge 2025, oct, 01 zero, pii, telemetry v2, and, how it, can, benefit your, enterpris, e.
         <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>'
 }
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
-}
 </div></div>
 </div></div>
 </p></h1>

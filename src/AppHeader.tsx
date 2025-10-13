@@ -2,7 +2,7 @@ import React, { useState } from 'react';';';
 import { useRouter , useSelector  } from 'next/router';';';
 import { useSelector  } from 'react-redux';';';
 import { Menu, X , useTranslation  } from 'lucide-react';';';
-import { useTranslation  } from 'react-i18next';';';
+import { useTranslation  } from 'react-i18 next';';';
 import { cn , RootState  } from '@/lib/utils';';';
 import { RootState  } from '@/store';';';
 import { useAuth , useIsMobile  } from '@/hooks/useAuth';';';
@@ -43,46 +43,29 @@ const openLoginModal = (returnToPath?: string) => {
 )
     <>
 <header
-        style={{ "--nav-height": "64px" } as React.CSSProperties}"
-        className={cn(
-  // TODO: Add parameters
-)
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground","
-          { "bg-red-500": mobileMenuOpen }"
-        )}
-      >
-<div className="container flex h-16 items-center px-4 sm:px-6">"
+        style={{ "--nav-height"64 px" } as React.CSSProperties}"sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground","bg-red-500": mobileMenuOpen }"container flex h-16 items-center px-4 sm:px-6"
 <Logo />
           {showTagline && (
   // TODO: Add parameters
 )
-            <span className="ml-4 hidden text-sm text-muted-foreground md:inline">"
+            <span className="
               {t('home.header_tagline')}'
             </span>
           )}
 
-          <div className="ml-6 flex-1 hidden md:block">"
-<nav role="navigation" aria-label="Main navigation">"
+          <div className="ml-6 flex-1 hidden md:block"navigation" aria-label=">"
 <ResponsiveNavigation openLoginModal={openLoginModal} /></nav>
 </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden ml-auto mr-4">"
+          <div className="
 <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring""
-              aria-expanded={mobileMenuOpen}
-              aria-label={t('general.toggle_mobile_menu')}'
-            >
-<span className="sr-only">{t('general.open_main_menu')}</span>'"
+              className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"sr-only"
               {mobileMenuOpen ? (
   // TODO: Add parameters
 )
-                <X className="block h-6 w-6" aria-hidden="true" />"
-              ) : (
-  // TODO: Add parameters
-)
-                <Menu className="block h-6 w-6" aria-hidden="true" />"
+                <X className="true" />"block h-6 w-6"true"
               )}
             </button></div>
 </div>
@@ -107,4 +90,3 @@ const openLoginModal = (returnToPath?: string) => {
       />
 </>
   );
-}

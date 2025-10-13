@@ -35,18 +35,11 @@ const interval = setInterval(updateMetrics, 1000)
   }
   return ()
         onClick={() => setIsVisible(!isVisible)}
-        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors""
-        aria-label="Toggle performance dashboard""
-      >
-        Perf</span>
-      {isVisible && ()
-              <span className="font-mono">{metrics?.loadTime.toFixed(2)}ms</span></div>"
-<div className="flex justify-between" /></div>"
-<span className="text-gray-600">Memory:</span>"
-<span className="font-mono">{metrics?.memoryUsage.toFixed(2)}MB</span></div>"
-<div className="flex justify-between" /></div>"
-<span className="text-gray-600">FPS:</span>"
-<span className="font-mono">{metrics?.fps.toFixed(1)}</span></div>"
+        className="bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"Toggle performance dashboard""font-mono"
+<div className="
+<span className="text-gray-600"font-mono"
+<div className="
+<span className="text-gray-600"font-mono"
 </div></div>
       )}
     </div>

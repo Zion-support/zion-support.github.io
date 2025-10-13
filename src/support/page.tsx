@@ -124,7 +124,7 @@ const supportChannels = [
       title: 'Live Chat','
       description: 'Instant support through our chat system','
       contact: 'Start Chat','
-      availability: 'Mon-Fri 9AM-6PM EST','
+      availability: 'Mon-Fri 9 AM-6 PM EST','
       color: 'text-purple-400''
     },
     {
@@ -220,123 +220,64 @@ const searchResults = searchQuery
 )
     <React.Fragment>
 <SEOOptimizer
-        title="Support Center - Zion Tech Group""
-        description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our team, and access comprehensive resources.""
+        title="Support Center - Zion Tech Group"
+        description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our team, and access comprehensive resources."
         keywords={['support', 'help', 'FAQ', 'technical support', 'customer service', 'AI support']}'
-        canonicalUrl="https://ziontechgroup.com/support""
+        canonicalUrl="https://ziontechgroup.com/support"
       />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<Navigation />
-<main className="container mx-auto px-4 py-16 pt-24">"
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"container mx-auto px-4 py-16 pt-24"
           {/* Hero Section */}
-          <section className="text-center mb-16">"
-<h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">"
-              Support Center
-
-            <p className="text-xl text-cyan-400 mb-8">"
+          <section className="
+<h1 className="text-4 xl md: text-6 xl font-bold text-white mb-6 neon-text"text-xl text-cyan-400 mb-8"
               We're here to help you succeed with AI,'
 
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto">"
+            <p className="
               Get instant answers to your questions, access comprehensive resources,
               and connect with our expert support team.
           {/* Search Section */}
-          <section className="mb-16">"
-<div className="max-w-2xl mx-auto">"
-<div className="relative">"
-<Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
-<input
-                  type="text""
-                  placeholder="Search for help...""
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none""
+          <section className="mb-16"max-w-2 xl mx-auto"
+<div className="
+<Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"text""Search for help...""w-full pl-12 pr-4 py-4 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
           {/* Support Channels */}
-          <section className="mb-16">"
-<h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Get Support"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">"
+          <section className="
+<h2 className="text-3 xl font-bold text-white mb-8 text-center neon-text"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
               {supportChannels.map((channel, index) => (
   // TODO: Add parameters
 )
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">"
+                <div key={index} className="
 <channel.icon className={`w-12 h-12 mx-auto mb-4 ${channel.color}`} />
-<h3 className="text-xl font-bold text-white mb-2">{channel.title}"
-                  <p className="text-gray-300 mb-4">{channel.description}"
-                  <div className="text-cyan-400 font-semibold mb-2">{channel.contact}"
-                  <div className="text-gray-400 text-sm">{channel.availability}"
-              ))}
-          {/* FAQ Categories */}
-          <section className="mb-16">"
-<h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Browse by Category"
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8">"
-              {supportCategories.map((category) => (
-  // TODO: Add parameters
-)
-                <$2 />
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`p-4 rounded-lg text-center transition-all duration-300 ${
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                    selectedCategory === category.id
-                      ? 'bg-cyan-500 text-slate-900''
-                      : 'bg-slate-800 text-white hover:bg-slate-700''
-                  }`}
-                >
-<category.icon className="w-6 h-6 mx-auto mb-2" />"
-<div className="text-sm font-semibold">{category.name}"
-                  <div className="text-xs opacity-75">{category.count} topics"
-              ))}
-          {/* FAQ Section */}
-          <section className="mb-16">"
-<h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Frequently Asked Questions"
-            <div className="max-w-4xl mx-auto space-y-4">"
-              {searchResults.map((faq) => (
-  // TODO: Add parameters
-)
-                <div key={faq.id} className="cyber-card p-6">"
-<h3 className="text-xl font-bold text-white mb-3">{faq.question}"
-                  <p className="text-gray-300 leading-relaxed">{faq.answer}"
-              ))}
-          {/* Resources Section */}
-          <section className="mb-16">"
-<h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Helpful Resources"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
-              {resources.map((resource, index) => (
-  // TODO: Add parameters
-)
-                <$2 />
-                  key={index}
-                  to={resource.link}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">"
-<div className="flex items-center mb-4">"
-<resource.icon className="w-8 h-8 text-cyan-400 mr-4" />"
-<ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />"
-<h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">"
+<h3 className="text-xl font-bold text-white mb-2"text-gray-300 mb-4"
+                  <div className="
+                  <div className="text-gray-400 text-sm"mb-16"
+<h2 className="
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 mb-8"w-6 h-6 mx-auto mb-2"
+<div className="
+                  <div className="text-xs opacity-75"mb-16"
+<h2 className="
+            <div className="max-w-4 xl mx-auto space-y-4"cyber-card p-6"
+<h3 className="
+                  <p className="text-gray-300 leading-relaxed"mb-16"
+<h2 className="
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"cyber-card p-6 hover:scale-105 transition-all duration-300 group"
+<div className="
+<resource.icon className="w-8 h-8 text-cyan-400 mr-4"w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform"
+<h3 className="
                     {resource.title}
-                  <p className="text-gray-300">{resource.description}"
-              ))}
-          {/* Contact CTA */}
-          <section className="text-center">"
-<div className="cyber-card p-12 max-w-4xl mx-auto">"
-<h2 className="text-3xl font-bold text-white mb-6 neon-text">"
-                Still Need Help?
-              </h2>
-<p className="text-xl text-gray-300 mb-8">"
+                  <p className="text-gray-300"text-center"
+<div className="
+<h2 className="text-3 xl font-bold text-white mb-6 neon-text"text-xl text-gray-300 mb-8"
                 Our expert team is ready to assist you with any questions or issues
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">"
+              <div className="
 <$2 />
-                  href="tel:+13024640950""
-                  className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">"
-<Phone className="w-5 h-5 mr-2" />"
+                  href="tel:+13024640950"
+                  className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center"w-5 h-5 mr-2"
                   Call (302) 464-0950
 
                 <$2 />
-                  href="mailto:kleber@ziontechgroup.com""
-                  className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">"
-<Mail className="w-5 h-5 mr-2" />"
+                  href=""
+                  className="
+<Mail className="w-5 h-5 mr-2"
                   Send Email
 
               </div></div>

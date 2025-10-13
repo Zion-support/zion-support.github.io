@@ -60,13 +60,10 @@ const filesToFix = [
   'app/utils/analytics.ts','
   'app/utils/analyticsTracker.ts']'
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-
     // Apply fixes
     content = fixConsoleStatements(content)
     fs.writeFileSync(fullPath, content)
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Fix all files

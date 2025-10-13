@@ -1,20 +1,16 @@
-import type { NextApiRequest, NextApiResponse } from "next";"
+import type { NextApiRequest, NextApiResponse } from "next"
 }
-  const svg = `<?xml version="1.0" encoding="UTF-8"?>"
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300">"
-<rect width="100%" height="100%" fill="#f3f4f6"/>"
-<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="#374151">Retention Cohorts (placeholder)</text></svg>`"
-  res.setHeader("Content-Type", "image/svg+xml")"
+  const svg = `<?xml version="1.0"UTF-8"?>"http://www.w3.org/2000/svg" width=" height="300"
+<rect width="100%"100%" fill="/>"
+<text x=" y="50%"middle" text-anchor=" font-size="20"#374151">Retention Cohorts (placeholder)</text></svg>`"Content-Type", ")"
   res.send(svg)
-  res.setHeader("Content-Typeimage/svg+xml")"
+  res.setHeader(")"
   res.send(svg)
 }
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-const svg = `<?xml version="1.0" encoding="UTF-8"?>"
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="300">"
-<rect width="100%" height="100%" fill="#f3f4f6"/>"
-<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="20" fill="#374151">Retention Cohorts (placeholder)</text></svg>`"
+const svg = `<?xml version=" encoding="UTF-8"
+<svg xmlns="http://www.w3.org/2000/svg"800" height=">"
+<rect width=" height="100%"#f3 f4 f6"/>"50%" y=" dominant-baseline="middle"middle" font-size=" fill="#374151"
   res.setHeader('Content-Type', 'image/svg+xml')'
   res.send(svg)
-}

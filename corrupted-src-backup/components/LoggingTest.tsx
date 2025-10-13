@@ -39,6 +39,6 @@ const logger = {/* TODO: Fix JSX expression */}
   debu,
   g: (messag)
   e: string, meta?: unknown) => {/* TODO: Fix JSX expression */}
-    //     }}
+    //     }
 `
 </button>

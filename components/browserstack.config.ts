@@ -36,7 +36,7 @@ default define_config ({
 }
   // TODO: Add properties
 }
-  test_dir: tests / e2e',  use: {'
+  test_dir: tests / e2 e',  use: {'
     baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on - first - retry'}'
   projects: [
   // TODO: Add items
@@ -93,7 +93,7 @@ default defineConfig({
 }
   // TODO: Add properties
 }
-  testDir: tests/e2e',  use: {'
+  testDir: tests/e2 e',  use: {'
     baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry',  },'
   projects: [
   // TODO: Add items

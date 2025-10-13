@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps;
   title?: string;
@@ -79,41 +78,26 @@ const SEOHead: React.FC<SEOHeadProps> = (
 //     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
-      <meta name="description" content="{description}" />
-      <meta name="keywords" content="{keywords}" />
-      <meta name="author" content="{author}" />
+      <meta name="description"{description}" />
+      <meta name=" content="{keywords}"author" content=" />
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content="{type}" />
-      <meta property="og:url" content="{url}" />
-      <meta property="og:title" content="{title}" />
-      <meta property="og:description" content="{description}" />
-      <meta property="og:image" content="{image}" />
-      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:type"{type}" />
+      <meta property=" content="{url}"og:title" content=" />
+      <meta property="og:description"{description}" />
+      <meta property=" content="{image}"og:site_name" content=" />
       {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="{url}" />
-      <meta property="twitter:title" content="{title}" />
-      <meta property="twitter:description" content="{description}" />
-      <meta property="twitter:image" content="{image}" />
-      {/* Additional Meta Tags */}
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width="device-width," initial-scale=1.0" />
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta property="twitter:card"summary_large_image" />
+      <meta property=" content="{url}"twitter:title" content=" />
+      <meta property="twitter:description"{description}" />
+      <meta property=" content="{image}"robots" content=" />
+      <meta name="viewport"width="device-width," />
+      <meta httpEquiv="Content-Type"text/html; charset=utf-8" />
       {/* Canonical URL */}
-      <link rel="canonical" href="{url}" />
-      {/* Article specific meta tags */}
-      {publishedTime && <meta property="article:published_time" content="{publishedTime}" />}</meta>
-      {modifiedTime && <meta property="article:modified_time" content="{modifiedTime}" />}</meta>
-      {section && <meta property="article:section" content="{section}" />}</meta>
-
-        <meta key="{index}" property="article:tag" content="{tag}" />
-
-      {/* Structured Data */}
-      <script type="application/ld+json"></script>
+      <link rel=" href="{url}"article:published_time" content=" />}</meta>
+      {modifiedTime && <meta property="article:modified_time"{modifiedTime}" />}</meta>
+      {section && <meta property=" content="{section}"{index}" property=" content="{tag}"application/ld+json"></script>
         {JSON.stringify(structuredData)}
 //       </script>
 //     </Helmet>
-=======
 
   );
-}

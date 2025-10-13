@@ -82,7 +82,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     color: 'from-slate-600 to-gray-700','
     textColor: 'text-slate-400','
     link: 'https://ziontechgroup.com/enterprise-ai-orchestrator','
-    marketPosition: 'Leading enterprise AI platform. 10x more comprehensive than existing solutions.','
+    marketPosition: 'Leading enterprise AI platform. 10 x more comprehensive than existing solutions.','
     targetAudience: 'Fortune 500 companies, Large enterprises, Government agencies, Healthcare systems, Financial institutions','
     trialDays: 30,
     setupTime: '6-8 weeks','
@@ -93,7 +93,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     useCases: ['Business process automation', 'Intelligent decision making', 'Predictive analytics', 'Customer intelligence', 'Operational efficiency'],'
     roi: '1200% ROI through operational efficiency and intelligent automation','
     competitors: ['IBM Watson ($1,000+/month)', 'Microsoft Azure AI ($500+/month)'],'
-    marketSize: '$500B enterprise AI market','
+    marketSize: '$500 B enterprise AI market','
     growthRate: '200% annual growth','
     variant: 'enterprise-futuristic','
     contactInfo: {
@@ -146,7 +146,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     color: 'from-orange-600 to-red-700','
     textColor: 'text-orange-400','
     link: 'https://ziontechgroup.com/ai-supply-chain-optimizer','
-    marketPosition: 'Leading AI supply chain platform. 5x more accurate than traditional methods.','
+    marketPosition: 'Leading AI supply chain platform. 5 x more accurate than traditional methods.','
     targetAudience: 'Manufacturing companies, Retail chains, Logistics providers, E-commerce platforms, Distribution centers','
     trialDays: 30,
     setupTime: '3-4 weeks','
@@ -157,7 +157,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     useCases: ['Demand forecasting', 'Inventory optimization', 'Route planning', 'Supplier management', 'Cost reduction'],'
     roi: '800% ROI through cost reduction and efficiency improvements','
     competitors: ['SAP SCM ($2,000+/month)', 'Oracle SCM ($1,500+/month)'],'
-    marketSize: '$300B supply chain market','
+    marketSize: '$300 B supply chain market','
     growthRate: '180% annual growth','
     variant: 'supply-chain-futuristic','
     contactInfo: {
@@ -210,7 +210,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     color: 'from-blue-600 to-indigo-700','
     textColor: 'text-blue-400','
     link: 'https://ziontechgroup.com/ai-customer-experience-platform','
-    marketPosition: 'Leading AI customer experience platform. 10x more personalized than existing solutions.','
+    marketPosition: 'Leading AI customer experience platform. 10 x more personalized than existing solutions.','
     targetAudience: 'E-commerce platforms, Retail companies, SaaS businesses, Financial services, Healthcare providers','
     trialDays: 30,
     setupTime: '2-3 weeks','
@@ -221,7 +221,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     useCases: ['Customer personalization', 'Intelligent recommendations', 'Customer service automation', 'Marketing optimization', 'Customer retention'],'
     roi: '600% ROI through improved customer satisfaction and retention','
     competitors: ['Salesforce Einstein ($1,000+/month)', 'Adobe Experience Cloud ($2,000+/month)'],'
-    marketSize: '$200B customer experience market','
+    marketSize: '$200 B customer experience market','
     growthRate: '250% annual growth','
     variant: 'customer-experience-futuristic','
     contactInfo: {
@@ -274,7 +274,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     color: 'from-green-600 to-emerald-700','
     textColor: 'text-green-400','
     link: 'https://ziontechgroup.com/ai-financial-risk-management','
-    marketPosition: 'Leading AI financial risk platform. 100x faster than traditional risk assessment.','
+    marketPosition: 'Leading AI financial risk platform. 100 x faster than traditional risk assessment.','
     targetAudience: 'Banks, Investment firms, Insurance companies, Credit unions, Financial regulators','
     trialDays: 30,
     setupTime: '4-5 weeks','
@@ -285,7 +285,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     useCases: ['Risk assessment', 'Fraud detection', 'Compliance monitoring', 'Portfolio management', 'Regulatory reporting'],'
     roi: '900% ROI through risk reduction and compliance automation','
     competitors: ['Bloomberg Terminal ($24,000/year)', 'Thomson Reuters ($1,000+/month)'],'
-    marketSize: '$150B financial risk management market','
+    marketSize: '$150 B financial risk management market','
     growthRate: '180% annual growth','
     variant: 'financial-risk-futuristic','
     contactInfo: {
@@ -338,7 +338,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     color: 'from-red-600 to-pink-700','
     textColor: 'text-red-400','
     link: 'https://ziontechgroup.com/ai-healthcare-analytics','
-    marketPosition: 'Leading AI healthcare analytics platform. 10x more accurate than traditional methods.','
+    marketPosition: 'Leading AI healthcare analytics platform. 10 x more accurate than traditional methods.','
     targetAudience: 'Hospitals, Healthcare systems, Medical research institutions, Insurance companies, Government agencies','
     trialDays: 30,
     setupTime: '4-6 weeks','
@@ -349,7 +349,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     useCases: ['Predictive diagnostics', 'Treatment optimization', 'Population health', 'Clinical research', 'Healthcare efficiency'],'
     roi: '700% ROI through improved patient outcomes and operational efficiency','
     competitors: ['Epic ($1,000+/month)', 'Cerner ($500+/month)'],'
-    marketSize: '$200B healthcare analytics market','
+    marketSize: '$200 B healthcare analytics market','
     growthRate: '220% annual growth','
     variant: 'healthcare-futuristic','
     contactInfo: {
@@ -402,7 +402,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     color: 'from-gray-600 to-slate-700','
     textColor: 'text-gray-400','
     link: 'https://ziontechgroup.com/ai-manufacturing-intelligence','
-    marketPosition: 'Leading AI manufacturing platform. 5x more efficient than traditional methods.','
+    marketPosition: 'Leading AI manufacturing platform. 5 x more efficient than traditional methods.','
     targetAudience: 'Manufacturing companies, Industrial facilities, Automotive manufacturers, Electronics companies, Chemical plants','
     trialDays: 30,
     setupTime: '3-4 weeks','
@@ -413,7 +413,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     useCases: ['Predictive maintenance', 'Quality control', 'Production optimization', 'Supply chain management', 'Performance monitoring'],'
     roi: '600% ROI through operational efficiency and quality improvements','
     competitors: ['Siemens Mindsphere ($500+/month)', 'GE Predix ($1,000+/month)'],'
-    marketSize: '$250B manufacturing intelligence market','
+    marketSize: '$250 B manufacturing intelligence market','
     growthRate: '200% annual growth','
     variant: 'manufacturing-futuristic','
     contactInfo: {
@@ -466,7 +466,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     color: 'from-yellow-600 to-orange-700','
     textColor: 'text-yellow-400','
     link: 'https://ziontechgroup.com/ai-energy-management','
-    marketPosition: 'Leading AI energy management platform. 10x more efficient than traditional methods.','
+    marketPosition: 'Leading AI energy management platform. 10 x more efficient than traditional methods.','
     targetAudience: 'Utility companies, Energy providers, Industrial facilities, Commercial buildings, Government agencies','
     trialDays: 30,
     setupTime: '2-3 weeks','
@@ -477,7 +477,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     useCases: ['Energy optimization', 'Renewable integration', 'Demand response', 'Grid optimization', 'Cost reduction'],'
     roi: '500% ROI through energy cost reduction and efficiency improvements','
     competitors: ['Schneider Electric ($1,000+/month)', 'Siemens ($500+/month)'],'
-    marketSize: '$180B energy management market','
+    marketSize: '$180 B energy management market','
     growthRate: '180% annual growth','
     variant: 'energy-futuristic','
     contactInfo: {
@@ -530,7 +530,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     color: 'from-purple-600 to-indigo-700','
     textColor: 'text-purple-400','
     link: 'https://ziontechgroup.com/ai-education-platform','
-    marketPosition: 'Leading AI education platform. 10x more personalized than traditional methods.','
+    marketPosition: 'Leading AI education platform. 10 x more personalized than traditional methods.','
     targetAudience: 'Schools, Universities, Online learning platforms, Corporate training, Government education','
     trialDays: 30,
     setupTime: '2-3 weeks','
@@ -541,7 +541,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     useCases: ['Personalized learning', 'Intelligent tutoring', 'Progress tracking', 'Content recommendation', 'Educational analytics'],'
     roi: '400% ROI through improved learning outcomes and engagement','
     competitors: ['Coursera ($49/month)', 'Udemy ($20/month)'],'
-    marketSize: '$100B educational technology market','
+    marketSize: '$100 B educational technology market','
     growthRate: '200% annual growth','
     variant: 'education-futuristic','
     contactInfo: {
@@ -594,7 +594,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     color: 'from-teal-600 to-cyan-700','
     textColor: 'text-teal-400','
     link: 'https://ziontechgroup.com/ai-real-estate-platform','
-    marketPosition: 'Leading AI real estate platform. 10x more accurate than traditional methods.','
+    marketPosition: 'Leading AI real estate platform. 10 x more accurate than traditional methods.','
     targetAudience: 'Real estate agencies, Property investors, Mortgage companies, Appraisers, Government agencies','
     trialDays: 30,
     setupTime: '2-3 weeks','
@@ -605,7 +605,7 @@ export const enterpriseAIServices: EnterpriseAIService[] = [;
     useCases: ['Property valuation', 'Market analysis', 'Investment decisions', 'Risk assessment', 'Market predictions'],'
     roi: '500% ROI through improved investment decisions and market timing','
     competitors: ['Zillow ($500/month)', 'Redfin ($300/month)'],'
-    marketSize: '$120B real estate technology market','
+    marketSize: '$120 B real estate technology market','
     growthRate: '180% annual growth','
     variant: 'real-estate-futuristic','
     contactInfo: {

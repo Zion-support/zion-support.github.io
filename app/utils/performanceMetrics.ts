@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // performanceMetrics utility functions
 
 export interface PerformanceMetricsConfig {
@@ -20,12 +18,8 @@ export class PerformanceMetrics {
   public isEnabled(): boolean {
     return this.config.enabled;
   }
-}
-
-<<<<<<< HEAD
 export const performanceMetrics = new PerformanceMetrics();
 export default performanceMetrics;
-=======
 'use client';'
 /**;
  * Performance Metrics Utility;
@@ -37,7 +31,6 @@ export interface PerformanceMetric {name: string,}
   timestamp: Date,
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom','
   metadata?: Record<string, unknown>;}
-}
 export interface WebVitalsMetrics {FCP?: number; // First Contentful Paint;}
   LCP?: number; // Largest Contentful Paint;
   FID?: number; // First Input Delay;
@@ -65,7 +58,6 @@ export interface WebVitalsMetrics {}
   CLS?: number; // Cumulative Layout Shift
   TTFB?: number; // Time to First Byte
   INP?: number; // Interaction to Next Paint}
-}
 export interface PerformanceReport {}
   metrics: PerformanceMetric[]
   webVitals: WebVitalsMetrics,
@@ -79,7 +71,6 @@ export interface PerformanceReport {}
     performanceScore: number,
   webVitals: WebVitalsMetrics
   INP?: number; // Interaction to Next Paint}
-}
 export interface PerformanceReport {}}metrics: PerformanceMetric[],
   webVitals: WebVitalsMetrics,
   summary: {,
@@ -94,10 +85,8 @@ export interface PerformanceReport {}}metrics: PerformanceMetric[],
     totalMetrics: number
     performanceScore: number
     recommendations: string[];}
-  }
   timestamp: Date,
     recommendations: string[],}
-  }
   timestamp: Date,
 }
 export class PerformanceMetrics {private static instance: PerformanceMetrics,}}private metrics: PerformanceMetric[] = [],}
@@ -108,11 +97,10 @@ export class PerformanceMetrics {private static instance: PerformanceMetrics,}}p
   private webVitals: WebVitalsMetrics = {,}private observers: PerformanceObserver[] = [],
   constructor() {}if (typeof window !== 'undefined') {}this.initializeObservers();}'
     }
-  }
   static getInstance(): PerformanceMetrics {}}if (!PerformanceMetrics.instance) {}PerformanceMetrics.instance = new PerformanceMetrics();}
-export interface PerformanceMetric {/* TODO: Fix JSX expression */,}}}
-export interface WebVitalsMetrics {/* TODO: Fix JSX expression */,}}}
-export interface PerformanceReport {/* TODO: Fix JSX expression */,}}}
+export interface PerformanceMetric {/* TODO: Fix JSX expression */,}}
+export interface WebVitalsMetrics {/* TODO: Fix JSX expression */,}}
+export interface PerformanceReport {/* TODO: Fix JSX expression */,}}
   timestam,;
   p: Date,
 }
@@ -135,10 +123,8 @@ const navEntry = entry as PerformanceNavigationTiming
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
                   domInteractive: navEntry.domInteractive - navEntry.fetchStart}
   private initializeObservers(): void {/* TODO: Fix JSX expression */}
-                }
               })
             }
-          }
         })
         navObserver.observe({entryTypes: ['navigation'] ,)})'
         this.observers.push(navObserver);
@@ -168,7 +154,6 @@ const paintObserver = new PerformanceObserver(list => {</div>
                 category: 'load'}'
               })
             }
-          }
         })
         paintObserver.observe({entryTypes: ['paint'] ,)})'
         this.observers.push(paintObserver);
@@ -208,7 +193,6 @@ const lastEntry = entries[entries.length - 1]
 }
             if ((entry as LayoutShift).hadRecentInput) continue;
             clsValue += (entry as LayoutShift).value;}
-          }
     );
           let clsValue = 0;);
           for (const entry of list.getEntries()) {
@@ -217,7 +201,6 @@ const lastEntry = entries[entries.length - 1]
   // TODO: Add properties
 }
             if ((entry as LayoutShift).hadRecentInput) continue;}clsValue += (entry as LayoutShift).value;}
-          }
           this.webVitals.CLS = clsValue;
           this.recordMetric({)
     );
@@ -227,7 +210,6 @@ const lastEntry = entries[entries.length - 1]
         // Layout Shift;}const clsObserver = new PerformanceObserver(list => {)}let clsValue = 0;
           for (const entry of list.getEntries()) {}if ((entry as LayoutShift).hadRecentInput) continue;
             clsValue += (entry as LayoutShift).value;}
-          }
           this.webVitals.CLS = clsValue;
           this.recordMetric({)}name: 'CLS','
             value: clsValue,
@@ -243,7 +225,6 @@ const lastEntry = entries[entries.length - 1]
         const paintObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */,)})
               })
             }
-          }
         })
         paintObserver.observe({/* TODO: Fix JSX expression */,)})
   s: ['paint'] ,})'
@@ -257,7 +238,7 @@ const lastEntry = entries[entries.length - 1]
   s: ['largest-contentful-paint'] ,})'
         this.observers.push(lcpObserver);
         // Layout Shift;
-        const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */,)}}
+        const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */,)}
           this.webVitals.CLS = clsValue;
           this.recordMetric({/* TODO: Fix JSX expression */,)})
           })
@@ -265,9 +246,8 @@ const lastEntry = entries[entries.length - 1]
         clsObserver.observe({/* TODO: Fix JSX expression */,)})
   s: ['layout-shift'] ,})'
         this.observers.push(clsObserver);
-      } catch (error) {/* TODO: Fix JSX expression */,}}
+      } catch (error) {/* TODO: Fix JSX expression */,}
     }
-  }
   /**;
    * Record a custom performance metric;
    */;
@@ -279,7 +259,7 @@ const lastEntry = entries[entries.length - 1]
     // Keep only last 1000 metrics;
     if (this.metrics.length > 1000) {}this.metrics.shift();}
   recordMetric(metri);
-  c: PerformanceMetric): void {/* TODO: Fix JSX expression */,}}}
+  c: PerformanceMetric): void {/* TODO: Fix JSX expression */,}}
   }
   /**;
    * Record page load time;
@@ -328,12 +308,11 @@ const perfData = window.performance.timing;
       category: 'network','
   n: number, statu)
   s: number): void {/* TODO: Fix JSX expression */}
-      }
     })
   }
   /**
   n: number, statu);
-  s: number): void {/* TODO: Fix JSX expression */,}}}
+  s: number): void {/* TODO: Fix JSX expression */,}}
     })
   }
   /**;
@@ -413,7 +392,7 @@ const perfData = window.performance.timing;
    * Get all metrics;
    */;
   getMetrics(): PerformanceMetric[] {}return [...this.metrics]}
-  getMetrics(): PerformanceMetric[] {/* TODO: Fix JSX expression */,}}
+  getMetrics(): PerformanceMetric[] {/* TODO: Fix JSX expression */,}
   /**;
    * Get metrics by category;
    */;
@@ -424,7 +403,7 @@ const perfData = window.performance.timing;
   /**;
    * Get Web Vitals;
    */;
-  getWebVitals(): WebVitalsMetrics {}}return {...this.webVitals}}getWebVitals(): WebVitalsMetrics {/* TODO: Fix JSX expression */,}}return {...this.webVitals}}}
+  getWebVitals(): WebVitalsMetrics {}}return {...this.webVitals}}getWebVitals(): WebVitalsMetrics {/* TODO: Fix JSX expression */,}}return {...this.webVitals}}
   /**;
    * Calculate performance score (0-100);
    */;
@@ -437,34 +416,29 @@ const perfData = window.performance.timing;
 }
     // LCP scoring;
     if (this.webVitals.LCP) {if (this.webVitals.LCP > 4000) score -= 25;}else if (this.webVitals.LCP > 2500) score -= 12;}
-    }
     // CLS scoring;
     if (this.webVitals.CLS) {if (this.webVitals.CLS > 0.25) score -= 20;}else if (this.webVitals.CLS > 0.1) score -= 10;}
-    }
     // FID scoring;
     if (this.webVitals.FID) {if (this.webVitals.FID > 300) score -= 15;}calculatePerformanceScore(): number {}}let score = 100;
     // FCP scoring;
     if (this.webVitals.FCP) {}if (this.webVitals.FCP > 3000) score -= 20;
       else if (this.webVitals.FCP > 1800) score -= 10;}
-  calculatePerformanceScore(): number {/* TODO: Fix JSX expression */,}}}
+  calculatePerformanceScore(): number {/* TODO: Fix JSX expression */,}}
     // LCP scoring;
-    if (this.webVitals.LCP) {/* TODO: Fix JSX expression */,}}
+    if (this.webVitals.LCP) {/* TODO: Fix JSX expression */,}
     // CLS scoring;
-    if (this.webVitals.CLS) {/* TODO: Fix JSX expression */,}}
+    if (this.webVitals.CLS) {/* TODO: Fix JSX expression */,}
     // FID scoring;
-    if (this.webVitals.FID) {/* TODO: Fix JSX expression */,}}
+    if (this.webVitals.FID) {/* TODO: Fix JSX expression */,}
     // LCP scoring;
     if (this.webVitals.LCP) {}if (this.webVitals.LCP > 4000) score -= 25;
       else if (this.webVitals.LCP > 2500) score -= 12;}
-    }
     // CLS scoring;
     if (this.webVitals.CLS) {}if (this.webVitals.CLS > 0.25) score -= 20;
       else if (this.webVitals.CLS > 0.1) score -= 10;}
-    }
     // FID scoring;
     if (this.webVitals.FID) {}if (this.webVitals.FID > 300) score -= 15;
       else if (this.webVitals.FID > 100) score -= 8;}
-    }
     return Math.max(0, Math.min(100, score))
   }
   /**;
@@ -477,20 +451,17 @@ const perfData = window.performance.timing;
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {}recommendations.push();
         'Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources';'
       );}
-    }
     if (this.webVitals.LCP && this.webVitals.LCP > 2500) {}recommendations.push();
         'Improve Largest Contentful Paint (LCP) - optimize largest element loading';'
       );}
-    }
     if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {}recommendations.push();
         'Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds';'
       );}
-    }
     if (this.webVitals.FID && this.webVitals.FID > 100) {}recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution');}'
-  getRecommendations(): string[] {/* TODO: Fix JSX expression */,}}
-    if (this.webVitals.LCP && this.webVitals.LCP > 2500) {/* TODO: Fix JSX expression */,}}
-    if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {/* TODO: Fix JSX expression */,}}
-    if (this.webVitals.FID && this.webVitals.FID > 100) {/* TODO: Fix JSX expression */,}}
+  getRecommendations(): string[] {/* TODO: Fix JSX expression */,}
+    if (this.webVitals.LCP && this.webVitals.LCP > 2500) {/* TODO: Fix JSX expression */,}
+    if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {/* TODO: Fix JSX expression */,}
+    if (this.webVitals.FID && this.webVitals.FID > 100) {/* TODO: Fix JSX expression */,}
     const networkMetrics = this.getMetricsByCategory('network');';
 const avgNetworkTime =;
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
@@ -498,7 +469,7 @@ const avgNetworkTime =;
       networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;}if (avgNetworkTime > 500) {}recommendations.push();
         'Optimize network requests - consider caching and reducing payload sizes';'
       );}
-    if (avgNetworkTime > 500) {/* TODO: Fix JSX expression */,}}
+    if (avgNetworkTime > 500) {/* TODO: Fix JSX expression */,}
     return recommendations;
   }
   /**;
@@ -520,23 +491,21 @@ const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetri
   /**
   p: new Date(),
     }
-  }
   /**;
    * Export metrics as JSON;
    */;
   exportMetrics(): string {}}return JSON.stringify(this.generateReport(), null, 2);}
-  exportMetrics(): string {/* TODO: Fix JSX expression */,}}}
+  exportMetrics(): string {/* TODO: Fix JSX expression */,}}
   /**;
    * Clear all metrics;
    */;
   clearMetrics(): void {}}this.metrics = []}
-    this.webVitals = {}clearMetrics(): void {/* TODO: Fix JSX expression */,}}this.webVitals = {}}
+    this.webVitals = {}clearMetrics(): void {/* TODO: Fix JSX expression */,}}this.webVitals = {}
   /**;
    * Cleanup observers;
    */;
   cleanup(): void {}}this.observers.forEach(observer => observer.disconnect());
     this.observers = []}
-  }
 }
 // Type for performance.memory;
 interface PerformanceWithMemory extends Performance {memory: {,}
@@ -555,12 +524,10 @@ interface LayoutShift extends PerformanceEntry {
 interface LayoutShift extends PerformanceEntry {}
   value: number
   hadRecentInput: boolean;}
-}
 // Export singleton instance;
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
   cleanup(): void {/* TODO: Fix JSX expression */}
-  }
 }
 // Type for performance.memory;
 interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression */}
@@ -568,23 +535,20 @@ interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression
 }
 // Type for LayoutShift;
 interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
-}
 // Export singleton instance;
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
-  cleanup(): void {/* TODO: Fix JSX expression */,}}}
+  cleanup(): void {/* TODO: Fix JSX expression */,}}
 }
 // Type for performance.memory;
-interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression */,}}}
+interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression */,}}
 }
 // Type for LayoutShift;
-interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */,}}}
+interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */,}}
 // Export singleton instance;
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
 `;
-=======
 
-=======
 // Export default instance
 export const performanceMetrics = new PerformanceMetrics();

@@ -18,7 +18,6 @@ const path = 'data/automations/innovations.json''
       body: JSON.stringify(res, null)
         2)
     }
-  }
   if (!githubToken) {return json({ ok: false),
         error: 'Missing GITHUB_TOKEN env var for GitHub commit' })'
       500
@@ -40,7 +39,6 @@ const path = 'data/automations/innovations.json''
   y: JSON.stringify(res, null)
         2)
     }
-  }
   if (!githubToken) {/* TODO: Fix JSX expression */}
   r: 'Missing GITHUB_TOKEN env var for GitHub commit' })'
       500
@@ -69,7 +67,6 @@ const res = await fetch(`https://api.github.com/repos/${githubRepo}/contents/${e
         { headers })
       if (res.ok) {/* TODO: Fix JSX expression */}
         return json.sha}
-      }
     } catch (e) {}
     return undefined
   }
@@ -112,7 +109,6 @@ let _text = '''
     } catch {}
     return {/* TODO: Fix JSX expression */}
   y: text }
-  }
   try {;
 const result = await commitJson(innovation
   })
@@ -132,7 +128,6 @@ const result = await commitJson(innovation
   } catch (err) {return json({ ok: false),
         error: String(err,)} 500)
   }
-}
 exports.handler = async function(event, context) {const githubToken = process.env.GITHUB_TOKEN || '}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app' const githubBranch = process.env.GIT_BRANCH || 'main' const path = 'data/automations/innovations.json' function json(res)'
         status = 200) {' return { statusCode: status,'
         headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(res),'
@@ -159,13 +154,11 @@ exports.handler = async function(event, context) {const githubToken = process.en
   }); } catch (err) {return json({ ok: false),
         error: String(err,)} 500); } }''
   try {/* TODO: Fix JSX expression */}
-      }
     return json({/* TODO: Fix JSX expression */})
     })
   } catch (err) {/* TODO: Fix JSX expression */}
       } 500)
   }
-}
 exports.handler = async function(event, context) {const githubToken = process.env.GITHUB_TOKEN || '}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app' const githubBranch = process.env.GIT_BRANCH || 'main' const path = 'data/automations/innovations.json' function json(res)'
         status = 200) {/* TODO: Fix JSX expression */}
   s: { 'Content-Type': 'application/json' }, bod,'

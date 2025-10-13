@@ -109,8 +109,6 @@ const tagCounts: Record<string, number> = {}
   }
 }
 }
-}
-}
 import { createServerClient } from '../../../utils/supabase/server';';';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
@@ -184,5 +182,4 @@ const tagCounts: Record<string, number> = {}
         { label: 'ai', value: 1 },'
       ],
     })
-  }
-}
+  

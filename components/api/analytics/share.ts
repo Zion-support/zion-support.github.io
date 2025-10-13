@@ -74,4 +74,3 @@ const list: any[] = JSON.parse (fs.readFileSync (FILE_PATH, 'utf8'))'
 }
   res.status(200).json({ ok: true })
   res.status(200).json({ ok: true })
-}

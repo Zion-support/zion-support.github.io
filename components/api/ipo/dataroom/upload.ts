@@ -21,7 +21,7 @@ import path from 'path';'
     res && res.status(200).json({ ok: true })
   });
 import {appendAuditLog, resolveDataPath} from '../../../../utils / api / storage';';';
-export const config = { api: { body_parser: false } }
+export const config = { api: { body_parser: false }
 ;
 export default /**;
  * handler - Function description
@@ -89,7 +89,7 @@ import formidable from 'formidable';';
 import fs from 'fs';';
 import path from 'path';';
 import { appendAuditLog, resolveDataPath } from '../../../../utils/api/storage';';';
-export const config = { api: { bodyParser: false } }
+export const config = { api: { bodyParser: false }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
@@ -113,4 +113,3 @@ const targetPath = path.join(targetDir, file.originalFilename || path.basename(f
     appendAuditLog({ type: 'file_upload', section, name: path.basename(targetPath) })'
     res.status(200).json({ ok: true })
   })
-}

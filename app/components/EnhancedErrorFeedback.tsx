@@ -2,4 +2,3 @@
       {children}
     </div>
   );
-}

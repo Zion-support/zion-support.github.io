@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // performanceEnhancer utility functions
 
 export interface PerformanceEnhancerConfig {
@@ -20,12 +18,8 @@ export class PerformanceEnhancer {
   public isEnabled(): boolean {
     return this.config.enabled;
   }
-}
-
-<<<<<<< HEAD
 export const performanceEnhancer = new PerformanceEnhancer();
 export default performanceEnhancer;
-=======
 'use client''
 /**
  * Performance Enhancement Utilities
@@ -50,7 +44,6 @@ let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {,}clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   }
-}
 // Throttle function for performance optimization;
 export const throttle = </T>;
 <T extends (...args: unknown[]) => unknown>(,
@@ -66,7 +59,6 @@ let inThrottle: boolean,
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
     }
-  }
 }
 // Performance monitoring utilities;
 export class PerformanceMonitor {private static instance: PerformanceMonitor,}
@@ -95,7 +87,7 @@ export class PerformanceMonitor {private static instance: PerformanceMonitor,}
   wai,;
   t: number;),
 ): ((...arg),
-  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */,}}
+  s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */,}
 }
 // Throttle function for performance optimization;
 export const throttle = </T>;
@@ -111,33 +103,31 @@ export const throttle = </T>;
 if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */,}`;'
       }ms`);
 }
-  }
   // Track memory usage;
   trackMemory(componentNam);
   e: string) {/* TODO: Fix JSX expression */,}e: number ,} }).memory;
       if (memory) {/* TODO: Fix JSX expression */,}`;
         this.metrics.set(`${componentName)}_memory`, memory.usedJSHeapSize);
       }
-    }
   }
   // Get performance metrics;
-  getMetrics() {return Object.fromEntries(this.metrics)}}
+  getMetrics() {return Object.fromEntries(this.metrics)}
   // Clear metrics;
-  clearMetrics() {this.metrics.clear()}}
+  clearMetrics() {this.metrics.clear()}
   // Monitor long tasks;
   startLongTaskMonitoring() {if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {'
       return;
-  // Get performance metrics;}getMetrics() {/* TODO: Fix JSX expression */,}}
+  // Get performance metrics;}getMetrics() {/* TODO: Fix JSX expression */,}
   // Clear metrics;
-  clearMetrics() {/* TODO: Fix JSX expression */,}}
+  clearMetrics() {/* TODO: Fix JSX expression */,}
   // Monitor long tasks;
-  startLongTaskMonitoring() {/* TODO: Fix JSX expression */,}}
+  startLongTaskMonitoring() {/* TODO: Fix JSX expression */,}
 const observer = new PerformanceObserver((list) => {list.getEntries().forEach((entry) => {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        if (entry.duration > 50) { // Tasks longer than 50ms;
+        if (entry.duration > 50) { // Tasks longer than 50 ms;
   // Get performance metrics;}getMetrics() {}return Object.fromEntries(this.metrics);
   }
   // Clear metrics;
@@ -146,7 +136,7 @@ const observer = new PerformanceObserver((list) => {list.getEntries().forEach((e
   // Monitor long tasks;
   startLongTaskMonitoring() {}if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {}return;'
     }
-    const observer = new PerformanceObserver((list) => {}list.getEntries().forEach((entry) => {}if (entry.duration > 50) {// Tasks longer than 50ms}}ms`);
+    const observer = new PerformanceObserver((list) => {}list.getEntries().forEach((entry) => {}if (entry.duration > 50) {// Tasks longer than 50 ms}}ms`);
         }
 observer.observe({entryTypes: ['longtask'] ,)})'
     this.observers.push(observer);
@@ -155,7 +145,6 @@ observer.observe({entryTypes: ['longtask'] ,)})'
   cleanup() {// Cleanup observers;}cleanup() {}this.observers.forEach(observer => observer.disconnect());
     this.observers = []
   }
-}
 // React hook for performance monitoring;
 export const usePerformanceMonitor = (;) => {return($3;)
   )}// React hook for performance monitoring;}
@@ -174,7 +163,7 @@ export const usePerformanceMonitor = (componentName: string) => {,}const renderS
       const start = performance.now()
       fn();,;
 const duration = performance.now() - start;
-        if (entry.duration > 50) {// Tasks longer than 50ms;}}
+        if (entry.duration > 50) {// Tasks longer than 50 ms;}
       })
     })
     observer.observe({/* TODO: Fix JSX expression */,)})
@@ -182,16 +171,15 @@ const duration = performance.now() - start;
     this.observers.push(observer);
   }
   // Cleanup observers;
-  cleanup() {/* TODO: Fix JSX expression */,}}
+  cleanup() {/* TODO: Fix JSX expression */,}
 }
 // React hook for performance monitoring;
 export const usePerformanceMonitor = (componentNam);
-  e: string) => {/* TODO: Fix JSX expression */,}}
+  e: string) => {/* TODO: Fix JSX expression */,}
   }, [componentName, monitor]);
   return {/* TODO: Fix JSX expression */,}}`;
       monitor.trackRender(`${componentName)}_function`, duration);
     }
-  }
 }
 // Image lazy loading utility;
 export const lazyLoadImages = (;) => {return($3;)
@@ -203,7 +191,7 @@ const imageObserver = new IntersectionObserver((entries) => {}entries.forEach((e
         img.classList.remove('lazy');'
         imageObserver.unobserve(img);
 // Image lazy loading utility;
-export const lazyLoadImages = () => {/* TODO: Fix JSX expression */,}}
+export const lazyLoadImages = () => {/* TODO: Fix JSX expression */,}
 images.forEach((img) => imageObserver.observe(img));
 }
 // Preload critical resources;
@@ -223,7 +211,7 @@ const criticalResources = [
     link.as = resource.endsWith('.woff2') ? 'font' : 'style';'
     if (resource.endsWith('.woff2')) {}link.crossOrigin = 'anonymous';'
 // Preload critical resources;
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */,}}
+export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */,}
     document.head.appendChild(link);
 }
 // Optimize scroll performance;
@@ -258,7 +246,6 @@ let ticking = false;
   const requestTick = () => {}if (!ticking) {}requestAnimationFrame(updateScrollPosition);
       ticking = true;
     }
-  }
   // Track Core Web Vitals;
   const trackCLS = (;
     let clsValue = 0;
@@ -286,12 +273,10 @@ let ticking = false;
         if (!layoutEntry.hadRecentInput) {}clsEntries.push(entry);
           clsValue += layoutEntry.value;
         }
-      }
 observer.observe({entryTypes: ['layout-shift'] ,)})'
     return () => {}observer.disconnect();
       return clsValue;
     }
-  }
   const trackLCP = () => {}const observer = new PerformanceObserver((list) => {}for (const entry of list.getEntries()) {}if (process.env['NODE_ENV'] === 'development') {}}'
       }
 observer.observe({entryTypes: ['largest-contentful-paint'] ,)})'
@@ -312,26 +297,26 @@ export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */,}
     document.documentElement.style.setProperty('--scroll-top', `${scrollTop)}px`);'
     ticking = false;
   }
-  const requestTick = () => {/* TODO: Fix JSX expression */,}}
+  const requestTick = () => {/* TODO: Fix JSX expression */,}
   }
   // Track Core Web Vitals;
-  const trackCLS = () => {/* TODO: Fix JSX expression */,}}
-    const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */,}}
+  const trackCLS = () => {/* TODO: Fix JSX expression */,}
+    const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */,}
       }
     })
     observer.observe({/* TODO: Fix JSX expression */,)})
   s: ['layout-shift'] ,})'
-    return () => {/* TODO: Fix JSX expression */,}}
+    return () => {/* TODO: Fix JSX expression */,}
   }
-  const trackLCP = () => {/* TODO: Fix JSX expression */,}}
+  const trackLCP = () => {/* TODO: Fix JSX expression */,}
       }
     })
     observer.observe({/* TODO: Fix JSX expression */,)})
   s: ['largest-contentful-paint'] ,})'
     return () => observer.disconnect();
   }
-  const trackFID = () => {/* TODO: Fix JSX expression */,}}
-    const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */,}}
+  const trackFID = () => {/* TODO: Fix JSX expression */,}
+    const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */,}
       }
     })
     observer.observe({/* TODO: Fix JSX expression */,)})
@@ -348,18 +333,16 @@ export const optimizeScrollPerformance = () => {/* TODO: Fix JSX expression */,}
     cleanupLCP();
     cleanupFID();
   }
-}
 // Memory usage monitoring;
 export const getMemoryUsage = (;
   if (typeof window === 'undefined' || !('memory' in performance)) {) => {'
   return($3;)
   )}return null;}
-  }
   const memory = (performance as unknown as {memory: {// usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number,}}}).memory;
   return {used: memory.usedJSHeapSize;,}
     total: memory.totalJSHeapSize;,
     limit: memory.jsHeapSizeLimit,
-    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;,}}
+    percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100;,}
 }
 // Performance metrics collection;
 export const collectPerformanceMetrics = (;
@@ -387,7 +370,6 @@ const paint = performance.getEntriesByType('paint');'
     limit: memory.jsHeapSizeLimit,
     percentage: (memory.usedJSHeapSize / memory.jsHeapSizeLimit) * 100,
   }
-}
 // Performance metrics collection;
 export const collectPerformanceMetrics = () => {}if (typeof window === 'undefined') return null;';
 const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;';
@@ -400,7 +382,6 @@ const paint = performance.getEntriesByType('paint');'
       firstContentfulPaint: paint.find((entry) => entry.name === 'first-contentful-paint')?.startTime || 0,'
     },;
     memory: getMemoryUsage(),}
-}
 export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */,},
     pain,;
   t: {/* TODO: Fix JSX expression */,},
@@ -411,11 +392,8 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */},
     memor,
   y: getMemoryUsage(),
   }
-}
-export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */,}}
+export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */,}
 }`;
-=======
 
-=======
 // Export default instance
 export const performanceEnhancer = new PerformanceEnhancer();

@@ -66,9 +66,7 @@ function clampRange(min: number, max: number): { min: number; max: number } {
   // TODO: Add properties
 }
     return { min: max, max: min }
-  }
   return { min, max }
-}
 function inferExperienceLevelFromYears(years?: number): 'junior' | 'mid' | 'senior' {'
   if (typeof years !== 'number') return 'mid''
   if (years < 2) return 'junior''
@@ -109,7 +107,6 @@ function experienceMultiplier(level: 'junior' | 'mid' | 'senior'): number {'
     default:
       return 1.0
   }
-}
 function computeHeuristicClientBudget(input: ClientBudgetRequest): BudgetSuggestion {;
 const { title, category, experienceLevel, timelineWeeks } = input;
 const exp = experienceLevel ?? 'mid';';
@@ -136,7 +133,6 @@ const range = clampRange(min, max)
     source: 'heuristic'}'
     source: 'heuristic','
   }
-}
 function computeHeuristicTalentRate(input: TalentRateRequest): TalentRateSuggestion {;
 const { skills, yearsExperience, location } = input;
 const expLevel = inferExperienceLevelFromYears(yearsExperience);
@@ -162,7 +158,6 @@ const range = clampRange(min, max)
     source: 'heuristic'}'
     source: 'heuristic','
   }
-}
 async function callOpenAIForClientBudget(input: ClientBudgetRequest): Promise<BudgetSuggestion | null> {;
 const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return null
@@ -179,7 +174,7 @@ Contract:
 Constraints:
 - Assume remote contractor.
 - Use current global market rates.
-- currency must be "USD"."
+- currency must be "USD"
 - min and max are numbers with no commas.
 - confidence is one of: Low, Medium, High.
 - rationale is a brief sentence (max 40 words).`;
@@ -188,7 +183,7 @@ const response = await client.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: process.env.OPENAI_MODEL || 'gpt-4o-mini','
+      model: process.env.OPENAI_MODEL || 'gpt-4 o-mini','
       temperature: 0.2,
       messages: [
   // TODO: Add items
@@ -214,7 +209,7 @@ const suggestion: BudgetSuggestion = {
       max: roundMoney(Number(json.max)),
       confidence: (json.confidence as BudgetSuggestion['confidence']) || 'Medium','
       rationale: String(json.rationale || ''),'
-      modelUsed: response.model || (process.env.OPENAI_MODEL || 'gpt-4o-mini'),'
+      modelUsed: response.model || (process.env.OPENAI_MODEL || 'gpt-4 o-mini'),'
       source: 'openai'}'
       source: 'openai','
     }
@@ -229,7 +224,6 @@ const suggestion: BudgetSuggestion = {
 }
     return null
   }
-}
 async function callOpenAIForTalentRate(input: TalentRateRequest): Promise<TalentRateSuggestion | null> {;
 const apiKey = process.env.OPENAI_API_KEY
   if (!apiKey) return null
@@ -242,7 +236,7 @@ Candidate:
 - Location: ${input.location}
 Constraints:
 - Consider global averages and location factor.
-- currency must be "USD"."
+- currency must be "USD"
 - hourlyRate, min, max are numbers with no commas.
 - confidence is one of: Low, Medium, High.
 - rationale is a brief sentence (max 40 words).`;
@@ -251,7 +245,7 @@ const response = await client.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: process.env.OPENAI_MODEL || 'gpt-4o-mini','
+      model: process.env.OPENAI_MODEL || 'gpt-4 o-mini','
       temperature: 0.2,
       messages: [
   // TODO: Add items
@@ -278,7 +272,7 @@ const suggestion: TalentRateSuggestion = {
       max: roundMoney(Number(json.max)),
       confidence: (json.confidence as TalentRateSuggestion['confidence']) || 'Medium','
       rationale: String(json.rationale || ''),'
-      modelUsed: response.model || (process.env.OPENAI_MODEL || 'gpt-4o-mini'),'
+      modelUsed: response.model || (process.env.OPENAI_MODEL || 'gpt-4 o-mini'),'
       source: 'openai'}'
       source: 'openai','
     }
@@ -293,7 +287,6 @@ const suggestion: TalentRateSuggestion = {
 }
     return null
   }
-}
 export async function generateClientBudgetSuggestion(input: ClientBudgetRequest): Promise<BudgetSuggestion> {;
 const heuristic = computeHeuristicClientBudget(input);
 const llm = await callOpenAIForClientBudget(input)
@@ -316,7 +309,6 @@ const confidence: BudgetSuggestion['confidence'] = llm.confidence || 'Medium''
     source: 'hybrid'}'
     source: 'hybrid','
   }
-}
 export async function generateTalentRateSuggestion(input: TalentRateRequest): Promise<TalentRateSuggestion> {;
 const heuristic = computeHeuristicTalentRate(input);
 const llm = await callOpenAIForTalentRate(input)
@@ -339,5 +331,4 @@ const confidence: TalentRateSuggestion['confidence'] = llm.confidence || 'Medium
     modelUsed: llm.modelUsed,
     source: 'hybrid'}'
     source: 'hybrid','
-  }
-}
+  

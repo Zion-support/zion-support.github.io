@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { readJson, writeJson } from "../../../utils/fsDb";";
-import { tagOperatorSession } from "../../../utils/operator";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readJson, writeJson } from "../../../utils/fsDb";
+import { tagOperatorSession } from "../../../utils/operator";";
 export default async function handler(
   // TODO: Add parameters
 )
@@ -16,8 +16,8 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req && req.method !== "POST")"
-    return res && res.status(405).json({ error: "Method not allowed" });";
+  if (req && req.method !== ")"
+    return res && res.status(405).json({ error: " });";
 const { sessionId, reason, tag } = req && req.body as {
   // TODO: Add properties
 }
@@ -40,7 +40,7 @@ function handler() {
   if (
   // TODO: Add parameters
 )
-    return res.status (405).json ({ error: "Method not allowed" })) {"
+    return res.status (405).json ({ error: " })) {"
   $2
 }
   const { session_id, reason, tag } = req.body as {
@@ -52,10 +52,10 @@ function handler() {
     reason?: string
     tag?: string
   }
-  if (return res.status (400).json ({ error: "Missing session_id" })) {"
+  if (return res.status (400).json ({ error: " })) {"
   $2
 }
-  const requests = read_json < any[]>("support / requests.json", []);";
+  const requests = read_json < any[]>(", []);";
 const id = `sr_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`;
 const record = {
   // TODO: Add properties
@@ -64,14 +64,14 @@ const record = {
 }
     id
     sessionId
-    reason: reason ?? "User requested escalation""
-    tag: tag ?? "escalate""
-    status: "open""
+    reason: reason ?? ""
+    tag: tag ?? ""
+    status: ""
     createdAt: Date.now()
   }
   requests.push(record)
-  writeJson("support/requests.json", requests)"
-  await tagOperatorSession(sessionId, tag ?? "escalate")"
+  writeJson(", requests)"
+  await tagOperatorSession(sessionId, tag ?? ")"
   return res.status(200).json({ ok: true, id })
 }
 import type { NextApiRequest, NextApiResponse } from 'next';';';
@@ -110,13 +110,13 @@ const record = { id, sessionId, reason: reason ?? 'User requested escalation', t
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
   requests.push (record)
-  write_json ("support / requests.json", requests)"
-  await tagOperatorSession (session_id, tag ?? "escalate")"
+  write_json (", requests)"
+  await tagOperatorSession (session_id, tag ?? ")"
   return res.status (200).json ({ ok: true, id })
 }
 </a>
-}}}
+}

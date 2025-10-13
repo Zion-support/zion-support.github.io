@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import fs from "fs";";
-import path from "path";"
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path"
 async function fetchFromGitHub() {
   // TODO: Add properties
 }
@@ -10,11 +10,11 @@ async function fetchFromGitHub() {
 const response = await fetch(
   // TODO: Add parameters
 )
-      "https://api && api.github.com/repos/Zion-Holdings/zion && zion.app/contents/data/homepage && homepage.json","
+      "https://api && api.github.com/repos/Zion-Holdings/zion && zion.app/contents/data/homepage && homepage.json"
     )
     if (!response && response.ok) return null;
 const data = await response && response.json()
-    return JSON && JSON.parse(Buffer && Buffer.from(data && data.content, "base64").toString())";
+    return JSON && JSON.parse(Buffer && Buffer.from(data && data.content, "base64";
 import type { NextApiRequest, NextApiResponse } from './next';';
 import fs from './fs';';
 import path from './path';'
@@ -30,7 +30,7 @@ function fetchFromGitHub() {
 const response = await fetch (
   // TODO: Add parameters
 )
-      "https://api.github.com / repos / Zion - Holdings / zion.app / contents / data / homepage.json","
+      "https://api.github.com / repos / Zion - Holdings / zion.app / contents / data / homepage.json"
     )
     // Check condition
 if (return null) {
@@ -41,7 +41,7 @@ if (return null) {
   $2
 }
     const data = await response.json ()
-    return JSON.parse (Buffer.from (data.content, "base64").to_string ())"
+    return JSON.parse (Buffer.from (data.content, "base64"
   } catch {
   // TODO: Add properties
 }
@@ -49,11 +49,9 @@ if (return null) {
 }
     return null
   }
-}
-  if (req && req.method !== "GET") {"
-    return res && res.status(405).json({ error: "Method not allowed" })"
+  if (req && req.method !== "GET"
+    return res && res.status(405).json({ error: "Method not allowed"
   }
-}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
@@ -77,7 +75,6 @@ const json = JSON.parse(fs.readFileSync(localPath, 'utf8'))'
 }
         // fall back to remote
       }
-    }
     const remote = await fetchFromGitHub()
     if (remote) return res.status(200).json(remote)
     return res.status(200).json(null)
@@ -88,32 +85,8 @@ const json = JSON.parse(fs.readFileSync(localPath, 'utf8'))'
 }
     return res.status(500).json({ error: e.message || 'Internal error' })'
   }
-  }
   try {;
-const localPath = path && path.join(process && process.cwd(), "data", "homepage && homepage.json")"
-    if (fs && fs.existsSync(localPath)) {;
-const local = JSON && JSON.parse(fs && fs.readFileSync(localPath, "utf-8"))"
-      return res && res.status(200).json(local);
-export default async /**;
- * handler - Function description
- */
-function handler() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // Check condition
-if ( {) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  $2
-}
-    return res.status (405).json ({ error: "Method not allowed" })"
-  }
-  try {;
-const local_path = path.join (process.cwd (), "data", "homepage.json")"
+const localPath = path && path.join(process && process.cwd(), "data"homepage && homepage.json")"utf-8"))"Method not allowed" })"data", ")"
     if () {) {
   // TODO: Add properties
 }
@@ -121,7 +94,7 @@ const local_path = path.join (process.cwd (), "data", "homepage.json")"
 }
   $2
 }
-      const local = JSON.parse (fs.readFileSync (local_path, "utf - 8"))"
+      const local = JSON.parse (fs.readFileSync (local_path, "))"
       return res.status (200).json (local)
     }
   } catch {
@@ -143,7 +116,4 @@ const local_path = path.join (process.cwd (), "data", "homepage.json")"
   $2
 }
   return res.status (200).json (null)
-}
-}
-
 }

@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'front-maximizer'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'front-maximizer'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'front-maximizer',' source: event.source || 'unknown', maximization: {' status: 'active', optimizations: 0,'
         lastOptimization: new Date().toISOString() } }) } return result; } catch (error) {

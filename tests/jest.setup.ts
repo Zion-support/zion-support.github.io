@@ -358,7 +358,6 @@ if ( {) {
     removeEventListener = jest.fn (),
     dispatch_event = jest.fn ()
   }
-}
 // Polyfill for window.scroll_to
 // Check condition
 if ( {) {
@@ -658,7 +657,6 @@ if (typeof BroadcastChannel === 'undefined') {'
     removeEventListener = jest.fn()
     dispatchEvent = jest.fn()
   }
-}
 // Polyfill for window.scrollTo
 if (typeof window.scrollTo === 'undefined') {'
   window.scrollTo = jest.fn()
@@ -673,7 +671,7 @@ axios.create = jest.fn(() => axios)
 // Some test files were originally written for Vitest and import utilities from 'vitest'.';'
 // To keep migrating gradually while still running the Jest suite successfully, we create
 // a lightweight shim that re-maps the most common Vitest helpers to their Jest equivalents.
-// This avoids individual test failures like "Vitest cannot be imported in a CommonJS module"."
+// This avoids individual test failures like "Vitest cannot be imported in a CommonJS module"
 //
 // NOTE: When the test suite is fully migrated to Vitest this shim can be removed together
 // with the associated `moduleNameMapper` entry in `jest.config.cjs`.
@@ -900,7 +898,6 @@ if ( {) {
     unobserve () {}
     disconnect () {}
     take_records () { return [] }
-  }
   // @ts - ignore
   window.IntersectionObserver = MockIntersectionObserver,
   // @ts - ignore
@@ -1023,7 +1020,6 @@ if ( {) {
 }
   $2
 }
-}
     useFeedback,
   }
 })
@@ -1074,7 +1070,6 @@ if (typeof window.IntersectionObserver === 'undefined') {'
     unobserve() {}
     disconnect() {}
     takeRecords() { return []; }
-  }
   // @ts-ignore
   window.IntersectionObserver = MockIntersectionObserver
   // @ts-ignore
@@ -1167,4 +1162,3 @@ if (global.vi) {
   if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind(jest)
   // @ts-ignore
   if (!global.vi.advanceTimersByTime) global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind(jest)
-}

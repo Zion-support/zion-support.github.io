@@ -1,6 +1,4 @@
 import React from 'react';
-
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -75,7 +73,7 @@ class SimpleWebsiteAnalyzer {
 //       '/services',
 //       '/ai-services',
 //       '/micro-saas',
-//       '/5g-solutions',
+//       '/5 g-solutions',
 //       '/team',
 //       '/careers',
 //       '/case-studies',
@@ -140,14 +138,14 @@ class SimpleWebsiteAnalyzer {
 //       '/zion-ai-api-manager',
 //       '/zion-ai-backup-manager',
 //       '/zion-ai-testing-automation',
-      // 5G Solutions
-//       '/5g-data-analytics',
-//       '/5g-edge-computing',
-//       '/5g-implementation',
-//       '/5g-mobile-applications',
-//       '/5g-network-infrastructure',
-//       '/5g-private-networks',
-//       '/5g-smart-city-solutions',
+      // 5 G Solutions
+//       '/5 g-data-analytics',
+//       '/5 g-edge-computing',
+//       '/5 g-implementation',
+//       '/5 g-mobile-applications',
+//       '/5 g-network-infrastructure',
+//       '/5 g-private-networks',
+//       '/5 g-smart-city-solutions',
       // IT Services
 //       '/cloud-infrastructure',
 //       '/blockchain-development',
@@ -191,8 +189,6 @@ class SimpleWebsiteAnalyzer {
       // Small delay to be respectful
       await new Promise(resolve => setTimeout(resolve, 100));
     }
-  }
-
   generateRecommendations() {
     const recommendations = [];
 
@@ -256,6 +252,4 @@ class SimpleWebsiteAnalyzer {
     // Save report
     fs.writeFileSync('simple-analysis-report.json', JSON.stringify(report, null, 2));
     return report;
-  }
-=======
-}
+  

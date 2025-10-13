@@ -50,9 +50,9 @@ const fixes = [
 }
     file: '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx','
     changes: [,
-      { from: 'const AI2026ImplementationRoadmap', to: 'const _AI2026ImplementationRoadmap' },'
+      { from: 'const AI2026 ImplementationRoadmap', to: 'const _AI2026 ImplementationRoadmap' },'
   {/* TODO: Fix JSX expression */}
-  o: 'const _AI2026ImplementationRoadmap' }]},'
+  o: 'const _AI2026 ImplementationRoadmap' }]},'
   {/* TODO: Fix JSX expression */}
   m: 'import { Tag as _Tag }', t,'
   o: 'import { Tag as _Tag }' }]},'
@@ -92,10 +92,7 @@ const fixes = [
         t,
   o: 'import { describe, it, expect, jest as _jest }'}]}]'
 function applyFixes() {/* TODO: Fix JSX expression */}
-}
   fixes.forEach(({ file, changes }) => {/* TODO: Fix JSX expression */}
-    }
-
     changes.forEach(({ from, to }) => {/* TODO: Fix JSX expression */}
         content = content.replace(new RegExp(from.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), to)'
         modified = true
@@ -103,7 +100,6 @@ function applyFixes() {/* TODO: Fix JSX expression */}
       }
     })
     if (modified) {/* TODO: Fix JSX expression */}
-    }
   })
 }
 
@@ -122,5 +118,4 @@ try {
 }
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' })'
-} catch (error) {/* TODO: Fix JSX expression */}
-}
+} catch (error) {/* TODO: Fix JSX expression */

@@ -40,7 +40,7 @@ export type ExpandedServicePricing =;
       limitations: string[]
       bestFor: string[]
       setupFee: number,
-      contractTerm: string}}
+      contractTerm: string}
   marketComparison: unknown
     competitors: string[],
     marketPosition: 'leader' | 'challenger' | 'niche' | 'emerging','
@@ -62,7 +62,7 @@ export type ExpandedServicePricing =;
     phone: string
     email: string
     website: string,
-    address: string}}
+    address: string}
 // 1. CYBERSECURITY SERVICES PRICING;
 export const cybersecurityPricing: ExpandedServicePricing[] = [;
   // TODO: Add items
@@ -156,7 +156,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [;
       setupFe,
   e: number,
       contractTer,
-  m: string}}
+  m: string}
   marketCompariso,
   n: unknown,
     competitor,
@@ -200,7 +200,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [;
     websit,
   e: string,
     addres,
-  s: string}}
+  s: string}
 // 1. CYBERSECURITY SERVICES PRICING;
 export const,;
   cybersecurityPricing: ExpandedServicePricing[] = [,
@@ -828,7 +828,6 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ]
 // 2. DATA ANALYTICS SERVICES PRICING;
 export const dataAnalyticsPricing: ExpandedServicePricing[] = [;
@@ -1145,7 +1144,6 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ]
 // 3. CLOUD & DEVOPS SERVICES PRICING;
 export const cloudDevOpsPricing: ExpandedServicePricing[] = [;
@@ -1462,7 +1460,6 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ]
 // 4. IOT & EDGE COMPUTING SERVICES PRICING;
 export const iotEdgePricing: ExpandedServicePricing[] = [;
@@ -1779,7 +1776,6 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ]
 // 5. FINANCIAL TECHNOLOGY SERVICES PRICING;
 export const finTechPricing: ExpandedServicePricing[] = [;
@@ -2029,7 +2025,7 @@ export const,;
 ]
   // TODO: Add items
 ]
-        '1000x faster calculations','
+        '1000 x faster calculations','
         'Reduced computational costs','
         'Superior risk assessment''
       ],
@@ -2096,7 +2092,6 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ]
 // 6. HEALTHCARE TECHNOLOGY SERVICES PRICING;
 export const healthcarePricing: ExpandedServicePricing[] = [;
@@ -2413,7 +2408,6 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ]
 // Export all pricing data;
 export const ALL_EXPANDED_SERVICES_PRICING = [;
@@ -2619,13 +2613,13 @@ const lowercaseQuery = query.toLowerCase(),
   r: pric,
   e: 1800,' currenc,'
   y: 'USD',' billingCycl,'
-  e: 'monthly', features[' 'Basic predictive modeling',' 'Standard dashboards',' 'Data visualization tools',' 'Email support',' 'Up to 100GB data processing',' 'Basic API access' ], limitations[' 'Limited model types',' 'Basic algorithms only',' 'Standard response time' ], bestFor[' 'Small businesses',' 'Startups',' 'Basic analytics needs' ], setupFe,'
+  e: 'monthly', features[' 'Basic predictive modeling',' 'Standard dashboards',' 'Data visualization tools',' 'Email support',' 'Up to 100 GB data processing',' 'Basic API access' ], limitations[' 'Limited model types',' 'Basic algorithms only',' 'Standard response time' ], bestFor[' 'Small businesses',' 'Startups',' 'Basic analytics needs' ], setupFe,'
   e: 3000,' contractTer,'
   m: '12 months' }, professiona,'
   l: pric,
   e: 3500,' currenc,'
   y: 'USD',' billingCycl,'
-  e: 'monthly', features[' 'All Starter features',' 'Advanced ML models',' 'Custom dashboards',' 'Real-time analytics',' 'Priority support',' 'Up to 1TB data processing',' 'Advanced API access',' 'Custom integrations' ], limitations[' 'Limited to standard ML algorithms',' 'Standard SLA' ], bestFor[' 'Mid-size companies',' 'E-commerce businesses',' 'Manufacturing firms' ], setupFe,'
+  e: 'monthly', features[' 'All Starter features',' 'Advanced ML models',' 'Custom dashboards',' 'Real-time analytics',' 'Priority support',' 'Up to 1 TB data processing',' 'Advanced API access',' 'Custom integrations' ], limitations[' 'Limited to standard ML algorithms',' 'Standard SLA' ], bestFor[' 'Mid-size companies',' 'E-commerce businesses',' 'Manufacturing firms' ], setupFe,'
   e: 6000,' contractTer,'
   m: '12 months' }, enterpris,'
   e: pric,
@@ -2790,7 +2784,7 @@ const lowercaseQuery = query.toLowerCase(),
   n: 'Quantum-powered financial modeling with unprecedented speed and accuracy' }, roiAnalysi,'
   s: ' paybackPerio,'
   d: '8-12 months',' annualRO,'
-  I: '500-1000%', costSavings[' '1000x faster calculations',' 'Reduced computational costs',' 'Superior risk assessment' ], revenueImpact[' 'Better investment decisions',' 'Faster portfolio optimization',' 'Competitive advantage' ], riskMitigation[' 'Superior risk modeling',' 'Enhanced fraud detection',' 'Better regulatory compliance' ] }, implementatio,'
+  I: '500-1000%', costSavings[' '1000 x faster calculations',' 'Reduced computational costs',' 'Superior risk assessment' ], revenueImpact[' 'Better investment decisions',' 'Faster portfolio optimization',' 'Competitive advantage' ], riskMitigation[' 'Superior risk modeling',' 'Enhanced fraud detection',' 'Better regulatory compliance' ] }, implementatio,'
   n: ' setupTim,'
   e: '8-12 weeks',' trainingRequire,'
   d: '1-2 weeks for financial team',' integrationComplexit,'

@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";";
-import { supabase } from "@/integrations/supabase/client";";
-import { TalentProfile } from "@/types/talent";";
-import { toast } from "@/hooks/use-toast";";
-import { useAuthStatus } from "@/hooks/talent";";";
+import { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { TalentProfile } from "@/types/talent";
+import { toast } from "@/hooks/use-toast";
+import { useAuthStatus } from "@/hooks/talent";";
 export function useSavedTalents() {;
 const { isAuthenticated, userDetails } = useAuthStatus();
 const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
@@ -61,7 +61,6 @@ const { data: talentData, error: talentError } = await supabase
 }
             setSavedTalents([])
           }
-        }
       } catch (error) {
   // TODO: Add properties
 }
@@ -73,9 +72,9 @@ const { data: talentData, error: talentError } = await supabase
 }
   // TODO: Add properties
 }
-          title: "Error loading favorites","
-          description: "There was a problem loading your saved talents.","
-          variant: "destructive""
+          title: ","
+          description: ","
+          variant: ""
         })
       } finally {
   // TODO: Add properties
@@ -84,7 +83,6 @@ const { data: talentData, error: talentError } = await supabase
 }
         setIsLoading(false)
       }
-    }
     fetchSavedTalents()
   }, [isAuthenticated, userDetails.id])
   // Toggle save talent;
@@ -103,9 +101,9 @@ const toggleSaveTalent = async (talent: TalentProfile) => {
 }
   // TODO: Add properties
 }
-        title: "Authentication required","
-        description: "Please log in to save talents to your favorites","
-        variant: "destructive""
+        title: ","
+        description: ","
+        variant: ""
       })
       return
     }
@@ -134,7 +132,7 @@ const { error } = await supabase
 }
   // TODO: Add properties
 }
-          title: "Removed from favorites","
+          title: ","
           description: `${talent.full_name} has been removed from your favorites`})
           description: `${talent.full_name} has been removed from your favorites`,
         })
@@ -163,7 +161,7 @@ const { error } = await supabase
 }
   // TODO: Add properties
 }
-          title: "Added to favorites","
+          title: ","
           description: `${talent.full_name} has been added to your favorites`})
           description: `${talent.full_name} has been added to your favorites`,
         })
@@ -179,12 +177,11 @@ const { error } = await supabase
 }
   // TODO: Add properties
 }
-        title: "Error","
-        description: "There was a problem updating your favorites. Please try again.","
-        variant: "destructive""
+        title: ","
+        description: ","
+        variant: ""
       })
     }
-  }
   // Check if talent is saved;
 const isTalentSaved = (talentId: string) => {
   // TODO: Add properties
@@ -203,5 +200,4 @@ const isTalentSaved = (talentId: string) => {
     isLoading,
     toggleSaveTalent,
     isTalentSaved
-  }
-}
+  

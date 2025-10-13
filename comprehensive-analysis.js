@@ -1,6 +1,4 @@
 import React from 'react';
-
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -82,12 +80,10 @@ class ComprehensiveWebsiteAnalyzer {
         } else {
           this.allRoutes.add(`/${route}`);
         }
-      }
-
       // Add common routes that might be referenced
       const commonRoutes = [
 //         '/about', '/contact', '/services', '/ai-services', '/micro-saas',
-//         '/5g-solutions', '/team', '/careers', '/case-studies', '/blog',
+//         '/5 g-solutions', '/team', '/careers', '/case-studies', '/blog',
 //         '/news', '/press', '/partners', '/pricing', '/demo', '/support',
 //         '/consultation', '/privacy', '/terms', '/cookies', '/sitemap'
       ];
@@ -98,8 +94,6 @@ class ComprehensiveWebsiteAnalyzer {
     } catch (error) {
       return [];
     }
-  }
-
   async analyzeRoutes() {
     const routes = await this.discoverRoutes();
     for (const route of routes) {
@@ -126,8 +120,6 @@ class ComprehensiveWebsiteAnalyzer {
       // Small delay to be respectful
       await new Promise(resolve => setTimeout(resolve, 200));
     }
-  }
-
   async checkNavigationLinks() {
     // Get the homepage content
     const homepageContent = await this.fetchPageContent(this.baseUrl);
@@ -157,10 +149,7 @@ class ComprehensiveWebsiteAnalyzer {
 //             source: 'navigation'
           });
         }
-      }
     }
-  }
-
   async fetchPageContent(url) {
     return new Promise((resolve) => {
       const urlObj = new URL(url);
@@ -202,24 +191,20 @@ class ComprehensiveWebsiteAnalyzer {
     const links = [];
 
     // Extract href attributes
-    const hrefRegex = /href=["']([^"']+)["']/gi;
+    const hrefRegex = /href=["']([^"']/gi;
     let match;
     while ((match = hrefRegex.exec(html)) !== null) {
       const href = match[1];
       if (href && href.startsWith('/') && !href.startsWith('//')) {
         links.push(href);
       }
-    }
-
     // Extract to attributes (React Router)
-    const toRegex = /to=["']([^"']+)["']/gi;
+    const toRegex = /to=["']([^"']/gi;
     while ((match = toRegex.exec(html)) !== null) {
       const to = match[1];
       if (to && to.startsWith('/') && !to.startsWith('//')) {
         links.push(to);
       }
-    }
-
     return [...new Set(links)]; // Remove duplicates
   }
 
@@ -298,6 +283,4 @@ class ComprehensiveWebsiteAnalyzer {
     // Save report
     fs.writeFileSync('comprehensive-analysis-report.json', JSON.stringify(report, null, 2));
     return report;
-  }
-=======
-}
+  

@@ -1,33 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-export default function PageTsxPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page.Tsx - Zion Tech Group</title>
-        <meta name="description" content="Advanced page.tsx solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page.Tsx</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page.tsx solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-          <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-          <p className="text-gray-300">
-            This page is under development. Please check back later for updates.
-          </p>
-        </div>
-      
-=======
 
 const CybersecuritySolutions = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -38,87 +10,57 @@ const CybersecuritySolutions = () => {
 
   const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 import { Eye, AlertTriangle, Users, Database, Check } from 'lucide-react';
-
 export default function CybersecuritySolutionsPage() {
   const services = [
     {
-      title: "Security Assessment",
-      description: "Comprehensive security audits to identify vulnerabilities and assess your current security posture",
-      icon: <Eye className="w-8 h-8" />,
-      features: ["Vulnerability scanning", "Penetration testing", "Risk assessment", "Compliance audit"],
-      price: "From $2,499/assessment",
+      title: "Security Assessment"Comprehensive security audits to identify vulnerabilities and assess your current security posture",
+      icon: <Eye className="Vulnerability scanning", ", "Risk assessment"Compliance audit"],
+      price: ",
     },
     {
-      title: "Threat Detection",
-      description: "Advanced threat detection and response systems to identify and neutralize security threats in real-time",
-      icon: <AlertTriangle className="w-8 h-8" />,
-      features: ["AI-powered detection", "Real-time monitoring", "Automated response", "Threat intelligence"],
-      price: "From $1,999/month",
+      title: "Threat Detection"Advanced threat detection and response systems to identify and neutralize security threats in real-time",
+      icon: <AlertTriangle className="AI-powered detection", ", "Automated response"Threat intelligence"],
+      price: ",
     },
     {
-      title: "Identity Management",
-      description: "Secure identity and access management solutions to control user access and prevent unauthorized access",
-      icon: <Users className="w-8 h-8" />,
-      features: ["Multi-factor authentication", "Single sign-on", "Access governance", "Privileged access"],
-      price: "From $1,299/month",
+      title: "Identity Management"Secure identity and access management solutions to control user access and prevent unauthorized access",
+      icon: <Users className="Multi-factor authentication", ", "Access governance"Privileged access"],
+      price: ",
     },
     {
-      title: "Data Protection",
-      description: "Comprehensive data protection solutions to secure sensitive information and ensure compliance",
-      icon: <Database className="w-8 h-8" />,
-      features: ["Data encryption", "Backup security", "Data loss prevention", "Compliance monitoring"],
-      price: "From $1,799/month",
+      title: "Data Protection"Comprehensive data protection solutions to secure sensitive information and ensure compliance",
+      icon: <Database className="Data encryption", ", "Data loss prevention"Compliance monitoring"],
+      price: ",
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Essential",
-      price: "$2,999",
-      period: "/month",
-      description: "Basic security protection for small to medium businesses",
+      name: "Essential"$2,999",
+      period: ",
+      description: "Basic security protection for small to medium businesses"Security assessment",
+        ",
+        "Email security"Firewall management",
+        ",
+        "Monthly reports"Professional",
+      price: ",
+      period: "/month"Advanced security solutions for growing businesses",
       features: [
-        "Security assessment",
-        "Basic threat monitoring",
-        "Email security",
-        "Firewall management",
-        "Standard support",
-        "Monthly reports"
-      ],
-      popular: false,
-    },
-    {
-      name: "Professional",
-      price: "$5,999",
-      period: "/month",
-      description: "Advanced security solutions for growing businesses",
+        ",
+        "Advanced threat detection"Identity management",
+        ",
+        "Priority support"Weekly reports",
+        ",
+        "Security training"Enterprise",
+      price: ",
+      period: "/month"Complete security suite for large organizations",
       features: [
-        "Comprehensive security assessment",
-        "Advanced threat detection",
-        "Identity management",
-        "Data protection",
-        "Priority support",
-        "Weekly reports",
-        "Incident response",
-        "Security training"
-      ],
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "$12,999",
-      period: "/month",
-      description: "Complete security suite for large organizations",
-      features: [
-        "Full security audit",
-        "AI-powered threat detection",
-        "Advanced identity management",
-        "Comprehensive data protection",
-        "24/7 dedicated support",
-        "Real-time reporting",
-        "Custom security policies",
-        "Dedicated security team",
-        "Compliance management"
+        ",
+        "AI-powered threat detection"Advanced identity management",
+        ",
+        "24/7 dedicated support"Real-time reporting",
+        ",
+        "Dedicated security team"Compliance management"
       ],
       popular: false,
     }
@@ -127,124 +69,16 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Cybersecurity Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity solutions to protect your business from threats and ensure compliance." />
+    <div className="description" content=" />
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function CybersecuritySolutions() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Cybersecurity Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced cybersecurity solutions solutions by Zion Tech Group" />
-      </Helmet>
-
-        {/* Services */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-6">
-                {service.icon}
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
-              <p className="text-gray-300 mb-6">{service.description}</p>
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-gray-300">
-                    <Check className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-              <div className="text-cyan-400 font-semibold">{service.price}</div>
-            </div>
-          ))}
-        </div>
-
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-            <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
-              Scalable and secure implementation.
-            </p>
-          </div>
-        </div>
-
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div>
-                  <div className="text-gray-300">{plan.period}</div>
-                  <p className="text-gray-300 mt-4">{plan.description}</p>
-                </div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-    </div>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cybersecurity Solutions
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
-            Professional cybersecurity solutions services by Zion Tech Group.
-          </p>
-          
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced cybersecurity solutions solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-                
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                    : 'border border-white/20 text-white hover:bg-white/10'
-                }`}>
-                  {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
-                </button>
-              </div>
-            ))}
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
-}
-=======
-}
-}
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Cybersecurity Solutions
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" content="Advanced cybersecurity solutions solutions by Zion Tech Group"grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-6"text-2 xl font-semibold text-white mb-4"text-gray-300 mb-6"space-y-2 mb-6"flex items-center text-gray-300"w-4 h-4 text-cyan-400 mr-3 flex-shrink-0"text-cyan-400 font-semibold"bg-white rounded-lg shadow-md p-6"text-xl font-semibold text-gray-900 mb-4"text-gray-600"bg-white rounded-lg shadow-md p-6"text-xl font-semibold text-gray-900 mb-4"text-gray-600"text-2 xl font-bold text-white mb-2"text-4 xl font-bold text-cyan-400 mb-2"text-gray-300"text-gray-300 mt-4"min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"container mx-auto px-4 py-20"text-5 xl font-bold text-white mb-6"text-xl text-gray-300 mb-8 max-w-3 xl"bg-slate-800 p-8 rounded-lg"text-2 xl font-bold text-white mb-4"text-gray-300"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-6"text-xl text-gray-600 mb-8">
             Advanced cybersecurity solutions solutions by Zion Tech Group.
           </p>
         </div>
       </div>
     </div>
   );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-c832

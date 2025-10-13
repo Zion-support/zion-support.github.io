@@ -147,7 +147,6 @@ export const _performanceConfig = {
           priority: -20,
           reuseExistingChunk: true
         }
-      }
     }
   },
   // Performance monitoring
@@ -162,7 +161,6 @@ export const _performanceConfig = {
 // sendToAnalytics: true,
 // logThreshold:   ,
 $4}
-}
 export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;
 /**
@@ -176,8 +174,6 @@ export const _performanceConfig = {
 }
     // TODO: Add content
   }
-
-}
   // Core Web Vitals thresholds,
   metric,
   s: {/* TODO: Fix JSX expression */}
@@ -195,7 +191,6 @@ export const _performanceConfig = {
 }
     // TODO: Add content
   }
-}
   good: 100,
       needsImprovement: 300,
     },
@@ -206,7 +201,6 @@ export const _performanceConfig = {
 }
     // TODO: Add content
   }
-}
   good: 0.1,
       needsImprovement: 0.25,
     },
@@ -217,7 +211,6 @@ export const _performanceConfig = {
 }
     // TODO: Add content
   }
-}
   good: 1800,
       needsImprovement: 3000,
     },
@@ -228,7 +221,6 @@ export const _performanceConfig = {
 }
     // TODO: Add content
   }
-}
   good: 800,
       needsImprovement: 1800,
 
@@ -251,7 +243,6 @@ export const _performanceConfig = {
 }
     // TODO: Add content
   }
-}
   maxAge: 3600, // 1 hour,
   staleWhileRevalidate: 60, // 1 minute
     },
@@ -323,13 +314,11 @@ export const _performanceConfig = {
 }
     // TODO: Add content
   }
-}
   minChunks: 2,
           priority: -20,
           reuseExistingChunk: true,
 
         }
-      }
     }
   },
   // Performance monitoring,
@@ -345,6 +334,5 @@ export const _performanceConfig = {
 // logThreshol,
   d: 'needsImprovement''
   }
-}
 export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;

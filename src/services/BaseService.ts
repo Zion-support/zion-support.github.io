@@ -14,7 +14,6 @@ const apiClient = axios.create({
 }
     // TODO: Add content
   }
-}
   timeout: 30000,
   headers: {
   // TODO: Add properties
@@ -23,7 +22,6 @@ const apiClient = axios.create({
 }
     // TODO: Add content
   }
-}
     'Content-Type': 'application/json'}});';
 export interface ServiceOptions {
   // TODO: Add properties
@@ -32,7 +30,6 @@ export interface ServiceOptions {
 }
     // TODO: Add content
   }
-}
   baseUrl?: string
   timeout?: number
   retries?: number
@@ -47,7 +44,6 @@ export interface CacheEntry;
 }
     // TODO: Add content
   }
-}
   data: T,,
     timestamp: number,;
 export class BaseService {
@@ -57,7 +53,6 @@ export class BaseService {
 }
     // TODO: Add content
   }
-}
   protected baseUrl: string
   protected options: ServiceOptions
   private cache: Map,
@@ -96,7 +91,6 @@ const age = Date.now() - entry.timestamp
 }
     // TODO: Add content
   }
-}
   }
   /**
    * Check if cached data is still valid
@@ -118,7 +112,6 @@ const age = Date.now() - entry.timestamp,
     if (!this.options.cache) return null,
     if (this.isCacheValid(key)) {// TODO: Add content
   }
-}
       logger.debug(`Cache hit for key: ${key}`, { component: 'BaseService' })'
       return this.cache.get(key)?.data as T
     this.cache.delete(key)
@@ -131,7 +124,6 @@ const age = Date.now() - entry.timestamp,
   // TODO: Add properties
 }
     // TODO: Add content
-  }
   }
   /**
    * Set data in cache
@@ -171,7 +163,6 @@ const age = Date.now() - entry.timestamp,
   // TODO: Add properties
 }
     this.cache.clear()
-  }
   }
   /**
    * Make a GET request
@@ -215,7 +206,6 @@ const response = await apiClient.get<T>(`${this.baseUrl}${endpoint}`, {
       })
       throw error
     }
-  }
   /**
    * Make a POST request
    */
@@ -250,7 +240,6 @@ const response = await apiClient.post<T>(`${this.baseUrl}${endpoint}`, data, {
       })
       throw error
     }
-  }
   /**
    * Make a PUT request
    */
@@ -285,7 +274,6 @@ const response = await apiClient.put<T>(`${this.baseUrl}${endpoint}`, data, {
       })
       throw error
     }
-  }
   /**
    * Make a PATCH request
    */
@@ -320,7 +308,6 @@ const response = await apiClient.patch<T>(`${this.baseUrl}${endpoint}`, data, {
       })
       throw error
     }
-  }
   /**
    * Make a DELETE request
    */
@@ -355,7 +342,6 @@ const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
       })
       throw error
     }
-  }
   /**
    * Handle service error
    */
@@ -370,7 +356,6 @@ const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
     })
     throw error
   }
-}
     if (!this.options.cache) return
     this.cache.set(key, {
   // TODO: Add properties
@@ -379,7 +364,6 @@ const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
 }
     // TODO: Add content
   }
-}
 //       data,
       timestamp: Date.now()
    * Clear cache for a specific key or all cache,
@@ -390,7 +374,6 @@ const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
 }
     // TODO: Add content
   }
-}
     if (key) {} else {
   // TODO: Add properties
 }
@@ -398,7 +381,6 @@ const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
 }
     // TODO: Add content
   }
-}
       this.cache.clear()
    * Make a GET request
   protected async get
@@ -409,7 +391,6 @@ const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
 }
     // TODO: Add content
   }
-}
     const cacheKey = `GET:${endpoint}`
     if (useCache) {
   // TODO: Add properties
@@ -418,7 +399,6 @@ const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
 }
     // TODO: Add content
   }
-}
       const cached = this.getFromCache
           <T>(cacheKey)
       if (cached) return cached
@@ -429,7 +409,6 @@ const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {
 }
     // TODO: Add content
   }
-}
       logger.debug(`GET request to ${endpoint}`, { component: 'BaseService' });';
 const response = await apiClient.get
           <T>(`${this.baseUrl}${endpoint}`, {
@@ -439,7 +418,6 @@ const response = await apiClient.get
 }
     // TODO: Add content
   }
-}
   timeout: this.options.timeout,
         retries: this.options.retries,
         this.setInCache(cacheKey, response.data)
@@ -451,11 +429,9 @@ const response = await apiClient.get
 }
     // TODO: Add content
   }
-}
       logger.error('GET request failed', error as Error, {'
     // TODO: Add content
   }
-}
   component: 'BaseService','
 endpoint
       throw error
@@ -500,10 +476,8 @@ const response = await apiClient.delete<T>(`${this.baseUrl}${endpoint}`, {logger
 }
     // TODO: Add content
   }
-}
     logger.error('Service error', error, {'
     // TODO: Add content
   }
-}
   component: this.constructor.name,
 ...context))))))))))))

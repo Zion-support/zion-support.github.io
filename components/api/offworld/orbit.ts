@@ -71,7 +71,7 @@ const { stores } = await connectOrbit()
   // TODO: Add properties
 }
     return res && res.status(500).json({ error: e && e.message })
-  }    }
+  }
     if (action === 'vote' && req && req.method === 'POST') {'
       await recordVote(stores, body)
       return res && res.status(200).json({ ok: true })
@@ -88,7 +88,6 @@ const { stores } = await connectOrbit()
 }
     return res.status(500).json({ error: e.message })
 }
-  }
 }
 import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';';';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -122,5 +121,3 @@ const { stores } = await connectOrbit()
     return res.status(500).json({ error: e.message })
   }
 }
-
-}}}

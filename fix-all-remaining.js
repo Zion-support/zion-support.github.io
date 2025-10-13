@@ -38,18 +38,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function ${pageName}() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            ${title}
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" content="${description}"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
           </p>
         </div>
@@ -67,7 +56,6 @@ function createComponentTemplate(filePath) {
   ).join('');
   
   return `import React from 'react';
-
 interface ${componentName}Props {
   className?: string;
   children?: React.ReactNode;
@@ -109,7 +97,6 @@ function fixFile(filePath) {
         ).join('');
         
         newContent = `import React from 'react';
-
 export default function ${componentName}() {
   return (
     <div>
@@ -130,8 +117,6 @@ export default function ${componentName}() {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Function to recursively find and fix files
 function fixAllFiles(dirPath) {
   const items = fs.readdirSync(dirPath);
@@ -151,7 +136,6 @@ function fixAllFiles(dirPath) {
       if (fixFile(fullPath)) {
         fixedCount++;
       }
-    }
   }
   
   return fixedCount;

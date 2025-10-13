@@ -27,7 +27,6 @@ const d = typeof date === 'string' ? new Date(date) : date'
     logErrorToProduction('Error formatting date:', { data:  e })'
     return '-''
   }
-}
 /**
  * Stores referral code in localStorage when detected in URL
  */;
@@ -104,4 +103,3 @@ const response = await apiClient('/api/track-referral', {'
     logErrorToProduction('Error tracking referral:', { data: error })'
   }
   return false
-}

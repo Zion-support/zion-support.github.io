@@ -39,7 +39,7 @@ const path = match.match(/path:\s*'([^']+)'/)[1],'
 const existingPages = [];
 const { execSync } = require('child_process')'
 try {;
-const result = execSync('find app -name "page.tsx" | sed "s|app/||" | sed "s|/page.tsx||"', { encoding: 'utf8' })'"
+const result = execSync('find app -name "page.tsx"s|app/||" | sed "', { encoding: 'utf8' })'"
   existingPages.push(...result.trim().split('\n').filter(Boolean))'
 } catch (error) {
   // TODO: Add properties
@@ -88,5 +88,4 @@ if (unlinkedPages.length > 0) {
   // TODO: Add properties
 }
     console.log(`... and ${unlinkedPages.length - 20} more`)
-  }
-}
+  

@@ -61,5 +61,4 @@ const { error, stack, componentStack, timestamp, userAgent, url } = req.body
       error: 'Failed to process error report','
       details: process.env.NODE_ENV === 'development' ? error.message : undefined'
     }));
-  }
-}
+  

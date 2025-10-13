@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'og-image-update-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'og-image-update-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'og-image-update-runner',' source: event.source || 'unknown', update: {' status: 'active', imagesUpdated: 0,'
         lastUpdate: new Date().toISOString() } }) } return result; } catch (error) {

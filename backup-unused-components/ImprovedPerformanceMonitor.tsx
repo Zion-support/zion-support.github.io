@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Activity, TrendingUp } from 'lucide-react';
-
 interface PerformanceMetrics {
   lcp?: number;
   fid?: number;
@@ -112,7 +110,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           if (entry.name === 'first-contentful-paint') {
             updateMetrics({ fcp: entry.startTime });
           }
-        }
       }
     });
 
@@ -179,7 +176,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return null;
   }
 
-=======
 interface ImprovedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
@@ -187,7 +183,6 @@ interface ImprovedPerformanceMonitorProps {
 
 export default function ImprovedPerformanceMonitor({ className = '', children }: ImprovedPerformanceMonitorProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -199,106 +194,8 @@ export default function ImprovedPerformanceMonitor({ className = '', children }:
       <h1>Component</h1>
       <p>This component is under construction.</p>
     </div>
-    <div className="fixed bottom-4 right-4 z-50">
-//       <button
-        onClick={() => setIsVisible(!isVisible)}
-        className="bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover:bg-slate-700/90 transition-colors"
-        title="Performance Monitor"
-//       >
-        <Activity className="w-5 h-5" />
-</button>
-
-      {isVisible && (
-        <div className="absolute bottom-16 right-0 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-semibold flex items-center gap-2">
-              <TrendingUp className="w-5 h-5" />
-              Performance
-</h3>
-//             <button
-              onClick={() => setIsVisible(false)}
-              className="text-gray-400 hover:text-white"
-//             >
-//               ×
-</button>
-</div>
-
-          {/* Performance Score */}
-          <div className="mb-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm text-gray-300">Overall Score</span>
-              <span className={`font-bold ${getScoreColor(performanceScore)}`}>
-                {performanceScore}/100
-</span>
-</div>
-            <div className="w-full bg-slate-700 rounded-full h-2">
-//               <div
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  performanceScore >= 90 ? 'bg-green-400' :
-                  performanceScore >= 70 ? 'bg-yellow-400' : 'bg-red-400'
-                }`}
-                style={{ width: `${performanceScore}%` }}
-//               />
-</div>
-            <p className="text-xs text-gray-400 mt-1">
-              {getScoreLabel(performanceScore)}
-</p>
-</div>
-
-          {/* Metrics */}
-          <div className="space-y-2 text-sm">
-            {metrics.lcp && (
-              <div className="flex justify-between">
-                <span className="text-gray-300">LCP</span>
-                <span className={metrics.lcp > 2500 ? 'text-red-400' : 'text-green-400'}>
-                  {metrics.lcp.toFixed(0)}ms
-</span>
-</div>
-            )}
-            {metrics.fid && (
-              <div className="flex justify-between">
-                <span className="text-gray-300">FID</span>
-                <span className={metrics.fid > 100 ? 'text-red-400' : 'text-green-400'}>
-                  {metrics.fid.toFixed(0)}ms
-</span>
-</div>
-            )}
-            {metrics.cls && (
-              <div className="flex justify-between">
-                <span className="text-gray-300">CLS</span>
-                <span className={metrics.cls > 0.1 ? 'text-red-400' : 'text-green-400'}>
-                  {metrics.cls.toFixed(3)}
-</span>
-</div>
-            )}
-            {metrics.fcp && (
-              <div className="flex justify-between">
-                <span className="text-gray-300">FCP</span>
-                <span className={metrics.fcp > 1800 ? 'text-red-400' : 'text-green-400'}>
-                  {metrics.fcp.toFixed(0)}ms
-</span>
-</div>
-            )}
-            {metrics.ttfb && (
-              <div className="flex justify-between">
-                <span className="text-gray-300">TTFB</span>
-                <span className={metrics.ttfb > 600 ? 'text-red-400' : 'text-green-400'}>
-                  {metrics.ttfb.toFixed(0)}ms
-</span>
-</div>
-            )}
-            {metrics.memory && (
-              <div className="flex justify-between">
-                <span className="text-gray-300">Memory</span>
-                <span className="text-cyan-400">
-                  {metrics.memory.toFixed(1)}MB
-</span>
-</div>
-            )}
-            {metrics.connection && (
-              <div className="flex justify-between">
-                <span className="text-gray-300">Connection</span>
-                <span className="text-cyan-400">
+    <div className="fixed bottom-4 right-4 z-50"
+        title="Performance Monitor"w-5 h-5"absolute bottom-16 right-0 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white"flex items-center justify-between mb-4"text-lg font-semibold flex items-center gap-2"w-5 h-5"text-gray-400 hover:text-white"mb-4"flex items-center justify-between mb-2"text-sm text-gray-300"w-full bg-slate-700 rounded-full h-2"text-xs text-gray-400 mt-1"space-y-2 text-sm"flex justify-between"text-gray-300"flex justify-between"text-gray-300"flex justify-between"text-gray-300"flex justify-between"text-gray-300"flex justify-between"text-gray-300"flex justify-between"text-gray-300"text-cyan-400"flex justify-between"text-gray-300"text-cyan-400">
                   {metrics.connection}
 </span>
 </div>
@@ -307,6 +204,4 @@ export default function ImprovedPerformanceMonitor({ className = '', children }:
 </div>
       )}
 </div>
-=======
   );
-}

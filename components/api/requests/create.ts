@@ -1,4 +1,4 @@
-  model: 'gpt-4o-mini''
+  model: 'gpt-4 o-mini''
 messages: [ {
   // TODO: Add properties
 }
@@ -55,7 +55,6 @@ const raw = fs.readFileSync(REQUESTS_PATH, 'utf-8')'
 }
     return []
   }
-}
 async function saveRequests(requests: any[]) {
   // TODO: Add properties
 }
@@ -76,13 +75,13 @@ async function summarizeWithOpenAI(description: string) {
 }
     if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' }';
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n""${description}""`;"";
+const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""`;";
 const response = await client.chat.completions.create({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini''
+      model: 'gpt-4 o-mini''
       messages: [
   // TODO: Add items
 ]
@@ -131,7 +130,6 @@ const typeMatch = content.match(/type\s*:\s*(.+)$/im)
 }
     return { summary: description.slice(0, 280), type: 'unknown' }'
   }
-}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
@@ -194,7 +192,6 @@ const type_match = content.match (/type\s*:\s*(.+)$/im)
 }
     return { summary: description.slice (0, 280), type: 'unknown' }'
   }
-}
 export default async /**;
  * handler - Function description
  */
@@ -234,13 +231,13 @@ const record = {
     if (!process.env.OPENAI_API_KEY) return { summary: description.slice(0, 280), type: 'unknown' }';
 const { OpenAI } = await import('openai');';
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n""${description}""`;";
+const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""`;";
 const response = await client.chat.completions.create({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini','
+      model: 'gpt-4 o-mini','
       messages: [
   // TODO: Add items
 ]
@@ -261,7 +258,6 @@ const typeMatch = content.match(/type\s*:\s*(.+)$/im)
 }
     return { summary: description.slice(0, 280), type: 'unknown' }'
   }
-}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }

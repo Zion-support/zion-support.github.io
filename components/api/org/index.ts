@@ -143,4 +143,3 @@ const parseArray = (v?: string | string[]) => {
   return res.status(200).json(filtered)
 }
 
-}}

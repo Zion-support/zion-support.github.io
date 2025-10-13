@@ -3,11 +3,9 @@ function runCommand(command) {/* TODO: Fix JSX expression */}
   o: 'pipe' })'
   } catch (error) {/* TODO: Fix JSX expression */}
   r: error.stderr }
-  }
 }
 
 function main() {/* TODO: Fix JSX expression */}
-}
   console.log('🚀 Pushing changes to main branch...')'
   try {
   // TODO: Add properties
@@ -34,7 +32,6 @@ const fallbackResult = runCommand('git push origin main')'
         console.log('❌ Fallback push also failed:', fallbackResult.stderr)'
         return false
   try {/* TODO: Fix JSX expression */}
-      }
     }
 
     console.log('✅ Successfully pushed to main branch')'
@@ -54,5 +51,3 @@ const statusResult = runCommand('git status')'
     console.log('❌ Error pushing changes:', error.message)'
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}

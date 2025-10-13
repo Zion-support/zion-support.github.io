@@ -116,7 +116,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
       'Research and development','
       'Enterprise data centers''
     ],
-    marketSize: '$14.3B by 2025','
+    marketSize: '$14.3 B by 2025','
     targetAudience: 'Enterprises requiring quantum-safe security, government agencies, financial institutions','
     competitiveAdvantage: 'First commercial quantum-safe cloud infrastructure with proven quantum resistance','
     contact: 'kleber@ziontechgroup.com','
@@ -191,7 +191,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
       'E-commerce platforms','
       'Real-time applications''
     ],
-    marketSize: '$11.7B by 2025','
+    marketSize: '$11.7 B by 2025','
     targetAudience: 'CDN providers, IoT companies, mobile app developers, global businesses','
     competitiveAdvantage: 'Only autonomous edge computing network with AI-driven optimization','
     contact: 'kleber@ziontechgroup.com','
@@ -245,7 +245,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
 ]
   // TODO: Add items
 ]
-      '1000x more energy efficient than traditional computing','
+      '1000 x more energy efficient than traditional computing','
       'Real-time learning and adaptation','
       'Unprecedented AI processing speed','
       'Cognitive computing capabilities','
@@ -266,7 +266,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
       'Scientific research','
       'Advanced AI applications''
     ],
-    marketSize: '$19.8B by 2025','
+    marketSize: '$19.8 B by 2025','
     targetAudience: 'AI research institutions, autonomous vehicle companies, robotics manufacturers','
     competitiveAdvantage: 'First commercial neuromorphic computing infrastructure with proven brain-inspired architecture','
     contact: 'kleber@ziontechgroup.com','
@@ -341,7 +341,7 @@ export const cuttingEdgeITInfrastructureInnovations2025 = [;
       'Government data centers','
       'Research and educational institutions''
     ],
-    marketSize: '$16.4B by 2025','
+    marketSize: '$16.4 B by 2025','
     targetAudience: 'Data center operators, cloud providers, enterprises with large IT infrastructure','
     competitiveAdvantage: 'Only fully autonomous data center management platform with AI-driven optimization','
     contact: 'kleber@ziontechgroup.com','

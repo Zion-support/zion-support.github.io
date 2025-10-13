@@ -163,5 +163,4 @@ const years = talent.years_experience || 0
     toggleRegion,
     clearFilters}
     clearFilters,
-  }
-}
+  

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 //   '/',
 //   '/about',
@@ -7,11 +5,10 @@ import React from 'react';
 //   '/services',
 //   '/ai-services',
 //   '/micro-saas',
-//   '/5g-solutions',
+//   '/5 g-solutions',
   '/manifest.json',
 ];
 
-=======
 export default function Component() {
   return (
     <div>
@@ -20,7 +17,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 const CACHE_NAME = 'zion-tech-group-v1';';
 const STATIC_CACHE = 'zion-static-v1';';
 const DYNAMIC_CACHE = 'zion-dynamic-v1';'
@@ -125,4 +121,3 @@ async function syncContactForm() {
 }
   // Handle offline form submissions
   console.log('Syncing contact form data');'
-}

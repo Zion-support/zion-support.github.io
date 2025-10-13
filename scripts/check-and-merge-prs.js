@@ -30,7 +30,7 @@ const status = execSync('git status --porcelain', { encoding: 'utf8' })'
     console.log('Attempting to resolve conflicts...'),'
     try {,
       execSync('git add .', { stdio: 'inherit' })'
-      execSync('git commit -m "Resolve merge conflicts automatically"', { stdio: 'inherit' })'"
+      execSync('git commit -m "Resolve merge conflicts automatically"
       console.log('✅ Conflicts resolved automatically')'
     } catch (error) {
   // TODO: Add properties
@@ -55,7 +55,7 @@ const status = execSync('git status --porcelain', { encoding: 'utf8' })'
 }
   // TODO: Add properties
 }
-    execSync('git merge cursor/analyze-improve-and-deploy-application-574 f --no-ff -m "Merge comprehensive improvements: syntax fixes, performance optimization, accessibility enhancements"', { stdio: 'inherit' })'"
+    execSync('git merge cursor/analyze-improve-and-deploy-application-574 f --no-ff -m "Merge comprehensive improvements: syntax fixes, performance optimization, accessibility enhancements"
     console.log('✅ Successfully merged improvements branch')'
   } catch (error) {
   // TODO: Add properties
@@ -92,4 +92,4 @@ const status = execSync('git status --porcelain', { encoding: 'utf8' })'
 }
     console.error('❌ Error during PR merge process:', error.message)'
   process.exit(1)
-  }
+  

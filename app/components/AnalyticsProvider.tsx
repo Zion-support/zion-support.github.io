@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, ReactNode } from 'react';
-import { AnalyticsContext } from '../contexts/AnalyticsContext';
-=======
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -33,9 +30,6 @@ const gtag = (window as {gtag: (command: string, action: string, parameters: Rec
         value: parameters.value,
         ...parameters,})
     }
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-
     // Google Analytics;
     if ('gtag' in window) {;';
 const gtag = (window as {gtag: (command: string, targetId: string, config: any) => void ,}}).gtag;
@@ -103,7 +97,6 @@ const gtag = (window as {gtag: (command: string, targetId: string, config: any) 
 }
         console.error('Analytics error:', error);'
       }
-    }
   };
 ;
 const trackPageView = (pageName: string, pagePath: string) => {
@@ -186,7 +179,6 @@ const trackPageView = (pageName: string, pagePath: string) => {
 }
         console.error('Page view error:', error);'
       }
-    }
   };
 
   useEffect(() => {
@@ -204,18 +196,6 @@ const script = document.createElement('script');'
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
       document.head.appendChild(script);
-
-<<<<<<< HEAD
-  const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
-    console.log('Analytics Event:', eventName, properties);
-    // Add your analytics tracking logic here
-  };
-
-  const trackPageView = (pageName: string, properties?: Record<string, unknown>) => {
-    console.log('Page View:', pageName, properties);
-    // Add your page view tracking logic here
-  };
-=======
 
     // Track performance metrics
     if (typeof window !== 'undefined' && 'performance' in window) {'
@@ -237,7 +217,6 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
         }, 1000);
       });
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
 
   }, [googleAnalyticsId]);
 const value: AnalyticsContextType = {,
@@ -251,4 +230,3 @@ const value: AnalyticsContextType = {,
       {children}
     </div>
   );
-}

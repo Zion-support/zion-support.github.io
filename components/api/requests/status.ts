@@ -94,7 +94,6 @@ function readAll() {
 }
     return []
   }
-}
 function writeAll(items: any[]) {
   // TODO: Add properties
 }
@@ -119,4 +118,4 @@ const idx = items.findIndex((r: any) => r.id === id)
   res.status(200).json({ ok: true })
 }
 
-}}}
+}

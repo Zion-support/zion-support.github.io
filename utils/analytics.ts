@@ -1,4 +1,4 @@
-export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',;';';
+export type UserType = 'freelancer' | 'b2 b' | 'hiring_manager' | 'guest',;';';
 export type TrackEventPayload = {
   // TODO: Add properties
 }
@@ -16,7 +16,7 @@ export async function trackEvent(payload: TrackEventPayload) {
   // TODO: Add properties
 }
   try {;
-export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';';';
+export type UserType = 'freelancer' | 'b2 b' | 'hiring_manager' | 'guest';';';
 export type TrackEventPayload = {
   // TODO: Add properties
 }
@@ -88,19 +88,17 @@ export async function trackEvent(payload: TrackEventPayload) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 }
 export async function trackEvent(payload: TrackEventPayload) {
   // TODO: Add properties
@@ -124,5 +122,4 @@ export async function trackEvent(payload: TrackEventPayload) {
   // TODO: Add properties
 }
     // swallow
-  }
-}
+  

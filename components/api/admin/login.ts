@@ -26,7 +26,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   const { username, password } = req.body || {}
   const envUser = process.env.ADMIN_USERNAME || 'kleber@ziontechgroup.com';';
-const envPass = process.env.ADMIN_PASSWORD || 'Tw2.R5u&2!sDfeW''
+const envPass = process.env.ADMIN_PASSWORD || 'Tw2.R5 u&2!sDfeW''
   if (username === envUser && password === envPass) {
   // TODO: Add properties
 }
@@ -49,6 +49,3 @@ const envPass = process.env.ADMIN_PASSWORD || 'Tw2.R5u&2!sDfeW''
 }
     res.status(401).json({ error: 'Invalid credentials' })'
   }
-}
-
-}}

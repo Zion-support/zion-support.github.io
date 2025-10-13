@@ -1,8 +1,8 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";"
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0"
 // Initialize Supabase client;
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;";
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;";
+const supabaseUrl = Deno.env.get("SUPABASE_URL";
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY";
 const supabase = createClient(supabaseUrl, supabaseServiceKey)
 serve(async (req) => {
   // TODO: Add properties
@@ -11,17 +11,17 @@ serve(async (req) => {
 }
   // Parse the URL to get the tracking parameters;
 const url = new URL(req.url);
-const type = url.searchParams.get("type"); // "open" or "click";";
-const campaignId = url.searchParams.get("cid");";
-const userId = url.searchParams.get("uid");";
-const redirectUrl = url.searchParams.get("redirect")"
+const type = url.searchParams.get("type"open" or ";";
+const campaignId = url.searchParams.get(");";
+const userId = url.searchParams.get(");";
+const redirectUrl = url.searchParams.get(")"
   // Validate required parameters
   if (!type || !campaignId || !userId) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    return new Response("Missing required parameters", { status: 400 })"
+    return new Response(", { status: 400 })"
   }
   try {
   // TODO: Add properties
@@ -29,26 +29,26 @@ const redirectUrl = url.searchParams.get("redirect")"
   // TODO: Add properties
 }
     // Update the email campaign record based on event type
-    if (type === "open") {"
+    if (type === ") {"
       await supabase
-        .from("email_campaigns")"
+        .from(")"
         .update({ opened_at: new Date().toISOString() })
-        .eq("id", campaignId)"
-        .eq("user_id", userId)"
-      // Return a 1x1 transparent GIF
+        .eq(", campaignId)"
+        .eq(", userId)"
+      // Return a 1 x1 transparent GIF
       return new Response(
   // TODO: Add parameters
 )
-        new Uint8Array([
+        new Uint8 Array([
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-          0x47, 0x49, 0x46, 0x38, 0x39, 0x61, 0x01, 0x00, 0x01, 0x00, 0x80, 0x00,
-          0x00, 0xFF, 0xFF, 0xFF, 0x00, 0x00, 0x00, 0x21, 0xF9, 0x04, 0x01, 0x00,
-          0x00, 0x00, 0x00, 0x2C, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00,
-          0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B]),
-          0x00, 0x02, 0x02, 0x44, 0x01, 0x00, 0x3B,
+          0 x47, 0 x49, 0 x46, 0 x38, 0 x39, 0 x61, 0 x01, 0 x00, 0 x01, 0 x00, 0 x80, 0 x00,
+          0 x00, 0 xFF, 0 xFF, 0 xFF, 0 x00, 0 x00, 0 x00, 0 x21, 0 xF9, 0 x04, 0 x01, 0 x00,
+          0 x00, 0 x00, 0 x00, 0 x2 C, 0 x00, 0 x00, 0 x00, 0 x00, 0 x01, 0 x00, 0 x01, 0 x00,
+          0 x00, 0 x02, 0 x02, 0 x44, 0 x01, 0 x00, 0 x3 B]),
+          0 x00, 0 x02, 0 x02, 0 x44, 0 x01, 0 x00, 0 x3 B,
         ]),
         {
   // TODO: Add properties
@@ -60,63 +60,9 @@ const redirectUrl = url.searchParams.get("redirect")"
 }
   // TODO: Add properties
 }
-            "Content-Type": "image/gif","
-            "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate","
-            "Pragma": "no-cache","
-            "Expires": "0"}}"
-            "Expires": "0","
-          },
-        }
-      )
-    } else if (type === "click") {"
-      await supabase
-        .from("email_campaigns")"
-        .update({ clicked_at: new Date().toISOString() })
-        .eq("id", campaignId)"
-        .eq("user_id", userId)"
-      // Redirect to the specified URL or default to dashboard;
-const destination = redirectUrl || `${supabaseUrl}/dashboard`
-      return new Response(null, {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        status: 302,
-        headers: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          Location: destination}})
-          Location: destination,
-        },
-      })
-    }
-    return new Response("Invalid event type", { status: 400 })"
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error tracking email event:", error)"
-    // If it was a click event, still try to redirect the user
-    if (type === "click" && redirectUrl) {"
-      return new Response(null, {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        status: 302,
-        headers: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          Location: redirectUrl}})
-          Location: redirectUrl,
-        },
-      })
-    }
-    return new Response("Error processing event", { status: 500 })"
+            ": "image/gif"
+            "Cache-Control"no-store, no-cache, must-revalidate, proxy-revalidate","Pragma": ","
+            ": "0"
+            "Expires"0","click") {"email_campaigns")"id", campaignId)"user_id", userId)"Invalid event type", { status: 400 })"Error tracking email event:", error)"click" && redirectUrl) {"Error processing event", { status: 500 })"
   }
 })

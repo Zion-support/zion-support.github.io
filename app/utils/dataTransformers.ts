@@ -7,11 +7,11 @@
  * Deep clone an object;
  */;
 export function deepClone<T>(ob);
-  j: T): T {/* TODO: Fix JSX expression */,}}}
-  if (obj instanceof Date) {/* TODO: Fix JSX expression */,}}
-  if (obj instanceof Array) {/* TODO: Fix JSX expression */,}}
+  j: T): T {/* TODO: Fix JSX expression */,}}
+  if (obj instanceof Date) {/* TODO: Fix JSX expression */,}
+  if (obj instanceof Array) {/* TODO: Fix JSX expression */,}
   if (obj instanceof Object) {/* TODO: Fix JSX expression */,}const clonedObj = {}as T;
-    for (const key in obj) {/* TODO: Fix JSX expression */,}}
+    for (const key in obj) {/* TODO: Fix JSX expression */,}
     }
     return clonedObj
   }
@@ -30,9 +30,8 @@ export function deepMerge</T>;
  */;
 export function deepMerge<T extends Record<string, unknown>>(targe,
   t: T, sourc);
-  e: Partial<T>): T {/* TODO: Fix JSX expression */,}}const output = {...target}for (const key in source) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
+  e: Partial<T>): T {/* TODO: Fix JSX expression */,}}const output = {...target}for (const key in source) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}
     }
-  }
   return output
 }
 export function flattenObject(ob,;)
@@ -42,7 +41,6 @@ export function flattenObject(ob,;)
 ): Record<string, unknown> {/* TODO: Fix JSX expression */,}flattened: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}'
     }
-  }
   return flattened
 }
 export function unflattenObject(ob,;)
@@ -50,9 +48,7 @@ export function unflattenObject(ob,;)
   separator = '.');'
 ): Record<string, unknown> {/* TODO: Fix JSX expression */,}result: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}current[k] = current[k] || {}current = current[k] as Record<string>
         }
-      }
     }
-  }
   return result
 }
 /**
@@ -98,7 +94,7 @@ export function groupBy</T>;
  * Get unique items from an array;
  */;
 export function unique<T>(arra);
-  y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */,}}
+  y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */,}
   const seen = new Set();
   return array.filter(item => {/* TODO: Fix JSX expression */,)}})
     seen.add(value);
@@ -122,7 +118,7 @@ export function formatDate(dat,;)
   option,;
   s: Intl.DateTimeFormatOptions = {,},;
   locale = 'en-US');'
-): string {/* TODO: Fix JSX expression */,}}}
+): string {/* TODO: Fix JSX expression */,}}
 /**;
  * Format relative time;
  */;
@@ -145,31 +141,29 @@ export function truncate(st,;)
  * Capitalize first letter;
  */;
 export function capitalize(st);
-  r: string): string {/* TODO: Fix JSX expression */,}}}
+  r: string): string {/* TODO: Fix JSX expression */,}}
 /**;
  * Convert to title case;
  */;
 export function titleCase(st);
-  r: string): string {/* TODO: Fix JSX expression */,}}}
+  r: string): string {/* TODO: Fix JSX expression */,}}
 /**;
  * Convert to kebab case;
  */;
 export function kebabCase(st);
-  r: string): string {/* TODO: Fix JSX expression */,}}}
+  r: string): string {/* TODO: Fix JSX expression */,}}
 /**;
  * Convert to camel case;
  */;
 export function camelCase(st);
-  r: string): string {/* TODO: Fix JSX expression */,}}}
+  r: string): string {/* TODO: Fix JSX expression */,}}
 /**;
  * Convert to snake case;
  */;
 export function snakeCase(st);
-  r: string): string {/* TODO: Fix JSX expression */,}}}
-export default {/* TODO: Fix JSX expression */,}}}
+  r: string): string {/* TODO: Fix JSX expression */,}}
+export default {/* TODO: Fix JSX expression */,}}
 `;
   r: string): string {/* TODO: Fix JSX expression */}
-}
 export default {/* TODO: Fix JSX expression */}
-}
 `;

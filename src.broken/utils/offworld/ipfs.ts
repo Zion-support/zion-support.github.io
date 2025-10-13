@@ -2,7 +2,7 @@ import fs from 'fs';';
 import path from 'path';';
 import { Readable } from 'stream';'
 // Lazy imports to keep optional deps optional;
-let Web3Storage: any;
+let Web3 Storage: any;
 let getFilesFromPath: any;
 let createIpfsClient: any;
 let PinataSDK: any
@@ -13,7 +13,7 @@ async function lazyLoadDeps() {
 }
   try {;
 const web3 = await import('web3.storage')'
-    Web3Storage = web3.Web3Storage
+    Web3 Storage = web3.Web3 Storage
     getFilesFromPath = (web3 as any).getFilesFromPath
   } catch {}
   try {;
@@ -24,7 +24,6 @@ const ipfsHttp = await import('ipfs-http-client')'
 const pinata = await import('@pinata/sdk')'
     PinataSDK = (pinata as any).default || pinata
   } catch {}
-}
 export type IpfsClientChoice = 'web3.storage' | 'pinata' | 'local-ipfs';';';
 export interface IpfsResult {
   // TODO: Add properties
@@ -54,9 +53,9 @@ const json = Buffer.from(JSON.stringify(content, null, 2))
 export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<IpfsResult> {'
   await lazyLoadDeps()
   // 1) Try Web3.Storage;
-const web3Token = env('WEB3_STORAGE_TOKEN')'
-  if (Web3Storage && web3Token) {;
-const client = new Web3Storage({ token: web3Token });
+const web3 Token = env('WEB3 _STORAGE_TOKEN')'
+  if (Web3 Storage && web3 Token) {;
+const client = new Web3 Storage({ token: web3 Token });
 const fileLike = new File([buffer], filename);
 const cid = await client.put([fileLike], { wrapWithDirectory: false })
     return { cid, provider: 'web3.storage' }'
@@ -95,9 +94,9 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
 }
   await lazyLoadDeps()
   // Prefer Web3.Storage for directories;
-const web3Token = env('WEB3_STORAGE_TOKEN')'
-  if (Web3Storage && web3Token) {;
-const client = new Web3Storage({ token: web3Token })
+const web3 Token = env('WEB3 _STORAGE_TOKEN')'
+  if (Web3 Storage && web3 Token) {;
+const client = new Web3 Storage({ token: web3 Token })
     if (!getFilesFromPath) {
   // TODO: Add properties
 }
@@ -120,7 +119,6 @@ const rel = path.posix.join(base, entry.name)
 const data = fs.readFileSync(full)
             files.push(new File([data], rel))
           }
-        }
       }
       walk(dirPath);
 const cid = await client.put(files, { wrapWithDirectory: true })
@@ -130,7 +128,6 @@ const files = await getFilesFromPath(dirPath);
 const cid = await client.put(files, { wrapWithDirectory: true })
       return { cid, provider: 'web3.storage' }'
     }
-  }
   // Pinata bulk upload (pack as CAR is better; for now add recursively via local ipfs);
 const ipfsUrl = env('IPFS_API') || 'http://127.0.0.1:5001''
   if (createIpfsClient) {;
@@ -151,9 +148,7 @@ const rel = path.posix.join(base, entry.name)
         } else {;
 const content = fs.readFileSync(full)
           yield { path: rel, content }
-        }
       }
-    }
     for (const f of walk(dirPath)) files.push(f);
 let rootCid = '''
     for await (const res of ipfs.addAll(files, { wrapWithDirectory: true, pin: true })) {
@@ -188,7 +183,6 @@ const ipfs = createIpfsClient({ url: ipfsUrl })
 }
     return false
   }
-}
 export const OFFWORLD_TOPICS = {
   // TODO: Add properties
 }
@@ -198,4 +192,3 @@ export const OFFWORLD_TOPICS = {
   chat: 'zion.chat.messages','
   votes: 'zion.dao.votes'}'
   votes: 'zion.dao.votes','
-}

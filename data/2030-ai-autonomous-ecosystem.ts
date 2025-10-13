@@ -264,7 +264,6 @@ export interface AIAutonomousEcosystem2030 {
   reviews: number
 }
 }
-}
 export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [,;
   // AI Autonomous Business Management
   {
@@ -281,7 +280,7 @@ reviews: 12
     integrations: ['ERP systems, CRM platforms, Financial software, Marketing tools, Analytics platforms, Communication tools']'
     useCases: ['Business strategy, Operations management, Financial planning, Marketing automation, Customer management, Risk management']'
     roi: 'Average customer sees 400% ROI within 12 months through improved efficiency and decision making.', competitors: ['No direct competitors in autonomous business management'],'
-    marketSize: '$20B market', growthRate: '350% annual growth''
+    marketSize: '$20 B market', growthRate: '350% annual growth''
     variant: 'ai-futuristic''
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com''
@@ -311,7 +310,7 @@ reviews: 12
     useCases: ['Creative design, Content creation, Product innovation, Marketing campaigns, Brand development, Research and development']'
     roi: 'Average customer sees 250% ROI within 6 months through improved creativity and innovation.''
     competitors: ['OpenAI, Midjourney, DALL-E, Stable Diffusion']'
-    marketSize: '$7B market', growthRate: '200% annual growth''
+    marketSize: '$7 B market', growthRate: '200% annual growth''
     variant: 'ai-futuristic''
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com''
@@ -343,7 +342,7 @@ reviews: 12
     useCases: ['Preventive care, Treatment optimization, Risk assessment, Health research, Insurance underwriting, Population health']'
     roi: 'Average customer sees 300% ROI within 12 months through improved health outcomes and reduced costs.''
     competitors: ['IBM Watson Health, Google Health, Microsoft Healthcare, Amazon Health']'
-    marketSize: '$18B market', growthRate: '220% annual growth''
+    marketSize: '$18 B market', growthRate: '220% annual growth''
     variant: 'ai-futuristic''
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com''
@@ -379,7 +378,7 @@ reviews: 12
     useCases: ['Mental health support, Therapy sessions, Mood management, Crisis intervention, Wellness programs, Educational support']'
     roi: 'Average customer sees 200% ROI within 3 months through improved mental health and reduced healthcare costs.''
     competitors: ['Woebot, Wysa, Replika, Youper']'
-    marketSize: '$6B market', growthRate: '180% annual growth''
+    marketSize: '$6 B market', growthRate: '180% annual growth''
     variant: 'ai-futuristic''
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com''
@@ -411,7 +410,7 @@ reviews: 12
     useCases: ['K-12 education, Higher education, Corporate training, Online learning, Skill development, Professional certification']'
     roi: 'Average customer sees 180% ROI within 6 months through improved learning outcomes and engagement.''
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo']'
-    marketSize: '$10B market', growthRate: '160% annual growth''
+    marketSize: '$10 B market', growthRate: '160% annual growth''
     variant: 'ai-futuristic''
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com''
@@ -443,7 +442,7 @@ reviews: 12
     useCases: ['Portfolio management, Algorithmic trading, Risk management, Investment optimization, Market analysis, Compliance automation']'
     roi: 'Average customer sees 350% ROI within 12 months through improved trading performance and risk management.''
     competitors: ['Renaissance Technologies, Two Sigma, Bridgewater Associates, AQR Capital']'
-    marketSize: '$15B market', growthRate: '280% annual growth''
+    marketSize: '$15 B market', growthRate: '280% annual growth''
     variant: 'ai-futuristic''
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com''
@@ -543,7 +542,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Business strategy, Operations management, Financial planning, Marketing automation, Customer management, Risk management'],'
     roi: 'Average customer sees 400% ROI within 12 months through improved efficiency and decision making.','
     competitors: ['No direct competitors in autonomous business management'],'
-    marketSize: '$20B market','
+    marketSize: '$20 B market','
     growthRate: '350% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -598,7 +597,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Creative design, Content creation, Product innovation, Marketing campaigns, Brand development, Research and development'],'
     roi: 'Average customer sees 250% ROI within 6 months through improved creativity and innovation.','
     competitors: ['OpenAI, Midjourney, DALL-E, Stable Diffusion'],'
-    marketSize: '$7B market','
+    marketSize: '$7 B market','
     growthRate: '200% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -654,7 +653,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Preventive care, Treatment optimization, Risk assessment, Health research, Insurance underwriting, Population health'],'
     roi: 'Average customer sees 300% ROI within 12 months through improved health outcomes and reduced costs.','
     competitors: ['IBM Watson Health, Google Health, Microsoft Healthcare, Amazon Health'],'
-    marketSize: '$18B market','
+    marketSize: '$18 B market','
     growthRate: '220% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -709,7 +708,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Mental health support, Therapy sessions, Mood management, Crisis intervention, Wellness programs, Educational support'],'
     roi: 'Average customer sees 200% ROI within 3 months through improved mental health and reduced healthcare costs.','
     competitors: ['Woebot, Wysa, Replika, Youper'],'
-    marketSize: '$6B market','
+    marketSize: '$6 B market','
     growthRate: '180% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -765,7 +764,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['K-12 education, Higher education, Corporate training, Online learning, Skill development, Professional certification'],'
     roi: 'Average customer sees 180% ROI within 6 months through improved learning outcomes and engagement.','
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo'],'
-    marketSize: '$10B market','
+    marketSize: '$10 B market','
     growthRate: '160% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -821,7 +820,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Portfolio management, Algorithmic trading, Risk management, Investment optimization, Market analysis, Compliance automation'],'
     roi: 'Average customer sees 350% ROI within 12 months through improved trading performance and risk management.','
     competitors: ['Renaissance Technologies, Two Sigma, Bridgewater Associates, AQR Capital'],'
-    marketSize: '$15B market','
+    marketSize: '$15 B market','
     growthRate: '280% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -842,7 +841,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     reviews: 12
   }
 ]
-    marketSize: '$15B market', growthRate: '280% annual growth''
+    marketSize: '$15 B market', growthRate: '280% annual growth''
     variant: 'ai-futuristic''
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com''
@@ -942,7 +941,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Business strategy, Operations management, Financial planning, Marketing automation, Customer management, Risk management'],'
     roi: 'Average customer sees 400% ROI within 12 months through improved efficiency and decision making.','
     competitors: ['No direct competitors in autonomous business management'],'
-    marketSize: '$20B market','
+    marketSize: '$20 B market','
     growthRate: '350% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -997,7 +996,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Creative design, Content creation, Product innovation, Marketing campaigns, Brand development, Research and development'],'
     roi: 'Average customer sees 250% ROI within 6 months through improved creativity and innovation.','
     competitors: ['OpenAI, Midjourney, DALL-E, Stable Diffusion'],'
-    marketSize: '$7B market','
+    marketSize: '$7 B market','
     growthRate: '200% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -1053,7 +1052,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Preventive care, Treatment optimization, Risk assessment, Health research, Insurance underwriting, Population health'],'
     roi: 'Average customer sees 300% ROI within 12 months through improved health outcomes and reduced costs.','
     competitors: ['IBM Watson Health, Google Health, Microsoft Healthcare, Amazon Health'],'
-    marketSize: '$18B market','
+    marketSize: '$18 B market','
     growthRate: '220% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -1108,7 +1107,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Mental health support, Therapy sessions, Mood management, Crisis intervention, Wellness programs, Educational support'],'
     roi: 'Average customer sees 200% ROI within 3 months through improved mental health and reduced healthcare costs.','
     competitors: ['Woebot, Wysa, Replika, Youper'],'
-    marketSize: '$6B market','
+    marketSize: '$6 B market','
     growthRate: '180% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -1164,7 +1163,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['K-12 education, Higher education, Corporate training, Online learning, Skill development, Professional certification'],'
     roi: 'Average customer sees 180% ROI within 6 months through improved learning outcomes and engagement.','
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo'],'
-    marketSize: '$10B market','
+    marketSize: '$10 B market','
     growthRate: '160% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -1220,7 +1219,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Portfolio management, Algorithmic trading, Risk management, Investment optimization, Market analysis, Compliance automation'],'
     roi: 'Average customer sees 350% ROI within 12 months through improved trading performance and risk management.','
     competitors: ['Renaissance Technologies, Two Sigma, Bridgewater Associates, AQR Capital'],'
-    marketSize: '$15B market','
+    marketSize: '$15 B market','
     growthRate: '280% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -1278,7 +1277,6 @@ export interface AIAutonomousEcosystem2030 {
     email: string
     address: string}
     website: string}
-  }
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -1336,7 +1334,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Business strategy, Operations management, Financial planning, Marketing automation, Customer management, Risk management']'
     roi: 'Average customer sees 400% ROI within 12 months through improved efficiency and decision making.''
     competitors: ['No direct competitors in autonomous business management']'
-    marketSize: '$20B market''
+    marketSize: '$20 B market''
     growthRate: '350% annual growth''
     variant: 'ai-futuristic'}'
     contactInfo: {}
@@ -1383,7 +1381,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Creative design, Content creation, Product innovation, Marketing campaigns, Brand development, Research and development']'
     roi: 'Average customer sees 250% ROI within 6 months through improved creativity and innovation.''
     competitors: ['OpenAI, Midjourney, DALL-E, Stable Diffusion']'
-    marketSize: '$7B market''
+    marketSize: '$7 B market''
     growthRate: '200% annual growth''
     variant: 'ai-futuristic'}'
     contactInfo: {}
@@ -1431,7 +1429,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Preventive care, Treatment optimization, Risk assessment, Health research, Insurance underwriting, Population health']'
     roi: 'Average customer sees 300% ROI within 12 months through improved health outcomes and reduced costs.''
     competitors: ['IBM Watson Health, Google Health, Microsoft Healthcare, Amazon Health']'
-    marketSize: '$18B market''
+    marketSize: '$18 B market''
     growthRate: '220% annual growth''
     variant: 'ai-futuristic'}'
     contactInfo: {}
@@ -1478,7 +1476,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Mental health support, Therapy sessions, Mood management, Crisis intervention, Wellness programs, Educational support']'
     roi: 'Average customer sees 200% ROI within 3 months through improved mental health and reduced healthcare costs.''
     competitors: ['Woebot, Wysa, Replika, Youper']'
-    marketSize: '$6B market''
+    marketSize: '$6 B market''
     growthRate: '180% annual growth''
     variant: 'ai-futuristic'}'
     contactInfo: {}
@@ -1526,7 +1524,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['K-12 education, Higher education, Corporate training, Online learning, Skill development, Professional certification']'
     roi: 'Average customer sees 180% ROI within 6 months through improved learning outcomes and engagement.''
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo']'
-    marketSize: '$10B market''
+    marketSize: '$10 B market''
     growthRate: '160% annual growth''
     variant: 'ai-futuristic'}'
     contactInfo: {}
@@ -1574,7 +1572,7 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [;
     useCases: ['Portfolio management, Algorithmic trading, Risk management, Investment optimization, Market analysis, Compliance automation']'
     roi: 'Average customer sees 350% ROI within 12 months through improved trading performance and risk management.''
     competitors: ['Renaissance Technologies, Two Sigma, Bridgewater Associates, AQR Capital']'
-    marketSize: '$15B market''
+    marketSize: '$15 B market''
     growthRate: '280% annual growth''
     variant: 'ai-futuristic'}'
     contactInfo: {}

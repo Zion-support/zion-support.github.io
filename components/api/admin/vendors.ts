@@ -39,7 +39,6 @@ const { action, vendorId, value } = req.body || {}
 }
     res && res.status(500).json({ error: e && e.message })
   }
-}
   setVendorApproval,
   setVendorCommission,
   suspendVendor,
@@ -118,7 +117,6 @@ const { action, vendorId, value } = req.body || {},
 }
     res.status (500).json ({ error: e.message })
 }
-  }
 }
     else if (action === 'commission') setVendorCommission(String(vendorId), Number(value))'
     else return res.status(400).json({ error: 'Unknown action' })'
@@ -129,5 +127,4 @@ const { action, vendorId, value } = req.body || {},
   // TODO: Add properties
 }
     res.status(500).json({ error: e.message })
-  }
-}
+  

@@ -85,7 +85,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(401).json({ error: 'Unauthorized' })'
     return
   }
-  }
   const { id, milestoneId } = req.query as { id: string, milestoneId: string }
   if (!id |!milestoneId) {
   // TODO: Add properties
@@ -111,7 +110,7 @@ const { id, milestoneId } = req && req.query as { id: string; milestoneId: strin
   if (req && req.method !== 'POST') {'
     res && res.setHeader('Allow', 'POST')'
     res && res.status(405).end('Method Not Allowed')'
-    return;  }  }
+    return;  }
   }
   const { id, milestoneId } = req && req.query as { id: string, milestoneId: string }
   if (!id || !milestoneId) {
@@ -132,7 +131,6 @@ const tranche = ms[idx].trancheAmount |0
   existing.milestones = ms
   existing.updatedAt = new Date().toISOString()
   res.status(200).json({ record: existing })
-}
 }
 /**
  * is_authorized - Function description
@@ -204,7 +202,7 @@ if ( {) {
 }
     res.set_header ('Allow', 'POST')'
     res.status (405).end ('Method Not Allowed')'
-    return;  }  }
+    return;  }
   }
   const { id, milestone_id } = req.query as { id: string, milestone_id: string }
   // Check condition
@@ -258,7 +256,6 @@ writeGrant(existing)
 }
   writeGrant(existing)
   res.status(200).json({ record: existing })
-}
 }
 }
   writeGrant(existing)
@@ -335,4 +332,3 @@ const tranche = ms[idx].trancheAmount || 0
   existing.updatedAt = new Date().toISOString()
   writeGrant(existing)
   res.status(200).json({ record: existing })
-}

@@ -3,242 +3,79 @@ import { Helmet } from 'react-helmet-async';
 
 export default function PagePage() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
+    <div className="min-h-screen bg-gray-50" content="Advanced Page solutions by Zion Tech Group"min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"description"Advanced docs solutions by Zion Tech Group" />
       </Helmet>
-      
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Docs - Zion Tech Group</title>
-        <meta name="description" content="Advanced docs solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+      <div className="text-center">
+          <h1 className="text-xl text-gray-600 mb-8">
           </p>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
-        <div className="container mx-auto px-4 py-20">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Docs
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl">
+      <div className="container mx-auto px-4 py-20">
+          <h1 className="text-xl text-gray-300 mb-8 max-w-3 xl">
             Professional docs services by Zion Tech Group.
           </p>
           
-          <div className="bg-slate-800 p-8 rounded-lg">
-            <h2 className="text-2xl font-bold text-white mb-4">Coming Soon</h2>
-            <p className="text-gray-300">
-              We are working on bringing you the most advanced docs solutions. 
-              Stay tuned for updates!
-            </p>
-          </div>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          <div className="text-2 xl font-bold text-white mb-4">Coming Soon</h2>
+            <p className="container mx-auto px-4 py-16">
+        <div className="text-4 xl font-bold text-gray-900 mb-6">
             Docs
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced docs solutions by Zion Tech Group.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-      title: 'AI Services Documentation','
-      description: 'Comprehensive guide to our AI-powered services','
-      category: 'ai-services','
-      difficulty: 'Intermediate','
-      readTime: '25 min','
-      lastUpdated: '2024-01-14','
-      sections: [,
-        'AI Chat API','
-        'Content Generation','
-        'Data Analytics','
-        'Computer Vision''
-      ]},
-    {id: 3,
-      title: 'IT Services Guide','
-      description: 'Complete documentation for our IT infrastructure services','
-      category: 'it-services','
-      difficulty: 'Advanced','
-      readTime: '30 min','
-      lastUpdated: '2024-01-13','
-      sections: [,
-        'Cloud Infrastructure','
-        'DevOps & CI/CD','
-        'Cybersecurity','
-        'Database Management''
-      ]},
-    {id: 4,
-      title: 'API Reference','
-      description: 'Complete API reference with examples and endpoints','
-      category: 'api','
-      difficulty: 'Intermediate','
-      readTime: '45 min','
-      lastUpdated: '2024-01-12','
-      sections: [,
-        'Authentication','
-        'Endpoints','
-        'Error Handling','
-        'Rate Limits''
-      ]},
-    {id: 5,
-      title: 'Security Best Practices','
-      description: 'Security guidelines and best practices for our services','
-      category: 'security','
-      difficulty: 'Intermediate','
-      readTime: '20 min','
-      lastUpdated: '2024-01-11','
-      sections: [,
-        'Data Protection','
-        'Access Control','
-        'Encryption','
-        'Compliance''
-      ]},
-    {id: 6,
-      title: 'Troubleshooting Guide','
-      description: 'Common issues and their solutions','
-      category: 'getting-started','
-      difficulty: 'Beginner','
-      readTime: '15 min','
-      lastUpdated: '2024-01-10','
-      sections: [,
-        'Common Errors','
-        'Debugging Tips','
-        'Performance Issues','
-        'Support Resources''
-      ]}];
-  const quickLinks = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    ? documentation ;
-    : documentation.filter(doc => doc.category === selectedCategory);
-;
-const searchResults = searchQuery;
-    ? documentation.filter(doc =>)
-        doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        doc.description.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    : filteredDocs;
-
-  return(<>)
-      <Helmet />
-<title>Documentation - Zion Tech Group</title>
-<meta name="description" content="Complete documentation for Zion Tech Group's AI, IT, and Micro SaaS services. Get started with our comprehensive guides and API references." />"'"
-<meta name="keywords" content="documentation, API docs, guides, tutorials, developer resources, AI services, IT services" />"
-<link rel="canonical" href="https: //ziontechgroup.com/docs" />,"
+          <p className="description" content=" />"'"keywords" content=" />"
+<link rel=" href="https: //ziontechgroup.com/docs"
       </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<div className="container mx-auto px-4 py-16 pt-24">{/* Header */</div>} <div className="text-center mb-16">"
-<div className="flex items-center justify-center mb-6">"
-<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">"
-<BookOpen className="w-8 h-8 text-white" /></div>"
-<h1 className="text-4xl md: text-5xl font-bold text-white neon-text-enhanced">,</h1>"
-                Documentation;
-              </h1></div>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Complete documentation for all our AI, IT, and Micro SaaS services.</p>"
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"container mx-auto px-4 py-16 pt-24"text-center mb-16"
+<div className="flex items-center justify-center mb-6"w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4"
+<BookOpen className="
+<h1 className="text-4 xl md: text-5 xl font-bold text-white neon-text-enhanced"text-xl text-gray-300 max-w-3 xl mx-auto mb-8"
               Find guides, API references, and best practices to help you build amazing applications.
             </p></div>
 
-          {/* Search Bar */} <div className="cyber-card-enhanced p-6 mb-12">"
-<div className="relative max-w-2xl mx-auto">"
-<Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />"
+          {/* Search Bar */} <div className="
+<div className="relative max-w-2 xl mx-auto"absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
 <input;
-                type="text""
-                placeholder="Search documentation...""
-                value={searchQuery}onChange={(e) => setSearchQuery(e.target.value)}className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent","
+                type=""
+                placeholder=""
+                value={searchQuery}onChange={(e) => setSearchQuery(e.target.value)}className="
               />
 </div></div>
 
-          {/* Quick Links */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12">,</div>"
-            {quickLinks.map((link, index) => (
-  // TODO: Add parameters
-)
-              <a;
-                key={index}href={link.url}className="cyber-card-enhanced p-6 text-center group hover: scale-105 transition-all duration-300","
+          {/* Quick Links */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-12"cyber-card-enhanced p-6 text-center group hover: scale-105 transition-all duration-300"
               >
-<link.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4 group-hover: text-cyan-300" />,"
-                <h3 className="text-lg font-semibold text-white group-hover: text-cyan-300">{link.title,}</h3></a>"
-            ))}
-          </div>
-
-          {/* Category Filter */} <div className="mb-8">"
-<h2 className="text-2xl font-bold text-white mb-6">Browse by Category</h2>"
-<div className="flex flex-wrap gap-4">{categories.map((category) => (</div>"
-<button;
-                  key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                    selectedCategory === category.id;
-                      ? 'bg-cyan-500 text-white''
-                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700',}`}'
-                >
-<category.icon className="w-5 h-5" />"
+<link.icon className="
+                <h3 className="text-lg font-semibold text-white group-hover: text-cyan-300"mb-8"
+<h2 className="
+<div className="flex flex-wrap gap-4"w-5 h-5"
 <span>{category.name</span>}</span></button>
               ))}
             </div></div>
 
-          {/* Documentation List */} <div className="space-y-6">{searchResults.map((doc) => (</div>"
-<div key={doc.id}className="cyber-card-enhanced p-8 group hover: scale-105 transition-all duration-300">,</div>"
-<div className="flex items-start justify-between mb-4">"
-<div className="flex-1">"
-<h3 className="text-2xl font-bold text-white mb-3 group-hover: text-cyan-400 transition-colors">,"
-                      {doc.title} </h3>
-<p className="text-gray-300 mb-4 leading-relaxed">{doc.description</p>} </p>"
-<div className="flex items-center space-x-6 text-sm text-gray-400 mb-4">"
-<span className="flex items-center">"
-<FileText className="w-4 h-4 mr-1" />"
+          {/* Documentation List */} <div className="
+<div key={doc.id}className="cyber-card-enhanced p-8 group hover: scale-105 transition-all duration-300"flex items-start justify-between mb-4"
+<div className="
+<h3 className="text-2 xl font-bold text-white mb-3 group-hover: text-cyan-400 transition-colors"text-gray-300 mb-4 leading-relaxed"
+<div className="
+<span className="flex items-center"w-4 h-4 mr-1"
                         {doc.readTime}read;
                       </span>
-<span className="flex items-center">"
-<Settings className="w-4 h-4 mr-1" />"
-                        {doc.difficulty} </span>
-<span className="flex items-center">"
-<Database className="w-4 h-4 mr-1" />"
+<span className="
+<Settings className="w-4 h-4 mr-1"flex items-center"
+<Database className="
                         Updated {doc.lastUpdated}} </span></div>
 </div>
-<div className="ml-6"></div>"
-< className={`px-3 py-1 rounded text-xs font-semibold ${$2 />
-                      doc.difficulty === 'Beginner' '
-                        ? 'bg-green-600 text-white' '
-                        : doc.difficulty === 'Intermediate''
-                        ? 'bg-yellow-600 text-white''
-                        : 'bg-red-600 text-white'}`}>{doc.difficulty</span>} </span></div>'
-</div>
-<div className="mb-6">"
-<h4 className="text-white font-semibold mb-3">Sections: </h4>,"
-                  <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-2">,</div>"
-                    {doc.sections.map((section, sectionIndex) => (
-  // TODO: Add parameters
-)
-                      <div key={sectionIndex}className="flex items-center text-gray-300 text-sm">"
-<CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />"
+<div className="ml-6"mb-6"
+<h4 className="
+                  <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-2"flex items-center text-gray-300 text-sm"
+<CheckCircle className="
                         {section} </div>
                     ))}
                   </div></div>
-<div className="flex items-center justify-between">"
-<div className="flex space-x-4">"
+<div className="flex items-center justify-between"flex space-x-4"
 <a;
                       href={`/docs/${doc.id}`}
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center","
+                      className="
                     >
                       Read Guide;
-                      <ArrowRight className="w-4 h-4 ml-2" /></a>"
-<a;
-                      href={`/docs/${doc.id}/download`}
-                      className="border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center","
+                      <ArrowRight className="w-4 h-4 ml-2"border-2 border-cyan-400 text-cyan-400 px-6 py-2 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center"
                     >
-<Download className="w-4 h-4 mr-2" />"
+<Download className="
                       Download PDF;
                     </a></div>
 </div></div>
@@ -248,59 +85,36 @@ const searchResults = searchQuery;
           {/* No Results */}{searchResults.length === 0 && searchQuery && (
   // TODO: Add parameters
 )
-            <div className="cyber-card-enhanced p-8 text-center"></div>"
-<Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />"
-<h3 className="text-xl font-semibold text-white mb-2">No results found</h3>"
-<p className="text-gray-300 mb-6">Try adjusting your search terms or browse our documentation categories.</p></p>"
-<button;
-                onClick={() =>setSearchQuery('')</button>}className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300","'"
-              >
-                Clear Search;
-              </button></div>
-          )}
-
-          {/* Additional Resources */} <div className="cyber-card-enhanced p-8 mt-16">"
-<h2 className="text-2xl font-bold text-white mb-6">Additional Resources</h2>"
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,</div>"
-<a;
-                href="/tutorials""
-                className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300","
+            <div className="cyber-card-enhanced p-8 text-center"w-16 h-16 text-gray-400 mx-auto mb-4"
+<h3 className="
+<p className="text-gray-300 mb-6"bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"'"cyber-card-enhanced p-8 mt-16"
+<h2 className="
+<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6"/tutorials""flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300"
               ></a>
-<BookOpen className="w-8 h-8 text-cyan-400" />"
+<BookOpen className="
 <div></div>
-<div className="text-white font-semibold">Tutorials</div>"
-<div className="text-gray-300 text-sm">Step-by-step guides</div></div>"
-<ArrowRightclassName="w-5 h-5 text-gray-400 ml-auto" / / />"
+<div className="text-white font-semibold"text-gray-300 text-sm"
+<ArrowRightclassName="
 </a>
 <a;
-                href="/api""
-                className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300","
-              ></a>
-<Code className="w-8 h-8 text-green-400" />"
+                href="/api"
+                className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300"w-8 h-8 text-green-400"
 <div></div>
-<div className="text-white font-semibold">API Reference</div>"
-<div className="text-gray-300 text-sm">Complete API documentation</div></div>"
-<ArrowRightclassName="w-5 h-5 text-gray-400 ml-auto" / / />"
+<div className="
+<div className="text-gray-300 text-sm"w-5 h-5 text-gray-400 ml-auto"
 </a>
 <a;
-                href="/community""
-                className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300","
+                href=""
+                className="
               ></a>
-<Users className="w-8 h-8 text-purple-400" />"
-<div></div>
-<div className="text-white font-semibold">Community</div>"
-<div className="text-gray-300 text-sm">Developer community</div></div>"
-<ArrowRightclassName="w-5 h-5 text-gray-400 ml-auto" / / />"
-</a>
-<a;
-                href="/support""
-                className="flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300","
+<Users className="w-8 h-8 text-purple-400"text-white font-semibold"
+<div className="
+<ArrowRightclassName="w-5 h-5 text-gray-400 ml-auto"/support""flex items-center space-x-3 p-4 rounded-lg hover: bg-cyan-500/10 transition-colors duration-300"
               ></a>
-<Shield className="w-8 h-8 text-orange-400" />"
+<Shield className="
 <div></div>
-<div className="text-white font-semibold">Support</div>"
-<div className="text-gray-300 text-sm">Get help and support</div></div>"
-<ArrowRightclassName="w-5 h-5 text-gray-400 ml-auto" / / />"
+<div className="text-white font-semibold"text-gray-300 text-sm"
+<ArrowRightclassName="
 </a></div>
 </div></div>
 </div></>
@@ -405,79 +219,47 @@ const filteredDocs = docCategories.map(category => ({
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<SEOOptimizer
-        title="Documentation - Zion Tech Group""
-        description="Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices."'"
-        keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation""
-      />
-<Navigation /></div>
-          ))
-        </div></section>
-
-      {/* Popular Docs */}
-      <section className="py-16 px-4"></section>"
-<div className="max-w-7xl mx-auto">"
-<h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation"
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"Documentation - Zion Tech Group""Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices."'"documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation""py-16 px-4"
+<div className="
+<h2 className="text-3 xl font-bold text-white mb-8 text-center"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
             {popularDocs.map((doc, index) => (;}
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">"
-<div className="flex items-center gap-3 mb-4">"
-<div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">"
-<BookOpen className="w-5 h-5 text-white" />"
-<span className="text-purple-400 text-sm font-medium">{doc.category}"
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">"
+              <div key={index} className="
+<div className="flex items-center gap-3 mb-4"w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center"
+<BookOpen className="
+<span className="text-purple-400 text-sm font-medium"text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors"
                   {doc.title}
-                <p className="text-gray-300 text-sm mb-4">{doc.description}"
+                <p className="
                 <$2 />
                   href={doc.link}
-                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm">"
-                  Read More
-                  <ArrowRight className="w-4 h-4" />"
+                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm"w-4 h-4"
             ))}
       {/* Documentation Categories */}
-      <section className="py-16 px-4"></section>"
-<div className="max-w-7xl mx-auto">"
-<h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category"
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">"
+      <section className="
+<div className="max-w-7 xl mx-auto"text-3 xl font-bold text-white mb-12 text-center"
+          <div className="
             {filteredDocs.map((category, index) => (
   // TODO: Add parameters
 )
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">"
-<div className="flex items-center gap-4 mb-6">"
-<div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">"
-<BookOpen className="w-6 h-6 text-white" />"
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2 xl p-8 border border-white/10"flex items-center gap-4 mb-6"
+<div className="
+<BookOpen className="w-6 h-6 text-white"text-2 xl font-bold text-white mb-2"
+                    <p className="
+                <div className="space-y-4"block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group"
+<div className="
 <div>
-<h3 className="text-2xl font-bold text-white mb-2">{category.title}"
-                    <p className="text-gray-300">{category.description}"
-                <div className="space-y-4">"
-                  {category.docs.map((doc, docIndex) => (
-  // TODO: Add parameters
-)
-                    <$2 />
-                      key={docIndex}
-                      href={doc.link}
-                      className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">"
-<div className="flex items-center justify-between">"
-<div>
-<h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">"
-                            {doc.title}
-                          <p className="text-gray-300 text-sm">{doc.description}"
-                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />"
+<h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors"text-gray-300 text-sm"
+                        <ChevronRight className="
                   ))}
                 ))
               </div>
             ))}
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700"></section>"
-<div className="max-w-4xl mx-auto text-center">"
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700"max-w-4 xl mx-auto text-center"
+<h2 className="
             Need Help?
-          <p className="text-xl text-purple-100 mb-8">"
-            Can't find what you're looking for? Our support team is here to help.'
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">Contact Support"
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">Join Community"
+          <p className="text-xl text-purple-100 mb-8"flex flex-col sm:flex-row gap-4 justify-center"
+<button className="
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors"
       <Footer />
   )
 }</div></div>
@@ -499,5 +281,3 @@ const filteredDocs = docCategories.map(category => ({
 </section></li>
 </li>
 
-}
-}

@@ -87,7 +87,7 @@ const pattern4 = /const\s+(\w+)\s*=\s*React\.memo\(\([^)]*\)\s*=>\s*\{/g;,
 
   // Remove React.memo closing parentheses
   // Pattern: }); at the end of component;
-const closingPattern = /(\w+)\.displayName\s*=\s*['"][^'"]+['"];\s*\}\);/g"'"
+const closingPattern = /(\w+)\.displayName\s*=\s*['"][^'"];\s*\}\);/g"'"
   if (closingPattern.test(newContent)) {
   // TODO: Add properties
 }
@@ -109,8 +109,6 @@ const closingPattern2 = /^\s*\}\);\s*$/gm
   }
 
   return { content: newContent, fixed }
-}
-
 function processFile(filePath) {
   // TODO: Add properties
 }
@@ -137,8 +135,6 @@ const result = fixReactMemo(content)
 }
     console.error(`❌ Error processing ${filePath}:`, error.message)
   }
-}
-
 async function main() {
   // TODO: Add properties
 }

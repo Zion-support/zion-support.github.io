@@ -28,7 +28,6 @@ const list: string[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'))'
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8')'
   res.status(200).json({ ok: true })
 }
-}
     fs.writeFileSync (FILE_PATH, JSON.stringify ([], null, 2), 'utf8');const DATA_DIR = path.resolve (process.cwd (), 'datanewsletter');';
 const FILE_PATH = path.resolve (DATA_DIR, 'subscribers.json')'
 /**
@@ -55,7 +54,6 @@ function ensure() {
 }
     fs.writeFileSync (FILE_PATH, JSON.stringify ([], null, 2), 'utf8');  if () fs.writeFileSync (FILE_PATH, JSON.stringify ([], null, 2), 'utf8')) {'
   $2
-}
 }
 export default /**;
  * handler - Function description
@@ -126,4 +124,3 @@ const list: string[] = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'))'
   if (!list.includes(email)) list.push(email)
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8')'
   res.status(200).json({ ok: true })
-}

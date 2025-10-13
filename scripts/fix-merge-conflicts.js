@@ -20,8 +20,6 @@ const stat = fs.statSync(fullPath)
 }
     files.push(fullPath)
   }
-  }
-
   return files
 }
 
@@ -59,8 +57,6 @@ const conflictMarkers = /(||    content = content.replace(conflictMarkers, '')'
     console.error(`Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Main execution;
 const srcDir = path.join(__dirname, '..', 'src');';
 const appDir = path.join(__dirname, '..', 'app')'
@@ -83,7 +79,5 @@ for (const file of allFiles) {
 }
     fixedCount++
   }
-}
-
 console.log(`Fixed merge conflicts in ${fixedCount} files`)
 console.log('Merge conflict resolution completed!'))

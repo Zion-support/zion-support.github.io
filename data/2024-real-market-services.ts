@@ -28,7 +28,6 @@
     email: string
     address: string}
     website: string}
-}
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -78,18 +77,16 @@ export const realMarketServices: RealMarketService[] = [;
     setupTime: '2 hours','
     category: 'AI & Analytics','
     realService: true,
-    technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"]"
-    integrations: ["Salesforce", "HubSpot", "Google Analytics", "Shopify", "QuickBooks", "Zapier"]"
-    useCases: ["Sales performance analysis", "Marketing ROI tracking", "Customer behavior insights", "Operational efficiency", "Financial forecasting", "Competitive analysis"]"
-    roi: "Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency.""
-    competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Sisense"]"
-    marketSize: "$29.48B market""
-    growthRate: "15.7% annual growth""
-    variant: "ai-futuristic""
-    contactInfo: mobile: "+1 302 464 0950""
-      email: "kleber@ziontechgroup.com""
-      address: "364 E Main St STE 1008 Middletown DE 19709""
-      website: "https://ziontechgroup.com""
+    technology: ["Python"TensorFlow", ", "Node.js"PostgreSQL", ", "AWS"
+    integrations: ["Salesforce"HubSpot", ", "Shopify"QuickBooks", "]"
+    useCases: [", "Marketing ROI tracking"Customer behavior insights", ", "Financial forecasting"Competitive analysis"]"Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency.""Tableau", ", "Looker"Qlik", "]"
+    marketSize: ""
+    growthRate: ""
+    variant: ""
+    contactInfo: mobile: ""
+      email: ""
+      address: ""
+      website: ""
     }
     realImplementation: true,
     implementationDetails: 'Production-ready SaaS platform with real-time data processing, machine learning models, and comprehensive analytics dashboard. Includes data connectors for major business tools.','
@@ -132,7 +129,7 @@ export const realMarketServices: RealMarketService[] = [;
     textColor: 'text-green-400','
     link: 'https://ziontechgroup.com/customer-success-automation','
     marketPosition: 'Competitive with Gainsight ($500/user/month), Totango ($500/user/month), and ChurnZero ($500/user/month). Our advantage: Lower cost, easier setup, and better automation.','
-    targetAudience: 'Customer success managers, SaaS companies, B2B businesses, Account managers, Product managers','
+    targetAudience: 'Customer success managers, SaaS companies, B2 B businesses, Account managers, Product managers','
     trialDays: 21,
     setupTime: '1 day','
     category: 'Customer Success','
@@ -142,7 +139,7 @@ export const realMarketServices: RealMarketService[] = [;
     useCases: ['Customer onboarding automation, Churn prevention, Customer health monitoring, Success playbook execution, Customer feedback management'],'
     roi: 'Average customer sees 300% ROI within 4 months through reduced churn and increased customer lifetime value.','
     competitors: ['Gainsight, Totango, ChurnZero, CustomerSuccessBox, Planhat'],'
-    marketSize: '$1.5B market','
+    marketSize: '$1.5 B market','
     growthRate: '25% annual growth','
     variant: 'micro-saas-futuristic','
     contactInfo: {
@@ -206,7 +203,7 @@ export const realMarketServices: RealMarketService[] = [;
     useCases: ['API security hardening, Performance monitoring, Compliance reporting, Developer experience improvement, API lifecycle management'],'
     roi: 'Average customer sees 250% ROI within 3 months through improved security posture and reduced API downtime.','
     competitors: ['Kong, Tyk, AWS API Gateway, Azure API Management, Google Cloud Endpoints'],'
-    marketSize: '$4.5B market','
+    marketSize: '$4.5 B market','
     growthRate: '18.5% annual growth','
     variant: 'enterprise-futuristic','
     contactInfo: {
@@ -270,7 +267,7 @@ export const realMarketServices: RealMarketService[] = [;
     useCases: ['Inventory automation, Order processing, Customer service, Marketing automation, Multi-channel selling'],'
     roi: 'Average customer sees 350% ROI within 5 months through increased sales and reduced operational costs.','
     competitors: ['Shopify Plus, BigCommerce Enterprise, WooCommerce Enterprise, Magento Commerce'],'
-    marketSize: '$18.2B market','
+    marketSize: '$18.2 B market','
     growthRate: '22% annual growth','
     variant: 'micro-saas-futuristic','
     contactInfo: {
@@ -334,7 +331,7 @@ export const realMarketServices: RealMarketService[] = [;
     useCases: ['Recruitment automation, Employee onboarding, Performance management, Compliance reporting, Employee engagement'],'
     roi: 'Average customer sees 280% ROI within 4 months through improved HR efficiency and reduced administrative costs.','
     competitors: ['BambooHR, Workday, ADP, Paychex, Gusto'],'
-    marketSize: '$15.6B market','
+    marketSize: '$15.6 B market','
     growthRate: '12.8% annual growth','
     variant: 'hr-futuristic','
     contactInfo: {
@@ -398,7 +395,7 @@ export const realMarketServices: RealMarketService[] = [;
     useCases: ['Financial planning, Cash flow management, Budget tracking, Investment analysis, Compliance reporting'],'
     roi: 'Average customer sees 320% ROI within 4 months through improved financial decision-making and cost optimization.','
     competitors: ['QuickBooks Online, Xero, FreshBooks, Sage, NetSuite'],'
-    marketSize: '$11.9B market','
+    marketSize: '$11.9 B market','
     growthRate: '16.2% annual growth','
     variant: 'micro-saas-futuristic','
     contactInfo: {
@@ -462,7 +459,7 @@ export const realMarketServices: RealMarketService[] = [;
     useCases: ['Project planning, Team collaboration, Resource management, Risk assessment, Progress tracking'],'
     roi: 'Average customer sees 290% ROI within 3 months through improved project efficiency and better resource utilization.','
     competitors: ['Asana, Monday.com, ClickUp, Trello, Jira'],'
-    marketSize: '$6.68B market','
+    marketSize: '$6.68 B market','
     growthRate: '14.3% annual growth','
     variant: 'micro-saas-futuristic','
     contactInfo: {
@@ -526,7 +523,7 @@ export const realMarketServices: RealMarketService[] = [;
     useCases: ['Email marketing, Social media management, Lead generation, Campaign automation, Marketing analytics'],'
     roi: 'Average customer sees 380% ROI within 4 months through improved marketing efficiency and increased lead generation.','
     competitors: ['HubSpot, Marketo, Pardot, Mailchimp, ActiveCampaign'],'
-    marketSize: '$25.1B market','
+    marketSize: '$25.1 B market','
     growthRate: '19.8% annual growth','
     variant: 'marketing-futuristic','
     contactInfo: {
@@ -590,7 +587,7 @@ export const realMarketServices: RealMarketService[] = [;
     useCases: ['Contract generation, Document review, Legal workflow automation, Compliance management, Client collaboration'],'
     roi: 'Average customer sees 420% ROI within 5 months through improved efficiency and reduced legal costs.','
     competitors: ['DocuSign, PandaDoc, HelloSign, ContractPodAi, Evisort'],'
-    marketSize: '$2.8B market','
+    marketSize: '$2.8 B market','
     growthRate: '28.5% annual growth','
     variant: 'legal-futuristic','
     contactInfo: {
@@ -611,4 +608,5 @@ export const realMarketServices: RealMarketService[] = [;
     reviews: 480
   }
 ];
-import { ServiceVariant } from "../types/service-variants" export interface RealMarketService id: string; name: string; tagline: string; price: string, period: string, description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; variant: ServiceVariant; contactInfo: mobile: string; email: string; address: string, website: string }; realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: number, } export const realMarketServices: RealMarketService[] = [ id: "ai-business-intelligence-pro" name: "AI Business Intelligence Pro" tagline: "Transform data into actionable insights with AI" price: "$299" period: "/month" description: "Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization." features: [ "Real-time data analytics dashboard" "AI-powered trend prediction" "Custom KPI tracking and alerts" "Automated report generation" "Multi-source data integration" "Predictive analytics modeling" "Executive summary automation" "Mobile-responsive interface" "White-label reporting" "API access for custom integrations" ] popular: true icon: "📊" color: "from-blue-500 to-indigo-600" textColor: "text-blue-400" link: "https://ziontechgroup.com/ai-business-intelligence" marketPosition: "Competitive with Tableau ($70/user/month), Power BI ($9.99/user/month), and Looker ($30/user/month). Our advantage: AI automation, predictive analytics, and lower cost per user." targetAudience: "Business analysts, Data scientists, Executives, Marketing teams, Sales teams, Operations managers" trialDays: 14 setupTime: "2 hours" category: "AI & Analytics" realService: true technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "AWS"] integrations: ["Salesforce", "HubSpot", "Google Analytics", "Shopify", "QuickBooks", "Zapier"] useCases: ["Sales performance analysis", "Marketing ROI tracking", "Customer behavior insights", "Operational efficiency", "Financial forecasting", "Competitive analysis"] roi: "Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency." competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Sisense"] marketSize: "$29.48B market" growthRate: "15.7% annual growth" variant: "ai-futuristic" contactInfo: mobile: "+1 302 464 0950" email: "kleber@ziontechgroup.com" address: "364 E Main St STE 1008 Middletown DE 19709" website: "https://ziontechgroup.com" } realImplementation: true implementationDetails: "Production-ready SaaS platform with real-time data processing, machine learning models, and comprehensive analytics dashboard. Includes data connectors for major business tools." launchDate: "2024-03-01" customers: 1800 rating: 4.7 reviews: 950 } ];
+import { ServiceVariant } from " export interface RealMarketService id: string;
+name: string; tagline: string; price: string, period: string, description: string; features: string[]; popular: boolean; icon: string; color: string; textColor: string; link: string; marketPosition: string; targetAudience: string; trialDays: number; setupTime: string; category: string; realService: boolean; technology: string[]; integrations: string[]; useCases: string[]; roi: string; competitors: string[]; marketSize: string; growthRate: string; variant: ServiceVariant; contactInfo: mobile: string; email: string; address: string, website: string }; realImplementation: boolean; implementationDetails: string; launchDate: string; customers: number; rating: number; reviews: number, } export const realMarketServices: RealMarketService[] = [ id: "ai-business-intelligence-pro"AI Business Intelligence Pro" tagline: " price: "$299"/month" description: " features: [ "Real-time data analytics dashboard"AI-powered trend prediction" " "Automated report generation"Multi-source data integration" " "Executive summary automation"Mobile-responsive interface" " "API access for custom integrations"📊" color: " textColor: "text-blue-400"https://ziontechgroup.com/ai-business-intelligence" marketPosition: " targetAudience: "Business analysts, Data scientists, Executives, Marketing teams, Sales teams, Operations managers"2 hours" category: " realService: true technology: ["Python"TensorFlow", ", "Node.js"PostgreSQL", ", "AWS"Salesforce", ", "Google Analytics"Shopify", ", "Zapier"Sales performance analysis", ", "Customer behavior insights"Operational efficiency", ", "Competitive analysis"Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency." competitors: [", "Power BI"Looker", ", "Sisense"$29.48 B market" growthRate: " variant: "ai-futuristic"+1 302 464 0950" email: " address: "364 E Main St STE 1008 Middletown DE 19709"https://ziontechgroup.com" } realImplementation: true implementationDetails: " launchDate: "2024-03-01" customers: 1800 rating: 4.7 reviews: 950 } ];

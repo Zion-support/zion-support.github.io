@@ -395,7 +395,6 @@ if (.error) {) {
 }
       setIsLoading (false)
     }
-  }
   const handleSectionContentChange = (id: string, new_content: string, ) =>: any {
   // TODO: Add properties
 }
@@ -444,7 +443,6 @@ if ( {) {
 }
           md_content += `**Distribution Notes:** ${distribution_breakdown}\n\n`
         }
-      }
     })
     return md_content
   }
@@ -493,7 +491,6 @@ const link = document.create_element ('a')'
 }
       setIsDownloading (false)
     }
-  }
   const handleDownloadPdf = async () => {
   // TODO: Implement
 }
@@ -522,11 +519,11 @@ const link = document.create_element ('a')'
       // Temporarily ensure the entire preview panel content is visible for capture if it's scrollable internally.'
       // This might involve temporarily changing styles, which is complex and error - prone.
       // A better approach for very long content is to paginate in jsPDF directly.
-      // For now, we capture what's visible or rely on html2canvas's capabilities with scroll.;';
-const html2canvasModule = await import ('html2canvas');';
-const html2canvas = html2canvasModule.default;
+      // For now, we capture what's visible or rely on html2 canvas's capabilities with scroll.;';
+const html2 canvasModule = await import ('html2 canvas');';
+const html2 canvas = html2 canvasModule.default;
 const { default: jsPDF } = await import ('jspdf');';
-const canvas = await html2canvas (previewPanelRef.current, {
+const canvas = await html2 canvas (previewPanelRef.current, {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -541,7 +538,7 @@ const canvas = await html2canvas (previewPanelRef.current, {
 }
           // You might need to re - apply some styles here if they don't transfer well'
           // For example, ensure SVGs from recharts are fully rendered.
-          // This is advanced usage of html2canvas.
+          // This is advanced usage of html2 canvas.
         },
       });
 const img_data = canvas.toDataURL ('image / png');';
@@ -586,7 +583,6 @@ let position = 0
 }
       setIsDownloading(false)
     }
-  }
   const handleGenerateShareableLink = async () => {
   // TODO: Implement
 }
@@ -692,7 +688,6 @@ const link = `${window.location.origin}/whitepaper / view/${(response as any).id
 }
       setIsSharing (false)
     }
-  }
   const handleTogglePublicStatus = async () => {
   // TODO: Implement
 }
@@ -785,7 +780,6 @@ if (
       // Revert optimistic update if it failed:
       // setCurrentSharedWhitepaperIsPublic (!newPublicStatus)
     }
-  }
   const handleSubmitToCounsel = async () => {
   // TODO: Implement
 }
@@ -1004,11 +998,8 @@ import React, { useState, useEffect, useCallback } from 'react',';';
 import { supabase } from '@/integrations/supabase/client',';';
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',';';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel';';
-import { Button } from "@/components/ui/button",";";
-import { Input } from "@/components/ui/input",";";
-import { Trash2, Download, Share2 } from 'lucide-react';';
-import { Send } from 'lucide-react', // Added Send icon';';
-import { toast } from "sonner",";";
+import { Button } from "@/components/ui/button";";
+import { Input } from ",";"sonner",";
 import { logErrorToProduction } from '@/utils/productionLogger',';'
 interface WhitepaperSection {
   // TODO: Add properties
@@ -1022,11 +1013,8 @@ import React, { useState, useEffect, useCallback } from 'react',';';
 import { supabase } from '@/integrations/supabase/client',';';
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',';';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel';';
-import { Button } from "@/components/ui/button",";";
-import { Input } from "@/components/ui/input",";";
-import { Trash2, Download, Share2 } from 'lucide-react';';
-import { Send } from 'lucide-react', // Added Send icon';';
-import { toast } from "sonner",";";
+import { Button } from "@/components/ui/button";";
+import { Input } from ",";"sonner",";
 import { logErrorToProduction } from '@/utils/productionLogger',';'
 interface WhitepaperSection {
   // TODO: Add properties
@@ -1057,7 +1045,7 @@ interface DistributionChartItem {
     value: number
 }
 ;
-const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#AA00FF#FF00AA#00AAAA#AAAA00'],'
+const COLORS = ['#0088 FE#00 C49 F#FFBB28#FF8042#AA00 FF#FF00 AA#00 AAAA#AAAA00'],'
 // Helper for slugifying filenames;
 const slugify = (text: string): string => {
   // TODO: Add properties
@@ -1195,7 +1183,7 @@ const totalPercentage = processedDistData.reduce((sum, item) => sum + item.perce
 }
   // TODO: Add properties
 }
-        setError("Total distribution percentage cannot exceed 100%."),"
+        setError("Total distribution percentage cannot exceed 100%."
         setIsLoading(false),
         return
     }
@@ -1210,7 +1198,7 @@ const totalPercentage = processedDistData.reduce((sum, item) => sum + item.perce
 }
   // TODO: Add properties
 }
-        setError("Distribution percentages are all zero or invalid."),"
+        setError("Distribution percentages are all zero or invalid."
         setIsLoading(false),
         return
     return parsed
@@ -1274,7 +1262,7 @@ const totalPercentage = processedDistData.reduce((sum, item) => sum + item.perce
 }
   // TODO: Add properties
 }
-        setError("Total distribution percentage cannot exceed 100%."),"
+        setError("Total distribution percentage cannot exceed 100%."
         setIsLoading(false),
         return
     }
@@ -1289,7 +1277,7 @@ const totalPercentage = processedDistData.reduce((sum, item) => sum + item.perce
 }
   // TODO: Add properties
 }
-        setError("Distribution percentages are all zero or invalid."),"
+        setError("Distribution percentages are all zero or invalid."
         setIsLoading(false),
         return
     }
@@ -1398,7 +1386,6 @@ let mdContent = `# ${tokenName} - Whitepaper\n\n`,
 }
            mdContent += `**Distribution Notes:** ${distributionBreakdown}\n\n`
         }
-      }
     }),
     return mdContent
   },;
@@ -1430,7 +1417,7 @@ const link = document.createElement('a'),'
   // TODO: Add properties
 }
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading Markdown' }),'
-        setError("Failed to download Markdown file. " + e.message)"
+        setError("Failed to download Markdown file. "
     } finally {
   // TODO: Add properties
 }
@@ -1455,7 +1442,7 @@ const handleDownloadPdf = async () => {
 }
   // TODO: Add properties
 }
-      setError("Preview panel is not available. Cannot generate PDF."),"
+      setError("Preview panel is not available. Cannot generate PDF."
       setIsDownloading(false),
       return
     }),
@@ -1489,7 +1476,7 @@ const link = document.createElement('a'),'
   // TODO: Add properties
 }
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading Markdown' }),'
-        setError("Failed to download Markdown file. " + e.message)"
+        setError("Failed to download Markdown file. "
     } finally {
   // TODO: Add properties
 }
@@ -1514,7 +1501,7 @@ const handleDownloadPdf = async () => {
 }
   // TODO: Add properties
 }
-      setError("Preview panel is not available. Cannot generate PDF."),"
+      setError("Preview panel is not available. Cannot generate PDF."
       setIsDownloading(false),
       return
     }
@@ -1527,11 +1514,11 @@ const handleDownloadPdf = async () => {
       // Temporarily ensure the entire preview panel content is visible for capture if it's scrollable internally.'
       // This might involve temporarily changing styles, which is complex and error-prone.
       // A better approach for very long content is to paginate in jsPDF directly.
-      // For now, we capture what's visible or rely on html2canvas's capabilities with scroll.;';
-const html2canvasModule = await import('html2canvas'),;';
-const html2canvas = html2canvasModule.default,;
+      // For now, we capture what's visible or rely on html2 canvas's capabilities with scroll.;';
+const html2 canvasModule = await import('html2 canvas'),;';
+const html2 canvas = html2 canvasModule.default,;
 const { default: jsPDF } = await import('jspdf'),;';
-const canvas = await html2canvas(previewPanelRef.current, {
+const canvas = await html2 canvas(previewPanelRef.current, {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -1546,7 +1533,7 @@ const canvas = await html2canvas(previewPanelRef.current, {
 }
             // You might need to re-apply some styles here if they don't transfer well'
             // For example, ensure SVGs from recharts are fully rendered.
-            // This is advanced usage of html2canvas.
+            // This is advanced usage of html2 canvas.
         }
       }),;
 const imgData = canvas.toDataURL('image/png'),;';
@@ -1578,7 +1565,7 @@ let position = 0,
   // TODO: Add properties
 }
       logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading PDF' }),'
-      setError("Failed to download PDF file. " + e.message)"
+      setError("Failed to download PDF file. "
     } finally {
   // TODO: Add properties
 }
@@ -1601,7 +1588,7 @@ const handleGenerateShareableLink = async () => {
 }
   // TODO: Add properties
 }
-      toast.error("Please generate the whitepaper content first before creating a shareable link."),"
+      toast.error("Please generate the whitepaper content first before creating a shareable link."
       return
     }
     setIsSharing(true),
@@ -1669,7 +1656,6 @@ const link = `${window.location.origin}/whitepaper/view/${(response as any).id}`
 }
       setIsSharing(false)
     }
-  }
   const handleTogglePublicStatus = async () => {
   // TODO: Implement
 }
@@ -1745,7 +1731,6 @@ const { data: response, error: funcError } =
       // Revert optimistic update if it failed:
       // setCurrentSharedWhitepaperIsPublic(!newPublicStatus)
     }
-  }
   const handleSubmitToCounsel = async () => {
   // TODO: Implement
 }
@@ -1901,7 +1886,6 @@ const { data: notifyResponse, error: notifyError } =
 }
       setIsSubmittingToCounsel(false)
     }
-  }
         distributionBreakdown},;
 const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {'
         body: whitepaperPayload}),
@@ -1914,15 +1898,15 @@ const link = `${window.location.origin}/whitepaper/view/${(response as any).id}`
       setShareableLink(link),
       setCurrentSharedWhitepaperId((response as any).id),
       setCurrentSharedWhitepaperIsPublic((response as any).is_public),
-      toast.success("Shareable link generated!")"
+      toast.success("Shareable link generated!"
     } catch (e: any) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
       logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error generating shareable link' }),'
-      setError("Failed to generate shareable link: " + e.message),"
-      toast.error("Failed to generate shareable link.")"
+      setError("Failed to generate shareable link: "
+      toast.error("Failed to generate shareable link."
     } finally {
   // TODO: Add properties
 }
@@ -1945,7 +1929,7 @@ const handleTogglePublicStatus = async () => {
 }
   // TODO: Add properties
 }
-        toast.error("No shareable whitepaper selected or status is unknown."),"
+        toast.error("No shareable whitepaper selected or status is unknown."
         return
     }
     // Optimistically update UI, or wait for response for certainty;
@@ -1969,8 +1953,8 @@ const { data: response, error: funcError } = await supabase.functions.invoke('se
   // TODO: Add properties
 }
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error toggling public status' }),'
-        setError("Failed to update public status: " + e.message),"
-        toast.error("Failed to update public status."),"
+        setError("Failed to update public status: "
+        toast.error("Failed to update public status."
         // Revert optimistic update if it failed:
         // setCurrentSharedWhitepaperIsPublic(!newPublicStatus)
     }
@@ -1989,7 +1973,7 @@ const handleSubmitToCounsel = async () => {
 }
   // TODO: Add properties
 }
-        toast.error("Please generate and finalize the whitepaper before submitting."),"
+        toast.error("Please generate and finalize the whitepaper before submitting."
         return
     }
     setIsSubmittingToCounsel(true),
@@ -2003,7 +1987,7 @@ let whitepaperIdToSubmit = currentSharedWhitepaperId,
 }
   // TODO: Add properties
 }
-            toast.info("Generating a shareable link first to submit to counsel..."),;";
+            toast.info("Generating a shareable link first to submit to counsel...";
 const whitepaperPayload = { tokenName, tokenSupply, sections, distributionChartData, distributionBreakdown },;
 const { data: linkResponse, error: linkFuncError } = await supabase.functions.invoke('create-shared-whitepaper', {'
                 body: whitepaperPayload}),
@@ -2025,7 +2009,7 @@ const { data: linkResponse, error: linkFuncError } = await supabase.functions.in
 }
   // TODO: Add properties
 }
-            toast.info("Making whitepaper public before submitting to counsel..."),;";
+            toast.info("Making whitepaper public before submitting to counsel...";
 const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {'
                 body: { whitepaperId: whitepaperIdToSubmit, isPublic: true }}),
             if (statusError) throw new Error(`Failed to make whitepaper public: ${statusError.message}`),
@@ -2040,7 +2024,7 @@ const { data: statusResponse, error: statusError } = await supabase.functions.in
   // TODO: Add properties
 }
       logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error downloading PDF' }),'
-      setError("Failed to download PDF file. " + e.message)"
+      setError("Failed to download PDF file. "
     } finally {
   // TODO: Add properties
 }
@@ -2063,7 +2047,7 @@ const handleGenerateShareableLink = async () => {
 }
   // TODO: Add properties
 }
-      toast.error("Please generate the whitepaper content first before creating a shareable link."),"
+      toast.error("Please generate the whitepaper content first before creating a shareable link."
       return
     }
     setIsSharing(true),
@@ -2092,15 +2076,15 @@ const link = `${window.location.origin}/whitepaper/view/${(response as any).id}`
       setShareableLink(link),
       setCurrentSharedWhitepaperId((response as any).id),
       setCurrentSharedWhitepaperIsPublic((response as any).is_public),
-      toast.success("Shareable link generated!")"
+      toast.success("Shareable link generated!"
     } catch (e: any) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
       logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error generating shareable link' }),'
-      setError("Failed to generate shareable link: " + e.message),"
-      toast.error("Failed to generate shareable link.")"
+      setError("Failed to generate shareable link: "
+      toast.error("Failed to generate shareable link."
     } finally {
   // TODO: Add properties
 }
@@ -2123,7 +2107,7 @@ const handleTogglePublicStatus = async () => {
 }
   // TODO: Add properties
 }
-        toast.error("No shareable whitepaper selected or status is unknown."),"
+        toast.error("No shareable whitepaper selected or status is unknown."
         return
     }
     // Optimistically update UI, or wait for response for certainty;
@@ -2143,8 +2127,8 @@ const { data: response, error: funcError } = await supabase.functions.invoke('se
   // TODO: Add properties
 }
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error toggling public status' }),'
-        setError("Failed to update public status: " + e.message),"
-        toast.error("Failed to update public status."),"
+        setError("Failed to update public status: "
+        toast.error("Failed to update public status."
         // Revert optimistic update if it failed:
         // setCurrentSharedWhitepaperIsPublic(!newPublicStatus)
     }
@@ -2163,7 +2147,7 @@ const handleSubmitToCounsel = async () => {
 }
   // TODO: Add properties
 }
-        toast.error("Please generate and finalize the whitepaper before submitting."),"
+        toast.error("Please generate and finalize the whitepaper before submitting."
         return
     }
     setIsSubmittingToCounsel(true),
@@ -2176,7 +2160,7 @@ let whitepaperIdToSubmit = currentSharedWhitepaperId,
 }
   // TODO: Add properties
 }
-            toast.info("Generating a shareable link first to submit to counsel..."),;";
+            toast.info("Generating a shareable link first to submit to counsel...";
 const whitepaperPayload = { tokenName, tokenSupply, sections, distributionChartData, distributionBreakdown },;
 const { data: linkResponse, error: linkFuncError } = await supabase.functions.invoke('create-shared-whitepaper', {'
                 body: whitepaperPayload}),
@@ -2197,7 +2181,7 @@ const { data: linkResponse, error: linkFuncError } = await supabase.functions.in
 }
   // TODO: Add properties
 }
-            toast.info("Making whitepaper public before submitting to counsel..."),;";
+            toast.info("Making whitepaper public before submitting to counsel...";
 const { data: statusResponse, error: statusError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {'
                 body: { whitepaperId: whitepaperIdToSubmit, isPublic: true }}),
             if (statusError) throw new Error(`Failed to make whitepaper public: ${statusError.message}`),
@@ -2220,7 +2204,7 @@ const { data: notifyResponse, error: notifyError } = await supabase.functions.in
         if (!notifyResponse) throw new Error('No response received from notify-legal-team function'),'
         if ((notifyResponse as any).error) throw new Error(`Error from notify-legal-team: ${(notifyResponse as any).error}`),
 
-        toast.success("Whitepaper submitted to counsel successfully!")"
+        toast.success("Whitepaper submitted to counsel successfully!"
 
     } catch (e: any) {
   // TODO: Add properties
@@ -2228,8 +2212,8 @@ const { data: notifyResponse, error: notifyError } = await supabase.functions.in
   // TODO: Add properties
 }
         logErrorToProduction(e instanceof Error ? e.message : String(e), e instanceof Error ? e : undefined, { message: 'Error submitting to counsel' }),'
-        setError("Failed to submit to counsel: " + e.message),"
-        toast.error("Failed to submit to counsel: " + e.message)"
+        setError("Failed to submit to counsel: "
+        toast.error("Failed to submit to counsel: "
     } finally {
   // TODO: Add properties
 }
@@ -2242,275 +2226,33 @@ const { data: notifyResponse, error: notifyError } = await supabase.functions.in
   return (
   // TODO: Add parameters
 )
-    <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">"
-      {/* Left Column: Inputs and Editors */}
-      <div className='md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto'>'
-<div className='flex justify-between items-center mb-6'>'
-<h1 className='text-xl font-bold text-center flex-grow'>'
-            Whitepaper Configuration
-          </h1>
-<div className='flex space-x-1'>'
-<Button
-              onClick={handleDownloadMarkdown}
-              disabled={
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                isDownloading |
-                sections.length === 0 |
-                isLoading |
-                isSharing |
-                isSubmittingToCounsel
-              }
-              variant='outline''
-              size='sm''
-              title='Download as Markdown'>'
-<Download className='h-4 w-4' />{' '}'
-              <span className='ml-1 hidden sm:inline'>MD</span></$1>'
-<Button
-              onClick={handleDownloadPdf}
-              disabled={
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                isDownloading ||
-                sections && sections.length === 0 ||
-                isLoading ||
-                isSharing ||
-
-                isSubmittingToCounsel
-              }
-              variant='outline''
-              size='sm''
-              title='Download as PDF'>'
-<Download className='h-4 w-4' />{' '}'
-              <span className='ml-1 hidden sm:inline'>PDF</span></$1>'
-<Button
-              onClick={handleGenerateShareableLink}
-              disabled={
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                isSharing ||
-                sections && sections.length === 0 ||
-                isLoading ||
-                isDownloading ||
-
-                isSubmittingToCounsel
-              }
-              variant='outline''
-              size='sm''
-              title='Generate Shareable Link'>'
-<Share2 className='h-4 w-4' />{' '}'
-
-              <span className='ml-1 hidden sm:inline'>Share</span></Button>'
-</div></div>
-<form onSubmit={e => e.preventDefault()} className='space-y-6'>'
-
-          {/* ... (Input fields remain the same) ... */}
-          <div>
-<label htmlFor='tokenName' className='block text-sm font-medium'>'
-              Token Name:
-            </label>
-<Input
-              id='tokenName''
-              value={tokenName}
-              onChange={e => setTokenName(e && e.target.value)}
-      setIsSubmittingToCounsel (false)
-    }
-  }
-  return (
-  // TODO: Add parameters
-)
-    <div className='flex flex - col md:flex - row h - screen max - h-screen p - 4 gap - 4 bg - gray - 100'>'
-      {/* Left Column: Inputs and Editors */}
-      <div className='md:w - 1/2 lg:w - 2/5 xl:w - 1/3 p - 4 bg - white rounded - lg shadow - md overflow - y-auto'>'
-<div className='flex justify - between items - center mb - 6'>'
-<h1 className='text - xl font - bold text - center flex - grow'>'
-            Whitepaper Configuration</$1>
-<div className='flex space - x-1'>'
-<Button
-              on_click={handleDownloadMarkdown}
-              disabled={
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                is_downloading ||
-                sections.length === 0 ||
-                is_loading ||
-                is_sharing ||
-                isSubmittingToCounsel
-              }
-              variant='outline''
-              size='sm''
-              title='Download as Markdown''
-            >
-<Download className='h - 4 w - 4' />{' '}'
-              <span className='ml - 1 hidden sm:inline'>MD</span></$1>'
-<Button
-              on_click={handleDownloadPdf}
-              disabled={
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                is_downloading ||
-                sections.length === 0 ||
-                is_loading ||
-                is_sharing ||
-                isSubmittingToCounsel
-              }
-              variant='outline''
-              size='sm''
-              title='Download as PDF''
-            >
-<Download className='h - 4 w - 4' />{' '}'
-              <span className='ml - 1 hidden sm:inline'>PDF</span></$1>'
-<Button
-              on_click={handleGenerateShareableLink}
-              disabled={
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                is_sharing ||
-                sections.length === 0 ||
-                is_loading ||
-                is_downloading ||
-                isSubmittingToCounsel
-              }
-              variant='outline''
-              size='sm''
-              title='Generate Shareable Link''
-            >
-<Share2 className='h - 4 w - 4' />{' '}'
-              <span className='ml - 1 hidden sm:inline'>Share</span></$1>'
-</$1></$1>
-<form on_submit={e => e.prevent_default ()} className='space - y-6'>'
-          {/* ... (Input fields remain the same) ... */}
-          <div>
-<label html_for='token_name' className='block text - sm font - medium'>'
-              Token Name:</$1>
-<Input
-              id='token_name''
-              value={token_name}
-              on_change={e => setTokenName (e.target.value)}
-              required
-            />
-</$1>
-<div>
-<label html_for='token_supply' className='block text - sm font - medium'>'
-              Token Supply:</$1>
-<Input
-              id='token_supply''
-              value={token_supply}
-              on_change={e => setTokenSupply (e.target.value)}
-
-              required
-            />
-</$1>
-<div>
-<label html_for='use_cases' className='block text - sm font - medium'>'
-              Use Cases:</$1>
-<textarea
-              id='use_cases''
-              value={use_cases}
-              on_change={e => setUseCases (e.target.value)}
-              required
-              className='mt - 1 block w - full border - gray - 300 rounded - md shadow - sm''
-              rows={3}
-            />
-</$1>
-<div>
-            />
-</$1>
-          {/* Token Distribution Inputs */}
-          <div className='space-y-3 p-3 border rounded-md'>'
-<h2 className='text-lg font-semibold'>Token Distribution</h2>'
-            {distributionData.map(item => (
-  // TODO: Add parameters
-)
-              <div key={item.id} className='flex items-center space-x-2'>'
-<Input
-                  type='text''
-                  placeholder='Category''
-                  value={item.name}
-                  onChange={e =>
-                    handleDistributionChange(item.id, 'name', e.target.value)'
-                  }
-                  className='flex-grow''
-                />
-<Input
-                  type='number''
-                  placeholder='%''
-
-                  value={item && item.percentage}
-                  onChange={e =>
-                    handleDistributionChange(
-  // TODO: Add parameters
-)
-                      item && item.id,
-                      'percentage','
-                      e && e.target.value
-                    )
-                  }
-                  className='w-24''
-                  min='0''
-                  max='100''
-                />
-<Button
-                  variant='ghost''
-                  size='icon''
-
-                  onClick={() => removeDistributionItem(item.id)}
-                  aria-label='Remove''
-                >
-<Trash2 className='h-4 w-4' /></Button>'
-</div>
-<form onSubmit={(e) => e.preventDefault()} className="space-y-6">"
+    <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100"space-y-6"
           {/* ... (Input fields remain the same) ... */}
            <div>
-<label htmlFor="tokenName" className="block text-sm font-medium">Token Name:</label>"
-<Input id="tokenName" value={tokenName} onChange={(e) => setTokenName(e.target.value)} required />"
+<label htmlFor=" className="block text-sm font-medium"tokenName" value={tokenName} onChange={(e) => setTokenName(e.target.value)} required />"tokenSupply" className="
+<Input id="tokenSupply"
 </div>
 <div>
-<label htmlFor="tokenSupply" className="block text-sm font-medium">Token Supply:</label>"
-<Input id="tokenSupply" value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} required />"
-</div>
-<div>
-<label htmlFor="useCases" className="block text-sm font-medium">Use Cases:</label>"
-<textarea id="useCases" value={useCases} onChange={(e) => setUseCases(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>"
-</div>
-<div>
-<label htmlFor="rewardsLogic" className="block text-sm font-medium">Rewards Logic:</label>"
-<textarea id="rewardsLogic" value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>"
+<label htmlFor="useCases"block text-sm font-medium"
+<textarea id=" value={useCases} onChange={(e) => setUseCases(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"rewardsLogic" className="
+<textarea id="rewardsLogic"mt-1 block w-full border-gray-300 rounded-md shadow-sm"
 </div>
 
           {/* Token Distribution Inputs */}
-          <div className="space-y-3 p-3 border rounded-md">"
-<h2 className="text-lg font-semibold">Token Distribution</h2>"
-            {distributionData.map((item) => (
-  // TODO: Add parameters
-)
-              <div key={item.id} className="flex items-center space-x-2">"
-<Input type="text" placeholder="Category" value={item.name} onChange={(e) => handleDistributionChange(item.id, 'name', e.target.value)} className="flex-grow"/>"'"
-<Input type="number" placeholder="%" value={item.percentage} onChange={(e) => handleDistributionChange(item.id, 'percentage', e.target.value)} className="w-24" min="0" max="100"/>"'"
-<Button variant="ghost" size="icon" onClick={() => removeDistributionItem(item.id)} aria-label="Remove">"
-<Trash2 className="h-4 w-4"/></Button>"
+          <div className="
+<h2 className="text-lg font-semibold"flex items-center space-x-2"
+<Input type=" placeholder="Category"flex-grow"'"number" placeholder=" value={item.percentage} onChange={(e) => handleDistributionChange(item.id, 'percentage', e.target.value)} className="w-24" max="100"'"
+<Button variant=" size="icon"Remove">"h-4 w-4"
 </div>
             ))}
-            <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>"
+            <Button type=" onClick={addDistributionItem} variant="outline"w-full"
 <div>
 
               )}
             </div>
           )}
 
-           {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}"
+           {isSharing && <p className="
 
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
@@ -2541,170 +2283,26 @@ const { data: notifyResponse, error: notifyError } = await supabase.functions.in
               Submitting to counsel...
             </p>
           )}
-           {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}"
-
-          {/* Submit to Counsel Button */}
-          {sections.length > 0 && (
-  // TODO: Add parameters
-)
-            <Button
-
-
-        </form></form>
-        {/* Section Editors */}
-        {sections && sections.length > 0 && (
-  // TODO: Add parameters
-)
-          <div className='mt-8 pt-6 border-t'>'
-<h2 className='text-xl font-bold mb-4 text-center'>'
-              Edit Generated Sections</$1>
-            {sections && sections.map(section => (
-  // TODO: Add parameters
-)
-              <WhitepaperSectionEditor
-                key={section && section.id}
-                title={section && section.title}
-                content={section && section.content}
-                onContentChange={newContent =>
-                  handleSectionContentChange(section && section.id, newContent)
-                }              />
-            ))}
-          </div>
-        )}
-        {rawDraft && (
-  // TODO: Add parameters
-)
-          <div className='mt-6 p-3 border rounded-md'>'
-<Button
-              onClick={() => setShowRawDraft(!showRawDraft)}
-              variant='outline''
-              size='sm''
-              className='w-full''
+           {isSharing && <p className="text-center text-sm text-blue-600"button""default""lg""w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
             >
-              {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text            </Button>'
-            {showRawDraft && (
-  // TODO: Add parameters
-)
-              <pre className='mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded'>'
-                {rawDraft}
-              </pre>
-            )}
-          </div>
-        )}
-
-      </div></$1>)}
-            </div>)}
-          {is_sharing && (
-  // TODO: Add parameters
-)
-            <p className='text - center text - sm text - blue - 600'>'
-              Generating shareable link...</$1>)}
-          {/* Submit to Counsel Button */}
-          {sections.length > 0 && (
-  // TODO: Add parameters
-)
-            <Button
-
-                type="button""
-                onClick={handleSubmitToCounsel}
-                disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
-                variant="default""
-                size="lg""
-                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white""
-            >
-<Send className="mr-2 h-4 w-4" />"
+<Send className="
                 {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}'
             </Button>
           )}
-           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}"
-
-                type="button""
-                onClick={handleSubmitToCounsel}
-                disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
-                variant="default""
-                size="lg""
-                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white""
+           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600"button""default""lg""w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
             >
-<Send className="mr-2 h-4 w-4" />"
+<Send className="
                 {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}'
             </Button>
           )}
-           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}"
-
-        </form>
-        {/* Section Editors */}
-        {sections && sections.length > 0 && (
-  // TODO: Add parameters
-)
-          <div className='mt-8 pt-6 border-t'>'
-<h2 className='text-xl font-bold mb-4 text-center'>'
-              Edit Generated Sections</$1>
-            {sections && sections.map(section => (
-  // TODO: Add parameters
-)
-              <WhitepaperSectionEditor
-                key={section && section.id}
-                title={section && section.title}
-                content={section && section.content}
-                onContentChange={newContent =>
-                  handleSectionContentChange(section && section.id, newContent)
-                }              />
-            ))}
-          </div>
-        )}
-        {rawDraft && (
-  // TODO: Add parameters
-)
-          <div className='mt-6 p-3 border rounded-md'>'
-<Button
-              onClick={() => setShowRawDraft(!showRawDraft)}
-              variant='outline''
-              size='sm''
-              className='w-full''
+           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600"button""default""lg""w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
             >
-              {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text            </Button>'
-            {showRawDraft && (
-  // TODO: Add parameters
-)
-              <pre className='mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded'>'
-                {rawDraft}
-              </pre>
-            )}
-          </div>
-        )}
-      </div></p>)}
-            </div>)}
-          {is_sharing && (
-  // TODO: Add parameters
-)
-            <p className='text - center text - sm text - blue - 600'>'
-              Generating shareable link...</$1>)}
-          {/* Submit to Counsel Button */}
-          {sections.length > 0 && (
-  // TODO: Add parameters
-)
-            <Button
-                type="button""
-                onClick={handleSubmitToCounsel}
-                disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
-                variant="default""
-                size="lg""
-                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white""
-            >
-<Send className="mr-2 h-4 w-4" />"
+<Send className="
                 {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}'
             </Button>
           )}
-           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}"
-
-        </form>
-        {/* Section Editors */}
-        {sections.length > 0 && (
-  // TODO: Add parameters
-)
-          tokenSupply={tokenSupply}        />
-<div className="mt-8 pt-6 border-t">"
-<h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>"
+           {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600"mt-8 pt-6 border-t"
+<h2 className="
             {sections.map((section) => (
   // TODO: Add parameters
 )
@@ -2739,14 +2337,7 @@ const { data: notifyResponse, error: notifyError } = await supabase.functions.in
               </pre>
             )}
           </div>
-<div className="mt-6 p-3 border rounded-md">"
-<Button onClick={() => setShowRawDraft(!showRawDraft)} variant="outline" size="sm" className="w-full">"
-                {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text'
-            </Button>
-            {showRawDraft && (
-  // TODO: Add parameters
-)
-                <pre className="mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded">"
+<div className="mt-6 p-3 border rounded-md"outline" size=" className="w-full"mt-2 p-2 bg-gray-50 text-xs whitespace-pre-wrap break-all max-h-60 overflow-y-auto rounded"
                 {rawDraft}
                 </pre>
             )}
@@ -2755,10 +2346,8 @@ const { data: notifyResponse, error: notifyError } = await supabase.functions.in
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
 
-'""'"
+'"'"
 }
-}
-
         className='md:w - 1/2 lg:w - 3/5 xl:w - 2/3 p - 1''
       >
 <WhitepaperPreviewPanel

@@ -97,7 +97,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     website: 'https://ziontechgroup.com/customer-success-ai-pro','
     contact: phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com'}'
-    marketSize: '$11.8B','
+    marketSize: '$11.8 B','
     targetAudience:,
       'Analytics''
     ]
@@ -111,7 +111,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$11.8B''
+  e: '$11.8 B''
     targetAudienc,
   e:
       'SaaS companies, subscription businesses, customer success teams, growth companies''
@@ -248,7 +248,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer','
     contact: phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com'}'
-    marketSize: '$15.4B','
+    marketSize: '$15.4 B','
     targetAudience:,
       'Analytics''
     ]
@@ -262,7 +262,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$15.4B''
+  e: '$15.4 B''
     targetAudienc,
   e:
       'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks''
@@ -392,7 +392,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     website: 'https://ziontechgroup.com/blockid-verify-pro','
     contact: phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com'}'
-    marketSize: '$13.7B','
+    marketSize: '$13.7 B','
     targetAudience:,
       'Compliance''
     ]
@@ -406,7 +406,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$13.7B''
+  e: '$13.7 B''
     targetAudienc,
   e:
       'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups''
@@ -540,7 +540,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     website: 'https://ziontechgroup.com/hr-analytics-ai-suite','
     contact: phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com'}'
-    marketSize: '$9.8B','
+    marketSize: '$9.8 B','
     targetAudience:,
       'Predictive Analytics''
     ]
@@ -554,7 +554,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$9.8B''
+  e: '$9.8 B''
     targetAudienc,
   e:
       'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies''
@@ -689,7 +689,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     website: 'https://ziontechgroup.com/quantum-risk-financial-manager','
     contact: phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com'}'
-    marketSize: '$28.9B','
+    marketSize: '$28.9 B','
     targetAudience:,
       'Compliance''
     ]
@@ -703,7 +703,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$28.9B''
+  e: '$28.9 B''
     targetAudienc,
   e:
       'Investment firms, banks, hedge funds, asset management companies, financial institutions''
@@ -742,7 +742,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
     features: [,
       'AI-powered churn prediction with 92% accuracyPersonalized engagement recommendationsCustomer health scoring and monitoringAutomated success playbook creationReal-time customer sentiment analysisPredictive analytics dashboardIntegration with CRM and support toolsAutomated customer onboarding workflows','
       'Performance metrics and reportingCustom AI model training','
-    market_size: '$28.9B','
+    market_size: '$28.9 B','
     target_audience: unknown,
       'Investment firms, banks, hedge funds, asset management companies, financial institutions','
     competitive_advantage: unknown,
@@ -756,7 +756,7 @@ export const cuttingEdgeMicroSaasServices2025 = [{/* TODO: Fix JSX expression */
       'AI-powered churn prediction with 92% accuracyPersonalized engagement recommendationsCustomer health scoring and monitoringAutomated success playbook creationReal-time customer sentiment analysisPredictive analytics dashboardIntegration with CRM and support toolsAutomated customer onboarding workflows''
       'Performance metrics and reportingCustom AI model training''
     market_siz,
-  e: '$28.9B','
+  e: '$28.9 B','
     target_audienc,
   e: unknown,
       'Investment firms, banks, hedge funds, asset management companies, financial institutions','
@@ -833,7 +833,6 @@ export const cuttingEdgeMicroSaasServices2025 = [;
         feature,
   s: ['Unlimited customersFull AI platformDedicated specialists24/7 support']}'
       }
-    }
     category: 'Customer Success''
     tags: ['Customer SuccessAIChurn PredictionEngagementAnalytics']'
     website: 'https://ziontechgroup.com/customer-success-ai-pro','
@@ -862,7 +861,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$11.8B','
+  e: '$11.8 B','
     targetAudienc,
   e: 'SaaS companies, subscription businesses, customer success teams, growth companies''
     competitiveAdvantag,
@@ -874,7 +873,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     integration,
   s: ['SalesforceHubSpotIntercomZendeskSlackMicrosoft Teams'],'
     complianc,
-  e: ['GDPRCCPASOC2Data Privacy Standards']}'
+  e: ['GDPRCCPASOC2 Data Privacy Standards']}'
   {
   // TODO: Add properties
 }
@@ -917,7 +916,6 @@ export const cuttingEdgeMicroSaasServices2025 = [;
         feature,
   s: ['Full quantum platformCustom algorithmsDedicated specialists24/7 support']}'
       }
-    }
     category: 'Supply Chain''
     tags: ['Supply ChainQuantum ComputingLogisticsOptimizationAnalytics']'
     website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer','
@@ -946,7 +944,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$15.4B','
+  e: '$15.4 B','
     targetAudienc,
   e: 'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks''
     competitiveAdvantag,
@@ -1001,7 +999,6 @@ export const cuttingEdgeMicroSaasServices2025 = [;
         feature,
   s: ['Unlimited verificationsFull verification platformDedicated specialists24/7 support']}'
       }
-    }
     category: 'Identity Verification''
     tags: ['Identity VerificationBlockchainBiometricsSecurityCompliance']'
     website: 'https://ziontechgroup.com/blockid-verify-pro','
@@ -1030,7 +1027,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$13.7B','
+  e: '$13.7 B','
     targetAudienc,
   e: 'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups''
     competitiveAdvantag,
@@ -1042,7 +1039,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     integration,
   s: ['CRM SystemsBanking PlatformsHealthcare SystemsE-commerce PlatformsGovernment APIs'],'
     complianc,
-  e: ['KYC/AMLGDPRCCPASOC2Global Identity Standards']}'
+  e: ['KYC/AMLGDPRCCPASOC2 Global Identity Standards']}'
   {
   // TODO: Add properties
 }
@@ -1085,7 +1082,6 @@ export const cuttingEdgeMicroSaasServices2025 = [;
         feature,
   s: ['Unlimited employeesFull analytics platformDedicated specialists24/7 support']}'
       }
-    }
     category: 'HR Analytics''
     tags: ['HR AnalyticsAIPerformance ManagementEmployee EngagementPredictive Analytics']'
     website: 'https://ziontechgroup.com/hr-analytics-ai-suite','
@@ -1114,7 +1110,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$9.8B','
+  e: '$9.8 B','
     targetAudienc,
   e: 'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies''
     competitiveAdvantag,
@@ -1169,7 +1165,6 @@ export const cuttingEdgeMicroSaasServices2025 = [;
         feature,
   s: ['Full risk management platformCustom algorithmsDedicated specialists24/7 support']}'
       }
-    }
     category: 'Financial Risk Management''
     tags: ['Risk ManagementQuantum ComputingFinancial AnalyticsPortfolio OptimizationCompliance']'
     website: 'https://ziontechgroup.com/quantum-risk-financial-manager','
@@ -1198,7 +1193,7 @@ export const cuttingEdgeMicroSaasServices2025 = [;
   l: 'kleber@ziontechgroup.com''
     }
     marketSiz,
-  e: '$28.9B','
+  e: '$28.9 B','
     targetAudienc,
   e: 'Investment firms, banks, hedge funds, asset management companies, financial institutions''
     competitiveAdvantag,
@@ -1250,7 +1245,7 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   t: ' phon,'
   e: '+1 302 464 0950' emai,''
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$11.8B' targetAudienc,'
+  e: '$11.8 B' targetAudienc,'
   e:' 'SaaS companies, subscription businesses, customer success teams, growth companies' competitiveAdvantag,'
   e: ' 'AI-powered churn prediction, personalized engagement, predictive analytics' useCase,'
   s: [' 'Customer churn prevention' 'Engagement strategy optimization' 'Customer health monitoring' 'Success playbook automation' 'Customer lifetime value optimization' ] integration,'
@@ -1280,7 +1275,7 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   t: ' phon,'
   e: '+1 302 464 0950' emai,''
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$15.4B' targetAudienc,'
+  e: '$15.4 B' targetAudienc,'
   e:' 'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks' competitiveAdvantag,'
   e: ' 'Quantum-enhanced optimization, real-time monitoring, predictive analytics' useCase,'
   s: [' 'Route optimization and planning' 'Inventory management optimization' 'Supplier selection and management' 'Cost reduction and efficiency improvement' 'Risk management and mitigation' ] integration,'
@@ -1310,7 +1305,7 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   t: ' phon,'
   e: '+1 302 464 0950' emai,''
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$13.7B' targetAudienc,'
+  e: '$13.7 B' targetAudienc,'
   e:' 'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups' competitiveAdvantag,'
   e: ' 'Blockchain-based verification, biometric authentication, global compliance' useCase,'
   s: [' 'Customer onboarding and verification' 'Employee identity verification' 'Government ID verification' 'Healthcare patient verification' 'Financial services compliance' ] integration,'
@@ -1340,7 +1335,7 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   t: ' phon,'
   e: '+1 302 464 0950' emai,''
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$9.8B' targetAudienc,'
+  e: '$9.8 B' targetAudienc,'
   e:' 'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies' competitiveAdvantag,'
   e: ' 'AI-powered HR analytics, predictive modeling, comprehensive insights' useCase,'
   s: [' 'Employee performance analysis' 'Talent retention optimization' 'Recruitment process improvement' 'Workforce planning and forecasting' 'Organizational effectiveness analysis' ] integration,'
@@ -1370,7 +1365,7 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   t: ' phon,'
   e: '+1 302 464 0950' emai,''
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$28.9B' targetAudienc,'
+  e: '$28.9 B' targetAudienc,'
   e:' 'Investment firms, banks, hedge funds, asset management companies, financial institutions' competitiveAdvantag,'
   e: ' 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics' useCase,'
   s: [' 'Portfolio risk assessment' 'Investment strategy optimization' 'Regulatory compliance reporting' 'Risk model development' 'Performance analysis and attribution' ] integration,'
@@ -1380,7 +1375,7 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   e: 'Customer Success AI Pro',' descriptio,'
   n: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.', feature,'
   s: [' 'AI-powered churn prediction with 92% accuracyPersonalized engagement recommendationsCustomer health scoring and monitoringAutomated success playbook creationReal-time customer sentiment analysisPredictive analytics dashboardIntegration with CRM and support toolsAutomated customer onboarding workflows' 'Performance metrics and reportingCustom AI model training' market_siz,''
-  e: '$28.9B', target_audienc,'
+  e: '$28.9 B', target_audienc,'
   e:  ,' 'Investment firms, banks, hedge funds, asset management companies, financial institutions', competitive_advantag,'
   e:  ,' 'Quantum - enhanced risk modeling, real - time optimization, advanced analytics', use_case,'
   s: [,' 'Portfolio risk assessment',' 'Investment strategy optimization',' 'Regulatory compliance reporting',' 'Risk model development',' 'Performance analysis and attribution'], integration,'
@@ -1403,12 +1398,12 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$11.8B',' targetAudienc,'
+  e: '$11.8 B',' targetAudienc,'
   e: 'SaaS companies, subscription businesses, customer success teams, growth companies';' competitiveAdvantag,'
   e: 'AI-powered churn prediction, personalized engagement, predictive analytics'; useCase,'
   s: [,' 'Customer churn preventionEngagement strategy optimizationCustomer health monitoringSuccess playbook automationCustomer lifetime value optimization' ];' integration,'
   s: ['SalesforceHubSpotIntercomZendeskSlackMicrosoft Teams'],' complianc,'
-  e: ['GDPRCCPASOC2Data Privacy Standards']} {/* TODO: Fix JSX expression */}'
+  e: ['GDPRCCPASOC2 Data Privacy Standards']} {/* TODO: Fix JSX expression */}'
   d: 'month'}' feature,'
   s: ['Basic optimization featuresStandard analyticsEmail support']} } professiona,'
   l: {/* TODO: Fix JSX expression */}
@@ -1424,7 +1419,7 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$15.4B',' targetAudienc,'
+  e: '$15.4 B',' targetAudienc,'
   e: 'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks';' competitiveAdvantag,'
   e: 'Quantum-enhanced optimization, real-time monitoring, predictive analytics'; useCase,'
   s: [,' 'Route optimization and planningInventory management optimizationSupplier selection and managementCost reduction and efficiency improvementRisk management and mitigation' ];' integration,'
@@ -1445,12 +1440,12 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$13.7B',' targetAudienc,'
+  e: '$13.7 B',' targetAudienc,'
   e: 'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups';' competitiveAdvantag,'
   e: 'Blockchain-based verification, biometric authentication, global compliance'; useCase,'
   s: [,' 'Customer onboarding and verificationEmployee identity verificationGovernment ID verificationHealthcare patient verificationFinancial services compliance' ];' integration,'
   s: ['CRM SystemsBanking PlatformsHealthcare SystemsE-commerce PlatformsGovernment APIs'],' complianc,'
-  e: ['KYC/AMLGDPRCCPASOC2Global Identity Standards']} {/* TODO: Fix JSX expression */}'
+  e: ['KYC/AMLGDPRCCPASOC2 Global Identity Standards']} {/* TODO: Fix JSX expression */}'
   d: 'month'}' feature,'
   s: ['Up to 500 employeesBasic analytics featuresEmail support']} } professiona,'
   l: {/* TODO: Fix JSX expression */}
@@ -1466,7 +1461,7 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$9.8B',' targetAudienc,'
+  e: '$9.8 B',' targetAudienc,'
   e: 'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies';' competitiveAdvantag,'
   e: 'AI-powered HR analytics, predictive modeling, comprehensive insights'; useCase,'
   s: [,' 'Employee performance analysisTalent retention optimizationRecruitment process improvementWorkforce planning and forecastingOrganizational effectiveness analysis' ];' integration,'
@@ -1487,7 +1482,7 @@ export const cuttingEdgeMicroSaasServices2025 = [ 'Basel III',' 'Solvency II',' 
   t: {/* TODO: Fix JSX expression */}
   e: '+1 302 464 0950'}' emai,'
   l: 'kleber@ziontechgroup.com' }' marketSiz,'
-  e: '$28.9B',' targetAudienc,'
+  e: '$28.9 B',' targetAudienc,'
   e: 'Investment firms, banks, hedge funds, asset management companies, financial institutions';' competitiveAdvantag,'
   e: 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics'; useCase,'
   s: [,' 'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution' ];' integration,'

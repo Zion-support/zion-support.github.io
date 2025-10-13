@@ -46,7 +46,6 @@ export type ZionCuttingEdgeService2029 =;
     currency: string
     period: string,
   }
-}
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
   // TODO: Add items
 ]
@@ -148,7 +147,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [;
   y: string,
     perio,
   d: string}
-}
 export const,;
   zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [,
   // 1. AI-Powered Quantum Computing Optimization Platform,
@@ -178,7 +176,7 @@ export const,;
     ],
     benefit,
   s: [,
-      'Solve problems 1000x faster than classical computers','
+      'Solve problems 1000 x faster than classical computers','
       'Reduce optimization costs by 80%','
       'Enable breakthrough discoveries in science','
       'Create competitive advantage in quantum era''
@@ -200,7 +198,7 @@ export const,;
     useCases: ['Drug discovery optimization', 'Portfolio optimization', 'Supply chain optimization', 'Materials design', 'Cryptography'],'
     roi: 'Average customer achieves 300% ROI within 6 months through quantum advantage in optimization problems.','
     competitors: ['IBM Quantum', 'Google Quantum AI', 'Rigetti', 'D-Wave', 'IonQ'],'
-    marketSize: '$1.3B quantum computing market''
+    marketSize: '$1.3 B quantum computing market''
     growthRate: '32.1% annual growth''
     variant: 'quantum-ai-futuristic''
     contactInfo: unknown,
@@ -265,7 +263,7 @@ export const,;
     competitor,
   s: ['IBM Quantum', 'Google Quantum AI', 'Rigetti', 'D-Wave', 'IonQ'],'
     marketSiz,
-  e: '$1.3B quantum computing market','
+  e: '$1.3 B quantum computing market','
     growthRat,
   e: '32.1% annual growth','
     varian,
@@ -357,7 +355,7 @@ export const,;
     useCases: ['Last-mile delivery', 'Infrastructure inspection', 'Agricultural monitoring', 'Security surveillance', 'Emergency response'],'
     roi: 'Average customer achieves 200% ROI within 12 months through reduced delivery costs and improved efficiency.','
     competitors: ['DroneDeploy', 'Skydio', 'DJI Enterprise', 'PrecisionHawk', 'Parrot'],'
-    marketSize: '$45.8B drone market''
+    marketSize: '$45.8 B drone market''
     growthRate: '16.3% annual growth''
     variant: 'autonomous-robotics''
     contactInfo: unknown,
@@ -422,7 +420,7 @@ export const,;
     competitor,
   s: ['DroneDeploy', 'Skydio', 'DJI Enterprise', 'PrecisionHawk', 'Parrot'],'
     marketSiz,
-  e: '$45.8B drone market','
+  e: '$45.8 B drone market','
     growthRat,
   e: '16.3% annual growth','
     varian,
@@ -514,7 +512,7 @@ export const,;
     useCases: ['KYC/AML compliance', 'Healthcare identity', 'Government services', 'Financial services', 'Travel and hospitality'],'
     roi: 'Average customer achieves 150% ROI within 8 months through reduced fraud and compliance costs.','
     competitors: ['Microsoft Entra', 'Okta', 'Auth0', 'Sovrin', 'uPort'],'
-    marketSize: '$28.6B identity management market''
+    marketSize: '$28.6 B identity management market''
     growthRate: '18.2% annual growth''
     variant: 'blockchain-identity''
     contactInfo: unknown,
@@ -579,7 +577,7 @@ export const,;
     competitor,
   s: ['Microsoft Entra', 'Okta', 'Auth0', 'Sovrin', 'uPort'],'
     marketSiz,
-  e: '$28.6B identity management market','
+  e: '$28.6 B identity management market','
     growthRat,
   e: '18.2% annual growth','
     varian,
@@ -671,7 +669,7 @@ export const,;
     useCases: ['Climate risk assessment', 'Insurance underwriting', 'Real estate planning', 'Agricultural planning', 'Energy optimization'],'
     roi: 'Average customer achieves 180% ROI within 12 months through reduced climate risks and improved sustainability.','
     competitors: ['ClimateAI', 'Jupiter Intelligence', 'One Concern', 'Climate Corp', 'The Climate Service'],'
-    marketSize: '$15.2B climate tech market''
+    marketSize: '$15.2 B climate tech market''
     growthRate: '24.5% annual growth''
     variant: 'climate-ai-sustainability''
     contactInfo: unknown,
@@ -736,7 +734,7 @@ export const,;
     competitor,
   s: ['ClimateAI', 'Jupiter Intelligence', 'One Concern', 'Climate Corp', 'The Climate Service'],'
     marketSiz,
-  e: '$15.2B climate tech market','
+  e: '$15.2 B climate tech market','
     growthRat,
   e: '24.5% annual growth','
     varian,
@@ -828,7 +826,7 @@ export const,;
     useCases: ['Edge AI processing', 'IoT sensor networks', 'Robotics control', 'Healthcare monitoring', 'Autonomous vehicles'],'
     roi: 'Average customer achieves 250% ROI within 18 months through reduced power costs and new AI capabilities.','
     competitors: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SynSense', 'General Vision'],'
-    marketSize: '$8.7B neuromorphic computing market''
+    marketSize: '$8.7 B neuromorphic computing market''
     growthRate: '28.9% annual growth''
     variant: 'neuromorphic-ai-futuristic''
     contactInfo: unknown,
@@ -893,7 +891,7 @@ export const,;
     competitor,
   s: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SynSense', 'General Vision'],'
     marketSiz,
-  e: '$8.7B neuromorphic computing market','
+  e: '$8.7 B neuromorphic computing market','
     growthRat,
   e: '28.9% annual growth','
     varian,
@@ -985,7 +983,7 @@ export const,;
     useCases: ['Inventory optimization', 'Demand forecasting', 'Supplier management', 'Logistics optimization', 'Risk management'],'
     roi: 'Average customer achieves 200% ROI within 12 months through reduced costs and improved efficiency.','
     competitors: ['SAP Ariba', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],'
-    marketSize: '$19.2B supply chain management market''
+    marketSize: '$19.2 B supply chain management market''
     growthRate: '11.8% annual growth''
     variant: 'supply-chain-ai''
     contactInfo: unknown,
@@ -1050,7 +1048,7 @@ export const,;
     competitor,
   s: ['SAP Ariba', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],'
     marketSiz,
-  e: '$19.2B supply chain management market','
+  e: '$19.2 B supply chain management market','
     growthRat,
   e: '11.8% annual growth','
     varian,
@@ -1142,7 +1140,7 @@ export const,;
     useCases: ['Medical imaging analysis', 'Diagnostic support', 'Treatment planning', 'Drug discovery', 'Population health'],'
     roi: 'Average customer achieves 180% ROI within 12 months through improved diagnostics and reduced costs.','
     competitors: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare', 'Nuance', 'Zebra Medical'],'
-    marketSize: '$45.2B AI healthcare market''
+    marketSize: '$45.2 B AI healthcare market''
     growthRate: '23.7% annual growth''
     variant: 'healthcare-ai''
     contactInfo: unknown,
@@ -1207,7 +1205,7 @@ export const,;
     competitor,
   s: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare', 'Nuance', 'Zebra Medical'],'
     marketSiz,
-  e: '$45.2B AI healthcare market','
+  e: '$45.2 B AI healthcare market','
     growthRat,
   e: '23.7% annual growth','
     varian,
@@ -1299,7 +1297,7 @@ export const,;
     useCases: ['Portfolio management', 'Algorithmic trading', 'Risk management', 'Market analysis', 'Compliance automation'],'
     roi: 'Average customer achieves 300% ROI within 12 months through improved returns and reduced costs.','
     competitors: ['Alpaca', 'Robinhood', 'Interactive Brokers', 'TD Ameritrade', 'E*TRADE'],'
-    marketSize: '$12.8B algorithmic trading market''
+    marketSize: '$12.8 B algorithmic trading market''
     growthRate: '19.4% annual growth''
     variant: 'fintech-ai-autonomous''
     contactInfo: unknown,
@@ -1364,7 +1362,7 @@ export const,;
     competitor,
   s: ['Alpaca', 'Robinhood', 'Interactive Brokers', 'TD Ameritrade', 'E*TRADE'],'
     marketSiz,
-  e: '$12.8B algorithmic trading market','
+  e: '$12.8 B algorithmic trading market','
     growthRat,
   e: '19.4% annual growth','
     varian,
@@ -1456,7 +1454,7 @@ export const,;
     useCases: ['Threat detection', 'Incident response', 'Vulnerability management', 'Compliance automation', 'Security training'],'
     roi: 'Average customer achieves 200% ROI within 12 months through reduced security incidents and compliance costs.','
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance', 'FireEye'],'
-    marketSize: '$182.3B cybersecurity market''
+    marketSize: '$182.3 B cybersecurity market''
     growthRate: '13.4% annual growth''
     variant: 'cybersecurity-ai''
     contactInfo: unknown,
@@ -1521,7 +1519,7 @@ export const,;
     competitor,
   s: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance', 'FireEye'],'
     marketSiz,
-  e: '$182.3B cybersecurity market','
+  e: '$182.3 B cybersecurity market','
     growthRat,
   e: '13.4% annual growth','
     varian,
@@ -1608,12 +1606,12 @@ export const,;
     category: 'AI & Smart Cities','
     aiTechnology: ['Machine Learning', 'Computer Vision', 'IoT Analytics', 'Predictive Analytics'],'
     realService: true,
-    technology: ['Python', 'TensorFlow', 'PyTorch', 'IoT platforms', 'Edge computing', '5G networks'],'
+    technology: ['Python', 'TensorFlow', 'PyTorch', 'IoT platforms', 'Edge computing', '5 G networks'],'
     integrations: ['Traffic systems', 'Energy grids', 'Water systems', 'Public safety systems', 'Citizen portals'],'
     useCases: ['Traffic optimization', 'Energy management', 'Waste management', 'Public safety', 'Citizen services'],'
     roi: 'Average customer achieves 250% ROI within 18 months through reduced costs and improved efficiency.','
     competitors: ['Cisco Smart Cities', 'Siemens City Performance', 'IBM Smarter Cities', 'Microsoft CityNext', 'Oracle Smart City'],'
-    marketSize: '$225.1B smart city market''
+    marketSize: '$225.1 B smart city market''
     growthRate: '14.8% annual growth''
     variant: 'smart-city-ai''
     contactInfo: unknown,
@@ -1663,7 +1661,7 @@ export const getServicesByCategory = (category: string) =>
     realServic,
   e: true,
     technolog,
-  y: ['Python', 'TensorFlow', 'PyTorch', 'IoT platforms', 'Edge computing', '5G networks'],'
+  y: ['Python', 'TensorFlow', 'PyTorch', 'IoT platforms', 'Edge computing', '5 G networks'],'
     integration,
   s: ['Traffic systems', 'Energy grids', 'Water systems', 'Public safety systems', 'Citizen portals'],'
     useCase,
@@ -1673,7 +1671,7 @@ export const getServicesByCategory = (category: string) =>
     competitor,
   s: ['Cisco Smart Cities', 'Siemens City Performance', 'IBM Smarter Cities', 'Microsoft CityNext', 'Oracle Smart City'],'
     marketSiz,
-  e: '$225.1B smart city market','
+  e: '$225.1 B smart city market','
     growthRat,
   e: '14.8% annual growth','
     varian,
@@ -1715,7 +1713,6 @@ export const getServicesByCategory = (category: string) =>
       perio,
   d: 'month''
     }
-  }
 ];
 export const getServicesByCategory = (categor)
   y: string) =>
@@ -1799,7 +1796,7 @@ export type ZionCuttingEdgeService2029 = i,;
   d: '/month',' descriptio,'
   n: 'Revolutionary platform that combines AI and quantum computing to solve complex optimization problems in logistics, finance, drug discovery, and materials science.', feature,'
   s: [' 'AI-powered quantum algorithm optimization',' 'Hybrid classical-quantum computing workflows',' 'Real-time quantum error correction',' 'Quantum machine learning models',' 'Multi-qubit system management',' 'Quantum advantage benchmarking',' 'Industry-specific quantum solutions',' 'API for quantum algorithm deployment',' 'Real-time quantum system monitoring',' 'Quantum workforce training platform' ], benefit,'
-  s: [' 'Solve problems 1000x faster than classical computers',' 'Reduce optimization costs by 80%',' 'Enable breakthrough discoveries in science',' 'Create competitive advantage in quantum era' ], popula,'
+  s: [' 'Solve problems 1000 x faster than classical computers',' 'Reduce optimization costs by 80%',' 'Enable breakthrough discoveries in science',' 'Create competitive advantage in quantum era' ], popula,'
   r: true,' ico,'
   n: '⚛️',' colo,'
   r: 'from-indigo-600 to-purple-700',' textColo,'
@@ -1818,7 +1815,7 @@ export type ZionCuttingEdgeService2029 = i,;
   s: ['Drug discovery optimization', 'Portfolio optimization', 'Supply chain optimization', 'Materials design', 'Cryptography'],' ro,'
   i: 'Average customer achieves 300% ROI within 6 months through quantum advantage in optimization problems.',' competitor,'
   s: ['IBM Quantum', 'Google Quantum AI', 'Rigetti', 'D-Wave', 'IonQ'],' marketSiz,'
-  e: '$1.3B quantum computing market',' growthRat,'
+  e: '$1.3 B quantum computing market',' growthRat,'
   e: '32.1% annual growth',' varian,'
   t: 'quantum-ai-futuristic', contactInf,'
   o: ' mobil,'
@@ -1846,7 +1843,7 @@ export type ZionCuttingEdgeService2029 = i,;
   d: '/month',' descriptio,'
   n: 'Enterprise-grade autonomous drone fleet management platform that enables businesses to deploy, monitor, and optimize large-scale drone operations for delivery, inspection, and surveillance.', feature,'
   s: [' 'AI-powered flight path optimization',' 'Real-time fleet monitoring and control',' 'Autonomous obstacle avoidance',' 'Battery management and charging optimization',' 'Weather-aware flight planning',' 'Regulatory compliance automation',' 'Multi-drone coordination algorithms',' 'Real-time video streaming and analysis',' 'Predictive maintenance scheduling',' 'Integration with existing logistics systems' ], benefit,'
-  s: [' 'Reduce delivery costs by 60%',' 'Improve delivery speed by 3x',' 'Eliminate human pilot costs',' 'Enable 24/7 autonomous operations' ], popula,'
+  s: [' 'Reduce delivery costs by 60%',' 'Improve delivery speed by 3 x',' 'Eliminate human pilot costs',' 'Enable 24/7 autonomous operations' ], popula,'
   r: true,' ico,'
   n: '🚁',' colo,'
   r: 'from-green-600 to-emerald-700',' textColo,'
@@ -1865,7 +1862,7 @@ export type ZionCuttingEdgeService2029 = i,;
   s: ['Last-mile delivery', 'Infrastructure inspection', 'Agricultural monitoring', 'Security surveillance', 'Emergency response'],' ro,'
   i: 'Average customer achieves 200% ROI within 12 months through reduced delivery costs and improved efficiency.',' competitor,'
   s: ['DroneDeploy', 'Skydio', 'DJI Enterprise', 'PrecisionHawk', 'Parrot'],' marketSiz,'
-  e: '$45.8B drone market',' growthRat,'
+  e: '$45.8 B drone market',' growthRat,'
   e: '16.3% annual growth',' varian,'
   t: 'autonomous-robotics', contactInf,'
   o: ' mobil,'
@@ -1912,7 +1909,7 @@ export type ZionCuttingEdgeService2029 = i,;
   s: ['KYC/AML compliance', 'Healthcare identity', 'Government services', 'Financial services', 'Travel and hospitality'],' ro,'
   i: 'Average customer achieves 150% ROI within 8 months through reduced fraud and compliance costs.',' competitor,'
   s: ['Microsoft Entra', 'Okta', 'Auth0', 'Sovrin', 'uPort'],' marketSiz,'
-  e: '$28.6B identity management market',' growthRat,'
+  e: '$28.6 B identity management market',' growthRat,'
   e: '18.2% annual growth',' varian,'
   t: 'blockchain-identity', contactInf,'
   o: ' mobil,'
@@ -1959,7 +1956,7 @@ export type ZionCuttingEdgeService2029 = i,;
   s: ['Climate risk assessment', 'Insurance underwriting', 'Real estate planning', 'Agricultural planning', 'Energy optimization'],' ro,'
   i: 'Average customer achieves 180% ROI within 12 months through reduced climate risks and improved sustainability.',' competitor,'
   s: ['ClimateAI', 'Jupiter Intelligence', 'One Concern', 'Climate Corp', 'The Climate Service'],' marketSiz,'
-  e: '$15.2B climate tech market',' growthRat,'
+  e: '$15.2 B climate tech market',' growthRat,'
   e: '24.5% annual growth',' varian,'
   t: 'climate-ai-sustainability', contactInf,'
   o: ' mobil,'
@@ -1987,7 +1984,7 @@ export type ZionCuttingEdgeService2029 = i,;
   d: '/month',' descriptio,'
   n: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure to enable ultra-efficient AI processing on edge devices and IoT sensors.', feature,'
   s: [' 'Brain-inspired neural architecture',' 'Ultra-low power consumption',' 'Real-time learning and adaptation',' 'Edge device optimization',' 'Spiking neural networks',' 'Neuromorphic hardware integration',' 'Adaptive learning algorithms',' 'Multi-modal sensor processing',' 'Federated learning support',' 'Hardware-software co-design' ], benefit,'
-  s: [' 'Reduce power consumption by 90%',' 'Enable real-time AI on edge devices',' 'Improve learning efficiency by 5x',' 'Create new AI applications' ], popula,'
+  s: [' 'Reduce power consumption by 90%',' 'Enable real-time AI on edge devices',' 'Improve learning efficiency by 5 x',' 'Create new AI applications' ], popula,'
   r: true,' ico,'
   n: '🧠',' colo,'
   r: 'from-purple-600 to-pink-700',' textColo,'
@@ -2006,7 +2003,7 @@ export type ZionCuttingEdgeService2029 = i,;
   s: ['Edge AI processing', 'IoT sensor networks', 'Robotics control', 'Healthcare monitoring', 'Autonomous vehicles'],' ro,'
   i: 'Average customer achieves 250% ROI within 18 months through reduced power costs and new AI capabilities.',' competitor,'
   s: ['Intel Loihi', 'IBM TrueNorth', 'BrainChip', 'SynSense', 'General Vision'],' marketSiz,'
-  e: '$8.7B neuromorphic computing market',' growthRat,'
+  e: '$8.7 B neuromorphic computing market',' growthRat,'
   e: '28.9% annual growth',' varian,'
   t: 'neuromorphic-ai-futuristic', contactInf,'
   o: ' mobil,'
@@ -2053,7 +2050,7 @@ export type ZionCuttingEdgeService2029 = i,;
   s: ['Inventory optimization', 'Demand forecasting', 'Supplier management', 'Logistics optimization', 'Risk management'],' ro,'
   i: 'Average customer achieves 200% ROI within 12 months through reduced costs and improved efficiency.',' competitor,'
   s: ['SAP Ariba', 'Oracle SCM', 'Manhattan Associates', 'JDA Software', 'Blue Yonder'],' marketSiz,'
-  e: '$19.2B supply chain management market',' growthRat,'
+  e: '$19.2 B supply chain management market',' growthRat,'
   e: '11.8% annual growth',' varian,'
   t: 'supply-chain-ai', contactInf,'
   o: ' mobil,'
@@ -2100,7 +2097,7 @@ export type ZionCuttingEdgeService2029 = i,;
   s: ['Medical imaging analysis', 'Diagnostic support', 'Treatment planning', 'Drug discovery', 'Population health'],' ro,'
   i: 'Average customer achieves 180% ROI within 12 months through improved diagnostics and reduced costs.',' competitor,'
   s: ['IBM Watson Health', 'Google Health AI', 'Microsoft Healthcare', 'Nuance', 'Zebra Medical'],' marketSiz,'
-  e: '$45.2B AI healthcare market',' growthRat,'
+  e: '$45.2 B AI healthcare market',' growthRat,'
   e: '23.7% annual growth',' varian,'
   t: 'healthcare-ai', contactInf,'
   o: ' mobil,'
@@ -2147,7 +2144,7 @@ export type ZionCuttingEdgeService2029 = i,;
   s: ['Portfolio management', 'Algorithmic trading', 'Risk management', 'Market analysis', 'Compliance automation'],' ro,'
   i: 'Average customer achieves 300% ROI within 12 months through improved returns and reduced costs.',' competitor,'
   s: ['Alpaca', 'Robinhood', 'Interactive Brokers', 'TD Ameritrade', 'E*TRADE'],' marketSiz,'
-  e: '$12.8B algorithmic trading market',' growthRat,'
+  e: '$12.8 B algorithmic trading market',' growthRat,'
   e: '19.4% annual growth',' varian,'
   t: 'fintech-ai-autonomous', contactInf,'
   o: ' mobil,'
@@ -2194,7 +2191,7 @@ export type ZionCuttingEdgeService2029 = i,;
   s: ['Threat detection', 'Incident response', 'Vulnerability management', 'Compliance automation', 'Security training'],' ro,'
   i: 'Average customer achieves 200% ROI within 12 months through reduced security incidents and compliance costs.',' competitor,'
   s: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance', 'FireEye'],' marketSiz,'
-  e: '$182.3B cybersecurity market',' growthRat,'
+  e: '$182.3 B cybersecurity market',' growthRat,'
   e: '13.4% annual growth',' varian,'
   t: 'cybersecurity-ai', contactInf,'
   o: ' mobil,'
@@ -2236,12 +2233,12 @@ export type ZionCuttingEdgeService2029 = i,;
   y: 'AI & Smart Cities',' aiTechnolog,'
   y: ['Machine Learning', 'Computer Vision', 'IoT Analytics', 'Predictive Analytics'], realServic,'
   e: true,' technolog,'
-  y: ['Python', 'TensorFlow', 'PyTorch', 'IoT platforms', 'Edge computing', '5G networks'],' integration,'
+  y: ['Python', 'TensorFlow', 'PyTorch', 'IoT platforms', 'Edge computing', '5 G networks'],' integration,'
   s: ['Traffic systems', 'Energy grids', 'Water systems', 'Public safety systems', 'Citizen portals'],' useCase,'
   s: ['Traffic optimization', 'Energy management', 'Waste management', 'Public safety', 'Citizen services'],' ro,'
   i: 'Average customer achieves 250% ROI within 18 months through reduced costs and improved efficiency.',' competitor,'
   s: ['Cisco Smart Cities', 'Siemens City Performance', 'IBM Smarter Cities', 'Microsoft CityNext', 'Oracle Smart City'],' marketSiz,'
-  e: '$225.1B smart city market',' growthRat,'
+  e: '$225.1 B smart city market',' growthRat,'
   e: '14.8% annual growth',' varian,'
   t: 'smart-city-ai', contactInf,'
   o: ' mobil,'

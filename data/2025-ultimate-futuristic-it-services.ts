@@ -94,7 +94,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     useCases: ['Government security, Financial data protection, Healthcare compliance, Military communications, Corporate espionage prevention'],'
     roi: 'Organizations report 600% ROI through enhanced security and reduced breach risks.','
     competitors: ['CrowdStrike, Palo Alto Networks, Fortinet, Check Point'],'
-    marketSize: '$45B cybersecurity market','
+    marketSize: '$45 B cybersecurity market','
     growthRate: '35% annual growth','
     variant: 'quantum-security-enterprise','
     contactInfo: {
@@ -158,7 +158,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     useCases: ['Continuous deployment, Infrastructure automation, Performance optimization, Cost reduction, System reliability'],'
     roi: 'Companies report 400% ROI through automated operations and reduced downtime.','
     competitors: ['Jenkins, GitLab CI/CD, CircleCI, GitHub Actions'],'
-    marketSize: '$8B DevOps market','
+    marketSize: '$8 B DevOps market','
     growthRate: '25% annual growth','
     variant: 'autonomous-devops-enterprise','
     contactInfo: {
@@ -222,7 +222,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     useCases: ['Scientific research, AI training, Financial modeling, Drug discovery, Complex simulations'],'
     roi: 'Research institutions report 800% ROI through accelerated research and development.','
     competitors: ['AWS, Microsoft Azure, Google Cloud, IBM Cloud'],'
-    marketSize: '$480B cloud computing market','
+    marketSize: '$480 B cloud computing market','
     growthRate: '25% annual growth','
     variant: 'quantum-cloud-enterprise','
     contactInfo: {
@@ -286,7 +286,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     useCases: ['Asset tracking, License management, Compliance reporting, Cost optimization, Maintenance scheduling'],'
     roi: 'Organizations report 300% ROI through improved asset utilization and cost reduction.','
     competitors: ['ServiceNow ITAM, BMC Helix, Ivanti, Flexera'],'
-    marketSize: '$2B IT asset management market','
+    marketSize: '$2 B IT asset management market','
     growthRate: '20% annual growth','
     variant: 'ai-itam-enterprise','
     contactInfo: {
@@ -350,7 +350,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     useCases: ['Network monitoring, Performance optimization, Traffic management, Security management, Cost reduction'],'
     roi: 'Organizations report 350% ROI through automated network management and improved performance.','
     competitors: ['Cisco DNA Center, Juniper Mist, Arista CloudVision, VMware NSX'],'
-    marketSize: '$12B network management market','
+    marketSize: '$12 B network management market','
     growthRate: '30% annual growth','
     variant: 'autonomous-networking-enterprise','
     contactInfo: {
@@ -414,7 +414,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     useCases: ['Government data storage, Financial data protection, Healthcare compliance, Military applications, Research computing'],'
     roi: 'Organizations report 700% ROI through enhanced security and compliance benefits.','
     competitors: ['Equinix, Digital Realty, CoreSite, CyrusOne'],'
-    marketSize: '$50B data center market','
+    marketSize: '$50 B data center market','
     growthRate: '20% annual growth','
     variant: 'quantum-datacenter-enterprise','
     contactInfo: {
@@ -478,7 +478,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     useCases: ['IT support automation, Ticket management, Knowledge management, Workflow automation, Performance analytics'],'
     roi: 'IT departments report 250% ROI through automated issue resolution and improved efficiency.','
     competitors: ['ServiceNow, BMC Remedy, Jira Service Desk, Zendesk'],'
-    marketSize: '$8B IT service management market','
+    marketSize: '$8 B IT service management market','
     growthRate: '25% annual growth','
     variant: 'ai-itsm-enterprise','
     contactInfo: {
@@ -542,7 +542,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     useCases: ['Data backup, Disaster recovery, Compliance backup, Long-term archiving, Cross-platform backup'],'
     roi: 'Organizations report 400% ROI through enhanced security and improved recovery times.','
     competitors: ['Veeam, Commvault, Veritas, Acronis'],'
-    marketSize: '$15B backup and recovery market','
+    marketSize: '$15 B backup and recovery market','
     growthRate: '20% annual growth','
     variant: 'quantum-backup-enterprise','
     contactInfo: {
@@ -606,7 +606,7 @@ export const ultimateFuturisticITServices2025: UltimateFuturisticITService[] = [
     useCases: ['Regulatory compliance, Audit preparation, Risk management, Policy management, Training tracking'],'
     roi: 'Organizations report 500% ROI through automated compliance and reduced audit costs.','
     competitors: ['MetricStream, LogicManager, RSA Archer, ServiceNow GRC'],'
-    marketSize: '$5B GRC market','
+    marketSize: '$5 B GRC market','
     growthRate: '15% annual growth','
     variant: 'autonomous-compliance-enterprise','
     contactInfo: {

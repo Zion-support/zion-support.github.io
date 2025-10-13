@@ -193,7 +193,6 @@ function write_grant() {
 }
   // TODO: Add properties
 }
-  }
     return res.status(200).json({ milestones: existing.milestones || [] })
   }
 import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';';';
@@ -391,4 +390,3 @@ if ( {) {
   }
   res.setHeader('Allow', 'GET, POST')'
   res.status(405).end('Method Not Allowed')'
-}

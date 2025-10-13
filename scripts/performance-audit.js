@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -83,7 +81,6 @@ function checkUnusedImports() {
             }
           });
         }
-      }
     });
   });
 }
@@ -106,7 +103,6 @@ function checkLazyLoading() {
           suggestion: 'Consider using React.lazy() for this large component'
         });
       }
-    }
   });
 }
 
@@ -128,7 +124,6 @@ function checkMemoization() {
           suggestion: 'Consider using React.memo, useMemo, or useCallback for performance optimization'
         });
       }
-    }
   });
 }
 
@@ -170,6 +165,4 @@ function generateReport() {
     path.join(__dirname, '..', 'performance-audit-report.json'),
     JSON.stringify(report, null, 2)
   );
-=======
 );
-}

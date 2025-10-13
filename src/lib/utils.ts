@@ -7,4 +7,3 @@ export function cn(...inputs: ClassValue[]) {
   // TODO: Add properties
 }
   return twMerge(clsx(inputs));
-}

@@ -41,8 +41,6 @@ function mergePR(pr) {
         { stdio: 'pipe' }'
 try {/* TODO: Fix JSX expression */}
 //   } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 // Function to safely merge a PR branch
 function mergePR(pr) {/* TODO: Fix JSX expression */}
         `git show-ref --verify --quiet refs/remotes/origin/${branchName}`,
@@ -50,8 +48,6 @@ function mergePR(pr) {/* TODO: Fix JSX expression */}
   o: 'pipe' }'
       )
     } catch (error) {/* TODO: Fix JSX expression */}
-    }
-
     // Fetch the latest changes
 //     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' })'
     // Check for merge conflicts
@@ -63,7 +59,7 @@ function mergePR(pr) {/* TODO: Fix JSX expression */}
       execSync(`git merge --no-commit --no-ff origin/${branchName}`, {)
         stdio: 'pipe')})'
 //       // Complete the merge
-      execSync(`git merge --no-ff origin/${branchName} -m "Merge PR #${prNumber}: ${prTitle}"`)"
+      execSync(`git merge --no-ff origin/${branchName} -m "Merge PR #${prNumber}: ${prTitle}"
         { stdio: 'inherit' }'
       )
 //       return true
@@ -80,7 +76,7 @@ function mergePR(pr) {/* TODO: Fix JSX expression */}
 }
   // TODO: Add properties
 }
-//         execSync(`git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge PR #${prNumber}: ${prTitle}"`)"
+//         execSync(`git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge PR #${prNumber}: ${prTitle}"
           { stdio: 'inherit' }'
         )
 //         return true
@@ -99,7 +95,7 @@ function mergePR(pr) {/* TODO: Fix JSX expression */}
       execSync(`git merge --no-commit --no-ff origin/${branchName}`, {/* TODO: Fix JSX expression */})
       })
 //       // Complete the merge;`
-      execSync(`git merge --no-ff origin/${branchName} -m "Merge PR #${prNumber}: ${prTitle}"`,"
+      execSync(`git merge --no-ff origin/${branchName} -m "Merge PR #${prNumber}: ${prTitle}"
         {/* TODO: Fix JSX expression */}
   o: 'inherit' })'
       )
@@ -107,76 +103,4 @@ function mergePR(pr) {/* TODO: Fix JSX expression */}
     } catch (mergeError) {/* TODO: Fix JSX expression */}
   o: 'pipe' })'
       // Try to resolve conflicts automatically
-      try {/* TODO: Fix JSX expression */}"`"
-          `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge PR #${prNumber}: ${prTitle}"`,"
-          {/* TODO: Fix JSX expression */}
-  o: 'inherit' }'
-        )
-//         return true
-      } catch (resolveError) {/* TODO: Fix JSX expression */}
-  o: 'pipe' })'
-        return false
-      }
-    }
-  } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
-
-// Process each PR
-for (const pr of openPRs) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-//   const success = mergePR(pr)
-  results.push({)
-    prNumber: pr.number;)
-    title: pr.title,),
-    branch: pr.head.ref),
-    success: success),
-for (const pr of openPRs) {/* TODO: Fix JSX expression */}
-  })
-  if (success) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-}
-
-// Create summary report;
-const summary = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  totalPRs: openPRs.length
-  successfulMerges: successCount
-  failedMerges: failCount
-  results: results,
-  timestamp: new Date().toISOString(),;
-const summary = {/* TODO: Fix JSX expression */}
-}
-
-fs.writeFileSync('pr-merge-results.json', JSON.stringify(summary, null, 2))'
-// // // // // Push changes to main if there were successful merges
-if (successCount > 0) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-//     execSync('git push origin main', { stdio: 'inherit' })'
-//     } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-if (successCount > 0) {/* TODO: Fix JSX expression */}
-  o: 'inherit' })'
-//     } catch (error) {/* TODO: Fix JSX expression */}
-//     }
-}
-
-// // "`
+      try {/* TODO: Fix JSX expression */}"`"Auto-merge PR #${prNumber}: ${prTitle}"`,"`

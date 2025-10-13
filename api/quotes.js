@@ -76,5 +76,4 @@ const quoteData = {
       error: 'Failed to submit quote request','
       details: process.env.NODE_ENV === 'development' ? error.message : undefined'
     }));
-  }
-}
+  

@@ -16,7 +16,7 @@ export interface AddedService {
   rating?: number
   customerCount?: number
 }
-export const added2025Services: AddedService[] = [;
+export const added2025 Services: AddedService[] = [;
   // TODO: Add items
 ]
   {
@@ -157,7 +157,7 @@ export const added2025Services: AddedService[] = [;
     price: 'Starting at $99','
     period: '/month','
     category: 'FinOps','
-    features: ['Rightsizing & schedules', 'Lifecycle policies', 'Anomaly alerts', 'IaC outputs', 'K8s bin-packing', 'Reports'],'
+    features: ['Rightsizing & schedules', 'Lifecycle policies', 'Anomaly alerts', 'IaC outputs', 'K8 s bin-packing', 'Reports'],'
     icon: '💸','
     link: 'https://ziontechgroup.com/cloud-cost-optimizer','
     rating: 4.8,

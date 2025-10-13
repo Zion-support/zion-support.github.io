@@ -4,7 +4,7 @@ import { supabase } from '@/integrations/supabase/client';';
 import { toast } from 'sonner';';
 import { BlockchainNetwork, DeploymentOptions, SmartContractInfo } from '@/types/smart-contracts';';
 import { TalentProfile } from '@/types/talent';';
-import { ContractFormValues } from "@/components/contracts/components/ContractForm";";";
+import { ContractFormValues } from "@/components/contracts/components/ContractForm";";
 export function useSmartContracts() {;
 const { user } = useAuth();
 const [isLoading, setIsLoading] = useState(false);
@@ -26,7 +26,7 @@ const generateSolidityContract = async (
   // TODO: Add properties
 }
       setIsLoading(true);
-const { data, error } = await supabase.functions.invoke("generate-smart-contract", {"
+const { data, error } = await supabase.functions.invoke(", {"
         body: {
   // TODO: Add properties
 }
@@ -56,15 +56,15 @@ const { data, error } = await supabase.functions.invoke("generate-smart-contract
 }
   // TODO: Add properties
 }
-        throw new Error("Failed to generate Solidity contract")"
+        throw new Error(")"
       }
     } catch (err: any) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      console.error("Error generating Solidity contract:", err)"
-      toast.error("Failed to generate smart contract")"
+      console.error(", err)"
+      toast.error(")"
       throw err
     } finally {
   // TODO: Add properties
@@ -73,7 +73,6 @@ const { data, error } = await supabase.functions.invoke("generate-smart-contract
 }
       setIsLoading(false)
     }
-  }
   const deploySmartContract = async (
   // TODO: Add parameters
 )
@@ -89,7 +88,7 @@ const { data, error } = await supabase.functions.invoke("generate-smart-contract
 }
   // TODO: Add properties
 }
-      toast.error("You must be logged in to deploy a contract")"
+      toast.error(")"
       return null
     }
     try {
@@ -100,7 +99,7 @@ const { data, error } = await supabase.functions.invoke("generate-smart-contract
       setDeploymentStatus('deploying')'
       // This would normally connect to MetaMask or other Web3 provider
       // For now, we'll just simulate success;';
-const mockTransactionHash = `0x${Array.from({length: 64}, () =>
+const mockTransactionHash = `0 x${Array.from({length: 64}, () =>
         Math.floor(Math.random() * 16).toString(16)).join('')}`;';
 const mockSmartContractInfo: SmartContractInfo = {
   // TODO: Add properties
@@ -111,7 +110,7 @@ const mockSmartContractInfo: SmartContractInfo = {
         transactionHash: mockTransactionHash,
         networkName: options.network,
         blockNumber: Math.floor(Math.random() * 1000000),
-        deployedAddress: `0x${Array.from({length: 40}, () =>
+        deployedAddress: `0 x${Array.from({length: 40}, () =>
           Math.floor(Math.random() * 16).toString(16)).join('')}`,'
         contractType: 'escrow','
         createdAt: new Date().toISOString(),
@@ -121,19 +120,18 @@ const mockSmartContractInfo: SmartContractInfo = {
       // Wait to simulate blockchain transaction time
       await new Promise(resolve => setTimeout(resolve, 2000))
       setDeploymentStatus('success')'
-      toast.success("Smart contract deployed successfully!")"
+      toast.success(")"
       return mockSmartContractInfo
     } catch (err: any) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      console.error("Error deploying smart contract:", err)"
-      toast.error("Failed to deploy smart contract")"
+      console.error(", err)"
+      toast.error(")"
       setDeploymentStatus('error')'
       return null
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -143,5 +141,4 @@ const mockSmartContractInfo: SmartContractInfo = {
     deploySmartContract,
     isLoading,
     deploymentStatus
-  }
-}
+  

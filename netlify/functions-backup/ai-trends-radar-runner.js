@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'ai-trends-radar-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'ai-trends-radar-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'ai-trends-radar-runner',' source: event.source || 'unknown', trends: {' status: 'scanning', patterns: 0,'
         lastScan: new Date().toISOString() } }) } return result; } catch (error) {

@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'orphan-pages-detector'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'orphan-pages-detector'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'orphan-pages-detector',' source: event.source || 'unknown', detection: {' status: 'active', pagesScanned: 0, orphansFound: 0,'
         lastScan: new Date().toISOString() } }) } return result; } catch (error) {

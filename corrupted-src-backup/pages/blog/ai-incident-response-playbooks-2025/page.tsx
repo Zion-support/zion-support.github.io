@@ -23,7 +23,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-incide n t-respon s e-playboo k s-20 2 5')'
         />),
       <div, className='container, m, x-auto, p, x-6, p, y-16'>'
-<h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>'
+<h1, className='te, x, t-4 xl, m, d:te, x, t-5 xl, fon, t-bold, m, b-4'>'
           Ai, Incident, Response Playbooks, 202, 5
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>'
           Learn, about, ai incident, response, playbooks 2025, and, how it, can, benefit
@@ -37,4 +37,3 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: 
 </div></div>
 </div></Link>
 </p></h1>
-}

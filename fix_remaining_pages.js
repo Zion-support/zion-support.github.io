@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -33,13 +31,7 @@ const pagesToFix = [
   );
                 ${title}
               ${description}
-              <h3 className = "text-xl font-semibold text-white mb-4">Feature 1</h3>
-//                 Description of the first key feature or service.
-//                 <li>• Benefit 1</li>
-//                 <li>• Benefit 2</li>
-//                 <li>• Benefit 3</li>
-//                 <li>• Benefit 4</li>
-              <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
+              <h3 className = "text-xl font-semibold text-white mb-4">Feature 2</h3>
 //                 Description of the second key feature or service.
 //                 <li>• Benefit 1</li>
 //                 <li>• Benefit 2</li>
@@ -125,5 +117,4 @@ const config = pageConfigs[page];
   try {
     fs.writeFileSync(pagePath, content);
     } catch (error) {
-=======
 

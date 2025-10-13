@@ -9,49 +9,36 @@ const replacements = [
   // TODO: Add items
 ]
   // Next.js imports to React Router
-  { from: "import Link from 'next/link';", to: "import { Link } from 'react-router-dom';" },";'"
+  { from: "import Link from 'next/link';"import { Link } from 'react-router-dom';" },"
   {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    from: "import { useRouter } from 'next/router';",";'"
-    to: "import { useNavigate, useLocation } from 'react-router-dom';",";'"
-  {/* TODO: Fix JSX expression */}
-  o: "import { Link } from 'react-router-dom';" },";'"
-  {/* TODO: Fix JSX expression */}""
-  m: "import { useRouter } from 'next/router';",";'"
-    t,""
-  o: "import { useNavigate, useLocation } from 'react-router-dom';"},";'"
-  {/* TODO: Fix JSX expression */}""
-  m: "import { useRouter } from 'next/navigation';",";'"
-    t,""
-  o: "import { useNavigate, useLocation } from 'react-router-dom';"},";'"
-  {/* TODO: Fix JSX expression */}""
-  m: "import { usePathname } from 'next/navigation';",";'"
-    t,""
-  o: "import { useLocation } from 'react-router-dom';"},";'"
-  {/* TODO: Fix JSX expression */}""
-  m: "import { useSearchParams } from 'next/navigation';",";'"
-    t,""
-  o: "import { useSearchParams } from 'react-router-dom';"},";'"
-  {/* TODO: Fix JSX expression */}""
-  o: "import { Helmet } from 'react-helmet-async';" },";'"
-  {/* TODO: Fix JSX expression */}""
-  o: "import { lazy, Suspense } from 'react';" },";'"
-  {/* TODO: Fix JSX expression */}""
-  m: "import { Metadata } from 'next';", t,";'"
-  o: "import { Helmet } from 'react-helmet-async';" },";'"
-  {/* TODO: Fix JSX expression */}""
-  m: "import type { Metadata } from 'next';",";'"
-    t,""
-  o: "import { Helmet } from 'react-helmet-async';"},";'"
+    from: "import { useRouter } from 'next/router';";'"
+    to: ",";'"import { Link } from 'react-router-dom';" },"
+  {/* TODO: Fix JSX expression */}""import { useRouter } from 'next/router';","
+    t,""import { useNavigate, useLocation } from 'react-router-dom';"},"
+  {/* TODO: Fix JSX expression */}""import { useRouter } from 'next/navigation';","
+    t,""import { useNavigate, useLocation } from 'react-router-dom';"},"
+  {/* TODO: Fix JSX expression */}""import { usePathname } from 'next/navigation';","
+    t,""import { useLocation } from 'react-router-dom';"},"
+  {/* TODO: Fix JSX expression */}""import { useSearchParams } from 'next/navigation';","
+    t,""import { useSearchParams } from 'react-router-dom';"},"
+  {/* TODO: Fix JSX expression */}""import { Helmet } from 'react-helmet-async';" },"
+  {/* TODO: Fix JSX expression */}""import { lazy, Suspense } from 'react';" },"
+  {/* TODO: Fix JSX expression */}""import { Metadata } from 'next';", t,"
+  o: "import { Helmet } from 'react-helmet-async';";'"
+  {/* TODO: Fix JSX expression */}"
+  m: "import type { Metadata } from 'next';";'"
+    t,"
+  o: "import { Helmet } from 'react-helmet-async';";'"
 
   // Next.js specific patterns
   { from: 'export const metadata: Metadata = {', to: '// Metadata moved to Helmet component' },'
   { from: 'export const metadata = {', to: '// Metadata moved to Helmet component' },'
-  { from: "'use client';", to: ' },''"
-  { from: "'use server';", to: ' },''"
+  { from: ", to: ' },''"
+  { from: ", to: ' },''"
 
   // Router usage patterns
   {
@@ -179,89 +166,9 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
           )
           modified = true
         }
-      }
     })
     // Additional cleanup
     content = content
       .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines'
-      .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, ') // Remove empty imports';'"
-      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {)
-        // Merge consecutive imports from same module;);
-        lines.forEach(line => {)
-          if (match) {;
-const [, importsStr, module] = match
-            if (!imports[module]) imports[module] = [];
-imports[module].push(importsStr)
-          }
-      .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive newlines;"'"
-      .replace(/import\s+{\s*}\s+from\s+['"][^'"]*['"];?\s*\n/g, ') // Remove empty imports';'"
-      .replace(/import\s+[^;]+;\s*\n\s*import\s+[^;]+;\s*\n/g, match => {/* TODO: Fix JSX expression */}
-          })
-        })
-        return ()
-          Object.entries(imports)
-            .join('\n') + '\n''
-        )
-      })
-    if (modified) {/* TODO: Fix JSX expression */}
-    }
-
-    return false
-  } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
-
-// Main execution
-async function main() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // Find all TypeScript/JavaScript files in app directory
-  for (const pattern of patterns) {;
-const files = await glob(pattern, {)
-      cwd: process.cwd(),
-      ignore: [,
-        '**/node_modules/**','
-        '**/dist/**','
-        '**/build/**','
-        '**/*.disabled/**','
-        '**/*backup*/**','
-        '**/*corrupted*/**','
-        '**/*temp*/**','
-        '**/*.broken/**']})'
-    files.forEach(file => {)
-      totalFiles++;)
-      if (processFile(file)) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        fixedFiles++
-      }
-async function main() {/* TODO: Fix JSX expression */}
-}
-  // Find all TypeScript/JavaScript files in app directory
-  for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-    })
-    files.forEach(file => {/* TODO: Fix JSX expression */}
-      })
-    })
-  }
-
-  if (fixedFiles > 0) {} else {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (fixedFiles > 0) {/* TODO: Fix JSX expression */}
-  } else {/* TODO: Fix JSX expression */}
-  }
-}
-`
-if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
-}
-;
-export { processFile, replacements  };
-}}}}}}}}}}}"`</Link>
+      .replace(/import\s+{\s*}\s+from\s+['"]*['"];?\s*\n/g, ') // Remove empty imports';'"'"
+      .replace(/import\s+{\s*}\s+from\s+['"]*['"];?\s*\n/g, ') // Remove empty imports';'"`</Link>

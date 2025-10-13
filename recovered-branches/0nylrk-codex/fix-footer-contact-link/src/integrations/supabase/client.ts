@@ -35,7 +35,6 @@ const id = setTimeout(() => controller.abort(), 3000)
 }
     return false
   }
-}
 // Custom fetch wrapper to provide clearer errors when network requests fail;
 export const safeFetch: typeof fetch = async (input, init) => {
   // TODO: Add properties
@@ -64,7 +63,6 @@ export const safeFetch: typeof fetch = async (input, init) => {
     console.error('Supabase fetch failed:', err)'
     throw new Error('Failed to connect to Supabase')'
   }
-}
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   // TODO: Add properties
 }

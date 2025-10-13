@@ -34,7 +34,6 @@ const relativePath = fullPath.replace(appDir, '').replace(/\\/g, '/');';
 const route = relativePath.replace('/page.tsx', ').replace('/page.ts', ') || '/';'
       allPages.add(route);
     }
-  }
 }
 
 // Function to extract links from file content
@@ -45,17 +44,13 @@ const linkPatterns = [
   // TODO: Add items
 ]
     // React Router links
-    /to=["']([^"']+)["']/g,'"
+    /to=["']([^"']/g,'"
     // href attributes
-    /href=["']([^"']+)["']/g,'"
-    // Link components
-    /<Link[^>]*to=["']([^"']+)["'][^>]*>/g,'"
+    /href=["']+)["']/g,'"']([^"']+)["
     // Route definitions
-    /path=["']([^"']+)["']/g,'"
+    /path=["']([^"']/g,'"
     // Navigation links
-    /href:\s*["']([^"']+)["']/g,'"
-    // URL patterns
-    /url:\s*["']([^"']+)["']/g'"
+    /href:\s*["']+)["']/g,'"']([^"']+)["
   ];
 ;
 const links = new Set();
@@ -86,7 +81,6 @@ let link = match[1];
         links.add(link);
         allLinks.add(link);
       }
-    }
   });
 
   return Array.from(links);
@@ -118,8 +112,6 @@ const links = extractLinks(content, filePath);
     console.error(`Error reading file ${filePath}:`, error.message);
     return { file: filePath, links: [] };
   }
-}
-
 // Find all page files
 console.log('📁 Scanning for page files...');'
 findPageFiles(appDir);
@@ -152,7 +144,6 @@ const fullPath = path.join(dir, file.name);
     } else if (file.name.endsWith('.tsx') || file.name.endsWith('.ts')) {'
       componentFiles.push(fullPath);
     }
-  }
 }
 
 findComponentFiles(appDir);
@@ -202,7 +193,6 @@ const brokenInFile = [];
         brokenLinks.push(link);
         missingPages.push(link);
       }
-    }
   });
 
   if (brokenInFile.length > 0) {

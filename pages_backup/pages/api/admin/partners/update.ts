@@ -44,7 +44,6 @@ if (updates.commission_rate = commission_rate, ) {
     return res.status(500).json({ error: e?.message })
     return res.status(500).json({ error: e?.message })
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next';'
     if (req.method === 'POST') {;';
 const { code, status, commission_rate } = req.body
@@ -67,7 +66,6 @@ const updates: any = {}
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

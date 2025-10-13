@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function PageBroken2Page() {
+export default function PageBroken2 Page() {
   return (
     e.preventDefault();
     setIsSubmitting(true)
@@ -52,7 +52,6 @@ try {// Simulate form submission,}
 }
     setIsSubmitting(false)
   }
-    }
   }
 const services = [
   // TODO: Add items
@@ -82,11 +81,9 @@ const contactInfo = [
       title: 'Phone','
       details: '+1 (302) 464-0950','
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" /></Helmet>"
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>"
-<div className="container mx-auto px-4"></div>"
-          {/* Header */} <div className="text-center mb-16"></div>"
+<meta name="description"AI-powered solution" />"keywords" content=" /></Helmet>"
+<div className="
+<div className="container mx-auto px-4"text-center mb-16"
 <h1>Get in;</h1>
 <span>{' '</span>}Touch;'
               </span></h1>
@@ -95,49 +92,35 @@ const contactInfo = [
             </p></div>
 </section></div>})}
 {submitStatus === 'error' && (;'
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>"
-<span className="text-red-400">Failed to send message. Please try again.</span></div>})}"
-<form>
-<div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,"
+                <div className="
+<span className="text-red-400"grid grid-cols-1 md: grid-cols-2 gap-6"
                   <div />
 <label>
                       Full Name *
                     </label>
-<div className="relative"></div>"
+<div className="
 <User />
 <input /></div>
 <div / /></div>
 <label></label>
                       Email Address *
                     </label>
-<div className="relative"></div>"
-<Mail />
-<input /></div>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,"
+<div className="relative"grid grid-cols-1 md: grid-cols-2 gap-6"
                   <div />
 <label>
                       Company;
                     </label>
-<div className="relative"></div>"
+<div className="
 <Building />
 <input /></div>
 <div />
 <label>
                       Phone Number;
                     </label>
-<div className="relative"></div>"
-<Phone />
-<input /></div>
-</div>
-<div / /></div>
-<label></label>
-                    Service Interest,
-                  </label>
-<div className="relative"></div>"
+<div className="relative"relative"
 <Globe>
 <select>
-<option value="">Select a service</option>"
+<option value=">Select a service</option>"
                       {services.map((service) => (} <option>
 
                           {service} </option>
@@ -149,35 +132,22 @@ const contactInfo = [
 <label></label>
                     Message *
                   </label>
-<div className="relative"></div>"
+<div className="
 <MessageCircle />
 <textarea /></div>
 <button>{isSubmitting ? (;</button>
 <>
-<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>"
-<span>Sending...</span></>
-                  ) : (
-  // TODO: Add parameters
-)
-                    <>
-<Send>
-<span>Send Message</span></>})}
-                </button></form>
-</div>
-            {/* Contact Information */} <div className="space-y-8"></div>"
+<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"space-y-8"
 <div />
-<h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>"
+<h2 className="
 <p>We're here to help! Reach out to us through any of these channels;</p>'
                   and we'll get back to you as soon as possible.'
                 </p></div>
-              {/* Contact Information */} <div className="space-y-8"></div>"
-<div />
-<h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>"
+              {/* Contact Information */} <div className="space-y-8"text-3 xl font-bold text-white mb-6"
 <p>We're here to help you transform your business with cutting-edge AI and technology solutions.</p></p>'
 </div>
-<div className="space-y-6"></div>"
-<div className="flex items-center"></div>"
-<div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>"
+<div className="
+<div className="flex items-center"w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"
 <Phone />
 <div />
 <h3>
@@ -185,162 +155,106 @@ const contactInfo = [
                         {info.title} </h3>
 <p>{info.details</p>} </p>
 <p>{info.description</p>} </p>
-<div className="relative">"
-<User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />"
-<input
-                        type="text""
-                        name="name""
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500""
-                        placeholder="Your full name""
+<div className="
+<User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"text""name""w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        placeholder=""
                       /></div>
 </div>
 <div>
-<label className="block text-sm font-medium text-gray-300 mb-2">"
+<label className="
                       Email Address *
                     </label>
-<div className="relative">"
-<Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />"
+<div className="relative"absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
 <input
-                        type="email""
-                        name="email""
+                        type=""
+                        name=""
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500""
-                        placeholder="your@email.com""
+                        className="
+                        placeholder="your@email.com"
                       /></div>
 </div></div>
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
-<div>
-<label className="block text-sm font-medium text-gray-300 mb-2">"
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6"block text-sm font-medium text-gray-300 mb-2"
                       Company
                     </label>
-<div className="relative">"
-<Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />"
-<input
-                        type="text""
-                        name="company""
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500""
-                        placeholder="Your company""
+<div className="
+<Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"text""company""w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+                        placeholder=""
                       /></div>
 </div>
 <div>
-<label className="block text-sm font-medium text-gray-300 mb-2">"
+<label className="
                       Phone Number
                     </label>
-<div className="relative">"
-<Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />"
+<div className="relative"absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
 <input
-                        type="tel""
-                        name="phone""
+                        type=""
+                        name=""
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500""
-                        placeholder="+1 (555) 123-4567""
+                        className="
+                        placeholder="+1 (555) 123-4567"
                       /></div>
 </div></div>
 <div>
-<label className="block text-sm font-medium text-gray-300 mb-2">"
-                    Service Interest
-                  </label>
-<div className="relative">"
-<Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />"
+<label className="block text-sm font-medium text-gray-300 mb-2"relative"
+<Globe className="
 <select
-                      name="service""
+                      name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500""
-                    >
-<option value=">Select a service</option>""
-                      {services.map((service) => (
-  // TODO: Add parameters
-)
-                        <option key={service} value={service}>
-                          {service}
-                        </option>
-                      ))}
-                    </select></div>
-</div>
-<div>
-<label className="block text-sm font-medium text-gray-300 mb-2">"
+                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500">Select a service</option>""block text-sm font-medium text-gray-300 mb-2"
                     Message *
                   </label>
-<div className="relative">"
-<MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />"
-<textarea
-                      name="message""
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      required
-                      rows={6}
-                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none""
-                      placeholder="Tell us about your project, goals, or any questions you have...""
+<div className="
+<MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400"message""w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
+                      placeholder=""
                     />
 <$2 />
-                  type="submit""
+                  type=""
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2""
+                  className="
                 >
                   {isSubmitting ? (
   // TODO: Add parameters
 )
                     <>
-<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>"
-<span>Sending...</span>
-
-                  ) : (
-  // TODO: Add parameters
-)
-                    <>
-</>
-<Send className="w-5 h-5" />"
+<div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"w-5 h-5"
 <span>Send Message</span></div>
 </button></form>
             ))
 
             {/* Contact Information */}
-            <div className="space-y-8">"
+            <div className="
 <div>
-<h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>"
-<p className="text-lg text-gray-300 mb-8">"
+<h2 className="text-3 xl font-bold text-white mb-6"text-lg text-gray-300 mb-8"
                   We're here to help! Reach out to us through any of these channels '
                   and we'll get back to you as soon as possible.'
               {/* Contact Information */}
-              <div className="space-y-8">"
+              <div className="
 <div>
-<h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>"
-<p className="text-gray-300 mb-8">"
+<h2 className="text-3 xl font-bold text-white mb-6"text-gray-300 mb-8"
                     We're here to help you transform your business with cutting-edge AI and technology solutions.'
                   </p></div>
-<div className="space-y-6">"
-<div className="flex items-center">"
-<div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4">"
-<Phone className="w-6 h-6 text-white" /></div>"
+<div className="
+<div className="flex items-center"w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"
+<Phone className="
 <div>
-<h3 className="text-lg font-semibold text-white mb-1">"
-                        {info.title}
-                      </h3>
-<p className="text-cyan-400 font-medium mb-1">"
+<h3 className="text-lg font-semibold text-white mb-1"text-cyan-400 font-medium mb-1"
                         {info.details}
                       </p>
-<p className="text-gray-300 text-sm">"
+<p className="
                         {info.description}
 
                       </p>
                     </div></div>
-<div className="flex items-center">"
-<div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">"
-<Mail className="w-6 h-6 text-white" /></div>"
+<div className="flex items-center"w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"
+<Mail className="
 <div>
-<h3 className="text-lg font-semibold text-white">Email</h3>"
-<p className="text-gray-300">info@ziontechgroup.com</p></div>"
+<h3 className="text-lg font-semibold text-white"text-gray-300"
 </div>
-<p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>,"
+<p className="
                     </div></div>
 </div></div>
             ))
@@ -352,51 +266,10 @@ const contactInfo = [
 ;
 export default ContactPage;
 
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Page Broken2 - Zion Tech Group</title>
-        <meta name="description" content="Advanced page broken2 solutions by Zion Tech Group" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page Broken2
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT solutions for your business needs.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
-              Comprehensive solution for your business requirements.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-            <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
-              Scalable and secure implementation.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" content="Advanced page broken2 solutions by Zion Tech Group"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600 mb-8"grid md:grid-cols-2 lg:grid-cols-3 gap-8"bg-white rounded-lg shadow-md p-6"text-xl font-semibold text-gray-900 mb-4"text-gray-600"bg-white rounded-lg shadow-md p-6"text-xl font-semibold text-gray-900 mb-4"text-gray-600"bg-white rounded-lg shadow-md p-6"text-xl font-semibold text-gray-900 mb-4"text-gray-600"text-center mt-12"bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
         </div>
       </div>
     </div>
   );
-}

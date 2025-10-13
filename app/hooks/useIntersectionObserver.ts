@@ -2,7 +2,7 @@
   isIntersecting: boolean;
   entry: IntersectionObserverEntry | undefined;
   isIntersecting: boolean,
-  entry: IntersectionObserverEntry | undefined;,}}
+  entry: IntersectionObserverEntry | undefined;,}
 export function useIntersectionObserver(;)
   options: UseIntersectionObserverOptions = {,}): UseIntersectionObserverReturn {const {}
     threshold = 0,;
@@ -75,7 +75,7 @@ if (entry.isIntersecting && freezeOnceVisible) {
         root,
         rootMargin,
 observer.observe(element);
-return () => {observer.disconnect()}}
+return () => {observer.disconnect()}
   }, [threshold, root, rootMargin, freezeOnceVisible]);
-return {ref, isIntersecting, entry}}}
+return {ref, isIntersecting, entry}}
 export default useIntersectionObserver;

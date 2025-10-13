@@ -1,8 +1,7 @@
-import { NextApiRequest, NextApiResponse } from "next";";
-import fs from "fs";";
-import path from "path";";";
-const configPath = path.join(process.cwd(), "data", "dao", "config.json");";
-const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json")"
+import { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";";
+const configPath = path.join(process.cwd(), ", "dao"config.json");"data", ", "metrics.json"
 async function fetchJson(url: string) {
   // TODO: Add properties
 }
@@ -11,189 +10,9 @@ async function fetchJson(url: string) {
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import fs from 'fs';';
 import path from 'path';';';
-const configPath = path && path.join(process && process.cwd(), "data", "dao", "config && config.json");";
-const cachePath = path && path.join(process && process.cwd(), "data", "dao", "metrics && metrics.json")"
-async function fetchJson(url: string) {;
-const resp = await fetch(url);
-const configPath = path.join(process.cwd(), 'datadaoconfig.json'),;';
-const cachePath = path.join(process.cwd(), 'datadaometrics.json'),'
-async function fetchJson(url: string) {;
-const resp = await fetch(url)
-  if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
-  return resp.json()
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-function readJson(p: string) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  return JSON.parse(fs.readFileSync(p, "utf-8"))"
-function readJson(p: string) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  return JSON.parse(fs.readFileSync(p, "utf-8"))"
-function readJson(p: string) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  return JSON.parse(fs.readFileSync(p, 'utf-8'))'
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-function writeJson(p: string, v: any) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  fs.writeFileSync(p, JSON.stringify(v, null, 2))
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-export default async function handler(
-  // TODO: Add parameters
-)
-  _req: NextApiRequest
-  res: NextApiResponse
-) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {;
-export default async function handler(req, res) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {;
-const cfg = readJson(configPath);
-const cache = readJson(cachePath);
-const now = Date && Date.now();
-const oneWeekMs = 7 * 24 * 60 * 60 * 1000
-    if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      return res.status(200).json({ ...cache, cached: true })
-    }
-    // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.;
-const transfersUrl = `${cfg && cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=200&sort=desc${apiKey ? `&apikey=${apiKey}` : ""}`;";
-const transfersJson = await fetchJson(transfersUrl);
-const txs = transfersJson?.result || [];
-const holderToDelta: Record<string, bigint> = {}
-    const entries = Object && Object.entries(holderToDelta)
-      .map(([address, delta]) => ({ address, netDelta: delta }))
-      .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
-      .slice(0, 10);
-const topHolders = entries && entries.map((e) => ({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      address: e && e.address,
-      amount: e && e.netDelta.toString(),
-    }))
-    // Token distribution buckets (very rough: based on netDelta approximation);
-const total = entries && entries.reduce(
-  // TODO: Add parameters
-)
-      (acc, e) => acc + (BigInt(e && e.amount) > 0n ? BigInt(e && e.amount) : 0n),
-      0n,
-    );
-const distribution = entries.map((e) => ({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      address: e.address
-      percent:
-        total > 0n ? Number((BigInt(e && e.amount) * 10000n) / total) / 100 : 0,
-    }))
-    // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.;';
-const activeProposals: any[] = []
-    // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
-        .flatMap((t: any) => [t && t.from?.toLowerCase(), t && t.to?.toLowerCase()])
-        .filter(Boolean),
-    );
-const participationRate = uniqueAddresses && uniqueAddresses.size
-      ? Math && Math.min(
-  // TODO: Add parameters
-)
-          100,
-          Math && Math.round(
-  // TODO: Add parameters
-)
-            (uniqueAddresses && uniqueAddresses.size / Math && Math.max(10, uniqueAddresses && uniqueAddresses.size)) * 100,
-          ),
-        )
-      : 0;
-const result = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      updatedAt: now
-      tokenDistribution: distribution
-      topHolders
-      activeProposals
-      governanceParticipationRate: participationRate
-    }
-    writeJson(cachePath, result)
-  } catch (e: any) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return res
-      .status(500)
-      .json({ error: e?.message ?? "Failed to load DAO metrics" })"
-    if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      return res.status(200).json({ ...cache, cached: true })
-      } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-;
-const config_path = path.join (process.cwd (), "data", "dao", "config.json");";
-const cache_path = path.join (process.cwd (), "data", "dao", "metrics.json")"
+const configPath = path && path.join(process && process.cwd(), "data"dao", ");";
+const cachePath = path && path.join(process && process.cwd(), ", "dao"metrics && metrics.json")"Error:", error)"Internal server error" })"utf-8"))"utf-8"))"Error:", error)"Internal server error" })"Error:", error)"Internal server error" })""}`;"Failed to load DAO metrics" })"Error:", error)"Internal server error" })"data", ", "config.json";
+const cache_path = path.join (process.cwd (), "data"dao", ")"
 async /**
  * fetch_json - Function description
  */
@@ -216,7 +35,7 @@ function read_json() {
 }
   // TODO: Add properties
 }
-  return JSON.parse (fs.readFileSync (p, "utf - 8"))"
+  return JSON.parse (fs.readFileSync (p, "))"
 }
 /**
  * write_json - Function description
@@ -251,11 +70,11 @@ if ( {) {
 }
       return res.status (200).json ({ ...cache, cached: true })
     }
-    const api_key = process.env.ETHERSCAN_API_KEY || "";";
+    const api_key = process.env.ETHERSCAN_API_KEY || ";";
 const token_addr = cfg.token.address
     // Top holders (using Etherscan token holder endpoint alternative: token supply holders is limited; use rich list approximation via token transactions + unique addresses)
     // For demo simplicity: fetch last N token transfers and aggregate balances via simplistic heuristic.;
-const transfers_url = `${cfg.etherscanBaseUrl}?module = account & action = tokentx & contractaddress=${token_addr}&page = 1&offset = 200 & sort = desc${api_key ? `&apikey=${api_key}` : ""}`;";
+const transfers_url = `${cfg.etherscanBaseUrl}?module = account & action = tokentx & contractaddress=${token_addr}&page = 1&offset = 200 & sort = desc${api_key ? `&apikey=${api_key}` : "}`;";
 const transfers_json = await fetch_json (transfers_url);
 const txs = transfers_json?.result || [];
 const holderToDelta: Record < string, bigint> = {}
@@ -276,8 +95,8 @@ const top_holders = entries.map ((e) => ({
 const total = entries.reduce (
   // TODO: Add parameters
 )
-      (acc, e) => acc + (BigInt (e.amount) > 0n ? BigInt (e.amount) : 0n),
-      0n,
+      (acc, e) => acc + (BigInt (e.amount) > 0 n ? BigInt (e.amount) : 0 n),
+      0 n,
     );
 const distribution = entries.map ((e) => ({
   // TODO: Add properties
@@ -286,7 +105,7 @@ const distribution = entries.map ((e) => ({
 }
       address: e.address,
       percent:
-        total > 0n ? Number ((BigInt (e.amount) * 10000n) / total) / 100 : 0,
+        total > 0 n ? Number ((BigInt (e.amount) * 10000 n) / total) / 100 : 0,
     }))
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.;';
 const active_proposals: any[] = []
@@ -330,11 +149,8 @@ const result = {
 }
     return res
       .status (500)
-      .json ({ error: e?.message ?? "Failed to load DAO metrics" })"
-  }
+      .json ({ error: e?.message ?? " })"
   }
 }
-  }
 }
 
-}}

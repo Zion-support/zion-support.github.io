@@ -20,7 +20,6 @@ let _content = fs.readFileSync(filePath, 'utf8')'
         // Remove unnecessary whitespace
         content = content.replace(/\s+/g, ' ')'
 function optimizeCSS() {/* TODO: Fix JSX expression */}
-}
 //   const cssPath = path.join(process.cwd(), '.next/static/css')'
   if (fs.existsSync(cssPath)) {/* TODO: Fix JSX expression */}
         content = content.replace(/;\s*}/g, '}')'
@@ -29,8 +28,6 @@ function optimizeCSS() {/* TODO: Fix JSX expression */}
       }
     })
 //     }
-}
-
 // Optimize JavaScript bundles
 function optimizeJS() {
   // TODO: Add properties
@@ -50,17 +47,12 @@ let _content = fs.readFileSync(filePath, 'utf8')'
           content = content.replace(/console\.warn\([^)]*\);?/g, '')'
           content = content.replace(/console\.info\([^)]*\);?/g, '')'
 function optimizeJS() {/* TODO: Fix JSX expression */}
-}
 //   const jsPath = path.join(process.cwd(), '.next/static/chunks')'
   if (fs.existsSync(jsPath)) {/* TODO: Fix JSX expression */}
-        }
-
         fs.writeFileSync(filePath, content)
       }
     })
 //     }
-}
-
 optimizeCSS()
 optimizeJS()
 //

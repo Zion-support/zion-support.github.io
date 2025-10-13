@@ -20,16 +20,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function ${functionName}() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${title} solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">${title}</h1>
-          <p className="text-xl text-gray-300 mb-8">
+    <div className="min-h-screen bg-gray-900 text-white" content="${title} solutions by Zion Tech Group"container mx-auto px-4 py-20"text-center"text-4 xl font-bold mb-8"text-xl text-gray-300 mb-8">
             This page is under development. Please check back later.
           </p>
         </div>
@@ -42,7 +33,6 @@ export default function ${functionName}() {
 // Function to create a clean component
 function createCleanComponent(componentName) {
   return `import React from 'react';
-
 interface ${componentName}Props {
   className?: string;
   children?: React.ReactNode;
@@ -80,7 +70,6 @@ export class ${utilityName} {
     if (this.config.enabled) {
       console.log('${utilityName} initialized');
     }
-  }
 }
 
 export const ${utilityName.toLowerCase()} = new ${utilityName}();
@@ -125,8 +114,6 @@ function fixFile(filePath) {
     console.error(`Error fixing file ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Function to find all broken files
 function findBrokenFiles(dir) {
   const files = [];
@@ -148,10 +135,7 @@ function findBrokenFiles(dir) {
         if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx')) {
           files.push(fullPath);
         }
-      }
     }
-  }
-  
   traverse(dir);
   return files;
 }
@@ -168,8 +152,6 @@ function main() {
     if (fixFile(file)) {
       fixedCount++;
     }
-  }
-  
   console.log(`Fixed ${fixedCount} files`);
   
   // Run type check to see if we fixed the issues
@@ -180,8 +162,6 @@ function main() {
   } catch (error) {
     console.log('Type check still has errors, but fixed some files.');
   }
-}
-
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }

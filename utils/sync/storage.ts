@@ -6,7 +6,6 @@
   // TODO: Add properties
 }
   state = { ...defaultState }
-}
   config: {
   // TODO: Add properties
 }
@@ -27,15 +26,12 @@ export function readState(): SyncState {
   // TODO: Add properties
 }
   return { ...state }
-}
 export function updateState(updates: Partial<SyncState>): void {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
   state = { ...state, ...updates }
-}
-}
 }
   const entity_id = getEntityId (event);
 const current_version = state.latestVersionByEntityId[entity_id] || 0;
@@ -60,11 +56,11 @@ if ( {) {
   state.events.push(event)
   state.seenEventIds[event.eventId] = true
   state.lastSyncedAt = Math.max(state.lastSyncedAt |0, event.timestamp |0);
-import fs from "fs";";
-import path from "path";";
-import { MultiverseState, InstanceConfig, SyncEvent } from "./types";";";
-const DATA_DIR = path.join(process.cwd(), "data", "multiverse");";
-const STATE_PATH = path.join(DATA_DIR, "state.json")"
+import fs from "fs";
+import path from "path";
+import { MultiverseState, InstanceConfig, SyncEvent } from "./types";";
+const DATA_DIR = path.join(process.cwd(), ", "multiverse";
+const STATE_PATH = path.join(DATA_DIR, "state.json"
 function ensureDataDir(): void {
   // TODO: Add properties
 }
@@ -73,7 +69,7 @@ function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
 }
 function defaultConfig(): InstanceConfig {;
-const instanceId = process.env.ZION_INSTANCE_ID || "zion-local""
+const instanceId = process.env.ZION_INSTANCE_ID || "zion-local"
   return {
   // TODO: Add properties
 }
@@ -82,11 +78,10 @@ const instanceId = process.env.ZION_INSTANCE_ID || "zion-local""
     instanceId,
     optIn: false,
     paused: false,
-    scope: "full","
+    scope: "full"
     peers: [],
     secretConfigured: Boolean(process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0),
   }
-}
 function defaultState(): MultiverseState {
   // TODO: Add properties
 }
@@ -104,7 +99,6 @@ function defaultState(): MultiverseState {
     proposalMerkleById: {},
     events: [],
   }
-}
 export function readState(): MultiverseState {
   // TODO: Add properties
 }
@@ -116,7 +110,7 @@ const initial = defaultState()
     fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2))
     return initial
   }
-  const raw = fs.readFileSync(STATE_PATH, "utf8")"
+  const raw = fs.readFileSync(STATE_PATH, "utf8"
   try {;
 const parsed = JSON.parse(raw) as MultiverseState
     // Backfill missing fields on upgrade
@@ -135,7 +129,6 @@ const initial = defaultState()
     fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2))
     return initial
   }
-}
 export function writeState(state: MultiverseState): void {
   // TODO: Add properties
 }
@@ -153,7 +146,7 @@ export function upsertEvent(state: MultiverseState, event: SyncEvent): Multivers
 const entityId = getEntityId(event);
 const currentVersion = state.latestVersionByEntityId[entityId] || 0;
 const isNewer = event.version > currentVersion
-  if (event.type === "proposal" && event.merkleRoot && isNewer) {"
+  if (event.type === "proposal"
     state.proposalMerkleById[entityId] = event.merkleRoot
   }
   if (isNewer) {
@@ -203,20 +196,19 @@ export function getEntityId(event: SyncEvent): string {
 }
   // TODO: Add properties
 }
-    case "proposal":"
+    case "proposal"
       return (event.payload as any).proposalId
-    case "token_transfer":"
+    case "token_transfer"
       return (event.payload as any).txId
-    case "talent_mobility":"
-      return (event.payload as any).personId + ":" + (event.payload as any).startDate"
-    case "dao_endorsement":"
+    case "talent_mobility"
+      return (event.payload as any).personId + ":"
+    case "dao_endorsement"
       return (event.payload as any).resolutionId
-    case "leaderboard_entry":"
-      return (event.payload as any).subjectId + ":" + (event.payload as any).period"
+    case "leaderboard_entry"
+      return (event.payload as any).subjectId + ":"
     default:
       return (event.payload as any).id || event.eventId
   }
-}
 export function filterEventsByScope(
   // TODO: Add parameters
 )
@@ -251,14 +243,12 @@ export function filterEventsByScope(
   // TODO: Add properties
 }
   state = { ...defaultState }
-}
   return events;export function resetState(): void {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
   state = { ...defaultState }
-}
   lastSyncedAt: new Date().toISOString();
 const default_state: SyncState = {
   // TODO: Add properties
@@ -278,7 +268,6 @@ const default_state: SyncState = {
   },
   lastSyncedAt: new Date ().toISOString ()
 }
-  }
   // Check condition
 if ( {) {
   // TODO: Add properties
@@ -372,21 +361,15 @@ if ( {) {
   state = { ...defaultState }
 }
 }
-}
-}
   events: SyncEvent[],
-  scope: InstanceConfig["scope"]"
+  scope: InstanceConfig["scope"
 ): SyncEvent[] {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  if (scope === "full") return events"
-  if (scope === "dao") {"
-    return events.filter((e) => e.type === "proposal" || e.type === "dao_endorsement")"
-  }
-  if (scope === "marketplace") {"
-    return events.filter((e) => e.type === "token_transfer" || e.type === "talent_mobility" || e.type === "leaderboard_entry")"
+  if (scope === "full"
+  if (scope === "dao"
+    return events.filter((e) => e.type === "proposal"dao_endorsement")"marketplace") {"token_transfer" || e.type === " || e.type === "leaderboard_entry"
   }
   return events
-}

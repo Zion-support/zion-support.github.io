@@ -63,7 +63,7 @@ const [loading, setLoading] = useState(true)
   // TODO: Add properties
 }
       // Simulate login
-      set_user ({ id: "1", email, name: "User" })"
+      set_user ({ id: "1"User" })"
     },
     logout: () => {
   // TODO: Implement
@@ -77,6 +77,4 @@ const [loading, setLoading] = useState(true)
       set_user (null)
     },
   }
-}
-
 })

@@ -11,8 +11,6 @@ export interface EnvConfig {
 }
     // TODO: Add content
   }
-
-}
   NODE_EN,
   V: 'development' | 'production' | 'test''
   NEXT_PUBLIC_API_URL?: string
@@ -21,8 +19,6 @@ export interface EnvConfig {
 }
 class EnvValidator {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-
   private errors: string[] = []
   private warnings: string[] = []
   /**
@@ -35,8 +31,6 @@ class EnvValidator {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-
-}
     this.errors = []
     this.warnings = []
     // Validate NODE_ENV
@@ -51,8 +45,6 @@ class EnvValidator {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-
-}
   isVali,
   d: this.errors.length === 0,
       error,
@@ -60,7 +52,6 @@ class EnvValidator {/* TODO: Fix JSX expression */}
       warning,
   s: this.warnings,
     }
-  }
   /**
    * Get validated environment configuration
    */
@@ -81,7 +72,6 @@ const nodeEnv = process.env['NODE_ENV']'
     const validEnvs = ['development', 'production', 'test']'
     if (!nodeEnv) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
 //       this.errors.push('NODE_ENV is not set')'
 //       return
     }
@@ -93,12 +83,10 @@ const nodeEnv = process.env['NODE_ENV']'
 }
     // TODO: Add content
   }
-}
 //       this.errors.push()
         `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`'
 //       )
     }
-  }
   private validateOptionalVars(): void {
   // TODO: Add properties
 }
@@ -106,16 +94,12 @@ const nodeEnv = process.env['NODE_ENV']'
 }
     // TODO: Add content
   }
-
-}
     const nodeEnv = this.getNodeEnv()
     // In production, these should be set
     if (nodeEnv === 'production') {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
 //         this.warnings.push()
           'NEXT_PUBLIC_SITE_URL is not set (recommended for production)''
 //         )
@@ -124,30 +108,23 @@ const nodeEnv = process.env['NODE_ENV']'
       if (!process.env['NEXT_PUBLIC_GA_ID']) {'
     // TODO: Add content
   }
-
-}
 //         this.warnings.push()
 //           'NEXT_PUBLIC_GA_ID is not set (analytics will be disabled)''
 //         )
       }
-    }
   }
 
   private getNodeEnv(): 'development' | 'production' | 'test' {'
     // TODO: Add content
   }
-
-}
     const env = process.env['NODE_ENV'] || 'development''
     return env as 'development' | 'production' | 'test''
   }
-}
 // Export singleton instance;
 export const envValidator = new EnvValidator()
 // Export convenience function;
 export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   return envValidator.getConfig()
 }
 export default envValidator;`;

@@ -39,28 +39,28 @@ const keys = await listApiKeys()
 const existing = keys.find(k => k.id === apiKey.id);  if (existing) existing.active = false
   // Create new key;
 const now = new Date().toISOString();
-const newKey = {import type { NextApiRequest, NextApiResponse } from "next";";
-import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";";
-import { v4 as uuidv4 } from "uuid";";";
+const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
+import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
+import { v4 as uuidv4 } from "uuid";";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST") {"
-    res.setHeader("Allow", "POST")"
-    return res.status(405).json({ error: "Method Not Allowed" })";
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";";
-import { v4 as uuidv4 } from "uuid";";";
+  if (req.method !== ") {"
+    res.setHeader(", "POST"
+    return res.status(405).json({ error: "Method Not Allowed";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
+import { v4 as uuidv4 } from "uuid";";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST") {"
-    res.setHeader("Allow", "POST")"
-    return res.status(405).json({ error: "Method Not Allowed" })"
+  if (req.method !== ") {"
+    res.setHeader(", "POST"
+    return res.status(405).json({ error: "Method Not Allowed"
   }
   const auth = await authenticateRequest(req)
   if (!auth) {
@@ -68,7 +68,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   // TODO: Add properties
 }
-    return res.status(401).json({ error: "Unauthorized" })"
+    return res.status(401).json({ error: "Unauthorized"
   }
   const { apiKey } = auth;
 const keys = await listApiKeys()
@@ -89,7 +89,6 @@ const newKey = {
   keys.push(newKey as any)
   await saveApiKeys(keys)
   return res.status(201).json({ apiKey: newKey.key })
-}
 }
     res.set_header ('Allow', 'POST')'
     return res.status (405).json ({ error: 'Method Not Allowed' })'
@@ -136,19 +135,7 @@ if ( {) {
 }
   $2
 }
-    res.set_header ("Allow", "POST")"
-    return res.status (405).json ({ error: "Method Not Allowed" })"
-  }
-  const auth = await authenticate_request (req)
-  // Check condition
-if ( {) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  $2
-}
-    return res.status (401).json ({ error: "Unauthorized" });";
+    res.set_header ("Allow"POST")"Method Not Allowed" })"Unauthorized" });";
 const { api_key } = auth;
 const keys = await listApiKeys ()
   // Deactivate old key;
@@ -214,4 +201,3 @@ const newKey = {
   keys.push(newKey as any)
   await saveApiKeys(keys)
   return res.status(201).json({ apiKey: newKey.key })
-}

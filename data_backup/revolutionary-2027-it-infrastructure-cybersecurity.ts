@@ -1,6 +1,6 @@
 impor,
   t: { ServiceVariant } from '../types/service-variants'; expor,''
-  t: interface Revolutionary2027ITInfrastructureCybersecurityService {/* TODO: Fix JSX expression */}
+  t: interface Revolutionary2027 ITInfrastructureCybersecurityService {/* TODO: Fix JSX expression */}
   e: '2027-02-2,0'} customer,'
   s: 45,0, ratin,
   g: 4.,8, review,

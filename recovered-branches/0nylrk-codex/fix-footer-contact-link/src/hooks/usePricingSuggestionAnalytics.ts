@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';';
-import { supabase } from "@/integrations/supabase/client";"
+import { supabase } from "@/integrations/supabase/client"
 interface PricingSuggestionAnalytics {
   // TODO: Add properties
 }
@@ -8,7 +8,8 @@ interface PricingSuggestionAnalytics {
   totalSuggestions: number
   acceptanceRate: number
   averagePriceGap: number
-  suggestionsByCategory: { category: string; count: number; acceptanceRate: number }[]
+  suggestionsByCategory: { category: string;
+count: number; acceptanceRate: number }[]
   recentSuggestions: {
   // TODO: Add properties
 }
@@ -125,7 +126,7 @@ const mockData = {
 }
   // TODO: Add properties
 }
-        console.error("Error fetching pricing suggestion analytics:", error)"
+        console.error("Error fetching pricing suggestion analytics:"
         setAnalytics({
   // TODO: Add properties
 }
@@ -133,11 +134,9 @@ const mockData = {
 }
           ...analytics,
           isLoading: false,
-          error: "Failed to load pricing analytics data.""
+          error: "Failed to load pricing analytics data."
         })
       }
-    }
     fetchAnalytics()
   }, [days])
   return analytics
-}

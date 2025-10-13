@@ -18,7 +18,7 @@ const client = getClient()
 }
   // TODO: Add properties
 }
-    model: process.env.OPENAI_MODEL || 'gpt-4o-mini','
+    model: process.env.OPENAI_MODEL || 'gpt-4 o-mini','
     messages: [
   // TODO: Add items
 ]
@@ -32,4 +32,3 @@ const client = getClient()
     temperature: 0.4,
   })
   return resp.choices?.[0]?.message?.content || '''
-}

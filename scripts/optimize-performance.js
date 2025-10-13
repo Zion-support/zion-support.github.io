@@ -40,21 +40,17 @@ function optimizeComponent(filePath) {/* TODO: Fix JSX expression */}
     // console.error(`❌ Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to add performance optimizations
 async function addPerformanceOptimizations() {;
 const componentFiles = await glob('app/components/**/*.{ts,tsx}', {)'
     ignore: ['**/node_modules/**', '**/dist/**', '**/build/**'])'
 async function addPerformanceOptimizations() {/* TODO: Fix JSX expression */}
-}
   const componentFiles = await glob('app/components/**/*.{ts,tsx}', {/* TODO: Fix JSX expression */})'
   })
   // console.log('🚀 Analyzing components for performance optimizations...\n');';
 let totalFiles = 0;
 let optimizedFiles = 0
   for (const file of componentFiles) {/* TODO: Fix JSX expression */}
-    }
   }
 
   // console.log(`\n📊 Performance Analysis Summary: `),
@@ -82,7 +78,6 @@ function createPerformanceMonitor() {/* TODO: Fix JSX expression */}
 }`;
 const performanceMonitorContent = `import React, { useEffect, useState } from 'react';'
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-}
 ;
 export default PerformanceMonitor;`;
 `
@@ -100,7 +95,6 @@ function createImageOptimization() {/* TODO: Fix JSX expression */}
 }`;
 const imageOptimizationContent = `import React from 'react';'
 interface OptimizedImageProps {/* TODO: Fix JSX expression */}
-}
 ;
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   // TODO: Add properties
@@ -126,7 +120,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       height={height})
       className={\`\${className}\`})
       loading={priority ? 'eager' : 'lazy'})'
-      decoding="async")"
+      decoding="async"
       style={{})
         width: width ? \`\${width}px\` : 'auto')'
         height: height ? \`\${height}px\` : 'auto''
@@ -139,12 +133,12 @@ const,
       height={height}`
       className={\`\${className}\`}
       loading={priority ? 'eager' : 'lazy'}'
-      decoding="async""
+      decoding="async"
       style={/* TODO: Fix JSX expression */}`
   h: width ? \`\${width}px\` : 'auto','
         heigh,`
   t: height ? \`\${height}px\` : 'auto''
-      }}
+      }
     />
 </img>
   )
@@ -163,7 +157,6 @@ async function main() {
   // TODO: Add properties
 }
 async function main() {/* TODO: Fix JSX expression */}
-}
   // console.log('🚀 Starting performance optimization...\n')'
   await addPerformanceOptimizations()
   createPerformanceMonitor()

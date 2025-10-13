@@ -124,7 +124,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     useCases: ['Inventory optimization', 'Demand forecasting', 'Cost reduction', 'Supplier management', 'Multi-location tracking', 'Seasonal planning'],'
     roi: 'Average customer achieves 300% ROI within 4 months through reduced inventory costs and improved stock management.','
     competitors: ['TradeGecko', 'Zoho Inventory', 'Fishbowl', 'SAP Business One', 'Oracle NetSuite'],'
-    marketSize: '$8B market','
+    marketSize: '$8 B market','
     growthRate: '180% annual growth','
     variant: 'business-futuristic','
     contactInfo: {
@@ -187,7 +187,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     useCases: ['Business automation', 'Legal contracts', 'Supply chain management', 'Payment automation', 'Asset management', 'Compliance tracking'],'
     roi: 'Average business achieves 400% ROI within 3 months through process automation and reduced legal costs.','
     competitors: ['OpenZeppelin', 'ConsenSys', 'Chainlink', 'Truffle', 'Hardhat'],'
-    marketSize: '$3B market','
+    marketSize: '$3 B market','
     growthRate: '250% annual growth','
     variant: 'blockchain-futuristic','
     contactInfo: {
@@ -250,7 +250,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     useCases: ['Customer success management', 'Churn prevention', 'Revenue expansion', 'Customer engagement', 'Success planning', 'Performance analytics'],'
     roi: 'Average SaaS company achieves 500% ROI within 6 months through increased customer lifetime value and reduced churn.','
     competitors: ['Gainsight', 'Totango', 'ClientSuccess', 'Planhat', 'Vitally'],'
-    marketSize: '$5B market','
+    marketSize: '$5 B market','
     growthRate: '200% annual growth','
     variant: 'customer-success-futuristic','
     contactInfo: {
@@ -313,7 +313,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     useCases: ['Process automation', 'Task management', 'Workflow optimization', 'Team collaboration', 'Document automation', 'Approval processes'],'
     roi: 'Average business achieves 300% ROI within 3 months through process automation and efficiency improvements.','
     competitors: ['Zapier', 'Make', 'IFTTT', 'Microsoft Power Automate', 'Automate.io'],'
-    marketSize: '$6B market','
+    marketSize: '$6 B market','
     growthRate: '180% annual growth','
     variant: 'automation-futuristic','
     contactInfo: {
@@ -376,7 +376,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [;
     useCases: ['Investment management', 'Financial planning', 'Portfolio optimization', 'Risk management', 'Tax optimization', 'Retirement planning'],'
     roi: 'Average investor achieves 200% ROI within 12 months through optimized investment strategies and reduced fees.','
     competitors: ['Betterment', 'Wealthfront', 'Robinhood', 'Acorns', 'Personal Capital'],'
-    marketSize: '$15B market','
+    marketSize: '$15 B market','
     growthRate: '220% annual growth','
     variant: 'finance-futuristic','
     contactInfo: {

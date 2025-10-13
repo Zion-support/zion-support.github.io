@@ -26,7 +26,6 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
   s: true, result }
   } catch (error) {/* TODO: Fix JSX expression */}
   r: error.message }
-  }
 }
 
 //Function to check if branch exists
@@ -49,7 +48,6 @@ function branchExists(branchName) {/* TODO: Fix JSX expression */}
     )
     return true
   } catch {/* TODO: Fix JSX expression */}
-  }
 }
 
 //Current PRs to process;
@@ -65,8 +63,8 @@ const prs = [
 }
     number: 11935,
     title: 'Fix web application console errors''
-    branch: 'cursor/fix-web-application-console-errors-0bf5','
-    sha: 'd4e66d09ceb2c6c48f1f522df7030a5261c4c661','
+    branch: 'cursor/fix-web-application-console-errors-0 bf5','
+    sha: 'd4 e66 d09 ceb2 c6 c48 f1 f522 df7030 a5261 c4 c661','
     priority: 'high'},'
   {
   // TODO: Add properties
@@ -75,8 +73,8 @@ const prs = [
 }
     number: 25063,
     title: 'Build and deploy with vite and netlify''
-    branch: 'cursor/build-and-deploy-with-vite-and-netlify-8b37','
-    sha: 'd2deed6f7d4ef805058d58bdadeb11ca5a746580','
+    branch: 'cursor/build-and-deploy-with-vite-and-netlify-8 b37','
+    sha: 'd2 deed6 f7 d4 ef805058 d58 bdadeb11 ca5 a746580','
     priority: 'medium'},'
   {
   // TODO: Add properties
@@ -85,7 +83,7 @@ const prs = [
 }
     number: 25062,
     title: 'Fix errors and merge to main''
-    branch: 'cursor/fix-errors-and-merge-to-main-fcbd','
+    branch: '','
     sha: 'a5 f35 d4 a9 ddcf46941 c797 da316 bb3 a2 b7 b05 b56','
     priority: 'high'},'
   {
@@ -95,8 +93,8 @@ const prs = [
 }
     number: 25061,
     title: 'Fix errors and merge to main''
-    branch: 'cursor/fix-errors-and-merge-to-main-e6e1','
-    sha: '29f97d68b44ddf467a8bada29cb68cb2100d59db','
+    branch: '','
+    sha: '29 f97 d68 b44 ddf467 a8 bada29 cb68 cb2100 d59 db','
     priority: 'high','
   {/* TODO: Fix JSX expression */}
   },
@@ -144,7 +142,7 @@ for (const pr of prs) {/* TODO: Fix JSX expression */}`
   }
 
 //   //Try to merge the branch;
-const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`)"
+const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"
     `Merge ${pr.branch}`
   )
   if (mergeResult.success) {
@@ -173,7 +171,7 @@ const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Me
       branch: pr.branch),
       error: mergeResult.error),
 //   //Try to merge the branch;`;
-const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"`,`"
+const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Merge PR #${pr.number}: ${pr.title}"
     `Merge ${pr.branch}`)
   )
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
@@ -183,8 +181,6 @@ const mergeResult = safeGitCommand(`git merge origin/${pr.branch} --no-ff -m "Me
     results.push({/* TODO: Fix JSX expression */})
     })
   }
-}
-
 //Run system checks
 // const typeCheck = safeGitCommand('pnpm run type-check')'
   'TypeScript type checking''
@@ -217,8 +213,6 @@ const buildCheck = safeGitCommand('pnpm run,'
 if (mergedCount > 0) {/* TODO: Fix JSX expression */}
 //     } else {/* TODO: Fix JSX expression */}
 //     }
-}
-
 //Generate comprehensive report;
 const report = {
   // TODO: Add properties

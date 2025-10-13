@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'broken-image-scanner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'broken-image-scanner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'broken-image-scanner',' source: event.source || 'unknown', scanning: {' status: 'active', imagesScanned: 0, brokenFound: 0,'
         lastScan: new Date().toISOString() } }) } return result; } catch (error) {

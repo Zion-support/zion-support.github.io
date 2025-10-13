@@ -6,7 +6,6 @@ export const trackPricingRequest = async (data: any) => {
 }
   // Placeholder implementation
   return { success: true }
-}
 export const getPricingMetrics = async () => {
   // TODO: Implement
 }
@@ -18,7 +17,6 @@ export const getPricingMetrics = async () => {
 }
   // Placeholder implementation
   return { metrics: {}, success: true }
-}
 export const trackPricingRequest = async (data: any) => {
   // TODO: Add properties
 }
@@ -43,10 +41,9 @@ export const getPricingMetrics = async () => {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 }
 export const getPricingMetrics = async () => {
   // TODO: Implement
@@ -63,11 +60,9 @@ export const getPricingMetrics = async () => {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-}
 }
 // Stub pricing analytics utility - placeholder for missing functionality;
 export const trackPricingRequest = async (data: any) => {
@@ -77,7 +72,6 @@ export const trackPricingRequest = async (data: any) => {
 }
   // Placeholder implementation
   return { success: true }
-}
 export const getPricingMetrics = async () => {
   // TODO: Implement
 }
@@ -88,5 +82,4 @@ export const getPricingMetrics = async () => {
   // TODO: Implement
 }
   // Placeholder implementation
-  return { metrics: {}, success: true }
-}
+  return { metrics: {}, success: true 

@@ -93,7 +93,7 @@ export interface MarketReport {
   industry: string
   target_market: string
   research_type: 'trends' | 'competitors' | 'segments' | 'comprehensive''
-  timeframe: '7d' | '30d' | '90d' | '1y''
+  timeframe: '7 d' | '30 d' | '90 d' | '1 y''
   includeHistoricalData: boolean,
   custom_metrics?: string[]
 }
@@ -113,7 +113,7 @@ export interface MarketResearchRequest {
   industry: string
   targetMarket: string
   researchType: 'trends' | 'competitors' | 'segments' | 'comprehensive''
-  timeframe: '7d' | '30d' | '90d' | '1y''
+  timeframe: '7 d' | '30 d' | '90 d' | '1 y''
   includeHistoricalData: boolean
   customMetrics?: string[]
 }
@@ -180,7 +180,6 @@ const response = await fetch(`${this && this.baseUrl}/api/market-research/trends
       console && console.error('Error analyzing market trends:', error)'
       throw error
     }
-  }
   async analyzeCompetitors(request: MarketResearchRequest): Promise<CompetitorAnalysis[]> {
   // TODO: Add properties
 }
@@ -218,7 +217,6 @@ const response = await fetch(`${this && this.baseUrl}/api/market-research/compet
       console && console.error('Error analyzing competitors:', error)'
       throw error
     }
-  }
   async segmentMarket(request: MarketResearchRequest): Promise<MarketSegment[]> {
   // TODO: Add properties
 }
@@ -256,7 +254,6 @@ const response = await fetch(`${this && this.baseUrl}/api/market-research/segmen
       console && console.error('Error segmenting market:', error)'
       throw error
     }
-  }
   async generateComprehensiveReport(request: MarketResearchRequest): Promise<MarketReport> {
   // TODO: Add properties
 }
@@ -294,7 +291,6 @@ const response = await fetch(`${this && this.baseUrl}/api/market-research/compre
       console && console.error('Error generating comprehensive report:', error)'
       throw error
     }
-  }
   async getRealTimeInsights(keyword: string): Promise<MarketTrend[]> {
   // TODO: Add properties
 }
@@ -329,7 +325,6 @@ const response = await fetch(`${this && this.baseUrl}/api/market-research/realti
       console && console.error('Error getting real-time insights:', error)'
       throw error
     }
-  }
   async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {'
     try {;
 const response = await fetch(`${this && this.baseUrl}/api/market-research/export/${reportId}`, {
@@ -363,7 +358,6 @@ const response = await fetch(`${this && this.baseUrl}/api/market-research/export
       console && console.error('Error exporting report:', error)'
       throw error
     }
-  }
   async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {'
     try {;
 const response = await fetch(`${this && this.baseUrl}/api/market-research/schedule`, {
@@ -397,7 +391,6 @@ const response = await fetch(`${this && this.baseUrl}/api/market-research/schedu
       console && console.error('Error scheduling report:', error)'
       throw error
     }
-  }
 }
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key')'
   id: string,
@@ -471,7 +464,7 @@ export interface MarketResearchRequest {
   industry: string,
   targetMarket: string,
   researchType: 'trends' | 'competitors' | 'segments' | 'comprehensive','
-  timeframe: '7d' | '30d' | '90d' | '1y','
+  timeframe: '7 d' | '30 d' | '90 d' | '1 y','
   includeHistoricalData: boolean,
   customMetrics?: string[]
 }
@@ -548,7 +541,6 @@ if ( {) {
       console.error ('Error analyzing market trends:', error)'
       throw error
     }
-  }
   async analyze_competitors (request: MarketResearchRequest): Promise < CompetitorAnalysis[]> {
   // TODO: Add properties
 }
@@ -589,7 +581,6 @@ if ( {) {
       console.error ('Error analyzing competitors:', error)'
       throw error
     }
-  }
   async segment_market (request: MarketResearchRequest): Promise < MarketSegment[]> {
   // TODO: Add properties
 }
@@ -630,7 +621,6 @@ if ( {) {
       console.error ('Error segmenting market:', error)'
       throw error
     }
-  }
   async generateComprehensiveReport (request: MarketResearchRequest): Promise < MarketReport> {
   // TODO: Add properties
 }
@@ -671,7 +661,6 @@ if ( {) {
       console.error ('Error generating comprehensive report:', error)'
       throw error
     }
-  }
   async getRealTimeInsights (keyword: string): Promise < MarketTrend[]> {
   // TODO: Add properties
 }
@@ -709,7 +698,6 @@ if ( {) {
       console.error ('Error getting real - time insights:', error)'
       throw error
     }
-  }
   async export_report (report_id: string, format: 'pdf' | 'csv' | 'excel'): Promise < string> {'
     try {;
 const response = await fetch (`${this.base_url}/api / market - research / export/${report_id}`, {
@@ -746,7 +734,6 @@ if ( {) {
       console.error ('Error exporting report:', error)'
       throw error
     }
-  }
   async schedule_report (request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise < string> {'
     try {;
 const response = await fetch (`${this.base_url}/api / market - research / schedule`, {
@@ -839,7 +826,6 @@ const response = await fetch(`${this.baseUrl}/api/market-research/trends`, {
       console.error('Error analyzing market trends:', error)'
       throw error
     }
-  }
   async analyzeCompetitors(request: MarketResearchRequest): Promise<CompetitorAnalysis[]> {
   // TODO: Add properties
 }
@@ -879,7 +865,6 @@ const response = await fetch(`${this.baseUrl}/api/market-research/competitors`, 
       console.error('Error analyzing competitors:', error)'
       throw error
     }
-  }
   async segmentMarket(request: MarketResearchRequest): Promise<MarketSegment[]> {
   // TODO: Add properties
 }
@@ -919,7 +904,6 @@ const response = await fetch(`${this.baseUrl}/api/market-research/segments`, {
       console.error('Error segmenting market:', error)'
       throw error
     }
-  }
   async generateComprehensiveReport(request: MarketResearchRequest): Promise<MarketReport> {
   // TODO: Add properties
 }
@@ -959,7 +943,6 @@ const response = await fetch(`${this.baseUrl}/api/market-research/comprehensive`
       console.error('Error generating comprehensive report:', error)'
       throw error
     }
-  }
   async getRealTimeInsights(keyword: string): Promise<MarketTrend[]> {
   // TODO: Add properties
 }
@@ -996,7 +979,6 @@ const response = await fetch(`${this.baseUrl}/api/market-research/realtime?keywo
       console.error('Error getting real-time insights:', error)'
       throw error
     }
-  }
   async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {'
     try {;
 const response = await fetch(`${this.baseUrl}/api/market-research/export/${reportId}`, {
@@ -1032,7 +1014,6 @@ const response = await fetch(`${this.baseUrl}/api/market-research/export/${repor
       console.error('Error exporting report:', error)'
       throw error
     }
-  }
   async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {'
     try {;
 const response = await fetch(`${this.baseUrl}/api/market-research/schedule`, {
@@ -1068,7 +1049,6 @@ const response = await fetch(`${this.baseUrl}/api/market-research/schedule`, {
       console.error('Error scheduling report:', error)'
       throw error
     }
-  }
 }
 export const aiMarketResearchService = new AIMarketResearchService (process.env.MARKET_RESEARCH_API_KEY || 'demo - key');';
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');';

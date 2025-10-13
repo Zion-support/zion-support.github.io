@@ -7,4 +7,3 @@
   // Placeholder for persistence, echo the response for now;
 const payload = { talentId, action, at: new Date().toISOString() }
   return res.status(200).json({ ok: true, data: payload })
-}

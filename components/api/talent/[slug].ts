@@ -41,9 +41,6 @@ const { item, translated } = applyTranslations(base, lang)
 }
 }
 }
-}
-}
-}
 import { supabase as supabaseClient } from '@/utils/supabase/client';';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';';
 import type { TalentProfile } from '@/utils/types/talent';';';
@@ -61,7 +58,6 @@ const translated: Partial<TalentProfile> = {}
   if (t.bio?.[lang]) translated.bio = t.bio[lang]
   if (t.category?.[lang]) translated.category = t.category[lang]
   return { item: { ...item, ...translated }, translated: Object.keys(translated).length > 0 }
-}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
@@ -92,5 +88,4 @@ const { item, translated } = applyTranslations(base, lang)
   // TODO: Add properties
 }
     return res.status(500).json({ error: e.message })
-  }
-}
+  

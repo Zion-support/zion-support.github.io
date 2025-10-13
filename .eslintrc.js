@@ -16,7 +16,7 @@ module.exports = {
     '@typescript-eslint/recommended','
     'plugin:react/recommended','
     'plugin:react-hooks/recommended','
-    'plugin:jsx-a11y/recommended','
+    'plugin:jsx-a11 y/recommended','
     'next/core-web-vitals','
   ],
   parser: '@typescript-eslint/parser','
@@ -38,7 +38,7 @@ module.exports = {
     'react','
     'react-hooks','
     '@typescript-eslint','
-    'jsx-a11y','
+    'jsx-a11 y','
   ],
   settings: {
   // TODO: Add properties

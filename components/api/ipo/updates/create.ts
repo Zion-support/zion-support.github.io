@@ -4,7 +4,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   // TODO: Add properties
 }
-}
 import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage';';
 import { requireSuperadminApi } from '../../../../utils / api / auth';';
 import { v4 as uuidv4 } from 'uuid';';';
@@ -57,7 +56,6 @@ const update = { id: uuidv4(), title, date: date || new Date().toISOString().sli
 }
   res.status(200).json(update)
 }
-}
   if (return res.status (405).json ({ error: 'Method not allowed' })) {'
   $2
 }
@@ -71,7 +69,6 @@ const update = { id: uuidv4 (), title, date: date || new Date ().toISOString ().
   writeJsonFile ('updates.json', updates)'
   res.status (200).json (update)
   res.status(200).json(update)
-}
 }
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';';
 import { requireSuperadminApi } from '../../../../utils/api/auth';';
@@ -90,4 +87,3 @@ const update = { id: uuidv4(), title, date: date || new Date().toISOString().sli
   updates.unshift(update)
   writeJsonFile('updates.json', updates)'
   res.status(200).json(update)
-}

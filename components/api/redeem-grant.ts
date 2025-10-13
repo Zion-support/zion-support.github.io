@@ -57,35 +57,14 @@ const { studentEmail, grantCode, courseId } = req.body |{}
 }
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400)
     return res.status(400).json({ error: 'Missing required fields' })';
-import type { NextApiRequest, NextApiResponse } from "next";";
-import fs from "fs-extra";";
-import path from "path";";
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";";
-import { v4 as uuidv4 } from "uuid";";";
-const REDEMPTIONS_FILE = path.join(process.cwd(), "data", "partners", "grant-redemptions.json");";
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-const started = Date.now();
-const auth = await authenticateRequest(req)
-  if (!auth) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return res && res.status(401).json({ error: "Unauthorized" })"
-  }
-  if (!(await enforceRateLimit(auth && auth.apiKey))) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 429)
-    return res && res.status(429).json({ error: "Rate limit exceeded" })"
-  }
-  if (req.method !== "POST") {"
-    res.setHeader("Allow", "POST")"
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
+import { v4 as uuidv4 } from "uuid";";
+const REDEMPTIONS_FILE = path.join(process.cwd(), ", "partners"grant-redemptions.json");"Unauthorized" })"Rate limit exceeded" })"POST") {"Allow", ")"
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 405)
-    return res.status(405).json({ error: "Method Not Allowed" })"
+    return res.status(405).json({ error: " })"
   }
   const { studentEmail, grantCode, courseId } = req.body |{}
   if (!studentEmail |!grantCode |!courseId) {;
@@ -192,7 +171,7 @@ if ( {) {
 }
   $2
 }
-    return res.status (401).json ({ error: "Unauthorized" })"
+    return res.status (401).json ({ error: " })"
   }
   if ()) {) {
   // TODO: Add properties
@@ -202,7 +181,7 @@ if ( {) {
   $2
 }
     await record_request (req, res, auth.partner, auth.api_key, started, 429)
-    return res.status (429).json ({ error: "Rate limit exceeded" })"
+    return res.status (429).json ({ error: " })"
   }
   // Check condition
 if ( {) {
@@ -212,9 +191,9 @@ if ( {) {
 }
   $2
 }
-    res.set_header ("Allow", "POST")"
+    res.set_header (", "POST"
     await record_request (req, res, auth.partner, auth.api_key, started, 405)
-    return res.status (405).json ({ error: "Method Not Allowed" })"
+    return res.status (405).json ({ error: "Method Not Allowed"
   }
   const { student_email, grant_code, course_id } = req.body || {}
   // Check condition
@@ -256,7 +235,7 @@ const auth = await authenticateRequest(req)
 }
   // TODO: Add properties
 }
-    return res.status(401).json({ error: "Unauthorized" })"
+    return res.status(401).json({ error: "Unauthorized"
   }
   if (!(await enforceRateLimit(auth.apiKey))) {
   // TODO: Add properties
@@ -264,41 +243,10 @@ const auth = await authenticateRequest(req)
   // TODO: Add properties
 }
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429),
-    return res.status(429).json({ error: "Rate limit exceeded" })"
+    return res.status(429).json({ error: "Rate limit exceeded"
   }
-  if (req.method !== "POST") {"
-    res.setHeader("Allow", "POST"),"
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405),
-    return res.status(405).json({ error: "Method Not Allowed" })"
-  }
-  const { studentEmail, grantCode, courseId } = req.body || {},
-  if (!studentEmail || !grantCode || !courseId) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400),
-    return res.status(400).json({ error: "Missing required fields" })"
-  }
-  const { studentEmail, grantCode, courseId } = req.body || {},
-  if (!studentEmail || !grantCode || !courseId) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400),
-    return res.status(400).json({ error: "Missing required fields" })"
-  }
-  await fs.ensureDir(path.dirname(REDEMPTIONS_FILE)),;
-const records = (await fs.pathExists(REDEMPTIONS_FILE)) ? await fs.readJSON(REDEMPTIONS_FILE) : [];
-const now = new Date().toISOString();
-const record = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    id: uuidv4(),;
-const REDEMPTIONS_FILE = path.join(process.cwd(), "data", "partners", "grant-redemptions.json");";
+  if (req.method !== "POST"
+    res.setHeader("Allow"POST"),"Method Not Allowed" })"Missing required fields" })"Missing required fields" })"data", ", "grant-redemptions.json";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 const started = Date.now();
 const auth = await authenticateRequest(req)
@@ -307,7 +255,7 @@ const auth = await authenticateRequest(req)
 }
   // TODO: Add properties
 }
-    return res.status(401).json({ error: "Unauthorized" })"
+    return res.status(401).json({ error: "Unauthorized"
   }
   if (!(await enforceRateLimit(auth.apiKey))) {
   // TODO: Add properties
@@ -315,21 +263,10 @@ const auth = await authenticateRequest(req)
   // TODO: Add properties
 }
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429)
-    return res.status(429).json({ error: "Rate limit exceeded" })"
+    return res.status(429).json({ error: "Rate limit exceeded"
   }
-  if (req.method !== "POST") {"
-    res.setHeader("Allow", "POST")"
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 405)
-    return res.status(405).json({ error: "Method Not Allowed" })"
-  }
-  const { studentEmail, grantCode, courseId } = req.body || {}
-  if (!studentEmail || !grantCode || !courseId) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400)
-    return res.status(400).json({ error: "Missing required fields" })"
+  if (req.method !== "POST"
+    res.setHeader("Allow"POST")"Method Not Allowed" })"Missing required fields" })"
   }
   await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
 const records = (await fs.pathExists(REDEMPTIONS_FILE)) ? await fs.readJSON(REDEMPTIONS_FILE) : [];
@@ -364,4 +301,4 @@ const record = {
   return res.status(201).json({ id: record.id, redeemedAt: now })
 }
 
-}}}}}}}}}}
+}}}}}}}}

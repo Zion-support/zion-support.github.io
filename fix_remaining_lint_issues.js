@@ -92,8 +92,6 @@ function fixRemainingLintIssues(filePath) {
   // TODO: Add properties
 }
 function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
-    }
-
     // Fix,
   1: Add underscore prefix to unused parameters,
     content = content.replace(/(\w+):\s*(\w+)\s*=\s*[^)]+\)\s*=>/g, (match, param1, param2) => {/* TODO: Fix JSX expression */}
@@ -302,10 +300,7 @@ function fixRemainingLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix,
   2: Comment out unused variable declarations
     for (let i = 0; i < lines.length, i++) {/* TODO: Fix JSX expression */}
-          }
         }
-      }
-
       // Fix 3: Add underscore prefix to unused function parameters,
       if (line.includes('function') && line.includes('(') && line.includes(')')) {'
         if (paramMatch) {;
@@ -386,7 +381,6 @@ const fixedParams = params.map(p => {)
             modified = true
             continue
           }
-        }
       }
 
       fixedLines.push(line)
@@ -429,11 +423,8 @@ const fixedParams = params.map(p => {)
     }
 
     if (modified) {/* TODO: Fix JSX expression */}
-    }
-
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Function to recursively fix remaining lint issues
@@ -466,7 +457,6 @@ function fixAllRemainingLintIssues(_dir) {
           if (['node_modules', '.git', 'dist', '.next', 'media', '__tests__'].includes(file)) {'
             continue
 function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
-          }
           fixedCount += fixAllRemainingLintIssues(filePath)
         } else if ()
           file.endsWith('.tsx') ||'
@@ -474,15 +464,12 @@ function fixAllRemainingLintIssues(_dir) {/* TODO: Fix JSX expression */}
           file.endsWith('.js') ||'
           file.endsWith('.jsx')'
         ) {/* TODO: Fix JSX expression */}
-          }
         }
       } catch (error) {/* TODO: Fix JSX expression */}
-      }
     }
 
     return fixedCount
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Main execution

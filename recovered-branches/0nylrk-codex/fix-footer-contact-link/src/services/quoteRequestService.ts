@@ -1,5 +1,5 @@
-import { supabase } from "@/integrations/supabase/client";";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";";";
+import { supabase } from "@/integrations/supabase/client";
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes";";
 export const quoteRequestService = {
   // TODO: Add properties
 }
@@ -86,7 +86,6 @@ const { data } = await supabase
 }
         updates.viewed_at = new Date().toISOString()
       }
-    }
     const { data, error } = await supabase
       .from('quote_requests')'
       .update(updates)
@@ -113,5 +112,4 @@ const { error } = await supabase
       .eq('id', id)'
     if (error) throw error
     return true
-  }
-}
+  

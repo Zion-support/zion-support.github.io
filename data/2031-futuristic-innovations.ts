@@ -94,7 +94,7 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [;
     useCases: ['Conscious AI development', 'Ethical AI research', 'Philosophical AI systems', 'Advanced robotics', 'AI consciousness studies'],'
     roi: 'Research institutions achieve 1200% ROI through breakthrough AI consciousness research and commercial applications.','
     competitors: ['Research-only solutions (OpenAI, Anthropic), No commercial consciousness platforms'],'
-    marketSize: '$8.5B AI consciousness market','
+    marketSize: '$8.5 B AI consciousness market','
     growthRate: '600% annual growth','
     contactInfo: {
   // TODO: Add properties
@@ -159,7 +159,7 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [;
     useCases: ['Drug discovery', 'Protein folding', 'Genetic analysis', 'Quantum simulations', 'Biological computing'],'
     roi: 'Pharmaceutical companies achieve 800% ROI through accelerated drug discovery and molecular modeling.','
     competitors: ['Traditional quantum computing (IBM, Google), No DNA-computing integration'],'
-    marketSize: '$12.3B quantum computing market','
+    marketSize: '$12.3 B quantum computing market','
     growthRate: '450% annual growth','
     contactInfo: {
   // TODO: Add properties
@@ -224,7 +224,7 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [;
     useCases: ['Asteroid mining', 'Space resource extraction', 'Interplanetary logistics', 'Space infrastructure', 'Resource optimization'],'
     roi: 'Space mining companies achieve 1500% ROI through automated resource extraction and reduced operational costs.','
     competitors: ['Manual space operations, No automated mining platforms'],'
-    marketSize: '$18.7B space mining market','
+    marketSize: '$18.7 B space mining market','
     growthRate: '800% annual growth','
     contactInfo: {
   // TODO: Add properties
@@ -289,7 +289,7 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [;
     useCases: ['Cognitive computing', 'Pattern recognition', 'Real-time learning', 'Energy-efficient AI', 'Brain research'],'
     roi: 'Research institutions achieve 400% ROI through advanced AI research and cognitive computing applications.','
     competitors: ['Traditional AI platforms, Limited neuromorphic solutions'],'
-    marketSize: '$4.2B neuromorphic computing market','
+    marketSize: '$4.2 B neuromorphic computing market','
     growthRate: '300% annual growth','
     contactInfo: {
   // TODO: Add properties
@@ -354,7 +354,7 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [;
     useCases: ['Automated deployments', 'Self-healing infrastructure', 'Intelligent scaling', 'Predictive maintenance', 'Autonomous monitoring'],'
     roi: 'Companies achieve 600% ROI through reduced DevOps overhead and improved system reliability.','
     competitors: ['Traditional DevOps tools, Limited automation platforms'],'
-    marketSize: '$6.8B DevOps automation market','
+    marketSize: '$6.8 B DevOps automation market','
     growthRate: '350% annual growth','
     contactInfo: {
   // TODO: Add properties
@@ -419,7 +419,7 @@ export const futuristicInnovations2031: FuturisticInnovation2031[] = [;
     useCases: ['Creative content generation', 'Design optimization', 'Idea generation', 'Innovation acceleration', 'Creative collaboration'],'
     roi: 'Creative agencies achieve 300% ROI through accelerated content creation and innovative design solutions.','
     competitors: ['Traditional AI creative tools, No quantum enhancement'],'
-    marketSize: '$3.5B creative AI market','
+    marketSize: '$3.5 B creative AI market','
     growthRate: '250% annual growth','
     contactInfo: {
   // TODO: Add properties

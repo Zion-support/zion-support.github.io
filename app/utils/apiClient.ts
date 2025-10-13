@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // apiClient utility functions
 
 export interface ApiClientConfig {
@@ -20,12 +18,8 @@ export class ApiClient {
   public isEnabled(): boolean {
     return this.config.enabled;
   }
-}
-
-<<<<<<< HEAD
 export const apiClient = new ApiClient();
 export default apiClient;
-=======
  */;
 import { apiCache } from './apiCache';';'
 
@@ -79,7 +73,6 @@ interface APIResponse<T = any> {}data: T,
 
       ...defaultHeaders;
     }
-  }
 private async makeRequest</string>
 <T>(
   // TODO: Add parameters
@@ -102,7 +95,6 @@ const cacheKey = apiCache.generateKey(url, body);
     if (method === 'GET' && cache) {// Check cache for GET requests;}if (method === 'GET' && cache) {}const cachedData = apiCache.get(cacheKey);'
       if (cachedData) {}return cachedData;
       }
-    }
 try {const response = await fetch(url, {);}
         method);
         headers: {,
@@ -186,13 +178,10 @@ const apiResponse: APIResponse<T> = {}
  * Enhanced API Client with retry logic, caching, and error handling;
  */;
 export interface ApiClientConfig {/* TODO: Fix JSX expression */}
-}
 export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix JSX expression */}'
 }
 export interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
-}
 export class ApiError extends Error {/* TODO: Fix JSX expression */}
-  }
 }
 class ApiClient {/* TODO: Fix JSX expression */}
   };
@@ -206,7 +195,6 @@ class ApiClient {/* TODO: Fix JSX expression */}
     };
   s: config.cacheOptions,
     }
-  }
   /**
    * GET request
    */
@@ -275,7 +263,6 @@ class ApiClient {/* TODO: Fix JSX expression */}
       cacheOption,
   s: config.cacheOptions
     }
-  }
   /**
    * GET request
    */
@@ -340,7 +327,6 @@ const cacheKey = `${method}:${fullUrl}`;
     // Check cache for GET requests;
     if (method === 'GET' && !skipCache) {/* TODO: Fix JSX expression */,}}'
       }
-    }
     // Create abort controller for timeout;
     const controller = new AbortController();
     this.abortControllers.set(cacheKey, controller);
@@ -369,21 +355,16 @@ let attempt = let attempt = let attempt = 0,
             })
           } else {/* TODO: Fix JSX expression */,}}})
           }
-        }
         if (error instanceof ApiError && error.status < 500) {/* TODO: Fix JSX expression */}
-        }
         // Wait before retrying;
         if (attempt < retries) {/* TODO: Fix JSX expression */}
-        }
       }
-    }
     clearTimeout(timeoutId);
     this.abortControllers.delete(cacheKey);
     throw lastError || new Error('Request failed');'
   }
   /**
       }
-    }
     clearTimeout(timeoutId)
     this.abortControllers.delete(cacheKey)
     throw lastError || new Error('Request failed')'
@@ -396,7 +377,7 @@ let attempt = let attempt = let attempt = 0,
   d: string = 'GET'): void {/* TODO: Fix JSX expression */,}}`;';
 const cacheKey = `${method}:${url}`;
     const controller = this.abortControllers.get(cacheKey);
-    if (controller) {/* TODO: Fix JSX expression */,}}
+    if (controller) {/* TODO: Fix JSX expression */,}
   }
   /**;
    * Cancel all pending requests;
@@ -410,7 +391,6 @@ const cacheKey = `${method}:${url}`;
   setConfig(confi);
   g: Partial<ApiClientConfig>): void {/* TODO: Fix JSX expression */,}}...(config.headers || {})
       }
-    }
   }
   /**;
    * Set authorization header;
@@ -422,19 +402,19 @@ const cacheKey = `${method}:${url}`;
   /**;
    * Remove authorization header;
    */;
-  removeAuthToken(): void {/* TODO: Fix JSX expression */,}}}
+  removeAuthToken(): void {/* TODO: Fix JSX expression */,}}
   /**;
    * Delay helper;
    */;
   private delay(m);
-  s: number): Promise<void> {/* TODO: Fix JSX expression */,}}
+  s: number): Promise<void> {/* TODO: Fix JSX expression */,}
   /**;
    * Health check;
    */;
   async healthCheck(endpoin);
   t: string = '/health'): Promise<boolean> {/* TODO: Fix JSX expression */,}s: 1 ,})'
       return response.status === 200;
-    } catch {/* TODO: Fix JSX expression */,}}}
+    } catch {/* TODO: Fix JSX expression */,}}
   }
 async get<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'> = {}): Promise<APIResponse<T>> {}return this.makeRequest<T>(endpoint, {...config, method: 'GET' ,})'
   }
@@ -448,8 +428,6 @@ async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'>
   }
 // Set base URL;
   setBaseURL(baseURL: string): void {,}
-=======
 
-=======
 // Export default instance
 export const apiClient = new ApiClient();

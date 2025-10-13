@@ -2,7 +2,6 @@ import React from 'react';'
 'use client''
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   title?: string
   description?: string
   keywords?: string
@@ -22,7 +21,6 @@ const SEOHead: React.FC,
 }
     // TODO: Add content
   }
-}
 const SEOHead: React.FC<SEOProps> = ({
   // TODO: Add properties
 }

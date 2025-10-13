@@ -1,13 +1,13 @@
-import React from "react";";
+import React from "react";
 import {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
   useToast as useToastHook,
-  Toast} from "@/components/ui/toast""
+  Toast} from "@/components/ui/toast"
   Toast,
-} from "@/components/ui/toast""
+} from "@/components/ui/toast"
 // Extend the Toast component props with common toast options;
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
   // TODO: Add properties
@@ -16,7 +16,7 @@ export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
 }
   description?: string
   title?: string
-  variant?: "default" | "destructive" | "success""
+  variant?: "default"destructive" | ""
 }
 export const useToast = useToastHook;
 // Base toast function that delegates to the implementation from `useToastHook`.
@@ -44,14 +44,14 @@ baseToast.error = (error: string) => {
 }
   // TODO: Add properties
 }
-  baseToast({ variant: "destructive", title: "Error", description: error })"
+  baseToast({ variant: ", title: "Error"
 }
 baseToast.success = (message: string) => {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  baseToast({ variant: "success", title: "Success", description: message })"
+  baseToast({ variant: "success"Success", description: message })"
 }
 // Export the callable toast function.;
 export const toast = baseToast as typeof baseToast & {
@@ -63,4 +63,3 @@ export const toast = baseToast as typeof baseToast & {
   description: (description: string) => void
   error: (error: string) => void
   success: (message: string) => void
-}

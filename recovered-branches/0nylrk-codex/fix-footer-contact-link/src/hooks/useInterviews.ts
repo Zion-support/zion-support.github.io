@@ -1,5 +1,5 @@
 import { useState } from 'react';';
-import { useAuth } from "@/hooks/useAuth";";
+import { useAuth } from "@/hooks/useAuth";
 import { supabase } from '@/integrations/supabase/client';';
 import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview';';
 import { toast } from '@/components/ui/use-toast';';';
@@ -24,9 +24,9 @@ const requestInterview = async (interviewRequest: InterviewRequest): Promise<Int
 }
   // TODO: Add properties
 }
-        title: "Authentication required","
-        description: "You must be logged in to request interviews","
-        variant: "destructive""
+        title: "Authentication required"
+        description: "You must be logged in to request interviews"
+        variant: "destructive"
       })
       return null
     }
@@ -64,7 +64,7 @@ const { data, error: insertError } = await supabase
 }
   // TODO: Add properties
 }
-        console.error("Error requesting interview:", insertError)"
+        console.error("Error requesting interview:"
         setError(insertError.message)
         return null
       }
@@ -84,7 +84,7 @@ const { data, error: insertError } = await supabase
 }
   // TODO: Add properties
 }
-      console.error("Error in requestInterview:", err)"
+      console.error("Error in requestInterview:"
       setError(err.message)
       return null
     } finally {
@@ -94,7 +94,6 @@ const { data, error: insertError } = await supabase
 }
       setIsLoading(false)
     }
-  }
   // Fetch interviews for the current user (as client or talent);
 const fetchInterviews = async (): Promise<Interview[]> => {
   // TODO: Add properties
@@ -131,7 +130,7 @@ const { data, error: fetchError } = await supabase
 }
   // TODO: Add properties
 }
-        console.error("Error fetching interviews:", fetchError)"
+        console.error("Error fetching interviews:"
         setError(fetchError.message)
         return []
       }
@@ -168,7 +167,7 @@ const formattedInterviews = data.map((interview: any): Interview => ({
 }
   // TODO: Add properties
 }
-      console.error("Error in fetchInterviews:", err)"
+      console.error("Error in fetchInterviews:"
       setError(err.message)
       return []
     } finally {
@@ -178,7 +177,6 @@ const formattedInterviews = data.map((interview: any): Interview => ({
 }
       setIsLoading(false)
     }
-  }
   // Respond to an interview request (as talent);
 const respondToInterview = async (
   // TODO: Add parameters
@@ -200,9 +198,9 @@ const respondToInterview = async (
 }
   // TODO: Add properties
 }
-        title: "Authentication required","
-        description: "You must be logged in to respond to interviews","
-        variant: "destructive""
+        title: "Authentication required"
+        description: "You must be logged in to respond to interviews"
+        variant: "destructive"
       })
       return false
     }
@@ -230,7 +228,7 @@ const { error: updateError } = await supabase
 }
   // TODO: Add properties
 }
-        console.error("Error responding to interview:", updateError)"
+        console.error("Error responding to interview:"
         setError(updateError.message)
         return false
       }
@@ -245,7 +243,7 @@ const { data: interview, error: fetchError } = await supabase
 }
   // TODO: Add properties
 }
-        console.error("Error fetching interview:", fetchError)"
+        console.error("Error fetching interview:"
         setError(fetchError.message)
         return false
       }
@@ -279,7 +277,7 @@ let message = `Your interview request for ${interview.scheduled_date} has been c
 }
   // TODO: Add properties
 }
-      console.error("Error in respondToInterview:", err)"
+      console.error("Error in respondToInterview:"
       setError(err.message)
       return false
     } finally {
@@ -289,7 +287,6 @@ let message = `Your interview request for ${interview.scheduled_date} has been c
 }
       setIsLoading(false)
     }
-  }
   // Helper function to create interview notifications;
 const createInterviewNotification = async (
   // TODO: Add parameters
@@ -322,9 +319,8 @@ const createInterviewNotification = async (
 }
   // TODO: Add properties
 }
-      console.error("Error creating notification:", error)"
+      console.error("Error creating notification:"
     }
-  }
   // Cancel an interview (either client or talent can cancel);
 const cancelInterview = async (interviewId: string): Promise<boolean> => {
   // TODO: Add properties
@@ -359,7 +355,7 @@ const { data: interview, error: fetchError } = await supabase
 }
   // TODO: Add properties
 }
-        setError("You don't have permission to cancel this interview")"'"
+        setError("You don't have permission to cancel this interview"'"
         return false
       }
       // Update the interview status;
@@ -404,7 +400,7 @@ const notifyUserId = interview.client_id === user.id
 }
   // TODO: Add properties
 }
-      console.error("Error in cancelInterview:", err)"
+      console.error(", err)"
       setError(err.message)
       return false
     } finally {
@@ -414,7 +410,6 @@ const notifyUserId = interview.client_id === user.id
 }
       setIsLoading(false)
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -428,5 +423,4 @@ const notifyUserId = interview.client_id === user.id
     respondToInterview,
     cancelInterview}
     cancelInterview,
-  }
-}
+  

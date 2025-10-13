@@ -121,7 +121,7 @@ export const microSAASServices = [;
     price: '$89/month','
     originalPrice: '$129/month','
     features: ['SEO-optimized content', 'Brand voice training', 'Multi-language support', 'Content calendar', 'Plagiarism check', 'Tone adjustment', 'Keyword research', 'Content templates'],'
-    benefits: ['10x content output', 'SEO ready', 'Brand consistent', 'Time savings'],'
+    benefits: ['10 x content output', 'SEO ready', 'Brand consistent', 'Time savings'],'
     link: '/ai-content-writer','
     popular: true,
     category: 'Content','
@@ -145,7 +145,7 @@ export const microSAASServices = [;
     price: '$79/month','
     originalPrice: '$119/month','
     features: ['AI audio editing', 'Auto-transcription', 'Show notes generation', 'Distribution automation', 'Analytics dashboard', 'Guest booking', 'Monetization tools', 'Social media integration'],'
-    benefits: ['Professional podcast quality', '10x faster production', 'Better audience engagement', 'Monetization ready'],'
+    benefits: ['Professional podcast quality', '10 x faster production', 'Better audience engagement', 'Monetization ready'],'
     link: '/ai-podcast-studio','
     popular: true,
     category: 'Content','
@@ -217,7 +217,7 @@ export const microSAASServices = [;
     price: '$99/month','
     originalPrice: '$149/month','
     features: ['AI prospecting', 'Lead scoring', 'Email sequences', 'CRM integration', 'Data enrichment', 'Follow-up automation', 'Lead nurturing', 'Conversion tracking'],'
-    benefits: ['5x more leads', 'Higher quality prospects', 'Automated nurturing', 'Better conversion'],'
+    benefits: ['5 x more leads', 'Higher quality prospects', 'Automated nurturing', 'Better conversion'],'
     link: '/ai-lead-generation','
     popular: true,
     category: 'Marketing','
@@ -356,7 +356,7 @@ export const itServices = [;
     price: '$2,500/month','
     originalPrice: '$3,500/month','
     features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Alerting', 'Security Scanning', 'Automated Testing', 'Deployment Automation', 'Team Training'],'
-    benefits: ['10x faster deployments', 'Zero downtime', 'Better quality', 'Team productivity'],'
+    benefits: ['10 x faster deployments', 'Zero downtime', 'Better quality', 'Team productivity'],'
     link: '/devops-automation','
     popular: true,
     category: 'DevOps','
@@ -461,7 +461,7 @@ export interface Service {id: string,}
     starting: number,
     currency: string,
     period: 'month' | 'year' | 'one-time','
-    custom?: boolean;}}
+    custom?: boolean;}
   benefits: string[],
   useCases: string[],
   icon: string,
@@ -471,10 +471,10 @@ export interface Service {id: string,}
   contact: {,
     phone: string,
     email: string,
-    demo: string,}}
+    demo: string,}
   marketPrice?: {min: number,
     max: number,
-    currency: string,}}
+    currency: string,}
 }
 export const services: Service[] = [,;
   // AI Services,
@@ -592,7 +592,7 @@ export const services: Service[] = [,;
       currency: 'USD','
       period: 'month',},'
     benefits: [,
-      '10x faster content creation','
+      '10 x faster content creation','
       'Consistent brand messaging','
       'SEO-optimized content','
       'Multi-language support''
@@ -728,7 +728,7 @@ export const services: Service[] = [,;
       currency: 'USD','
       period: 'month',},'
     benefits: [,
-      '3x more engagement','
+      '3 x more engagement','
       'Save 15 hours/week','
       'Consistent posting schedule','
       'Data-driven content strategy''
@@ -1044,7 +1044,7 @@ export const services: Service[] = [,;
       currency: 'USD','
       period: 'month',},'
     benefits: [,
-      '10x faster deployments','
+      '10 x faster deployments','
       'Reduced deployment errors','
       'Automated testing','
       'Improved team productivity''
@@ -1285,4 +1285,4 @@ export const contactInfo = {phone: '+1 (302) 464-0950','
   email: 'kleber@ziontechgroup.com','
   address: '364 E Main St STE 1008, Middletown, DE 19709','
   website: 'https://ziontechgroup.com','
-  hours: 'Mon-Fri: 9AM-6PM EST',}}'
+  hours: 'Mon-Fri: 9 AM-6 PM EST',}}'

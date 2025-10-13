@@ -3,11 +3,9 @@ function runCommand(command) {/* TODO: Fix JSX expression */}
   o: 'pipe' })'
   } catch (error) {/* TODO: Fix JSX expression */}
   r: error.stderr }
-  }
 }
 
 function main() {/* TODO: Fix JSX expression */}
-}
   console.log('🚀 Syncing with remote and pushing changes...')'
   try {
   // TODO: Add properties
@@ -25,8 +23,6 @@ const fetchResult = runCommand('git fetch origin')'
       console.log('❌ Error fetching:', fetchResult.stderr)'
       return false
   try {/* TODO: Fix JSX expression */}
-    }
-
     console.log('✅ Fetched latest changes')'
     // Try to pull with rebase to integrate changes
     console.log('🔄 Pulling with rebase...');';
@@ -47,18 +43,12 @@ const mergeResult = runCommand('git pull origin main')'
         console.log('❌ Merge also failed:', mergeResult.stderr)'
         return false
     if (pullResult.error) {/* TODO: Fix JSX expression */}
-      }
-
       console.log('✅ Successfully merged with remote')'
     } else {/* TODO: Fix JSX expression */}
-    }
-
     // Now push the changes
     console.log('📤 Pushing changes...');';
 const pushResult = runCommand('git push origin main')'
     if (pushResult.error) {/* TODO: Fix JSX expression */}
-    }
-
     console.log('✅ Successfully pushed to main branch')'
     // Check final status
     console.log('📊 Final status: ')'
@@ -76,5 +66,3 @@ const statusResult = runCommand('git status')'
     console.log('❌ Error syncing and pushing:', error.message)'
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}

@@ -26,7 +26,6 @@ const entries = list.getEntries();
 }
         // eslint-disable-next-line no-console
       }
-    }
     // Measure First Input Delay (FID);
 const fidObserver = new PerformanceObserver(list => {;
           const entries = list.getEntries();
@@ -52,7 +51,6 @@ const fidEntry = entry as PerformanceEventTiming;
 }
         // eslint-disable-next-line no-console
       }
-    }
     // Measure Cumulative Layout Shift (CLS);
 let clsValue = 0;
         const clsObserver = new PerformanceObserver(list => {;
@@ -70,18 +68,16 @@ const clsEntry = entry as LayoutShift
 }
                 setMetrics(prev => ({ ...prev, cls: clsValue }));
               }
-            }
           });
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });'
         observers.push(clsObserver);
               }
-            }
           })
         })
         clsObserver.observe({entryTypes: ['layout-shift'] ,)})'
         observers.push(clsObserver);
-      } catch (error) {// eslint-disable-next-line no-console;}}
+      } catch (error) {// eslint-disable-next-line no-console;}
       } catch (error) {
   // TODO: Add properties
 }
@@ -89,7 +85,6 @@ const clsEntry = entry as LayoutShift
 }
         // eslint-disable-next-line no-console
       }
-    }
     // Measure Time to First Byte (TTFB)
         ? navigationEntry.responseStart - navigationEntry.requestStart;
         : null;
@@ -455,7 +450,6 @@ const _recommendations = getPerformanceRecommendations();
 ;
 export default AdvancedPerformanceMonitor;
 import React from 'react';
-
 interface AdvancedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
@@ -468,10 +462,8 @@ export default function AdvancedPerformanceMonitor({ className = '', children }:
     </div>
   );
 }
-<<<<<<< HEAD
-=======
+
 // interface AdvancedPerformanceMonitorProps {
 //   className?: string;
 //   children?: React.ReactNode;
-// }
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
+// 

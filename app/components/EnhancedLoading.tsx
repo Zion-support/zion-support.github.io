@@ -6,4 +6,3 @@ export default function EnhancedLoadingPage() {
       {children}
     </div>
   );
-}

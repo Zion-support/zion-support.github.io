@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface CoreWebVitalsProps {
   className?: string;
   children?: React.ReactNode;
@@ -22,5 +20,4 @@ const CoreWebVitals: React.FC = () => {
   return null;
 ;
 export default CoreWebVitals;
-=======
 

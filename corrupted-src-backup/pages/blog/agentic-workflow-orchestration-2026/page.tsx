@@ -24,12 +24,11 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/agent i c-workfl o w-orchestrati o n-20 2 6')'
         />),
       <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>'
-<h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>'
+<h1, classNam, e='te, x, t-4 xl, m, d:te, x, t-5 xl, fon, t-bold, m, b-4'>'
           Agentic, Workflow, Orchestration 20, 2, 6
   }
           Agentic, Workflow, Orchestration 20, 2, 6
 }
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
-}
 </div></div>
 </div></h1>

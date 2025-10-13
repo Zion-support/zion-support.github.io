@@ -8,7 +8,6 @@
  */;
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   lcp?: number
   fid?: number
   cls?: number
@@ -18,7 +17,6 @@ export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 export interface ErrorReport {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   messag,
   e: string
   stack?: string
@@ -31,8 +29,6 @@ export interface ErrorReport {/* TODO: Fix JSX expression */}
   l: string,
 class MonitoringService {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-
 class MonitoringService {
   // TODO: Add properties
 }
@@ -50,8 +46,6 @@ class MonitoringService {
     if (typeof window !== 'undefined') {'
       this.initializeMonitoring()
     }
-  }
-
   private initializeMonitoring(): void {
   // TODO: Add properties
 }
@@ -132,7 +126,6 @@ const entries = list.getEntries()
 }
     // console.error('Error setting up performance observers:', error)'
   }
-    }
   }
 
   private monitorLongTasks(): void {
@@ -166,7 +159,6 @@ const longTaskObserver = new PerformanceObserver((list) => {
 }
         // Long task API might not be available
       }
-    }
   }
 
   private monitorResourceTiming(): void {
@@ -201,7 +193,6 @@ const resourceEntry = entry as PerformanceResourceTiming,
 }
     // console.error('Error monitoring resources:', _error)'
   }
-    }
   }
 
   private setupErrorHandling(): void {
@@ -261,8 +252,6 @@ const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImpr
         event_category: 'Web Vitals''
       })
     }
-  }
-
   public logError(error: ErrorReport): void {
   // TODO: Add properties
 }
@@ -276,16 +265,12 @@ const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImpr
 }
       this.errors = this.errors.slice(-50)
     }
-  }
-
   public getMetrics(): PerformanceMetrics {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     return { ...this.metrics }
-  }
-
   public getErrors(): ErrorReport[] {
   // TODO: Add properties
 }
@@ -320,7 +305,6 @@ const memory = (performance as Performance & { memory?: { usedJSHeapSize: number
         //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         // })
       }
-    }
   }
 
   public measureNavigationTiming(): void {
@@ -345,9 +329,7 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
         //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`'
         // })
       }
-    }
   }
-}
 ;
 const monitoring = new MonitoringService();
 export default monitoring;`;

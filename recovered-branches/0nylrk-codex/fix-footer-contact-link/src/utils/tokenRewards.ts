@@ -33,4 +33,3 @@ export async function rewardFiveStarReview(userId: string) {
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' })})'
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' }),'
   })
-}

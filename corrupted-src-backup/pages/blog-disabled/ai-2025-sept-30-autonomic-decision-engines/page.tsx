@@ -24,7 +24,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-se p t-30-autonom i c-decisi o n-engin e s')'
         />),
       <div, className='container, m, x-auto, p, x-6, p, y-16'>'
-<h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>'
+<h1, className='te, x, t-4 xl, m, d:te, x, t-5 xl, fon, t-bold, m, b-4'>'
           Autonomic, Decision, Engines
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>'
           S, u, b‑1, 0, 0, m, s, K, P, I‑Linked, Action, s
@@ -36,10 +36,8 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
             ← Back, to, Blog
     </d, i, v > );
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
- }
 </div></div>
 </div></div>
 </div></Link>
 </p></p>
 </h1>
-}

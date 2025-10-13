@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'homepage_advertiser'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'homepage_advertiser'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'homepage_advertiser',' source: event.source || 'unknown', advertising: {' status: 'active', ads: 0,'
         lastAd: new Date().toISOString() } }) } return result; } catch (error) {

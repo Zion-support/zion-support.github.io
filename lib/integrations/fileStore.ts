@@ -41,7 +41,6 @@ const initial: IntegrationsState = {,
       events: []}
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8')'
   }
-}
 ;
 export function readState(): IntegrationsState {
   // TODO: Add properties
@@ -57,21 +56,14 @@ const raw = fs.readFileSync(STATE_FILE, 'utf8')'
 }
   // TODO: Add properties
 }
-    //     const raw = fs.readFileSync(STATE_FILE, "utf8")"
+    //     const raw = fs.readFileSync(STATE_FILE, "utf8"
     return JSON.parse(raw) as IntegrationsState
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    //     const raw = fs.readFileSync(STATE_FILE, "utf8")"
-    return JSON.parse(raw) as IntegrationsState
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    //     const raw = fs.readFileSync(STATE_FILE, 'utf8')'
+    //     const raw = fs.readFileSync(STATE_FILE, "utf8"
     return JSON.parse(raw) as IntegrationsState
   } catch (error) {
   // TODO: Add properties
@@ -85,7 +77,14 @@ const raw = fs.readFileSync(STATE_FILE, 'utf8')'
 }
   // TODO: Add properties
 }
-    //     const raw = fs.readFileSync(STATE_FILE, "utf8")"
+    //     const raw = fs.readFileSync(STATE_FILE, 'utf8')'
+    return JSON.parse(raw) as IntegrationsState
+  } catch (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    //     const raw = fs.readFileSync(STATE_FILE, "utf8"
     return JSON.parse(raw) as IntegrationsState
   } catch (error) {
   // TODO: Add properties
@@ -118,14 +117,14 @@ const raw = fs.readFileSync(STATE_FILE, 'utf8')'
 }
   // TODO: Add properties
 }
-    //     const raw = fs.readFileSync(STATE_FILE, "utf8")"
+    //     const raw = fs.readFileSync(STATE_FILE, "utf8"
     return JSON.parse(raw) as IntegrationsState
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    //     const raw = fs.readFileSync(STATE_FILE, "utf8")"
+    //     const raw = fs.readFileSync(STATE_FILE, "utf8"
     return JSON.parse(raw) as IntegrationsState
   } catch (error) {
   // TODO: Add properties
@@ -144,11 +143,10 @@ const initial: IntegrationsState = {
       overrides: [],
       events: []}
 
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8")"
+    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8"
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8')'
     return initial
   }
-}
 export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
   // TODO: Add properties
 }
@@ -181,7 +179,6 @@ const current = readState()
   }
 ;
 export interface FileStoreOptions {/* TODO: Fix JSX expression */}
-}
 ;
 export class FileStore {
   // TODO: Add properties
@@ -210,8 +207,6 @@ export class FileStore {
 //     const fullPath = path.join(this.basePath, filePath);
 const _dir = path.dirname(fullPath);
 export class FileStore {/* TODO: Fix JSX expression */}
-  }
-
   async readFile(filePath: string): Promise<string> {;
 const fullPath = path.join(this.basePath, filePath)
     return fs.promises.readFile(fullPath, this.encoding)
@@ -248,8 +243,6 @@ const fullPath = path.join(this.basePath, filePath)
 }
     return false
   }
-  }
-
   async deleteFile(filePath: string): Promise<void> {
   // TODO: Add properties
 }
@@ -294,10 +287,9 @@ const fullPath = path.join(this.basePath, dirPath)
 const fullPath = path.join(this.basePath, dirPath)
     await fs.promises.rmdir(fullPath, { recursive: true })
   }
-}
 ;
 export const createFileStore = (options: FileStoreOptions) =>,
   new FileStore(options)
 ,
 
-}}}}
+}}

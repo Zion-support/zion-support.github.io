@@ -1,5 +1,5 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts"";
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";";
+import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1';';';
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY');';
 const corsHeaders = {
@@ -30,7 +30,7 @@ const { bio, skills, title, name } = await req.json()
       return new Response(
   // TODO: Add parameters
 )
-        JSON.stringify({ error: "Bio must be at least 20 characters long" }),"
+        JSON.stringify({ error: "Bio must be at least 20 characters long"
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }'
       )
     }
@@ -51,7 +51,7 @@ const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions',
 }
   // TODO: Add properties
 }
-        model: 'gpt-4o-mini','
+        model: 'gpt-4 o-mini','
         messages: [
   // TODO: Add items
 ]
@@ -85,61 +85,7 @@ const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions',
 }
   // TODO: Add properties
 }
-              "summary": "The professional summary text","
-              "suggestedSkills": ["Skill 1", "Skill 2", "Skill 3", ...]"
-            }`
-          }
-        ],
-        temperature: 0.7})})
-        temperature: 0.7,
-      }),
-    });
-const openAIData = await openAIResponse.json()
-    if (!openAIData.choices || openAIData.choices.length === 0) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      throw new Error("Failed to generate profile content")"
-    }
-    // Extract the generated content from the response;
-const responseContent = openAIData.choices[0].message.content
-    // Parse the JSON response;
-let parsedResponse
-    try {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      // Find the JSON object in the response;
-const jsonMatch = responseContent.match(/\{[\s\S]*\}/)
-      if (jsonMatch) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        parsedResponse = JSON.parse(jsonMatch[0])
-      } else {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        throw new Error("Could not extract JSON from response")"
-      }
-    } catch (e) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      console.error("Error parsing OpenAI response:", e)"
-      // Fallback parsing approach if the standard parsing fails;
-const summaryMatch = responseContent.match(/"summary"\s*:\s*"([^"]*)"/);";
-const skillsMatch = responseContent.match(/"suggestedSkills"\s*:\s*\[(.*?)\]/s)"
-      if (summaryMatch && skillsMatch) {;
-const summary = summaryMatch[1];
-const skillsString = skillsMatch[1];
-const suggestedSkills = skillsString.split(',').map(s => '
-          s.trim().replace(/"/g, '')'"
+              "summary"The professional summary text","suggestedSkills": [", "Skill 2"Skill 3", ...]"Failed to generate profile content")"Could not extract JSON from response")"Error parsing OpenAI response:", e)"summary"\s*:\s*"]*)"/);"suggestedSkills"\s*:\s*\[(.*?)\]/s)"/g, '')'"
         ).filter(Boolean)
         parsedResponse = { summary, suggestedSkills }
       } else {
@@ -147,9 +93,8 @@ const suggestedSkills = skillsString.split(',').map(s => '
 }
   // TODO: Add properties
 }
-        throw new Error("Failed to parse the generated content")"
+        throw new Error(")"
       }
-    }
     return new Response(
   // TODO: Add parameters
 )
@@ -161,7 +106,7 @@ const suggestedSkills = skillsString.split(',').map(s => '
 }
   // TODO: Add properties
 }
-    console.error("Error in profile-summary-generator function:", error)"
+    console.error(", error)"
     return new Response(
   // TODO: Add parameters
 )

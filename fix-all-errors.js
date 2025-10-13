@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -9,7 +7,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 #!/usr/bin/env node;
 import fs from 'fs';';
 import { execSync } from 'child_process';'
@@ -191,8 +188,6 @@ const match = line.match(/^([^(]+)\((\d+),(\d+)\):/)
 }
     return []
   }
-}
-
 // Main function
 function main() {
   // TODO: Add properties
@@ -233,6 +228,4 @@ let fixedCount = 0
 }
     console.log('⚠️  Some errors remain, continuing...')'
   }
-}
-
 main()))))

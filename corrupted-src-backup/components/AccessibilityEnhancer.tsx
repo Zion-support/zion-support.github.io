@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 interface AccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
@@ -8,10 +7,8 @@ interface AccessibilityEnhancerProps {
 export default function AccessibilityEnhancer({ className = '', children }: AccessibilityEnhancerProps) {
   return (
     <div className={`${className}`}>
-=======
 import React, { useEffect, useState } from 'react';'
 interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
-}
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({,
   children
   enableKeyboardNavigation = true,
@@ -41,7 +38,6 @@ const _handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches),
 const,
   AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-    }
     return undefined
   }, [enableHighContrast])
   useEffect(() => {
@@ -62,7 +58,6 @@ const _handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches),
       mediaQuery.addEventListener('change', handleChange)'
       return () => mediaQuery.removeEventListener('change', handleChange)'
   useEffect(() => {/* TODO: Fix JSX expression */}
-    }
     return undefined
   }, [enableReducedMotion])
   useEffect(() => {
@@ -88,7 +83,6 @@ const _skipLink = document.querySelector('.skip-link') as HTMLElement,'
             skipLink.focus()
             e.preventDefault()
   useEffect(() => {/* TODO: Fix JSX expression */}
-          }
         }
         // Escape key handling
         if (e.key === 'Escape') {;';
@@ -101,7 +95,6 @@ const _activeElement = document.activeElement as HTMLElement
             activeElement.blur()
         if (e.key === 'Escape') {/* TODO: Fix JSX expression */}'
           }
-        }
       }
       // Focus management;
 const handleFocusIn = (e: FocusEvent) => {
@@ -117,16 +110,12 @@ const _announcement = target.getAttribute('aria-label'),'
           if (announcement) {,
             announceToScreenReader(announcement);
 const handleFocusIn = (e: FocusEvent) => {/* TODO: Fix JSX expression */}
-          }
         }
-      }
       const handleFocusOut = () => {/* TODO: Fix JSX expression */}
-      }
       document.addEventListener('keydown', handleKeyDown)'
       document.addEventListener('focusin', handleFocusIn)'
       document.addEventListener('focusout', handleFocusOut)'
       return () => {/* TODO: Fix JSX expression */}
-      }
     }
     return undefined
   }, [enableKeyboardNavigation, enableScreenReaderSupport])
@@ -155,13 +144,10 @@ const _root = document.documentElement
       root.classList.remove('high-contrast')'
   useEffect(() => {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-    }
     if (isReducedMotion) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-    }
     if (focusVisible) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-    }
   }, [isHighContrast, isReducedMotion, focusVisible])
   // Announce to screen reader;
 const announceToScreenReader = (message: string) => {,
@@ -186,63 +172,44 @@ const announceToScreenReader = (messag)
   e: string) => {/* TODO: Fix JSX expression */}
       }, 1000)
     }
-  }
   return(<;$2 />
   return (<div></div>
       className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : '} ${isReducedMotion ? 'reduced-motion' : '}`}''
-      role="main"""
-      aria-label="Main content""
+      role="main""
+      aria-label=""
     >
       {/* Skip to main content link */})
       <;)$2 />
-        href="#main-content")"
-        className="skip-link")"
+        href=")"
+        className="
         onClick={e => {)
       {/* Skip to main content link */}
       <$2 />
-        href="#main-content""
+        href="#main-content"
         className="skip-link""
-        onClick={e => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          e.preventDefault();
-const _main = document.querySelector('main') || document.querySelector('#main-content')'
-          if (main) {}
-            (main as HTMLElement).focus();}
-            (main as HTMLElement).scrollIntoView({ behavior: 'smooth' })'
-      {/* Skip to main content link */}
-      <a></a>""
-        href="#main-content"""
-        className="skip-link""
+        href="""skip-link"
         onClick={/* TODO: Fix JSX expression */})
   r: 'smooth' })'
           }
-        }}
+        }
       >
         Skip to main content
       {/* Accessibility controls */}
-      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">"
+      <div className="toolbar" aria-label=">"
 <$2 />
-<div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">"
+<div className="toolbar" aria-label=">"
 <$2 />
           onClick={() => setIsHighContrast(!isHighContrast)}
-          className="accessibility-toggle""
-      {/* Accessibility controls */}""
-      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">"
-<button>
-          onClick={() => setIsHighContrast(!isHighContrast)}""
-          className="accessibility-toggle"`"
+          className="
+      {/* Accessibility controls */}""accessibility-controls"toolbar"Accessibility controls">""
+          className="
           aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}'
         >
           {isHighContrast ? '🔆' : '🌙'} High Contrast'
         <$2 />
           onClick={() => setIsReducedMotion(!isReducedMotion)}
           className="accessibility-toggle""
-        <button>
-          onClick={() => setIsReducedMotion(!isReducedMotion)}""
-          className="accessibility-toggle"`"
+          className="
           aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}'
         >
           {isReducedMotion ? '🏃' : '🚶'} Motion'
@@ -254,7 +221,6 @@ const _main = document.querySelector('main') || document.querySelector('#main-co
   </div>
   );
 }
-<<<<<<< HEAD
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -265,15 +231,12 @@ export default AccessibilityenhancerPage;
     <div>Content</div>
   );
         <title>Accessibilityenhancer - Zion Tech Group</title>
-            <h1 className = "text-4xl font-bold text-white mb-4">Accessibilityenhancer</h1>
-            <p className="text-gray-300 mb-8">This page is under construction.</p>;
+            <h1 className = "text-4 xl font-bold text-white mb-4">This page is under construction.</p>;
               Learn More;
   );
 };
-=======
 export default AccessibilityEnhancer;
 "`"
   </AccessibilityEnhancerProps></AccessibilityEnhancerProps>
 </div></div>
 </button></button>
-=======

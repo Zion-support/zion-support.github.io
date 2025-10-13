@@ -41,7 +41,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [;
 		textColor: 'text-emerald-300','
 		link: 'https://ziontechgroup.com/affiliate-marketing-tracker-pro','
 		marketPosition: 'Focused, SMB-friendly alternative to complex partner suites.','
-		targetAudience: 'E-commerce, B2B SaaS, publishers','
+		targetAudience: 'E-commerce, B2 B SaaS, publishers','
 		trialDays: 14,
 		setupTime: '2 hours','
 		category: 'Micro SAAS','
@@ -51,7 +51,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Launch affiliate programs', 'Reduce fraud', 'Automate payouts'],'
 		roi: 'Increase referral revenue 10–25%','
 		competitors: ['Refersion', 'LeadDyno', 'Post Affiliate Pro'],'
-		marketSize: '$2B+ affiliate software','
+		marketSize: '$2 B+ affiliate software','
 		growthRate: '12% CAGR','
 		variant: 'holographic-advanced','
 		contactInfo: contact,
@@ -101,7 +101,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Track leads', 'Measure campaigns', 'Share public stats'],'
 		roi: 'Clarity on ROI with < 5 min setup','
 		competitors: ['Plausible', 'Fathom'],'
-		marketSize: '$1B+ SMB tooling','
+		marketSize: '$1 B+ SMB tooling','
 		growthRate: '18% CAGR','
 		variant: 'quantum','
 		contactInfo: contact,
@@ -151,7 +151,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Manage tickets', 'Meet SLAs', 'Share reports'],'
 		roi: 'Reduce resolution time 20–35%','
 		competitors: ['Freshdesk', 'Zendesk'],'
-		marketSize: '$10B ITSM','
+		marketSize: '$10 B ITSM','
 		growthRate: '14% CAGR','
 		variant: 'holographic-matrix','
 		contactInfo: contact,
@@ -201,7 +201,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Blog production', 'Email campaigns', 'Social media'],'
 		roi: 'Reduce content time by 60–80%','
 		competitors: ['Jasper', 'Copy.ai'],'
-		marketSize: '$7B+ by 2029','
+		marketSize: '$7 B+ by 2029','
 		growthRate: '22% CAGR','
 		variant: 'quantum-holographic','
 		contactInfo: contact,
@@ -241,7 +241,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [;
 		textColor: 'text-amber-300','
 		link: 'https://ziontechgroup.com/ecommerce-returns-manager','
 		marketPosition: 'SMB-first tool with fast setup.','
-		targetAudience: 'D2C brands, marketplaces','
+		targetAudience: 'D2 C brands, marketplaces','
 		trialDays: 14,
 		setupTime: '3 hours','
 		category: 'Micro SAAS','
@@ -251,7 +251,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Reduce returns friction', 'Recover revenue', 'Track costs'],'
 		roi: 'Cut return handling time 40–60%','
 		competitors: ['Loop Returns', 'Returnly'],'
-		marketSize: '$5B returns SaaS','
+		marketSize: '$5 B returns SaaS','
 		growthRate: '20% CAGR','
 		variant: 'holographic-advanced','
 		contactInfo: contact,
@@ -301,7 +301,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Nurture leads', 'Reopen opportunities', 'Auto follow-ups'],'
 		roi: 'Lift conversion 10–20%','
 		competitors: ['Reply.io', 'Mixmax'],'
-		marketSize: '$8B sales tools','
+		marketSize: '$8 B sales tools','
 		growthRate: '10% CAGR','
 		variant: 'quantum','
 		contactInfo: contact,
@@ -351,7 +351,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Accessibility', 'SEO', 'Clip creation'],'
 		roi: 'Grow organic traffic 5–15%','
 		competitors: ['Rev', 'Descript'],'
-		marketSize: '$1B transcription','
+		marketSize: '$1 B transcription','
 		growthRate: '9% CAGR','
 		variant: 'holographic-advanced','
 		contactInfo: contact,
@@ -401,7 +401,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Launch portfolio', 'Showcase work', 'Capture leads'],'
 		roi: 'Faster client acquisition','
 		competitors: ['Carrd', 'Webflow'],'
-		marketSize: '$3B+ creators','
+		marketSize: '$3 B+ creators','
 		growthRate: '11% CAGR','
 		variant: 'saas-futuristic','
 		contactInfo: contact,
@@ -451,7 +451,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['Track customers', 'Book appointments', 'Close deals'],'
 		roi: 'Improved follow-through and show-up rate','
 		competitors: ['HubSpot Starter', 'Zoho Bigin'],'
-		marketSize: '$50B CRM','
+		marketSize: '$50 B CRM','
 		growthRate: '12% CAGR','
 		variant: 'quantum','
 		contactInfo: contact,
@@ -501,7 +501,7 @@ export const newSaasItAiServices2025: EnhancedRealMicroSaasService[] = [;
 		useCases: ['On-page optimization', 'Briefs', 'Content refresh'],'
 		roi: 'Lift organic traffic 15–35%','
 		competitors: ['Surfer SEO', 'Clearscope'],'
-		marketSize: '$2B SEO tools','
+		marketSize: '$2 B SEO tools','
 		growthRate: '13% CAGR','
 		variant: 'holographic-advanced','
 		contactInfo: contact,

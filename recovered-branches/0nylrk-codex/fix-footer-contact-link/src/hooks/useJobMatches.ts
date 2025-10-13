@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";";
-import { supabase } from "@/integrations/supabase/client";";
-import { toast } from "@/hooks/use-toast";";
-import { JobMatch } from "@/types/jobs";";";
+import { useState, useEffect } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { JobMatch } from "@/types/jobs";";
 export function useJobMatches(jobId: string) {;
 const [matches, setMatches] = useState<JobMatch[]>([]);
 const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +18,7 @@ const fetchMatches = async () => {
     setIsLoading(true)
     try {;
 const { data, error } = await supabase
-        .from("job_talent_matches")"
+        .from(")"
         .select(`
           *,
           talent_profile:talent_id(
@@ -36,8 +36,8 @@ const { data, error } = await supabase
             skills
           )
         `)
-        .eq("job_id", jobId)"
-        .order("match_score", { ascending: false })"
+        .eq(", jobId)"
+        .order(", { ascending: false })"
       if (error) throw error
       setMatches(data || [])
     } catch (error) {
@@ -45,16 +45,16 @@ const { data, error } = await supabase
 }
   // TODO: Add properties
 }
-      console.error("Error fetching job matches:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Error","
-        description: "Failed to load matched talents. Please try again later.","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: ","
+        variant: "})"
+        variant: ","
       })
     } finally {
   // TODO: Add properties
@@ -63,7 +63,6 @@ const { data, error } = await supabase
 }
       setIsLoading(false)
     }
-  }
   const triggerAIMatching = async () => {
   // TODO: Implement
 }
@@ -85,7 +84,7 @@ const response = await supabase.functions.invoke('job-talent-matcher', {'
 }
   // TODO: Add properties
 }
-        title: "AI Matching Complete","
+        title: ","
         description: `Found ${response.data.matches || 0} potential talent matches for this job.`})
         description: `Found ${response.data.matches || 0} potential talent matches for this job.`,
       })
@@ -96,16 +95,16 @@ const response = await supabase.functions.invoke('job-talent-matcher', {'
 }
   // TODO: Add properties
 }
-      console.error("Error triggering AI matching:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Matching Failed","
-        description: "Could not process talent matching. Please try again later.","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: ","
+        variant: "})"
+        variant: ","
       })
     } finally {
   // TODO: Add properties
@@ -114,7 +113,6 @@ const response = await supabase.functions.invoke('job-talent-matcher', {'
 }
       setIsProcessing(false)
     }
-  }
   useEffect(() => {
   // TODO: Implement
 }
@@ -135,5 +133,4 @@ const response = await supabase.functions.invoke('job-talent-matcher', {'
     isLoading,
     isProcessing,
     triggerAIMatching
-  }
-}
+  

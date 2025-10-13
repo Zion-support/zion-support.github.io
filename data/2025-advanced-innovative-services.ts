@@ -67,16 +67,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 }
     id: 'metaverse-development-platform','
     name: 'Metaverse Development Platform','
-    tagline: 'Complete platform for building immersive 3D virtual worlds and experiences','
+    tagline: 'Complete platform for building immersive 3 D virtual worlds and experiences','
     price: '$599','
     period: '/month','
-    description: 'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive 3D virtual worlds, games, and social experiences with built-in AI and blockchain integration.','
+    description: 'Comprehensive metaverse development platform that enables creators to build, deploy, and monetize immersive 3 D virtual worlds, games, and social experiences with built-in AI and blockchain integration.','
     features: [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-      '3D world building tools','
+      '3 D world building tools','
       'AI-powered NPCs and interactions','
       'Blockchain integration for digital assets','
       'Multi-user collaboration','
@@ -97,17 +97,17 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     setupTime: '1-2 weeks','
     category: 'Metaverse & Virtual Reality','
     realService: true,
-    technology: ['3D Graphics, AI/ML, Blockchain, VR/AR'],'
+    technology: ['3 D Graphics, AI/ML, Blockchain, VR/AR'],'
     integrations: ['Unity, Unreal Engine, Meta Quest, Steam VR'],'
     useCases: ['Virtual events, Gaming, Education, Brand experiences'],'
     roi: 'Create immersive experiences that increase engagement by 200-400%.','
     competitors: ['Roblox, Unity, Unreal Engine, Decentraland'],'
-    marketSize: '$45B metaverse','
+    marketSize: '$45 B metaverse','
     growthRate: '65% YoY','
     variant: 'metaverse-futuristic','
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: '3D world building engine with AI integration and blockchain capabilities.','
+    implementationDetails: '3 D world building engine with AI integration and blockchain capabilities.','
     launchDate: '2025-01-10','
     customers: 89,
     rating: 4.8,
@@ -153,9 +153,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     technology: ['Quantum Computing, Bioinformatics, Molecular Modeling'],'
     integrations: ['PubChem, PDB, DrugBank, Research databases'],'
     useCases: ['Drug discovery, Protein research, Personalized medicine'],'
-    roi: 'Accelerate drug discovery by 5-10x and reduce development costs by 30-50%.','
+    roi: 'Accelerate drug discovery by 5-10 x and reduce development costs by 30-50%.','
     competitors: ['IBM Quantum, Google Quantum, D-Wave, Rigetti'],'
-    marketSize: '$6B quantum bio-computing','
+    marketSize: '$6 B quantum bio-computing','
     growthRate: '58% YoY','
     variant: 'quantum-bio-enterprise','
     contactInfo: contact,
@@ -208,7 +208,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     useCases: ['Contract review, Legal research, Compliance automation'],'
     roi: 'Reduce legal research time by 60-80% and improve contract review efficiency by 40-60%.','
     competitors: ['LexisNexis, Westlaw, ContractPodAi, Kira Systems'],'
-    marketSize: '$28B legal technology','
+    marketSize: '$28 B legal technology','
     growthRate: '24% YoY','
     variant: 'legal-futuristic','
     contactInfo: contact,
@@ -261,7 +261,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     useCases: ['Route optimization, Resource planning, Cost reduction'],'
     roi: 'Reduce logistics costs by 20-35% and improve delivery efficiency by 30-50%.','
     competitors: ['Manhattan Associates, Blue Yonder, SAP SCM'],'
-    marketSize: '$15B logistics optimization','
+    marketSize: '$15 B logistics optimization','
     growthRate: '32% YoY','
     variant: 'quantum-logistics','
     contactInfo: contact,
@@ -312,9 +312,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     technology: ['AI/ML, NLP, Knowledge Graphs, Automation'],'
     integrations: ['PubMed, arXiv, Google Scholar, Research databases'],'
     useCases: ['Scientific research, Market analysis, Academic studies'],'
-    roi: 'Accelerate research by 3-5x and discover insights that would be missed manually.','
+    roi: 'Accelerate research by 3-5 x and discover insights that would be missed manually.','
     competitors: ['Semantic Scholar, ResearchGate, Academia.edu'],'
-    marketSize: '$8B research tools','
+    marketSize: '$8 B research tools','
     growthRate: '28% YoY','
     variant: 'ai-autonomous','
     contactInfo: contact,
@@ -367,7 +367,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     useCases: ['Grid optimization, Renewable energy management, Cost reduction'],'
     roi: 'Reduce energy costs by 15-30% and improve grid efficiency by 25-40%.','
     competitors: ['GE Digital, Siemens, ABB, Schneider Electric'],'
-    marketSize: '$18B energy optimization','
+    marketSize: '$18 B energy optimization','
     growthRate: '35% YoY','
     variant: 'quantum-energy','
     contactInfo: contact,
@@ -420,7 +420,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     useCases: ['Design automation, Brand consistency, Creative collaboration'],'
     roi: 'Increase design production by 200-400% and improve brand consistency by 40-60%.','
     competitors: ['Canva, Figma, Adobe Creative Suite, Sketch'],'
-    marketSize: '$14B design tools','
+    marketSize: '$14 B design tools','
     growthRate: '32% YoY','
     variant: 'ai-creative','
     contactInfo: contact,
@@ -473,7 +473,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     useCases: ['Advanced ML training, Research breakthroughs, Performance optimization'],'
     roi: 'Solve previously intractable ML problems; accelerate AI research and development.','
     competitors: ['IBM Quantum, Google Quantum, Rigetti, D-Wave'],'
-    marketSize: '$4B quantum ML','
+    marketSize: '$4 B quantum ML','
     growthRate: '62% YoY','
     variant: 'quantum-neural','
     contactInfo: contact,
@@ -526,7 +526,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     useCases: ['Financial planning, Investment optimization, Wealth management'],'
     roi: 'Improve investment returns by 15-25% and reduce financial planning costs by 40-60%.','
     competitors: ['Betterment, Wealthfront, Personal Capital, Mint'],'
-    marketSize: '$25B fintech','
+    marketSize: '$25 B fintech','
     growthRate: '28% YoY','
     variant: 'ai-futuristic','
     contactInfo: contact,
@@ -579,7 +579,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     useCases: ['Device security, Network protection, Compliance'],'
     roi: 'Future-proof IoT security investment; avoid costly migrations later.','
     competitors: ['Armis, Palo Alto Networks, Check Point, Fortinet'],'
-    marketSize: '$12B IoT security','
+    marketSize: '$12 B IoT security','
     growthRate: '38% YoY','
     variant: 'quantum-iot','
     contactInfo: contact,
@@ -632,7 +632,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     useCases: ['Personalized learning, Adaptive curriculum, Student engagement'],'
     roi: 'Improve student outcomes by 25-40% and increase engagement by 30-50%.','
     competitors: ['Coursera, Udemy, Khan Academy, Duolingo'],'
-    marketSize: '$20B edtech','
+    marketSize: '$20 B edtech','
     growthRate: '26% YoY','
     variant: 'ai-futuristic','
     contactInfo: contact,
@@ -685,7 +685,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     useCases: ['Satellite optimization, Mission planning, Space research'],'
     roi: 'Optimize space operations and reduce mission costs by 20-40%.','
     competitors: ['NASA, SpaceX, Boeing, Lockheed Martin'],'
-    marketSize: '$8B space technology','
+    marketSize: '$8 B space technology','
     growthRate: '45% YoY','
     variant: 'quantum-space','
     contactInfo: contact,
@@ -738,7 +738,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     useCases: ['Medical diagnosis, Treatment planning, Patient care'],'
     roi: 'Improve diagnostic accuracy by 15-25% and reduce diagnosis time by 30-50%.','
     competitors: ['IBM Watson Health, Google Health, Aidoc, Zebra Medical'],'
-    marketSize: '$35B AI healthcare','
+    marketSize: '$35 B AI healthcare','
     growthRate: '42% YoY','
     variant: 'ai-healthcare','
     contactInfo: contact,
@@ -789,9 +789,9 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     technology: ['Quantum Computing, Materials Science, Simulation'],'
     integrations: ['Materials databases, Research tools, Patent databases'],'
     useCases: ['Materials discovery, Property optimization, Research acceleration'],'
-    roi: 'Accelerate materials discovery by 5-10x and reduce research costs by 30-50%.','
+    roi: 'Accelerate materials discovery by 5-10 x and reduce research costs by 30-50%.','
     competitors: ['Materials Project, Citrine Informatics, Schrödinger'],'
-    marketSize: '$5B materials informatics','
+    marketSize: '$5 B materials informatics','
     growthRate: '38% YoY','
     variant: 'quantum-materials-enterprise','
     contactInfo: contact,
@@ -844,7 +844,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     useCases: ['Vehicle maintenance, Fleet optimization, Driver safety'],'
     roi: 'Reduce maintenance costs by 20-35% and improve fleet efficiency by 25-40%.','
     competitors: ['Geotab, Fleet Complete, Samsara, Verizon Connect'],'
-    marketSize: '$22B fleet management','
+    marketSize: '$22 B fleet management','
     growthRate: '24% YoY','
     variant: 'ai-futuristic','
     contactInfo: contact,
@@ -897,7 +897,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     useCases: ['Climate modeling, Sustainability planning, Policy analysis'],'
     roi: 'Improve climate prediction accuracy and optimize sustainability strategies.','
     competitors: ['NOAA, NASA, Climate modeling institutions'],'
-    marketSize: '$6B climate technology','
+    marketSize: '$6 B climate technology','
     growthRate: '35% YoY','
     variant: 'quantum-futuristic','
     contactInfo: contact,

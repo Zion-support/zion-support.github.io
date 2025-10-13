@@ -70,15 +70,11 @@ const originalContent = content
       fs.writeFileSync(filePath, content, 'utf8')'
       modified = true
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-
     return modified
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to find all TypeScript/JavaScript files
 function findSourceFiles(dir) {;
 const files = []
@@ -109,11 +105,8 @@ const stat = fs.statSync(fullPath)
 }
           files.push(fullPath)
 function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
-        }
       } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
-        }
       }
-    }
   }
 
   walkDir(dir)
@@ -131,7 +124,6 @@ let processedCount = 0
 for (const file of files) {/* TODO: Fix JSX expression */}`
   d: ${file}`)
   }
-}
 `
 console.log(`Processed ${processedCount} files`)
 console.log('Type annotation fixes completed!');`

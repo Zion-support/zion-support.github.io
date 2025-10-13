@@ -1,5 +1,5 @@
-import "https://deno.land/x/xhr@0.1.0/mod.ts"";
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts";";
+import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1';';';
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY');';
 const corsHeaders = {
@@ -39,7 +39,6 @@ interface EnhancedProfile {
     softSkills: string[]
     other: string[]
   }
-}
 serve(async (req) => {
   // TODO: Add properties
 }
@@ -59,7 +58,7 @@ const { talentData } = await req.json() as { talentData: TalentProfileData }
       return new Response(
   // TODO: Add parameters
 )
-        JSON.stringify({ error: "Bio must be at least 20 characters long" }),"
+        JSON.stringify({ error: "Bio must be at least 20 characters long"
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }'
       )
     }
@@ -80,7 +79,7 @@ const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions',
 }
   // TODO: Add properties
 }
-        model: 'gpt-4o-mini','
+        model: 'gpt-4 o-mini','
         messages: [
   // TODO: Add items
 ]
@@ -112,20 +111,16 @@ const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions',
 }
   // TODO: Add properties
 }
-              "summary": "The professional summary text (100-150 words)","
-              "categorizedSkills": {"
-                "programming": ["skill1", "skill2"],"
-                "devops": ["skill1", "skill2"],"
-                "platforms": ["skill1", "skill2"],"
-                "softSkills": ["skill1", "skill2"],"
-                "other": ["skill1", "skill2"]"
+              "summary"The professional summary text (100-150 words)","categorizedSkills": {"programming": [", "skill2"
+                "devops"skill1", "],"
+                ": ["skill1"skill2"],"softSkills": [", "skill2"
+                "other"skill1", "]"
               }
-            }
             Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.`
           }
         ],
         temperature: 0.7,
-        response_format: { type: "json_object" }"
+        response_format: { type: " }"
       })})
       }),
     });
@@ -135,7 +130,7 @@ const openAIData = await openAIResponse.json()
 }
   // TODO: Add properties
 }
-      throw new Error("Failed to generate profile content")"
+      throw new Error(")"
     }
     // Extract the generated content from the response;
 const responseContent = openAIData.choices[0].message.content
@@ -152,8 +147,8 @@ let enhancedProfile: EnhancedProfile
 }
   // TODO: Add properties
 }
-      console.error("Error parsing OpenAI response:", e)"
-      throw new Error("Failed to parse the generated content")"
+      console.error(", e)"
+      throw new Error(")"
     }
     return new Response(
   // TODO: Add parameters
@@ -166,7 +161,7 @@ let enhancedProfile: EnhancedProfile
 }
   // TODO: Add properties
 }
-    console.error("Error in talent-profile-enhancer function:", error)"
+    console.error(", error)"
     return new Response(
   // TODO: Add parameters
 )

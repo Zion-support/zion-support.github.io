@@ -10,7 +10,7 @@ const _stats = execSync('du -sh dist/*', { encoding: 'utf8' })'
     // Check total size;
 const _totalSize = execSync('du -sh dist', { encoding: 'utf8' }).trim()'
     // Check for large files;
-const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', { encoding: 'utf8' })'
+const _largeFiles = execSync('find dist -type f -size +100 k -exec ls -lh {} +', { encoding: 'utf8' })'
     if (largeFiles.trim()) {} else {}
   } else {
   // TODO: Add properties
@@ -23,19 +23,15 @@ try {/* TODO: Fix JSX expression */}
 const _totalSize = execSync('du -sh dist', {/* TODO: Fix JSX expression */})'
   g: 'utf8' }).trim()'
     // Check for large files;
-const _largeFiles = execSync('find dist -type f -size +100k -exec ls -lh {} +', {/* TODO: Fix JSX expression */})'
+const _largeFiles = execSync('find dist -type f -size +100 k -exec ls -lh {} +', {/* TODO: Fix JSX expression */})'
   g: 'utf8' })'
     if (largeFiles.trim()) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-    }
   } else {/* TODO: Fix JSX expression */}
-  }
 } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 // 2. Functions count
 try {;
-const _functionsCount = execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim()'"
+const _functionsCount = execSync('find netlify/functions -name "*.js"
   if (parseInt(functionsCount) < 100) {} else {
   // TODO: Add properties
 }
@@ -45,10 +41,7 @@ try {/* TODO: Fix JSX expression */}
   g: 'utf8' }).trim()'
   if (parseInt(functionsCount) < 100) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
-  }
 } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 // 3. Check for performance issues
 // Check for unused dependencies
 try {;
@@ -74,10 +67,7 @@ const foundHeavyDeps = [...dependencies, ...devDependencies].filter(dep => )
 }
   if (foundHeavyDeps.length > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
-  }
 } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 // 4. Check build configuration
 try {;
 const _viteConfig = fs.readFileSync('vite.config.js', 'utf8');';
@@ -87,14 +77,9 @@ const _netlifyToml = fs.readFileSync('netlify.toml', 'utf8')'
   if (netlifyToml.includes('NODE_OPTIONS')) {} else {'
 try {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
-  }
-
   if (netlifyToml.includes('NODE_OPTIONS')) {/* TODO: Fix JSX expression */}'
   } else {/* TODO: Fix JSX expression */}
-  }
 } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 // 5. Generate performance report;
 const report = {
   // TODO: Add properties
@@ -103,13 +88,13 @@ const report = {
 }
   timestamp: new Date().toISOString(),
   buildSize: execSync('du -sh dist', { encoding: 'utf8' }).trim(),'
-  functionsCount: execSync('find netlify/functions -name "*.js" | wc -l', { encoding: 'utf8' }).trim(),'"
+  functionsCount: execSync('find netlify/functions -name "*.js"
   optimizationStatus: 'Completed','
   improvements: [,;
 const report = {/* TODO: Fix JSX expression */}
   g: 'utf8' }).trim(),'
   functionsCoun,
-  t: execSync('find netlify/functions -name "*.js" | wc -l', {/* TODO: Fix JSX expression */})'"
+  t: execSync('find netlify/functions -name "*.js"
   g: 'utf8' }).trim(),'
   optimizationStatu,
   s: 'Completed','

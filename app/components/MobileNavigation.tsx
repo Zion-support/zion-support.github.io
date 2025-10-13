@@ -10,4 +10,3 @@ export default function MobileNavigation({ className = '', children }: MobileNav
       {children}
     </div>
   );
-}

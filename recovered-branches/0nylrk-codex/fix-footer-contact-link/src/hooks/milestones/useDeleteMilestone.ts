@@ -22,15 +22,15 @@ const { error } = await supabase
         .delete()
         .eq('id', milestoneId)'
       if (error) throw error
-      toast.success("Milestone deleted successfully")"
+      toast.success("Milestone deleted successfully"
       return true
     } catch (err: any) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      console.error("Error deleting milestone:", err)"
-      toast.error("Failed to delete milestone: " + err.message)"
+      console.error("Error deleting milestone:"
+      toast.error("Failed to delete milestone: "
       return false
     } finally {
   // TODO: Add properties
@@ -39,7 +39,6 @@ const { error } = await supabase
 }
       setIsSubmitting(false)
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -47,5 +46,4 @@ const { error } = await supabase
 }
     deleteMilestone,
     isSubmitting
-  }
-}
+  

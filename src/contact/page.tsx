@@ -91,7 +91,7 @@ const handleSubmit = async (e: React.FormEvent) => {
     phone: '+1 (302) 464-0950','
     email: 'kleber@ziontechgroup.com','
     address: '364 E Main St STE 1008, Middletown, DE 19709','
-    hours: 'Mon-Fri: 9AM-6PM EST''
+    hours: 'Mon-Fri: 9 AM-6 PM EST''
   }
   const services = [
   // TODO: Add items
@@ -121,11 +121,9 @@ const achievements = [
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"
-<div className="text-center">"
-<h1 className="text-4xl font-bold text-white mb-4">Contact</h1>"
-<p className="text-gray-300 mb-8">Coming Soon - Advanced contact solutions</p>"
-<a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover: bg-cyan-600 transition-colors">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"text-center"
+<h1 className="
+<p className="text-gray-300 mb-8"/contact" className="
           Contact Us</span></div>
   );
 export default ContactPage,;
@@ -142,11 +140,11 @@ const budgetRanges = [
 ]
   // TODO: Add items
 ]
-    'Under $10K','
-    '$10K - $50K','
-    '$50K - $100K','
-    '$100K - $500K','
-    '$500K+','
+    'Under $10 K','
+    '$10 K - $50 K','
+    '$50 K - $100 K','
+    '$100 K - $500 K','
+    '$500 K+','
     'Not sure''
   ];
 const timelines = [
@@ -175,7 +173,7 @@ const offices = [
       address: '364 E Main St STE 1008, Middletown, DE 19709','
       phone: '+1 (302) 464-0950','
       email: 'kleber@ziontechgroup.com','
-      hours: 'Mon-Fri: 9AM-6PM EST','
+      hours: 'Mon-Fri: 9 AM-6 PM EST','
       timezone: 'Eastern Time''
     },
     {
@@ -187,7 +185,7 @@ const offices = [
       address: '123 Tech Street, San Francisco, CA 94105','
       phone: '+1 (415) 555-0123','
       email: 'sf@ziontechgroup.com','
-      hours: 'Mon-Fri: 9AM-6PM PST','
+      hours: 'Mon-Fri: 9 AM-6 PM PST','
       timezone: 'Pacific Time''
     },
     {
@@ -196,10 +194,10 @@ const offices = [
   // TODO: Add properties
 }
       city: 'London, UK','
-      address: '456 Innovation Lane, London EC1A 4HD','
+      address: '456 Innovation Lane, London EC1 A 4 HD','
       phone: '+44 20 7946 0958','
       email: 'london@ziontechgroup.com','
-      hours: 'Mon-Fri: 9AM-6PM GMT','
+      hours: 'Mon-Fri: 9 AM-6 PM GMT','
       timezone: 'Greenwich Mean Time''
     }
   ];
@@ -249,31 +247,22 @@ const faqs = [
     return (
   // TODO: Add parameters
 )
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"
-<div className="max-w-2xl mx-auto text-center p-8">"
-<div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">"
-<CheckCircle className="w-10 h-10 text-white" />"
-<h1 className="text-3xl font-bold text-white mb-4">Thank You!"
-          <p className="text-xl text-gray-300 mb-6">"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"max-w-2 xl mx-auto text-center p-8"
+<div className="
+<CheckCircle className="w-10 h-10 text-white"text-3 xl font-bold text-white mb-4"
+          <p className="
             Your message has been sent successfully. Our team will get back to you within 24 hours.
-          <div className="space-y-4">"
-<p className="text-gray-400">"
+          <div className="space-y-4"text-gray-400"
 <strong>What happens next?
-            <div className="space-y-2 text-left max-w-md mx-auto">"
-<div className="flex items-center space-x-3">"
-<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-<span className="text-gray-300">We'll review your requirements'"
-              <div className="flex items-center space-x-3">"
-<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-<span className="text-gray-300">Schedule a consultation call"
-              <div className="flex items-center space-x-3">"
-<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-<span className="text-gray-300">Provide a detailed proposal"
-          <div className="mt-8">"
-<$2 />
-              href="/""
-              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">"
-<ArrowRight className="w-5 h-5 mr-2" />"
+            <div className="
+<div className="flex items-center space-x-3"w-5 h-5 text-green-400 flex-shrink-0"
+<span className="
+              <div className="flex items-center space-x-3"w-5 h-5 text-green-400 flex-shrink-0"
+<span className="
+              <div className="flex items-center space-x-3"w-5 h-5 text-green-400 flex-shrink-0"
+<span className="
+          <div className="mt-8"/""bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
+<ArrowRight className="
               Back to Home</span></div>
 </div></div>
     )
@@ -281,250 +270,171 @@ const faqs = [
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">"
-<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20">"
-<div className="container mx-auto px-4 relative z-10">"
-<div className="max-w-4xl mx-auto text-center">"
-<h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"relative py-20 lg:py-32 overflow-hidden"
+<div className="
+<div className="container mx-auto px-4 relative z-10"max-w-4 xl mx-auto text-center"
+<h1 className="
               Get In Touch
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">"
-              Ready to transform your business with AI? Let's discuss your project and explore '
-              how we can help you achieve your goals.
-            <div className="flex flex-wrap justify-center gap-6">"
-<div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">"
-<Phone className="w-5 h-5 text-cyan-400" />"
-<span className="text-white font-medium">{contactInfo.phone}"
-              <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">"
-<Mail className="w-5 h-5 text-purple-400" />"
-<span className="text-white font-medium">{contactInfo.email}"
+            <p className="text-xl lg:text-2 xl text-gray-300 mb-8 leading-relaxed"flex flex-wrap justify-center gap-6"
+<div className="
+<Phone className="w-5 h-5 text-cyan-400"text-white font-medium"
+              <div className="
+<Mail className="w-5 h-5 text-purple-400"text-white font-medium"
       {/* Contact Form & Info */}
-      <section className="py-20">"
-<div className="container mx-auto px-4">"
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12">"
+      <section className="
+<div className="container mx-auto px-4"grid grid-cols-1 lg:grid-cols-2 gap-12"
             {/* Contact Form */}
-            <div className="bg-slate-800/50 rounded-lg p-8">"
-<h2 className="text-2xl font-bold text-white mb-6">Send us a message"
-              <form onSubmit={handleSubmit} className="space-y-6">"
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+            <div className="
+<h2 className="text-2 xl font-bold text-white mb-6"space-y-6"
+<div className="
 <div>
-<label className="block text-sm font-medium text-gray-300 mb-2">"
-                      Full Name *
-                    <input
-                      type="text""
-                      name="name""
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors""
-                      placeholder="Your full name""
+<label className="block text-sm font-medium text-gray-300 mb-2"text""name""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                      placeholder=""
                     />
 <div>
-<label className="block text-sm font-medium text-gray-300 mb-2">"
+<label className="
                       Email Address *
                     <input
-                      type="email""
-                      name="email""
+                      type="email"
+                      name="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors""
-                      placeholder="your@email.com""
-                    />
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"your@email.com""grid grid-cols-1 md:grid-cols-2 gap-6"
 <div>
-<label className="block text-sm font-medium text-gray-300 mb-2">"
+<label className="
                       Company
                     <input
-                      type="text""
-                      name="company""
+                      type="text"
+                      name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors""
-                      placeholder="Your company name""
-                    />
-<div>
-<label className="block text-sm font-medium text-gray-300 mb-2">"
+                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"Your company name""block text-sm font-medium text-gray-300 mb-2"
                       Phone Number
                     <input
-                      type="tel""
-                      name="phone""
+                      type=""
+                      name=""
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors""
-                      placeholder="+1 (555) 123-4567""
+                      className="
+                      placeholder="+1 (555) 123-4567"
                     />
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
-<div>
-<label className="block text-sm font-medium text-gray-300 mb-2">"
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6"block text-sm font-medium text-gray-300 mb-2"
                       Service Interest
                     <select
-                      name="service""
+                      name=""
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">"
-<option value="">Select a service"
+                      className="
+<option value=""
                       {services.map((service, index) => (
   // TODO: Add parameters
 )
                         <option key={index} value={service}>{service}
                       ))}
                   <div>
-<label className="block text-sm font-medium text-gray-300 mb-2">"
-                      Budget Range
-                    <select
-                      name="budget""
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">"
-<option value="">Select budget range"
+<label className="block text-sm font-medium text-gray-300 mb-2"budget""w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
+<option value=">Select budget range"
                       {budgetRanges.map((range, index) => (
   // TODO: Add parameters
 )
                         <option key={index} value={range}>{range}
                       ))}
                 <div>
-<label className="block text-sm font-medium text-gray-300 mb-2">"
+<label className="
                     Timeline
                   <select
-                    name="timeline""
+                    name="timeline"
                     value={formData.timeline}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors">"
-<option value="">Select timeline"
-                    {timelines.map((timeline, index) => (
-  // TODO: Add parameters
-)
-                      <option key={index} value={timeline}>{timeline}
-                    ))}
-                <div>
-<label className="block text-sm font-medium text-gray-300 mb-2">"
+                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"">Select timeline"block text-sm font-medium text-gray-300 mb-2"
                     Message *
                   <textarea
-                    name="message""
+                    name=""
                     value={formData.message}
                     onChange={handleInputChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors resize-none""
-                    placeholder="Tell us about your project, goals, and any specific requirements...""
+                    className="
+                    placeholder="Tell us about your project, goals, and any specific requirements..."
                   />
 <$2 />
-                  type="submit""
+                  type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center">"
-                  {isSubmitting ? (
-  // TODO: Add parameters
-)
-                    <React.Fragment>
-<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2">"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"
                       Sending...
                   ) : (
   // TODO: Add parameters
 )
                     <React.Fragment>
-<Send className="w-5 h-5 mr-2" />"
+<Send className="
                       Send Message
                   )}
             {/* Contact Information */}
-            <div className="space-y-8">"
+            <div className="space-y-8"text-2 xl font-bold text-white mb-6"
+                <div className="
+<div className="flex items-start space-x-4"w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"
 <div>
-<h2 className="text-2xl font-bold text-white mb-6">Contact Information"
-                <div className="space-y-6">"
-<div className="flex items-start space-x-4">"
-<Phone className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />"
+<div className="
+                      <div className="text-gray-400 text-sm"flex items-start space-x-4"
+<Mail className="
 <div>
-<div className="text-white font-medium">{contactInfo.phone}"
-                      <div className="text-gray-400 text-sm">Call us anytime"
-                  <div className="flex items-start space-x-4">"
-<Mail className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />"
+<div className="text-white font-medium"text-gray-400 text-sm"
+                  <div className="
+<MapPin className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"text-white font-medium"
+                      <div className="
+                  <div className="flex items-start space-x-4"w-6 h-6 text-yellow-400 mt-1 flex-shrink-0"
 <div>
-<div className="text-white font-medium">{contactInfo.email}"
-                      <div className="text-gray-400 text-sm">Email us"
-                  <div className="flex items-start space-x-4">"
-<MapPin className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />"
-<div>
-<div className="text-white font-medium">Middletown, DE"
-                      <div className="text-gray-400 text-sm">{contactInfo.address}"
-                  <div className="flex items-start space-x-4">"
-<Clock className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />"
-<div>
-<div className="text-white font-medium">{contactInfo.hours}"
-                      <div className="text-gray-400 text-sm">Business hours"
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 rounded-lg">"
-<h3 className="text-xl font-bold text-white mb-4">Why Choose Us?"
-                <div className="space-y-3">"
-<div className="flex items-center space-x-3">"
-<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-<span className="text-gray-300">300% Average ROI"
-                  <div className="flex items-center space-x-3">"
-<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-<span className="text-gray-300">99.9% Uptime Guarantee"
-                  <div className="flex items-center space-x-3">"
-<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-<span className="text-gray-300">24/7 Support"
-                  <div className="flex items-center space-x-3">"
-<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />"
-<span className="text-gray-300">Enterprise Security"
-              <div className="bg-slate-800/50 p-6 rounded-lg">"
-<h3 className="text-xl font-bold text-white mb-4">Quick Actions"
-                <div className="space-y-3">"
-<$2 />
-                    href="/consultation""
-                    className="block w-full bg-cyan-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-cyan-600 transition-colors text-center">"
-<Calendar className="w-5 h-5 inline mr-2" />"
+<div className="
+                      <div className="text-gray-400 text-sm"bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 rounded-lg"
+<h3 className="
+                <div className="space-y-3"flex items-center space-x-3"
+<CheckCircle className="
+<span className="text-gray-300"flex items-center space-x-3"
+<CheckCircle className="
+<span className="text-gray-300"flex items-center space-x-3"
+<CheckCircle className="
+<span className="text-gray-300"flex items-center space-x-3"
+<CheckCircle className="
+<span className="text-gray-300"bg-slate-800/50 p-6 rounded-lg"
+<h3 className="
+                <div className="space-y-3"/consultation""block w-full bg-cyan-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-cyan-600 transition-colors text-center"
+<Calendar className="
                     Schedule Free Consultation
                   <$2 />
-                    href="/demo""
-                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-colors text-center">"
-<MessageSquare className="w-5 h-5 inline mr-2" />"
+                    href="/demo"
+                    className="block w-full border border-cyan-400 text-cyan-400 py-3 px-4 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-colors text-center"w-5 h-5 inline mr-2"
                     Request Demo
       {/* Global Offices */}
-      <section className="py-20 bg-slate-800/50">"
-<div className="container mx-auto px-4">"
-<div className="text-center mb-16">"
-<h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">"
+      <section className="
+<div className="container mx-auto px-4"text-center mb-16"
+<h2 className="
               Our Global Offices
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">"
-              We're here to serve you wherever you are in the world'
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+            <p className="text-lg text-gray-300 max-w-3 xl mx-auto"grid grid-cols-1 md:grid-cols-3 gap-8"
             {offices.map((office, index) => (
   // TODO: Add parameters
 )
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">"
-<h3 className="text-xl font-bold text-white mb-4">{office.city}"
-                <div className="space-y-3">"
-<div className="flex items-center justify-center space-x-2">"
-<MapPin className="w-4 h-4 text-cyan-400" />"
-<span className="text-gray-300 text-sm">{office.address}"
-                  <div className="flex items-center justify-center space-x-2">"
-<Phone className="w-4 h-4 text-purple-400" />"
-<span className="text-gray-300 text-sm">{office.phone}"
-                  <div className="flex items-center justify-center space-x-2">"
-<Mail className="w-4 h-4 text-green-400" />"
-<span className="text-gray-300 text-sm">{office.email}"
-                  <div className="flex items-center justify-center space-x-2">"
-<Clock className="w-4 h-4 text-yellow-400" />"
-<span className="text-gray-300 text-sm">{office.hours}"
-                  <div className="text-cyan-400 text-sm font-medium">{office.timezone}"
+              <div key={index} className="
+<h3 className="text-xl font-bold text-white mb-4"space-y-3"
+<div className="
+<MapPin className="w-4 h-4 text-cyan-400"text-gray-300 text-sm"
+                  <div className="
+<Phone className="w-4 h-4 text-purple-400"text-gray-300 text-sm"
+                  <div className="
+<Mail className="w-4 h-4 text-green-400"text-gray-300 text-sm"
+                  <div className="
+<Clock className="w-4 h-4 text-yellow-400"text-gray-300 text-sm"
+                  <div className="
             ))}
       {/* FAQ Section */}
-      <section className="py-20">"
-<div className="container mx-auto px-4">"
-<div className="text-center mb-16">"
-<h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">"
-              Frequently Asked Questions
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">"
+      <section className="py-20"container mx-auto px-4"
+<div className="
+<h2 className="text-3 xl lg:text-4 xl font-bold text-white mb-4"text-lg text-gray-300 max-w-3 xl mx-auto"
               Common questions about our services and process
-          <div className="max-w-4xl mx-auto">"
-<div className="space-y-6">"
-              {faqs.map((faq, index) => (
-  // TODO: Add parameters
-)
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6">"
-<h3 className="text-xl font-bold text-white mb-3">{faq.question}"
-                  <p className="text-gray-300">{faq.answer}"
+          <div className="
+<div className="space-y-6"bg-slate-800/50 rounded-lg p-6"
+<h3 className="
+                  <p className="text-gray-300"
               ))}
   )
 }</div></div>
@@ -583,4 +493,4 @@ const faqs = [
 </h3></section>
 </section></section>
 </section>
-}}}
+}

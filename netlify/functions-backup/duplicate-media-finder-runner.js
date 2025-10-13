@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'duplicate-media-finder-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'duplicate-media-finder-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'duplicate-media-finder-runner',' source: event.source || 'unknown', finding: {' status: 'active', mediaScanned: 0, duplicatesFound: 0,'
         lastScan: new Date().toISOString() } }) } return result; } catch (error) {

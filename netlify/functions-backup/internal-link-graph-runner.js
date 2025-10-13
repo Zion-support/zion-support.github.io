@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'internal-link-graph-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'internal-link-graph-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'internal-link-graph-runner',' source: event.source || 'unknown', graph: {' status: 'generating', links: 0, nodes: 0,'
         lastGenerated: new Date().toISOString() } }) } return result; } catch (error) {

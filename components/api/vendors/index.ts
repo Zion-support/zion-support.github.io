@@ -32,4 +32,4 @@ const vendors = listVendors()
   res.status(200).json({ vendors })
 }
 
-}}}}}
+}}}

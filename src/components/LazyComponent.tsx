@@ -18,9 +18,8 @@ export default function LazyComponent({
 const DefaultFallback = () => (
   // TODO: Add parameters
 )
-  <div className="flex items-center justify-center p-8">"
-<div className="cyber-loader">"
-<span className="ml-3 text-cyan-400">Loading..."
+  <div className="flex items-center justify-center p-8"cyber-loader"
+<span className="
 );
 const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children
 }) => {
@@ -64,7 +63,6 @@ export default LazyComponent;
 import LoadingSpinner from './LoadingSpinner';'
 interface LazyComponentProps {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   childre,
   n: ReactNode
   fallback?: ReactNode
@@ -80,7 +78,6 @@ export const _withLazyLoading = {}
           <P>,
   fallback?: ReactNode) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   return (prop)
   s: P) => ()
           <Suspense fallback={fallback || <LoadingSpinner />}>
@@ -93,33 +90,27 @@ const,
   LazyComponent: React.FC,
           <LazyComponentProps> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
-}
 //   children,
   fallback =
           <LoadingSpinner />,
   delay = 0,
   threshold = 0.1,
-  rootMargin = '50px')'
+  rootMargin = '50 px')'
 }) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   const [isVisible, setIsVisible] = React.useState(false);
 const [isLoaded, setIsLoaded] = React.useState(false);
 const elementRef = React.useRef
           <HTMLDivElement>(null)
   React.useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     const observer = new IntersectionObserver()
       ([entry]) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
           setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
             setIsVisible(true)
             setIsLoaded(true)
           }, delay)
@@ -128,13 +119,11 @@ const elementRef = React.useRef
       },
       {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
 //         threshold,
 //         rootMargin}
     )
     if (elementRef.current) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       observer.observe(elementRef.current)
     }
     return () => observer.disconnect()
@@ -155,14 +144,11 @@ export const preloadComponent = (importFunctio)
   n: () => Promise,
           <any>) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     const component = lazy(importFunction)
     return component
   }
-}
 // Lazy load with preloading;
 export const createLazyComponent = {}
           <P extends object>();
@@ -172,7 +158,6 @@ importFunctio,
   t: ComponentType<P> }>,
   fallback?: ReactNode) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   const LazyComponent = lazy(importFunction)
   return (prop)
   s: P) => ()
@@ -184,7 +169,6 @@ importFunctio,
 // Critical resource preloader;
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   if (typeof window === 'undefined') return'
   // Preload critical fonts;
 const fontPreloads = [
@@ -203,7 +187,6 @@ const fontPreloads = [
   i: wght@300;400;500;600;700&display=swap'],'
   fontPreloads.forEach((href) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     const link = document.createElement('link')'
     link.rel = 'preload''
     link.as = 'style''
@@ -223,7 +206,6 @@ const imagePreloads = [
 //     '/favicon.ico']'
   imagePreloads.forEach((src) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     const link = document.createElement('link')'
     link.rel = 'preload''
     link.as = 'image''

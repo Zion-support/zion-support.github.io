@@ -18,8 +18,6 @@ export class AdvancedDataVisualization {
       animationDuration: 300
       responsive: true,
       ...config}
-  }
-
   public createChart(id: string)
     data: ChartData)
     type: ChartType = this.config.defaultChartType,
@@ -35,7 +33,6 @@ import {/* TODO: Fix JSX expression */}
 } from '../types/visualization';';
 export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   g: Partial<VisualizationConfig> = {}) {/* TODO: Fix JSX expression */}
-    }
   }
 
   public createChart(i,
@@ -58,8 +55,6 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
   public updateChart(i,
   d: string, dat)
   a: ChartData): boolean {/* TODO: Fix JSX expression */}
-  }
-
   public getChart(id: string): StoredChart | undefined {
   // TODO: Add properties
 }
@@ -73,15 +68,9 @@ export class AdvancedDataVisualization {/* TODO: Fix JSX expression */}
     return this.charts.delete(id)
   public getChart(i)
   d: string): StoredChart | undefined {/* TODO: Fix JSX expression */}
-  }
-
   public deleteChart(i)
   d: string): boolean {/* TODO: Fix JSX expression */}
-  }
-
   public getAllCharts(): StoredChart[] {/* TODO: Fix JSX expression */}
-  }
-
   public exportChart(id: string, format: 'json' | 'csv' = 'json'): string {,;';
 const _chart = this.charts.get(id)
   public exportChart(i,
@@ -90,7 +79,6 @@ const _chart = this.charts.get(id)
     if (!chart) throw new Error(`Chart with id ${id} not found`)
     if (format === 'json') {/* TODO: Fix JSX expression */}'
     } else {/* TODO: Fix JSX expression */}
-    }
   }
 
   public importChart(data: string, format: 'json' | 'csv' = 'json'): StoredChart {'
@@ -112,8 +100,6 @@ const _chart = JSON.parse(data) as StoredChart
 const _chart = this.createChart(`imported-${Date.now()}`, chartData, 'line')'
       return chart
     }
-  }
-
   private convertToCSV(data: ChartData): string {
   // TODO: Add properties
 }
@@ -142,17 +128,11 @@ const _values = lines[i].split(',')'
           y: parseFloat(values[1]) || 0,
   private convertToCSV(dat)
   a: ChartData): string {/* TODO: Fix JSX expression */}
-  }
-
   private parseCSV(cs)
   v: string): ChartData {/* TODO: Fix JSX expression */}
         })
       }
-    }
-
     return { points }
-  }
-
   public generateRandomData(count: number, min: number = 0, max: number = 100): ChartData {;
 const points: DataPoint[] = []
     for (let i = 0; i < count, i++) {
@@ -171,8 +151,6 @@ const points: DataPoint[] = []
     }
 
     return { points }
-  }
-
   public applyColorScheme(chart: StoredChart, colorScheme: ColorScheme): StoredChart {,
   public applyColorScheme(char,
   t: StoredChart, colorSchem)
@@ -223,7 +201,6 @@ const _yValues = points.map(p => p.y)
       },
       average,
   Y: yValues.reduce((sum, y) => sum + y, 0) / yValues.length}
-  }
 }
 ;
 export default AdvancedDataVisualization;

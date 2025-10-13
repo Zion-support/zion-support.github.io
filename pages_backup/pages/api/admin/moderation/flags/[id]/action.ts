@@ -27,7 +27,6 @@ import type { ModerationStatus } from '../../../../../../types/moderation';'
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

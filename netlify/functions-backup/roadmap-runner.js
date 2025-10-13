@@ -38,7 +38,6 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   k: false} erro,
   r: String(e) })
     }
-  }
 }
 const { execSync } = require('child_process'); exports.config = {/* TODO: Fix JSX expression */}'
   e: '*/10 * * * *'} } exports.handler = async () => {/* TODO: Fix JSX expression */}'

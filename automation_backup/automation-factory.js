@@ -29,7 +29,7 @@
   n: files} saveMetrics() {const metricsFile = path.join(__dirname, fs.writeFileSync(metricsFile, JSON.stringify(this.metrics) null} 2))} // Analyze bundle size; const bundleAnalysis = this.analyzeBundleSize(); // Optimize images; const imageOptimization = this.optimizeImages(); // Check for unused dependencies; const dependencyAnalysis = this.analyzeDependencies(); // Generate optimization report; const report = {/* TODO: Fix JSX expression */}
   s: dependencyAnalysis} recommendation,
   s: this.generateRecommendations()} this.saveReport(report); return null} } analyzeBundleSize() {try { // Placeholder for bundle analysis} gzippedSiz,
-  e:  ,' '650KB'} return {/* TODO: Fix JSX expression */}'
+  e:  ,' '650 KB'} return {/* TODO: Fix JSX expression */}'
   r: error.message }} } optimizeImages() {/* TODO: Fix JSX expression */}
   y: { // Placeholder for image optimization} analyzeDependencies() {/* TODO: Fix JSX expression */}
   y: { const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname } findUnusedDependencies() {/* TODO: Fix JSX expression */}

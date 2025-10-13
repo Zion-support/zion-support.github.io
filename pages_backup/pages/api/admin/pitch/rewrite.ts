@@ -16,7 +16,7 @@ const chat = await client.chat.completions.create({
 }
   // TODO: Add properties
 }
-        model: 'gpt-4o-mini''
+        model: 'gpt-4 o-mini''
         messages: [
   // TODO: Add items
 ]
@@ -38,7 +38,6 @@ res.status(200).json({ title, content })
     res.status(500).json({ error: e?.message |'Rewrite failed' })'
     res.status(500).json({ error: e?.message || 'Rewrite failed' })'
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next';'
     if (req.method === 'POST') {;';
 const { slide } = req.body
@@ -85,8 +84,7 @@ const rewritten = {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 )

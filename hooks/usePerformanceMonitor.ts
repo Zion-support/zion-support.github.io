@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-import { useState, useEffect } from 'react';
 
+
+import { useState, useEffect } from 'react';
 export function usePerformanceMonitor() {
-<<<<<<< HEAD
   const [state, setState] = useState<string | null>(null);
   
-=======
   const [state, setState] = useState(null);
 
   useEffect(() => {
@@ -21,13 +13,8 @@ export function usePerformanceMonitor() {
   
   return { state };
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
 
 export default usePerformanceMonitor;
-=======
 
   return state;
 }
@@ -52,10 +39,8 @@ export default usePerformanceMonitor;
 //     processData,
   };
 };
-=======
 
 export default usePerformanceMonitor;
-=======
 import { useEffect } from 'react';';';
 export const usePerformanceMonitor = () => {
   // TODO: Implement
@@ -79,9 +64,7 @@ export const usePerformanceMonitor = () => {
     console.log('Performance monitor initialized')'
   }, [])
 }
-=======
 import { useEffect, useState } from 'react';
-
 interface PerformanceData {
   domContentLoaded: number;
   loadComplete: number;

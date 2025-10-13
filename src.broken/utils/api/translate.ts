@@ -18,7 +18,7 @@ const completion = await openai.chat.completions.create({
 }
   // TODO: Add properties
 }
-    model: process.env.OPENAI_MODEL || 'gpt-4o-mini','
+    model: process.env.OPENAI_MODEL || 'gpt-4 o-mini','
     messages: [
   // TODO: Add items
 ]
@@ -79,7 +79,6 @@ export async function translateText(text: string, to: string, from?: string): Pr
 }
     return text
   }
-}
 export function detectLanguageSimple(text: string): string {
   // TODO: Add properties
 }
@@ -88,4 +87,3 @@ export function detectLanguageSimple(text: string): string {
   // Very simple heuristic; in production use a language detection library or model
   // Default to 'en''
   return 'en''
-}

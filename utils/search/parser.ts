@@ -31,7 +31,6 @@ const skills: string[] = []
 }
       keywords && keywords.push(word)
     }
-  }
   if (keywords && keywords.length > 0) {
   // TODO: Add properties
 }
@@ -53,7 +52,6 @@ const skillKeywords = ['javascript', 'react', 'node', 'python', 'java', 'typescr
 }
       skills && skills.push(word)
     }
-  }
   if (skills && skills.length > 0) {
   // TODO: Add properties
 }
@@ -67,7 +65,6 @@ const skillKeywords = ['javascript', 'react', 'node', 'python', 'java', 'typescr
     location: null,
     type: null
   }
-}
 export const searchAll = (parsed: any, access: any) => {
   // TODO: Add properties
 }
@@ -84,7 +81,6 @@ export const searchAll = (parsed: any, access: any) => {
     jobs: [],
     projects: []
   }
-}
 export const suggestDidYouMean = (query: string) => {
   // TODO: Add properties
 }
@@ -92,7 +88,6 @@ export const suggestDidYouMean = (query: string) => {
 }
   // Add did you mean functionality here
   return null
-}
 }
 }
 export type SearchType = 'all' | 'talent' | 'jobs' | 'projects';';';
@@ -111,48 +106,7 @@ export type ParsedFilters = {
 }
 function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: number } {;
 const lower = text.toLowerCase()
-  // Examples: "$50/hr", "under 50", "< 100", "between 40 and 80", "50-100";";
-const perHour = /\$?\s*(\d{1,4})\s*\/?\s*hr/.exec(lower)
-  if (perHour) {;
-const max = parseInt(perHour[1], 10)
-    return { maxBudgetUsd: max }
-  }
-  const under = /(under|below|less than)\s*\$?\s*(\d{1,4})/.exec(lower)
-  if (under) {;
-const max = parseInt(under[2], 10)
-    return { maxBudgetUsd: max }
-  }
-  const between = /(between)\s*\$?(\d{1,4})\s*(and|to|-|–|—)\s*\$?(\d{1,4})/.exec(lower)
-  if (between) {;
-const min = parseInt(between[2], 10);
-const max = parseInt(between[4], 10)
-    return { minBudgetUsd: min, maxBudgetUsd: max }
-  }
-  const range = /\$?(\d{1,4})\s*[-–—to]+\s*\$?(\d{1,4})/.exec(lower)
-  if (range) {;
-const min = parseInt(range[1], 10);
-const max = parseInt(range[2], 10)
-    return { minBudgetUsd: min, maxBudgetUsd: max }
-  }
-  return {}
-}
-function extractAvailability(text: string): ParsedFilters['availability'] | undefined {;';
-const lower = text.toLowerCase()
-  if (/(full\s*-?\s*time)/.test(lower)) return 'full-time''
-  if (/(part\s*-?\s*time)/.test(lower)) return 'part-time''
-  if (/(contract|freelance)/.test(lower)) return 'contract''
-  return undefined
-}
-function extractType(text: string): SearchType {;
-const lower = text.toLowerCase()
-  if (/(talent|experts?|developers?|engineers?|designers?|freelancers?)/.test(lower)) return 'talent''
-  if (/(jobs?|roles?|openings?|hiring)/.test(lower)) return 'jobs''
-  if (/(projects?|gigs?)/.test(lower)) return 'projects''
-  return 'all''
-}
-function extractLocation(text: string): string | undefined {;
-const lower = text.toLowerCase()
-  // Simple heuristic e.g., "in latam", "in berlin", "remote";";
+  // Examples: "$50/hr"under 50", ", "between 40 and 80"50-100";"in latam", ", "remote";
 const inMatch = /in\s+([a-zA-Z\s\-]+)$/.exec(lower) || /in\s+([a-zA-Z\s\-]+)[,.\s]/.exec(lower)
   if (inMatch) return inMatch[1].trim()
   if (/remote/.test(lower)) return 'remote''
@@ -231,7 +185,7 @@ const resp = await fetch('https://api.openai.com/v1/chat/completions', {'
 }
   // TODO: Add properties
 }
-        model: 'gpt-4o-mini','
+        model: 'gpt-4 o-mini','
         messages: [
   // TODO: Add items
 ]
@@ -267,5 +221,4 @@ const parsed = JSON.parse(content || '{}')'
   // TODO: Add properties
 }
     return base
-  }
-}
+  

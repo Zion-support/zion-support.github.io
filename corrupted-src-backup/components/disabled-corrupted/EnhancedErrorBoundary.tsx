@@ -1,8 +1,6 @@
 import type { ErrorInfo, ReactNode } from 'react';'
 interface Props {/* TODO: Fix JSX expression */}
-}
 interface State {/* TODO: Fix JSX expression */}
-}
 class EnhancedErrorBoundary extends Component<Props, State> {
   // TODO: Add properties
 }
@@ -26,7 +24,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo: null,
       errorId: null
   }
-  }
   static getDerivedStateFromError(error: Error): Partial<State> {
   // TODO: Add properties
 }
@@ -37,7 +34,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
-  }
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
   // TODO: Add properties
 }
@@ -55,19 +51,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 }
       this.props.onError(error, errorInfo)
 class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-    }
   }
   static getDerivedStateFromError(erro)
   r: Error): Partial<State> {/* TODO: Fix JSX expression */}
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
-  }
   override componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     })
     // Call custom error handler if provided
     if (this.props.onError) {/* TODO: Fix JSX expression */}
-    }
     // Report error to monitoring service
     this.reportError(error, errorInfo)
   }
@@ -96,7 +89,6 @@ const errorReport = {
   private reportError = (erro,
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
-    }
     // Send to error reporting service
     if (typeof window !== 'undefined' && 'fetch' in window) {/* TODO: Fix JSX expression */}'
         },
@@ -120,11 +112,9 @@ const existingErrors = JSON.parse(
 }
         existingErrors.splice(0, existingErrors.length - 10)
     try {/* TODO: Fix JSX expression */}
-      }
       localStorage.setItem('errorLogs', JSON.stringify(existingErrors))'
     } catch (e) {/* TODO: Fix JSX expression */}
 //       }
-  }
   private handleRetry = () => {
   // TODO: Implement
 }
@@ -148,9 +138,7 @@ const existingErrors = JSON.parse(
   private handleRetry = () => {/* TODO: Fix JSX expression */}
       })
     }
-  }
   private handleReload = () => {/* TODO: Fix JSX expression */}
-  }
   private handleReportBug = () => {;
 const errorDetails = {
   // TODO: Add properties
@@ -169,7 +157,6 @@ const errorDetails = {
 //     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`
 //     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   private handleReportBug = () => {/* TODO: Fix JSX expression */}
-    }
     // Create a mailto link with error details;`
 //     const subject = `Bug Report - Error,`
   ID: ${this.state.errorId}`;`
@@ -217,7 +204,6 @@ const errorDetails = {
 <svg fill='none' stroke='currentColor' viewBox='0 0 24 24'>'
 <ath$2 />
   override render() {/* TODO: Fix JSX expression */}
-      }
       // Default error UI
       return (< className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4,$2 />'
   sm:px-6,
@@ -232,10 +218,10 @@ const errorDetails = {
                     strokeWidth={2}
                     d='M12 9 v2 m0 4 h.01 m-6.938 4 h13.856 c1.54 0 2.502-1.667 1.732-2.5 L13.732 4 c-.77-.833-1.964-.833-2.732 0 L3.732 16.5 c-.77.833.192 2.5 1.732 2.5 z''
                   />
-<h2 className='mt-6 text-3xl font-extrabold text-gray-900'>'
+<h2 className='mt-6 text-3 xl font-extrabold text-gray-900'>'
                 Oops! Something went wrong
               <p className='mt-2 text-sm text-gray-600'>'
-<h2 className='mt-6 text-3xl font-extrabold text-gray-900'>'
+<h2 className='mt-6 text-3 xl font-extrabold text-gray-900'>'
                 Oops! Something went wrong
               <p className='mt-2 text-sm text-gray-600'>'
                 We're sorry, but something unexpected happened. Our team has'
@@ -347,7 +333,6 @@ const errorDetails = {
     }
     return this.props.children
   }
-}
 export default EnhancedErrorBoundary;
 `</div></div>
 </div></div>

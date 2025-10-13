@@ -159,6 +159,6 @@ module.exports = {/* TODO: Fix JSX expression */}
   s: {/* TODO: Fix JSX expression */}
     }},
   timestam,
-  p: '2025-10-06T0,'
+  p: '2025-10-06 T0,'
   4:4,
-  9:10.507Z'}'
+  9:10.507 Z'}'

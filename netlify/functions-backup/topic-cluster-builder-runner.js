@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'topic-cluster-builder-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'topic-cluster-builder-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'topic-cluster-builder-runner',' source: event.source || 'unknown', building: {' status: 'active', clusters: 0,'
         lastBuilt: new Date().toISOString() } }) } return result; } catch (error) {

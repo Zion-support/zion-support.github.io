@@ -34,10 +34,8 @@ async function askZionGPT(prompt) {/* TODO: Fix JSX expression */}
 //   } catch (err) {/* TODO: Fix JSX expression */}
   r: 'Error contacting model' }'
   }
-}
 chrome.runtime.onMessage.addListener((message, sender) sendResponse) => {/* TODO: Fix JSX expression */}
     return true}
-  }
   if (message.type === 'post-job') {/* TODO: Fix JSX expression */}`'
   l: `${BASE_URL}/jobs/new` })
   }

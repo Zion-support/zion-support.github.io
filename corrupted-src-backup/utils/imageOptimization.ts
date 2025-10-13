@@ -33,7 +33,7 @@ export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {
   // TODO: Add properties
 }
     if ('IntersectionObserv, e, r' in, wind, o, w) {'
-        rootMarg, i, n: '5, 0, p, x', // Start loading 50px before entering viewport'
+        rootMarg, i, n: '5, 0, p, x', // Start loading 50 px before entering viewport'
   },;
 export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {
   // TODO: Add properties
@@ -62,7 +62,7 @@ export const lazyLoadImage = (i, m, g: HTMLImageElem, e, n, t): vo, i, d = > {/*
               }, if() {/* TODO: Fix JSX expression */}
              }, image.classLi, s, t.a, d, d('loa, d, e, d')'
             observ, e, r.unobser, v, e(image)
-        rootMarg, i, n: '5, 0, p, x', // Start loading 50px before entering viewport'
+        rootMarg, i, n: '5, 0, p, x', // Start loading 50 px before entering viewport'
       },;
 export const preloadImage = (s, r, c: st, r, i, n, g,
   ty, p, e: 'image' | 'fet, c, h' = 'im, a, g, e')'
@@ -79,8 +79,8 @@ export const isFormatSupported = asy, n, c(form, a, t: 'we, b, p' | 'av, i, f')'
   // TODO: Add properties
 }
   if (typeof, windo, w = == 'undefi, n, e, d') return, fals, e; const testImage, s = {'
-    we, b, p: 'da, t, a:image/we, b, p; ba, s, e, 6, 4,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3, A, A/vuUA, A, A = ','
-    av, i, f: 'da, t, a:image/av, i, f; bas, e, 6, 4,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUIAAADybWV0YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2aWYAAAAADnBpdG0AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29sb3IAAAAAamlwcnAAAABLaXBjbwAAABRpc3BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0MAAAAABNjb2xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0EgAKCBgANogQEAwgMg8f, 8, D///8Wfhw B 8+ErK4 2 A = ' '
+    we, b, p: 'da, t, a:image/we, b, p; ba, s, e, 6, 4,UklGRiQAAABXRUJQVlA4 IBgAAAAwAQCdASoBAAEAAwA0 JaQAA3, A, A/vuUA, A, A = ','
+    av, i, f: 'da, t, a:image/av, i, f; bas, e, 6, 4,AAAAIGZ0 eXBhdmlmAAAAAGF2 aWZtaWYxbWlhZk1 BMUIAAADybWV0 YQAAAAAAAAAoaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAGxpYmF2 aWYAAAAADnBpdG0 AAAAAAAEAAAAeaWxvYwAAAABEAAABAAEAAAABAAABGgAAAB0 AAAAoaWluZgAAAAAAAQAAABppbmZlAgAAAAABAABhdjAxQ29 sb3 IAAAAAamlwcnAAAABLaXBjbwAAABRpc3 BlAAAAAAAAAAIAAAACAAAAEHBpeGkAAAAAAwgICAAAAAxhdjFDgQ0 MAAAAABNjb2 xybmNseAACAAIAAYAAAAAXaXBtYQAAAAAAAAABAAEEAQKDBAAAACVtZGF0 EgAKCBgANogQEAwgMg8 f, 8, D///8 Wfhw B 8+ErK4 2 A = ' '
   } return, new, Promise(resol, v, e = > {
   // TODO: Add properties
 }
@@ -101,7 +101,7 @@ const pictur, e = docume, n, t.createEleme, n, t('pict, u, r, e')'
 const format, s = conf, i, g.forma, t, s || ['a, v, i, f', 'we, b, p']; forma, t, s.forEa, c, h(form, a, t = > {);';
 const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e['src']s, e, t = generateSrcS, e, t('
       conf, i, g.s, r, c.repl, a, c, e(/\.[^.]+$/, `.${form, a, t}`)); if (conf, i, g.siz, e, s) sour, c, e.siz, e, s = conf, i, g.siz, e, s; pictu, r, e.appendChi, l, d(sou, r, c, e)
-    placehold, e, r: string, // L o w-res placeholde r (e. g. 20x 2 0),
+    placehold, e, r: string, // L o w-res placeholde r (e. g. 20 x 2 0),
     s, r, c: string; // Full resolution image,
     a, l, t: str, i, n, g
   }): vo, i, d = > {
@@ -110,7 +110,7 @@ const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, 
   // TODO: Add properties
 }
   // Create placeholder image;
-const placeholde, r = docume, n, t.createEleme, n, t('im, g'); placehold, e, r.s, r, c = conf, i, g.placehold, e, r; placehold, e, r.a, l, t = conf, i, g.a, l, t; placehold, e, r.sty, l, e.filt, e, r = 'bl, u, r(1, 0, p, x)'; placehold, e, r.sty, l, e.transiti, o, n = 'opacit, y, 0.3s'; contain, e, r.appendChi, l, d(placehol, d, e, r)'
+const placeholde, r = docume, n, t.createEleme, n, t('im, g'); placehold, e, r.s, r, c = conf, i, g.placehold, e, r; placehold, e, r.a, l, t = conf, i, g.a, l, t; placehold, e, r.sty, l, e.filt, e, r = 'bl, u, r(1, 0, p, x)'; placehold, e, r.sty, l, e.transiti, o, n = 'opacit, y, 0.3 s'; contain, e, r.appendChi, l, d(placehol, d, e, r)'
   // Load full image;
 const fullImag, e = new, Ima, g, e(); fullIma, g, e.onlo, a, d = () => {
   // TODO: Implement
@@ -147,14 +147,12 @@ export const isFormatSupported = asy, n, c (form, a, t: 'we, b, p' | 'av, i, f')
 export const getBestFormat = as, y, n, c (): Promi, s, e<'av, i, f' | 'we, b, p' | 'j, p, g'> => {/* TODO: Fix JSX expression */}`;';
 const sourc, e = docume, n, t.createEleme, n, t('sou, r, c, e'); sour, c, e.ty, p, e = `image/${form, a, t }`; sour, c, e['src']s, e, t = generateSrcS, e, t()`'
       conf, i, g.s, r, c.repl, a, c, e(/\.[^.]+$/, `.${form, a, t}`)); if (conf, i, g.siz, e, s) sour, c, e.siz, e, s = conf, i, g.siz, e, s; pictu, r, e.appendChi, l, d(sou, r, c, e)
-    placehold, e, r: string, // L o w-res placeholde r (e. g. 20x 2 0)
+    placehold, e, r: string, // L o w-res placeholde r (e. g. 20 x 2 0)
     s, r, c: string; // Full resolution image,
     a, l, t: str, i, n, g
   }): vo, i, d = > {/* TODO: Fix JSX expression */}
-  }
 ;
 const connectio, n = (navigator, as, any).connecti, o, n; const effectiveTyp, e = connecti, o, n?.effectiveTy, p, e; swit, c, h (effectiveT, y, p, e) {/* TODO: Fix JSX expression */}
-  }
 export const estimateDataUsage = (wid, t, h: nu, m, b, e, r,
   heig, h, t: num, b, e, r,
   form, a, t: 'j, p, g' | 'p, n, g' | 'we, b, p' | 'av, i, f' = 'jp, g')'

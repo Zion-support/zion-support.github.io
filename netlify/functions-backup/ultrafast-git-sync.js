@@ -36,7 +36,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   } catch (e) {/* TODO: Fix JSX expression */}
       })
     }
-  }
 }
 const { execSync } = require('child_process'); exports.config = {' schedule: '*/1 * * * *' // every minute } exports.handler = async function() {try {' execSync('node automation/advanced-git-sync.cjs || node automation/git-sync.cjs || true') { stdio: 'inherit'} shell: true,'
       });' return {statusCode: 200,'

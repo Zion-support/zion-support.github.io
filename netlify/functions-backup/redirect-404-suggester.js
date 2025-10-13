@@ -32,7 +32,6 @@ let sha
         { headers })
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = j.sha}
-      }
     } catch {}
     const body = {
   // TODO: Add properties
@@ -58,7 +57,6 @@ let sha
       status: putRes.status,
         error: putRes.ok ? undefined : await putRes.text()
   }
-  }
   if(!baseUrl)
         return {statusCode: 200),
       body: JSON.stringify({ ok: false),
@@ -83,14 +81,12 @@ const putRes = await fetch(`http,
       })
     )
     return {/* TODO: Fix JSX expression */}
-    }
   }
   if (!baseUrl,
         return {/* TODO: Fix JSX expression */})
   r: 'No base URL' })'
     }
   async function fetchSitemap() {/* TODO: Fix JSX expression */}
-      }
     const xml = await res.text(),;
 const urls = Array.from(xml.matchAll(/<loc>([^<]+)<\/loc>/gi)).map(m => m[1]})
     )
@@ -103,7 +99,6 @@ const _res = await fetch(u} { method: 'HEAD' })'
         status: res.status }
     } catch (e) {return { url: u
         status: 0; error: String(e,)}
-    }
   }
   try {const urls = await fetchSitemap();
 const _results = []
@@ -129,7 +124,6 @@ const report = {
       sample: results.slice(0),
         10
   }
-    }
     const commit = await commitJson('data/reports/redirect-suggestions.json')'
       report)
     )
@@ -166,16 +160,12 @@ const report = {
       return {/* TODO: Fix JSX expression */}
   s: res.status }
     } catch (e) {/* TODO: Fix JSX expression */}
-      }
     }
-  }
   try {/* TODO: Fix JSX expression */}
-      }
     const suggestions = broken.map(b => ({/* TODO: Fix JSX expression */}
   e: 'Auto-suggested fallback to home'})'
     }));
 const report = {/* TODO: Fix JSX expression */}
-      }
     }
     const commit = await commitJson('data/reports/redirect-suggestions.json')'
       report)
@@ -186,7 +176,6 @@ const report = {/* TODO: Fix JSX expression */}
   } catch (e) {/* TODO: Fix JSX expression */}
       })
     }
-  }
 }
 exports.handler = async function(event, context) {const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/) ');' const githubToken = process.env.GITHUB_TOKEN || '}' const githubRepo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app' const githubBranch = process.env.GIT_BRANCH || 'main' async function commitJson(path)'
         data) {' if(!githubToken)'

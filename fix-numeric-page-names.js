@@ -16,7 +16,7 @@ function fixNumericPageName(filePath) {
       let pageName;
       if (fileName === '404') {
         pageName = 'NotFoundPage';
-      } else if (fileName.startsWith('5g-')) {
+      } else if (fileName.startsWith('5 g-')) {
         pageName = 'FiveG' + fileName.split('-').slice(1).map(word => 
           word.charAt(0).toUpperCase() + word.slice(1)
         ).join('') + 'Page';
@@ -37,18 +37,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function ${pageName}() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            ${title}
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" content="${description}"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
           </p>
         </div>
@@ -67,8 +56,6 @@ export default function ${pageName}() {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Function to recursively find and fix numeric page files
 function fixNumericPageFiles(dirPath) {
   const items = fs.readdirSync(dirPath);
@@ -88,7 +75,6 @@ function fixNumericPageFiles(dirPath) {
       if (fixNumericPageName(fullPath)) {
         fixedCount++;
       }
-    }
   }
   
   return fixedCount;

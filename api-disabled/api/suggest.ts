@@ -33,5 +33,4 @@ const suggestions = SAMPLE_QUERIES.filter(s =>)
     return res.status(200).json({ suggestions })
   } catch (error) {/* TODO: Fix JSX expression */}
   r: 'Internal server error' })'
-  }
-}
+  

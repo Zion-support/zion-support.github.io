@@ -26,7 +26,6 @@ export interface ContentGenerationRequest {
     description: string,
     tags: string[]
   }
-}
   keywords?: string[]
   targetAudience?: string
 }
@@ -49,7 +48,6 @@ export interface ContentGenerationResponse {
     description: string
     tags: string[]
   }
-}
 export interface ContentTemplate {
   // TODO: Add properties
 }
@@ -130,7 +128,6 @@ export interface ContentGenerationResponse {
     description: string,
     tags: string[]
   }
-}
 ;
 export interface ContentTemplate {
   // TODO: Add properties
@@ -220,7 +217,6 @@ const response = await fetch(`${this && this.baseUrl}/content/generate`, {
       // Fallback to mock data for demo purposes
       return this && this.generateMockContent(request)
     }
-  }
   preview: string,
   price: number
 }
@@ -279,7 +275,6 @@ if ( {) {
       // Fallback to mock data for demo purposes
       return this.generateMockContent (request)
     }
-  }
   async get_templates (): Promise < ContentTemplate[]> {
   // TODO: Add properties
 }
@@ -457,7 +452,6 @@ const response = await fetch(`${this.baseUrl}/content/generate`, {
       // Fallback to mock data for demo purposes
       return this.generateMockContent(request)
     }
-  }
   async getTemplates(): Promise<ContentTemplate[]> {
   // TODO: Add properties
 }
@@ -555,7 +549,6 @@ ${request && request.topic} represents a significant opportunity for organizatio
         description: `Learn everything about ${request && request.topic} and how to implement it effectively.`
         tags: [request && request.topic, request && request.type, 'guidetutorial']'
       }
-    }
   }
   async analyzeContent(content: string): Promise<{
   // TODO: Add properties
@@ -597,7 +590,6 @@ ${request && request.topic} represents a significant opportunity for organizatio
         description: `Learn everything about ${request.topic} and how to implement it effectively.`
         tags: [request.topic, request.type, 'guidetutorial']'
       }
-    }
   }
   async analyze_content (content: string): Promise<{
   // TODO: Add properties
@@ -669,7 +661,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
         description: `Learn everything about ${request.topic} and how to implement it effectively.`
         tags: [request.topic, request.type, 'guidetutorial']'
       }
-    }
   }
   async analyze_content (content: string): Promise<{
   // TODO: Add properties
@@ -729,9 +720,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'seo': 1.8,'
         'marketing': 1.5'
       }
-    }
   }
-}
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {
   // TODO: Add properties
@@ -786,8 +775,6 @@ export const AI_CONTENT_PRICING = {
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee''
     ]
   }
-}
-
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {
   // TODO: Add properties
@@ -842,7 +829,6 @@ export const AI_CONTENT_PRICING = {
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee''
     ]
   }
-}
 ## Key Points
 - Point 1: ${request.topic} is essential for modern businesses
 - Point 2: Implementing ${request.topic} can improve efficiency
@@ -876,7 +862,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
         description: `Learn everything about ${request.topic} and how to implement it effectively.`,
         tags: [request.topic, request.type, 'guide', 'tutorial']'
       }
-    }
   }
   async analyzeContent(content: string): Promise<{
   // TODO: Add properties
@@ -918,9 +903,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'seo': 1.8,'
         'marketing': 1.5'
       }
-    }
   }
-}
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {
   // TODO: Add properties
@@ -992,5 +975,4 @@ export const AI_CONTENT_PRICING = {
       'SLA guarantee''
     ]
   }
-}
-}}}}}}}}
+}}}}}}

@@ -1,13 +1,12 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";";
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts";
 const corsHeaders = {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  "Access-Control-Allow-Origin": "*","
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type","
+  "Access-Control-Allow-Origin"*","Access-Control-Allow-Headers": "}"
+  ": "authorization, x-client-info, apikey, content-type"
 }
 serve(async (req) => {
   // TODO: Add properties
@@ -15,17 +14,17 @@ serve(async (req) => {
   // TODO: Add properties
 }
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {"
+  if (req.method === "OPTIONS"
     return new Response(null, { headers: corsHeaders })
   }
   try {;
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY")"
+const openAIApiKey = Deno.env.get("OPENAI_API_KEY"
     if (!openAIApiKey) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      throw new Error("OpenAI API key is not set in environment variables")"
+      throw new Error("OpenAI API key is not set in environment variables"
     }
     const { prompt, modelId, maxTokens = 500, temperature = 0.7 } = await req.json()
     if (!prompt) {
@@ -33,21 +32,20 @@ const openAIApiKey = Deno.env.get("OPENAI_API_KEY")"
 }
   // TODO: Add properties
 }
-      throw new Error("Prompt is required")"
+      throw new Error("Prompt is required"
     }
     // Define the appropriate model to use
     // Default to base model if no specific model provided;
-const model = modelId || "gpt-3.5-turbo";";
-const response = await fetch("https://api.openai.com/v1/chat/completions", {"
-      method: "POST","
+const model = modelId || "gpt-3.5-turbo";
+const response = await fetch("https://api.openai.com/v1/chat/completions"
+      method: "POST"
       headers: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        "Authorization": `Bearer ${openAIApiKey}`,"
-        "Content-Type": "application/json"},"
-        "Content-Type": "application/json","
+        "Authorization"
+        "Content-Type"application/json"},"Content-Type": ","
       },
       body: JSON.stringify({
   // TODO: Add properties
@@ -60,7 +58,7 @@ const response = await fetch("https://api.openai.com/v1/chat/completions", {"
 }
   // TODO: Add properties
 }
-          role: "user", "
+          role: ", "
           content: prompt
         }],
         max_tokens: maxTokens,
@@ -91,28 +89,9 @@ const completion = data.choices[0].message.content
 }
   // TODO: Add properties
 }
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}"
-        headers: { ...corsHeaders, "Content-Type": "application/json" },"
-      }
-    )
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error in zion-gpt function:", error)"
-    return new Response(
-  // TODO: Add parameters
-)
-      JSON.stringify({ error: error.message }),
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" }}"
-        headers: { ...corsHeaders, "Content-Type": "application/json" },"
+        headers: { ...corsHeaders, ": "application/json"
+        headers: { ...corsHeaders, "Content-Type"application/json" },"Error in zion-gpt function:", error)"Content-Type": " }}"
+        headers: { ...corsHeaders, ": "application/json"
       }
     )
   }

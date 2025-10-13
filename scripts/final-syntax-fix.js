@@ -58,8 +58,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
     console.error(`❌ Error fixing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;';
 let files = []
@@ -83,7 +81,6 @@ const stat = fs.statSync(fullPath)
 }
     files.push(fullPath)
   }
-    }
   } catch (error) {
   // TODO: Add properties
 }

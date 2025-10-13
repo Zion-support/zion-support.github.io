@@ -28,7 +28,7 @@ export const caseStudies: CaseStudy[] = [;
     company: 'Global Energy Corporation (Fortune 100)','
     industry: 'Energy & Utilities','
     challenge:,
-      'Critical infrastructure aging with $2.3B annual maintenance costs, 87 major outages in 2024, and declining customer satisfaction','
+      'Critical infrastructure aging with $2.3 B annual maintenance costs, 87 major outages in 2024, and declining customer satisfaction','
     solution:
       'Enterprise AI-Powered Digital Twin Platform with real-time monitoring, predictive analytics, and autonomous optimization across 125,000 assets','
     results: [,
@@ -57,7 +57,7 @@ export const caseStudies: CaseStudy[] = [;
     company: 'FinTech Solutions Inc.','
     industry: 'Financial Services','
     challenge:,
-      "Manual financial analysis processes were taking 40+ hours per week and prone to human error, limiting the company's ability to provide real-time insights to clients.","'"
+      "Manual financial analysis processes were taking 40+ hours per week and prone to human error, limiting the company's ability to provide real-time insights to clients."'"
     solution:
       'Developed a comprehensive AI analytics platform with machine learning models for predictive analysis, automated report generation, and real-time dashboard monitoring.','
     results: [,
@@ -119,7 +119,7 @@ export const caseStudies: CaseStudy[] = [;
     company: 'Precision Manufacturing Co.','
     industry: 'Manufacturing','
     challenge:,
-      'Equipment downtime was costing $50K per hour with no predictive maintenance capabilities, leading to unexpected failures.','
+      'Equipment downtime was costing $50 K per hour with no predictive maintenance capabilities, leading to unexpected failures.','
     solution:
       'Developed an IoT platform with real-time monitoring, predictive maintenance algorithms, and automated alert systems for equipment optimization.','
     results: [,
@@ -185,7 +185,7 @@ export const caseStudies: CaseStudy[] = [;
     solution:,
       'Implemented end-to-end tracing from device to POP, latency budgets, and automated error budget alerts across 40 regions.','
     results: [,
-      'Cut P95 latency from 180ms to 85ms','
+      'Cut P95 latency from 180 ms to 85 ms','
       'Reduced incident MTTR by 62%','
       'Decreased churn by 18% in 2 quarters','
       '$4.7 M annual SLA penalty savings'],'
@@ -213,7 +213,6 @@ export const caseStudies: CaseStudy[] = [;
     duration: '10 weeks','
     imageUrl: '/images/case-studies/enterprise-rag.jpg',;';
 export type CaseStudy = {/* TODO: Fix JSX expression */}
-}
 ;
 export const,;
   caseStudies: CaseStudy[] = [

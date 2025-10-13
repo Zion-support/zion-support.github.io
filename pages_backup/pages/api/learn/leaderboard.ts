@@ -26,7 +26,6 @@ const entries = Object.values(users as any).map((u: any) => ({
 }
     res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' })'
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
@@ -64,14 +63,12 @@ const top = entries.sort ((array: any, boolean: any) => b.points - a.points).sli
 }
     res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' })'
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ))

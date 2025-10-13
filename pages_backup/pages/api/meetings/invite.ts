@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { createClient } from "@supabase/supabase-js";";";
-const url = process && process.env.NEXT_PUBLIC_SUPABASE_URL || ";"";
-const key = process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ";"";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { createClient } from "@supabase/supabase-js";";
+const url = process && process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+const key = process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
 export default async function handler(
   // TODO: Add parameters
 )
@@ -12,24 +12,24 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req && req.method !== "POST") {"
-    res && res.setHeader("Allow", "POST")"
-    return res && res.status(405).json({ error: "Method not allowed" })"
+  if (req && req.method !== ") {"
+    res && res.setHeader(", "POST"
+    return res && res.status(405).json({ error: "Method not allowed"
   }
   try {;
 const { projectId, roomName, inviterName } = req.body |{}
     if (!projectId |!roomName)
-      return res.status(400).json({ error: "Missing required fields" })"
+      return res.status(400).json({ error: "Missing required fields"
     if (!url |!key)
-      return res.status(500).json({ error: "Supabase not configured" });";
+      return res.status(500).json({ error: "Supabase not configured";
 const supabase = createClient(url, key)
     await supabase.channel(`project_${projectId}_calls`).send({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      type: "broadcast""
-      event: "call_invite""
+      type: "broadcast"
+      event: "call_invite"
       payload: { projectId, roomName, inviterName }
     })
     return res.status(200).json({ ok: true })
@@ -39,7 +39,7 @@ const supabase = createClient(url, key)
   // TODO: Add properties
 }
     console.error(e)
-    return res.status(500).json({ ok: false, error: "Failed to send invite" })";
+    return res.status(500).json({ ok: false, error: "Failed to send invite";
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import { createClient } from '@supabase/supabase-js';';';
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -61,38 +61,34 @@ const supabase = createClient(url, key)
     return res.status(200).json({ ok: true, skipped: true })
   }
 }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

@@ -1,7 +1,6 @@
 import { Menu, X } from 'lucide-react';';
 import React, { useState } from 'react';'
 interface ModernNavigationProps {/* TODO: Fix JSX expression */}
-}
 const,
   ModernNavigation: React.FC<ModernNavigationProps> = ({ className = ' }) => {/* TODO: Fix JSX expression */}''
   f: '/' },'
@@ -12,75 +11,52 @@ const,
     {/* TODO: Fix JSX expression */}
   f: '/contact' }]'
   return(<nav className={`bg-white shadow-md ${className}`}>
-<div className="container mx-auto px-4">"
-<div className="flex justify-between items-center py-4">"
+<div className="container mx-auto px-4"flex justify-between items-center py-4"
   return (
   // TODO: Add parameters
 )
     <nav className={`bg-white shadow-md ${className}`}>
-<div className="container mx-auto px-4">"
-<div className="flex justify-between items-center py-4">"
-<Link href="/" className="text-xl font-bold text-blue-600">"
+<div className="
+<div className="flex justify-between items-center py-4"/" className="
             Zion Tech Group
           {/* Desktop Navigation */}
-          <div className="hidden md: flex space-x-8">,"
-            {navigationItems.map(item => (,
-              <$2 />
-                key={item.name})
-                href={item.href})
-                className="text-gray-700 hover: text-blue-600 transition-colors")"
+          <div className="hidden md: flex space-x-8"text-gray-700 hover: text-blue-600 transition-colors"
               >),
-          <div className="hidden md:flex space-x-8">"
+          <div className="
             {navigationItems.map(item => (
   // TODO: Add parameters
 )
               <$2 />
   return (<nav className={`bg-white shadow-md ${className}`}>
-<div className="container mx-auto px-4"></div>""
-        <div className="flex justify-between items-center py-4"></div>""
-          <Link href="/" className="text-xl font-bold text-blue-600">"
+<div className="container mx-auto px-4"
+        <div className="flex justify-between items-center py-4"
+          <Link href="/"text-xl font-bold text-blue-600"
             Zion Tech Group
-          {/* Desktop Navigation */}""
-          < className="hidden,"$2 />"
-  md:flex space-x-8">"
+          {/* Desktop Navigation */}"
+          < className="hidden,">"
             {/* TODO: Fix JSX expression */}
                 key={item.name}
-                href={item.href}""
+                href={item.href}"
                 className="text-gray-700,""
-  hover:text-blue-600 transition-colors""
               >
                 {item.name}
               </Link>)
             ))}
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)} className="md: hidden text-gray-700">,"
-          {/* Mobile Menu Button */}""
-          <button onClick={() => setIsOpen(!isOpen)} className="m,""
-  d:hidden text-gray-700">""
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}"
-        {/* Mobile Navigation */}
-        {isOpen && (
-  // TODO: Add parameters
-)
-          <div className="md: hidden py-4 border-t">,"
+          <button onClick={() => setIsOpen(!isOpen)} className="
+          {/* Mobile Menu Button */}""m,"
+  d:hidden text-gray-700""
+            {isOpen ? <X className="w-6 h-6" />}"md: hidden py-4 border-t"
             {navigationItems.map(item => (,
               <;)$2 />
                 key={item.name})
                 href={item.href})
-                className="block text-gray-700 hover: text-blue-600 py-2"),"
-          <div className="md:hidden py-4 border-t">"
-            {navigationItems.map(item => (
-  // TODO: Add parameters
-)
-              <$2 />
-                key={item.name}
-                href={item.href}
-                className="block text-gray-700 hover:text-blue-600 py-2""
+                className="
+          <div className="md:hidden py-4 border-t"block text-gray-700 hover:text-blue-600 py-2"
         {/* TODO: Fix JSX expression */}
                 key={item.name}
-                href={item.href}""
+                href={item.href}"
                 className="block text-gray-700,""
-  hover:text-blue-600 py-2""
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
@@ -89,7 +65,7 @@ const,
   )
 }
 export default ModernNavigation;
-"`</div></div>"
+"
 </div></div>
 </div></div>
 </div></div>

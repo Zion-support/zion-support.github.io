@@ -20,8 +20,6 @@ const stat = fs.statSync(fullPath)
   } else if (item.endsWith('.tsx')) {'
     files.push(fullPath)
   }
-  }
-
   return files
 }
 
@@ -41,50 +39,7 @@ let modified = false
 
     // Fix 2: Fix malformed quotes in className
     if (content.includes('&quot;')) {'
-    content = content.replace(/&quot,/g, '"')'"
-      modified = true
-  }
-
-    // Fix 3: Fix malformed JSX with missing opening tags;
-const malformedJsxPattern = /<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g,
-    content = content.replace(malformedJsxPattern, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      if (text.trim()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        modified = true
-        return `<${tagName}${attributes}>${text}</${tagName}>`
-      }
-      return match
-    })
-    // Fix 4: Fix self-closing tags that should have content;
-const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g,
-    content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      if (text.trim() && !text.includes('<')) {'
-        modified = true
-        return `<${tagName}${attributes}>${text}</${tagName}>`
-      }
-      return match
-    })
-    // Fix 5: Fix malformed className attributes;
-const malformedClassPattern = /className="([^"]*)"([^>]*)>"
-<\/undefined>/g,
-    content = content.replace(malformedClassPattern, (match, className, rest) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      modified = true
-      return `className="${className}"${rest}>`"
+    content = content.replace(/&quot,/g, '"')'"([^"([^>]*)>"${className}"
     })
     // Fix 6: Fix malformed closing tags;
 const malformedClosingPattern = /<\/undefined>
@@ -437,8 +392,6 @@ const missingOpeningTagPattern5 = /<\/\w+>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\1>/g
     console.error(`Error fixing ${filePath}:`, error.message)
     return false
   }
-}
-
 console.log('Starting ultimate JSX fixes...');';
 const appDir = path.join(__dirname, 'app');';
 const tsxFiles = getAllTsxFiles(appDir);

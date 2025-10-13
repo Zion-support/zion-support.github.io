@@ -126,7 +126,6 @@ const partnerTypes = [],
 }
     // TODO: Add content
   }
-}
   titl,
   e: 'Technology Partners','
       descriptio,
@@ -227,168 +226,117 @@ const PagePage: React.FC = () => {
 )
     <React.Fragment>
 <Navigation />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<div className="container mx-auto px-4 py-16 pt-24">"
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"container mx-auto px-4 py-16 pt-24"
           {/* Header */}
-          <div className="text-center mb-16">"
-<h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">"
-              Our Partners,
-
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">"
+          <div className="
+<h1 className="text-4 xl md: text-5 xl font-bold text-white mb-6 neon-text"text-xl text-gray-300 max-w-3 xl mx-auto mb-8"
               We work with industry-leading technology partners to deliver comprehensive solutions
               that drive innovation and business success.
           {/* Partner Types */}
-          <div className="mb-16">"
+          <div className="
             {partnerTypes.map((type, index) => (
   // TODO: Add parameters
 )
-              <div key={index} className="mb-12">"
-<div className="flex items-center mb-8">"
+              <div key={index} className="mb-12"flex items-center mb-8"
 <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}>
 <type.icon className={`w-6 h-6 ${type.color}`} />
 <div>
-<h2 className="text-2xl font-bold text-white neon-text">{type.title}"
-                    <p className="text-gray-300">{type.description}"
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
+<h2 className="
+                    <p className="text-gray-300"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                   {type.partners.map((partner, partnerIndex) => (
   // TODO: Add parameters
 )
-                    <div key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">"
-<div className="text-3xl mb-3">{partner.logo}"
-                      <h3 className="text-lg font-semibold text-white mb-2">{partner.name}"
-                      <p className="text-gray-300 text-sm">{partner.description}"
+                    <div key={partnerIndex} className="
+<div className="text-3 xl mb-3"text-lg font-semibold text-white mb-2"
+                      <p className="
                   ))}
           {/* Partnership Benefits */}
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">"
-              Why Partner With Us?
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">"
+            <h2 className="text-3 xl font-bold text-white text-center mb-12 neon-text"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
               {benefits.map((benefit, index) => (
   // TODO: Add parameters
 )
-                <div key={index} className="text-center">"
-<div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">"
-<benefit.icon className="w-8 h-8 text-cyan-400" />"
-<h3 className="text-lg font-semibold text-white mb-2">{benefit.title}"
-                  <p className="text-gray-300 text-sm">{benefit.description}"
-          {/* Partnership Tiers */}
-              Partnership Tiers
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+                <div key={index} className="
+<div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"w-8 h-8 text-cyan-400"
+<h3 className="
+                  <p className="text-gray-300 text-sm"grid grid-cols-1 md:grid-cols-3 gap-8"
               {partnershipTiers.map((tier, index) => (
   // TODO: Add parameters
 )
                 <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}>
-<div className="text-center mb-6">"
-<div className={`text-2xl font-bold ${tier.color} mb-2`}>{tier.level}
-                    <h3 className="text-xl font-semibold text-white mb-2">{tier.name}"
-                    <p className="text-gray-300 text-sm">{tier.description}"
-                  <ul className="space-y-3">"
+<div className="
+<div className={`text-2 xl font-bold ${tier.color} mb-2`}>{tier.level}
+                    <h3 className="text-xl font-semibold text-white mb-2"text-gray-300 text-sm"
+                  <ul className="
                     {tier.benefits.map((benefit, benefitIndex) => (
   // TODO: Add parameters
 )
-                      <li key={benefitIndex} className="flex items-start">"
-<CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />"
-<span className="text-gray-300 text-sm">{benefit}"
+                      <li key={benefitIndex} className="flex items-start"w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"
+<span className="
           {/* Become a Partner CTA */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">"
-<h2 className="text-2xl font-bold text-white mb-4">"
+          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2 xl p-8 text-center"text-2 xl font-bold text-white mb-4"
               Become Our Partner
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">"
+            <p className="
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success.
               Let's build the future together.'
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
-<$2 />
-                href="/contact""
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">"
-<Handshake className="w-5 h-5 mr-2" />"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"/contact""cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+<Handshake className="
                 Become a Partner,
 
-                href="tel:+13024640950""
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <Phone className="w-4 h-4 mr-2" />"
+                href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"w-4 h-4 mr-2"
                 (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com""
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <Mail className="w-4 h-4 mr-2" />"
-                Email Us
-      <Footer />
-          {/* Header */}
-          <div className="text-center mb-16"></div>""
-            < className="text-4xl,"$2 />"
-  md: text-5xl font-bold text-white mb-6 neon-text">"
+                href=""
+                className="
+                <Mail className="w-4 h-4 mr-2"text-center mb-16""text-4 xl,"
+  md: text-5 xl font-bold text-white mb-6 neon-text"
 </h1>
 // Our Partners
-          </h1>""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>"
+          </h1>""text-xl text-gray-300 max-w-3 xl mx-auto mb-8"
 // We work with industry-leading technology partners to deliver comprehensive solutions,
 //               that drive innovation and business success.
-          {/* Partner Types */}""
-          <div className="mb-16">"
-            {partnerTypes.map((type, index) => ()}""
-          <div key={index} className="mb-12"></div>""
-                <div className="flex items-center mb-8">"
+          {/* Partner Types */}"
+          <div className="mb-16""
+          <div key={index} className=""
+                <div className="
 <div className={`w-12 h-12 ${type.bgColor} rounded-lg flex items-center justify-center mr-4`}></div>`
                     <type.icon className={`w-6 h-6 ${type.color}`} />
-<div></div>""
-                    <h2 className="text-2xl font-bold text-white neon-text">{type.title}</h2>""
-                    <p className="text-gray-300">{type.description}</p>""
-                < className="grid grid-cols-1,$2 />"
-  md:grid-cols-2,""
-  lg:grid-cols-3 gap-6">"
-                  {type.partners.map((partner, partnerIndex) => ()}""
-          < key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,"$2 />"
-  hover:border-cyan-400/50 transition-all duration-300">"
-</div>""
-                      <div className="text-3xl mb-3">{partner.logo}</div>""
-                      <h3 className="text-lg font-semibold text-white mb-2">{partner.name}</h3>""
-                      <p className="text-gray-300 text-sm">{partner.description}"
-                  ))}
-          {/* Partnership Benefits */}""
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">"
+<div></div>""text-2 xl font-bold text-white neon-text""text-gray-300""grid grid-cols-1,$2 />"">"
+                  {type.partners.map((partner, partnerIndex) => ()}"
+          < key={partnerIndex} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50,">"
+</div>"
+                      <div className="text-3 xl mb-3"
+                      <h3 className="text-lg font-semibold text-white mb-2"
+                      <p className="text-gray-300 text-sm""
+            <h2 className="
 // Why Partner With Us?
-          </h2>""
-            < className="grid grid-cols-1,$2 />"
-  md:grid-cols-2,""
-  lg:grid-cols-4 gap-6">"
-              {benefits.map((benefit, index) => ()}""
-          <div key={index} className="text-center"></div>""
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"></div>""
-                    <benefit.icon className="w-8 h-8 text-cyan-400" /></benefit>""
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>""
-                  <p className="text-gray-300 text-sm">{benefit.description}"
-{/* Partnership Tiers */}
-              Partnership Tiers;""
-            < className="grid grid-cols-1,"$2 />"
-  md:grid-cols-3 gap-8">"
-              {partnershipTiers.map((tier, index) => ()}`
-          <div key={index} className={`${tier.bgColor} rounded-lg p-6 border border-gray-700/50`}></div>""
-                  <div className="text-center mb-6"></div>`"
-                    <div className={`text-2xl font-bold ${tier.color} mb-2`}>{tier.level}</div>""
-                    <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>""
-                    <p className="text-gray-300 text-sm">{tier.description}</p>""
-                  <ul className="space-y-3">"
-                    {tier.benefits.map((benefit, benefitIndex) => ()}""
-          <li key={benefitIndex} className="flex items-start"></li>""
-                        <CheckCircleclassName="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" / />""
-                        <span className="text-gray-300 text-sm">{benefit}"
-{/* Become a Partner CTA */}""
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>""
-            <h2 className="text-2xl font-bold text-white mb-4">"
-              Become Our Partner;""
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">"
+          </h2>""grid grid-cols-1,$2 />"">"
+              {benefits.map((benefit, index) => ()}"
+          <div key={index} className="text-center"
+                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4"
+                    <benefit.icon className="w-8 h-8 text-cyan-400"
+                  <h3 className="text-lg font-semibold text-white mb-2"
+                  <p className="text-gray-300 text-sm""
+            < className="
+  md:grid-cols-3 gap-8">""
+                  <div className="
+                    <div className={`text-2 xl font-bold ${tier.color} mb-2`}>{tier.level}</div>""text-xl font-semibold text-white mb-2""text-gray-300 text-sm""space-y-3"
+                    {tier.benefits.map((benefit, benefitIndex) => ()}"
+          <li key={benefitIndex} className="flex items-start"
+                        <CheckCircleclassName="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0"
+                        <span className="text-gray-300 text-sm""
+          <div className=""
+            <h2 className="
+              Become Our Partner;""text-gray-300 mb-6 max-w-2 xl mx-auto"
               Join our partner ecosystem and unlock new opportunities for growth, innovation, and success.
               Let's build the future together.'
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
+            <div className="
 <$2 />
-                href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105""
+                href="/contact"cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
 // >
-          ""
-          <Handshake className="w-5 h-5 mr-2" />"
-// Become a Partner
-                href="tel:+13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-<Phone className="w-4 h-4 mr-2" />"
-                (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <Mail className="w-4 h-4 mr-2" />"
+          "
+          <Handshake className="w-5 h-5 mr-2"tel:+13024640950" className="
+<Phone className="w-4 h-4 mr-2"mailto:kleber@ziontechgroup.com" className="
+                <Mail className="w-4 h-4 mr-2"
                 Email Us
       <Footer /></div>
   ),

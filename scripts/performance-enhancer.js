@@ -33,12 +33,9 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
       recommendation,
   s: []
     }
-  }
-
   async enhance() {/* TODO: Fix JSX expression */}
   to: ${path.join(process.cwd(), 'performance-enhancement-report.json')}`)'
     } catch (error) {/* TODO: Fix JSX expression */}
-    }
   }
 
   async analyzeBundle() {
@@ -60,14 +57,13 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 let _totalSize = 0;
 const _fileSizes = {}
       for (const file of files) {/* TODO: Fix JSX expression */}
-        }
       }
 
       this.report.metrics.bundleSize = totalSize
       this.report.metrics.fileSizes = fileSizes
       // Add recommendations based on bundle size
-      if (totalSize > 1024 * 1024) { // 1MB
-        this.report.recommendations.push('Bundle size is large (>1MB). Consider code splitting.')'
+      if (totalSize > 1024 * 1024) { // 1 MB
+        this.report.recommendations.push('Bundle size is large (>1 MB). Consider code splitting.')'
       }
 
       this.report.optimizations.push({)
@@ -75,8 +71,6 @@ const _fileSizes = {}
         status: 'completed'),'
         details: `Total bundle size: ${(totalSize / 1024).toFixed(2)} KB`
       if (totalSize > 1024 * 1024) {/* TODO: Fix JSX expression */}
-      }
-
       this.report.optimizations.push({/* TODO: Fix JSX expression */})`
   size: ${(totalSize / 1024).toFixed(2)} KB`
       })
@@ -85,8 +79,6 @@ const _fileSizes = {}
   size: ${(totalSize / 1024).toFixed(2)} KB`)
     } catch (error) {/* TODO: Fix JSX expression */}
 //       }
-  }
-
   async optimizeImages() {
   // TODO: Add properties
 }
@@ -114,7 +106,6 @@ const _fileSizes = {}
 //         return
   async optimizeImages() {/* TODO: Fix JSX expression */}
       } catch {/* TODO: Fix JSX expression */}
-      }
       ;
 const _images = await fs.readdir(imagesPath);
 let _optimizedCount = 0
@@ -124,8 +115,6 @@ let _optimizedCount = 0
 
           optimizedCount++
         }
-      }
-
       this.report.optimizations.push({)
         type: 'image-optimization'),'
         status: 'completed'),'
@@ -135,8 +124,6 @@ let _optimizedCount = 0
       })
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
-  }
-
   async optimizeCSS() {
   // TODO: Add properties
 }
@@ -157,11 +144,11 @@ const criticalCSS = `
 .justify-center { justify-content: center; }
 .text-white { color: #ffffff; }
 .font-bold { font-weight: 700; }
-.text-xl { font-size: 1.25rem; }
-.p-4 { padding: 1rem; }
-.rounded { border-radius: 0.25rem; }
+.text-xl { font-size: 1.25 rem; }
+.p-4 { padding: 1 rem; }
+.rounded { border-radius: 0.25 rem; }
   async optimizeCSS() {/* TODO: Fix JSX expression */}
-  t: 100vh; }
+  t: 100 vh; }
 .bg-slate-950 {/* TODO: Fix JSX expression */}
   r: #020617; }
 .flex {/* TODO: Fix JSX expression */}
@@ -175,11 +162,11 @@ const criticalCSS = `
 .font-bold {/* TODO: Fix JSX expression */}
   t: 700; }
 .text-xl {/* TODO: Fix JSX expression */}
-  e: 1.25rem; }
+  e: 1.25 rem; }
 .p-4 {/* TODO: Fix JSX expression */}
-  g: 1rem; }
+  g: 1 rem; }
 .rounded {/* TODO: Fix JSX expression */}
-  s: 0.25rem; }`
+  s: 0.25 rem; }`
 `
 //       const criticalCSSPath = path.join(process.cwd(), 'public', 'critical.css')'
       await fs.writeFile(criticalCSSPath, criticalCSS)
@@ -191,8 +178,6 @@ const criticalCSS = `
       })
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
-  }
-
   async optimizeJavaScript() {
   // TODO: Add properties
 }
@@ -233,7 +218,6 @@ const _entries = list.getEntries()
   // TODO: Add properties
 }
   async optimizeJavaScript() {/* TODO: Fix JSX expression */}
-}
     if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}'
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] })'
@@ -245,13 +229,10 @@ const _entries = list.getEntries()
       // CLS;
 let _clsValue = 0
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
-          }
         })
 //         }).observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] })'
     }
-  }
-
   // Start monitoring when DOM is ready
   if (document.readyState === 'loading') {'
     document.addEventListener('DOMContentLoaded', observeWebVitals)'
@@ -263,7 +244,6 @@ let _clsValue = 0
     observeWebVitals()
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}'
   } else {/* TODO: Fix JSX expression */}
-  }
 })();`
 `
 //       const performanceScriptPath = path.join(process.cwd(), 'public', 'performance-monitor.js')'
@@ -276,8 +256,6 @@ let _clsValue = 0
       })
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
-  }
-
   async generateServiceWorker() {
   // TODO: Add properties
 }
@@ -341,8 +319,6 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}'
       })
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
-  }
-
   async optimizeBuild() {
   // TODO: Add properties
 }
@@ -367,8 +343,6 @@ const _configContent = await fs.readFile(viteConfigPath, 'utf8')'
         if (!configContent.includes('rollup-plugin-visualizer')) {'
           this.report.recommendations.push('Consider adding bundle analyzer to vite.config.js')'
   async optimizeBuild() {/* TODO: Fix JSX expression */}
-        }
-
         if (!configContent.includes('terser')) {/* TODO: Fix JSX expression */}'
         }
 
@@ -383,8 +357,6 @@ const _configContent = await fs.readFile(viteConfigPath, 'utf8')'
       })
 //       } catch (error) {/* TODO: Fix JSX expression */}
 //       }
-  }
-
   async generateReport() {
   // TODO: Add properties
 }
@@ -443,8 +415,6 @@ ${this.report.recommendations.map(rec => `- ${rec}`).join('\n')}'
 *Generated by Performance Enhancer Script*`
 `
   }
-}
-
 // Run the enhancer;
 const _enhancer = new PerformanceEnhancer()
 // enhancer.enhance().catch(console.error);

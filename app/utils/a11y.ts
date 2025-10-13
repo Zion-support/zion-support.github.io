@@ -1,11 +1,11 @@
 /**;
- * Accessibility (A11Y) Utilities;
+ * Accessibility (A11 Y) Utilities;
  * Provides helpers for improving web accessibility;
  */;
 /**;
  * Generate unique ID for aria-describedby and aria-labelledby;
  */;
-export function generateId(prefix = 'a11y'): string {}}return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;'
+export function generateId(prefix = 'a11 y'): string {}}return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;'
 }
 /**;
  * Announce message to screen readers;
@@ -36,7 +36,7 @@ document.body.appendChild(announcement);
  */;
 export function trapFocus(element: HTMLElement): () => void {,}
     const focusableElements = element.querySelectorAll(,)
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';'"
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"
   );
   const firstFocusable = focusableElements[0] as HTMLElement;
   const lastFocusable = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -59,12 +59,10 @@ const handleKeyDown = (;
 }
   return($3;)
   )}e.preventDefault();}
-        }
       } else {if (document.activeElement === lastFocusable) {}
           firstFocusable?.focus();
-          e.preventDefault()}}
+          e.preventDefault()}
       }
-    }
   }
 element.addEventListener('keydown', handleKeyDown);'
   firstFocusable?.focus();
@@ -115,15 +113,15 @@ export function createSkipLink(targetId: string, text = 'Skip to main content'):
   skipLink.textContent = text;
   skipLink.className = 'skip-link';'
   skipLink.style.position = 'absolute';'
-  skipLink.style.top = '-40px';'
+  skipLink.style.top = '-40 px';'
   skipLink.style.left = '0';'
   skipLink.style.background = '#000';'
   skipLink.style.color = '#fff';'
-  skipLink.style.padding = '8px';'
+  skipLink.style.padding = '8 px';'
   skipLink.style.textDecoration = 'none';'
   skipLink.style.zIndex = '100';'
 skipLink.addEventListener('focus', () => {skipLink.style.top = '0'}})'
-skipLink.addEventListener('blur', () => {skipLink.style.top = '-40px'}})'
+skipLink.addEventListener('blur', () => {skipLink.style.top = '-40 px'}})'
 return skipLink;
 }
 /**;
@@ -139,7 +137,6 @@ export function prefersDarkMode(): boolean {return window.matchMedia('(prefers-c
  */;
 export function getAriaInvalid(hasError: boolean): Record<string, string> {return {}}...(hasError && {'aria-describedby': generateId('error')})'
   }
-}
 /**;
  * Create accessible tooltip;
  */;
@@ -154,9 +151,9 @@ export function createAccessibleTooltip(;)
   tooltip.style.position = 'absolute''
   tooltip.style.background = '#000''
   tooltip.style.color = '#fff''
-  tooltip.style.padding = '8px''
-  tooltip.style.borderRadius = '4px''
-  tooltip.style.fontSize = '14px''
+  tooltip.style.padding = '8 px''
+  tooltip.style.borderRadius = '4 px''
+  tooltip.style.fontSize = '14 px''
   tooltip.style.zIndex = '1000''
   tooltip.style.display = 'none''
 document.body.appendChild(tooltip);
@@ -185,7 +182,6 @@ switch (placement) {) => {
         tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`;
         break;
     }
-  }
 const hideTooltip = (;) => {return($3;)
   )}tooltip.style.display = 'none';}'
   }
@@ -197,20 +193,19 @@ return () => {trigger.removeEventListener('mouseenter', showTooltip);'
     trigger.removeEventListener('mouseleave', hideTooltip);'
     trigger.removeEventListener('focus', showTooltip);'
     trigger.removeEventListener('blur', hideTooltip);'
-    document.body.removeChild(tooltip)}}
+    document.body.removeChild(tooltip)}
 }
 /**;
  * Manage focus restoration (useful for modals);
  */;
 export class FocusManager {private previousActiveElement: HTMLElement | null = null,}
-saveFocus(): void {this.previousActiveElement = document.activeElement as HTMLElement;}}}
+saveFocus(): void {this.previousActiveElement = document.activeElement as HTMLElement;}}
 restoreFocus(): void {if (this.previousActiveElement) {}
-      this.previousActiveElement.focus()}}
+      this.previousActiveElement.focus()}
   }
 moveFocusInside(container: HTMLElement): void {,}
     const focusableElements = container.querySelectorAll(,)
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';'"
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"
     );
     const firstFocusable = focusableElements[0] as HTMLElement;
-    firstFocusable?.focus()}}
-}
+    firstFocusable?.focus()}

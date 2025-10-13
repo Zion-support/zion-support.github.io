@@ -21,7 +21,6 @@ const options = {
         'User-Agent': 'Zion-App-Automation','
         'Accept': 'application/vnd.github.v3+json','
 function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}
-      }
     }
 ;
 const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
@@ -39,15 +38,12 @@ const req = https.request(options, (res) => {/* TODO: Fix JSX expression */}
 }
 
 async function getOpenPRs() {/* TODO: Fix JSX expression */}
-}
   try {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 async function getPRDetails(prNumber) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 function runGitCommand(command) {
@@ -80,10 +76,7 @@ function runGitCommand(command) {/* TODO: Fix JSX expression */}
     return {/* TODO: Fix JSX expression */}
   t: result }
   } catch (error) {/* TODO: Fix JSX expression */}
-    }
   }
-}
-
 async function mergePRWithGit(pr) {
   // TODO: Add properties
 }
@@ -167,29 +160,19 @@ async function mergePRWithGit(pr) {
 }
         return false
 async function mergePRWithGit(pr) {/* TODO: Fix JSX expression */}
-    }
-
     // Check if PR is mergeable
     if (prDetails.mergeable === false) {/* TODO: Fix JSX expression */}
-    }
-
     // Fetch the PR branch
     if (!fetchResult.success) {/* TODO: Fix JSX expression */}
-    }
-
     // Try to merge the branch
     if (mergeResult.success) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
           } else {/* TODO: Fix JSX expression */}
-          }
         } else {/* TODO: Fix JSX expression */}
-        }
       } else {/* TODO: Fix JSX expression */}
-      }
     }
 
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 async function mergeAllPRsWithGit() {
@@ -209,10 +192,7 @@ async function mergeAllPRsWithGit() {
 }
       return
 async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
-}
   try {/* TODO: Fix JSX expression */}
-    }
-
     // Filter PRs that target main branch
     if (mainPRs.length === 0) {
   // TODO: Add properties
@@ -221,8 +201,6 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
 }
       return
     if (mainPRs.length === 0) {/* TODO: Fix JSX expression */}
-    }
-
     // Process PRs one by one
     for (const pr of mainPRs) {
   // TODO: Add properties
@@ -243,14 +221,11 @@ async function mergeAllPRsWithGit() {/* TODO: Fix JSX expression */}
         failCount++
     for (const pr of mainPRs) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
-      }
-
       // Add a small delay between merges
       await new Promise(resolve => setTimeout(resolve, 2000))
     }
 
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Run the merge process

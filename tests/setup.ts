@@ -1,4 +1,4 @@
-const "@testing-library/jest-dom"; jest.mock("next/router",() => ({ useRouter() { return { route: "/",pathname: "/",query: {},asPath: "/",push: jest.fn(),pop: jest.fn(),reload: jest.fn(),back: jest.fn(),prefetch: jest.fn(),beforePopState: jest.fn(),events: { on: jest.fn(),off: jest.fn(),emit: jest.fn()}} }})) Object.defineProperty(window,"matchMedia",{ writable: "true",value: jest.fn().mockImplementation((query: string) => ({ matches: false,media: "query",onchange: "null",addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn()}))}) global.IntersectionObserver = class IntersectionObserver { disconnect() { return; } observe() { return; } unobserve() { return; } } as any global.ResizeObserver = class ResizeObserver { disconnect() { return; } observe() { return; } unobserve() { return; } } as any'"'"'";
+const "@testing-library/jest-dom"next/router",() => ({ useRouter() { return { route: ",pathname: "/"/",push: jest.fn(),pop: jest.fn(),reload: jest.fn(),back: jest.fn(),prefetch: jest.fn(),beforePopState: jest.fn(),events: { on: jest.fn(),off: jest.fn(),emit: jest.fn()}} }})) Object.defineProperty(window,",{ writable: "true"query",onchange: ",addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn()}))}) global.IntersectionObserver = class IntersectionObserver { disconnect() { return; } observe() { return; } unobserve() { return; } } as any global.ResizeObserver = class ResizeObserver { disconnect() { return; } observe() { return; } unobserve() { return; } } as any'"'";
 import React from 'react';'
 interface SetupProps {
   // TODO: Add properties
@@ -32,7 +32,6 @@ global.ResizeObserver = class ResizeObserver {
   observe() { /* do nothing */ }
   unobserve() { /* do nothing */ }
   disconnect() { /* do nothing */ }
-}
 // Mock window.scrollTo
 global.window.scrollTo = vi.fn(); // vi should be globally available
 // Ensure React Testing Library cleans up and mocks are restored between tests
@@ -79,4 +78,3 @@ afterEach(() => {
   // We expose it so imports compile even if we don't use it.'
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   SnapshotSerializer: () => {},
-}

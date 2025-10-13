@@ -112,5 +112,4 @@ const newSubscriber = {
     res.statusCode = 500
     res.setHeader('Content-Type', 'application/json')'
     res.end(JSON.stringify({ error: 'Failed to save subscription' }))'
-  }
-}
+  

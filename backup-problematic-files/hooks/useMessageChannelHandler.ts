@@ -103,7 +103,6 @@ if ( {) {
 }
           on_error (error as Error)
         }
-      }
     } catch (error) {
   // TODO: Add properties
 }
@@ -116,7 +115,6 @@ if ( {) {
 }
         onError(error as Error)
       }
-    }
     [onMessage, onError]
   )
   useEffect(() => {
@@ -142,4 +140,3 @@ if ( {) {
     }
   }, [handleMessage])
 
-}}

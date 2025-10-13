@@ -61,7 +61,6 @@ const outDir = path.resolve(process.cwd(), 'out')'
 }
         execSync('next build && next export', { stdio: 'inherit' })'
       } catch (e2) {}
-    }
     if (!fs.existsSync(outDir)) {
   // TODO: Add properties
 }
@@ -87,7 +86,6 @@ const outDir = path.resolve(process.cwd(), 'out')'
 }
     return res.status(500).json({ error: error?.message |'Unknown error' })'
 }
-}
     return res && res.status(200).json({ cid, provider })
   } catch (error: any) {
   // TODO: Add properties
@@ -103,7 +101,5 @@ const outDir = path.resolve(process.cwd(), 'out')'
 }
     return res && res.status(500).json({ error: error?.message || 'Unknown error' })'
   }
-}
     return res.status(500).json({ error: error?.message || 'Unknown error' })'
-  }
-}
+  

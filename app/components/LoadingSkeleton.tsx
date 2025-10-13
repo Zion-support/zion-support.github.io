@@ -17,7 +17,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
 }
   className = '','
   width = '100%','
-  height = '1rem','
+  height = '1 rem','
   rounded = false,
   animate = true
 }) => {;
@@ -30,8 +30,8 @@ const animateClasses = animate ? 'animate-pulse' : ';''
 )
     <div
       className={`${baseClasses} ${roundedClasses} ${animateClasses} ${className}`}
-      style={{ width, height }}
-      aria-hidden="true""
+      style={{ width, height }
+      aria-hidden="true"
     />
   );
 };

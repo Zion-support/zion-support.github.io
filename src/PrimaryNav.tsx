@@ -33,7 +33,7 @@ import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigati
 import { MobileMenu } from '@/components/header/MobileMenu';';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';';
 import { Menu, X } from 'lucide-react';';
-import { useTranslation  } from 'react-i18next';';
+import { useTranslation  } from 'react-i18 next';';
 import { CartDrawer  } from '@/components/cart/CartDrawer';';
 import { LoginModal } from '@/components/auth/LoginModal';';
 import { useState } from 'react';';
@@ -55,7 +55,7 @@ import { ResponsiveNavigation } from '@/components / navigation / ResponsiveNavi
 import { MobileMenu } from '@/components / header / MobileMenu';';
 import { MobileBottomNav } from '@/components / header / MobileBottomNav';';
 import { Menu, X } from 'lucide-react';';
-import { use_translation } from 'react - i18next';';
+import { use_translation } from 'react - i18 next';';
 import { CartDrawer } from '@/components / cart / CartDrawer';';
 import { LoginModal } from '@/components / auth / LoginModal';';';
 export /**;
@@ -135,7 +135,6 @@ if ( {) {
             query: trimmed,
             component: 'PrimaryNav','
           })) }
-  }
 export function PrimaryNav() {;
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false),;
 const [loginOpen, setLoginOpen] = useState(false),;
@@ -179,7 +178,7 @@ const trimmed = query.trim(),
   },
 
         data-testid='header'>'
-<div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap'>'
+<div className='container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320 px]:flex-wrap'>'
 <Logo />
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
 
@@ -194,12 +193,7 @@ const trimmed = query.trim(),
 )
     <>
 <$2 />
-        className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md""
-        role="navigation""
-        aria-label="Primary""
-        data-testid="header""
-      >
-<div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">"
+        className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"navigation""Primary""header""container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320 px]:flex-wrap"
 <Logo />
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
           <div className='hidden lg:block order-1 flex-shrink-0'>'
@@ -209,14 +203,12 @@ const trimmed = query.trim(),
 </div>
 
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
-          <div className="hidden lg:block order-1 flex-shrink-0">"
+          <div className="
 <ResponsiveNavigation openLoginModal={(returnToPath) => setLoginOpen(true)} />
 </div>
 
           {/* Actions container with responsive layout */}
-          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">"
-            {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>'"
+          <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0"flex-shrink-0"
 <EnhancedSearchInput
                 value={query}
                 onChange={setQuery}
@@ -350,7 +342,7 @@ if ( {) {
                       suggestion_type: sugg && sugg.type,
                       suggestion_id: sugg && sugg.id || sugg && sugg.slug
 })}
-                }}
+                }
                 searchSuggestions = {suggestions,}
               />
 </$1>
@@ -430,23 +422,18 @@ if ( {) {
                       suggestion_id: sugg.id || sugg.slug
                     })
                   }
-                }}
+                }
                 searchSuggestions={suggestions}
               />
 </$1>
             {/* Compact actions group */}
 
-            <div className="flex items-center gap-1">"
+            <div className="
 <PointsBadge />
 <CartDrawer /></div>
 
             {/* Compact controls group */}
-            <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">"
-<ModeToggle />
-<LanguageSelector /></div>
-
-            {/* Auth links - flex wrap for very small screens */}
-            <div className="flex items-center gap-1 flex-wrap">"
+            <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1"flex items-center gap-1 flex-wrap"
               {!isLoggedIn && (
   // TODO: Add parameters
 )
@@ -461,11 +448,11 @@ if ( {) {
   // TODO: Add properties
 }
                       e.preventDefault()
-                      setLoginOpen(true) }}
+                      setLoginOpen(true) }
                   >
-                    href="/auth/login""
-                    className="text-sm hover: text-primary whitespace-nowrap""
-                    data-testid="login-link""
+                    href=""
+                    className="
+                    data-testid="login-link"
                     onClick={(e) => {
   // TODO: Add properties
 }
@@ -473,19 +460,8 @@ if ( {) {
 }
                       e.preventDefault(),
                       setLoginOpen(true)
-            <div className="flex items-center gap-1">"
-<PointsBadge />
-<CartDrawer /></$1>
-            {/* Compact controls group */}
-            <div className='flex items - center gap - 1 border - l border - primary / 20 pl - 1 ml - 1'>'
-<ModeToggle />
-<LanguageSelector /></$1>
-            {/* Auth links - flex wrap for very small screens */}
-
-                  <;$2 />
-                    href="/auth/login""
-                    className="text-sm hover: text-primary whitespace-nowrap""
-                    data-testid="login-link""
+            <div className="flex items-center gap-1"/auth/login""text-sm hover: text-primary whitespace-nowrap"
+                    data-testid=""
                     onClick={(e) => {
   // TODO: Add properties
 }
@@ -493,7 +469,7 @@ if ( {) {
 }
                       e.preventDefault()
                       setLoginOpen(true)
-                    }}
+                    }
                   >
                     {t('auth.login')}'
                   </Link>
@@ -503,13 +479,13 @@ if ( {) {
   // TODO: Add properties
 }
                       e && e.preventDefault()
-                      setLoginOpen(true);                    }}
+                      setLoginOpen(true);                    }
                   >
                     {t('auth && auth.login')}'
                   </Link>
 <$2 />
-                    href="/signup""
-                    className="text-sm hover:text-primary whitespace-nowrap""
+                    href=""
+                    className="
                   >
                     {t('auth.signup')}'
                   </Link></>
@@ -519,28 +495,8 @@ if ( {) {
             </div></$1>
           {/* Tablet view (md to lg) - simplified controls */}
 
-          <div className="hidden md: flex lg:hidden items-center gap-2 order-2">"
-<ModeToggle />
-<LanguageSelector />
-            {!isLoggedIn && (
-  // TODO: Add parameters
-)
-              <$2 />
-                href='/auth/login''
-                className='text-sm hover:text-primary''
-                data-testid='login-link''
-                onClick={e => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                  e.preventDefault()
-                  setLoginOpen(true) }}
-
-              >
-                href="/auth/login""
-                className="text-sm hover:text-primary""
-                data-testid="login-link""
+          <div className="hidden md: flex lg:hidden items-center gap-2 order-2"/auth/login""text-sm hover:text-primary"
+                data-testid=""
                 onClick={(e) => {
   // TODO: Add properties
 }
@@ -548,145 +504,27 @@ if ( {) {
 }
                   e.preventDefault(),
                   setLoginOpen(true)
-          <div className="hidden md: flex lg:hidden items-center gap-2 order-2">"
+          <div className="
 <ModeToggle />
 <LanguageSelector />
             {!isLoggedIn && (
   // TODO: Add parameters
 )
               <;$2 />
-                href="/auth/login""
-                className="text-sm hover:text-primary""
-                data-testid="login-link""
-                onClick={(e) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                  e.preventDefault()
-                  setLoginOpen(true)
-                }}
-              >
-                {t('auth.login')}'
-              </Link>
-            )}
-            {isLoggedIn && <UserMenu />}
-
-                onClick={e => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                  e && e.preventDefault()
-                  setLoginOpen(true);                }}
-              >
-                {t('auth && auth.login')}'
-              </Link>
-            )}
-            {isLoggedIn && <UserMenu />}
-
-          </div>
-<div className='flex items - center gap - 1 flex - wrap'>'
-              {!isLoggedIn && (
-  // TODO: Add parameters
-)
-                <>
-<;$2 />
-                    href='/auth / login''
-                    className='text - sm hover:text - primary whitespace - nowrap''
-                    data - testid='login - link''
-                    on_click={e => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                      e.prevent_default ()
-                      setLoginOpen (true) }}
-                  >
-                    {t ('auth.login')}'
-                  </Link>
-<;$2 />
-                    href='/signup''
-                    className='text - sm hover:text - primary whitespace - nowrap''
-                  >
-                    {t ('auth.signup')}'
-                  </Link></>)}
-              {isLoggedIn && <UserMenu />}
-            </div></$1>
-          {/* Tablet view (md to lg) - simplified controls */}
-          <div className='hidden md:flex lg:hidden items - center gap - 2 order - 2'>'
-<ModeToggle />
-<LanguageSelector />
-            {!isLoggedIn && (
-  // TODO: Add parameters
-)
-              <;$2 />
-                href='/auth / login''
-                className='text - sm hover:text - primary''
-                data - testid='login - link''
-                on_click={e => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                  e.prevent_default ()
-                  setLoginOpen (true) }}
-              >
-                {t ('auth.login')}'
-              </Link>)}
-            {isLoggedIn && <UserMenu />}
-          </div>
-              {isLoggedIn && <UserMenu  />}
-            </div></div>
-          {/* Mobile menu button */}
-          <$2 />
-            className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0''
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-expanded={mobileMenuOpen}
-            aria-label={t('general.toggle_mobile_menu')}          >'
-</div>
-          {/* Mobile menu button */}
-          <$2 />
-            className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0''
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-expanded={mobileMenuOpen}
-            aria-label={t('general.toggle_mobile_menu')}'
-          >
-
-            {mobileMenuOpen ? (
-  // TODO: Add parameters
-)
-              <X className="h-6 w-6" />"
+                href="/auth/login"
+                className="text-sm hover:text-primary"login-link""h-6 w-6"
             ) : (
   // TODO: Add parameters
 )
-              <Menu className="h-6 w-6" />"
+              <Menu className="
             )}
           </button></div>
 </header>
       {mobileMenuOpen && (
   // TODO: Add parameters
 )
-        <div className="lg:hidden fixed inset-0 z-60 pt-16">"
-<$2 />
-            className='absolute inset-0 bg-black/50 backdrop-blur-sm''
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden='true'          />'
-<div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'>'
-<MobileMenu
-              unreadCount={unreadCount}
-              onClose={() => setMobileMenuOpen(false)}
-              openLoginModal={returnToPath => setLoginOpen(true)}            />
-</div></div>
-      )}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} /></>
-  )
-}
-
-return (<>
-<header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" >"
-<div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" >"
+        <div className="lg:hidden fixed inset-0 z-60 pt-16"sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"navigation"Primary" data-testid=" >"
+<div className="
 <Logo />
 }setQuery ('')'
 //Track analytics event
@@ -709,9 +547,9 @@ return (<>
   // TODO: Add properties
 }
   > {''
-  t ('auth.login') ""'"
+  t ('auth.login') ""
 }</Link>
-<Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {''"
+<Link href="/signup"text-sm hover:text-primary whitespace-nowrap"
   t ('auth.signup')'
 }</Link></>)
 }{
@@ -722,8 +560,8 @@ return (<>
   isLoggedIn && <UserMenu />
 }</div></div>
 <ModeToggle />
-<LanguageSelector /> {""
-  !isLoggedIn && (< href="/auth/login" className="text-sm hover:text-primary" data-testid="login-link" onClick={$2 />"
+<LanguageSelector /> {"
+  !isLoggedIn && (< href="/auth/login"text-sm hover:text-primary"login-link"
   (e) => {
   // TODO: Add properties
 }
@@ -745,105 +583,20 @@ setLoginOpen (true)
 }
   // TODO: Add properties
 }
-  /* Mobile menu button */ ""
-}<button) : (<Menu className="h-6 w-6" />) ""
-}</button></div>
-</header>
-< className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={$2 />"
-  () => setMobileMenuOpen (false) ""
-}aria-hidden="true" />"
-<div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" >"
-<MobileMenu unreadCount= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  unreadCount
-}onClose= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  () => setMobileMenuOpen (false)
-}openLoginModal= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  (returnToPath) => setLoginOpen (true)
-}/>
-</div></div>)
-}{
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  isMobile && <MobileBottomNav unreadCount= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-}/>
-}<LoginModal isOpen= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  loginOpen
-}onOpenChange= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  setLoginOpen
-}/></>)
-}'"  { opacity: 0"'"
-  height: 0
-}}
-              animate = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  { opacity: 1
-  height: 'auto''
-}}
-              exit = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  { opacity: 0
-  height: 0
-
-          <;$2 />
-            className='lg:hidden p - 2 rounded focus:outline - none flex - shrink - 0''
-            on_click={() => setMobileMenuOpen (!mobileMenuOpen)}
-            aria - expanded={mobileMenuOpen}
-            aria - label={t ('general.toggle_mobile_menu')}          >'
-            {mobileMenuOpen ? (
-  // TODO: Add parameters
-)
-              <X className='h - 6 w - 6' />) : ('
-              <Menu className='h - 6 w - 6' />)}'
-          </button>
-}}
-              transition={{ duration: 0.3 }}""
-              className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10">""
-              <div className="px-4 py-6 space-y-4">"
+  /* Mobile menu button */ ""h-6 w-6""absolute inset-0 bg-black/50 backdrop-blur-sm"
+  () => setMobileMenuOpen (false) "
+}aria-hidden="true"
+<div className="relative bg-card border-t border-primary/20 max-h-[calc (100 vh-4 rem) ] overflow-y-auto"  { opacity: 0"'""
+              className=""
+              <div className="
                 {services.map((category, index) => (
   // TODO: Add parameters
 )
-                  <div key={index}>""
-                    <h3 className="text-sm font-semibold text-cyan-400 mb-2">"
+                  <div key={index}>""text-sm font-semibold text-cyan-400 mb-2"
                       {category.category}
-                    </h3>""
-                    <div className="space-y-2 ml-4">"
-                      {category.items.map((service: unknown, serviceIndex: unknown
-                        <$2 />
-                          key={serviceIndex}
-                          to={service.path}""
-                          className="block text-gray-300 hover:text-white transition-colors duration-200""
+                    </h3>"
+                    <div className="space-y-2 ml-4""
+                          className="
                           onClick={( setIsOpen(false)}
                         >
                           {service.name}
@@ -851,27 +604,19 @@ setLoginOpen (true)
                       ))}
                     </div></div>
                 ))}
-                <div className="pt-4 border-t border-white/10 space-y-2">"
-<                    to="/solutions"$2 />"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200""
+                <div className="pt-4 border-t border-white/10 space-y-2"/solutions"$2 />"block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Solutions
                   </Link>
-<                    to="/about"$2 />"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200""
+<                    to="$2 />"
+                    className="
                     onClick={: unknown setIsOpen(false)}
                   >
                     About
                   </Link>
-<                    to="/blog"$2 />"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200""
-                    onClick={: unknown setIsOpen(false)}
-                  >
-                    Blog
-                  </Link>
-<                    to="/contact"$2 />"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200""
+<                    to="/blog"
+                    className="block text-gray-300 hover:text-white transition-colors duration-200"/contact"$2 />"block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Contact
@@ -881,42 +626,15 @@ setLoginOpen (true)
         </AnimatePresence></nav>
 </header>
   )}
-'"`"'"
+'"'"
 }
 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm""
+            className="
             onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true""
+            aria-hidden="true"
           />
-<div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">"
-<MobileMenu
-              unreadCount={unreadCount}
-              onClose={() => setMobileMenuOpen(false)}
-              openLoginModal={(returnToPath) => setLoginOpen(true)}
-            />
-</$1></$1>
-</$1>
-      {mobileMenuOpen && (
-  // TODO: Add parameters
-)
-        <div className='lg:hidden fixed inset - 0 z - 60 pt - 16'>'
-<;$2 />
-            className='absolute inset - 0 bg - black / 50 backdrop - blur - sm''
-            on_click={() => setMobileMenuOpen (false)}
-            aria - hidden='true'          />'
-<div className='relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem)] overflow - y-auto'>'
-<MobileMenu
-              unread_count={unread_count}
-              on_close={() => setMobileMenuOpen (false)}
-              openLoginModal={returnToPath => setLoginOpen (true)}            />
-</$1></$1>)}
-      {is_mobile && <MobileBottomNav unread_count={unread_count} />}
-      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} /></>)
-}
-
-return (<>
-<header className="sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md" role="navigation" aria - label="Primary" data - testid="header" >"
-<div className="container flex items - center justify - between gap - 2 min - h-16 px - 4 sm:px - 6 max-[320px]:flex - wrap" >"
+<div className="relative bg-card border-t border-primary/20 max-h-[calc(100 vh-4 rem)] overflow-y-auto"sticky top - 0 z - 70 w - full border - b border - primary / 20 bg - card / 90 backdrop - blur - md"navigation"Primary" data - testid=" >"
+<div className="
 <Logo />
 }set_query ('')'
 //Track analytics event
@@ -939,9 +657,9 @@ return (<>
   // TODO: Add properties
 }
   > {''
-  t ('auth.login') ""'"
+  t ('auth.login') ""
 }</Link>
-<Link href="/signup" className="text - sm hover:text - primary whitespace - nowrap" > {''"
+<Link href="/signup"text - sm hover:text - primary whitespace - nowrap"
   t ('auth.signup')'
 }</Link></>)
 }{
@@ -952,8 +670,8 @@ return (<>
   isLoggedIn && <UserMenu />
 }</div></div>
 <ModeToggle />
-<LanguageSelector /> {""
-  !isLoggedIn && (< href="/auth / login" className="text - sm hover:text - primary" data - testid="login - link" on_click={$2 />"
+<LanguageSelector /> {"
+  !isLoggedIn && (< href="/auth / login"text - sm hover:text - primary"login - link"
   (e) => {
   // TODO: Add properties
 }
@@ -975,123 +693,41 @@ setLoginOpen (true)
 }
   // TODO: Add properties
 }
-  /* Mobile menu button */ ""
-}<button) : (<Menu className="h - 6 w - 6" />) ""
-}</button></div>
-</header>
-< className="absolute inset - 0 bg - black / 50 backdrop - blur - sm" on_click={$2 />"
-  () => setMobileMenuOpen (false) ""
-}aria - hidden="true" />"
-<div className="relative bg - card border - t border - primary / 20 max - h-[calc (100vh - 4rem) ] overflow - y-auto" >"
-<MobileMenu unread_count= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  unread_count
-}on_close= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  () => setMobileMenuOpen (false)
-}openLoginModal= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  (returnToPath) => setLoginOpen (true)
-}/>
-</div></div>)
-}{
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  is_mobile && <MobileBottomNav unread_count= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  unread_count
-}/>
-}<LoginModal is_open= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  login_open
-}onOpenChange= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  setLoginOpen
-}/></>)
-}'"  { opacity: 0,"'"
-  height: 0
-}}
-              animate = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  { opacity: 1,
-  height: 'auto''
-}}
-              exit = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  { opacity: 0,
-  height: 0
-}}
-              transition={{ duration: 0.3 }}""
-              className="lg:hidden bg - slate - 900 / 95 backdrop - blur - md border - t border - white / 10">""
-              <div className="px - 4 py - 6 space - y-4">"
+  /* Mobile menu button */ ""h - 6 w - 6""absolute inset - 0 bg - black / 50 backdrop - blur - sm"
+  () => setMobileMenuOpen (false) "
+}aria - hidden="true"
+<div className="relative bg - card border - t border - primary / 20 max - h-[calc (100 vh - 4 rem) ] overflow - y-auto"  { opacity: 0,"'""
+              className=""
+              <div className="
                 {services.map ((category, index) => (
   // TODO: Add parameters
 )
-                  <div key={index}>""
-                    <h3 className="text - sm font - semibold text - cyan - 400 mb - 2">"
+                  <div key={index}>""text - sm font - semibold text - cyan - 400 mb - 2"
                       {category.category}
 
-</$1>""
-                    <div className="space - y-2 ml - 4">"
-                      {category.items.map ((service: unknown, service_index: unknown
-                        <;$2 />
-                          key={service_index}
-                          to={service.path}""
-                          className="block text - gray - 300 hover:text - white transition - colors duration - 200""
+</$1>"
+                    <div className="space - y-2 ml - 4""
+                          className="
                           on_click={( setIsOpen (false)}
                         >
                           {service.name}
                         </Link>))}
                     </div></$1>))}
-                <div className="pt - 4 border - t border - white / 10 space - y-2">"
-<                    to="/solutions";$2 />"
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200""
+                <div className="pt - 4 border - t border - white / 10 space - y-2"/solutions";$2 />"block text - gray - 300 hover:text - white transition - colors duration - 200"
                     on_click={: unknown setIsOpen (false)}
                   >
                     Solutions</$1>
-<                    to="/about";$2 />"
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200""
+<                    to=";$2 />"
+                    className="
                     on_click={: unknown setIsOpen (false)}
                   >
                     About</$1>
-<                    to="/blog";$2 />"
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200""
-                    on_click={: unknown setIsOpen (false)}
-                  >
-                    Blog</$1>
-<                    to="/contact";$2 />"
-                    className="block text - gray - 300 hover:text - white transition - colors duration - 200""
+<                    to="/blog"
+                    className="block text - gray - 300 hover:text - white transition - colors duration - 200"/contact";$2 />"block text - gray - 300 hover:text - white transition - colors duration - 200"
                     on_click={: unknown setIsOpen (false)}
                   >
                     Contact</$1></$1>
 </$1></$1>)}
         </AnimatePresence></$1>
 </$1>)}
-'"`"'"
-}
+'"'"

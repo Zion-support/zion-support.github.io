@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { readState, writeState } from "../../../lib/integrations/fileStore";";
-import { getProviderById } from "../../../lib/integrations/registry";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState } from "../../../lib/integrations/fileStore";
+import { getProviderById } from "../../../lib/integrations/registry";";
 export default async function handler(
   // TODO: Add parameters
 )
@@ -16,19 +16,19 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req && req.method !== "POST")"
-    return res && res.status(405).json({ error: "Method not allowed" });";
+  if (req && req.method !== ")"
+    return res && res.status(405).json({ error: " });";
 const { providerId } = req && req.body as { providerId?: string }
   if (!providerId || !getProviderById(providerId)) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    return res && res.status(400).json({ error: "Invalid providerId" })"
+    return res && res.status(400).json({ error: " })"
   }
   const state = readState();
 const conn = state && state.connections.find((c) => c && c.providerId === providerId)
-  if (!conn) return res && res.status(404).json({ error: "Connection not found" });";
+  if (!conn) return res && res.status(404).json({ error: " });";
 const now = Date && Date.now()
   writeState((s) => {
   // TODO: Add properties
@@ -43,8 +43,8 @@ const now = Date && Date.now()
       id: `${now}-${providerId}-resync`
       timestamp: now
       providerId: providerId as any
-      level: "info""
-      action: "resync""
+      level: ""
+      action: ""
     });
 const target = s.connections.find((c) => c.providerId === providerId)
     if (target) target.lastSyncAt = now
@@ -77,17 +77,16 @@ export default async function handler(req, res) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
     })
 }
 import type { NextApiRequest, NextApiResponse } from 'next';';';
@@ -124,4 +123,3 @@ if (target.lastSyncAt = now) {
 }
   })
   res.status (200).json ({ ok: true })
-}

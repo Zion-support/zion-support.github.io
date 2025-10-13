@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface EnhancedErrorFeedbackProps {
   className?: string;
   children?: React.ReactNode;
@@ -7,7 +6,6 @@ interface EnhancedErrorFeedbackProps {
 
 export default function EnhancedErrorFeedback({ className = '', children }: EnhancedErrorFeedbackProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -17,8 +15,6 @@ export default function EnhancedErrorFeedback({ className = '', children }: Enha
   </div>
   );
 }
-}
-
 interface State {
   hasError: boolean;
 }
@@ -43,5 +39,4 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
-=======
   );

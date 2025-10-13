@@ -1,4 +1,4 @@
-const, October2025AdvancedAIInnovationsBanne, r = () => {
+const, October2025 AdvancedAIInnovationsBanne, r = () => {
   // TODO: Implement
 }
   // TODO: Add properties
@@ -7,344 +7,220 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
 }
   // TODO: Implement
 }
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">"
+  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3 xl, m, b-12"absolute, inse, t-0, overflo, w-hidd, e, n"
+<div, className="
+        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3 xl, animat, e-pulse, dela, y-10, 0, 0"absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3 xl, animat, e-pulse, dela, y-5, 0, 0"
+const, October2025 AdvancedAIInnovationsBanne, r = () => {
+  // TODO: Implement
+}
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // TODO: Implement
+}
+  return(<div, className=""
       {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">"
-<div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>)"
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>)"
-        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-5, 0, 0"></d, i, v>)"
-const, October2025AdvancedAIInnovationsBanne, r = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-  return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">""
-      {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">""
+      <div, className=""
   return (
   // TODO: Add parameters
 )
-    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">"
+    <div, className="
       {/* Animated, background, elements */}</div>
-<div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>"
-<div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>"
-<div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>"
-<div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-5, 0, 0"></d, i, v>"
-const, October2025AdvancedAIInnovationsBanne, r = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-  return (
-  // TODO: Add parameters
-)
-    <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">""
-      {/* Animated, background, elements */}</div>
-<div, className="absolute, inse, t-0, overflo, w-hidd, e, n">"</div>"
-<div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>""
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>""
-const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, background, elements */}
-      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n"></div>""
-        <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>""
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>""
-        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-5, 0, 0">"
-const, October2025AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expression */}
-      {/* Animated, background, elements */}""
-      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";""
-        <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";""
-        <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";""
-        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-5, 0, 0"></d, i, v>"</$1>""
-      <div, className="relativ, e, z-10, ma, x-w-6xl, m, x-au, t, o">""
+<div, className="absolute, inse, t-0, overflo, w-hidd, e, n"absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3 xl, animat, e-pul, s, e"
+<div, className="
+<div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3 xl, animat, e-pulse, dela, y-5, 0, 0"relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3 xl, m, b-12""absolute, inse, t-0, overflo, w-hidd, e, n"</div>"absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3 xl, animat, e-pul, s, e""absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3 xl, animat, e-pulse, dela, y-10, 0, 0""absolute, inse, t-0, overflo, w-hidd, e, n""absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3 xl, animat, e-pul, s, e""absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3 xl, animat, e-pulse, dela, y-10, 0, 0""absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3 xl, animat, e-pulse, dela, y-5, 0, 0"
+const, October2025 AdvancedAIInnovationsBanne, r = () => {/* TODO: Fix JSX expression */}
+      {/* Animated, background, elements */}"
+      <div, className="absolute, inse, t-0, overflo, w-hidd, e, n""
+        <div, className=";""absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3 xl, animat, e-pulse, dela, y-10, 0, 0";"
+        <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3 xl, animat, e-pulse, dela, y-5, 0, 0""
+      <div, className=""
         {/* Header, Sectio, n */}
-        <div, className="text-center mb-12">"
-<div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6">"
-<Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />"
-<span, className="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Breaking, Innovatio, n • October, 202, 5"
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />"
-<h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t">"
+        <div, className="
+<div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6"w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />"te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r"
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />">"
             Ne, x, t-Generation, AI, Technologies: The, Future, is N, o, w
-          <p, className="te, x, t-xl, tex, t-indi, g, o-200, ma, x-w-3xl, m, x-au, t, o">"
+          <p, className="
             Explore, revolutionary, advances in, neuromorphic, computing, synthetic, data, generation
-        <div, className="text-center mb-12">""
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6">""
-        {/* Header, Sectio, n */}""
-        <div, className="text-center mb-12"></div>""
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6"></div>""
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  / />""
-            <span, className="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Breaking, Innovatio, n • October, 202, 5</sp, a, n>""
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  /></d, i, v>""
-          <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-            Ne, x, t-Generation, AI, Technologie,
-  s: The, Future, is N, o, w</$1>""
-          <p, className="te, x, t-xl, tex, t-indi, g, o-200, ma, x-w-3xl, m, x-au, t, o">"
-            Explore, revolutionary, advances in, neuromorphic, computing, synthetic, data, generation;""
-        <div, className="text-center mb-12">";""
-          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6">";""
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";""
-            <span, className="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Breaking, Innovatio, n • October, 202, 5</sp, a, n>";""
-            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />"</$1>""
-          <h2, className="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t">""
+        <div, className="text-center mb-12"
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6"
+        {/* Header, Sectio, n */}""text-center mb-12""inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6""w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  / />"
+            <span, className=""
+            <Sparkles, className="
+          <h2, className="te, x, t-5 xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t""
+          <p, className="
+            Explore, revolutionary, advances in, neuromorphic, computing, synthetic, data, generation;""text-center mb-12";"
+          <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6""
+            <Sparkles, className=";""te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r";"
+            <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e""
+          <h2, className=""
             Ne, x, t-Generation, AI, Technologies: The, Future, is N, o, w
             Ne, x, t-Generation, AI, Technologie,
-  s: The, Future, is N, o, w</$1>""
-          <p, className="te, x, t-xl, tex, t-indi, g, o-200, ma, x-w-3xl, m, x-au, t, o">""
+  s: The, Future, is N, o, w</$1>"
+          <p, className="te, x, t-xl, tex, t-indi, g, o-200, ma, x-w-3 xl, m, x-au, t, o"
             Explore, revolutionary, advances in, neuromorphic, computing, synthetic, data, generation
             and, quantum, machine learning, that, are reshaping, enterprise, AI in, 202, 5
         {/* Featured, Articles, Grid */}
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">""
-        {/* Featured, Articles, Grid */}""
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">"""
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">""
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10"
+        {/* Featured, Articles, Grid */}""grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10""
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10"
           {/* Articl, e, 1 - Neuromorphic, Computin, g */}
           <Li, n, k
           {/* Articl, e, 1 - Neuromorphic, Computin, g */}
           <Li, n, k
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-neuromorph, i, c-neur, a, l-networ, k, s-revoluti, o, n""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-8, 0, 0/40, t, o-indi, g, o-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-indi, g, o-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e"
-  r:shad, o, w-indi, g, o-5, 0, 0/50""
+  to="/bl, o, g/ai-20, 2, 5-octob, e, r-neuromorph, i, c-neur, a, l-networ, k, s-revoluti, o, n"
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-8, 0, 0/40, t, o-indi, g, o-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-indi, g, o-4, 0, 0/30, rounde, d-2 x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2 xl, hov, e""
           >
-<div, className="flex, item, s-center, ga, p-3, m, b-4">"
-<div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">""
-                <Brain, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0  />"
-<div, className="flex, item, s-center, ga, p-3, m, b-4">""
-              <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">""
-                <Brain, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0" />""
-              <div, className="fl, e, x-1">""
-                <span, className="te, x, t-xs, tex, t-indi, g, o-300, fon, t-semibold, uppercase, tracking-wi, d, e">Neuromorphic, A, I</sp, a, n>""
-            <, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e$2 />"
-  r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">""
-            <, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e$2 />"
-  r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">""
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">""
+<div, className="
+<div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s"
+                <Brain, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0  />">""p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s""w-8 h-8, tex, t-indi, g, o-3, 0, 0""fl, e, x-1""te, x, t-xs, tex, t-indi, g, o-300, fon, t-semibold, uppercase, tracking-wi, d, e""te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e$2 />">"
+            <, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e$2 />""
+            <h3, className=""
               Neuromorphic, Neural, Network
   s: Bra, i, n-Inspired, Computing, Revolution
-            <p, className="te, x, t-indi, g, o-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">""
-              Discover, how, neuromorphic computing, delivers, 10,000x, energy, efficiency improvemen, t, s
+            <p, className=""
+              Discover, how, neuromorphic computing, delivers, 10,000 x, energy, efficiency improvemen, t, s
   through, spik, e-based, even, t-driven, processing, and biological, neural, network architectur, e, s.
-            <div, className="flex, item, s-center, justif, y-betwe, e, n">""
-              <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-300, tex, t-sm">""
-          <Li, n, k;""
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-neuromorph, i, c-neur, a, l-networ, k, s-revoluti, o, n"""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-8, 0, 0/40, t, o-indi, g, o-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-indi, g, o-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,""
-  r:shad, o, w-indi, g, o-5, 0, 0/50""
-           />""
-            <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>""
-              <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">"""
-                <Brain, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0  / />""
-            <div, className="flex, item, s-center, ga, p-3, m, b-4">";""
-              <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">";""
-                <Brain, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0" />"</$1>""
-              <div, className="fl, e, x-1">";""
-                <span, className="te, x, t-xs, tex, t-indi, g, o-300, fon, t-semibold, uppercase, tracking-wi, d, e">Neuromorphic, A, I</sp, a, n>""
-            </d, i, v>""
-            <, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"$2 />"
-  r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">"""
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">""
-              Neuromorphic, Neural, Network,
-  s: Bra, i, n-Inspired, Computing, Revolution</$1>""
-            <p, className="te, x, t-indi, g, o-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">""
-              Discover, how, neuromorphic computing, delivers, 10,000x, energy, efficiency improvemen, t, s
+            <div, className=""
+              <div, className=""
+          <Li, n, k;"
+  to="/bl, o, g/ai-20, 2, 5-octob, e, r-neuromorph, i, c-neur, a, l-networ, k, s-revoluti, o, n""
+            classNa, m, e=""
+  r:shad, o, w-indi, g, o-5, 0, 0/50"
+           />""flex, item, s-center, ga, p-3, m, b-4""p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s""
+                <Brain, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0  / />"flex, item, s-center, ga, p-3, m, b-4";"
+              <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s""
+                <Brain, className="</$1>""fl, e, x-1";"
+                <span, className="te, x, t-xs, tex, t-indi, g, o-300, fon, t-semibold, uppercase, tracking-wi, d, e"
+            </d, i, v>""te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"
+  r: te, x, t-indi, g, o-200, transitio, n-colo, r, s"""te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-200, transitio, n-colo, r, s"""
+            <p, className=""
+              Discover, how, neuromorphic computing, delivers, 10,000 x, energy, efficiency improvemen, t, s
   through, spik, e-based, even, t-driven, processing, and biological, neural, network architectur, e, s.
-            </p>""
-            <div, className="flex, item, s-center, justif, y-betwe, e, n">";""
-              <div, className="flex, item, s-center, ga, p-2, tex, t-indi, g, o-300, tex, t-sm">""
+            </p>"
+            <div, className="flex, item, s-center, justif, y-betwe, e, n""
+              <div, className=""
                 <sp, a, n>18, min, read
                 <sp, a, n>•
                 <sp, a, n>Oc, t, 1, 20, 2, 5
-              </d, i, v>""
-              <Link, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"""
-              <Link, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />""
+              </d, i, v>"
+              <Link, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m"
           {/* Articl, e, 2 - Synthetic, Data, Generation */}
           <Li, n, k
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-synthet, i, c-da, t, a-generati, o, n-maste, r, y""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e"
-  r:shad, o, w-purp, l, e-5, 0, 0/50""
+  to="/bl, o, g/ai-20, 2, 5-octob, e, r-synthet, i, c-da, t, a-generati, o, n-maste, r, y"
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-2 x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2 xl, hov, e""
           >
-<div, className="flex, item, s-center, ga, p-3, m, b-4">"
-<div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">""
-                <Database, className="w-8 h-8, tex, t-purp, l, e-3, 0, 0  />"
-<div, className="flex, item, s-center, ga, p-3, m, b-4">""
-              <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">""
-                <Database, className="w-8 h-8, tex, t-purp, l, e-3, 0, 0" />""
-              <div, className="fl, e, x-1">""
-                <span, className="te, x, t-xs, tex, t-purp, l, e-300, fon, t-semibold, uppercase, tracking-wi, d, e">Data, Engineerin, g</sp, a, n>""
-            <, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e$2 />"
-  r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">""
+<div, className="
+<div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s"
+                <Database, className="w-8 h-8, tex, t-purp, l, e-3, 0, 0  />">""p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s""w-8 h-8, tex, t-purp, l, e-3, 0, 0""fl, e, x-1""te, x, t-xs, tex, t-purp, l, e-300, fon, t-semibold, uppercase, tracking-wi, d, e""te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e$2 />">"
               Synthetic, Data, Generation Maste, r, y: Solving, A, I's, Data, Scarcity Probl, e, m''
-            <p, className="te, x, t-purp, l, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">"
-              Learn, how, leading organizations, generate, 60-80% of, training, data synthetical, l, y
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">""
-              Synthetic, Data, Generation Mast, e, r
-          <Li, n, k;""
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-synthet, i, c-da, t, a-generati, o, n-maste, r, y"""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,""
-  r:shad, o, w-purp, l, e-5, 0, 0/50""
-           />""
-            <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>""
-              <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">"""
-                <Database, className="w-8 h-8, tex, t-purp, l, e-3, 0, 0  / />""
-            <div, className="flex, item, s-center, ga, p-3, m, b-4">";""
-              <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">";""
-                <Database, className="w-8 h-8, tex, t-purp, l, e-3, 0, 0" />"</$1>""
-              <div, className="fl, e, x-1">";""
-                <span, className="te, x, t-xs, tex, t-purp, l, e-300, fon, t-semibold, uppercase, tracking-wi, d, e">Data, Engineerin, g</sp, a, n>""
-            </d, i, v>""
-            <, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"$2 />"
-  r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">""
-              Synthetic, Data, Generation Maste, r, y: Solving, A, I's, Data, Scarcity Probl, e, m''
-            </h3>""
-            <p, className="te, x, t-purp, l, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">"
-              Learn, how, leading organizations, generate, 60-80% of, training, data synthetical, l, y;""
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">""
-              Synthetic, Data, Generation Mast, e, r,
-  y: Solving, A, I's, Data, Scarcity Probl, e, m'</$1>"'"
-            <p, className="te, x, t-purp, l, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">""
+            <p, className="te, x, t-purp, l, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3"te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s"""
+  to="""group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-2 x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2 xl, hov, e,"""
+           />"
+            <div, className="flex, item, s-center, ga, p-3, m, b-4"
+              <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s""
+                <Database, className="
+            <div, className="flex, item, s-center, ga, p-3, m, b-4""
+              <div, className=";""w-8 h-8, tex, t-purp, l, e-3, 0, 0"</$1>"
+              <div, className="fl, e, x-1""
+                <span, className=""
+            </d, i, v>"
+            <, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,">"""
+            <p, className="
+              Learn, how, leading organizations, generate, 60-80% of, training, data synthetical, l, y;""te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s""'"
+            <p, className=""
               Learn, how, leading organizations, generate, 60-80% of, training, data synthetical, l, y
               enabling, faster, iteration, privacy, complianc, e, and, more, robust AI, system, s.
-            <div, className="flex, item, s-center, justif, y-betwe, e, n">""
-              <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, tex, t-sm">""
-            </p>""
-            <div, className="flex, item, s-center, justif, y-betwe, e, n">";""
-              <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, tex, t-sm">""
+            <div, className=""
+              <div, className=""
+            </p>"
+            <div, className="flex, item, s-center, justif, y-betwe, e, n""
+              <div, className=""
                 <sp, a, n>22, min, read
                 <sp, a, n>•
                 <sp, a, n>Oc, t, 1, 20, 2, 5
-              </d, i, v>""
-              <Link, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"""
-              <Link, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />""
+              </d, i, v>"
+              <Link, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m"
           {/* Articl, e, 3 - Quantum, Machine, Learning */}
           <Li, n, k
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-quant, u, m-machi, n, e-learni, n, g-enterpri, s, e-breakthrou, g, h""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-pi, n, k-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e"
-  r:shad, o, w-pi, n, k-5, 0, 0/50""
+  to="/bl, o, g/ai-20, 2, 5-octob, e, r-quant, u, m-machi, n, e-learni, n, g-enterpri, s, e-breakthrou, g, h"
+            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-pi, n, k-4, 0, 0/30, rounde, d-2 x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2 xl, hov, e""
           >
-<div, className="flex, item, s-center, ga, p-3, m, b-4">"
-<div, className="p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-pi, n, k-5, 0, 0/30, transitio, n-colo, r, s">""
-                <Atom, className="w-8 h-8, tex, t-pi, n, k-3, 0, 0  />"
-<div, className="flex, item, s-center, ga, p-3, m, b-4">""
-              <div, className="p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-pi, n, k-5, 0, 0/30, transitio, n-colo, r, s">""
-                <Atom, className="w-8 h-8, tex, t-pi, n, k-3, 0, 0" />""
-              <div, className="fl, e, x-1">""
-                <span, className="te, x, t-xs, tex, t-pi, n, k-300, fon, t-semibold, uppercase, tracking-wi, d, e">Quantum, M, L</sp, a, n>""
-            <, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e$2 />"
-  r: te, x, t-pi, n, k-200, transitio, n-colo, r, s">""
+<div, className="
+<div, className="p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-pi, n, k-5, 0, 0/30, transitio, n-colo, r, s"
+                <Atom, className="w-8 h-8, tex, t-pi, n, k-3, 0, 0  />">""p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-pi, n, k-5, 0, 0/30, transitio, n-colo, r, s""w-8 h-8, tex, t-pi, n, k-3, 0, 0""fl, e, x-1""te, x, t-xs, tex, t-pi, n, k-300, fon, t-semibold, uppercase, tracking-wi, d, e""te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e$2 />">"
               Quantum, Machine, Learning: Enterprise, Breakthrough, in 20, 2, 5
-            <p, className="te, x, t-pi, n, k-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">"
-              Explore, how, quantum ML, is, delivering exponential, speedups, for optimizati, o, n, drug, discover, y
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-pi, n, k-200, transitio, n-colo, r, s">""
-              Quantum, Machine, Learnin
-  g: Enterprise, Breakthrough, in 20, 2, 5
-            <p, className="te, x, t-pi, n, k-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">""
-              Explore, how, quantum ML, is, delivering exponential, speedups, for optimizati, o, n, drug, discover, y
-              financial, modelin, g, and, cryptography, with 1,0, 0, 0+ qubit, system, s.
-            <div, className="flex, item, s-center, justif, y-betwe, e, n">""
-              <div, className="flex, item, s-center, ga, p-2, tex, t-pi, n, k-300, tex, t-sm">""
-          <Li, n, k;""
-  to="/bl, o, g/ai-20, 2, 5-octob, e, r-quant, u, m-machi, n, e-learni, n, g-enterpri, s, e-breakthrou, g, h"""
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-pi, n, k-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hov, e,""
-  r:shad, o, w-pi, n, k-5, 0, 0/50""
-           />""
-            <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>""
-              <div, className="p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-pi, n, k-5, 0, 0/30, transitio, n-colo, r, s">"""
-                <Atom, className="w-8 h-8, tex, t-pi, n, k-3, 0, 0  / />""
-            <div, className="flex, item, s-center, ga, p-3, m, b-4">";""
-              <div, className="p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-pi, n, k-5, 0, 0/30, transitio, n-colo, r, s">";""
-                <Atom, className="w-8 h-8, tex, t-pi, n, k-3, 0, 0" />"</$1>""
-              <div, className="fl, e, x-1">";""
-                <span, className="te, x, t-xs, tex, t-pi, n, k-300, fon, t-semibold, uppercase, tracking-wi, d, e">Quantum, M, L</sp, a, n>""
-            </d, i, v>""
-            <, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,"$2 />"
-  r: te, x, t-pi, n, k-200, transitio, n-colo, r, s">""
-              Quantum, Machine, Learnin,
-  g: Enterprise, Breakthrough, in 20, 2, 5</$1>""
-            <p, className="te, x, t-pi, n, k-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">"
-              Explore, how, quantum ML, is, delivering exponential, speedups, for optimizati, o, n, drug, discover, y;""
-            <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-pi, n, k-200, transitio, n-colo, r, s">""
-              Quantum, Machine, Learnin,
-  g: Enterprise, Breakthrough, in 20, 2, 5</$1>""
-            <p, className="te, x, t-pi, n, k-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">""
+            <p, className="te, x, t-pi, n, k-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3"te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-pi, n, k-200, transitio, n-colo, r, s""te, x, t-pi, n, k-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3""flex, item, s-center, justif, y-betwe, e, n""flex, item, s-center, ga, p-2, tex, t-pi, n, k-300, tex, t-sm"""
+  to="""group, b, g-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-pi, n, k-4, 0, 0/30, rounde, d-2 x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2 xl, hov, e,"""
+           />"
+            <div, className="flex, item, s-center, ga, p-3, m, b-4"
+              <div, className="p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-pi, n, k-5, 0, 0/30, transitio, n-colo, r, s""
+                <Atom, className="
+            <div, className="flex, item, s-center, ga, p-3, m, b-4""
+              <div, className=";""w-8 h-8, tex, t-pi, n, k-3, 0, 0"</$1>"
+              <div, className="fl, e, x-1""
+                <span, className=""
+            </d, i, v>"
+            <, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e,">"""
+            <p, className="
+              Explore, how, quantum ML, is, delivering exponential, speedups, for optimizati, o, n, drug, discover, y;""te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-pi, n, k-200, transitio, n-colo, r, s"""
+            <p, className=""
               Explore, how, quantum ML, is, delivering exponential, speedups, for optimizati, o, n, drug, discover, y
               financial, modelin, g, and, cryptography, with 1,0, 0, 0+ qubit, system, s.
-            </p>""
-            <div, className="flex, item, s-center, justif, y-betwe, e, n">";""
-              <div, className="flex, item, s-center, ga, p-2, tex, t-pi, n, k-300, tex, t-sm">""
+            </p>"
+            <div, className="flex, item, s-center, justif, y-betwe, e, n""
+              <div, className=""
                 <sp, a, n>24, min, read
                 <sp, a, n>•
                 <sp, a, n>Oc, t, 1, 20, 2, 5
-              </d, i, v>""
-              <Link, className="w-5 h-5, tex, t-pi, n, k-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"""
-              <Link, className="w-5 h-5, tex, t-pi, n, k-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />""
+              </d, i, v>"
+              <Link, className="w-5 h-5, tex, t-pi, n, k-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+              <Link, className="w-5 h-5, tex, t-pi, n, k-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m"
         {/* CTA, Sectio, n */}
-        <div, className="te, x, t-center, m, t-10">""
+        <div, className="te, x, t-center, m, t-10"
           <Li, n, k
-        <div, className="te, x, t-center, m, t-10">""
+        <div, className="te, x, t-center, m, t-10"
           <Li, n, k
+  to="/bl, o, g"
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-pi, n, k-600, hove, r: fr, o, m-indi, g, o-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, tex, t-lg, p, x-10, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hov, e""
+        <div, className=""
+          <Li, n, k;"
   to="/bl, o, g""
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-pi, n, k-600, hove, r: fr, o, m-indi, g, o-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, tex, t-lg, p, x-10, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hov, e"
-        {/* CTA, Sectio, n */}""
-        <div, className="te, x, t-center, m, t-10">""
-          <Li, n, k;""
-  to="/bl, o, g"""
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-pi, n, k-600, hove, r: fr, o, m-indi, g, o-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, tex, t-lg, p, x-10, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hove,"
-  r:sca, l, e-105, shado, w-lg, hov, e,""
-  r:shad, o, w-2, x, l""
+            classNa, m, e="
+  r:sca, l, e-105, shado, w-lg, hov, e,"""
           >
-<sp, a, n>Discover, More, Innovations</sp, a, n>""
-            <Link, className="w-6 h-6  / />""
-            <Link, className="w-6 h-6" />"</$1>""
-          <p, className="te, x, t-indi, g, o-2, 0, 0/70, tex, t-sm, m, t-4">""
+<sp, a, n>Discover, More, Innovations</sp, a, n>"
+            <Link, className="w-6 h-6  / />"w-6 h-6"</$1>"
+          <p, className="te, x, t-indi, g, o-2, 0, 0/70, tex, t-sm, m, t-4"
             Join, 5, 0,0, 0, 0+ technology, leaders, pioneering the, next, wave of, AI, innovation
         {/* Stats, Ba, r */}
-        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">""
-          <div, className="te, x, t-cent, e, r">"
-<div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, m, b-1">"
-<div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">""
-          <div, className="te, x, t-cent, e, r">""
-        {/* Stats, Ba, r */}""
-        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">"""
-          <div, className="te, x, t-cent, e, r"></div>""
-            <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, m, b-1"></div>""
-        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">";""
-          <div, className="te, x, t-cent, e, r">";""
-            <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, m, b-1">""
-              10,00, 0, x</$1>""
-            <div, className="te, x, t-indi, g, o-2, 0, 0/70, tex, t-sm">Energy, Efficienc, y</d, i, v>""
-          <div, className="te, x, t-cent, e, r">""
-          </d, i, v>""
-          <div, className="te, x, t-cent, e, r">";""
-            <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, m, b-1">""
-              60-80%
-            </d, i, v>""
-            <div, className="te, x, t-purp, l, e-2, 0, 0/70, tex, t-sm">Synthetic, Data, Usage</d, i, v>""
-          <div, className="te, x, t-cent, e, r">""
-          </d, i, v>""
-          <div, className="te, x, t-cent, e, r">";""
-            <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, t, o-r, e, d-400, b, g-cl, i, p-text, m, b-1">""
+        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6"
+          <div, className="te, x, t-cent, e, r"te, x, t-3 xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, m, b-1"
+<div, className=""
+          <div, className=""
+        {/* Stats, Ba, r */}"
+        <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6""
+          <div, className=""
+            <div, className=""
+        <div, className=";""te, x, t-cent, e, r";"
+            <div, className="te, x, t-3 xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, m, b-1"
+              10,00, 0, x</$1>""te, x, t-indi, g, o-2, 0, 0/70, tex, t-sm""te, x, t-cent, e, r"""
+          <div, className=";""te, x, t-3 xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, m, b-1"""
+            <div, className=""
+          <div, className=""
+          </d, i, v>"
+          <div, className="te, x, t-cent, e, r""
+            <div, className=""
               1,0, 0, 0+
-            </d, i, v>""
-            <div, className="te, x, t-pi, n, k-2, 0, 0/70, tex, t-sm">Logical, Qubit, s</d, i, v>""
-          <div, className="te, x, t-cent, e, r">""
-          </d, i, v>""
-          <div, className="te, x, t-cent, e, r">";""
-            <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, m, b-1">""
-              10, 0, x</$1>""
-            <div, className="te, x, t-gre, e, n-2, 0, 0/70, tex, t-sm">Faster, Simulation, s</d, i, v>""
-        </d, i, v>)
-      </d, i, v>)
-    </d, i, v>)
-  )
-}
-export, default, React.me, m, o(October2025 AdvancedAIInnovationsBann, e, r)
-}""
+            </d, i, v>"
+            <div, className="te, x, t-pi, n, k-2, 0, 0/70, tex, t-sm"
+          <div, className="te, x, t-cent, e, r"
+          </d, i, v>""te, x, t-cent, e, r";"
+            <div, className="te, x, t-3 xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, m, b-1"
+              10, 0, x</$1>""te, x, t-gre, e, n-2, 0, 0/70, tex, t-sm"""
 </div></div>
 </div></div>
 </div></div>
@@ -409,4 +285,3 @@ export, default, React.me, m, o(October2025 AdvancedAIInnovationsBann, e, r)
 </h3></h3>
 </h3></h3>
 </h3>
-}

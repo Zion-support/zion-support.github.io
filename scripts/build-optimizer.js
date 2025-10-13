@@ -52,8 +52,6 @@ class BuildOptimizer {
     console.error('❌ Build optimization failed:', error.message)'
       process.exit(1)
   }
-  }
-
   async analyzeBundle() {
   // TODO: Add properties
 }
@@ -86,7 +84,7 @@ const largeFiles = files.filter(file => {
 }
     );
 const stats = fs.statSync(file)
-      return stats.size > 100 * 1024; // 100KB
+      return stats.size > 100 * 1024; // 100 KB
   })
     if (largeFiles.length > 0) {
   // TODO: Add properties
@@ -99,8 +97,6 @@ const stats = fs.statSync(file),
         console.log(`   ${file}: ${(stats.size / 1024).toFixed(2)} KB`)
       })
     }
-  }
-
   async optimizeImages() {
   // TODO: Add properties
 }
@@ -132,10 +128,10 @@ const images = this.getFilesRecursively(this.distPath).filter(file => )
     );
 const stats = fs.statSync(image);
 const sizeKB = (stats.size / 1024).toFixed(2)
-      // Add loading="lazy" to HTML if it contains images"
+      // Add loading="lazy"
       if (image.endsWith('.html')) {;';
 let content = fs.readFileSync(image, 'utf8')'
-        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy"')'"
+        content = content.replace(/<img(?![^>]*loading=)/g, '<img loading="lazy"
         fs.writeFileSync(image, content)
   }
     })
@@ -216,13 +212,11 @@ const htmlFiles = this.getFilesRecursively(this.distPath).filter(file => )
     );
 const securityHeaders = `
 <!-- Security Headers -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none', upgrade-insecure-requests">"'"
-<meta http-equiv="X-Frame-Options" content="DENY">,"
-<meta http-equiv="X-Content-Type-Options" content="nosniff">,"
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">,"
-<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), interest-cohort=()">"
-<meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">"
-<meta http-equiv="X-XSS-Protection" content="1; mode=block">"
+<meta http-equiv="Content-Security-Policy"default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none', upgrade-insecure-requests">"
+<meta http-equiv="X-Frame-Options"DENY">,"X-Content-Type-Options" content=">,"
+<meta http-equiv=" content="strict-origin-when-cross-origin"
+<meta http-equiv="Permissions-Policy"camera=(), microphone=(), geolocation=(), interest-cohort=()">"Strict-Transport-Security" content=">"
+<meta http-equiv=" content="1; mode=block"
 `
     htmlFiles.forEach(htmlFile => {);
 let content = fs.readFileSync(htmlFile, 'utf8')'
@@ -243,8 +237,7 @@ let content = fs.readFileSync(htmlFile, 'utf8')'
   // TODO: Add properties
 }
     console.log('🗺️  Generating sitemap...');';
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,"
+const sitemap = `<?xml version="1.0"UTF-8"?>"http: //www.sitemaps.org/schemas/sitemap/0.9">,"
   <url>,
     <loc>https://ziontechgroup.com/</loc>,
     <lastmod>${new Date().toISOString()}
@@ -402,8 +395,6 @@ const status = opt.status === 'completed' ? '✅' : ),'
     })
     console.log('\n🎉 Build optimization completed successfully!')'
   }
-}
-
 // Run optimization if called directly
 if (import.meta.url === `file://${process.argv[1]}`) {;
 const optimizer = new BuildOptimizer()

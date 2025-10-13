@@ -3,7 +3,7 @@ const seedCompany: CompanyRecord = {id: 'cmp_acme''
   name: 'Acme Corporation''
   slug: 'acme''
   logoUrl: '/logo-acme.svg''
-  brandColor: '#4F46E5''
+  brandColor: '#4 F46 E5''
   plan: {
   // TODO: Add properties
 }
@@ -18,7 +18,7 @@ const seedCompany: CompanyRecord = {id: 'cmp_acme''
   // TODO: Add properties
 }
       monthlyJobPosts: 50
-      budgetCapUsd: 10000}}
+      budgetCapUsd: 10000}
   members: [
   // TODO: Add items
 ]
@@ -67,7 +67,7 @@ const record: CompanyRecord = {id
         tier: 'teams''
         seatsPurchased: 10
         seatsUsed: 0
-        usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000 }}
+        usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000 }
       members: []
       activity: []
       invoices: []}
@@ -89,7 +89,7 @@ const seedCompany: CompanyRecord = {
   name: 'Acme Corporation','
   slug: 'acme','
   logoUrl: '/logo-acme.svg','
-  brandColor: '#4F46E5','
+  brandColor: '#4 F46 E5','
   plan: {
   // TODO: Add properties
 }
@@ -237,7 +237,7 @@ const member = company.members.find(m => m.id === memberId)
   listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId]
   slug: 'acme','
   logoUrl: '/logo-acme.svg','
-  brandColor: '#4F46E5','
+  brandColor: '#4 F46 E5','
   plan: {
   // TODO: Add properties
 }
@@ -403,10 +403,9 @@ const company = companiesById[companyId]
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
     return changed
   },
   updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {;
@@ -430,7 +429,7 @@ const company = companiesById[companyId]
   list_invoices (company_id: string): InvoiceRecord[] {;
 const company = companiesById[company_id]
     return company ? company.invoices : []
-  }}
+  }
   },
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {;
 const company = companiesById[companyId]
@@ -444,4 +443,4 @@ const company = companiesById[companyId]
     return company ? company.invoices : []
   },
 }
-}}}
+}

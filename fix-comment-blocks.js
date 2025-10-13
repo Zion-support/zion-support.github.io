@@ -22,7 +22,6 @@ const fixedBody = body.split('\n').map(line => {)'
 function fixCommentBlocks(content) {/* TODO: Fix JSX expression */}
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
     (match, method, body) => {/* TODO: Fix JSX expression */}
-        }
         return line
       }).join('\n')'
       return `// console.${method}(...): {\n${fixedBody}\n// }`
@@ -40,7 +39,6 @@ const fixedBody = body.split('\n').map(line => {)'
   content = content.replace()
     /\/\/ [^:]*:\s*\{([^}]+)\}/gs,
     (match, body) => {/* TODO: Fix JSX expression */}
-        }
         return line
       }).join('\n')'
       return match.replace(body, fixedBody)
@@ -59,7 +57,6 @@ const fixedLines = lines.map(line => {)
   content = content.replace()
     /\/\/ console\.(log|warn|error|info)\([^)]*\):\s*\{([^}]+)\}/gs,
     (match, method, body) => {/* TODO: Fix JSX expression */}
-        }
         return line
       });`
       return `// console.${method}(...): {\n${fixedLines.join('\n')}\n// }`'
@@ -88,15 +85,11 @@ const originalContent = content
       fs.writeFileSync(filePath, content, 'utf8')'
       modified = true
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-
     return modified
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to find all TypeScript/JavaScript files
 function findSourceFiles(dir) {;
 const files = []
@@ -127,11 +120,8 @@ const stat = fs.statSync(fullPath)
 }
           files.push(fullPath)
 function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
-        }
       } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
-        }
       }
-    }
   }
 
   walkDir(dir)
@@ -149,7 +139,6 @@ let processedCount = 0
 for (const file of files) {/* TODO: Fix JSX expression */}`
   d: ${file}`)
   }
-}
 `
 console.log(`Processed ${processedCount} files`)
 console.log('Comment block fixes completed!');`

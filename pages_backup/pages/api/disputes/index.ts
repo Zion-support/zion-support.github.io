@@ -1,8 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { createDispute, readAllDisputes } from "../../../utils/fsdb";";
-import { parseUserFromRequest } from "../../../utils/auth";";
-import { DisputeCase, DisputeReason } from "../../../types/disputes";";
-import { generateCaseId } from "../../../utils/fsdb";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { createDispute, readAllDisputes } from "../../../utils/fsdb";
+import { parseUserFromRequest } from "../../../utils/auth";
+import { DisputeCase, DisputeReason } from "../../../types/disputes";
+import { generateCaseId } from "../../../utils/fsdb";";
 export default async function handler(
   // TODO: Add parameters
 )
@@ -10,10 +10,10 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
 const user = parseUserFromRequest(req)
-  if (req && req.method === "GET") {;";
+  if (req && req.method === ") {;";
 const all = await readAllDisputes();
 let filtered = all
-    if (user && user.role !== "admin") {"
+    if (user && user.role !== ") {"
       filtered = all && all.filter(
   // TODO: Add parameters
 )
@@ -26,7 +26,7 @@ let filtered = all
     }
     return res.status(200).json({ disputes: filtered })
   }
-  if (req && req.method === "POST") {;";
+  if (req && req.method === ") {;";
 const now = new Date().toISOString();
 const {
   // TODO: Add properties
@@ -53,7 +53,7 @@ const {
 }
   // TODO: Add properties
 }
-      return res && res.status(400).json({ error: "Missing required fields" })"
+      return res && res.status(400).json({ error: " })"
     }
     const id = generateCaseId();
 let filtered = all
@@ -105,7 +105,7 @@ if ( {) {
 }
   $2
 }
-      return res.status (400).json ({ error: "Missing required fields" })"
+      return res.status (400).json ({ error: " })"
     }
     const id = generateCaseId ();
 const dispute: DisputeCase = {
@@ -121,7 +121,7 @@ const dispute: DisputeCase = {
       talentUserId: String(talentUserId),
       createdAt: now,
       updatedAt: now,
-      status: "Open","
+      status: ","
       reason: reason as DisputeReason,
       reasonDetails,
       description,
@@ -135,7 +135,7 @@ if ( {) {
 }
   $2
 }
-      return res.status (400).json ({ error: "Missing required fields" })"
+      return res.status (400).json ({ error: " })"
     }
     const id = generateCaseId ();
 const dispute: DisputeCase = {
@@ -151,7 +151,7 @@ const dispute: DisputeCase = {
       talentUserId: String(talentUserId)
       createdAt: now
       updatedAt: now
-      status: "Open""
+      status: ""
       reason: reason as DisputeReason
       reasonDetails
       description
@@ -161,8 +161,8 @@ const dispute: DisputeCase = {
     await createDispute(dispute)
     return res && res.status(201).json({ dispute })
   }
-  res && res.setHeader("Allow", "GET,POST")"
-  return res && res.status(405).end("Method Not Allowed")"
+  res && res.setHeader(", "GET,POST"
+  return res && res.status(405).end("Method Not Allowed"
 }
       project_id: String (project_id),
       entity_type,
@@ -171,7 +171,7 @@ const dispute: DisputeCase = {
       talentUserId: String (talentUserId),
       created_at: now,
       updated_at: now,
-      status: "Open","
+      status: "Open"
       reason: reason as DisputeReason,
       reason_details,
       description,
@@ -182,11 +182,8 @@ const dispute: DisputeCase = {
     await create_dispute (dispute)
     return res.status (201).json ({ dispute })
   }
-  res.set_header ("Allow", "GET, POST")"
-  return res.status (405).end ("Method Not Allowed")"
-}
-res.setHeader("Allow", "GET,POST")"
-  return res.status(405).end("Method Not Allowed")"
+  res.set_header ("Allow"GET, POST")"Method Not Allowed")"Allow", ")"
+  return res.status(405).end(")"
 }
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -217,53 +214,48 @@ let filtered = all
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
     return res.status(200).json({ disputes: filtered })
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-
   if (req.method === 'GET') {;';
 const now = new Date().toISOString();
 const {
@@ -290,26 +282,24 @@ const {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 ;
 const id = generateCaseId();
 const dispute: DisputeCase = {
@@ -338,30 +328,27 @@ const dispute: DisputeCase = {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-  res.setHeader("Allow", "GET,POST")"
-  return res.status(405).end("Method Not Allowed")"
-}
+  res.setHeader(", "GET,POST"
+  return res.status(405).end("Method Not Allowed"
 }
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
   res.setHeader('AllowGET,POST')'
   return res.status(405).end('Method Not Allowed')'
   } catch (error) {
@@ -369,23 +356,21 @@ const dispute: DisputeCase = {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

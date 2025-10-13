@@ -1,6 +1,6 @@
 import, React, from 'rea, c, t';'
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m''
-const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {
+const, January2025 ContentShowcaseBanne, r: Rea, c, t.FC = () => {
   // TODO: Implement
 }
   // TODO: Add properties
@@ -10,25 +10,25 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {
   // TODO: Implement
 }
   retu, r, n(<div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }'
-          <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>'
+          <h2, classNam, e='te, x, t-4 xl, m, d:te, x, t-6 xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>'
 <span, classNam, e='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>)'
               Complete, AI, Knowledge H, u, b;)
-          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12'>)'
+          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4 xl, m, x-auto, m, b-12'>)'
             Access, the, most comprehensive, collection, of AI, insig, h, t, s)
   retu, r, n (
   // TODO: Add parameters
 )
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }'
-          <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>'
+          <h2, classNam, e='te, x, t-4 xl, m, d:te, x, t-6 xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>'
 <span, classNam, e='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>'
               Complete, AI, Knowledge H, u, b
-          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12'>'
-const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
+          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4 xl, m, x-auto, m, b-12'>'
+const, January2025 ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' }'
-          <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>'
+          <h2, classNam, e='te, x, t-4 xl, m, d:te, x, t-6 xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>'
 <span, classNam, e='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>'
               Complete, AI, Knowledge H, u, b
-          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12'>'
+          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4 xl, m, x-auto, m, b-12'>'
             Access, the, most comprehensive, collection, of AI, insig, h, t, s,
             breakthrough, technologie, s, and, proven, enterprise strategi, e, s.
             Everything, you, need to, master, AI transformation, in, one pla, c, e.
@@ -37,8 +37,8 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
           {/* Breakthrough, Technolog, i, e, s */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>'
           {/* Breakthrough, Technolog, i, e, s */}
-          <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>'
-<div, classNam, e='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-pi, n, k-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' />'
+          <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3 x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-pi, n, k-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>'
+<div, classNam, e='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-pi, n, k-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3 xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' />'
 <div, classNam, e='relati, v, e'>'
 <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6'>'
 <div, classNam, e='p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl'>'
@@ -54,8 +54,8 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
                 Explore, All, Technologies
                 <Link, classNam, e='w-4 h-4' />'
           {/* Enterprise, Case, Studi, e, s */}
-          <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>'
-<div, classNam, e='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' />'
+          <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3 x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>'
+<div, classNam, e='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-3 xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' />'
 <div, classNam, e='relati, v, e'>'
 <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6'>'
 <div, classNam, e='p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl'>'
@@ -66,8 +66,8 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
                 View, All, Case Studi, e, s
                 <Link, classNam, e='w-4 h-4' />'
           {/* Latest, Artic, l, e, s */}
-          <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>'
-<div, classNam, e='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/10, t, o-emera, l, d-5, 0, 0/10, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' />'
+          <div, classNam, e = 'group, relative, bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-3 x, l, p-8, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>'
+<div, classNam, e='absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/10, t, o-emera, l, d-5, 0, 0/10, rounde, d-3 xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0' />'
 <div, classNam, e='relati, v, e'>'
 <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6'>'
 <div, classNam, e='p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl'>'
@@ -75,21 +75,21 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
                 Read, All, Articles
                 <Link, classNam, e='w-4 h-4' />'
         {/* Statis, t, i, c, s */}
-        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16'>'
-<h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'>'
+        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3 x, l, p-12, border, border-whi, t, e/20, m, b-16'>'
+<h3, classNam, e='te, x, t-3 xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'>'
 <BookOpen, classNam, e='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />'
                 Read, All, Articles
                 <Link, classNam, e='w-4 h-4' />'
         {/* Statis, t, i, c, s */}
-        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16'>'
-<h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'>'
+        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3 x, l, p-12, border, border-whi, t, e/20, m, b-16'>'
+<h3, classNam, e='te, x, t-3 xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'>'
             Content, Library, Overview
           <div, classNam, e='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8'>'
 <div, classNam, e='te, x, t-cent, e, r'>'
 <div, classNam, e='te, x, t-gr, a, y-3, 0, 0'>Total, Article, s'
         {/* Featured, Content, Previ, e, w */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-16'>'
-<div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20'>'
+<div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2 x, l, p-8, border, border-whi, t, e/20'>'
 <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>'
 <Star, classNam, e='w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t' />'
 <Star, classNam, e='w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t' />'
@@ -100,7 +100,7 @@ const, January2025ContentShowcaseBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JS
                 classNa, m, e='te, x, t-pi, n, k-400, hove, r: te, x, t-pi, n, k-3, 0, 0''
               >
 <Link, classNam, e='w-4 h-4' />'
-<div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20'>'
+<div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2 x, l, p-8, border, border-whi, t, e/20'>'
 <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>'
 <TrendingUp, classNam, e='w-6 h-6, tex, t-emera, l, d-4, 0, 0' />'
 <TrendingUp, classNam, e='w-6 h-6, tex, t-emera, l, d-4, 0, 0' />'

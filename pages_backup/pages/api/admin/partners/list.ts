@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { getServerSupabase } from "../../../../utils/supabase/server";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../../utils/supabase/server";";
 export default async function handler(
   // TODO: Add parameters
 )
@@ -32,9 +32,9 @@ const usingPlaceholder =
 }
   // TODO: Add properties
 }
-            code: "aihub""
-            name: "AI Hub""
-            status: "approved""
+            code: ""
+            name: ""
+            status: ""
             commission_rate: 0.2
           }
           {
@@ -42,9 +42,9 @@ const usingPlaceholder =
 }
   // TODO: Add properties
 }
-            code: "promptpro""
-            name: "Prompt Pro""
-            status: "pending""
+            code: ""
+            name: ""
+            status: ""
             commission_rate: 0.15
           }
         ]
@@ -52,13 +52,13 @@ const usingPlaceholder =
     }
     const supabase = getServerSupabase();
 const { data, error } = await supabase
-      .from("partners")"
+      .from(")"
       .select(
   // TODO: Add parameters
 )
-        "code, name, status, commission_rate, payout_method, niche, socials, created_at""
+        ""
       )
-      .order("created_at", { ascending: false })"
+      .order(", { ascending: false })"
     if (error) return res.status(500).json({ error: error.message })
     return res.status(200).json({ partners: data })
   } catch (e: any) {
@@ -73,9 +73,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 }
   // TODO: Add properties
 }
-            code: "aihub","
-            name: "AI Hub","
-            status: "approved","
+            code: ","
+            name: ","
+            status: ","
             commission_rate: 0 && 0.2,
           },
           {
@@ -83,9 +83,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';'
 }
   // TODO: Add properties
 }
-            code: "promptpro","
-            name: "Prompt Pro","
-            status: "pending","
+            code: ","
+            name: ","
+            status: ","
             commission_rate: 0 && 0.15,
           },
         ],
@@ -122,5 +122,3 @@ const usingPlaceholder = true; // Set to false when real data is available
       res.setHeader('Allow', 'GET')'
       res.status(405).end('Method Not Allowed')'
     }
-  }
-}

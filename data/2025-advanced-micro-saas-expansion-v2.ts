@@ -1,4 +1,4 @@
-export const advancedMicroSaasExpansion2025V2 = [;
+export const advancedMicroSaasExpansion2025 V2 = [;
   // TODO: Add items
 ]
   {
@@ -15,7 +15,7 @@ export const advancedMicroSaasExpansion2025V2 = [;
       'Content calendar management','
       'Performance analytics','
     ],;
-export const advancedMicroSaasExpansion2025V2 = [;
+export const advancedMicroSaasExpansion2025 V2 = [;
   // TODO: Add items
 ]
   {
@@ -614,7 +614,7 @@ export const advancedMicroSaasExpansion2025V2 = [;
     ]
   }
 ];
-export const advancedMicroSaasExpansion2025V2 = [;
+export const advancedMicroSaasExpansion2025 V2 = [;
   // TODO: Add items
 ]
   {
@@ -941,7 +941,7 @@ export const advancedMicroSaasExpansion2025V2 = [;
     ]
   }
 ];
-export const advancedMicroSaasExpansion2025V2 = [;
+export const advancedMicroSaasExpansion2025 V2 = [;
   // TODO: Add items
 ]
   {

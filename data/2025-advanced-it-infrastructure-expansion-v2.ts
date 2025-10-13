@@ -1,4 +1,4 @@
-export const advancedITInfrastructureExpansion2025V2 = [;
+export const advancedITInfrastructureExpansion2025 V2 = [;
   // TODO: Add items
 ]
   {
@@ -75,7 +75,7 @@ export const advancedITInfrastructureExpansion2025V2 = [;
       'Security protocols','
       'Scalability solutions','
     ],;
-export const advancedITInfrastructureExpansion2025V2 = [;
+export const advancedITInfrastructureExpansion2025 V2 = [;
   // TODO: Add items
 ]
   {
@@ -540,7 +540,7 @@ export const advancedITInfrastructureExpansion2025V2 = [;
 ]
   // TODO: Add items
 ]
-      '3D modeling tools','
+      '3 D modeling tools','
       'Virtual world creation','
       'User interaction systems','
       'Performance optimization','
@@ -551,7 +551,7 @@ export const advancedITInfrastructureExpansion2025V2 = [;
 ]
   // TODO: Add items
 ]
-      '3D modeling tools','
+      '3 D modeling tools','
       'Virtual world creation','
       'User interaction systems','
       'Performance optimization''
@@ -1477,7 +1477,7 @@ export const advancedITInfrastructureExpansion2025V2 = [;
     ]
   }
 ];
-export const advancedITInfrastructureExpansion2025V2 = [;
+export const advancedITInfrastructureExpansion2025 V2 = [;
   // TODO: Add items
 ]
   {
@@ -1749,7 +1749,7 @@ export const advancedITInfrastructureExpansion2025V2 = [;
 ]
   // TODO: Add items
 ]
-      '3D modeling toolsVirtual world creationUser interaction systemsPerformance optimization''
+      '3 D modeling toolsVirtual world creationUser interaction systemsPerformance optimization''
     ]
   },
   {

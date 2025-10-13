@@ -535,6 +535,4 @@ let accessibleRoutes = [...publicPages, ...authPages]
     if (userType === 'admin') {'
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]
     }
-  }
   return accessibleRoutes
-}

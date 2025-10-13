@@ -83,11 +83,7 @@ class PerformanceEnhancer {
 }
     console.warn('PerformanceObserver not supported:', error)'
   }
-
-      }
     }
-  }
-
   public getMetrics(): PerformanceMetrics | null {
   // TODO: Add properties
 }
@@ -95,15 +91,12 @@ class PerformanceEnhancer {
 }
     return this.metrics
   }
-  }
-
   public cleanup(): void {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     // Cleanup resources
-  }
   }
 }
 ;

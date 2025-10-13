@@ -23,7 +23,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ed g e-20 2 5-o c t-01-priva t e-consentle s s-experimen t s')'
         />),
       <div, className='container, m, x-auto, p, x-6, p, y-16'>'
-<h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>'
+<h1, className='te, x, t-4 xl, m, d:te, x, t-5 xl, fon, t-bold, m, b-4'>'
           Edge, 2025, Oct 01, Private, Consentless Experimen, t, s
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>'
           Learn, about, edge 2025, oct, 01 private, consentless, experiments and, how, it can, benefit, your enterpri, s, e.
@@ -39,4 +39,3 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: 
 </div></Link>
 </p></p>
 </h1>
-}

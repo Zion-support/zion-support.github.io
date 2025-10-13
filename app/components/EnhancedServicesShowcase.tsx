@@ -52,24 +52,19 @@ const services = [
       icon: Zap,
       color: 'text-yellow-400','
       features: ['Workflow Automation', 'Process Optimization', 'Smart Scheduling', 'Task Management'],'
-          <div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="container mx-auto px-4"></div>"
-<div className="text-center mb-16"></div>"
+          <div className="max-w-7 xl mx-auto"text-center mb-16"
+<h2 className="
+<p className="text-xl text-gray-300"container mx-auto px-4"
+<div className="
 <h2>Our Core Services;</h2></h2>
 <p>Comprehensive AI and IT solutions designed to transform your business and drive innovation;</p></p>
 </div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,"
-          {services.map((service, index) => (</div>} <div key={index}className="cyber-card hologram-card p-6 group hover: scale-105 transition-all duration-300"></div>,"
-              <div className="flex items-center mb-4"></div>"
+<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"cyber-card hologram-card p-6 group hover: scale-105 transition-all duration-300"
+              <div className="
 <service></service>
 <div />
-<h3 className="text-xl font-bold text-white">{service.title}</h3>"
-<div className="text-sm text-cyan-400 font-semibold">{service.stats</div>}</div></div>"
-<p className="text-gray-300 mb-4">{service.description</p>}</p>"
+<h3 className="text-xl font-bold text-white"text-sm text-cyan-400 font-semibold"
+<p className="
 <ul>
                 {service.features.map((feature, featureIndex) => (} <li>
 <CheckCircle />
@@ -84,13 +79,10 @@ const services = [
               </a></div>
           ))}
         </div>
-<div className="text-center mt-12">"
-<a
-            href="/services""
-            className="cyber-button inline-flex items-center""
+<div className="text-center mt-12"/services""cyber-button inline-flex items-center"
           >
             View All Services
-            <ArrowRight className="w-5 h-5 ml-2" /></a>"
+            <ArrowRight className="
 </div></section>
   );
 };

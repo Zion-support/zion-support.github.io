@@ -20,7 +20,6 @@ const cookie = createSessionCookie({ email, role: result.role, twofaVerified: tr
   res.setHeader('Set-Cookie', cookie)'
   return res.status(200).json({ ok: true })
 }
-}
     return res.status (405).json ({ error: 'Method not allowed' })'
   }
   const { email, password, code } = req.body || {}
@@ -87,4 +86,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true })
   res.setHeader('Set-Cookie', cookie)'
   return res.status(200).json({ ok: true })
-}

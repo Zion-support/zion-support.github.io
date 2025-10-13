@@ -65,7 +65,7 @@ const observer = new IntersectionObserver(
 }
   // TODO: Add properties
 }
-    rootMargin: '50px 0px','
+    rootMargin: '50 px 0 px','
         threshold: 0.01
   }
     )
@@ -113,13 +113,11 @@ const handleLoad = () => {
 }
     if (placeholder) return placeholder;
 const svg = `
-      <svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">"
-<rect width="100%" height="100%" fill="#1e293b"/>"
-<rect x="0" y="0" width="100%" height="2" fill="#00ffff" opacity="0.3"/>"
-<rect x="0" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>"
-<rect x="0" y="98%" width="100%" height="2" fill="#00ffff" opacity="0.3"/>"
-<rect x="98%" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>"
-<text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14">"
+      <svg width="${width || 400}"${height || 300}" xmlns=">"
+<rect width=" height="100%"#1 e293 b"/>"0" y=" width="100%"2" fill=" opacity="0.3"
+<rect x="0"0" width=" height="100%"#00 ffff" opacity="/>"
+<rect x=" y="98%"100%" height=" fill="#00 ffff"0.3"/>"98%" y=" width="2"100%" fill=" opacity="0.3"
+<text x="50%"50%" text-anchor=" fill="#64748 b"monospace" font-size=">"
           Loading...,
         </text>,
       </svg>,
@@ -134,11 +132,10 @@ const svg = `
 }
     return(<$2 />
         className={`bg-slate-800 flex items-center justify-center ${className}`}
-        style={{ width, height }}
+        style={{ width, height }
       >
-<div className="text-gray-400 text-center">"
-<div className="text-4xl mb-2">⚠️"
-          <div className="text-sm">Image failed to load</div>)"
+<div className="
+<div className="text-4 xl mb-2"text-sm"
         </div>)
       </div>)
     )
@@ -146,7 +143,7 @@ const svg = `
   return(<$2 />
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
-      style={{ width, height }}
+      style={{ width, height }
     >
       {/* Placeholder */})
       {!isLoaded && ()
@@ -157,8 +154,8 @@ const svg = `
 )
         <img
           src={generatePlaceholder()}
-          alt="""
-          className="absolute inset-0 w-full h-full object-cover animate-pulse""
+          alt=""
+          className="
           style={{ filter: 'blur(1 px)' }}'
         />
       )}
@@ -173,10 +170,10 @@ const svg = `
             isLoaded ? 'opacity-100' : 'opacity-0'}'
           }`}
           loading={priority ? 'eager' : 'lazy'}'
-          decoding="async""
+          decoding="async"
           onLoad={handleLoad}
           onError={handleError}
-          style={{ width, height }}
+          style={{ width, height }
         />
       )}
     </div>

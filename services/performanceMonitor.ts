@@ -42,7 +42,7 @@ export interface PerformanceAlert {
   resolved: boolean
 }
   urls: string[]
-  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily''
+  frequency: '1 min' | '5 min' | '15 min' | '1 hour' | '6 hours' | 'daily''
   thresholds: {
   // TODO: Add properties
 }
@@ -55,7 +55,6 @@ export interface PerformanceAlert {
     this && this.baseUrl = baseUrl
     webhook: boolean
   }
-}
 export class PerformanceMonitorService {;
 export class PerformanceMonitorService {
   // TODO: Add properties
@@ -137,7 +136,7 @@ export interface MonitoringConfig {
   // TODO: Add properties
 }
   urls: string[],
-  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily','
+  frequency: '1 min' | '5 min' | '15 min' | '1 hour' | '6 hours' | 'daily','
   thresholds: {
   // TODO: Add properties
 }
@@ -157,7 +156,6 @@ export interface MonitoringConfig {
     slack: boolean,
     webhook: boolean
   }
-}
 ;
 export class PerformanceMonitorService {
   // TODO: Add properties
@@ -234,7 +232,6 @@ const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
       // Fallback to mock data for demo purposes
       return this && this.generateMockMetrics(url)
     }
-  }
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
   // TODO: Add properties
 }
@@ -292,7 +289,6 @@ const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeUR
       // Generate mock historical data
       return this && this.generateMockHistoricalData(url, days)
     }
-  }
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
   // TODO: Add properties
 }
@@ -328,7 +324,6 @@ const response = await fetch(`${this && this.baseUrl}/performance/config`, {
       console && console.error('Failed to set monitoring config:', error)'
       throw error
     }
-  }
   async getAlerts(url?: string): Promise<PerformanceAlert[]> {
   // TODO: Add properties
 }
@@ -389,8 +384,6 @@ const response = await fetch(`${this.baseUrl}/performance/config`, {
       console.error('Failed to set monitoring config:', error),'
       throw error
     }
-  }
-
   async getAlerts(url?: string): Promise<PerformanceAlert[]> {
   // TODO: Add properties
 }
@@ -425,7 +418,6 @@ const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {
       // Generate mock alerts
       return this && this.generateMockAlerts(url)
     }
-  }
   currentValue: number
   timestamp: Date
   resolved: boolean
@@ -436,7 +428,7 @@ export interface MonitoringConfig {
   // TODO: Add properties
 }
   urls: string[]
-  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily''
+  frequency: '1 min' | '5 min' | '15 min' | '1 hour' | '6 hours' | 'daily''
   thresholds: {
   // TODO: Add properties
 }
@@ -456,7 +448,6 @@ export interface MonitoringConfig {
     slack: boolean
     webhook: boolean
   }
-}
 export class PerformanceMonitorService {
   // TODO: Add properties
 }
@@ -511,7 +502,6 @@ const response = await fetch(`${this.baseUrl}/performance/monitor`, {
       // Fallback to mock data for demo purposes
       return this.generateMockMetrics(url)
     }
-  }
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
   // TODO: Add properties
 }
@@ -547,7 +537,6 @@ const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeUR
       // Generate mock historical data
       return this.generateMockHistoricalData(url, days)
     }
-  }
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
   // TODO: Add properties
 }
@@ -585,7 +574,6 @@ const response = await fetch(`${this.baseUrl}/performance/config`, {
       console.error('Failed to set monitoring config:', error)'
       throw error
     }
-  }
   async getAlerts(url?: string): Promise<PerformanceAlert[]> {
   // TODO: Add properties
 }
@@ -622,7 +610,6 @@ const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {
       // Generate mock alerts
       return this.generateMockAlerts(url)
     }
-  }
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{'
     summary: {
   // TODO: Add properties
@@ -681,7 +668,6 @@ const dates = historicalData && historicalData.map(d => d && d.timestamp.toISOSt
         'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources''
       ]
     }
-  }
   private generateMockMetrics(url: string): PerformanceMetrics {
   // TODO: Add properties
 }
@@ -707,7 +693,6 @@ const dates = historicalData && historicalData.map(d => d && d.timestamp.toISOSt
       bestPracticesScore: Math && Math.floor(Math && Math.random() * 20) + 80,
       seoScore: Math && Math.floor(Math && Math.random() * 20) + 80
     }
-  }
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {;
 const data: PerformanceMetrics[] = [];
 const now = new Date()
@@ -793,8 +778,6 @@ const dates = historicalData.map(d => d.timestamp.toISOString().split('T')[0]),'
         'Optimize image sizes and use WebP formatImplement lazy loading for below-the-fold contentMinimize render-blocking resourcesUse a CDN for static assetsEnable compression for text-based resources''
       ]
     }
-  }
-
   private generateMockMetrics(url: string): PerformanceMetrics {
   // TODO: Add properties
 }
@@ -820,8 +803,6 @@ const dates = historicalData.map(d => d.timestamp.toISOString().split('T')[0]),'
       bestPracticesScore: Math.floor(Math.random() * 20) + 80,
       seoScore: Math.floor(Math.random() * 20) + 80
     }
-  }
-
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {;
 const data: PerformanceMetrics[] = [],;
 const now = new Date(),
@@ -869,7 +850,6 @@ const alerts: PerformanceAlert[] = [
     slack: boolean,
     webhook: boolean
   }
-}
 export class PerformanceMonitorService {
   // TODO: Add properties
 }
@@ -925,7 +905,6 @@ if ( {) {
       // Fallback to mock data for demo purposes
       return this.generateMockMetrics (url)
     }
-  }
   async getHistoricalData (url: string, days: number = 30): Promise < PerformanceMetrics[]> {
   // TODO: Add properties
 }
@@ -962,7 +941,6 @@ if ( {) {
       // Generate mock historical data
       return this.generateMockHistoricalData (url, days)
     }
-  }
   async setMonitoringConfig (config: MonitoringConfig): Promise < void> {
   // TODO: Add properties
 }
@@ -1001,7 +979,6 @@ if ( {) {
       console.error ('Failed to set monitoring config:', error)'
       throw error
     }
-  }
   async get_alerts (url?: string): Promise < PerformanceAlert[]> {
   // TODO: Add properties
 }
@@ -1039,7 +1016,6 @@ if ( {) {
       // Generate mock alerts
       return this.generateMockAlerts (url)
     }
-  }
   async generate_report (url: string, timeframe: 'day' | 'week' | 'month'): Promise<{'
     summary: {
   // TODO: Add properties
@@ -1098,7 +1074,6 @@ const dates = historical_data.map (d => d.timestamp.toISOString ().split ('T')[0
         'Optimize image sizes and use WebP format_implement lazy loading for below - the - fold content_minimize render - blocking resources_use a CDN for static assets_enable compression for text - based resources''
       ]
     }
-  }
   private generateMockMetrics (url: string): PerformanceMetrics {
   // TODO: Add properties
 }
@@ -1124,7 +1099,6 @@ const dates = historical_data.map (d => d.timestamp.toISOString ().split ('T')[0
       bestPracticesScore: Math.floor (Math.random () * 20) + 80,
       seo_score: Math.floor (Math.random () * 20) + 80
     }
-  }
   private generateMockHistoricalData (url: string, days: number): PerformanceMetrics[] {;
 const data: PerformanceMetrics[] = [];
 const now = new Date (),
@@ -1193,7 +1167,6 @@ const alerts: PerformanceAlert[] = [
     ]
     return url ? alerts.filter(a => a.url === url) : alerts
   }
-}
 // Pricing tiers for the Performance Monitor
         current_value: 85
         timestamp: new Date (),
@@ -1202,7 +1175,6 @@ const alerts: PerformanceAlert[] = [
     ]
     return url ? alerts.filter (array => a.url === url) : alerts
   }
-}
 // Pricing tiers for the Performance Monitor;
 export const PERFORMANCE_MONITOR_PRICING = {
   // TODO: Add properties
@@ -1340,7 +1312,6 @@ const dates = historicalData.map(d => d.timestamp.toISOString().split('T')[0])'
         'Enable compression for text-based resources''
       ]
     }
-  }
   private generateMockMetrics(url: string): PerformanceMetrics {
   // TODO: Add properties
 }
@@ -1366,7 +1337,6 @@ const dates = historicalData.map(d => d.timestamp.toISOString().split('T')[0])'
       bestPracticesScore: Math.floor(Math.random() * 20) + 80,
       seoScore: Math.floor(Math.random() * 20) + 80
     }
-  }
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {;
 const data: PerformanceMetrics[] = [];
 const now = new Date()
@@ -1435,8 +1405,6 @@ const alerts: PerformanceAlert[] = [
     ]
     return url ? alerts.filter(a => a.url === url) : alerts
   }
-}
-
 // Pricing tiers for the Performance Monitor;
 export const PERFORMANCE_MONITOR_PRICING = {
   // TODO: Add properties
@@ -1500,7 +1468,6 @@ export const PERFORMANCE_MONITOR_PRICING = {
       'SLA guarantee''
     ]
   }
-}
 // Pricing tiers for the Performance Monitor;
 export const PERFORMANCE_MONITOR_PRICING = {
   // TODO: Add properties
@@ -1627,5 +1594,4 @@ export const PERFORMANCE_MONITOR_PRICING = {
       'SLA guarantee''
     ]
   }
-}
-}}}}}}}}}}}}
+}}}}}}}}}}

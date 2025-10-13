@@ -55,7 +55,6 @@ const { data, error } = await supabase
 }
       setLoading(false)
     }
-  }
   async function fetchTransactions() {
   // TODO: Add properties
 }
@@ -84,7 +83,6 @@ const { data, error } = await supabase
 }
       console.error('Error fetching transactions:', err)'
     }
-  }
   async function earnTokens(amount: number, reason?: string) {
   // TODO: Add properties
 }
@@ -171,5 +169,4 @@ const { data, error } = await supabase
     earnTokens,
     spendTokens}
     spendTokens,
-  }
-}
+  

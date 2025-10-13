@@ -17,7 +17,7 @@ export const config = {
 }
   // TODO: Add properties
 }
-      sizeLimit: '10mb'}}}';
+      sizeLimit: '10 mb'}}}';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
@@ -49,7 +49,7 @@ const page = await browser.newPage()
 const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true })'
     await browser.close()
     res.setHeader('Content-Typeapplication/pdf')'
-    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"')'"
+    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"
     res.status(200).send(pdfBuffer)
   } catch (e: any) {
   // TODO: Add properties
@@ -75,7 +75,7 @@ export const config = {
 }
   // TODO: Add properties
 }
-      sizeLimit: '10mb'}}}';
+      sizeLimit: '10 mb'}}}';
 export default async function handler(req, res) {
   // TODO: Add properties
 }
@@ -94,10 +94,9 @@ export default async function handler(req, res) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 const { html, pageSize } = req.body as { html: string, pageSize?: 'A4' | 'LETTER' },'
   if (!html) {
@@ -112,10 +111,9 @@ const { html, pageSize } = req.body as { html: string, pageSize?: 'A4' | 'LETTER
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   const browser = await puppeteer.launch({
   // TODO: Add properties
 }
@@ -129,7 +127,7 @@ const page = await browser.newPage(),
 const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true }),'
     await browser.close(),
     res.setHeader('Content-Typeapplication/pdf'),'
-    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"'),'"
+    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"
     res.status(200).send(pdfBuffer)
   } catch (e: any) {
   // TODO: Add properties
@@ -139,7 +137,6 @@ const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', 
     try { await browser.close() } catch {}
     res.status(500).json({ error: e?.message || 'Failed to render PDF' })'
   }
-}
   const browser = await puppeteer.launch({
   // TODO: Add properties
 }
@@ -153,7 +150,7 @@ const page = await browser.newPage()
 const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', printBackground: true })'
     await browser.close()
     res.setHeader('Content-Typeapplication/pdf')'
-    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"')'"
+    res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"
     res.status(200).send(pdfBuffer)
   } catch (error) {
   // TODO: Add properties
@@ -165,28 +162,25 @@ const pdfBuffer = await page.pdf({ format: pageSize === 'A4' ? 'A4' : 'Letter', 
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
     res.status(500).json({ error: e?.message || 'Failed to render PDF' })'
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
 }
     res.status (400).json ({ error: 'Missing html' }),'
@@ -205,7 +199,7 @@ const page = await browser.new_page (),
 const pdf_buffer = await page.pdf ({ format: page_size === 'A4' ? 'A4' : 'Letter', print_background: true }),'
     await browser.close (),
     res.set_header ('Content - Typeapplication / pdf'),'
-    res.set_header ('Content - Dispositionattachment, filename="zion - os - book.pdf"'),'"
+    res.set_header ('Content - Dispositionattachment, filename="zion - os - book.pdf"
     res.status (200).send (pdf_buffer)
   } catch (e: any) {
   // TODO: Add properties
@@ -214,5 +208,4 @@ const pdf_buffer = await page.pdf ({ format: page_size === 'A4' ? 'A4' : 'Letter
 }
     try { await browser.close () } catch {}
     res.status (500).json ({ error: e?.message || 'Failed to render PDF' })'
-  }
-}
+  

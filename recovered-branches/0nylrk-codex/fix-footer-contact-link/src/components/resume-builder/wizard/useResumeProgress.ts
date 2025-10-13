@@ -59,4 +59,3 @@ const [progress, setProgress] = useState(0)
     setProgress(progressPercentage)
   }, [resume])
   return progress
-}

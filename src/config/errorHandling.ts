@@ -15,8 +15,6 @@ export enum ErrorSeverity {
  */;
 export enum ErrorSeverity {// TODO: Add content
   }
-
-}
   LOW = 'low','
   MEDIUM = 'medium','
   HIGH = 'high','
@@ -25,8 +23,6 @@ export enum ErrorSeverity {// TODO: Add content
 export enum ErrorCategory {;
 export enum ErrorCategory {// TODO: Add content
   }
-
-}
   NETWORK = 'network','
   VALIDATION = 'validation','
   AUTHENTICATION = 'authentication','
@@ -53,7 +49,6 @@ export interface ErrorConfig {
 export const _errorHandlingConfig: ErrorConfig = {;
 export interface ErrorConfig {// TODO: Add content
   }
-}
   enabled: boolean
     logToConsole: boolean,,
     sendToServer: boolean,,
@@ -69,7 +64,6 @@ export const _errorHandlingConfig: ErrorConfig = {
 }
     // TODO: Add content
   }
-}
   enabled: true,
   logToConsole: process.env['NODE_ENV'] !== 'production','
   sendToServer: process.env['NODE_ENV'] === 'production','
@@ -125,7 +119,6 @@ $4},
     unknown: 'An unexpected error occurred. Please try again.','
     retry:   ,
 $4}
-}
 export class AppError extends Error {
   // TODO: Add properties
 }
@@ -161,7 +154,6 @@ export class AppError extends Error {
   validatio,
   n: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   require,
   d: 'This field is required.','
     invali,
@@ -172,7 +164,6 @@ export class AppError extends Error {
   authenticatio,
   n: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   faile,
   d: 'Authentication failed. Please try logging in again.','
     expire,
@@ -183,17 +174,13 @@ export class AppError extends Error {
   generi,
   c: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   unknow,
   n: 'An unexpected error occurred. Please try again.','
     retr,
   y: 'Please try again in a few moments.''
   }
-}
 export class AppError extends Error {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-
   network: {
   // TODO: Add properties
 }
@@ -201,7 +188,6 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-}
   offline: 'You are currently offline. Please check your internet connection.','
     timeout: 'Request timed out. Please try again.','
     serverError: 'Server error occurred. Our team has been notified.''
@@ -213,7 +199,6 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-}
   required: 'This field is required.','
     invalid: 'Please enter a valid value.','
     format: 'Invalid format. Please check your input.''
@@ -225,7 +210,6 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-}
   failed: 'Authentication failed. Please try logging in again.','
     expired: 'Your session has expired. Please log in again.','
     unauthorized: 'You are not authorized to access this resource.''
@@ -237,11 +221,9 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-}
   unknown: 'An unexpected error occurred. Please try again.','
     retry: 'Please try again in a few moments.''
   }
-}
 export class AppError extends Error {
   // TODO: Add properties
 }
@@ -249,7 +231,6 @@ export class AppError extends Error {
 }
     // TODO: Add content
   }
-}
 export class AppError extends Error {
   // TODO: Add properties
 }
@@ -274,11 +255,8 @@ export class AppError extends Error {
 }
     // TODO: Add content
   }
-
-}
     super(message)
     this.name = 'AppError''
     Error.captureStackTrace(this, this.constructor)
   }
-}
 export default errorHandlingConfig;

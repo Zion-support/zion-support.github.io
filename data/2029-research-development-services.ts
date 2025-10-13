@@ -154,9 +154,9 @@
       affiliate: '20% commission for referrals','
       referral: '$25,000 bonus for partnerships''
       partnership: 'Quantum research partnerships','
-      funding: 'Series B funding, $150M valuation''
+      funding: 'Series B funding, $150 M valuation''
       exit: 'IPO or quantum acquisition','
-      market_size: '$18.5B by 2029','
+      market_size: '$18.5 B by 2029','
       competitors: [,
       integratio,
   n: [,
@@ -207,11 +207,11 @@
       partnershi,
   p: 'Quantum research partnerships''
       fundin,
-  g: 'Series B funding, $150M valuation''
+  g: 'Series B funding, $150 M valuation''
       exi,
   t: 'IPO or quantum acquisition''
       market_siz,
-  e: '$18.5B by 2029','
+  e: '$18.5 B by 2029','
       competitor,
   s: [,
         'IBM Quantum','
@@ -291,7 +291,7 @@
       partnershi,
   p: 'Quantum research partnerships','
       fundin,
-  g: 'Series B funding, $150M valuation','
+  g: 'Series B funding, $150 M valuation','
       exi,
   t: 'IPO or quantum acquisition','
       contac,
@@ -336,9 +336,9 @@
       affiliate: '30% commission for referrals','
       referral: '$10,000 bonus for partnerships''
       partnership: 'AI research partnerships','
-      funding: 'Series A funding, $80M valuation''
+      funding: 'Series A funding, $80 M valuation''
       exit: 'Acquisition by major research platform','
-      market_size: '$15.2B by 2029','
+      market_size: '$15.2 B by 2029','
       competitors: ['Grammarly', 'Mendeley', 'Zotero', 'EndNote'],'
       technology: [,
       integratio,
@@ -386,11 +386,11 @@
       partnershi,
   p: 'AI research partnerships''
       fundin,
-  g: 'Series A funding, $80M valuation''
+  g: 'Series A funding, $80 M valuation''
       exi,
   t: 'Acquisition by major research platform''
       market_siz,
-  e: '$15.2B by 2029','
+  e: '$15.2 B by 2029','
       competitor,
   s: ['Grammarly', 'Mendeley', 'Zotero', 'EndNote'],'
       technolog,
@@ -465,7 +465,7 @@
       partnershi,
   p: 'AI research partnerships','
       fundin,
-  g: 'Series A funding, $80M valuation','
+  g: 'Series A funding, $80 M valuation','
       exi,
   t: 'Acquisition by major research platform','
       contac,
@@ -498,7 +498,7 @@
       affiliate: '25% commission for referrals','
       referral: '$20, 000 bonus for partnerships','
       partnership: 'Biotech research partnerships','
-      funding: 'Series B funding, $120M valuation','
+      funding: 'Series B funding, $120 M valuation','
       exit: 'IPO or biotech acquisition''
       contact: unknown,
         mobile: '+1 302 464 0950''
@@ -550,7 +550,7 @@
       partnershi,
   p: 'Biotech research partnerships','
       fundin,
-  g: 'Series B funding, $120M valuation','
+  g: 'Series B funding, $120 M valuation','
       exi,
   t: 'IPO or biotech acquisition','
       contac,
@@ -584,7 +584,7 @@
 ]
   // TODO: Add items
 ]
-      'Accelerate research by 5xReduce manual errors by 90%Improve research qualityEnhance collaborationStreamline workflowsIncrease productivity''
+      'Accelerate research by 5 xReduce manual errors by 90%Improve research qualityEnhance collaborationStreamline workflowsIncrease productivity''
     ]
     useCases: [,
       'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies'],'
@@ -620,7 +620,7 @@
       'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies''
     ],
     marketSiz,
-  e: '$12 && 12.8B by 2029', competitor,'
+  e: '$12 && 12.8 B by 2029', competitor,'
   s: ['LabVantageBenchlingLabArchivesSciNote'],'
     technolog,
   y: ['AI/MLAutomationData ScienceResearch Tools'], integratio,'
@@ -631,7 +631,7 @@
     scalabilit,
   y: 'Research-grade, multi-discipline support','
     market_siz,
-  e: '$12.8B by 2029', competitor,'
+  e: '$12.8 B by 2029', competitor,'
   s: ['LabVantageBenchlingLabArchivesSciNote'],'
     technolog,
   y: ['AI / MLAutomationData ScienceResearch Tools'], integratio,'
@@ -672,7 +672,7 @@
     partnershi,
   p: 'Research institution partnerships','
     fundin,
-  g: 'Series A funding, $60M valuation','
+  g: 'Series A funding, $60 M valuation','
     exi,
   t: 'Acquisition by major research platform','
     contac,
@@ -685,7 +685,6 @@
   s://ziontechgroup.com',      addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
     i,
   d: 'quantum - research - platform', nam,'
   e: 'Quantum Research Platform','
@@ -744,7 +743,7 @@
       'Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning''
     ],
     marketSiz,
-  e: '$18 && 18.5B by 2029', competitor,'
+  e: '$18 && 18.5 B by 2029', competitor,'
   s: ['IBM QuantumGoogle QuantumMicrosoft QuantumD-Wave'],'
     technolog,
   y: ['Quantum ComputingQuantum AlgorithmsResearch ToolsCollaboration'], integratio,'
@@ -755,7 +754,7 @@
     scalabilit,
   y: 'Quantum-grade, global research network','
     market_siz,
-  e: '$18.5B by 2029', competitor,'
+  e: '$18.5 B by 2029', competitor,'
   s: ['IBM QuantumGoogle QuantumMicrosoft QuantumD - Wave'],'
     technolog,
   y: ['Quantum ComputingQuantum AlgorithmsResearch ToolsCollaboration'], integratio,'
@@ -796,7 +795,7 @@
     partnershi,
   p: 'Quantum research partnerships','
     fundin,
-  g: 'Series B funding, $150M valuation','
+  g: 'Series B funding, $150 M valuation','
     exi,
   t: 'IPO or quantum acquisition','
     contac,
@@ -809,7 +808,6 @@
   s://ziontechgroup.com',      addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
     i,
   d: 'ai - research - assistant', nam,'
   e: 'AI Research Assistant','
@@ -832,7 +830,7 @@
 ]
   // TODO: Add items
 ]
-      'Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows''
+      'Accelerate research by 3 xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows''
     ]
     useCases: [,
       'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews'],'
@@ -868,7 +866,7 @@
       'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews''
     ],
     marketSiz,
-  e: '$15 && 15.2B by 2029', competitor,'
+  e: '$15 && 15.2 B by 2029', competitor,'
   s: ['GrammarlyMendeleyZoteroEndNote'],'
     technolog,
   y: ['AI/MLNatural Language ProcessingData AnalysisResearch Tools'], integratio,'
@@ -879,7 +877,7 @@
     scalabilit,
   y: 'AI-powered, multi-domain support','
     market_siz,
-  e: '$15.2B by 2029', competitor,'
+  e: '$15.2 B by 2029', competitor,'
   s: ['GrammarlyMendeleyZoteroEndNote'],'
     technolog,
   y: ['AI / MLNatural Language ProcessingData AnalysisResearch Tools'], integratio,'
@@ -920,7 +918,7 @@
     partnershi,
   p: 'AI research partnerships','
     fundin,
-  g: 'Series A funding, $80M valuation','
+  g: 'Series A funding, $80 M valuation','
     exi,
   t: 'Acquisition by major research platform','
     contac,
@@ -933,7 +931,6 @@
   s://ziontechgroup.com',      addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
     i,
   d: 'biotech - research - suite', nam,'
   e: 'Biotech Research Suite','
@@ -964,7 +961,7 @@
 ]
   // TODO: Add items
 ]
-      'Accelerate research by 5xReduce manual errors by 90%Improve research quality_enhance collaboration_streamline workflows_increase productivity''
+      'Accelerate research by 5 xReduce manual errors by 90%Improve research quality_enhance collaboration_streamline workflows_increase productivity''
     ]
     use_cases: [,
       'Academic research_corporate R & DGovernment research_pharmaceutical research_market research_scientific studies'],'
@@ -1022,7 +1019,7 @@
     partnershi,
   p: 'Research institution partnerships','
     fundin,
-  g: 'Series A funding, $60M valuation','
+  g: 'Series A funding, $60 M valuation','
     exi,
   t: 'Acquisition by major research platform','
     contac,
@@ -1035,7 +1032,6 @@
   s://ziontechgroup.com',      addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
     i,
   d: 'quantum - research - platform', nam,'
   e: 'Quantum Research Platform','
@@ -1116,7 +1112,7 @@
     partnershi,
   p: 'Quantum research partnerships','
     fundin,
-  g: 'Series B funding, $150M valuation','
+  g: 'Series B funding, $150 M valuation','
     exi,
   t: 'IPO or quantum acquisition','
     contac,
@@ -1129,7 +1125,6 @@
   s://ziontechgroup.com',      addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
     i,
   d: 'ai - research - assistant', nam,'
   e: 'AI Research Assistant','
@@ -1152,7 +1147,7 @@
 ]
   // TODO: Add items
 ]
-      'Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows''
+      'Accelerate research by 3 xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows''
     ]
     useCases: [,
       'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews'],'
@@ -1210,7 +1205,7 @@
     partnershi,
   p: 'AI research partnerships','
     fundin,
-  g: 'Series A funding, $80M valuation','
+  g: 'Series A funding, $80 M valuation','
     exi,
   t: 'Acquisition by major research platform','
     contac,
@@ -1223,7 +1218,6 @@
   s://ziontechgroup.com',      addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
     i,
   d: 'biotech - research - suite', nam,'
   e: 'Biotech Research Suite','
@@ -1278,7 +1272,7 @@
       'Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech''
     ],
     marketSiz,
-  e: '$22 && 22.8B by 2029', competitor,'
+  e: '$22 && 22.8 B by 2029', competitor,'
   s: ['BenchlingLabVantageSciNoteLabArchives'],'
     technolog,
   y: ['AI/MLBiotechnologyData ScienceResearch Tools'], integratio,'
@@ -1319,7 +1313,7 @@
     partnershi,
   p: 'Biotech research partnerships','
     fundin,
-  g: 'Series B funding, $120M valuation','
+  g: 'Series B funding, $120 M valuation','
     exi,
   t: 'IPO or biotech acquisition','
     contac,
@@ -1332,9 +1326,7 @@
   s://ziontechgroup.com',      addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 export interface ResearchDevelopmentService2029 {/* TODO: Fix JSX expression */}
-    }
   }
 ]
 mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
@@ -1347,13 +1339,11 @@ mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
   s://ziontechgroup.com',      addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ];
 export interface ResearchDevelopmentService2029 {/* TODO: Fix JSX expression */}
   e: string}
     addres,
   s: string}
-  }
 }
 export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] = [,;
   {,
@@ -1383,7 +1373,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
 ]
   // TODO: Add items
 ]
-      'Accelerate research by 5xReduce manual errors by 90%Improve research qualityEnhance collaborationStreamline workflowsIncrease productivity''
+      'Accelerate research by 5 xReduce manual errors by 90%Improve research qualityEnhance collaborationStreamline workflowsIncrease productivity''
     ]
     useCases: [
   // TODO: Add items
@@ -1431,7 +1421,6 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     id: 'quantum-research-platform','
       address: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
   {
   // TODO: Add properties
 }
@@ -1516,7 +1505,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
 ]
   // TODO: Add items
 ]
-      'Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows''
+      'Accelerate research by 3 xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows''
     ]
     useCases: [
   // TODO: Add items
@@ -1732,7 +1721,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
 ]
   // TODO: Add items
 ]
-      'Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows''
+      'Accelerate research by 3 xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows''
     ]
     useCases: [
   // TODO: Add items
@@ -1853,7 +1842,6 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
   {/* TODO: Fix JSX expression */}
   t: 'IPO or quantum acquisition'}'
     contac,
@@ -1868,7 +1856,6 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
   {/* TODO: Fix JSX expression */}
   t: 'Acquisition by major research platform'}'
     contac,
@@ -1883,7 +1870,6 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
   {/* TODO: Fix JSX expression */}
   t: 'IPO or biotech acquisition'}'
     contac,
@@ -1898,7 +1884,6 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ]
       mobil,
   e: '+1 302 464 0950', emai,'
@@ -1908,7 +1893,6 @@ export const,;
   s://ziontechgroup.com',      addres,'
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 i,
   d: string, nam,
   e: string, descriptio,
@@ -1967,9 +1951,9 @@ i,
   e: '20% commission for referrals' referra,''
   l: '$25,000 bonus for partnerships' partnershi,''
   p: 'Quantum research partnerships' fundin,''
-  g: 'Series B funding, $150M valuation' exi,''
+  g: 'Series B funding, $150 M valuation' exi,''
   t: 'IPO or quantum acquisition' market_siz,''
-  e: '$18.5B by 2029', competitor,'
+  e: '$18.5 B by 2029', competitor,'
   s: [,' 'IBM Quantum',' 'Google Quantum',' 'Microsoft Quantum',' 'D - Wave'], technolog,'
   y: [,' 'Quantum Computing',' 'Quantum Algorithms',' 'Research Tools',' 'Collaboration'], integratio,'
   n: [,' 'Quantum hardware',' 'Research platforms',' 'Publication systems'],' suppor,'
@@ -1992,7 +1976,7 @@ i,
   e: '20% commission for referrals',' referra,'
   l: '$25, 000 bonus for partnerships',' partnershi,'
   p: 'Quantum research partnerships',' fundin,'
-  g: 'Series B funding, $150M valuation',' exi,'
+  g: 'Series B funding, $150 M valuation',' exi,'
   t: 'IPO or quantum acquisition', contac,'
   t: ' 'Academic research',' 'Corporate research',' 'Government research',' 'Market research',' 'Scientific studies',' 'Literature reviews'], technolog,'
   y: [' 'AI/ML' 'Natural Language Processing' 'Data Analysis' 'Research Tools' ] integratio,'
@@ -2016,9 +2000,9 @@ i,
   e: '30% commission for referrals' referra,''
   l: '$10,000 bonus for partnerships' partnershi,''
   p: 'AI research partnerships' fundin,''
-  g: 'Series A funding, $80M valuation' exi,''
+  g: 'Series A funding, $80 M valuation' exi,''
   t: 'Acquisition by major research platform' market_siz,''
-  e: '$15.2B by 2029',' competitor,'
+  e: '$15.2 B by 2029',' competitor,'
   s: ['Grammarly', 'Mendeley', 'Zotero', 'EndNote'], technolog,'
   y: [,' 'AI / ML',' 'Natural Language Processing',' 'Data Analysis',' 'Research Tools'], integratio,'
   n: [,' 'Research databases',' 'Analysis tools',' 'Publication platforms'],' suppor,'
@@ -2041,7 +2025,7 @@ i,
   e: '30% commission for referrals',' referra,'
   l: '$10, 000 bonus for partnerships',' partnershi,'
   p: 'AI research partnerships',' fundin,'
-  g: 'Series A funding, $80M valuation',' exi,'
+  g: 'Series A funding, $80 M valuation',' exi,'
   t: 'Acquisition by major research platform', contac,'
   t: ' 'Pharmaceutical research',' 'Genetic research',' 'Clinical trials',' 'Biotech development',' 'Medical research',' 'Agricultural biotech'],' competitor,'
   s: ['Benchling', 'LabVantage', 'SciNote', 'LabArchives'],' technolog,'
@@ -2066,7 +2050,7 @@ i,
   e: '25% commission for referrals',' referra,'
   l: '$20, 000 bonus for partnerships',' partnershi,'
   p: 'Biotech research partnerships',' fundin,'
-  g: 'Series B funding, $120M valuation',' exi,'
+  g: 'Series B funding, $120 M valuation',' exi,'
   t: 'IPO or biotech acquisition', contac,'
   t: ' mobil,'
   e: '+1 302 464 0950',' emai,'
@@ -2076,16 +2060,16 @@ i,
   s: '364 E Main St STE 1008 Middletown DE 19709'}}]; feature,'
   s: [ ' 'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management' ], feature,'
   s: [;' 'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management' ], benefit,'
-  s: [' 'Accelerate research by 5xReduce manual errors by 90%Improve research qualityEnhance collaborationStreamline workflowsIncrease productivity' ], useCase,'
+  s: [' 'Accelerate research by 5 xReduce manual errors by 90%Improve research qualityEnhance collaborationStreamline workflowsIncrease productivity' ], useCase,'
   s: [' 'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies' ], ' marketSiz,'
-  e: '$12 && 12.8B by 2029', competitor,'
+  e: '$12 && 12.8 B by 2029', competitor,'
   s: ['LabVantageBenchlingLabArchivesSciNote'],' technolog,'
   y: ['AI/MLAutomationData ScienceResearch Tools'], integratio,'
   n: ['Research platformsData sourcesAnalysis tools'],' suppor,'
   t: ['24/7 research supportResearch expertsImplementation team'], complianc,'
   e: ['Research ethicsData privacyScientific standards'],' scalabilit,'
   y: 'Research-grade, multi-discipline support',' market_siz,'
-  e: '$12.8B by 2029', competitor,'
+  e: '$12.8 B by 2029', competitor,'
   s: ['LabVantageBenchlingLabArchivesSciNote'],' technolog,'
   y: ['AI / MLAutomationData ScienceResearch Tools'], integratio,'
   n: ['Research platforms_data sources_analysis tools'],' suppor,'
@@ -2108,7 +2092,7 @@ i,
   e: '25% commission for referrals',' referra,'
   l: '$15, 000 bonus for partnerships',' partnershi,'
   p: 'Research institution partnerships',' fundin,'
-  g: 'Series A funding, $60M valuation',' exi,'
+  g: 'Series A funding, $60 M valuation',' exi,'
   t: 'Acquisition by major research platform', contac,'
   t: ' mobil,'
   e: '+1 302 464 0950', emai,'
@@ -2124,14 +2108,14 @@ i,
   s: [;' 'Quantum computing access_quantum algorithm library_quantum simulation tools_research collaboration space_quantum education resources_performance analytics_research project management_publication tools' ], benefit,'
   s: [' 'Access to quantum computingAccelerate quantum researchCollaborate with quantum expertsLearn quantum technologiesPublish quantum researchAdvance quantum science' ], useCase,'
   s: [' 'Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning' ], ' marketSiz,'
-  e: '$18 && 18.5B by 2029', competitor,'
+  e: '$18 && 18.5 B by 2029', competitor,'
   s: ['IBM QuantumGoogle QuantumMicrosoft QuantumD-Wave'],' technolog,'
   y: ['Quantum ComputingQuantum AlgorithmsResearch ToolsCollaboration'], integratio,'
   n: ['Quantum hardwareResearch platformsPublication systems'],' suppor,'
   t: ['24/7 quantum supportQuantum expertsResearch team'], complianc,'
   e: ['Research ethicsQuantum standardsPublication guidelines'],' scalabilit,'
   y: 'Quantum-grade, global research network',' market_siz,'
-  e: '$18.5B by 2029', competitor,'
+  e: '$18.5 B by 2029', competitor,'
   s: ['IBM QuantumGoogle QuantumMicrosoft QuantumD - Wave'],' technolog,'
   y: ['Quantum ComputingQuantum AlgorithmsResearch ToolsCollaboration'], integratio,'
   n: ['Quantum hardware_research platforms_publication systems'],' suppor,'
@@ -2154,7 +2138,7 @@ i,
   e: '20% commission for referrals',' referra,'
   l: '$25, 000 bonus for partnerships',' partnershi,'
   p: 'Quantum research partnerships',' fundin,'
-  g: 'Series B funding, $150M valuation',' exi,'
+  g: 'Series B funding, $150 M valuation',' exi,'
   t: 'IPO or quantum acquisition', contac,'
   t: ' mobil,'
   e: '+1 302 464 0950', emai,'
@@ -2168,16 +2152,16 @@ i,
   y: ['AIResearchData AnalysisScientific ComputingKnowledge Management'],' pric,'
   e: '$2, 999 / month', feature,'
   s: [;' 'Intelligent literature review_data analysis assistance_hypothesis generation_research planning tools_knowledge synthesis_citation management_research collaboration_progress tracking' ], benefit,'
-  s: [' 'Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows' ], useCase,'
+  s: [' 'Accelerate research by 3 xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows' ], useCase,'
   s: [' 'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews' ], ' marketSiz,'
-  e: '$15 && 15.2B by 2029', competitor,'
+  e: '$15 && 15.2 B by 2029', competitor,'
   s: ['GrammarlyMendeleyZoteroEndNote'],' technolog,'
   y: ['AI/MLNatural Language ProcessingData AnalysisResearch Tools'], integratio,'
   n: ['Research databasesAnalysis toolsPublication platforms'],' suppor,'
   t: ['24/7 AI supportResearch expertsImplementation help'], complianc,'
   e: ['Research ethicsData privacyAcademic standards'],' scalabilit,'
   y: 'AI-powered, multi-domain support',' market_siz,'
-  e: '$15.2B by 2029', competitor,'
+  e: '$15.2 B by 2029', competitor,'
   s: ['GrammarlyMendeleyZoteroEndNote'],' technolog,'
   y: ['AI / MLNatural Language ProcessingData AnalysisResearch Tools'], integratio,'
   n: ['Research databases_analysis tools_publication platforms'],' suppor,'
@@ -2200,7 +2184,7 @@ i,
   e: '30% commission for referrals',' referra,'
   l: '$10, 000 bonus for partnerships',' partnershi,'
   p: 'AI research partnerships',' fundin,'
-  g: 'Series A funding, $80M valuation',' exi,'
+  g: 'Series A funding, $80 M valuation',' exi,'
   t: 'Acquisition by major research platform', contac,'
   t: ' mobil,'
   e: '+1 302 464 0950', emai,'
@@ -2215,7 +2199,7 @@ i,
   e: '$6, 999 / month', feature,'
   s: [;' 'Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools' ' 'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management' ], feature,'
   s: [;' 'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management' ], benefit,'
-  s: [;' 'Accelerate research by 5xReduce manual errors by 90%Improve research quality_enhance collaboration_streamline workflows_increase productivity' ], use_case,'
+  s: [;' 'Accelerate research by 5 xReduce manual errors by 90%Improve research quality_enhance collaboration_streamline workflows_increase productivity' ], use_case,'
   s: [,' 'Academic research_corporate R & DGovernment research_pharmaceutical research_market research_scientific studies' ],' ro,'
   i: '400% within 15 months',' deploymen,'
   t: 'Cloud - based, research infrastructure',' maintenanc,'
@@ -2233,7 +2217,7 @@ i,
   e: '25% commission for referrals',' referra,'
   l: '$15, 000 bonus for partnerships',' partnershi,'
   p: 'Research institution partnerships',' fundin,'
-  g: 'Series A funding, $60M valuation',' exi,'
+  g: 'Series A funding, $60 M valuation',' exi,'
   t: 'Acquisition by major research platform', contac,'
   t: ' mobil,'
   e: '+1 302 464 0950', emai,'
@@ -2265,7 +2249,7 @@ i,
   e: '20% commission for referrals',' referra,'
   l: '$25, 000 bonus for partnerships',' partnershi,'
   p: 'Quantum research partnerships',' fundin,'
-  g: 'Series B funding, $150M valuation',' exi,'
+  g: 'Series B funding, $150 M valuation',' exi,'
   t: 'IPO or quantum acquisition', contac,'
   t: ' mobil,'
   e: '+1 302 464 0950', emai,'
@@ -2279,7 +2263,7 @@ i,
   y: ['AIResearchData AnalysisScientific ComputingKnowledge Management'],' pric,'
   e: '$2, 999 / month', feature,'
   s: [;' 'Intelligent literature review_data analysis assistance_hypothesis generation_research planning tools_knowledge synthesis_citation management_research collaboration_progress tracking' ], benefit,'
-  s: [' 'Accelerate research by 3xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows' ], useCase,'
+  s: [' 'Accelerate research by 3 xImprove research qualityReduce research timeEnhance collaborationGenerate new insightsStreamline workflows' ], useCase,'
   s: [' 'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews' ],' ro,'
   i: '350% within 12 months',' deploymen,'
   t: 'Cloud - based, AI infrastructure',' maintenanc,'
@@ -2297,7 +2281,7 @@ i,
   e: '30% commission for referrals',' referra,'
   l: '$10, 000 bonus for partnerships',' partnershi,'
   p: 'AI research partnerships',' fundin,'
-  g: 'Series A funding, $80M valuation',' exi,'
+  g: 'Series A funding, $80 M valuation',' exi,'
   t: 'Acquisition by major research platform', contac,'
   t: ' mobil,'
   e: '+1 302 464 0950', emai,'
@@ -2313,7 +2297,7 @@ i,
   s: [;' 'Genetic research tools_drug discovery platform_clinical trial management_biotech analytics_research collaboration_data visualization_regulatory compliance_publication tools' ], benefit,'
   s: [' 'Accelerate biotech researchImprove drug discoveryStreamline clinical trialsEnhance collaborationEnsure complianceReduce research costs' ], useCase,'
   s: [' 'Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech' ], ' marketSiz,'
-  e: '$22 && 22.8B by 2029', competitor,'
+  e: '$22 && 22.8 B by 2029', competitor,'
   s: ['BenchlingLabVantageSciNoteLabArchives'],' technolog,'
   y: ['AI/MLBiotechnologyData ScienceResearch Tools'], integratio,'
   n: ['Lab equipmentResearch databasesClinical systems'],' suppor,'
@@ -2336,7 +2320,7 @@ i,
   e: '25% commission for referrals',' referra,'
   l: '$20, 000 bonus for partnerships',' partnershi,'
   p: 'Biotech research partnerships',' fundin,'
-  g: 'Series B funding, $120M valuation',' exi,'
+  g: 'Series B funding, $120 M valuation',' exi,'
   t: 'IPO or biotech acquisition', contac,'
   t: ' mobil,'
   e: '+1 302 464 0950', emai,'

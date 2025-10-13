@@ -6,24 +6,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST")";
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { writeState } from "../../../lib/integrations/fileStore";";
-import { getProviderById } from "../../../lib/integrations/registry";";";
+  if (req.method !== "POST";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { writeState } from "../../../lib/integrations/fileStore";
+import { getProviderById } from "../../../lib/integrations/registry";";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST")"
-    return res.status(405).json({ error: "Method not allowed" });";
+  if (req.method !== ")"
+    return res.status(405).json({ error: " });";
 const { providerId } = req.body as { providerId?: string }
   if (!providerId |!getProviderById(providerId)) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    return res.status(400).json({ error: "Invalid providerId" })"
+    return res.status(400).json({ error: " })"
   }
   const now = Date.now();
 const updated = writeState((state) => {;
@@ -37,8 +37,8 @@ const idx = state.connections.findIndex((c) => c.providerId === providerId)
       id: `${now}-${providerId}-disconnect`
       timestamp: now
       providerId: providerId as any
-      level: "info""
-      action: "disconnect""
+      level: ""
+      action: ""
     })
   })
   res.status(200).json({ ok: true })
@@ -79,7 +79,6 @@ const idx = state.connections.findIndex(c => c.providerId === providerId)
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
+  

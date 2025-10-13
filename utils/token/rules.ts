@@ -1,11 +1,5 @@
-import { TokenConfig } from "./types",";";
-import { TokenConfig } from "./types";";";
-export const DEFAULT_TOKEN_CONFIG: TokenConfig = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  symbol: "ZION$","
+import { TokenConfig } from "./types";";
+import { TokenConfig } from ";";"ZION$","
   usdPerToken: 0.05, // 100 ZION$ = $5 credit
   earnRules: {
   // TODO: Add properties
@@ -30,4 +24,3 @@ export const DEFAULT_TOKEN_CONFIG: TokenConfig = {
     featured_badge: 200}},
     featured_badge: 200,
   },
-}

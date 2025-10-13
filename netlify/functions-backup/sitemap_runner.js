@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'sitemap_runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'sitemap_runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'sitemap_runner',' source: event.source || 'unknown', sitemap: {' status: 'active', pages: 0,'
         lastGenerated: new Date().toISOString() } }) } return result; } catch (error) {

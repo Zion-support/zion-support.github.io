@@ -62,8 +62,8 @@ const marketplace = [
 }
   // TODO: Add properties
 }
-      key: 'jobs_24h''
-      label: 'Jobs posted (24h)''
+      key: 'jobs_24 h''
+      label: 'Jobs posted (24 h)''
       value: rand(15, 60)
       trend: generateSeries(14, 40)
     }
@@ -72,8 +72,8 @@ const marketplace = [
 }
   // TODO: Add properties
 }
-      key: 'jobs_7d''
-      label: 'Jobs posted (7d)''
+      key: 'jobs_7 d''
+      label: 'Jobs posted (7 d)''
       value: rand(120, 360)
       trend: generateSeries(14, 260)
     }
@@ -157,8 +157,8 @@ const token = [
 }
       key: 'circulating_supply''
       label: 'Circulating supply (ZION$)''
-      value: rand(1_000_000, 2_500_000)
-      trend: generateSeries(14, 1_700_000)
+      value: rand(1 _000 _000, 2 _500 _000)
+      trend: generateSeries(14, 1 _700 _000)
     }
     {
   // TODO: Add properties
@@ -167,8 +167,8 @@ const token = [
 }
       key: 'active_wallets''
       label: 'Active wallets''
-      value: rand(4_000, 12_000)
-      trend: generateSeries(14, 8_000)
+      value: rand(4 _000, 12 _000)
+      trend: generateSeries(14, 8 _000)
     }
     {
   // TODO: Add properties
@@ -177,8 +177,8 @@ const token = [
 }
       key: 'tx_volume_daily''
       label: 'Transaction volume (daily)''
-      value: rand(100_000, 700_000)
-      trend: generateSeries(14, 300_000)
+      value: rand(100 _000, 700 _000)
+      trend: generateSeries(14, 300 _000)
     }
     {
   // TODO: Add properties
@@ -187,8 +187,8 @@ const token = [
 }
       key: 'treasury_health''
       label: 'Treasury health (USD)''
-      value: rand(1_000_000, 7_000_000)
-      trend: generateSeries(14, 3_500_000)
+      value: rand(1 _000 _000, 7 _000 _000)
+      trend: generateSeries(14, 3 _500 _000)
     }
     { key: 'top_earners', label: 'Top earners (count)', value: rand(5, 25) }'
   ];
@@ -221,7 +221,7 @@ const multiverse = [
 }
   // TODO: Add properties
 }
-      key: 'top5_growth''
+      key: 'top5 _growth''
       label: 'Top 5 by user growth''
       value: rand(500, 2500)
     }
@@ -232,8 +232,8 @@ const multiverse = [
 }
       key: 'cross_token''
       label: 'Cross-instance token movement''
-      value: rand(1_000, 12_000)
-      trend: generateSeries(14, 6_000)
+      value: rand(1 _000, 12 _000)
+      trend: generateSeries(14, 6 _000)
     }
   ];
 const response: any = {
@@ -244,7 +244,7 @@ const response: any = {
       marketplace: marketplace.map((m) => m.trend || generateSeries(14, m.value))
       dao: dao.map((m) => m.trend || generateSeries(14, m.value))
       token: token.map((m) => m.trend || generateSeries(14, m.value))
-      multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value))}}
+      multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value))}
   const now = new Date();
 const labels = Array.from({ length: 14 }, (_, i) => {;
 const d = new Date(now)
@@ -256,8 +256,8 @@ const marketplace = [
 ]
   // TODO: Add items
 ]
-    { key: 'jobs_24h', label: 'Jobs posted (24h)', value: rand(15, 60), trend: generateSeries(14, 40) },'
-    { key: 'jobs_7d', label: 'Jobs posted (7d)', value: rand(120, 360), trend: generateSeries(14, 260) },'
+    { key: 'jobs_24 h', label: 'Jobs posted (24 h)', value: rand(15, 60), trend: generateSeries(14, 40) },'
+    { key: 'jobs_7 d', label: 'Jobs posted (7 d)', value: rand(120, 360), trend: generateSeries(14, 260) },'
     { key: 'jobs_total', label: 'Jobs posted (total)', value: rand(5000, 15000) },'
     { key: 'talent_onboarded', label: 'Talent onboarded', value: rand(50, 200), trend: generateSeries(14, 120) },'
     { key: 'proposal_conversions', label: 'Proposal conversions', value: rand(30, 120), trend: generateSeries(14, 80) },'
@@ -278,10 +278,10 @@ const token = [
 ]
   // TODO: Add items
 ]
-    { key: 'circulating_supply', label: 'Circulating supply (ZION$)', value: rand(1_000_000, 2_500_000), trend: generateSeries(14, 1_700_000) },'
-    { key: 'active_wallets', label: 'Active wallets', value: rand(4_000, 12_000), trend: generateSeries(14, 8_000) },'
-    { key: 'tx_volume_daily', label: 'Transaction volume (daily)', value: rand(100_000, 700_000), trend: generateSeries(14, 300_000) },'
-    { key: 'treasury_health', label: 'Treasury health (USD)', value: rand(1_000_000, 7_000_000), trend: generateSeries(14, 3_500_000) },'
+    { key: 'circulating_supply', label: 'Circulating supply (ZION$)', value: rand(1 _000 _000, 2 _500 _000), trend: generateSeries(14, 1 _700 _000) },'
+    { key: 'active_wallets', label: 'Active wallets', value: rand(4 _000, 12 _000), trend: generateSeries(14, 8 _000) },'
+    { key: 'tx_volume_daily', label: 'Transaction volume (daily)', value: rand(100 _000, 700 _000), trend: generateSeries(14, 300 _000) },'
+    { key: 'treasury_health', label: 'Treasury health (USD)', value: rand(1 _000 _000, 7 _000 _000), trend: generateSeries(14, 3 _500 _000) },'
     { key: 'top_earners', label: 'Top earners (count)', value: rand(5, 25) },'
   ];
 const multiverse = [
@@ -291,8 +291,8 @@ const multiverse = [
 ]
     { key: 'active_instances', label: 'Total active sub-instances', value: rand(8, 32), trend: generateSeries(14, 20) },'
     { key: 'map_overlay', label: 'Map overlay intensity', value: rand(100, 900) },'
-    { key: 'top5_growth', label: 'Top 5 by user growth', value: rand(500, 2500) },'
-    { key: 'cross_token', label: 'Cross-instance token movement', value: rand(1_000, 12_000), trend: generateSeries(14, 6_000) },'
+    { key: 'top5 _growth', label: 'Top 5 by user growth', value: rand(500, 2500) },'
+    { key: 'cross_token', label: 'Cross-instance token movement', value: rand(1 _000, 12 _000), trend: generateSeries(14, 6 _000) },'
   ];
 const response: any = {
   // TODO: Add properties
@@ -347,7 +347,7 @@ const factor = 0.8 + Math.random() * 0.4
   };      marketplace: marketplace && marketplace.map((m) => m && m.trend || generateSeries(14, m && m.value))
       dao: dao && dao.map((m) => m && m.trend || generateSeries(14, m && m.value))
       token: token && token.map((m) => m && m.trend || generateSeries(14, m && m.value))
-      multiverse: multiverse && multiverse.map((m) => m && m.trend || generateSeries(14, m && m.value))}}
+      multiverse: multiverse && multiverse.map((m) => m && m.trend || generateSeries(14, m && m.value))}
   if (req && req.query.compare === 'quarter') {;';
 const factor = 0 && 0.8 + Math && Math.random() * 0 && 0.4
     response && response.compare = {
@@ -418,8 +418,8 @@ const marketplace = [
 }
   // TODO: Add properties
 }
-      key: 'jobs_24h','
-      label: 'Jobs posted (24h)','
+      key: 'jobs_24 h','
+      label: 'Jobs posted (24 h)','
       value: rand (15, 60),
       trend: generate_series (14, 40),
     },
@@ -428,8 +428,8 @@ const marketplace = [
 }
   // TODO: Add properties
 }
-      key: 'jobs_7d','
-      label: 'Jobs posted (7d)','
+      key: 'jobs_7 d','
+      label: 'Jobs posted (7 d)','
       value: rand (120, 360),
       trend: generate_series (14, 260),
     },
@@ -513,8 +513,8 @@ const token = [
 }
       key: 'circulating_supply','
       label: 'Circulating supply (ZION$)','
-      value: rand (1_000_000, 2_500_000),
-      trend: generate_series (14, 1_700_000),
+      value: rand (1 _000 _000, 2 _500 _000),
+      trend: generate_series (14, 1 _700 _000),
     },
     {
   // TODO: Add properties
@@ -523,8 +523,8 @@ const token = [
 }
       key: 'active_wallets','
       label: 'Active wallets','
-      value: rand (4_000, 12_000),
-      trend: generate_series (14, 8_000),
+      value: rand (4 _000, 12 _000),
+      trend: generate_series (14, 8 _000),
     },
     {
   // TODO: Add properties
@@ -533,8 +533,8 @@ const token = [
 }
       key: 'tx_volume_daily','
       label: 'Transaction volume (daily)','
-      value: rand (100_000, 700_000),
-      trend: generate_series (14, 300_000),
+      value: rand (100 _000, 700 _000),
+      trend: generate_series (14, 300 _000),
     },
     {
   // TODO: Add properties
@@ -543,8 +543,8 @@ const token = [
 }
       key: 'treasury_health','
       label: 'Treasury health (USD)','
-      value: rand (1_000_000, 7_000_000),
-      trend: generate_series (14, 3_500_000),
+      value: rand (1 _000 _000, 7 _000 _000),
+      trend: generate_series (14, 3 _500 _000),
     },
     { key: 'top_earners', label: 'Top earners (count)', value: rand (5, 25) },'
   ];
@@ -577,7 +577,7 @@ const multiverse = [
 }
   // TODO: Add properties
 }
-      key: 'top5_growth','
+      key: 'top5 _growth','
       label: 'Top 5 by user growth','
       value: rand (500, 2500),
     },
@@ -588,8 +588,8 @@ const multiverse = [
 }
       key: 'cross_token','
       label: 'Cross - instance token movement','
-      value: rand (1_000, 12_000),
-      trend: generate_series (14, 6_000),
+      value: rand (1 _000, 12 _000),
+      trend: generate_series (14, 6 _000),
     },
   ];
 const response: any = {
@@ -616,7 +616,7 @@ const response: any = {
   }      marketplace: marketplace.map ((m) => m.trend || generate_series (14, m.value))
       dao: dao.map ((m) => m.trend || generate_series (14, m.value))
       token: token.map ((m) => m.trend || generate_series (14, m.value))
-      multiverse: multiverse.map ((m) => m.trend || generate_series (14, m.value))}}
+      multiverse: multiverse.map ((m) => m.trend || generate_series (14, m.value))}
   // Check condition
 if ( {) {
   // TODO: Add properties
@@ -656,16 +656,15 @@ if ( {) {
         })),
       },
     }
-  }
         marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }))
         dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }))
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }))
-        multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
+        multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}
   }
   res.status (200).json (response);        marketplace: marketplace.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))
         dao: dao.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))
         token: token.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))
-        multiverse: multiverse.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))}}
+        multiverse: multiverse.map ((m) => ({ ...m, value: Math.round (m.value * factor) }))}
   }
   res.status (200).json (response)
 }
@@ -675,7 +674,6 @@ if ( {) {
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) })),
       },
     }
-  }
   res.status(200).json(response)
 }
 )))))

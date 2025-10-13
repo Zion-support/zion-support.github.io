@@ -6,9 +6,9 @@ const variantStyles = {
 }
   // TODO: Add properties
 }
-  info: { background: '#1e3a8a', color: '#fff' },'
-  error: { background: '#7f1d1d', color: '#fff' }}'
-  error: { background: '#7f1d1d', color: '#fff' },'
+  info: { background: '#1 e3 a8 a', color: '#fff' },'
+  error: { background: '#7 f1 d1 d', color: '#fff' }}'
+  error: { background: '#7 f1 d1 d', color: '#fff' },'
 }
 // Deduplication settings;
 const DEDUPE_DELAY = 3000; // 3 seconds;
@@ -166,7 +166,6 @@ toastAdapter.dismiss = (toastId?: string | number) => {
 }
     globalToastManager.dismissAll()
   }
-}
 // Enhanced useToast hook with global toast manager integration;
 export const useToast = () => ({
   // TODO: Add properties

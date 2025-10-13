@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -9,7 +7,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 import fs from 'fs';';
 import path from 'path';';
 import { execSync } from 'child_process';';
@@ -30,16 +27,7 @@ const content = fs.readFileSync(filePath, 'utf8')'
 }
   // TODO: Add properties
 }
-      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, { stdio: 'pipe' })'"
-      console.log(`✓ Fixed unused imports in ${filePath}`)
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      // If ESLint fails, try a simpler approach
-function removeUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"rules":{"@typescript-eslint/no-unused-vars":"error"},"parser":"@typescript-eslint/parser","parserOptions":{"ecmaVersion":2020,"sourceType":"module","ecmaFeatures":{"jsx":true}},"plugins":["@typescript-eslint"]}'`, {/* TODO: Fix JSX expression */})'"
+      execSync(`npx eslint "${filePath}"rules":{":"error"parser":","parserOptions"ecmaVersion":2020,":"module"ecmaFeatures":{":true}},"plugins"@typescript-eslint"]}'`, { stdio: 'pipe' })'"${filePath}" --fix --no-eslintrc --config '{":{"@typescript-eslint/no-unused-vars"error"},":"@typescript-eslint/parser"parserOptions":{":2020,"sourceType"module",":{"jsx"plugins":["]}'`, {/* TODO: Fix JSX expression */})'"
   o: 'pipe' });`'
       console.log(`✓ Fixed unused imports in ${filePath}`)
     } catch (error) {/* TODO: Fix JSX expression */}`
@@ -61,18 +49,14 @@ const importName = line.match(/import\s*{([^}]+)}/)?.[1]?.split(',').map(s => s.
             })
             return isUsed
           }
-        }
         return true
       })
       if (newLines.length !== lines.length) {/* TODO: Fix JSX expression */}`
         console.log(`✓ Manually cleaned ${filePath}`)
       }
-    }
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.log(`✗ Error processing ${filePath}: ${error.message}`)
   }
-}
-
 // Function to recursively find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {;';
 const files = []
@@ -92,10 +76,7 @@ const stat = fs.statSync(fullPath)
 function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}'
         }
       } else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
-      }
     }
-  }
-
   traverse(dir)
   return files
 }
@@ -110,6 +91,5 @@ let processed = 0
 for (const file of files) {/* TODO: Fix JSX expression */}`
   s: ${processed}/${files.length} files processed`)
   }
-}
 `
 console.log(`\n✅ Cleanup complete! Processed ${processed} files.`);"`

@@ -778,7 +778,6 @@ if (return null, ) {
 }
         return conversation,
       }
-    }
     // Create new conversation;
 const conversation: Conversation = {
   // TODO: Add properties
@@ -912,7 +911,6 @@ const lowercaseQuery = query && query.toLowerCase()
       totalMessages: this && this.messages.size,
       totalConversations: this && this.conversations.size
     }
-  }
 }
 // Singleton instance;
 export const marketplaceStore = new MarketplaceStore()
@@ -1060,7 +1058,6 @@ export function createProjectData(
     documents: [],
     ...additionalData
   }
-}
 export function createOfferData(
   // TODO: Add parameters
 )
@@ -1083,7 +1080,6 @@ export function createOfferData(
     status: 'SENT','
     ...additionalData
   }
-}
 export function createApplicationData(
   // TODO: Add parameters
 )
@@ -1101,7 +1097,6 @@ export function createApplicationData(
     status: 'PENDING','
     ...additionalData
   }
-}
 export function createMessageData(
   // TODO: Add parameters
 )
@@ -1124,15 +1119,14 @@ export function createMessageData(
     ...additionalData
   }
 }
-}
 export function generate_id (prefix: string = 'item'): string {'
   return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`
 }
-import fs from "fs";";
-import path from "path";";
-import { MarketplaceDb, Offer, Project } from "./types";";";
-const DATA_DIR = path.join(process.cwd(), "data", "runtime");";
-const DB_PATH = path.join(DATA_DIR, "marketplace.json")"
+import fs from "fs";
+import path from "path";
+import { MarketplaceDb, Offer, Project } from "./types";";
+const DATA_DIR = path.join(process.cwd(), ", "runtime";
+const DB_PATH = path.join(DATA_DIR, "marketplace.json"
 function ensureDataFile(): void {
   // TODO: Add properties
 }
@@ -1147,9 +1141,8 @@ function ensureDataFile(): void {
   }
   if (!fs.existsSync(DB_PATH)) {;
 const initial: MarketplaceDb = { offers: [], projects: [] }
-    fs.writeFileSync(DB_PATH, JSON.stringify(initial, null, 2), "utf-8")"
+    fs.writeFileSync(DB_PATH, JSON.stringify(initial, null, 2), "utf-8"
   }
-}
 export function readDb(): MarketplaceDb {
   // TODO: Add properties
 }
@@ -1157,7 +1150,7 @@ export function readDb(): MarketplaceDb {
 }
   ensureDataFile()
   try {;
-const raw = fs.readFileSync(DB_PATH, "utf-8");";
+const raw = fs.readFileSync(DB_PATH, "utf-8";
 const data = JSON.parse(raw) as MarketplaceDb
     if (!data.offers) data.offers = []
     if (!data.projects) data.projects = []
@@ -1168,7 +1161,6 @@ const data = JSON.parse(raw) as MarketplaceDb
   // TODO: Add properties
 }
     return { offers: [], projects: [] }
-  }
 }
 export function writeDb(db: MarketplaceDb): void {
   // TODO: Add properties
@@ -1176,7 +1168,7 @@ export function writeDb(db: MarketplaceDb): void {
   // TODO: Add properties
 }
   ensureDataFile()
-  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), "utf-8")"
+  fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), "utf-8"
 }
 export function saveOffer(offer: Offer): Offer {;
 const db = readDb();
@@ -1231,4 +1223,3 @@ const index = db.projects.findIndex((p) => p.id === project.id)
 export function getProjectById(id: string): Project | undefined {;
 const db = readDb()
   return db.projects.find((p) => p.id === id)
-}

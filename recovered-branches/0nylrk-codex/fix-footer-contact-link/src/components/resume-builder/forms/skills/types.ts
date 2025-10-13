@@ -43,4 +43,3 @@ export interface BulkAddSkillsProps {
 }
   resumeId: string
   onSuccess: () => Promise<void>
-}

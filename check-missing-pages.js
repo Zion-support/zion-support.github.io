@@ -92,5 +92,4 @@ if (extraPages.length > 0) {
   // TODO: Add properties
 }
     console.log(`  ... and ${extraPages.length - 20} more`);
-  }
-}
+  

@@ -14,7 +14,6 @@ class ApplicationMonitor {/* TODO: Fix JSX expression */}
   s: []}
       performanc,
   e: {}
-    }
   }
   saveMetrics() {fs.writeFileSync(this.metricsFile, JSON.stringify(this.metrics) null} 2))
   }
@@ -29,7 +28,6 @@ class ApplicationMonitor {/* TODO: Fix JSX expression */}
     })
     //Keep only last 10 build times
     if (this.metrics.buildTimes.length > 10) {this.metrics.buildTimes = this.metrics.buildTimes.slice(-10)}
-    }
     this.saveMetrics()
   }
 //   generateReport() {//     // console.log('===')}'
@@ -40,7 +38,6 @@ class ApplicationMonitor {/* TODO: Fix JSX expression */}
   Time: ${avgBuildTime.toFixed(2)}ms`)
     }
 //     }
-}
 // const command = process.argv[2]
 switch (command) {case 'deploy':'
     monitor.recordDeployment()

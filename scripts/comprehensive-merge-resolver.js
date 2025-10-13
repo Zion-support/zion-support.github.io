@@ -1,27 +1,5 @@
 
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-}
-#!/usr/bin/env node;
-// console.log('🚀 Starting comprehensive merge conflict resolution and PR management...\n')
-// Function to execute git commands safely;
-    // console.log(`📝 ${description}...`)
-  for (let i = 0; i;
- setTimeout(resolve, 1000))}
-  // Step 8: Final status check;
-  // console.log('\n📊 Final Status: ')
-  execGitCommand('git status', 'Final git status')
-  execGitCommand('git log --oneline -10', 'Recent commits')
-  // console.log('\n🎉 Comprehensive merge conflict resolution and PR management completed!')}
-// Run the main function;
-main().catch(console.error)
-=======
+
 #!/usr/bin/env node;
 import { execSync } from 'child_process';';
 import fs from 'fs';';
@@ -53,8 +31,6 @@ const result = execSync(command, { )
     console.log(`❌ ${description} failed: ${error.message}`)
     return null
   }
-}
-
 // Function to resolve merge conflicts in a file
 function resolveMergeConflicts(filePath) {
   // TODO: Add properties
@@ -64,7 +40,7 @@ function resolveMergeConflicts(filePath) {
   try {;
 const content = fs.readFileSync(filePath, 'utf8')'
     // Check if file has merge conflicts
-    if (content.includes('<<<<<<<') || content.includes(') || content.includes('>>>>>>>')) {'
+    if (content.includes('<<<<<<<') || content.includes(') || content.includes(')) {'
       console.log(`🔧 Resolving merge conflicts in ${filePath}...`)
       // Advanced conflict resolution strategy;
 let resolvedContent = content
@@ -97,8 +73,6 @@ const incoming = parts[1].replace(/            return incoming;)
     console.log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`)
     return false
   }
-}
-
 // Function to find and resolve all merge conflicts
 function resolveAllMergeConflicts() {
   // TODO: Add properties
@@ -139,8 +113,6 @@ let resolvedCount = 0
 }
         resolvedCount++
   }
-    }
-
     console.log(`✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)
     return resolvedCount === conflictedFiles.length
   } catch (error) {
@@ -151,8 +123,6 @@ let resolvedCount = 0
     console.log('❌ Error finding merge conflicts:', error.message)'
     return false
   }
-}
-
 // Function to get all remote branches
 function getAllRemoteBranches() {
   // TODO: Add properties
@@ -176,8 +146,6 @@ const branches = result
     console.log('❌ Error getting remote branches:', error.message)'
     return []
   }
-}
-
 // Function to merge a branch safely
 function mergeBranch(branchName) {
   // TODO: Add properties
@@ -213,7 +181,7 @@ const mergeResult = execGitCommand(`git merge origin/${branchName} --no-edit`, `
   // TODO: Add properties
 }
           execGitCommand('git add .', `Adding resolved files from ${branchName}`)'
-          execGitCommand(`git commit -m "Resolve merge conflicts from ${branchName}"`, `Committing merge resolution for ${branchName}`)"
+          execGitCommand(`git commit -m "Resolve merge conflicts from ${branchName}"
           console.log(`✅ Resolved conflicts and merged ${branchName}`)
           return true
         } else {
@@ -224,7 +192,6 @@ const mergeResult = execGitCommand(`git merge origin/${branchName} --no-edit`, `
           console.log(`❌ Failed to resolve conflicts in ${branchName}`)
           return false
         }
-      }
     } else {
   // TODO: Add properties
 }
@@ -241,8 +208,6 @@ const mergeResult = execGitCommand(`git merge origin/${branchName} --no-edit`, `
     console.log(`❌ Error merging ${branchName}: ${error.message}`)
     return false
   }
-}
-
 // Main execution
 async function main() {
   // TODO: Add properties
@@ -281,7 +246,7 @@ const mergeResult = execGitCommand('git merge origin/main --no-edit', 'Merging w
       // Step 5: Add resolved files,
       execGitCommand('git add .', 'Adding resolved files')'
       // Step 6: Commit the merge,
-      execGitCommand('git commit -m "Resolve merge conflicts and integrate latest changes"', 'Committing merge resolution')'"
+      execGitCommand('git commit -m "Resolve merge conflicts and integrate latest changes"
       console.log('✅ Merge conflicts resolved and committed')'
   } else {
   // TODO: Add properties
@@ -291,8 +256,6 @@ const mergeResult = execGitCommand('git merge origin/main --no-edit', 'Merging w
     console.log('❌ Failed to resolve all merge conflicts')'
       return
   }
-  }
-
   // Step 7: Get all remote branches and merge them
   console.log('\n🔍 Getting all remote branches...');';
 const allBranches = getAllRemoteBranches(),
@@ -336,8 +299,6 @@ const priorityBranches = [
 }
       mergeBranch(branch)
   }
-  }
-
   // Merge other branches in batches;
 const otherBranches = allBranches.filter(branch => !priorityBranches.includes(branch));
 const batchSize = 5
@@ -366,4 +327,3 @@ const batch = otherBranches.slice(i, i + batchSize)
 
 // Run the main function
 main().catch(console.error)
-=======

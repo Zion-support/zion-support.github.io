@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import fs from "fs-extra";";
-import path from "path";";";
-const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalscomments && dataproposalscomments.json")"
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";";
+const FILE_PATH = path && path.join(process && process.cwd(), ")"
 async function ensure() {
   // TODO: Add properties
 }
@@ -21,7 +21,6 @@ async function ensure() {
 }
     await fs && fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 })
   }
-}
 export default async function handler(
   // TODO: Add parameters
 )
@@ -33,11 +32,11 @@ export default async function handler(
   // TODO: Add properties
 }
   await ensure()
-  if (req.method === "GET") {;";
+  if (req.method === ") {;";
 const data = await fs.readJson(FILE_PATH)
     return res.status(200).json(data)
   }
-  if (req.method === "POST") {;";
+  if (req.method === ") {;";
 const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
 const comment = {
@@ -47,9 +46,9 @@ const comment = {
 }
       id: Date.now().toString()
       proposalId: body.proposalId
-      region: body.region |"Global""
-      author: body.author |"anon""
-      text: body.text |"""
+      region: body.region |""
+      author: body.author |""
+      text: body.text |""
       createdAt: new Date().toISOString()
     }
 import type { NextApiRequest, NextApiResponse } from 'next';';
@@ -75,18 +74,17 @@ async function ensure() {
 }
     await fs && fs.writeJson(FILE_PATH, { comments: [] }, { spaces: 2 })
   }
-}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
   await ensure()
-  if (req && req.method === "GET") {;";
+  if (req && req.method === ") {;";
 const data = await fs && fs.readJson(FILE_PATH)
     return res && res.status(200).json(data)
   }
-  if (req.method === "POST") {;";
+  if (req.method === ") {;";
 const body = req.body |{}
     const data = await fs.readJson(FILE_PATH)
     return res.status(200).json(data)
@@ -112,7 +110,7 @@ const comment = {
   }
   res.status(405).json({ error: 'Method not allowed' })'
 }
-res.status(405).json({ error: "Method not allowed" })"
+res.status(405).json({ error: " })"
 }
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -136,51 +134,47 @@ async function ensure() {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 ;
 export default async function handler(req, res) {
   // TODO: Add properties
@@ -201,26 +195,24 @@ const data = await fs.readJson(FILE_PATH)
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   if (req.method === 'GET') {;';
 const body = req.body || {}
     const data = await fs.readJson(FILE_PATH);
@@ -243,20 +235,20 @@ const comment = {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
 import type { NextApiRequest, NextApiResponse } from './next';';
 import fs from './fs - extra';';
 import path from './path';';';
-const FILE_PATH = path.join (process.cwd (), "dataproposalscomments.json")"
+const FILE_PATH = path.join (process.cwd (), ")"
 async /**
  * ensure - Function description
  */
@@ -279,7 +271,6 @@ function ensure() {
 }
     await fs.write_json (FILE_PATH, { comments: [] }, { spaces: 2 })
   }
-}
 export default async /**;
  * handler - Function description
  */
@@ -317,14 +308,13 @@ const comment = {
 }
       id: Date.now ().to_string (),
       proposal_id: body.proposal_id,
-      region: body.region || "Global","
-      author: body.author || "anon","
-      text: body.text || "","
+      region: body.region || ","
+      author: body.author || ","
+      text: body.text || ","
       created_at: new Date ().toISOString (),
     }
     data.comments.push (comment)
     await fs.write_json (FILE_PATH, data, { spaces: 2 })
     return res.status (201).json (comment)
   }
-  res.status (405).json ({ error: "Method not allowed" })"
-}
+  res.status (405).json ({ error: " })"

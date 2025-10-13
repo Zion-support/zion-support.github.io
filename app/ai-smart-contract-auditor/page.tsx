@@ -1,172 +1,58 @@
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Ai Smart Contract Auditor - Zion Tech Group</title>
-        <meta name="description" content="Advanced ai smart contract auditor solutions by Zion Tech Group" />
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" content="Advanced ai smart contract auditor solutions by Zion Tech Group"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600 mb-8"description" content=" />"
+<meta name=" content="smart contract audit, blockchain security, AI auditing, DeFi security, smart contract analysis, vulnerability detection"
+<meta property="og: title"AI Smart Contract Auditor - Automated Security Analysis" />,"og:description" content=" />"
+<meta property=" content="website"
+        <meta property="og: url"https://ziontechgroup.com/ai-smart-contract-auditor" />,"canonical" href=" />,"
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-        </div>
-      </div>
-    </>
-  );
-      title: 'Code Quality Assessment','
-      description: 'Comprehensive code review with best practices compliance and optimization suggestions','
-      benefits: ['Continuous learning', 'Pattern recognition', 'Predictive analysis']}];'
-;
-const pricingPlans = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {name: 'Starter','
-      price: '$299','
-      period: '/month','
-      description: 'Perfect for small projects and individual developers','
-      features: [,
-        'Up to 5 smart contracts per month','
-        'Basic security analysis','
-        'Code quality assessment','
-        'Email support','
-        'PDF audit reports','
-        'Basic risk scoring''
-      ],
-      popular: false;,},
-    {name: 'Professional','
-      price: '$799','
-      period: '/month','
-      description: 'Ideal for growing DeFi projects and development teams','
-      features: [,
-        'Up to 25 smart contracts per month','
-        'Advanced security analysis','
-        'Gas optimization recommendations','
-        'Priority support','
-        'Detailed audit reports','
-        'Advanced risk scoring','
-        'API access','
-        'Custom compliance checks''
-      ],
-      popular: true;,},
-    {name: 'Enterprise','
-      price: '$1,999','
-      period: '/month','
-      description: 'For large-scale projects and enterprise clients','
-      features: [,
-        'Unlimited smart contracts','
-        'Comprehensive security analysis','
-        'Custom ML model training','
-        '24/7 dedicated support','
-        'Executive summary reports','
-        'Real-time monitoring','
-        'Custom integrations','
-        'White-label solutions','
-        'On-site consultation''
-      ],
-      popular: false;,}];
-;
-const useCases = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {title: 'DeFi Protocol Audits','
-      description: 'Comprehensive security analysis for decentralized finance protocols','
-      icon: DollarSign,
-      results: 'Reduced security incidents by 95%',},'
-    {title: 'NFT Marketplace Security','
-      description: 'Smart contract auditing for NFT platforms and marketplaces','
-      icon: Image,
-      results: 'Zero critical vulnerabilities found',},'
-    {title: 'Token Launch Security','
-      description: 'Pre-launch security audits for new token contracts','
-      icon: Rocket,
-      results: '100% successful token launches',},'
-    {title: 'Cross-Chain Bridge Audits','
-      description: 'Security analysis for cross-chain bridge implementations','
-      icon: Globe,
-        <title>AI Smart Contract Auditor - Automated Security Analysis | Zion Tech Group</title>
-<meta name="description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment. Secure your blockchain projects with our cutting-edge technology." />"
-<meta name="keywords" content="smart contract audit, blockchain security, AI auditing, DeFi security, smart contract analysis, vulnerability detection" />"
-<meta property="og: title" content="AI Smart Contract Auditor - Automated Security Analysis" />,"
-        <meta property="og:description" content="Advanced AI-powered smart contract auditing with automated security analysis, vulnerability detection, and risk assessment." />"
-<meta property="og: type" content="website" />,"
-        <meta property="og: url" content="https://ziontechgroup.com/ai-smart-contract-auditor" />,"
-        <link rel="canonical" href="https: //ziontechgroup.com/ai-smart-contract-auditor" />,"
-      </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">{/* Hero Section */</div>} <section className="relative py-20 px-4 sm: px-6 lg:px-8 overflow-hidden">,</section>"
-<div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"></div>"
-<div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-500/20 via-transparent to-transparent"></div>"
-<div className="max-w-7xl mx-auto relative z-10"></div>"
-<div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}></div>'
-<div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 mb-8 border border-cyan-500/30"></div>"
-<Shield className="w-5 h-5 text-cyan-400" />"
-<span className="text-cyan-400 font-semibold">AI-Powered Security</span></div>"
-<h1 className="text-5xl md: text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">,</h1>"
+<div className="relative py-20 px-4 sm: px-6 lg:px-8 overflow-hidden">,</section>"absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"
+<div className="
+<div className="max-w-7 xl mx-auto relative z-10"inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full px-6 py-3 mb-8 border border-cyan-500/30"
+<Shield className="
+<span className="text-cyan-400 font-semibold"text-5 xl md: text-7 xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
                 AI Smart Contract Auditor;
               </h1>
-<p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">,</p>"
+<p className="
                 Advanced AI-powered smart contract auditing with automated security analysis,
                 vulnerability detection, and comprehensive risk assessment for blockchain projects.
               </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">,</div>"
-<div className="flex items-center space-x-2 text-cyan-400">"
-<CheckCircle className="w-5 h-5" />"
-<span className="font-semibold">99.9% Vulnerability Detection</span></div>"
-<div className="flex items-center space-x-2 text-purple-400"></div>"
-<Clock className="w-5 h-5" />"
-<span className="font-semibold">80% Faster Audits</span></div>"
-<div className="flex items-center space-x-2 text-pink-400"></div>"
-<Shield className="w-5 h-5" />"
-<span className="font-semibold">Zero False Positives</span></div>"
-</div>
-<div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>"
+<div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12"flex items-center space-x-2 text-cyan-400"
+<CheckCircle className="
+<span className="font-semibold"flex items-center space-x-2 text-purple-400"
+<Clock className="
+<span className="font-semibold"flex items-center space-x-2 text-pink-400"
+<Shield className="
+<span className="font-semibold"flex flex-col sm: flex-row gap-4 justify-center"
 <a;
-                  href="tel: +13024640950","
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105","
+                  href=","
+                  className="
                 >
-<Phone className="w-5 h-5 mr-2" />"
-                  Call (302) 464-0950;
-                </a>
-<a;
-                  href="mailto: kleber@ziontechgroup.com","
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover: from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105","
+<Phone className="w-5 h-5 mr-2"mailto: kleber@ziontechgroup.com","inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover: from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105"
                 >
-<Mail className="w-5 h-5 mr-2" />"
+<Mail className="
                   Get Quote;
                 </a></div>
 </div></div>
 </section>
 
-        {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">,</h2>"
-                Advanced AI Security Features;
-              </h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI-powered smart contract auditor uses cutting-edge machine learning;</p>"
+        {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8"max-w-7 xl mx-auto"
+<div className="
+<h2 className="text-4 xl md: text-5 xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"text-xl text-gray-300 max-w-3 xl mx-auto"
                 and static analysis to provide comprehensive security assessments.
               </p></div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>"
+<div className="
               {features.map((feature, index) => (
   // TODO: Add parameters
 )
                 <div;
-                  key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-cyan-500/20 hover: border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10","
-                ></div>
-<div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"></div>"
-<feature.icon className="w-8 h-8 text-white" /></div>"
-<h3 className="text-xl font-bold mb-4 text-white">{feature.title}</h3>"
-<p className="text-gray-300 mb-6">{feature.description</p>}</p>"
-<ul className="space-y-2">"
+                  key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2 xl p-8 border border-cyan-500/20 hover: border-cyan-500/40 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/10"w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"
+<feature.icon className="
+<h3 className="text-xl font-bold mb-4 text-white"text-gray-300 mb-6"
+<ul className="
                     {feature.benefits.map((benefit, idx) => (
   // TODO: Add parameters
 )
-                      <li key={idx}className="flex items-center text-sm text-cyan-400">"
-<CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />"
+                      <li key={idx}className="flex items-center text-sm text-cyan-400"w-4 h-4 mr-2 flex-shrink-0"
                         {benefit} </li>
                     ))}
                   </ul></div>
@@ -174,159 +60,69 @@ const useCases = [
             </div></div>
 </section>
 
-        {/* Use Cases Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-slate-800/30 to-slate-900/30">,</section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">,</h2>"
+        {/* Use Cases Section */} <section className="
+<div className="max-w-7 xl mx-auto"text-center mb-16"
+<h2 className="
                 Trusted by Leading Projects;
               </h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">Our AI smart contract auditor has secured billions in value across;</p>"
-                various blockchain ecosystems and use cases.
-              </p></div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,</div>"
+<p className="text-xl text-gray-300 max-w-3 xl mx-auto"grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"
               {useCases.map((useCase, index) => (
   // TODO: Add parameters
 )
                 <div;
-                  key={index}className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-purple-500/20 hover: border-purple-500/40 transition-all duration-300 hover:scale-105","
+                  key={index}className="
                 ></div>
-<div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6"></div>"
-<useCase.icon className="w-8 h-8 text-white" /></div>"
-<h3 className="text-xl font-bold mb-4 text-white">{useCase.title}</h3>"
-<p className="text-gray-300 mb-4">{useCase.description</p>}</p>"
-<div className="text-cyan-400 font-semibold text-sm">{useCase.results</div>} </div></div>"
+<div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6"w-8 h-8 text-white"
+<h3 className="
+<p className="text-gray-300 mb-4"text-cyan-400 font-semibold text-sm"
               ))}
             </div></div>
 </section>
 
-        {/* Pricing Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">,</h2>"
+        {/* Pricing Section */} <section className="
+<div className="max-w-7 xl mx-auto"text-center mb-16"
+<h2 className="
                 Transparent Pricing;
               </h2>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the perfect plan for your smart contract auditing needs.</p>"
-                All plans include our advanced AI security analysis.
-              </p></div>
-<div className="grid grid-cols-1 md: grid-cols-3 gap-8">,</div>"
+<p className="text-xl text-gray-300 max-w-3 xl mx-auto"grid grid-cols-1 md: grid-cols-3 gap-8"
               {pricingPlans.map((plan, index) => (
   // TODO: Add parameters
 )
                 <div;
-                  key={index}className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border transition-all duration-300 hover: scale-105 hover:shadow-xl ${,
+                  key={index}className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2 xl p-8 border transition-all duration-300 hover: scale-105 hover:shadow-xl ${,
                     plan.popular;
                       ? 'border-cyan-500/50 shadow-cyan-500/20' '
                       : 'border-gray-700/50 hover: border-cyan-500/30',}`}'
                 >{plan.popular && (</div>
-<div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
-<div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold">Most Popular;</div></div>"
-</div>
-                  )} <div className="text-center mb-8">"
-<h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>"
-<p className="text-gray-400 mb-4">{plan.description</p>}</p>"
-<div className="flex items-baseline justify-center">"
-<span className="text-5xl font-bold text-cyan-400">{plan.price</span>}</span>"
-<span className="text-gray-400 ml-2">{plan.period</span>}</span></div>"
-</div>
-<ul className="space-y-4 mb-8">"
+<div className="
+<div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold"text-center mb-8"
+<h3 className="
+<p className="text-gray-400 mb-4"flex items-baseline justify-center"
+<span className="
+<span className="text-gray-400 ml-2"space-y-4 mb-8"
                     {plan.features.map((feature, idx) => (
   // TODO: Add parameters
 )
-                      <li key={idx}className="flex items-center text-gray-300">"
-<CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />"
-                        {feature} </li>
-                    ))}
-                  </ul>
-<a;
-                    href="tel: +13024640950","
-                    className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 ${
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                      plan.popular;
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover: from-cyan-600 hover:to-blue-700','
-                        : 'bg-gradient-to-r from-gray-700 to-gray-600 text-white hover: from-gray-600 hover:to-gray-500',}`}'
-                  >
-                    Get Started;
-                  </a></div>
-              ))}
-            </div></div>
-</section>
-
-        {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">,</section>"
-<div className="max-w-4xl mx-auto text-center">"
-<h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">,</h2>"
-              Secure Your Smart Contracts Today;
-            </h2>
-<p className="text-xl text-gray-300 mb-8">Don't risk your project's security. Get comprehensive AI-powered smart contract auditing;</p>'"
+                      <li key={idx}className="
+<CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"tel: +13024640950","py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10"
+<div className="
+<h2 className="text-4 xl md: text-5 xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"text-xl text-gray-300 mb-8"
               with our advanced security analysis platform.
             </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>"
+<div className="
 <a;
-                href="tel: +13024640950","
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105","
-              >
-<Phone className="w-5 h-5 mr-2" />"
+                href="tel: +13024640950"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-105"w-5 h-5 mr-2"
                 Call (302) 464-0950;
               </a>
 <a;
-                href="mailto: kleber@ziontechgroup.com","
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover: from-purple-600 hover:to-pink-700 transition-all duration-300 shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105","
+                href=","
+                className="
               >
-<Mail className="w-5 h-5 mr-2" />"
-                Get Free Quote;
-              </a></div>
-</div></section>
-</div></>
-  )
-}
-export default AISmartContractAuditor;
-
-};
-
-export default AiSmartContractAuditorPage;
-            Advanced AI and IT solutions for your business needs.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
-              Comprehensive solution for your business requirements.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-            <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
-              Scalable and secure implementation.
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Get Started
-          </button>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Ai Smart Contract Auditor
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+<Mail className="w-5 h-5 mr-2"grid md:grid-cols-2 lg:grid-cols-3 gap-8"bg-white rounded-lg shadow-md p-6"text-xl font-semibold text-gray-900 mb-4"text-gray-600"bg-white rounded-lg shadow-md p-6"text-xl font-semibold text-gray-900 mb-4"text-gray-600"bg-white rounded-lg shadow-md p-6"text-xl font-semibold text-gray-900 mb-4"text-gray-600"text-center mt-12"bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-6"text-xl text-gray-600 mb-8">
             Advanced ai smart contract auditor solutions by Zion Tech Group.
           </p>
         </div>
       </div>
     </div>
   );
-}

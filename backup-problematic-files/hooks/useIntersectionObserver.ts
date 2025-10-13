@@ -115,4 +115,3 @@ const prevNode = useRef<Element | null>(null)
     prevNode.current = node
   }, [node])
   return [setNode, entry] as const
-}

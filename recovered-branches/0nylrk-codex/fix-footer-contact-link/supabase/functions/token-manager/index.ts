@@ -1,5 +1,5 @@
-import { serve } from "https://deno.land/std@0.177.0/http/server.ts";";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.38.0";"
+import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.38.0"
 interface TokenRequest {
   // TODO: Add properties
 }
@@ -9,8 +9,8 @@ interface TokenRequest {
   amount: number
   reason?: string
 }
-const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;";
-const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;";
+const supabaseUrl = Deno.env.get("SUPABASE_URL";
+const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY";
 const supabase = createClient(supabaseUrl, serviceKey)
 serve(async (req) => {
   // TODO: Add properties
@@ -81,4 +81,3 @@ const { error } = await supabase
   })
   if (txError) return new Response(JSON.stringify({ error: txError.message }), { status: 500 })
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 })
-}

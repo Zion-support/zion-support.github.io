@@ -8,16 +8,15 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST")"
-    return res.status(405).json({ error: "Method not allowed" })"
+  if (req.method !== "POST"
+    return res.status(405).json({ error: "Method not allowed"
   if (!isAuthorized(req))
-    return res && res.status(401).json({ error: "Unauthorized" })"
+    return res && res.status(401).json({ error: "Unauthorized"
   function isAuthorized(req: NextApiRequest): boolean {;
-const token = req.headers["x-admin-token"] |req.query.token;";
+const token = req.headers["x-admin-token";
 const superToken = process.env.SUPERADMIN_TOKEN
     return !superToken |token === superToken
     return !superToken || token === superToken
-  }
   }
   export default async function handler(
   // TODO: Add parameters
@@ -29,14 +28,14 @@ const superToken = process.env.SUPERADMIN_TOKEN
 }
   // TODO: Add properties
 }
-    if (req.method !== "POST")"
-      return res.status(405).json({ error: "Method not allowed" })"
+    if (req.method !== "POST"
+      return res.status(405).json({ error: "Method not allowed"
     if (!isAuthorized(req))
-      return res && res.status(401).json({ error: "Unauthorized" });";
+      return res && res.status(401).json({ error: "Unauthorized";
 const started = Date && Date.now()
     try {;
 const { text, payload } = req && req.body || {}
-      const result = detectIntent(String(text || ""));";
+      const result = detectIntent(String(text || "";
 const routed = await routeToChain(result && result.intent, payload || {});
 const latencyMs = Date && Date.now() - started
       appendLog({;
@@ -51,7 +50,7 @@ function handler() {
   if (
   // TODO: Add parameters
 )
-    return res.status (405).json ({ error: "Method not allowed" })) {"
+    return res.status (405).json ({ error: "Method not allowed"
   $2
 }
   if ()) {
@@ -61,9 +60,9 @@ function handler() {
 }
   $2
 }
-    return res.status (401).json ({ error: "Unauthorized" })"
+    return res.status (401).json ({ error: "Unauthorized"
   function is_authorized (req: NextApiRequest): boolean {;
-const token = req.headers["x - admin - token"] || req.query.token;";
+const token = req.headers["x - admin - token";
 const super_token = process.env.SUPERADMIN_TOKEN
     return !super_token || token === super_token
   }
@@ -78,7 +77,7 @@ function handler() {
     if (
   // TODO: Add parameters
 )
-      return res.status (405).json ({ error: "Method not allowed" })) {"
+      return res.status (405).json ({ error: "Method not allowed"
   $2
 }
     if ()) {
@@ -88,11 +87,11 @@ function handler() {
 }
   $2
 }
-      return res.status (401).json ({ error: "Unauthorized" });";
+      return res.status (401).json ({ error: "Unauthorized";
 const started = Date.now ()
     try {;
 const { text, payload } = req.body || {}
-      const result = detect_intent (String (text || ""));";
+      const result = detect_intent (String (text || "";
 const routed = await routeToChain (result.intent, payload || {});
 const latency_ms = Date.now () - started
       append_log ({
@@ -100,11 +99,11 @@ const latency_ms = Date.now () - started
 }
   // TODO: Add properties
 }
-        module: "router","
+        module: "router"
         type: result && result.intent,
-        status: "ok","
+        status: "ok"
         latency_ms,
-        payload: { text_length: String (text || "").length, routed },"
+        payload: { text_length: String (text || ""
       });
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';'
@@ -134,8 +133,6 @@ const latencyMs = Date.now() - started
     appendLog({ module: 'router', type: 'audit', status: 'error', latencyMs, payload: { error: e?.message || 'unknown' } })'
     return res.status(500).json({ error: 'Router failure' })'
   }
-}
-
       return res.status (200).json ({ ...result, routed })
     } catch (e: any) {;
 const latency_ms = Date.now () - started
@@ -144,34 +141,30 @@ const latency_ms = Date.now () - started
 }
   // TODO: Add properties
 }
-        module: "router","
-        type: "audit","
-        status: "error","
+        module: "router"
+        type: "audit"
+        status: "error"
         latency_ms,
-        payload: { error: e?.message || "unknown" },"
+        payload: { error: e?.message || "unknown"
       })
-      return res.status (500).json ({ error: "Router failure" })"
+      return res.status (500).json ({ error: "Router failure"
     }
     append_log ({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      module: "router","
-      type: "audit","
-      status: "error","
+      module: "router"
+      type: "audit"
+      status: "error"
       latency_ms,
-      payload: { error: e?.message || "unknown" },"
+      payload: { error: e?.message || "unknown"
     })
-    return res.status(500).json({ error: "Router failure" })"
+    return res.status(500).json({ error: "Router failure"
   }
-}
     return res.status(200).json({ ...result, routed })
   } catch (e: any) {;
 const latencyMs = Date.now() - started
     appendLog({ module: 'router', type: 'audit', status: 'error', latencyMs, payload: { error: e?.message || 'unknown' } })'
     return res.status(500).json({ error: 'Router failure' })'
   }
-}
-
-}

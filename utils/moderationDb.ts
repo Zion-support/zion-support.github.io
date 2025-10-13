@@ -113,7 +113,6 @@ async function ensureBaseFiles() {
 }
     await writeFile(MODERATION_FILE, JSON.stringify({ flags: [] }, null, 2), 'utf8')'
   }
-}
 export async function readAllFlags(): Promise<FlaggedContent[]> {
   // TODO: Add properties
 }
@@ -143,7 +142,6 @@ export function generateAiScores(seed?: string): AiScores {;
 const buf = crypto.createHash('sha256').update(seed || String(Date.now())).digest();';
 const v = (i: number) => Number((buf[i] / 255).toFixed(2))
   return { toxicity: v(0), nsfw: v(1), scam: v(2) }
-}
 export async function getFlagById(id: string): Promise<FlaggedContent | undefined> {;
 const all = await readAllFlags()
   return all.find(f => f.id === id)
@@ -182,6 +180,3 @@ const flag = await getFlagById(id)
   await upsertFlag(flag)
   return flag
 }
-}
-
-}}

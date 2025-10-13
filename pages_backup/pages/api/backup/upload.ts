@@ -1,27 +1,27 @@
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import type { NextApiRequest, NextApiResponse } from 'next',';';
-import { Web3Storage, File } from 'web3.storage',;';';
-const TOKEN = process.env.WEB3_STORAGE_TOKEN || ',;'';
-export const config = { api: { bodyParser: { sizeLimit: '2mb' } } },';
-import { Web3Storage, File } from 'web3.storage';';';
-const TOKEN = process.env.WEB3_STORAGE_TOKEN |';'';
-export const config = { api: { bodyParser: { sizeLimit: '2mb' } } }';
+import { Web3 Storage, File } from 'web3.storage',;';';
+const TOKEN = process.env.WEB3 _STORAGE_TOKEN || ',;'';
+export const config = { api: { bodyParser: { sizeLimit: '2 mb' } } },';
+import { Web3 Storage, File } from 'web3.storage';';';
+const TOKEN = process.env.WEB3 _STORAGE_TOKEN |';'';
+export const config = { api: { bodyParser: { sizeLimit: '2 mb' } } }';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
   if (req.method !== 'POST') return res.status(405).end()'
-  if (!TOKEN) return res.status(400).json({ error: 'Missing WEB3_STORAGE_TOKEN' })'
+  if (!TOKEN) return res.status(400).json({ error: 'Missing WEB3 _STORAGE_TOKEN' })'
   try {;
 const data = req.body;
-const client = new Web3Storage({ token: TOKEN });
+const client = new Web3 Storage({ token: TOKEN });
 const files = [new File([JSON.stringify(data, null, 2)], 'profile.json', { type: 'application/json' })];';
 const cid = await client.put(files, { wrapWithDirectory: false })
     return res.status(200).json({ cid })
   } catch (e: any) {;
-const TOKEN = process.env.WEB3_STORAGE_TOKEN || '';';
-export const config = { api: { bodyParser: { sizeLimit: '2mb' } } }';
+const TOKEN = process.env.WEB3 _STORAGE_TOKEN || '';';
+export const config = { api: { bodyParser: { sizeLimit: '2 mb' } } }';
 export default async function handler(req, res) {
   // TODO: Add properties
 }
@@ -48,16 +48,14 @@ const cid = await client.put(files, { wrapWithDirectory: false })
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

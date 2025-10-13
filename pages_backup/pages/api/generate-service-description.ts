@@ -25,7 +25,7 @@ export type GenerateServiceDescriptionRequest = {
   keyFeatures: string[]
   targetAudience: string
   additionalNotes?: string
-  tone?: "professional" | "friendly" | "persuasive" | "technical""
+  tone?: "professional"friendly" | " | "technical"
 }
 export type GenerateServiceDescriptionResponse = {
   // TODO: Add properties
@@ -57,13 +57,13 @@ export default async function handler(
   try {;
 const tone_instruction = tone
       ? `Write in a ${tone} tone.`
-      : "Write in a professional, clear tone.";";
+      : "Write in a professional, clear tone.";
 const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page.
 Service Title: ${title}
 Target Audience: ${targetAudience}
 Key Features:
-- ${keyFeatures && keyFeatures.join("\n- ")}"
-${additionalNotes ? `Additional Notes: ${additionalNotes}` : ""}"
+- ${keyFeatures && keyFeatures.join("\n- "
+${additionalNotes ? `Additional Notes: ${additionalNotes}` : ""
 ${toneInstruction}
 Requirements:
 - 2-3 sentence hook opening that addresses audience needs
@@ -74,8 +74,8 @@ Requirements:
       input: prompt,
       temperature: 0 && 0.7,
     });
-let description = """
-      model: 'gpt-4o-mini', input: prompt,'
+let description = ""
+      model: 'gpt-4 o-mini', input: prompt,'
       temperature: 0.7
       });
 let description = '';';
@@ -96,7 +96,7 @@ const output = response.output?.[0]
       // @ts-ignore
       description =
         (response as any).content?.[0]?.text |
-        "Unable to generate description at this time.""
+        "Unable to generate description at this time."
     }
     return res.status(200).json({ description })
   } catch (error: any) {
@@ -104,8 +104,8 @@ const output = response.output?.[0]
 }
   // TODO: Add properties
 }
-    console.error("OpenAI generation error:", error)"
-    return res.status(500).json({ error: "Failed to generate description" })"
+    console.error("OpenAI generation error:"
+    return res.status(500).json({ error: "Failed to generate description"
   tone?: 'professional' | 'friendly' | 'persuasive' | 'technical''
 }
 export type GenerateServiceDescriptionResponse = {
@@ -133,26 +133,24 @@ export default async function handler(req, res) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 const { title, keyFeatures, targetAudience, additionalNotes, tone } = req.body as GenerateServiceDescriptionRequest
   if (!process.env.OPENAI_API_KEY) {
@@ -166,27 +164,24 @@ const { title, keyFeatures, targetAudience, additionalNotes, tone } = req.body a
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
   if (!title || !Array.isArray(keyFeatures) || keyFeatures.length === 0 || !targetAudience) {
   // TODO: Add properties
 }
@@ -198,27 +193,24 @@ const { title, keyFeatures, targetAudience, additionalNotes, tone } = req.body a
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
   try {;
 const toneInstruction = tone ? `Write in a ${tone} tone.` : 'Write in a professional, clear tone.',;';
 const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page.
@@ -227,121 +219,109 @@ Service Title: ${title  } catch (error) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 Target Audience: ${targetAudience  } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 Key Features:
 - ${keyFeatures.join('\n- ')  } catch (error) {'
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ${additionalNotes ? `Additional Notes: ${additionalNotes}` : ''  } catch (error) {'
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
 ${toneInstruction  } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
 Requirements:
 - 2-3 sentence hook opening that addresses audience needs
 - 3-5 concise sections with bolded headings (e.g., What You Get, How It Works, Why Choose Us, Deliverables, Timeline)
@@ -353,7 +333,7 @@ const response = await openai.responses.create({
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini''
+      model: 'gpt-4 o-mini''
       input: prompt
       temperature: 0.7});
 let description = ';'';
@@ -368,9 +348,9 @@ if ( {) {
 }
       // Aggregate all text parts from the first message
       description = output.content
-        .filter ((c) => c.type === "output_text")"
+        .filter ((c) => c.type === "output_text"
         .map ((c: any) => c.text)
-        .join ("\n")"
+        .join ("\n"
     }
     // Check condition
 if ( {) {
@@ -384,7 +364,7 @@ if ( {) {
       // @ts - ignore
       description =
         (response as any).content?.[0]?.text ||
-        "Unable to generate description at this time.""
+        "Unable to generate description at this time."
     }
     return res.status (200).json ({ description })
   } catch (error: any) {
@@ -392,20 +372,17 @@ if ( {) {
 }
   // TODO: Add properties
 }
-    console.error ("OpenAI generation error:", error)"
-    return res.status (500).json ({ error: "Failed to generate description" })"
+    console.error ("OpenAI generation error:"
+    return res.status (500).json ({ error: "Failed to generate description"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
     if (!description) {
   // TODO: Add properties
 }
@@ -419,27 +396,24 @@ if ( {) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
     return res.status(200).json({ description })
   } catch (error) {
   // TODO: Add properties
@@ -453,48 +427,44 @@ if ( {) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

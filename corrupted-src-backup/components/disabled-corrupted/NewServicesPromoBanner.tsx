@@ -18,248 +18,172 @@ const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({</
 const services = featuredOn, l, y
      ? newServices20, 2, 6.filt, e, r(s = > s.featu, r, e, d).sli, c, e(0, showCou, n, t)
     : newServices20, 2, 6.sli, c, e(0, showCou, n, t); if (varia, n, t = == 'showc, a, s, e') {'
-    return(<div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-emera, l, d-600, vi, a-te, a, l-600, t, o-cy, a, n-600, rounde, d-3x, l, p-8, m, d : p-12, tex, t-whi, t, e ${class N, a, m, e  }`}>
-<div, classNam, e = "m, a, x-w-6xl, m, x-au, t, o">"
-<div, className="te, x, t-center, m, b-10">"
-<div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-yell, o, w-4, 0, 0/20, rounde, d-full, tex, t-yell, o, w-300, m, b-6">"
+    return(<div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-emera, l, d-600, vi, a-te, a, l-600, t, o-cy, a, n-600, rounde, d-3 x, l, p-8, m, d : p-12, tex, t-whi, t, e ${class N, a, m, e  }`}>
+<div, classNam, e = "m, a, x-w-6 xl, m, x-au, t, o"
+<div, className="te, x, t-center, m, b-10"inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-yell, o, w-4, 0, 0/20, rounde, d-full, tex, t-yell, o, w-300, m, b-6"
     return (
   // TODO: Add parameters
 )
-      <div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-emera, l, d-600, vi, a-te, a, l-600, t, o-cy, a, n-600, rounde, d-3x, l, p-8, m, d : p-12, tex, t-whi, t, e ${class N, a, m, e  }`}>
-<div, classNam, e = "m, a, x-w-6xl, m, x-au, t, o">"
-<div, className="te, x, t-center, m, b-10">"
-<div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-yell, o, w-4, 0, 0/20, rounde, d-full, tex, t-yell, o, w-300, m, b-6">"
-<Rocket, className="w-5 h-5, m, r-2" />"
-<span, className="fo, n, t-bo, l, d">NEW, SERVICES, LAUNCHED"
-            <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">"
-              Revolutionary, AI, Services Now, Availabl, e
-            <p, className="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-au, t, o">"
+      <div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-emera, l, d-600, vi, a-te, a, l-600, t, o-cy, a, n-600, rounde, d-3 x, l, p-8, m, d : p-12, tex, t-whi, t, e ${class N, a, m, e  }`}>
+<div, classNam, e = ">"
+<div, className="
+<div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-yell, o, w-4, 0, 0/20, rounde, d-full, tex, t-yell, o, w-300, m, b-6"w-5 h-5, m, r-2"
+<span, className="
+            <h2, className="te, x, t-4 xl, m, d: te, x, t-5 xl, fon, t-bold, m, b-4"te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3 xl, m, x-au, t, o"
               Transform, your, business with, our, newest AI-powered, solutions, delivering unprecedented, result, s</$1>)
           </div>)
-          <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">)"
+          <div, className="
             { servic, e, s.m, a, p((serv, i, c, e) = > (
   // TODO: Add parameters
 )
               Transform, your, business with, our, newest AI-powered, solutions, delivering unprecedented, result, s
-          <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-            { servic, e, s.m, a, p((serv, i, c, e) = > (
-  // TODO: Add parameters
-)
-              <, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"$2 />"
-              >
-<div, className="te, x, t-4xl, m, b-4">{servi, c, e.ic, o, n}"
-                <div, classNam, e = "flex, item, s-center, ga, p-2, m, b-3">"
-<Star, className="w-5 h-5, tex, t-yell, o, w-300, fil, l-yell, o, w-3, 0, 0" />"
-<span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.category}"
-                <h3, className="te, x, t-2 xl, fon, t-bold, m, b-3">{servi, c, e.na, m, e}"
-                <p, className="te, x, t-emera, l, d-100, m, b-4">{servi, c, e.description}"
-                <div, className="spa, c, e-y-2, m, b-6">"
-                  { servi, c, e.benefi, t, s.sli, c, e(, 0, 3).m, a, p((benef, i, t, i, d, x) = > (
-  // TODO: Add parameters
-)
-                    <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-start, ga, p-2">"
-<Zap, className="w-4 h-4, tex, t-yell, o, w-300, fle, x-shri, n, k-0, m, t-1" />"
-<span, className="te, x, t-sm, tex, t-whi, t, e">{benef, i, t}"
+          <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8"bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2 x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"$2 />"te, x, t-4 xl, m, b-4"
+                <div, classNam, e = ">"
+<Star, className="
+<span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0"te, x, t-2 xl, fon, t-bold, m, b-3"
+                <p, className="
+                <div, className="spa, c, e-y-2, m, b-6"flex, item, s-start, ga, p-2">"w-4 h-4, tex, t-yell, o, w-300, fle, x-shri, n, k-0, m, t-1"
+<span, className="
                   ))}
-                <div, classNam, e = "flex, item, s-center, justif, y-betwe, e, n">"
-<span, className="te, x, t-sm, fon, t-semibold, tex, t-emera, l, d-2, 0, 0">{servi, c, e.prici, n, g}"
-                  <, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "bg-white, tex, t-emera, l, d-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-emera, l, d-50, transitio, n-colors, flex, items-center, ga, p-1"$2 />"
-                  >
-                    Learn, Mor, e
-                    <Link, className="w-4 h-4" />"
+                <div, classNam, e = "flex, item, s-center, justif, y-betwe, e, n"
+<span, className="te, x, t-sm, fon, t-semibold, tex, t-emera, l, d-2, 0, 0"bg-white, tex, t-emera, l, d-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-emera, l, d-50, transitio, n-colors, flex, items-center, ga, p-1"$2 />"w-4 h-4"
 interface NewServicesPromoBannerProp, s {/* TODO: Fix JSX expression */}
- }
 const NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-      <div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-emera, l, d-600, vi, a-te, a, l-600, t, o-cy, a, n-600, rounde, d-3x, l, p-8, m, d : p-12, tex, t-whi, t, e ${class N, a, m, e  }`}>
-<div, classNam, e = "m, a, x-w-6xl, m, x-au, t, o"></div>""
-          <div, className="te, x, t-center, m, b-10"></div>""
-            <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-yell, o, w-4, 0, 0/20, rounde, d-full, tex, t-yell, o, w-300, m, b-6"></div>""
-              <Rocket, className="w-5 h-5, m, r-2" / />""
-              <span, className="fo, n, t-bo, l, d">NEW, SERVICES, LAUNCHED"
-            </div>""
-            <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">"
-              Revolutionary, AI, Services Now, Availabl, e</$1>""
-            <p, className="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-au, t, o">"
+      <div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-emera, l, d-600, vi, a-te, a, l-600, t, o-cy, a, n-600, rounde, d-3 x, l, p-8, m, d : p-12, tex, t-whi, t, e ${class N, a, m, e  }`}>
+<div, classNam, e = "></div>""te, x, t-center, m, b-10""inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-yell, o, w-4, 0, 0/20, rounde, d-full, tex, t-yell, o, w-300, m, b-6""w-5 h-5, m, r-2""fo, n, t-bo, l, d"
+            </div>"
+            <h2, className="te, x, t-4 xl, m, d: te, x, t-5 xl, fon, t-bold, m, b-4""
+            <p, className="
               Transform, your, business with, our, newest AI-powered, solutions, delivering unprecedented, result, s
-          </div>""
-          <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-            {/* TODO: Fix JSX expression */}""
-              <, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"$2 />"
+          </div>""grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8"
+            {/* TODO: Fix JSX expression */}"
+              <, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2 x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
               >
-</div>""
-                <div, className="te, x, t-4xl, m, b-4">{servi, c, e.ic, o, n}</div>""
-                <div, classNam, e = "flex, item, s-center, ga, p-2, m, b-3"></div>""
-                  <Star, className="w-5 h-5, tex, t-yell, o, w-300, fil, l-yell, o, w-3, 0, 0" / />""
-                  <span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.category}"
-                </div>""
-                <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">{servi, c, e.na, m, e}</h3>""
-                <p, className="te, x, t-emera, l, d-100, m, b-4">{servi, c, e.description}</p>""
-                <div, className="spa, c, e-y-2, m, b-6">"
-                  {/* TODO: Fix JSX expression */}""
-                    <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-start, ga, p-2"></div>""
-                      <Zap, className="w-4 h-4, tex, t-yell, o, w-300, fle, x-shri, n, k-0, m, t-1" / />""
-                      <span, className="te, x, t-sm, tex, t-whi, t, e">{benef, i, t}"
-                  ))}
-                </div>""
-                <div, classNam, e = "flex, item, s-center, justif, y-betwe, e, n"></div>""
-                  <span, className="te, x, t-sm, fon, t-semibold, tex, t-emera, l, d-2, 0, 0">{servi, c, e.prici, n, g}</sp, a, n>""
-                  <, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "bg-white, tex, t-emera, l, d-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-emera, l, d-50, transitio, n-colors, flex, items-center, ga, p-1"$2 />"
-                  >
-                    Learn, Mor, e;""
-                    <Link, className="w-4 h-4" />"
+</div>""te, x, t-4 xl, m, b-4""flex, item, s-center, ga, p-2, m, b-3"></div>"
+                  <Star, className="w-5 h-5, tex, t-yell, o, w-300, fil, l-yell, o, w-3, 0, 0"
+                  <span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0""
+                <h3, className=""
+                <p, className=""
+                <div, className="
+                  {/* TODO: Fix JSX expression */}""flex, item, s-start, ga, p-2"></div>"
+                      <Zap, className="w-4 h-4, tex, t-yell, o, w-300, fle, x-shri, n, k-0, m, t-1"
+                      <span, className="te, x, t-sm, tex, t-whi, t, e""
+                <div, classNam, e = "></div>""te, x, t-sm, fon, t-semibold, tex, t-emera, l, d-2, 0, 0""bg-white, tex, t-emera, l, d-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-emera, l, d-50, transitio, n-colors, flex, items-center, ga, p-1"$2 />""
+                    <Link, className="
             ))}
-          <div, classNam, e = "te, x, t-cent, e, r">"
-<, t, o="/servic, e, s"$2 />"
-              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5">"
-              View, All, Services
-              <Link, className="w-6 h-6" /></div>""
-          <div, classNam, e = "te, x, t-cent, e, r"></div>""
-            <, t, o="/servic, e, s"$2 />""
-              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5">"
-              View, All, Services;""
-              <Link, className="w-6 h-6" /></d, i, v  > )"
+          <div, classNam, e = "te, x, t-cent, e, r"
+<, t, o="/servic, e, s"
+              className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"w-6 h-6""te, x, t-cent, e, r"></div>"
+            <, t, o="/servic, e, s""
+              className="
+              View, All, Services;""w-6 h-6"
   }
   if (varia, n, t = == 'prem, i, u, m') {'
-    return(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
-<div, className="flex, item, s-center, ga, p-3, m, b-6">"
+    return(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2 x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
+<div, className="
     return (
   // TODO: Add parameters
 )
-      <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
-<div, className="flex, item, s-center, ga, p-3, m, b-6">"
-<Rocket, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />"
-<h2, className="te, x, t-3xl, fon, t-bo, l, d">New, Services, Available"
-        <p, className="te, x, t-oran, g, e-100, tex, t-lg, m, b-8">"
-          Discover, our, latest AI-powered, solutions, transforming businesses, worldwid, e;)
-        </p>)
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">)"
+      <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2 x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
+<div, className="flex, item, s-center, ga, p-3, m, b-6"w-8 h-8, tex, t-yell, o, w-3, 0, 0"
+<h2, className="
+        <p, className="te, x, t-oran, g, e-100, tex, t-lg, m, b-8"grid, m, d: gr, i, d-co, l, s-3, ga, p-6"
           { servic, e, s.m, a, p((serv, i, c, e) = > (
   // TODO: Add parameters
 )
-            <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">Discover, our, latest AI-powered, solutions, transforming businesses, worldwid, e"
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
+            <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = ">Discover, our, latest AI-powered, solutions, transforming businesses, worldwid, e"
+        <div, className="
           { servic, e, s.m, a, p((serv, i, c, e) = > (
   // TODO: Add parameters
 )
-            <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">"
-<div, className="te, x, t-3xl, m, b-3">{servi, c, e.ic, o, n}"
-              <h3, classNam, e = "te, x, t-xl, fon, t-bold, m, b-2">{servi, c, e.na, m, e}"
-              <p, className="te, x, t-oran, g, e-100, tex, t-sm, m, b-4, lin, e-cla, m, p-2">{servi, c, e.description}"
-              <div, className="mb-4">"
+            <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"
+<div, className="te, x, t-3 xl, m, b-3"te, x, t-xl, fon, t-bold, m, b-2">{servi, c, e.na, m, e}"te, x, t-oran, g, e-100, tex, t-sm, m, b-4, lin, e-cla, m, p-2"
+              <div, className="
   if (varia, n, t = == 'prem, i, u, m') {/* TODO: Fix JSX expression */}`'
-      <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>""
-        <div, className="flex, item, s-center, ga, p-3, m, b-6"></div>""
-          <Rocket, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0" / />""
-          <h2, className="te, x, t-3xl, fon, t-bo, l, d">New, Services, Available"
-        </div>""
-        <p, className="te, x, t-oran, g, e-100, tex, t-lg, m, b-8">"
-          Discover, our, latest AI-powered, solutions, transforming businesses, worldwid, e</$1>""
-        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
-          {/* TODO: Fix JSX expression */}""
-            <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"></div>""
-              <div, className="te, x, t-3xl, m, b-3">{servi, c, e.ic, o, n}</div>""
-              <h3, classNam, e = "te, x, t-xl, fon, t-bold, m, b-2">{servi, c, e.na, m, e}</h3>""
-              <p, className="te, x, t-oran, g, e-100, tex, t-sm, m, b-4, lin, e-cla, m, p-2">{servi, c, e.description}</p>""
-              <div, className="mb-4"></div>""
-                <span, className="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.benefi, t, s[0]}"
-              </div>""
-              <, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "inli, n, e-flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, hove, r: te, x, t-yell, o, w-2, 0, 0"$2 />"
-              >
-</Link>""
-                Learn, Mor, e <Link, className="w-4 h-4" />"
+      <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2 x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>""flex, item, s-center, ga, p-3, m, b-6""w-8 h-8, tex, t-yell, o, w-3, 0, 0""te, x, t-3 xl, fon, t-bo, l, d"
+        </div>"
+        <p, className="te, x, t-oran, g, e-100, tex, t-lg, m, b-8""
+        <div, className="
+          {/* TODO: Fix JSX expression */}""bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"></div>"
+              <div, className="te, x, t-3 xl, m, b-3"
+              <h3, classNam, e = "te, x, t-xl, fon, t-bold, m, b-2""
+              <p, className=""
+              <div, className=""
+                <span, className="
+              </div>""inli, n, e-flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, hove, r: te, x, t-yell, o, w-2, 0, 0"$2 />""
+                Learn, Mor, e <Link, className="
           ))}
       </d, i, v  > )
   }
   if (varia, n, t = == 'g, r, i, d') {'
     return(<div, classNam, e = {`bg-white, rounde, d-xl, shado, w-l, g, p-8 ${classNa, m, e}`}>
-<div, className="flex, item, s-center, justif, y-between, m, b-6">"
-<div, className="flex, item, s-center, ga, p-3">"
+<div, className="flex, item, s-center, justif, y-between, m, b-6"flex, item, s-center, ga, p-3"
     return (
   // TODO: Add parameters
 )
       <div, classNam, e = {`bg-white, rounde, d-xl, shado, w-l, g, p-8 ${classNa, m, e}`}>
-<div, className="flex, item, s-center, justif, y-between, m, b-6">"
-<div, className="flex, item, s-center, ga, p-3">"
-<Rocket, className="w-7 h-7, tex, t-indi, g, o-6, 0, 0" />"
+<div, className="
+<div, className="flex, item, s-center, ga, p-3"w-7 h-7, tex, t-indi, g, o-6, 0, 0"
   if (varia, n, t = == 'g, r, i, d') {/* TODO: Fix JSX expression */}`'
-      <div, classNam, e = {`bg-white, rounde, d-xl, shado, w-l, g, p-8 ${classNa, m, e}`}></div>""
-        <div, className="flex, item, s-center, justif, y-between, m, b-6"></div>""
-          <div, className="flex, item, s-center, ga, p-3"></div>""
-            <Rocket, className="w-7 h-7, tex, t-indi, g, o-6, 0, 0" / />""
-            <h3, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">New, Service, s"
-          </div>""
-          <Link, t, o="/servic, e, s" className="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-8, 0, 0">"
-            View, Al, l →
-          </Li, n, k>)
-        </div>)
-        <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6">)"
+      <div, classNam, e = {`bg-white, rounde, d-xl, shado, w-l, g, p-8 ${classNa, m, e}`}></div>"
+        <div, className="flex, item, s-center, justif, y-between, m, b-6"
+          <div, className="flex, item, s-center, ga, p-3"
+            <Rocket, className="w-7 h-7, tex, t-indi, g, o-6, 0, 0"
+            <h3, className="te, x, t-2 xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0""
+          <Link, t, o=" className="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-8, 0, 0"grid, m, d:gr, i, d-co, l, s-3, ga, p-6"
           { servic, e, s.m, a, p((serv, i, c, e) = > (
   // TODO: Add parameters
 )
-        <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6">"
+        <div, className="
           { servic, e, s.m, a, p((serv, i, c, e) = > (
   // TODO: Add parameters
 )
-        </div>""
-        <div, className="grid, m, d:gr, i, d-co, l, s-3, ga, p-6">"
-          {/* TODO: Fix JSX expression */}""
-            <Link, ke, y = { servi, c, e., i, d  }, to={ servi, c, e.li, n, k } className="border, borde, r-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-all, grou, p" />""
-              <div, className="te, x, t-3xl, m, b-3">{servi, c, e.ic, o, n}</div>""
-              <h4, classNam, e = "fo, n, t-bold, tex, t-gr, a, y-900, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-6, 0, 0">"
+        </div>""grid, m, d:gr, i, d-co, l, s-3, ga, p-6"
+          {/* TODO: Fix JSX expression */}"
+            <Link, ke, y = { servi, c, e., i, d  }, to={ servi, c, e.li, n, k } className="border, borde, r-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-all, grou, p"
+              <div, className="te, x, t-3 xl, m, b-3"
+              <h4, classNam, e = "fo, n, t-bold, tex, t-gr, a, y-900, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-6, 0, 0"
                 {servi, c, e.na, m, e}
-              </h4>""
-              <p, classNam, e = "te, x, t-sm, tex, t-gr, a, y-600, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}</p>""
-              <div, className="te, x, t-sm, fon, t-semibold, tex, t-indi, g, o-6, 0, 0">{servi, c, e.prici, n, g}"
-          ))}
-      </d, i, v  > )
-  }
-  // Default variant return(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-x, l, p-6, tex, t-whi, t, e ${classNa, m, e}`}>
-<div, className="flex, item, s-center, ga, p-3, m, b-4">"
-<Rocket, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />"
-<h3, className="te, x, t-2xl, fon, t-bo, l, d">New, Services, Just Launch, e, d</h3>)"
-      </div>)
-      <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4">)"
+              </h4>""te, x, t-sm, tex, t-gr, a, y-600, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}</p>"
+              <div, className="te, x, t-sm, fon, t-semibold, tex, t-indi, g, o-6, 0, 0"flex, item, s-center, ga, p-3, m, b-4"
+<Rocket, className="
+<h3, className="te, x, t-2 xl, fon, t-bo, l, d"grid, m, d: gr, i, d-co, l, s-3, ga, p-4"
         { servic, e, s.m, a, p((serv, i, c, e) = > (
   // TODO: Add parameters
 )
-          <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">"
+          <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = ">"
   // Default variant return (
   // TODO: Add parameters
 )
     <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-x, l, p-6, tex, t-whi, t, e ${classNa, m, e}`}>
-<div, className="flex, item, s-center, ga, p-3, m, b-4">"
-<Rocket, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />"
-<h3, className="te, x, t-2xl, fon, t-bo, l, d">New, Services, Just Launch, e, d"
-      <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4">"
+<div, className="
+<Rocket, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0"te, x, t-2 xl, fon, t-bo, l, d"
+      <div, className="
         { servic, e, s.m, a, p((serv, i, c, e) = > (
   // TODO: Add parameters
 )
-          <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">"
-<div, className="te, x, t-2xl, m, b-2">{servi, c, e.ic, o, n}"
-            <h4, classNam, e = "fo, n, t-semibold, m, b-2">{servi, c, e.na, m, e}"
-            <p, className="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}"
-            <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">"
+          <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"
+<div, className="te, x, t-2 xl, m, b-2"fo, n, t-semibold, m, b-2">{servi, c, e.na, m, e}"te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2"
+            <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = ">"
   }`
-  // Default variant return (<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-x, l, p-6, tex, t-whi, t, e ${classNa, m, e}`}></div>""
-      <div, className="flex, item, s-center, ga, p-3, m, b-4"></div>""
-        <Rocket, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0" / />""
-        <h3, className="te, x, t-2xl, fon, t-bo, l, d">New, Services, Just Launch, e, d"
-      </div>""
-      <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4">"
-        {/* TODO: Fix JSX expression */}""
-          <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"></div>""
-            <div, className="te, x, t-2xl, m, b-2">{servi, c, e.ic, o, n}</div>""
-            <h4, classNam, e = "fo, n, t-semibold, m, b-2">{servi, c, e.na, m, e}</h4>""
-            <p, className="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}</p>""
-            <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">"
+  // Default variant return (<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-x, l, p-6, tex, t-whi, t, e ${classNa, m, e}`}></div>"
+      <div, className="flex, item, s-center, ga, p-3, m, b-4"
+        <Rocket, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0"
+        <h3, className="te, x, t-2 xl, fon, t-bo, l, d""
+      <div, className="
+        {/* TODO: Fix JSX expression */}""bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"></div>"
+            <div, className="te, x, t-2 xl, m, b-2"
+            <h4, classNam, e = "fo, n, t-semibold, m, b-2""
+            <p, className=""
+            <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = ">"
               Explore, Servic, e →
           </div>)
         ))}
       </div></div>
   )
 }
-export default NewServicesPromoBanner;"`";"
+export default NewServicesPromoBanner;";"
 </div></div>
 </div></div>
 </div></div>

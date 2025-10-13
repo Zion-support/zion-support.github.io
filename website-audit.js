@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -12,7 +9,6 @@ export default function Component() {
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -40,7 +36,7 @@ class WebsiteAuditor {
     const appContent = fs.readFileSync(appPath, 'utf8');
 
     const routes = [];
-    const routeRegex = /<Route\s+path="([^"]+)"\s+element={<[^>]+>}\s*\/>/g;
+    const routeRegex = /<Route\s+path="([^"\s+element={<[^>]+>}\s*\/>/g;
     let match;
 
     while ((match = routeRegex.exec(appContent)) !== null) {
@@ -69,7 +65,6 @@ class WebsiteAuditor {
           const route = basePath ? `/${basePath}` : '/';
           pages.push(route);
         }
-      }
     };
 
     scanDirectory(appDir);
@@ -92,14 +87,14 @@ class WebsiteAuditor {
     const links = [];
 
     // Extract Link components
-    const linkRegex = /<Link\s+to="([^"]+)"/g;
+    const linkRegex = /<Link\s+to="([^"/g;
     let match;
     while ((match = linkRegex.exec(content)) !== null) {
       links.push(match[1]);
     }
 
     // Extract href attributes
-    const hrefRegex = /href="([^"]+)"/g;
+    const hrefRegex = /href="([^"/g;
     while ((match = hrefRegex.exec(content)) !== null) {
       links.push(match[1]);
     }
@@ -126,10 +121,7 @@ class WebsiteAuditor {
             type: 'navigation'
           });
         }
-      }
     }
-  }
-
   // Check for missing pages referenced in routes
   checkMissingPages() {
     const routes = this.extractRoutesFromApp();
@@ -143,7 +135,6 @@ class WebsiteAuditor {
 //           description: 'Route defined in App.tsx but page.tsx not found'
         });
       }
-    }
   }
 
   // Check for orphaned pages (pages without routes)
@@ -159,7 +150,6 @@ class WebsiteAuditor {
 //           description: 'Page exists but no route defined in App.tsx'
         });
       }
-    }
   }
 
   // Check footer links
@@ -181,9 +171,7 @@ class WebsiteAuditor {
               type: 'footer'
             });
           }
-        }
       }
-    }
   }
 
   // Check for SEO issues
@@ -200,14 +188,12 @@ class WebsiteAuditor {
     }
 
     // Check for proper heading structure
-    if (!content.includes('<h1') && !content.includes('className="text-4xl')) {
+    if (!content.includes('<h1') && !content.includes('className="text-4 xl')) {
       this.auditResults.seoIssues.push({
         type: 'missing_h1',
 //         description: 'Home page missing H1 tag'
       });
     }
-  }
-
   // Generate comprehensive audit report
   generateAuditReport() {
     // Check navigation consistency
@@ -263,7 +249,6 @@ class WebsiteAuditor {
 
     return report;
   }
-=======
 #!/usr/bin/env node;
 import https from 'https';';
 import http from 'http';';
@@ -305,7 +290,7 @@ const routes = [
   '/micro-saas','
 
   // AI Services Pages
-  '/ai-3d-generation','
+  '/ai-3 d-generation','
   '/ai-agricultural-intelligence-pro','
   '/ai-analytics-dashboard','
   '/ai-api-management','
@@ -547,5 +532,3 @@ const route = item.url.replace(baseUrl, '')'
   // Save results to file
   fs.writeFileSync('audit-results.json', JSON.stringify(results, null, 2))'
   console.log('\n📄 Results saved to audit-results.json')'
-=======
-}

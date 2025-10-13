@@ -94,7 +94,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
     useCases: ['Supply chain tracking', 'Digital identity management', 'Financial transactions', 'Asset tokenization', 'Voting systems', 'Data integrity'],'
     roi: 'Enterprise customers see 500% ROI within 18 months through improved transparency and operational efficiency.','
     competitors: ['Alchemy', 'Infura', 'QuickNode', 'Chainstack', 'Blockdaemon', 'ConsenSys'],'
-    marketSize: '$19.9B market','
+    marketSize: '$19.9 B market','
     growthRate: '280% annual growth','
     variant: 'blockchain-futuristic','
     contactInfo: {
@@ -158,7 +158,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
     useCases: ['Yield farming optimization', 'Portfolio management', 'Risk management', 'Tax optimization', 'DeFi strategy automation', 'Investment analysis'],'
     roi: 'Users see 200-500% higher yields compared to manual DeFi strategies.','
     competitors: ['Yearn Finance', 'Harvest Finance', 'Beefy Finance', 'Pickle Finance', 'Badger DAO', 'Convex Finance'],'
-    marketSize: '$8.5B market','
+    marketSize: '$8.5 B market','
     growthRate: '350% annual growth','
     variant: 'blockchain-futuristic','
     contactInfo: {
@@ -222,7 +222,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
     useCases: ['Digital art sales', 'Gaming assets', 'Sports collectibles', 'Music NFTs', 'Fashion NFTs', 'Virtual real estate'],'
     roi: 'Creators see 300% ROI within 6 months through new revenue streams and increased engagement.','
     competitors: ['OpenSea', 'Rarible', 'Foundation', 'SuperRare', 'Nifty Gateway', 'Magic Eden'],'
-    marketSize: '$13.6B market','
+    marketSize: '$13.6 B market','
     growthRate: '400% annual growth','
     variant: 'blockchain-futuristic','
     contactInfo: {
@@ -286,7 +286,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
     useCases: ['User authentication', 'Identity verification', 'KYC/AML compliance', 'Access control', 'Privacy protection', 'Cross-platform identity'],'
     roi: 'Web3 applications see 400% ROI within 8 months through improved security and user experience.','
     competitors: ['Auth0', 'Okta', 'Microsoft Azure AD', 'Cognito', 'Firebase Auth', 'Supabase Auth'],'
-    marketSize: '$15.8B market','
+    marketSize: '$15.8 B market','
     growthRate: '220% annual growth','
     variant: 'blockchain-futuristic','
     contactInfo: {
@@ -350,7 +350,7 @@ export const blockchainInnovations2026: BlockchainInnovation2026[] = [;
     useCases: ['Product traceability', 'Quality assurance', 'Compliance management', 'Supply chain optimization', 'Counterfeit prevention', 'Sustainability tracking'],'
     roi: 'Manufacturing companies see 600% ROI within 12 months through improved transparency and operational efficiency.','
     competitors: ['IBM Food Trust', 'SAP Blockchain', 'Oracle Blockchain', 'VeChain', 'Walmart Blockchain', 'Maersk TradeLens'],'
-    marketSize: '$9.8B market','
+    marketSize: '$9.8 B market','
     growthRate: '250% annual growth','
     variant: 'blockchain-futuristic','
     contactInfo: {

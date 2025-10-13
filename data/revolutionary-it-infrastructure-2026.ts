@@ -103,7 +103,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     useCases: ['Data encryption', 'Secure communications', 'Identity management', 'Compliance adherence'],'
     roi: 'Future-proof security investment with 50% reduction in long-term security upgrade costs.','
     competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne', 'Traditional cybersecurity vendors'],'
-    marketSize: '$45.2B cybersecurity market','
+    marketSize: '$45.2 B cybersecurity market','
     growthRate: '130% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: contact,
@@ -124,7 +124,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     tagline: 'Intelligent edge computing management and optimization','
     price: '$1,799','
     period: '/month','
-    description: 'Comprehensive edge computing platform that manages, monitors, and optimizes distributed edge infrastructure for IoT, 5G, and edge applications.','
+    description: 'Comprehensive edge computing platform that manages, monitors, and optimizes distributed edge infrastructure for IoT, 5 G, and edge applications.','
     features: [
   // TODO: Add items
 ]
@@ -154,10 +154,10 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     realService: true,
     technology: ['Kubernetes', 'Docker', 'Go', 'Python', 'Apache Kafka', 'InfluxDB', 'Prometheus'],'
     integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Kubernetes', 'Docker Swarm', 'Custom edge devices'],'
-    useCases: ['IoT data processing', '5G network optimization', 'Smart city management', 'Industrial automation'],'
+    useCases: ['IoT data processing', '5 G network optimization', 'Smart city management', 'Industrial automation'],'
     roi: 'Average 40% reduction in edge infrastructure costs and 60% improvement in edge application performance.','
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'VMware Edge'],'
-    marketSize: '$18.7B edge computing market','
+    marketSize: '$18.7 B edge computing market','
     growthRate: '160% annual growth','
     variant: 'edge-futuristic','
     contactInfo: contact,
@@ -211,7 +211,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     useCases: ['CI/CD optimization', 'Infrastructure automation', 'Deployment management', 'Performance monitoring'],'
     roi: 'Average 50% reduction in deployment time and 30% decrease in production incidents.','
     competitors: ['GitLab CI/CD', 'GitHub Actions', 'Jenkins', 'CircleCI', 'Travis CI'],'
-    marketSize: '$7.8B DevOps market','
+    marketSize: '$7.8 B DevOps market','
     growthRate: '140% annual growth','
     variant: 'ai-futuristic','
     contactInfo: contact,
@@ -265,7 +265,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     useCases: ['DeFi applications', 'NFT marketplaces', 'Supply chain tracking', 'Digital identity'],'
     roi: 'Average 60% reduction in blockchain development time and 40% improvement in transaction efficiency.','
     competitors: ['Alchemy', 'Infura', 'QuickNode', 'Moralis', 'Chainstack'],'
-    marketSize: '$19.9B blockchain market','
+    marketSize: '$19.9 B blockchain market','
     growthRate: '170% annual growth','
     variant: 'blockchain-futuristic','
     contactInfo: contact,
@@ -319,7 +319,7 @@ export const revolutionaryITInfrastructure2026: RevolutionaryITInfrastructure202
     useCases: ['Drug discovery', 'Financial modeling', 'Optimization problems', 'Machine learning', 'Cryptography'],'
     roi: 'Access to quantum computing capabilities with 70% cost reduction compared to building quantum infrastructure.','
     competitors: ['IBM Quantum', 'Google Quantum', 'Amazon Braket', 'Azure Quantum', 'D-Wave'],'
-    marketSize: '$1.9B quantum computing market','
+    marketSize: '$1.9 B quantum computing market','
     growthRate: '200% annual growth','
     variant: 'quantum-futuristic','
     contactInfo: contact,

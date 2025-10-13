@@ -1,4 +1,4 @@
-import { serve } from "https://deno.land/std@0.177.0/http/server.ts";";
+import { serve } from "https://deno.land/std@0.177.0/http/server.ts";
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0';'
 interface CreateWebhookRequest {
   // TODO: Add properties
@@ -19,8 +19,8 @@ interface WebhookTestRequest {
   eventType: string
 }
 // Create a Supabase client;
-const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;";
-const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;";
+const supabaseUrl = Deno.env.get("SUPABASE_URL";
+const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY";
 const supabase = createClient(supabaseUrl, supabaseKey)
 serve(async (req) => {
   // TODO: Add properties
@@ -96,7 +96,6 @@ const { webhookId } = await req.json()
       if (path === 'webhooks') {'
         return await getUserWebhooks(user.id)
       }
-    }
     return new Response(JSON.stringify({ error: 'Invalid action' }), {'
       status: 400,
       headers: { 'Content-Type': 'application/json' }})'
@@ -175,7 +174,6 @@ const { data, error } = await supabase
       headers: { 'Content-Type': 'application/json' },'
     })
   }
-}
 async function getUserWebhooks(userId: string) {
   // TODO: Add properties
 }
@@ -220,7 +218,6 @@ const { data, error } = await supabase
       headers: { 'Content-Type': 'application/json' },'
     })
   }
-}
 async function toggleWebhook(userId: string, webhookId: string, isActive: boolean) {
   // TODO: Add properties
 }
@@ -273,7 +270,6 @@ const { data, error } = await supabase
       headers: { 'Content-Type': 'application/json' },'
     })
   }
-}
 async function deleteWebhook(userId: string, webhookId: string) {
   // TODO: Add properties
 }
@@ -337,7 +333,6 @@ const { data, error } = await supabase
       headers: { 'Content-Type': 'application/json' },'
     })
   }
-}
 async function testWebhook(userId: string, webhookId: string, eventType: string) {
   // TODO: Add properties
 }
@@ -452,7 +447,6 @@ const responseText = await webhookResponse.text()
       headers: { 'Content-Type': 'application/json' },'
     })
   }
-}
 async function createWebhookSignature(payload: string, secret: string) {
   // TODO: Add properties
 }
@@ -477,7 +471,7 @@ const signature = await crypto.subtle.sign(
     encoder.encode(payload)
   )
   // Convert to hex string
-  return Array.from(new Uint8Array(signature))
+  return Array.from(new Uint8 Array(signature))
     .map(b => b.toString(16).padStart(2, '0'))'
     .join('')'
 }
@@ -511,7 +505,6 @@ const eventId = crypto.randomUUID()
           status: 'new','
           match_score: 85
         }
-      }
     case 'quote_received':'
       return {
   // TODO: Add properties
@@ -540,7 +533,6 @@ const eventId = crypto.randomUUID()
           },
           created_at: timestamp
         }
-      }
     case 'milestone_approved':'
       return {
   // TODO: Add properties
@@ -561,7 +553,6 @@ const eventId = crypto.randomUUID()
           amount: 500,
           approved_at: timestamp
         }
-      }
     case 'talent_hired':'
       return {
   // TODO: Add properties
@@ -583,7 +574,6 @@ const eventId = crypto.randomUUID()
           created_at: timestamp,
           status: 'offer_accepted''
         }
-      }
     default:
       return {
   // TODO: Add properties
@@ -600,6 +590,4 @@ const eventId = crypto.randomUUID()
 }
           message: 'This is a test webhook event''
         }
-      }
-  }
-}
+  

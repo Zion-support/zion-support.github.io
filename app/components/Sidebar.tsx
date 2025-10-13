@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { X, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-
-  MapPin,
+MapPin,
   Clock
 } from 'lucide-react';'
 ;
@@ -97,7 +93,7 @@ const contactInfo = {
     phone: '(302) 464-0950','
     email: 'kleber@ziontechgroup.com','
     address: '364 E Main St STE 1008 Middletown, DE 19709','
-    hours: 'Mon-Fri 9AM-6PM EST''
+    hours: 'Mon-Fri 9 AM-6 PM EST''
   };
 
   return (
@@ -105,28 +101,10 @@ const contactInfo = {
       {/* Overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
-          onClick={onClose}
-        />
-      )}
-
-      {/* Sidebar */}
-      <div
-        className={`fixed top-0 left-0 h-full w-64 bg-slate-900 transform transition-transform duration-300 ease-in-out z-50 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-      >
-        <div className="flex items-center justify-between p-4 border-b border-gray-700">
-          <h2 className="text-xl font-bold text-white">Menu</h2>
-          <button
-            onClick={onClose}
-            className="text-gray-400 hover:text-white transition-colors"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40">
+          <h2 className="text-xl font-bold text-white"
           >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-
-        <nav className="mt-4">
+            <X className="w-6 h-6">
           {navigationItems.map((item) => (
             <Link
               key={item.name}
@@ -152,4 +130,3 @@ export default function Sidebar({ className = '', children }: SidebarProps) {
       {children}
     </div>
   );
-}

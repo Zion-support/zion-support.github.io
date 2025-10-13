@@ -24,11 +24,9 @@ const fixes = [
   // Fix console statements
   { pattern: /console\.(log|warn|error|info|debug)\([^)]*\),/g, replacement: '' },'
   // Fix missing imports
-  { pattern: /'use client'\nimport {/g, replacement: "'use client',\nimport React, { lazy } from 'react';\nimport {" },";'"
+  { pattern: /'use client'\nimport {/g, replacement: "'use client',\nimport React, { lazy } from 'react';\nimport {";'"
   // Fix missing semicolons in imports
-  { pattern: /from 'lucide-react'\nconst/g, replacement: "from 'lucide-react',\n\nconst" },"'"
-  // Fix missing semicolons in lazy imports
-  { pattern: /import\('\.\.\/components\/[^']+'\)\nconst/g, replacement: "import('../components/$1'),\nconst" }]"'"
+  { pattern: /from 'lucide-react'\nconst/g, replacement: " },"'"import('../components/$1'),\nconst" }]"
 function fixFile(filePath) {
   // TODO: Add properties
 }
@@ -66,8 +64,6 @@ const newContent = content.replace(fix.pattern, fix.replacement)
     console.error(`❌ Error fixing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Find all TypeScript/JavaScript files
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {;';
 let files = []
@@ -91,7 +87,6 @@ const stat = fs.statSync(fullPath)
 }
     files.push(fullPath)
   }
-    }
   } catch (error) {
   // TODO: Add properties
 }

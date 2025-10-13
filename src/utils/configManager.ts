@@ -70,7 +70,6 @@ export interface AppConfig {
     enableConsole: boolean,
     enableNetwork: boolean
   }
-}
   environment: 'development','
   api: {
   // TODO: Add properties
@@ -132,7 +131,6 @@ $4},
     enableConsole: true,
     enableNetwork: false
   }
-}
 const developmentConfig: Partial<AppConfig> = {
   // TODO: Add properties
 }
@@ -164,13 +162,11 @@ const developmentConfig: Partial<AppConfig> = {
 export type Environment = 'development' | 'staging' | 'production' | 'test';';';
 export interface AppConfig {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   environmen,
   t: Environment,,
     ap,
   i: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   baseUR,
   L: string,,
     timeou,
@@ -183,8 +179,6 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   feature,
   s: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-
   enableAnalytics: boolean,,
     enableErrorReporting: boolean,,
     enablePerformanceMonitoring: boolean,,
@@ -196,7 +190,6 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   performanc,
   e: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   enableCodeSplittin,
   g: boolean,,
     enableLazyLoadin,
@@ -209,7 +202,6 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   securit,
   y: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   enableCS,
   P: boolean,,
     enableCOR,
@@ -222,7 +214,6 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   u,
   i: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   them,
   e: 'light' | 'dark' | 'auto',,'
     languag,
@@ -233,13 +224,10 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
   loggin,
   g: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-
   level: 'debug' | 'info' | 'warn' | 'error',,'
     enableConsole: boolean,,
     enableNetwork: boolean
   }
-}
   environment: 'development','
   api: {
   // TODO: Add properties
@@ -248,7 +236,6 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-}
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com','
     timeout: 30000,
     retryAttempts: 3,
@@ -261,7 +248,6 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-}
   enableAnalytics: false,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
@@ -276,7 +262,6 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-}
   enableCodeSplitting: true,
     enableLazyLoading: true,
     enableImageOptimization: true,
@@ -289,7 +274,6 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-}
   enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
@@ -302,7 +286,6 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-}
   theme: 'auto','
     language: 'en','
     timezone: 'UTC''
@@ -314,12 +297,10 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
 }
     // TODO: Add content
   }
-}
   level: 'info','
     enableConsole: true,
     enableNetwork: false,
   }
-}
 const developmentConfig: Partial,
           <AppConfig> = {
   // TODO: Add properties
@@ -328,7 +309,6 @@ const developmentConfig: Partial,
 }
     // TODO: Add content
   }
-}
   environment: 'development','
   api: {
   // TODO: Add properties
@@ -337,7 +317,6 @@ const developmentConfig: Partial,
 }
     // TODO: Add content
   }
-}
   baseURL: 'http://localhost:3000/api','
     timeout: 30000,
     retryAttempts: 1,
@@ -350,7 +329,6 @@ const developmentConfig: Partial,
 }
     // TODO: Add content
   }
-}
   enableAnalytics: false,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
@@ -367,7 +345,6 @@ const developmentConfig: Partial,
     enableConsole: true,
     enableNetwork: false
   }
-}
 const stagingConfig: Partial<AppConfig> = {
   // TODO: Add properties
 }
@@ -399,12 +376,10 @@ const stagingConfig: Partial<AppConfig> = {
 }
     // TODO: Add content
   }
-}
   level: 'debug','
     enableConsole: true,
     enableNetwork: false,
   }
-}
 const stagingConfig: Partial,
           <AppConfig> = {
   // TODO: Add properties
@@ -413,7 +388,6 @@ const stagingConfig: Partial,
 }
     // TODO: Add content
   }
-}
   environment: 'staging','
   api: {
   // TODO: Add properties
@@ -422,7 +396,6 @@ const stagingConfig: Partial,
 }
     // TODO: Add content
   }
-}
   baseURL: 'https://staging-api.ziontech.com','
     timeout: 30000,
     retryAttempts: 3,
@@ -435,7 +408,6 @@ const stagingConfig: Partial,
 }
     // TODO: Add content
   }
-}
   enableAnalytics: true,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
@@ -452,7 +424,6 @@ const stagingConfig: Partial,
     enableConsole: true,
     enableNetwork: true
   }
-}
 const productionConfig: Partial<AppConfig> = {
   // TODO: Add properties
 }
@@ -484,12 +455,10 @@ const productionConfig: Partial<AppConfig> = {
 }
     // TODO: Add content
   }
-}
   level: 'info','
     enableConsole: true,
     enableNetwork: true,
   }
-}
 const productionConfig: Partial,
           <AppConfig> = {
   // TODO: Add properties
@@ -498,7 +467,6 @@ const productionConfig: Partial,
 }
     // TODO: Add content
   }
-}
   environment: 'production','
   api: {
   // TODO: Add properties
@@ -507,7 +475,6 @@ const productionConfig: Partial,
 }
     // TODO: Add content
   }
-}
   baseURL: 'https://api.ziontech.com','
     timeout: 30000,
     retryAttempts: 3,
@@ -520,7 +487,6 @@ const productionConfig: Partial,
 }
     // TODO: Add content
   }
-}
   enableAnalytics: true,
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
@@ -547,7 +513,6 @@ const productionConfig: Partial,
     enableRateLimiting: true,
     maxRequestsPerMinute: 60
   }
-}
 const testConfig: Partial<AppConfig> = {
   // TODO: Add properties
 }
@@ -579,7 +544,6 @@ const testConfig: Partial<AppConfig> = {
 }
     // TODO: Add content
   }
-}
   level: 'error','
     enableConsole: false,
     enableNetwork: true,
@@ -591,13 +555,11 @@ const testConfig: Partial<AppConfig> = {
 }
     // TODO: Add content
   }
-}
   enableCSP: true,
     enableCORS: true,
     enableRateLimiting: true,
     maxRequestsPerMinute: 60,
   }
-}
 const testConfig: Partial,
           <AppConfig> = {
   // TODO: Add properties
@@ -606,7 +568,6 @@ const testConfig: Partial,
 }
     // TODO: Add content
   }
-}
   environment: 'test','
   api: {
   // TODO: Add properties
@@ -615,7 +576,6 @@ const testConfig: Partial,
 }
     // TODO: Add content
   }
-}
   baseURL: 'http://localhost:3000/api','
     timeout: 5000,
     retryAttempts: 0,
@@ -628,7 +588,6 @@ const testConfig: Partial,
 }
     // TODO: Add content
   }
-}
   enableAnalytics: false,
     enableErrorReporting: false,
     enablePerformanceMonitoring: false,
@@ -645,7 +604,6 @@ const testConfig: Partial,
     enableConsole: false,
     enableNetwork: false
   }
-}
 export class ConfigManager {
   // TODO: Add properties
 }
@@ -682,12 +640,10 @@ export class ConfigManager {
 }
     // TODO: Add content
   }
-}
   level: 'error','
     enableConsole: false,
     enableNetwork: false,
   }
-}
 export class ConfigManager {
   // TODO: Add properties
 }
@@ -695,7 +651,6 @@ export class ConfigManager {
 }
     // TODO: Add content
   }
-}
   private static instance: ConfigManager
   private config: AppConfig
   private environment: Environment
@@ -704,16 +659,13 @@ export class ConfigManager {
           <AppConfig> = {}
   constructor() {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     this.environment = this.detectEnvironment()
     this.config = this.loadConfig()
   }
   static getInstance(): ConfigManager {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     if (!ConfigManager.instance) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       ConfigManager.instance = new ConfigManager()
     }
     return ConfigManager.instance
@@ -778,8 +730,6 @@ const nextEnv = process.env.NEXT_PUBLIC_ENVIRONMENT
 }
     // TODO: Add content
   }
-
-}
     if (typeof process !== 'undefined') {switch (this.environment) {}'
   // TOD,
   O: Add content,
@@ -839,8 +789,6 @@ const baseValue = result[key],
   private mergeConfig(base: AppConfig, override: Partial,
           <AppConfig>): AppConfig {// TODO: Add content
   }
-
-}
     const result = { ...base } as AppConfig
 //     (Object.keys(override) as Array
           <keyof AppConfig>).forEach()
@@ -848,11 +796,9 @@ const baseValue = result[key],
           <K extends keyof AppConfig>(ke)
   y: K) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
         const value = override[key]
         if (value !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
           const baseValue = result[key]
           if ()
             typeof value === 'object' &&'
@@ -867,15 +813,11 @@ const baseValue = result[key],
 }
     // TODO: Add content
   }
-
-}
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue
           } else {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
             result[key] = value as typeof baseValue
           }
-        }
       }
     )
     return result
@@ -992,10 +934,8 @@ const defaultValue = this.getDefaultForKey(key)
   y: K,
     nestedKey?: NK): AppConfig[K] | AppConfig[K][NK] {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     if (nestedKey !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       return this.config[key][nestedKey]
     }
     return this.config[key]
@@ -1030,11 +970,8 @@ const defaultValue = this.getDefaultForKey(key)
 }
     // TODO: Add content
   }
-
-}
     if (value !== undefined && typeof nestedKeyOrValue === 'string') {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
       const currentValue = this.config[key]
       if ()
         typeof currentValue === 'object' &&'
@@ -1046,30 +983,23 @@ const defaultValue = this.getDefaultForKey(key)
 }
     // TODO: Add content
   }
-
-}
         this.config[key] = Object.assign({}, currentValue, {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
           [nestedKeyOrValue]: value;)
         }) as AppConfig[K]
       } else {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
         // If current value is not an object, create a new object by merging with default;
 const defaultValue = this.getDefaultForKey(key)
         this.config[key] = Object.assign({}, defaultValue, {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
           [nestedKeyOrValue]: value;)
         }) as AppConfig[K]
       }
     } else {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       this.config[key] = nestedKeyOrValue as AppConfig[K]
     }
-  }
   /**
    * Get default value for a config key
    */
@@ -1102,18 +1032,14 @@ const defaultValues: AppConfig = {
           <K extends keyof AppConfig>(ke)
   y: K): AppConfig[K] {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     const,
   defaultValues: AppConfig = {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   environmen,
   t: 'development','
       ap,
   i: {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-
   baseURL: '','
         timeout: 30000,
         retryAttempts: 3,
@@ -1126,7 +1052,6 @@ const defaultValues: AppConfig = {
 }
     // TODO: Add content
   }
-}
   enableAnalytics: false,
         enableErrorReporting: true,
         enablePerformanceMonitoring: false,
@@ -1172,7 +1097,6 @@ $4},
         enableConsole: true,
         enableNetwork: false
       }
-    }
     return defaultValues[key]
   }
   /**
@@ -1184,7 +1108,6 @@ $4},
   // TODO: Add properties
 }
     return { ...this.config }
-  }
   /**
    * Get environment
    */
@@ -1222,13 +1145,11 @@ $4},
   // TODO: Add properties
 }
     return { ...this.config.api }
-  }
   /**
    * Update API configuration
    */
   updateAPIConfig(config: Partial<AppConfig['api']>): void {'
     this.config.api = { ...this.config.api, ...config }
-  }
   /**
    * Check if in production
    */
@@ -1286,7 +1207,6 @@ $4},
 }
     // TODO: Add content
   }
-}
   enableCodeSplitting: true,
         enableLazyLoading: true,
         enableImageOptimization: true,
@@ -1299,7 +1219,6 @@ $4},
 }
     // TODO: Add content
   }
-}
   enableCSP: true,
         enableCORS: false,
         enableRateLimiting: true,
@@ -1312,7 +1231,6 @@ $4},
 }
     // TODO: Add content
   }
-}
   theme: 'light','
         language: 'en','
         timezone: 'UTC''
@@ -1324,13 +1242,11 @@ $4},
 }
     // TODO: Add content
   }
-}
   level: 'info','
         enableConsole: true,
         enableNetwork: false,
 
       }
-    }
     return defaultValues[key]
   }
   /**
@@ -1344,10 +1260,7 @@ $4},
 }
     // TODO: Add content
   }
-
-}
     return { ...this.config }
-  }
   /**
    * Get environment
    */
@@ -1359,8 +1272,6 @@ $4},
 }
     // TODO: Add content
   }
-
-}
     return this.environment
   }
   /**
@@ -1370,8 +1281,6 @@ $4},
   isFeatureEnabled(feature: keyof AppConfig['features']): boolean {'
     // TODO: Add content
   }
-
-}
     return this.config.features[feature]
   }
   /**
@@ -1381,8 +1290,6 @@ $4},
   enableFeature(feature: keyof AppConfig['features']): void {'
     // TODO: Add content
   }
-
-}
     this.config.features[feature] = true
   }
   /**
@@ -1392,8 +1299,6 @@ $4},
   disableFeature(feature: keyof AppConfig['features']): void {'
     // TODO: Add content
   }
-
-}
     this.config.features[feature] = false
   }
   /**
@@ -1407,10 +1312,7 @@ $4},
 }
     // TODO: Add content
   }
-
-}
     return { ...this.config.api }
-  }
   /**
    * Update API configuration
    */
@@ -1419,10 +1321,7 @@ $4},
           <AppConfig['api']>): void {'
     // TODO: Add content
   }
-
-}
     this.config.api = { ...this.config.api, ...config }
-  }
   /**
    * Check if in production
    */
@@ -1434,8 +1333,6 @@ $4},
 }
     // TODO: Add content
   }
-
-}
     return this.environment === 'production''
   }
   /**
@@ -1449,8 +1346,6 @@ $4},
 }
     // TODO: Add content
   }
-
-}
     return this.environment === 'development''
   }
   /**
@@ -1464,8 +1359,6 @@ $4},
 }
     // TODO: Add content
   }
-
-}
     return this.environment === 'test''
   }
   /**
@@ -1479,8 +1372,6 @@ $4},
 }
     // TODO: Add content
   }
-
-}
     return this.environment === 'staging''
   }
   /**
@@ -1495,8 +1386,6 @@ $4},
 }
     // TODO: Add content
   }
-
-}
     this.overrides = config
     this.config = this.loadConfig()
   }
@@ -1513,8 +1402,6 @@ $4},
 
   reset(): void {// TODO: Add content
   }
-
-}
     this.overrides = {}
     this.config = this.loadConfig()
   }
@@ -1546,7 +1433,7 @@ const errors: string[] = [],
 }
   // TODO: Add properties
 }
-    errors.push('API timeout must be at least 1000ms')'
+    errors.push('API timeout must be at least 1000 ms')'
   }
     if (this.config.api.retryAttempts < 0) {
   // TODO: Add properties
@@ -1571,7 +1458,6 @@ const errors: string[] = [],
       valid: errors.length === 0,
       errors
     }
-  }
 }
 // Export singleton instance;
 export const configManager = ConfigManager.getInstance()
@@ -1584,8 +1470,6 @@ export(): string {
 }
     // TODO: Add content
   }
-
-}
     return JSON.stringify(this.config, null, 2)
   }
   /**
@@ -1599,41 +1483,34 @@ export(): string {
 }
     // TODO: Add content
   }
-}
     const errors: string[] = []
     // Validate API configuration,
     if (!this.config.api.baseURL) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       errors.push('API baseURL is required')'
     }
     if (this.config.api.timeout;)
           < 1000) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-      errors.push('API timeout must be at least 1000ms')'
+      errors.push('API timeout must be at least 1000 ms')'
     }
     if (this.config.api.retryAttempts;)
           < 0) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       errors.push('API retryAttempts must be non-negative')'
     }
     // Validate security configuration
     if (this.config.security.maxRequestsPerMinute;)
           < 1) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       errors.push('Security maxRequestsPerMinute must be at least 1')'
     }
     return {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   vali,
   d: errors.length === 0,
 //       errors
     }
-  }
 }
 // Export singleton instance;
 export const configManager = ConfigManager.getInstance()

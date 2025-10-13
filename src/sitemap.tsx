@@ -12,31 +12,16 @@ const generateSitemap = (pages: Array<{ url: string; priority: number, changefre
 const baseUrl = 'https:// ziontechgroup.com''
   }
   const sitemap = `
-          <?xml version="1.0" encoding="UTF-8"?>"
-<urlset xmlns="http:// www.sitemaps.org/schemas/sitemap/0.9">"
-${pages.map(page => `}
-          <url>
-<loc>${baseUrl}${page.url}
-    <priority>${page.priority}
-    <changefreq>${page.changefreq}
-  </url>`).join(''
-')}'
-</urlset>`
-  return sitemap
-  return (
-  // TODO: Add parameters
-)
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
+          <?xml version="1.0"UTF-8"?>"http:// www.sitemaps.org/schemas/sitemap/0.9">"min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"
 <Navigation />
-<main className="container mx-auto px-4 py-16 pt-24">"
-<section className="text-center mb-16">"
-<h1 className="text-5xl md: text-6xl font-bold text-white mb-6">"
+<main className="
+<section className="text-center mb-16"text-5 xl md: text-6 xl font-bold text-white mb-6"
             Sitemap
 
-          <p className="text-xl text-cyan-400 mb-8 font-medium">"
+          <p className="
             Blog Post
 
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">"
+          <p className="text-lg text-gray-300 max-w-4 xl mx-auto mb-8 leading-relaxed"
             This blog post is under development. Please check back soon for the full content.
       <Footer /></div>
   ),

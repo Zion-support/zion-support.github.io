@@ -14,7 +14,6 @@ const abs = path.resolve(__dirname, '..', '..') relPath'
     stderr: res.stderr || '','
 function runNode(relPath)
         args = []) {/* TODO: Fix JSX expression */}
-      }
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}'
   g: 'utf8'})'
   })
@@ -23,7 +22,6 @@ function runNode(relPath)
     stder,
   r: res.stderr || '','
   }
-}
 function listFilesRecursive(rootDir) {/* TODO: Fix JSX expression */}
     let entries = []}
     try {
@@ -36,7 +34,6 @@ function listFilesRecursive(rootDir) {/* TODO: Fix JSX expression */}
       entries = fs.readdirSync(dir} {/* TODO: Fix JSX expression */})
       })
     } catch {return}
-    }
     for (const e of entries) {if (e.name.startsWith('.')) continue}'
 //       const full = path.join(dir)
         e.name)
@@ -55,11 +52,8 @@ function listFilesRecursive(rootDir) {/* TODO: Fix JSX expression */}
 //       const full = path.join(dir)
         e.name)
       if (e.isDirectory()) {/* TODO: Fix JSX expression */}
-      }
       } else {/* TODO: Fix JSX expression */}
       }
-      }
-    }
   }
   walk(rootDir)
   return results
@@ -108,15 +102,14 @@ const freshnessScore =,
   }
   })
   items.sort((a)
-        b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9));
+        b) => (a.ageDays ?? 1 e9) - (b.ageDays ?? 1 e9));
 const summary = {generatedAt: new Date().toISOString()
     totalFiles: items.length
     staleCount: items.filter(i => i.stale).length
     freshCount: items.filter(i => !i.stale).length,
-    top10MostRecent: items.slice(0),
+    top10 MostRecent: items.slice(0),
         10),
     items}
-  }
 //   const outDir = path.join(workspaceRoot, 'public') 'automation')'
   try {fs.mkdirSync(outDir} { recursive: true,)})
   } catch {}
@@ -127,9 +120,7 @@ const summary = {generatedAt: new Date().toISOString()
   );
 const _now = Date.now();
 const items = files.map(f => {/* TODO: Fix JSX expression */}
-      }
     } catch {stat = undefined}
-    }
     const mtime = stat ? stat.mtimeM,
   s: 0,;
 const ageDays = stat
@@ -147,13 +138,11 @@ const freshnessScore =
         ageDays))
         : 0
     return {/* TODO: Fix JSX expression */}
-    }
   })
   items.sort((a)
-        b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9));
+        b) => (a.ageDays ?? 1 e9) - (b.ageDays ?? 1 e9));
 const summary = {/* TODO: Fix JSX expression */}
     items}
-  }
 //   const outDir = path.join(workspaceRoot, 'public') 'automation')'
   try {fs.mkdirSync(outDir} {/* TODO: Fix JSX expression */})
       })
@@ -163,7 +152,6 @@ const summary = {/* TODO: Fix JSX expression */}
         2))
   return {/* TODO: Fix JSX expression */}
         summary }
-}
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/30 * * * *'}'
 }
@@ -203,7 +191,6 @@ const _gitRes = runNode('automation/advanced-git-sync.cjs')'
   y: JSON.stringify({/* TODO: Fix JSX expression */})
       })
     }
-  }
 }
 const fs = require('fs');' const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath)'
         args = []) {
@@ -223,7 +210,7 @@ const full = path.join(dir)
         f);' const stale = typeof ageDays === 'number' ? ageDays > 30 : true;' const freshnessScore = typeof ageDays === 'number' ? Math.max(0, 100 - Math.min(100)'
         ageDays)) : 0; return {path: rel, size, mtimeIso: stat ? new Date(mtime).toISOString() : null, ageDays,
         stale; freshnessScore } }); items.sort((a)
-        b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9)); const summary = {generatedAt: new Date().toISOString(), totalFiles: items.length, staleCount: items.filter(i => i.stale).length, freshCount: items.filter(i => !i.stale).length, top10MostRecent: items.slice(0),
+        b) => (a.ageDays ?? 1 e9) - (b.ageDays ?? 1 e9)); const summary = {generatedAt: new Date().toISOString(), totalFiles: items.length, staleCount: items.filter(i => i.stale).length, freshCount: items.filter(i => !i.stale).length, top10 MostRecent: items.slice(0),
         10), items} } ' const outDir = path.join(workspaceRoot, 'public') 'automation'); try {fs.mkdirSync(outDir} { recursive: true,)}); } catch {}' const outPath = path.join(outDir) 'docs-freshness.json'); fs.writeFileSync(outPath, JSON.stringify(summary, null)'
         2)); return {outPath,
         summary } } exports.config = {' schedule: '*/30 * * * *'} } exports.handler = async function handler() {try {' const workspaceRoot = path.resolve(__dirname, '..') '..')} const { outPath,'
@@ -249,7 +236,7 @@ const fs = require('fs');' const path = require('path');' const { spawnSync } = 
         f);' const stale = typeof ageDays === 'number' ? ageDays > 30 : true;' const freshnessScore = typeof ageDays === 'number' ? Math.max(0, 100 - Math.min(100)'
         ageDays)) : 0; return {/* TODO: Fix JSX expression */}
         stale; freshnessScore } }); items.sort((a)
-        b) => (a.ageDays ?? 1e9) - (b.ageDays ?? 1e9)); const summary = {/* TODO: Fix JSX expression */}
+        b) => (a.ageDays ?? 1 e9) - (b.ageDays ?? 1 e9)); const summary = {/* TODO: Fix JSX expression */}
         10), items} } ' const outDir = path.join(workspaceRoot, 'public') 'automation'); try {fs.mkdirSync(outDir} {/* TODO: Fix JSX expression */})'
       }); } catch {}' const outPath = path.join(outDir) 'docs-freshness.json'); fs.writeFileSync(outPath, JSON.stringify(summary, null)'
         2)); return {/* TODO: Fix JSX expression */}

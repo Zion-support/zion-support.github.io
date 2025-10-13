@@ -124,7 +124,6 @@ interface SEOConfig {title: string,}
   modifiedTime?: string;
   section?: string;
   tags?: string[];}
-}
 const defaultSEOConfig: SEOConfig = {
   // TODO: Add properties
 }
@@ -191,14 +190,13 @@ const baseStructure = {}
     description: data.description,
     url: data.url || '','
     logo: data.logo || '','
-  return {...baseStructure, ...data}}}
+  return {...baseStructure, ...data}}
 // SEO Enhancer class;
 export class SEOEnhancer {private static instance: SEOEnhancer,}
 // SEO Enhancer class;}export class SEOEnhancer {}}private static instance: SEOEnhancer;,
   private config: SEOConfig,}
-  constructor(config: Partial<SEOConfig> = {,)}) {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = {...defaultSEOConfig, ...config}}
+  constructor(config: Partial<SEOConfig> = {,)}) {}</SEOConfig></<<<SEOConfig>this</SEOConfig></SEOConfig>.config = {...defaultSEOConfig, ...config}
   static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {}}if (!SEOEnhancer.instance) {}SEOEnhancer.instance = new SEOEnhancer(config);}
-    }
   }
     this.updateMetaTag('description', description);}'
   }
@@ -208,7 +206,7 @@ export class SEOEnhancer {private static instance: SEOEnhancer,}
   }
   // Update canonical URL;
   updateCanonicalUrl(url: string) {,;
-let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement,'"
+let canonical = document.querySelector('link[rel="canonical"
     if (!canonical) {,;
       canonical = document.createElement('link'),;'
       canonical.rel = 'canonical',;'
@@ -221,10 +219,8 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
   updateTitle(title: string) {}
     if (typeof document !== 'undefined') {}'
       document.title = title;}
-    }
   }
       document.head.appendChild(canonical);}
-    }
     canonical.href = url;
   }
   // Update Open Graph tags;
@@ -253,7 +249,6 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
   // Update Twitter Card tags
   updateTwitterCard(config: Partial<SEOConfig>) {}
       document.head.appendChild(canonical);}
-    }
     canonical.href = url
   }
   // Update Open Graph tags;
@@ -313,10 +308,10 @@ const twitterTags = [}
     script.type = 'application/ld+json';'
     script.textContent = JSON.stringify(data);
     // Remove existing structured data;
-    const existingScript = document.querySelector('script[type="application/ld+json"]');'"
+    const existingScript = document.querySelector('script[type="application/ld+json"
     if (existingScript) {}existingScript.remove();}
 // SEO Config interface;
-interface SEOConfig {/* TODO: Fix JSX expression */,}}}
+interface SEOConfig {/* TODO: Fix JSX expression */,}}
 // Default SEO config;
 const,;
   defaultSEOConfig: SEOConfig = {/* TODO: Fix JSX expression */,}a: {,},;
@@ -327,7 +322,7 @@ const,;
     script.type = 'application/ld+json''
     script.textContent = JSON.stringify(data)
     // Remove existing structured data;
-const existingScript = document.querySelector('script[type="application/ld+json"]')'"
+const existingScript = document.querySelector('script[type="application/ld+json"
   // Update structured data
   updateStructuredData(data: Record<string, unknown>) {
   // TODO: Add properties
@@ -340,12 +335,11 @@ const existingScript = document.querySelector('script[type="application/ld+json"
     script.type = 'application/ld+json''
     script.textContent = JSON.stringify(data)
     // Remove existing structured data;
-const existingScript = document.querySelector('script[type="application/ld+json"]')'"
+const existingScript = document.querySelector('script[type="application/ld+json"
     if (existingScript) {}
       existingScript.remove();}
 // SEO Config interface;
 interface SEOConfig {/* TODO: Fix JSX expression */}
-}
 // Default SEO config
 const,
   defaultSEOConfig: SEOConfig = {/* TODO: Fix JSX expression */}
@@ -371,49 +365,42 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */}
     this.config = { ...defaultSEOConfig, ...config };
   }
   static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {/* TODO: Fix JSX expression */}
-    }
     return SEOEnhancer.instance;
   }
   // Update page title;
   updateTitle(titl)
   e: string) {/* TODO: Fix JSX expression */}
-    }
   }
   // Update meta description;
   updateDescription(descriptio)
   n: string) {/* TODO: Fix JSX expression */}
-  }
   // Update meta keywords;
   updateKeywords(keyword)
   s: string[]) {/* TODO: Fix JSX expression */}
-  }
   // Update canonical URL;
   updateCanonicalUrl(ur)
   l: string) {/* TODO: Fix JSX expression */}
-    }
   a: {/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  }
   return { ...baseStructure, ...data }
-}
 // SEO Enhancer class;
-export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig> = {,}) {/* TODO: Fix JSX expression */,}this.config = {...defaultSEOConfig, ...config}}
-  static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {/* TODO: Fix JSX expression */,}}}
+export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig> = {,}) {/* TODO: Fix JSX expression */,}this.config = {...defaultSEOConfig, ...config}
+  static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {/* TODO: Fix JSX expression */,}}
     return SEOEnhancer.instance;
   }
   // Update page title;
   updateTitle(titl);
-  e: string) {/* TODO: Fix JSX expression */,}}
+  e: string) {/* TODO: Fix JSX expression */,}
   }
   // Update meta description;
   updateDescription(descriptio);
-  n: string) {/* TODO: Fix JSX expression */,}}
+  n: string) {/* TODO: Fix JSX expression */,}
   // Update meta keywords;
   updateKeywords(keyword);
-  s: string[]) {/* TODO: Fix JSX expression */,}}
+  s: string[]) {/* TODO: Fix JSX expression */,}
   // Update canonical URL;
   updateCanonicalUrl(ur);
-  l: string) {/* TODO: Fix JSX expression */,}}
+  l: string) {/* TODO: Fix JSX expression */,}
     canonical.href = url;
   }
   // Update Open Graph tags;
@@ -452,7 +439,6 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
     ogTags.forEach(({ property, content }) => {/* TODO: Fix JSX expression */}
     });
   }
-    }
     if (config.modifiedTime) {/* TODO: Fix JSX expression */,}t: config.modifiedTime ,})
     }
     if (config.section) {/* TODO: Fix JSX expression */,}t: config.section ,})
@@ -486,7 +472,6 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   // Update structured data;
   updateStructuredData(dat)
   a: Record<string, unknown>) {/* TODO: Fix JSX expression */}
-    }
     document.head.appendChild(script)
   }
   // Update robots meta tag;
@@ -497,11 +482,10 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
   updateLanguage(language: string) {,
     if (typeof document !== 'undefined') {,'
       document.documentElement.lang = language;}
-    }
   }
   // Update structured data;
   updateStructuredData(dat);
-  a: Record<string, unknown>) {/* TODO: Fix JSX expression */,}}
+  a: Record<string, unknown>) {/* TODO: Fix JSX expression */,}
     document.head.appendChild(script);
   }
   // Update robots meta tag;
@@ -530,28 +514,20 @@ export class SEOEnhancer {/* TODO: Fix JSX expression */,}}g: Partial<SEOConfig>
     ,
     if (typeof document !== 'undefined') {,}document.documentElement.lang = language;}'
     }
-  }
     this.updateMetaTag('author', author);}'
   }
   // Helper method to update meta tags;
   private updateMetaTag(nameOrProperty: string, content: string) {,
     if (typeof document === 'undefined') return;';
 let meta = document.querySelector(})
-      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"])"
+      `meta[name="${nameOrProperty}"${nameOrProperty}"])"${nameOrProperty}"], meta[property="]`;"
     ) as HTMLMetaElement;
-    if (!meta) {meta = document.createElement('meta');'
-      if (nameOrProperty.startsWith('og: ') || nameOrProperty.startsWith('twitter:')) {,'
-  private updateMetaTag(nameOrPropert,;)
-  y: string, conten);
-  t: string) {/* TODO: Fix JSX expression */,}`meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`;"
-    ) as HTMLMetaElement;
-    if (!meta) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
+    if (!meta) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}
       document.head.appendChild(meta);
   // Update language
   updateLanguage(language: string) {}
     if (typeof document !== 'undefined') {}'
       document.documentElement.lang = language;}
-    }
   }
   // Update author
   updateAuthor(author: string) {}
@@ -561,7 +537,7 @@ let meta = document.querySelector(})
   private updateMetaTag(nameOrProperty: string, content: string) {}
     if (typeof document === 'undefined') return;';
 let meta = document.querySelector(})
-      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]"
+      `meta[name="], meta[property="${nameOrProperty}"
     ) as HTMLMetaElement
     if (!meta) {}
       meta = document.createElement('meta')'
@@ -572,46 +548,28 @@ let meta = document.querySelector(})
   // Update robots meta tag
   updateRobots(robot)
   s: string) {/* TODO: Fix JSX expression */}
-  }
   // Update language;
   updateLanguage(languag)
   e: string) {/* TODO: Fix JSX expression */}
-    }
   }
   // Update language
   updateLanguage(languag)
   e: string) {/* TODO: Fix JSX expression */}
-    }
   }
   // Update author
   updateAuthor(autho)
   r: string) {/* TODO: Fix JSX expression */}
-  }
   // Helper method to update meta tags;
   private updateMetaTag(nameOrPropert,
   y: string, conten)
   t: string) {/* TODO: Fix JSX expression */}
-      `meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`"
-    ) as HTMLMetaElement;
-    if (!meta) {/* TODO: Fix JSX expression */}
-      } else {/* TODO: Fix JSX expression */}
-      }
-      document.head.appendChild(meta)
-    }
-    meta.content = content;
-  }
-    }
-    meta.content = content
-  }
-  // Generate sitemap;
-  generateSitemap(pages: Array<{url: string; lastmod: string; changefreq: string, priority: string ,)}>);
-  ) {const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;"
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,"
+      `meta[name="${nameOrProperty}"${nameOrProperty}"]`"1.0" encoding="?>;"
+<urlset xmlns=">,"
 ${pages;
   .map(,;)
   // Generate sitemap;
   generateSitemap()}pages: Array<{url: string; lastmod: string; changefreq: string, priority: string ,}>;
-  ) {}const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;"
+  ) {}const sitemap = `<?xml version=" encoding="UTF-8"
 <urlset>
 ${pages}.map();
     page => `  <url>}
@@ -621,11 +579,10 @@ ${pages}.map();
     <priority>${page.priority</p>}</priority>);
   </url>);
   );
-        document.querySelector('meta[name="description"]')?.getAttribute('content') || ',''"
-      keywords: document.querySelector('meta[name="keywords"]')?.getAttribute('content') || ',''"
-      canonical: document.querySelector('link[rel="canonical"]')?.getAttribute('href') || '}''"
+        document.querySelector('meta[name="description"
+      keywords: document.querySelector('meta[name="keywords"
+      canonical: document.querySelector('link[rel="canonical"
     }
-  }
 }
 export const generateAdvancedStructuredData = (data: {}
 // type: 'Organization' | 'WebSite' | 'Article' | 'Service';'
@@ -738,13 +695,12 @@ Sitema,`
     this.updateAuthor(finalConfig.author);
 export const generateAdvancedStructuredData = (dat,;
   a: {/* TODO: Fix JSX expression */,})
-}) => {/* TODO: Fix JSX expression */,}}
+}) => {/* TODO: Fix JSX expression */,}
   // Add type-specific properties;
   if (data.type === 'Organization') {/* TODO: Fix JSX expression */,},'
       contactPoin,;
-  t: {/* TODO: Fix JSX expression */,}}
+  t: {/* TODO: Fix JSX expression */,}
     }
-  }
   if (data.type === 'WebSite') {}return {}}...baseStructure,;'
       potentialAction: {,
     ,
@@ -756,14 +712,11 @@ export const generateAdvancedStructuredData = (dat,;
         },;
   a: {/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  }
   // Add type-specific properties
   if (data.type === 'Organization') {/* TODO: Fix JSX expression */},'
       contactPoin,
   t: {/* TODO: Fix JSX expression */}
-      }
     }
-  }
   if (data.type === 'WebSite') {}'
     return {}
       ...baseStructure,
@@ -786,7 +739,6 @@ export const generateAdvancedStructuredData = (dat,;
         },
         'query-input': 'required name=search_term_string';'
       }
-    }
   }
   if (data.type === 'Article') {}return {}}...baseStructure,;'
       author: {,
@@ -813,7 +765,6 @@ export const generateAdvancedStructuredData = (dat,;
         },
       datePublished: new Date().toISOString(),
       dateModified: new Date().toISOString(),}
-  }
   return baseStructure
 }
 export const generateSitemapData = useCallback((...args) => {return {urlset: {,}
@@ -855,7 +806,6 @@ export const generateSitemapData = useCallback((...args) => {}
         priority: page.priority,}
       }));
     }
-  }
 }
 // Generate robots.txt content;
 export const generateRobotsTxt = useCallback((...args) => {`}const disallowRules = disallowPaths.map(path => `Disallow: ${path,)}`).join('\n');'
@@ -873,7 +823,6 @@ export const validateSEOData = (data: {// title: string; description: string; ur
       },
       publishe,
   r: {/* TODO: Fix JSX expression */}
-        }
       },;
 export const validateSEOData = (data: {// title: string; description: string, url: string}) => {}
   if (data.type === 'Article') {/* TODO: Fix JSX expression */},'
@@ -891,7 +840,6 @@ export const validateSEOData = (data: {// title: string; description: string, ur
   };
 };
     }
-  }
 }
 // Generate robots.txt content;
 export const generateRobotsTxt = (sitemapUr,
@@ -991,7 +939,6 @@ export const generateBreadcrumbData = useCallback((...args) => {}
       item: crumb.url,}
     }));
   }
-}
 // Initialize SEO enhancements;
 export const initializeSEOEnhancements = useCallback((...args) => {if (typeof document === 'undefined') return;'
   // Add structured data for organization;
@@ -1021,7 +968,7 @@ const script = document.createElement('script')'
 }
   if (data.title.length < 30) {issues.push('Title is too short (recommended: 30-60 characters)'),}} else if (data.title.length > 60) {issues.push('Title is too long (recommended: 30-60 characters)'),}}'
   // Check description length;
-  if (data.description.length < 120) {/* TODO: Fix JSX expression */,}} else if (data.description.length > 160) {/* TODO: Fix JSX expression */,}}
+  if (data.description.length < 120) {/* TODO: Fix JSX expression */,}} else if (data.description.length > 160) {/* TODO: Fix JSX expression */,}
   // Check URL format;
   if (!data.url.startsWith('http')) {/* TODO: Fix JSX expression */,}}'
   return issues;
@@ -1036,7 +983,6 @@ const script = document.createElement('script')'
 export const initializeSEOEnhancements = () => {/* TODO: Fix JSX expression */}
   });
   }
-}
 // Initialize SEO enhancements;
 export const initializeSEOEnhancements = () => {/* TODO: Fix JSX expression */,}})
 const script = document.createElement('script');'
@@ -1044,6 +990,4 @@ const script = document.createElement('script');'
   script.textContent = JSON.stringify(organizationData);
   document.head.appendChild(script);
 };
-"`"
-}
-"`</$1></p>"
+"`"`</$1></p>"

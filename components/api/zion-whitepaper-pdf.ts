@@ -9,7 +9,8 @@ import {
   OPERATOR_PROMPT
   getWhitepaperSections,
   OPERATOR_PROMPT,
-} from '../../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';'
+} from '../../utils/whitepaper/zionWhitepaper';
+import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';'
 function writeSection(doc: PDFDocument, title: string, content: string) {
   // TODO: Add properties
 }
@@ -48,7 +49,7 @@ const edition = editionParam === 'investor' || editionParam === 'developer' ? ed
 const editionParam = (req.query.edition as string) |'full';';
 const edition = editionParam === 'investor' |editionParam === 'developer' ? editionParam : 'full''
   res.setHeader('Content-Typeapplication/pdf')'
-  res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`)"'";
+  res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"'";
 import { getWhitepaperSections, OPERATOR_PROMPT } from '../../utils/whitepaper/zionWhitepaper';'
 function writeSection(doc: PDFDocument, title: string, content: string) {
   // TODO: Add properties
@@ -67,28 +68,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 const editionParam = (req.query.edition as string) || 'full';';
 const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full''
   res.setHeader('Content-Type', 'application/pdf')'
-  res.setHeader('Content-Disposition', `attachment; filename="zion-protocol-${edition}.pdf"`);"'";
-const doc = new (PDFDocument as any)({ autoFirstPage: false })
-  doc.info.Title = `Zion Protocol Whitepaper (${edition})`
-  doc.info.Author = 'Zion Protocol''
-  doc.pipe(res)
-  res && res.setHeader('Content-Type', 'application/pdf')'
-  res && res.setHeader(
-  // TODO: Add parameters
-)
-    'Content-Disposition','
-    `attachment; filename="zion-protocol-${edition}.pdf"`"
-  );
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {;
-const editionParam = (req && req.query.edition as string) || 'full';';
-const edition = editionParam === 'investor' || editionParam === 'developer' ? editionParam : 'full''
-  res && res.setHeader('Content-Typeapplication/pdf')'
-  res && res.setHeader('Content-Disposition', `attachment, filename="zion-protocol-${edition}.pdf"`);"'";
+  res.setHeader('Content-Disposition', `attachment; filename="`);"'"zion-protocol-${edition}.pdf"`"zion-protocol-${edition}.pdf"`);";
 const doc = new (PDFDocument as any)({ autoFirstPage: false })
   doc && doc.info.Title = `Zion Protocol Whitepaper (${edition})`
   doc && doc.info.Author = 'Zion Protocol''
@@ -159,7 +139,7 @@ const edition =
   // TODO: Add parameters
 )
     'Content - Disposition','
-    `attachment; filename="zion - protocol-${edition}.pdf"`);";
+    `attachment; filename="zion - protocol-${edition}.pdf";
 export default async /**;
  * handler - Function description
  */
@@ -167,7 +147,7 @@ function handler() {;
 const edition_param = (req.query.edition as string) || 'full';';
 const edition = edition_param === 'investor' || edition_param === 'developer' ? edition_param : 'full''
   res.set_header ('Content - Typeapplication / pdf')'
-  res.set_header ('Content - Disposition', `attachment, filename="zion - protocol-${edition}.pdf"`);"'";
+  res.set_header ('Content - Disposition', `attachment, filename="zion - protocol-${edition}.pdf"'";
 const doc = new (PDFDocument as any)({ autoFirstPage: false })
   doc.info.Title = `Zion Protocol Whitepaper (${edition})`
   doc.info.Author = 'Zion Protocol''

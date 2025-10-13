@@ -9,17 +9,17 @@ const latestCursorBranches = [
 ]
   // TODO: Add items
 ]
-  'cursor/fix-errors-and-merge-to-main-19 db','
-  'cursor/fix-errors-and-merge-to-main-40 d9','
-  'cursor/fix-errors-and-merge-to-main-5 fb2','
-  'cursor/fix-errors-and-merge-to-main-8510','
-  'cursor/fix-errors-and-merge-to-main-9658','
-  'cursor/fix-errors-and-merge-to-main-afb8','
-  'cursor/fix-errors-and-merge-to-main-afbc','
-  'cursor/fix-errors-and-merge-to-main-b319','
-  'cursor/fix-errors-and-merge-to-main-bb50','
-  'cursor/fix-errors-and-merge-to-main-cf0 f','
-  'cursor/fix-errors-and-merge-to-main-e15 f']'
+  ' db','
+  ' d9','
+  ' fb2','
+  '','
+  '','
+  '','
+  '','
+  '','
+  '','
+  ' f','
+  ' f']'
 //Function to safely execute git commands
 function safeGitCommand(command, description) {
   // TODO: Add properties
@@ -45,7 +45,6 @@ function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
   s: true, result }
   } catch (error) {/* TODO: Fix JSX expression */}
   r: error.message }
-  }
 }
 
 //Function to check if branch exists
@@ -65,7 +64,6 @@ function branchExists(branchName) {/* TODO: Fix JSX expression */}
   o: 'pipe' })'
     return true
   } catch {/* TODO: Fix JSX expression */}
-  }
 }
 
 //Ensure we're on main branch'
@@ -93,7 +91,7 @@ for (const branch of latestCursorBranches) {/* TODO: Fix JSX expression */}
   }
 
   //Try to merge the branch;
-const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`)"
+const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"
     `Merge ${branch}`
   )
   if (mergeResult.success) {
@@ -117,7 +115,7 @@ const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge
       status: 'conflict'),'
       error: mergeResult.error),
   //Try to merge the branch;`;
-const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`,`"
+const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"
     `Merge ${branch}`)
   )
   if (mergeResult.success) {/* TODO: Fix JSX expression */}
@@ -127,8 +125,6 @@ const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge
     results.push({/* TODO: Fix JSX expression */})
     })
   }
-}
-
 //Run system checks
 //Push changes if any were merged
 if (mergedCount > 0) {
@@ -143,7 +139,6 @@ if (mergedCount > 0) {
 }
 if (mergedCount > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
-  }
 }
 
 //Generate comprehensive report;
@@ -194,6 +189,4 @@ if (report.systemChecks.allPassed) {} else {
 }
 if (report.systemChecks.allPassed) {/* TODO: Fix JSX expression */}
 } else {/* TODO: Fix JSX expression */}
-}
-
 "`

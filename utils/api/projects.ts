@@ -94,7 +94,6 @@ export interface Milestone {
   createdAt: string
   updatedAt: string
 }
-}
 export function getAllProjects(): Project[] {;
 export function getProjectById(id: string): Project | null {
   // TODO: Add properties
@@ -162,7 +161,6 @@ const newMilestone: Milestone = {
     status: 'pending','
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
-  }
   }
   project.milestones.push(newMilestone)
   project.updatedAt = new Date().toISOString()
@@ -401,4 +399,3 @@ const next: Milestone = { ...project.milestones[idx], ...update, updatedAt: now 
   project.updatedAt = now
   saveProject(project)
   return next
-}

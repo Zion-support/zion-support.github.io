@@ -1,6 +1,6 @@
 impor,
   t: { ServiceVariant } from '../types/service-variants'; expor,''
-  t: interface Revolutionary2026FintechBlockchainService {/* TODO: Fix JSX expression */}
+  t: interface Revolutionary2026 FintechBlockchainService {/* TODO: Fix JSX expression */}
   e: '2024-12-0,1'} customer,'
   s: 78,9, ratin,
   g: 4.,8, review,

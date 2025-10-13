@@ -159,7 +159,6 @@ const poorMetrics = performanceReport.metrics.filter(m => m.rating === 'poor')'
 }
           console.error('Error sending to analytics:', error),'
         }
-      }
       res.status(200).json({ success: true, message: 'Performance data recorded' }),'
     } catch (error) {
   // TODO: Add properties
@@ -199,7 +198,6 @@ const poorMetrics = performanceReport.metrics.filter(m => m.rating === 'poor')'
 }
           console.error('Error sending to analytics:', error)'
         }
-      }
       res.status(200).json({ success: true, message: 'Performance data recorded' })'
     } catch (error) {
   // TODO: Add properties
@@ -310,7 +308,6 @@ const limitedErrors = errorLogs
               total: errorLogs.length,
               recent: errorLogs.slice(-10).length
             }
-          }
         }),
         })
       } else {
@@ -388,7 +385,6 @@ const limitedErrors = errorLogs
       message: `Method ${req.method} Not Allowed`
     })
   }
-}
 function calculateAverages(metrics: PerformanceData[]) {
   // TODO: Add properties
 }
@@ -419,5 +415,4 @@ const sums = metrics.reduce((acc, metric) => ({
     cls: Math.round((sums.cls / metrics.length) * 1000) / 1000,
     ttfb: Math.round(sums.ttfb / metrics.length)
   },
-  }
-}
+  

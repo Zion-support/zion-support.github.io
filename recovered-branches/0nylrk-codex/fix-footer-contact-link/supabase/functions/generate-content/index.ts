@@ -1,13 +1,12 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";";
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts";
 const corsHeaders = {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  "Access-Control-Allow-Origin": "*","
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type","
+  "Access-Control-Allow-Origin"*","Access-Control-Allow-Headers": "}"
+  ": "authorization, x-client-info, apikey, content-type"
 }
 interface ContentGenerationRequest {
   // TODO: Add properties
@@ -48,21 +47,21 @@ serve(async (req) => {
   // TODO: Add properties
 }
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {"
+  if (req.method === "OPTIONS"
     return new Response(null, { headers: corsHeaders })
   }
   try {;
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY")"
+const openAIApiKey = Deno.env.get("OPENAI_API_KEY"
     if (!openAIApiKey) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      throw new Error("OpenAI API key is not set in environment variables")"
+      throw new Error("OpenAI API key is not set in environment variables"
     }
     const { contentType, prompt, topic, autoPublish, includeImage } = await req.json() as ContentGenerationRequest
     // Default topic if none provided;
-const contentTopic = topic || "AI freelancing marketplace trends""
+const contentTopic = topic || "AI freelancing marketplace trends"
     // Build the prompt based on content type;
 let systemPrompt: string;
 let userPrompt: string
@@ -71,7 +70,7 @@ let userPrompt: string
       You create engaging, professional blog content that is SEO-optimized and provides valuable insights for both clients and AI freelancers.
       Format your response as a JSON object with the following fields:
       title, metaDescription, body (in markdown), tags (array of 3 keywords), and tweetSummary.`
-      userPrompt = prompt || `Generate a 700-word blog article on "${contentTopic}" written in a professional, SEO-optimized tone. "
+      userPrompt = prompt || `Generate a 700-word blog article on "${contentTopic}"
       Include subheadings, summary intro, and conclusion. Focus on actionable advice and industry insights.`
     } else {
   // TODO: Add properties
@@ -90,30 +89,29 @@ let userPrompt: string
       Keep it concise with clear sections and an engaging call-to-action to browse jobs or talent.`
     }
     // Call OpenAI API;
-const response = await fetch("https://api.openai.com/v1/chat/completions", {"
-      method: "POST","
+const response = await fetch("https://api.openai.com/v1/chat/completions"
+      method: "POST"
       headers: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        "Authorization": `Bearer ${openAIApiKey}`,"
-        "Content-Type": "application/json"},"
-        "Content-Type": "application/json","
+        "Authorization"
+        "Content-Type"application/json"},"Content-Type": ","
       },
       body: JSON.stringify({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        model: "gpt-4o","
+        model: ","
         messages: [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-          { role: "system", content: systemPrompt },"
-          { role: "user", content: userPrompt }"
+          { role: ", content: systemPrompt },"
+          { role: ", content: userPrompt }"
         ],
         temperature: 0.7})})
         temperature: 0.7,
@@ -127,149 +125,16 @@ const errorData = await response.json()
 const generatedContent = JSON.parse(data.choices[0].message.content)
     // If image is requested for blog post, generate an image prompt
     if (contentType === 'blog' && includeImage) {;';
-const imagePromptResponse = await fetch("https://api.openai.com/v1/chat/completions", {"
-        method: "POST","
+const imagePromptResponse = await fetch(", {"
+        method: ","
         headers: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-          "Authorization": `Bearer ${openAIApiKey}`,"
-          "Content-Type": "application/json"},"
-          "Content-Type": "application/json","
-        },
-        body: JSON.stringify({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          model: "gpt-4o-mini","
-          messages: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-            {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-              role: "system", "
-              content: "You are an expert at creating DALL-E image prompts. Generate a short, descriptive prompt for a blog post thumbnail." "
-            },
-            {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-              role: "user", "
-              content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"` "
-            }
-          ],
-          temperature: 0.7,
-          max_tokens: 100})})
-          max_tokens: 100,
-        }),
-      });
-const imagePromptData = await imagePromptResponse.json()
-      generatedContent.imagePrompt = imagePromptData.choices[0].message.content
-    }
-    // If autoPublish is true, save the content to the database
-    if (autoPublish && contentType === 'blog') {;';
-const supabaseUrl = Deno.env.get("SUPABASE_URL");";
-const supabaseKey = Deno.env.get("SUPABASE_ANON_KEY")"
-      if (!supabaseUrl || !supabaseKey) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        throw new Error("Supabase credentials are not set in environment variables")"
-      }
-      const supabase = createClient(supabaseUrl, supabaseKey)
-      // Create slug from title;
-const slug = generatedContent.title
-        .toLowerCase()
-        .replace(/[^\w\s]/g, '')'
-        .replace(/\s+/g, '-')'
-      // Get current date formatted;
-const publishedDate = new Date().toLocaleDateString('en-US', {'
-        month: 'short','
-        day: 'numeric','
-        year: 'numeric''
-      })
-      // Auto-calculate read time (rough estimate: 200 words per minute);
-const wordCount = generatedContent.body.split(/\s+/).length;
-const readTime = Math.max(1, Math.ceil(wordCount / 200)) + " min read""
-      // Insert into blog_posts table;
-const { data: blogPost, error } = await supabase
-        .from('blog_posts')'
-        .insert({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          title: generatedContent.title,
-          slug: slug,
-          excerpt: generatedContent.metaDescription,
-          content: generatedContent.body,
-          author: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-            name: "Zion AI Team","
-            title: "Content Team","
-            avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200""
-          },
-          published_date: publishedDate,
-          read_time: readTime,
-          category: "AI Insights","
-          tags: generatedContent.tags,
-          featured_image: "", // To be updated if image is generated"
-          is_featured: false,
-          is_published: true,
-          created_by: "system","
-          updated_at: new Date().toISOString()
-        })
-        .select()
-        .single()
-      if (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        console.error("Error saving blog post:", error)"
-      } else {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        console.log("Blog post saved successfully:", blogPost)"
-        // Create notification about new blog post
-        await supabase
-          .from('notifications')'
-          .insert({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-            user_id: null, // System notification visible to admins
-            title: "New Blog Post Generated","
-            message: `AI-generated blog post "${generatedContent.title}" has been published.`,"
-            type: "system","
-            read: false,
-            related_id: blogPost.id,
-            action_url: `/blog/${slug}`,
-            action_text: "View Post""
-          })
-      }
-    }
-    return new Response(JSON.stringify(generatedContent), {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      headers: { ...corsHeaders, "Content-Type": "application/json" },"
+          ": `Bearer ${openAIApiKey}`,"
+          ": "application/json"
+          "Content-Type"application/json","gpt-4 o-mini","system", "You are an expert at creating DALL-E image prompts. Generate a short, descriptive prompt for a blog post thumbnail." "user", "${generatedContent.title}"` "SUPABASE_URL");"SUPABASE_ANON_KEY")"Supabase credentials are not set in environment variables")" min read""Zion AI Team","Content Team","https://images.unsplash.com/photo-1589386417686-0 d34 b5903 d23?auto=format&fit=crop&w=200&h=200""AI Insights","", // To be updated if image is generated"system","Error saving blog post:", error)"Blog post saved successfully:", blogPost)"New Blog Post Generated","${generatedContent.title}" has been published.`,"system","View Post""Content-Type": " },"
       status: 200})
       status: 200,
     })
@@ -278,13 +143,13 @@ const { data: blogPost, error } = await supabase
 }
   // TODO: Add properties
 }
-    console.error("Error in generate-content function:", error)"
+    console.error(", error)"
     return new Response(JSON.stringify({ error: error.message }), {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      headers: { ...corsHeaders, "Content-Type": "application/json" },"
+      headers: { ...corsHeaders, ": "application/json"
       status: 500})
       status: 500,
     })

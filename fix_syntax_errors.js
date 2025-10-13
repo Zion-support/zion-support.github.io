@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -9,7 +7,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 #!/usr/bin/env node;
 import fs from 'fs';';
 import path from 'path';'
@@ -29,8 +26,6 @@ const stat = fs.statSync(fullPath)
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {'
       files.push(fullPath)
     }
-  }
-
   return files
 }
 
@@ -100,8 +95,6 @@ const componentName = content.match(/const\s+(\w+):\s*React\.FC/g)
 }
         content = content.replace(/}\s*$/, `}\n\nexport default ${componentName[1]};`)
       }
-    }
-
     // Clean up extra whitespace
     content = content.replace(/\n\n\n+/g, '\n\n')'
     content = content.trim() + '\n''
@@ -124,8 +117,6 @@ const componentName = content.match(/const\s+(\w+):\s*React\.FC/g)
     console.error(`✗ Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Get all TypeScript files;
 const tsFiles = getAllTsFiles('./app')'
 console.log(`Found ${tsFiles.length} TypeScript files to check`);

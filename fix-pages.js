@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
@@ -15,14 +14,13 @@ const pagesToFix = [
         <title>${title} - Zion Tech Group</title>
                 ${title}
               Professional ${title.toLowerCase()} services by Zion Tech Group.
-            <h2 className = "text-2xl font-bold text-white mb-4">Coming Soon</h2>
+            <h2 className = "text-2 xl font-bold text-white mb-4">Coming Soon</h2>
               We're working on bringing you comprehensive ${title.toLowerCase()} solutions.
               Contact us to learn more about our services.;
               Contact Us;
   );
 };
 
-=======
 export default function Component() {
   return (
     <div>
@@ -30,4 +28,3 @@ export default function Component() {
       <p>This component is under construction.</p>
     </div>
   );
-}

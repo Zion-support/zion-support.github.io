@@ -48,7 +48,7 @@ const diff = execSync(`git diff main origin/${branch} --name-only`, { encoding: 
       }
 
       // Try to merge
-      execSync(`git merge origin/${branch} --no-ff -m "feat: Merge ${branch}"`, { stdio: 'inherit' })'"
+      execSync(`git merge origin/${branch} --no-ff -m "feat: Merge ${branch}"
       console.log(`✅ Successfully merged ${branch}`)
     } catch (error) {
   // TODO: Add properties
@@ -70,7 +70,6 @@ const diff = execSync(`git diff main origin/${branch} --name-only`, { encoding: 
 }
         // Ignore abort errors
       }
-    }
   }
 
   // Push all changes
@@ -83,4 +82,3 @@ const diff = execSync(`git diff main origin/${branch} --name-only`, { encoding: 
   // TODO: Add properties
 }
   console.error('❌ Error processing PRs:', error.message)'
-}

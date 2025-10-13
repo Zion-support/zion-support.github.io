@@ -18,11 +18,7 @@ const App: React.FC = () => {
 )
     <HelmetProvider>
 <Router>
-<div className="min-h-screen bg-white">"
-<Navigation />
-<main>
-<Routes>
-<Route path="/" element={<HomePage />} />"
+<div className="min-h-screen bg-white"/" element={<HomePage />} />"
 </Routes></main>
 <Footer /></div>
 </Router></HelmetProvider>

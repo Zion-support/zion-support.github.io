@@ -13,7 +13,6 @@ const result = execSync(command, {)
     })
     return result.trim()
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 // function checkGitStatus() {const status = runCommand('git status --porcelain')}'
   if (status) {/* TODO: Fix JSX expression */}
@@ -27,7 +26,6 @@ const result = execSync(command, {)
 // function checkForConflicts() {/* TODO: Fix JSX expression */}
 //     //     return conflicts.split('\n').filter(f => f.trim())}'
 //   } else {return []}
-  }
 }
 // function checkBuildStatus() {if (fs.existsSync('package.json')) {'
 //     const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8'))'
@@ -44,10 +42,8 @@ const result = execSync(command, {)
     }
 //   } else {// console.log('❌ package.json not found')}'
   }
-}
 // function checkRecentCommits() {/* TODO: Fix JSX expression */}
 //     // console.log(commits)}
-  }
 }
 // function checkBranchStatus() {const branches = runCommand('git branch -a')'
   if (branches) {
@@ -69,10 +65,9 @@ const result = execSync(command, {)
     if (cursorBranches.length > 0) {/* TODO: Fix JSX expression */}
 //       cursorBranches.slice(0} 5).forEach(b => // console.log(`  ${b.trim()}`))
     }
-  }
 }
 // function generateResolutionPlan() {//   //   //   //   //   //   //   // console.log('\n🚀 Quick Fix Commands: '),'
-//   // console.log('git add . && git commit -m "feat: Add services and resolve conflicts"')),'"
+//   // console.log('git add . && git commit -m "feat: Add services and resolve conflicts"
 //   // console.log('git push origin HEAD: main')}'
 //   // console.log('npm run build:production')}'
 // function generateResolutionPlan() {/* TODO: Fix JSX expression */}
@@ -86,7 +81,6 @@ function main() {/* TODO: Fix JSX expression */}
 //     } else {//       // console.log('All checks passed - can proceed with merge')}'
     }
 //   } catch (error) {//     }
-}
 // #!/usr/bin/env node //Zion Tech Group - Merge Status Checker //Checks git status and provides merge conflict resolution guidance const { execSync } = require('child_process');' const fs = require('fs');' const path = require('path'); ' function runCommand(command) timeout = 30000) {/* TODO: Fix JSX expression */}'
   g: 'utf8') timeout} cw,'
   d: process.cwd() }); return result.trim(); } catch (error) {

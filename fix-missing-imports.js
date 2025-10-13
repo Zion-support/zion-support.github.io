@@ -1,98 +1,55 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 
 export default function fix-missing-imports.js() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Fix Missing Imports.js - Zion Tech Group</title>
-        <meta name="description" content="Fix Missing Imports.js solutions by Zion Tech Group" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">Fix Missing Imports.js</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-// Common imports that are frequently missing;
-const commonImports = {
-  'Helmet': "import { Helmet } from 'react-helmet-async';",
-  'Link': "import { Link } from 'react-router-dom';",
-  'ArrowRight': "import { ArrowRight } from 'lucide-react';",
-  'ArrowLeft': "import { ArrowLeft } from 'lucide-react';",
-  'Home': "import { Home } from 'lucide-react';",
-  'Search': "import { Search } from 'lucide-react';",
-  'AlertTriangle': "import { AlertTriangle } from 'lucide-react';",
-  'Clock': "import { Clock } from 'lucide-react';",
-  'Users': "import { Users } from 'lucide-react';",
-  'Award': "import { Award } from 'lucide-react';",
-  'Star': "import { Star } from 'lucide-react';",
-  'Cpu': "import { Cpu } from 'lucide-react';",
-  'PieChart': "import { PieChart } from 'lucide-react';",
-  'MapPin': "import { MapPin } from 'lucide-react';",
-  'Pause': "import { Pause } from 'lucide-react';",
-  'Download': "import { Download } from 'lucide-react';",
-  'Upload': "import { Upload } from 'lucide-react';",
-  'Shield': "import { Shield } from 'lucide-react';",
-  'Database': "import { Database } from 'lucide-react';",
-  'CheckCircle': "import { CheckCircle } from 'lucide-react';",
-  'TrendingUp': "import { TrendingUp } from 'lucide-react';",
-  'Zap': "import { Zap } from 'lucide-react';",
-  'Brain': "import { Brain } from 'lucide-react';",
-  'Settings': "import { Settings } from 'lucide-react';",
-  'Sparkles': "import { Sparkles } from 'lucide-react';",
-  'Globe': "import { Globe } from 'lucide-react';",
-  'Server': "import { Server } from 'lucide-react';",
-  'Network': "import { Network } from 'lucide-react';",
-  'Lock': "import { Lock } from 'lucide-react';",
-  'Calendar': "import { Calendar } from 'lucide-react';",
-  'Rocket': "import { Rocket } from 'lucide-react';",
-  'Code': "import { Code } from 'lucide-react';",
-  'WebIcon': "import { WebIcon } from 'lucide-react';",
-  'Monitor': "import { Monitor } from 'lucide-react';",
-  'Target': "import { Target } from 'lucide-react';",
-  'BarChart3': "import { BarChart3 } from 'lucide-react';",
-  'Activity': "import { Activity } from 'lucide-react';",
-  'Mail': "import { Mail } from 'lucide-react';",
-  'MessageSquare': "import { MessageSquare } from 'lucide-react';",
-  'Share2': "import { Share2 } from 'lucide-react';",
-  'Filter': "import { Filter } from 'lucide-react';",
-  'Edit': "import { Edit } from 'lucide-react';",
-  'Trash2': "import { Trash2 } from 'lucide-react';",
-  'Plus': "import { Plus } from 'lucide-react';",
-  'Minus': "import { Minus } from 'lucide-react';",
-  'Play': "import { Play } from 'lucide-react';",
-  'Stop': "import { Stop } from 'lucide-react';",
-  'Volume2': "import { Volume2 } from 'lucide-react';",
-  'VolumeX': "import { VolumeX } from 'lucide-react';",
-  'Wifi': "import { Wifi } from 'lucide-react';",
-  'WifiOff': "import { WifiOff } from 'lucide-react';",
-  'Signal': "import { Signal } from 'lucide-react';",
-  'Bluetooth': "import { Bluetooth } from 'lucide-react';",
-  'Battery': "import { Battery } from 'lucide-react';",
-  'BatteryLow': "import { BatteryLow } from 'lucide-react';",
-  'Headphones': "import { Headphones } from 'lucide-react';",
-  'DollarSign': "import { DollarSign } from 'lucide-react';",
-  'Truck': "import { Truck } from 'lucide-react';",
-  'Phone': "import { Phone } from 'lucide-react';",
-  'Smartphone': "import { Smartphone } from 'lucide-react';",
-  'FileText': "import { FileText } from 'lucide-react';",
-  'Hand': "import { Hand } from 'lucide-react';",
-  'Layers': "import { Layers } from 'lucide-react';",
-  'Box': "import { Box } from 'lucide-react';",
-  'Mic': "import { Mic } from 'lucide-react';",
-  'Cloud': "import { Cloud } from 'lucide-react';",
-  'Package': "import { Package } from 'lucide-react';",
-  'Heart': "import { Heart } from 'lucide-react';",
-  'Receipt': "import { Receipt } from 'lucide-react';",
-  'GlobeIcon': "import { Globe as GlobeIcon } from 'lucide-react';"
+    <div className="min-h-screen bg-gray-900 text-white" content="Fix Missing Imports.js solutions by Zion Tech Group"container mx-auto px-4 py-20"text-center"text-4 xl font-bold mb-8"text-xl text-gray-300 mb-8"import { Helmet } from 'react-helmet-async';",
+  'Link': ",
+  'ArrowRight': "import { ArrowRight } from 'lucide-react';"import { ArrowLeft } from 'lucide-react';",
+  'Home': ",
+  'Search': "import { Search } from 'lucide-react';"import { AlertTriangle } from 'lucide-react';",
+  'Clock': ",
+  'Users': "import { Users } from 'lucide-react';"import { Award } from 'lucide-react';",
+  'Star': ",
+  'Cpu': "import { Cpu } from 'lucide-react';"import { PieChart } from 'lucide-react';",
+  'MapPin': ",
+  'Pause': "import { Pause } from 'lucide-react';"import { Download } from 'lucide-react';",
+  'Upload': ",
+  'Shield': "import { Shield } from 'lucide-react';"import { Database } from 'lucide-react';",
+  'CheckCircle': ",
+  'TrendingUp': "import { TrendingUp } from 'lucide-react';"import { Zap } from 'lucide-react';",
+  'Brain': ",
+  'Settings': "import { Settings } from 'lucide-react';"import { Sparkles } from 'lucide-react';",
+  'Globe': ",
+  'Server': "import { Server } from 'lucide-react';"import { Network } from 'lucide-react';",
+  'Lock': ",
+  'Calendar': "import { Calendar } from 'lucide-react';"import { Rocket } from 'lucide-react';",
+  'Code': ",
+  'WebIcon': "import { WebIcon } from 'lucide-react';"import { Monitor } from 'lucide-react';",
+  'Target': ",
+  'BarChart3': "import { BarChart3 } from 'lucide-react';"import { Activity } from 'lucide-react';",
+  'Mail': ",
+  'MessageSquare': "import { MessageSquare } from 'lucide-react';"import { Share2 } from 'lucide-react';",
+  'Filter': ",
+  'Edit': "import { Edit } from 'lucide-react';"import { Trash2 } from 'lucide-react';",
+  'Plus': ",
+  'Minus': "import { Minus } from 'lucide-react';"import { Play } from 'lucide-react';",
+  'Stop': ",
+  'Volume2': "import { Volume2 } from 'lucide-react';"import { VolumeX } from 'lucide-react';",
+  'Wifi': ",
+  'WifiOff': "import { WifiOff } from 'lucide-react';"import { Signal } from 'lucide-react';",
+  'Bluetooth': ",
+  'Battery': "import { Battery } from 'lucide-react';"import { BatteryLow } from 'lucide-react';",
+  'Headphones': ",
+  'DollarSign': "import { DollarSign } from 'lucide-react';"import { Truck } from 'lucide-react';",
+  'Phone': ",
+  'Smartphone': "import { Smartphone } from 'lucide-react';"import { FileText } from 'lucide-react';",
+  'Hand': ",
+  'Layers': "import { Layers } from 'lucide-react';"import { Box } from 'lucide-react';",
+  'Mic': ",
+  'Cloud': "import { Cloud } from 'lucide-react';"import { Package } from 'lucide-react';",
+  'Heart': ",
+  'Receipt': "import { Receipt } from 'lucide-react';"import { Globe as GlobeIcon } from 'lucide-react';"
 };
 
 // Function to fix missing imports in a file;
@@ -120,13 +77,11 @@ function fixMissingImports(filePath) {
     }
 
     // Find the last import statement;
-    let lastImportIndex = -1;
+let lastImportIndex = -1;
     for (let i = 0; i < lines.length; i++) {>
   if (lines[i].trim().startsWith('import ')) {>
   lastImportIndex = i;
       }
-    }
-
     // Add missing imports;
     const newImports = Array.from(missingImports).map(importName => commonImports[importName]);
     // Add missing imports>
@@ -147,8 +102,6 @@ function fixMissingImports(filePath) {
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
   }
-}
-
 // Function to recursively find all TypeScript files;
 function findFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
@@ -176,4 +129,3 @@ files.forEach(file => {
 });
 
 console.log('Finished fixing missing imports.');
-=======

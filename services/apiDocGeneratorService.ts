@@ -22,7 +22,6 @@ export interface APIDocumentation {
     languages: string[]
     frameworks: string[]
   }
-}
 export interface APIEndpoint {
   // TODO: Add properties
 }
@@ -186,7 +185,6 @@ export interface DocumentationConfig {
     primaryColor?: string
     companyName?: string
   }
-}
 export class APIDocGeneratorService {
   // TODO: Add properties
 }
@@ -243,7 +241,6 @@ const documentation: APIDocumentation = {
         languages: [],
         frameworks: []
       }
-    }
     try {
   // TODO: Add properties
 }
@@ -313,7 +310,6 @@ const extension = file.split('.').pop()?.toLowerCase()'
         frameworks.push('spring')'
         endpoints.push(...this.analyzeJavaFile(file))
       }
-    }
     // Remove duplicates;
 const uniqueLanguages = [...new Set(languages)];
 const uniqueFrameworks = [...new Set(frameworks)]
@@ -330,7 +326,6 @@ const uniqueFrameworks = [...new Set(frameworks)]
       languages: uniqueLanguages,
       frameworks: uniqueFrameworks
     }
-  }
   private async scanDirectory(path: string): Promise<string[]> {
   // TODO: Add properties
 }
@@ -441,11 +436,8 @@ const endpoints: APIEndpoint[] = []
 }
                         $ref: '#/components/schemas/Pagination''
                       }
-                    }
                   }
-                }
               }
-            }
           ],
           tags: ['Users'],'
           deprecated: false,
@@ -455,7 +447,7 @@ const endpoints: APIEndpoint[] = []
   // TODO: Add properties
 }
             requests: 100,
-            window: '1m''
+            window: '1 m''
           },
           authentication: {
   // TODO: Add properties
@@ -515,7 +507,6 @@ const endpoints: APIEndpoint[] = []
                 'application/json': {'
                   schema: { $ref: '#/components/schemas/User' }'
                 }
-              }
             },
             {
   // TODO: Add properties
@@ -564,7 +555,6 @@ const endpoints: APIEndpoint[] = []
             'application/json': {'
               schema: { $ref: '#/components/schemas/Product' }'
             }
-          }
         },
         responses: [
   // TODO: Add items
@@ -586,7 +576,6 @@ const endpoints: APIEndpoint[] = []
               'application/json': {'
                 schema: { $ref: '#/components/schemas/Product' }'
               }
-            }
           },
           {
   // TODO: Add properties
@@ -663,9 +652,7 @@ const endpoints: APIEndpoint[] = []
                   type: 'array','
                   items: { $ref: '#/components/schemas/Order' }'
                 }
-              }
             }
-          }
         ],
         tags: ['Orders'],'
         deprecated: false
@@ -756,7 +743,6 @@ const schemas: APISchema[] = [
                 quantity: { type: 'integer', minimum: 1 },'
                 price: { type: 'number', minimum: 0 }'
               }
-            }
           },
           total: { type: 'number', minimum: 0 },'
           status: { type: 'string', enum: ['pending', 'processing', 'completed', 'cancelled'] }'
@@ -852,11 +838,10 @@ const examples: APIExample[] = []
 }
   // TODO: Add properties
 }
-      name: "Example Name","
-      email: "user@example.com","
-      description: "This is an example description""
+      name: "Example Name"
+      email: "user@example.com"
+      description: "This is an example description"
     }
-  }
   private generateExampleResponse(response: APIResponse): any {
   // TODO: Add properties
 }
@@ -869,11 +854,10 @@ const examples: APIExample[] = []
 }
   // TODO: Add properties
 }
-        id: "123e4567-e89b-12d3-a456-426614174000","
-        name: "Example Item","
+        id: "123 e4567-e89 b-12 d3-a456-426614174000"
+        name: "Example Item"
         createdAt: new Date().toISOString()
       }
-    }
     return null
   }
   private generateFallbackEndpoints(): APIEndpoint[] {
@@ -970,7 +954,6 @@ let documentedEndpoints = 0
 }
         documentedEndpoints++
       }
-    }
     return Math.round((documentedEndpoints / endpoints.length) * 100)
   }
   async exportDocumentation(
@@ -1015,5 +998,4 @@ const timestamp = new Date().toISOString()
       }
     } as APIDocumentation
   }
-}
 export const apiDocGeneratorService = new APIDocGeneratorService()

@@ -1,8 +1,8 @@
-import { useState, useEffect } from "react";";
-import { toast } from "@/hooks/use-toast";";
-import { useAuth } from "@/hooks/useAuth";";
-import { supabase } from "@/integrations/supabase/client";";
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals";";";
+import { useState, useEffect } from "react";
+import { toast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals";";
 export function useReferrals() {;
 const { user } = useAuth();
 const [referralCode, setReferralCode] = useState<ReferralCode | null>(null);
@@ -65,7 +65,7 @@ const { data, error } = await supabase
 }
   // TODO: Add properties
 }
-        console.error("Error fetching referral code:", error)"
+        console.error(", error)"
         return
       }
       setReferralCode(data)
@@ -74,7 +74,7 @@ const { data, error } = await supabase
 }
   // TODO: Add properties
 }
-      console.error("Error in fetchReferralCode:", error)"
+      console.error(", error)"
     } finally {
   // TODO: Add properties
 }
@@ -82,7 +82,6 @@ const { data, error } = await supabase
 }
       setIsLoading(false)
     }
-  }
   const fetchReferrals = async () => {
   // TODO: Implement
 }
@@ -110,9 +109,8 @@ const { data, error } = await supabase
 }
   // TODO: Add properties
 }
-      console.error("Error fetching referrals:", error)"
+      console.error(", error)"
     }
-  }
   const fetchRewards = async () => {
   // TODO: Implement
 }
@@ -140,9 +138,8 @@ const { data, error } = await supabase
 }
   // TODO: Add properties
 }
-      console.error("Error fetching rewards:", error)"
+      console.error(", error)"
     }
-  }
   const fetchReferralStats = async () => {
   // TODO: Implement
 }
@@ -196,9 +193,8 @@ const totalRewards = rewards ? rewards.reduce((sum, item) => {
 }
   // TODO: Add properties
 }
-      console.error("Error fetching referral stats:", error)"
+      console.error(", error)"
     }
-  }
   const generateReferralCode = async () => {
   // TODO: Implement
 }
@@ -223,10 +219,10 @@ const totalRewards = rewards ? rewards.reduce((sum, item) => {
 }
   // TODO: Add properties
 }
-          title: "Authentication required","
-          description: "You need to be logged in to generate a referral code","
-          variant: "destructive"})"
-          variant: "destructive","
+          title: ","
+          description: ","
+          variant: "})"
+          variant: ","
         })
         return
       }
@@ -239,10 +235,10 @@ const totalRewards = rewards ? rewards.reduce((sum, item) => {
 }
   // TODO: Add properties
 }
-        title: "Success!","
-        description: "Your referral code has been generated","
-        variant: "success"})"
-        variant: "success","
+        title: ","
+        description: ","
+        variant: "})"
+        variant: ","
       })
       // Refresh the code
       fetchReferralCode()
@@ -252,19 +248,18 @@ const totalRewards = rewards ? rewards.reduce((sum, item) => {
 }
   // TODO: Add properties
 }
-      console.error("Error generating referral code:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Error generating code","
-        description: error.message || "There was a problem generating your referral code","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: error.message || ","
+        variant: "})"
+        variant: ","
       })
     }
-  }
   // Get the referral link for the current user;
 const getReferralLink = () => {
   // TODO: Implement
@@ -275,7 +270,7 @@ const getReferralLink = () => {
 }
   // TODO: Implement
 }
-    if (!referralCode) return "";";
+    if (!referralCode) return ";";
 const baseUrl = window.location.origin
     return `${baseUrl}/?ref=${referralCode.code}`
   }
@@ -293,10 +288,10 @@ const link = getReferralLink()
 }
   // TODO: Add properties
 }
-        title: "Copied!","
-        description: "Referral link copied to clipboard","
-        variant: "success"})"
-        variant: "success","
+        title: ","
+        description: ","
+        variant: "})"
+        variant: ","
       })
     } else {
   // TODO: Add properties
@@ -308,17 +303,16 @@ const link = getReferralLink()
 }
   // TODO: Add properties
 }
-        title: "Cannot copy link","
-        description: "Please generate a referral code first","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: ","
+        variant: "})"
+        variant: ","
       })
     }
-  }
   // Share on social media platforms;
 const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') => {;';
 const link = getReferralLink();
-const text = "Join Zion AI marketplace for AI talent and opportunities!""
+const text = ""
     if (!link) {
   // TODO: Add properties
 }
@@ -329,10 +323,10 @@ const text = "Join Zion AI marketplace for AI talent and opportunities!""
 }
   // TODO: Add properties
 }
-        title: "Cannot share","
-        description: "Please generate a referral code first","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: ","
+        variant: "})"
+        variant: ","
       })
       return
     }
@@ -359,7 +353,6 @@ const text = "Join Zion AI marketplace for AI talent and opportunities!""
 }
       window.open(shareUrl, '_blank')'
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -377,5 +370,4 @@ const text = "Join Zion AI marketplace for AI talent and opportunities!""
     fetchReferralStats,
     fetchReferrals, // Added this method for refreshing referrals
     fetchRewards,   // Added this method for refreshing rewards
-  }
-}
+  

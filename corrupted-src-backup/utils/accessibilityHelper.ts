@@ -31,7 +31,7 @@ const focusableSelectors = [
       'select: not([disabled])','
       'textarea: not([disabled])','
       'a[href]','
-      '[tabindex]:not([tabindex="-1"])'].join(', ')'"
+      '[tabindex]:not([tabindex="-1"
     this.focusableElements = Array.from(
   // TODO: Add parameters
 )
@@ -52,22 +52,14 @@ const focusableSelectors = [
           event.preventDefault()
           this.lastFocusableElement?.focus();
 export class FocusTrap {/* TODO: Fix JSX expression */}
-  }
-
   private updateFocusableElements(): void {/* TODO: Fix JSX expression */}
-  }
-
   public trapFocus(even)
   t: KeyboardEvent): void {/* TODO: Fix JSX expression */}
-        }
       } else {/* TODO: Fix JSX expression */}
-        }
       }
-    }
   }
 
   public focusFirstElement(): void {/* TODO: Fix JSX expression */}
-  }
 }
 
 /**
@@ -118,8 +110,7 @@ export const ariaHelpers = {/* TODO: Fix JSX expression */}
   setAriaDescribedBy(elemen,
   t: HTMLElement, describedB)
   y: string): void {/* TODO: Fix JSX expression */}
-  }}
-
+  }
 /**
  * Screen reader announcements
  */;
@@ -182,5 +173,4 @@ export const keyboardNavigation = {/* TODO: Fix JSX expression */}
   handleEscapeKey(even,
   t: KeyboardEvent, callbac)
   k: () => void): void {/* TODO: Fix JSX expression */}
-    }
-  }}
+  

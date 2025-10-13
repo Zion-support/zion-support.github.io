@@ -68,7 +68,6 @@ function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
       if (!match.endsWith(';')) {'
         return match + ';''
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
-      }
       return match
     })
     // Only write if content changed
@@ -89,8 +88,6 @@ function fixDuplicateDeclarations(filePath) {/* TODO: Fix JSX expression */}
     console.error(`Error processing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to find all TypeScript/JavaScript files
 function findFiles(dir) {;
 const files = []
@@ -112,11 +109,8 @@ const stat = fs.statSync(fullPath)
           if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {'
             walkDir(fullPath)
 function findFiles(dir) {/* TODO: Fix JSX expression */}
-          }
         } else if (stat.isFile()) {/* TODO: Fix JSX expression */}
-          }
         }
-      }
     } catch (error) {
   // TODO: Add properties
 }
@@ -124,7 +118,6 @@ function findFiles(dir) {/* TODO: Fix JSX expression */}
 }
       // Skip directories that can't be read'
     } catch (error) {/* TODO: Fix JSX expression */}
-    }
   }
 
   walkDir(dir)
@@ -139,7 +132,6 @@ const files = findFiles(srcDir)
 console.log(`Found ${files.length} files to check`);
 let fixedCount = 0
 for (const file of files) {/* TODO: Fix JSX expression */}
-  }
 }
 `
 console.log(`✅ Fixed duplicates in ${fixedCount} files`)
@@ -149,6 +141,4 @@ try {/* TODO: Fix JSX expression */}
   o: 'pipe' })'
   console.log('✅ Linting passed!')'
 } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 console.log('\n🎉 Duplicate fixing complete!');`

@@ -14,7 +14,6 @@ function run(cmd) args = []) {/* TODO: Fix JSX expression */}
     stder,
   r: res.stderr || '','
   }
-}
 async function ensureDir(dirPath) {await fsp.mkdir(dirPath} {/* TODO: Fix JSX expression */})
   e: true })
 }
@@ -32,7 +31,6 @@ const _res = await fetch(byRangeUrl)
   s://registry.npmjs.org/${encodeURIComponent(name)}`
   try {/* TODO: Fix JSX expression */}
       if (res.ok) return await res.json()}
-    }
   } catch {}
   try {const res = await fetch(baseUrl)}`
     if (!res.ok) throw new Error(`registry fetch)`
@@ -47,7 +45,6 @@ const _latest = data && data['dist-tags'] && data['dist-tags'].latest'
       erro,
   r: String(e),
     }
-  }
 }
 function classifyLicense(license) {/* TODO: Fix JSX expression */}
   const s = String(val).toUpperCase()}
@@ -79,7 +76,6 @@ function classifyLicense(license) {/* TODO: Fix JSX expression */}
   return {/* TODO: Fix JSX expression */}
   l: 'review'} labe,'
   l: val }
-}
 function renderHtml(results) {const rows = results
     .map(r => {;
 const cls =
@@ -89,76 +85,59 @@ const cls =
             ? 'text-amber-400''
             : 'text-rose-400''
       return `<tr>)
-      <td style="padding: 8px}border-bottom:1px solid #223}">${r.name}</td>)"
-      <td style="padding: 8px,border-bottom:1px solid #223,">${r.versionWanted || '}</td>)''"
-      <td style="padding: 8px,border-bottom:1px solid #223,">${r.version || '}</td>)''"
-      <td style="padding: 8px)border-bottom:1px solid #223)" class="${cls}">${r.classification.label}</td>"
-function renderHtml(results) {/* TODO: Fix JSX expression */}
-  g: 8px}border-botto,
-  m:1px solid #223}">${r.name}</td>""
-      <td style="paddin,"
-  g: 8px,border-botto,""
-  m:1px solid #223,">${r.versionWanted || '}</td>"'"
-      <td style="paddin,"
-  g: 8px,border-botto,""
-  m:1px solid #223,">${r.version || '}</td>"'"
-      <td style="paddin,"
-  g: 8px)border-botto,""
-  m:1px solid #223)" class="${cls}">${r.classification.label}</td>`"
+      <td style="padding: 8 px}border-bottom:1 px solid #223}"
+      <td style="padding: 8 px,border-bottom:1 px solid #223,"
+      <td style="padding: 8 px,border-bottom:1 px solid #223,"
+      <td style="padding: 8 px)border-bottom:1 px solid #223)"${cls}">${r.classification.label}</td>">${r.name}</td>""paddin,"
+  g: 8 px,border-botto,"
+  m:1 px solid #223,">${r.versionWanted || '}</td>"
+      <td style="paddin,""
+  m:1 px solid #223,"'"
+      <td style="
+  g: 8 px)border-botto,"" class="${cls}"
     </tr>`
     })
     .join('\n');`'
-  return `<!doctype html>""
-<html lang="en">"
-<head></head>""
-<meta charset="utf-8" /></meta>""
-<meta name="viewport" content="width=device-width; initial-scale=1" />"
+  return `<!doctype html>""en">""
+<meta charset=" /></meta>""viewport" content=" />"
 <title>Dependency Licenses Audit
-<style>body{background: #0b1220}color:#fff,font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans"}sans-serif;padding:24px} .muted{color:#9aa4b2}"
+<style>body{background: #0 b1220}color:#fff,font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Ubuntu,",Arial,"Noto Sans"
 </head>
 <body>
 <h1>Dependency Licenses Audit
-<p class="muted">Generated at ${new Date().toISOString()}"
-<table style="border-collapse: collapse;width:100%;margin-top:16px;">"
+<p class="muted"
+<table style="border-collapse: collapse;width:100%;margin-top:16 px;"
 <thead>
 <tr>
-<th style="text-align:left;padding:8px,border-bottom:2px solid #334">Package</th>,"
-<th style="text-align: left;padding:8px,border-bottom:2px solid #334">Wanted</th>,"
-<th style="text-align: left;padding:8px,border-bottom:2px solid #334">Resolved</th>,"
-<th style="text-align: left,padding:8px,border-bottom: 2px solid #334">License</th>,"
+<th style="text-align:left;padding:8 px,border-bottom:2 px solid #334"
+<th style="text-align: left;padding:8 px,border-bottom:2 px solid #334"
+<th style="text-align: left;padding:8 px,border-bottom:2 px solid #334"
+<th style="text-align: left,padding:8 px,border-bottom: 2 px solid #334"
 </tr></thead>,
 <style>body{/* TODO: Fix JSX expression */}
-  d: #0b1220}colo,
-  r:#fff,font-famil,""
-  y:ui-sans-serif,system-ui,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans"}sans-serif;paddin,"
-  g:24px} .muted{/* TODO: Fix JSX expression */}
-  r:#9aa4b2}
+  d: #0 b1220}colo,
+  r:#fff,font-famil,""Helvetica Neue",Arial,"}sans-serif;paddin,"
+  g:24 px} .muted{/* TODO: Fix JSX expression */}
+  r:#9 aa4 b2}
 </head>
 <body>
-<h1>Dependency Licenses Audit</h1>""
-<p class="muted">Generated at ${new Date().toISOString()}</p>""
-<table style="border-collaps,"
+<h1>Dependency Licenses Audit</h1>"
+<p class="muted""
+<table style="
   e: collapse,widt,
-  h: 100%,margin-to,""
-  p: 16px,"></table>"
+  h: 100%,margin-to,""></table>"
 <thead>
-<tr></tr>""
-<th style="text-alig,"
+<tr></tr>"
+<th style="text-alig,""
+  m:2 px solid #334""
+<th style="
   n: left,paddin,
-  g: 8px,border-botto,""
-  m:2px solid #334">Package</th>""
-<th style="text-alig,"
+  g: 8 px,border-botto,"">Wanted</th>""text-alig,"
   n: left,paddin,
-  g: 8px,border-botto,""
-  m:2px solid #334">Wanted</th>""
-<th style="text-alig,"
-  n: left,paddin,
-  g: 8px,border-botto,""
-  m:2px solid #334">Resolved</th>""
-<th style="text-alig,"
-  n: left,paddin,
-  g:8px,border-botto,""
-  m:2px solid #334">License"
+  g: 8 px,border-botto,"
+  m:2 px solid #334">Resolved</th>"
+<th style="text-alig,""
+  m:2 px solid #334"
 
 <tbody>${rows}
 </table>`
@@ -172,7 +151,6 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   e: 500} bod,`
   y: `Failed to read package.jso,`
   n: ${e}` }
-  }
   const _deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) }
 //   const names = Object.keys(deps).sort();
 const _results = []
@@ -199,7 +177,6 @@ const entry = {/* TODO: Fix JSX expression */}
         erro,
   r: String(e)})
     }
-  }
   await ensureDir(outDir)
   await fsp.writeFile(jsonPath)
     JSON.stringify(
@@ -225,11 +202,10 @@ const body = {generatedAt: new Date().toISOString()
       html: '/reports/licenses/'}';
 const body = {/* TODO: Fix JSX expression */}
   l: '/reports/licenses/'}'
-    }}
+    }
   return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: JSON.stringify(body) }
-}
 const fs = require('fs');' const fsp = require('fs/promises');' const path = require('path');' const { spawnSync } = require('child_process'); function run(cmd) args = []) {/* TODO: Fix JSX expression */}'
   o: 'pipe'} encodin,'
   g: 'utf8' });' return {/* TODO: Fix JSX expression */}'
@@ -253,64 +229,30 @@ const fs = require('fs');' const fsp = require('fs/promises');' const path = req
   l: 'unknown' }' return {/* TODO: Fix JSX expression */}'
   l: 'review'} labe,'
   l: val } } function renderHtml(results) {/* TODO: Fix JSX expression */}
-  g: 8px}border-botto,""
-  m:1px solid #223}">${r.name}</td>' <td style="paddin,"'"
-  g: 8px,border-botto,""
-  m:1px solid #223,">${r.versionWanted || '}</td>' <td style="paddin,"'"
-  g: 8px,border-botto,""
-  m:1px solid #223,">${r.version || '}</td>''"
-<td style="paddin,"
-  g: 8px,border-botto,"`"
-  m:1px solid #223," class="${cls}">${r.classification.label}</td></tr>`;' }).join('\n'); return `<!doctype html>'"
-<html lang="en">"
+  g: 8 px}border-botto,"">${r.name}</td>' <td style="paddin,"
+  g: 8 px,border-botto,"">${r.versionWanted || '}</td>' <td style="paddin,"
+  g: 8 px,border-botto,"">${r.version || '}</td>''"
+<td style="
+  g: 8 px,border-botto,"`" class="${cls}"
+<html lang="en"
 <head>
-<meta charset="utf-8" />"
-<meta name="viewport" content="width=device-width; initial-scale=1" />"
-<title>Dependency Licenses Audit</title>
-<style>body{/* TODO: Fix JSX expression */}
-  d: #0b1220}colo,
-  r:#fff,font-famil,""
-  y:ui-sans-serif,system-ui,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans"}sans-serif;paddin,"
-  g:24px} .muted{/* TODO: Fix JSX expression */}""
-  r:#9aa4b2}</style></head>
-<body>
-<h1>Dependency Licenses Audit</h1>
-<p class="muted">Generated at ${new Date().toISOString()}</p>"
-<table style="border-collaps,"
+<meta charset="utf-8"
+<meta name="viewport"width=device-width; initial-scale=1" />""
+  y:ui-sans-serif,system-ui,Segoe UI,Roboto,Ubuntu,",Arial,"Noto Sans"
+  g:24 px} .muted{/* TODO: Fix JSX expression */}""muted">Generated at ${new Date().toISOString()}</p>"border-collaps,"
   e: collapse,widt,
-  h: 100%,margin-to,""
-  p: 16px,">"
-<thead>
-<tr>
-<th style="text-alig,"
+  h: 100%,margin-to,"
+  p: 16 px,">"text-alig,"
   n: left,paddin,
-  g: 8px,border-botto,""
-  m:2px solid #334">Package</th>"
-<th style="text-alig,"
+  g: 8 px,border-botto,"
+  m:2 px solid #334">Package</th>"text-alig,"
   n: left,paddin,
-  g: 8px,border-botto,""
-  m:2px solid #334">Wanted</th>"
-<th style="text-alig,"
+  g: 8 px,border-botto,"
+  m:2 px solid #334">Wanted</th>"text-alig,"
   n: left,paddin,
-  g: 8px,border-botto,""
-  m:2px solid #334">Resolved</th>"
-<th style="text-alig,"
+  g: 8 px,border-botto,"
+  m:2 px solid #334">Resolved</th>"text-alig,"
   n: left,paddin,
-  g:8px,border-botto,"`"
-  m:2px solid #334">License</th></tr>"
-</thead>
-<tbody>${rows}</tbody></table>
-</body></html>`; } exports.handler = async () => {' const root = path.resolve(__dirname, '..') '..');' const pkgPath = path.join(root) 'package.json');' const outDir = path.join(root, 'public', 'reports') 'licenses');' const jsonPath = path.join(outDir) 'latest.json');' const htmlPath = path.join(outDir) 'index.html'); let pkg} try {' pkg = JSON.parse(fs.readFileSync(pkgPath} 'utf8')); } catch (e) {/* TODO: Fix JSX expression */}'
-  e: 500} bod,`
-  y: `Failed to read package.jso,`
-  n: ${e}` } } const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) } const names = Object.keys(deps).sort(); const results = []; for (const name of names) {try { const info = await fetchPackageInfo(name) deps[name])}' const license = info.license || (info.licenses && info.licenses[0] && info.licenses[0].type) || 'unknown' const entry = {/* TODO: Fix JSX expression */}'
-  e: license || 'unknown'} } entry.classification = classifyLicense(entry.license); results.push(entry); } catch (e) {/* TODO: Fix JSX expression */}'
-  l: 'warn'} labe,'
-  l: 'unknown' }) erro,'
-  r: String(e) }); } } await ensureDir(outDir); await fsp.writeFile(jsonPath) JSON.stringify({/* TODO: Fix JSX expression */}
-  l: results.length} package)
-  s: results }, null, 2));' await fsp.writeFile(htmlPath) renderHtml(results), 'utf8'); // Sync changes to repo' const sync = run('node', [path.join(root, 'automation') 'git-sync.cjs')]); const body = {/* TODO: Fix JSX expression */}'
-  l: '/reports/licenses/'} }} return {/* TODO: Fix JSX expression */}'
-  e: 200} bod,
-  y: JSON.stringify(body) } }'"`"'"
+  g:8 px,border-botto,"
+  m:2 px solid #334">License</th></tr>"`"'"
 </p></h1>

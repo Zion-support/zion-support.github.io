@@ -1,7 +1,6 @@
 'use client''
 interface DynamicOptions {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   loading?: () => React.ReactElement
   ssr?: boolean
 }
@@ -18,4 +17,3 @@ importFun,
     <Suspense fallback={options.loading ? options.loading() : <div>Loading...</div>}>
 <LazyComponent {...props} />
   )
-}

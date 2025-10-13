@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-=======
+
   children?: React.ReactNode;
   className?: string;
   onClick?: () => void;
 }
-
 
 interface FuturisticButtonProps {
   className?: string;
@@ -18,5 +16,5 @@ export default function FuturisticButton({ className = '', children }: Futuristi
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
+
 // import React from 'react';

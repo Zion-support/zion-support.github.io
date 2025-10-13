@@ -52,7 +52,6 @@ function ensureDataDir(): void {
 }
     fs.mkdirSync(DATA_ROOT, { recursive: true })
   }
-}
 function getFilePath(fileName: string): string {
   // TODO: Add properties
 }
@@ -84,7 +83,6 @@ const filePath = getFilePath(fileName)
 }
     return defaultValue
   }
-}
 export function writeJsonFile<T>(fileName: string, data: T): void {;
 const filePath = getFilePath(fileName);
 const tmpPath = `${filePath}.tmp`
@@ -163,7 +161,6 @@ export class DatabaseManager {
       rowCount: 0,
       fields: []
     }
-  }
   async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T> {
   // TODO: Add properties
 }
@@ -212,11 +209,7 @@ const items = readJsonFile<T[]>(fileName, [])
   items.push(item)
   writeJsonFile<T[]>(fileName, items)
 }
-}
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
 const items = readJsonFile<T[]>(fileName, [])
   items.push(item)
   writeJsonFile<T[]>(fileName, items)
-}
-
-}

@@ -31,7 +31,7 @@ const completion = await openai && openai.chat.completions && completions.create
 }
   // TODO: Add properties
 }
-      model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini','
+      model: process && process.env.OPENAI_MODEL || 'gpt-4 o-mini','
       messages: [
   // TODO: Add items
 ]
@@ -81,14 +81,13 @@ const parsed = JSON && JSON.parse(content)
 }
     return res.status(500).json({ error: e.message |'OpenAI error' })'
 }
-  }
 }
     const completion = await openai.chat.completions.create({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      model: process.env.OPENAI_MODEL || 'gpt-4o-mini','
+      model: process.env.OPENAI_MODEL || 'gpt-4 o-mini','
       messages: [
   // TODO: Add items
 ]
@@ -119,5 +118,4 @@ const parsed = JSON.parse(content)
   // TODO: Add properties
 }
     return res.status(500).json({ error: e.message || 'OpenAI error' })'
-  }
-}
+  

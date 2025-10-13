@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
 export default function Component() {
   return (
     <div>
@@ -87,13 +85,13 @@ const enhancedChunking = `
             }
             return 'zion-other'
           }
-          // 5G service pages
-          if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            return '5g-services'
+          // 5 G service pages
+          if (id.includes('/5 g-') && id.includes('/page.tsx')) {
+            return '5 g-services'
           }
           // Other service pages
           if (id.includes('/app/') && id.includes('/page.tsx') &&
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5 g-')) {
             return 'pages'
           }
           // Default chunk for other modules
@@ -163,7 +161,6 @@ if (typeof window !== 'undefined') {
       if (entry.entryType === 'resource') {
         console.log('Resource loaded:', entry.name, entry.transferSize);
       }
-    }
   });
   observer.observe({ entryTypes: ['resource'] });
 }
@@ -173,28 +170,23 @@ fs.writeFileSync(path.join(__dirname, '..', 'public', 'performance.js'), perform
 
 // 4. Create enhanced PWA manifest
 const manifestContent = {
-//   "name": "Zion Tech Group - AI & IT Solutions",
-//   "short_name": "Zion Tech",
-  "description": "Leading provider of AI-powered solutions, IT services, and digital transformation",
-//   "start_url": "/",
-//   "display": "standalone",
-//   "background_color": "#0f172a",
-//   "theme_color": "#00ffff",
-//   "icons": [
+//   "name"Zion Tech Group - AI & IT Solutions",
+//   ": "Zion Tech"description": ",
+//   "start_url"/",
+//   ": "standalone"background_color": ",
+//   "theme_color"#00 ffff",
+//   ": [
     {
-//       "src": "/icon-192.png",
-//       "sizes": "192x192",
-      "type": "image/png"
+//       "src"/icon-192.png",
+//       ": "192 x192"type": "
     },
     {
-//       "src": "/icon-512.png",
-//       "sizes": "512x512",
-      "type": "image/png"
+//       "src"/icon-512.png",
+//       ": "512 x512"type": "
     }
 //   ],
-//   "categories": ["business", "productivity", "technology"],
-//   "lang": "en-US",
-//   "orientation": "portrait-primary"
+//   "categories"business", ", "technology"lang": ",
+//   "orientation"portrait-primary"
 };
 
 fs.writeFileSync(
@@ -207,4 +199,3 @@ console.log('✓ Enhanced chunking strategy applied');
 console.log('✓ Service worker updated');
 console.log('✓ Performance monitoring added');
 console.log('✓ PWA manifest enhanced');
-=======

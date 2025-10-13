@@ -2,7 +2,6 @@ export interface CloudDevOpsService {/* TODO: Fix JSX expression */}
   s: number}
     setupTim,
   e: string}
-  }
   keyFeatures: string[]
   benefits: string[]
   targetAudience: string[]

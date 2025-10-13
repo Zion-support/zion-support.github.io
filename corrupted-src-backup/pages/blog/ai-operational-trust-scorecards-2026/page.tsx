@@ -23,7 +23,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-operation a l-tru s t-scorecar d s-20 2 6')'
         />),
       <div, className='container, m, x-auto, p, x-6, p, y-16'>'
-<h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>'
+<h1, className='te, x, t-4 xl, m, d:te, x, t-5 xl, fon, t-bold, m, b-4'>'
           Ai, Operational, Trust Scorecards, 202, 6
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>'
           Learn, about, ai operational, trust, scorecards 2026, and, how it, can, benefit your, enterpris, e.
@@ -33,7 +33,6 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
             and, provides, practical insights, for, enterprise implementati, o, n.
 }
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
-}
 </div></div>
 </div></div>
 </p></p>

@@ -29,7 +29,7 @@ const allowed = (process.env.CORS_ORIGINS || ').split(',').map((s) => s.trim())'
   },
   methods: ['GET', 'POST', 'OPTIONS']'
 })
-await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });';
+await app.register(rateLimit, { global: true, max: 100, timeWindow: '1 m' });';
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY || '')'
 function getUserId(req: any): string | null {
   // TODO: Add properties
@@ -43,7 +43,7 @@ app.post('/ai/ask', async (req, reply) => {;';
 const body = (req.body as any) || {}
   const prompt = body.prompt as string
   if (!prompt) return reply.code(400).send({ error: 'prompt required' });';
-const completion = await openai.responses.create({ model: 'gpt-4o-mini', input: prompt })'
+const completion = await openai.responses.create({ model: 'gpt-4 o-mini', input: prompt })'
   return { text: completion.output_text }
 })
 app.post('/jobs/generate', async (req: any, reply: any) => {'

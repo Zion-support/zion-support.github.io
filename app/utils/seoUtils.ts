@@ -14,10 +14,10 @@
 }
 export class SEOManager {private config: SEOConfig,}
 constructor(config: SEOConfig) {,
-    this.config = config;}}
+    this.config = config;}
 public updateConfig(newConfig: Partial<SEOConfig>): void {,}}this.config = {...this.config, ...newConfig}this.applyConfig();
   }
-public getConfig(): SEOConfig {}}return {...this.config}}}
+public getConfig(): SEOConfig {}}return {...this.config}}
 private applyConfig(): void {if (typeof document === 'undefined') return;}'
 // Update title;
     document.title = this.config.title;
@@ -50,16 +50,15 @@ private applyConfig(): void {if (typeof document === 'undefined') return;}'
     if (this.config.tags) {this.config.tags.forEach(tag => {)
         this.addMetaTag('article:tag', tag)}})'
     }
-  }
 private updateMetaTag(name: string, content: string): void {,}
-    if (typeof document === 'undefined') return;}let meta = document.querySelector(`meta[name="${name)}"]`) as HTMLMetaElement;"'"
+    if (typeof document === 'undefined') return;}let meta = document.querySelector(`meta[name="${name)}"'"
     if (!meta) {meta = document.createElement('meta');'
       meta.name = name;
-      document.head.appendChild(meta)}}
+      document.head.appendChild(meta)}
     meta.content = content;
   }
 private updateCanonicalUrl(): void {if (typeof document === 'undefined' || !this.config.canonicalUrl) return;}';
-let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;'"
+let canonical = document.querySelector('link[rel="]') as HTMLLinkElement;'"
     if (!canonical) {
   // TODO: Add properties
 }
@@ -67,7 +66,7 @@ let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkEleme
 }
       canonical = document.createElement('link');'
       canonical.rel = 'canonical';'
-      document.head.appendChild(canonical)}}
+      document.head.appendChild(canonical)}
     canonical.href = this.config.canonicalUrl;
   }
 private updateOpenGraphTags(): void {if (typeof document === 'undefined') return;}';
@@ -92,10 +91,10 @@ twitterTags.forEach(tag => {)
     this.updateMetaTag(tag.name, tag.content)}})
   }
 private updateMetaTagByProperty(property: string, content: string): void {,}
-    if (typeof document === 'undefined') return;}let meta = document.querySelector(`meta[property="${property)}"]`) as HTMLMetaElement;"'"
+    if (typeof document === 'undefined') return;}let meta = document.querySelector(`meta[property="]`) as HTMLMetaElement;"'"
     if (!meta) {meta = document.createElement('meta');'
       meta.setAttribute('property', property);'
-      document.head.appendChild(meta)}}
+      document.head.appendChild(meta)}
     meta.content = content;
   }
 private addMetaTag(name: string, content: string): void {,}
@@ -103,7 +102,7 @@ private addMetaTag(name: string, content: string): void {,}
 const meta = document.createElement('meta')'
     meta.name = name;
     meta.content = content,
-    document.head.appendChild(meta)}}
+    document.head.appendChild(meta)}
 }
 export const generateMetaDescription = (content: string, maxLength: number = 160): string => {,;
 const cleanContent = content.replace(/<[^>]*>/g, '').trim();'
@@ -112,7 +111,7 @@ const cleanContent = content.replace(/<[^>]*>/g, '').trim();'
 }
   // TODO: Add properties
 }
-    return cleanContent;}}
+    return cleanContent;}
   return cleanContent.substring(0, maxLength - 3) + '...';'
 }
 })
@@ -122,4 +121,3 @@ export const addStructuredData = (data: any): void => {,
 const script = document.createElement('script')'
   script.type = 'application/ld+json''
   script.textContent = createStructuredData(data),
-}

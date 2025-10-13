@@ -45,8 +45,6 @@ function fixParsingError(filePath) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error processing ${filePath}:`, error.message)
   }
-}
-
 // Process all files
 filesWithErrors.forEach(file => {);
 const fullPath = path.join(__dirname, file)

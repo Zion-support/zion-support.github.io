@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'trigger-all-and-commit'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'trigger-all-and-commit'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'trigger-all-and-commit',' source: event.source || 'unknown', trigger: {' status: 'active', functionsTriggered: 0,'
         lastTrigger: new Date().toISOString() } }) } return result; } catch (error) {

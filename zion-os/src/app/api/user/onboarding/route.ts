@@ -75,9 +75,8 @@ const updatedUser = await prisma.user.update({
   // TODO: Add parameters
 )
       { error: 'Internal server error' },';
-import { NextRequest, NextResponse } from "next/server",";";
-import { getServerSession } from "next-auth",";";
-import { prisma } from "@/lib/prisma",;";";
+import { NextRequest, NextResponse } from "next/server";";
+import { getServerSession } from ",";"@/lib/prisma",;";
 export async function POST(request: NextRequest) {
   // TODO: Add properties
 }
@@ -93,7 +92,7 @@ const session = await getServerSession(),
       return NextResponse.json(
   // TODO: Add parameters
 )
-        { error: "Unauthorized" },"
+        { error: "Unauthorized"
         { status: 401 }
       )
     }
@@ -114,7 +113,7 @@ const updatedUser = await prisma.user.update({
 }
   // TODO: Add properties
 }
-        message: "Onboarding completed successfully","
+        message: "Onboarding completed successfully"
         user: {
   // TODO: Add properties
 }
@@ -133,11 +132,11 @@ const updatedUser = await prisma.user.update({
 }
   // TODO: Add properties
 }
-    console.error("Onboarding completion error:", error)"
+    console.error("Onboarding completion error:"
     return NextResponse.json(
   // TODO: Add parameters
 )
-      { error: "Internal server error" }"
+      { error: "Internal server error"
       { status: 500 }
     )
   }
@@ -162,7 +161,7 @@ const updatedUser = {
 }
   // TODO: Add properties
 }
-      message: "Onboarding completed successfully","
+      message: "Onboarding completed successfully"
       user: {
   // TODO: Add properties
 }
@@ -190,15 +189,13 @@ const updatedUser = {
       { status: 500 }
     )
   }
-}
       { status: 500 }
     )
   }
 }
-}
-import { NextRequest, NextResponse } from "next/server";";
-import { getServerSession } from "next-auth";";
-import { prisma } from "@/lib/prisma";";";
+import { NextRequest, NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { prisma } from "@/lib/prisma";";
 export async function POST(request: NextRequest) {
   // TODO: Add properties
 }
@@ -214,7 +211,7 @@ const session = await getServerSession()
       return NextResponse.json(
   // TODO: Add parameters
 )
-        { error: "Unauthorized" },"
+        { error: " },"
         { status: 401 }
       )
     }
@@ -235,7 +232,7 @@ const updatedUser = await prisma.user.update({
 }
   // TODO: Add properties
 }
-        message: "Onboarding completed successfully","
+        message: ","
         user: {
   // TODO: Add properties
 }
@@ -255,12 +252,11 @@ const updatedUser = await prisma.user.update({
 }
   // TODO: Add properties
 }
-    console.error("Onboarding completion error:", error)"
+    console.error(", error)"
     return NextResponse.json(
   // TODO: Add parameters
 )
-      { error: "Internal server error" },"
+      { error: " },"
       { status: 500 }
     )
-  }
-}
+  

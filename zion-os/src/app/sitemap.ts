@@ -62,7 +62,7 @@ const networkServices = [
 ]
   // TODO: Add items
 ]
-    '/5g-enterprise-network/5g-enterprise-solutions/5g-network-optimization'];';
+    '/5 g-enterprise-network/5 g-enterprise-solutions/5 g-network-optimization'];';
 const complianceServices = [
   // TODO: Add items
 ]
@@ -136,7 +136,7 @@ const network_services = [
 ]
   // TODO: Add items
 ]
-    '/5g - enterprise - network / 5g - enterprise - solutions / 5g - network - optimization'];';
+    '/5 g - enterprise - network / 5 g - enterprise - solutions / 5 g - network - optimization'];';
 const compliance_services = [
   // TODO: Add items
 ]
@@ -199,7 +199,7 @@ const networkServices = [
 ]
   // TODO: Add items
 ]
-    '/5g-enterprise-network/5g-enterprise-solutions/5g-network-optimization'];';
+    '/5 g-enterprise-network/5 g-enterprise-solutions/5 g-network-optimization'];';
 const complianceServices = [
   // TODO: Add items
 ]
@@ -366,9 +366,9 @@ const networkServices = [
 ]
   // TODO: Add items
 ]
-    '/5g-enterprise-network','
-    '/5g-enterprise-solutions','
-    '/5g-network-optimization','
+    '/5 g-enterprise-network','
+    '/5 g-enterprise-solutions','
+    '/5 g-network-optimization','
   ];
 const complianceServices = [
   // TODO: Add items

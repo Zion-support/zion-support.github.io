@@ -1,6 +1,6 @@
 // January 2026 - New Revolutionary Content
 // Brand new cutting-edge AI breakthroughs and enterprise solutions;
-export const january2026NewContent = {
+export const january2026 NewContent = {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -33,7 +33,7 @@ export const january2026NewContent = {
 }
       id: 'ai-2026-january-quantum-edge-computing''
       title: '⚡ Quantum Edge Computing 2026: Sub-Millisecond Processing Revolution''
-      description: 'Breakthrough quantum-edge convergence delivering 200-250x speed improvements with ultra-low latency processing''
+      description: 'Breakthrough quantum-edge convergence delivering 200-250 x speed improvements with ultra-low latency processing''
       link: '/blog/ai-2026-january-quantum-edge-computing''
       type: 'article''
       featured: true,
@@ -41,7 +41,7 @@ export const january2026NewContent = {
       category: 'Quantum Computing','
       tags: ['quantum', 'edge', 'computing', 'latency', '2026'],'
       readTime: '15 min','
-      excerpt: "Explore the convergence of quantum computing and edge processing that's enabling unprecedented speed and efficiency in real-time applications."},"'"
+      excerpt: "Explore the convergence of quantum computing and edge processing that's enabling unprecedented speed and efficiency in real-time applications."'"
     {
   // TODO: Add properties
 }
@@ -50,7 +50,7 @@ export const january2026NewContent = {
       id: 'ai-2026-january-synthetic-consciousness','
       title: '🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness','
       description:,
-        'Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $500B enterprise value','
+        'Revolutionary AI achieving genuine consciousness, emotional intelligence, and creative autonomy with $500 B enterprise value','
       link: '/blog/ai-2026-january-synthetic-consciousness''
       type: 'article''
       featured: true,
@@ -95,7 +95,7 @@ export const january2026NewContent = {
       type: 'service''
       featured: true,
       category: 'Quantum Computing''
-      pricing: 'Starting at $50K/month','
+      pricing: 'Starting at $50 K/month','
       features: [,
         'Sub-millisecond latency','
         '200-250 x speed improvement','
@@ -113,7 +113,7 @@ export const january2026NewContent = {
 }
       id: 'fortune-100-autonomous-transformation''
       title: 'Fortune 100 Autonomous Business Transformation''
-      description: 'Complete enterprise automation achieving 95% operational efficiency with $2.8B value creation''
+      description: 'Complete enterprise automation achieving 95% operational efficiency with $2.8 B value creation''
       link: '/case-studies/fortune-100-autonomous-transformation''
       type: 'case-study''
       featured: true,
@@ -124,7 +124,7 @@ export const january2026NewContent = {
         '99.7% efficiency','
         'Zero human error'],'
       duration: '6 months',;';
-export const january2026NewContent = {/* TODO: Fix JSX expression */}
+export const january2026 NewContent = {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     },

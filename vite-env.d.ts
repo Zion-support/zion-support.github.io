@@ -1,4 +1,4 @@
-/// <reference types="vite/client" />"
+/// <reference types="vite/client"
 interface ImportMetaEnv {
   // TODO: Add properties
 }
@@ -9,10 +9,7 @@ interface ImportMetaEnv {
   readonly MODE: string
   readonly SSR: boolean
   readonly [key: string]: unknown,
-/// <reference types="vite/client" /></reference>"
+/// <reference types="vite/client"
 interface ImportMetaEnv {/* TODO: Fix JSX expression */}
-}
-
 interface ImportMeta {/* TODO: Fix JSX expression */}
-}
 "

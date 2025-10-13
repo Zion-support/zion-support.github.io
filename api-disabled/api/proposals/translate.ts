@@ -21,7 +21,7 @@ const completion = await openai.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: process.env.OPENAI_MODEL || 'gpt-4o-mini','
+      model: process.env.OPENAI_MODEL || 'gpt-4 o-mini','
       messages: [,
         {,
           role: 'system','
@@ -47,5 +47,4 @@ const completion = await openai.chat.completions.create({/* TODO: Fix JSX expres
   r: unknown) {/* TODO: Fix JSX expression */}
   r: 'Translation failed' })'
   }
-}
 `

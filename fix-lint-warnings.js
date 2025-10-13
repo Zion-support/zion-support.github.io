@@ -73,8 +73,6 @@ function fixLintWarnings(filePath) {/* TODO: Fix JSX expression */}
     console.error(`Error fixing ${filePath}:`, error.message)
     return false
   }
-}
-
 // Function to find all files that need lint fixing
 function findFilesToFix(dir) {;
 const files = []
@@ -90,7 +88,6 @@ const stat = fs.statSync(fullPath)
 function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {/* TODO: Fix JSX expression */}'
       }
-    }
   }
 
   walkDir(dir)
@@ -104,7 +101,6 @@ const filesToFix = findFilesToFix(srcDir);`
 console.log(`Processing ${filesToFix.length} files`);
 let fixedCount = 0
 for (const file of filesToFix) {/* TODO: Fix JSX expression */}
-  }
 }
 `
 console.log(`Processed ${fixedCount} files`);`

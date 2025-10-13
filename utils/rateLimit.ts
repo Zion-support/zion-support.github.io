@@ -59,6 +59,3 @@ const timestamps = (store.get(key) || []).filter((t) => t > windowStart)
     return false
   }
   return true
-}
-
-}

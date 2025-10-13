@@ -49,8 +49,8 @@ const handleToggle = () => {
   // TODO: Add parameters
 )
     <button
-      type="button""
-      role="switch""
+      type="button"
+      role="switch"
       aria-checked={checked}
       aria-label={ariaLabel}
       disabled={disabled}
@@ -75,4 +75,3 @@ const handleToggle = () => {
         )}
       /></button>
   );
-}

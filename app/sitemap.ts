@@ -25,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {return [;}
       lastModified: new Date(),
       changeFrequency: 'weekly','
       priority: 0.7,},
-    {url: 'https://ziontechgroup.com/ai-3d-generation','
+    {url: 'https://ziontechgroup.com/ai-3 d-generation','
       lastModified: new Date(),
       changeFrequency: 'monthly','
       priority: 0.6,},
@@ -50,4 +50,3 @@ export default function sitemap(): MetadataRoute.Sitemap {return [;}
       changeFrequency: 'monthly','
       priority: 0.5,},
   ]
-}

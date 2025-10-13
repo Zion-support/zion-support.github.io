@@ -163,7 +163,7 @@ export const microSaasServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$11.8B','
+    marketSize: '$11.8 B','
     targetAudience: 'SaaS companies, subscription businesses, customer success teams, growth companies','
     competitiveAdvantage: 'AI-powered churn prediction, personalized engagement, predictive analytics','
     useCases: [
@@ -278,7 +278,7 @@ export const microSaasServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$15.4B','
+    marketSize: '$15.4 B','
     targetAudience: 'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks','
     competitiveAdvantage: 'Quantum-enhanced optimization, real-time monitoring, predictive analytics','
     useCases: [
@@ -393,7 +393,7 @@ export const microSaasServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$13.7B','
+    marketSize: '$13.7 B','
     targetAudience: 'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups','
     competitiveAdvantage: 'Blockchain-based verification, biometric authentication, global compliance','
     useCases: [
@@ -508,7 +508,7 @@ export const microSaasServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$9.8B','
+    marketSize: '$9.8 B','
     targetAudience: 'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies','
     competitiveAdvantage: 'AI-powered HR analytics, predictive modeling, comprehensive insights','
     useCases: [
@@ -623,7 +623,7 @@ export const microSaasServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$28.9B','
+    marketSize: '$28.9 B','
     targetAudience: 'Investment firms, banks, hedge funds, asset management companies, financial institutions','
     competitiveAdvantage: 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics','
     useCases: [
@@ -738,7 +738,7 @@ export const microSaasServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$6.2B','
+    marketSize: '$6.2 B','
     targetAudience: 'Marketing agencies, content creators, small businesses, enterprise marketing teams','
     competitiveAdvantage: 'AI-powered content generation, brand consistency, multi-format support','
     useCases: [
@@ -755,7 +755,7 @@ export const microSaasServices: Service[] = [;
     integrations: ['WordPress', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer', 'Google Analytics'],'
     compliance: ['Content Copyright', 'Data Privacy', 'GDPR', 'CCPA'],'
     icon: '✍️','
-    benefits: ['10x content output', '50% time savings', '40% better engagement'],'
+    benefits: ['10 x content output', '50% time savings', '40% better engagement'],'
     marketPrice: '$199','
     savings: '50%''
   },
@@ -853,7 +853,7 @@ export const microSaasServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$4.8B','
+    marketSize: '$4.8 B','
     targetAudience: 'Retailers, e-commerce companies, manufacturers, distributors, warehouse operators','
     competitiveAdvantage: 'AI-powered forecasting, automated optimization, real-time monitoring','
     useCases: [
@@ -968,7 +968,7 @@ export const microSaasServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$7.5B','
+    marketSize: '$7.5 B','
     targetAudience: 'E-commerce businesses, marketing agencies, SaaS companies, enterprise marketing teams','
     competitiveAdvantage: 'AI-powered personalization, automated workflows, advanced analytics','
     useCases: [
@@ -1083,7 +1083,7 @@ export const microSaasServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$8.3B','
+    marketSize: '$8.3 B','
     targetAudience: 'Social media managers, marketing agencies, brands, influencers, small businesses','
     competitiveAdvantage: 'AI-powered content creation, multi-platform management, advanced analytics','
     useCases: [
@@ -1198,7 +1198,7 @@ export const microSaasServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$5.6B','
+    marketSize: '$5.6 B','
     targetAudience: 'Project managers, consulting firms, agencies, enterprise teams, freelancers','
     competitiveAdvantage: 'AI-powered optimization, risk prediction, automated workflows','
     useCases: [
@@ -1319,7 +1319,7 @@ export const aiServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$15.9B','
+    marketSize: '$15.9 B','
     targetAudience: 'Data science teams, AI engineers, enterprise organizations, tech companies','
     competitiveAdvantage: 'End-to-end ML platform, automated MLOps, enterprise-grade security','
     useCases: [
@@ -1381,7 +1381,7 @@ export const aiServices: Service[] = [;
 ]
   // TODO: Add items
 ]
-          'Up to 100K API calls','
+          'Up to 100 K API calls','
           'Basic NLP features','
           'Email support''
         ]
@@ -1398,7 +1398,7 @@ export const aiServices: Service[] = [;
 ]
   // TODO: Add items
 ]
-          'Up to 1M API calls','
+          'Up to 1 M API calls','
           'Advanced NLP features','
           'Priority support','
           'Custom models''
@@ -1434,7 +1434,7 @@ export const aiServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$12.4B','
+    marketSize: '$12.4 B','
     targetAudience: 'Software developers, AI engineers, content platforms, customer service teams','
     competitiveAdvantage: 'High-accuracy NLP models, real-time processing, multi-language support','
     useCases: [
@@ -1496,7 +1496,7 @@ export const aiServices: Service[] = [;
 ]
   // TODO: Add items
 ]
-          'Up to 10K images/month','
+          'Up to 10 K images/month','
           'Basic CV features','
           'Email support''
         ]
@@ -1513,7 +1513,7 @@ export const aiServices: Service[] = [;
 ]
   // TODO: Add items
 ]
-          'Up to 100K images/month','
+          'Up to 100 K images/month','
           'Advanced CV features','
           'Priority support','
           'Custom models''
@@ -1549,7 +1549,7 @@ export const aiServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$18.7B','
+    marketSize: '$18.7 B','
     targetAudience: 'Manufacturing companies, security firms, healthcare organizations, retail companies','
     competitiveAdvantage: 'High-accuracy vision models, real-time processing, edge deployment','
     useCases: [
@@ -1664,7 +1664,7 @@ export const aiServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$22.1B','
+    marketSize: '$22.1 B','
     targetAudience: 'Security teams, IT departments, enterprises, government agencies, financial institutions','
     competitiveAdvantage: 'AI-powered threat detection, automated response, comprehensive monitoring','
     useCases: [
@@ -1779,7 +1779,7 @@ export const aiServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$31.2B','
+    marketSize: '$31.2 B','
     targetAudience: 'Hospitals, clinics, medical imaging centers, healthcare providers, research institutions','
     competitiveAdvantage: 'FDA-approved AI models, high diagnostic accuracy, clinical integration','
     useCases: [
@@ -1898,7 +1898,7 @@ export const itServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$25.8B','
+    marketSize: '$25.8 B','
     targetAudience: 'Enterprises, mid-size companies, startups, government agencies','
     competitiveAdvantage: 'Zero-downtime migration, cost optimization, security-first approach','
     useCases: [
@@ -2011,7 +2011,7 @@ export const itServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$20.3B','
+    marketSize: '$20.3 B','
     targetAudience: 'Enterprises, government agencies, financial institutions, healthcare organizations','
     competitiveAdvantage: 'Comprehensive security coverage, proactive threat detection, compliance expertise','
     useCases: [
@@ -2124,7 +2124,7 @@ export const itServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$18.7B','
+    marketSize: '$18.7 B','
     targetAudience: 'Enterprises, mid-size companies, government agencies, educational institutions','
     competitiveAdvantage: 'Proactive management, cost optimization, high availability, expert support','
     useCases: [
@@ -2237,7 +2237,7 @@ export const itServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$16.2B','
+    marketSize: '$16.2 B','
     targetAudience: 'Software development teams, tech companies, enterprises, startups','
     competitiveAdvantage: 'Faster deployments, automated processes, scalable infrastructure, expert guidance','
     useCases: [
@@ -2350,7 +2350,7 @@ export const itServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$14.8B','
+    marketSize: '$14.8 B','
     targetAudience: 'Enterprises, software companies, data-driven organizations, government agencies','
     competitiveAdvantage: 'Expert database administration, performance optimization, high availability, security expertise','
     useCases: [
@@ -2471,7 +2471,7 @@ export const specializedServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$19.4B','
+    marketSize: '$19.4 B','
     targetAudience: 'Enterprises, data analysts, business intelligence teams, executives','
     competitiveAdvantage: 'AI-powered insights, automated reporting, real-time analytics, predictive modeling','
     useCases: [
@@ -2584,7 +2584,7 @@ export const specializedServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$23.7B','
+    marketSize: '$23.7 B','
     targetAudience: 'Fintech companies, enterprises, startups, government agencies, gaming companies','
     competitiveAdvantage: 'Expert blockchain development, security-first approach, comprehensive Web3 solutions','
     useCases: [
@@ -2697,7 +2697,7 @@ export const specializedServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$17.9B','
+    marketSize: '$17.9 B','
     targetAudience: 'Manufacturing companies, smart cities, healthcare organizations, retail companies','
     competitiveAdvantage: 'Real-time processing, edge intelligence, scalable solutions, security expertise','
     useCases: [
@@ -2810,7 +2810,7 @@ export const specializedServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$21.6B','
+    marketSize: '$21.6 B','
     targetAudience: 'Startups, enterprises, agencies, healthcare organizations, retail companies','
     competitiveAdvantage: 'Native performance, cross-platform compatibility, AI-powered features, expert development','
     useCases: [
@@ -2923,7 +2923,7 @@ export const specializedServices: Service[] = [;
       phone: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com''
     },
-    marketSize: '$26.4B','
+    marketSize: '$26.4 B','
     targetAudience: 'Retailers, brands, manufacturers, service providers, entrepreneurs','
     competitiveAdvantage: 'AI-powered features, mobile optimization, advanced analytics, security expertise','
     useCases: [

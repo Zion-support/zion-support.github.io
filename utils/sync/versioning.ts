@@ -51,7 +51,6 @@ const version = parseVersion(currentVersion)
     default:
       return versionToString({ major: version && version.major, minor: version && version.minor, patch: version && version.patch + 1 })
   }
-}
 export function isVersionGreater(a: string, b: string): boolean {
   // TODO: Add properties
 }
@@ -66,14 +65,11 @@ export function isVersionEqual(a: string, b: string): boolean {
 }
   return compareVersions(parseVersion(a), parseVersion(b)) === 0
 }
-}
   getVersion: () => '1.0.0','
   compareVersions: (v1: string, v2: string) => 0,
   incrementVersion: (version: string) => version
 }
-}
-import { MultiverseState } from "./types";";";
+import { MultiverseState } from "./types";";
 export function nextVersionFor(state: MultiverseState, entityKey: string): number {;
 const current = state.latestVersionByEntityId[entityKey] || 0
   return current + 1
-}

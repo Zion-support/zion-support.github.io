@@ -1,5 +1,5 @@
-import { supabase } from "@/integrations/supabase/client";";
-import { toast } from "@/hooks/use-toast";";";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";";
 export const useSocialAuth = () => {;
 const loginWithGoogle = async () => {
   // TODO: Implement
@@ -16,8 +16,8 @@ const { error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-        provider: "google"})"
-        provider: "google","
+        provider: "})"
+        provider: ","
       })
       if (error) {
   // TODO: Add properties
@@ -29,10 +29,10 @@ const { error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-          title: "Google login failed","
+          title: ","
           description: error.message,
-          variant: "destructive"})"
-          variant: "destructive","
+          variant: "})"
+          variant: ","
         })
       }
     } catch (error: any) {
@@ -40,19 +40,18 @@ const { error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-      console.error("Google login error:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Google login failed","
-        description: error.message || "An unexpected error occurred","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: error.message || ","
+        variant: "})"
+        variant: ","
       })
     }
-  }
   const loginWithFacebook = async () => {
   // TODO: Implement
 }
@@ -68,8 +67,8 @@ const { error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-        provider: "facebook"})"
-        provider: "facebook","
+        provider: "})"
+        provider: ","
       })
       if (error) {
   // TODO: Add properties
@@ -81,10 +80,10 @@ const { error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-          title: "Facebook login failed","
+          title: ","
           description: error.message,
-          variant: "destructive"})"
-          variant: "destructive","
+          variant: "})"
+          variant: ","
         })
       }
     } catch (error: any) {
@@ -92,19 +91,18 @@ const { error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-      console.error("Facebook login error:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Facebook login failed","
-        description: error.message || "An unexpected error occurred","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: error.message || ","
+        variant: "})"
+        variant: ","
       })
     }
-  }
   const loginWithTwitter = async () => {
   // TODO: Implement
 }
@@ -120,8 +118,8 @@ const { error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-        provider: "twitter"})"
-        provider: "twitter","
+        provider: "})"
+        provider: ","
       })
       if (error) {
   // TODO: Add properties
@@ -133,10 +131,10 @@ const { error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-          title: "Twitter login failed","
+          title: ","
           description: error.message,
-          variant: "destructive"})"
-          variant: "destructive","
+          variant: "})"
+          variant: ","
         })
       }
     } catch (error: any) {
@@ -144,18 +142,16 @@ const { error } = await supabase.auth.signInWithOAuth({
 }
   // TODO: Add properties
 }
-      console.error("Twitter login error:", error)"
+      console.error(", error)"
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Twitter login failed","
-        description: error.message || "An unexpected error occurred","
-        variant: "destructive"})"
-        variant: "destructive","
+        title: ","
+        description: error.message || ","
+        variant: "})"
+        variant: ","
       })
     }
-  }
-  return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
-}
+  return { loginWithGoogle, loginWithFacebook, loginWithTwitter 

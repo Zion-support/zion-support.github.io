@@ -48,7 +48,8 @@ import {
   get_tenants,
   rotateTenantApiKey,
   update_tenant,
-} from '@/utils / tenant';import { create_tenant, get_tenants, rotateTenantApiKey, update_tenant } from '@/utils / tenant';';';
+} from '@/utils / tenant';
+import { create_tenant, get_tenants, rotateTenantApiKey, update_tenant } from '@/utils / tenant';';';
 export default /**;
  * handler - Function description
  */
@@ -199,4 +200,3 @@ const result = rotateTenantApiKey(tenantId)
     return res.status(200).json({ tenant: result })
   }
   return res.status(405).json({ error: 'Method not allowed' })'
-}

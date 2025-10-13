@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'dead-code-report'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'dead-code-report'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'dead-code-report',' source: event.source || 'unknown', report: {' status: 'generated', filesScanned: 0, deadCodeFound: 0,'
         lastReport: new Date().toISOString() } }) } return result; } catch (error) {

@@ -2,7 +2,6 @@
 export const wait = (ms: number): Promise<void> => {,;
 export const wait = (ms: number): Promise<void> => {}
   return new Promise(resolve => setTimeout(resolve, ms));}
-}
 /**;
  * Wait for a condition to be true;
  */;
@@ -24,7 +23,6 @@ export const waitFor = async(;)
     }
     await wait(interval)
   }
-}
 /**
  * Mock fetch for testing
  */;
@@ -47,13 +45,11 @@ export const mockFetch = (
       } as Response);
     ) as typeof fetch;
   }
-}
 /**;
  * Mock local storage;
  */;
 export class MockStorage implements Storage {}}private store: Map<string, string> = new Map();
   get length(): number {}}return this.store.size;}
-}
 /**
  * Mock local storage
  */;
@@ -61,66 +57,49 @@ export class MockStorage implements Storage {}
   private store: Map<string, string> = new Map()
   get length(): number {}
     return this.store.size;}
-  }
   clear(): void {}
     this.store.clear();}
-  }
   getItem(key: string): string | null {,
     return this.store.get(key) || null;}
-  }
   key(index: number): string | null {,;
 const keys = Array.from(this.store.keys()),
     return keys[index] || null;}
-  }
   removeItem(key: string): void {,
     this.store.delete(key);}
-  }
   setItem(key: string, value: string): void {,
   }
   clear(): void {}}this.store.clear();}
-  }
   getItem(key: string): string | null {,}
     ,}return this.store.get(key) || null;}
-  }
   key(index: number): string | null {,}
     ,;
 const keys = Array.from(this.store.keys()),}return keys[index] || null;}
-  }
   removeItem(key: string): void {,}
     ,}this.store.delete(key);}
-  }
   setItem(key: string, value: string): void {,}
     ,}getItem(key: string): string | null {,}}return this.store.get(key) || null;}
-  }
   key(index: number): string | null {,}}const keys = Array.from(this.store.keys());
     return keys[index] || null;}
-  }
   removeItem(key: string): void {,}}this.store.delete(key);}
-  }
 export const mockWindow = (overrides: Partial<Window> = {,}): void => {if (typeof global !== 'undefined') {'
     Object.defineProperty(global, 'window', {);'
       value: {),
         ...global.window),}export const mockWindow = (overrides: Partial<Window> = {,}): void => {}if (typeof global !== 'undefined') {}Object.defineProperty(global, 'window', {)}value: {,}...global.window,;'
   getItem(key: string): string | null {}
     return this.store.get(key) || null;}
-  }
   key(index: number): string | null {}
     const keys = Array.from(this.store.keys())
     return keys[index] || null;}
-  }
   removeItem(key: string): void {}
     this.store.delete(key);}
-  }
   setItem(key: string, value: string): void {}
     this.store.set(key, value);}
-  }
 }
 /**
  * Create a mock localStorage for testing
  */;
 export const createMockStorage = (): MockStorage => {}
   return new MockStorage();}
-}
 /**
  * Mock window object
  */;
@@ -142,7 +121,6 @@ export const mockWindow = (overrides: Partial</Window>
  */;
 export const createMockStorage = (): MockStorage => {}
   return new MockStorage();}
-}
 /**
  * Mock window object
  */
@@ -165,7 +143,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {}
       writable: true,
     });
 export const wait = (m);
-  s: number): Promise<void> => {/* TODO: Fix JSX expression */,}}
+  s: number): Promise<void> => {/* TODO: Fix JSX expression */,}
 /**;
  * Wait for a condition to be true;
  */;
@@ -200,15 +178,15 @@ export const mockFetch = (respons,
   status = 200,
   header,
   s: Record<string, string> = {})
-  y: string): void {/* TODO: Fix JSX expression */,}}}
+  y: string): void {/* TODO: Fix JSX expression */,}}
   setItem(ke,;)
   y: string, valu);
-  e: string): void {/* TODO: Fix JSX expression */,}}}
+  e: string): void {/* TODO: Fix JSX expression */,}}
 }
 /**;
  * Create a mock localStorage for testing;
  */;
-export const createMockStorage = (): MockStorage => {/* TODO: Fix JSX expression */,}}
+export const createMockStorage = (): MockStorage => {/* TODO: Fix JSX expression */,}
 /**;
  * Mock window object;
  */;
@@ -219,12 +197,10 @@ export const mockWindow = (override);
   e: true,
     });
   }
-}
 /**
  * Create a mock localStorage for testing
  */;
 export const createMockStorage = (): MockStorage => {/* TODO: Fix JSX expression */}
-}
 /**
  * Mock window object
  */;
@@ -235,7 +211,6 @@ export const mockWindow = (override)
   e: true,
     })
   }
-}
 export const createMockPerformance = (): Performance => {}const entries: PerformanceEntry[] = [],
   return {now: () => Date.now(),}
     mark: (name: string) => {,
@@ -408,20 +383,17 @@ export const generateTestData = {}
   y: <T>(generato),
   r: () => T, length = 5): T[] => {/* TODO: Fix JSX expression */,}return Array.from({length)}, generator);
   }
-}
 /**;
  * Deep clone an object;
  */;
 export const deepClone = <T>(obj: T): T => {,
     ,}export const deepClone = <T>(obj: T): T => {,}return JSON.parse(JSON.stringify(obj));}
-}
 /**;
  * Compare objects for equality;
  */;
 export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,;
 export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {}
   return JSON.stringify(obj1) === JSON.stringify(obj2);}
-}
 /**
  * Generate random test data
  */;
@@ -482,7 +454,6 @@ export const generateTestData = {/* TODO: Fix JSX expression */}
   r: () => T, length = 5): T[] => {/* TODO: Fix JSX expression */}
     return Array.from({ length }, generator)
   }
-}
 /**
  * Deep clone an object
  */;
@@ -497,7 +468,6 @@ export const deepClone = </T>;
 export const deepClone = </T>;
 <T>(obj: T): T => {}
   return JSON.parse(JSON.stringify(obj));}
-}
 /**
  * Compare objects for equality
  */;
@@ -510,7 +480,6 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {
   }
 export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {}
   return JSON.stringify(obj1) === JSON.stringify(obj2);}
-}
 /**
  * Spy on console methods
  */;
@@ -524,7 +493,6 @@ export class ConsoleSpy {
   private errors: string[] = [],
   private warnings: string[] = [],
   constructor() {}this.originalConsole = {...console}this.mock();
-  }
   }
   private mock(): void {
   // TODO: Add properties
@@ -542,23 +510,18 @@ export class ConsoleSpy {
     }
       this.warnings.push(args.map(String).join(' '));}'
     }
-  }
   getLogs(): string[] {}
     return [...this.logs];}
-  }
   getErrors(): string[] {}
     return [...this.errors];}
-  }
   getWarnings(): string[] {}
     return [...this.warnings];}
-  }
   restore(): void {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
   restore(): void {}
-  }
   clear(): void {}
     this.logs = []
     this.errors = []
@@ -576,19 +539,15 @@ export const deepClone = <T>(ob)
     }
       this.warnings.push(args.map(String).join(' '));}'
     }
-  }
   getLogs(): string[] {}return [...this.logs]}
-  }
   getErrors(): string[] {}return [...this.errors]}
-  }
   getWarnings(): string[] {}return [...this.warnings]}
-  }
-  restore(): void {}}restore(): void {}}}
+  restore(): void {}}restore(): void {}}
   clear(): void {}}this.logs = []
     this.errors = []
     this.warnings = []}
 export const deepClone = <T>(ob);
-  j: T): T => {/* TODO: Fix JSX expression */,}}
+  j: T): T => {/* TODO: Fix JSX expression */,}
 /**;
  * Compare objects for equality;
  */;
@@ -612,14 +571,11 @@ export class ConsoleSpy {/* TODO: Fix JSX expression */,}}this.originalConsole =
   initialDelay = 1000;
 ): Promise<T> => {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
-      }
     }
-  }
   throw lastError as any;
 }
 /**
     }
-  }
   throw lastError as any
 }
 /**;
@@ -629,7 +585,7 @@ export const measureExecutionTime = async <T>(;
   fn: () => T | Promise<T>): Promise<{result: T, duration: number ,}> => {fn: () => T | Promise<T>,}): Promise<{result: T, duration: number ,}> => {}const start = performance.now();
   const result = await fn();
   const duration = performance.now() - start;}
-  return {result, duration}}}
+  return {result, duration}}
 export default {}}wait,;
   waitFor,;
   mockFetch,;
@@ -643,14 +599,12 @@ export default {}}wait,;
   createDeferred,;
   retryWithBackoff,;
   measureExecutionTime}
-}
 export const measureExecutionTime = async <T>(f);
   n: () => T | Promise<T />,
-): Promise<{/* TODO: Fix JSX expression */,}n: number ,}> => {/* TODO: Fix JSX expression */,}return {result, duration}}}
-export default {/* TODO: Fix JSX expression */,}}}
+): Promise<{/* TODO: Fix JSX expression */,}n: number ,}> => {/* TODO: Fix JSX expression */,}return {result, duration}}
+export default {/* TODO: Fix JSX expression */,}}
 `;
   return { result, duration }
-}
 export default {}
   wait,
   waitFor,
@@ -665,6 +619,5 @@ export default {}
   createDeferred,
   retryWithBackoff,
   measureExecutionTime}
-}
 export const measureExecutionTime = async <T>(f)
 `;

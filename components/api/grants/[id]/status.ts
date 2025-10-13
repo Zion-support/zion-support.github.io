@@ -102,11 +102,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   // TODO: Add properties
 }
-  }
   if (req && req.method !== 'POST') {'
     res && res.setHeader('Allow', 'POST')'
     res && res.status(405).end('Method Not Allowed')'
-    return;  }  }
+    return;  }
   }
   if (req && req.method !== 'POST') {'
     res && res.setHeader('AllowPOST')'
@@ -119,7 +118,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   // TODO: Add properties
 }
-  }
   const payload = req && req.body as StatusUpdatePayload
   existing && existing.status = payload && payload.status
   existing && existing.updatedAt = new Date().toISOString()
@@ -232,4 +230,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   existing.updatedAt = new Date().toISOString()
   writeGrant(existing)
   res.status(200).json({ record: existing })
-}

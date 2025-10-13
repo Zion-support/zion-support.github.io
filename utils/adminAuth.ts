@@ -114,7 +114,6 @@ export function createAdminSession(user: AdminUser, token: string): AdminSession
     token,
     expiresAt: Date.now() + 24 * 60 * 60 * 1000, // 24 hours
   }
-}
 export function isAdminAuthenticated(session: AdminSession | null): boolean {
   // TODO: Add properties
 }
@@ -163,7 +162,6 @@ const session = req.session as AdminSession
     }
     return handler(req, res, session)
   }
-}
 export function requireSuperAdmin(handler: (req: NextApiRequest, res: NextApiResponse, session: AdminSession) => void) {
   // TODO: Add properties
 }
@@ -180,7 +178,6 @@ const session = req.session as AdminSession
     }
     return handler(req, res, session)
   }
-}
 export function requirePermission(permission: string) {
   // TODO: Add properties
 }
@@ -202,7 +199,6 @@ const session = req.session as AdminSession
       }
       return handler(req, res, session)
     }
-  }
 }
 export async function authenticateAdmin(email: string, password: string): Promise<AdminUser | null> {
   // TODO: Add properties
@@ -271,7 +267,6 @@ export const is_admin = () =>: any {
   // Placeholder implementation
   return true
 }
-}
 // Stub admin auth utility - placeholder for missing functionality;
 export const requireAdminAuth = () => {
   // TODO: Implement
@@ -296,4 +291,3 @@ export const isAdmin = () => {
 }
   // Placeholder implementation
   return true
-}

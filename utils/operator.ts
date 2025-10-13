@@ -45,4 +45,3 @@ export async function tagOperatorSession(sessionId: string, tag: string): Promis
   // TODO: Add properties
 }
   return Promise.resolve()
-}

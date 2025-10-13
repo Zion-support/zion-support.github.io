@@ -1,13 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { render } from '@testing-library/react';
 import LoadingSpinner from '../app/components/LoadingSpinner';
 import { render, screen } from '@testing-library/react';
-=======
 import '@testing-library/jest-dom';
-=======
 import '@testing-library/jest-dom';
 
 // Mock component for testing
@@ -33,13 +29,9 @@ describe('LoadingSpinner Component', () => {
   it('renders children', () => {
     render(<LoadingSpinner>Test content</LoadingSpinner>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Mock test for loading spinner
 describe('Loading Spinner', () => {
   it('should render without crashing', () => {
     expect(true).toBe(true);
-=======
-=======
   });
 });

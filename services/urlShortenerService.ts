@@ -287,7 +287,6 @@ const url = this.urls.get(shortCode),
     }
     return url
   }
-    }
     return url
   }
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {;';
@@ -458,7 +457,6 @@ const analytics = this.analytics.get(shortCode),
 }
         analytics && analytics.browsers.push(clickData && clickData.browser)
       }
-    }
   }
   async getAnalytics(shortCode: string): Promise<UrlAnalytics | null> {
   // TODO: Add properties
@@ -525,7 +523,6 @@ let result = '','
 }
     return Math.random().toString(36).substr(2, 9)
   }
-    }
     return url
   }
   async track_click (short_code: string, click_data: Omit < ClickEvent, 'id'>): Promise < void> {;';
@@ -597,7 +594,6 @@ if ( {) {
 }
         analytics.browsers.push (click_data.browser)
       }
-    }
   }
   async get_analytics (short_code: string): Promise < UrlAnalytics | null> {
   // TODO: Add properties
@@ -674,7 +670,6 @@ let result = '''
 }
         analytics.browsers.push(clickData.browser)
       }
-    }
   }
   async getAnalytics(shortCode: string): Promise<UrlAnalytics | null> {
   // TODO: Add properties
@@ -736,7 +731,6 @@ let result = '''
       analytics: Array && Array.from(this && this.analytics.entries()),
       clicks: Array && Array.from(this && this.clicks.entries())
     }
-  }
   async importData(data: any): Promise<void> {
   // TODO: Add properties
 }
@@ -746,7 +740,6 @@ let result = '''
     this && this.analytics = new Map(data && data.analytics),
     this && this.clicks = new Map(data && data.clicks)
   }
-}
 export const urlShortenerService = new UrlShortenerService()
   // Utility methods for data persistence (in a real app, this would use a database)
   async export_data (): Promise < any> {
@@ -763,7 +756,6 @@ export const urlShortenerService = new UrlShortenerService()
       analytics: Array.from (this.analytics.entries ()),
       clicks: Array.from (this.clicks.entries ())
     }
-  }
   async import_data (data: any): Promise < void> {
   // TODO: Add properties
 }
@@ -773,14 +765,12 @@ export const urlShortenerService = new UrlShortenerService()
     this.analytics = new Map (data.analytics),
     this.clicks = new Map (data.clicks)
   }
-}
 export const urlShortenerService = new UrlShortenerService ();
 export const urlShortenerService = new UrlShortenerService()
       urls: Array.from(this.urls.entries()),
       analytics: Array.from(this.analytics.entries()),
       clicks: Array.from(this.clicks.entries())
     }
-  }
   async importData(data: any): Promise<void> {
   // TODO: Add properties
 }
@@ -790,6 +780,4 @@ export const urlShortenerService = new UrlShortenerService()
     this.analytics = new Map(data.analytics)
     this.clicks = new Map(data.clicks)
   }
-}
 export const urlShortenerService = new UrlShortenerService()</$1>
-}}

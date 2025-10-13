@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from "next";";
-import { requireUser } from "../../../utils/auth";";
+import { NextApiRequest, NextApiResponse } from "next";
+import { requireUser } from "../../../utils/auth";
 import {
   // TODO: Add properties
 }
@@ -8,24 +8,24 @@ import {
   getConversationById,
   getMessages,
   sendMessage,
-} from "../../../utils/messaging/storage";";
+} from "../../../utils/messaging/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 const user = requireUser(req, res)
   if (!user) return
-  if (req.method === "GET") {;";
+  if (req.method === "GET";
 const { id } = req.query
-    if (!id |typeof id !== "string") return res.status($1).json({ $2 });";
+    if (!id |typeof id !== "string";
 const conversation = getConversationById(id)
     if (!conversation |!conversation.participants.includes(user.id)) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      return res.status(404).json({ error: "Conversation not found" })"
+      return res.status(404).json({ error: "Conversation not found"
     }
     const messages = getMessages(id)
     res.status(200).json({ conversation, messages })
-  } else if (req.method === "POST") {;";
+  } else if (req.method === "POST";
 const {
   // TODO: Add properties
 }
@@ -40,7 +40,7 @@ const {
       context
     } = req.body |{}
     if (!recipientId |!body)
-      return res.status(400).json({ error: "Missing required fields" });";
+      return res.status(400).json({ error: "Missing required fields";
 const { conversation, message } = sendMessage({
   // TODO: Add properties
 }
@@ -61,16 +61,16 @@ const { conversation, message } = sendMessage({
 }
   // TODO: Add properties
 }
-    res.status(405).json({ error: "Method not allowed" })";
+    res.status(405).json({ error: "Method not allowed";
 import { NextApiRequest, NextApiResponse } from 'next';';
 import { requireUser } from '../../../utils/auth';';
 import { getConversationById, getMessages, sendMessage } from '../../../utils/messaging/storage';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 const user = requireUser(req, res)
   if (!user) return
-  if (req && req.method === "GET") {;";
+  if (req && req.method === "GET";
 const { id } = req && req.query
-    if (!id || typeof id !== "string") return res && res.status($1).json({ $2 })"
+    if (!id || typeof id !== "string"
     if (!id || typeof id !== 'string') return res.status(400).json({ error: 'Missing id' });';
 const conversation = getConversationById(id)
     if (!conversation || !conversation && conversation.participants.includes(user && user.id)) {
@@ -78,7 +78,7 @@ const conversation = getConversationById(id)
 }
   // TODO: Add properties
 }
-      return res && res.status(404).json({ error: "Conversation not found" })"
+      return res && res.status(404).json({ error: "Conversation not found"
     }
     const messages = getMessages(id)
       conversationId,
@@ -110,8 +110,7 @@ const { conversation, message } = sendMessage({
 }
     res.status(405).json({ error: 'Method not allowed' })'
   }
-}
-    res.status(405).json({ error: "Method not allowed" })";
+    res.status(405).json({ error: "Method not allowed";
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
@@ -147,7 +146,7 @@ const { id } = req.query
 }
   $2
 }
-      return res.status (404).json ({ error: "Conversation not found" })"
+      return res.status (404).json ({ error: "Conversation not found"
     }
     const messages = get_messages (id)
     res.status (200).json ({ conversation, messages })
@@ -175,7 +174,7 @@ if ( {) {
     if (
   // TODO: Add parameters
 )
-      return res.status (400).json ({ error: "Missing required fields" })) {"
+      return res.status (400).json ({ error: "Missing required fields"
   $2
 }
     const { conversation, message } = send_message ({
@@ -199,49 +198,44 @@ if ( {) {
 }
   // TODO: Add properties
 }
-    res && res.status(405).json({ error: "Method not allowed" })"
+    res && res.status(405).json({ error: "Method not allowed"
   }
-}
     res.status (200).json ({ conversation, message })
   } else {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    res.status (405).json ({ error: "Method not allowed" })"
+    res.status (405).json ({ error: "Method not allowed"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

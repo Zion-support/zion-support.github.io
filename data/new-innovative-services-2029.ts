@@ -42,7 +42,7 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [;
     textColor: 'text-emerald-300','
     link: 'https://ziontechgroup.com/ai-customer-success-platform','
     marketPosition: 'Comparable to Gainsight ($500+) and Totango ($400+) with AI-first automation and lower TCO.','
-    targetAudience: 'B2B SaaS, Customer Success teams, RevOps','
+    targetAudience: 'B2 B SaaS, Customer Success teams, RevOps','
     trialDays: 14,
     setupTime: '1-2 days','
     category: 'AI & Data','
@@ -52,7 +52,7 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [;
     useCases: ['Churn reduction', 'NRR growth', 'Lifecycle automation', 'CSAT/NPS insights'],'
     roi: '10-20% churn reduction, 5-12% NRR lift in 90 days','
     competitors: ['Gainsight', 'Totango', 'Planhat'],'
-    marketSize: '$3B+ CS platforms','
+    marketSize: '$3 B+ CS platforms','
     growthRate: '25% CAGR','
     variant: 'ai-futuristic','
     contactInfo: contact,
@@ -99,9 +99,9 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [;
     technology: ['TypeScript', 'Pinecone', 'OpenAI', 'PostgreSQL'],'
     integrations: ['Salesforce', 'HubSpot', 'Gmail/Microsoft 365'],'
     useCases: ['Pipeline generation', 'Outbound personalization', 'Lead scoring'],'
-    roi: '30-60% lift in reply rates and 2-4x pipeline increase','
+    roi: '30-60% lift in reply rates and 2-4 x pipeline increase','
     competitors: ['Apollo.io', 'ZoomInfo', 'Outreach'],'
-    marketSize: '$20B+ sales tech','
+    marketSize: '$20 B+ sales tech','
     growthRate: '18% CAGR','
     variant: 'quantum-cyberpunk','
     contactInfo: contact,
@@ -139,7 +139,7 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [;
     color: 'from-violet-500 to-purple-600','
     textColor: 'text-violet-300','
     link: 'https://ziontechgroup.com/ai-financial-planning-platform','
-    marketPosition: 'Competes with Anaplan ($30k+/yr) and Pigment ($15k+/yr) with SMB pricing.','
+    marketPosition: 'Competes with Anaplan ($30 k+/yr) and Pigment ($15 k+/yr) with SMB pricing.','
     targetAudience: 'Finance and RevOps','
     trialDays: 14,
     setupTime: '2-5 days','
@@ -150,7 +150,7 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [;
     useCases: ['Budgeting and planning', 'Forecasting', 'Board reporting'],'
     roi: '50-80% time saved on planning cycles','
     competitors: ['Anaplan', 'Pigment', 'Cube'],'
-    marketSize: '$6B planning software','
+    marketSize: '$6 B planning software','
     growthRate: '15% CAGR','
     variant: 'ai-futuristic','
     contactInfo: contact,
@@ -198,7 +198,7 @@ export const newInnovativeServices2029: EnhancedRealMicroSaasService[] = [;
     useCases: ['Retention', 'Hiring', 'Diversity'],'
     roi: '5-10% attrition reduction; 20% faster hiring','
     competitors: ['Visier', 'ChartHop', 'Eightfold'],'
-    marketSize: '$7B HR analytics','
+    marketSize: '$7 B HR analytics','
     growthRate: '14% CAGR','
     variant: 'ai-futuristic','
     contactInfo: contact,

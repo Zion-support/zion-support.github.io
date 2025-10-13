@@ -1,6 +1,6 @@
 impor,
   t: { ServiceVariant } from '../types/service-variants'; expor,''
-  t: interface EnterpriseIT2026ServiceV4 {/* TODO: Fix JSX expression */}
+  t: interface EnterpriseIT2026 ServiceV4 {/* TODO: Fix JSX expression */}
   e: '2026-02-1,5'} customer,'
   s: 12,0, ratin,
   g: 4.,7, review,

@@ -16,7 +16,6 @@ const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}'
     stder,
   r: res.stderr || '','
   }
-}
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/2 * * * *'}'
 }
@@ -41,7 +40,6 @@ const {status, stdout} stderr } = runNode(rel) args)
     bod,
   y: logs.join('\n'),'
   }
-}
 const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relativePath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relativePath)}' const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */}'
   o: 'pipe'} encodin,'
   g: 'utf8' });' return {/* TODO: Fix JSX expression */}'

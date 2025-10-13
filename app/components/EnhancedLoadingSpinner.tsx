@@ -10,4 +10,3 @@ export default function EnhancedLoadingSpinner({ className = '', children }: Enh
       {children}
     </div>
   );
-}

@@ -1,6 +1,6 @@
 impor,
   t: { ServiceVariant } from '../types/service-variants'; expor,''
-  t: interface Revolutionary2027AdvancedMicroSaasService {/* TODO: Fix JSX expression */}
+  t: interface Revolutionary2027 AdvancedMicroSaasService {/* TODO: Fix JSX expression */}
   e: '2027-02-1,5'} customer,'
   s: 180,0, ratin,
   g: 4.,9, review,

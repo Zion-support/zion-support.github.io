@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'headers-enforcer'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'headers-enforcer'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'headers-enforcer',' source: event.source || 'unknown', enforcement: {' status: 'active', headersEnforced: 0,'
         lastEnforcement: new Date().toISOString() } }) } return result; } catch (error) {

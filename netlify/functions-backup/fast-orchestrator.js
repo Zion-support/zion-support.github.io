@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'fast-orchestrator'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'fast-orchestrator'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'fast-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'fast', services: 0,'
         lastOrchestration: new Date().toISOString() } }) } return result; } catch (error) {

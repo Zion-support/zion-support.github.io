@@ -20,8 +20,6 @@ const stat = fs.statSync(fullPath)
   } else if (item.endsWith('.tsx')) {'
     files.push(fullPath)
   }
-  }
-
   return files
 }
 
@@ -114,11 +112,9 @@ const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g,
       return match
     })
     // Fix 7: Fix malformed className attributes with quotes;
-const malformedClassPattern = /className="([^"]*"[^"]*)"([^>]*)>/g,"
-    content = content.replace(malformedClassPattern, (match, className, rest) => {;
-const fixedClassName = className.replace(/"/g, '&quot;')'"
+const malformedClassPattern = /className="([^"]*)"([^>]*)>/g,"/g, '&quot;')'"
       modified = true
-      return `className="${fixedClassName}"${rest}>`"
+      return `className="
     })
     // Fix 8: Fix missing closing tags in JSX;
 const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm;
@@ -145,8 +141,6 @@ const nextLine = lines[j].trim(),
           if (nextLine.startsWith('<') && !nextLine.startsWith('</')) {'
     break
   }
-        }
-
         if (!foundClosing) {
   // TODO: Add properties
 }
@@ -156,7 +150,6 @@ const nextLine = lines[j].trim(),
           newContent = newContent.replace(line, line + `</${tagName}>`)
           modified = true
         }
-      }
     }
 
     if (modified) {
@@ -178,8 +171,6 @@ const nextLine = lines[j].trim(),
     console.error(`Error fixing ${filePath}:`, error.message)
     return false
   }
-}
-
 console.log('Starting comprehensive TypeScript fixes...');';
 const appDir = path.join(__dirname, 'app');';
 const tsxFiles = getAllTsxFiles(appDir);

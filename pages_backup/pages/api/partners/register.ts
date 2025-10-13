@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import { getServerSupabase } from '[^']*';';
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { getServerSupabase } from "../../../utils/supabase/server";"
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server"
 function sanitizeCode(input: string): string {
   // TODO: Add properties
 }
@@ -9,9 +9,9 @@ function sanitizeCode(input: string): string {
 }
   return input
     .toLowerCase()
-    .replace(/[^a-z0-9-]/g, "-")"
-    .replace(/-+/g, "-")"
-    .replace(/^-|-$/g, "")"
+    .replace(/[^a-z0-9-]/g, "-"
+    .replace(/-+/g, "-"
+    .replace(/^-|-$/g, ""
 }
 export default async function handler(
   // TODO: Add parameters
@@ -30,104 +30,15 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST") return res.status($1).json({ $2 });";
+  if (req.method !== "POST";
 const { name, niche, socials, payout_method, desired_code } = req.body |{}
   if (!name |!desired_code) return res.status($1).json({ $2 });
 const code = sanitizeCode(desired_code)
   if (!code) return res.status($1).json({ $2 });
 const usingPlaceholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |"
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ==="
-      "placeholder-key""
-  try {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    if (usingPlaceholder) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      return res
-        .status(200)
-        .json({ ok: true, code, status: "pending", mock: true })"
-    }
-    const supabase = getServerSupabase();
-const { data: existing, error: existingErr } = await supabase
-      .from("partners")"
-      .select("code")"
-      .eq("code", code)"
-      .maybeSingle()
-  } catch (e: any) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return res.status(500).json({ error: e?.message });
-import type { NextApiRequest, NextApiResponse } from 'next';';';
-export default async function handler(req, res) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (req.method === 'POST') {'
-    res.status(201).json({ message: 'Partner registered' })'
-  } else {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    res.status(405).end('Method Not Allowed')';
-import type { NextApiRequest, NextApiResponse } from 'next';';
-import { getServerSupabase } from '../../../utils/supabase/server';'
-function sanitizeCode(input: string): string {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  return input.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, ')''
-}
-export default async /**;
- * handler - Function description
- */
-function handler() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (return res.status ($1).json ({ $2 })) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  $2
-}
-  const { name, niche, socials, payout_method, desired_code } = req.body || {}
-  if (return res.status ($1).json ({ $2 })) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  $2
-}
-  const code = sanitize_code (desired_code)
-  if (return res.status ($1).json ({ $2 })) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  $2
-}
-  const using_placeholder =
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||"
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ==="
-      "placeholder - key""
+    (process.env.NEXT_PUBLIC_SUPABASE_URL |""placeholder") |"placeholder-key") ==="placeholder-key""pending", mock: true })"partners")"code")"code", code)"").includes (") ||"
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ") ==="
+      ""
   try {
   // TODO: Add properties
 }
@@ -143,13 +54,13 @@ if ( {) {
 }
       return res
         .status (200)
-        .json ({ ok: true, code, status: "pending", mock: true })"
+        .json ({ ok: true, code, status: ", mock: true })"
     }
     const supabase = getServerSupabase ();
 const { data: existing, error: existing_err } = await supabase
-      .from ("partners")"
-      .select ("code")"
-      .eq ("code", code)"
+      .from (")"
+      .select (")"
+      .eq (", code)"
       .maybe_single ()
     if (return res.status ($1).json ({ $2 })) {
   // TODO: Add properties
@@ -165,11 +76,10 @@ const { data: existing, error: existing_err } = await supabase
 }
   $2
 }
-    const { error } = await supabase.from ("partners").insert ({"
+    const { error } = await supabase.from (").insert ({"
       code,
       name,
   }
-}
       niche: niche || null, socials: socials || null,
       payout_method: payout_method || null, status: 'pending','
       commission_rate: 0.15})
@@ -190,7 +100,5 @@ const { data: existing, error: existing_err } = await supabase
 }
     return res.status(500).json({ error: e?.message })
   }
-  }
 }
 
-}}

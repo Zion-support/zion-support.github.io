@@ -99,7 +99,6 @@ const merged = {
   res.status(200).json({ ok: true })
 }
 }
-}
     res.status (405).json ({ error: 'Method Not Allowed' })'
     return
   }
@@ -192,4 +191,3 @@ const merged = {
 }
   fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2))
   res.status(200).json({ ok: true })
-}

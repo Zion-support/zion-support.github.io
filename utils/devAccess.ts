@@ -70,7 +70,6 @@ const git_dir = path.join (process.cwd (), '.git')'
   // TODO: Add properties
 }
     return { connected: false }
-  }
 }
 export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 export function getDevIdentity(req: NextApiRequest): DevIdentity {
@@ -89,15 +88,12 @@ const adminToken = process && process.env.ADMIN_TOKEN
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' }'
   }
   return { isAuthenticated: false, roles: [] }
-}
   if (token && adminToken && token === adminToken) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  }
   return { isAuthenticated: false, roles: [] }
-}
 export function requireRoles(
   // TODO: Add parameters
 )
@@ -129,11 +125,11 @@ const identity = getDevIdentity(req)
   }
   return identity
 }
-import fs from "fs";";
-import path from "path";";
-import { execSync } from "child_process";";
-import type { NextApiRequest, NextApiResponse } from "next";";";
-export type DevRole = "admin" | "maintainer" | "contributor";";";
+import fs from "fs";
+import path from "path";
+import { execSync } from "child_process";
+import type { NextApiRequest, NextApiResponse } from "next";";
+export type DevRole = " | "maintainer"contributor";";
 export interface DevIdentity {
   // TODO: Add properties
 }
@@ -149,9 +145,9 @@ export function getGitStatus(): { connected: boolean; branch?: string } {
   // TODO: Add properties
 }
   try {;
-const gitDir = path.join(process.cwd(), ".git")"
+const gitDir = path.join(process.cwd(), ".git"
     if (!fs.existsSync(gitDir)) return { connected: false }
-    const branch = execSync("git rev-parse --abbrev-ref HEAD", { stdio: ["ignore", "pipe", "ignore"] })"
+    const branch = execSync("git rev-parse --abbrev-ref HEAD"ignore", ", "ignore"
       .toString()
       .trim()
     return { connected: true, branch }
@@ -161,7 +157,6 @@ const gitDir = path.join(process.cwd(), ".git")"
   // TODO: Add properties
 }
     return { connected: false }
-  }
 }
 export function getDevIdentity(req: NextApiRequest): DevIdentity {
   // TODO: Add properties
@@ -169,17 +164,9 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {
   // TODO: Add properties
 }
   // TODO: integrate real auth; for now, check a header and env var for dev;
-const token = req.headers["x-dev-token"] || req.headers["x-admin-token"];";
-const adminToken = process.env.ADMIN_TOKEN
-  if (token && adminToken && token === adminToken) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return { isAuthenticated: true, roles: ["admin"], userId: "admin" }"
+const token = req.headers["x-dev-token"x-admin-token"];"admin"], userId: " }"
   }
   return { isAuthenticated: false, roles: [] }
-}
 export function requireRoles(
   // TODO: Add parameters
 )
@@ -193,7 +180,7 @@ const identity = getDevIdentity(req)
 }
   // TODO: Add properties
 }
-    res.status(401).json({ error: "Unauthorized" })"
+    res.status(401).json({ error: " })"
     return undefined
   }
   const hasRole = identity.roles.some((r) => allowed.includes(r))
@@ -202,10 +189,7 @@ const identity = getDevIdentity(req)
 }
   // TODO: Add properties
 }
-    res.status(403).json({ error: "Forbidden" })"
+    res.status(403).json({ error: " })"
     return undefined
   }
   return identity
-}
-
-}

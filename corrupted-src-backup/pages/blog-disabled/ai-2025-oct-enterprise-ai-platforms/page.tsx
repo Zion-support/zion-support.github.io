@@ -23,7 +23,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-enterpri s e-ai-platfor m s')'
         />),
       <div, className='container, m, x-auto, p, x-6, p, y-16'>'
-<h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>'
+<h1, className='te, x, t-4 xl, m, d:te, x, t-5 xl, fon, t-bold, m, b-4'>'
           Enterprise, AI, Platforms 20, 2, 5: Architec, t, u, r, e, SL, A, s, and, RO, I
         <p>
           Production, patterns, that sca, l, e: golden, pat, h, s, ev, a, l‑gated, release, s)
@@ -36,10 +36,8 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
             ← Back, to, Blog
     </d, i, v > );
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
- }
 </div></div>
 </div></div>
 </div></Link>
 </p></p>
 </h1>
-}

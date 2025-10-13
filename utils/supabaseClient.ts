@@ -49,20 +49,18 @@ export function getSupabaseClient(): ZionSupabase {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
       return browserClient
       } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
     // Server-side: create a new client per call to avoid cross-request state
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
   } catch {
@@ -84,19 +82,17 @@ export function getSupabaseClient(): ZionSupabase {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 let browserClient: SupabaseClient | undefined;
 export function getSupabaseClient(): ZionSupabase {
   // TODO: Add properties
@@ -127,5 +123,4 @@ export function getSupabaseClient(): ZionSupabase {
   // TODO: Add properties
 }
     return undefined
-  }
-}
+  

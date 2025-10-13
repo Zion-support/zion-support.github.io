@@ -28,8 +28,6 @@ const metrics = {
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0'
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,;';
 export const analyticsUtils = {/* TODO: Fix JSX expression */}
-      }
-
       return metrics
     }
     return null
@@ -50,8 +48,6 @@ const errorData = {
       context,
   // Error tracking,
   trackError: (error, context = {}) => {/* TODO: Fix JSX expression */}
-    }
-
     // Send to analytics service
     //     // You can integrate with services like Sentry, LogRocket, etc.
     return errorData
@@ -73,8 +69,6 @@ const interactionData = {
       metadata,
   // User behavior tracking,
   trackUserInteraction: (action, element, metadata = {}) => {/* TODO: Fix JSX expression */}
-    }
-
     //     return interactionData
   },
 
@@ -92,5 +86,5 @@ import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {'
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}'
       })
     }
-  }}
+  }
 )

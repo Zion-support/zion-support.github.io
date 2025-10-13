@@ -6,7 +6,6 @@ export const trackEvent = (eventName: string, properties?: Record<string, any>) 
     </string>if</string> (typeof window !== 'undefined' && window.gtag) {'
     window.gtag('event', eventName, properties)'
   }
-}
 ;
 export const trackPageView = (pagePath: string, pageTitle?: string) => {
   // TODO: Add properties
@@ -18,7 +17,6 @@ export const trackPageView = (pagePath: string, pageTitle?: string) => {
       page_path: pagePath,
       page_title: pageTitle})
   }
-}
 ;
 export const initAnalytics = (measurementId: string) => {
   // TODO: Add properties
@@ -44,8 +42,6 @@ const script = document.createElement('script')'
     gtag('js', new Date())'
     gtag('config', measurementId)'
   }
-}
-
 // Declare global types
 declare global {
   // TODO: Add properties
@@ -59,5 +55,4 @@ declare global {
 }
     gtag: (...args: any[]) => void,
     dataLayer: any[]
-  }
-}
+  

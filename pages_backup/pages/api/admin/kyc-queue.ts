@@ -32,7 +32,6 @@ const FILE = path.join(DATA_DIR, 'profiles.json')'
   // TODO: Add properties
 }
     return {}
-  }
 }
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
 }
@@ -66,8 +65,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   // TODO: Add properties
 }
-  }
-
   return res.status(405).json({ error: 'Method not allowed' })'
 }
   try {
@@ -109,7 +106,6 @@ const profiles = load()
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

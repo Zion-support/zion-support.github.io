@@ -77,7 +77,6 @@ export interface FraudDetectionConfig {
       enabled: boolean
       threshold: number,
     }
-  }
   auto_actions: {
   // TODO: Add properties
 }
@@ -86,7 +85,6 @@ export interface FraudDetectionConfig {
     enabled: boolean
     actions: AdminActionType[]
   }
-}
 }
 export type MonitoredSource = 'signup' | 'job_post' | 'message' | 'quote' | 'review';';';
 export type GptClassificationLabel = 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';';';
@@ -183,4 +181,3 @@ export interface MonthlyReport {
   bySource: Record<MonitoredSource, number>
   falsePositives: number; // count of IGNORED actions
   topReasons: Array<{ reason: string; count: number }>
-}

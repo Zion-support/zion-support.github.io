@@ -22,7 +22,6 @@ export interface EnterpriseCaseStudy {
     roi: string
     timeline: string,;
 export interface EnterpriseCaseStudy {/* TODO: Fix JSX expression */}
-  }
   feature,
   d: boolean,
   publishedA,
@@ -48,7 +47,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [;
     solution: 'Implemented AI-powered automation platform with intelligent workflow optimization''
     results: 'Achieved 85% cost reduction and 300% efficiency improvement''
     metrics: {,
-      costSavings: '$50M annually','
+      costSavings: '$50 M annually','
       efficiencyGain: '300%','
       roi: '450%','
       timeline: '6 months'},'
@@ -69,7 +68,7 @@ export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [;
     solution: 'Deployed AI-powered analytics platform with real-time fraud detection''
     results: 'Achieved 99.9% accuracy in fraud detection with 60% reduction in false positives''
     metrics: {,
-      costSavings: '$25M annually','
+      costSavings: '$25 M annually','
       efficiencyGain: '200%','
       roi: '350%','
       timeline: '4 months'},'

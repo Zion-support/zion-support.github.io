@@ -181,11 +181,11 @@ export const,;
       roi: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.','
       competitors: [,
         'Schrdinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'],'
-      marketSize: '$45 && 45.8B AI drug discovery market''
+      marketSize: '$45 && 45.8 B AI drug discovery market''
       growthRate: '35% annual growth''
       variant: 'ai-drug-discovery-enterprise''
       ],
-      marketSize: '$45 && 45.8B AI drug discovery market','
+      marketSize: '$45 && 45.8 B AI drug discovery market','
       growthRate: '35% annual growth','
       variant: 'ai-drug-discovery-enterprise','
       contactInfo: unknown,
@@ -219,7 +219,7 @@ export const,;
   s: [,
         'Schrdinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'],'
       marketSiz,
-  e: '$45 && 45.8B AI drug discovery market','
+  e: '$45 && 45.8 B AI drug discovery market','
       growthRat,
   e: '35% annual growth','
       varian,
@@ -262,7 +262,7 @@ export const,;
       competitor,
   s: [,
         'Schrdinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'],'
-      market_size: '$45.8B AI drug discovery market''
+      market_size: '$45.8 B AI drug discovery market''
       growth_rate: '35% annual growth''
       variant: 'ai - drug - discovery - enterprise''
       contact_info: unknown,
@@ -279,7 +279,7 @@ export const,;
       competitors: [,
         'Schrdinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia','
       ],
-      market_size: '$45.8B AI drug discovery market','
+      market_size: '$45.8 B AI drug discovery market','
       growth_rate: '35% annual growth','
       variant: 'ai - drug - discovery - enterprise','
       contact_info: {
@@ -307,7 +307,7 @@ export const,;
       period: '/month','
       description: unknown,
       market_siz,
-  e: '$45.8B AI drug discovery market','
+  e: '$45.8 B AI drug discovery market','
       growth_rat,
   e: '35% annual growth','
       varian,
@@ -388,12 +388,12 @@ export const,;
       roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.','
       competitors: [,
         '23 andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],'
-      marketSize: '$78 && 78.6B precision medicine market''
+      marketSize: '$78 && 78.6 B precision medicine market''
       growthRate: '28% annual growth''
       variant: 'precision-medicine-enterprise''
-        '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics','
+        '23 andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics','
       ],
-      marketSize: '$78 && 78.6B precision medicine market','
+      marketSize: '$78 && 78.6 B precision medicine market','
       growthRate: '28% annual growth','
       variant: 'precision-medicine-enterprise','
       contactInfo: unknown,
@@ -401,7 +401,7 @@ export const,;
       text_color: 'text - blue - 400','
       link: 'https://ziontechgroup.com / precision - medicine - genomics','
       market_position: unknown,
-        'Competes with 23andMe ($199 / kit), AncestryDNA ($99 / kit), Color Genomics ($249 / test). Our advantage: Comprehensive platform, AI - powered insights, and healthcare integration.','
+        'Competes with 23 andMe ($199 / kit), AncestryDNA ($99 / kit), Color Genomics ($249 / test). Our advantage: Comprehensive platform, AI - powered insights, and healthcare integration.','
       target_audience: unknown,
         'Healthcare providers, Hospitals, Research institutions, Genetic counselors, Pharmaceutical companies','
       trial_days: 21,
@@ -413,7 +413,7 @@ export const,;
       text_color: 'text - blue - 400','
       link: 'https://ziontechgroup.com / precision - medicine - genomics','
       market_position: unknown
-        'Competes with 23andMe ($199 / kit), AncestryDNA ($99 / kit), Color Genomics ($249 / test). Our advantage: Comprehensive platform, AI - powered insights, and healthcare integration.','
+        'Competes with 23 andMe ($199 / kit), AncestryDNA ($99 / kit), Color Genomics ($249 / test). Our advantage: Comprehensive platform, AI - powered insights, and healthcare integration.','
       target_audience: unknown
         'Healthcare providers, Hospitals, Research institutions, Genetic counselors, Pharmaceutical companies','
       trial_days: 21
@@ -425,9 +425,9 @@ export const,;
   i: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.''
       competitor,
   s: [,
-        '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],'
+        '23 andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],'
       marketSiz,
-  e: '$78 && 78.6B precision medicine market','
+  e: '$78 && 78.6 B precision medicine market','
       growthRat,
   e: '28% annual growth','
       varian,
@@ -443,7 +443,7 @@ export const,;
   s://ziontechgroup.com / precision - medicine - genomics','
       market_positio,
   n: unknown,
-        'Competes with 23andMe ($199 / kit), AncestryDNA ($99 / kit), Color Genomics ($249 / test). Our,'
+        'Competes with 23 andMe ($199 / kit), AncestryDNA ($99 / kit), Color Genomics ($249 / test). Our,'
   advantage: Comprehensive platform, AI - powered insights, and healthcare integration.','
       target_audienc,
   e: unknown,
@@ -469,8 +469,8 @@ export const,;
   i: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.','
       competitor,
   s: [,
-        '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],'
-      market_size: '$78.6B precision medicine market''
+        '23 andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],'
+      market_size: '$78.6 B precision medicine market''
       growth_rate: '28% annual growth''
       variant: 'precision - medicine - enterprise''
       contact_info: unknown,
@@ -485,9 +485,9 @@ export const,;
       ],
       roi: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.','
       competitors: [,
-        '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics','
+        '23 andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics','
       ],
-      market_size: '$78.6B precision medicine market','
+      market_size: '$78.6 B precision medicine market','
       growth_rate: '28% annual growth','
       variant: 'precision - medicine - enterprise','
       contact_info: {
@@ -507,7 +507,7 @@ export const,;
       rating: 4 && 4.8
       reviews: 23,
       market_siz,
-  e: '$78.6B precision medicine market','
+  e: '$78.6 B precision medicine market','
       growth_rat,
   e: '28% annual growth','
       varian,
@@ -644,7 +644,7 @@ export const,;
         'Medical imaging analysis, Diagnosis assistance, Clinical decision support, Research collaboration, Quality assurance'],'
       roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.','
       competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'],'
-      market_size: '$32.1B AI medical imaging market''
+      market_size: '$32.1 B AI medical imaging market''
       growth_rate: '42% annual growth''
       variant: 'ai - imaging - enterprise''
       contact_info: unknown,
@@ -674,7 +674,7 @@ export const,;
       competitor,
   s: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'],'
       market_siz,
-  e: '$32.1B AI medical imaging market','
+  e: '$32.1 B AI medical imaging market','
       growth_rat,
   e: '42% annual growth','
       varian,
@@ -763,7 +763,7 @@ export const,;
       ],
       roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.','
       competitors: ['Teladoc, Amwell, Doxy && Doxy.me, MDLive, PlushCare'],'
-      marketSize: '$185 && 185.6B digital health market''
+      marketSize: '$185 && 185.6 B digital health market''
       growthRate: '25% annual growth''
       variant: 'digital-health-enterprise''
       contactInfo: unknown,
@@ -784,7 +784,7 @@ export const,;
       competitor,
   s: ['Teladoc, Amwell, Doxy && Doxy.me, MDLive, PlushCare'],'
       marketSiz,
-  e: '$185 && 185.6B digital health market','
+  e: '$185 && 185.6 B digital health market','
       growthRat,
   e: '25% annual growth','
       varian,
@@ -824,12 +824,12 @@ export const,;
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management'],'
       roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.','
       competitors: ['Teladoc, Amwell, Doxy.me, MDLive, PlushCare'],'
-      market_size: '$185.6B digital health market''
+      market_size: '$185.6 B digital health market''
       growth_rate: '25% annual growth''
       variant: 'digital - health - enterprise''
       contact_info: unknown,
         mobile: '+1 302 464 0950''
-      market_size: '$185.6B digital health market','
+      market_size: '$185.6 B digital health market','
       growth_rate: '25% annual growth','
       variant: 'digital - health - enterprise','
       contact_info: {
@@ -862,7 +862,7 @@ export const,;
       competitor,
   s: ['Teladoc, Amwell, Doxy.me, MDLive, PlushCare'],'
       market_siz,
-  e: '$185.6B digital health market','
+  e: '$185.6 B digital health market','
       growth_rat,
   e: '25% annual growth','
       varian,
@@ -951,12 +951,12 @@ export const,;
       roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.','
       competitors: [,
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'],'
-      marketSize: '$67 && 67.2B clinical trial market''
+      marketSize: '$67 && 67.2 B clinical trial market''
       growthRate: '18% annual growth''
       variant: 'clinical-trial-enterprise''
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel','
       ],
-      marketSize: '$67 && 67.2B clinical trial market','
+      marketSize: '$67 && 67.2 B clinical trial market','
       growthRate: '18% annual growth','
       variant: 'clinical-trial-enterprise','
       contactInfo: unknown,
@@ -990,7 +990,7 @@ export const,;
   s: [,
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'],'
       marketSiz,
-  e: '$67 && 67.2B clinical trial market','
+  e: '$67 && 67.2 B clinical trial market','
       growthRat,
   e: '18% annual growth','
       varian,
@@ -1032,7 +1032,7 @@ export const,;
       competitor,
   s: [,
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'],'
-      market_size: '$67.2B clinical trial market''
+      market_size: '$67.2 B clinical trial market''
       growth_rate: '18% annual growth''
       variant: 'clinical - trial - enterprise''
       contact_info: unknown,
@@ -1047,7 +1047,7 @@ export const,;
       competitors: [,
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel','
       ],
-      market_size: '$67.2B clinical trial market','
+      market_size: '$67.2 B clinical trial market','
       growth_rate: '18% annual growth','
       variant: 'clinical - trial - enterprise','
       contact_info: {
@@ -1062,7 +1062,7 @@ export const,;
       real_implementation: true
       implementation_details: unknown,
       market_siz,
-  e: '$67.2B clinical trial market','
+  e: '$67.2 B clinical trial market','
       growth_rat,
   e: '18% annual growth','
       varian,
@@ -1137,7 +1137,7 @@ i,
   s: [' 'Drug discovery identification, Molecular modeling, Clinical trial optimization, Drug repurposing' ]' ro,'
   i: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.' competitor,'
   s: [ ' 'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'],' marketSiz,'
-  e: '$45 && 45.8B AI drug discovery market',' growthRat,'
+  e: '$45 && 45.8 B AI drug discovery market',' growthRat,'
   e: '35% annual growth',' varian,'
   t: 'ai-drug-discovery-enterprise', contactInf,'
   o: ' colo,'
@@ -1157,7 +1157,7 @@ i,
   s: [,' 'Drug discovery identification, Molecular modeling, Clinical trial optimization, Drug repurposing'],' ro,'
   i: 'Pharma companies report 500% ROI through accelerated drug discovery and reduced development costs.', competitor,'
   s: [,' 'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia'],' market_siz,'
-  e: '$45.8B AI drug discovery market',' growth_rat,'
+  e: '$45.8 B AI drug discovery market',' growth_rat,'
   e: '35% annual growth',' varian,'
   t: 'ai - drug - discovery - enterprise', contact_inf,'
   o: ' mobil,'
@@ -1184,8 +1184,8 @@ i,
   s: [' 'Epic, Cerner, Allscripts, Lab systems, Research databases' ] useCase,'
   s: [' 'Personalized medicine, Disease risk assessment, Treatment optimization, Clinical research, Population health' ]' ro,'
   i: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.' competitor,'
-  s: [ ' '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],' marketSiz,'
-  e: '$78 && 78.6B precision medicine market',' growthRat,'
+  s: [ ' '23 andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],' marketSiz,'
+  e: '$78 && 78.6 B precision medicine market',' growthRat,'
   e: '28% annual growth',' varian,'
   t: 'precision-medicine-enterprise', contactInf,'
   o: ' colo,'
@@ -1193,7 +1193,7 @@ i,
   r: 'text - blue - 400',' lin,'
   k: 'http,'
   s://ziontechgroup.com / precision - medicine - genomics', market_positio,'
-  n:  ,' 'Competes with 23andMe ($199 / kit), AncestryDNA ($99 / kit), Color Genomics ($249 / test). Our,'
+  n:  ,' 'Competes with 23 andMe ($199 / kit), AncestryDNA ($99 / kit), Color Genomics ($249 / test). Our,'
   advantage: Comprehensive platform, AI - powered insights, and healthcare integration.', target_audienc,'
   e:  ,' 'Healthcare providers, Hospitals, Research institutions, Genetic counselors, Pharmaceutical companies', trial_day,'
   s: 21,' setup_tim,'
@@ -1204,8 +1204,8 @@ i,
   s: [,' 'Epic, Cerner, Allscripts, Lab systems, Research databases'], use_case,'
   s: [,' 'Personalized medicine, Disease risk assessment, Treatment optimization, Clinical research, Population health'],' ro,'
   i: 'Healthcare providers report 300% ROI through improved patient outcomes and reduced treatment costs.', competitor,'
-  s: [,' '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],' market_siz,'
-  e: '$78.6B precision medicine market',' growth_rat,'
+  s: [,' '23 andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics'],' market_siz,'
+  e: '$78.6 B precision medicine market',' growth_rat,'
   e: '28% annual growth',' varian,'
   t: 'precision - medicine - enterprise', contact_inf,'
   o: ' mobil,'
@@ -1247,7 +1247,7 @@ i,
   s: [, ' 'Medical imaging analysis, Diagnosis assistance, Clinical decision support, Research collaboration, Quality assurance'],' ro,'
   i: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.',' competitor,'
   s: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'], ' market_siz,'
-  e: '$32.1B AI medical imaging market',' growth_rat,'
+  e: '$32.1 B AI medical imaging market',' growth_rat,'
   e: '42% annual growth',' varian,'
   t: 'ai - imaging - enterprise', contact_inf,'
   o: ' mobil,'
@@ -1275,7 +1275,7 @@ i,
   s: [ ' 'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management'],' ro,'
   i: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',' competitor,'
   s: ['Teladoc, Amwell, Doxy && Doxy.me, MDLive, PlushCare'],' marketSiz,'
-  e: '$185 && 185.6B digital health market',' growthRat,'
+  e: '$185 && 185.6 B digital health market',' growthRat,'
   e: '25% annual growth',' varian,'
   t: 'digital-health-enterprise', contactInf,'
   o: ' colo,'
@@ -1295,7 +1295,7 @@ i,
   s: [,' 'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management'],' ro,'
   i: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',' competitor,'
   s: ['Teladoc, Amwell, Doxy.me, MDLive, PlushCare'],' market_siz,'
-  e: '$185.6B digital health market',' growth_rat,'
+  e: '$185.6 B digital health market',' growth_rat,'
   e: '25% annual growth',' varian,'
   t: 'digital - health - enterprise', contact_inf,'
   o: ' mobil,'
@@ -1323,7 +1323,7 @@ i,
   s: [' 'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management' ]' ro,'
   i: 'Research organizations report 400% ROI through faster trial completion and improved data quality.' competitor,'
   s: [ ' 'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'],' marketSiz,'
-  e: '$67 && 67.2B clinical trial market',' growthRat,'
+  e: '$67 && 67.2 B clinical trial market',' growthRat,'
   e: '18% annual growth',' varian,'
   t: 'clinical-trial-enterprise', contactInf,'
   o: ' colo,'
@@ -1343,7 +1343,7 @@ i,
   s: [,' 'Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'],' ro,'
   i: 'Research organizations report 400% ROI through faster trial completion and improved data quality.', competitor,'
   s: [,' 'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'],' market_siz,'
-  e: '$67.2B clinical trial market',' growth_rat,'
+  e: '$67.2 B clinical trial market',' growth_rat,'
   e: '18% annual growth',' varian,'
   t: 'clinical - trial - enterprise', contact_inf,'
   o: ' mobil,'

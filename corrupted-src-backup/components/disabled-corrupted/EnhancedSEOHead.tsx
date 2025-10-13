@@ -15,7 +15,7 @@ interface SEOHeadProp, s {
   author ?  : string
   }
 const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOHeadPro> = 'Zion, Tech, Group - Revolutionary, AI, and IT, Soluti, o, n, s','
-  description = "Transform, your, enterprise with, Zion, Tech Gro, u, p's, revolutionary, AI solution, s.","'"
+  description = "Transform, your, enterprise with, Zion, Tech Gro, u, p's, revolutionary, AI solution, s."'"
   keywor, d, s = 'AI, solutio, n, s, enterprise, A, I, artificial, intelligenc, e, machine, learnin, g, automati, o, n','
   canonic, a, l,
   u, r, l = 'htt, p, s: //ziontechgro u p.c o m' ,'
@@ -50,7 +50,6 @@ const metaKeyword, s = Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo,
     industry: 'Artificial, Intelligen, c, e','
     servic, e, s: [,
 interface SEOHeadProp, s {/* TODO: Fix JSX expression */}
- }
 const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
      },
@@ -91,8 +90,8 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
 <meta, nam, e = 'twitt, e, r: description' conte, n, t={descrip, t, i, o, n} />'
 <meta, nam, e = 'twitt, e, r: image' conte, n, t={i, m, a, g, e} />'
       {/* Additional, Metas */}
-      <meta, nam, e = 'the, m, e-col, o, r' conte, n, t='#3B82, F, 6' />'
-<meta, nam, e='msapplicati, o, n-TileCol, o, r' conte, n, t='#3B82, F, 6' />'
+      <meta, nam, e = 'the, m, e-col, o, r' conte, n, t='#3 B82, F, 6' />'
+<meta, nam, e='msapplicati, o, n-TileCol, o, r' conte, n, t='#3 B82, F, 6' />'
 <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-capab, l, e' conte, n, t='y, e, s' />'
 <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-stat, u, s-b, a, r-sty, l, e' conte, n, t='defau, l, t' />'
 <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-title' conte, n, t='Zion, Tech, Group' />'
@@ -134,8 +133,8 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
 <meta, nam, e = 'twitt, e, r: description' conte, n, t={descrip, t, i, o, n} />'
 <meta, nam, e = 'twitt, e, r: image' conte, n, t={i, m, a, g, e} />'
       {/* Additional, Metas */}
-      <meta, nam, e = 'the, m, e-col, o, r' conte, n, t='#3B82, F, 6' />'
-<meta, nam, e='msapplicati, o, n-TileCol, o, r' conte, n, t='#3B82, F, 6' />'
+      <meta, nam, e = 'the, m, e-col, o, r' conte, n, t='#3 B82, F, 6' />'
+<meta, nam, e='msapplicati, o, n-TileCol, o, r' conte, n, t='#3 B82, F, 6' />'
 <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-capab, l, e' conte, n, t='y, e, s' />'
 <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-stat, u, s-b, a, r-sty, l, e' conte, n, t='defau, l, t' />'
 <meta, nam, e='app, l, e-mobi, l, e-w, e, b-a, p, p-title' conte, n, t='Zion, Tech, Group' />'

@@ -12,7 +12,9 @@ const mockPrismaClient = {
 }
   // TODO: Add properties
 }
-import { createMocks, RequestMethod } from node-mocks-http';import type { NextApiRequest, NextApiResponse } from 'next';import reviewsHandler from @/pages/api/reviews'; // Handler for POST /api/reviews'import productReviewsHandler from @/pages/api/reviews/[productId]; // Handler for GET /api/reviews/[productId]import { PrismaClient } from @prisma/client';import { supabase } from @/integrations/supabase/client';'
+import { createMocks, RequestMethod } from node-mocks-http';
+import type { NextApiRequest, NextApiResponse } from 'next';import reviewsHandler from @/pages/api/reviews'; // Handler for POST /api/reviews'import productReviewsHandler from @/pages/api/reviews/[productId]; // Handler for GET /api/reviews/[productId]import { PrismaClient } from @prisma/client';
+import { supabase } from @/integrations/supabase/client';'
 // Mock Prisma Client
 jest.mock('@prisma/client', () => {'  const mockPrismaClient = {'
     productReview: {
@@ -67,9 +69,7 @@ jest.mock('@prisma/client', () => {'  const mockPrismaClient = {'
           this.meta = meta
           this.name = 'PrismaClientKnownRequestError''
         }
-      }
     }
-  }
 })
 jest.mock('@/integrations/supabase/client', () => ({'
   supabase: {
@@ -88,7 +88,6 @@ jest.mock('@/integrations/supabase/client', () => ({'  supabase: {'
 }
       getSession: jest.fn()
     }
-  }
 }))
 interface ErrorResponse {
   // TODO: Add properties
@@ -569,7 +568,7 @@ const { req, res } = createMocks({
       expect(res._getStatusCode()).toBe(400)
       expect(JSON.parse(res._getData())).toEqual({ error: Rating is required and must be a number between 1 and 5.' });    })'
     it('should fail with invalid rating (400) - not a number', async () => {'        const { req, res } = createMocks({'
-          method: POST' as RequestMethod,          body: { productId: prod1', rating: "five-stars", comment: Text rating!' },        })'"
+          method: POST' as RequestMethod,          body: { productId: prod1', rating: "five-stars"
         await reviewsHandler(req as NextApiRequest, res as NextApiResponse)
         expect(res._getStatusCode()).toBe(400)
         expect(JSON.parse(res._getData())).toEqual({ error: Rating is required and must be a number between 1 and 5.' });      })'

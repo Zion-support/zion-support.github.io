@@ -8,13 +8,13 @@ import { emergingTechnologyServices } from '../data/emerging-technology-services
 import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';';
 import { realMarketServices } from '../data/real-market-services';';
 import { serviceExpansions2025 } from '../data/service-expansions-2025';';
-import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';';
+import { verifiedRealServices2025 Batch2 } from '../data/verified-real-services-2025-batch2';';
 import { realOperationalServices } from '../data/real-operational-services';';
 import { newOperationalServices2025 } from '../data/new-operational-services-2025';';
-import { innovative2025Services } from '../data/innovative-2025-services';';
-import { emergingTech2025Services } from '../data/emerging-tech-2025-services';';
+import { innovative2025 Services } from '../data/innovative-2025-services';';
+import { emergingTech2025 Services } from '../data/emerging-tech-2025-services';';
 import { professionalServices } from '../data/professional-services';';
-import { real2029Q2Additions } from '../data/real-2029-q2-additions';';';
+import { real2029 Q2 Additions } from '../data/real-2029-q2-additions';';';
 export type ServiceRecord = any;
 export type ServiceRecord = any;
 const allServiceArrays: ServiceRecord[][] = [
@@ -34,11 +34,11 @@ const allServiceArrays: ServiceRecord[][] = [
 	serviceExpansions2025,
 	realOperationalServices,
 	newOperationalServices2025,
-	verifiedRealServices2025Batch2,
-	innovative2025Services,
-	emergingTech2025Services,
+	verifiedRealServices2025 Batch2,
+	innovative2025 Services,
+	emergingTech2025 Services,
 	professionalServices
-	,real2029Q2Additions
+	,real2029 Q2 Additions
 ]
 ];
 export function findServiceBySlug(slug: string): ServiceRecord | undefined {
@@ -65,7 +65,6 @@ const url = new URL(s.link)
 }
 					return s.link.endsWith('/' + slug)'
 				}
-			}
 			return false
 		})
 		if (hit) return hit
@@ -87,7 +86,6 @@ const results: ServiceRecord[] = []
 			if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {'
 				results.push(s)
 			}
-		}
 	}
 	// Deduplicate by id or link;
 const seen = new Set<string>()
@@ -97,4 +95,3 @@ const key = s.id || s.link || s.name
 		seen.add(key)
 		return true
 	})
-}

@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'front-ads-promoter'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'front-ads-promoter'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'front-ads-promoter',' source: event.source || 'unknown', promotion: {' status: 'active', adsPromoted: 0,'
         lastPromotion: new Date().toISOString() } }) } return result; } catch (error) {

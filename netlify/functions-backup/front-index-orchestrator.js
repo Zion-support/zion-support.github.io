@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'front-index-orchestrator'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'front-index-orchestrator'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'front-index-orchestrator',' source: event.source || 'unknown', orchestration: {' status: 'active', indexes: 0,'
         lastOrchestration: new Date().toISOString() } }) } return result; } catch (error) {

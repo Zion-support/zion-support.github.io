@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface FuturisticBackgroundProps {
   className?: string;
   children?: React.ReactNode;
@@ -69,7 +68,7 @@ const resizeCanvas = () => {
     <canvas
       ref={canvasRef}
       className="fixed inset-0 w-full h-full pointer-events-none z-0"
-      style={{ background: 'linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%)' }}
+      style={{ background: 'linear-gradient(135 deg, #0 f172 a 0%, #581 c87 50%, #0 f172 a 100%)' }
     />
   );
 };
@@ -78,4 +77,3 @@ export default FuturisticBackgroundPage;
 
 }
 export default FuturisticBackground;
-}

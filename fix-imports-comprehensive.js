@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -9,7 +7,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 #!/usr/bin/env node;
 import fs from 'fs';';
 import path from 'path';'
@@ -85,13 +82,13 @@ const linkImportRegex =
   // TODO: Add properties
 }
       content = content.replace(linkImportRegex)
-        "import Link from 'next/link';";'"
+        "import Link from 'next/link';"
       )
       modified = true
     }
 
-    //Fix lucide-react imports - replace individual imports with single import
-    for (let i = 0; i < importLines.length; i++) {
+    //Fix lucide-react imports - replace individual imports with single import for (let i = 0;
+i < importLines.length; i++) {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -114,20 +111,15 @@ const match = line.match(
 //           const finalName = iconReplacements[correctName] || correctName
           lucideImports.push(finalName);
 const iconMappings = {/* TODO: Fix JSX expression */}
-}
 //Icons that don't exist in lucide-react - replace with similar ones;';
 const iconReplacements = {/* TODO: Fix JSX expression */}
-}
 //Function to fix imports in a file
 function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-
-    //Fix lucide-react imports - replace individual imports with single import
-    for (let i = 0; i < importLines.length; i++) {/* TODO: Fix JSX expression */}
-        }
+    //Fix lucide-react imports - replace individual imports with single import for (let i = 0;
+i < importLines.length; i++) {/* TODO: Fix JSX expression */}
         modified = true
       } else if (line.includes('import {/* TODO: Fix JSX expression */})'
-        line.includes("} from 'lucide-react'")"'"
+        line.includes("} from 'lucide-react'"'"
       ) {
   // TODO: Add properties
 }
@@ -143,7 +135,6 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
         newImportLines.push(line)
       ) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
-      }
     }
 
     //Add consolidated lucide-react import
@@ -153,7 +144,8 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
   // TODO: Add properties
 }
       //Find the best place to insert the import
-      for (let i = 0; i < newImportLines.length; i++) {
+      for (let i = 0;
+i < newImportLines.length; i++) {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -165,8 +157,6 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
     if (lucideImports.length > 0) {/* TODO: Fix JSX expression */}
         } else if (newImportLines[i].trim() === '') {/* TODO: Fix JSX expression */}'
         }
-      }
-
       newImportLines.splice(insertIndex, 0, lucideImportLine)
       content = newImportLines.join('\n')'
     }
@@ -178,8 +168,6 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
 //       }
   } catch (error) {/* TODO: Fix JSX expression */}
 //     }
-}
-
 //Get all files that need fixing
 directories.forEach(dir => {)
   if (fs.existsSync(dir)) {;

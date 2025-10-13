@@ -1,7 +1,7 @@
 import { useState } from 'react';';
-import { supabase } from "@/integrations/supabase/client";";
-import { toast } from "@/hooks/use-toast";";
-import { TalentProfile } from "@/types/talent";";";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
+import { TalentProfile } from "@/types/talent";";
 export interface HireRequestData {
   // TODO: Add properties
 }
@@ -36,7 +36,6 @@ export interface HireRequestData {
     budgetMin: number
     budgetMax: number
   }
-}
 export function useHireRequest() {;
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [error, setError] = useState<string | null>(null);
@@ -63,7 +62,7 @@ const { data: response, error } = await supabase.functions.invoke('process-hire-
 }
   // TODO: Add properties
 }
-        title: "Request Submitted","
+        title: ","
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`})
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`,
       })
@@ -73,20 +72,20 @@ const { data: response, error } = await supabase.functions.invoke('process-hire-
 }
   // TODO: Add properties
 }
-      console.error("Error submitting hire request:", error);";
+      console.error(", error);";
 const errorMessage = error instanceof Error
         ? error.message
-        : "There was a problem submitting your request. Please try again.""
+        : ""
       setError(errorMessage)
       toast({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        title: "Error","
+        title: ","
         description: errorMessage,
-        variant: "destructive"})"
-        variant: "destructive","
+        variant: "})"
+        variant: ","
       })
       return { success: false, error: errorMessage }
     } finally {
@@ -96,7 +95,6 @@ const errorMessage = error instanceof Error
 }
       setIsSubmitting(false)
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -105,5 +103,4 @@ const errorMessage = error instanceof Error
     submitHireRequest,
     isSubmitting,
     error
-  }
-}
+  

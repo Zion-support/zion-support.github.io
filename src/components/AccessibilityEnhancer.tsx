@@ -29,7 +29,6 @@ const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {'
         document.body.classList.add('keyboard-navigation')'
   }
-    }
     const handleMouseDown = () => {
   // TODO: Implement
 }
@@ -101,7 +100,7 @@ const images = document.querySelectorAll('img: not([alt])'),'
       // Add ARIA labels to form inputs;
 const inputs = document.querySelectorAll('input: not([aria-label])'),'
       inputs.forEach(input => {;
-const label = document.querySelector(`label[for="${input.getAttribute('id')}"]`)"'"
+const label = document.querySelector(`label[for="${input.getAttribute('id')}"'"
         if (label && !input.getAttribute('aria-label')) {'
     input.setAttribute('aria-label', label.textContent?.trim() || ')''
   }
@@ -225,7 +224,7 @@ const handleKeyDown = (e: KeyboardEvent) => {
 }
     // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {;';
-const mainContent = document.querySelector('main, [role="main"]')'"
+const mainContent = document.querySelector('main, [role="]')'"
         if (mainContent) {
   // TODO: Add properties
 }
@@ -234,7 +233,6 @@ const mainContent = document.querySelector('main, [role="main"]')'"
           (mainContent as HTMLElement).focus()
           e.preventDefault()
   }
-      }
       // Escape key to close modals/dropdowns
       if (e.key === 'Escape') {;';
 const activeElement = document.activeElement as HTMLElement
@@ -245,7 +243,6 @@ const activeElement = document.activeElement as HTMLElement
 }
           activeElement.blur()
   }
-      }
     }
     document.addEventListener('keydown', handleKeyDown)'
     return () => {
@@ -277,7 +274,6 @@ const existingLiveRegion = document.getElementById('live-region')'
 }
         existingLiveRegion.remove()
   }
-    }
   }, [])
   // Announce page changes
   useEffect(() => {;
@@ -287,7 +283,6 @@ const liveRegion = document.getElementById('live-region')'
 const pageTitle = document.title
         liveRegion.textContent = `Page loaded: ${pageTitle}`
       }
-    }
     // Announce after a short delay to ensure content is loaded;
 const timeoutId = setTimeout(announcePageChange, 1000)
     return () => clearTimeout(timeoutId)
@@ -299,40 +294,32 @@ const timeoutId = setTimeout(announcePageChange, 1000)
   return (
   // TODO: Add parameters
 )
-    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">"
-<div className="mb-2 font-bold">Accessibility Settings"
-      <div className="space-y-2">"
-<label className="flex items-center space-x-2">"
+    <div className="
+<div className="mb-2 font-bold"space-y-2"
+<label className="
 <input
-            type="checkbox""
+            type="checkbox"
             checked={settings.highContrast}
             onChange={(e) => setSettings(prev => ({ ...prev, highContrast: e.target.checked }))}
-            className="rounded""
-          />
-<span>High Contrast
-        <label className="flex items-center space-x-2">"
+            className="rounded"flex items-center space-x-2"
 <input
-            type="checkbox""
+            type=""
             checked={settings.reducedMotion}
             onChange={(e) => setSettings(prev => ({ ...prev, reducedMotion: e.target.checked }))}
-            className="rounded""
+            className="
           />
 <span>Reduced Motion
         <div>
-<label className="block mb-1">Font Size:"
-          <select
-            value={settings.fontSize}
-            onChange={(e) => setSettings(prev => ({ ...prev, fontSize: e.target.value as any }))}
-            className="bg-gray-700 text-white rounded px-2 py-1">"
-<option value="small">Small"
-            <option value="medium">Medium"
-            <option value="large">Large"
-        <label className="flex items-center space-x-2">"
+<label className="block mb-1"bg-gray-700 text-white rounded px-2 py-1"
+<option value=">Small"
+            <option value=">Medium"
+            <option value=">Large"
+        <label className="
 <input
-            type="checkbox""
+            type="checkbox"
             checked={settings.focusVisible}
             onChange={(e) => setSettings(prev => ({ ...prev, focusVisible: e.target.checked }))}
-            className="rounded""
+            className="rounded"
           />
 <span>Focus Visible</span></label>
 </div></div>

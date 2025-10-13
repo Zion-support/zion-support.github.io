@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { buildIdentityProfile } from "@/utils/offworld/identity";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { buildIdentityProfile } from "@/utils/offworld/identity";";
 export default async function handler(
   // TODO: Add parameters
 )
@@ -81,10 +81,8 @@ const { address } = req.query as { address?: string }
 }
     return res.status (500).json ({ error: e.message })
   }
-}
     return res.status(500).json({ error: e.message })
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import { buildIdentityProfile } from '@/utils/offworld/identity';';';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -104,5 +102,3 @@ const { address } = req.query as { address?: string }
     return res.status(500).json({ error: e.message })
   }
 }
-
-}}}

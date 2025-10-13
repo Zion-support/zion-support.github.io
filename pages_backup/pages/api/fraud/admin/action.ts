@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { getFraudStore } from "../../../../utils/fraud/store";";
-import { AdminActionType } from "../../../../utils/fraud/types";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getFraudStore } from "../../../../utils/fraud/store";
+import { AdminActionType } from "../../../../utils/fraud/types";";
 export default async function handler(
   // TODO: Add parameters
 )
@@ -16,8 +16,8 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req && req.method !== "POST") {"
-    return res && res.status(405).json({ error: "Method not allowed" })"
+  if (req && req.method !== ") {"
+    return res && res.status(405).json({ error: " })"
   }
   const { fraudId, action, reason, adminId } = req && req.body || {}
   if (!fraudId || !action) {
@@ -25,7 +25,7 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-    return res && res.status(400).json({ error: "Missing fraudId or action" })"
+    return res && res.status(400).json({ error: " })"
   }
   const store = getFraudStore();
 const fraud = store && store.getById(fraudId)
@@ -34,7 +34,7 @@ const fraud = store && store.getById(fraudId)
 }
   // TODO: Add properties
 }
-    return res && res.status(404).json({ error: "Fraud record not found" })"
+    return res && res.status(404).json({ error: " })"
   }
   const adminAction: AdminActionType = {
   // TODO: Add properties
@@ -79,26 +79,24 @@ const token = req.headers['x-admin-token']'
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 ;
 export default async /**;
  * handler - Function description
@@ -116,7 +114,7 @@ if ( {) {
 }
   $2
 }
-    return res.status (405).json ({ error: "Method not allowed" })"
+    return res.status (405).json ({ error: " })"
   }
   const { fraud_id, action, reason, admin_id } = req.body || {}
   // Check condition
@@ -127,7 +125,7 @@ if ( {) {
 }
   $2
 }
-    return res.status (400).json ({ error: "Missing fraud_id or action" })"
+    return res.status (400).json ({ error: " })"
   }
   const store = getFraudStore ();
 const fraud = store.getById (fraud_id)
@@ -139,7 +137,7 @@ if ( {) {
 }
   $2
 }
-    return res.status (404).json ({ error: "Fraud record not found" })"
+    return res.status (404).json ({ error: " })"
   }
   const admin_action: AdminActionType = {
   // TODO: Add properties
@@ -162,10 +160,9 @@ if ( {) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 ;
 const store = getFraudStore()
   await store.recordAction({ fraudId, action: act, adminId: adminId || null, reason: reason || null });
@@ -177,23 +174,21 @@ const newStatus = act === 'IGNORE' ? 'IGNORED' : act === 'WARN' ? 'WARNED' : 'SU
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
+  

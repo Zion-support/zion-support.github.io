@@ -27,7 +27,6 @@ export class ${utilityName} {
     if (this.config.enabled) {
       console.log('${utilityName} initialized');
     }
-  }
 }
 
 export const ${utilityName.toLowerCase()}Instance = new ${utilityName}();
@@ -58,8 +57,6 @@ function fixFile(filePath) {
     console.error(`Error fixing file ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Main execution
 function main() {
   const workspaceDir = process.cwd();
@@ -74,7 +71,6 @@ function main() {
       if (fixFile(fullPath)) {
         fixedCount++;
       }
-    }
   }
   
   console.log(`Fixed ${fixedCount} files`);
@@ -87,8 +83,6 @@ function main() {
   } catch (error) {
     console.log('Type check still has errors, but fixed some files.');
   }
-}
-
 if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }

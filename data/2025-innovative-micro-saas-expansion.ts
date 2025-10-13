@@ -181,12 +181,12 @@ export const,;
       roi: 'Average customer sees 300% ROI within 3 months through improved retention and reduced churn.','
       competitors: [,
         'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally'],'
-      marketSize: '$1 && 1.2B market''
+      marketSize: '$1 && 1.2 B market''
       growthRate: '22 && 22.5% annual growth''
       variant: 'ai-autonomous''
         'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally','
       ],
-      marketSize: '$1 && 1.2B market','
+      marketSize: '$1 && 1.2 B market','
       growthRate: '22 && 22.5% annual growth','
       variant: 'ai-autonomous','
       contactInfo: unknown,
@@ -220,7 +220,7 @@ export const,;
   s: [,
         'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally'],'
       marketSiz,
-  e: '$1 && 1.2B market','
+  e: '$1 && 1.2 B market','
       growthRat,
   e: '22 && 22.5% annual growth','
       varian,
@@ -263,7 +263,7 @@ export const,;
       competitor,
   s: [,
         'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally'],'
-      market_size: '$1.2B market''
+      market_size: '$1.2 B market''
       growth_rate: '22.5% annual growth''
       variant: 'ai - autonomous''
       contact_info: unknown,
@@ -280,7 +280,7 @@ export const,;
       competitors: [,
         'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally','
       ],
-      market_size: '$1.2B market','
+      market_size: '$1.2 B market','
       growth_rate: '22.5% annual growth','
       variant: 'ai - autonomous','
       contact_info: {
@@ -314,7 +314,7 @@ export const,;
       period: '/month','
       description: unknown,
       market_siz,
-  e: '$1.2B market','
+  e: '$1.2 B market','
       growth_rat,
   e: '22.5% annual growth','
       varian,
@@ -446,7 +446,7 @@ export const,;
         'Document processing, Form automation, Data extraction, Compliance management, Workflow automation'],'
       roi: 'Average customer saves 15 hours per week and sees 400% ROI through automation and efficiency gains.','
       competitors: ['UiPath, Automation Anywhere, Blue Prism, Kofax, ABBYY'],'
-      market_size: '$2.8B market''
+      market_size: '$2.8 B market''
       growth_rate: '19.8% annual growth''
       variant: 'ai - autonomous''
       contact_info: unknown,
@@ -465,7 +465,7 @@ export const,;
       ],
       roi: 'Average customer saves 15 hours per week and sees 400% ROI through automation and efficiency gains.','
       competitors: ['UiPath, Automation Anywhere, Blue Prism, Kofax, ABBYY'],'
-      market_size: '$2.8B market','
+      market_size: '$2.8 B market','
       growth_rate: '19.8% annual growth','
       variant: 'ai - autonomous','
       contact_info: {
@@ -497,7 +497,7 @@ export const,;
       competitor,
   s: ['UiPath, Automation Anywhere, Blue Prism, Kofax, ABBYY'],'
       market_siz,
-  e: '$2.8B market','
+  e: '$2.8 B market','
       growth_rat,
   e: '19.8% annual growth','
       varian,
@@ -570,7 +570,7 @@ export const,;
       ],
       roi: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.','
       competitors: ['TradeGecko, Zoho Inventory, Fishbowl, Cin7, Unleashed'],'
-      marketSize: '$3 && 3.1B market''
+      marketSize: '$3 && 3.1 B market''
       growthRate: '16 && 16.9% annual growth''
       variant: 'ai-autonomous''
       contactInfo: unknown,
@@ -591,7 +591,7 @@ export const,;
       competitor,
   s: ['TradeGecko, Zoho Inventory, Fishbowl, Cin7, Unleashed'],'
       marketSiz,
-  e: '$3 && 3.1B market','
+  e: '$3 && 3.1 B market','
       growthRat,
   e: '16 && 16.9% annual growth','
       varian,
@@ -631,12 +631,12 @@ export const,;
         'Inventory tracking, Demand forecasting, Supplier management, Multi - location operations, E - commerce integration'],'
       roi: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.','
       competitors: ['TradeGecko, Zoho Inventory, Fishbowl, Cin7, Unleashed'],'
-      market_size: '$3.1B market''
+      market_size: '$3.1 B market''
       growth_rate: '16.9% annual growth''
       variant: 'ai - autonomous''
       contact_info: unknown,
         mobile: '+1 302 464 0950''
-      market_size: '$3.1B market','
+      market_size: '$3.1 B market','
       growth_rate: '16.9% annual growth','
       variant: 'ai - autonomous','
       contact_info: {
@@ -669,7 +669,7 @@ export const,;
       competitor,
   s: ['TradeGecko, Zoho Inventory, Fishbowl, Cin7, Unleashed'],'
       market_siz,
-  e: '$3.1B market','
+  e: '$3.1 B market','
       growth_rat,
   e: '16.9% annual growth','
       varian,
@@ -799,7 +799,7 @@ export const,;
         'Candidate screening, Job posting, Interview scheduling, Skill assessment, Compliance tracking'],'
       roi: 'Average customer reduces time - to - hire by 60% and sees 250% ROI through efficiency gains.','
       competitors: ['Greenhouse, Lever, BambooHR, Workday, ADP'],'
-      market_size: '$2.3B market''
+      market_size: '$2.3 B market''
       growth_rate: '18.2% annual growth''
       variant: 'ai - autonomous''
       contact_info: unknown,
@@ -818,7 +818,7 @@ export const,;
       ],
       roi: 'Average customer reduces time - to - hire by 60% and sees 250% ROI through efficiency gains.','
       competitors: ['Greenhouse, Lever, BambooHR, Workday, ADP'],'
-      market_size: '$2.3B market','
+      market_size: '$2.3 B market','
       growth_rate: '18.2% annual growth','
       variant: 'ai - autonomous','
       contact_info: {
@@ -851,7 +851,7 @@ export const,;
       competitor,
   s: ['Greenhouse, Lever, BambooHR, Workday, ADP'],'
       market_siz,
-  e: '$2.3B market','
+  e: '$2.3 B market','
       growth_rat,
   e: '18.2% annual growth','
       varian,
@@ -940,7 +940,7 @@ export const,;
       ],
       roi: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.','
       competitors: ['Asana, Monday && Monday.com, Jira, Trello, Basecamp'],'
-      marketSize: '$4 && 4.2B market''
+      marketSize: '$4 && 4.2 B market''
       growthRate: '20 && 20.1% annual growth''
       variant: 'ai-autonomous''
       contactInfo: unknown,
@@ -961,7 +961,7 @@ export const,;
       competitor,
   s: ['Asana, Monday && Monday.com, Jira, Trello, Basecamp'],'
       marketSiz,
-  e: '$4 && 4.2B market','
+  e: '$4 && 4.2 B market','
       growthRat,
   e: '20 && 20.1% annual growth','
       varian,
@@ -1001,12 +1001,12 @@ export const,;
         'Project planning, Resource management, Risk assessment, Team collaboration, Progress tracking'],'
       roi: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.','
       competitors: ['Asana, Monday.com, Jira, Trello, Basecamp'],'
-      market_size: '$4.2B market''
+      market_size: '$4.2 B market''
       growth_rate: '20.1% annual growth''
       variant: 'ai - autonomous''
       contact_info: unknown,
         mobile: '+1 302 464 0950''
-      market_size: '$4.2B market','
+      market_size: '$4.2 B market','
       growth_rate: '20.1% annual growth','
       variant: 'ai - autonomous','
       contact_info: {
@@ -1025,7 +1025,7 @@ export const,;
       competitor,
   s: ['Asana, Monday.com, Jira, Trello, Basecamp'],'
       market_siz,
-  e: '$4.2B market','
+  e: '$4.2 B market','
       growth_rat,
   e: '20.1% annual growth','
       varian,
@@ -1100,7 +1100,7 @@ i,
   s: [' 'Customer onboarding, Churn prevention, Success automation, Health monitoring, Growth optimization' ]' ro,'
   i: 'Average customer sees 300% ROI within 3 months through improved retention and reduced churn.' competitor,'
   s: [ ' 'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally'],' marketSiz,'
-  e: '$1 && 1.2B market',' growthRat,'
+  e: '$1 && 1.2 B market',' growthRat,'
   e: '22 && 22.5% annual growth',' varian,'
   t: 'ai-autonomous', contactInf,'
   o: ' colo,'
@@ -1120,7 +1120,7 @@ i,
   s: [,' 'Customer onboarding, Churn prevention, Success automation, Health monitoring, Growth optimization'],' ro,'
   i: 'Average customer sees 300% ROI within 3 months through improved retention and reduced churn.', competitor,'
   s: [,' 'Gainsight, Totango, ChurnZero, CustomerSuccessBox, Vitally'],' market_siz,'
-  e: '$1.2B market',' growth_rat,'
+  e: '$1.2 B market',' growth_rat,'
   e: '22.5% annual growth',' varian,'
   t: 'ai - autonomous', contact_inf,'
   o: ' mobil,'
@@ -1163,7 +1163,7 @@ i,
   s: [, ' 'Document processing, Form automation, Data extraction, Compliance management, Workflow automation'],' ro,'
   i: 'Average customer saves 15 hours per week and sees 400% ROI through automation and efficiency gains.',' competitor,'
   s: ['UiPath, Automation Anywhere, Blue Prism, Kofax, ABBYY'], ' market_siz,'
-  e: '$2.8B market',' growth_rat,'
+  e: '$2.8 B market',' growth_rat,'
   e: '19.8% annual growth',' varian,'
   t: 'ai - autonomous', contact_inf,'
   o: ' mobil,'
@@ -1191,7 +1191,7 @@ i,
   s: [ ' 'Inventory tracking, Demand forecasting, Supplier management, Multi-location operations, E-commerce integration'],' ro,'
   i: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.',' competitor,'
   s: ['TradeGecko, Zoho Inventory, Fishbowl, Cin7, Unleashed'],' marketSiz,'
-  e: '$3 && 3.1B market',' growthRat,'
+  e: '$3 && 3.1 B market',' growthRat,'
   e: '16 && 16.9% annual growth',' varian,'
   t: 'ai-autonomous', contactInf,'
   o: ' colo,'
@@ -1211,7 +1211,7 @@ i,
   s: [,' 'Inventory tracking, Demand forecasting, Supplier management, Multi - location operations, E - commerce integration'],' ro,'
   i: 'Average customer reduces inventory costs by 25% and sees 350% ROI within 6 months.',' competitor,'
   s: ['TradeGecko, Zoho Inventory, Fishbowl, Cin7, Unleashed'],' market_siz,'
-  e: '$3.1B market',' growth_rat,'
+  e: '$3.1 B market',' growth_rat,'
   e: '16.9% annual growth',' varian,'
   t: 'ai - autonomous', contact_inf,'
   o: ' mobil,'
@@ -1253,7 +1253,7 @@ i,
   s: [, ' 'Candidate screening, Job posting, Interview scheduling, Skill assessment, Compliance tracking'],' ro,'
   i: 'Average customer reduces time - to - hire by 60% and sees 250% ROI through efficiency gains.',' competitor,'
   s: ['Greenhouse, Lever, BambooHR, Workday, ADP'], ' market_siz,'
-  e: '$2.3B market',' growth_rat,'
+  e: '$2.3 B market',' growth_rat,'
   e: '18.2% annual growth',' varian,'
   t: 'ai - autonomous', contact_inf,'
   o: ' mobil,'
@@ -1281,7 +1281,7 @@ i,
   s: [ ' 'Project planning, Resource management, Risk assessment, Team collaboration, Progress tracking'],' ro,'
   i: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',' competitor,'
   s: ['Asana, Monday && Monday.com, Jira, Trello, Basecamp'],' marketSiz,'
-  e: '$4 && 4.2B market',' growthRat,'
+  e: '$4 && 4.2 B market',' growthRat,'
   e: '20 && 20.1% annual growth',' varian,'
   t: 'ai-autonomous', contactInf,'
   o: ' colo,'
@@ -1301,7 +1301,7 @@ i,
   s: [,' 'Project planning, Resource management, Risk assessment, Team collaboration, Progress tracking'],' ro,'
   i: 'Average customer improves project success rate by 35% and sees 300% ROI through better management.',' competitor,'
   s: ['Asana, Monday.com, Jira, Trello, Basecamp'],' market_siz,'
-  e: '$4.2B market',' growth_rat,'
+  e: '$4.2 B market',' growth_rat,'
   e: '20.1% annual growth',' varian,'
   t: 'ai - autonomous', contact_inf,'
   o: ' mobil,'

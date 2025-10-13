@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'robots-auditor'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'robots-auditor'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'robots-auditor',' source: event.source || 'unknown', audit: {' status: 'active', robotsFiles: 0, issuesFound: 0,'
         lastAudit: new Date().toISOString() } }) } return result; } catch (error) {

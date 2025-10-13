@@ -27,182 +27,120 @@ return (
 )
     <>
 <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" />"
+<meta name="description"AI-powered solution" />"keywords" content=" />"
 <link></Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
+<div className="
         {/* Hero Section */}</div>
-<section className="py-20 px-4"></section>"
-< className="$2 /></div>"
-<div className="text-center mb-16"></div>"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
+<section className="py-20 px-4"$2 /></div>"text-center mb-16"
+<h2 className="text-4 xl font-bold text-white mb-4"text-xl text-gray-300"
 </div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>"
+<div className="
+<div className="text-center mb-16"inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"
 <BarChart />
 <span>AI Analytics Dashboard</span></div>
 <h1>
                 Real-time Business </h1>
-<span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Intelligence</span></h1>"
+<span className="
 <p>Transform your data into actionable insights with our AI-powered analytics dashboard.;</p>
                 Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
               </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
-                <button></button>
-<span>Start Free Trial</span>
-<ArrowRight></button>
-<button>View Demo,</button></button>
-</div></div>
+<div className="flex flex-col sm: flex-row gap-4 justify-center"py-20 px-4"
+<div className="
+<div className="text-center mb-16"text-4 xl font-bold text-white mb-4"
+<p className="
 </div></section>
-        {/* Features Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
-<h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>"
+<div className="max-w-7 xl mx-auto"text-center mb-16"
+<h2 className="
 <p>Everything you need to make data-driven decisions with confidence;</p></p>
 </div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,"
-              {features.map((feature, index) => (</div>} <div key={index}className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover: border-cyan-400/50 transition-all group"></div>,"
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover: scale-110 transition-transform"></div>,"
+<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover: border-cyan-400/50 transition-all group"
+                  <div className="
                     <feature />
-<h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
-<p className="text-gray-300">{feature.description</p>}</p></div>"
+<h3 className="text-xl font-semibold text-white mb-3"text-gray-300"
               ))}
             </div></div>
 </section>
-        {/* Metrics Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6">"
-<BarChart className="w-4 h-4" />"
-<span>AI Analytics Dashboard
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">"
+        {/* Metrics Section */} <section className="
+<div className="max-w-7 xl mx-auto"text-center mb-16"
+<div className="
+<BarChart className="w-4 h-4"text-5 xl md:text-6 xl font-bold text-white mb-6 cyber-text"
                 Real-time Business
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Intelligence"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">"
-                Transform your data into actionable insights with our AI-powered analytics dashboard.
-                Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">"
+                <span className="
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto mb-8"flex flex-col sm:flex-row gap-4 justify-center"
+<button className="
 <span>Start Free Trial
-                  <ArrowRight className="w-5 h-5" />"
-<button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">View Demo"
+                  <ArrowRight className="w-5 h-5"border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all"
         {/* Features Section */}
-        <section className="py-16 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Everything you need to make data-driven decisions with confidence"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+        <section className="
+<div className="max-w-7 xl mx-auto"text-center mb-16"
+<h2 className="
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               {features.map((feature, index) => (
   // TODO: Add parameters
 )
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group">"
-<div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">"
-<feature.icon className="w-6 h-6 text-white" />"
-<h3 className="text-xl font-semibold text-white mb-3">{feature.title}"
-                  <p className="text-gray-300">{feature.description}"
-              ))}
-        {/* Metrics Section */}
-        <section className="py-20 px-4"></section>"
-< className="$2 /></div>"
-<div className="text-center mb-16"></div>"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
+                <div key={index} className="
+<div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"w-6 h-6 text-white"
+<h3 className="
+                  <p className="text-gray-300"py-20 px-4"
+< className="text-center mb-16"></div>"text-4 xl font-bold text-white mb-4"
+<p className="
 </div></section>
-<div className="max-w-7xl mx-auto" / /></div>"
-<div className="text-center mb-16" / /></div>"
-<h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>"
+<div className="max-w-7 xl mx-auto"text-center mb-16"
+<h2 className="
 <p>Built for scale and reliability;</p></p>
 </div>
-<div className="grid grid-cols-2 md: grid-cols-4 gap-8"></div>,"
-              {metrics.map((metric, index) => (</div>} <div key={index}className="text-center"></div>"
-<div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"></div>"
+<div className="grid grid-cols-2 md: grid-cols-4 gap-8"text-center"
+<div className="
 <metric />
-<div className="text-3xl font-bold text-white mb-2">{metric.value</div>}</div>"
-<div className="text-gray-300">{metric.label</div>}</div></div>"
+<div className="text-3 xl font-bold text-white mb-2"text-gray-300"
               ))}
             </div></div>
 </section>
-        {/* Benefits Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Platform Performance"
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Built for scale and reliability"
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
+        {/* Benefits Section */} <section className="
+<div className="max-w-7 xl mx-auto"text-center mb-16"
+<h2 className="
+              <p className="text-xl text-gray-300 max-w-3 xl mx-auto"grid grid-cols-2 md:grid-cols-4 gap-8"
               {metrics.map((metric, index) => (
   // TODO: Add parameters
 )
-                <div key={index} className="text-center">"
-<div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">"
-<metric.icon className="w-8 h-8 text-white" />"
-<div className="text-3xl font-bold text-white mb-2">{metric.value}"
-                  <div className="text-gray-300">{metric.label}"
-              ))}
-        {/* Benefits Section */}
-        <section className="py-20 px-4"></section>"
-< className="$2 /></div>"
-<div className="text-center mb-16"></div>"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
+                <div key={index} className="
+<div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"w-8 h-8 text-white"
+<div className="
+                  <div className="text-gray-300"py-20 px-4"
+< className="text-center mb-16"></div>"text-4 xl font-bold text-white mb-4"
+<p className="
 </div></section>
-<div className="max-w-7xl mx-auto" / /></div>"
-<div className="text-center mb-16" / /></div>"
-<h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>"
+<div className="max-w-7 xl mx-auto"text-center mb-16"
+<h2 className="
 <p>Experience the difference with our AI-powered analytics platform;</p></p>
 </div>
-<div className="grid grid-cols-1 md: grid-cols-2 gap-8"></div>,"
-              <div className="space-y-6"></div>"
-                {benefits.map((benefit, index) => (</div>} <div key={index}className="flex items-start space-x-3"></div>"
+<div className="grid grid-cols-1 md: grid-cols-2 gap-8"space-y-6"
+                {benefits.map((benefit, index) => (</div>} <div key={index}className="
 <CheckCircle />
-<span className="text-gray-300 text-lg">{benefit</span>}</span></div>"
-                ))}
-              </div>
-<div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30" / /></div>"
-<h3 className="text-2xl font-bold text-white mb-4">Success Stories</h3>"
-<div className="space-y-4"></div>"
-<div className="flex items-center space-x-3"></div>"
+<span className="text-gray-300 text-lg"bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30"
+<h3 className="
+<div className="space-y-4"flex items-center space-x-3"
 <Star />
-<span className="text-gray-300">"Increased revenue by 40% with better insights"</span></div>"
-<div className="flex items-center space-x-3"></div>"
+<span className="Increased revenue by 40% with better insights"</span></div>"flex items-center space-x-3"
 <Star />
-<span className="text-gray-300">"Reduced reporting time by 80%"</span></div>"
-<div className="flex items-center space-x-3"></div>"
+<span className="Reduced reporting time by 80%"</span></div>"flex items-center space-x-3"
 <Star />
-<span className="text-gray-300">"Improved decision making speed by 3x"</span></div>"
-</div></div>
-</div></div>
-        </section>
-<section className="py-16 px-4"></section>"
-<div className="max-w-4xl mx-auto text-center"></div>"
-<div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>"
-<h2 className="text-4xl font-bold text-white mb-6">"
+<span className="Improved decision making speed by 3 x"</span></div>"py-16 px-4"
+<div className="
+<div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2 xl p-12 border border-green-500/30"text-4 xl font-bold text-white mb-6"
                 Ready to Transform Your Analytics?
               </h2>
-<p className="text-xl text-gray-300 mb-8">"
+<p className="
                 Join thousands of businesses already using our AI analytics dashboard
                 to make smarter, data-driven decisions.
               </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center"></div>"
-<button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">"
+<div className="flex flex-col sm:flex-row gap-4 justify-center"bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2"
 <span>Start Free Trial</span>
-<ArrowRight className="w-5 h-5" /></button>"
-<button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">"
-<p className="text-xl text-gray-300">Section description</p></div>"
+<ArrowRight className="
+<button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all"text-xl text-gray-300"
 </div></section>
-<div className="max-w-4xl mx-auto text-center"></div>"
-<div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>"
-<h2>Ready to Transform Your Analytics?</h2></h2>
-<p>Join thousands of businesses already using our AI analytics dashboard;</p>
-                to make smarter, data-driven decisions.
-              </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,"
+<div className="
+<div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2 xl p-12 border border-green-500/30"flex flex-col sm: flex-row gap-4 justify-center"
                 <button></button>
 <span>Start Free Trial</span>
 <ArrowRight></button>
@@ -226,21 +164,13 @@ import { Helmet } from 'react-helmet-async';
 
 export default function AnalyticsDashboard() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Analytics Dashboard - Zion Tech Group</title>
-        <meta name="description" content="Advanced analytics dashboard solutions by Zion Tech Group" />
+    <div className="description" content=" />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Analytics Dashboard
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <h1 className="text-4 xl font-bold text-gray-900 mb-6">
             Advanced analytics dashboard solutions by Zion Tech Group.
           </p>
         </div>
       </div>
     </div>
   );
-}

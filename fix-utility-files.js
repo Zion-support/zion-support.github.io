@@ -55,8 +55,6 @@ export class ${className} {
   public isEnabled(): boolean {
     return this.config.enabled;
   }
-}
-
 // Export default instance
 export const ${fileName} = new ${className}();
 `;
@@ -73,8 +71,6 @@ function fixUtilityFile(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
-}
-
 // Main execution
 console.log('Fixing utility files...');
 

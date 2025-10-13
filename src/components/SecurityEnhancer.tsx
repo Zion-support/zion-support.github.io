@@ -1,35 +1,24 @@
 import React from 'react';'
 'use client''
 interface SecurityEnhancerProps {/* TODO: Fix JSX expression */}
-}
 const,
   SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-    }
     if (enableHTTPSRedirect) {/* TODO: Fix JSX expression */}
-    }
     if (enableXSSProtection) {/* TODO: Fix JSX expression */}
-    }
     if (enableClickjackingProtection) {/* TODO: Fix JSX expression */}
-    }
     if (enableContentTypeSniffingProtection) {/* TODO: Fix JSX expression */}
-    }
     // Add security headers
     addSecurityHeaders()
     // Add security event listeners
     addSecurityEventListeners()
   }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
 const addContentSecurityPolicy = () => {/* TODO: Fix JSX expression */}
-  }
   const enforceHTTPS = () => {/* TODO: Fix JSX expression */}
-    }
   }
   const addXSSProtection = () => {/* TODO: Fix JSX expression */}
-  }
   const addClickjackingProtection = () => {/* TODO: Fix JSX expression */}
-  }
   const addContentTypeSniffingProtection = () => {/* TODO: Fix JSX expression */}
-  }
   const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
   t: 'strict-origin-when-cross-origin' },'
       {/* TODO: Fix JSX expression */}
@@ -41,7 +30,6 @@ const addContentSecurityPolicy = () => {/* TODO: Fix JSX expression */}
     })
   }
   const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
-      }
     })
     // Prevent text selection (optional)
     document.addEventListener('selectstart', (e) => {/* TODO: Fix JSX expression */}'
@@ -57,22 +45,17 @@ const addContentSecurityPolicy = () => {/* TODO: Fix JSX expression */}
         }
         // Ctrl+Shift+I
         if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {/* TODO: Fix JSX expression */}
-        }
         // Ctrl+U
         if (e.ctrlKey && e.keyCode === 85) {/* TODO: Fix JSX expression */}
-        }
         // Ctrl+S
         if (e.ctrlKey && e.keyCode === 83) {/* TODO: Fix JSX expression */}
-        }
         // Ctrl+A
         if (e.ctrlKey && e.keyCode === 65) {/* TODO: Fix JSX expression */}
-        }
       }
     })
     // Monitor for suspicious activity;
 let suspiciousActivity = 0;
 const resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
-    }
     // Reset suspicious activity counter every 5 minutes
     setInterval(resetSuspiciousActivity, 5 * 60 * 1000)
     // Track rapid clicks (potential bot activity);
@@ -155,7 +138,6 @@ const headers = (window as any).securityHeaders
       if (!headers['x-xss-protection']) {'
     warnings.push('X-XSS-Protection header missing')'
   }
-    }
     setSecurityWarnings(warnings)
     if (warnings.length > 0) {
   // TODO: Add properties
@@ -251,7 +233,6 @@ const handleSecurityEvent = useCallback((event: string, data: any) => {
         metrics,
         isSecure,
         warnings: securityWarnings}
-    }
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings])
   return (
   // TODO: Add parameters
@@ -261,27 +242,11 @@ const handleSecurityEvent = useCallback((event: string, data: any) => {
       {!isSecure && (
   // TODO: Add parameters
 )
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">"
-          ⚠️ Security Warning: This site is not served over HTTPS
-      )}
-      {/* Security Warnings */}
-      {securityWarnings.length > 0 && (
-  // TODO: Add parameters
-)
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md">"
-<h4 className="font-bold mb-2">Security Warnings"
-          <ul className="text-sm space-y-1">"
-            {securityWarnings.map((warning, index) => (
-  // TODO: Add parameters
-)
-              <li key={index}>• {warning}
-            ))}
-      )}
-      {/* Security Metrics (Development Only) */}
-      {process.env.NODE_ENV === 'development' && ('
-        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">"
-<h4 className="font-bold mb-2">Security Metrics"
-          <div className="space-y-1">"
+        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50"fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md"
+<h4 className="
+          <ul className="text-sm space-y-1"fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs"
+<h4 className="
+          <div className="space-y-1"
 <div>CSP Violations: {metrics.cspViolations}
             <div>XSS Attempts: {metrics.xssAttempts}
             <div>CSRF Attempts: {metrics.csrfAttempts}

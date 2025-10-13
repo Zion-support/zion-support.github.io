@@ -49,7 +49,7 @@ class SEOEnhancer {/* TODO: Fix JSX expression */}
       // Update title
       document.title = this.config.title
       // Update meta description;
-let metaDescription = document.querySelector('meta[name="description"]')'"
+let metaDescription = document.querySelector('meta[name="description"
       if (!metaDescription) {
   // TODO: Add properties
 }
@@ -62,14 +62,11 @@ let metaDescription = document.querySelector('meta[name="description"]')'"
       }
       metaDescription.setAttribute('content', this.config.description)'
     }
-  }
-
   public updateConfig(newConfi)
   g: Partial<SEOConfig>): void {/* TODO: Fix JSX expression */}
     this.config = { ...this.config, ...newConfig }
     this.updateMetaTags()
   }
-}
 ;
 export default SEOEnhancer;";"
 

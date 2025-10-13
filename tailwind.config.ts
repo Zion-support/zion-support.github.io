@@ -24,16 +24,16 @@ const config: Config = {,
 }
   // TODO: Add properties
 }
-          cyan: '#00ffff''
-          purple: '#8b5cf6''
+          cyan: '#00 ffff''
+          purple: '#8 b5 cf6''
           pink: '#ec4899''
-          blue: '#3b82f6','
-          green: '#10b981','
-          orange: '#f59e0b','
+          blue: '#3 b82 f6','
+          green: '#10 b981','
+          orange: '#f59 e0 b','
           red: '#ef4444','
           yellow: '#eab308'},'
         dark: {,
-          bg: '#0a0a0a','
+          bg: '#0 a0 a0 a','
           darker: '#050505','
           card: '#1 a1 a1 a','
           border: '#2 a2 a2 a'}},'
@@ -41,18 +41,18 @@ const config: Config = {,
         orbitron: ['Orbitron', 'monospace'],'
         rajdhani: ['Rajdhani', 'sans-serif'],'
         exo: ['Exo 2', 'sans-serif'],'
-          50: '#eff6ff','
-          500: '#3b82f6','
-          600: '#2563eb','
-          700: '#1d4ed8'},'
+          50: '#eff6 ff','
+          500: '#3 b82 f6','
+          600: '#2563 eb','
+          700: '#1 d4 ed8'},'
         dark: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-          50: '#f8fafc','
-          100: '#f1f5f9','
-          900: '#0f172a'}},'
+          50: '#f8 fafc','
+          100: '#f1 f5 f9','
+          900: '#0 f172 a'}},'
       fontFamily: {
   // TODO: Add properties
 }
@@ -60,20 +60,20 @@ const config: Config = {,
 }
         sans: ['Inter', 'system-ui', 'sans-serif']},'
       animation: {,
-        'fade-in': 'fadeIn 0.5s ease-in-out','
-        'slide-up': 'slideUp 0.3s ease-out'},'
+        'fade-in': 'fadeIn 0.5 s ease-in-out','
+        'slide-up': 'slideUp 0.3 s ease-out'},'
       keyframes: {,
         fadeIn: {,
           '0%': { opacity: '0' },'
           '100%': { opacity: '1' }},'
         slideUp: {,
-          '0%': { transform: 'translateY(20px)', opacity: '0' },'
+          '0%': { transform: 'translateY(20 px)', opacity: '0' },'
         slideUp: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-          '0%': { transform: 'translateY(10px)', opacity: '0' },'
+          '0%': { transform: 'translateY(10 px)', opacity: '0' },'
           '100%': { transform: 'translateY(0)', opacity: '1' }}}}},'
   plugins: []}
 ;

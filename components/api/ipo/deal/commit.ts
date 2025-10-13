@@ -85,4 +85,3 @@ const record = { amount, timestamp: new Date ().toISOString () }
   res.status(200).json(record)
 }
 
-}}

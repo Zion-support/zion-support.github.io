@@ -48,7 +48,6 @@ function fixImportsInFile(filePath) {
 }
       //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;
 const iconMappings = {/* TODO: Fix JSX expression */}
-}
 //Function to fix imports in a file
 function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
       //       const oldImport = `lucide-react/dist/esm/icons/${broken}`;`
@@ -57,21 +56,15 @@ function fixImportsInFile(filePath) {/* TODO: Fix JSX expression */}
           new RegExp(`import ${correct} from '${oldImport}';`, 'g'))';'
         modified = true
       }
-    }
-
     //Fix Link imports if missing
-    if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {";'"
-      content = "import Link from 'next/link';\n" + content";'"
-      modified = true
-    if (content.includes('Link') && !content.includes("import Link from 'next/link'")) {/* TODO: Fix JSX expression */}";'"
+    if (content.includes('Link') && !content.includes("import Link from 'next/link'";'"
+      content = " + content";'"import Link from 'next/link'")) {/* TODO: Fix JSX expression */}"
     }
 
     if (modified) {/* TODO: Fix JSX expression */}
       //       }
   } catch (error) {/* TODO: Fix JSX expression */}
     //     }
-}
-
 //Get all blog files
 // const blogDir = '/workspace/app/blog';';
 const files = fs

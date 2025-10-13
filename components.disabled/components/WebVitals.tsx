@@ -1,4 +1,5 @@
-// import React; { useEffect } from 'react' import {getCLS, getFID, getFCP} getLCP; getTTFB } from 'web-vitals' interface WebVitalsMetric {/* TODO: Fix JSX expression */}';'
+// import React; { useEffect } from 'react' import {getCLS, getFID, getFCP} getLCP;
+getTTFB } from 'web-vitals' interface WebVitalsMetric {/* TODO: Fix JSX expression */}';'
   e: number} delt,
   a: number} i,
   d: string} const sendToAnalytics = (metri)

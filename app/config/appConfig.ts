@@ -9,21 +9,21 @@ export interface AppConfig {app: {,}
   api: {,
     baseUrl: string,
     timeout: number,
-    retryAttempts: number,}}
+    retryAttempts: number,}
   features: {,
     analytics: boolean,
     monitoring: boolean,
     errorTracking: boolean,
-    performanceOptimization: boolean,}}
+    performanceOptimization: boolean,}
   performance: {,
     enableLazyLoading: boolean,
     imageLazyLoadThreshold: number,
     componentLazyLoadThreshold: number,
-    cacheMaxAge: number,}}
+    cacheMaxAge: number,}
   security: {,
     enableCSP: boolean,
     enableHSTS: boolean,
-    enableXSSProtection: boolean,}}
+    enableXSSProtection: boolean,}
 }
 const config: AppConfig = {,
     app: {,
@@ -62,20 +62,19 @@ for (const key of keys) {
   // TODO: Add properties
 }
     if (value && typeof value === 'object' && key in value) {'
-      value = (value as Record<string, unknown>)[key]}} else {}}throw new Error(`Configuration key "${keyPath)}" not found`);"
+      value = (value as Record<string, unknown>)[key]}} else {}}throw new Error(`Configuration key "${keyPath)}"
     }
-  }
 return value as T
 }
 /**;
  * Check if a feature is enabled;
  */;
 export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {,}'
-    return config.features[feature]}}
+    return config.features[feature]}
 /**;
  * Get current environment;
  */;
-export function getEnvironment(): string {return config.app.environment;}}}
+export function getEnvironment(): string {return config.app.environment;}}
 /**;
  * Check if running in production;
  */;

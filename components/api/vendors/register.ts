@@ -87,7 +87,6 @@ const vendor = registerVendor({
     res && res.status(500).json({ error: e && e.message })
   }    res && res.status(500).json({ error: e && e.message })
   }
-}
     verification_docs,
     case_studies,
   } = req.body || {}
@@ -150,7 +149,6 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
     res.status(500).json({ error: e.message })
   }    res.status(500).json({ error: e.message })
   }
-}
     const vendor = registerVendor({
   // TODO: Add properties
 }
@@ -171,5 +169,4 @@ verification_docs: Array.is_array (verification_docs) ? verification_docs : [],
   // TODO: Add properties
 }
     res.status(500).json({ error: e.message })
-  }
-}
+  

@@ -23,7 +23,7 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-se p t-30-caus a l-eva l s-bluepri n t')'
         />),
       <div, className='container, m, x-auto, p, x-6, p, y-16'>'
-<h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>'
+<h1, className='te, x, t-4 xl, m, d:te, x, t-5 xl, fon, t-bold, m, b-4'>'
           Ai, 2025, Sept 30, Causal, Evals Bluepri, n, t
             This, comprehensive, guide covers, ai, 2025 sept, 30, causal evals, blueprint, and provides, practical, insights for, enterprise, implementation.
         <div, className='mt-8'>'
@@ -34,4 +34,3 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: 
  }</div></div>
 </div></div>
 </Link></h1>
-}

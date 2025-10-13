@@ -15,8 +15,8 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: 'Cannot access account after password reset''
     status: 'open''
     priority: 'high''
-    createdAt: '2023-12-15T14:30:00Z''
-    lastUpdated: '2023-12-15T15:45:00Z''
+    createdAt: '2023-12-15 T14:30:00 Z''
+    lastUpdated: '2023-12-15 T15:45:00 Z''
     category: 'authentication''
   }
   {
@@ -30,19 +30,19 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: 'Cannot access account after password reset','
     status: 'open','
     priority: 'high','
-    created_at: '2023 - 12 - 15T14:30:00Z','
-    last_updated: '2023 - 12 - 15T15:45:00Z','
+    created_at: '2023 - 12 - 15 T14:30:00 Z','
+    last_updated: '2023 - 12 - 15 T15:45:00 Z','
     category: 'authentication','
 
-    id: "SR-1001","
-    user: "john.doe@example.com","
-    userId: "user-123","
-    issue: "Cannot access account after password reset","
-    status: "open","
-    priority: "high","
-    createdAt: "2023-12-15T14:30:00Z","
-    lastUpdated: "2023-12-15T15:45:00Z","
-    category: "authentication""
+    id: "SR-1001"
+    user: "john.doe@example.com"
+    userId: "user-123"
+    issue: "Cannot access account after password reset"
+    status: "open"
+    priority: "high"
+    createdAt: "2023-12-15 T14:30:00 Z"
+    lastUpdated: "2023-12-15 T15:45:00 Z"
+    category: "authentication"
 
   },
   {
@@ -50,75 +50,75 @@ const MOCK_SUPPORT_REQUESTS = [
 }
   // TODO: Add properties
 }
-    id: "SR-1002","
-    user: "sarah.smith@company.co","
-    userId: "user-456","
-    issue: "Payment failed but funds were deducted","
-    status: "in-progress","
-    priority: "high","
-    createdAt: "2023-12-14T09:15:00Z","
-    lastUpdated: "2023-12-15T13:20:00Z","
-    category: "billing""
+    id: "SR-1002"
+    user: "sarah.smith@company.co"
+    userId: "user-456"
+    issue: "Payment failed but funds were deducted"
+    status: "in-progress"
+    priority: "high"
+    createdAt: "2023-12-14 T09:15:00 Z"
+    lastUpdated: "2023-12-15 T13:20:00 Z"
+    category: "billing"
   },
   {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    id: "SR-1003","
-    user: "tech.guru@startup.io","
-    userId: "user-789","
-    issue: "Unable to download invoice PDF","
-    status: "open","
-    priority: "medium","
-    createdAt: "2023-12-15T11:00:00Z","
-    lastUpdated: "2023-12-15T11:00:00Z","
-    category: "billing""
+    id: "SR-1003"
+    user: "tech.guru@startup.io"
+    userId: "user-789"
+    issue: "Unable to download invoice PDF"
+    status: "open"
+    priority: "medium"
+    createdAt: "2023-12-15 T11:00:00 Z"
+    lastUpdated: "2023-12-15 T11:00:00 Z"
+    category: "billing"
   },
   {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    id: "SR-1004","
-    user: "developer@codelab.dev","
-    userId: "user-235","
-    issue: "API integration documentation is outdated","
-    status: "open","
-    priority: "low","
-    createdAt: "2023-12-13T16:45:00Z", "
-    lastUpdated: "2023-12-13T16:45:00Z","
-    category: "api""
+    id: "SR-1004"
+    user: "developer@codelab.dev"
+    userId: "user-235"
+    issue: "API integration documentation is outdated"
+    status: "open"
+    priority: "low"
+    createdAt: "2023-12-13 T16:45:00 Z"
+    lastUpdated: "2023-12-13 T16:45:00 Z"
+    category: "api"
   },
   {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    id: "SR-1005","
-    user: "maria.rodriguez@design.co","
-    userId: "user-567","
-    issue: "Dispute with freelancer over delivered work quality","
-    status: "in-progress","
-    priority: "high","
-    createdAt: "2023-12-12T10:30:00Z","
-    lastUpdated: "2023-12-15T09:15:00Z","
-    category: "disputes""
+    id: "SR-1005"
+    user: "maria.rodriguez@design.co"
+    userId: "user-567"
+    issue: "Dispute with freelancer over delivered work quality"
+    status: "in-progress"
+    priority: "high"
+    createdAt: "2023-12-12 T10:30:00 Z"
+    lastUpdated: "2023-12-15 T09:15:00 Z"
+    category: "disputes"
   },
   {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    id: "SR-1006","
-    user: "alex.wong@datacompany.com","
-    userId: "user-890","
-    issue: "Profile verification pending for over 7 days","
-    status: "resolved","
-    priority: "medium","
-    createdAt: "2023-12-08T13:20:00Z","
-    lastUpdated: "2023-12-15T08:30:00Z","
-    category: "verification""
+    id: "SR-1006"
+    user: "alex.wong@datacompany.com"
+    userId: "user-890"
+    issue: "Profile verification pending for over 7 days"
+    status: "resolved"
+    priority: "medium"
+    createdAt: "2023-12-08 T13:20:00 Z"
+    lastUpdated: "2023-12-15 T08:30:00 Z"
+    category: "verification"
 
   },
   {
@@ -138,11 +138,9 @@ class ErrorBoundary extends React.Component {
 }
     super(props)
     this.state = { hasError: false }
-  }
-
 ],;
 export default function SupportRequests() {;
-const [searchQuery, setSearchQuery] = useState("),;"";
+const [searchQuery, setSearchQuery] = useState("),;";
 const [statusFilter, setStatusFilter] = useState<string | null>(null),;
 const [priorityFilter, setPriorityFilter] = useState<string | null>(null),;
 const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
@@ -163,16 +161,12 @@ const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
   // TODO: Add properties
 }
       return false;
-import React, { useState } from "react",";";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",";";
-import { Input } from "@/components/ui/input",";";
-import { Button } from "@/components/ui/button",";";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",";";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",";";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",";";
-import { Badge } from "@/components/ui/badge",";";
-import { Search, Filter } from 'lucide-react';';
-import { SEO } from "@/components/SEO",";"
+import React, { useState } from "react";";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from ",";"@/components/ui/input",";
+import { Button } from "@/components/ui/button";";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from ",";"@/components/ui/select",";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";";
+import { Badge } from ",";"@/components/SEO","
 // Mock data for support requests;
 const MOCK_SUPPORT_REQUESTS = [
   // TODO: Add items
@@ -184,109 +178,109 @@ const MOCK_SUPPORT_REQUESTS = [
 }
   // TODO: Add properties
 }
-    id: "SR-1001","
-    user: "john.doe@example.com","
-    userId: "user-123","
-    issue: "Cannot access account after password reset","
-    status: "open","
-    priority: "high","
-    createdAt: "2023-12-15T14:30:00Z","
-    lastUpdated: "2023-12-15T15:45:00Z","
-    category: "authentication""
+    id: "SR-1001"
+    user: "john.doe@example.com"
+    userId: "user-123"
+    issue: "Cannot access account after password reset"
+    status: "open"
+    priority: "high"
+    createdAt: "2023-12-15 T14:30:00 Z"
+    lastUpdated: "2023-12-15 T15:45:00 Z"
+    category: "authentication"
   },
   {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    id: "SR-1002","
-    user: "sarah.smith@company.co","
-    userId: "user-456","
-    issue: "Payment failed but funds were deducted","
-    status: "in-progress","
-    priority: "high","
-    createdAt: "2023-12-14T09:15:00Z","
-    lastUpdated: "2023-12-15T13:20:00Z","
-    category: "billing""
+    id: "SR-1002"
+    user: "sarah.smith@company.co"
+    userId: "user-456"
+    issue: "Payment failed but funds were deducted"
+    status: "in-progress"
+    priority: "high"
+    createdAt: "2023-12-14 T09:15:00 Z"
+    lastUpdated: "2023-12-15 T13:20:00 Z"
+    category: "billing"
   },
   {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    id: "SR-1003","
-    user: "tech.guru@startup.io","
-    userId: "user-789","
-    issue: "Unable to download invoice PDF","
-    status: "open","
-    priority: "medium","
-    createdAt: "2023-12-15T11:00:00Z","
-    lastUpdated: "2023-12-15T11:00:00Z","
-    category: "billing""
+    id: "SR-1003"
+    user: "tech.guru@startup.io"
+    userId: "user-789"
+    issue: "Unable to download invoice PDF"
+    status: "open"
+    priority: "medium"
+    createdAt: "2023-12-15 T11:00:00 Z"
+    lastUpdated: "2023-12-15 T11:00:00 Z"
+    category: "billing"
   },
   {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    id: "SR-1004","
-    user: "developer@codelab.dev","
-    userId: "user-235","
-    issue: "API integration documentation is outdated","
-    status: "open","
-    priority: "low","
-    createdAt: "2023-12-13T16:45:00Z","
-    lastUpdated: "2023-12-13T16:45:00Z","
-    category: "api""
+    id: "SR-1004"
+    user: "developer@codelab.dev"
+    userId: "user-235"
+    issue: "API integration documentation is outdated"
+    status: "open"
+    priority: "low"
+    createdAt: "2023-12-13 T16:45:00 Z"
+    lastUpdated: "2023-12-13 T16:45:00 Z"
+    category: "api"
   },
   {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    id: "SR-1005","
-    user: "maria.rodriguez@design.co","
-    userId: "user-567","
-    issue: "Dispute with freelancer over delivered work quality","
-    status: "in-progress","
-    priority: "high","
-    createdAt: "2023-12-12T10:30:00Z","
-    lastUpdated: "2023-12-15T09:15:00Z","
-    category: "disputes""
+    id: "SR-1005"
+    user: "maria.rodriguez@design.co"
+    userId: "user-567"
+    issue: "Dispute with freelancer over delivered work quality"
+    status: "in-progress"
+    priority: "high"
+    createdAt: "2023-12-12 T10:30:00 Z"
+    lastUpdated: "2023-12-15 T09:15:00 Z"
+    category: "disputes"
   },
   {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    id: "SR-1006","
-    user: "alex.wong@datacompany.com","
-    userId: "user-890","
-    issue: "Profile verification pending for over 7 days","
-    status: "resolved","
-    priority: "medium","
-    createdAt: "2023-12-08T13:20:00Z","
-    lastUpdated: "2023-12-15T08:30:00Z","
-    category: "verification""
+    id: "SR-1006"
+    user: "alex.wong@datacompany.com"
+    userId: "user-890"
+    issue: "Profile verification pending for over 7 days"
+    status: "resolved"
+    priority: "medium"
+    createdAt: "2023-12-08 T13:20:00 Z"
+    lastUpdated: "2023-12-15 T08:30:00 Z"
+    category: "verification"
   },
   {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    id: "SR-1007","
-    user: "jamie.taylor@tech.org","
-    userId: "user-345","
-    issue: "Cannot upload portfolio images","
-    status: "resolved","
-    priority: "medium","
-    createdAt: "2023-12-10T15:10:00Z","
-    lastUpdated: "2023-12-13T11:25:00Z","
-    category: "profile""
+    id: "SR-1007"
+    user: "jamie.taylor@tech.org"
+    userId: "user-345"
+    issue: "Cannot upload portfolio images"
+    status: "resolved"
+    priority: "medium"
+    createdAt: "2023-12-10 T15:10:00 Z"
+    lastUpdated: "2023-12-13 T11:25:00 Z"
+    category: "profile"
   }
 ],;
 export default function SupportRequests() {;
-const [searchQuery, setSearchQuery] = useState("),;"";
+const [searchQuery, setSearchQuery] = useState("),;";
 const [statusFilter, setStatusFilter] = useState<string | null>(null),;
 const [priorityFilter, setPriorityFilter] = useState<string | null>(null),;
 const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
@@ -372,62 +366,49 @@ const resetFilters = () => {
 )
     <>
 <SEO
-        title="Support Requests | Admin Dashboard""
-        description="Manage and track user support requests and issues""
+        title="Support Requests | Admin Dashboard"
+        description="Manage and track user support requests and issues"
       />
-<div className="container mx-auto px-4 py-8">"
-<div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">"
+<div className="container mx-auto px-4 py-8"flex flex-col md:flex-row items-start md:items-center justify-between mb-8"
 <div>
-<h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">"
+<h1 className="
               Support Requests
             </h1>
-<p className="text-zion-slate-light mt-2">"
-              Manage and respond to user support requests and issues
-            </p></div>
-<div className='mt-4 md:mt-0'>'
-<Button className='bg-zion-purple hover:bg-zion-purple-light'>'
-<div className="mt-4 md:mt-0">"
-<Button className="bg-zion-purple hover:bg-zion-purple-light">"
+<p className="text-zion-slate-light mt-2"mt-4 md:mt-0"
+<Button className="
 
               New Support Case
             </Button></div>
 </div>
 
         {/* Status Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">"
-<Card>
-<CardHeader className="pb-2">"
-<CardTitle className="text-2xl font-bold">{openCount}</CardTitle>"
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8"pb-2"
+<CardTitle className="
 <CardDescription>Open Requests</CardDescription></CardHeader>
 </Card>
 <Card>
-<CardHeader className="pb-2">"
-<CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>"
+<CardHeader className="pb-2"text-2 xl font-bold"
 <CardDescription>In Progress</CardDescription></CardHeader>
 </Card>
 <Card>
-<CardHeader className="pb-2">"
-<CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>"
-<CardDescription>Resolved</CardDescription></CardHeader>
-</Card>
-<Card>
-<CardHeader className="pb-2">"
-<CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>"
+<CardHeader className="
+<CardTitle className="text-2 xl font-bold"pb-2"
+<CardTitle className="
 <CardDescription>Total Requests</CardDescription></CardHeader>
 </Card></div>
 <Tabs defaultValue='all' className='mb-8'>'
-<Tabs defaultValue="all" className="mb-8">"
+<Tabs defaultValue="all"mb-8"
 <TabsList>
-<TabsTrigger value="all">All Requests</TabsTrigger>"
-<TabsTrigger value="escalated">Escalated</TabsTrigger>"
-<TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>"
-<TabsTrigger value="need-response">Need Response</TabsTrigger></TabsList>"
+<TabsTrigger value=">All Requests</TabsTrigger>"
+<TabsTrigger value=">Escalated</TabsTrigger>"
+<TabsTrigger value=">AI Flagged</TabsTrigger>"
+<TabsTrigger value=">Need Response</TabsTrigger></TabsList>"
 
       />
 <div className='container mx-auto px-4 py-8'>'
 <div className='flex flex-col md:flex-row items-start md:items-center justify-between mb-8'>'
 <div>
-<h1 className='text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>'
+<h1 className='text-3 xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent'>'
               Support Requests</$1>
 <p className='text-zion-slate-light mt-2'>'
               Manage and respond to user support requests and issues</$1></$1>
@@ -439,26 +420,26 @@ const resetFilters = () => {
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8'>'
 <Card>
 <CardHeader className='pb-2'>'
-<CardTitle className='text-2xl font-bold'>{openCount}</CardTitle>'
+<CardTitle className='text-2 xl font-bold'>{openCount}</CardTitle>'
 <CardDescription>Open Requests</CardDescription></$1>
 </$1>
 <Card>
 <CardHeader className='pb-2'>'
-<CardTitle className='text-2xl font-bold'>'
+<CardTitle className='text-2 xl font-bold'>'
                 {inProgressCount}
               </CardTitle>
 <CardDescription>In Progress</CardDescription></$1>
 </$1>
 <Card>
 <CardHeader className='pb-2'>'
-<CardTitle className='text-2xl font-bold'>'
+<CardTitle className='text-2 xl font-bold'>'
                 {resolvedCount}
               </CardTitle>
 <CardDescription>Resolved</CardDescription></$1>
 </$1>
 <Card>
 <CardHeader className='pb-2'>'
-<CardTitle className='text-2xl font-bold'>{totalCount}</CardTitle>'
+<CardTitle className='text-2 xl font-bold'>{totalCount}</CardTitle>'
 <CardDescription>Total Requests</CardDescription></$1>
 </$1></$1>
 <Tabs defaultValue='all' className='mb-8'>'
@@ -468,59 +449,35 @@ const resetFilters = () => {
 <TabsTrigger value='ai-flagged'>AI Flagged</TabsTrigger>'
 <TabsTrigger value='need-response'>Need Response</TabsTrigger></$1>'
 <TabsContent value='all' className='mt-6'>'
-<TabsContent value="all" className="mt-6">"
-
-            {/* Search and Filters */}
-            <div className="flex flex-col md:flex-row gap-4 mb-6">"
-<div className="relative flex-1">"
-<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />"
-
-              >
-<SelectTrigger className='w-[180px]'>'
-<SelectValue placeholder='Status' />'
-                  placeholder="Search by ID, user or issue...""
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10""
+<TabsContent value=" className="mt-6"flex flex-col md:flex-row gap-4 mb-6"
+<div className="
+<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"Search by ID, user or issue...""pl-10"
                 />
 </div>
-<Select value={statusFilter || "} onValueChange={value => setStatusFilter(value || null)}>""
-<SelectTrigger className="w-[180px]">"
-<SelectValue placeholder="Status" /></SelectTrigger>"
+<Select value={statusFilter || ""
+<SelectTrigger className="
+<SelectValue placeholder="Status"
 <SelectContent>
-<SelectItem value="">All Statuses</SelectItem>"
-<SelectItem value="open">Open</SelectItem>"
-<SelectItem value="in-progress">In Progress</SelectItem>"
-<SelectItem value="resolved">Resolved</SelectItem></SelectContent>"
+<SelectItem value=""
+<SelectItem value="open"
+<SelectItem value="in-progress"
+<SelectItem value="resolved"
 </Select>
 
               >
-<SelectTrigger className='w-[180px]'>'
+<SelectTrigger className='w-[180 px]'>'
 <SelectValue placeholder='Priority' />'
-<Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>"
-<SelectTrigger className="w-[180px]">"
-<SelectValue placeholder="Priority" /></SelectTrigger>"
+<Select value={priorityFilter || ""
+<SelectTrigger className="w-[180 px]"Priority" /></SelectTrigger>"">All Priorities</SelectItem>"high">High</SelectItem>"medium">Medium</SelectItem>"low">Low</SelectItem></SelectContent>""} onValueChange={value => setCategoryFilter(value || null)}>"w-[180 px]"
+<SelectValue placeholder=" /></SelectTrigger>"
 <SelectContent>
-<SelectItem value="">All Priorities</SelectItem>"
-<SelectItem value="high">High</SelectItem>"
-<SelectItem value="medium">Medium</SelectItem>"
-<SelectItem value="low">Low</SelectItem></SelectContent>"
-</Select>
-
-              >
-<SelectTrigger className='w-[180px]'>'
-<SelectValue placeholder='Category' />'
-<Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>"
-<SelectTrigger className="w-[180px]">"
-<SelectValue placeholder="Category" /></SelectTrigger>"
-<SelectContent>
-<SelectItem value="">All Categories</SelectItem>"
-<SelectItem value="authentication">Authentication</SelectItem>"
-<SelectItem value="billing">Billing</SelectItem>"
-<SelectItem value="api">API</SelectItem>"
-<SelectItem value="disputes">Disputes</SelectItem>"
-<SelectItem value="verification">Verification</SelectItem>"
-<SelectItem value="profile">Profile</SelectItem></SelectContent>"
+<SelectItem value=">All Categories</SelectItem>"
+<SelectItem value=">Authentication</SelectItem>"
+<SelectItem value=">Billing</SelectItem>"
+<SelectItem value=">API</SelectItem>"
+<SelectItem value=">Disputes</SelectItem>"
+<SelectItem value=">Verification</SelectItem>"
+<SelectItem value=">Profile</SelectItem></SelectContent>"
 </Select>
 
                   onChange={e => setSearchQuery(e && e.target.value)}
@@ -530,13 +487,12 @@ const resetFilters = () => {
                 value={statusFilter || ''}'
                 onValueChange={value => setStatusFilter(value || null)}
 
-              <Button variant="outline" onClick={resetFilters} className="md:w-auto">"
-<Filter className="h-4 w-4 mr-2" /> Reset Filters"
+              <Button variant=" onClick={resetFilters} className="md:w-auto"h-4 w-4 mr-2"
               </Button></div>
 
             {/* Support Requests Table */}
             <Card>
-<CardContent className="p-0">"
+<CardContent className="
 <Table>
 <TableHeader>
 <TableRow>
@@ -559,9 +515,7 @@ const resetFilters = () => {
   // TODO: Add parameters
 )
                       <TableRow key={request.id}>
-<TableCell className="font-medium">{request.id}</TableCell>"
-<TableCell>{request.user}</TableCell>
-<TableCell className="max-w-xs truncate">{request.issue}</TableCell>"
+<TableCell className="font-medium"max-w-xs truncate"
 <TableCell>
 <Badge
                             variant={
@@ -620,7 +574,7 @@ const resetFilters = () => {
 }
   // TODO: Implement
 }
-    setSearchQuery(""),"
+    setSearchQuery("),"
     setStatusFilter(null),
     setPriorityFilter(null)
     setCategoryFilter(null)
@@ -630,197 +584,42 @@ const resetFilters = () => {
 )
     <>
 <SEO
-        title="Support Requests | Admin Dashboard""
-        description="Manage and track user support requests and issues""
+        title=""
+        description=""
       />
-<div className="container mx-auto px-4 py-8">"
-<div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8">"
-<div>
-<h1 className="text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">"
+<div className="
+<div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8"text-3 xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"
               Support Requests</$1>
-<p className="text-zion-slate-light mt-2">"
+<p className="
               Manage and respond to user support requests and issues</$1></$1>
-<div className="mt-4 md:mt-0">"
-<Button className="bg-zion-purple hover:bg-zion-purple-light">"
+<div className="mt-4 md:mt-0"bg-zion-purple hover:bg-zion-purple-light"
               New Support Case</$1></$1>
 </$1>
         {/* Status Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">"
+        <div className="
 <Card>
-<CardHeader className="pb-2">"
-<CardTitle className="text-2xl font-bold">{openCount}</CardTitle>"
+<CardHeader className="pb-2"text-2 xl font-bold"
 <CardDescription>Open Requests</CardDescription></$1>
 </$1>
 <Card>
-<CardHeader className="pb-2">"
-<CardTitle className="text-2xl font-bold">{inProgressCount}</CardTitle>"
-<CardDescription>In Progress</CardDescription></$1>
-</$1>
-<Card>
-<CardHeader className="pb-2">"
-<CardTitle className="text-2xl font-bold">{resolvedCount}</CardTitle>"
+<CardHeader className="
+<CardTitle className="text-2 xl font-bold"pb-2"
+<CardTitle className="
 <CardDescription>Resolved</CardDescription></$1>
 </$1>
 <Card>
-<CardHeader className="pb-2">"
-<CardTitle className="text-2xl font-bold">{totalCount}</CardTitle>"
+<CardHeader className="pb-2"text-2 xl font-bold"
 <CardDescription>Total Requests</CardDescription></$1>
 </$1></$1>
-<Tabs defaultValue="all" className="mb-8">"
-<TabsList>
-<TabsTrigger value="all">All Requests</TabsTrigger>"
-<TabsTrigger value="escalated">Escalated</TabsTrigger>"
-<TabsTrigger value="ai-flagged">AI Flagged</TabsTrigger>"
-<TabsTrigger value="need-response">Need Response</TabsTrigger></$1>"
-<TabsContent value="all" className="mt-6">"
+<Tabs defaultValue=" className="mb-8"all">All Requests</TabsTrigger>"escalated">Escalated</TabsTrigger>"ai-flagged">AI Flagged</TabsTrigger>"need-response">Need Response</TabsTrigger></$1>"all" className="
             {/* Search and Filters */}
-            <div className="flex flex-col md:flex-row gap-4 mb-6">"
-<div className="relative flex-1">"
-<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />"
+            <div className="flex flex-col md:flex-row gap-4 mb-6"relative flex-1"
+<Search className="
 <Input
-                  placeholder="Search by ID, user or issue...""
+                  placeholder="Search by ID, user or issue..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10""
-                />
-</$1>
-<Select
-                value={status_filter || ''}'
-                onValueChange={value => setStatusFilter (value || null)}
-              >
-<SelectTrigger className='w-[180px]'>'
-<SelectValue placeholder='Status' /></$1>'
-<SelectContent>
-<SelectItem value=''>All Statuses</SelectItem>'
-<SelectItem value='open'>Open</SelectItem>'
-<SelectItem value='in - progress'>In Progress</SelectItem>'
-<SelectItem value='resolved'>Resolved</SelectItem></$1>'
-</$1>
-<Select
-                value={priority_filter || ''}'
-                onValueChange={value => setPriorityFilter (value || null)}
-
-              >
-<SelectTrigger className='w-[180px]'>'
-<SelectValue placeholder='Priority' /></$1>'
-<SelectContent>
-<SelectItem value=">All Priorities</SelectItem>""
-<SelectItem value="high">High</SelectItem>"
-<SelectItem value="medium">Medium</SelectItem>"
-<SelectItem value="low">Low</SelectItem></$1>"
-</$1>
-<Select
-                value={category_filter || ''}'
-                onValueChange={value => setCategoryFilter (value || null)}
-
-              >
-<SelectTrigger className='w-[180px]'>'
-<SelectValue placeholder='Category' /></$1>'
-<SelectContent>
-<SelectItem value="">All Categories</SelectItem>"
-<SelectItem value="authentication">Authentication</SelectItem>"
-<SelectItem value="billing">Billing</SelectItem>"
-<SelectItem value="api">API</SelectItem>"
-<SelectItem value="disputes">Disputes</SelectItem>"
-<SelectItem value="verification">Verification</SelectItem>"
-<SelectItem value="profile">Profile</SelectItem></$1>"
-</$1>
-<Button
-                variant='outline''
-                on_click={reset_filters}
-                className='md:w - auto''
-              >
-<Filter className='h - 4 w - 4 mr - 2' /> Reset Filters</$1></$1>'
-            {/* Support Requests Table */}
-            <Card>
-<CardContent className='p - 0'>'
-<Table>
-<TableHeader>
-<TableRow>
-<TableHead > ID</TableHead>
-<TableHead > User</TableHead>
-<TableHead > Issue</TableHead>
-<TableHead > Status</TableHead>
-<TableHead > Priority</TableHead>
-<TableHead > Category</TableHead>
-<TableHead > Created</TableHead>
-<TableHead > Last Updated</TableHead>
-<TableHead > Actions</TableHead></$1>
-</$1>
-<TableBody>
-                    {filteredRequests && filteredRequests.map(request => (                      <TableRow key={request && request.id}>
-<TableCell className='font-medium'>'
-                          {request && request.id}
-                        </TableCell>
-<TableCell>{request && request.user}</TableCell>
-<TableCell className='max-w-xs truncate'>'
-                          {request && request.issue}
-                        </TableCell>
-<TableCell>
-<Badge
-                            variant={
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                              request && request.status === 'open''
-                                ? 'default''
-                                : request && request.status === 'in-progress''
-                                  ? 'secondary''
-                                  : 'outline''
-                            }>
-                            {request && request.status}
-                          </Badge></$1>
-<TableCell>
-<Badge
-                            variant={
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-                              request && request.priority === 'high''
-                                ? 'destructive''
-                                : request && request.priority === 'medium''
-                                  ? 'default''
-                                  : 'outline''
-                            }>
-                            {request && request.priority}
-                          </Badge></$1>
-<TableCell>{request && request.category}</TableCell>
-<TableCell>
-                          {new Date(request && request.createdAt).toLocaleDateString()}
-                        </TableCell>
-<TableCell>
-                          {new Date(request && request.lastUpdated).toLocaleDateString()}
-              <Button
-                variant='outline''
-                on_click={reset_filters}
-                className='md:w - auto''
-              >
-<Filter className='h - 4 w - 4 mr - 2' /> Reset Filters</$1></$1>'
-            {/* Support Requests Table */}
-            <Card>
-<CardContent className='p - 0'>'
-<Table>
-<TableHeader>
-<TableRow>
-<TableHead > ID</TableHead>
-<TableHead > User</TableHead>
-<TableHead > Issue</TableHead>
-<TableHead > Status</TableHead>
-<TableHead > Priority</TableHead>
-<TableHead > Category</TableHead>
-<TableHead > Created</TableHead>
-<TableHead > Last Updated</TableHead>
-<TableHead > Actions</TableHead></$1>
-</$1>
-<TableBody>
-                    {filtered_requests.map (request => (                      <TableRow key={request.id}>
-<TableCell className='font - medium'>'
-                          {request.id}
-                        </TableCell>
-<TableCell>{request.user}</TableCell>
-<TableCell className="max-w-xs truncate">{request.issue}</TableCell>"
+                  className="pl-10">All Priorities</SelectItem>""high">High</SelectItem>"medium">Medium</SelectItem>"low">Low</SelectItem></$1>"">All Categories</SelectItem>"authentication">Authentication</SelectItem>"billing">Billing</SelectItem>"api">API</SelectItem>"disputes">Disputes</SelectItem>"verification">Verification</SelectItem>"profile">Profile</SelectItem></$1>"max-w-xs truncate"
 <TableCell>
 <Badge variant={
   // TODO: Add properties
@@ -861,25 +660,18 @@ const resetFilters = () => {
                             View</$1>
 <Button variant='ghost' size='sm'>'
                             Assign</$1></$1>
-<TabsContent value="escalated" className="mt-6">"
-<div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">"
-<h3 className="text-xl font-medium mb-4">Escalated Requests</h3>"
-<p className="text-zion-slate-light">"
-                This tab will show support requests that have been escalated by agents or the system.
-              </p></div>
-</TabsContent>
-<TabsContent value="ai-flagged" className="mt-6">"
-<div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">"
-<h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>"
-<p className="text-zion-slate-light">"
+<TabsContent value=" className="mt-6"bg-zion-blue-light/20 p-8 rounded-lg text-center"
+<h3 className="
+<p className="text-zion-slate-light"ai-flagged" className="
+<div className="bg-zion-blue-light/20 p-8 rounded-lg text-center"text-xl font-medium mb-4"
+<p className="
                 This tab shows issues that our AI system has identified as requiring human attention.
 
               </p></div>
 </TabsContent>
-<TabsContent value="need-response" className="mt-6">"
-<div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">"
-<h3 className="text-xl font-medium mb-4">Awaiting Response</h3>"
-<p className="text-zion-slate-light">"
+<TabsContent value="need-response"mt-6"
+<div className="
+<h3 className="text-xl font-medium mb-4"text-zion-slate-light"
                 These support requests have been waiting for an agent response for over 24 hours.
 
               </p></div>
@@ -915,62 +707,45 @@ const resetFilters = () => {
   )
   return true
 })
-//Count by status for the summary dashboard Support Requests | Admin Dashboard"description=" Manage and track user support requests and issues"/>"
-<div className=" container mx-auto px-4 py-8">"
-<div className=" flex flex-col md:flex-row items-start md:items-center justify-between mb-8">"
+//Count by status for the summary dashboard Support Requests | Admin Dashboard" Manage and track user support requests and issues"/>" container mx-auto px-4 py-8"
+<div className="
 <div>
-<h1 className=" text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"> Support Requests </h1>"
-<p className=" text-zion-slate-light mt-2"> Manage and respond to user support requests and issues </p></div>"
-<div className=" mt-4 md:mt-0">"
-<Button className=" bg-zion-purple hover:bg-zion-purple-light"> New Support Case </Button></div>"
-</div>
-<CardDescription>Open Requests</CardDescription></CardHeader>
-</Card>
-<Card>
-<CardDescription>In Progress</CardDescription></CardHeader>
-</Card>
-<Card>
-<CardDescription>Resolved</CardDescription></CardHeader>
-</Card>
-<Card>
-<CardDescription>Total Requests</CardDescription></CardHeader>
-</Card></div>
-<Tabs defaultValue=" all"className=" mb-8">"
+<h1 className=" text-3 xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent" text-zion-slate-light mt-2"
+<div className="
+<Button className=" bg-zion-purple hover:bg-zion-purple-light" all"className="
 <TabsList>
-<TabsTrigger value=" all">All Requests</TabsTrigger>"
-<TabsTrigger value=" escalated">Escalated</TabsTrigger>"
-<TabsTrigger value=" ai-flagged">AI Flagged</TabsTrigger>"
-<TabsTrigger value=" need-response">Need Response</TabsTrigger></TabsList>"
+<TabsTrigger value=" all"
+<TabsTrigger value=" escalated"
+<TabsTrigger value=" ai-flagged"
+<TabsTrigger value=" need-response"
 </SelectTrigger>
 <SelectContent>
-<SelectItem value="">All Statuses</SelectItem>"
-<SelectItem value=" open">Open</SelectItem>"
-<SelectItem value=" in-progress">In Progress</SelectItem>"
-<SelectItem value=" resolved">Resolved</SelectItem></SelectContent>"
+<SelectItem value=""
+<SelectItem value=" open"
+<SelectItem value=" in-progress"
+<SelectItem value=" resolved"
 </Select></SelectTrigger>
 <SelectContent>
-<SelectItem value="">All Priorities</SelectItem>"
-<SelectItem value=" high">High</SelectItem>"
-<SelectItem value=" medium">Medium</SelectItem>"
-<SelectItem value=" low">Low</SelectItem></SelectContent>"
+<SelectItem value=""
+<SelectItem value=" high"
+<SelectItem value=" medium"
+<SelectItem value=" low"
 </Select></SelectTrigger>
 <SelectContent>
-<SelectItem value="">All Categories</SelectItem>"
-<SelectItem value=" authentication">Authentication</SelectItem>"
-<SelectItem value=" billing">Billing</SelectItem>"
-<SelectItem value=" api">API</SelectItem>"
-<SelectItem value=" disputes">Disputes</SelectItem>"
-<SelectItem value=" verification">Verification</SelectItem>"
-<SelectItem value=" profile">Profile</SelectItem></SelectContent>"
+<SelectItem value=""
+<SelectItem value=" authentication"
+<SelectItem value=" billing"
+<SelectItem value=" api"
+<SelectItem value=" disputes"
+<SelectItem value=" verification"
+<SelectItem value=" profile"
 </Select></Button>
 </div> {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  /* Support Requests Table */ ""
-}<Card>
-<CardContent className=" p-0">"
+  /* Support Requests Table */ "" p-0"
 <Table>
 <TableHeader>
 <TableRow>
@@ -1039,34 +814,28 @@ const resetFilters = () => {
 }
   // TODO: Add properties
 }
-  new Date (request && request.lastUpdated) .toLocaleDateString () ""
+  new Date (request && request.lastUpdated) .toLocaleDateString () "
 }
 
 }</TableCell>
 <TableCell>
-<Button variant=" ghost"size=" sm">View</Button>"
-<Button variant=" ghost"size=" sm">Assign</Button></TableCell>"
-</TableRow>) ) ""
+<Button variant=" ghost" sm">View</Button>" ghost"size=">Assign</Button></TableCell>"
+</TableRow>) ) "
 }</TableBody></Table>
 </CardContent></Card>
 </TabsContent>
-<TabsContent value=" escalated"className=" mt-6">"
-<div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center">"
-<h3 className=" text-xl font-medium mb-4">Escalated Requests</h3>"
-<p className=" text-zion-slate-light"> This tab will show support requests that have been escalated by agents or the system. </p></div>"
+<TabsContent value=" escalated" mt-6"
+<div className="
+<h3 className=" text-xl font-medium mb-4" text-zion-slate-light"
 </TabsContent>
-<TabsContent value=" ai-flagged"className=" mt-6">"
-<div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center">"
-<h3 className=" text-xl font-medium mb-4">AI Flagged Issues</h3>"
-<p className=" text-zion-slate-light"> This tab shows issues that our AI system has identified as requiring human attention. </p></div>"
-</TabsContent>
-<TabsContent value=" need-response"className=" mt-6">"
-<div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center">"
-<h3 className=" text-xl font-medium mb-4">Awaiting Response</h3>"
-<p className=" text-zion-slate-light" > These support requests have been waiting for an agent response for over 24 hours. </p></div>"
+<TabsContent value="className=" mt-6" bg-zion-blue-light/20 p-8 rounded-lg text-center"
+<h3 className="
+<p className=" text-zion-slate-light" need-response"className="
+<div className=" bg-zion-blue-light/20 p-8 rounded-lg text-center" text-xl font-medium mb-4"
+<p className="
 </TabsContent></Tabs>
 </div></>)
-}'"}"'"
+}'"}"
 
                       </TableRow>))}
                   </TableBody></$1>
@@ -1096,14 +865,11 @@ const resetFilters = () => {
 </$1></>)
   return true
 })
-//Count by status for the summary dashboard Support Requests | Admin Dashboard"description=" Manage and track user support requests and issues"/>"
-<div className=" container mx - auto px - 4 py - 8">"
-<div className=" flex flex - col md:flex - row items - start md:items - center justify - between mb - 8">"
-<div>
-<h1 className=" text - 3xl font - bold bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent"> Support Requests </h1>"
-<p className=" text - zion - slate - light mt - 2"> Manage and respond to user support requests and issues </p></div>"
-<div className=" mt - 4 md:mt - 0">"
-<Button className=" bg - zion - purple hover:bg - zion - purple - light"> New Support Case </Button></div>"
+//Count by status for the summary dashboard Support Requests | Admin Dashboard"description="/>"
+<div className="
+<div className=" flex flex - col md:flex - row items - start md:items - center justify - between mb - 8" text - 3 xl font - bold bg - gradient - to - r from - zion - cyan to - zion - purple bg - clip - text text - transparent"
+<p className="
+<div className=" mt - 4 md:mt - 0" bg - zion - purple hover:bg - zion - purple - light"
 </div>
 <CardDescription > Open Requests</CardDescription></CardHeader>
 </Card>
@@ -1116,42 +882,9 @@ const resetFilters = () => {
 <Card>
 <CardDescription > Total Requests</CardDescription></CardHeader>
 </Card></div>
-<Tabs default_value=" all"className=" mb - 8">"
-<TabsList>
-<TabsTrigger value=" all">All Requests</TabsTrigger>"
-<TabsTrigger value=" escalated">Escalated</TabsTrigger>"
-<TabsTrigger value=" ai - flagged">AI Flagged</TabsTrigger>"
-<TabsTrigger value=" need - response">Need Response</TabsTrigger></TabsList>"
-</SelectTrigger>
-<SelectContent>
-<SelectItem value="">All Statuses</SelectItem>"
-<SelectItem value=" open">Open</SelectItem>"
-<SelectItem value=" in - progress">In Progress</SelectItem>"
-<SelectItem value=" resolved">Resolved</SelectItem></SelectContent>"
-</Select></SelectTrigger>
-<SelectContent>
-<SelectItem value="">All Priorities</SelectItem>"
-<SelectItem value=" high">High</SelectItem>"
-<SelectItem value=" medium">Medium</SelectItem>"
-<SelectItem value=" low">Low</SelectItem></SelectContent>"
-</Select></SelectTrigger>
-<SelectContent>
-<SelectItem value="">All Categories</SelectItem>"
-<SelectItem value=" authentication">Authentication</SelectItem>"
-<SelectItem value=" billing">Billing</SelectItem>"
-<SelectItem value=" api">API</SelectItem>"
-<SelectItem value=" disputes">Disputes</SelectItem>"
-<SelectItem value=" verification">Verification</SelectItem>"
-<SelectItem value=" profile">Profile</SelectItem></SelectContent>"
-</Select></Button>
-</div> {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  /* Support Requests Table */ ""
+<Tabs default_value="className=" mb - 8" all">All Requests</TabsTrigger>" escalated">Escalated</TabsTrigger>" ai - flagged">AI Flagged</TabsTrigger>" need - response">Need Response</TabsTrigger></TabsList>"">All Statuses</SelectItem>" open">Open</SelectItem>" in - progress">In Progress</SelectItem>" resolved">Resolved</SelectItem></SelectContent>"">All Priorities</SelectItem>" high">High</SelectItem>" medium">Medium</SelectItem>" low">Low</SelectItem></SelectContent>"">All Categories</SelectItem>" authentication">Authentication</SelectItem>" billing">Billing</SelectItem>" api">API</SelectItem>" disputes">Disputes</SelectItem>" verification">Verification</SelectItem>" profile">Profile</SelectItem></SelectContent>""
 }<Card>
-<CardContent className=" p - 0">"
+<CardContent className="
 <Table>
 <TableHeader>
 <TableRow>
@@ -1220,31 +953,18 @@ const resetFilters = () => {
 }
   // TODO: Add properties
 }
-  new Date (request.last_updated) .toLocaleDateString () ""
-}</TableCell>
-<TableCell>
-<Button variant=" ghost"size=" sm">View</Button>"
-<Button variant=" ghost"size=" sm">Assign</Button></TableCell>"
-</TableRow>) ) ""
-}</TableBody></Table>
-</CardContent></Card>
+  new Date (request.last_updated) .toLocaleDateString () "" ghost"size=">View</Button>"
+<Button variant="size=" sm"
+</TableRow>) ) "" escalated"className="
+<div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center" text - xl font - medium mb - 4"
+<p className="
 </TabsContent>
-<TabsContent value=" escalated"className=" mt - 6">"
-<div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center">"
-<h3 className=" text - xl font - medium mb - 4">Escalated Requests</h3>"
-<p className=" text - zion - slate - light"> This tab will show support requests that have been escalated by agents or the system. </p></div>"
+<TabsContent value=" ai - flagged" mt - 6"
+<div className="
+<h3 className=" text - xl font - medium mb - 4" text - zion - slate - light"
 </TabsContent>
-<TabsContent value=" ai - flagged"className=" mt - 6">"
-<div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center">"
-<h3 className=" text - xl font - medium mb - 4">AI Flagged Issues</h3>"
-<p className=" text - zion - slate - light"> This tab shows issues that our AI system has identified as requiring human attention. </p></div>"
-</TabsContent>
-<TabsContent value=" need - response"className=" mt - 6">"
-<div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center">"
-<h3 className=" text - xl font - medium mb - 4">Awaiting Response</h3>"
-<p className=" text - zion - slate - light" > These support requests have been waiting for an agent response for over 24 hours. </p></div>"
-</TabsContent></Tabs>
-</div></>)
-}'"}"'"
+<TabsContent value="className=" mt - 6" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"
+<h3 className="
+<p className=" text - zion - slate - light"}"'"
 
 }}))

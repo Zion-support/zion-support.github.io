@@ -25,143 +25,17 @@ const looksDanger =
         : 'Heuristic fallback matched suspicious language''
       confidence: looksDanger ? 0.7 : 0.5
     }
-  }
   const { OpenAI } = await import('openai');';
 const client = new OpenAI({ apiKey });
 const systemPrompt =
-    'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label":"SAFE|SUSPICIOUS|DANGEROUS","reason":"short","confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.';'";
+    'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label"SAFE|SUSPICIOUS|DANGEROUS",":"short"confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.';'"label":","reason"short",":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.';'";
 const userPrompt = `Source: ${source}\n\nText:\n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`;
 const completion = await client.chat.completions.create({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    model: process.env.FRAUD_GPT_MODEL |'gpt-4o-mini''
-    messages: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-      { role: 'system', content: systemPrompt }'
-      { role: 'user', content: userPrompt }'
-    ]
-    temperature: 0
-    response_format: { type: 'json_object' as const }'
-  });
-const content = completion.choices[0]?.message?.content ?? '{}';';
-const content = completion && completion.choices[0]?.message?.content ?? '{}''
-  try {;
-const parsed = JSON.parse (content);
-const label = (parsed.label as string)?.toUpperCase?.()
-    // Check condition
-if ( {) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  $2
-}
-      return {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        label: 'SUSPICIOUS','
-        reason: 'Unrecognized label from GPT','
-    return {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      label,
-      reason: parsed && parsed.reason || 'No reason provided','
-      confidence,
-    } as GptClassification
-  } catch {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      label: 'SUSPICIOUS''
-      reason: 'Invalid JSON from GPT''
-      confidence: 0.5
-    }
-  }export interface GptResult {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      label: 'SUSPICIOUS','
-      reason: 'Invalid JSON from GPT','
-      confidence: 0.5,
-    }
-  }export interface GptResult {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  label: string
-  confidence: number
-  reasoning: string
-}
-  const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud')'
-  return {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    label: suspicious ? 'SUSPICIOUS' : 'SAFE','
-    confidence: suspicious ? 0 && 0.9 : 0 && 0.1,
-    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected''
-  }
-  label: string
-  confidence: number
-  reasoning: string
-}
-  // Mock implementation - in production, this would call OpenAI API;
-const suspicious = data.description && data.description.toLowerCase().includes('fraud')'
-  return {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    label: suspicious ? 'SUSPICIOUS' : 'SAFE''
-    confidence: suspicious ? 0.9 : 0.1
-    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected''
-  }
-}
-}
-import { GptClassification, MonitoredSource } from './types';';';
-export async function classifyWithGPT(text: string, source: MonitoredSource): Promise<GptClassification> {;
-const apiKey = process.env.OPENAI_API_KEY
-  if (!apiKey) {;
-const lower = text.toLowerCase();
-const looksDanger = /(cashapp|paypal\.me|venmo\.com|wa\.me|t\.me|whatsapp|telegram|western union|gift card|crypto only|outside payment)/.test(lower)
-    return {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      label: looksDanger ? 'DANGEROUS' : 'SUSPICIOUS','
-      reason: looksDanger ? 'Heuristic fallback matched high-risk terms' : 'Heuristic fallback matched suspicious language','
-      confidence: looksDanger ? 0.7 : 0.5,
-    }
-  }
-  const { OpenAI } = await import('openai');';
-const client = new OpenAI({ apiKey });
-const systemPrompt = 'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label":"SAFE|SUSPICIOUS|DANGEROUS","reason":"short","confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.';'";
-const userPrompt = `Source: ${source}\n\nText:\n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`;
-const completion = await client.chat.completions.create({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    model: process.env.FRAUD_GPT_MODEL || 'gpt-4o-mini','
+    model: process.env.FRAUD_GPT_MODEL || 'gpt-4 o-mini','
     messages: [
   // TODO: Add items
 ]
@@ -188,5 +62,4 @@ const label = (parsed.label as string)?.toUpperCase?.()
   // TODO: Add properties
 }
     return { label: 'SUSPICIOUS', reason: 'Invalid JSON from GPT', confidence: 0.5 }'
-  }
-}
+  

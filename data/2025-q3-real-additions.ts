@@ -1,4 +1,4 @@
-export interface RealAdditionService2025Q3 {
+export interface RealAdditionService2025 Q3 {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -28,7 +28,7 @@ export interface RealAdditionService2025Q3 {
 	rating?: number
 	reviews?: number
 }
-export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
+export const realAdditions2025 Q3: RealAdditionService2025 Q3[] = [;
   // TODO: Add items
 ]
 	{
@@ -64,7 +64,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		useCases: ['Shared inboxes', 'Lead response', 'Support triage'],'
 		roi: 'Cut average first response by 60%','
 		competitors: ['Superhuman AI', 'Gmail HelpMeWrite'],'
-		marketSize: '$10B+ email productivity','
+		marketSize: '$10 B+ email productivity','
 		growthRate: '20% CAGR','
 		launchDate: '2025-06-01','
 		customers: 140,
@@ -104,7 +104,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		useCases: ['Partner programs', 'Referral campaigns'],'
 		roi: 'Grow referral revenue 10–25%','
 		competitors: ['Rewardful', 'ReferralCandy'],'
-		marketSize: '$1.5B affiliate tooling','
+		marketSize: '$1.5 B affiliate tooling','
 		growthRate: '15% CAGR','
 		launchDate: '2025-06-02','
 		customers: 85,
@@ -144,7 +144,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		useCases: ['Founder dashboards', 'Investor updates'],'
 		roi: 'Save 4–8 hrs/week on reporting','
 		competitors: ['Geckoboard', 'Databox'],'
-		marketSize: '$30B+ BI','
+		marketSize: '$30 B+ BI','
 		growthRate: '14% CAGR','
 		launchDate: '2025-06-03','
 		customers: 120,
@@ -184,7 +184,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		useCases: ['MSPs', 'Internal IT'],'
 		roi: 'Reduce resolution time 25–40%','
 		competitors: ['Freshservice', 'Zendesk'],'
-		marketSize: '$10B ITSM','
+		marketSize: '$10 B ITSM','
 		growthRate: '12% CAGR','
 		launchDate: '2025-06-04','
 		customers: 60,
@@ -224,7 +224,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		useCases: ['Standups', 'Client calls', 'Hiring'],'
 		roi: 'Save 3–5 hrs/person/month','
 		competitors: ['Grain', 'Fathom'],'
-		marketSize: '$5B+ meeting AI','
+		marketSize: '$5 B+ meeting AI','
 		growthRate: '30% CAGR','
 		launchDate: '2025-06-05','
 		customers: 200,
@@ -264,7 +264,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		useCases: ['Prevent bad dashboards', 'Catch pipeline breaks'],'
 		roi: 'Reduce bad data incidents 50%','
 		competitors: ['Monte Carlo', 'Bigeye'],'
-		marketSize: '$3B data observability','
+		marketSize: '$3 B data observability','
 		growthRate: '25% CAGR','
 		launchDate: '2025-06-06','
 		customers: 55,
@@ -304,7 +304,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		useCases: ['Landing pages', 'Pricing pages'],'
 		roi: 'Increase conversion 5–20%','
 		competitors: ['VWO', 'Optimizely'],'
-		marketSize: '$2B experimentation','
+		marketSize: '$2 B experimentation','
 		growthRate: '18% CAGR','
 		launchDate: '2025-06-07','
 		customers: 90,
@@ -344,7 +344,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		useCases: ['Content ops', 'Agency delivery'],'
 		roi: 'Reduce brand review cycles 50%','
 		competitors: ['Writer', 'Grammarly Business'],'
-		marketSize: '$2B brand management','
+		marketSize: '$2 B brand management','
 		growthRate: '16% CAGR','
 		launchDate: '2025-06-08','
 		customers: 45,
@@ -384,7 +384,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		useCases: ['AppSec hygiene', 'Audit support'],'
 		roi: 'Reduce vuln MTTR 30–50%','
 		competitors: ['Snyk', 'Dependabot (partial)'],'
-		marketSize: '$6B AppSec','
+		marketSize: '$6 B AppSec','
 		growthRate: '20% CAGR','
 		launchDate: '2025-06-09','
 		customers: 110,
@@ -424,7 +424,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		useCases: ['Third-party risk', 'Annual reviews'],'
 		roi: 'Shorten cycle time 40–70%','
 		competitors: ['OneTrust', 'Whistic'],'
-		marketSize: '$4B vendor risk','
+		marketSize: '$4 B vendor risk','
 		growthRate: '22% CAGR','
 		launchDate: '2025-06-10','
 		customers: 65,
@@ -464,7 +464,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		useCases: ['Major incidents', 'Compliance'],'
 		roi: 'Cut comms toil 60%','
 		competitors: ['Rootly (partial)'],'
-		marketSize: '$10B+ incident mgmt','
+		marketSize: '$10 B+ incident mgmt','
 		growthRate: '18% CAGR','
 		launchDate: '2025-06-11','
 		customers: 40,
@@ -504,7 +504,7 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		useCases: ['GDPR/CCPA compliance', 'Cookie audits'],'
 		roi: 'Reduce legal risk and fines','
 		competitors: ['OneTrust', 'Cookiebot'],'
-		marketSize: '$4B privacy tech','
+		marketSize: '$4 B privacy tech','
 		growthRate: '22% CAGR','
 		launchDate: '2025-06-12','
 		customers: 95,
@@ -542,9 +542,9 @@ export const realAdditions2025Q3: RealAdditionService2025Q3[] = [;
 		technology: ['Next.js', 'OpenAI'],'
 		integrations: ['DocuSign', 'HubSpot', 'Stripe'],'
 		useCases: ['Agencies', 'Consultancies'],'
-		roi: 'Ship proposals 3x faster','
+		roi: 'Ship proposals 3 x faster','
 		competitors: ['PandaDoc', 'Proposify'],'
-		marketSize: '$1B+ proposal tools','
+		marketSize: '$1 B+ proposal tools','
 		growthRate: '12% CAGR','
 		launchDate: '2025-06-13','
 		customers: 300,

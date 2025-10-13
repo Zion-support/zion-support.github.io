@@ -9,7 +9,6 @@ interface SEOConfig {siteName: string,}
   defaultDescription: string,
   defaultImage: string,
   googleTagManagerId?: string,}
-}
 interface PageSEOData {}}title: string;,
   description: string;,
   keywords: string[],
@@ -23,14 +22,13 @@ interface PageSEOData {}}title: string;,
   tags?: string[],
   noindex?: boolean;
   nofollow?: boolean;}
-}
 class SEOOptimizer {private config: SEOConfig,}
   private currentPageData: PageSEOData | null = null,
   constructor(config: SEOConfig) {,}class SEOOptimizer {}}private config: SEOConfig;,
   private currentPageData: PageSEOData | null = null,
   generateKeywords(pageKeywords?: string[]): string {}}const keywords = pageKeywords || this.currentPageData?.keywords || []
     return keywords.join(', ');}'
-  generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */,}}}
+  generateKeywords(pageKeywords?: string[]): string {/* TODO: Fix JSX expression */,}}
   /**;
    * Update meta tags;
    */;
@@ -63,8 +61,8 @@ class SEOOptimizer {private config: SEOConfig,}
     }
     // Additional meta tags;
     this.setMetaTag('viewport', 'width=device-width, initial-scale=1.0');'
-    this.setMetaTag('theme-color', '#1e40af');'
-    this.setMetaTag('msapplication-TileColor', '#1e40af');'
+    this.setMetaTag('theme-color', '#1 e40 af');'
+    this.setMetaTag('msapplication-TileColor', '#1 e40 af');'
   private updateMetaTags(): void {/* TODO: Fix JSX expression */,}}`;
   r:site', `@${this.config.twitterHandle}`);'
       this.setMetaTag('twitte);'
@@ -84,7 +82,6 @@ const directives = []
     } else {}
       directives.push('nofollow');}'
   private getRobotsContent(): string {/* TODO: Fix JSX expression */}
-    }
     if (!this.currentPageData.nofollow) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
     }];];
@@ -102,7 +99,6 @@ const directives = []
   t: `${this.config.siteUrl}/search?q={search_term_string}`,
         'query-input': 'required name=search_term_string';'
       }
-    }
     this.addStructuredData(structuredData)
   }
   /**;
@@ -132,7 +128,6 @@ const structuredData = {}
         url: this.config.siteUrl}
         name: this.config.siteName,
         url: this.config.siteUrl,}
-      }
     }
     // Add article-specific properties;
     if (this.currentPageData.type === 'article') {Object.assign(structuredData, {)'
@@ -188,7 +183,6 @@ const structuredData = {}
     document.head.appendChild(script);
   private addStructuredData(dat)
   a: unknown): void {/* TODO: Fix JSX expression */}
-  }
   /**
    * Setup canonical URLs;
    */;
@@ -196,7 +190,7 @@ const structuredData = {}
     canonical.rel = 'canonical';'
     canonical.href = window.location.href;
     document.head.appendChild(canonical);}
-  private setupCanonicalUrls(): void {/* TODO: Fix JSX expression */,}}}
+  private setupCanonicalUrls(): void {/* TODO: Fix JSX expression */,}}
   /**;
    * Setup performance monitoring for SEO;
    */;
@@ -206,7 +200,7 @@ const structuredData = {}
       new PerformanceObserver((list) => {}const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1]
       }).observe({entryTypes: ['largest-contentful-paint'] ,)})'
-  private setupPerformanceMonitoring(): void {/* TODO: Fix JSX expression */,}}}
+  private setupPerformanceMonitoring(): void {/* TODO: Fix JSX expression */,}}
       }).observe({/* TODO: Fix JSX expression */,)})
   s: ['largest-contentful-paint'] ,})'
       // Monitor CLS (Cumulative Layout Shift);
@@ -217,11 +211,9 @@ const structuredData = {}
   // TODO: Add properties
 }
           if (!(entry as any).hadRecentInput) {}clsValue += (entry as any).value;}
-          }
         }
         if (clsValue > 0.25) {// Poor CLS;
       let clsValue = 0;}new PerformanceObserver((list) => {}for (const entry of list.getEntries()) {}if (!(entry as any).hadRecentInput) {}clsValue += (entry as any).value;}
-    }
   }
       (window as any).gtag('event', 'seo_metric', {</div>'
         metric_name: metric,
@@ -231,7 +223,6 @@ const structuredData = {}
   c: string, valu);
   e: number): void {/* TODO: Fix JSX expression */,}}})
     }
-  }
   /**;
    * Generate sitemap data;
    */;
@@ -288,7 +279,7 @@ Disallo,`
     } else if (title.length > 60) {}issues.push('Title is too long (more than 60 characters)');}'
     }
     // Check description length;
-    const description = document.querySelector('meta[name="description"]')?.getAttribute('content');'"
+    const description = document.querySelector('meta[name="description"
     if (!description) {}issues.push('Missing meta description');}'
     } else if (description.length < 120) {}issues.push('Description is too short (less than 120 characters)');}'
     } else if (description.length > 160) {}issues.push('Description is too long (more than 160 characters)');}'
@@ -299,65 +290,8 @@ Disallo,`
       }
     })
     // Check for heading structure;
-    const h1s = document.querySelectorAll('h1');'
-    if (h1s.length === 0) {}issues.push('Page is missing H1 tag');}'
-    } else if (h1s.length > 1) {}issues.push('Page has multiple H1 tags');}'
-  checkSEOIssues(): string[] {/* TODO: Fix JSX expression */,}} else if (title.length > 60) {/* TODO: Fix JSX expression */,}}
-    // Check description length;";";
-const description = document.querySelector('meta[name="description"]')?.getAttribute('content');'"
-    if (!description) {/* TODO: Fix JSX expression */,}} else if (description.length < 120) {/* TODO: Fix JSX expression */,}} else if (description.length > 160) {/* TODO: Fix JSX expression */,}}
-    // Check for images without alt text;
-    const images = document.querySelectorAll('img');'
-    images.forEach((img, index) => {/* TODO: Fix JSX expression */,}`;
-        issues.push(`Image ${index + 1)}is missing alt text`);
-      }
-    })
-    // Check for heading structure;
-    const h1s = document.querySelectorAll('h1');'
-    if (h1s.length === 0) {/* TODO: Fix JSX expression */,}} else if (h1s.length > 1) {/* TODO: Fix JSX expression */,}}
-    return issues;
-  }
-  /**;
-   * Get SEO score;
-   */;
-  getSEOScore(): number {}}const issues = this.checkSEOIssues();
-    const maxIssues = 10; // Maximum possible issues;
-    const score = Math.max(0, 100 - (issues.length / maxIssues) * 100)
-    return Math.round(score);}
-  }
-}
-// Default configuration;
-const defaultConfig: SEOConfig = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  siteName: 'Zion Tech Group''
-  siteUrl: 'https://zion.app''
-// Default configuration;
-const defaultConfig: SEOConfig = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    siteName: 'Zion Tech Group','
-    siteUrl: 'https://zion.app','
-// Default configuration
-  }
-const defaultConfig: SEOConfig = {}
-  siteName: 'Zion Tech Group','
-  siteUrl: 'https://zion.app','
-  defaultTitle: 'Advanced AI and IT Solutions','
-  defaultDescription: 'Zion Tech Group provides cutting-edge AI and IT solutions for businesses. Transform your operations with our innovative technology and expert consulting services.','
-  defaultImage: 'https://zion.app/og-image.webp','
-  twitterHandle: 'ZionTechGroup','
-  googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID;
-  googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID}
-}
-  getSEOScore(): number {/* TODO: Fix JSX expression */}
-  }
-}
-// Default configuration;
-};
-export const seoOptimizer = new SEOOptimizer(defaultConfig);
-export default seoOptimizer;"`;";"
+    const h1 s = document.querySelectorAll('h1');'
+    if (h1 s.length === 0) {}issues.push('Page is missing H1 tag');}'
+    } else if (h1 s.length > 1) {}issues.push('Page has multiple H1 tags');}'
+  checkSEOIssues(): string[] {/* TODO: Fix JSX expression */,}} else if (title.length > 60) {/* TODO: Fix JSX expression */,}
+    // Check description length;";"description"]')?.getAttribute('content');'"`;";"

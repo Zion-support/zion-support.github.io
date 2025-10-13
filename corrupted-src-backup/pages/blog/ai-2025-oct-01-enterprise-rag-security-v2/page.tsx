@@ -23,13 +23,12 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-enterpri s e-r a g-securi t y-v2')'
         />),
       <div, className='container, m, x-auto, p, x-6, p, y-16'>'
-<h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>'
+<h1, className='te, x, t-4 xl, m, d:te, x, t-5 xl, fon, t-bold, m, b-4'>'
           Enterprise, RAG, Security v2
         <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>Au, t, h-A, w, a, r, e, Fre, s, h, Sign, e, d'
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>'
 }
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
-}
 </div></div>
 </div></div>
 </p></h1>

@@ -34,7 +34,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  }
       'Machine Learning','
       'Bioinformatics','
       'React','
@@ -163,7 +162,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Industrial biotechnology'],'
     roi: 'Revolutionize genetic engineering with AI precision. ROI through innovation and new product development.','
     competitors: ['Manual methods', 'Basic tools'],'
-    market_size: '$50B genetic engineering market''
+    market_size: '$50 B genetic engineering market''
     growth_rate: '300% annual growth''
     variant: 'biotech - futuristic''
     contact_info: unknown,
@@ -190,7 +189,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['Manual methods', 'Basic tools'],'
     market_siz,
-  e: '$50B genetic engineering market','
+  e: '$50 B genetic engineering market','
     growth_rat,
   e: '300% annual growth','
     varian,
@@ -310,7 +309,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Drug delivery'],'
     roi: 'Design novel proteins faster and more efficiently. ROI through new product development and research acceleration.','
     competitors: ['Basic tools', 'Manual design'],'
-    market_size: '$30B protein engineering market''
+    market_size: '$30 B protein engineering market''
     growth_rate: '280% annual growth''
     variant: 'biotech - futuristic''
     contact_info: unknown,
@@ -337,7 +336,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['Basic tools', 'Manual design'],'
     market_siz,
-  e: '$30B protein engineering market','
+  e: '$30 B protein engineering market','
     growth_rat,
   e: '280% annual growth','
     varian,
@@ -457,7 +456,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Performance tracking'],'
     roi: 'Reduce trial costs by 40% and accelerate completion by 60%. ROI through efficiency gains and faster approvals.','
     competitors: ['Basic tools', 'Manual management'],'
-    market_size: '$45B clinical trial market''
+    market_size: '$45 B clinical trial market''
     growth_rate: '220% annual growth''
     variant: 'biotech - futuristic''
     contact_info: unknown,
@@ -484,7 +483,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['Basic tools', 'Manual management'],'
     market_siz,
-  e: '$45B clinical trial market','
+  e: '$45 B clinical trial market','
     growth_rat,
   e: '220% annual growth','
     varian,
@@ -525,7 +524,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   d: '/month','
     descriptio,
   n: unknown,
-      'Advanced AI platform that discovers and validates biomarkers for disease diagnosis, prognosis, and treatment response. Accelerate biomarker research by 10x.','
+      'Advanced AI platform that discovers and validates biomarkers for disease diagnosis, prognosis, and treatment response. Accelerate biomarker research by 10 x.','
     feature,
   s: [,
       'AI biomarker discovery','
@@ -602,9 +601,9 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Drug development','
       'Personalized medicine','
       'Research discovery'],'
-    roi: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.','
+    roi: 'Accelerate biomarker discovery by 10 x. ROI through research acceleration and new diagnostic development.','
     competitors: ['Manual methods', 'Basic tools'],'
-    market_size: '$25B biomarker market''
+    market_size: '$25 B biomarker market''
     growth_rate: '240% annual growth''
     variant: 'biotech - futuristic''
     contact_info: unknown,
@@ -627,11 +626,11 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     period: '/month','
     description: unknown,
     ro,
-  i: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.','
+  i: 'Accelerate biomarker discovery by 10 x. ROI through research acceleration and new diagnostic development.','
     competitor,
   s: ['Manual methods', 'Basic tools'],'
     market_siz,
-  e: '$25B biomarker market','
+  e: '$25 B biomarker market','
     growth_rat,
   e: '240% annual growth','
     varian,
@@ -751,7 +750,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Healthcare research'],'
     roi: 'Improve treatment outcomes and reduce healthcare costs. ROI through better patient outcomes and cost savings.','
     competitors: ['Basic analysis', 'Limited tools'],'
-    market_size: '$60B personalized medicine market''
+    market_size: '$60 B personalized medicine market''
     growth_rate: '260% annual growth''
     variant: 'biotech - futuristic''
     contact_info: unknown,
@@ -778,7 +777,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['Basic analysis', 'Limited tools'],'
     market_siz,
-  e: '$60B personalized medicine market','
+  e: '$60 B personalized medicine market','
     growth_rat,
   e: '260% annual growth','
     varian,
@@ -898,7 +897,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Research discovery'],'
     roi: 'Accelerate drug development and reduce costs by 80%. ROI through faster time - to - market and cost savings.','
     competitors: ['Manual research', 'Basic tools'],'
-    market_size: '$20B drug repurposing market''
+    market_size: '$20 B drug repurposing market''
     growth_rate: '200% annual growth''
     variant: 'biotech - futuristic''
     contact_info: unknown,
@@ -926,7 +925,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['Manual research', 'Basic tools'],'
     market_siz,
-  e: '$20B drug repurposing market','
+  e: '$20 B drug repurposing market','
     growth_rat,
   e: '200% annual growth','
     varian,
@@ -1047,7 +1046,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Statistical analysis'],'
     roi: 'Accelerate biological research and data analysis. ROI through research efficiency and discovery acceleration.','
     competitors: ['Basic tools', 'Manual analysis'],'
-    market_size: '$35B bioinformatics market''
+    market_size: '$35 B bioinformatics market''
     growth_rate: '230% annual growth''
     variant: 'biotech - futuristic''
     contact_info: unknown,
@@ -1074,7 +1073,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['Basic tools', 'Manual analysis'],'
     market_siz,
-  e: '$35B bioinformatics market','
+  e: '$35 B bioinformatics market','
     growth_rat,
   e: '230% annual growth','
     varian,
@@ -1194,7 +1193,7 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
       'Performance monitoring'],'
     roi: 'Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings.','
     competitors: ['Basic optimization', 'Manual processes'],'
-    market_size: '$40B biomanufacturing market''
+    market_size: '$40 B biomanufacturing market''
     growth_rate: '210% annual growth''
     variant: 'biotech - futuristic''
     contact_info: unknown,
@@ -1238,7 +1237,7 @@ export const biotechAIServices: BiotechAIService[] = [,;
     id: 'ai-drug-discovery-platform', name: 'AI Drug Discovery Platform','
     tagline: 'Accelerate drug development with AI-powered discovery','
     price: '$3,999','
-    period: '/month', description: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.''
+    period: '/month', description: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10 x while reducing costs by 90%. Discover new treatments and optimize existing drugs.''
     features: [,
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard','
       'API for research integrationMulti-omics data analysis'],'
@@ -1267,7 +1266,7 @@ export const biotechAIServices: BiotechAIService[] = [,;
     competitor,
   s: ['Basic optimization', 'Manual processes'],'
     market_siz,
-  e: '$40B biomanufacturing market','
+  e: '$40 B biomanufacturing market','
     growth_rat,
   e: '210% annual growth','
     varian,
@@ -1368,7 +1367,7 @@ export const,;
   e: '$3,999','
     perio,
   d: '/month', descriptio,'
-  n: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.','
+  n: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10 x while reducing costs by 90%. Discover new treatments and optimize existing drugs.','
     feature,
   s: [,
       'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard''
@@ -1383,7 +1382,7 @@ export const,;
     lin,
   k: 'http,'
   s://ziontechgroup.com/biotech-ai', marketPositio,'
-  n: 'Revolutionary technology with no direct competitors. Insitro ($100M+ funding) and Recursion ($2B+ funding) offer basic AI drug discovery. Our,'
+  n: 'Revolutionary technology with no direct competitors. Insitro ($100 M+ funding) and Recursion ($2 B+ funding) offer basic AI drug discovery. Our,'
   advantage: Comprehensive platform and accessible pricing.','
     targetAudienc,
   e: 'Pharmaceutical companies, Biotech startups, Research institutions, Drug discovery labs, Healthcare organizations, Academic researchers','
@@ -1398,10 +1397,10 @@ export const,;
   s: ['Research databasesLaboratory systemsClinical trial platformsRegulatory databasesScientific literature'],'
     useCase,
   s: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration'], ro,'
-  i: 'Accelerate drug development by 10x and reduce costs by 90%. ROI through faster time-to-market and cost savings.','
+  i: 'Accelerate drug development by 10 x and reduce costs by 90%. ROI through faster time-to-market and cost savings.','
     competitor,
   s: ['InsitroRecursionBasic research tools'], marketSiz,'
-  e: '$150B AI in healthcare market','
+  e: '$150 B AI in healthcare market','
     growthRat,
   e: '250% annual growth', varian,'
   t: 'biotech-futuristic','
@@ -1429,7 +1428,6 @@ export const,;
     review,
   s: 45}
 export interface BiotechAIService {/* TODO: Fix JSX expression */}
-  }
 ]
 }
 ]
@@ -1560,7 +1558,7 @@ realImplementation: true,
     competitor,
   s: ['Manual methods', 'Basic tools']'
     marketSiz,
-  e: '$50B genetic engineering market''
+  e: '$50 B genetic engineering market''
     growthRat,
   e: '300% annual growth''
     varian,
@@ -1619,7 +1617,7 @@ realImplementation: true,
     competitor,
   s: ['Basic tools', 'Manual design']'
     marketSiz,
-  e: '$30B protein engineering market''
+  e: '$30 B protein engineering market''
     growthRat,
   e: '280% annual growth''
     varian,
@@ -1678,7 +1676,7 @@ realImplementation: true,
     competitor,
   s: ['Basic tools', 'Manual management']'
     marketSiz,
-  e: '$45B clinical trial market''
+  e: '$45 B clinical trial market''
     growthRat,
   e: '220% annual growth''
     varian,
@@ -1722,7 +1720,7 @@ realImplementation: true,
       'Drug development''
       'Personalized medicine''
       'Research discovery'],'
-    roi: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.','
+    roi: 'Accelerate biomarker discovery by 10 x. ROI through research acceleration and new diagnostic development.','
     competitors: ['Manual methods', 'Basic tools']'
     marketSize: '$25 B biomarker market''
     growthRate: '240% annual growth''
@@ -1733,11 +1731,11 @@ realImplementation: true,
       'Research discovery''
     ]
     ro,
-  i: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.''
+  i: 'Accelerate biomarker discovery by 10 x. ROI through research acceleration and new diagnostic development.''
     competitor,
   s: ['Manual methods', 'Basic tools']'
     marketSiz,
-  e: '$25B biomarker market''
+  e: '$25 B biomarker market''
     growthRat,
   e: '240% annual growth''
     varian,
@@ -1796,7 +1794,7 @@ realImplementation: true,
     competitor,
   s: ['Basic analysis', 'Limited tools']'
     marketSiz,
-  e: '$60B personalized medicine market''
+  e: '$60 B personalized medicine market''
     growthRat,
   e: '260% annual growth''
     varian,
@@ -1855,7 +1853,7 @@ realImplementation: true,
     competitor,
   s: ['Manual research', 'Basic tools']'
     marketSiz,
-  e: '$20B drug repurposing market''
+  e: '$20 B drug repurposing market''
     growthRat,
   e: '200% annual growth''
     varian,
@@ -1914,7 +1912,7 @@ realImplementation: true,
     competitor,
   s: ['Basic tools', 'Manual analysis']'
     marketSiz,
-  e: '$35B bioinformatics market''
+  e: '$35 B bioinformatics market''
     growthRat,
   e: '230% annual growth''
     varian,
@@ -1991,7 +1989,7 @@ realImplementation: true,
     competitor,
   s: ['Basic optimization', 'Manual processes']'
     marketSiz,
-  e: '$40B biomanufacturing market''
+  e: '$40 B biomanufacturing market''
     growthRat,
   e: '210% annual growth''
     varian,
@@ -2046,7 +2044,6 @@ export interface BiotechAIService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  }
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -2087,7 +2084,7 @@ export const biotechAIServices: BiotechAIService[] = [;
     tagline: 'Accelerate drug development with AI-powered discovery''
     price: '$3,999''
     period: '/month',,'
-  description: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.''
+  description: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10 x while reducing costs by 90%. Discover new treatments and optimize existing drugs.''
     features: [
   // TODO: Add items
 ]
@@ -2263,7 +2260,7 @@ export interface BiotechAIService,;
   s: [,' 'Gene editing',' 'Synthetic biology',' 'Genetic optimization',' 'Agricultural improvement',' 'Medical research',' 'Industrial biotechnology'],' ro,'
   i: 'Revolutionize genetic engineering with AI precision. ROI through innovation and new product development.',' competitor,'
   s: ['Manual methods', 'Basic tools'],' market_siz,'
-  e: '$50B genetic engineering market',' growth_rat,'
+  e: '$50 B genetic engineering market',' growth_rat,'
   e: '300% annual growth',' varian,'
   t: 'biotech - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2303,7 +2300,7 @@ export interface BiotechAIService,;
   s: [,' 'Therapeutic proteins',' 'Industrial enzymes',' 'Research tools',' 'Food proteins',' 'Biomaterials',' 'Drug delivery'],' ro,'
   i: 'Design novel proteins faster and more efficiently. ROI through new product development and research acceleration.',' competitor,'
   s: ['Basic tools', 'Manual design'],' market_siz,'
-  e: '$30B protein engineering market',' growth_rat,'
+  e: '$30 B protein engineering market',' growth_rat,'
   e: '280% annual growth',' varian,'
   t: 'biotech - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2343,7 +2340,7 @@ export interface BiotechAIService,;
   s: [,' 'Trial optimization',' 'Patient recruitment',' 'Data analysis',' 'Risk management',' 'Compliance monitoring',' 'Performance tracking'],' ro,'
   i: 'Reduce trial costs by 40% and accelerate completion by 60%. ROI through efficiency gains and faster approvals.',' competitor,'
   s: ['Basic tools', 'Manual management'],' market_siz,'
-  e: '$45B clinical trial market',' growth_rat,'
+  e: '$45 B clinical trial market',' growth_rat,'
   e: '220% annual growth',' varian,'
   t: 'biotech - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2363,7 +2360,7 @@ export interface BiotechAIService,;
   e: 'Discover biomarkers with AI - powered analysis',' pric,'
   e: '$2, 499',' perio,'
   d: '/month', descriptio,'
-  n:  ,' 'Advanced AI platform that discovers and validates biomarkers for disease diagnosis, prognosis, and treatment response. Accelerate biomarker research by 10x.', feature,'
+  n:  ,' 'Advanced AI platform that discovers and validates biomarkers for disease diagnosis, prognosis, and treatment response. Accelerate biomarker research by 10 x.', feature,'
   s: [, ' 'AI biomarker discovery',' 'Multi - omics analysis',' 'Validation algorithms',' 'Clinical correlation',' 'Data visualization',' 'Collaboration tools',' 'Mobile app',' 'API for integration',' 'Research database',' 'Analytics dashboard'], popula,'
   r: true,' ico,'
   n: '🔍', ' colo,'
@@ -2381,9 +2378,9 @@ export interface BiotechAIService,;
   y: [, ' 'AI Discovery',' 'Biomarkers',' 'Machine Learning',' 'React',' 'Node && Node.js',' 'PostgreSQL',' 'Bioinformatics'], integration,'
   s: [,' 'Laboratory systems',' 'Clinical databases',' 'Research platforms',' 'Analytical tools',' 'Data sources'], use_case,'
   s: [,' 'Disease diagnosis',' 'Treatment response',' 'Prognosis prediction',' 'Drug development',' 'Personalized medicine',' 'Research discovery'],' ro,'
-  i: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.',' competitor,'
+  i: 'Accelerate biomarker discovery by 10 x. ROI through research acceleration and new diagnostic development.',' competitor,'
   s: ['Manual methods', 'Basic tools'],' market_siz,'
-  e: '$25B biomarker market',' growth_rat,'
+  e: '$25 B biomarker market',' growth_rat,'
   e: '240% annual growth',' varian,'
   t: 'biotech - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2423,7 +2420,7 @@ export interface BiotechAIService,;
   s: [,' 'Treatment optimization',' 'Drug selection',' 'Risk assessment',' 'Preventive medicine',' 'Clinical trials',' 'Healthcare research'],' ro,'
   i: 'Improve treatment outcomes and reduce healthcare costs. ROI through better patient outcomes and cost savings.',' competitor,'
   s: ['Basic analysis', 'Limited tools'],' market_siz,'
-  e: '$60B personalized medicine market',' growth_rat,'
+  e: '$60 B personalized medicine market',' growth_rat,'
   e: '260% annual growth',' varian,'
   t: 'biotech - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2463,7 +2460,7 @@ export interface BiotechAIService,;
   s: [,' 'New indications',' 'Combination therapy',' 'Rare diseases',' 'Cost reduction',' 'Faster approval',' 'Research discovery'],' ro,'
   i: 'Accelerate drug development and reduce costs by 80%. ROI through faster time - to - market and cost savings.',' competitor,'
   s: ['Manual research', 'Basic tools'],' market_siz,'
-  e: '$20B drug repurposing market',' growth_rat,'
+  e: '$20 B drug repurposing market',' growth_rat,'
   e: '200% annual growth',' varian,'
   t: 'biotech - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2503,7 +2500,7 @@ export interface BiotechAIService,;
   s: [,' 'Genomic analysis',' 'Proteomic analysis',' 'Metabolomic analysis',' 'Research discovery',' 'Data processing',' 'Statistical analysis'],' ro,'
   i: 'Accelerate biological research and data analysis. ROI through research efficiency and discovery acceleration.',' competitor,'
   s: ['Basic tools', 'Manual analysis'],' market_siz,'
-  e: '$35B bioinformatics market',' growth_rat,'
+  e: '$35 B bioinformatics market',' growth_rat,'
   e: '230% annual growth',' varian,'
   t: 'biotech - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2543,7 +2540,7 @@ export interface BiotechAIService,;
   s: [,' 'Process optimization',' 'Yield improvement',' 'Quality control',' 'Cost reduction',' 'Automation',' 'Performance monitoring'],' ro,'
   i: 'Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings.',' competitor,'
   s: ['Basic optimization', 'Manual processes'],' market_siz,'
-  e: '$40B biomanufacturing market',' growth_rat,'
+  e: '$40 B biomanufacturing market',' growth_rat,'
   e: '210% annual growth',' varian,'
   t: 'biotech - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2603,7 +2600,7 @@ export interface BiotechAIService,;
   e: 'Accelerate drug development with AI-powered discovery',' pric,'
   e: '$3,999',' perio,'
   d: '/month', descriptio,'
-  n: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10x while reducing costs by 90%. Discover new treatments and optimize existing drugs.', feature,'
+  n: 'Advanced AI-powered drug discovery platform that accelerates drug development by 10 x while reducing costs by 90%. Discover new treatments and optimize existing drugs.', feature,'
   s: [' 'AI drug discovery algorithmsGenetic sequence analysisProtein folding predictionDrug interaction modelingClinical trial optimizationRegulatory compliance toolsResearch collaboration platformAdvanced analytics dashboard' 'API for research integrationMulti-omics data analysis' ],' popula,'
   r: true, ico,
   n: '🧬',' colo,'
@@ -2611,7 +2608,7 @@ export interface BiotechAIService,;
   r: 'text-emerald-400',' lin,'
   k: 'http,'
   s://ziontechgroup.com/biotech-ai', marketPositio,'
-  n: 'Revolutionary technology with no direct competitors. Insitro ($100M+ funding) and Recursion ($2B+ funding) offer basic AI drug discovery. Our,'
+  n: 'Revolutionary technology with no direct competitors. Insitro ($100 M+ funding) and Recursion ($2 B+ funding) offer basic AI drug discovery. Our,'
   advantage: Comprehensive platform and accessible pricing.',' targetAudienc,'
   e: 'Pharmaceutical companies, Biotech startups, Research institutions, Drug discovery labs, Healthcare organizations, Academic researchers',' trialDay,'
   s: 30, setupTim,
@@ -2621,9 +2618,9 @@ export interface BiotechAIService,;
   y: ['AI Drug DiscoveryMachine LearningBioinformaticsReactNode.jsPostgreSQLCloud Computing'], integration,'
   s: ['Research databasesLaboratory systemsClinical trial platformsRegulatory databasesScientific literature'],' useCase,'
   s: ['Drug discoveryTarget identificationLead optimizationClinical trial designRegulatory complianceResearch collaboration'], ro,'
-  i: 'Accelerate drug development by 10x and reduce costs by 90%. ROI through faster time-to-market and cost savings.',' competitor,'
+  i: 'Accelerate drug development by 10 x and reduce costs by 90%. ROI through faster time-to-market and cost savings.',' competitor,'
   s: ['InsitroRecursionBasic research tools'], marketSiz,'
-  e: '$150B AI in healthcare market',' growthRat,'
+  e: '$150 B AI in healthcare market',' growthRat,'
   e: '250% annual growth', varian,'
   t: 'biotech-futuristic', contactInf,'
   o: ' mobil,'
@@ -2669,7 +2666,7 @@ export interface BiotechAIService,;
   s: [' 'Gene editing' 'Synthetic biology' 'Genetic optimization' 'Agricultural improvement' 'Medical research' 'Industrial biotechnology' ]' ro,'
   i: 'Revolutionize genetic engineering with AI precision. ROI through innovation and new product development.' competitor,''
   s: ['Manual methods', 'Basic tools']' marketSiz,'
-  e: '$50B genetic engineering market' growthRat,''
+  e: '$50 B genetic engineering market' growthRat,''
   e: '300% annual growth' varian,''
   t: 'biotech-futuristic' contactInf,'
   o: marketPositio,
@@ -2685,7 +2682,7 @@ export interface BiotechAIService,;
   s: [' 'Therapeutic proteins' 'Industrial enzymes' 'Research tools' 'Food proteins' 'Biomaterials' 'Drug delivery' ]' ro,'
   i: 'Design novel proteins faster and more efficiently. ROI through new product development and research acceleration.' competitor,''
   s: ['Basic tools', 'Manual design']' marketSiz,'
-  e: '$30B protein engineering market' growthRat,''
+  e: '$30 B protein engineering market' growthRat,''
   e: '280% annual growth' varian,''
   t: 'biotech-futuristic' contactInf,'
   o: marketPositio,
@@ -2701,7 +2698,7 @@ export interface BiotechAIService,;
   s: [' 'Trial optimization' 'Patient recruitment' 'Data analysis' 'Risk management' 'Compliance monitoring' 'Performance tracking' ]' ro,'
   i: 'Reduce trial costs by 40% and accelerate completion by 60%. ROI through efficiency gains and faster approvals.' competitor,''
   s: ['Basic tools', 'Manual management']' marketSiz,'
-  e: '$45B clinical trial market' growthRat,''
+  e: '$45 B clinical trial market' growthRat,''
   e: '220% annual growth' varian,''
   t: 'biotech-futuristic' contactInf,'
   o: marketPositio,
@@ -2715,9 +2712,9 @@ export interface BiotechAIService,;
   technology: [ integration,
   s: [' 'Laboratory systems' 'Clinical databases' 'Research platforms' 'Analytical tools' 'Data sources' ] useCase,'
   s: [' 'Disease diagnosis' 'Treatment response' 'Prognosis prediction' 'Drug development' 'Personalized medicine' 'Research discovery' ]' ro,'
-  i: 'Accelerate biomarker discovery by 10x. ROI through research acceleration and new diagnostic development.' competitor,''
+  i: 'Accelerate biomarker discovery by 10 x. ROI through research acceleration and new diagnostic development.' competitor,''
   s: ['Manual methods', 'Basic tools']' marketSiz,'
-  e: '$25B biomarker market' growthRat,''
+  e: '$25 B biomarker market' growthRat,''
   e: '240% annual growth' varian,''
   t: 'biotech-futuristic' contactInf,'
   o: marketPositio,
@@ -2733,7 +2730,7 @@ export interface BiotechAIService,;
   s: [' 'Treatment optimization' 'Drug selection' 'Risk assessment' 'Preventive medicine' 'Clinical trials' 'Healthcare research' ]' ro,'
   i: 'Improve treatment outcomes and reduce healthcare costs. ROI through better patient outcomes and cost savings.' competitor,''
   s: ['Basic analysis', 'Limited tools']' marketSiz,'
-  e: '$60B personalized medicine market' growthRat,''
+  e: '$60 B personalized medicine market' growthRat,''
   e: '260% annual growth' varian,''
   t: 'biotech-futuristic' contactInf,'
   o: marketPositio,
@@ -2749,7 +2746,7 @@ export interface BiotechAIService,;
   s: [' 'New indications' 'Combination therapy' 'Rare diseases' 'Cost reduction' 'Faster approval' 'Research discovery' ]' ro,'
   i: 'Accelerate drug development and reduce costs by 80%. ROI through faster time-to-market and cost savings.' competitor,''
   s: ['Manual research', 'Basic tools']' marketSiz,'
-  e: '$20B drug repurposing market' growthRat,''
+  e: '$20 B drug repurposing market' growthRat,''
   e: '200% annual growth' varian,''
   t: 'biotech-futuristic' contactInf,'
   o: marketPositio,
@@ -2765,7 +2762,7 @@ export interface BiotechAIService,;
   s: [' 'Genomic analysis' 'Proteomic analysis' 'Metabolomic analysis' 'Research discovery' 'Data processing' 'Statistical analysis' ]' ro,'
   i: 'Accelerate biological research and data analysis. ROI through research efficiency and discovery acceleration.' competitor,''
   s: ['Basic tools', 'Manual analysis']' marketSiz,'
-  e: '$35B bioinformatics market' growthRat,''
+  e: '$35 B bioinformatics market' growthRat,''
   e: '230% annual growth' varian,''
   t: 'biotech-futuristic' contactInf,'
   o: marketPositio,
@@ -2781,7 +2778,7 @@ export interface BiotechAIService,;
   s: [' 'Process optimization' 'Yield improvement' 'Quality control' 'Cost reduction' 'Automation' 'Performance monitoring' ]' ro,'
   i: 'Improve yield by 30% and reduce costs by 25%. ROI through efficiency gains and cost savings.' competitor,''
   s: ['Basic optimization', 'Manual processes']' marketSiz,'
-  e: '$40B biomanufacturing market' growthRat,''
+  e: '$40 B biomanufacturing market' growthRat,''
   e: '210% annual growth' varian,''
   t: 'biotech-futuristic' contactInf,'
   o: ' mobil,'

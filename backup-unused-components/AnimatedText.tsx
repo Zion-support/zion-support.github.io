@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface AnimatedTextProps {
   className?: string;
   children?: React.ReactNode;
@@ -7,7 +6,6 @@ interface AnimatedTextProps {
 
 export default function AnimatedText({ className = '', children }: AnimatedTextProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -17,15 +15,9 @@ export default function AnimatedText({ className = '', children }: AnimatedTextP
   </div>
   );
 }
-}
-
 const AnimatedText: React.FC<AnimatedTextProps> = ({
 //   text,
-  className = "",
-  delay = 0,
-  speed = 100,
-}) => {
-  const [displayedText, setDisplayedText] = useState("");
+  className = "");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -44,5 +36,4 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 };
 
 export default AnimatedText;
-=======
   );

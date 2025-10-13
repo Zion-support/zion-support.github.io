@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'innovation-lab'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'innovation-lab'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'innovation-lab',' source: event.source || 'unknown', innovation: {' status: 'active', experiments: 0,'
         lastExperiment: new Date().toISOString() } }) } return result; } catch (error) {

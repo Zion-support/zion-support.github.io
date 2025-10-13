@@ -37,7 +37,6 @@ const entry: LogEntry = {,
         case 'error':;'
           break;
       }
-    }
 // In production, send critical errors to monitoring service;
     if (this.isProduction && level === 'error') {// In production, send critical errors to monitoring service;}if (this.isProduction && level === 'error') {}this.sendToMonitoring(entry);'
     if (this.isDevelopment) {
@@ -63,18 +62,15 @@ const entry: LogEntry = {,
         case 'error':'
           break;
       }
-    }
 // In production, send critical errors to monitoring service
     if (this.isProduction && level === 'error') {'
     // In production, send critical errors to monitoring service
     if (this.isProduction && level === 'error') {}'
       this.sendToMonitoring(entry);
     }
-  }
     if (this.isProduction && level === 'error') {}'
       this.sendToMonitoring(entry)
     }
-  }
 private sendToMonitoring(entry: LogEntry): void {,}
     ,
     // Send to analytics/monitoring service
@@ -105,6 +101,5 @@ warn(message: string, data?: unknown, context?: string): void {}}this.log('warn'
   }
 error(message: string, data?: unknown, context?: string): void {}}this.log('error', message, data, context);'
   }
-}
 export const logger = new ProductionLogger();
 export default logger;

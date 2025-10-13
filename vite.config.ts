@@ -1,37 +1,19 @@
-<<<<<<< HEAD
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import { resolve } from "path";
-=======
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-
 export default defineConfig({
   plugins: [
     react({
       // Enable JSX runtime
-      jsxRuntime: "automatic",
-    }),
-  ],
-  resolve: {
-    alias: {
-      "@": resolve(__dirname, "./app"),
-      "@/components": resolve(__dirname, "./app/components"),
-<<<<<<< HEAD
-      "@/utils": resolve(__dirname, "./app/utils"),
-=======
-      "@/pages": resolve(__dirname, "./app"),
-      "@/utils": resolve(__dirname, "./app/utils"),
-      "@/types": resolve(__dirname, "./types"),
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-      "@/hooks": resolve(__dirname, "./hooks"),
-    },
-  },
-  build: {
-    target: "esnext",
-    minify: "terser",
+      jsxRuntime: "automatic"@": resolve(__dirname, "),
+      "@/components"./app/components"),
+
+      ": resolve(__dirname, "./app"@/utils": resolve(__dirname, "),
+      "@/types"./types"),
+
+      ": resolve(__dirname, "./hooks"esnext",
+    minify: ",
     cssCodeSplit: true,
     modulePreload: {
       polyfill: false,
@@ -128,15 +110,14 @@ export default defineConfig({
           if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
             return 'micro-saas-pages'
           }
-          // 5G Solutions pages
-          if (id.includes('/app/5g-') && id.includes('/page.tsx')) {
-            return '5g-pages'
+          // 5 G Solutions pages
+          if (id.includes('/app/5 g-') && id.includes('/page.tsx')) {
+            return '5 g-pages'
           }
           // Default chunk for other pages
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
           }
-<<<<<<< HEAD
           // Default chunk for other modules
           return 'vendor'
         },
@@ -145,17 +126,14 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-<<<<<<< HEAD
-    // Enable tree shaking
-    treeshake: true,
-=======
+
     sourcemap: true,
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ["react", "react-dom"],
-          router: ["react-router-dom"],
-          ui: ["framer-motion", "lucide-react"],
+          vendor: ["react"react-dom"],
+          router: ["],
+          ui: ["framer-motion"lucide-react"],
         },
       },
     },
@@ -165,75 +143,46 @@ export default defineConfig({
         drop_debugger: true,
       },
     },
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
-=======
+
         }
-      }
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
   },
   server: {
     port: 3000,
     open: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+
     host: true,
     // Enable HMR
     hmr: {
       overlay: true,
     },
     cors: true,
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
-=======
-    cors: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+
   },
   preview: {
     port: 4173,
     open: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     host: true,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-=======
+
     host: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
   },
   optimizeDeps: {
     include: [
-      "react",
-      "react-dom",
-      "react-router-dom",
-      "framer-motion",
+      ",
+      "react-dom"react-router-dom",
+      ",
       "lucide-react",
     ],
   },
   // CSS optimization
   css: {
     devSourcemap: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
+
   },
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
   },
 });
-=======
   },
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-c832

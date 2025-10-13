@@ -99,7 +99,7 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
     me, g, a: 'py-20, p, x-1, 2'} const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n(<, classNam, e = { `$2 />'
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl
         ${variantClass, e, s[varia, n, t]}
-        ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : ' }''
+        ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2 xl, hove, r:sca, l, e-[1.0, 1]'  : ' }''
               <span, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d'>'
                 {IconCompone, n, t  &&</div>
 <IconComponent, classNam, e='w-4 h-4' / >   }'
@@ -116,18 +116,16 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
                 ? 'te, x, t-3 xl, m, d:te, x, t-4, x, l''
                 : varia, n, t === 'compa, c, t''
                    ? 'te, x, t-xl, m, d:te, x, t-2, x, l''
-                  : 'te, x, t-2xl, m, d : te, x, t-3, x, l';';
+                  : 'te, x, t-2 xl, m, d : te, x, t-3, x, l';';
 export, interface, FeaturedItem {/* TODO: Fix JSX expression */}
-}
 export, interface, UnifiedPromotionalBannerProps {/* TODO: Fix JSX expression */}
-}
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   } const, buttonTheme, s = {/* TODO: Fix JSX expression */}
   } const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n (<, classNam, e = {/* TODO: Fix JSX expression */}$2 />
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl
         ${variantClass, e, s[varia, n, t]}
-        ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : ' }''
+        ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2 xl, hove, r:sca, l, e-[1.0, 1]'  : ' }''
               <span, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d'>'
                 {IconCompone, n, t  && <IconComponent, classNam, e='w-4 h-4' / >   }'
         <, classNam, e = {/* TODO: Fix JSX expression */}$2 />

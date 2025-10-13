@@ -124,12 +124,12 @@ const resetBtn = document.createElement('button')'
           // Trap focus in modals
           document.addEventListener('keydown', function(e) {'
             if (e.key === 'Tab') {;';
-const modal = document.querySelector('.modal:not([style*="display: none"])')'"
+const modal = document.querySelector('.modal:not([style*="display: none"
               if (modal) {;
 const focusableElements = modal.querySelectorAll(
   // TODO: Add parameters
 )
-                  'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])''"
+                  'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"
                 );
 const firstElement = focusableElements[0];
 const lastElement = focusableElements[focusableElements.length - 1]
@@ -159,18 +159,14 @@ const lastElement = focusableElements[focusableElements.length - 1]
                     firstElement.focus()
                     e.preventDefault()
                   }
-                }
               }
-            }
-
             // Close modals with Escape key
             if (e.key === 'Escape') {;';
-const modal = document.querySelector('.modal:not([style*="display: none"])')'"
+const modal = document.querySelector('.modal:not([style*="display: none"
               if (modal) {;
-const closeBtn = modal.querySelector('[aria-label="Close"], .close-btn')'"
+const closeBtn = modal.querySelector('[aria-label="Close"
                 if (closeBtn) closeBtn.click()
               }
-            }
           })
         }
 
@@ -189,8 +185,8 @@ const iconName = icon.getAttribute('class') || icon.tagName.toLowerCase()'
               button.setAttribute('aria-label', \`\${iconName} button\`)'
             }
           })
-          // Add role="button" to clickable divs;";
-const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"]')'"
+          // Add role="button";
+const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"
           clickableDivs.forEach(div => {
   // TODO: Add properties
 }
@@ -202,431 +198,32 @@ const clickableDivs = document.querySelectorAll('div[onclick], div[class*="curso
             }
           })
           // Add aria-expanded to collapsible elements;
-const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse"]')'"
-          collapsibles.forEach(element => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-            if (!element.getAttribute('aria-expanded')) {'
-              element.setAttribute('aria-expanded', 'false')'
-            }
-          })
-        }
-
-        // Announce page changes to screen readers
-        function addLiveRegion() {;
-const liveRegion = document.createElement('div')'
-          liveRegion.setAttribute('aria-live', 'polite')'
-          liveRegion.setAttribute('aria-atomic', 'true')'
-          liveRegion.className = 'sr-only''
-          liveRegion.style.cssText = \`
-            position: absolute
-            width: 1 px
-            height: 1 px
-            padding: 0
-            margin: -1 px
-            overflow: hidden
-            clip: rect(0, 0, 0, 0)
-            white-space: nowrap
-            border: 0
-          \`
-          document.body.appendChild(liveRegion)
-          // Announce navigation changes;
-const originalPushState = history.pushState
-          history.pushState = function() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-            originalPushState.apply(history, arguments)
-            liveRegion.textContent = 'Page navigation complete''
-          }
-        }
-
-        // Initialize accessibility features
-        document.addEventListener('DOMContentLoaded', function() {'
-          addSkipLink()
-          addHighContrastToggle()
-          addFontSizeControls()
-          enhanceFocusManagement()
-          addAriaLabels()
-          addLiveRegion()
-        })
-        // Add high contrast styles;
-const highContrastStyles = \`
-          .high-contrast {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-            filter: contrast(150%) brightness(120%)
-          }
-          .high-contrast * {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-            border-color: currentColor !important
-          }
-          .high-contrast button,
-          .high-contrast a {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-            border: 2 px solid currentColor !important
-          }
-        \`;
-const styleSheet = document.createElement('style')'
-        styleSheet.textContent = highContrastStyles
-        document.head.appendChild(styleSheet)
-      })()
-  `
-  // Insert accessibility script before closing body tag
-  indexContent = indexContent.replace('</body>', `${accessibilityScript}</body>`)'
-  fs.writeFileSync(indexPath, indexContent)
-  console.log('✅ Enhanced accessibility features')'
-}
-
-// Create accessibility statement;
-const accessibilityStatement = `# Accessibility Statement
-// 1. Generate accessibility report
-function generateAccessibilityReport() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  console.log('📊 Generating accessibility report...');';
-const accessibilityReport = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    timestamp: new Date().toISOString()
-    version: "1.0.0""
-    summary: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      totalIssues: 0
-      criticalIssues: 0
-      warnings: 0
-      passed: 0
-    },
-    checks: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-      {,
-        id: "alt-text","
-        name: "Alt text for images","
-        status: "passed","
-        description: "All images have appropriate alt text"},"
+const collapsibles = document.querySelectorAll('[class*="dropdown"collapse"]')'"1.0.0""alt-text","Alt text for images","passed","All images have appropriate alt text"},"heading-structure","Heading structure","passed","Proper heading hierarchy (h1, h2, h3, etc.)""color-contrast","Color contrast","passed","Sufficient color contrast ratios"},"keyboard-navigation","Keyboard navigation","passed","All interactive elements are keyboard accessible"},"focus-management","Focus management","passed","Proper focus management and visible focus indicators"},"aria-labels","ARIA labels","passed","Appropriate ARIA labels and roles"},"semantic-html","Semantic HTML","passed","Proper use of semantic HTML elements"},"skip-links","Skip links","passed","Skip links for keyboard navigation"}"Continue regular accessibility audits","Test with screen readers","Ensure keyboard-only navigation works","Maintain color contrast standards","Keep ARIA labels up to date""Zion Tech Group Accessibility Checklist""1.0.0""Visual Design","Color contrast meets WCAG AA standards (4.5:1 for normal text)","Text is readable at 200% zoom","No reliance on color alone to convey information","Focus indicators are visible and clear""Navigation","Skip links are available for keyboard users","All interactive elements are keyboard accessible","Tab order is logical and intuitive","Focus management works correctly""Content","All images have appropriate alt text","Headings follow proper hierarchy (h1, h2, h3, etc.)","Links have descriptive text","Form labels are properly associated""ARIA and Semantics","ARIA labels are used appropriately","Semantic HTML elements are used correctly","Roles are properly assigned","Live regions are used for dynamic content""Testing","Tested with screen readers (NVDA, JAWS, VoiceOver)","Tested with keyboard-only navigation","Tested with voice control software","Tested with high contrast mode""skip-links","Add Skip Links","Add skip links to allow keyboard users to bypass navigation","high","Add skip links at the top of each page"},"focus-management","Improve Focus Management","Ensure proper focus management for modal dialogs and dynamic content","high","Implement focus trapping and restoration"},"aria-labels","Enhance ARIA Labels","Add more descriptive ARIA labels for complex UI components","medium","Review and enhance ARIA labels throughout the application"},"color-contrast","Verify Color Contrast","Ensure all text meets WCAG AA contrast requirements","high","Test and adjust color combinations as needed"},"keyboard-navigation","Enhance Keyboard Navigation","Ensure all interactive elements are keyboard accessible","high","Add keyboard event handlers where needed"}"Accessibility Testing Guide""1.0.0""axe-core","Automated accessibility testing library","npm install axe-core --save-dev"},"WAVE","Web accessibility evaluation tool","Browser extension or online tool"},"Lighthouse","Google's automated testing tool","
+        usage: "Chrome DevTools or CLI"
       {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        id: "heading-structure","
-        name: "Heading structure","
-        status: "passed","
-        description: "Proper heading hierarchy (h1, h2, h3, etc.)""
-      },
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        id: "color-contrast","
-        name: "Color contrast","
-        status: "passed","
-        description: "Sufficient color contrast ratios"},"
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        id: "keyboard-navigation","
-        name: "Keyboard navigation","
-        status: "passed","
-        description: "All interactive elements are keyboard accessible"},"
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        id: "focus-management","
-        name: "Focus management","
-        status: "passed","
-        description: "Proper focus management and visible focus indicators"},"
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        id: "aria-labels","
-        name: "ARIA labels","
-        status: "passed","
-        description: "Appropriate ARIA labels and roles"},"
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        id: "semantic-html","
-        name: "Semantic HTML","
-        status: "passed","
-        description: "Proper use of semantic HTML elements"},"
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        id: "skip-links","
-        name: "Skip links","
-        status: "passed","
-        description: "Skip links for keyboard navigation"}"
-    ],
-    recommendations: [,
-      "Continue regular accessibility audits","
-      "Test with screen readers","
-      "Ensure keyboard-only navigation works","
-      "Maintain color contrast standards","
-      "Keep ARIA labels up to date""
-    ]
-  }
-  fs.writeFileSync(
-  // TODO: Add parameters
-)
-    path.join(__dirname, '../public/accessibility-report.json'), '
-    JSON.stringify(accessibilityReport, null, 2)
-  )
-  console.log('✅ Accessibility report generated')'
-}
-
-// 2. Generate accessibility checklist
-function generateAccessibilityChecklist() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  console.log('✅ Generating accessibility checklist...');';
-const checklist = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    title: "Zion Tech Group Accessibility Checklist""
-    version: "1.0.0""
-    lastUpdated: new Date().toISOString()
-    categories: [,
-      {,
-        name: "Visual Design","
-        items: [,
-          "Color contrast meets WCAG AA standards (4.5:1 for normal text)","
-          "Text is readable at 200% zoom","
-          "No reliance on color alone to convey information","
-          "Focus indicators are visible and clear""
-        ]
-      },
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        name: "Navigation","
-        items: [,
-          "Skip links are available for keyboard users","
-          "All interactive elements are keyboard accessible","
-          "Tab order is logical and intuitive","
-          "Focus management works correctly""
-        ]
-      },
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        name: "Content","
-        items: [,
-          "All images have appropriate alt text","
-          "Headings follow proper hierarchy (h1, h2, h3, etc.)","
-          "Links have descriptive text","
-          "Form labels are properly associated""
-        ]
-      },
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        name: "ARIA and Semantics","
-        items: [,
-          "ARIA labels are used appropriately","
-          "Semantic HTML elements are used correctly","
-          "Roles are properly assigned","
-          "Live regions are used for dynamic content""
-        ]
-      },
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        name: "Testing","
-        items: [,
-          "Tested with screen readers (NVDA, JAWS, VoiceOver)","
-          "Tested with keyboard-only navigation","
-          "Tested with voice control software","
-          "Tested with high contrast mode""
-        ]
-      }
-    ]
-  }
-  fs.writeFileSync(
-  // TODO: Add parameters
-)
-    path.join(__dirname, '../public/accessibility-checklist.json'), '
-    JSON.stringify(checklist, null, 2)
-  )
-  console.log('✅ Accessibility checklist generated')'
-}
-
-// 3. Generate accessibility improvements
-function generateAccessibilityImprovements() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  console.log('🔧 Generating accessibility improvements...');';
-const improvements = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      id: "skip-links","
-      title: "Add Skip Links","
-      description: "Add skip links to allow keyboard users to bypass navigation","
-      priority: "high","
-      implementation: "Add skip links at the top of each page"},"
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      id: "focus-management","
-      title: "Improve Focus Management","
-      description: "Ensure proper focus management for modal dialogs and dynamic content","
-      priority: "high","
-      implementation: "Implement focus trapping and restoration"},"
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      id: "aria-labels","
-      title: "Enhance ARIA Labels","
-      description: "Add more descriptive ARIA labels for complex UI components","
-      priority: "medium","
-      implementation: "Review and enhance ARIA labels throughout the application"},"
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      id: "color-contrast","
-      title: "Verify Color Contrast","
-      description: "Ensure all text meets WCAG AA contrast requirements","
-      priority: "high","
-      implementation: "Test and adjust color combinations as needed"},"
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      id: "keyboard-navigation","
-      title: "Enhance Keyboard Navigation","
-      description: "Ensure all interactive elements are keyboard accessible","
-      priority: "high","
-      implementation: "Add keyboard event handlers where needed"}"
-  ]
-  fs.writeFileSync(
-  // TODO: Add parameters
-)
-    path.join(__dirname, '../public/accessibility-improvements.json'), '
-    JSON.stringify(improvements, null, 2)
-  )
-  console.log('✅ Accessibility improvements generated')'
-}
-
-// 4. Generate accessibility testing guide
-function generateAccessibilityTestingGuide() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  console.log('🧪 Generating accessibility testing guide...');';
-const testingGuide = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    title: "Accessibility Testing Guide""
-    version: "1.0.0""
-    lastUpdated: new Date().toISOString()
-    tools: [,
-      {,
-        name: "axe-core","
-        description: "Automated accessibility testing library","
-        usage: "npm install axe-core --save-dev"},"
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        name: "WAVE","
-        description: "Web accessibility evaluation tool","
-        usage: "Browser extension or online tool"},"
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        name: "Lighthouse","
-        description: "Google's automated testing tool","'"
-        usage: "Chrome DevTools or CLI"},"
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        name: "Screen Readers","
-        description: "Test with actual screen readers","
-        usage: "NVDA (Windows), JAWS (Windows), VoiceOver (Mac)""
+        name: "Screen Readers"
+        description: "Test with actual screen readers"
+        usage: "NVDA (Windows), JAWS (Windows), VoiceOver (Mac)"
       }
     ],
     manualTests: [,
-      "Navigate the entire site using only the keyboard","
-      "Test with screen reader software","
-      "Verify color contrast ratios","
-      "Test with high contrast mode enabled","
-      "Test with zoom levels up to 200%","
-      "Verify form labels and error messages","
-      "Test focus indicators and tab order""
+      "Navigate the entire site using only the keyboard"
+      "Test with screen reader software"
+      "Verify color contrast ratios"
+      "Test with high contrast mode enabled"
+      "Test with zoom levels up to 200%"
+      "Verify form labels and error messages"
+      "Test focus indicators and tab order"
     ],
     automatedTests: [,
-      "Run axe-core tests in CI/CD pipeline","
-      "Use Lighthouse accessibility audit","
-      "Implement automated color contrast testing","
-      "Test with accessibility testing tools""
+      "Run axe-core tests in CI/CD pipeline"
+      "Use Lighthouse accessibility audit"
+      "Implement automated color contrast testing"
+      "Test with accessibility testing tools"
     ]
   }
 ## Our Commitment
@@ -658,8 +255,6 @@ async function runAccessibilityEnhancements() {
     console.error('❌ Error during accessibility enhancement:', error)'
     process.exit(1)
   }
-}
-
 ## Accessibility Features
 - Skip to main content links
 - High contrast mode toggle
@@ -699,4 +294,3 @@ If you have any questions or concerns about our accessibility efforts, please co
 fs.writeFileSync(path.join(__dirname, '../dist/accessibility-statement.md'), accessibilityStatement)'
 console.log('✅ Created accessibility statement')'
 console.log('♿ Accessibility enhancements completed!')'
-}

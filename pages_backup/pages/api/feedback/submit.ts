@@ -1,17 +1,7 @@
-  if (req.method !== "POST") return res.status(405).end();";
+  if (req.method !== "POST";
 const { responseId, rating, comment, pagePath, aiModel } = req.body |{}
-  if (!responseId |!rating |!["up", "down"].includes(rating)) {"
-    return res.status(400).json({ error: "Missing responseId or rating" })"
-  }
-  const entry = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (req && req.method !== "POST") return res && res.status(405).end();";
-const { responseId, rating, comment, pagePath, aiModel } = req && req.body || {}
-  if (!responseId || !rating || !["up", "down"].includes(rating)) {"
-    return res && res.status(400).json({ error: "Missing responseId or rating" })"
+  if (!responseId |!rating |!["up"down"].includes(rating)) {"Missing responseId or rating" })"POST") return res && res.status(405).end();"up", "].includes(rating)) {"
+    return res && res.status(400).json({ error: " })"
   }
   const entry = {
   // TODO: Add properties
@@ -20,10 +10,10 @@ const { responseId, rating, comment, pagePath, aiModel } = req && req.body || {}
 }
     id: responseId,
     rating,
-    comment: String(comment || "").slice(0, 2000),"
-    pagePath: String(pagePath || ""),"
-    aiModel: String(aiModel || ""),"
-    userAgent: req && req.headers["user-agent"] || ",""
+    comment: String(comment || ").slice(0, 2000),"
+    pagePath: String(pagePath || "),"
+    aiModel: String(aiModel || "),"
+    userAgent: req && req.headers["] || ","
     ts: Date && Date.now(),
   }
   const rows = readAll()
@@ -68,52 +58,47 @@ const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8')'
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
 function writeAll(rows: any[]) {
   // TODO: Add properties
 }
@@ -125,26 +110,24 @@ function writeAll(rows: any[]) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export default function handler(req, res) {
   // TODO: Add properties
@@ -165,26 +148,24 @@ const { responseId, rating, comment, pagePath, aiModel } = req.body || {}
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   const entry = {
   // TODO: Add properties
 }
@@ -206,15 +187,15 @@ const rows = readAll()
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
   const entry = {
   // TODO: Add properties
@@ -223,14 +204,13 @@ const rows = readAll()
 }
     id: response_id,
     rating,
-    comment: String (comment || "").slice (0, 2000),"
-    page_path: String (page_path || ""),"
-    ai_model: String (ai_model || ""),"
-    user_agent: req.headers["user - agent"] || ",""
+    comment: String (comment || ""
+    page_path: String (page_path || ""
+    ai_model: String (ai_model || ""
+    user_agent: req.headers["user - agent",""
     ts: Date.now (),
   }
   const rows = read_all ()
   rows.push (entry)
   write_all (rows)
   return res.status (200).json ({ ok: true })
-}

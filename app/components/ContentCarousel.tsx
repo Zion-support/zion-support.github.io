@@ -70,34 +70,27 @@ const slides: Slide[] = [
   return (
   // TODO: Add parameters
 )
-    <div className="relative w-full max-w-4xl mx-auto"></div>"
-<div className="relative overflow-hidden rounded-2xl"></div>"
+    <div className="relative w-full max-w-4 xl mx-auto"relative overflow-hidden rounded-2 xl"
 <$2 />
-          className="flex transition-transform duration-500 ease-in-out""
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          className="
+          style={{ transform: `translateX(-${currentSlide * 100}%)` }
         >
           {slides.map((slide) => (
   // TODO: Add parameters
 )
             </div>
-<div key={slide.id} className="w-full flex-shrink-0"></div>"
-<div className={`bg-gradient-to-br ${slide.color} p-8 rounded-2xl text-white`}></div>
-<div className="flex items-center justify-between mb-6"></div>"
-<div className="flex items-center space-x-4"></div>"
-<div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center"></div>"
-<slide.icon className="w-8 h-8" /></div>"
+<div key={slide.id} className="w-full flex-shrink-0"flex items-center justify-between mb-6"
+<div className="
+<div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center"w-8 h-8"
 <div></div>
-<h3 className="text-2xl font-bold">{slide.title}</h3>"
-<p className="text-white/90">{slide.description}</p></div>"
-</div></div>
-<div className="grid grid-cols-2 gap-4">"
+<h3 className="
+<p className="text-white/90"grid grid-cols-2 gap-4"
                   {slide.features.map((feature, index) => (
   // TODO: Add parameters
 )
                     </div>
-<div key={index} className="flex items-center space-x-2"></div>"
-<div className="w-2 h-2 bg-white rounded-full"></div>"
-<span className="text-sm">{feature}</span></div>"
+<div key={index} className="
+<div className="w-2 h-2 bg-white rounded-full"text-sm"
                   ))}
                 </div></div>
 </div>
@@ -105,41 +98,13 @@ const slides: Slide[] = [
         </div></div>
 
       {/* Navigation buttons */} <button;
-        onClick={prevSlide}className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover: bg-white/30 text-white p-2 rounded-full transition-all duration-300","
+        onClick={prevSlide}className="
       >
-<ChevronLeft className="h-6 w-6" /></button>"
-<button;
-        onClick={nextSlide}className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover: bg-white/30 text-white p-2 rounded-full transition-all duration-300","
+<ChevronLeft className="h-6 w-6"absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover: bg-white/30 text-white p-2 rounded-full transition-all duration-300"
       >
-<ChevronRight className="h-6 w-6" /></button>"
+<ChevronRight className="
 
-      {/* Dots indicator */} <div className="flex justify-center mt-6 space-x-2">{slides.map((_, index) => (</div>"
-<button;
-            key={index}onClick={() =>setCurrentSlide(index)</button>}className={`w-3 h-3 rounded-full transition-all duration-300 ${
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-              index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'}`}'
-          />
-        ))}
-      </div></div>
-  );
-});
-;
-export default ContentCarousel;
-    },
-    {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      icon: Globe,
-      title: 'Global Reach','
-      description: 'Worldwide deployment and support for international businesses''
-    }
-          {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 space-x-2">"
+      {/* Dots indicator */} <div className="flex justify-center mt-6 space-x-2"flex justify-center mt-8 space-x-2"
             {slides.map((_, index) => (
   // TODO: Add parameters
 )
@@ -175,20 +140,16 @@ export default ContentCarousel;
         </div>
 
         {/* Additional Info */}
-        <div className="mt-16 text-center">"
-<div className="grid grid-cols-2 md:grid-cols-4 gap-8">"
-<div className="text-center">"
-<div className="text-3xl font-bold text-white mb-2">500+</div>"
-<div className="text-gray-300">Happy Clients</div></div>"
-<div className="text-center">"
-<div className="text-3xl font-bold text-white mb-2">99.9%</div>"
-<div className="text-gray-300">Uptime</div></div>"
-<div className="text-center">"
-<div className="text-3xl font-bold text-white mb-2">24/7</div>"
-<div className="text-gray-300">Support</div></div>"
-<div className="text-center">"
-<div className="text-3xl font-bold text-white mb-2">50+</div>"
-<div className="text-gray-300">Countries</div></div>"
+        <div className="
+<div className="grid grid-cols-2 md:grid-cols-4 gap-8"text-center"
+<div className="
+<div className="text-gray-300"text-center"
+<div className="
+<div className="text-gray-300"text-center"
+<div className="
+<div className="text-gray-300"text-center"
+<div className="
+<div className="text-gray-300"
 </div></div>
 </div>
     </div>

@@ -31,9 +31,9 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
 }
   // TODO: Add properties
 }
-    name: "Marketplace API","
-    status: "operational","
-    description: "Product listings and search functionality","
+    name: "Marketplace API"
+    status: "operational"
+    description: "Product listings and search functionality"
     lastChecked: new Date().toISOString()
   },
   {
@@ -41,9 +41,9 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
 }
   // TODO: Add properties
 }
-    name: "Authentication Service", "
-    status: "operational","
-    description: "User login and registration","
+    name: "Authentication Service"
+    status: "operational"
+    description: "User login and registration"
     lastChecked: new Date().toISOString()
   },
   {
@@ -51,9 +51,9 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
 }
   // TODO: Add properties
 }
-    name: "Payment Processing","
-    status: "operational", "
-    description: "Checkout and payment handling","
+    name: "Payment Processing"
+    status: "operational"
+    description: "Checkout and payment handling"
     lastChecked: new Date().toISOString()
   },
   {
@@ -61,9 +61,9 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
 }
   // TODO: Add properties
 }
-    name: "Talent Directory","
-    status: "operational","
-    description: "AI talent profiles and matching","
+    name: "Talent Directory"
+    status: "operational"
+    description: "AI talent profiles and matching"
     lastChecked: new Date().toISOString()
 
   }
@@ -74,8 +74,6 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
   // TODO: Add properties
 }
     return { hasError: true }
-  }
-
   componentDidCatch(error, errorInfo) {
   // TODO: Add properties
 }
@@ -99,8 +97,6 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
 
     return this.props.children
   }
-}
-
   )
 }
 ;
@@ -114,9 +110,9 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
 }
   // TODO: Add properties
 }
-    name: "Marketplace API","
-    status: "operational","
-    description: "Product listings and search functionality","
+    name: "Marketplace API"
+    status: "operational"
+    description: "Product listings and search functionality"
     lastChecked: new Date().toISOString()
   },
   {
@@ -124,9 +120,9 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
 }
   // TODO: Add properties
 }
-    name: "Authentication Service", "
-    status: "operational","
-    description: "User login and registration","
+    name: "Authentication Service"
+    status: "operational"
+    description: "User login and registration"
     lastChecked: new Date().toISOString()
   },
   {
@@ -134,9 +130,9 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
 }
   // TODO: Add properties
 }
-    name: "Payment Processing","
-    status: "operational", "
-    description: "Checkout and payment handling","
+    name: "Payment Processing"
+    status: "operational"
+    description: "Checkout and payment handling"
     lastChecked: new Date().toISOString()
   },
   {
@@ -144,9 +140,9 @@ const FALLBACK_SERVICES: ServiceStatus[] = [
 }
   // TODO: Add properties
 }
-    name: "Talent Directory","
-    status: "operational","
-    description: "AI talent profiles and matching","
+    name: "Talent Directory"
+    status: "operational"
+    description: "AI talent profiles and matching"
     lastChecked: new Date().toISOString()
   }
 ],;
@@ -154,7 +150,7 @@ export default function Status() {;
 const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),;
 const [showFallback, setShowFallback] = useState(false),;
 const [uptime, setUptime] = useState<number | null>(null),;
-const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com","
+const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com"
 
   useEffect(() => {
   // TODO: Implement
@@ -181,133 +177,16 @@ const timeout = setTimeout(() => {
   // TODO: Add properties
 }
         setShowFallback(true);
-import { SEO } from "@/components/SEO",";";
-import { useState, useEffect } from "react",";";
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';';
-import { Button } from "@/components/ui/button",";";
-import Link from "next/link",";";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",";";
-import { logWarn } from '@/utils/productionLogger',';'
-interface ServiceStatus {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  name: string,
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance','
-  description: string,
-  lastChecked: string
-}
-;
-const FALLBACK_SERVICES: ServiceStatus[] = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-  {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    name: "Marketplace API","
-    status: "operational","
-    description: "Product listings and search functionality","
-    lastChecked: new Date().toISOString()
-  },
-  {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    name: "Authentication Service","
-    status: "operational","
-    description: "User login and registration","
-    lastChecked: new Date().toISOString()
-  },
-  {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    name: "Payment Processing","
-    status: "operational","
-    description: "Checkout and payment handling","
-    lastChecked: new Date().toISOString()
-  },
-  {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    name: "Talent Directory","
-    status: "operational","
-    description: "AI talent profiles and matching","
-    lastChecked: new Date().toISOString()
-  }
-],;
-export default function Status() {;
-const [externalStatusLoaded, setExternalStatusLoaded] = useState(false),;
-const [showFallback, setShowFallback] = useState(false),;
-const [uptime, setUptime] = useState<number | null>(null),;
-const statusUrl = process.env.NEXT_PUBLIC_STATUS_PAGE_URL || "https: //status.ziontechgroup.com","
-  useEffect(() => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-    // Try to load external status page, fallback after timeout;
-const timeout = setTimeout(() => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-      if (!externalStatusLoaded) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        setShowFallback(true)
-      }
-    }, 5000), // 5 second timeout
-    return () => clearTimeout(timeout)
-  }, [externalStatusLoaded]),
-  useEffect(() => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-    async function fetchUptime() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      try {;
-const res = await fetch('/api/health'),'
-        if (!res.ok) return,;
-const data = await res.json(),
-        if (typeof data.uptime === 'number') {'
-          setUptime(data.uptime)
-        }
-      } catch (err) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        logWarn('Failed to fetch uptime', { data: err })'
-      }
-    }
+import { SEO } from "@/components/SEO";";
+import { useState, useEffect } from ",";"@/components/ui/button",";
+import Link from "next/link";";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from ",";"Marketplace API","operational","Product listings and search functionality","Authentication Service","operational","User login and registration","Payment Processing","operational","Checkout and payment handling","Talent Directory","operational","AI talent profiles and matching","https: //status.ziontechgroup.com","h-5 w-5 text-green-500"
+      case 'degraded':'
+        return <Clock className="
+      case 'outage':'
+        return <AlertCircle className="h-5 w-5 text-red-500"h-5 w-5 text-blue-500"
+      default:
+        return <AlertCircle className="
     fetchUptime()
   }, []),;
 const getStatusIcon = (status: ServiceStatus['status']) => {'
@@ -317,35 +196,15 @@ const getStatusIcon = (status: ServiceStatus['status']) => {'
   // TODO: Add properties
 }
       case 'operational':'
-        return <CheckCircle className="h-5 w-5 text-green-500" />,"
-      case 'degraded':'
-        return <Clock className="h-5 w-5 text-yellow-500" />,"
+        return <CheckCircle className="h-5 w-5 text-green-500"h-5 w-5 text-yellow-500"
       case 'outage':'
-        return <AlertCircle className="h-5 w-5 text-red-500" />,"
+        return <AlertCircle className="
       case 'maintenance':'
-        return <Clock className="h-5 w-5 text-blue-500" />,"
-      default:
-        return <AlertCircle className="h-5 w-5 text-gray-500" />"
-    fetchUptime()
-  }, []),;
-const getStatusIcon = (status: ServiceStatus['status']) => {'
-    switch (status) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      case 'operational':'
-        return <CheckCircle className="h-5 w-5 text-green-500" />,"
-      case 'degraded':'
-        return <Clock className="h-5 w-5 text-yellow-500" />,"
-      case 'outage':'
-        return <AlertCircle className="h-5 w-5 text-red-500" />,"
-      case 'maintenance':'
-        return <Clock className="h-5 w-5 text-blue-500" />,"
-      default:
-        return <AlertCircle className="h-5 w-5 text-gray-500" />}";
-import React, { useState, useEffect } from 'react'; import { motion  , SEO  } from 'framer-motion';';';
-import { SEO  } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)';'
+        return <Clock className="h-5 w-5 text-blue-500"h-5 w-5 text-gray-500";
+import React, { useState, useEffect } from 'react';
+import { motion  , SEO  } from 'framer-motion';';';
+import { SEO  } from '../components/SEO';
+import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)';'
 }
 ;
 const formatUptime = (seconds: number) => {;
@@ -364,32 +223,23 @@ const parts: string[] = [],
 )
     <>
 <SEO
-        title="API Status""
-        description="View real-time service availability and uptime statistics.""
-        canonical="https://app.ziontechgroup.com/status""
+        title=""
+        description=""
+        canonical=""
       />
-<main className="min-h-screen bg-zion-blue pt-24 pb-20">"
-<div className="container mx-auto px-4">"
-<div className="text-center mb-8">"
-<h1 className="text-4xl font-bold text-white mb-4">System Status</h1>"
-<p className="text-zion-slate-light text-lg">"
-              Real-time monitoring of Zion platform services
-            </p>
-            {uptime !== null && (
-  // TODO: Add parameters
-)
-              <p className="text-zion-slate-light text-sm mt-2">Uptime: {formatUptime(uptime)}</p>"
+<main className="
+<div className="container mx-auto px-4"text-center mb-8"
+<h1 className="
+<p className="text-zion-slate-light text-lg"text-zion-slate-light text-sm mt-2"
             )}
           </div>
 
           {!showFallback && (
   // TODO: Add parameters
 )
-            <div className="mb-8">"
-<Card className="bg-zion-blue-dark border-zion-blue-light">"
-<CardHeader>
-<CardTitle className="text-white flex items-center gap-2">"
-<ExternalLink className="h-5 w-5" />"
+            <div className="
+<Card className="bg-zion-blue-dark border-zion-blue-light"text-white flex items-center gap-2"
+<ExternalLink className="
                     Live Status Dashboard
                   </CardTitle>
 <CardDescription>
@@ -398,17 +248,12 @@ const parts: string[] = [],
 <CardContent>
 <iframe
                     src={statusUrl}
-                    title="Zion Status Page""
-                    className="w-full border-0 rounded""
-                    height="600""
-                    onLoad={() => setExternalStatusLoaded(true)}
-                    onError={() => setShowFallback(true)}
-                  />
-<div className="mt-4 text-center">"
+                    title="Zion Status Page"
+                    className="w-full border-0 rounded"600""mt-4 text-center"
 <Button
-                      variant="outline""
+                      variant=""
                       onClick={() => setShowFallback(true)}
-                      className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10""
+                      className="
                     >
                       View Simplified Status
                     </Button></div>
@@ -420,103 +265,57 @@ const parts: string[] = [],
   // TODO: Add parameters
 )
             <>
-<div className="mb-8">"
-<Card className="bg-zion-blue-dark border-zion-blue-light">"
+<div className="mb-8"bg-zion-blue-dark border-zion-blue-light"
 <CardHeader>
-<CardTitle className="text-white">Service Status Overview</CardTitle>"
+<CardTitle className="
 <CardDescription>
                       Current status of core platform services
                     </CardDescription></CardHeader>
-<CardContent className="space-y-4">"
-                    {FALLBACK_SERVICES.map((service) => (
-  // TODO: Add parameters
-)
-                      <div key={service.name} className="flex items-center justify-between p-4 bg-zion-blue rounded-lg">"
-<div className="flex items-center gap-3">"
+<CardContent className="space-y-4"flex items-center justify-between p-4 bg-zion-blue rounded-lg"
+<div className="
                           {getStatusIcon(service.status)}
                           <div>
-<h3 className="font-medium text-white">{service.name}</h3>"
-<p className="text-sm text-zion-slate-light">{service.description}</p></div>"
+<h3 className="font-medium text-white"text-sm text-zion-slate-light"
 </div>
-<div className="text-right">"
+<div className="
 <div className={`font-medium ${getStatusColor(service.status)}`}>
                             {getStatusText(service.status)}
                           </div>
-<div className="text-xs text-zion-slate-light">"
-                            Updated: {new Date(service.lastChecked).toLocaleTimeString()}
-                          </div></$1>
-</$1>
-                    ))}
-                  </CardContent></Card>
-</div>
-<div className="text-center">"
-<p className="text-zion-slate-light mb-4">"
+<div className="text-xs text-zion-slate-light"text-center"
+<p className="
                   For detailed incident history and real-time updates:
                 </p>
 <Button
-                  variant="outline""
+                  variant="outline"
                   asChild
-                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10""
-                >
-<$2 />
-                    href={statusUrl}
-                    target="_blank" "
-                    rel="noopener noreferrer""
-                    className="flex items-center gap-2""
+                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"_blank" "noopener noreferrer""flex items-center gap-2"
                   >
-<ExternalLink className="h-4 w-4" />"
+<ExternalLink className="
                     Visit Full Status Page
                   </Link></Button>
 </div></>
           )}
 
-          <div className="mt-12 text-center">"
-<Card className="bg-zion-blue-dark border-zion-blue-light">"
+          <div className="mt-12 text-center"bg-zion-blue-dark border-zion-blue-light"
 <CardHeader>
-<CardTitle className="text-white">Need Help?</CardTitle></CardHeader>"
-<CardContent className="space-y-4">"
-<p className="text-zion-slate-light">"
+<CardTitle className="
+<CardContent className="space-y-4"text-zion-slate-light"
                   If you're experiencing issues not reflected here, please contact our support team.'
                 </p>
-<div className="flex flex-col sm: flex-row gap-4 justify-center">"
+<div className="
 <Button
-                    variant="outline""
+                    variant="outline"
                     asChild
-                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10""
+                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"/contact">Contact Support</Link></Button>"outline""text-zion-purple border-zion-purple hover:bg-zion-purple/10"
                   >
-<Link href="/contact">Contact Support</Link></Button>"
-<Button
-                    variant="outline""
-                    asChild
-                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10""
-                  >
-<a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">"
-                      @ZionTechGroup
-                    </Link></Button>
-</div></CardContent>
-</Card></div>
-</div></main>
-</>
-  )
-}
-;
-import { log_warn } from '@/utils / production_logger';'
-interface ServiceStatus {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  name: string,
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance','
-  description: string,
-  last_checked: string
-}
-        return <CheckCircle className="h - 5 w - 5 text - green - 500" />"
-        return <Clock className="h - 5 w - 5 text - blue - 500" />"
+<a href=" target="_blank"noopener noreferrer">"h - 5 w - 5 text - green - 500"
+        return <Clock className="
       default:
-        return <AlertCircle className="h - 5 w - 5 text - gray - 500" />}";
-import React, { useState, useEffect } from 'react'; import { motion  , SEO  } from 'framer-motion';';';
-import { SEO  } from '../components / SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default /**';'
+        return <AlertCircle className="h - 5 w - 5 text - gray - 500";
+import React, { useState, useEffect } from 'react';
+import { motion  , SEO  } from 'framer-motion';';';
+import { SEO  } from '../components / SEO';
+import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default /**';'
  * Status - Function description
  */
 function Status() { const [last_updated, setLastUpdated] = useState (new Date ()); const [is_refreshing, setIsRefreshing] = useState (false)
@@ -525,4 +324,4 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
 }
 
 </a>
-}}}}
+}}

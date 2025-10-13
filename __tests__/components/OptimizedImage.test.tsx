@@ -1,24 +1,13 @@
 import React from 'react';
-<<<<<<< HEAD
 import { render, screen, waitFor, act } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { render, screen } from '@testing-library/react';
-=======
 import { render, screen, waitFor, act } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
-=======
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-=======
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
 
 const defaultProps = {
   src: 'test-image.jpg',
@@ -38,17 +27,12 @@ describe('OptimizedImage Component', () => {
     expect(container.firstChild).toHaveClass('test-class');
   });
 
-<<<<<<< HEAD
-=======
   it('renders children', () => {
     render(<OptimizedImage>Test content</OptimizedImage>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
   it('shows loading skeleton initially', () => {
     render(<OptimizedImage {...defaultProps} />);
     const skeleton = screen.getByAltText('Test image').parentElement?.querySelector('.animate-pulse');
@@ -60,9 +44,6 @@ describe('OptimizedImage Component', () => {
     render(<OptimizedImage {...defaultProps} onError={onError} />);
 
     const img = screen.getByAltText('Test image');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
     await act(async () => {
       img.dispatchEvent(new Event('error'));
@@ -71,8 +52,6 @@ describe('OptimizedImage Component', () => {
     await act(async () => {
       img.dispatchEvent(new Event('error'));
     });
-    
-=======
 
     await act(async () => {
       img.dispatchEvent(new Event('error'));
@@ -88,9 +67,6 @@ describe('OptimizedImage Component', () => {
     render(<OptimizedImage {...defaultProps} onLoad={onLoad} />);
 
     const img = screen.getByAltText('Test image');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
     await act(async () => {
       img.dispatchEvent(new Event('load'));
@@ -99,8 +75,6 @@ describe('OptimizedImage Component', () => {
     await act(async () => {
       img.dispatchEvent(new Event('load'));
     });
-    
-=======
 
     await act(async () => {
       img.dispatchEvent(new Event('load'));
@@ -123,8 +97,4 @@ describe('OptimizedImage Component', () => {
     expect(img).toHaveAttribute('loading', 'lazy');
   });
 });
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
+

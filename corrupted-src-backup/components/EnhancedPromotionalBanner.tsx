@@ -1,6 +1,5 @@
 import React from 'react';'
 interface EnhancedPromotionalBannerProps {/* TODO: Fix JSX expression */}
-}
 const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,
   banner
   className = '}) => {;'';
@@ -22,7 +21,7 @@ const variantStyles = {
 <div, classNam, e='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4'>'
 <div, classNam, e='flex, item, s-center, ga, p-3, fle, x-1, mi, n-w-0'>)'
             {  bann, e, r.ic, o, n  && ()
-              <span, classNam, e='te, x, t-2xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }</s, p, a, n>)'
+              <span, classNam, e='te, x, t-2 xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }</s, p, a, n>)'
   } retu, r, n (
   // TODO: Add parameters
 )
@@ -35,7 +34,7 @@ const variantStyles = {
             {  bann, e, r.ic, o, n  && (
   // TODO: Add parameters
 )
-              <span, classNam, e='te, x, t-2xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }'
+              <span, classNam, e='te, x, t-2 xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }'
 const,
   EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -46,7 +45,7 @@ const,
 <div, classNam, e='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4'></div>'
 <div, classNam, e='flex, item, s-center, ga, p-3, fle, x-1, mi, n-w-0'></div>'
             {/* TODO: Fix JSX expression */}
-              <span, classNam, e='te, x, t-2xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }</s, p, a, n>)'
+              <span, classNam, e='te, x, t-2 xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }</s, p, a, n>)'
             )}
             <div, classNam, e = 'fl, e, x-1, mi, n-w-0'>'
 <h3, classNam, e='fo, n, t-bold, tex, t-lg'>{bann, e, r.title}'

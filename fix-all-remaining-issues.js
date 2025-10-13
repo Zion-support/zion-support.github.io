@@ -79,7 +79,7 @@ const contentWithoutImport = content.replace(line, '')'
             newLines.push(line)
 function fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
         const importMatch = trimmedLine.match(/import\s*{([^}]+)}\s*from/);
-        if (importMatch) {/* TODO: Fix JSX expression */}
+if (importMatch) {/* TODO: Fix JSX expression */}
                    !contentWithoutImport.includes(`import ${name}`) &&`
                    !contentWithoutImport.includes(`{ ${name}`) &&`
                    !contentWithoutImport.includes(`{${name}`)
@@ -87,16 +87,12 @@ function fixUnusedImports(filePath) {/* TODO: Fix JSX expression */}
           if (usedImports.length === 0) {/* TODO: Fix JSX expression */}
           } else if (usedImports.length < imports.length) {/* TODO: Fix JSX expression */}
           } else {/* TODO: Fix JSX expression */}
-          }
         } else {/* TODO: Fix JSX expression */}`
                 !contentWithoutImport.includes(`import ${name}`)) {/* TODO: Fix JSX expression */}
-            }
             // If not used, skip the line (don't add it)'
           } else {/* TODO: Fix JSX expression */}
-          }
         }
       } else {/* TODO: Fix JSX expression */}
-      }
     }
     ;
 const newContent = newLines.join('\n')'
@@ -223,7 +219,6 @@ const stat = fs.statSync(filePath)
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}'
       }
     } else {/* TODO: Fix JSX expression */}
-      }
     }
   })
   return results
@@ -262,18 +257,11 @@ let fileFixed = false;)
 }
     fileFixed = true
 files.forEach(file => {/* TODO: Fix JSX expression */}
-  }
-
   // Fix parsing errors;)
   if (fixParsingErrors(file)) {/* TODO: Fix JSX expression */}
-  }
-
   // Fix unused variables
   if (fixUnusedVariables(file)) {/* TODO: Fix JSX expression */}
-  }
-
   if (fileFixed) {/* TODO: Fix JSX expression */}
-  }
 })
 `
 console.log(`Fixed ${fixedCount} files`);`

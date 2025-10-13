@@ -94,7 +94,7 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [;
     useCases: ['Enterprise security', 'Compliance automation', 'Threat prevention', 'Access management', 'Security orchestration'],'
     roi: 'Enterprises achieve 400% ROI through reduced security incidents and automated compliance.','
     competitors: ['Traditional security tools, Limited zero-trust solutions'],'
-    marketSize: '$15.2B zero-trust security market','
+    marketSize: '$15.2 B zero-trust security market','
     growthRate: '320% annual growth','
     contactInfo: {
   // TODO: Add properties
@@ -159,7 +159,7 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [;
     useCases: ['IoT management', 'Edge AI deployment', 'Real-time processing', 'Distributed computing', 'Performance optimization'],'
     roi: 'IoT companies achieve 350% ROI through optimized edge computing and improved performance.','
     competitors: ['Traditional cloud platforms, Limited edge orchestration'],'
-    marketSize: '$8.9B edge computing market','
+    marketSize: '$8.9 B edge computing market','
     growthRate: '280% annual growth','
     contactInfo: {
   // TODO: Add properties
@@ -224,7 +224,7 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [;
     useCases: ['IT monitoring', 'Predictive maintenance', 'Incident response', 'Performance optimization', 'Capacity planning'],'
     roi: 'Enterprises achieve 500% ROI through reduced downtime and automated IT operations.','
     competitors: ['Traditional IT tools, Limited AI integration'],'
-    marketSize: '$12.8B IT operations market','
+    marketSize: '$12.8 B IT operations market','
     growthRate: '380% annual growth','
     contactInfo: {
   // TODO: Add properties
@@ -289,7 +289,7 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [;
     useCases: ['Data classification', 'Compliance automation', 'Privacy protection', 'Data lineage', 'Access control'],'
     roi: 'Organizations achieve 450% ROI through automated compliance and improved data governance.','
     competitors: ['Traditional governance tools, Limited AI integration'],'
-    marketSize: '$7.5B data governance market','
+    marketSize: '$7.5 B data governance market','
     growthRate: '290% annual growth','
     contactInfo: {
   // TODO: Add properties
@@ -354,7 +354,7 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [;
     useCases: ['Infrastructure automation', 'Self-healing systems', 'Performance optimization', 'Capacity management', 'Resource optimization'],'
     roi: 'Organizations achieve 700% ROI through autonomous infrastructure and reduced operational overhead.','
     competitors: ['Traditional infrastructure tools, No autonomous capabilities'],'
-    marketSize: '$18.3B infrastructure management market','
+    marketSize: '$18.3 B infrastructure management market','
     growthRate: '420% annual growth','
     contactInfo: {
   // TODO: Add properties

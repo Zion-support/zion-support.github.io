@@ -31,82 +31,49 @@ const defaultStructuredData = {
 }
   // TODO: Add properties
 }
-    "@context": "https://schema.org","
-    "@type": "Organization","
-    "name": "Zion Tech Group","
-    "url": "https://ziontechgroup.com","
-    "logo": "https://ziontechgroup.com/logo.png","
-    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.","
-    "address": {"
-      "@type": "PostalAddress","
-      "streetAddress": "364 E Main St STE 1008","
-      "addressLocality": "Middletown","
-      "addressRegion": "DE","
-      "postalCode": "19709","
-      "addressCountry": "US""
+    "@context"https://schema.org","@type": ","
+    ": "Zion Tech Group"
+    "url"https://ziontechgroup.com","logo": ","
+    ": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services."
+    "address"
+      "@type"PostalAddress","streetAddress": ","
+      ": "Middletown"
+      "addressRegion"DE","postalCode": ","
+      ": "US"
     },
-    "contactPoint": {"
-      "@type": "ContactPoint","
-      "telephone": "+1-302-464-0950","
-      "contactType": "customer service","
-      "email": "kleber@ziontechgroup.com""
-    },
-    "sameAs": ["
-      "https://linkedin.com/company/zion-tech-group","
-      "https://twitter.com/ziontechgroup","
-      "https://github.com/zion-tech-group""
-    ]
-  };
-
-  return (
-  // TODO: Add parameters
-)
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{title}</title>
-<meta name="description" content={description} />"
-<meta name="keywords" content={keywords} />"
-<meta name="author" content="Zion Tech Group" />"
-<meta name="robots" content="index, follow" />"
-<meta name="googlebot" content="index, follow" />"
-<meta name="bingbot" content="index, follow" />"
+    "contactPoint"
+      "@type"ContactPoint","telephone": ","
+      ": "customer service"
+      "email"kleber@ziontechgroup.com""sameAs": ["https://linkedin.com/company/zion-tech-group","https://twitter.com/ziontechgroup","https://github.com/zion-tech-group""description" content={description} />"keywords" content={keywords} />"author" content=" />"
+<meta name=" content="index, follow"
+<meta name="googlebot"index, follow" />"bingbot" content=" />"
 
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />"
+      <link rel=" href={url} />"
 
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />"
-<meta property="og:url" content={url} />"
-<meta property="og:title" content={title} />"
-<meta property="og:description" content={description} />"
-<meta property="og:image" content={image} />"
-<meta property="og:image:width" content="1200" />"
-<meta property="og:image:height" content="630" />"
-<meta property="og:image:alt" content={title} />"
-<meta property="og:site_name" content={siteName} />"
-<meta property="og:locale" content="en_US" />"
+      <meta property=" content={type} />"
+<meta property=" content={url} />"
+<meta property=" content={title} />"
+<meta property=" content={description} />"
+<meta property=" content={image} />"
+<meta property=" content="1200"
+<meta property="og:image:height"630" />"og:image:alt" content={title} />"og:site_name" content={siteName} />"og:locale" content=" />"
 
       {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />"
-<meta name="twitter:url" content={url} />"
-<meta name="twitter:title" content={title} />"
-<meta name="twitter:description" content={description} />"
-<meta name="twitter:image" content={image} />"
-<meta name="twitter:image:alt" content={title} />"
-<meta name="twitter:creator" content="@ziontechgroup" />"
-<meta name="twitter:site" content="@ziontechgroup" />"
+      <meta name=" content="summary_large_image"
+<meta name="twitter:url"
+<meta name="twitter:title"
+<meta name="twitter:description"
+<meta name="twitter:image"
+<meta name="twitter:image:alt"
+<meta name="twitter:creator"@ziontechgroup" />"twitter:site" content=" />"
 
       {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#00ffff" />"
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />"
-
-      {/* Business Information */}
-      <meta name="contact" content="kleber@ziontechgroup.com" />"
-<meta name="phone" content="+1-302-464-0950" />"
-<meta name="address" content="364 E Main St STE 1008, Middletown, DE 19709" />"
-
-      {/* Structured Data */}
-      <script type="application/ld+json">"
+      <meta name=" content="#00 ffff"
+<meta name="viewport"width=device-width, initial-scale=1.0, viewport-fit=cover" />"contact" content=" />"
+<meta name=" content="+1-302-464-0950"
+<meta name="address"364 E Main St STE 1008, Middletown, DE 19709" />"application/ld+json">"
           {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
 )

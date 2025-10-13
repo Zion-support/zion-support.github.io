@@ -68,11 +68,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "ai_chats_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "ai_chats_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -131,11 +131,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "analytics_events_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "analytics_events_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -158,7 +158,7 @@ export type Database = {
           key_prefix: string
           last_used_at: string | null
           name: string
-          scopes: Database["public"]["Enums"]["api_key_scope"][]"
+          scopes: Database["public"Enums"]["][]"
           user_id: string
         }
         Insert: {
@@ -174,23 +174,7 @@ export type Database = {
           key_prefix: string
           last_used_at?: string | null
           name: string
-          scopes?: Database["public"]["Enums"]["api_key_scope"][]"
-          user_id: string
-        }
-        Update: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          created_at?: string
-          expires_at?: string | null
-          id?: string
-          is_active?: boolean
-          key_hash?: string
-          key_prefix?: string
-          last_used_at?: string | null
-          name?: string
-          scopes?: Database["public"]["Enums"]["api_key_scope"][]"
+          scopes?: Database["]["Enums"api_key_scope"][]"public"]["]["api_key_scope"
           user_id?: string
         }
         Relationships: [
@@ -203,11 +187,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "api_keys_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "api_keys_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -275,22 +259,22 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "api_logs_api_key_id_fkey""
-            columns: ["api_key_id"]"
+            foreignKeyName: "api_logs_api_key_id_fkey"
+            columns: ["api_key_id"
             isOneToOne: false
-            referencedRelation: "api_keys""
-            referencedColumns: ["id"]"
+            referencedRelation: "api_keys"
+            referencedColumns: ["id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "api_logs_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "api_logs_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -355,11 +339,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "certifications_resume_id_fkey""
-            columns: ["resume_id"]"
+            foreignKeyName: "certifications_resume_id_fkey"
+            columns: ["resume_id"
             isOneToOne: false
-            referencedRelation: "talent_resumes""
-            referencedColumns: ["id"]"
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"
           }]
           },
         ]
@@ -430,11 +414,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "content_creator_id_fkey""
-            columns: ["creator_id"]"
+            foreignKeyName: "content_creator_id_fkey"
+            columns: ["creator_id"
             isOneToOne: false
-            referencedRelation: "profiles""
-            referencedColumns: ["id"]"
+            referencedRelation: "profiles"
+            referencedColumns: ["id"
           }]
           },
         ]
@@ -493,11 +477,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "contract_templates_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "contract_templates_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -574,11 +558,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "education_resume_id_fkey""
-            columns: ["resume_id"]"
+            foreignKeyName: "education_resume_id_fkey"
+            columns: ["resume_id"
             isOneToOne: false
-            referencedRelation: "talent_resumes""
-            referencedColumns: ["id"]"
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"
           }]
           },
         ]
@@ -657,7 +641,7 @@ export type Database = {
           reason: string
           reviewed_at: string | null
           reviewed_by: string | null
-          severity: Database["public"]["Enums"]["fraud_severity"]"
+          severity: Database["public"Enums"]["]"
           status: string
           timestamp: string
           updated_at: string | null
@@ -681,31 +665,7 @@ export type Database = {
           reason: string
           reviewed_at?: string | null
           reviewed_by?: string | null
-          severity?: Database["public"]["Enums"]["fraud_severity"]"
-          status?: string
-          timestamp?: string
-          updated_at?: string | null
-          user_email?: string | null
-          user_id?: string | null
-        }
-        Update: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          action_taken?: string | null
-          content_excerpt?: string
-          content_id?: string
-          content_type?: string
-          gpt_classification?: string | null
-          gpt_explanation?: string | null
-          id?: string
-          ip_address?: string | null
-          is_false_positive?: boolean | null
-          reason?: string
-          reviewed_at?: string | null
-          reviewed_by?: string | null
-          severity?: Database["public"]["Enums"]["fraud_severity"]"
+          severity?: Database["]["Enums"fraud_severity"]"public"]["]["fraud_severity"
           status?: string
           timestamp?: string
           updated_at?: string | null
@@ -722,22 +682,22 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "fraud_flags_reviewed_by_fkey""
-            columns: ["reviewed_by"]"
+            foreignKeyName: "fraud_flags_reviewed_by_fkey"
+            columns: ["reviewed_by"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "fraud_flags_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "fraud_flags_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -963,33 +923,33 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "job_applications_job_id_fkey""
-            columns: ["job_id"]"
+            foreignKeyName: "job_applications_job_id_fkey"
+            columns: ["job_id"
             isOneToOne: false
-            referencedRelation: "jobs""
-            referencedColumns: ["id"]"
+            referencedRelation: "jobs"
+            referencedColumns: ["id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "job_applications_resume_id_fkey""
-            columns: ["resume_id"]"
+            foreignKeyName: "job_applications_resume_id_fkey"
+            columns: ["resume_id"
             isOneToOne: false
-            referencedRelation: "talent_resumes""
-            referencedColumns: ["id"]"
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "job_applications_talent_id_fkey""
-            columns: ["talent_id"]"
+            foreignKeyName: "job_applications_talent_id_fkey"
+            columns: ["talent_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -1060,11 +1020,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "jobs_client_id_fkey""
-            columns: ["client_id"]"
+            foreignKeyName: "jobs_client_id_fkey"
+            columns: ["client_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -1126,22 +1086,22 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "milestone_activities_milestone_id_fkey""
-            columns: ["milestone_id"]"
+            foreignKeyName: "milestone_activities_milestone_id_fkey"
+            columns: ["milestone_id"
             isOneToOne: false
-            referencedRelation: "project_milestones""
-            referencedColumns: ["id"]"
+            referencedRelation: "project_milestones"
+            referencedColumns: ["id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "milestone_activities_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "milestone_activities_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -1197,11 +1157,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "notification_preferences_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "notification_preferences_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: true
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -1266,11 +1226,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "notifications_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "notifications_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -1335,11 +1295,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "partner_payouts_partner_id_fkey""
-            columns: ["partner_id"]"
+            foreignKeyName: "partner_payouts_partner_id_fkey"
+            columns: ["partner_id"
             isOneToOne: false
-            referencedRelation: "partner_profiles""
-            referencedColumns: ["id"]"
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"
           }]
           },
         ]
@@ -1419,11 +1379,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "partner_profiles_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "partner_profiles_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -1488,11 +1448,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "partner_referral_links_partner_id_fkey""
-            columns: ["partner_id"]"
+            foreignKeyName: "partner_referral_links_partner_id_fkey"
+            columns: ["partner_id"
             isOneToOne: false
-            referencedRelation: "partner_profiles""
-            referencedColumns: ["id"]"
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"
           }]
           },
         ]
@@ -1563,11 +1523,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "portfolio_projects_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "portfolio_projects_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -1656,22 +1616,22 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "profiles_id_fkey""
-            columns: ["id"]"
+            foreignKeyName: "profiles_id_fkey"
+            columns: ["id"
             isOneToOne: true
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "profiles_tenant_id_fkey""
-            columns: ["tenant_id"]"
+            foreignKeyName: "profiles_tenant_id_fkey"
+            columns: ["tenant_id"
             isOneToOne: false
-            referencedRelation: "whitelabel_tenants""
-            referencedColumns: ["id"]"
+            referencedRelation: "whitelabel_tenants"
+            referencedColumns: ["id"
           }]
           },
         ]
@@ -1742,22 +1702,22 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "project_milestones_created_by_fkey""
-            columns: ["created_by"]"
+            foreignKeyName: "project_milestones_created_by_fkey"
+            columns: ["created_by"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "project_milestones_project_id_fkey""
-            columns: ["project_id"]"
+            foreignKeyName: "project_milestones_project_id_fkey"
+            columns: ["project_id"
             isOneToOne: false
-            referencedRelation: "projects""
-            referencedColumns: ["id"]"
+            referencedRelation: "projects"
+            referencedColumns: ["id"
           }]
           },
         ]
@@ -1810,22 +1770,22 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "project_notes_project_id_fkey""
-            columns: ["project_id"]"
+            foreignKeyName: "project_notes_project_id_fkey"
+            columns: ["project_id"
             isOneToOne: false
-            referencedRelation: "projects""
-            referencedColumns: ["id"]"
+            referencedRelation: "projects"
+            referencedColumns: ["id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "project_notes_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "project_notes_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -1896,33 +1856,33 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "projects_client_id_fkey""
-            columns: ["client_id"]"
+            foreignKeyName: "projects_client_id_fkey"
+            columns: ["client_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "projects_job_id_fkey""
-            columns: ["job_id"]"
+            foreignKeyName: "projects_job_id_fkey"
+            columns: ["job_id"
             isOneToOne: false
-            referencedRelation: "jobs""
-            referencedColumns: ["id"]"
+            referencedRelation: "jobs"
+            referencedColumns: ["id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "projects_talent_id_fkey""
-            columns: ["talent_id"]"
+            foreignKeyName: "projects_talent_id_fkey"
+            columns: ["talent_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -1951,7 +1911,7 @@ export type Database = {
           requester_id: string | null
           requester_name: string
           start_date: string | null
-          status: Database["public"]["Enums"]["quote_request_status"]"
+          status: Database["public"Enums"]["]"
           talent_id: string | null
           timeline: string
           updated_at: string
@@ -1976,32 +1936,7 @@ export type Database = {
           requester_id?: string | null
           requester_name: string
           start_date?: string | null
-          status?: Database["public"]["Enums"]["quote_request_status"]"
-          talent_id?: string | null
-          timeline: string
-          updated_at?: string
-          viewed_at?: string | null
-        }
-        Update: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          budget_display?: string | null
-          budget_max?: number | null
-          budget_min?: number | null
-          created_at?: string
-          id?: string
-          is_archived?: boolean
-          project_description?: string | null
-          project_name?: string
-          project_summary?: string
-          replied_at?: string | null
-          requester_email?: string
-          requester_id?: string | null
-          requester_name?: string
-          start_date?: string | null
-          status?: Database["public"]["Enums"]["quote_request_status"]"
+          status?: Database["]["Enums"quote_request_status"]"public"]["]["quote_request_status"
           talent_id?: string | null
           timeline?: string
           updated_at?: string
@@ -2017,22 +1952,22 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "quote_requests_requester_id_fkey""
-            columns: ["requester_id"]"
+            foreignKeyName: "quote_requests_requester_id_fkey"
+            columns: ["requester_id"
             isOneToOne: false
-            referencedRelation: "profiles""
-            referencedColumns: ["id"]"
+            referencedRelation: "profiles"
+            referencedColumns: ["id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "quote_requests_talent_id_fkey""
-            columns: ["talent_id"]"
+            foreignKeyName: "quote_requests_talent_id_fkey"
+            columns: ["talent_id"
             isOneToOne: false
-            referencedRelation: "profiles""
-            referencedColumns: ["id"]"
+            referencedRelation: "profiles"
+            referencedColumns: ["id"
           }]
           },
         ]
@@ -2085,11 +2020,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "referral_codes_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "referral_codes_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: true
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -2151,33 +2086,33 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "referral_rewards_partner_id_fkey""
-            columns: ["partner_id"]"
+            foreignKeyName: "referral_rewards_partner_id_fkey"
+            columns: ["partner_id"
             isOneToOne: false
-            referencedRelation: "partner_profiles""
-            referencedColumns: ["id"]"
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "referral_rewards_referral_id_fkey""
-            columns: ["referral_id"]"
+            foreignKeyName: "referral_rewards_referral_id_fkey"
+            columns: ["referral_id"
             isOneToOne: false
-            referencedRelation: "referrals""
-            referencedColumns: ["id"]"
+            referencedRelation: "referrals"
+            referencedColumns: ["id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "referral_rewards_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "referral_rewards_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -2205,7 +2140,7 @@ export type Database = {
           referrer_user_type: string | null
           reward_issued: boolean
           reward_issued_at: string | null
-          status: Database["public"]["Enums"]["referral_status"]"
+          status: Database["public"Enums"]["]"
         }
         Insert: {
   // TODO: Add properties
@@ -2225,27 +2160,7 @@ export type Database = {
           referrer_user_type?: string | null
           reward_issued?: boolean
           reward_issued_at?: string | null
-          status?: Database["public"]["Enums"]["referral_status"]"
-        }
-        Update: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          completed_at?: string | null
-          created_at?: string
-          email?: string | null
-          id?: string
-          ip_address?: string | null
-          partner_id?: string | null
-          referral_code?: string
-          referred_id?: string | null
-          referred_user_type?: string | null
-          referrer_id?: string
-          referrer_user_type?: string | null
-          reward_issued?: boolean
-          reward_issued_at?: string | null
-          status?: Database["public"]["Enums"]["referral_status"]"
+          status?: Database["]["Enums"referral_status"]"public"]["]["referral_status"
         }
         Relationships: [
   // TODO: Add items
@@ -2257,44 +2172,44 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "referrals_partner_id_fkey""
-            columns: ["partner_id"]"
+            foreignKeyName: "referrals_partner_id_fkey"
+            columns: ["partner_id"
             isOneToOne: false
-            referencedRelation: "partner_profiles""
-            referencedColumns: ["id"]"
+            referencedRelation: "partner_profiles"
+            referencedColumns: ["id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "referrals_referral_code_fkey""
-            columns: ["referral_code"]"
+            foreignKeyName: "referrals_referral_code_fkey"
+            columns: ["referral_code"
             isOneToOne: false
-            referencedRelation: "referral_codes""
-            referencedColumns: ["code"]"
+            referencedRelation: "referral_codes"
+            referencedColumns: ["code"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "referrals_referred_id_fkey""
-            columns: ["referred_id"]"
+            foreignKeyName: "referrals_referred_id_fkey"
+            columns: ["referred_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "referrals_referrer_id_fkey""
-            columns: ["referrer_id"]"
+            foreignKeyName: "referrals_referrer_id_fkey"
+            columns: ["referrer_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -2356,11 +2271,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "reminder_logs_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "reminder_logs_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -2419,11 +2334,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "resume_skills_resume_id_fkey""
-            columns: ["resume_id"]"
+            foreignKeyName: "resume_skills_resume_id_fkey"
+            columns: ["resume_id"
             isOneToOne: false
-            referencedRelation: "talent_resumes""
-            referencedColumns: ["id"]"
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"
           }]
           },
         ]
@@ -2482,22 +2397,22 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "review_reports_reporter_id_fkey""
-            columns: ["reporter_id"]"
+            foreignKeyName: "review_reports_reporter_id_fkey"
+            columns: ["reporter_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "review_reports_review_id_fkey""
-            columns: ["review_id"]"
+            foreignKeyName: "review_reports_review_id_fkey"
+            columns: ["review_id"
             isOneToOne: false
-            referencedRelation: "reviews""
-            referencedColumns: ["id"]"
+            referencedRelation: "reviews"
+            referencedColumns: ["id"
           }]
           },
         ]
@@ -2583,33 +2498,33 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "reviews_project_id_fkey""
-            columns: ["project_id"]"
+            foreignKeyName: "reviews_project_id_fkey"
+            columns: ["project_id"
             isOneToOne: false
-            referencedRelation: "projects""
-            referencedColumns: ["id"]"
+            referencedRelation: "projects"
+            referencedColumns: ["id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "reviews_reviewee_id_fkey""
-            columns: ["reviewee_id"]"
+            foreignKeyName: "reviews_reviewee_id_fkey"
+            columns: ["reviewee_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "reviews_reviewer_id_fkey""
-            columns: ["reviewer_id"]"
+            foreignKeyName: "reviews_reviewer_id_fkey"
+            columns: ["reviewer_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -2726,11 +2641,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "subscriptions_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "subscriptions_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -2792,11 +2707,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "talent_resumes_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "talent_resumes_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -2846,22 +2761,22 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "tenant_administrators_tenant_id_fkey""
-            columns: ["tenant_id"]"
+            foreignKeyName: "tenant_administrators_tenant_id_fkey"
+            columns: ["tenant_id"
             isOneToOne: false
-            referencedRelation: "whitelabel_tenants""
-            referencedColumns: ["id"]"
+            referencedRelation: "whitelabel_tenants"
+            referencedColumns: ["id"
           },
           {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-            foreignKeyName: "tenant_administrators_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "tenant_administrators_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -2974,11 +2889,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "user_onboarding_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "user_onboarding_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -3031,11 +2946,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "user_privacy_settings_id_fkey""
-            columns: ["id"]"
+            foreignKeyName: "user_privacy_settings_id_fkey"
+            columns: ["id"
             isOneToOne: true
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -3103,11 +3018,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "webhook_configs_user_id_fkey""
-            columns: ["user_id"]"
+            foreignKeyName: "webhook_configs_user_id_fkey"
+            columns: ["user_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -3187,11 +3102,11 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "whitelabel_tenants_account_manager_id_fkey""
-            columns: ["account_manager_id"]"
+            foreignKeyName: "whitelabel_tenants_account_manager_id_fkey"
+            columns: ["account_manager_id"
             isOneToOne: false
-            referencedRelation: "user_metrics""
-            referencedColumns: ["user_id"]"
+            referencedRelation: "user_metrics"
+            referencedColumns: ["user_id"
           }]
           },
         ]
@@ -3265,16 +3180,15 @@ export type Database = {
 }
   // TODO: Add properties
 }
-            foreignKeyName: "work_history_resume_id_fkey""
-            columns: ["resume_id"]"
+            foreignKeyName: "work_history_resume_id_fkey"
+            columns: ["resume_id"
             isOneToOne: false
-            referencedRelation: "talent_resumes""
-            referencedColumns: ["id"]"
+            referencedRelation: "talent_resumes"
+            referencedColumns: ["id"
           }]
           },
         ]
       }
-    }
     Views: {
   // TODO: Add properties
 }
@@ -3354,7 +3268,6 @@ export type Database = {
         }
         Relationships: []
       }
-    }
     Functions: {
   // TODO: Add properties
 }
@@ -3532,41 +3445,26 @@ export type Database = {
         Args: { provided_key: string; stored_hash: string }
         Returns: boolean
       }
-    }
     Enums: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
       api_key_scope:
-        | "jobs:read""
-        | "jobs:write""
-        | "talent:read""
-        | "quotes:write""
-        | "webhooks:manage""
-      fraud_severity: "safe" | "suspicious" | "dangerous""
+        | "jobs:read"
+        | "jobs:write"
+        | "talent:read"
+        | "quotes:write"
+        | "webhooks:manage"
+      fraud_severity: "safe"suspicious" | ""
       quote_request_status:
-        | "new""
-        | "in_review""
-        | "accepted""
-        | "responded""
-        | "closed""
-        | "archived""
-      referral_status: "pending" | "completed" | "expired""
-    }
-    CompositeTypes: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      [_ in never]: never
-    }
-  }
-}
-type DefaultSchema = Database[Extract<keyof Database, "public">];";
-export type Tables<;
-  DefaultSchemaTableNameOrOptions extends
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])"
+        | ""
+        | ""
+        | ""
+        | ""
+        | ""
+        | ""
+      referral_status: " | "completed"expired""public">];"Tables"] & DefaultSchema["])"
     | { schema: keyof Database },
   TableName extends DefaultSchemaTableNameOrOptions extends {
   // TODO: Add properties
@@ -3575,20 +3473,17 @@ export type Tables<;
 }
     schema: keyof Database
   }
-    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &"
-        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])"
-    : never = never,
-> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &"
-      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {"
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["]]["Tables"
+        Database[DefaultSchemaTableNameOrOptions["schema"Views"])"schema"]]["] &"
+      Database[DefaultSchemaTableNameOrOptions["]]["Views"
       Row: infer R
     }
     ? R
     : never
-  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &"
-        DefaultSchema["Views"])"
-    ? (DefaultSchema["Tables"] &"
-        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {"
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"
+        DefaultSchema["Views"
+    ? (DefaultSchema["Tables"
+        DefaultSchema["Views"
         Row: infer R
       }
       ? R
@@ -3596,7 +3491,7 @@ export type Tables<;
     : never;
 export type TablesInsert<;
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema["Tables"]"
+    | keyof DefaultSchema["Tables"
     | { schema: keyof Database },
   TableName extends DefaultSchemaTableNameOrOptions extends {
   // TODO: Add properties
@@ -3605,16 +3500,13 @@ export type TablesInsert<;
 }
     schema: keyof Database
   }
-    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]"
-    : never = never,
-> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"Tables"]"schema"]]["][TableName] extends {"
       Insert: infer I
     }
     ? I
     : never
-  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]"
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {"
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["]"
+    ? DefaultSchema["][DefaultSchemaTableNameOrOptions] extends {"
         Insert: infer I
       }
       ? I
@@ -3622,7 +3514,7 @@ export type TablesInsert<;
     : never;
 export type TablesUpdate<;
   DefaultSchemaTableNameOrOptions extends
-    | keyof DefaultSchema["Tables"]"
+    | keyof DefaultSchema["]"
     | { schema: keyof Database },
   TableName extends DefaultSchemaTableNameOrOptions extends {
   // TODO: Add properties
@@ -3631,42 +3523,19 @@ export type TablesUpdate<;
 }
     schema: keyof Database
   }
-    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]"
+    ? keyof Database[DefaultSchemaTableNameOrOptions["]]["Tables"
     : never = never,
 > = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {"
-      Update: infer U
-    }
-    ? U
-    : never
-  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]"
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {"
-        Update: infer U
-      }
-      ? U
-      : never
-    : never;
-export type Enums<;
-  DefaultSchemaEnumNameOrOptions extends
-    | keyof DefaultSchema["Enums"]"
-    | { schema: keyof Database },
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    schema: keyof Database
-  }
-    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]"
+  ? Database[DefaultSchemaTableNameOrOptions["schema"Tables"][TableName] extends {"Tables"]"Tables"][DefaultSchemaTableNameOrOptions] extends {"Enums"]"schema"]]["]"
     : never = never,
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]"
-  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]"
-    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]"
+  ? Database[DefaultSchemaEnumNameOrOptions["]]["Enums"
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"
+    ? DefaultSchema["Enums"
     : never;
 export type CompositeTypes<;
   PublicCompositeTypeNameOrOptions extends
-    | keyof DefaultSchema["CompositeTypes"]"
+    | keyof DefaultSchema["CompositeTypes"
     | { schema: keyof Database },
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
   // TODO: Add properties
@@ -3675,12 +3544,9 @@ export type CompositeTypes<;
 }
     schema: keyof Database
   }
-    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]"
-    : never = never,
-> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
-  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]"
-  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]"
-    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]"
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"CompositeTypes"]"schema"]]["][CompositeTypeName]"
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["]"
+    ? DefaultSchema["][PublicCompositeTypeNameOrOptions]"
     : never;
 export const Constants = {
   // TODO: Add properties
@@ -3702,29 +3568,17 @@ export const Constants = {
 ]
   // TODO: Add items
 ]
-        "jobs:read","
-        "jobs:write","
-        "talent:read","
-        "quotes:write","
-        "webhooks:manage"],"
-        "webhooks:manage","
+        ","
+        ","
+        ","
+        ","
+        "],"
+        ","
       ],
-      fraud_severity: ["safe", "suspicious", "dangerous"],"
-      quote_request_status: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-        "new","
-        "in_review","
-        "accepted","
-        "responded","
-        "closed","
-        "archived"],"
-      referral_status: ["pending", "completed", "expired"]}}} as const"
-        "archived","
+      fraud_severity: [", "suspicious"dangerous"],"new","in_review","accepted","responded","closed","archived"],"pending", ", "expired"
+        "archived"
       ],
-      referral_status: ["pending", "completed", "expired"],"
+      referral_status: ["pending"completed", "],"
     },
   },
 } as const

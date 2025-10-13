@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 interface EnhancedPerformanceOptimizerProps {
   className?: string;
   children?: React.ReactNode;
@@ -17,9 +15,7 @@ export default function EnhancedPerformanceOptimizer({ className = '', children 
   </div>
   );
 }
-}
-import { useEffect, useCallback } from "react";
-"use client";
+import { useEffect, useCallback } from "react"use client";
 
 // Performance metrics interface for future use
 // interface PerformanceMetrics {
@@ -33,14 +29,10 @@ import { useEffect, useCallback } from "react";
 export default function EnhancedPerformanceOptimizer() {
   const preloadCriticalResources = useCallback(() => {
     const criticalResources = [
-      { href: "/fonts/inter-var.woff2", as: "font", type: "font/woff2", crossorigin: "anonymous" },
-      { href: "/images/hero-bg.webp", as: "image" },
-      { href: "/images/logo.webp", as: "image" },
-    ];
-
-    criticalResources.forEach((resource) => {
-      const link = document.createElement("link");
-      link.rel = "preload";
+      { href: ", as: "font"font/woff2", crossorigin: " },
+      { href: "/images/hero-bg.webp"image" },
+      { href: ", as: "image"link");
+      link.rel = ";
       link.href = resource.href;
       link.as = resource.as;
       if (resource.type) link.type = resource.type;
@@ -48,11 +40,7 @@ export default function EnhancedPerformanceOptimizer() {
       document.head.appendChild(link);
     });
 
-    logger.info("Critical resources preloaded");
-  }, []);
-
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll("img[data-src]");
+    logger.info("Critical resources preloaded"img[data-src]");
 
     if (images.length === 0) return;
 
@@ -64,14 +52,8 @@ export default function EnhancedPerformanceOptimizer() {
             const src = img.dataset.src;
             if (src) {
               img.src = src;
-              img.classList.remove("lazy");
-              img.classList.add("loaded");
-              imageObserver.unobserve(img);
-            }
-          }
-        });
-      },
-      { rootMargin: "50px" }
+              img.classList.remove(");
+              img.classList.add("loaded"50 px" }
     );
 
     images.forEach((img) => imageObserver.observe(img));
@@ -81,21 +63,15 @@ export default function EnhancedPerformanceOptimizer() {
   const optimizeFonts = useCallback(() => {
     // Preload critical fonts
     const fontPreloads = [
-      { href: "/fonts/inter-var.woff2", type: "font/woff2" },
-    ];
-
-    fontPreloads.forEach((font) => {
-      const link = document.createElement("link");
-      link.rel = "preload";
+      { href: ", type: "font/woff2"link");
+      link.rel = ";
       link.href = font.href;
-      link.as = "font";
-      link.type = font.type;
-      link.crossOrigin = "anonymous";
+      link.as = "font"anonymous";
       document.head.appendChild(link);
     });
 
     // Add font-display: swap to existing font faces
-    const style = document.createElement("style");
+    const style = document.createElement(");
     style.textContent = `
       @font-face {
         font-family: 'Inter';
@@ -107,45 +83,26 @@ export default function EnhancedPerformanceOptimizer() {
   }, []);
 
   const deferNonCriticalScripts = useCallback(() => {
-    const scripts = document.querySelectorAll("script[data-defer]");
-    scripts.forEach((script) => {
-      const newScript = document.createElement("script");
-      newScript.src = script.getAttribute("src") || "";
-      newScript.async = true;
-      newScript.defer = true;
-      script.parentNode?.replaceChild(newScript, script);
-    });
-  }, []);
-
-  const setupPerformanceMonitoring = useCallback(() => {
-    // Monitor Core Web Vitals
-    import("web-vitals").then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
+    const scripts = document.querySelectorAll("script[data-defer]"script");
+      newScript.src = script.getAttribute(") || ""web-vitals").then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
       onCLS((metric: any) => {
-        logger.info("CLS:", metric.value);
+        logger.info(", metric.value);
       });
       onINP((metric: any) => {
-        logger.info("INP:", metric.value);
-      });
-      onFCP((metric: any) => {
-        logger.info("FCP:", metric.value);
+        logger.info("INP:"FCP:", metric.value);
       });
       onLCP((metric: any) => {
-        logger.info("LCP:", metric.value);
+        logger.info(", metric.value);
       });
       onTTFB((metric: any) => {
-        logger.info("TTFB:", metric.value);
-      });
-    }).catch((error) => {
-      logger.error("Failed to load web-vitals:", error);
+        logger.info("TTFB:"Failed to load web-vitals:", error);
     });
 
     // Monitor resource loading
-    if ("PerformanceObserver" in window) {
+    if (" in window) {
       const observer = new PerformanceObserver((list) => {
         list.getEntries().forEach((entry) => {
-          if (entry.entryType === "navigation") {
-            const navEntry = entry as PerformanceNavigationTiming;
-            logger.info("Navigation timing:", {
+          if (entry.entryType === "navigation"Navigation timing:", {
 //               domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
               loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
 //               totalTime: navEntry.loadEventEnd - navEntry.fetchStart,
@@ -153,38 +110,21 @@ export default function EnhancedPerformanceOptimizer() {
           }
         });
       });
-      observer.observe({ entryTypes: ["navigation", "resource"] });
-    }
-  }, []);
-
-  const optimizeBundleLoading = useCallback(() => {
-    // Preload next likely pages
-    const nextPages = ["/about", "/services", "/contact"];
-    nextPages.forEach((page) => {
-      const link = document.createElement("link");
-      link.rel = "prefetch";
+      observer.observe({ entryTypes: [", "resource"/about", ", "/contact"link");
+      link.rel = ";
       link.href = page;
       document.head.appendChild(link);
     });
   }, []);
 
   const setupServiceWorker = useCallback(() => {
-    if ("serviceWorker" in navigator) {
-//       navigator.serviceWorker
-        .register("/sw.js")
+    if ("serviceWorker"/sw.js")
         .then((registration) => {
-          logger.info("Service Worker registered:", registration);
+          logger.info(", registration);
         })
         .catch((error) => {
-          logger.error("Service Worker registration failed:", error);
-        });
-    }
-  }, []);
-
-  useEffect(() => {
-    // Run optimizations after DOM is ready
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", () => {
+          logger.error("Service Worker registration failed:"loading") {
+      document.addEventListener(", () => {
         preloadCriticalResources();
         optimizeImages();
         optimizeFonts();
@@ -218,6 +158,3 @@ export default function EnhancedPerformanceOptimizer() {
   ]);
 
   return null;
-}
-=======
-

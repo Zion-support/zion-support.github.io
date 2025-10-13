@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { getServerSupabase } from "../../../utils/supabase/server";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server";";
 export default async function handler(
   // TODO: Add parameters
 )
@@ -7,7 +7,7 @@ export default async function handler(
   res: NextApiResponse
 ) {;
 const usingPlaceholder =
-      "placeholder-key""
+      ""
   try {
   // TODO: Add properties
 }
@@ -34,7 +34,7 @@ const usingPlaceholder =
 }
   // TODO: Add properties
 }
-      if (row && row.event !== "profile_completed") continue;";
+      if (row && row.event !== ") continue;";
 const key = row && row.partner_code as string
       map && map.set(key, (map && map.get(key) || 0) + 1)
     }
@@ -49,16 +49,14 @@ const key = row && row.partner_code as string
 }
     return res && res.status(500).json({ error: e?.message })
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
@@ -102,43 +100,41 @@ const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || ').includes('p
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 ;
 const supabase = getServerSupabase();
 const startOfMonth = new Date()
     startOfMonth.setDate(1)
     startOfMonth.setHours(0, 0, 0, 0);
 const { data, error } = await supabase
-      .from("referral_events")"
-      .select("partner_code, event, created_at")"
-      .gte("created_at", startOfMonth.toISOString())"
-    if (error) return res.status(500).json({ error: "Database error" });";
+      .from(")"
+      .select(")"
+      .gte(", startOfMonth.toISOString())"
+    if (error) return res.status(500).json({ error: " });";
 const map = new Map<string, number>()
     for (const row of data |[]) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      if (row.event !== "profile_completed") continue;";
+      if (row.event !== ") continue;";
 const key = row.partner_code as string
       map.set(key, (map.get(key) |0) + 1)
     }
@@ -159,26 +155,24 @@ const { data, error } = await supabase
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 ;
 const leaders = Array.from(map.entries())
       .map(([code, profile_completions]) => ({ code, profile_completions }))
@@ -196,15 +190,14 @@ const leaders = Array.from(map.entries())
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 )

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // accessibilityUtils utility functions
 
 export interface AccessibilityUtilsConfig {
@@ -20,7 +18,6 @@ export class AccessibilityUtils {
   public isEnabled(): boolean {
     return this.config.enabled;
   }
-=======
 export const announceToScreenReader = (message: string): void => {,;
 const announcement = document.createElement('div'),'
   announcement.setAttribute('aria-live', 'polite')'
@@ -45,11 +42,11 @@ export const focusElement = (element: HTMLElement | null): void => {,
 }
   // TODO: Add properties
 }
-    element.focus()}}
+    element.focus()}
 }
 export const trapFocus = (container: HTMLElement): (() => void) => {,;
 const focusableElements = container.querySelectorAll(,)
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';'"
+    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"
   );
 const firstElement = focusableElements[0] as HTMLElement;
   const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -72,12 +69,10 @@ const handleTabKey = (;
 }
   return($3;)
   )}e.preventDefault();}
-        }
       } else {if (document.activeElement === lastElement) {}
           firstElement.focus();
-          e.preventDefault()}}
+          e.preventDefault()}
       }
-    }
   }
 container.addEventListener('keydown', handleTabKey);'
 return () => {container.removeEventListener('keydown', handleTabKey)}}'
@@ -91,7 +86,7 @@ export const enhanceKeyboardNavigation = (element: HTMLElement): void => {,
 element.addEventListener('keydown', (e) => {'
     if (e.key === 'Enter' || e.key === ' ') {'
       e.preventDefault();
-      element.click()}}
+      element.click()}
   })
 }
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {,;';
@@ -117,22 +112,22 @@ return contrast >= 4.5; // WCAG AA standard
 }
 export const addFocusIndicators = (): void => {const style = document.createElement('style');'
   style.textContent = `;
-    *:focus {outline: 2px solid #3b82f6,}
-      outline-offset: 2px,}}
+    *:focus {outline: 2 px solid #3 b82 f6,}
+      outline-offset: 2 px,}
 .sr-only {position: absolute,}
-      width: 1px,
-      height: 1px,
+      width: 1 px,
+      height: 1 px,
       padding: 0,
-      margin: -1px,
+      margin: -1 px,
       overflow: hidden,
       clip: rect(0, 0, 0, 0)
       white-space: nowrap,
-      border: 0,}}
+      border: 0,}
 .focus\\:not-sr-only: focus {,}
     position: static,
       width: auto,
       height: auto,
-      padding: 0.5rem 1rem,
+      padding: 0.5 rem 1 rem,
       margin: 0,
       overflow: visible,
       clip: auto,;
@@ -146,17 +141,14 @@ export const initializeAccessibility = (): void => {addFocusIndicators();
 }
     mainContent.id = 'main-content';';
 const skipLink = createSkipLink('main-content');'
-    document.body.insertBefore(skipLink, document.body.firstChild)}}
+    document.body.insertBefore(skipLink, document.body.firstChild)}
 // Enhance all interactive elements;
   const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');'
   interactiveElements.forEach((element) => {enhanceKeyboardNavigation(element as HTMLElement)}})
 }
 
-<<<<<<< HEAD
 export const accessibilityUtils = new AccessibilityUtils();
 export default accessibilityUtils;
-=======
 
-=======
 // Export default instance
 export const accessibilityUtils = new AccessibilityUtils();

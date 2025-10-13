@@ -135,7 +135,7 @@ const existingPages = [
   '/ai-cloud-infrastructure','
   '/ai-enterprise-solutions','
   '/ai-project-manager','
-  '/ai-3d-generation','
+  '/ai-3 d-generation','
   '/about''
 ]
 // Find missing pages;

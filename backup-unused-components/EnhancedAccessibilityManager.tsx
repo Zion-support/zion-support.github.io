@@ -1,6 +1,4 @@
 import React from 'react';
-
-<<<<<<< HEAD
 interface EnhancedAccessibilityManagerProps {
   className?: string;
   children?: React.ReactNode;
@@ -92,83 +90,14 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       // Navigation commands
       if (command.includes('go to') || command.includes('navigate to')) {
         const target = command.replace(/go to|navigate to/g, '').trim();
-        const element = document.querySelector(`[aria-label*="${target}"], [title*="${target}"]`) as HTMLElement;
+        const element = document.querySelector(`[aria-label*="${target}"${target}"]`) as HTMLElement;
         if (element) {
           element.focus();
           element.click();
         }
       } else if (command.includes('click') || command.includes('press')) {
         const target = command.replace(/click|press/g, '').trim();
-        const element = document.querySelector(`[aria-label*="${target}"], [title*="${target}"]`) as HTMLElement;
-        if (element) {
-          element.click();
-        }
-      } else if (command.includes('scroll')) {
-        if (command.includes('up')) {
-          window.scrollBy(0, -100);
-        } else if (command.includes('down')) {
-          window.scrollBy(0, 100);
-        }
-      }
-    };
-
-    recognition.onerror = (event: any) => {
-      // Speech recognition error handled silently
-    };
-
-    recognition.start();
-    (window as any).voiceRecognition = recognition;
-  }, []);
-
-  const stopVoiceNavigation = useCallback(() => {
-    if ((window as any).voiceRecognition) {
-      (window as any).voiceRecognition.stop();
-      (window as any).voiceRecognition = null;
-    }
-  }, []);
-
-  // Voice navigation toggle
-  const toggleVoiceNavigation = useCallback(() => {
-    if (!enableVoiceNavigation) return;
-
-    setIsVoiceNavigationActive(prev => {
-      const newValue = !prev;
-      if (newValue) {
-        startVoiceNavigation();
-      } else {
-        stopVoiceNavigation();
-      }
-      return newValue;
-    });
-  }, [enableVoiceNavigation, startVoiceNavigation, stopVoiceNavigation]);
-
-  // Keyboard navigation enhancements
-  const setupKeyboardNavigation = useCallback(() => {
-    if (!enableKeyboardNavigation) return;
-
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
-      if (event.key === 'Tab' && event.shiftKey && event.altKey) {
-        event.preventDefault();
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {
-          mainContent.focus();
-          mainContent.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-
-      // Escape key to close modals/dropdowns
-      if (event.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
-        }
-      }
-
-      // Arrow key navigation for custom components
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const focusableElements = document.querySelectorAll(
-          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        const element = document.querySelector(`[aria-label*="], [title*="${target}"-1"])'
         );
         const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element);
 
@@ -180,7 +109,6 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
           (focusableElements[nextIndex] as HTMLElement)?.focus();
           event.preventDefault();
         }
-      }
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -251,7 +179,7 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     // Focus trap for modals
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="])'
       );
       const firstElement = focusableElements[0] as HTMLElement;
       const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -268,7 +196,6 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
               firstElement.focus();
               e.preventDefault();
             }
-          }
         }
       };
 
@@ -345,33 +272,15 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
 
   // Accessibility controls component
   const AccessibilityControls = () => (
-    <div className="fixed bottom-4 right-4 z-50 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg border border-gray-200">
-      <h3 className="text-sm font-semibold text-gray-700 mb-3">Accessibility</h3>
+    <div className="fixed bottom-4 right-4 z-50 bg-white/90 backdrop-blur-sm rounded-lg p-4 shadow-lg border border-gray-200">Accessibility</h3>
       <div className="space-y-2">
-        {enableHighContrast && (
-//           <button
-            onClick={toggleHighContrast}
-            className={`w-full px-3 py-1 text-xs rounded ${
-//               isHighContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
-            }`}
-            aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
-//           >
-//             High Contrast
-</button>
-        )}
-
-        <div className="flex items-center space-x-2">
 //           <button
             onClick={() => adjustFontSize(-2)}
             className="px-2 py-1 text-xs bg-gray-200 text-gray-700 rounded"
-            aria-label="Decrease font size"
 //           >
 //             A-
 </button>
-          <span className="text-xs text-gray-600">{fontSize}px</span>
-//           <button
-            onClick={() => adjustFontSize(2)}
-            className="px-2 py-1 text-xs bg-gray-200 text-gray-700 rounded"
+          <span className="text-xs text-gray-600"
             aria-label="Increase font size"
 //           >
 //             A+
@@ -403,6 +312,4 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
         )}
 </div>
 </div>
-=======
   );
-}

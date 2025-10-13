@@ -94,7 +94,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     useCases: ['Drug discovery, Financial modeling, Cryptography, Machine learning, Optimization problems'],'
     roi: 'Research teams report 1000% ROI through accelerated research and breakthrough discoveries.','
     competitors: ['IBM Quantum, Amazon Braket, Google Quantum, Azure Quantum'],'
-    marketSize: '$1.8B quantum computing market','
+    marketSize: '$1.8 B quantum computing market','
     growthRate: '45% annual growth','
     variant: 'quantum-computing-enterprise','
     contactInfo: {
@@ -158,7 +158,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     useCases: ['DeFi applications, NFT marketplaces, Supply chain tracking, Digital identity, Cross-border payments'],'
     roi: 'Blockchain projects report 600% ROI through reduced development time and improved security.','
     competitors: ['Alchemy, Infura, QuickNode, AWS Blockchain'],'
-    marketSize: '$19.9B blockchain market','
+    marketSize: '$19.9 B blockchain market','
     growthRate: '87% annual growth','
     variant: 'blockchain-enterprise','
     contactInfo: {
@@ -211,7 +211,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     color: 'from-blue-600 to-cyan-600','
     textColor: 'text-blue-400','
     link: 'https://ziontechgroup.com/edge-computing-orchestration','
-    marketPosition: 'Competes with AWS Greengrass ($0.16/hour), Azure IoT Edge ($0.40/hour), Google Cloud IoT ($0.0044/100KB). Our advantage: Intelligent orchestration reduces latency by 80% and improves resource utilization by 60%.','
+    marketPosition: 'Competes with AWS Greengrass ($0.16/hour), Azure IoT Edge ($0.40/hour), Google Cloud IoT ($0.0044/100 KB). Our advantage: Intelligent orchestration reduces latency by 80% and improves resource utilization by 60%.','
     targetAudience: 'IoT companies, Edge computing providers, Telecommunications, Manufacturing, Smart cities','
     trialDays: 14,
     setupTime: '6-8 hours','
@@ -222,7 +222,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     useCases: ['IoT data processing, Real-time analytics, Edge AI, Content delivery, Industrial automation'],'
     roi: 'Edge computing projects report 400% ROI through reduced latency and improved performance.','
     competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT, EdgeX Foundry'],'
-    marketSize: '$11.2B edge computing market','
+    marketSize: '$11.2 B edge computing market','
     growthRate: '37% annual growth','
     variant: 'edge-computing-enterprise','
     contactInfo: {
@@ -259,7 +259,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
 ]
   // TODO: Add items
 ]
-      '3D world building tools','
+      '3 D world building tools','
       'Avatar creation and customization','
       'Real-time collaboration tools','
       'VR/AR integration','
@@ -286,7 +286,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     useCases: ['Virtual events, Gaming platforms, Virtual real estate, Educational experiences, Social networking'],'
     roi: 'Metaverse projects report 800% ROI through new revenue streams and user engagement.','
     competitors: ['Unity, Unreal Engine, Roblox Studio, Decentraland'],'
-    marketSize: '$47.5B metaverse market','
+    marketSize: '$47.5 B metaverse market','
     growthRate: '42% annual growth','
     variant: 'metaverse-enterprise','
     contactInfo: {
@@ -350,7 +350,7 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     useCases: ['Earth observation, Communications, Navigation, Weather monitoring, Environmental tracking'],'
     roi: 'Space technology projects report 1200% ROI through new data services and infrastructure optimization.','
     competitors: ['Maxar, Planet, Airbus, SpaceX'],'
-    marketSize: '$469B space economy','
+    marketSize: '$469 B space economy','
     growthRate: '8% annual growth','
     variant: 'space-technology-enterprise','
     contactInfo: {

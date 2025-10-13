@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // formValidation utility functions
 
 export interface FormValidationConfig {
@@ -14,11 +12,8 @@ export class FormValidation {
       enabled: true,
       ...config
     };
-<<<<<<< HEAD
-=======
   validate: (value: T) => boolean;
   message: string;}
-}
 export interface ValidationResult {
   // TODO: Add properties
 }
@@ -28,19 +23,14 @@ export interface ValidationResult {
 export interface ValidationRule<T = unknown> {}
   validate: (value: T) => boolean
   message: string;}
-}
 export interface ValidationResult {}
   valid: boolean
   errors: string[];}
-}
 export interface FieldValidation {}
   [fieldName: string]: ValidationRule[];}
 export interface ValidationRule<T = unknown> {/* TODO: Fix JSX expression */}
-}
 export interface ValidationResult {/* TODO: Fix JSX expression */}
-}
 export interface FieldValidation {/* TODO: Fix JSX expression */}
-}
 /**
  * Common validation rules
  */;
@@ -258,15 +248,7 @@ const hasLowerCase = /[a-z]/.test(value)): ValidationRule<string> => ({}
       const hasUpperCase = /[A-Z]/.test(value);
 const hasLowerCase = /[a-z]/.test(value);
 const hasNumber = /[0-9]/.test(value);}
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|</string>"
-<React.Fragment>{
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    ]/.test(value)
-  strongPasswor,;
-const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{;"
+      const hasSpecialChar = /[!@#$%^&*(),.?":{}|</string>":{}|<>{;"
     ]/.test(value);
       const hasMinLength = value.length >= 8;
       return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar && hasMinLength;},
@@ -394,7 +376,6 @@ const errors: string[] = [],
   for (const rule of rules) {,
     if (!rule.validate(value)) {,
       errors.push(rule.message);}
-    }
   }
     valid: errors.length === 0;
 export function validateField<T>(value: T, rules: ValidationRule<T>[]): ValidationResult {}
@@ -402,24 +383,19 @@ export function validateField<T>(value: T, rules: ValidationRule<T>[]): Validati
   for (const rule of rules) {}
     if (!rule.validate(value)) {}
       errors.push(rule.message);}
-    }
   }
   return {}
     valid: errors.length === 0,
     errors}
-  }
 export function validateField<T>(valu,
   e: T, rule)
   s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */}
-    }
   }
   return {/* TODO: Fix JSX expression */}
   };
     }
-  }
   return {}}valid: errors.length === 0,
     errors}
-  }
 export function validateField</T>;
 <T>(valu,
   e: T, rule)
@@ -427,9 +403,9 @@ export function validateField</T>;
 <T>[]): ValidationResult {/* TODO: Fix JSX expression */}
 export function validateField<T>(valu,
   e: T, rule);
-  s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */,}}}
+  s: ValidationRule<T>[]): ValidationResult {/* TODO: Fix JSX expression */,}}
   }
-  return {/* TODO: Fix JSX expression */,}}}
+  return {/* TODO: Fix JSX expression */,}}
 }
 /**
  * Validate entire form
@@ -449,7 +425,6 @@ export function validateForm<T extends Record<string, unknown>>(formDat,
 ): Record<keyof T, ValidationResult> {/* TODO: Fix JSX expression */}
   const results = {} as Record<keyof T, ValidationResult>;
   for (const fieldName in validationSchema) {/* TODO: Fix JSX expression */}
-  }
   return results;
 }
 /**
@@ -464,7 +439,6 @@ export function isFormValid<T extends Record<string, unknown>>(
 export function isFormValid<T extends Record<string, unknown>>(validationResult,
   s: Record<keyof T, ValidationResult></keyof>)
 ): boolean {/* TODO: Fix JSX expression */}
-}
 /**
  * Get all form errors
  */;
@@ -483,7 +457,6 @@ export function getFormErrors<T extends Record<string, unknown>>(validationResul
 ): Record<keyof T, string[]> {/* TODO: Fix JSX expression */}
   const errors = {} as Record<keyof T, string[]>;
   for (const fieldName in validationResults) {/* TODO: Fix JSX expression */}
-    }
   }
   return errors;
 }
@@ -516,7 +489,7 @@ export function validateForm<T extends Record<string, unknown>>(formDat,
 ): boolean {}}return Object.values(validationResults).every(result => result.valid);}
 export function isFormValid<T extends Record<string, unknown>>(validationResult,;
   s: Record<keyof T, ValidationResult></keyof>);
-): boolean {/* TODO: Fix JSX expression */,}}}
+): boolean {/* TODO: Fix JSX expression */,}}
 /**;
  * Get all form errors;
  */;
@@ -549,7 +522,7 @@ const later = useCallback((...args) => {,
 export function getFormErrors<T extends Record<string, unknown>>(validationResult,
   s: Record<keyof T, ValidationResult></keyof>);
 ): Record<keyof T, string[]> {/* TODO: Fix JSX expression */,}const errors = {}as Record<keyof>
-  for (const fieldName in validationResults) {/* TODO: Fix JSX expression */,}}
+  for (const fieldName in validationResults) {/* TODO: Fix JSX expression */,}
   }
   return errors
 }
@@ -566,7 +539,7 @@ export function sanitizeInput(input: string): string {}
     .replace(/[<>{]/g, ') // Remove potential HTML tags;}''
     .replace(/[^\w\s@.-]/gi, '); // Keep only alphanumeric, spaces, @, ., -}'';
 export function sanitizeInput(inpu);
-  t: string): string {/* TODO: Fix JSX expression */,}}}
+  t: string): string {/* TODO: Fix JSX expression */,}}
 /**;
  * Debounce function for form validation;
  */}</React.Fragment>;
@@ -594,16 +567,12 @@ const later = useCallback((...args) => {,
     const later = useCallback((...args) => {}
       timeout = null
       func(...args);}
-    }
     if (timeout) {}
       clearTimeout(timeout);}
       func(...args);}
-    }
     if (timeout) {}clearTimeout(timeout);}
-    }
     timeout = setTimeout(later, wait)
   }
-}
 export function debounce</T>;
 <T extends (...arg)
   s: Parameters<T>) => ReturnType</T>
@@ -612,14 +581,13 @@ export function debounce</T>;
   wai,;
   t: number;),
 ): (...arg),
-  s: Parameters<T>) => void {/* TODO: Fix JSX expression */,}}}
-    if (timeout) {/* TODO: Fix JSX expression */,}}
+  s: Parameters<T>) => void {/* TODO: Fix JSX expression */,}}
+    if (timeout) {/* TODO: Fix JSX expression */,}
     timeout = setTimeout(later, wait);
     }
     timeout = setTimeout(later, wait)
   }
-}
-"`</T>;";
+";
 export function debounce<T extends (...arg)
   s: Parameters<T>) => ReturnType<T>>(fun,
   c: T,
@@ -629,26 +597,17 @@ export function debounce<T extends (...arg)
   s: Parameters<T>) => void {/* TODO: Fix JSX expression */}
     };
     if (timeout) {/* TODO: Fix JSX expression */}
-    }
     timeout = setTimeout(later, wait);
   };
-=======
   }
 
   // Utility methods can be added here
   public isEnabled(): boolean {
     return this.config.enabled;
   }
-}
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 export const formValidation = new FormValidation();
 export default formValidation;
-=======
 "`"
-=======
 
-=======
 // Export default instance
 export const formValidation = new FormValidation();

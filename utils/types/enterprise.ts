@@ -52,10 +52,9 @@ export interface CompanyPlan {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export interface CompanyPlan {
   // TODO: Add properties
@@ -71,16 +70,14 @@ export interface CompanyPlan {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export interface CompanyMember {
   // TODO: Add properties
 }
   // TODO: Add properties
-}
 }
 export interface CompanyMember {
   // TODO: Add properties
@@ -96,16 +93,14 @@ export interface CompanyMember {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export interface CompanyActivityEvent {
   // TODO: Add properties
 }
   // TODO: Add properties
-}
 }
 export interface CompanyActivityEvent {
   // TODO: Add properties
@@ -123,10 +118,9 @@ export interface CompanyActivityEvent {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 ;
 export interface InvoiceRecord {
   // TODO: Add properties
@@ -163,10 +157,9 @@ export interface CompanyRecord {id: string
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 export interface CompanyPlan {
   // TODO: Add properties
 }
@@ -245,8 +238,6 @@ export interface CompanyRecord {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-}

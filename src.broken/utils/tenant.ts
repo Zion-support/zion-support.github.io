@@ -114,4 +114,3 @@ const updated: Tenant = { ...t, apiKey: crypto.randomBytes(24).toString('hex'), 
     return { tenants }
   }, FALLBACK)
   return result
-}

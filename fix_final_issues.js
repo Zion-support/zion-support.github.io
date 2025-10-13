@@ -1,5 +1,4 @@
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -7,4 +6,3 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
   );
-}

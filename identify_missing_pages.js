@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -17,7 +16,7 @@ const navigationLinks = [
 //   '/ai-content-generator',
 //   '/ai-chatbot-enterprise',
 //   '/ai-analytics-dashboard',
-//   '/ai-3d-generation',
+//   '/ai-3 d-generation',
 //   '/ai-drug-discovery-pro',
 //   '/ai-cybersecurity-suite',
 //   '/ai-crm-assistant',
@@ -45,13 +44,13 @@ const navigationLinks = [
 //   '/ai-customer-support',
 //   '/ai-invoice-generator',
 //   '/ai-task-manager',
-//   '/5g-implementation',
-//   '/5g-network-infrastructure',
-//   '/5g-edge-computing',
-//   '/5g-iot-solutions',
-//   '/5g-mobile-applications',
-//   '/5g-private-networks',
-//   '/5g-data-analytics',
+//   '/5 g-implementation',
+//   '/5 g-network-infrastructure',
+//   '/5 g-edge-computing',
+//   '/5 g-iot-solutions',
+//   '/5 g-mobile-applications',
+//   '/5 g-private-networks',
+//   '/5 g-data-analytics',
 //   '/about',
 //   '/contact',
   '/pricing';
@@ -61,7 +60,7 @@ const footerLinks = [
 //   '/ai-content-generator',
 //   '/ai-chatbot-enterprise',
 //   '/ai-analytics-dashboard',
-//   '/ai-3d-generation',
+//   '/ai-3 d-generation',
 //   '/ai-drug-discovery-pro',
 //   '/ai-cybersecurity-suite',
 //   '/ai-crm-assistant',
@@ -148,7 +147,7 @@ const appRoutes = [
 //   '/task-manager-pro',
 //   '/training',
 //   '/services-advertising',
-  '/5g-implementation';
+  '/5 g-implementation';
 ];
 // Combine all links and remove duplicates;
 const allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes])];
@@ -166,7 +165,6 @@ const allLinks = [...new Set([...navigationLinks, ...footerLinks, ...appRoutes])
 // Write results to files;
 fs.writeFileSync('/workspace/missing_pages.txt', missingPages.join('\n'));
 fs.writeFileSync('/workspace/broken_links.txt', brokenLinks.join('\n'));
-=======
 import fs from 'fs';'
 // Read existing pages;
 const existingPages = fs.readFileSync('existing_pages.txt', 'utf8').split('\n').filter(page => page.trim() && page !== 'page.tsx')'
@@ -219,4 +217,3 @@ console.log(`Total existing pages: ${existingPages.length}`)
 console.log(`Total navigation links: ${navigationPages.length}`)
 // Write missing pages to file
 fs.writeFileSync('missing_pages.txt', missingPages.join('\n'))
-=======

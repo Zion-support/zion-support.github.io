@@ -3,87 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function aiDrugDiscoveryPro() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Ai Drug Discovery Pro - Zion Tech Group</title>
-        <meta name="description" content="Ai Drug Discovery Pro solutions by Zion Tech Group" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">Ai Drug Discovery Pro</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8"></h1>
-        <div className="prose prose-invert max-w-none">
-          <p>This page is under construction. Please check back later for  solutions.</p>
-  </div>
-  </div>
-  </div>
-  );
-}
-}
-<div>Content</div>
-  );
-<div>Component content</div>
-  );
-}
-  return (
-<div>Content</div>
-  );
-//         <title>AI Drug Discovery Pro - Zion Tech Group</title>
-      {/* Hero Section */}
-              AI Drug Discovery Pro;
-              Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform.
-//               Accelerate drug development, reduce costs, and improve success rates with cutting-edge technology.
-                Get Started;
-                Request Demo;
-      {/* Features Section */}
-              Advanced Drug Discovery Features;
-//               Cutting-edge AI technology to accelerate pharmaceutical research and development.
- (
-                <div className = "mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-            ))}
-      {/* Applications Section */};
-                Research Applications;
-                Our AI drug discovery platform supports research across multiple therapeutic areas;
- (
-                  <span className = "text-sm">{application}</span>
-              ))}
-      {/* CTA Section */}
-//               Ready to Accelerate Drug Discovery?
-              Transform your pharmaceutical research with our AI-powered drug discovery platform.;
-                Contact Our Experts;
-                View All AI Services;
-</section>    <div></div>
-//         <title>AI Drug Discovery Pro - Zion Tech Group</title>
-      {/* Hero Section */}
-              AI Drug Discovery Pro;
-              Revolutionize pharmaceutical research with our advanced AI-powered drug discovery platform.
-//               Accelerate drug development, reduce costs, and improve success rates with cutting-edge technology.
-                Get Started;
-                Request Demo;
-      {/* Features Section */}
-              Advanced Drug Discovery Features;
-//               Cutting-edge AI technology to accelerate pharmaceutical research and development.
- (
-                <div className = "mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-            ))}
-      {/* Applications Section */};
-                Research Applications;
-                Our AI drug discovery platform supports research across multiple therapeutic areas;
- (
-                  <span className = "text-sm">{application}</span>
+    <div className="min-h-screen bg-gray-900 text-white" content="Ai Drug Discovery Pro solutions by Zion Tech Group"container mx-auto px-4 py-20"text-center"text-4 xl font-bold mb-8"text-xl text-gray-300 mb-8"container mx-auto px-4 py-16"text-4 xl font-bold mb-8"prose prose-invert max-w-none"mb-4"text-xl font-semibold text-white mb-4"text-gray-300"text-sm"mb-4"text-xl font-semibold text-white mb-4"text-gray-300"text-sm">{application}</span>
               ))}
       {/* CTA Section */}
 //               Ready to Accelerate Drug Discovery?
@@ -91,4 +11,3 @@ export default function aiDrugDiscoveryPro() {
                 Contact Our Experts;
                 View All AI Services;
   );
-=======

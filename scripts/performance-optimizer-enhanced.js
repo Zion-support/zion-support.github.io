@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
@@ -67,7 +66,6 @@ const optimizations = {
       content = content.replace(/>\s+</g, '><'); // Remove spaces between tags
       
       fs.writeFileSync(htmlFile, content);
-=======
 #!/usr/bin/env node;
 import fs from 'fs';';
 import path from 'path';';
@@ -100,13 +98,13 @@ const optimizations = {
 
   // Minify inline styles
   minifyInlineStyles: (content) => {,
-    return content.replace(/style="([^"]*)"/g, (match, styles) => {;";
+    return content.replace(/style="([^"/g, (match, styles) => {;";
 const minified = styles
         .replace(/\s+/g, ' ')'
         .replace(/;\s*/g, ';')'
         .replace(/:\s*/g, ':')'
         .trim()
-      return `style="${minified}"`"
+      return `style="`"
     })
   },
 
@@ -142,7 +140,6 @@ const minified = styles
     console.log('✅ HTML optimized');
   },
 
-<<<<<<< HEAD
   // Add performance headers
   addPerformanceHeaders: () => {
     console.log('🔧 Adding performance headers...');
@@ -223,30 +220,24 @@ Crawl-delay: 1
     console.log('📱 Generating manifest.json...');
     
     const manifest = {
-      "name": "Zion Tech Group",
-      "short_name": "Zion Tech",
-      "description": "Advanced AI and IT Solutions for Modern Businesses",
-      "start_url": "/",
-      "display": "standalone",
-      "background_color": "#0f172a",
-      "theme_color": "#8b5cf6",
-      "icons": [
+      ": "Zion Tech Group"short_name": ",
+      "description"Advanced AI and IT Solutions for Modern Businesses",
+      ": "/"display": ",
+      "background_color"#0 f172 a",
+      ": "#8 b5 cf6"icons": [
         {
-          "src": "/icon-192.png",
-          "sizes": "192x192",
-          "type": "image/png"
+          ": "/icon-192.png"sizes": ",
+          "type"image/png"
         },
         {
-          "src": "/icon-512.png",
-          "sizes": "512x512",
-          "type": "image/png"
+          ": "/icon-512.png"sizes": ",
+          "type"image/png"
         }
       ]
     };
     
     fs.writeFileSync('dist/manifest.json', JSON.stringify(manifest, null, 2));
     console.log('✅ manifest.json generated');
-=======
   // Add performance hints
   addPerformanceHints: (content) => {
   // TODO: Add properties
@@ -256,16 +247,14 @@ Crawl-delay: 1
     // Add preload hints for critical resources,
     if (content.includes('<head>')) {;';
 const preloadHints = `
-    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>,"
-    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>,"
-    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">`"
+    <link rel=" href="/assets/vendor-ConSr3 PY.js"script" crossorigin>,"preload" href=" as="script"
+    <link rel="preload"/assets/index-C1 QbpZNs.css" as=">`"
       content = content.replace('<head>', `<head>${preloadHints}`)'
     }
     return content
   }
 };
 
-<<<<<<< HEAD
 // Run all optimizations
 async function runOptimizations() {
   console.log('🚀 Starting enhanced performance optimization...\n');
@@ -291,10 +280,7 @@ async function runOptimizations() {
     console.error('❌ Optimization failed:', error);
     process.exit(1);
   }
-}
-
 runOptimizations();
-=======
 // Files to process;
 const filePatterns = [
   // TODO: Add items
@@ -371,8 +357,6 @@ const before = newContent
 }
     console.error(`❌ Error processing ${filePath}:`, error.message)
   }
-}
-
 async function main() {
   // TODO: Add properties
 }

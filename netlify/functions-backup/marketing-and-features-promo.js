@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'marketing-and-features-promo'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'marketing-and-features-promo'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'marketing-and-features-promo',' source: event.source || 'unknown', promotion: {' status: 'active', marketing: 0, features: 0,'
         lastPromo: new Date().toISOString() } }) } return result; } catch (error) {

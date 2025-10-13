@@ -47,8 +47,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
       icon: (
   // TODO: Add parameters
 )
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />"
+        <svg className="w-6 h-6" stroke="currentColor"0 0 24 24">"round" strokeLinejoin=" strokeWidth={2} d="M3 8 l7.89 4.26 a2 2 0 002.22 0 L21 8 M5 19 h14 a2 2 0 002-2 V7 a2 2 0 00-2-2 H5 a2 2 0 00-2 2 v10 a2 2 0 002 2 z"
       ),
       title: 'Email Us','
       details: 'info@ziontechgroup.com','
@@ -62,8 +61,7 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
       icon: (
   // TODO: Add parameters
 )
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />"
+        <svg className="w-6 h-6" stroke="currentColor"0 0 24 24">"round" strokeLinejoin=" strokeWidth={2} d="M3 5 a2 2 0 012-2 h3.28 a1 1 0 01.948.684 l1.498 4.493 a1 1 0 01-.502 1.21 l-2.257 1.13 a11.042 11.042 0 005.516 5.516 l1.13-2.257 a1 1 0 011.21-.502 l4.493 1.498 a1 1 0 01.684.949 V19 a2 2 0 01-2 2 h-1 C9.716 21 3 14.284 3 6 V5 z"
       ),
       title: 'Call Us','
       details: '+1 (555) 123-4567','
@@ -77,9 +75,8 @@ const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElemen
       icon: (
   // TODO: Add parameters
 )
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />"
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />"
+        <svg className="w-6 h-6" stroke="currentColor"0 0 24 24">"round" strokeLinejoin=" strokeWidth={2} d="M17.657 16.657 L13.414 20.9 a1.998 1.998 0 01-2.827 0 l-4.244-4.243 a8 8 0 1111.314 0 z"
+<path strokeLinecap="round"round" strokeWidth={2} d=" />"
       ),
       title: 'Visit Us','
       details: '123 Tech Street, Innovation City, IC 12345','
@@ -103,138 +100,94 @@ const services = [
   return (
   // TODO: Add parameters
 )
-    <section id="contact" className="py-20 relative">"
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
+    <section id=" className="py-20 relative"max-w-7 xl mx-auto px-4 sm:px-6 lg:px-8"
         {/* Section Header */}
-        <div className="text-center mb-16">"
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
-<span className="holographic-text">Get In Touch"
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">"
+        <div className="
+<h2 className="text-4 xl md:text-5 xl font-bold text-white mb-6"holographic-text"
+          <p className="
             Ready to transform your business with cutting-edge AI and IT solutions?
             Let's discuss your project and create something amazing together.'
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">"
-          {/* Contact Information */}
-          <div className="space-y-8">"
-<div className="cyber-card-advanced p-8">"
-<h3 className="text-2xl font-bold text-white mb-6">"
-                Let's Start a Conversation'
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">"
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16"space-y-8"
+<div className="
+<h3 className="text-2 xl font-bold text-white mb-6"text-gray-300 text-lg leading-relaxed mb-8"
                 Whether you have a specific project in mind or just want to explore
                 how AI and IT solutions can benefit your business, we're here to help. '
                 Our team of experts is ready to provide personalized consultation.
               {/* Contact Info Cards */}
-              <div className="space-y-6">"
+              <div className="
                 {contactInfo.map((info, index) => (
   // TODO: Add parameters
 )
                   <$2 />
                     key={index}
                     href={info.link}
-                    className="flex items-center p-4 cyber-card hover:scale-105 transition-all duration-300 group">"
-<div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mr-4 text-black group-hover:scale-110 transition-transform duration-300">"
+                    className="flex items-center p-4 cyber-card hover:scale-105 transition-all duration-300 group"w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center mr-4 text-black group-hover:scale-110 transition-transform duration-300"
                       {info.icon}
                     <div>
-<h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors duration-300">"
+<h4 className="
                         {info.title}
-                      <p className="text-gray-400">{info.details}"
-                ))}
-            {/* Why Choose Us */}
-            <div className="cyber-card-advanced p-8">"
-<h3 className="text-xl font-bold text-white mb-6">"
+                      <p className="text-gray-400"cyber-card-advanced p-8"
+<h3 className="
                 Why Work With Us?
-              <ul className="space-y-4">"
-<li className="flex items-start">"
-<svg className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />"
-<span className="text-gray-300">Free initial consultation and project assessment"
-                <li className="flex items-start">"
-<svg className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />"
-<span className="text-gray-300">Transparent pricing with no hidden costs"
-                <li className="flex items-start">"
-<svg className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />"
-<span className="text-gray-300">Agile development methodology"
-                <li className="flex items-start">"
-<svg className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
-<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />"
-<span className="text-gray-300">Ongoing support and maintenance"
+              <ul className="space-y-4"flex items-start"
+<svg className="none" stroke=" viewBox="0 0 24 24"
+<path strokeLinecap="round"round" strokeWidth={2} d=" />"
+<span className="
+                <li className="flex items-start"w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0"none"currentColor" viewBox=">"
+<path strokeLinecap=" strokeLinejoin="round"M5 13 l4 4 L19 7" />"text-gray-300"
+                <li className="
+<svg className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" stroke="currentColor"0 0 24 24">"round" strokeLinejoin=" strokeWidth={2} d="M5 13 l4 4 L19 7"
+<span className="text-gray-300"flex items-start"
+<svg className="none" stroke=" viewBox="0 0 24 24"
+<path strokeLinecap="round"round" strokeWidth={2} d=" />"
+<span className="
           {/* Contact Form */}
-          <div className="cyber-card-advanced p-8">"
-<h3 className="text-2xl font-bold text-white mb-6">"
+          <div className="cyber-card-advanced p-8"text-2 xl font-bold text-white mb-6"
               Send Us a Message
-            <form onSubmit={handleSubmit} className="space-y-6">"
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6">"
-<div>
-<label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">"
+            <form onSubmit={handleSubmit} className="
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6"name" className="
                     Full Name *
                   <input
-                    type="text""
-                    id="name""
-                    name="name""
+                    type="text"
+                    id="name"
+                    name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300""
-                    placeholder="Your full name""
-                  />
-<div>
-<label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"Your full name""email" className="
                     Email Address *
                   <input
-                    type="email""
-                    id="email""
-                    name="email""
+                    type="email"
+                    id="email"
+                    name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300""
-                    placeholder="your@email.com""
-                  />
-<div>
-<label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"your@email.com""company" className="
                   Company Name
                 <input
-                  type="text""
-                  id="company""
-                  name="company""
+                  type="text"
+                  id="company"
+                  name="company"
                   value={formData.company}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300""
-                  placeholder="Your company name""
-                />
-<div>
-<label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"Your company name""service" className="
                   Service Interested In
                 <select
-                  id="service""
-                  name="service""
+                  id="service"
+                  name="service"
                   value={formData.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300">"
-<option value="">Select a service"
-                  {services.map((service, index) => (
-  // TODO: Add parameters
-)
-                    <option key={index} value={service}>
-                      {service}
-                  ))}
-              <div>
-<label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"">Select a service"message" className="
                   Message *
                 <textarea
-                  id="message""
-                  name="message""
+                  id="message"
+                  name="message"
                   value={formData.message}
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none""
-                  placeholder="Tell us about your project...""
-                />
-<$2 />
-                type="submit""
-                className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300 resize-none"Tell us about your project...""submit""w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
                 Send Message</span></form>
 </div></div>
 </div></section>

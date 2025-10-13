@@ -106,76 +106,49 @@ const filteredData = faqData.map(category => ({
 )
     <React.Fragment>
 <Navigation />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<div className="container mx-auto px-4 py-16 pt-24">"
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"container mx-auto px-4 py-16 pt-24"
           {/* Header */}
-          <div className="text-center mb-12">"
-<h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">"
-              Frequently Asked Questions
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">"
+          <div className="
+<h1 className="text-4 xl md:text-5 xl font-bold text-white mb-6 neon-text"text-xl text-gray-300 max-w-3 xl mx-auto mb-8"
               Find answers to common questions about our AI and IT services, pricing, and support.
             {/* Search Bar */}
-            <div className="max-w-md mx-auto relative">"
-<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
-<input
-                type="text""
-                placeholder="Search FAQs...""
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20""
+            <div className="
+<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"text""Search FAQs...""w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />
           {/* FAQ Content */}
-          <div className="max-w-4xl mx-auto">"
+          <div className="
             {filteredData.map((category, categoryIndex) => (
   // TODO: Add parameters
 )
-              <div key={categoryIndex} className="mb-12">"
-<h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">"
+              <div key={categoryIndex} className="mb-12"text-2 xl font-bold text-cyan-400 mb-6 neon-text"
                   {category.category}
-                <div className="space-y-4">"
+                <div className="
                   {category.questions.map((item, itemIndex) => {;
 const globalIndex = categoryIndex * 100 + itemIndex;
 const isOpen = openItems.includes(globalIndex)
-                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">"
-<$2 />
-                          onClick={() => toggleItem(globalIndex)}
-                          className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors">"
-<span className="text-white font-medium pr-4">{item.question}"
+                      <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50"w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
+<span className="
                           {isOpen ? (
   // TODO: Add parameters
 )
-                            <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />"
-                          ) : (
-  // TODO: Add parameters
-)
-                            <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />"
+                            <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0"w-5 h-5 text-cyan-400 flex-shrink-0"
                           )}
                         {isOpen && (
   // TODO: Add parameters
 )
-                          <div className="px-6 pb-4">"
-<p className="text-gray-300 leading-relaxed">{item.answer}"
-                  })}
-            ))}
-          {/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">"
-<h2 className="text-2xl font-bold text-white mb-4">"
+                          <div className="
+<p className="text-gray-300 leading-relaxed"mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2 xl p-8 text-center"
+<h2 className="
               Still Have Questions?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">"
-              Can't find the answer you're looking for? Our team is here to help you with any questions about our services.'
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
+            <p className="text-gray-300 mb-6 max-w-2 xl mx-auto"flex flex-col sm: flex-row gap-4 justify-center items-center"
 <$2 />
-                href="tel:+13024640950""
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105""
-                <Phone className="w-5 h-5 mr-2" />"
-                Call (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com""
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <Mail className="w-4 h-4 mr-2" />"
+                href=""
+                className="
+                <Phone className="w-5 h-5 mr-2"mailto:kleber@ziontechgroup.com""border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <Mail className="
                 Email Us
-                href="/contact""
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <MessageSquare className="w-4 h-4 mr-2" />"
+                href="/contact"
+                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"w-4 h-4 mr-2"
                 Contact Form
       <Footer /></React.Fragment>;
 export default FAQPage,;
@@ -216,7 +189,6 @@ const toggleItem = (inde)
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   categor,
   y: 'General Questions','
       question,
@@ -321,7 +293,7 @@ const toggleItem = (inde)
           questio,
   n: 'What are your business hours?','
           answe,
-  r: 'Our business hours are Monday-Friday, 9AM-6PM EST. However, our support team is available 24/7 for critical issues and emergency support.''
+  r: 'Our business hours are Monday-Friday, 9 AM-6 PM EST. However, our support team is available 24/7 for critical issues and emergency support.''
           questio,
   n: 'Do you offer remote support?','
           answe,
@@ -333,7 +305,6 @@ const toggleItem = (inde)
   ],;
 const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
   O: Add content,}
-}
 //     ...category,
     question,
   s: category.questions.filter(q =>)
@@ -345,78 +316,51 @@ const filteredData = faqData.map(category => ({/* TODO: Fix JSX expression */}
   )
           <React.Fragment>
 <Navigation />
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>""
-        <div className="container mx-auto px-4 py-16 pt-24">"
-          {/* Header */}""
-          <div className="text-center mb-12"></div>""
-            < className="text-4xl,"$2 />"
-  md:text-5xl font-bold text-white mb-6 neon-text">"
-// Frequently Asked Questions</h1>""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">"
+<div className=""
+        <div className="
+          {/* Header */}""text-center mb-12""text-4 xl,"
+  md:text-5 xl font-bold text-white mb-6 neon-text"
+// Frequently Asked Questions</h1>""text-xl text-gray-300 max-w-3 xl mx-auto mb-8"
 // Find answers to common questions about our AI and IT services, pricing, and support.
             {/* Search Bar */}
-            <div className="max-w-md mx-auto relative">"
-<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
-<input
-type="text" placeholder="Search FAQs...""
+            <div className="
+<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"text" placeholder=""
                 value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}""
+                onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400,"
-  focus:outline-none,
-  focus:border-cyan-400,
-  focus:ring-2,""
-  focus:ring-cyan-400/20""
-// />
-          {/* FAQ Content */}""
-          <div className="max-w-4xl mx-auto">"
-            {filteredData.map((category, categoryIndex) => ()}""
-          <div key={categoryIndex} className="mb-12"></div>""
-                <h2 className="text-2xl font-bold text-cyan-400 mb-6 neon-text">"
+  focus:ring-cyan-400/20"""
+          <div className="
+            {filteredData.map((category, categoryIndex) => ()}""mb-12""text-2 xl font-bold text-cyan-400 mb-6 neon-text"
                   {category.category}
-                </h2>""
-                <div className="space-y-4">"
-                  {category.questions.map((item, itemIndex) => {}
-  // TOD,
-  O: Add content,
-}
-                    const globalIndex = categoryIndex * 100 + itemIndex;
-const isOpen = openItems.includes(globalIndex)
-          ""
-          <div key={itemIndex} className="bg-slate-800/50 rounded-lg border border-gray-700/50">"
+                </h2>"
+                <div className="space-y-4""
+          <div key={itemIndex} className="
 <button>
-                          onClick={() => toggleItem(globalIndex)}""
-                          className="w-full px-6 py-4 text-left flex items-center justify-between,""
-  hover:bg-slate-700/50 transition-colors""
+                          onClick={() => toggleItem(globalIndex)}""w-full px-6 py-4 text-left flex items-center justify-between,"
+  hover:bg-slate-700/50 transition-colors"
 // >
-          ""
-          <span className="text-white font-medium pr-4">{item.question}"
-                          {isOpen ? ()}""
-          <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />"
-                          ) : ()
-                            ""
-          <ChevronDown className="w-5 h-5 text-cyan-400 flex-shrink-0" />"
+          ""text-white font-medium pr-4"
+                          {isOpen ? ()}"
+          <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0""
+          <ChevronDown className="
                           )}
-                        {isOpen && ()}""
-          <div className="px-6 pb-4"></div>""
-                            <p className="text-gray-300 leading-relaxed">{item.answer}"
+                        {isOpen && ()}""px-6 pb-4""text-gray-300 leading-relaxed"
                   })}
             ))}
 {/* Contact CTA */}
-          <div className="mt-16 bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">"
-<h2 className="text-2xl font-bold text-white mb-4">"
-              Still Have Questions?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">"
+          <div className="
+<h2 className="text-2 xl font-bold text-white mb-4"text-gray-300 mb-6 max-w-2 xl mx-auto"
               Can't find the answer you're looking for? Our team is here to help you with any questions about our services.'
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">"
+            <div className="
 <$2 />
-                href="tel:+13024640950" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105""
-                <Phone className="w-5 h-5 mr-2" />"
+                href="tel:+13024640950"cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
+                <Phone className="
 // Call (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <Mail className="w-4 h-4 mr-2" />"
+                href="mailto:kleber@ziontechgroup.com"border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <Mail className="
                 Email Us
-                href="/contact" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center""
-                <MessageSquare className="w-4 h-4 mr-2" />"
+                href="/contact"border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+                <MessageSquare className="
                 Contact Form
       <Footer/ />
 </React.Fragment>;

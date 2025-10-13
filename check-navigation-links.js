@@ -36,7 +36,6 @@ const stat = fs.statSync(fullPath)
 const route = fullPath.replace('/workspace/src', ').replace('/page.tsx', ') || '/''
       existingPages.push(route)
     }
-  }
 }
 
 scanDirectory(srcDir)
@@ -55,8 +54,6 @@ for (const link of allLinks) {
 }
     missingPages.push(link)
   }
-}
-
 console.log('=== NAVIGATION LINKS ANALYSIS ===')'
 console.log(`Total navigation links found: ${allLinks.length}`)
 console.log(`Existing pages in src: ${existingPages.length}`)

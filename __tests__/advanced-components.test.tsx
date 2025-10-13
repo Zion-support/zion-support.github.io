@@ -1,9 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-<<<<<<< HEAD
 // Mock component for testing
 const AdvancedComponent = () => {
   return <div>Advanced Component</div>;
@@ -14,34 +12,21 @@ describe('Advanced Components', () => {
     render(<AdvancedComponent />);
     expect(screen.getByText('Advanced Component')).toBeInTheDocument();
   });
-<<<<<<< HEAD
 
   it('renders with custom className', () => {
     const { container } = render(<AdvancedComponents className="test-class" />);
-    expect(container.firstChild).toHaveClass('test-class');
-describe('AdvancedComponents', () => {
-  it('renders with default props', () => {
-    render(<AdvancedComponents />);
-    expect(screen.getByTestId('advanced-components')).toBeInTheDocument();
-  });
-
-  it('renders with custom className', () => {
-    render(<AdvancedComponents className="custom-class" />);
     expect(screen.getByTestId('advanced-components')).toHaveClass('custom-class');
   });
 
   it('renders children', () => {
     render(<AdvancedComponents>Test content</AdvancedComponents>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
-=======
 // Mock test for advanced components
 describe('Advanced Components', () => {
   it('should render without crashing', () => {
     expect(true).toBe(true);
   });
-<<<<<<< HEAD
 });
-=======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';';
 import { HelmetProvider } from 'react-helmet-async';';
 import { MemoryRouter } from 'react-router-dom';'
@@ -96,9 +81,7 @@ const consoleSpy = jest
     consoleSpy.mockRestore()
   })
 })
-=======
 });
-=======
 
   it('should have proper test structure', () => {
     const testComponent = <div>Test Component</div>;
@@ -106,21 +89,16 @@ const consoleSpy = jest
     expect(screen.getByText('Test Component')).toBeInTheDocument();
   });
 });
-=======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Mock components
 const MockErrorBoundary = ({ children }: { children: React.ReactNode }) => {
-  return <div data-testid="error-boundary">{children}</div>;
-};
-
-const MockSEOOptimizer = ({ title, description }: { title: string; description: string }) => {
-  return <div data-testid="seo-optimizer">{title} - {description}</div>;
+  return <div data-testid="error-boundary"seo-optimizer">{title} - {description}</div>;
 };
 
 const MockPerformanceMonitor = () => {
-  return <div data-testid="performance-monitor">Performance Monitor</div>;
+  return <div data-testid=">Performance Monitor</div>;
 };
 
 // Mock component that throws an error
@@ -268,8 +246,6 @@ describe('Advanced Components', () => {
       observe() {}
       disconnect() {}
       takeRecords() { return []; }
-    }
-
     beforeEach(() => {
       // Mock performance API
       Object.defineProperty(window, 'performance', {

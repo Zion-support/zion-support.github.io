@@ -20,7 +20,7 @@ const specificFixes = {/* TODO: Fix JSX expression */}
   'app/blog/ai-2026-february-ultimate-consciousness-breakthrough/page.tsx': {/* TODO: Fix JSX expression */}'
   },
   'app/blog/ai-2026-hyperconscious-computing-revolution/page.tsx': {/* TODO: Fix JSX expression */}'
-  }}
+  }
 function processFile(filePath) {
   // TODO: Add properties
 }
@@ -47,7 +47,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   s: [${keywordArray}],`)
           modified = true
         }
-      }
     }
 
     // General fixes;
@@ -63,7 +62,7 @@ const replacements = [
   // TODO: Add properties
 }
         pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,';'
-        replacement: "import { useRouter } from '../utils/navigation';"},";'"
+        replacement: "import { useRouter } from '../utils/navigation';";'"
       // Fix import paths for root-level files
       {
   // TODO: Add properties
@@ -71,33 +70,23 @@ const replacements = [
   // TODO: Add properties
 }
         pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,';'
-        replacement: "import { Metadata } from './types/next';"},";'"
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g';'
-        replacement: "import Link from './utils/link';",";'"
+        replacement: "},";'"import Link from './utils/link';","
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,';'
         replacemen,
-  t: "import { useRouter } from '../utils/navigation';"},";'"
+  t: "import { useRouter } from '../utils/navigation';";'"
       // Fix import paths for root-level files
       {/* TODO: Fix JSX expression */}
   n: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,';'
-        replacemen,""
-  t: "import { Metadata } from './types/next';"},";'"
+        replacemen,"
+  t: "import { Metadata } from './types/next';";'"
       {/* TODO: Fix JSX expression */}
       }]
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
-      }
     })
     if (modified) {/* TODO: Fix JSX expression */}
-    }
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 function processDirectory(dirPath) {
@@ -123,10 +112,9 @@ function processDirectory(dirPath) {
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}'
       }
-    }
   })
   return totalFixed
 }
 
 // Process the app directory
-// Process the app directory;"`"
+// Process the app directory;"

@@ -30,48 +30,10 @@ const res = await fetch(`/api/products/${id}`)
 }
     // If no id from router yet, it might still be loading
 
-    return <div className="p-6 text-white">Loading product details...</div>"
-  }
-  if (!product) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        if (res && res.ok) {;
-const data = await res && res.json()
-          setProduct(data)
-        }
-      } catch (err) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        // Fail silently and fall back to local data
-        logErrorToProduction('Error fetching product', { data: err })'
-      }
-    }
-    // Only fetch if id is available (from router)
-    if (id) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      fetchProduct()
-
-    }
-  }, [id]), // id is now from router && router.query
-  return (
-  // TODO: Add parameters
-)
-    <>
-<SEO
-        title = {product.title,}
-        description = {product.description,}
-        ogImage = {product.images?.[0],}
-    return <div className="p-6 text-white">Product not found</div>"
+    return <div className="p-6 text-white"p-6 text-white"
   }, [id]), // id is now from router.query
   if (!product && !id) { // If no id from router yet, it might still be loading
-    return <div className="p-6 text-white">Loading product details...</div>"
+    return <div className="
   }
 
   if (!product) {
@@ -79,60 +41,16 @@ const data = await res && res.json()
 }
   // TODO: Add properties
 }
-    return <div className="p-6 text-white">Product not found</div>"
-  }
-;
-const inCart = items.some(i => i.id === product.id),;
-const handleAdd = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-    if (inCart) return,
-    setAdding(true),
-    dispatch({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      type: 'ADD_ITEM','
-      payload: { id: product && product.id, name: product && product.title, price: product && product.price ?? 0, quantity: 1 }
-    })
-    toast && toast.success(`1× ${product && product.title} added`)
-    setTimeout(() => setAdding(false), 500)
-  }
-    setTimeout(() => setAdding(false), 500)
-  }
-
-  return (
-  // TODO: Add parameters
-)
-    <>
-<SEO
-
-      />
-<div className="min-h-screen bg-zion-blue p-6 text-white">"
-<h1 className="text-2xl font-bold mb-4">{product.title}</h1>"
+    return <div className="p-6 text-white"min-h-screen bg-zion-blue p-6 text-white"
+<h1 className="
         {product.images?.length ? (
   // TODO: Add parameters
 )
-          <div className="mb-4 relative w-full h-64">"
-<Image
-              src = {product.images[0] |'/placeholder.svg',}'
-              alt = {product.title,}
-
-              src={product.images[0] || '/placeholder.svg'}'
-              alt={product.title}
-
-              className="object-cover rounded-md""
+          <div className="mb-4 relative w-full h-64"object-cover rounded-md"
               fill
             /></div>
         ) : null}
-        <p className="mb-6">{product.description}</p>"
+        <p className="
 <Button onClick={handleAdd} disabled={adding |inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}'
 
@@ -238,8 +156,6 @@ const found_product = NEW_PRODUCTS.find ((p) => p.id === id)
 </>
   )
 }
-
-}
 //Only fetch if id is available (from router)
 }const in_cart = items.some (index => i.id === product.id);
 const handle_add = () =>: any {
@@ -295,5 +211,3 @@ product.title
 </Button></div>
 </>)
 }''
-}
-

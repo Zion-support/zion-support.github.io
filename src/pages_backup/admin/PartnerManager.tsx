@@ -46,8 +46,8 @@ export default function PartnerManager() {;
 const [partners, setPartners] = useState<PartnerProfile[]>([]);
 const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
 const [isLoading, setIsLoading] = useState(true);
-const [searchQuery, setSearchQuery] = useState("");";
-const [activeTab, setActiveTab] = useState("pending");";
+const [searchQuery, setSearchQuery] = useState("";
+const [activeTab, setActiveTab] = useState("pending";
 const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
 const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 const [isSettingsOpen, setIsSettingsOpen] = useState(false);
@@ -89,65 +89,18 @@ const { data, error } = await supabase
         .from('partner_profiles')'
         .select('*')'
         .order('created_at', { ascending: false })'
-        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>"
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>"
-      default:
-        return <Badge variant="outline">{status}</Badge>"
-  partners
-  isLoading
-  onViewDetails, }
-
-  )
-  partners,
-  isLoading,
-  onViewDetails, }
-  )
-}
-}
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),;
-const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),;
-const [isLoading, setIsLoading] = useState(true),;
-const [searchQuery, setSearchQuery] = useState(""),;";
-const [activeTab, setActiveTab] = useState("pending"),;";
-const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),;
-const [isDetailsOpen, setIsDetailsOpen] = useState(false),;
-const [isSettingsOpen, setIsSettingsOpen] = useState(false),;
-const [commissionRate, setCommissionRate] = useState(25),;
-const { user, isAuthenticated } = useAuth(),;
-const router = useRouter(),
-
-  useEffect(() => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-    if (!isAuthenticated) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      router.push('/auth/login?returnTo=' + encodeURIComponent('/admin/partners')),'
-      return;
-import { useState, useEffect } from "react",";";
-import { useAuth } from "@/hooks/useAuth",";";
+        return <Badge variant="outline"bg-yellow-900/30 text-yellow-500 border-yellow-600"
+        return <Badge variant=" className="bg-red-900/30 text-red-500 border-red-600"outline">{status}</Badge>""),;"pending"),;"react",";
+import { useAuth } from "@/hooks/useAuth";";
 import { useRouter } from 'next/router',';';
-import { Button } from "@/components/ui/button",";";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",";";
-import { Input } from "@/components/ui/input",";";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",";";
-import { Badge } from "@/components/ui/badge",";";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",";";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",";";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",";";
-import { toast } from "@/hooks/use-toast",";";
+import { Button } from ",";"@/components/ui/card",";
+import { Input } from "@/components/ui/input";";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from ",";"@/components/ui/badge",";
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from ",";"@/components/ui/alert",";
+import { toast } from "@/hooks/use-toast";";
 import { Check, Flag, Search, Settings, X, Users } from 'lucide-react';';
-import { supabase } from "@/integrations/supabase/client",";";
-import { logErrorToProduction } from '@/utils/productionLogger',';';
-import { EmptyState } from "@/components/ui/empty-state",";"
+import { supabase } from ",";"@/components/ui/empty-state","
 interface PartnerProfile {
   // TODO: Add properties
 }
@@ -174,8 +127,8 @@ function PartnerManager() {;
 const [partners, set_partners] = useState < PartnerProfile[]>([]);
 const [filtered_partners, setFilteredPartners] = useState < PartnerProfile[]>([]);
 const [is_loading, setIsLoading] = useState (true);
-const [search_query, setSearchQuery] = useState (");"";
-const [active_tab, setActiveTab] = useState ("pending");";
+const [search_query, setSearchQuery] = useState (");";
+const [active_tab, setActiveTab] = useState ("pending";
 const [selected_partner, setSelectedPartner] = useState < PartnerProfile | null>(null);
 const [isDetailsOpen, setIsDetailsOpen] = useState (false);
 const [isSettingsOpen, setIsSettingsOpen] = useState (false);
@@ -203,7 +156,7 @@ const filterPartners = (partners: PartnerProfile[], status: string, query: strin
 let filtered = partners,
 
     // Filter by status
-    if (status !== "all") {"
+    if (status !== "all"
       filtered = filtered.filter(p => p.status === status)
     } catch (error) {
   // TODO: Add properties
@@ -216,9 +169,9 @@ let filtered = partners,
 }
   // TODO: Add properties
 }
-        title: "Error","
-        description: "Failed to load partner data","
-        variant: "destructive"})"
+        title: "Error"
+        description: "Failed to load partner data"
+        variant: "destructive"
     } finally {
   // TODO: Add properties
 }
@@ -230,7 +183,7 @@ let filtered = partners,
 const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {;
 let filtered = partners,
     // Filter by status
-    if (status !== "all") {"
+    if (status !== "all"
       filtered = filtered.filter(p => p.status === status)
     }
 
@@ -304,9 +257,9 @@ const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejec
 }
   // TODO: Add properties
 }
-        title: status === 'approved' ? "Partner Approved" : "Partner Rejected","'"
+        title: status === 'approved' ? "Partner Approved"Partner Rejected","
         description: `The partner has been ${status}.`,
-        variant: status === 'approved' ? "default" : "destructive"}),"'"
+        variant: status === 'approved' ? "default"destructive"}),"
 
       // Close the dialog if open
       if (isDetailsOpen && selectedPartner?.id === partnerId) {
@@ -327,9 +280,9 @@ const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejec
 }
   // TODO: Add properties
 }
-        title: "Error","
-        description: "Failed to update partner status","
-        variant: "destructive"})"
+        title: "Error"
+        description: "Failed to update partner status"
+        variant: "destructive"
     }
   },;
 const handleSaveSettings = async () => {
@@ -366,9 +319,9 @@ const handleSaveSettings = async () => {
 }
   // TODO: Add properties
 }
-        title: "Settings Updated","
-        description: "Partner settings have been updated successfully.","
-        variant: "default"}),"
+        title: "Settings Updated"
+        description: "Partner settings have been updated successfully."
+        variant: "default"
 
       setIsSettingsOpen(false)
     } catch (error) {
@@ -382,9 +335,9 @@ const handleSaveSettings = async () => {
 }
   // TODO: Add properties
 }
-        title: "Error","
-        description: "Failed to update partner settings","
-        variant: "destructive"})"
+        title: "Error"
+        description: "Failed to update partner settings"
+        variant: "destructive"
 
     setFilteredPartners(filtered)
   },;
@@ -443,9 +396,9 @@ const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejec
 }
   // TODO: Add properties
 }
-        title: status === 'approved' ? "Partner Approved" : "Partner Rejected","'"
+        title: status === 'approved' ? "Partner Approved"Partner Rejected","
         description: `The partner has been ${status}.`,
-        variant: status === 'approved' ? "default" : "destructive"}),"'"
+        variant: status === 'approved' ? "default"destructive"}),"
       // Close the dialog if open
       if (isDetailsOpen && selectedPartner?.id === partnerId) {
   // TODO: Add properties
@@ -465,9 +418,9 @@ const handleUpdateStatus = async (partnerId: string, status: 'approved' | 'rejec
 }
   // TODO: Add properties
 }
-        title: "Error","
-        description: "Failed to update partner status","
-        variant: "destructive"})"
+        title: "Error"
+        description: "Failed to update partner status"
+        variant: "destructive"
     }
   },;
 const handleSaveSettings = async () => {
@@ -501,9 +454,9 @@ const handleSaveSettings = async () => {
 }
   // TODO: Add properties
 }
-        title: "Settings Updated","
-        description: "Partner settings have been updated successfully.","
-        variant: "default"}),"
+        title: "Settings Updated"
+        description: "Partner settings have been updated successfully."
+        variant: "default"
       setIsSettingsOpen(false)
     } catch (error) {
   // TODO: Add properties
@@ -516,9 +469,9 @@ const handleSaveSettings = async () => {
 }
   // TODO: Add properties
 }
-        title: "Error","
-        description: "Failed to update partner settings","
-        variant: "destructive"})"
+        title: "Error"
+        description: "Failed to update partner settings"
+        variant: "destructive"
     }
   },;
 const getAudienceSizeLabel = (size: string) => {
@@ -531,11 +484,11 @@ const getAudienceSizeLabel = (size: string) => {
 }
   // TODO: Add properties
 }
-      case 'under1k': return 'Under 1,000','
-      case '1k-10k': return '1,000 - 10,000','
-      case '10k-50k': return '10,000 - 50,000','
-      case '50k-100k': return '50,000 - 100,000','
-      case 'over100k': return 'Over 100,000','
+      case 'under1 k': return 'Under 1,000','
+      case '1 k-10 k': return '1,000 - 10,000','
+      case '10 k-50 k': return '10,000 - 50,000','
+      case '50 k-100 k': return '50,000 - 100,000','
+      case 'over100 k': return 'Over 100,000','
       default: return size
     }
   },;
@@ -550,13 +503,11 @@ const getStatusBadge = (status: string) => {
   // TODO: Add properties
 }
       case 'pending':'
-        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,"
+        return <Badge variant="outline"bg-yellow-900/30 text-yellow-500 border-yellow-600"
       case 'approved':'
-        return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>,"
-      case 'rejected':'
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,"
+        return <Badge variant=" className="bg-green-900/30 text-green-500 border-green-600"outline" className="
       default:
-        return <Badge variant="outline">{status}</Badge>"
+        return <Badge variant="outline"
     }
   },;
 const getFraudFlagBadge = (flags: number = 0) => {
@@ -569,8 +520,8 @@ const getFraudFlagBadge = (flags: number = 0) => {
     return (
   // TODO: Add parameters
 )
-      <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">"
-<Flag className="h-3 w-3" />"
+      <Badge variant="outline"bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1"
+<Flag className="
   },;
 const getStatusBadge = (status: string) => {
   // TODO: Add properties
@@ -583,13 +534,11 @@ const getStatusBadge = (status: string) => {
   // TODO: Add properties
 }
       case 'pending':'
-        return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>,"
+        return <Badge variant="outline"bg-yellow-900/30 text-yellow-500 border-yellow-600"
       case 'approved':'
-        return <Badge variant="outline" className="bg-green-900/30 text-green-500 border-green-600">Approved</Badge>,"
-      case 'rejected':'
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,"
+        return <Badge variant=" className="bg-green-900/30 text-green-500 border-green-600"outline" className="
       default:
-        return <Badge variant="outline">{status}</Badge>"
+        return <Badge variant="outline"
     }
   },;
 const getFraudFlagBadge = (flags: number = 0) => {
@@ -601,8 +550,8 @@ const getFraudFlagBadge = (flags: number = 0) => {
     return (
   // TODO: Add parameters
 )
-      <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">"
-<Flag className="h-3 w-3" />"
+      <Badge variant="outline"bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1"
+<Flag className="
         {flags}
       </Badge>
     )
@@ -610,75 +559,47 @@ const getFraudFlagBadge = (flags: number = 0) => {
   return (
   // TODO: Add parameters
 )
-    <div className="container max-w-7xl py-10">"
-<div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">"
+    <div className="container max-w-7 xl py-10"flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8"
 <div>
-<h1 className="text-3xl font-bold tracking-tight text-white">Partner Management</h1>"
-<p className="text-zion-slate-light">Approve and manage affiliate partners</p></$1>"
-</$1>
-<Card className="bg-zion-blue-dark border-zion-blue-light mb-8">"
-<CardHeader className="pb-3">"
+<h1 className="
+<p className="text-zion-slate-light"bg-zion-blue-dark border-zion-blue-light mb-8"
+<CardHeader className="
 <CardTitle>Overview</CardTitle></$1>
 <CardContent>
-<div className="grid gap-4 md:grid-cols-3">"
-<Card className="bg-zion-blue border-zion-blue-light">"
-<CardHeader className="pb-2">"
-<CardTitle className="text-sm font-medium text-zion-slate-light">"
-                  Pending Applications</$1>
-<div className="text-2xl font-bold text-white">"
+<div className="grid gap-4 md:grid-cols-3"bg-zion-blue border-zion-blue-light"
+<CardHeader className="
+<CardTitle className="text-sm font-medium text-zion-slate-light"text-2 xl font-bold text-white"
                   {partners.filter(p => p.status === 'pending').length}'
                 </div></$1>
-<CardContent className="pt-0">"
-<p className="text-xs text-zion-slate-light">"
-                  Partners waiting for review and approval</$1></$1>
-</$1>
-<Card className="bg-zion-blue border-zion-blue-light">"
-<CardHeader className="pb-2">"
-<CardTitle className="text-sm font-medium text-zion-slate-light">"
-                  Active Partners</$1>
-<div className="text-2xl font-bold text-white">"
+<CardContent className="
+<p className="text-xs text-zion-slate-light"bg-zion-blue border-zion-blue-light"
+<CardHeader className="
+<CardTitle className="text-sm font-medium text-zion-slate-light"text-2 xl font-bold text-white"
                   {partners.filter(p => p.status === 'approved').length}'
                 </div></$1>
-<CardContent className="pt-0">"
-<p className="text-xs text-zion-slate-light">"
-                  Currently approved and active partners</$1></$1>
-</$1>
-<Card className="bg-zion-blue border-zion-blue-light">"
-<CardHeader className="pb-2">"
-<CardTitle className="text-sm font-medium text-zion-slate-light">"
-                  Fraud Flags</$1>
-<div className="text-2xl font-bold text-white">"
+<CardContent className="
+<p className="text-xs text-zion-slate-light"bg-zion-blue border-zion-blue-light"
+<CardHeader className="
+<CardTitle className="text-sm font-medium text-zion-slate-light"text-2 xl font-bold text-white"
                   {partners.reduce((total, p) => total + (p.fraud_flags || 0), 0)}
                 </div></CardHeader>
-<CardContent className="pt-0">"
-<p className="text-xs text-zion-slate-light">"
-                  Total potential fraud flags detected
-                </p></CardContent>
-</Card></div>
-</CardContent></Card>
-<Card className="bg-zion-blue-dark border-zion-blue-light">"
-<CardHeader className="pb-3 flex flex-col md:flex-row justify-between md:items-center gap-4">"
+<CardContent className="
+<p className="text-xs text-zion-slate-light"bg-zion-blue-dark border-zion-blue-light"
+<CardHeader className="
 <div>
 <CardTitle>Partners</CardTitle>
 <CardDescription>Manage partnership applications and settings</CardDescription></div>
-<div className="w-full md:w-80">"
-<div className="relative">"
-<Search className="absolute left-2 top-2.5 h-4 w-4 text-zion-slate-light" />"
+<div className="w-full md:w-80"relative"
+<Search className="
 <Input
-                placeholder="Search partners...""
-                className="pl-8""
-                value={searchQuery}
-                onChange={handleSearch}
-              /></div>
-</div></CardHeader>
-<CardContent>
-<Tabs value={activeTab} onValueChange={handleTabChange} className="space-y-4">"
-<TabsList className="grid grid-cols-4 w-full md:w-auto">"
-<TabsTrigger value="pending">Pending</TabsTrigger>"
-<TabsTrigger value="approved">Approved</TabsTrigger>"
-<TabsTrigger value="rejected">Rejected</TabsTrigger>"
-<TabsTrigger value="all">All</TabsTrigger></TabsList>"
-<TabsContent value="pending" className="space-y-4">"
+                placeholder="Search partners..."
+                className="pl-8"space-y-4"
+<TabsList className="
+<TabsTrigger value="pending"
+<TabsTrigger value="approved"
+<TabsTrigger value="rejected"
+<TabsTrigger value="all"
+<TabsContent value="pending"space-y-4"
 <PartnerTable
                 partners={filteredPartners}
                 isLoading={isLoading}
@@ -688,7 +609,7 @@ const getFraudFlagBadge = (flags: number = 0) => {
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
               /></TabsContent>
-<TabsContent value="approved" className="space-y-4">"
+<TabsContent value=" className="space-y-4"rejected" className="
 <PartnerTable
                 partners={filteredPartners}
                 isLoading={isLoading}
@@ -698,17 +619,7 @@ const getFraudFlagBadge = (flags: number = 0) => {
                 getStatusBadge={getStatusBadge}
                 getFraudFlagBadge={getFraudFlagBadge}
               /></TabsContent>
-<TabsContent value="rejected" className="space-y-4">"
-<PartnerTable
-                partners={filteredPartners}
-                isLoading={isLoading}
-                onViewDetails={handleViewDetails}
-                onUpdateStatus={handleUpdateStatus}
-                onOpenSettings={handleOpenSettings}
-                getStatusBadge={getStatusBadge}
-                getFraudFlagBadge={getFraudFlagBadge}
-              /></TabsContent>
-<TabsContent value="all" className="space-y-4">"
+<TabsContent value="all"space-y-4"
 <PartnerTable
                 partners={filteredPartners}
                 isLoading={isLoading}
@@ -722,7 +633,7 @@ const getFraudFlagBadge = (flags: number = 0) => {
 </$1>
       {/* Partner Details Dialog */}
       <Dialog open={isDetailsOpen} onOpenChange={setIsDetailsOpen}>
-<DialogContent className="sm:max-w-lg bg-zion-blue border-zion-blue-light">"
+<DialogContent className="
 <DialogHeader>
 <DialogTitle>Partner Details</DialogTitle>
 <DialogDescription>
@@ -732,87 +643,50 @@ const getFraudFlagBadge = (flags: number = 0) => {
           {selectedPartner && (
   // TODO: Add parameters
 )
-            <div className="space-y-4">"
-<div className="grid grid-cols-2 gap-2">"
+            <div className="space-y-4"grid grid-cols-2 gap-2"
 <div>
-<p className="text-xs text-zion-slate-light">Name</p>"
-<p className="font-medium text-white">{selectedPartner.name}</p></div>"
-<div>
-<p className="text-xs text-zion-slate-light">Status</p>"
+<p className="
+<p className="font-medium text-white"text-xs text-zion-slate-light"
 <div>{getStatusBadge(selectedPartner.status)}</div></div>
 </div>
 <div>
-<p className="text-xs text-zion-slate-light">Bio</p>"
-<p className="text-white">{selectedPartner.bio || "No bio provided"}</p></div>"
-<div className="grid grid-cols-2 gap-2">"
+<p className="
+<p className="text-white"}</p></div>"
+<div className="
 <div>
-<p className="text-xs text-zion-slate-light">Niche</p>"
-<p className="text-white">{selectedPartner.niche}</p></div>"
+<p className="text-xs text-zion-slate-light"text-white"
 <div>
-<p className="text-xs text-zion-slate-light">Audience Size</p>"
-<p className="text-white">{getAudienceSizeLabel(selectedPartner.audience_size)}</p></div>"
-</div>
-
-              {selectedPartner.website && (
-  // TODO: Add parameters
-)
-                <div>
-<p className="text-xs text-zion-slate-light">Website</p>"
-<p className="text-zion-cyan">{selectedPartner.website}</p></div>"
+<p className="
+<p className="text-white"text-xs text-zion-slate-light"
+<p className="
               )}
 
               {selectedPartner.social_media && Object.keys(selectedPartner.social_media).length > 0 && (
   // TODO: Add parameters
 )
                 <div>
-<p className="text-xs text-zion-slate-light">Social Media</p>"
-<div className="grid grid-cols-2 gap-2">"
+<p className="text-xs text-zion-slate-light"grid grid-cols-2 gap-2"
                     {Object.entries(selectedPartner.social_media).map(([platform, handle]) => (
   // TODO: Add parameters
 )
-                      <p key={platform} className="text-white">"
-<span className="font-medium">{platform}: </span>"
-                        {handle}
-                      </p>
-                    ))}
-                  </div></$1>
-              )}
-
-              <div className="grid grid-cols-2 gap-2">"
+                      <p key={platform} className="
+<span className="font-medium"grid grid-cols-2 gap-2"
 <div>
-<p className="text-xs text-zion-slate-light">Payout Method</p>"
-<p className="text-white capitalize">{selectedPartner.payout_method || "Not specified"}</p></div>"
+<p className="
+<p className="text-white capitalize"}</p></div>"
 <div>
-<p className="text-xs text-zion-slate-light">Commission Rate</p>"
-<p className="text-white">{selectedPartner.commission_rate || 25}%</p></div>"
-</div>
-
-              {selectedPartner.fraud_flags && selectedPartner.fraud_flags > 0 && (
-  // TODO: Add parameters
-)
-                <Alert className="bg-red-900/20 border-red-900/50 text-red-500">"
-<AlertTitle className="flex items-center gap-2">"
-<Flag className="h-4 w-4" />"
-                    Potential Fraud Detected ({selectedPartner.fraud_flags})
-                  </AlertTitle>
-<AlertDescription>
-                    This application has triggered our fraud detection system. Review carefully before approving.
-                  </AlertDescription></Alert>
-              )}
-
-              {selectedPartner.status === 'pending' && ('
-                <div className="flex justify-end gap-2 mt-4">"
+<p className="
+<p className="text-white"bg-red-900/20 border-red-900/50 text-red-500"
+<AlertTitle className="
+<Flag className="h-4 w-4"flex justify-end gap-2 mt-4"
 <Button
-                    variant="destructive" "
+                    variant=" "
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}'
                   >
-<X className="h-4 w-4 mr-1" />"
+<X className="
                     Reject</$1>
 <Button
-                    className="bg-green-600 hover:bg-green-700""
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}'
-                  >
-<Check className="h-4 w-4 mr-1" />"
+                    className="bg-green-600 hover:bg-green-700"h-4 w-4 mr-1"
                     Approve</$1></$1>
               )}
             </div>
@@ -820,7 +694,7 @@ const getFraudFlagBadge = (flags: number = 0) => {
         </DialogContent></$1>
       {/* Partner Settings Dialog */}
       <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>
-<DialogContent className="bg-zion-blue border-zion-blue-light">"
+<DialogContent className="
 <DialogHeader>
 <DialogTitle>Partner Settings</DialogTitle>
 <DialogDescription>
@@ -830,80 +704,29 @@ const getFraudFlagBadge = (flags: number = 0) => {
           {selectedPartner && (
   // TODO: Add parameters
 )
-            <div className="space-y-4">"
+            <div className="space-y-4"text-sm font-medium text-white"
+<p className="
 <div>
-<label className="text-sm font-medium text-white">Partner Name</label>"
-<p className="text-zion-slate-light">{selectedPartner.name}</p></div>"
-<div>
-<label className="text-sm font-medium text-white" htmlFor="commission-rate">"
+<label className="text-sm font-medium text-white">"
                   Commission Rate (%)
                 </label>
 <Input
-                  id="commission-rate""
-                  type="number""
-                  min="1""
-                  max="50""
+                  id=""
+                  type=""
+                  min=""
+                  max=""
                   value={commissionRate}
                   onChange={(e) => setCommissionRate(parseInt(e.target.value))}
                 />
-<p className="text-xs text-zion-slate-light mt-1">"
+<p className="
                   Percentage of reward granted to this partner for successful referrals
                 </p></div>
 <DialogFooter>
-<Button variant="outline" onClick={() => setIsSettingsOpen(false)}>"
+<Button variant="outline"
                   Cancel
                 </Button>
-<Button onClick={handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark">"
-                  Save Changes
-                </Button></DialogFooter>
-</div>
-          )}
-        </DialogContent></$1>
-</$1>
-  )
-}
-
-interface PartnerTableProps {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  partners: PartnerProfile[],
-  isLoading: boolean,
-  onViewDetails: (partner: PartnerProfile) => void,
-  onUpdateStatus: (partnerId: string, status: 'approved' | 'rejected') => void,'
-  onOpenSettings: (partner: PartnerProfile) => void,
-  getStatusBadge: (status: string) => JSX.Element,
-  getFraudFlagBadge: (flags?: number) => JSX.Element | null
-}
-
-function PartnerTable({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  partners,
-  isLoading,
-  onViewDetails,
-  onUpdateStatus,
-  onOpenSettings
-  getStatusBadge
-  getFraudFlagBadge
-}: PartnerTableProps) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (isLoading) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return (
-  // TODO: Add parameters
-)
-      <div className="text-center py-8">"
-<p className="text-zion-slate-light">Loading partner data...</p></$1>"
+<Button onClick={handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark"text-center py-8"
+<p className="
     )
   }
 
@@ -915,12 +738,10 @@ function PartnerTable({
     return (
   // TODO: Add parameters
 )
-      <div className="py-8">"
-<EmptyState
-          icon={<Users className="h-8 w-8" />}"
-          title="No Partners Found""
-          description="There are no partner applications to display.""
-          className="border-none bg-transparent text-center""
+      <div className="py-8"h-8 w-8"
+          title=""
+          description=""
+          className="
         />
 </div>
     )
@@ -931,21 +752,14 @@ function PartnerTable({
 )
     <Table>
 <TableHeader>
-<TableRow className="hover:bg-transparent">"
-<TableHead>Name</TableHead>
-<TableHead>Niche</TableHead>
-<TableHead>Audience</TableHead>
-<TableHead>Status</TableHead>
-<TableHead>Date</TableHead>
-<TableHead className="text-right">Actions</TableHead></$1>"
+<TableRow className="hover:bg-transparent"text-right"
 </$1>
 <TableBody>
         {partners.map((partner) => (
   // TODO: Add parameters
 )
-          <TableRow key={partner.id} className="border-zion-blue-light hover:bg-zion-blue-light/10">"
-<TableCell className="font-medium text-white">"
-<div className="flex items-center gap-2">"
+          <TableRow key={partner.id} className="
+<TableCell className="font-medium text-white"flex items-center gap-2"
                 {partner.name}
                 {getFraudFlagBadge(partner.fraud_flags)}
               </div></$1>
@@ -957,40 +771,17 @@ function PartnerTable({
 <TableCell>
               {new Date(partner.created_at).toLocaleDateString()}
             </TableCell>
-<TableCell className="text-right">"
-<div className="flex justify-end gap-2">"
-                {partner.status === 'pending' && ('
-                  <>
-<Button
-                      variant="ghost""
-                      size="sm""
-                      onClick={() => onUpdateStatus(partner.id, 'rejected')}'
-                      className="text-red-500 hover:text-red-600 hover:bg-red-900/20""
+<TableCell className="
+<div className="flex justify-end gap-2"ghost""sm""text-red-500 hover:text-red-600 hover:bg-red-900/20"
                     >
-<X className="h-4 w-4" />"
-<span className="sr-only">Reject</span></Button>"
-<Button
-                      variant="ghost""
-                      size="sm""
-                      onClick={() => onUpdateStatus(partner.id, 'approved')}'
-                      className="text-green-500 hover:text-green-600 hover:bg-green-900/20""
+<X className="
+<span className="sr-only"ghost""sm""text-green-500 hover:text-green-600 hover:bg-green-900/20"
                     >
-<Check className="h-4 w-4" />"
-<span className="sr-only">Approve</span></Button>"
-</>
-                )}
-
-                <Button
-                  variant="ghost" "
-                  size="sm""
-                  onClick={() => onOpenSettings(partner)}
-                  className="text-zion-slate-light hover:text-white""
+<Check className="
+<span className="sr-only"ghost" "sm""text-zion-slate-light hover:text-white"
                 >
-<Settings className="h-4 w-4" />"
-<span className="sr-only">Settings</span></Button>"
-<Button
-                  variant="outline" "
-                  size="sm""
+<Settings className="
+<span className="sr-only"outline" "sm""
                   onClick={() => onViewDetails(partner)}
                 >
                   View</$1></$1>
@@ -998,4 +789,3 @@ function PartnerTable({
         ))}
       </TableBody></$1>
   )
-}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useEffect, useState } from 'react';
 import { Eye, Volume2, MousePointer, Keyboard, Contrast, ZoomIn } from 'lucide-react';
@@ -120,59 +119,23 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
 //       <button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-4 right-4 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
-        aria-label="Open accessibility settings"
 //       >
-        <Eye className="w-6 h-6" />
-</button>
-    );
-  }
-
-=======
-interface AdvancedAccessibilityEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function AdvancedAccessibilityEnhancer({ className = '', children }: AdvancedAccessibilityEnhancerProps) {
-  return (
-<<<<<<< HEAD
-    <div className={`${className}`}>
-      {children}
-    </div>
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
+        <Eye className="w-6 h-6">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
 //           Accessibility Settings
 </h3>
 //         <button
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-          aria-label="Close accessibility settings"
 //         >
 //           ×
 </button>
 </div>
 
       <div className="space-y-4">
-        {accessibilityFeatures.map((feature) => {
-          const Icon = feature.icon;
-          return (
-            <div key={feature.key} className="flex items-center justify-between">
-              <div className="flex items-center space-x-3">
-                <Icon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+              <div className="flex items-center space-x-3" />
 //                 <div>
                   <div className="text-sm font-medium text-gray-900 dark:text-white">
-                    {feature.title}
-</div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400">
                     {feature.description}
 </div>
 </div>
@@ -197,24 +160,10 @@ export default function AdvancedAccessibilityEnhancer({ className = '', children
         })}
 </div>
 
-      <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-//         <button
-          onClick={() => {
-            setSettings({
-//               highContrast: false,
-//               largeText: false,
-//               screenReader: false,
-//               keyboardNavigation: false,
-//               reducedMotion: false,
-//               focusIndicator: false
-            });
-          }}
-          className="w-full text-sm text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200"
+      <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700"
 //         >
 //           Reset to Default
 </button>
 </div>
 </div>
-=======
   );
-}

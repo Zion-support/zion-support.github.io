@@ -236,13 +236,12 @@ const jobs: SearchResult[] = [];
 const projects: SearchResult[] = [];
 const all = [...talent, ...jobs, ...projects].sort((a, b) => b.relevance - a.relevance)
   return { all, talent, jobs, projects }
-}
 export function suggestDidYouMean(query: string): string | null {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  // naive suggestion: if user says devops latam -> normalize to "DevOps jobs in LATAM";";
+  // naive suggestion: if user says devops latam -> normalize to "DevOps jobs in LATAM";
 const q = query.toLowerCase(),
   if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM','
   if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr','
@@ -251,4 +250,3 @@ const q = query.toLowerCase()
   if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM''
   if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr''
   return null
-}

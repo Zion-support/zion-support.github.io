@@ -18,9 +18,8 @@ const reasons: string[] = []
 }
   // TODO: Add properties
 }
-      reasons.push(`Contains suspicious phrase: "${phrase}"`)"
+      reasons.push(`Contains suspicious phrase: "${phrase}"
     }
-  }
   // Check for links (simplified check);
 const hasExternalLinks = /(https?:\/\/|www\.)[^\s]+/g.test(contentLower)
   if (hasExternalLinks && (
@@ -66,5 +65,3 @@ const capitalRatio = (content.match(/[A-Z]/g) || []).length / content.length
     isSuspicious: reasons.length > 0,
     reasons
   }
-}
-}

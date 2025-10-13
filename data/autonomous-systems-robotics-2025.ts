@@ -83,7 +83,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [;
     color: 'from-gray-700 to-slate-800','
     textColor: 'text-gray-300','
     link: 'https://ziontechgroup.com/autonomous-manufacturing-ai','
-    marketPosition: 'Leading autonomous manufacturing platform. Traditional manufacturing systems: $25,000+/month. Our AI platform: $8,999/month with 10x better efficiency.','
+    marketPosition: 'Leading autonomous manufacturing platform. Traditional manufacturing systems: $25,000+/month. Our AI platform: $8,999/month with 10 x better efficiency.','
     targetAudience: 'Manufacturing companies, Industrial organizations, Automotive companies, Electronics manufacturers, Pharmaceutical companies, Food processing companies','
     trialDays: 21,
     setupTime: '4-6 weeks','
@@ -94,7 +94,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [;
     useCases: ['Production automation', 'Quality control', 'Predictive maintenance', 'Supply chain optimization', 'Energy management', 'Waste reduction'],'
     roi: 'Manufacturing companies report 800% ROI through automation. Industrial organizations see 600% ROI in efficiency improvements.','
     competitors: ['Traditional manufacturing systems: $25,000+/month', 'Industrial AI: $15,000+/month', 'Automation platforms: $20,000+/month'],'
-    marketSize: '$18B autonomous manufacturing market','
+    marketSize: '$18 B autonomous manufacturing market','
     growthRate: '250% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -158,7 +158,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [;
     useCases: ['Warehouse automation', 'Logistics optimization', 'Agricultural automation', 'Search and rescue', 'Industrial automation', 'Research applications'],'
     roi: 'Warehouse companies report 1000% ROI through automation. Logistics companies see 800% ROI in efficiency improvements.','
     competitors: ['Traditional robotics: $50,000+/month', 'Multi-robot systems: $30,000+/month', 'Automation platforms: $25,000+/month'],'
-    marketSize: '$12B swarm robotics market','
+    marketSize: '$12 B swarm robotics market','
     growthRate: '300% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -222,7 +222,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [;
     useCases: ['Autonomous cars', 'Self-driving trucks', 'Autonomous drones', 'Industrial vehicles', 'Transportation systems', 'Safety systems'],'
     roi: 'Automotive companies report 1200% ROI through autonomous capabilities. Trucking companies see 800% ROI in efficiency improvements.','
     competitors: ['Traditional autonomous systems: $75,000+/month', 'Vehicle AI: $40,000+/month', 'Safety systems: $30,000+/month'],'
-    marketSize: '$25B autonomous vehicle market','
+    marketSize: '$25 B autonomous vehicle market','
     growthRate: '280% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -286,7 +286,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [;
     useCases: ['Industrial automation', 'Medical robotics', 'Service robotics', 'Research applications', 'Manufacturing automation', 'Safety systems'],'
     roi: 'Industrial companies report 800% ROI through automation. Healthcare organizations see 600% ROI in robotic assistance.','
     competitors: ['Traditional robotics: $40,000+/month', 'Advanced robotics: $25,000+/month', 'Automation platforms: $20,000+/month'],'
-    marketSize: '$15B advanced robotics market','
+    marketSize: '$15 B advanced robotics market','
     growthRate: '220% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -350,7 +350,7 @@ export const autonomousSystemsRobotics2025: AutonomousSystemsRobotics2025[] = [;
     useCases: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Performance optimization'],'
     roi: 'Retail companies report 600% ROI through optimization. Manufacturing companies see 500% ROI in supply chain efficiency.','
     competitors: ['Traditional supply chain systems: $20,000+/month', 'AI optimization: $15,000+/month', 'Supply chain platforms: $12,000+/month'],'
-    marketSize: '$22B supply chain optimization market','
+    marketSize: '$22 B supply chain optimization market','
     growthRate: '200% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {

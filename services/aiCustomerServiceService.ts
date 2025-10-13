@@ -216,7 +216,6 @@ const response = await fetch(`${this && this.baseUrl}/api/customer-service/ticke
       console && console.error('Error creating ticket:', error)'
       throw error
     }
-  }
   async getTicket(ticketId: string): Promise<CustomerTicket> {
   // TODO: Add properties
 }
@@ -266,7 +265,6 @@ const response = await fetch(`${this && this.baseUrl}/api/customer-service/ticke
       console && console.error('Error getting ticket:', error)'
       throw error
     }
-  }
   async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {
   // TODO: Add properties
 }
@@ -318,7 +316,6 @@ const response = await fetch(`${this && this.baseUrl}/api/customer-service/ticke
       console && console.error('Error updating ticket:', error)'
       throw error
     }
-  }
   async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {'
     try {;
 const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
@@ -357,7 +354,6 @@ const response = await fetch(`${this && this.baseUrl}/api/customer-service/ticke
       console && console.error('Error adding message:', error)'
       throw error
     }
-  }
   async generateAIResponse(ticketId: string): Promise<AIResponse> {
   // TODO: Add properties
 }
@@ -399,7 +395,6 @@ const response = await fetch(`${this && this.baseUrl}/api/customer-service/ticke
       console && console.error('Error generating AI response:', error)'
       throw error
     }
-  }
   async getCustomerProfile(customerId: string): Promise<CustomerProfile> {
   // TODO: Add properties
 }
@@ -440,8 +435,7 @@ const response = await fetch(`${this && this.baseUrl}/api/customer-service/custo
       console && console.error('Error getting customer profile:', error)'
       throw error
     }
-  }
-  async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics> {'
+  async getMetrics(timeframe: string = '30 d'): Promise<CustomerServiceMetrics> {'
     try {;
 const response = await fetch(`${this && this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
   // TODO: Add properties
@@ -470,7 +464,6 @@ const response = await fetch(`${this && this.baseUrl}/api/customer-service/metri
       console && console.error('Error getting metrics:', error)'
       throw error
     }
-  }
   async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
   // TODO: Add properties
 }
@@ -521,7 +514,6 @@ const response = await fetch(`${this && this.baseUrl}/api/customer-service/ticke
       console && console.error('Error searching tickets:', error)'
       throw error
     }
-  }
   async autoAssignTickets(): Promise<{ assigned: number, failed: number }> {
   // TODO: Add properties
 }
@@ -556,7 +548,6 @@ const response = await fetch(`${this && this.baseUrl}/api/customer-service/ticke
       console && console.error('Error auto-assigning tickets:', error)'
       throw error
     }
-  }
   async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {'
     try {;
 const response = await fetch(`${this && this.baseUrl}/api/customer-service/reports`, {
@@ -589,7 +580,6 @@ const response = await fetch(`${this && this.baseUrl}/api/customer-service/repor
       console && console.error('Error generating report:', error)'
       throw error
     }
-  }
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');';
 export interface CustomerTicket {;
@@ -770,8 +760,6 @@ const data = await response.json(),
       console.error('Error creating ticket:', error),'
       throw error
     }
-  }
-
   async getTicket(ticketId: string): Promise<CustomerTicket> {
   // TODO: Add properties
 }
@@ -822,8 +810,6 @@ const data = await response.json(),
       console.error('Error getting ticket:', error),'
       throw error
     }
-  }
-
   async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {
   // TODO: Add properties
 }
@@ -876,8 +862,6 @@ const data = await response.json(),
       console.error('Error updating ticket:', error),'
       throw error
     }
-  }
-
   async addMessage(ticketId: string, message: Omit<CustomerMessage 'id' | 'timestamp'>): Promise<CustomerMessage> {'
     try {;
 const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
@@ -917,8 +901,6 @@ const data = await response.json(),
       console.error('Error adding message:', error),'
       throw error
     }
-  }
-
   async generateAIResponse(ticketId: string): Promise<AIResponse> {
   // TODO: Add properties
 }
@@ -961,8 +943,6 @@ const data = await response.json(),
       console.error('Error generating AI response:', error),'
       throw error
     }
-  }
-
   async getCustomerProfile(customerId: string): Promise<CustomerProfile> {
   // TODO: Add properties
 }
@@ -1004,9 +984,7 @@ const data = await response.json(),
       console.error('Error getting customer profile:', error),'
       throw error
     }
-  }
-
-  async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics> {'
+  async getMetrics(timeframe: string = '30 d'): Promise<CustomerServiceMetrics> {'
     try {;
 const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
   // TODO: Add properties
@@ -1036,8 +1014,6 @@ const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timef
       console.error('Error getting metrics:', error),'
       throw error
     }
-  }
-
   async searchTickets(query: string, filters?: Record<string any>): Promise<CustomerTicket[]> {
   // TODO: Add properties
 }
@@ -1089,8 +1065,6 @@ const data = await response.json(),
       console.error('Error searching tickets:', error),'
       throw error
     }
-  }
-
   async autoAssignTickets(): Promise<{ assigned: number, failed: number }> {
   // TODO: Add properties
 }
@@ -1126,8 +1100,6 @@ const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-
       console.error('Error auto-assigning tickets:', error),'
       throw error
     }
-  }
-
   async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {'
     try {;
 const response = await fetch(`${this.baseUrl}/api/customer-service/reports`, {
@@ -1224,7 +1196,6 @@ const response = await fetch(`${this.baseUrl}/api/customer-service/tickets`, {
       console.error('Error creating ticket:', error)'
       throw error
     }
-  }
   async getTicket(ticketId: string): Promise<CustomerTicket> {
   // TODO: Add properties
 }
@@ -1278,7 +1249,6 @@ const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${tic
       console.error('Error getting ticket:', error)'
       throw error
     }
-  }
   async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {
   // TODO: Add properties
 }
@@ -1335,7 +1305,6 @@ const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${tic
       console.error('Error updating ticket:', error)'
       throw error
     }
-  }
   async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {'
     try {;
 const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
@@ -1378,7 +1347,6 @@ const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${tic
       console.error('Error adding message:', error)'
       throw error
     }
-  }
   async generateAIResponse(ticketId: string): Promise<AIResponse> {
   // TODO: Add properties
 }
@@ -1423,7 +1391,6 @@ const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${tic
       console.error('Error generating AI response:', error)'
       throw error
     }
-  }
   async getCustomerProfile(customerId: string): Promise<CustomerProfile> {
   // TODO: Add properties
 }
@@ -1467,8 +1434,7 @@ const response = await fetch(`${this.baseUrl}/api/customer-service/customers/${c
       console.error('Error getting customer profile:', error)'
       throw error
     }
-  }
-  async getMetrics(timeframe: string = '30d'): Promise<CustomerServiceMetrics> {'
+  async getMetrics(timeframe: string = '30 d'): Promise<CustomerServiceMetrics> {'
     try {;
 const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
   // TODO: Add properties
@@ -1499,7 +1465,6 @@ const response = await fetch(`${this.baseUrl}/api/customer-service/metrics?timef
       console.error('Error getting metrics:', error)'
       throw error
     }
-  }
   async searchTickets(query: string, filters?: Record<string, any>): Promise<CustomerTicket[]> {
   // TODO: Add properties
 }
@@ -1554,7 +1519,6 @@ const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/searc
       console.error('Error searching tickets:', error)'
       throw error
     }
-  }
   async autoAssignTickets(): Promise<{ assigned: number; failed: number }> {
   // TODO: Add properties
 }
@@ -1591,7 +1555,6 @@ const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-
       console.error('Error auto-assigning tickets:', error)'
       throw error
     }
-  }
   async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {'
     try {;
 const response = await fetch(`${this.baseUrl}/api/customer-service/reports`, {
@@ -1627,7 +1590,6 @@ const response = await fetch(`${this.baseUrl}/api/customer-service/reports`, {
       console.error('Error generating report:', error)'
       throw error
     }
-  }
 }
 ;
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');';

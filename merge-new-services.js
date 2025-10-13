@@ -25,8 +25,6 @@ import fs from 'fs';'
   execSync('git pull origin main', {/* TODO: Fix JSX expression */})'
   o: 'inherit' })'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 //Step,
   2: Get new service branches,
 // const newServiceBranches = [
@@ -34,8 +32,8 @@ import fs from 'fs';'
 ]
   // TODO: Add items
 ]
-  'cursor/add-new-services-and-deploy-updates-0c4f','
-  'cursor/add-new-services-and-deploy-updates-0f78','
+  'cursor/add-new-services-and-deploy-updates-0 c4 f','
+  'cursor/add-new-services-and-deploy-updates-0 f78','
   'cursor/add-new-services-and-deploy-updates-1399','
   'cursor/add-new-services-and-deploy-updates-1503','
   'cursor/add-new-services-and-deploy-updates-1817','
@@ -60,7 +58,7 @@ function mergeServiceBranch(branchName) {,
     //Fetch the branch
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' })'
     //Try direct merge first
-    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Add new services and deploy updates"`)"
+    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Add new services and deploy updates"
       { stdio: 'inherit' }'
     )
 //     return { success: true, method: 'direct' }'
@@ -85,7 +83,7 @@ function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
     execSync(`git fetch origin ${branchName}`, {/* TODO: Fix JSX expression */})
   o: 'inherit' })'
     //Try direct merge first;`
-    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Add new services and deploy updates"`,"
+    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} - Add new services and deploy updates"
       {/* TODO: Fix JSX expression */}
   o: 'inherit' })'
     )
@@ -93,17 +91,8 @@ function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
   d: 'direct' }'
   } catch (error) {/* TODO: Fix JSX expression */}
   o: 'inherit' })'
-      execSync(")`"
-        `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,"
-        {/* TODO: Fix JSX expression */}
-  o: 'inherit' }'
-      )
-//       return {/* TODO: Fix JSX expression */}
-  d: 'theirs' }'
-    } catch (theirsError) {/* TODO: Fix JSX expression */}
-  o: 'inherit' })'
-        execSync(")`"
-          `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,"
+      execSync(")`"Auto-merge ${branchName} (theirs strategy)"`,")`"
+          `git merge origin/${branchName} -X ours --no-ff -m "`,"
           {/* TODO: Fix JSX expression */}
   o: 'inherit' }'
         )
@@ -131,15 +120,10 @@ function mergeServiceBranch(branchName) {/* TODO: Fix JSX expression */}
       } catch (oursError) {/* TODO: Fix JSX expression */}
   o: 'inherit' })'
         } catch (resetError) {/* TODO: Fix JSX expression */}
-        }
-
         return {/* TODO: Fix JSX expression */}
   d: 'failed' }'
       }
-    }
   }
-}
-
 //Step 4: Process all new service branches
 // const results = {
   // TODO: Add properties
@@ -171,7 +155,6 @@ for (const branch of newServiceBranches) {/* TODO: Fix JSX expression */}
   results.summary.total++
   if (result.success) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
-  }
 }
 
 //Step 5: Generate report,

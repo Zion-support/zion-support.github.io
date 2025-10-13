@@ -58,7 +58,6 @@ async function ensureFilesExist(): Promise<void> {
 }
     await fs.writeJson(REVIEWS_PATH, [], { spaces: 2 })
   }
-}
 export async function readProjects(): Promise<Project[]> {
   // TODO: Add properties
 }
@@ -178,4 +177,3 @@ const reviews = await readReviews()
 )
     (r) => r.projectId === projectId && r.fromRole === fromRole && r.fromId === fromId && !r.removed,
   )
-}

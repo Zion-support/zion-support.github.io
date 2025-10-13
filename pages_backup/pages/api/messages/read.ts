@@ -7,5 +7,3 @@ const conv = getConversationById(conversationId)
   if (!conv || !conv.participants.includes(user.id)) return res.status(404).json({ error: 'Conversation not found' })'
   markAsRead(conversationId, user.id)
   res.status(200).json({ success: true })
-}
-}

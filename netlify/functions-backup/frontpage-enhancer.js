@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'frontpage-enhancer'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'frontpage-enhancer'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'frontpage-enhancer',' source: event.source || 'unknown', enhancement: {' status: 'active', enhancements: 0,'
         lastEnhancement: new Date().toISOString() } }) } return result; } catch (error) {

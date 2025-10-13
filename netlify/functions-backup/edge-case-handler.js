@@ -65,11 +65,9 @@ let _edgeCaseCount = 0
           edgeCaseCount++}
         } else {/* TODO: Fix JSX expression */}
           successCount++}
-        }
       } catch (error) {/* TODO: Fix JSX expression */}
   r: ${error.message}`
       }
-    }
     // Calculate edge case handling metrics
 //     const totalTests = Object.keys(edgeCaseTests).length;
 const _edgeCaseHandlingRate = (edgeCaseCount / totalTests) * 100;
@@ -126,7 +124,6 @@ const result = {/* TODO: Fix JSX expression */}
   s: 'error'}'
       })
     }
-  }
 }
 // exports.handler = async function(event) context) {try { const timestamp = new Date().toISOString()} // Test various edge cases and data types const edgeCaseTests = {/* TODO: Fix JSX expression */}
   y: []} emptyObjec,

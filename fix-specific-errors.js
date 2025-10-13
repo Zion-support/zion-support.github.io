@@ -47,7 +47,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   // TODO: Add properties
 }
         // Fix lines that look like property assignments but are missing colons
-        if (line.match(/^\s*[a-zA-Z_][a-zA-Z0-9_]*\s+[a-zA-Z_][a-zA-Z0-9_]*\s*$/)) {
+        if (line.match(/^\s*[a-zA-Z_][a-zA-Z0-9 _]*\s+[a-zA-Z_][a-zA-Z0-9 _]*\s*$/)) {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -77,15 +77,11 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
         newLines.push(line)
       }
       if (modified) {/* TODO: Fix JSX expression */}
-      }
     }
 
     if (modified) {/* TODO: Fix JSX expression */}
-    }
-
     return false
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Main execution
@@ -104,7 +100,6 @@ async function main() {
       fixedCount++
     }
 async function main() {/* TODO: Fix JSX expression */}
-}
   // Find all TypeScript/JavaScript files in app directory
   files.forEach(file => {/* TODO: Fix JSX expression */}
     })

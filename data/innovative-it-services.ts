@@ -30,7 +30,6 @@ export interface InnovativeITService {id: string
     email: string,
     address: string}
     website: string}
-  }
     id: 'zero - trust - security - platform''
     name: 'Zero Trust Security Platform','
     tagline: 'Next - generation cybersecurity with zero trust architecture','
@@ -41,7 +40,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  }
     i,
   d: 'zero - trust - security - platform','
     nam,
@@ -144,7 +142,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Zscaler','
       'Okta','
       'CyberArk'],'
-    market_size: '$45B cybersecurity market''
+    market_size: '$45 B cybersecurity market''
     growth_rate: '110% annual growth''
     variant: 'cyberpunk''
     contact_info: unknown,
@@ -167,7 +165,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     period: '/month','
     description: unknown,
     market_siz,
-  e: '$45B cybersecurity market','
+  e: '$45 B cybersecurity market','
     growth_rat,
   e: '110% annual growth','
     varian,
@@ -299,7 +297,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Google Cloud IoT Edge','
       'FogHorn','
       'ClearBlade'],'
-    market_size: '$15B edge computing market''
+    market_size: '$15 B edge computing market''
     growth_rate: '180% annual growth''
     variant: 'quantum''
     contact_info: unknown,
@@ -322,7 +320,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     period: '/month','
     description: unknown,
     market_siz,
-  e: '$15B edge computing market','
+  e: '$15 B edge computing market','
     growth_rat,
   e: '180% annual growth','
     varian,
@@ -453,7 +451,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Google Quantum','
       'Rigetti','
       'D - Wave'],'
-    market_size: '$8B quantum computing market''
+    market_size: '$8 B quantum computing market''
     growth_rate: '250% annual growth''
     variant: 'quantum - advanced''
     contact_info: unknown,
@@ -477,7 +475,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     period: '/month','
     description: unknown,
     market_siz,
-  e: '$8B quantum computing market','
+  e: '$8 B quantum computing market','
     growth_rat,
   e: '250% annual growth','
     varian,
@@ -611,7 +609,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'Corda','
       'Quorum','
       'Multichain'],'
-    market_size: '$19B blockchain market''
+    market_size: '$19 B blockchain market''
     growth_rate: '160% annual growth''
     variant: 'quantum - blockchain''
     contact_info: unknown,
@@ -635,7 +633,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
     period: '/month','
     description: unknown,
     market_siz,
-  e: '$19B blockchain market','
+  e: '$19 B blockchain market','
     growth_rat,
   e: '160% annual growth','
     varian,
@@ -771,7 +769,7 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
       'CircleCI','
       'GitHub Actions','
       'Azure DevOps'],'
-    market_size: '$12B DevOps market''
+    market_size: '$12 B DevOps market''
     growth_rate: '130% annual growth''
     variant: 'cyberpunk''
     contact_info: unknown,
@@ -841,7 +839,7 @@ export const innovativeITServices: InnovativeITService[] = [,;
     rating: 4.7
     reviews: 1250,
     market_siz,
-  e: '$12B DevOps market','
+  e: '$12 B DevOps market','
     growth_rat,
   e: '130% annual growth','
     varian,
@@ -976,7 +974,7 @@ export const,;
   i: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.','
     competitor,
   s: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'], marketSiz,'
-  e: '$45B cybersecurity market','
+  e: '$45 B cybersecurity market','
     growthRat,
   e: '110% annual growth', varian,'
   t: 'cyberpunk','
@@ -1004,7 +1002,6 @@ export const,;
     review,
   s: 1250}
 export interface InnovativeITService {/* TODO: Fix JSX expression */}
-  }
 ]
 }
 ]
@@ -1145,12 +1142,12 @@ realImplementation: true,
       'FogHorn''
       'ClearBlade''
     ]
-    marketSize: '$15B edge computing market''
+    marketSize: '$15 B edge computing market''
     growthRate: '180% annual growth','
     variant: 'quantum','
     contactInfo: targetAudience: unknown,
     marketSiz,
-  e: '$15B edge computing market''
+  e: '$15 B edge computing market''
     growthRat,
   e: '180% annual growth''
     varian,
@@ -1199,7 +1196,7 @@ realImplementation: true,
       'Rigetti''
       'D-Wave''
     ]
-    marketSize: '$8B quantum computing market''
+    marketSize: '$8 B quantum computing market''
     growthRate: '250% annual growth','
     variant: 'quantum-advanced','
     contactInfo: marketPosition: unknown,
@@ -1216,7 +1213,7 @@ realImplementation: true,
 ]
     integrations: [,
     marketSiz,
-  e: '$8B quantum computing market''
+  e: '$8 B quantum computing market''
     growthRat,
   e: '250% annual growth''
     varian,
@@ -1269,7 +1266,7 @@ realImplementation: true,
       'Quorum''
       'Multichain''
     ]
-    marketSize: '$19B blockchain market''
+    marketSize: '$19 B blockchain market''
     growthRate: '160% annual growth','
     variant: 'quantum-blockchain','
     contactInfo: marketPosition: unknown,
@@ -1286,7 +1283,7 @@ realImplementation: true,
 ]
     integrations: [,
     marketSiz,
-  e: '$19B blockchain market''
+  e: '$19 B blockchain market''
     growthRat,
   e: '160% annual growth''
     varian,
@@ -1345,7 +1342,7 @@ realImplementation: true,
       'GitHub Actions''
       'Azure DevOps''
     ]
-    marketSize: '$12B DevOps market''
+    marketSize: '$12 B DevOps market''
     growthRate: '130% annual growth''
     variant: 'cyberpunk''
     contactInfo: mobile: '+1 302 464 0950''
@@ -1370,7 +1367,7 @@ realImplementation: true,
     rating: 4.7
     reviews: 1250,
     marketSiz,
-  e: '$12B DevOps market''
+  e: '$12 B DevOps market''
     growthRat,
   e: '130% annual growth''
     varian,
@@ -1425,7 +1422,6 @@ export interface InnovativeITService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  }
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -1545,7 +1541,6 @@ export const,;
   g: 4.7,
     review,
   s: 1250}
-  }
 ]
   }
 ]
@@ -1608,7 +1603,7 @@ export interface InnovativeITService,;
   s: [,' 'Enterprise security',' 'Cloud security',' 'Network protection',' 'Identity management',' 'Compliance',' 'Threat detection'],' ro,'
   i: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.', competitor,'
   s: [,' 'Palo Alto Networks',' 'CrowdStrike',' 'Zscaler',' 'Okta',' 'CyberArk'],' market_siz,'
-  e: '$45B cybersecurity market',' growth_rat,'
+  e: '$45 B cybersecurity market',' growth_rat,'
   e: '110% annual growth',' varian,'
   t: 'cyberpunk', contact_inf,'
   o: ' mobil,'
@@ -1629,7 +1624,7 @@ export interface InnovativeITService,;
   e: '$299',' perio,'
   d: '/month', descriptio,'
   n:  ,' 'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.', feature,'
-  s: [, ' 'Distributed edge nodes',' 'Real - time data processing',' 'Low - latency computing',' 'Edge AI capabilities',' 'Automatic scaling',' 'Geographic distribution',' 'Load balancing',' 'Edge analytics',' 'IoT integration',' '5G optimization'], popula,'
+  s: [, ' 'Distributed edge nodes',' 'Real - time data processing',' 'Low - latency computing',' 'Edge AI capabilities',' 'Automatic scaling',' 'Geographic distribution',' 'Load balancing',' 'Edge analytics',' 'IoT integration',' '5 G optimization'], popula,'
   r: true,' ico,'
   n: '🌐', ' colo,'
   r: 'from - blue - 500 to - cyan - 600',' text_colo,'
@@ -1643,12 +1638,12 @@ export interface InnovativeITService,;
   e: '1 hour',' categor,'
   y: 'IT & Edge Computing', real_servic,'
   e: true, technolog,
-  y: [, ' 'Edge Computing',' 'IoT',' '5G',' 'Kubernetes',' 'Docker',' 'React',' 'Node && Node.js',' 'Python',' 'AWS'], integration,'
+  y: [, ' 'Edge Computing',' 'IoT',' '5 G',' 'Kubernetes',' 'Docker',' 'React',' 'Node && Node.js',' 'Python',' 'AWS'], integration,'
   s: [,' 'AWS IoT',' 'Azure IoT',' 'Google Cloud IoT',' 'MQTT',' 'CoAP',' 'HTTP / 2',' 'WebSocket',' 'REST API'], use_case,'
-  s: [,' 'IoT applications',' 'Real - time analytics',' 'Edge AI',' '5G services',' 'Smart manufacturing',' 'Autonomous vehicles'],' ro,'
+  s: [,' 'IoT applications',' 'Real - time analytics',' 'Edge AI',' '5 G services',' 'Smart manufacturing',' 'Autonomous vehicles'],' ro,'
   i: 'Average customer sees 300% ROI within 8 months through reduced latency and improved performance.', competitor,'
   s: [,' 'AWS Greengrass',' 'Azure IoT Edge',' 'Google Cloud IoT Edge',' 'FogHorn',' 'ClearBlade'],' market_siz,'
-  e: '$15B edge computing market',' growth_rat,'
+  e: '$15 B edge computing market',' growth_rat,'
   e: '180% annual growth',' varian,'
   t: 'quantum', contact_inf,'
   o: ' mobil,'
@@ -1688,7 +1683,7 @@ export interface InnovativeITService,;
   s: [,' 'Drug discovery',' 'Financial modeling',' 'Logistics optimization',' 'Machine learning',' 'Cryptography',' 'Material science'],' ro,'
   i: 'Average customer sees 500% ROI within 18 months through breakthrough discoveries and optimizations.', competitor,'
   s: [,' 'IBM Quantum',' 'AWS Braket',' 'Google Quantum',' 'Rigetti',' 'D - Wave'],' market_siz,'
-  e: '$8B quantum computing market',' growth_rat,'
+  e: '$8 B quantum computing market',' growth_rat,'
   e: '250% annual growth',' varian,'
   t: 'quantum - advanced', contact_inf,'
   o: ' mobil,'
@@ -1728,7 +1723,7 @@ export interface InnovativeITService,;
   s: [,' 'Supply chain tracking',' 'Digital identity',' 'Smart contracts',' 'Tokenization',' 'Voting systems',' 'Asset management'],' ro,'
   i: 'Average customer sees 350% ROI within 12 months through improved efficiency and transparency.', competitor,'
   s: [,' 'Hyperledger Fabric',' 'Ethereum Enterprise',' 'Corda',' 'Quorum',' 'Multichain'],' market_siz,'
-  e: '$19B blockchain market',' growth_rat,'
+  e: '$19 B blockchain market',' growth_rat,'
   e: '160% annual growth',' varian,'
   t: 'quantum - blockchain', contact_inf,'
   o: ' mobil,'
@@ -1768,7 +1763,7 @@ export interface InnovativeITService,;
   s: [,' 'Software development',' 'Deployment automation',' 'Infrastructure management',' 'Testing automation',' 'Monitoring',' 'Security'],' ro,'
   i: 'Average customer sees 250% ROI within 6 months through improved development velocity and reduced deployment time.', competitor,'
   s: [,' 'GitLab',' 'Jenkins',' 'CircleCI',' 'GitHub Actions',' 'Azure DevOps'],' market_siz,'
-  e: '$12B DevOps market',' growth_rat,'
+  e: '$12 B DevOps market',' growth_rat,'
   e: '130% annual growth',' varian,'
   t: 'cyberpunk', contact_inf,'
   o: ' mobil,'
@@ -1848,7 +1843,7 @@ export interface InnovativeITService,;
   s: ['Enterprise securityCloud securityNetwork protectionIdentity managementComplianceThreat detection'], ro,'
   i: 'Average customer sees 400% ROI within 12 months through reduced security incidents and compliance costs.',' competitor,'
   s: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'], marketSiz,'
-  e: '$45B cybersecurity market',' growthRat,'
+  e: '$45 B cybersecurity market',' growthRat,'
   e: '110% annual growth', varian,'
   t: 'cyberpunk', contactInf,'
   o: ' mobil,'
@@ -1875,7 +1870,7 @@ export interface InnovativeITService,;
   e: '$299' perio,''
   d: '/month' descriptio,'
   n:' 'Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.' feature,'
-  s: [' 'Distributed edge nodes' 'Real-time data processing' 'Low-latency computing' 'Edge AI capabilities' 'Automatic scaling' 'Geographic distribution' 'Load balancing' 'Edge analytics' 'IoT integration' '5G optimization' ] popula,'
+  s: [' 'Distributed edge nodes' 'Real-time data processing' 'Low-latency computing' 'Edge AI capabilities' 'Automatic scaling' 'Geographic distribution' 'Load balancing' 'Edge analytics' 'IoT integration' '5 G optimization' ] popula,'
   r: true' ico,'
   n: '🌐' colo,''
   r: 'from-blue-500 to-cyan-600' textColo,''
@@ -1889,12 +1884,12 @@ export interface InnovativeITService,;
   e: '1 hour' categor,''
   y: 'IT & Edge Computing' realServic,'
   e: true,
-  technology: [' 'Edge Computing' 'IoT' '5G' 'Kubernetes' 'Docker' 'React' 'Node.js' 'Python' 'AWS' ] integration,'
+  technology: [' 'Edge Computing' 'IoT' '5 G' 'Kubernetes' 'Docker' 'React' 'Node.js' 'Python' 'AWS' ] integration,'
   s: [' 'AWS IoT' 'Azure IoT' 'Google Cloud IoT' 'MQTT' 'CoAP' 'HTTP/2' 'WebSocket' 'REST API' ] useCase,'
-  s: [' 'IoT applications' 'Real-time analytics' 'Edge AI' '5G services' 'Smart manufacturing' 'Autonomous vehicles' ]' ro,'
+  s: [' 'IoT applications' 'Real-time analytics' 'Edge AI' '5 G services' 'Smart manufacturing' 'Autonomous vehicles' ]' ro,'
   i: 'Average customer sees 300% ROI within 8 months through reduced latency and improved performance.' competitor,'
   s: [' 'AWS Greengrass' 'Azure IoT Edge' 'Google Cloud IoT Edge' 'FogHorn' 'ClearBlade' ]' marketSiz,'
-  e: '$15B edge computing market' growthRat,''
+  e: '$15 B edge computing market' growthRat,''
   e: '180% annual growth' varian,''
   t: 'quantum' contactInf,'
   o: targetAudienc,
@@ -1908,7 +1903,7 @@ export interface InnovativeITService,;
   s: [' 'Drug discovery' 'Financial modeling' 'Logistics optimization' 'Machine learning' 'Cryptography' 'Material science' ]' ro,'
   i: 'Average customer sees 500% ROI within 18 months through breakthrough discoveries and optimizations.' competitor,'
   s: [' 'IBM Quantum' 'AWS Braket' 'Google Quantum' 'Rigetti' 'D-Wave' ]' marketSiz,'
-  e: '$8B quantum computing market' growthRat,''
+  e: '$8 B quantum computing market' growthRat,''
   e: '250% annual growth' varian,''
   t: 'quantum-advanced' contactInf,'
   o: marketPositio,
@@ -1924,7 +1919,7 @@ export interface InnovativeITService,;
   s: [' 'Supply chain tracking' 'Digital identity' 'Smart contracts' 'Tokenization' 'Voting systems' 'Asset management' ]' ro,'
   i: 'Average customer sees 350% ROI within 12 months through improved efficiency and transparency.' competitor,'
   s: [' 'Hyperledger Fabric' 'Ethereum Enterprise' 'Corda' 'Quorum' 'Multichain' ]' marketSiz,'
-  e: '$19B blockchain market' growthRat,''
+  e: '$19 B blockchain market' growthRat,''
   e: '160% annual growth' varian,''
   t: 'quantum-blockchain' contactInf,'
   o: marketPositio,
@@ -1940,7 +1935,7 @@ export interface InnovativeITService,;
   s: [' 'Software development' 'Deployment automation' 'Infrastructure management' 'Testing automation' 'Monitoring' 'Security' ]' ro,'
   i: 'Average customer sees 250% ROI within 6 months through improved development velocity and reduced deployment time.' competitor,'
   s: [' 'GitLab' 'Jenkins' 'CircleCI' 'GitHub Actions' 'Azure DevOps' ]' marketSiz,'
-  e: '$12B DevOps market' growthRat,''
+  e: '$12 B DevOps market' growthRat,''
   e: '130% annual growth' varian,''
   t: 'cyberpunk' contactInf,'
   o: ' mobil,'

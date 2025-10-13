@@ -43,4 +43,4 @@ const { id } = req.query as { id?: string }
   res.status(200).send(transcript)
 }
 
-}}}
+}

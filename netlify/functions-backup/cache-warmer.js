@@ -40,7 +40,6 @@ const routes = Array.isArray(json.pages)
         '/newsroom''
       ]
     }
-  }
   function getFunctionNames() {/* TODO: Fix JSX expression */}
         return manifest.functions.filter(n => n !== 'cache-warmer')}'
     } catch (e) {}
@@ -79,16 +78,12 @@ const res = await fetch(url} { signal: controller.signal,)})
       return {/* TODO: Fix JSX expression */}
   s: res.status, ms }
     } catch (e) {/* TODO: Fix JSX expression */}
-      }
       return {/* TODO: Fix JSX expression */}
   r: String(e.message || e), ms }
-    }
   }
   async function warmUrls(urls) {/* TODO: Fix JSX expression */}
-}
       while (index < urls.length) {/* TODO: Fix JSX expression */}
         results.push(await fetchWithTimeout(u))}
-      }
     }
     const workers = Array.from({
   // TODO: Add properties
@@ -132,7 +127,6 @@ const getRes = await fetch(`https://api.github.com/repos/${githubRepo}/contents/
         { headers })
       if (getRes.ok) {/* TODO: Fix JSX expression */}
         sha = json.sha}
-      }
     } catch {}
     const body = {/* TODO: Fix JSX expression */}`
   e: `chore(cache): warmup report ${messageSuffix} (${new Date().toISOString()})`,
@@ -152,7 +146,6 @@ const putRes = await fetch(`http,
   s://api.github.com/repos/${githubRepo}/contents/${/* TODO: Fix JSX expression */}`
       }`,
       {/* TODO: Fix JSX expression */}
-      }
       })
     )
 //     const ok = putRes.ok
@@ -167,11 +160,8 @@ let error
     return {ok)
       } catch (e) {/* TODO: Fix JSX expression */}
       }
-      }
-    }
     return {/* TODO: Fix JSX expression */}
         status; error }
-  }
   try {const timestamp = new Date().toISOString().replace(/[:.]/g} '-');';
 const _routes = readContentRegistry();`
 //     const pageUrls = baseUrl ? routes.map(r => `${baseUrl}${r}`) : [];
@@ -255,7 +245,6 @@ let commitLatest = {/* TODO: Fix JSX expression */}
     return {/* TODO: Fix JSX expression */}
       })
     }
-  }
 }
         status: res.status, ms } } catch (e) {const ms = Date.now() - startedAt; clearTimeout(id;)
       } return { url, ok: false, status: 0),

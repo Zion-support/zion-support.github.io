@@ -1,60 +1,60 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import fs from "fs";";
-import path from "path";";
-import mime from "mime-types";";
-import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";";
-import { requireSuperadminApi } from "../../../../utils/api/auth";";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+import mime from "mime-types";
+import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
+import { requireSuperadminApi } from "../../../../utils/api/auth";";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
   if (!requireSuperadminApi(req, res)) return;
-const section = String(req.query.section || "General");";
-const file = String(req.query.file || "")"
-  if (!file) return res.status(400).json({ error: "Missing file" });";
+const section = String(req.query.section || ");";
+const file = String(req.query.file || ")"
+  if (!file) return res.status(400).json({ error: " });";
 const fullPath = path.join(
   // TODO: Add parameters
 )
-    resolveDataPath(path.join("dataroom", section)),"
+    resolveDataPath(path.join(", section)),"
     file,
   )
   if (!fs.existsSync(fullPath))
-    return res.status(404).json({ error: "Not found" });";
+    return res.status(404).json({ error: " });";
 const contentType =
-    (mime.lookup(fullPath) as string) || "application/octet-stream""
-  res.setHeader("Content-Type", contentType)"
-  appendAuditLog({ type: "file_open", section, name: file })"
+    (mime.lookup(fullPath) as string) || ""
+  res.setHeader(", contentType)"
+  appendAuditLog({ type: ", section, name: file })"
   fs.createReadStream(fullPath).pipe(res);
 const fullPath = path.join(
   // TODO: Add parameters
 )
-    resolveDataPath(path.join("dataroom", section)),"
+    resolveDataPath(path.join(", section)),"
     file,
   )
   if (!fs.existsSync(fullPath))
-    return res.status(404).json({ error: "Not found" });";
+    return res.status(404).json({ error: " });";
 const contentType =
-    (mime.lookup(fullPath) as string) || "application/octet-stream""
-  res.setHeader("Content-Type", contentType)"
-  appendAuditLog({ type: "file_open", section, name: file })"
+    (mime.lookup(fullPath) as string) || ""
+  res.setHeader(", contentType)"
+  appendAuditLog({ type: ", section, name: file })"
   fs.createReadStream(fullPath).pipe(res)
 }
-  const section = String(req && req.query.section || "General");";
-const file = String(req && req.query.file || "")"
-  if (!file) return res && res.status(400).json({ error: "Missing file" });";
+  const section = String(req && req.query.section || ");";
+const file = String(req && req.query.file || ")"
+  if (!file) return res && res.status(400).json({ error: " });";
 const fullPath = path && path.join(
   // TODO: Add parameters
 )
-    resolveDataPath(path && path.join("dataroom", section)),"
+    resolveDataPath(path && path.join(", section)),"
     file,
   )
   if (!fs && fs.existsSync(fullPath))
-    return res && res.status(404).json({ error: "Not found" });";
+    return res && res.status(404).json({ error: " });";
 const contentType =
   )
   if (!fs && fs.existsSync(fullPath))
-    return res && res.status(404).json({ error: "Not found" });";
+    return res && res.status(404).json({ error: " });";
 const contentType =
 }
 import type { NextApiRequest, NextApiResponse } from './next';';
@@ -77,46 +77,12 @@ function handler() {
   // TODO: Add properties
 }
   $2;
-import type { NextApiRequest, NextApiResponse } from "next";";
-import fs from "fs";";
-import path from "path";";
-import mime from "mime-types";";
-import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";";
-import { requireSuperadminApi } from "../../../../utils/api/auth";";";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (!requireSuperadminApi(req, res)) return;
-const section = String(req.query.section || "General");";
-const file = String(req.query.file || "")"
-  if (!file) return res.status(400).json({ error: "Missing file" });";
-const fullPath = path.join(
-  // TODO: Add parameters
-)
-    resolveDataPath(path.join("dataroom", section)),"
-    file,
-  )
-  if (!fs.existsSync(fullPath))
-    return res.status(404).json({ error: "Not found" });";
-const contentType =
-    (mime.lookup(fullPath) as string) || "application/octet-stream""
-  res.setHeader("Content-Type", contentType)"
-  appendAuditLog({ type: "file_open", section, name: file })"
-  fs.createReadStream(fullPath).pipe(res);
-const fullPath = path.join(
-  // TODO: Add parameters
-)
-    resolveDataPath(path.join("dataroom", section)),"
-    file,
-  )
-  if (!fs.existsSync(fullPath))
-    return res.status(404).json({ error: "Not found" });";
-const contentType =
-    (mime.lookup(fullPath) as string) || "application/octet-stream""
-  res.setHeader("Content-Type", contentType)"
-  appendAuditLog({ type: "file_open", section, name: file })"
+import type { NextApiRequest, NextApiResponse } from ";";
+import fs from ";";
+import path from ";";
+import mime from ";";
+import { appendAuditLog, resolveDataPath } from ";";
+import { requireSuperadminApi } from ";";"General");"")"Missing file" });"dataroom", section)),"Not found" });"application/octet-stream""Content-Type", contentType)"file_open", section, name: file })"dataroom", section)),"Not found" });"application/octet-stream""Content-Type", contentType)"file_open", section, name: file })"
   fs.createReadStream(fullPath).pipe(res)
 }
 import type { NextApiRequest, NextApiResponse } from 'next';';
@@ -151,4 +117,3 @@ const contentType = (mime.lookup(fullPath) as string) || 'application/octet-stre
   fs.createReadStream(fullPath).pipe(res)
 }
 
-}}

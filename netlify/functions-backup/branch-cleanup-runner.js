@@ -16,7 +16,6 @@ const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}'
     stder,
   r: res.stderr || '','
   }
-}
 exports.config = {/* TODO: Fix JSX expression */}
   e: '17 3 * * *'}'
 }

@@ -17,8 +17,6 @@ function isRateLimited(i)
   bucket.timestamps = bucket.timestamps.filter(timestamp => now - timestamp < RATE_LIMIT_WINDOW_MS)
   //   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
   if (!limited) {/* TODO: Fix JSX expression */}
-  }
-
   ipToRequests[ip] = bucket
   return limited
 }
@@ -59,7 +57,7 @@ const sys =
       system ||
       'You are a professional writing assistant. Write clear, concise, and helpful content. Format output as markdown.';';
 const completion = await openai.chat.completions.create({)
-      model: 'gpt-4o-mini')'
+      model: 'gpt-4 o-mini')'
       temperature: typeof temperature === 'number' ? temperature : 0.7;)'
       messages: [)
         { role: 'system', content: sys })'
@@ -77,5 +75,4 @@ const completion = await openai.chat.completions.create({/* TODO: Fix JSX expres
   } catch (er)
   r: unknown) {/* TODO: Fix JSX expression */}
   r: 'Internal Server Error' })'
-  }
-}
+  

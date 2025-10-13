@@ -90,5 +90,3 @@ export type Conversation = {
   createdAtIso: string
   updatedAtIso: string
   messages: Message[]
-}
-}

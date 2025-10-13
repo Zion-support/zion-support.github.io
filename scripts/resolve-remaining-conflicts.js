@@ -1,13 +1,5 @@
 
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-=======
+
 #!/usr/bin/env node;
 import { execSync } from 'child_process';';
 import fs from 'fs';'
@@ -21,7 +13,7 @@ function resolveMergeConflicts(filePath) {
   try {;
 const content = fs.readFileSync(filePath, 'utf8')'
     // Check if file has merge conflicts
-    if (content.includes('<<<<<<<') || content.includes(') || content.includes('>>>>>>>')) {'
+    if (content.includes('<<<<<<<') || content.includes(') || content.includes(')) {'
       console.log(`🔧 Resolving merge conflicts in ${filePath}...`)
       // Advanced conflict resolution strategy;
 let resolvedContent = content
@@ -54,8 +46,6 @@ const incoming = parts[1].replace(/            return incoming;)
     console.log(`❌ Error resolving conflicts in ${filePath}: ${error.message}`)
     return false
   }
-}
-
 // List of files with conflicts;
 const conflictedFiles = [
   // TODO: Add items
@@ -89,8 +79,6 @@ let resolvedCount = 0
 }
       resolvedCount++
   }
-  }
-
   console.log(`\n✅ Resolved conflicts in ${resolvedCount}/${conflictedFiles.length} files`)
   if (resolvedCount > 0) {
   // TODO: Add properties
@@ -121,7 +109,7 @@ let resolvedCount = 0
 }
   // TODO: Add properties
 }
-      execSync('git commit -m "Resolve remaining merge conflicts and integrate all changes"', { encoding: 'utf8', cwd: process.cwd() })'"
+      execSync('git commit -m "Resolve remaining merge conflicts and integrate all changes"
       console.log('✅ Merge resolution committed successfully')'
     } catch (error) {
   // TODO: Add properties
@@ -130,8 +118,6 @@ let resolvedCount = 0
 }
     console.log('❌ Error committing:', error.message)'
   }
-  }
-
   // Final status
   console.log('\n📊 Final Status: '),'
   try {,;
@@ -150,4 +136,3 @@ const status = execSync('git status', { encoding: 'utf8', cwd: process.cwd() })'
 #!/usr/bin/env node;
 // console.log('🔧 Resolving remaining merge conflicts...\n')
 // Function to resolve merge conflicts in a file;
-=======

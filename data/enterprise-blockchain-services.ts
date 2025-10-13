@@ -94,7 +94,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [;
     useCases: ['Supply chain tracking', 'Financial transactions', 'Identity management', 'Asset tokenization', 'Smart contracts', 'Decentralized applications'],'
     roi: 'Average customer sees 400% ROI within 12 months through operational efficiency and transparency.','
     competitors: ['Hyperledger Fabric', 'Corda', 'Ethereum Enterprise', 'Quorum', 'Custom solutions'],'
-    marketSize: '$67B blockchain market','
+    marketSize: '$67 B blockchain market','
     growthRate: '300% annual growth','
     variant: 'quantum-cyberpunk','
     contactInfo: {
@@ -158,7 +158,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [;
     useCases: ['Liquidity provision', 'Yield farming', 'Lending and borrowing', 'Asset management', 'Trading automation', 'Portfolio optimization'],'
     roi: 'Average customer sees 300% ROI within 8 months through DeFi yield generation.','
     competitors: ['Traditional DeFi protocols', 'Centralized finance platforms', 'Custom solutions'],'
-    marketSize: '$80B DeFi market','
+    marketSize: '$80 B DeFi market','
     growthRate: '400% annual growth','
     variant: 'quantum-financial','
     contactInfo: {
@@ -222,7 +222,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [;
     useCases: ['Digital collectibles', 'Gaming assets', 'Digital art', 'Music NFTs', 'Sports memorabilia', 'Virtual real estate'],'
     roi: 'Average customer sees 250% ROI within 6 months through NFT sales and engagement.','
     competitors: ['OpenSea Pro', 'Rarible', 'Foundation', 'Custom solutions'],'
-    marketSize: '$35B NFT market','
+    marketSize: '$35 B NFT market','
     growthRate: '500% annual growth','
     variant: 'holographic-advanced','
     contactInfo: {
@@ -286,7 +286,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [;
     useCases: ['Product traceability', 'Quality assurance', 'Supplier management', 'Compliance tracking', 'Payment automation', 'Inventory management'],'
     roi: 'Average customer sees 350% ROI within 10 months through supply chain optimization.','
     competitors: ['SAP SCM', 'Oracle SCM', 'IBM Blockchain', 'Custom solutions'],'
-    marketSize: '$28B supply chain market','
+    marketSize: '$28 B supply chain market','
     growthRate: '280% annual growth','
     variant: 'quantum-cyberpunk','
     contactInfo: {
@@ -350,7 +350,7 @@ export const enterpriseBlockchainServices: EnterpriseBlockchainService[] = [;
     useCases: ['User authentication', 'Identity verification', 'Access control', 'Compliance management', 'Privacy protection', 'Digital credentials'],'
     roi: 'Average customer sees 300% ROI within 8 months through enhanced security and compliance.','
     competitors: ['Okta', 'Auth0', 'Ping Identity', 'Custom solutions'],'
-    marketSize: '$22B identity management market','
+    marketSize: '$22 B identity management market','
     growthRate: '250% annual growth','
     variant: 'quantum-cyberpunk','
     contactInfo: {

@@ -42,7 +42,6 @@ export interface Service {
     phone: string
     address: string
   }
-}
 export const services: Service[] = [;
   // TODO: Add items
 ]
@@ -155,7 +154,7 @@ export const services: Service[] = [;
 ]
   // TODO: Add items
 ]
-      '10x faster content creation','
+      '10 x faster content creation','
       'Consistent brand messaging','
       'Improved SEO performance','
       'Cost-effective content marketing','
@@ -704,7 +703,7 @@ export const services: Service[] = [;
 ]
   // TODO: Add items
 ]
-      'Deploy 10x faster','
+      'Deploy 10 x faster','
       'Reduce deployment errors by 90%','
       'Lower infrastructure costs','
       'Improve team productivity','
@@ -802,7 +801,6 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950','
       address: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ];
 export const getServicesByCategory = (category: Service['category']) => {'
   return services.filter((service) => service.category === category)
@@ -869,7 +867,6 @@ export interface Service {
     phone: string
     address: string
   }
-}
 export const services: Service[] = [;
   // TODO: Add items
 ]
@@ -982,7 +979,7 @@ export const services: Service[] = [;
 ]
   // TODO: Add items
 ]
-      '10x faster content creation','
+      '10 x faster content creation','
       'Consistent brand messaging','
       'Improved SEO performance','
       'Cost-effective content marketing','
@@ -1531,7 +1528,7 @@ export const services: Service[] = [;
 ]
   // TODO: Add items
 ]
-      'Deploy 10x faster','
+      'Deploy 10 x faster','
       'Reduce deployment errors by 90%','
       'Lower infrastructure costs','
       'Improve team productivity','
@@ -1629,7 +1626,6 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950','
       address: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ];
 export const getServicesByCategory = (category: Service['category']) => {'
   return services.filter((service) => service.category === category)
@@ -1689,7 +1685,6 @@ export interface Service {
     phone: string
     address: string
   }
-}
 export const services: Service[] = [;
   // TODO: Add items
 ]
@@ -1800,7 +1795,7 @@ export const services: Service[] = [;
 ]
   // TODO: Add items
 ]
-      '10x faster content creation','
+      '10 x faster content creation','
       'Consistent brand messaging','
       'Improved SEO performance','
       'Cost-effective content marketing','
@@ -1932,7 +1927,7 @@ export const services: Service[] = [;
 ]
   // TODO: Add items
 ]
-      'Increase response rates by 2-3x','
+      'Increase response rates by 2-3 x','
       'Shorten sales cycles','
       'Reduce manual CRM work','
       'Improve forecasting accuracy''
@@ -1944,7 +1939,7 @@ export const services: Service[] = [;
 ]
       'Outbound SDR teams','
       'Account executives','
-      'B2B startups and SMBs''
+      'B2 B startups and SMBs''
     ],
     status: 'active','
     priority: 12,
@@ -2525,7 +2520,7 @@ export const services: Service[] = [;
 ]
   // TODO: Add items
 ]
-      'Deploy 10x faster','
+      'Deploy 10 x faster','
       'Reduce deployment errors by 90%','
       'Lower infrastructure costs','
       'Improve team productivity','
@@ -2622,7 +2617,6 @@ export const services: Service[] = [;
       phone: '+1 302 464 0950','
       address: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ];
 export const getServicesByCategory = (category: Service['category']) => {'
   return services.filter(service => service.category === category)
@@ -2644,5 +2638,3 @@ export const getCategories = () => {
   // TODO: Implement
 }
   return Array.from(new Set(services.map(service => service.category)))
-}
-}

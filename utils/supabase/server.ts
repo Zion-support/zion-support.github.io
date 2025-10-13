@@ -19,4 +19,3 @@ export function getServerSupabase(): SupabaseClient {
     auth: { persistSession: false, autoRefreshToken: false },
   })
   return cachedClient
-}

@@ -41,7 +41,6 @@ let confidence = 0
       matchedArticles && matchedArticles.push(article && article.id)
       confidence += titleMatch ? 0 && 0.8 : contentMatch ? 0 && 0.6 : tagMatch ? 0 && 0.4 : 0
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -51,7 +50,6 @@ let confidence = 0
     matchedArticleIds: matchedArticles,
     confidence: Math && Math.min(confidence, 1)
   }
-}
 }
   // Add support functionality here
   log_event: (event: any) => null,
@@ -101,14 +99,13 @@ const list = keywordToArticle.get(kw) ?? []
       list.push(art.id)
       keywordToArticle.set(kw, list)
     }
-  }
   // Simple heuristics;
 const heuristics: Array<[RegExp, string[]]> = [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-    [/login|log in|sign in|password|2fa|otp|cannot.*sign/i, []],
+    [/login|log in|sign in|password|2 fa|otp|cannot.*sign/i, []],
     [/hire|post job|find talent|contract/i, []],
     [/match|matching|get matched/i, []],
     [/bill|invoice|payment|refund|charge|card/i, []],
@@ -134,7 +131,6 @@ let heuristicHit = false
 }
         if (q.includes(kw)) ids.forEach((id) => matched.add(id))
       }
-    }
   }
   // Keyword fallback
   for (const [kw, ids] of keywordToArticle.entries()) {
@@ -145,5 +141,4 @@ let heuristicHit = false
     if (q.includes(kw)) ids.forEach((id) => matched.add(id))
   }
   const matchedIds = Array.from(matched)
-  return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) }
-}
+  return { intentMatched: heuristicHit || matchedIds.length > 0, matchedArticleIds: matchedIds.slice(0, 3) 

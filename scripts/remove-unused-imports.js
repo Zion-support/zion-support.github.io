@@ -43,7 +43,7 @@ function removeUnusedImports(content) {;
 let newContent = content;
 let removedCount = 0
   // Find all import statements;
-const importRegex = /import\s+.*?from\s+['"][^'"]+['"];?\s*\n/g;";'";
+const importRegex = /import\s+.*?from\s+['"][^'"];?\s*\n/g;";'";
 const imports = content.match(importRegex) || [];
 imports.forEach(importStatement => {)
     // Extract imported names;);
@@ -65,8 +65,7 @@ const importOccurrences = (importStatement.match(usageRegex) || []).length;
 const totalOccurrences = matches.length
         return totalOccurrences>importOccurrences</totalOccurrences>
       })
-      // If no names are used, remove the entire import
-      if (usedNames.length === 0) {
+      // If no names are used, remove the entire import if (usedNames.length === 0) {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -108,14 +107,11 @@ const importOccurrences = (importStatement.match(usageRegex) || []).length
     newContent = newContent.replace(importStatement, '')'
           removedCount++
   }
-      }
     }
   })
   // Clean up multiple empty lines
   newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n')'
   return { content: newContent, removedCount }
-}
-
 function processFile(filePath) {
   // TODO: Add properties
 }
@@ -142,8 +138,6 @@ const result = removeUnusedImports(content)
 }
     console.error(`❌ Error processing ${filePath}:`, error.message)
   }
-}
-
 async function main() {
   // TODO: Add properties
 }

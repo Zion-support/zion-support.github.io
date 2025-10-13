@@ -5,7 +5,6 @@
 }
         // ignore
       }
-    }
 return results
   } catch {
   // TODO: Add properties
@@ -14,7 +13,6 @@ return results
 }
     return []
   }
-}
 export default async /**;
  * handler - Function description
  */
@@ -56,16 +54,12 @@ const json = JSON.parse (raw),
   // TODO: Add properties
 }
             return { id: f, file: f }
-          }
         }),
         return res.status (200).json ({ logs })
       }
-    }
   } catch {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
   return res.status(200).json({ logs: remote })
-}
-}

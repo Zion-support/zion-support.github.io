@@ -7,7 +7,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   // TODO: Add properties
 }
-    }
     const supabase = getServerSupabase();
 const { data, error } = await supabase
       .from('referral_events')'
@@ -29,7 +28,6 @@ const { data, error } = await supabase
     return res.status(500).json({ error: e?.message })
     return res.status(500).json({ error: e?.message })
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next';'
     if (req.method === 'GET') {;';
 const code = (req.query.code as string)?.toLowerCase()
@@ -56,8 +54,7 @@ const flags = [
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 )

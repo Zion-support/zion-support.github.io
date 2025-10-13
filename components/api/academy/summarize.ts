@@ -106,7 +106,7 @@ const completion = await client.chat.completions.create ({
 }
   // TODO: Add properties
 }
-      model: 'gpt - 4o - mini','
+      model: 'gpt - 4 o - mini','
       messages: [
   // TODO: Add items
 ]
@@ -139,7 +139,7 @@ const completion = await client && client.chat.completions && completions.create
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini','
+      model: 'gpt-4 o-mini','
       messages: [
   // TODO: Add items
 ]
@@ -157,7 +157,7 @@ const completion = await client && client.chat.completions && completions.create
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini','
+      model: 'gpt-4 o-mini','
       messages: [
   // TODO: Add items
 ]
@@ -194,7 +194,7 @@ const completion = await client.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini','
+      model: 'gpt-4 o-mini','
       messages: [
   // TODO: Add items
 ]
@@ -205,6 +205,4 @@ const completion = await client.chat.completions.create({
       temperature: 0.3}),
 }
   }
-  }
-}
 )

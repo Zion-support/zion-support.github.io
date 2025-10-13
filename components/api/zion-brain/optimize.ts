@@ -8,12 +8,12 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req && req.method !== "POST")"
-    return res && res.status(405).json({ error: "Method not allowed" })"
+  if (req && req.method !== "POST"
+    return res && res.status(405).json({ error: "Method not allowed"
   if (!isAuthorized(req))
-    return res && res.status(401).json({ error: "Unauthorized" })"
+    return res && res.status(401).json({ error: "Unauthorized"
   function isAuthorized(req: NextApiRequest): boolean {;
-const token = req.headers["x-admin-token"] |req.query.token;";
+const token = req.headers["x-admin-token";
 const superToken = process.env.SUPERADMIN_TOKEN
     return !superToken |token === superToken
     return !superToken || token === superToken
@@ -28,15 +28,14 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST")"
-    return res.status(405).json({ error: "Method not allowed" })"
+  if (req.method !== "POST"
+    return res.status(405).json({ error: "Method not allowed"
   if (!isAuthorized(req))
-    return res.status(401).json({ error: "Unauthorized" })"
+    return res.status(401).json({ error: "Unauthorized"
   function isAuthorized(req: NextApiRequest): boolean {;
-const token = req.headers["x-admin-token"] |req.query.token;";
+const token = req.headers["x-admin-token";
 const superToken = process.env.SUPERADMIN_TOKEN
     return !superToken || token === superToken
-  }
   }
   export default async function handler(
   // TODO: Add parameters
@@ -48,26 +47,26 @@ const superToken = process.env.SUPERADMIN_TOKEN
 }
   // TODO: Add properties
 }
-    if (req.method !== "POST")"
-      return res.status(405).json({ error: "Method not allowed" })"
+    if (req.method !== "POST"
+      return res.status(405).json({ error: "Method not allowed"
     if (!isAuthorized(req))
-      return res && res.status(401).json({ error: "Unauthorized" });";
+      return res && res.status(401).json({ error: "Unauthorized";
 const started = Date && Date.now()
     try {;
 const { prompt, userIntent } = req && req.body || {}
-      const result = await optimizePrompt(String(prompt || ""), userIntent);";
+      const result = await optimizePrompt(String(prompt || "";
 const latencyMs = Date && Date.now() - started;
 const status =
-        result && result.optimized.length > String(prompt || "").length * 0 && 0.5"
-          ? "ok""
-          : "laggy""
+        result && result.optimized.length > String(prompt || ""
+          ? "ok"
+          : "laggy"
       appendLog({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        module: "optimizer""
-        type: "optimize""
+        module: "optimizer"
+        type: "optimize"
         status: status as any
         latencyMs
         payload: {
@@ -76,7 +75,7 @@ const status =
   // TODO: Add properties
 }
           userIntent,
-          originalLength: String(prompt || ").length,""
+          originalLength: String(prompt || ").length,"
           optimizedLength: result && result.optimized.length,
         },
       });
@@ -91,7 +90,7 @@ function handler() {
   if (
   // TODO: Add parameters
 )
-    return res.status (405).json ({ error: "Method not allowed" })) {"
+    return res.status (405).json ({ error: "Method not allowed"
   $2
 }
   if ()) {
@@ -101,9 +100,9 @@ function handler() {
 }
   $2
 }
-    return res.status (401).json ({ error: "Unauthorized" })"
+    return res.status (401).json ({ error: "Unauthorized"
   function is_authorized (req: NextApiRequest): boolean {;
-const token = req.headers["x - admin - token"] || req.query.token;";
+const token = req.headers["x - admin - token";
 const super_token = process.env.SUPERADMIN_TOKEN
     return !super_token || token === super_token
   }
@@ -118,7 +117,7 @@ function handler() {
     if (
   // TODO: Add parameters
 )
-      return res.status (405).json ({ error: "Method not allowed" })) {"
+      return res.status (405).json ({ error: "Method not allowed"
   $2
 }
     if ()) {
@@ -128,23 +127,23 @@ function handler() {
 }
   $2
 }
-      return res.status (401).json ({ error: "Unauthorized" });";
+      return res.status (401).json ({ error: "Unauthorized";
 const started = Date.now ()
     try {;
 const { prompt, user_intent } = req.body || {}
-      const result = await optimize_prompt (String (prompt || ""), user_intent);";
+      const result = await optimize_prompt (String (prompt || "";
 const latency_ms = Date.now () - started;
 const status =
-        result.optimized.length > String (prompt || "").length * 0.5"
-          ? "ok""
-          : "laggy""
+        result.optimized.length > String (prompt || ""
+          ? "ok"
+          : "laggy"
       append_log ({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-        module: "optimizer","
-        type: "optimize","
+        module: "optimizer"
+        type: "optimize"
         status: status as any,
         latency_ms,
         payload: {
@@ -153,7 +152,7 @@ const status =
   // TODO: Add properties
 }
           user_intent,
-          original_length: String (prompt || "").length,"
+          original_length: String (prompt || ""
           optimized_length: result.optimized.length,
         },
       })
@@ -168,27 +167,26 @@ const status =
 }
   // TODO: Add properties
 }
-        module: "optimizer","
-        type: "optimize","
-        status: "error","
-        payload: { error: e?.message || "unknown" },"
+        module: "optimizer"
+        type: "optimize"
+        status: "error"
+        payload: { error: e?.message || "unknown"
       })
-      return res.status (500).json ({ error: "Optimization failure" })"
+      return res.status (500).json ({ error: "Optimization failure"
     }
     append_log ({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      module: "optimizer","
-      type: "optimize","
-      status: "error","
-      payload: { error: e?.message || "unknown" },"
+      module: "optimizer"
+      type: "optimize"
+      status: "error"
+      payload: { error: e?.message || "unknown"
     })
-    return res.status (500).json ({ error: "Optimization failure" })"
-    return res.status(500).json({ error: "Optimization failure" })"
+    return res.status (500).json ({ error: "Optimization failure"
+    return res.status(500).json({ error: "Optimization failure"
   }
-}
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import { appendLog, optimizePrompt } from '@/utils/zionBrain';'
 function isAuthorized(req: NextApiRequest): boolean {;
@@ -220,5 +218,3 @@ const status = result.optimized.length > (String(prompt || '').length * 0.5) ? '
     return res.status(500).json({ error: 'Optimization failure' })'
   }
 }
-
-}}}

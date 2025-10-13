@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'license-compliance-auditor'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'license-compliance-auditor'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'license-compliance-auditor',' source: event.source || 'unknown', audit: {' status: 'active', licenses: 0, compliance: 100,'
         lastAudit: new Date().toISOString() } }) } return result; } catch (error) {

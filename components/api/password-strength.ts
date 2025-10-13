@@ -77,7 +77,6 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  }
   try {;
 const { password } = req && req.body
     if (!password || typeof password !== 'string') {'
@@ -143,7 +142,7 @@ const length = password.length;
 const hasUppercase = /[A-Z]/.test(password);
 const hasLowercase = /[a-z]/.test(password);
 const hasNumbers = /\d/.test(password);
-const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)"'"
+const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)"
     // Check for common patterns;
 const commonPatterns = [
   // TODO: Add items
@@ -193,7 +192,6 @@ const suggestions: string[] = []
 }
   // TODO: Add properties
 }
-    }
     const result: PasswordStrengthResult = {
   // TODO: Add properties
 }
@@ -313,7 +311,6 @@ if ( {) {
     console && console.error('Password strength check error:', error)'
     res && res.status(500).json({ error: 'Internal server error' })'
   }
-}
         entropy: Math.round (entropy * 100) / 100}
       suggestions}
 
@@ -496,7 +493,7 @@ const length = password.length;
 const hasUppercase = /[A-Z]/.test(password);
 const hasLowercase = /[a-z]/.test(password);
 const hasNumbers = /\d/.test(password);
-const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)"'"
+const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)"
     // Check for common patterns;
 const commonPatterns = [
   // TODO: Add items
@@ -524,7 +521,7 @@ const commonPatterns = [
 ]
   // TODO: Add items
 ]
-      '123abcqwepasswordadminusertest123456', 'password123admin123qwertyasdf''
+      '123 abcqwepasswordadminusertest123456', 'password123 admin123 qwertyasdf''
     ];
 const hasCommonPatterns = commonPatterns.some(pattern =>
       password.toLowerCase().includes(pattern)
@@ -638,6 +635,4 @@ const suggestions: string[] = []
     console.error('Password strength check error:', error)'
     res.status(500).json({ error: 'Internal server error' })'
   }
-}
-  }
-}
+  

@@ -1,9 +1,9 @@
-import { useState } from "react";";
-import { useForm } from "react-hook-form";";
-import { zodResolver } from "@hookform/resolvers/zod";";
-import { z } from "zod";";
-import { useHireRequest } from "@/hooks/useHireRequest";";
-import { TalentProfile } from "@/types/talent";"
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { useHireRequest } from "@/hooks/useHireRequest";
+import { TalentProfile } from "@/types/talent"
 interface UseHireRequestFormProps {
   // TODO: Add properties
 }
@@ -21,7 +21,6 @@ interface UseHireRequestFormProps {
     email?: string
     id?: string
   }
-}
 export interface FormValues {
   // TODO: Add properties
 }
@@ -43,19 +42,19 @@ const formSchema = z.object({
 }
   // TODO: Add properties
 }
-    requesterName: z.string().min(2, "Name is required"),"
-    requesterEmail: z.string().email("Valid email is required"),"
-    projectOverview: z.string().min(10, "Please provide more details about your project"),"
-    timeline: z.string().min(5, "Please specify your timeline"),"
-    budgetMin: z.number().min(1, "Budget minimum is required"),"
-    budgetMax: z.number().min(1, "Budget maximum is required")"
+    requesterName: z.string().min(2, "Name is required"
+    requesterEmail: z.string().email("Valid email is required"
+    projectOverview: z.string().min(10, "Please provide more details about your project"
+    timeline: z.string().min(5, "Please specify your timeline"
+    budgetMin: z.number().min(1, "Budget minimum is required"
+    budgetMax: z.number().min(1, "Budget maximum is required"
   }).refine(data => data.budgetMax >= data.budgetMin, {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    message: "Maximum budget must be greater than or equal to minimum budget","
-    path: ["budgetMax"]"
+    message: "Maximum budget must be greater than or equal to minimum budget"
+    path: ["budgetMax"
   })
   // Initialize the form;
 const form = useForm<FormValues>({
@@ -69,10 +68,10 @@ const form = useForm<FormValues>({
 }
   // TODO: Add properties
 }
-      requesterName: userDetails?.name || "","
-      requesterEmail: userDetails?.email || "","
-      projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "","
-      timeline: "","
+      requesterName: userDetails?.name || ""
+      requesterEmail: userDetails?.email || ""
+      projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : ""
+      timeline: ""
       budgetMin: talent.hourly_rate || 25,
       budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50
     }
@@ -95,7 +94,7 @@ const requestData = {
 }
   // TODO: Add properties
 }
-          id: talent.id || "","
+          id: talent.id || ""
           full_name: talent.full_name,
           professional_title: talent.professional_title},
           professional_title: talent.professional_title,
@@ -119,7 +118,6 @@ const requestData = {
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax
         }
-      }
       const result = await submitHireRequest(requestData)
       if (result.success) {
   // TODO: Add properties
@@ -133,7 +131,7 @@ const requestData = {
 }
   // TODO: Add properties
 }
-      console.error("Error submitting hire request:", error)"
+      console.error("Error submitting hire request:"
     } finally {
   // TODO: Add properties
 }
@@ -141,7 +139,6 @@ const requestData = {
 }
       setIsSubmitting(false)
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -150,5 +147,4 @@ const requestData = {
     form,
     isSubmitting,
     onSubmit
-  }
-}
+  

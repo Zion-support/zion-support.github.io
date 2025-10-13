@@ -22,7 +22,6 @@ exports.handler = async function (event, context) {
           awsRequestId: context.awsRequestId
           functionName: context.functionName,;
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
-        }
       }),
       header,
   s: {'Content-Type': 'application/json'}'
@@ -46,5 +45,3 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       header,
   s: {'Content-Type': 'application/json'}'
     }
-  }
-}

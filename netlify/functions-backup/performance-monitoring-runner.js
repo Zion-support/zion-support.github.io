@@ -44,12 +44,10 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       })}
 //     return result
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
   p: new Date().toISOString()}
       })
     }
-  }
 }
         timestam,
   p: new Date().toISOString() }) } } }'

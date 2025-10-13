@@ -92,8 +92,8 @@ const { data, error } = await supabase
 }
   // TODO: Add properties
 }
-        title: "Project added","
-        description: "Your project has been added to your portfolio""
+        title: "Project added"
+        description: "Your project has been added to your portfolio"
       })
       await fetchProjects()
       return data.id
@@ -109,9 +109,9 @@ const { data, error } = await supabase
 }
   // TODO: Add properties
 }
-        title: "Error","
+        title: "Error"
         description: `Could not add project: ${e.message}`,
-        variant: "destructive""
+        variant: "destructive"
       })
       return null
     } finally {
@@ -121,7 +121,6 @@ const { data, error } = await supabase
 }
       setIsLoading(false)
     }
-  }
   const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {
   // TODO: Add properties
 }
@@ -161,8 +160,8 @@ const { error } = await supabase
 }
   // TODO: Add properties
 }
-        title: "Project updated","
-        description: "Your portfolio project has been updated""
+        title: "Project updated"
+        description: "Your portfolio project has been updated"
       })
       await fetchProjects()
       return true
@@ -178,9 +177,9 @@ const { error } = await supabase
 }
   // TODO: Add properties
 }
-        title: "Error","
+        title: "Error"
         description: `Could not update project: ${e.message}`,
-        variant: "destructive""
+        variant: "destructive"
       })
       return false
     } finally {
@@ -190,7 +189,6 @@ const { error } = await supabase
 }
       setIsLoading(false)
     }
-  }
   const deleteProject = async (projectId: string): Promise<boolean> => {
   // TODO: Add properties
 }
@@ -218,8 +216,8 @@ const { error } = await supabase
 }
   // TODO: Add properties
 }
-        title: "Project deleted","
-        description: "Your portfolio project has been deleted""
+        title: "Project deleted"
+        description: "Your portfolio project has been deleted"
       })
       setProjects(projects.filter(p => p.id !== projectId))
       return true
@@ -235,9 +233,9 @@ const { error } = await supabase
 }
   // TODO: Add properties
 }
-        title: "Error","
+        title: "Error"
         description: `Could not delete project: ${e.message}`,
-        variant: "destructive""
+        variant: "destructive"
       })
       return false
     } finally {
@@ -247,7 +245,6 @@ const { error } = await supabase
 }
       setIsLoading(false)
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -260,5 +257,4 @@ const { error } = await supabase
     addProject,
     updateProject,
     deleteProject
-  }
-}
+  

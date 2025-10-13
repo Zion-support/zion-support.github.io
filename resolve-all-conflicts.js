@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -20,22 +19,7 @@ import { readFileSync, writeFileSync } from 'fs'
     // // return false}
   // Get list of files with conflicts;
 // `
-=======
-#!/usr/bin/env node;
-import fs from 'fs';';
-import path from 'path';';
-import { execSync } from 'child_process';';
-import { readFileSync, writeFileSync } from 'fs';'
-console.log('🔧 Resolving all merge conflicts...')'
-function resolveConflicts(filePath) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {;
-const content = readFileSync(filePath, 'utf8')'
-    // Check if file has conflict markers
-    if (!content.includes('') && !content.includes(') && !content.includes('>>>>>>>')) {'
+)) {'
       return false; // No conflicts
 // Get list of files with conflicts;
 const gitStatus = execSync('git status --porcelain', {/* TODO: Fix JSX expression */})'
@@ -80,8 +64,6 @@ const line = lines[i]
 }
     resolvedLines.push(line)
   }
-    }
-
     // Write the resolved content
     writeFileSync(filePath, resolvedLines.join('\n'))'
     console.log(`✅ Resolved conflicts in ${filePath}`)
@@ -94,8 +76,6 @@ const line = lines[i]
     console.log(`❌ Error resolving ${filePath}: ${error.message}`)
     return false
   }
-}
-
 try {
   // TODO: Add properties
 }
@@ -126,19 +106,16 @@ let resolvedCount = 0,
       if (resolveConflicts(file.trim())) {,
         resolvedCount++
   }
-    }
     // Check if file has conflict markers
     if (!content.includes(' 0) {/* TODO: Fix JSX expression */}'
   o: 'inherit' })'
     console.log('📝 Added resolved files to git staging')'
   } catch (error) {/* TODO: Fix JSX expression */}
-  }
-
   console.log(`\n📊 Resolved conflicts in ${resolvedCount} files`)
   // Add all resolved files
   execSync('git add .', { stdio: 'inherit' })'
   // Commit the resolution
-  execSync('git commit -m "feat: Resolve all merge conflicts and integrate latest enhancements"', { stdio: 'inherit' })'"
+  execSync('git commit -m "feat: Resolve all merge conflicts and integrate latest enhancements"
   console.log('✅ All conflicts resolved and committed!')'
 } catch (error) {
   // TODO: Add properties
@@ -149,4 +126,3 @@ let resolvedCount = 0,
   process.exit(1)
   }
 console.log('🎉 Merge conflict resolution completed!');`'
-=======

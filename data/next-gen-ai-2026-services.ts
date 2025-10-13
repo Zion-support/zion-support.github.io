@@ -40,7 +40,7 @@
     addres,
   s: string}
 export const,;
-  nextGenAI2026Services: NextGenAi2026Service[] = [,
+  nextGenAI2026 Services: NextGenAi2026 Service[] = [,
     i,
   d: '2026-next-gen-ai''
     nam,
@@ -70,30 +70,30 @@ export const,;
       email: 'kleber@ziontechgroup.com','
       address: '364 E Main St STE 1008 Middletown DE 19709'}'
   }
-];      mobile: "+1 302 464 0950","
-      email: "kleber@ziontechgroup.com","
-      address: "364 E Main St STE 1008 Middletown DE 19709"}"
+];      mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
   }
 ]
-    id: "2026-next-gen-ai""
-    id: "2026-next-gen-ai","
-    name: "2026 Next-Gen AI Platform","
-    tagline: "Next-generation AI for 2026","
-    price: "$299/month","
-    description: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.","
+    id: "2026-next-gen-ai"
+    id: "2026-next-gen-ai"
+    name: "2026 Next-Gen AI Platform"
+    tagline: "Next-generation AI for 2026"
+    price: "$299/month"
+    description: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities."
     features: [,
-      "Next-gen AI capabilities","
-      "Advanced algorithms","
-      "Future-ready features","
-      "Innovation platform","
-      "Expert support""
+      "Next-gen AI capabilities"
+      "Advanced algorithms"
+      "Future-ready features"
+      "Innovation platform"
+      "Expert support"
     ],
-    link: "/services/2026-next-gen-ai""
-    category: "Next-Gen AI 2026""
+    link: "/services/2026-next-gen-ai"
+    category: "Next-Gen AI 2026"
     realImplementation: true
     contactInfo: unknown,
-      email: "kleber@ziontechgroup.com","
-      address: "364 E Main St STE 1008 Middletown DE 19709","
+      email: "kleber@ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     lin,
   k: '/services/2026-next-gen-ai''
     categor,
@@ -108,73 +108,54 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ];      mobil,
-  e: "+1 302 464 0950","
-  emai,""
-  l: "kleber@ziontechgroup.com""
-      addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709""
+  e: "+1 302 464 0950"
+  emai,""kleber@ziontechgroup.com"""
+  s: ""
     }
-  }
 ]
-    i,""
-  d: "2026-next-gen-ai","
-    nam,""
-  e: "2026 Next-Gen AI Platform","
-    taglin,""
-  e: "Next-generation AI for 2026","
-    pric,""
-  e: "$299/month","
-    descriptio,""
-  n: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.","
-    feature,
-  s: [,""
-      "Next-gen AI capabilities",""
-      "Advanced algorithms",""
-      "Future-ready features",""
-      "Innovation platform",""
-      "Expert support""
-    ],
-    lin,""
-  k: "/services/2026-next-gen-ai","
-    categor,""
-  y: "Next-Gen AI 2026","
+    i,"
+  d: "2026-next-gen-ai"
+    nam,""2026 Next-Gen AI Platform",""
+  e: ","
+    pric,"
+  e: "$299/month"
+    descriptio,""Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.",""
+      ",""Advanced algorithms","
+      "Future-ready features""
+      ",""Expert support"""
+  k: ","
+    categor,"
+  y: "Next-Gen AI 2026"
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      emai,""
-  l: "kleber@ziontechgroup.com","
-      addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709""
+      emai,""kleber@ziontechgroup.com",""
+  s: ""
     }
-  }
 ]]],
-      mobil,""
-  e: "+1 302 464 0950","
+      mobil,"
+  e: "+1 302 464 0950"
       mobil,
   e: '+1 302 464 0950','
       emai,
   l: 'kleber@ziontechgroup.com','
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}}'
-];      mobile: "+1 302 464 0950","
-      mobile: "+1 302 464 0950","
-      mobile: "+1 302 464 0950","
-      email: "kleber@ziontechgroup.com","
-      address: "364 E Main St STE 1008 Middletown DE 19709"],      mobil,""
-  e: "+1 302 464 0950","
-      mobil,""
-  e: "+1 302 464 0950","
-      mobil,""
-  e: "+1 302 464 0950","
-      emai,""
-  l: "kleber@ziontechgroup.com","
-      addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709""
+];      mobile: "+1 302 464 0950"
+      mobile: "+1 302 464 0950"
+      mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709""
+  e: ","
+      mobil,"
+  e: "+1 302 464 0950"
+      mobil,""+1 302 464 0950",""
+  l: ","
+      addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709"
     }
-  }
 ]]
 ]],
 i,
@@ -187,7 +168,7 @@ i,
   k: string, categor,
   y: string, addres,
   s: string} export const,;
-  nextGenAI2026Services: NextGenAi2026Service[] = [ i,
+  nextGenAI2026 Services: NextGenAi2026 Service[] = [ i,
   d: '2026-next-gen-ai' nam,''
   e: '2026 Next-Gen AI Platform' taglin,''
   e: 'Next-generation AI for 2026' pric,''
@@ -200,29 +181,21 @@ i,
   contactInfo: ' mobil,'
   e: '+1 302 464 0950' emai,''
   l: 'kleber@ziontechgroup.com' addres,''
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; mobil,"'"
-  e: "+1 302 464 0950","
-  emai,""
-  l: "kleber@ziontechgroup.com" addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ] i,""
-  d: "2026-next-gen-ai", nam,""
-  e: "2026 Next-Gen AI Platform", taglin,""
-  e: "Next-generation AI for 2026", pric,""
-  e: "$299/month", descriptio,""
-  n: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.", feature,""
-  s: [ "Next-gen AI capabilities", "Advanced algorithms", "Future-ready features", "Innovation platform", "Expert support" ], lin,""
-  k: "/services/2026-next-gen-ai", categor,""
-  y: "Next-Gen AI 2026", realImplementatio,"
+  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; mobil,"'"+1 302 464 0950",""
+  l: " addres,""364 E Main St STE 1008 Middletown DE 19709" } } ] i,"
+  d: "2026-next-gen-ai""
+  e: ", taglin,""Next-generation AI for 2026", pric,"
+  e: "$299/month""
+  n: ", feature,""Next-gen AI capabilities", ", "Future-ready features"Innovation platform", " ], lin,""/services/2026-next-gen-ai", categor,"
+  y: "Next-Gen AI 2026"
   n: true, contactInf,
-  o: emai,""
-  l: "kleber@ziontechgroup.com", addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]]], mobil,""
-  e: "+1 302 464 0950",' mobil,'"
+  o: emai,""kleber@ziontechgroup.com", addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709""
+  e: ",' mobil,'"
   e: '+1 302 464 0950',' emai,'
   l: 'kleber@ziontechgroup.com',' addres,'
-  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,"'"
-  e: "+1 302 464 0950", mobil,""
-  e: "+1 302 464 0950", mobil,""
-  e: "+1 302 464 0950", emai,""
-  l: "kleber@ziontechgroup.com", addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]]; ]], '"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,"
+  e: "+1 302 464 0950""
+  e: ", mobil,""+1 302 464 0950", emai,"
+  l: "kleber@ziontechgroup.com""
+  s: " } } ]]; ]], '"

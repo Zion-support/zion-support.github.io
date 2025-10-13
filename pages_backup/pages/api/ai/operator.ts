@@ -92,7 +92,7 @@ const completion = await openai.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini''
+      model: 'gpt-4 o-mini''
       temperature: typeof temperature === 'number' ? temperature : 0.7'
       messages: [
   // TODO: Add items
@@ -113,11 +113,9 @@ const text = completion.choices?.[0]?.message?.content ?? '''
     console.error('Operator error', err),'
     return res.status(500).json({ error: 'Internal Server Error' })'
   }
-}
     console.error('Operator error', err)'
     return res.status(500).json({ error: 'Internal Server Error' })'
   }
-}
   ipToRequests[ip] = bucket;
 export default async function handler(req, res) {
   // TODO: Add properties
@@ -166,7 +164,7 @@ const completion = await openai.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: 'gpt-4o-mini','
+      model: 'gpt-4 o-mini','
       temperature: typeof temperature === 'number' ? temperature : 0.7,'
       messages: [
   // TODO: Add items
@@ -179,6 +177,4 @@ const completion = await openai.chat.completions.create({
     });
 const text = completion.choices?.[0]?.message?.content ?? '''
     return res.status(200).json({ text })
-}
-}
 }

@@ -133,9 +133,8 @@ const load_data = async () => {
   // TODO: Add properties
 }
         logErrorToProduction('Failed to load conversations:', { data: error })'
-        toast.error("Failed to load messages. Please try again.")"
+        toast.error("Failed to load messages. Please try again."
       }
-    }
     loadData()
   }, [fetchConversations])
     }
@@ -155,7 +154,7 @@ const startVideoCall = () => {
 }
   // TODO: Add properties
 }
-      toast.error("Please select a conversation first")"
+      toast.error("Please select a conversation first"
       return
     }
     ;
@@ -164,8 +163,8 @@ const roomId = `msg-${activeConversation.id}`
 const roomId = `msg-${activeConversation.id}`
     setActiveCall(roomId)
     // Show toast notification
-    toast.success("Starting video call", {"
-      description: "Initializing video call connection...""
+    toast.success("Starting video call"
+      description: "Initializing video call connection..."
     })
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
@@ -190,27 +189,12 @@ const roomId = `msg-${activeConversation.id}`,
   // TODO: Add parameters
 )
     <ProtectedRoute>
-<div className="min-h-screen bg-zion-blue">"
-<div className="container mx-auto py-8 px-4">"
-<div className="flex justify-between items-center mb-6">"
-<h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}>'
-<MessageSquare className="h-6 w-6" />"
-              Messages
-            </h1>
-
-  useEffect((,) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-            {activeConversation && (
-  // TODO: Add parameters
-)
-              <Button
-                onClick={startVideoCall}
-                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light""
+<div className="min-h-screen bg-zion-blue"container mx-auto py-8 px-4"
+<div className="
+<h1 className={`text-${isMobile ? '2 xl' : '3 xl'} font-bold text-white flex items-center gap-2`}>'
+<MessageSquare className="h-6 w-6"flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
               >
-<Video className="h-4 w-4" />"
+<Video className="
                 Start Call
               </Button>
             )}
@@ -273,7 +257,7 @@ const loadData = async () => {
   // TODO: Add properties
 }
         logErrorToProduction('Failed to load conversations:', { data: error }),'
-        toast.error("Failed to load messages. Please try again.")"
+        toast.error("Failed to load messages. Please try again."
       }
     },
     loadData()
@@ -292,15 +276,15 @@ const startVideoCall = () => {
 }
   // TODO: Add properties
 }
-      toast.error("Please select a conversation first"),"
+      toast.error("Please select a conversation first"
       return
     }
 ;
 const roomId = `msg-${activeConversation.id}`,
     setActiveCall(roomId),
     // Show toast notification
-    toast.success("Starting video call", {"
-      description: "Initializing video call connection...""
+    toast.success("Starting video call"
+      description: "Initializing video call connection..."
     })
     // Navigate to video call page
     router.push(`/call/${roomId}`), // Changed from navigate
@@ -309,31 +293,17 @@ const roomId = `msg-${activeConversation.id}`,
   // TODO: Add parameters
 )
     <ProtectedRoute>
-<div className="min-h-screen bg-zion-blue">"
-<div className="container mx-auto py-8 px-4">"
-<div className="flex justify-between items-center mb-6">"
-<h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}>'
-<MessageSquare className="h-6 w-6" />"
-              Messages</$1>
-            {activeConversation && (
-  // TODO: Add parameters
-)
-              <Button
-                onClick = {startVideoCall,}
-                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">"
-<Video className="h-4 w-4" />"
+<div className="min-h-screen bg-zion-blue"container mx-auto py-8 px-4"
+<div className="
+<h1 className={`text-${isMobile ? '2 xl' : '3 xl'} font-bold text-white flex items-center gap-2`}>'
+<MessageSquare className="h-6 w-6"flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
+<Video className="
                 Start Call</$1>
             )}
 
           </div>
-<div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">"
-<div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>'
-              {/* Conversations List */}
-              {isLoading ? (
-  // TODO: Add parameters
-)
-                <div className="flex-1 flex items-center justify-center p-8">"
-<LoadingSpinner variant="primary" /></$1>"
+<div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden"flex-1 flex items-center justify-center p-8"
+<LoadingSpinner variant=" /></$1>"
               ) : (
   // TODO: Add parameters
 )
@@ -349,7 +319,7 @@ const roomId = `msg-${activeConversation.id}`,
               <ConversationDetailView /></div>
 </div></div>
         {/* Add extra bottom padding on mobile to account for the bottom nav */}
-        {isMobile && <div className="h-16"></div>}"
+        {isMobile && <div className="
       </div></ProtectedRoute>
 )
 }
@@ -372,22 +342,18 @@ setActiveCall (roomId)
 }`), //Changed from navigate
 }
 return (<ProtectedRoute>
-<div className="min-h-screen bg-zion-blue" >"
-<div className="container mx-auto py-8 px-4" >"
-<div className="flex justify-between items-center mb-6" >"
+<div className="min-h-screen bg-zion-blue"container mx-auto py-8 px-4"
+<div className="
 <className= {$2 />
   `text-$ {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  isMobile ? '2xl' : '3xl' '
-}font-bold text-white flex items-center gap-2` ""
-}>
-<MessageSquare className="h-6 w-6" /> activeConversation && (<ButtononClick={"
-  startVideoCall ""
-}className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light">"
-<Video className="h-4 w-4" /> Start Call </Button>) "
+  isMobile ? '2 xl' : '3 xl' '
+}font-bold text-white flex items-center gap-2` ""h-6 w-6"
+  startVideoCall "
+}className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"h-4 w-4"
 }</div></div>) : (<ConversationsListconversations= {
   // TODO: Add properties
 }
@@ -418,13 +384,11 @@ return (<ProtectedRoute>
 }<ConversationDetailView /></div>
 </div></div>
 </div></ProtectedRoute>)
-}'"}"'"
+}'"'"
 
         logErrorToProduction ('Failed to load conversations:', { data: error }),'
-        toast.error ("Failed to load messages. Please try again.")"
+        toast.error (")"
       }
-    }
-
     load_data ()
   }, [fetch_conversations]);
 const startVideoCall = () =>: any {
@@ -440,14 +404,14 @@ if ( {) {
 }
   $2
 }
-      toast.error ("Please select a conversation first")"
+      toast.error (")"
       return
     }
     const room_id = `msg-${active_conversation.id}`
     setActiveCall (room_id)
     // Show toast notification
-    toast.success ("Starting video call", {"
-      description: "Initializing video call connection...""
+    toast.success (", {"
+      description: ""
     })
     // Navigate to video call page
     router.push (`/call/${room_id}`), // Changed from navigate
@@ -457,41 +421,26 @@ if ( {) {
   // TODO: Add parameters
 )
     <ProtectedRoute>
-<div className="min - h-screen bg - zion - blue">"
-<div className="container mx - auto py - 8 px - 4">"
-<div className="flex justify - between items - center mb - 6">"
-<h1 className={`text-${is_mobile ? '2xl' : '3xl'} font - bold text - white flex items - center gap - 2`}>'
-<MessageSquare className="h - 6 w - 6" />"
+<div className="
+<div className="container mx - auto py - 8 px - 4"flex justify - between items - center mb - 6"
+<h1 className={`text-${is_mobile ? '2 xl' : '3 xl'} font - bold text - white flex items - center gap - 2`}>'
+<MessageSquare className="
               Messages</$1>
             {active_conversation && (
   // TODO: Add parameters
 )
               <Button
                 on_click = {startVideoCall, }
-                className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light""
-              >
-<Video className="h - 4 w - 4" />"
+                className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light"h - 4 w - 4"
                 Start Call</$1>)}
           </div>
-<div className="bg - zion - blue - light / 10 rounded - lg shadow - lg border border - zion - purple / 20 overflow - hidden">"
-<div className={`flex flex - col md:flex - row h-[${is_mobile ? '85vh' : '75vh'}]`}>'
+<div className="
+<div className={`flex flex - col md:flex - row h-[${is_mobile ? '85 vh' : '75 vh'}]`}>'
               {/* Conversations List */}
               {is_loading ? (
   // TODO: Add parameters
 )
-                <div className="flex - 1 flex items - center justify - center p - 8">"
-<LoadingSpinner variant="primary" /></$1>) : ("
-                <ConversationsList
-                  conversations = {conversations, }
-                  active_conversation = {active_conversation, }
-                  setActiveConversation = {setActiveConversation, }
-                  markAsRead = {markAsRead, }
-                />)}
-              {/* Conversation Detail */}
-              <ConversationDetailView /></$1>
-</$1></$1>
-        {/* Add extra bottom padding on mobile to account for the bottom nav */}
-        {is_mobile && <div className="h - 16"></div>}"
+                <div className="flex - 1 flex items - center justify - center p - 8"primary" /></$1>) : ("h - 16"
       </div></$1>)
 }
 load_data ()
@@ -513,57 +462,19 @@ setActiveCall (room_id)
 }`), //Changed from navigate
 }
 return (<ProtectedRoute>
-<div className="min - h-screen bg - zion - blue" >"
-<div className="container mx - auto py - 8 px - 4" >"
-<div className="flex justify - between items - center mb - 6" >"
+<div className="
+<div className="container mx - auto py - 8 px - 4"flex justify - between items - center mb - 6"
 < className= {$2 />
   `text-$ {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  is_mobile ? '2xl' : '3xl' '
-}font - bold text - white flex items - center gap - 2` ""
+  is_mobile ? '2 xl' : '3 xl' '
+}font - bold text - white flex items - center gap - 2` "
 }>
-<MessageSquare className="h - 6 w - 6" /> active_conversation && (<Button on_click={"
-  startVideoCall ""
-}className="flex items - center gap - 2 bg - zion - purple hover:bg - zion - purple - light" >"
-<Video className="h - 4 w - 4" /> Start Call </Button>) "
-}</div></div>) : (<ConversationsList conversations= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  conversations
-}active_conversation= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  active_conversation
-}setActiveConversation= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  setActiveConversation
-}markAsRead= {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  markAsRead
-}/>)
-}{
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  /* Conversation Detail */
-}<ConversationDetailView /></div>
-</div></div>
-</div></ProtectedRoute>)
-}'"}"'"
+<MessageSquare className="h - 6 w - 6""
+}className="
+<Video className="h - 4 w - 4"}"'"
 
   )
-}

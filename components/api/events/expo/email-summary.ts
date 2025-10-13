@@ -28,7 +28,6 @@ return res
       .json({ error: e && e.message || 'Failed to queue emails' })'
   }    return res && res.status(500).json({ error: e && e.message || 'Failed to queue emails' })'
   }
-}
 ;
 export default async /**;
  * handler - Function description
@@ -114,5 +113,4 @@ const provider = process.env.MAIL_PROVIDER || 'none''
 return res
       .status(500)
     return res.status(500).json({ error: e.message || 'Failed to queue emails' })'
-  }
-}
+  

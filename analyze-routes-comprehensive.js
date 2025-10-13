@@ -341,8 +341,6 @@ const response = await makeRequest(url)
     })
     console.log(`⚠️  ${route} - Error: ${error.message}`)
   }
-}
-
 // Main analysis function
 async function analyzeAllRoutes() {
   // TODO: Add properties
@@ -380,8 +378,6 @@ const promises = batch.map(route => analyzeRoute(route))
 }
       await new Promise(resolve => setTimeout(resolve, 1000))
     }
-  }
-
   // Generate report;
 const report = {
   // TODO: Add properties

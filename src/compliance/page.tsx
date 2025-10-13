@@ -26,7 +26,6 @@ const complianceAreas = [
 ],
     {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   ico,
   n: Shield,
       titl,
@@ -55,74 +54,47 @@ const complianceAreas = [
     }
   return (<div>Coming Soon</div>)
   )
-          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"
-<Navigation />
-        {/* Header */}
-        <section className="bg-white shadow-sm border-b">"
-<div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">"
-<div className="flex items-center">"
-<$2 />
-                to="/privacy" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mr-6""
+          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"bg-white shadow-sm border-b"
+<div className="
+<div className="flex items-center"/privacy" className="
 // >
-          ""
-          <ArrowLeftclassName="w-4 h-4 mr-2" / />"
+          ""w-4 h-4 mr-2"
 // Back to Privacy Policy,
-          </Link>""
-              <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1></div>"
-</section>""
-        < className="max-w-7xl mx-auto px-4,$2 />"
-  sm:px-6,""
-  lg:px-8 py-12">"
-          {/* Overview */}""
-          <section className="mb-16"></section>""
-            <div className="text-center mb-12"></div>""
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">"
-// Our Commitment to Compliance</$1>""
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">"
-// At Zion Tech Group, we maintain the highest standards of compliance and security.
-                Our certifications and adherence to industry standards ensure your data is protected
-//                 and our services meet the most stringent requirements.
-            {/* Certifications Grid */}""
-            < className="grid grid-cols-1,$2 />"
-  md:grid-cols-2,""
-  lg:grid-cols-3 gap-6 mb-12">"
-              {certifications.map((cert, index) => ()}""
-          <div key={index} className="bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500"></div>""
-                  <div className="flex items-center justify-between"></div>""
-                    <h3 className="text-lg font-semibold text-gray-900">{cert.name}</h3>""
-                    <div className="flex items-center text-green-600"></div>""
-                      <CheckCircleclassName="w-5 h-5 mr-2" / />""
-                      <span className="text-sm font-medium">{cert.status}"
+          </Link>"
+              <h1 className="text-2 xl font-bold text-gray-900""
+        < className=""
+  lg:px-8 py-12"
+          {/* Overview */}""mb-16""text-center mb-12""text-3 xl font-bold text-gray-900 mb-4"
+// Our Commitment to Compliance</$1>"
+              <p className="text-lg text-gray-600 max-w-3 xl mx-auto""
+            < className=""
+  lg:grid-cols-3 gap-6 mb-12"
+              {certifications.map((cert, index) => ()}""bg-white rounded-lg shadow-md p-6 border-l-4 border-green-500""flex items-center justify-between""text-lg font-semibold text-gray-900""flex items-center text-green-600""w-5 h-5 mr-2""text-sm font-medium"
               ))}
-          {/* Compliance Areas */}""
-            <h2 className="text-2xl font-bold text-gray-900 text-center mb-12">"
-Compliance Areas;""
-            < className="grid grid-cols-1,"$2 />"
-  md:grid-cols-2 gap-8">"
-              {complianceAreas.map((area, index) => ()}""
-          <div key={index} className="bg-white rounded-lg shadow-md p-8"></div>""
-                  <div className="flex items-center mb-4"></div>""
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4"></div>""
-                      <area.icon className="w-6 h-6 text-blue-600" /></area>""
-                    <h3 className="text-xl font-semibold text-gray-900">{area.title}</h3>""
-                  <p className="text-gray-600 mb-4">{area.description}</p>""
-                  <ul className="space-y-2">"
-                    {area.features.map((feature, featureIndex) => ()}""
-          <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>""
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />"
+          {/* Compliance Areas */}"
+            <h2 className="text-2 xl font-bold text-gray-900 text-center mb-12""
+            < className="
+  md:grid-cols-2 gap-8">""
+          <div key={index} className=""
+                  <div className=""
+                    <div className=""
+                      <area.icon className=""
+                    <h3 className=""
+                  <p className=""
+                  <ul className="
+                    {area.features.map((feature, featureIndex) => ()}""flex items-center text-sm text-gray-600""w-4 h-4 text-green-500 mr-2 flex-shrink-0"
                         {feature}
-{/* Contact Section */}""
-          <section className="bg-blue-50 rounded-lg p-8 text-center"></section>""
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">"
-              Questions About Our Compliance?""
-            <p className="text-gray-600 mb-6">"
+{/* Contact Section */}"
+          <section className="bg-blue-50 rounded-lg p-8 text-center"
+            <h2 className="text-2 xl font-bold text-gray-900 mb-4""
+            <p className="
               Our compliance team is available to answer any questions about our certifications,
               security measures, or data protection practices.
             <$2 />
-              href="mailto: compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200""
+              href="mailto: compliance@ziontechgroup.com"inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
               Contact Compliance Team,
-            </a>""
-            <div className="mt-8 text-sm text-blue-200"></div>"
+            </a>"
+            <div className="mt-8 text-sm text-blue-200"
 <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p></main>
 <Footer />
   )

@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import { PDFDocument, StandardFonts } from "pdf-lib";";
-import crypto from "crypto";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import { PDFDocument, StandardFonts } from "pdf-lib";
+import crypto from "crypto";
 import {
   // TODO: Add properties
 }
@@ -9,19 +9,19 @@ import {
   updateArtifacts,
   getProposal,
   savePdf,
-} from "../../../utils/data/proposals"";
-import { create as createIpfsClient } from "ipfs-http-client";";
-import { ethers } from "ethers";";
-import fs from "fs";";
-import path from "path";"
+} from "../../../utils/data/proposals";
+import { create as createIpfsClient } from "ipfs-http-client";
+import { ethers } from "ethers";
+import fs from "fs";
+import path from "path"
 function buildIpfsClient() {;
 const projectId = process && process.env.IPFS_PROJECT_ID;
 const projectSecret = process && process.env.IPFS_PROJECT_SECRET;
 const apiUrl =
-    process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0""
+    process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0"
   if (!projectId || !projectSecret) return null;
 const auth =
-    "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64")"
+    "Basic ":" + projectSecret).toString(")"
   return createIpfsClient({
   // TODO: Add properties
 }
@@ -69,11 +69,9 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-
 async function generatePdfFromMarkdown(markdown: string, title: string) {;
 const pdfDoc = await PDFDocument.create();
 const page = pdfDoc.addPage([595.28, 841.89]); // A4;
@@ -90,7 +88,6 @@ const lines = markdown
 }
           current = test
         }
-      }
     .replace(/\r\n/g, '\n')'
     .split('\n')'
     .flatMap((line) => {;
@@ -114,7 +111,6 @@ const width = font.widthOfTextAtSize(test, fontSize)
 }
           current = test
         }
-      }
       if (current) wrapped.push(current)
       return wrapped.length ? wrapped : [' ']'
     });
@@ -127,7 +123,7 @@ let y = page && page.getHeight() - margin
 }
   $2
 }
-      return wrapped.length ? wrapped : [" "]"
+      return wrapped.length ? wrapped : ["]"
     });
 let coordinate_y = page.get_height () - margin
   page.draw_text (title, { coordinate_x: margin, y, size: 16, font })
@@ -149,7 +145,7 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req && req.method !== "POST") return res && res.status($1).json({ $2 })"
+  if (req && req.method !== ") return res && res.status($1).json({ $2 })"
   for (const line of lines) {
   // TODO: Add properties
 }
@@ -166,7 +162,6 @@ export default async function handler(
     page.drawText(line, { x: margin, y, size: fontSize, font })
     y -= 14
   }
-}
     const { id } = req && req.body || {}
     if (!id) return res && res.status($1).json({ $2 });
 const meta = getProposal(id)
@@ -175,12 +170,12 @@ const markdownPath = path && path.join(
   // TODO: Add parameters
 )
       process && process.cwd(),
-      "public","
-      meta && meta.artifacts.markdownPath || "","
+      ","
+      meta && meta.artifacts.markdownPath || ","
     );
 const markdown = fs && fs.existsSync(markdownPath)
-      ? fs && fs.readFileSync(markdownPath, "utf8")"
-      : "# Proposal""
+      ? fs && fs.readFileSync(markdownPath, ")"
+      : ""
   return pdfDoc.save()
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -200,9 +195,9 @@ const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
 const pdfUrl = savePdf(id, pdfBytes);
 const hasher = crypto.createHash('sha256')'
     hasher.update(markdown);
-const digest = '0x' + hasher.digest('hex');';
+const digest = '0 x' + hasher.digest('hex');';
 let signature: string | undefined;
-const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY
+const privateKey = process.env.WEB3 _SIGNER_PRIVATE_KEY
     if (privateKey) {;
 const wallet = new ethers.Wallet(privateKey)
       signature = await wallet.signMessage(ethers.getBytes(digest))
@@ -219,7 +214,6 @@ const { cid } = await ipfs.add(markdown)
         ipfsCid = cid.toString()
         ipfsCid = cid.toString()
       } catch {}
-    }
     const updated = updateArtifacts(id, {
   // TODO: Add properties
 }
@@ -235,135 +229,54 @@ const { cid } = await ipfs.add(markdown)
 }
   // TODO: Add properties
 }
-    return res.status(500).json({ error: error?.message |"Export failed" })"
-    return res.status(500).json({ error: error?.message || "Export failed" })"
+    return res.status(500).json({ error: error?.message |" })"
+    return res.status(500).json({ error: error?.message || " })"
       } catch {  } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
       } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-;
-const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid })
-    return res.status(200).json({ meta: updated })
-  } catch (error: any) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return res.status(500).json({ error: error?.message || 'Export failed' })'
-  }
-}
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return res.status(500).json({ error: error?.message || "Export failed" })"
-      } catch {  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-      } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-    } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
 ;
 const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid })
     return res.status(200).json({ meta: updated })
@@ -380,32 +293,99 @@ const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid })
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    return res.status(500).json({ error: error?.message || " })"
+      } catch {  } catch (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
+      } catch (error) {
+  // TODO: Add properties
 }
+  // TODO: Add properties
+}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
+    } catch (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
+  }
+  } catch (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
+  }
+;
+const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid })
+    return res.status(200).json({ meta: updated })
+  } catch (error: any) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    return res.status(500).json({ error: error?.message || 'Export failed' })'
+  }
+  } catch (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
+  }
+  } catch (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
+    } catch (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
+  }
+  } catch (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
+  

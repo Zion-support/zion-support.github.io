@@ -52,8 +52,6 @@ try {/* TODO: Fix JSX expression */}`
     }
   })
 //   } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 // Check TypeScript configuration
 try {;
 const _tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), 'utf-8'))'
@@ -72,8 +70,6 @@ try {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
 //     }
 } catch (error) {/* TODO: Fix JSX expression */}
-}
-
 // Check environment variables setup
 if (!existsSync(resolve(process.cwd(), '.env.example'))) {'
     warnings.push('.env.example file not found - consider adding environment variable documentation')'

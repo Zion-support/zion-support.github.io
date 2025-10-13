@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 const Breadcrumb: React.FC = () =>
@@ -27,13 +26,8 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
     <div className={`${className}`}>
       {children}
     </div>
-    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20 py-2"></nav>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-        <ol className="flex items-center space-x-2 text-sm"></ol>
-
-            <li key="{item.path}" className="flex items-center"></li>
-
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
+    <nav className="bg-slate-800/50 backdrop-blur-sm border-b border-cyan-500/20 py-2"></div>
+        <ol className="flex items-center space-x-2 text-sm" className="flex items-center" />
 
                 <Link;
 
@@ -43,16 +37,8 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
 //                 <Link
                   to={item.path}
                   className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors"
-//                 >
-                <Link>
-  to={item.path}>
-  className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors"
                 >
-                  <Home className="w-4 h-4 mr-1" />
-                  {item.name}
-</Link>
-              ) : index === breadcrumbItems.length - 1 ? (
-                <span className="text-cyan-400 font-medium"></span>
+                  <Home className="w-4 h-4 mr-1"></span>
                   {item.name}
 </span>
               ) : (
@@ -60,10 +46,6 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
 //                 <Link
                   to={item.path}
                   className="text-gray-300 hover:text-cyan-400 transition-colors"
-//                 >
-                <Link>
-  to={item.path}>
-  className="text-gray-300 hover:text-cyan-400 transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -80,8 +62,6 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
 //         </ol>
 </div>
 //     </nav>
-=======
 
   return (
   );
-}

@@ -30,7 +30,6 @@ export interface SpaceTechService {id: string
     email: string,
     address: string}
     website: string}
-  }
     trialDays: 30
     setupTime: '2 weeks''
     category: 'Space Technology''
@@ -50,7 +49,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  }
     trialDay,
   s: 30,
     setupTim,
@@ -153,7 +151,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Performance optimization'],'
     roi: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.','
     competitors: ['SpaceX Starlink', 'OneWeb', 'Basic satellite services'],'
-    market_size: '$469B space economy''
+    market_size: '$469 B space economy''
     growth_rate: '400% annual growth''
     variant: 'space - futuristic''
     contact_info: unknown,
@@ -181,7 +179,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['SpaceX Starlink', 'OneWeb', 'Basic satellite services'],'
     market_siz,
-  e: '$469B space economy','
+  e: '$469 B space economy','
     growth_rat,
   e: '400% annual growth','
     varian,
@@ -302,7 +300,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Efficiency optimization'],'
     roi: 'Optimize satellite operations and reduce operational costs by 40%. ROI through efficiency gains and improved service quality.','
     competitors: ['Traditional satellite management', 'Basic monitoring tools'],'
-    market_size: '$150B satellite services market''
+    market_size: '$150 B satellite services market''
     growth_rate: '300% annual growth''
     variant: 'space - futuristic''
     contact_info: unknown,
@@ -330,7 +328,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['Traditional satellite management', 'Basic monitoring tools'],'
     market_siz,
-  e: '$150B satellite services market','
+  e: '$150 B satellite services market','
     growth_rat,
   e: '300% annual growth','
     varian,
@@ -451,7 +449,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Safety planning'],'
     roi: 'Protect valuable satellites and reduce insurance costs by 30%. ROI through risk mitigation and asset protection.','
     competitors: ['Basic debris tracking', 'Manual monitoring'],'
-    market_size: '$50B space safety market''
+    market_size: '$50 B space safety market''
     growth_rate: '250% annual growth''
     variant: 'space - futuristic''
     contact_info: unknown,
@@ -478,7 +476,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['Basic debris tracking', 'Manual monitoring'],'
     market_siz,
-  e: '$50B space safety market','
+  e: '$50 B space safety market','
     growth_rat,
   e: '250% annual growth','
     varian,
@@ -598,7 +596,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Safety planning'],'
     roi: 'Prevent satellite damage and reduce operational disruptions. ROI through risk mitigation and operational continuity.','
     competitors: ['Basic weather data', 'Manual monitoring'],'
-    market_size: '$30B space weather market''
+    market_size: '$30 B space weather market''
     growth_rate: '200% annual growth''
     variant: 'space - futuristic''
     contact_info: unknown,
@@ -625,7 +623,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['Basic weather data', 'Manual monitoring'],'
     market_siz,
-  e: '$30B space weather market','
+  e: '$30 B space weather market','
     growth_rat,
   e: '200% annual growth','
     varian,
@@ -745,7 +743,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Performance analysis'],'
     roi: 'Improve launch success rates and reduce mission costs by 25%. ROI through operational efficiency and mission success.','
     competitors: ['Basic coordination', 'Manual planning'],'
-    market_size: '$20B launch services market''
+    market_size: '$20 B launch services market''
     growth_rate: '180% annual growth''
     variant: 'space - futuristic''
     contact_info: unknown,
@@ -772,7 +770,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['Basic coordination', 'Manual planning'],'
     market_siz,
-  e: '$20B launch services market','
+  e: '$20 B launch services market','
     growth_rat,
   e: '180% annual growth','
     varian,
@@ -892,7 +890,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Global coordination'],'
     roi: 'Optimize ground station operations and reduce network costs by 35%. ROI through efficiency gains and improved reliability.','
     competitors: ['Basic management', 'Manual coordination'],'
-    market_size: '$25B ground station market''
+    market_size: '$25 B ground station market''
     growth_rate: '220% annual growth''
     variant: 'space - futuristic''
     contact_info: unknown,
@@ -919,7 +917,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['Basic management', 'Manual coordination'],'
     market_siz,
-  e: '$25B ground station market','
+  e: '$25 B ground station market','
     growth_rat,
   e: '220% annual growth','
     varian,
@@ -1039,7 +1037,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Data exploration'],'
     roi: 'Accelerate research and discovery through comprehensive data access and AI analysis. ROI through research efficiency and insights.','
     competitors: ['Basic data access', 'Manual research'],'
-    market_size: '$15B space research market''
+    market_size: '$15 B space research market''
     growth_rate: '180% annual growth''
     variant: 'space - futuristic''
     contact_info: unknown,
@@ -1066,7 +1064,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['Basic data access', 'Manual research'],'
     market_siz,
-  e: '$15B space research market','
+  e: '$15 B space research market','
     growth_rat,
   e: '180% annual growth','
     varian,
@@ -1186,7 +1184,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Market making'],'
     roi: 'Create new revenue streams through space asset trading and reduce transaction costs by 50%.','
     competitors: ['Manual contracts', 'Traditional procurement'],'
-    market_size: '$100B space services market''
+    market_size: '$100 B space services market''
     growth_rate: '300% annual growth''
     variant: 'space - futuristic''
     contact_info: unknown,
@@ -1213,7 +1211,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
     competitor,
   s: ['Manual contracts', 'Traditional procurement'],'
     market_siz,
-  e: '$100B space services market','
+  e: '$100 B space services market','
     growth_rat,
   e: '300% annual growth','
     varian,
@@ -1333,7 +1331,7 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
       'Personal development'],'
     roi: 'Accelerate space education and career development through interactive learning. ROI through skill development and career advancement.','
     competitors: ['Basic education', 'Traditional courses'],'
-    market_size: '$8B space education market''
+    market_size: '$8 B space education market''
     growth_rate: '200% annual growth''
     variant: 'space - futuristic''
     contact_info: unknown,
@@ -1407,7 +1405,7 @@ export const spaceTechServices: SpaceTechService[] = [,;
     competitor,
   s: ['Basic education', 'Traditional courses'],'
     market_siz,
-  e: '$8B space education market','
+  e: '$8 B space education market','
     growth_rat,
   e: '200% annual growth','
     varian,
@@ -1542,7 +1540,7 @@ export const,;
   i: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.','
     competitor,
   s: ['SpaceX StarlinkOneWebBasic satellite services'], marketSiz,'
-  e: '$469B space economy','
+  e: '$469 B space economy','
     growthRat,
   e: '400% annual growth', varian,'
   t: 'space-futuristic','
@@ -1570,7 +1568,6 @@ export const,;
     review,
   s: 250}
 export interface SpaceTechService {/* TODO: Fix JSX expression */}
-  }
 ]
 }
 ]
@@ -1701,7 +1698,7 @@ realImplementation: true,
     competitor,
   s: ['Traditional satellite management', 'Basic monitoring tools']'
     marketSiz,
-  e: '$150B satellite services market''
+  e: '$150 B satellite services market''
     growthRat,
   e: '300% annual growth''
     varian,
@@ -1760,7 +1757,7 @@ realImplementation: true,
     competitor,
   s: ['Basic debris tracking', 'Manual monitoring']'
     marketSiz,
-  e: '$50B space safety market''
+  e: '$50 B space safety market''
     growthRat,
   e: '250% annual growth''
     varian,
@@ -1819,7 +1816,7 @@ realImplementation: true,
     competitor,
   s: ['Basic weather data', 'Manual monitoring']'
     marketSiz,
-  e: '$30B space weather market''
+  e: '$30 B space weather market''
     growthRat,
   e: '200% annual growth''
     varian,
@@ -1878,7 +1875,7 @@ realImplementation: true,
     competitor,
   s: ['Basic coordination', 'Manual planning']'
     marketSiz,
-  e: '$20B launch services market''
+  e: '$20 B launch services market''
     growthRat,
   e: '180% annual growth''
     varian,
@@ -1937,7 +1934,7 @@ realImplementation: true,
     competitor,
   s: ['Basic management', 'Manual coordination']'
     marketSiz,
-  e: '$25B ground station market''
+  e: '$25 B ground station market''
     growthRat,
   e: '220% annual growth''
     varian,
@@ -1996,7 +1993,7 @@ realImplementation: true,
     competitor,
   s: ['Basic data access', 'Manual research']'
     marketSiz,
-  e: '$15B space research market''
+  e: '$15 B space research market''
     growthRat,
   e: '180% annual growth''
     varian,
@@ -2055,7 +2052,7 @@ realImplementation: true,
     competitor,
   s: ['Manual contracts', 'Traditional procurement']'
     marketSiz,
-  e: '$100B space services market''
+  e: '$100 B space services market''
     growthRat,
   e: '300% annual growth''
     varian,
@@ -2132,7 +2129,7 @@ realImplementation: true,
     competitor,
   s: ['Basic education', 'Traditional courses']'
     marketSiz,
-  e: '$8B space education market''
+  e: '$8 B space education market''
     growthRat,
   e: '200% annual growth''
     varian,
@@ -2187,7 +2184,6 @@ export interface SpaceTechService {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
-  }
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -2399,7 +2395,7 @@ export interface SpaceTechService,;
   s: [,' 'Mission planning',' 'Satellite operations',' 'Launch coordination',' 'Space monitoring',' 'Regulatory compliance',' 'Performance optimization'],' ro,'
   i: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',' competitor,'
   s: ['SpaceX Starlink', 'OneWeb', 'Basic satellite services'],' market_siz,'
-  e: '$469B space economy',' growth_rat,'
+  e: '$469 B space economy',' growth_rat,'
   e: '400% annual growth',' varian,'
   t: 'space - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2439,7 +2435,7 @@ export interface SpaceTechService,;
   s: [,' 'Constellation management',' 'Coverage optimization',' 'Performance monitoring',' 'Maintenance planning',' 'Traffic management',' 'Efficiency optimization'],' ro,'
   i: 'Optimize satellite operations and reduce operational costs by 40%. ROI through efficiency gains and improved service quality.',' competitor,'
   s: ['Traditional satellite management', 'Basic monitoring tools'],' market_siz,'
-  e: '$150B satellite services market',' growth_rat,'
+  e: '$150 B satellite services market',' growth_rat,'
   e: '300% annual growth',' varian,'
   t: 'space - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2479,7 +2475,7 @@ export interface SpaceTechService,;
   s: [,' 'Debris monitoring',' 'Collision avoidance',' 'Risk assessment',' 'Insurance underwriting',' 'Research analysis',' 'Safety planning'],' ro,'
   i: 'Protect valuable satellites and reduce insurance costs by 30%. ROI through risk mitigation and asset protection.',' competitor,'
   s: ['Basic debris tracking', 'Manual monitoring'],' market_siz,'
-  e: '$50B space safety market',' growth_rat,'
+  e: '$50 B space safety market',' growth_rat,'
   e: '250% annual growth',' varian,'
   t: 'space - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2519,7 +2515,7 @@ export interface SpaceTechService,;
   s: [,' 'Weather forecasting',' 'Impact assessment',' 'Risk mitigation',' 'Operational planning',' 'Research analysis',' 'Safety planning'],' ro,'
   i: 'Prevent satellite damage and reduce operational disruptions. ROI through risk mitigation and operational continuity.',' competitor,'
   s: ['Basic weather data', 'Manual monitoring'],' market_siz,'
-  e: '$30B space weather market',' growth_rat,'
+  e: '$30 B space weather market',' growth_rat,'
   e: '200% annual growth',' varian,'
   t: 'space - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2559,7 +2555,7 @@ export interface SpaceTechService,;
   s: [,' 'Launch coordination',' 'Mission planning',' 'Timing optimization',' 'Trajectory planning',' 'Mission tracking',' 'Performance analysis'],' ro,'
   i: 'Improve launch success rates and reduce mission costs by 25%. ROI through operational efficiency and mission success.',' competitor,'
   s: ['Basic coordination', 'Manual planning'],' market_siz,'
-  e: '$20B launch services market',' growth_rat,'
+  e: '$20 B launch services market',' growth_rat,'
   e: '180% annual growth',' varian,'
   t: 'space - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2599,7 +2595,7 @@ export interface SpaceTechService,;
   s: [,' 'Network management',' 'Traffic optimization',' 'Performance monitoring',' 'Maintenance planning',' 'Failover management',' 'Global coordination'],' ro,'
   i: 'Optimize ground station operations and reduce network costs by 35%. ROI through efficiency gains and improved reliability.',' competitor,'
   s: ['Basic management', 'Manual coordination'],' market_siz,'
-  e: '$25B ground station market',' growth_rat,'
+  e: '$25 B ground station market',' growth_rat,'
   e: '220% annual growth',' varian,'
   t: 'space - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2639,7 +2635,7 @@ export interface SpaceTechService,;
   s: [,' 'Research analysis',' 'Educational content',' 'Media reporting',' 'Policy development',' 'Scientific discovery',' 'Data exploration'],' ro,'
   i: 'Accelerate research and discovery through comprehensive data access and AI analysis. ROI through research efficiency and insights.',' competitor,'
   s: ['Basic data access', 'Manual research'],' market_siz,'
-  e: '$15B space research market',' growth_rat,'
+  e: '$15 B space research market',' growth_rat,'
   e: '180% annual growth',' varian,'
   t: 'space - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2679,7 +2675,7 @@ export interface SpaceTechService,;
   s: [,' 'Asset trading',' 'Service procurement',' 'Capacity trading',' 'Investment trading',' 'Insurance trading',' 'Market making'],' ro,'
   i: 'Create new revenue streams through space asset trading and reduce transaction costs by 50%.',' competitor,'
   s: ['Manual contracts', 'Traditional procurement'],' market_siz,'
-  e: '$100B space services market',' growth_rat,'
+  e: '$100 B space services market',' growth_rat,'
   e: '300% annual growth',' varian,'
   t: 'space - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2719,7 +2715,7 @@ export interface SpaceTechService,;
   s: [,' 'Space education',' 'Career training',' 'Skill development',' 'Professional certification',' 'Academic learning',' 'Personal development'],' ro,'
   i: 'Accelerate space education and career development through interactive learning. ROI through skill development and career advancement.',' competitor,'
   s: ['Basic education', 'Traditional courses'],' market_siz,'
-  e: '$8B space education market',' growth_rat,'
+  e: '$8 B space education market',' growth_rat,'
   e: '200% annual growth',' varian,'
   t: 'space - futuristic', contact_inf,'
   o: ' mobil,'
@@ -2799,7 +2795,7 @@ export interface SpaceTechService,;
   s: ['Mission planningSatellite operationsLaunch coordinationSpace monitoringRegulatory compliancePerformance optimization'], ro,'
   i: 'Enable commercial space operations and reduce mission costs by 60%. ROI through operational efficiency and new revenue streams.',' competitor,'
   s: ['SpaceX StarlinkOneWebBasic satellite services'], marketSiz,'
-  e: '$469B space economy',' growthRat,'
+  e: '$469 B space economy',' growthRat,'
   e: '400% annual growth', varian,'
   t: 'space-futuristic', contactInf,'
   o: ' mobil,'
@@ -2845,7 +2841,7 @@ export interface SpaceTechService,;
   s: [' 'Constellation management' 'Coverage optimization' 'Performance monitoring' 'Maintenance planning' 'Traffic management' 'Efficiency optimization' ]' ro,'
   i: 'Optimize satellite operations and reduce operational costs by 40%. ROI through efficiency gains and improved service quality.' competitor,''
   s: ['Traditional satellite management', 'Basic monitoring tools']' marketSiz,'
-  e: '$150B satellite services market' growthRat,''
+  e: '$150 B satellite services market' growthRat,''
   e: '300% annual growth' varian,''
   t: 'space-futuristic' contactInf,'
   o: marketPositio,
@@ -2861,7 +2857,7 @@ export interface SpaceTechService,;
   s: [' 'Debris monitoring' 'Collision avoidance' 'Risk assessment' 'Insurance underwriting' 'Research analysis' 'Safety planning' ]' ro,'
   i: 'Protect valuable satellites and reduce insurance costs by 30%. ROI through risk mitigation and asset protection.' competitor,''
   s: ['Basic debris tracking', 'Manual monitoring']' marketSiz,'
-  e: '$50B space safety market' growthRat,''
+  e: '$50 B space safety market' growthRat,''
   e: '250% annual growth' varian,''
   t: 'space-futuristic' contactInf,'
   o: marketPositio,
@@ -2877,7 +2873,7 @@ export interface SpaceTechService,;
   s: [' 'Weather forecasting' 'Impact assessment' 'Risk mitigation' 'Operational planning' 'Research analysis' 'Safety planning' ]' ro,'
   i: 'Prevent satellite damage and reduce operational disruptions. ROI through risk mitigation and operational continuity.' competitor,''
   s: ['Basic weather data', 'Manual monitoring']' marketSiz,'
-  e: '$30B space weather market' growthRat,''
+  e: '$30 B space weather market' growthRat,''
   e: '200% annual growth' varian,''
   t: 'space-futuristic' contactInf,'
   o: marketPositio,
@@ -2893,7 +2889,7 @@ export interface SpaceTechService,;
   s: [' 'Launch coordination' 'Mission planning' 'Timing optimization' 'Trajectory planning' 'Mission tracking' 'Performance analysis' ]' ro,'
   i: 'Improve launch success rates and reduce mission costs by 25%. ROI through operational efficiency and mission success.' competitor,''
   s: ['Basic coordination', 'Manual planning']' marketSiz,'
-  e: '$20B launch services market' growthRat,''
+  e: '$20 B launch services market' growthRat,''
   e: '180% annual growth' varian,''
   t: 'space-futuristic' contactInf,'
   o: marketPositio,
@@ -2909,7 +2905,7 @@ export interface SpaceTechService,;
   s: [' 'Network management' 'Traffic optimization' 'Performance monitoring' 'Maintenance planning' 'Failover management' 'Global coordination' ]' ro,'
   i: 'Optimize ground station operations and reduce network costs by 35%. ROI through efficiency gains and improved reliability.' competitor,''
   s: ['Basic management', 'Manual coordination']' marketSiz,'
-  e: '$25B ground station market' growthRat,''
+  e: '$25 B ground station market' growthRat,''
   e: '220% annual growth' varian,''
   t: 'space-futuristic' contactInf,'
   o: marketPositio,
@@ -2925,7 +2921,7 @@ export interface SpaceTechService,;
   s: [' 'Research analysis' 'Educational content' 'Media reporting' 'Policy development' 'Scientific discovery' 'Data exploration' ]' ro,'
   i: 'Accelerate research and discovery through comprehensive data access and AI analysis. ROI through research efficiency and insights.' competitor,''
   s: ['Basic data access', 'Manual research']' marketSiz,'
-  e: '$15B space research market' growthRat,''
+  e: '$15 B space research market' growthRat,''
   e: '180% annual growth' varian,''
   t: 'space-futuristic' contactInf,'
   o: marketPositio,
@@ -2941,7 +2937,7 @@ export interface SpaceTechService,;
   s: [' 'Asset trading' 'Service procurement' 'Capacity trading' 'Investment trading' 'Insurance trading' 'Market making' ]' ro,'
   i: 'Create new revenue streams through space asset trading and reduce transaction costs by 50%.' competitor,''
   s: ['Manual contracts', 'Traditional procurement']' marketSiz,'
-  e: '$100B space services market' growthRat,''
+  e: '$100 B space services market' growthRat,''
   e: '300% annual growth' varian,''
   t: 'space-futuristic' contactInf,'
   o: marketPositio,
@@ -2957,7 +2953,7 @@ export interface SpaceTechService,;
   s: [' 'Space education' 'Career training' 'Skill development' 'Professional certification' 'Academic learning' 'Personal development' ]' ro,'
   i: 'Accelerate space education and career development through interactive learning. ROI through skill development and career advancement.' competitor,''
   s: ['Basic education', 'Traditional courses']' marketSiz,'
-  e: '$8B space education market' growthRat,''
+  e: '$8 B space education market' growthRat,''
   e: '200% annual growth' varian,''
   t: 'space-futuristic' contactInf,'
   o: ' mobil,'

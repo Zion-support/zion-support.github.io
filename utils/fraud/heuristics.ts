@@ -44,7 +44,7 @@ const lower = text.toLowerCase(),;
 const reasons: string[] = [],
   for (const pattern of vagueScammyJobPhrases) {;
 const re = new RegExp(pattern, 'i'),'
-    if (re.test(lower)) reasons.push(`job_vague_claim:"${pattern}"`),"
+    if (re.test(lower)) reasons.push(`job_vague_claim:"${pattern}"
   }
   return reasons,
 }
@@ -65,7 +65,7 @@ const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10),'
 }
   // TODO: Add properties
 }
-      reasons.push(`rapid_fire_signups_from_ip:${event.ipAddress}:${recent}in10m`),
+      reasons.push(`rapid_fire_signups_from_ip:${event.ipAddress}:${recent}in10 m`),
       severity = recent >= 10 ? 'high' : 'medium',';
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';';';
 const suspiciousLinkHosts = [
@@ -131,7 +131,7 @@ const lower = text.toLowerCase();
 const reasons: string[] = []
   for (const pattern of vagueScammyJobPhrases) {;
 const re = new RegExp(pattern, 'i')'
-    if (re.test(lower)) reasons.push(`job_vague_claim:"${pattern}"`)"
+    if (re.test(lower)) reasons.push(`job_vague_claim:"${pattern}"
   }
   return reasons
 }
@@ -152,10 +152,9 @@ const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10)'
 }
   // TODO: Add properties
 }
-      reasons.push(`rapid_fire_signups_from_ip:${event.ipAddress}:${recent}in10m`)
+      reasons.push(`rapid_fire_signups_from_ip:${event.ipAddress}:${recent}in10 m`)
       severity = recent >= 10 ? 'high' : 'medium''
     }
-  }
   if ((event.source === 'message' || event.source === 'job_post' || event.source === 'quote' || event.source === 'review') && event.content) {'
     if (containsSuspiciousHost(event.content)) {
   // TODO: Add properties
@@ -171,7 +170,7 @@ const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10)'
 }
   // TODO: Add properties
 }
-      reasons.push(...phrases.map((p) => `suspicious_phrase:"${p}"`)),"
+      reasons.push(...phrases.map((p) => `suspicious_phrase:"${p}"
       if (severity === 'low') severity = 'medium','
       reasons.push('outside_payment_link_detected')'
       severity = 'high''
@@ -182,10 +181,9 @@ const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10)'
 }
   // TODO: Add properties
 }
-      reasons.push(...phrases.map((p) => `suspicious_phrase:"${p}"`))"
+      reasons.push(...phrases.map((p) => `suspicious_phrase:"${p}"
       if (severity === 'low') severity = 'medium''
     }
-  }
   if (event.source === 'job_post' && event.content) {;';
 const vague = containsVagueJobClaims(event.content),
     if (vague.length > 0) {
@@ -204,7 +202,6 @@ const vague = containsVagueJobClaims(event.content)
       reasons.push(...vague)
       if (severity === 'low') severity = 'medium''
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -216,4 +213,3 @@ const vague = containsVagueJobClaims(event.content)
     severity,
   }
 }
-}}}

@@ -29,13 +29,12 @@ export interface RevolutionaryBreakthroughContent {
     accuracy: string
     roi: string,;
 export interface RevolutionaryBreakthroughContent {/* TODO: Fix JSX expression */}
-  }
   consciousnessLevel?: string
   transcendenceLevel?: string
   superintelligenceLevel?: string
 }
 ;
-export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [;
+export const december2025 RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [;
   // TODO: Add items
 ]
   {
@@ -58,7 +57,7 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
     image: '/images/quantum-ai-transcendence-revolution-2025.jpg''
     newBadge: true
     trending: true,
-    valueProposition: '$1.2B+ annual value creation''
+    valueProposition: '$1.2 B+ annual value creation''
     metrics: {
   // TODO: Add properties
 }
@@ -67,9 +66,9 @@ export const december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthr
       performance: 'Infinite processing power','
       savings: '$1.2 B+ annual savings','
       accuracy: '99.99% consciousness accuracy','
-      roi: '10,000x ROI',;';
+      roi: '10,000 x ROI',;';
 export const,;
-  december2025RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
+  december2025 RevolutionaryBreakthroughContent: RevolutionaryBreakthroughContent[] = [
   // TODO: Add items
 ]
   // TODO: Add items
@@ -91,7 +90,7 @@ export const,;
     slug: 'ai-2025-december-artificial-superintelligence-breakthrough''
     title: 'Artificial Superintelligence Breakthrough 2025''
     description: 'First true artificial superintelligence achieving human-level consciousness with exponential learning capabilities','
-    excerpt: "The world's first artificial superintelligence breakthrough - achieving human-level consciousness and exponential learning.","'"
+    excerpt: "The world's first artificial superintelligence breakthrough - achieving human-level consciousness and exponential learning."'"
     author: 'Zion Tech Group','
     date: '2025-12-01','
     category: 'Superintelligence','
@@ -101,7 +100,7 @@ export const,;
     image: '/images/artificial-superintelligence-breakthrough-2025.jpg''
     newBadge: true
     trending: true,
-    valueProposition: '$2.5B+ annual value creation''
+    valueProposition: '$2.5 B+ annual value creation''
     metrics: {
   // TODO: Add properties
 }
@@ -110,7 +109,7 @@ export const,;
       performance: 'Exponential learning','
       savings: '$2.5 B+ annual savings','
       accuracy: '99.99% superintelligence accuracy','
-      roi: '25,000x ROI','
+      roi: '25,000 x ROI','
   {/* TODO: Fix JSX expression */}
     },
     consciousnessLeve,

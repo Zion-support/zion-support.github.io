@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import nodemailer from "nodemailer";";
-import crypto from "crypto";";
+import type { NextApiRequest, NextApiResponse } from "next";
+import nodemailer from "nodemailer";
+import crypto from "crypto";
 import {
   // TODO: Add properties
 }
@@ -9,7 +9,7 @@ import {
   getProposal,
   updateProposalMeta,
   updateArtifacts,
-} from "../../../utils/data/proposals""
+} from "../../../utils/data/proposals"
 async function submitByEmail(
   // TODO: Add parameters
 )
@@ -39,9 +39,9 @@ const port = Number(process.env.EMAIL_PORT |587);
 const user = process.env.EMAIL_USER;
 const pass = process.env.EMAIL_PASS;
 const from = process.env.EMAIL_FROM |user
-  if (!host |!user |!pass) throw new Error("Email not configured");";
+  if (!host |!user |!pass) throw new Error("Email not configured";
 const from = process.env.EMAIL_FROM || user
-  if (!host || !user || !pass) throw new Error("Email not configured");";
+  if (!host || !user || !pass) throw new Error("Email not configured";
 const transporter = nodemailer.createTransport({
   // TODO: Add properties
 }
@@ -73,10 +73,9 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
 export default async function handler(
   // TODO: Add parameters
 )
@@ -87,27 +86,27 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST") return res.status($1).json({ $2 })"
+  if (req.method !== "POST"
   try {;
-const { id, channels = ["email"], emailTo, delegateNote } = req.body |{}"
+const { id, channels = ["email"
     if (!id) return res.status($1).json({ $2 });
 const meta = getProposal(id)
     if (!meta) return res.status($1).json({ $2 })
     // Email submission
-    if (channels.includes("email")) {;";
-const to = emailTo |process.env.UN_GATEWAY_EMAIL |"example@un.org";";
+    if (channels.includes("email";
+const to = emailTo |process.env.UN_GATEWAY_EMAIL |"example@un.org";
 const subject = `[Proposal] ${meta.title} - ${meta.targetInstitution}`;
-const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote |"N/A"}`"
+const text = `Please find the proposal attached.\n\nTitle: ${meta.title}\nTarget: ${meta.targetInstitution}\nType: ${meta.type}\nRegion: ${meta.regionalScope}\nBudget/Resolution: ${meta.budgetOrResolution}\n\nDAO Governance: See document.\n\nDelegate Note: ${delegateNote |"N/A"
       await submitByEmail(to, subject, text)
     }
     // ENS record hash (default: compute and store hash only);
 let ensRecordHash: string | undefined
     try {;
 const hash = crypto
-        .createHash("sha256")"
+        .createHash("sha256"
         .update(JSON.stringify(meta))
-        .digest("hex")"
-      ensRecordHash = `0x${hash}`
+        .digest("hex"
+      ensRecordHash = `0 x${hash}`
       updateArtifacts(id, { ensRecordHash })
     } catch {}
     const updated = updateProposalMeta(id, (m) => ({
@@ -116,7 +115,7 @@ const hash = crypto
   // TODO: Add properties
 }
       ...m
-      status: "Submitted""
+      status: "Submitted"
     }))
     return res.status(200).json({ meta: updated })
   } catch (error: any) {
@@ -126,7 +125,7 @@ const hash = crypto
 }
     return res
       .status(500)
-      .json({ error: error?.message |"Submission failed" })";
+      .json({ error: error?.message |"Submission failed";
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import nodemailer from 'nodemailer';';
 import crypto from 'crypto';';
@@ -137,7 +136,7 @@ const port = Number (process.env.EMAIL_PORT || 587);
 const user = process.env.EMAIL_USER;
 const pass = process.env.EMAIL_PASS;
 const from = process.env.EMAIL_FROM || user
-  if (throw new Error ("Email not configured")) {"
+  if (throw new Error ("Email not configured"
   $2
 }
   const transporter = nodemailer.create_transport ({
@@ -150,7 +149,7 @@ const from = process.env.EMAIL_FROM || user
     secure: port === 465,
     auth: { user, pass },
   });
-const { id, channels = ["email"], emailTo, delegateNote } = req && req.body || {}"
+const { id, channels = ["email"
     if (!id) return res && res.status($1).json({ $2 });
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
@@ -158,7 +157,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // TODO: Add properties
 }
   if (req.method !== 'POST') return res.status($1).json({$2})'
-      .json({ error: error?.message || "Submission failed" });";
+      .json({ error: error?.message || "Submission failed";
 export default async function handler(req, res) {
   // TODO: Add properties
 }
@@ -183,7 +182,7 @@ let ensRecordHash: string | undefined
 }
   // TODO: Add properties
 }
-      ensRecordHash = `0x${hash}`
+      ensRecordHash = `0 x${hash}`
       update_artifacts (id, { ensRecordHash })
     } catch {}
     return res && res.status(200).json({ meta: updated })
@@ -194,11 +193,10 @@ let ensRecordHash: string | undefined
 }
     return res
       .status(500)
-      .json({ error: error?.message |"Submission failed" })"
+      .json({ error: error?.message |"Submission failed"
   }
-}
       const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex')'
-      ensRecordHash = `0x${hash}`
+      ensRecordHash = `0 x${hash}`
       updateArtifacts(id, { ensRecordHash })
     } catch {}
     const updated = updateProposalMeta(id, (m) => ({ ...m, status: 'Submitted' }))'
@@ -210,14 +208,13 @@ let ensRecordHash: string | undefined
 }
     return res.status(500).json({ error: error?.message || 'Submission failed' })'
   }
-}
     const updated = updateProposalMeta (id, (m) => ({
   // TODO: Add properties
 }
   // TODO: Add properties
 }
       ...m,
-      status: "Submitted","
+      status: "Submitted"
     }))
     return res.status (200).json ({ meta: updated })
   } catch (error: any) {
@@ -227,7 +224,16 @@ let ensRecordHash: string | undefined
 }
     return res
       .status (500)
-      .json ({ error: error?.message || "Submission failed" })"
+      .json ({ error: error?.message || "Submission failed"
+  }
+  } catch (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  }
   }
 }
   } catch (error) {
@@ -235,45 +241,29 @@ let ensRecordHash: string | undefined
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-  }
-}
-}
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
+  

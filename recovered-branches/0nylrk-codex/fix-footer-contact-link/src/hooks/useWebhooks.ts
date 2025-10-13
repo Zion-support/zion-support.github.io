@@ -1,7 +1,7 @@
-import { useState } from "react";";
-import { useAuth } from "@/hooks/useAuth";";
-import { supabase } from "@/integrations/supabase/client";";
-import { toast } from "@/hooks/use-toast";";";
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";";
 export type WebhookEventType = 'new_application' | 'quote_received' | 'milestone_approved' | 'talent_hired';';';
 export interface Webhook {
   // TODO: Add properties
@@ -68,7 +68,7 @@ const { data: { session } } = await supabase.auth.getSession()
 }
   // TODO: Add properties
 }
-        setError("Authentication required")"
+        setError(")"
         return
       }
       const response = await fetch(`${getWebhookUrl()}/webhooks`, {
@@ -107,8 +107,8 @@ const result = await response.json()
 }
   // TODO: Add properties
 }
-        variant: "destructive","
-        title: "Error fetching webhooks","
+        variant: ","
+        title: ","
         description: err instanceof Error ? err.message : 'An unknown error occurred'})'
         description: err instanceof Error ? err.message : 'An unknown error occurred','
       })
@@ -119,7 +119,6 @@ const result = await response.json()
 }
       setLoading(false)
     }
-  }
   // Create new webhook;
 const createWebhook = async (name: string, url: string, eventTypes: WebhookEventType[], secret?: string) => {
   // TODO: Add properties
@@ -136,7 +135,7 @@ const { data: { session } } = await supabase.auth.getSession()
 }
   // TODO: Add properties
 }
-        setError("Authentication required")"
+        setError(")"
         return
       }
       const response = await fetch(`${getWebhookUrl()}/create`, {
@@ -179,9 +178,9 @@ const result = await response.json()
 }
   // TODO: Add properties
 }
-        title: "Webhook Created","
-        description: "Your webhook has been created successfully."})"
-        description: "Your webhook has been created successfully.","
+        title: ","
+        description: "})"
+        description: ","
       })
       return result.webhook
     } catch (err) {
@@ -196,8 +195,8 @@ const result = await response.json()
 }
   // TODO: Add properties
 }
-        variant: "destructive","
-        title: "Error creating webhook","
+        variant: ","
+        title: ","
         description: err instanceof Error ? err.message : 'An unknown error occurred'})'
         description: err instanceof Error ? err.message : 'An unknown error occurred','
       })
@@ -208,7 +207,6 @@ const result = await response.json()
 }
       setLoading(false)
     }
-  }
   // Toggle webhook active status;
 const toggleWebhook = async (webhookId: string, isActive: boolean) => {
   // TODO: Add properties
@@ -225,7 +223,7 @@ const { data: { session } } = await supabase.auth.getSession()
 }
   // TODO: Add properties
 }
-        setError("Authentication required")"
+        setError(")"
         return
       }
       const response = await fetch(`${getWebhookUrl()}/toggle`, {
@@ -261,7 +259,7 @@ const result = await response.json()
 }
   // TODO: Add properties
 }
-        title: isActive ? "Webhook Activated" : "Webhook Deactivated","
+        title: isActive ? " : "Webhook Deactivated"
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`})'
         description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`,'
       })
@@ -278,8 +276,8 @@ const result = await response.json()
 }
   // TODO: Add properties
 }
-        variant: "destructive","
-        title: "Error updating webhook","
+        variant: "destructive"
+        title: "Error updating webhook"
         description: err instanceof Error ? err.message : 'An unknown error occurred'})'
         description: err instanceof Error ? err.message : 'An unknown error occurred','
       })
@@ -290,7 +288,6 @@ const result = await response.json()
 }
       setLoading(false)
     }
-  }
   // Delete webhook;
 const deleteWebhook = async (webhookId: string) => {
   // TODO: Add properties
@@ -307,7 +304,7 @@ const { data: { session } } = await supabase.auth.getSession()
 }
   // TODO: Add properties
 }
-        setError("Authentication required")"
+        setError("Authentication required"
         return
       }
       const response = await fetch(`${getWebhookUrl()}/delete`, {
@@ -341,9 +338,9 @@ const result = await response.json()
 }
   // TODO: Add properties
 }
-        title: "Webhook Deleted","
-        description: "The webhook has been deleted successfully."})"
-        description: "The webhook has been deleted successfully.","
+        title: "Webhook Deleted"
+        description: "The webhook has been deleted successfully."
+        description: "The webhook has been deleted successfully."
       })
       return result
     } catch (err) {
@@ -358,8 +355,8 @@ const result = await response.json()
 }
   // TODO: Add properties
 }
-        variant: "destructive","
-        title: "Error deleting webhook","
+        variant: "destructive"
+        title: "Error deleting webhook"
         description: err instanceof Error ? err.message : 'An unknown error occurred'})'
         description: err instanceof Error ? err.message : 'An unknown error occurred','
       })
@@ -370,7 +367,6 @@ const result = await response.json()
 }
       setLoading(false)
     }
-  }
   // Test webhook;
 const testWebhook = async (webhookId: string, eventType: WebhookEventType) => {
   // TODO: Add properties
@@ -388,7 +384,7 @@ const { data: { session } } = await supabase.auth.getSession()
 }
   // TODO: Add properties
 }
-        setError("Authentication required")"
+        setError("Authentication required"
         return
       }
       const response = await fetch(`${getWebhookUrl()}/test`, {
@@ -434,7 +430,7 @@ const result = await response.json()
 }
   // TODO: Add properties
 }
-        title: "Webhook Test Sent","
+        title: "Webhook Test Sent"
         description: `Test completed with status: ${result.status} ${result.statusText}`})
         description: `Test completed with status: ${result.status} ${result.statusText}`,
       })
@@ -451,8 +447,8 @@ const result = await response.json()
 }
   // TODO: Add properties
 }
-        variant: "destructive","
-        title: "Error testing webhook","
+        variant: "destructive"
+        title: "Error testing webhook"
         description: err instanceof Error ? err.message : 'An unknown error occurred'})'
         description: err instanceof Error ? err.message : 'An unknown error occurred','
       })
@@ -463,7 +459,6 @@ const result = await response.json()
 }
       setLoading(false)
     }
-  }
   return {
   // TODO: Add properties
 }
@@ -479,5 +474,4 @@ const result = await response.json()
     deleteWebhook,
     testWebhook,
     clearTestResult: () => setTestResult(null)
-  }
-}
+  

@@ -1,20 +1,19 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";";
-import { Configuration, OpenAIApi } from "npm:openai@4.28.0";";";
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { Configuration, OpenAIApi } from "npm:openai@4.28.0";";
 const corsHeaders = {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  "Access-Control-Allow-Origin": "*","
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}"
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type","
+  ": "*"
+  "Access-Control-Allow-Headers"authorization, x-client-info, apikey, content-type"}"Access-Control-Allow-Headers": ","
 }
 serve(async (req) => {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  if (req.method === "OPTIONS") {"
+  if (req.method === ") {"
     return new Response(null, { headers: corsHeaders })
   }
   try {;
@@ -32,7 +31,7 @@ const { title, keyFeatures, targetAudience } = await req.json()
 }
   // TODO: Add properties
 }
-          error: "Missing required field: title" "
+          error: " "
         }),
         {
   // TODO: Add properties
@@ -40,7 +39,7 @@ const { title, keyFeatures, targetAudience } = await req.json()
   // TODO: Add properties
 }
           status: 400,
-          headers: { ...corsHeaders, "Content-Type": "application/json" } "
+          headers: { ...corsHeaders, ": "application/json"
         }
       )
     }
@@ -55,8 +54,8 @@ const { title, keyFeatures, targetAudience } = await req.json()
 const openai = new OpenAIApi(configuration);
 const prompt = `Create a professional and detailed service description for the following service:
 Title: ${title}
-Key Features: ${keyFeatures || "Not specified"}"
-Target Audience: ${targetAudience || "General users"}"
+Key Features: ${keyFeatures || "Not specified"
+Target Audience: ${targetAudience || "General users"
 The description should:
 1. Be approximately 200-300 words
 2. Highlight the key benefits and unique selling points
@@ -68,8 +67,8 @@ const completion = await openai.chat.completions.create({
 }
   // TODO: Add properties
 }
-      model: "gpt-4o-mini","
-      messages: [{ role: "user", content: prompt }],"
+      model: "gpt-4 o-mini"
+      messages: [{ role: "user"
       temperature: 0.7})
       temperature: 0.7,
     });
@@ -83,33 +82,7 @@ const generatedDescription = completion.choices[0].message.content
 }
   // TODO: Add properties
 }
-        headers: { ...corsHeaders, "Content-Type": "application/json" } "
-      }
-    )
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error in generate-service-description:", error)"
-    return new Response(
-  // TODO: Add parameters
-)
-      JSON.stringify({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        error: "Failed to generate service description","
-        details: error.message
-      }),
-      {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        status: 500,
-        headers: { ...corsHeaders, "Content-Type": "application/json" } "
+        headers: { ...corsHeaders, "Content-Type"application/json" } "Error in generate-service-description:", error)"Failed to generate service description","Content-Type": " } "
       }
     )
   }

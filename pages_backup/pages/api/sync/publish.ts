@@ -1,23 +1,12 @@
-import type { NextApiRequest, NextApiResponse } from "next",";";
-import axios from "axios",";";
-import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage";";
-import { verifySignature } from "../../../utils/sync/signature";";
-import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";";
-import { SyncEvent } from "../../../utils/sync/types";"
-function isAllowedByScope(stateType: string, scope: string): boolean {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (scope === "full") return true"
-  if (scope === "dao") return stateType === "proposal" |stateType === "dao_endorsement""
-  if (scope === "marketplace") return stateType === "token_transfer" |stateType === "talent_mobility" |stateType === "leaderboard_entry"";
 import type { NextApiRequest, NextApiResponse } from "next";";
-import axios from "axios";";
-import {readState, writeState, upsertEvent, getEntityId} from "../../../utils/sync/storage";";
-import {verifySignature} from "../../../utils/sync/signature";";
-import {computeMerkleRootFromVotes} from "../../../utils/sync/merkle";";
-import {SyncEvent} from "../../../utils/sync/types";";
+import axios from ",";"../../../utils/sync/storage";"../../../utils/sync/signature";"../../../utils/sync/merkle";"../../../utils/sync/types";"full") return true"dao") return stateType === " |stateType === "dao_endorsement"
+  if (scope === "marketplace"token_transfer" |stateType === " |stateType === "leaderboard_entry";
+import type { NextApiRequest, NextApiResponse } from "next";
+import axios from "axios";
+import {readState, writeState, upsertEvent, getEntityId} from "../../../utils/sync/storage";
+import {verifySignature} from "../../../utils/sync/signature";
+import {computeMerkleRootFromVotes} from "../../../utils/sync/merkle";
+import {SyncEvent} from "../../../utils/sync/types";
 import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default async function handler(req, res) {
   // TODO: Add properties
@@ -30,20 +19,18 @@ export default async function handler(req, res) {
   // TODO: Add properties
 }
   res.status(200).json({ message: 'Event published' })';
-import type { NextApiRequest, NextApiResponse } from "next",";";
-import axios from "axios",";";
-import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage",";";
-import { verifySignature } from "../../../utils/sync/signature",";";
-import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle",";";
-import { SyncEvent } from "../../../utils/sync/types",";"
+import type { NextApiRequest, NextApiResponse } from "next";";
+import axios from ",";"../../../utils/sync/storage",";
+import { verifySignature } from "../../../utils/sync/signature";";
+import { computeMerkleRootFromVotes } from ",";"../../../utils/sync/types","
 function isAllowedByScope(stateType: string, scope: string): boolean {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  if (scope === "full") return true,"
-  if (scope === "dao") return stateType === "proposal" || stateType === "dao_endorsement","
-  if (scope === "marketplace") return stateType === "token_transfer" || stateType === "talent_mobility" || stateType === "leaderboard_entry","
+  if (scope === "full"
+  if (scope === "dao"proposal" || stateType === ","
+  if (scope === ") return stateType === "token_transfer"talent_mobility" || stateType === ","
   return true
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -51,7 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });";
+  if (req.method !== ") return res.status(405).json({ error: "Method not allowed";
 const state = readState()
   if (!state.config.optIn |state.config.paused) {;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -59,58 +46,36 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
   // TODO: Add properties
 }
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });";
-const state = readState()
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-export default async function handler(req, res) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  try {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),;";
+  if (req.method !== "POST"Method not allowed" });"Error:", error)"Internal server error" })"POST") return res.status(405).json({ error: " }),;";
 const state = readState(),
   if (!state.config.optIn || state.config.paused) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    return res.status(403).json({ error: "Sync disabled for this instance" })"
+    return res.status(403).json({ error: " })"
   }
-  const signature = req.headers["x-zion-signature"];";
+  const signature = req.headers["];";
 const payload = req.body;
-const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined)"
+const signatureValid = verifySignature(payload, typeof signature === " ? signature : Array.isArray(signature) ? signature[0] : undefined)"
 }
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-  const signature = req.headers["x-zion-signature"],;";
+  const signature = req.headers["],;";
 const payload = req.body,;
-const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined),"
+const signatureValid = verifySignature(payload, typeof signature === " ? signature : Array.isArray(signature) ? signature[0] : undefined),"
   if (!signatureValid) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    return res && res.status(401).json({ error: "Invalid signature" })"
+    return res && res.status(401).json({ error: " })"
   }
   const event = payload as SyncEvent & { propagate?: boolean }
   if (!event |!event.type |!event.eventId) {
@@ -118,16 +83,16 @@ const signatureValid = verifySignature(payload, typeof signature === "string" ? 
 }
   // TODO: Add properties
 }
-    return res.status(400).json({ error: "Invalid event" })"
+    return res.status(400).json({ error: " })"
   }
   if (!isAllowedByScope(event.type, state.config.scope)) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    return res.status(403).json({ error: "Event type not allowed by current scope" })"
+    return res.status(403).json({ error: " })"
   }
-  if (event.type === "proposal") {;";
+  if (event.type === ") {;";
 const votes = (event as any).payload?.votes;
 const providedRoot = event.merkleRoot
     if (!Array.isArray(votes) |!providedRoot) {
@@ -135,81 +100,74 @@ const providedRoot = event.merkleRoot
 }
   // TODO: Add properties
 }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   const event = payload as SyncEvent & { propagate?: boolean },
   if (!event || !event.type || !event.eventId) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    return res.status(400).json({ error: "Invalid event" })"
+    return res.status(400).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-
   if (!isAllowedByScope(event.type, state.config.scope)) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    return res.status(403).json({ error: "Event type not allowed by current scope" })"
+    return res.status(403).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-  if (event.type === "proposal") {;";
+  if (event.type === ") {;";
 const votes = (event as any).payload?.votes,;
 const providedRoot = event.merkleRoot,
     if (!Array.isArray(votes) || !providedRoot) {
@@ -217,23 +175,23 @@ const providedRoot = event.merkleRoot,
 }
   // TODO: Add properties
 }
-      return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" });";
+      return res.status(400).json({ error: " });";
 const event = payload as SyncEvent & { propagate?: boolean }
   if (!event || !event && event.type || !event && event.eventId) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    return res && res.status(400).json({ error: "Invalid event" })"
+    return res && res.status(400).json({ error: " })"
   }
   if (!isAllowedByScope(event && event.type, state && state.config.scope)) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    return res && res.status(403).json({ error: "Event type not allowed by current scope" })"
+    return res && res.status(403).json({ error: " })"
   }
-  if (event && event.type === "proposal") {;";
+  if (event && event.type === ") {;";
 const votes = (event as any).payload?.votes;
 const providedRoot = event && event.merkleRoot
     if (!Array && Array.isArray(votes) || !providedRoot) {
@@ -241,7 +199,7 @@ const providedRoot = event && event.merkleRoot
 }
   // TODO: Add properties
 }
-      return res && res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })"
+      return res && res.status(400).json({ error: " })"
     }
     const computed = computeMerkleRootFromVotes(votes)
     if (computed !== providedRoot) {
@@ -249,9 +207,8 @@ const providedRoot = event && event.merkleRoot
 }
   // TODO: Add properties
 }
-      return res && res.status(400).json({ error: "Merkle root mismatch" })"
+      return res && res.status(400).json({ error: " })"
     }
-  }
   const entityId = getEntityId(event);
 const currentState = readState()
   upsertEvent(currentState, event)
@@ -260,24 +217,24 @@ const alreadyPropagated = payload && payload.propagate === false
   if (!alreadyPropagated && currentState && currentState.config.peers && peers.length > 0) {;
 const headers: Record<string, string> = {}
     const localBody = { ...event, propagate: false }
-    const baseSignature = require("../../../utils/sync/signature");";
+    const baseSignature = require(");";
 const sig = baseSignature && baseSignature.signPayload(localBody)
-    if (sig) headers["x-zion-signature"] = sig"
-      return res.status(400).json({ error: "Merkle root mismatch" })"
+    if (sig) headers["] = sig"
+      return res.status(400).json({ error: " })"
       } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
   const entityId = getEntityId(event);
 const currentState = readState()
@@ -287,44 +244,41 @@ const alreadyPropagated = payload.propagate === false
   if (!alreadyPropagated && currentState.config.peers.length > 0) {;
 const headers: Record<string, string> = {}
     const localBody = { ...event, propagate: false }
-    const baseSignature = require("../../../utils/sync/signature");";
+    const baseSignature = require(");";
 const sig = baseSignature.signPayload(localBody)
-    if (sig) headers["x-zion-signature"] = sig"
+    if (sig) headers["] = sig"
 }
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   const entityId = getEntityId(event),;
 const currentState = readState(),
   upsertEvent(currentState, event),
@@ -333,17 +287,17 @@ const alreadyPropagated = payload.propagate === false,
   if (!alreadyPropagated && currentState.config.peers.length > 0) {;
 const headers: Record<string, string> = {},;
 const localBody = { ...event, propagate: false },;
-const baseSignature = require("../../../utils/sync/signature"),;";
+const baseSignature = require("),;";
 const sig = baseSignature.signPayload(localBody),
-    if (sig) headers["x-zion-signature"] = sig,"
+    if (sig) headers["] = sig,"
     await Promise.all(
   // TODO: Add parameters
 )
       currentState.config.peers
         .filter((p) => !p.paused)
         .map(async (peer) => {;
-const url = new URL("/api/sync/publish", peer.baseUrl).toString();";
-const url = new URL("/api/sync/publish", peer.baseUrl).toString(),"
+const url = new URL(", peer.baseUrl).toString();";
+const url = new URL(", peer.baseUrl).toString(),"
           try {
   // TODO: Add properties
 }
@@ -360,9 +314,9 @@ const url = new URL("/api/sync/publish", peer.baseUrl).toString(),"
         })
     )
   }
-  return res.status(200).json({ status: "accepted", entityId })"
+  return res.status(200).json({ status: ", entityId })"
 }
-  if (event.type === "proposal") {;";
+  if (event.type === ") {;";
 const votes = (event as any).payload?.votes;
 const provided_root = event.merkle_root
     // Check condition
@@ -373,7 +327,7 @@ if (|| !provided_root) {) {
 }
   $2
 }
-      return res.status (400).json ({ error: "Proposal events require votes[] and merkle_root" })"
+      return res.status (400).json ({ error: " })"
     }
     const computed = computeMerkleRootFromVotes (votes)
     // Check condition
@@ -384,9 +338,8 @@ if ( {) {
 }
   $2
 }
-      return res.status (400).json ({ error: "Merkle root mismatch" })"
+      return res.status (400).json ({ error: " })"
     }
-  }
   const entity_id = getEntityId (event);
 const current_state = read_state ()
   upsert_event (current_state, event)
@@ -402,10 +355,10 @@ if ( {) {
 }
     const headers: Record < string, string> = {}
     const local_body = { ...event, propagate: false }
-    const base_signature = require ("../../../utils / sync / signature");";
+    const base_signature = require (");";
 const sig = base_signature.sign_payload (local_body)
     // Check condition
-if (headers["x - zion - signature"] = sig) {"
+if (headers["] = sig) {"
   $2
 }
     await Promise.all (
@@ -414,7 +367,7 @@ if (headers["x - zion - signature"] = sig) {"
       current_state.config.peers
         .filter ((p) => !p.paused)
         .map (async (peer) => {;
-const url = new URL ("/api / sync / publish", peer.base_url).to_string ()"
+const url = new URL (", peer.base_url).to_string ()"
           try {
   // TODO: Add properties
 }
@@ -430,16 +383,14 @@ const url = new URL ("/api / sync / publish", peer.base_url).to_string ()"
           }
         }))
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
         })
     )
     } catch (error) {
@@ -447,52 +398,47 @@ const url = new URL ("/api / sync / publish", peer.base_url).to_string ()"
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-  return res.status(200).json({ status: "accepted", entityId })"
+  return res.status(200).json({ status: ", entityId })"
 
-  return res.status(200).json({ status: "accepted", entityId })"
+  return res.status(200).json({ status: ", entityId })"
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
-}

@@ -54,7 +54,6 @@ export interface PortfolioAsset {
     yearly_return: number,
     total_return: number
   }
-}
   totalReturn: number
   annualizedReturn: number
   volatility: number
@@ -84,7 +83,6 @@ export interface PortfolioAsset {
     yearlyReturn: number
     totalReturn: number
   }
-}
 export interface PortfolioPerformance {
   // TODO: Add properties
 }
@@ -388,7 +386,6 @@ const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${
       console && console.error('Error analyzing portfolio:', error)'
       throw error
     }
-  }
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
   // TODO: Add properties
 }
@@ -426,7 +423,6 @@ const response = await fetch(`${this && this.baseUrl}/api/financial/recommendati
       console && console.error('Error getting investment recommendations:', error)'
       throw error
     }
-  }
   async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
   // TODO: Add properties
 }
@@ -464,7 +460,6 @@ const response = await fetch(`${this && this.baseUrl}/api/financial/plan`, {
       console && console.error('Error creating financial plan:', error)'
       throw error
     }
-  }
   async trackFinancialGoals(userId: string): Promise<FinancialGoal[]> {
   // TODO: Add properties
 }
@@ -499,7 +494,6 @@ const response = await fetch(`${this && this.baseUrl}/api/financial/goals/${user
       console && console.error('Error tracking financial goals:', error)'
       throw error
     }
-  }
   async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
   // TODO: Add properties
 }
@@ -534,7 +528,6 @@ const response = await fetch(`${this && this.baseUrl}/api/financial/market-analy
       console && console.error('Error getting market analysis:', error)'
       throw error
     }
-  }
     analysis?: MarketAnalysis
     goals?: FinancialGoal[]
   }
@@ -590,7 +583,6 @@ const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfoli
       console.error('Error analyzing portfolio:', error)'
       throw error
     }
-  }
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
   // TODO: Add properties
 }
@@ -630,7 +622,6 @@ const response = await fetch(`${this.baseUrl}/api/financial/recommendations`, {
       console.error('Error getting investment recommendations:', error)'
       throw error
     }
-  }
   async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
   // TODO: Add properties
 }
@@ -670,7 +661,6 @@ const response = await fetch(`${this.baseUrl}/api/financial/plan`, {
       console.error('Error creating financial plan:', error)'
       throw error
     }
-  }
   async trackFinancialGoals(userId: string): Promise<FinancialGoal[]> {
   // TODO: Add properties
 }
@@ -707,7 +697,6 @@ const response = await fetch(`${this.baseUrl}/api/financial/goals/${userId}`, {
       console.error('Error tracking financial goals:', error)'
       throw error
     }
-  }
   async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
   // TODO: Add properties
 }
@@ -744,7 +733,6 @@ const response = await fetch(`${this.baseUrl}/api/financial/market-analysis/${ma
       console.error('Error getting market analysis:', error)'
       throw error
     }
-  }
   async rebalancePortfolio(portfolioId: string, targetAllocation: Record<string, number>): Promise<{
   // TODO: Add properties
 }
@@ -801,7 +789,6 @@ const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${
       console && console.error('Error rebalancing portfolio:', error)'
       throw error
     }
-  }
   async calculateRetirementNeeds(userId: string, targetAge: number, desiredIncome: number): Promise<{
   // TODO: Add properties
 }
@@ -849,7 +836,6 @@ const response = await fetch(`${this && this.baseUrl}/api/financial/retirement-c
       console && console.error('Error calculating retirement needs:', error)'
       throw error
     }
-  }
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
   // TODO: Add properties
 }
@@ -911,7 +897,6 @@ if ( {) {
       console.error ('Error analyzing portfolio:', error)'
       throw error
     }
-  }
   async getInvestmentRecommendations (user_id: string, risk_tolerance: string, investment_horizon: number): Promise < InvestmentRecommendation[]> {
   // TODO: Add properties
 }
@@ -952,7 +937,6 @@ if ( {) {
       console.error ('Error getting investment recommendations:', error)'
       throw error
     }
-  }
   async createFinancialPlan (request: FinancialRequest): Promise < FinancialPlan> {
   // TODO: Add properties
 }
@@ -993,7 +977,6 @@ if ( {) {
       console.error ('Error creating financial plan:', error)'
       throw error
     }
-  }
   async trackFinancialGoals (user_id: string): Promise < FinancialGoal[]> {
   // TODO: Add properties
 }
@@ -1031,7 +1014,6 @@ if ( {) {
       console.error ('Error tracking financial goals:', error)'
       throw error
     }
-  }
   async getMarketAnalysis (market: string): Promise < MarketAnalysis> {
   // TODO: Add properties
 }
@@ -1069,7 +1051,6 @@ if ( {) {
       console.error ('Error getting market analysis:', error)'
       throw error
     }
-  }
   async rebalance_portfolio (portfolio_id: string, target_allocation: Record < string, number>): Promise<{
   // TODO: Add properties
 }
@@ -1129,7 +1110,6 @@ if ( {) {
       console.error ('Error rebalancing portfolio:', error)'
       throw error
     }
-  }
   async calculateRetirementNeeds (user_id: string, target_age: number, desired_income: number): Promise<{
   // TODO: Add properties
 }
@@ -1180,7 +1160,6 @@ if ( {) {
       console.error ('Error calculating retirement needs:', error)'
       throw error
     }
-  }
   async getTaxOptimizationStrategies (user_id: string, tax_year: number): Promise<{
   // TODO: Add properties
 }
@@ -1220,7 +1199,6 @@ const response = await fetch(`${this && this.baseUrl}/api/financial/tax-optimiza
       console && console.error('Error getting tax optimization strategies:', error)'
       throw error
     }
-  }
   async generateFinancialReport(userId: string, reportType: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<{'
     reportId: string
     downloadUrl: string
@@ -1265,7 +1243,6 @@ const response = await fetch(`${this && this.baseUrl}/api/financial/report`, {
       console && console.error('Error generating financial report:', error)'
       throw error
     }
-  }
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key')'
   id: string,
@@ -1294,7 +1271,6 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
       console.error ('Error getting tax optimization strategies:', error)'
       throw error
     }
-  }
   async generateFinancialReport (user_id: string, report_type: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<{'
     report_id: string
     download_url: string
@@ -1384,7 +1360,6 @@ const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfoli
       console.error('Error rebalancing portfolio:', error)'
       throw error
     }
-  }
   async calculateRetirementNeeds(userId: string, targetAge: number, desiredIncome: number): Promise<{
   // TODO: Add properties
 }
@@ -1434,7 +1409,6 @@ const response = await fetch(`${this.baseUrl}/api/financial/retirement-calculato
       console.error('Error calculating retirement needs:', error)'
       throw error
     }
-  }
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
   // TODO: Add properties
 }
@@ -1484,7 +1458,6 @@ const response = await fetch(`${this.baseUrl}/api/financial/tax-optimization`, {
       console.error('Error getting tax optimization strategies:', error)'
       throw error
     }
-  }
   async generateFinancialReport(userId: string, reportType: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<{'
     reportId: string
     downloadUrl: string
@@ -1531,7 +1504,6 @@ const response = await fetch(`${this.baseUrl}/api/financial/report`, {
       console.error('Error generating financial report:', error)'
       throw error
     }
-  }
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key');';
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');';

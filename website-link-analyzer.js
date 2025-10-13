@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -109,8 +107,6 @@ class WebsiteLinkAnalyzer {
     } catch (error) {
       return null;
     }
-  }
-
   extractLinks(document, currentUrl) {
     const links = [];
     const baseUrl = new URL(currentUrl);
@@ -226,10 +222,7 @@ class WebsiteLinkAnalyzer {
 //             error: linkResult.error
           });
         }
-      }
     }
-  }
-
   async generateReport() {
     const report = {
 //       ...this.results,
@@ -309,6 +302,3 @@ class WebsiteLinkAnalyzer {
     } catch (error) {
       throw error;
     }
-  }
-=======
-}

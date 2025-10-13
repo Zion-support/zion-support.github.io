@@ -1,4 +1,4 @@
-export interface January2026Content {
+export interface January2026 Content {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -19,7 +19,6 @@ export interface January2026Content {
     starting: string,
     enterprise: string
   }
-}
 ;
 export const newJanuary2026 Content: January2026 Content[] = [;
   // TODO: Add items
@@ -39,7 +38,7 @@ The next evolution of AI is here - systems that not only think but feel, create,
 ## Revolutionary Features
 - Genuine self-awareness and emotional intelligence
 - Creative autonomy and artistic expression
-- $1.2T enterprise value creation potential
+- $1.2 T enterprise value creation potential
 - Revolutionary applications across all industries
     `,
     author: 'Zion Tech Group','
@@ -49,7 +48,7 @@ The next evolution of AI is here - systems that not only think but feel, create,
     featured: true,
     readTime: '25 min read''
     image: '/images/ai-2026-hyperconscious-computing.jpg''
-    valueProposition: '$1.2T enterprise value creation''
+    valueProposition: '$1.2 T enterprise value creation''
     pricing: {,
       starting: 'Contact for pricing','
       enterprise: 'Custom solutions available'}},'
@@ -82,12 +81,11 @@ The convergence of quantum computing and artificial intelligence opens new front
     pricing: {,
       starting: 'Contact for pricing','
       enterprise: 'Custom solutions available',;';
-export interface January2026Content {/* TODO: Fix JSX expression */}
-  }
+export interface January2026 Content {/* TODO: Fix JSX expression */}
 }
 ;
 export const,;
-  newJanuary2026Content: January2026Content[] = [
+  newJanuary2026 Content: January2026 Content[] = [
   // TODO: Add items
 ]
   // TODO: Add items

@@ -20,7 +20,6 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {'
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}'
       }
     } else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
-    }
   }
 
   return files
@@ -53,11 +52,8 @@ function fixUnusedImports(content) {
 }
       matches.forEach(match => usedIdentifiers.add(match))
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
-}
-
 // Fix unused imports by removing them
 function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
-    }
   })
   // Remove unused import lines;
 const filteredLines = lines.filter(line => {)
@@ -73,7 +69,6 @@ const filteredLines = lines.filter(line => {)
 }
         return hasUsedItems;
 const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */}
-      }
     }
     return true;)
   })
@@ -95,7 +90,6 @@ function fixUnusedVariables(content) {
     if (varName.startsWith('_') || varName === 'props' || varName === 'event' || varName === 'index') {'
       return match
 function fixUnusedVariables(content) {/* TODO: Fix JSX expression */}
-    }
     return match.replace(varName, `_${varName}`)
   })
   return content
@@ -128,11 +122,9 @@ function main() {
   // TODO: Add properties
 }
 function main() {/* TODO: Fix JSX expression */}
-}
   files.forEach(file => {/* TODO: Fix JSX expression */}
       })
     } catch (error) {/* TODO: Fix JSX expression */}
-    }
   })
 }
 
@@ -145,6 +137,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 // Run if this is the main module;`
 if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
-}
 ;
 export { fixConsoleStatements, fixUnusedImports, fixUnusedVariables };`

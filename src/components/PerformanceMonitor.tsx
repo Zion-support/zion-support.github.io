@@ -132,7 +132,6 @@ const navigationEntry = performance.getEntriesByType('navigation')[0] as Perform
         clsObserver.disconnect()
         fcpObserver.disconnect()
   }
-    }
     const cleanup = measureWebVitals()
     // Send metrics to analytics (if available);
 const sendToAnalytics = (metrics: PerformanceMetrics) => {
@@ -172,7 +171,6 @@ const gtag = (window as any).gtag,
             event_label: 'CLS','
             value: Math.round(metrics.cls * 1000) / 1000})
         }
-      }
     }
     // Send metrics after a delay to allow all measurements to complete;
 const timeoutId = setTimeout(() => {
@@ -206,8 +204,7 @@ const timeoutId = setTimeout(() => {
   return (
   // TODO: Add parameters
 )
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">"
-<div className="mb-2 font-bold">Performance Metrics</div>"
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50"mb-2 font-bold"
 <div>LCP: {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Measuring...'}</div>'
 <div>FID: {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'Measuring...'}</div>'
 <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}</div>'

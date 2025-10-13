@@ -29,7 +29,6 @@
     email: string
     address: string}
     website: string}
-  }
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -37,7 +36,7 @@
   rating: number
   reviews: number,
 }
-export const innovative2026AIServices: Innovative2026AIService[] = [;
+export const innovative2026 AIServices: Innovative2026 AIService[] = [;
   // TODO: Add items
 ]
   // AI-Powered Business Intelligence
@@ -62,7 +61,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     category: 'AI & Business Intelligence', realService: true,'
     technology: ['PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker'], integrations: ['SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksSlackMicrosoft Teams'],'
     useCases: ['Sales performance analysisCustomer behavior insightsMarket trend predictionOperational efficiency optimizationFinancial forecastingRisk assessment'], roi: 'Average customer sees 450% ROI within 6 months through improved decision-making and operational efficiency.','
-    competitors: ['TableauPower BILookerQlikSisense'], marketSize: '$29.9B market','
+    competitors: ['TableauPower BILookerQlikSisense'], marketSize: '$29.9 B market','
     growthRate: '220% annual growth', variant: 'ai-futuristic','
     contactInfo: unknown,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com','
@@ -121,7 +120,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     useCases: ['Website personalization', 'Email marketing optimization', 'Product recommendations', 'Customer support automation', 'Loyalty program optimization', 'Cross-selling and upselling'],'
     roi: 'Average customer sees 320% ROI within 4 months through increased conversion rates and customer lifetime value.','
     competitors: ['Optimizely', 'Adobe Target', 'Dynamic Yield', 'Evergage', 'Maxymiser'],'
-    marketSize: '$15.8B market','
+    marketSize: '$15.8 B market','
     growthRate: '180% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -183,9 +182,9 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'Elasticsearch', 'Kafka', 'AWS', 'Docker'],'
     integrations: ['Active Directory', 'Office 365', 'Slack', 'Jira', 'ServiceNow', 'Splunk', 'QRadar'],'
     useCases: ['Endpoint protection', 'Network security monitoring', 'Cloud security', 'Data loss prevention', 'Compliance management', 'Security awareness training'],'
-    roi: 'Average customer saves $2.4M annually through prevented security incidents and reduced response times.','
+    roi: 'Average customer saves $2.4 M annually through prevented security incidents and reduced response times.','
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance', 'Carbon Black'],'
-    marketSize: '$173.5B market','
+    marketSize: '$173.5 B market','
     growthRate: '250% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -239,7 +238,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     textColor: 'text-purple-400','
     link: 'https://ziontechgroup.com/ai-marketing-automation','
     marketPosition: 'Competitive with HubSpot ($45-3200), Marketo ($895+), and Pardot ($1250+). Our advantage: AI-first approach, comprehensive automation, and affordable pricing.','
-    targetAudience: 'Marketing teams, Digital agencies, E-commerce businesses, SaaS companies, B2B companies, Real estate agencies','
+    targetAudience: 'Marketing teams, Digital agencies, E-commerce businesses, SaaS companies, B2 B companies, Real estate agencies','
     trialDays: 21,
     setupTime: '3 days','
     category: 'AI & Marketing','
@@ -249,7 +248,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     useCases: ['Lead generation and nurturing', 'Email marketing campaigns', 'Social media marketing', 'Content marketing', 'Account-based marketing', 'Marketing analytics'],'
     roi: 'Average customer sees 280% ROI within 5 months through increased lead quality and conversion rates.','
     competitors: ['HubSpot', 'Marketo', 'Pardot', 'ActiveCampaign', 'ConvertKit'],'
-    marketSize: '$25.1B market','
+    marketSize: '$25.1 B market','
     growthRate: '200% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -303,7 +302,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     textColor: 'text-yellow-400','
     link: 'https://ziontechgroup.com/ai-sales-intelligence','
     marketPosition: 'Competitive with ZoomInfo ($199+), LinkedIn Sales Navigator ($79.99+), and DiscoverOrg ($2000+). Our advantage: AI-powered insights, comprehensive coverage, and competitive pricing.','
-    targetAudience: 'Sales teams, B2B companies, Real estate agencies, Financial services, Insurance companies, Consulting firms','
+    targetAudience: 'Sales teams, B2 B companies, Real estate agencies, Financial services, Insurance companies, Consulting firms','
     trialDays: 14,
     setupTime: '2 days','
     category: 'AI & Sales','
@@ -313,7 +312,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     useCases: ['Lead generation', 'Prospect research', 'Sales forecasting', 'Pipeline management', 'Competitive analysis', 'Sales coaching'],'
     roi: 'Average customer sees 350% ROI within 4 months through increased sales productivity and conversion rates.','
     competitors: ['ZoomInfo', 'LinkedIn Sales Navigator', 'DiscoverOrg', 'Clearbit', 'RocketReach'],'
-    marketSize: '$18.2B market','
+    marketSize: '$18.2 B market','
     growthRate: '190% annual growth','
     variant: 'ai-futuristic','
     contactInfo: {
@@ -333,7 +332,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     rating: 4.8,
     reviews: 950
 ],import { ServiceVariant } from '../types/service-variants';';';
-export interface Innovative2026AIService {
+export interface Innovative2026 AIService {
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -369,7 +368,6 @@ export interface Innovative2026AIService {
     email: string
     address: string}
     website: string}
-  }
   realImplementation: boolean
   implementationDetails: string
   launchDate: string
@@ -377,7 +375,7 @@ export interface Innovative2026AIService {
   rating: number
   reviews: number,
 }
-export const innovative2026AIServices: Innovative2026AIService[] = [;
+export const innovative2026 AIServices: Innovative2026 AIService[] = [;
   // TODO: Add items
 ]
   // AI-Powered Business Intelligence
@@ -408,7 +406,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     useCases: ['Sales performance analysisCustomer behavior insightsMarket trend predictionOperational efficiency optimizationFinancial forecastingRisk assessment']'
     roi: 'Average customer sees 450% ROI within 6 months through improved decision-making and operational efficiency.''
     competitors: ['TableauPower BILookerQlikSisense']'
-    marketSize: '$29.9B market''
+    marketSize: '$29.9 B market''
     growthRate: '220% annual growth''
     variant: 'ai-futuristic'}'
     contactInfo: {}
@@ -456,7 +454,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     useCases: ['Website personalizationEmail marketing optimizationProduct recommendationsCustomer support automationLoyalty program optimizationCross-selling and upselling']'
     roi: 'Average customer sees 320% ROI within 4 months through increased conversion rates and customer lifetime value.''
     competitors: ['OptimizelyAdobe TargetDynamic YieldEvergageMaxymiser']'
-    marketSize: '$15.8B market''
+    marketSize: '$15.8 B market''
     growthRate: '180% annual growth''
     variant: 'ai-futuristic'}'
     contactInfo: {}
@@ -500,11 +498,11 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     category: 'AI & Cybersecurity''
     realService: true
     technology: ['PythonTensorFlowReactNode.jsElasticsearchKafkaAWSDocker']'
-    integrations: ['Active DirectoryOffice 365SlackJiraServiceNowSplunkQRadar']'
+    integrations: ['Active DirectoryOffice 365 SlackJiraServiceNowSplunkQRadar']'
     useCases: ['Endpoint protectionNetwork security monitoringCloud securityData loss preventionCompliance managementSecurity awareness training']'
-    roi: 'Average customer saves $2.4M annually through prevented security incidents and reduced response times.''
+    roi: 'Average customer saves $2.4 M annually through prevented security incidents and reduced response times.''
     competitors: ['CrowdStrikeSentinelOneDarktraceCylanceCarbon Black']'
-    marketSize: '$173.5B market''
+    marketSize: '$173.5 B market''
     growthRate: '250% annual growth''
     variant: 'ai-futuristic'}'
     contactInfo: {}
@@ -542,7 +540,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     textColor: 'text-purple-400''
     link: 'https://ziontechgroup.com/ai-marketing-automation''
     marketPosition: 'Competitive with HubSpot ($45-3200), Marketo ($895+), and Pardot ($1250+). Our advantage: AI-first approach, comprehensive automation, and affordable pricing.''
-    targetAudience: 'Marketing teams, Digital agencies, E-commerce businesses, SaaS companies, B2B companies, Real estate agencies''
+    targetAudience: 'Marketing teams, Digital agencies, E-commerce businesses, SaaS companies, B2 B companies, Real estate agencies''
     trialDays: 21
     setupTime: '3 days''
     category: 'AI & Marketing''
@@ -552,7 +550,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     useCases: ['Lead generation and nurturingEmail marketing campaignsSocial media marketingContent marketingAccount-based marketingMarketing analytics']'
     roi: 'Average customer sees 280% ROI within 5 months through increased lead quality and conversion rates.''
     competitors: ['HubSpotMarketoPardotActiveCampaignConvertKit']'
-    marketSize: '$25.1B market''
+    marketSize: '$25.1 B market''
     growthRate: '200% annual growth''
     variant: 'ai-futuristic'}'
     contactInfo: {}
@@ -590,7 +588,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     textColor: 'text-yellow-400''
     link: 'https://ziontechgroup.com/ai-sales-intelligence''
     marketPosition: 'Competitive with ZoomInfo ($199+), LinkedIn Sales Navigator ($79.99+), and DiscoverOrg ($2000+). Our advantage: AI-powered insights, comprehensive coverage, and competitive pricing.''
-    targetAudience: 'Sales teams, B2B companies, Real estate agencies, Financial services, Insurance companies, Consulting firms''
+    targetAudience: 'Sales teams, B2 B companies, Real estate agencies, Financial services, Insurance companies, Consulting firms''
     trialDays: 14
     setupTime: '2 days''
     category: 'AI & Sales''
@@ -600,7 +598,7 @@ export const innovative2026AIServices: Innovative2026AIService[] = [;
     useCases: ['Lead generationProspect researchSales forecastingPipeline managementCompetitive analysisSales coaching']'
     roi: 'Average customer sees 350% ROI within 4 months through increased sales productivity and conversion rates.''
     competitors: ['ZoomInfoLinkedIn Sales NavigatorDiscoverOrgClearbitRocketReach']'
-    marketSize: '$18.2B market''
+    marketSize: '$18.2 B market''
     growthRate: '190% annual growth''
     variant: 'ai-futuristic'}'
     contactInfo: {}
@@ -627,14 +625,14 @@ export const getPopularAIServices = () => {
 }
   // TODO: Implement
 }
-  return innovative2026AIServices.filter(service => service.popular)
+  return innovative2026 AIServices.filter(service => service.popular)
 }
 export const getAIServicesByCategory = (category: string) => {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  return innovative2026AIServices.filter(service =>
+  return innovative2026 AIServices.filter(service =>
     service.category.toLowerCase().includes(category.toLowerCase())
   )
 }
@@ -643,7 +641,7 @@ export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) =>
 }
   // TODO: Add properties
 }
-  return innovative2026AIServices.filter(service => {;
+  return innovative2026 AIServices.filter(service => {;
 const price = parseInt(service.price.replace('$', ').replace(',', '))''
     return price >= minPrice && price <= maxPrice
   })

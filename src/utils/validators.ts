@@ -25,7 +25,6 @@ const urlObj = new URL(url)
 }
     return false
   }
-}
 export const validateURL = (url: string): ValidationResult => {
   // TODO: Add properties
 }
@@ -48,7 +47,6 @@ export const validateURL = (url: string): ValidationResult => {
   }
 
   return { isValid: true }
-}
 // String Length Validation;
 export const validateLength = (
   // TODO: Add parameters
@@ -68,26 +66,19 @@ export const validateLength = (
   // TODO: Add properties
 }
     return { isValid: false, error: `${fieldName} is required` }
-  }
-
   if (value.length < min) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     return { isValid: false, error: `${fieldName} must be at least ${min} characters long` }
-  }
-
   if (value.length > max) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     return { isValid: false, error: `${fieldName} must be no more than ${max} characters long` }
-  }
-
   return { isValid: true }
-}
 // Password Validation;
 export const isValidPassword = (password: string): boolean => {
   // TODO: Add properties
@@ -98,69 +89,9 @@ export const isValidPassword = (password: string): boolean => {
 const hasUpperCase = /[A-Z]/.test(password);
 const hasLowerCase = /[a-z]/.test(password);
 const hasNumbers = /\d/.test(password);
-const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password)"
-  return hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar
-}
-export const validatePassword = (password: string): ValidationResult => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (!password) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return { isValid: false, error: 'Password is required' }'
-  }
-
-  if (password.length < 8) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return { isValid: false, error: 'Password must be at least 8 characters long' }'
-  }
-
-  if (password.length > 128) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return { isValid: false, error: 'Password must be no more than 128 characters long' }'
-  }
-
-  if (!isValidPassword(password)) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      isValid: false,
-      error: 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character' '
-    }
-  }
-
-  return { isValid: true }
-}
-// HTML Sanitization;
-export const sanitizeHTML = (input: string | null | undefined): string => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (!input || typeof input !== 'string') return '''
-  return input
-    .replace(/&/g, '&amp;')'
-    .replace(/</g, '&lt;')'
-    .replace(/>/g, '&gt;')'
-    .replace(/"/g, '&quot;')'"
+const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password)"/g, '&quot;')'"
     .replace(/'/g, '&#x27;')'
-    .replace(/\//g, '&#x2F;')'
+    .replace(/\//g, '&#x2 F;')'
 }
 // Date Validation;
 export const validateDate = (dateString: string): ValidationResult => {
@@ -206,7 +137,6 @@ const isoString = date.toISOString().split('T')[0]'
   }
 
   return { isValid: true }
-}
 // Credit Card Validation (Luhn Algorithm);
 export const validateCreditCard = (cardNumber: string): ValidationResult => {
   // TODO: Add properties
@@ -249,8 +179,6 @@ let digit = parseInt(cleaned[i])
 }
         digit -= 9
       }
-    }
-
     sum += digit
     isEven = !isEven
   }
@@ -264,7 +192,6 @@ let digit = parseInt(cleaned[i])
   }
 
   return { isValid: true }
-}
 // JSON Validation;
 export const validateJSON = (jsonString: string): ValidationResult => {
   // TODO: Add properties
@@ -293,15 +220,11 @@ export const validateJSON = (jsonString: string): ValidationResult => {
 }
     return { isValid: false, error: 'Invalid JSON format' }'
   }
-}
 // Required Field Validation;
 export const validateRequired = (value: any, fieldName: string = 'Field'): ValidationResult => {'
   if (value === null || value === undefined || value === '') {'
     return { isValid: false, error: `${fieldName} is required` }
-  }
-
   return { isValid: true }
-}
 // Composite Validation;
 export const validateComposite = (
   // TODO: Add parameters
@@ -322,10 +245,7 @@ const result = validator(value)
 }
       return result
     }
-  }
-
   return { isValid: true }
-}
 // Async Validation Helper;
 export const asyncValidator = async (val: string): Promise<string> => {
   // TODO: Add properties
@@ -335,4 +255,3 @@ export const asyncValidator = async (val: string): Promise<string> => {
   // Simulate async validation
   await new Promise(resolve => setTimeout(resolve, 100))
   return 'success''
-}

@@ -1,43 +1,17 @@
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Healthcare It - Zion Tech Group</title>
-        <meta name="description" content="Advanced healthcare it solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-        </div>
-      </div>
-    </>
-  );
-      title: 'HIPAA Compliance','
-      description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.','
-      benefits: ['Automated compliance', 'Audit trails', 'Risk management'],'
-    },
-    {icon: Zap,
-      title: 'Patient Data Security','
-      description: 'Bank-level security for patient data with encryption, access controls, and monitoring.','
-      benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']}]'
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>)"
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" content="Advanced healthcare it solutions by Zion Tech Group"container mx-auto px-4 py-16"text-center"text-4 xl font-bold text-gray-900 mb-4"text-xl text-gray-600 mb-8"min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"
 return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>"
+    <div className="
       <SEOOptimizer>
 <Navigation />
-      {/* Hero Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
+      {/* Hero Section */} <section className="py-20 px-4"max-w-7 xl mx-auto"
+<div className="
+<h2 className="text-4 xl font-bold text-white mb-4"text-xl text-gray-300"
 </div></section>
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} /></div>'"
-<div className="relative max-w-7xl mx-auto text-center"></div>"
+<div className="
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"relative max-w-7 xl mx-auto text-center"
 <h1>Healthcare;</h1>
 <span>IT Solutions;</span></span>
 </h1>
@@ -64,62 +38,40 @@ const stats = [
   return (
   // TODO: Add parameters
 )
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>"
+<div className="
 <Navigation >{/* Hero Section */}</Navigation></Navigation>
-<section className="relative py-20 px-4 overflow-hidden">"
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">)</div>"
+<section className="relative py-20 px-4 overflow-hidden"min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"
 <Navigation />)
       {/* Hero Section */})
-      <section className="relative py-20 px-4 overflow-hidden">)"
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></div>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>'"
-<div className="relative max-w-7xl mx-auto text-center"></div>"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Healthcare<span className="block bg-gradient-to-r from-red-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Specialized IT solutions for healthcare with HIPAA compliance, security, and interoperability.</p>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></section>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>'"
+      <section className="
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse"absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse"
+<div className="
+<h1 className="text-5 xl md:text-7 xl font-bold text-white mb-6 leading-tight">IT Solutions<p className="text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed"absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse"
+<div className="
 
   return (
   // TODO: Add parameters
 )
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">"
-<SEOOptimizer
-        title="Healthcare IT Solutions - Zion Tech Group""
-        description="Comprehensive healthcare IT solutions including HIPAA compliance, patient data security, and system integration for healthcare organizations.""
-        keywords="healthcare IT, HIPAA compliance, patient data security, EHR integration, healthcare analytics, medical technology""
-      />
-<Navigation />
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden"></section>"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />"
-<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />'"
-<div className="relative max-w-7xl mx-auto text-center">"
-<h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"Healthcare IT Solutions - Zion Tech Group""Comprehensive healthcare IT solutions including HIPAA compliance, patient data security, and system integration for healthcare organizations.""healthcare IT, HIPAA compliance, patient data security, EHR integration, healthcare analytics, medical technology""relative py-20 px-4 overflow-hidden"
+<div className="
+<div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse"relative max-w-7 xl mx-auto text-center"
+<h1 className="
             Healthcare
-            <span className="block bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">IT Solutions"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">"
+            <span className="block bg-gradient-to-r from-red-400 via-pink-400 to-purple-400 bg-clip-text text-transparent"text-xl text-gray-300 mb-8 max-w-3 xl mx-auto leading-relaxed"
             Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.
             Protect patient data while improving operational efficiency.
         </section>
-<p className="text-xl text-gray-300 max-w-3xl mx-auto">"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<p>Comprehensive IT solutions for all aspects of healthcare delivery and management.</p></p>
-</div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,"
-            {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,"
-                <div className="text-4xl mb-4">{service.icon</div>}</div>"
-<h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>"
-<p className="text-gray-300">{service.description</p>}</p></div>"
+<p className="
+<p className="text-xl text-gray-300"grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"
+            {services.map((service, index) => (} <div key={index}className="
+                <div className="text-4 xl mb-4"text-xl font-semibold text-white mb-3"
+<p className="
             ))}
           </div></div>
 </section>
-      {/* Benefits Section */} <section className="py-20 px-4">"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-              Comprehensive IT solutions for all aspects of healthcare delivery and management.
-            </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" / /></div>"
+      {/* Benefits Section */} <section className="py-20 px-4"max-w-7 xl mx-auto"
+<div className="
+<h2 className="text-4 xl font-bold text-white mb-4"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
             {
   // TODO: Add properties
 }
@@ -132,59 +84,40 @@ const stats = [
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4"></section>"
-<div className="max-w-7xl mx-auto">"
-<div className="text-center mb-16">"
-<h2 className="text-4xl font-bold text-white mb-4">"
-<p className="text-xl text-gray-300">Section description</p></div>"
-</div></section>
-<div className="max-w-7xl mx-auto"></div>"
-<div className="text-center mb-16"></div>"
+      <section className="
+<div className="max-w-7 xl mx-auto"text-center mb-16"
+<h2 className="
+<p className="text-xl text-gray-300"max-w-7 xl mx-auto"
+<div className="
 <h2>Why Choose Our Healthcare IT Solutions?</h2></h2>
 <p>Experience the benefits of modern healthcare technology with our proven solutions.</p></p>
 </div>
-<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"></div>,"
-            {benefits.map((benefit, index) => (
-  // TODO: Add parameters
-)
-                <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>"
-<div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>"
+<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"
+<div className="
 <CheckCircle />
-<h3 className="text-lg font-semibold text-white">{benefit}</h3></div>"
-              Why Choose Our Healthcare IT Solutions?
-            </h2>
-<p></p>
-              Experience the benefits of modern healthcare technology with our proven solutions.
-            </p></div>
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"
+<h3 className="text-lg font-semibold text-white"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             {benefits.map((benefit, index) => (
   // TODO: Add parameters
 )
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">"
-<div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">"
-<CheckCircle className="w-8 h-8 text-white" /></div>"
-<h3 className="text-lg font-semibold text-white">{benefit}</h3></div>"
+              <div key={index} className="
+<div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"w-8 h-8 text-white"
+<h3 className="
             ))}
 
-        <div className="max-w-4xl mx-auto text-center">"
-<h2 className="text-4xl md:text-5xl font-bold text-white mb-6">"
+        <div className="max-w-4 xl mx-auto text-center"text-4 xl md:text-5 xl font-bold text-white mb-6"
             Ready to Transform Your Healthcare IT?
           </h2>
-<p className="text-xl text-red-100 mb-8">"
+<p className="
             Let's discuss how our healthcare IT solutions can improve your operations and patient care.'
           </p>
-<div className="flex flex-col sm:flex-row gap-4 justify-center">"
-<button className="bg-white text-red-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">"
+<div className="flex flex-col sm:flex-row gap-4 justify-center"bg-white text-red-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors"
               Schedule Consultation
             </button>
-<button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">"
+<button className="
               View Case Studies
       {/* CTA Section */}
-<section className="py-20 px-4"></section>"
-< className="$2 /></div>"
-<div className="text-center mb-16"></div>"
-<h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-<p className="text-xl text-gray-300">Section description</p></div>"
+<section className="py-20 px-4"$2 /></div>"text-center mb-16"
+<h2 className="text-4 xl font-bold text-white mb-4"text-xl text-gray-300"
 </div>
         </section></button>
 <button>View Case Studies;</button>
@@ -193,7 +126,7 @@ const stats = [
 <Footer/ / />
   )
 }
-            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-red-600 transition-colors">View Case Studies"
+            <button className="
       <Footer />
   )
 }</div></div>
@@ -219,42 +152,27 @@ export default HealthcareItPage;
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
               Comprehensive solution for your business requirements.
             </p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+          <div className="bg-white rounded-lg shadow-md p-6">Feature 2</h3>
             <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">
               Scalable and secure implementation.
             </p>
           </div>
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Healthcare It
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <h1 className="text-4 xl font-bold text-gray-900 mb-6">
             Advanced healthcare it solutions by Zion Tech Group.
           </p>
         </div>
       </div>
     </div>
   );
-}

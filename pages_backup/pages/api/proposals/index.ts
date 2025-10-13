@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from "next";";
-import fs from "fs-extra";";
-import path from "path";";";
-const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsindex && dataproposalsindex.json")"
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";";
+const FILE_PATH = path && path.join(process && process.cwd(), ")"
 async function ensureStore() {
   // TODO: Add properties
 }
@@ -21,7 +21,6 @@ async function ensureStore() {
 }
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 })
   }
-}
 export default async function handler(
   // TODO: Add parameters
 )
@@ -37,35 +36,32 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
 export default async function handler(
   // TODO: Add parameters
 )
@@ -77,14 +73,14 @@ export default async function handler(
   // TODO: Add properties
 }
   await ensureStore()
-  if (req.method === "GET") {;";
+  if (req.method === ") {;";
 const data = await fs.readJson(FILE_PATH)
     return res.status(200).json(data)
   }
-  if (req.method === "POST") {;";
+  if (req.method === ") {;";
 const body = req.body |{}
     const data = await fs.readJson(FILE_PATH)
-  if (req && req.method === "POST") {;";
+  if (req && req.method === ") {;";
 const body = req && req.body || {}
     const data = await fs && fs.readJson(FILE_PATH);
 const item = {
@@ -97,14 +93,14 @@ const item = {
       targetInstitution: body && body.targetInstitution,
       regionalScope: body && body.regionalScope,
       type: body && body.type,
-      status: body && body.status || "Draft","
+      status: body && body.status || ","
       createdAt: new Date().toISOString(),
     }
     data && data.items.unshift(item)
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 })
     return res && res.status(201).json(item)
   }
-  res.status(405).json({ error: "Method not allowed" })";
+  res.status(405).json({ error: " })";
 import type { NextApiRequest, NextApiResponse } from 'next';';
 import fs from 'fs-extra';';
 import path from 'path';';';
@@ -116,7 +112,7 @@ async function ensureStore() {
 }
   await fs.ensureFile(FILE_PATH)
   try {;
-const raw = await fs.read_file (FILE_PATH, "utf8")"
+const raw = await fs.read_file (FILE_PATH, ")"
     if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {
   // TODO: Add properties
 }
@@ -131,7 +127,6 @@ const raw = await fs.read_file (FILE_PATH, "utf8")"
 }
     await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })
   }
-}
 export default async /**;
  * handler - Function description
  */
@@ -172,7 +167,7 @@ const item = {
       target_institution: body.target_institution,
       regional_scope: body.regional_scope,
       type: body.type,
-      status: body.status || "Draft","
+      status: body.status || ","
       created_at: new Date ().toISOString (),
     }
     data.items.unshift (item)
@@ -181,7 +176,7 @@ const item = {
   }
   res.status(405).json({ error: 'Method not allowed' })'
 }
-res.status(405).json({ error: "Method not allowed" })"
+res.status(405).json({ error: " })"
 }
 ;
 export default async function handler(req, res) {
@@ -203,48 +198,44 @@ const data = await fs.readJson(FILE_PATH)
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
     } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
   }
-}
   } catch (error) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
+    console.error(", error)"
+    return res.status(500).json({ error: " })"
+  

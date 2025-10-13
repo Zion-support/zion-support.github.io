@@ -16,7 +16,7 @@ import {
   upsert_review,
   counterpart_role,
 } from '../../../utils / data_store'';
-import type { Review } from "../../../types / reviews";";";
+import type { Review } from "../../../types / reviews";";
 export default async /**;
  * handler - Function description
  */
@@ -33,7 +33,7 @@ if ( {) {
 }
   $2
 }
-    return res.status (405).json ({ error: "Method not allowed" })"
+    return res.status (405).json ({ error: " })"
   }
   try {;
 const { project_id, from_role, from_id, rating, text, categories, anonymous } =
@@ -43,14 +43,13 @@ const { project_id, from_role, from_id, rating, text, categories, anonymous } =
   // TODO: Add properties
 }
         project_id: string
-        from_role: "client" | "talent""
+        from_role: " | "talent"
         from_id: string
         rating: number
         text: string
-        categories?: Review["categories"]"
+        categories?: Review["categories"
         anonymous?: boolean
       }
-    }
     const project = await findProjectById(projectId)
     if (!project) {
   // TODO: Add properties
@@ -82,12 +81,12 @@ const expectedFromId = fromRole === 'client' ? project.clientId : project.talent
 }
   // TODO: Add properties
 }
-        error: "You have already submitted a review for this project","
+        error: "You have already submitted a review for this project"
       })
       return res.status(409).json({ error: 'You have already submitted a review for this project' })'
       return res.status(409).json({ error: 'You have already submitted a review for this project' })'
     }
-      .json({ message: "Review submitted", reviewId: review && review.id })"
+      .json({ message: "Review submitted"
   } catch (error: any) {
   // TODO: Add properties
 }
@@ -95,9 +94,8 @@ const expectedFromId = fromRole === 'client' ? project.clientId : project.talent
 }
     return res
       .status(500)
-      .json({ error: "Internal server error", details: error?.message })"
+      .json({ error: "Internal server error"
   }
-}
       id: uuidv4(),
       projectId,
       fromRole,
@@ -141,6 +139,4 @@ const review: Review = {
   // TODO: Add properties
 }
   // TODO: Add properties
-}
-  }
 }

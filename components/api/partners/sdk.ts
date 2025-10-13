@@ -27,30 +27,18 @@ const type = (req.query.type as string) || 'rest''
 )
       `# Zion Partner SDK (REST)\n\nBase URL: /api\n\nEndpoints:\n- POST /talents\n- GET /jobs\n- GET /certifications\n- POST /verify-student\n- POST /redeem-grant\n\nAuth:\n- Provide X-API-KEY header or Authorization: Bearer <JWT> (use /api/partners/token).`
     )
-  if (type === "graphql") {"
-    res && res.setHeader("Content-Type", "text/markdown")"
-    return res && res.status(200).send(`# Zion Partner SDK (GraphQL)\n\nSchemas and resolvers are coming soon. For now, use REST endpoints documented in the REST SDK.`)
-  }
-  res.setHeader("Content-Type", "text/markdown")"
-  res && res.setHeader("Content-Type", "text/markdown")"
+  if (type === "graphql"
+    res && res.setHeader("Content-Type"text/markdown")"Content-Type", ")"
+  res && res.setHeader(", "text/markdown"
   return res && res.status(200).send(`# Zion Partner SDK (REST)\n\nBase URL: /api\n\nEndpoints:\n- POST /talents\n- GET /jobs\n- GET /certifications\n- POST /verify-student\n- POST /redeem-grant\n\nAuth:\n- Provide X-API-KEY header or Authorization: Bearer <JWT> (use /api/partners/token).`)
 }
   return res.status(200).send(`# Zion Partner SDK (REST)\n\nBase URL: /api\n\nEndpoints:\n- POST /talents\n- GET /jobs\n- GET /certifications\n- POST /verify-student\n- POST /redeem-grant\n\nAuth:\n- Provide X-API-KEY header or Authorization: Bearer <JWT> (use /api/partners/token).`)
 }
-}
-    res.set_header ("Content - Type", "text / markdown")"
-    return res.status (200).send (`# Zion Partner SDK (GraphQL)\n\n_schemas and resolvers are coming soon. For now, use REST endpoints documented in the REST SDK.`)
-  }
-  res.set_header ("Content - Type", "text / markdown")"
+    res.set_header ("Content - Type"text / markdown")"Content - Type", ")"
   return res.status (200).send (`# Zion Partner SDK (REST)\n\n_base URL: /api\n\n_endpoints:\n- POST /talents\n- GET /jobs\n- GET /certifications\n- POST /verify - student\n- POST /redeem - grant\n\n_auth:\n- Provide X - API - KEY header or Authorization: Bearer <JWT> (use /api / partners / token).`)
 }
-import type { NextApiRequest, NextApiResponse } from "next";";";
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-const type = (req.query.type as string) || "rest""
-  if (type === "graphql") {"
-    res.setHeader("Content-Type", "text/markdown")"
+import type { NextApiRequest, NextApiResponse } from ";";"rest""graphql") {"Content-Type", ")"
     return res.status(200).send(`# Zion Partner SDK (GraphQL)\n\nSchemas and resolvers are coming soon. For now, use REST endpoints documented in the REST SDK.`)
   }
-  res.setHeader("Content-Type", "text/markdown")"
+  res.setHeader(", "text/markdown"
   return res.status(200).send(`# Zion Partner SDK (REST)\n\nBase URL: /api\n\nEndpoints:\n- POST /talents\n- GET /jobs\n- GET /certifications\n- POST /verify-student\n- POST /redeem-grant\n\nAuth:\n- Provide X-API-KEY header or Authorization: Bearer <JWT> (use /api/partners/token).`)
-}

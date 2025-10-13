@@ -56,7 +56,6 @@ export const realMicroSaasServices2024 = [{/* TODO: Fix JSX expression */}
       enterpris,
   e: 'Custom''
     }
-  }
 ];
 export const realMicroSaasCategories2024 = [;
   // TODO: Add items

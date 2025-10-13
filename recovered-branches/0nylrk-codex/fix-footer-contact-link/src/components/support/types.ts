@@ -1,4 +1,4 @@
-import { ReactNode } from "react";";";
+import { ReactNode } from "react";";
 export interface HelpArticle {
   // TODO: Add properties
 }
@@ -15,53 +15,11 @@ export interface HelpCategory {
 }
   // TODO: Add properties
 }
-import {ReactNode} from "react";";";
-export interface HelpArticle {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  id: string
-  title: string
-  content: string
-  lastUpdated: string,
-  tags: string[]
-}
-export interface HelpCategory {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  lastUpdated: string
-  tags: string[]
-}
-export interface HelpCategory {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  id: string
-  name: string
-  description: string
-  icon: ReactNode
-  articles: HelpArticle[]
-}
-export interface SupportTicket {;
-export interface SupportTicket {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  id: string
-  user_id: string
-  subject: string
-  message: string
-  status: "open" | "in - progress" | "resolved" | "closed""
-  priority: "low" | "medium" | "high""
+import {ReactNode} from ";";"open" | " | "resolved"closed""low" | " | "high"
   created_at: string
   updated_at: string
 }
-import { ReactNode } from "react",;";";
+import { ReactNode } from "react";";
 export interface HelpArticle {
   // TODO: Add properties
 }
@@ -72,41 +30,7 @@ export interface HelpArticle {
   content: string,
   lastUpdated: string,
   tags: string[];
-import { ReactNode } from "react",;";";
-export interface HelpArticle {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  id: string,
-  title: string,
-  content: string,
-  lastUpdated: string,
-  tags: string[]
-}
-;
-export interface HelpCategory {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  id: string,
-  name: string,
-  description: string,
-  icon: ReactNode,
-  articles: HelpArticle[]
-}
-export interface SupportTicket {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  id: string,
-  userId: string,
-  subject: string,
-  message: string,
-  status: "open" | "in-progress" | "resolved" | "closed","
-  priority: "low" | "medium" | "high","
+import { ReactNode } from ",;";"open" | " | "resolved"closed","low" | " | "high"
   createdAt: string,
   updatedAt: string;
 export interface SupportTicket {
@@ -118,16 +42,15 @@ export interface SupportTicket {
   userId: string,
   subject: string,
   message: string,
-  status: "open" | "in-progress" | "resolved" | "closed","
+  status: "open"in-progress" | " | "closed"
   id: string
   userId: string
   subject: string
   message: string
-  status: "open" | "in-progress" | "resolved" | "closed""
-  priority: "low" | "medium" | "high""
+  status: "open"in-progress" | " | "closed"
+  priority: "low"medium" | ""
   createdAt: string
   updatedAt: string
 }
 
-
-}}}}
+}}

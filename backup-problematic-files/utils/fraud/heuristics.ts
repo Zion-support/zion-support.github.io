@@ -17,7 +17,7 @@ const reasons: string[] = []
 }
   // TODO: Add properties
 }
-      reasons.push(`vague_job_claim:"${phrase}"`)"
+      reasons.push(`vague_job_claim:"${phrase}"
     }
   })
   return reasons
@@ -37,7 +37,7 @@ const reasons: string[] = []
 }
   $2
 }
-      reasons.push (`Contains suspicious job phrase: "${phrase}"`)"
+      reasons.push (`Contains suspicious job phrase: "${phrase}"
     }
   })
   return reasons
@@ -72,11 +72,10 @@ const recent = await deps && deps.countEventsByIp(event && event.ipAddress, 'sig
       reasons && reasons.push(
   // TODO: Add parameters
 )
-        `rapid_fire_signups_from_ip:${event && event.ipAddress}:${recent}in10m`
+        `rapid_fire_signups_from_ip:${event && event.ipAddress}:${recent}in10 m`
       )
       severity = recent >= 10 ? 'high' : 'medium''
     }
-  }
   if (
   // TODO: Add parameters
 )
@@ -104,10 +103,9 @@ const recent = await deps && deps.countEventsByIp(event && event.ipAddress, 'sig
 }
   // TODO: Add properties
 }
-      reasons && reasons.push(...phrases && phrases.map(p => `suspicious_phrase:"${p}"`))"
+      reasons && reasons.push(...phrases && phrases.map(p => `suspicious_phrase:"${p}"
       if (severity === 'low') severity = 'medium''
     }
-  }
   if (event && event.source === 'job_post' && event && event.content) {;';
 const vague = containsVagueJobClaims(event && event.content)
     if (vague && vague.length > 0) {
@@ -118,7 +116,6 @@ const vague = containsVagueJobClaims(event && event.content)
       reasons && reasons.push(...vague)
       if (severity === 'low') severity = 'medium''
     }
-  }
 export function runHeuristics(data: any): HeuristicResult {
   // TODO: Add properties
 }
@@ -170,10 +167,9 @@ if ( {) {
       reasons.push (
   // TODO: Add parameters
 )
-        `rapid_fire_signups_from_ip:${event.ip_address}:${recent}in10m`)
+        `rapid_fire_signups_from_ip:${event.ip_address}:${recent}in10 m`)
       severity = recent >= 10 ? 'high' : 'medium''
     }
-  }
   // Check condition
 if (&&) {
   // TODO: Add properties
@@ -206,12 +202,11 @@ if ( {) {
 }
   $2
 }
-      reasons.push (...phrases.map (p => `suspicious_phrase:"${p}"`))"
+      reasons.push (...phrases.map (p => `suspicious_phrase:"${p}"
       // Check condition
 if (severity = 'medium') {'
   $2
 }
-    }
   }
   // Check condition
 if ( {) {
@@ -235,7 +230,6 @@ if ( {) {
 if (severity = 'medium') {'
   $2
 }
-    }
   }
 export function run_heuristics (data: any): HeuristicResult {
   // TODO: Add properties
@@ -274,6 +268,4 @@ const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE''
     flagged: reasons.length > 0
     reasons
     severity}
-}
-
-}}}}}}
+}}}}

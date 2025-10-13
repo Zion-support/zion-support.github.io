@@ -1,5 +1,5 @@
-import { ProductListing } from "@/types/listings";";
-import { SearchSuggestion } from "@/types/search";"
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion } from "@/types/search"
 // Shared data source for marketplace listings;
 export const MARKETPLACE_LISTINGS: ProductListing[] = [;
   // TODO: Add items
@@ -9,30 +9,30 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
 }
   // TODO: Add properties
 }
-    id: "ai-model-1","
-    title: "GPT-4 API Integration Package","
-    description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.","
-    category: "AI Models & APIs","
+    id: "ai-model-1"
+    title: "GPT-4 API Integration Package"
+    description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support."
+    category: "AI Models & APIs"
     price: 1999,
-    currency: "$","
-    tags: ["GPT-4", "API Integration", "NLP"],"
+    currency: "$"
+    tags: ["GPT-4"API Integration", "],"
     author: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      name: "AI Solutions Inc.","
-      id: "ai-solutions","
-      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100"},"
-      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=100&h=100","
+      name: ","
+      id: ","
+      avatarUrl: "},"
+      avatarUrl: ","
     },
-    images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&h=500"],"
-    createdAt: "2024-01-10T12:30:00.000Z","
+    images: ["],"
+    createdAt: ","
     rating: 4.9,
     reviewCount: 58,
     featured: true,
-    location: "Global","
-    availability: "Immediate","
+    location: ","
+    availability: ","
     aiScore: 98
   },
   {
@@ -40,59 +40,29 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
 }
   // TODO: Add properties
 }
-    id: "ai-service-2","
-    title: "Custom Machine Learning Model Development","
-    description: "End-to-end development of custom ML models tailored to your specific business needs. From data preparation to deployment and monitoring.","
-    category: "Services","
+    id: ","
+    title: ","
+    description: ","
+    category: ","
     price: 5999,
-    currency: "$","
-    tags: ["Machine Learning", "Custom Development", "Data Science"],"
+    currency: ","
+    tags: [", "Custom Development"Data Science"],"DataMinds","dataminds","https://images.unsplash.com/photo-1568602471122-7832951 cc4 c5?auto=format&fit=crop&w=100&h=100"},"https://images.unsplash.com/photo-1568602471122-7832951 cc4 c5?auto=format&fit=crop&w=100&h=100","https://images.unsplash.com/photo-1581092918056-0 c4 c3 acd3789?auto=format&fit=crop&w=800&h=500"],"2024-02-15 T10:45:00.000 Z","North America","4-6 Weeks","ai-equipment-3","AI Workstation Supercomputer","High-performance computing rig optimized for AI model training and deep learning applications. Features NVIDIA A100 GPUs, terabytes of storage, and pre-installed ML frameworks.","Equipment","$","Hardware", ", "GPU"
     author: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      name: "DataMinds","
-      id: "dataminds","
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"},"
-      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100","
+      name: "TechGear Pro"
+      id: "techgear"
+      id: "techgear"
     },
-    images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],"
-    createdAt: "2024-02-15T10:45:00.000Z","
-    rating: 4.8,
-    reviewCount: 32,
-    location: "North America","
-    availability: "4-6 Weeks","
-    aiScore: 92
-  },
-  {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    id: "ai-equipment-3","
-    title: "AI Workstation Supercomputer","
-    description: "High-performance computing rig optimized for AI model training and deep learning applications. Features NVIDIA A100 GPUs, terabytes of storage, and pre-installed ML frameworks.","
-    category: "Equipment","
-    price: 12999,
-    currency: "$","
-    tags: ["Hardware", "Deep Learning", "GPU"],"
-    author: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      name: "TechGear Pro","
-      id: "techgear"},"
-      id: "techgear","
-    },
-    images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"],"
-    createdAt: "2024-03-05T09:15:00.000Z","
+    images: ["https://images.unsplash.com/photo-1591405351990-4726 e331 f141?auto=format&fit=crop&w=800&h=500"
+    createdAt: "2024-03-05 T09:15:00.000 Z"
     rating: 4.7,
     reviewCount: 18,
     featured: true,
-    location: "Global","
-    availability: "2-3 Weeks","
+    location: "Global"
+    availability: "2-3 Weeks"
     aiScore: 95
   },
   {
@@ -100,29 +70,29 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
 }
   // TODO: Add properties
 }
-    id: "ai-content-4","
-    title: "AI Content Generation Suite","
-    description: "Complete toolkit for generating blog posts, social media content, product descriptions, and more using advanced AI. Includes API access and user-friendly interface.","
-    category: "Content Creation","
+    id: "ai-content-4"
+    title: "AI Content Generation Suite"
+    description: "Complete toolkit for generating blog posts, social media content, product descriptions, and more using advanced AI. Includes API access and user-friendly interface."
+    category: "Content Creation"
     price: 399,
-    currency: "$","
-    tags: ["Content Generation", "Copywriting", "Marketing"],"
+    currency: "$"
+    tags: ["Content Generation"Copywriting", "],"
     author: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      name: "ContentGenius","
-      id: "contentgenius","
-      avatarUrl: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100"},"
-      avatarUrl: "https://images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=100&h=100","
+      name: ","
+      id: ","
+      avatarUrl: "},"
+      avatarUrl: ","
     },
-    images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],"
-    createdAt: "2024-01-28T14:20:00.000Z","
+    images: ["],"
+    createdAt: ","
     rating: 4.6,
     reviewCount: 124,
-    location: "Global","
-    availability: "Immediate","
+    location: ","
+    availability: ","
     aiScore: 88
   },
   {
@@ -130,59 +100,30 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [;
 }
   // TODO: Add properties
 }
-    id: "ai-analytics-5","
-    title: "AI-Powered Business Intelligence Dashboard","
-    description: "Comprehensive analytics solution with AI-driven insights, predictive capabilities, and customizable visualization tools for data-driven decision making.","
-    category: "Data Analysis","
+    id: ","
+    title: ","
+    description: ","
+    category: ","
     price: 2499,
-    currency: "$","
-    tags: ["Analytics", "Business Intelligence", "Dashboard"],"
+    currency: ","
+    tags: [", "Business Intelligence"Dashboard"],"InsightAnalytica","insightanalytica"},"insightanalytica","https://images.unsplash.com/photo-1551288049-bebda4 e38 f71?auto=format&fit=crop&w=800&h=500"],"2024-02-02 T11:30:00.000 Z","North America","1-2 Weeks","ai-vision-6","Computer Vision API Bundle","Ready-to-use computer vision APIs for object detection, image recognition, facial analysis, and scene understanding with comprehensive documentation.","Computer Vision","$","Computer Vision", ", "Image Recognition"
     author: {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-      name: "InsightAnalytica","
-      id: "insightanalytica"},"
-      id: "insightanalytica","
+      name: "VisionTech AI"
+      id: "visiontech"
+      avatarUrl: "https://images.unsplash.com/photo-1600180758890-6 b94519 a8 ba6?auto=format&fit=crop&w=100&h=100"
+      avatarUrl: "https://images.unsplash.com/photo-1600180758890-6 b94519 a8 ba6?auto=format&fit=crop&w=100&h=100"
     },
-    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],"
-    createdAt: "2024-02-02T11:30:00.000Z","
-    rating: 4.5,
-    reviewCount: 47,
-    location: "North America","
-    availability: "1-2 Weeks","
-    aiScore: 90
-  },
-  {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    id: "ai-vision-6","
-    title: "Computer Vision API Bundle","
-    description: "Ready-to-use computer vision APIs for object detection, image recognition, facial analysis, and scene understanding with comprehensive documentation.","
-    category: "Computer Vision","
-    price: 999,
-    currency: "$","
-    tags: ["Computer Vision", "Object Detection", "Image Recognition"],"
-    author: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      name: "VisionTech AI","
-      id: "visiontech","
-      avatarUrl: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100"},"
-      avatarUrl: "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?auto=format&fit=crop&w=100&h=100","
-    },
-    images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"],"
-    createdAt: "2023-12-10T16:45:00.000Z","
+    images: ["https://images.unsplash.com/photo-1624355834900-99 cd2071585 b?auto=format&fit=crop&w=800&h=500"
+    createdAt: "2023-12-10 T16:45:00.000 Z"
     rating: 4.8,
     reviewCount: 36,
     featured: true,
-    location: "Global","
-    availability: "Immediate","
+    location: "Global"
+    availability: "Immediate"
     aiScore: 94
   }
 ]
@@ -193,16 +134,16 @@ const suggestions = [
 ]
   // TODO: Add items
 ]
-    "AI models","
-    "GPT integration","
-    "Machine learning","
-    "Computer vision","
-    "Speech recognition","
-    "Data analysis","
-    "Content generation","
-    "Code assistant","
-    "Virtual assistant","
-    "Enterprise AI solutions""
+    "AI models"
+    "GPT integration"
+    "Machine learning"
+    "Computer vision"
+    "Speech recognition"
+    "Data analysis"
+    "Content generation"
+    "Code assistant"
+    "Virtual assistant"
+    "Enterprise AI solutions"
   ]
   return suggestions.map(text => ({
   // TODO: Add properties
@@ -258,6 +199,5 @@ const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.ava
     })),
     ratingOptions: [1, 2, 3, 4, 5]
   }
-}
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0))

@@ -1,27 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
-import React from "react";
-interface SecurityEnhancerProps;
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
-
-interface SecurityEnhancerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function SecurityEnhancer({ className = '', children }: SecurityEnhancerProps) {
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = (
-  children,
-  className = "",
-  title,
-  description,
-) =>
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
-//   children,
-  className = "",
+import React from "react""",
 //   title,
 //   description,
 }) => {
@@ -30,9 +8,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       {children}
   </div>
 </div>
-=======
 return (
     <div className={`${className}`}>
       {children}
   );
-}

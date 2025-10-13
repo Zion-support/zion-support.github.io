@@ -18,7 +18,6 @@ exports.handler = async function (event) context) {// console.log('Test function
     header,
   s: {'Content-Type': 'application/json'}'
     }
-  }
 }
 exports.handler = async function(event) context) {// console.log('Test function executed successfully')} return {/* TODO: Fix JSX expression */}'
   d: context.awsRequestId} functionNam,

@@ -1,28 +1,18 @@
 export default {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  testEnvironment: "jsdom"<rootDir>/jest.setup.js"],
   moduleNameMapper: {
-    "^@/(.*)$": "<rootDir>/$1",
-    "^@/components/(.*)$": "<rootDir>/app/components/$1",
-    "^@/content/(.*)$": "<rootDir>/content/$1",
+    ": "<rootDir>/$1"^@/components/(.*)$": ",
+    "^@/content/(.*)$"<rootDir>/content/$1",
   },
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
-    "^.+\\.(js|jsx)$": "babel-jest",
+    ": "ts-jest"^.+\\.(js|jsx)$": ",
   },
   testMatch: [
-    "<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)",
-    "<rootDir>/__tests__/**/*.(test|spec).(ts|tsx|js|jsx)",
+    "<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)"<rootDir>/__tests__/**/*.(test|spec).(ts|tsx|js|jsx)",
   ],
   collectCoverageFrom: [
-    "app/**/*.{ts,tsx}",
-    "!app/**/index.{ts,tsx}",
-    "!app/**/*.d.ts",
-<<<<<<< HEAD
-=======
+    ",
+    "!app/**/index.{ts,tsx}"!app/**/*.d.ts",
   // TODO: Add properties
 }
   // TODO: Add properties
@@ -92,15 +82,9 @@ export default {
     '<rootDir>/dist/','
     '<rootDir>/.next/','
     '<rootDir>/out/''
-=======
   ],
-  testPathIgnorePatterns: ["<rootDir>/out/", "<rootDir>/node_modules/"],
-  transformIgnorePatterns: [
-<<<<<<< HEAD
-    "node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))",
+  testPathIgnorePatterns: [", "<rootDir>/node_modules/"node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))",
   ],
-<<<<<<< HEAD
-=======
   // TODO: Add items
 ]
   // TODO: Add items
@@ -116,7 +100,5 @@ export default {
     'ts-jest': {'
       useESM: true
     }
-  }
 };
-=======
 };

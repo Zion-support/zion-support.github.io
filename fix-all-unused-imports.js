@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-
 export default function Component() {
   return (
     <div>
@@ -9,51 +6,36 @@ export default function Component() {
       <p>This component is under construction.</p>
   </div>
   );
-import fs from "fs";
-import { glob } from "glob";
+import fs from "fs"glob";
 // #!/usr/bin/env node
 
 function fixUnusedImports(filePath) {
-  let content = fs.readFileSync(filePath, "utf8");
+  let content = fs.readFileSync(filePath, ");
   let modified = false;
 
   // Find all lucide-react imports
   const lucideImportRegex =
-    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
-  let match;
-
-  while ((match = lucideImportRegex.exec(content)) !== null) {
-    const importStatement = match[0];
-    const importedIcons = match[1].split(",").map((icon) => icon.trim());
+    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['",").map((icon) => icon.trim());
 
     // Check which icons are actually used in the file
     const usedIcons = importedIcons.filter((icon) => {
       // Create a regex to find the icon usage (not in the import statement)
-      const iconRegex = new RegExp(`\\b${icon}\\b`, "g");
-      const allMatches = content.match(iconRegex) || [];
+      const iconRegex = new RegExp(`\\b${icon}\\b`, ");
+const allMatches = content.match(iconRegex) || [];
       // Count matches outside of import statements
       const importMatches = (importStatement.match(iconRegex) || []).length;
-      return allMatches.length > importMatches;
+return allMatches.length > importMatches;
     });
 
     if (usedIcons.length !== importedIcons.length) {
       if (usedIcons.length > 0) {
-        const newImport = `import { ${usedIcons.join(", ")} } from 'lucide-react';`;
-        content = content.replace(importStatement, newImport);
-      } else {
-        // Remove the entire import line if no icons are used
-        content = content.replace(importStatement + "\n", "");
+        const newImport = `import { ${usedIcons.join(", "\n", ");
       }
       modified = true;
     }
-  }
-
   if (modified) {
     fs.writeFileSync(filePath, content);
     }
-=======
-}
-=======
 import fs from 'fs';';
 import path from 'path';';
 import { fileURLToPath } from 'url';'
@@ -74,7 +56,7 @@ function cleanUnusedImports(filePath) {
 let content = fs.readFileSync(filePath, 'utf8');';
 let modified = false
     // Fix lucide-react imports;
-const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/)";'"
+const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['";'"
     if (lucideImportMatch) {;
 const imports = lucideImportMatch[1].split(',').map(imp => imp.trim());';
 const usedImports = []
@@ -91,19 +73,7 @@ const cleanImp = imp.replace(/\s*as\s+\w+/, '').trim()'
       if (usedImports.length !== imports.length) {;
 const newImport = usedImports.length > 0
 function cleanUnusedImports(filePath) {/* TODO: Fix JSX expression */}
-    const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/)";'"
-    if (lucideImportMatch) {/* TODO: Fix JSX expression */}
-        if (content.includes(`<${cleanImp}`) || content.includes(`${cleanImp}.`) || content.includes(`${cleanImp}(`)) {/* TODO: Fix JSX expression */}
-      })
-      if (usedImports.length !== imports.length) {/* TODO: Fix JSX expression */}`
-          ? `import { ${usedImports.join(', ')} } from 'lucide-react';`';'
-          : '''
-        content = content.replace(lucideImportMatch[0], newImport)
-        modified = true
-    // Remove unused component imports;
-const componentImports = ['Navigation', 'Footer', 'SEOOptimizer']'
-    componentImports.forEach(comp => {);
-const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g')';'"
+    const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"];?/)";'"][^'"]+['"
       if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {
   // TODO: Add properties
 }
@@ -149,8 +119,7 @@ const isUsed = content.includes(varName) && content.indexOf(varName) !== content
 // Process all page files
 pageFiles.forEach(file => {)
   cleanUnusedImports(file)
-    componentImports.forEach(comp => {/* TODO: Fix JSX expression */}")`;";
-const importRegex = new RegExp(`import\\s+${comp}\\s+from\\s+['"][^'"]+['"];?\\s*`, 'g');`';'"
+    componentImports.forEach(comp => {/* TODO: Fix JSX expression */}")`;"][^'"]+['"
       if (importRegex.test(content) && !content.includes(`<${comp}`) && !content.includes(`${comp}.`)) {/* TODO: Fix JSX expression */}`
   d: ${path.relative(__dirname, filePath)}`)
   } catch (error) {/* TODO: Fix JSX expression */}`
@@ -263,4 +232,4 @@ files.forEach(file => {)
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}`'
 console.log(`Fixed ${fixedCount} files`)
 "`"
-}}}}}}}}}}}}}}}}}}}}}
+}}}}}}}}}}}}}}}}}}}

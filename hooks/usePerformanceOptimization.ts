@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 // Performance optimization hook
 export default function usePerformanceOptimization() {
   // Hook implementation would go here
   return {};
 }
-}
 import { useEffect, useCallback, useRef } from 'react';
-
 interface PerformanceOptimizationOptions {
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
@@ -49,11 +46,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
               img.classList.add('loaded');
               observerRef.current?.unobserve(img);
             }
-          }
         });
       },
       {
-        rootMargin: '50px 0px',
+        rootMargin: '50 px 0 px',
         threshold: 0.01,
       }
     );
@@ -97,12 +93,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     const images = document.querySelectorAll('img');
 
     images.forEach((img) => {
-      // Add loading="lazy" for non-critical images
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy');
-      }
-
-      // Add decoding="async" for better performance
+      // Add loading="lazy"async" for better performance
       if (!img.hasAttribute('decoding')) {
         img.setAttribute('decoding', 'async');
       }
@@ -140,7 +131,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
           if (entry.duration > 50) {
             // Long task detected
           }
-        }
       });
 
       try {
@@ -148,8 +138,6 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       } catch {
         // Long task observer not supported
       }
-    }
-
     // Monitor memory usage
     if ('memory' in performance) {
       const checkMemory = () => {
@@ -231,6 +219,3 @@ export default function usePerformanceOptimization() {
 export default function usePerformanceMonitor() {
   // Implementation would go here
   return {};
-}
-=======
-

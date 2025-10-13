@@ -128,7 +128,6 @@ function handler() {
     res.status (500).json ({ error: e.message })
     res.status(500).json({ error: e.message })
   }
-}
   try {
   // TODO: Add properties
 }
@@ -145,7 +144,4 @@ function handler() {
   }
 }
 }
-  }
-}
 
-}}

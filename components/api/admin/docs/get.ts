@@ -43,7 +43,6 @@ const data = fs.readFileSync (CONTENT_PATH, 'utf8')'
     res.status (500).json ({ error: 'Failed to read content' })'
     res.status(500).json({ error: 'Failed to read content' })'
   }
-}
 const CONTENT_PATH = path.join(process.cwd(), 'data', 'docs', 'content.json');';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 const token = req.headers['x-admin-token'] as string | undefined'
@@ -63,5 +62,4 @@ const data = fs.readFileSync(CONTENT_PATH, 'utf8')'
   // TODO: Add properties
 }
     res.status(500).json({ error: 'Failed to read content' })'
-  }
-}
+  

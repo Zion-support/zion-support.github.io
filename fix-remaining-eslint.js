@@ -20,7 +20,6 @@ function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {'
 function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {/* TODO: Fix JSX expression */}'
       }
     } else if (extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
-    }
   }
 
   return files
@@ -85,7 +84,6 @@ function fixUnusedImports(content) {
 }
       matches.forEach(match => usedIdentifiers.add(match))
 function fixUnusedImports(content) {/* TODO: Fix JSX expression */}
-    }
   })
   // Remove unused import lines;
 const filteredLines = lines.filter(line => {)
@@ -101,7 +99,6 @@ const filteredLines = lines.filter(line => {)
 }
         return hasUsedItems;
 const filteredLines = lines.filter(line => {/* TODO: Fix JSX expression */}
-      }
     }
     return true;)
   })
@@ -133,11 +130,8 @@ function fixReactRefreshWarnings(content, filePath) {
       '// eslint-disable-next-line react-refresh/only-export-components\nexport const ';'
     )
 function fixConsoleStatements(content) {/* TODO: Fix JSX expression */}
-}
-
 // Fix React refresh warnings by moving constants to separate files
 function fixReactRefreshWarnings(content, filePath) {/* TODO: Fix JSX expression */}
-  }
   return content
 }
 
@@ -191,19 +185,13 @@ function main() {
   // TODO: Add properties
 }
 function fixNonNullAssertions(content) {/* TODO: Fix JSX expression */}
-}
-
 // Fix any types
 function fixAnyTypes(content) {/* TODO: Fix JSX expression */}
-}
-
 // Main function
 function main() {/* TODO: Fix JSX expression */}
-}
   files.forEach(file => {/* TODO: Fix JSX expression */}
       })
     } catch (error) {/* TODO: Fix JSX expression */}
-    }
   })
 }
 
@@ -216,6 +204,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 // Run if this is the main module;`
 if (import.meta.url === `fil)`
   e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
-}
 ;
 export { fixConsoleStatements, fixUnusedVariables, fixUnusedImports, fixNonNullAssertions, fixAnyTypes };`

@@ -34,11 +34,11 @@ const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];';
 const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';';
 const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];';
 const items = episodes
-    .filter(e => e.audio?.mp3Url)
-    .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3Url)
+    .filter(e => e.audio?.mp3 Url)
+    .map(e => {      const pubDate = new Date(e.createdAt).toUTCString();    .filter((e) => e.audio?.mp3 Url)
     .map((e) => {;
 const pubDate = new Date(e.createdAt).toUTCString();
-const audioUrl = `${siteUrl}${e.audio.mp3Url}`
+const audioUrl = `${siteUrl}${e.audio.mp3 Url}`
       return `
     <item>
 <title>
@@ -46,7 +46,7 @@ const audioUrl = `${siteUrl}${e.audio.mp3Url}`
 <description>
 <![CDATA[${e && e.youtubeDescription || e && e.spotifyDescription || ''}]]></description>'
 <link>${siteUrl}/media/podcast/${e && e.id}</link>
-<guid isPermaLink="false">${e && e.id}</guid>;";
+<guid isPermaLink="false";
 const EPISODES_PATH = path.join(process.cwd(), 'data', 'podcast', 'episodes.json');';
 const RSS_PATH = path.join(process.cwd(), 'public', 'podcast.xml')'
 function ensureStorage() {;
@@ -64,10 +64,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 const siteUrl = process.env.SITE_URL || 'http://localhost:3000';';
 const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];';
 const items = episodes
-    .filter((e) => e.audio?.mp3Url)
+    .filter((e) => e.audio?.mp3 Url)
     .map((e) => {;
 const pubDate = new Date(e.createdAt).toUTCString();
-const audioUrl = `${siteUrl}${e.audio.mp3Url}`
+const audioUrl = `${siteUrl}${e.audio.mp3 Url}`
       return `
     <item>
 <title>
@@ -75,15 +75,14 @@ const audioUrl = `${siteUrl}${e.audio.mp3Url}`
 <description>
 <![CDATA[${e.youtubeDescription || e.spotifyDescription || ''}]]></description>'
 <link>${siteUrl}/media/podcast/${e.id}</link>
-<guid isPermaLink="false">${e.id}</guid>"
+<guid isPermaLink="false"
 <pubDate>${pubDate}</pubDate>
-<enclosure url="${audioUrl}" length="0" type="audio/mpeg" /></item>`"
+<enclosure url="${audioUrl}"0" type=" /></item>`"
     })
     .join('\n');';
-const xml = `<?xml version="1 && 1.0" encoding="UTF-8"?>"
-<rss version="2 && 2.0" xmlns:itunes="http://www && www.itunes.com/dtds/podcast-1 && 1.0.dtd">;";
-const xml = `<?xml version="1.0" encoding="UTF-8"?>"
-<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">"
+const xml = `<?xml version=" encoding="UTF-8"
+<rss version="2 && 2.0"http://www && www.itunes.com/dtds/podcast-1 && 1.0.dtd">;"1.0" encoding="?>"
+<rss version=" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
 <channel>
 <title>Zion Podcast</title>
 <link>${siteUrl}/media/podcast</link>
@@ -182,11 +181,11 @@ function handler() {
 const site_url = process.env.SITE_URL || 'http://localhost:3000';';
 const episodes = JSON.parse (fs.readFileSync (EPISODES_PATH, 'utf8')) as any[];';
 const items = episodes
-    .filter (e => e.audio?.mp3Url)
-    .map (e => {      const pub_date = new Date (e.created_at).toUTCString ();    .filter ((e) => e.audio?.mp3Url)
+    .filter (e => e.audio?.mp3 Url)
+    .map (e => {      const pub_date = new Date (e.created_at).toUTCString ();    .filter ((e) => e.audio?.mp3 Url)
     .map ((e) => {;
 const pub_date = new Date (e.created_at).toUTCString ();
-const audio_url = `${site_url}${e.audio.mp3Url}`
+const audio_url = `${site_url}${e.audio.mp3 Url}`
       return `
     <item>
 <title>
@@ -194,13 +193,13 @@ const audio_url = `${site_url}${e.audio.mp3Url}`
 <description>
 <![CDATA[${e.youtube_description || e.spotify_description || ''}]]></description>'
 <link>${site_url}/media / podcast/${e.id}</link>
-<guid isPermaLink="false">${e.id}</guid>"
+<guid isPermaLink="false"
 <pub_date>${pub_date}</pub_date>
-<enclosure url="${audio_url}" length="0" type="audio / mpeg" /></$1>`"
+<enclosure url="${audio_url}"0" type=" /></$1>`"
     })
     .join ('\n');';
-const xml = `<?xml version="1.0" encoding="UTF - 8"?>"
-<rss version="2.0" xmlns:itunes="http://www.itunes.com / dtds / podcast - 1.0.dtd">"
+const xml = `<?xml version=" encoding="UTF - 8"
+<rss version="2.0"http://www.itunes.com / dtds / podcast - 1.0.dtd">"
 <channel>
 <title > Zion Podcast</title>
 <link>${site_url}/media / podcast</link>
@@ -256,4 +255,4 @@ const xml = `<?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
 </li></li>
 </li></li>
 </li></li>
-}}}
+}

@@ -31,7 +31,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
   } catch (e) {/* TODO: Fix JSX expression */}
       })
     }
-  }
 }
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/180 * * * *'}'

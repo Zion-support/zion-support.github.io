@@ -236,7 +236,6 @@ export const getServiceStatus = () => {
     fileConverter: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }'
     textAnalysis: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }'
   }
-}
 // Service usage statistics;
 export const getServiceStats = () => {
   // TODO: Implement
@@ -265,9 +264,7 @@ export const getServiceStats = () => {
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 }
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 }
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
-    }
   }
-}
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 }
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 }
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 }
@@ -382,8 +379,6 @@ export const getServiceStatus = () =>: any {
     file_converter: { status: 'active', uptime: '99.9%', last_updated: new Date () }'
     text_analysis: { status: 'active', uptime: '99.9%', last_updated: new Date () }'
   }
-}
-
 // Service usage statistics;
 export const getServiceStats = () => {
   // TODO: Implement
@@ -412,9 +407,7 @@ export const getServiceStats = () => {
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
-    }
   }
-}
 // Export service types and interfaces;
 export type {
   // TODO: Add properties
@@ -645,7 +638,6 @@ export const getServiceStatus = () => {
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },'
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }'
   }
-}
 // Service usage statistics;
 export const getServiceStats = () => {
   // TODO: Implement
@@ -674,7 +666,4 @@ export const getServiceStats = () => {
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
-    }
   }
-}
-}

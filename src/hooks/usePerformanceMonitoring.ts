@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -16,38 +13,30 @@ export default usePerformanceMonitoring;
       // trackPerformance(name, value);
 //     []
   );
-=======
 );
 }
-=======
 
 'use client''
 // PerformanceMetrics interface removed as it's not used in this hook;';
 export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
   const { trackPerformance } = useAnalytics();
 const reportMetric = useCallback()
     (nam,
   e: string, valu)
   e: number) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       trackPerformance(name, value)
     },
 //     [trackPerformance]
   )
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
       return () => {}
-    }
     try {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       // LCP - Largest Contentful Paint;
 const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -67,7 +56,6 @@ const entries = list.getEntries()
           (entr)
   y: PerformanceEntry & { processingStart?: number }) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
             const fid =
               (entry.processingStart || entry.startTime) - entry.startTime
             reportMetric('FID', fid)'
@@ -86,19 +74,15 @@ const entries = list.getEntries()
             entr,
   y: PerformanceEntry & {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
               hadRecentInput?: boolean
               value?: number
             }
           ) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
             if (!entry.hadRecentInput && entry.value) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
               clsValue += entry.value
             }
-          }
         )
         reportMetric('CLS', clsValue)'
       })
@@ -114,7 +98,6 @@ const entries = list.getEntries()
 })
           if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
             reportMetric('FCP', entry.startTime)'
           }
         })
@@ -128,10 +111,8 @@ const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX exp
 const entries = list.getEntries()
         entries.forEach((entry) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
           if (entry.entryType === 'navigation') {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
             const navEntry = entry as PerformanceNavigationTiming;
 const ttfb = navEntry.responseStart - navEntry.requestStart
             reportMetric('TTFB', ttfb)'
@@ -147,19 +128,15 @@ const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expre
 const entries = list.getEntries()
         entries.forEach((entry) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
           if (entry.entryType === 'resource') {/* TODO: Fix JSX expression */}'
   O: Add content,}
-}
             const resourceEntry = entry as PerformanceResourceTiming;
 const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart
             if (loadTime > 1000) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
               // Only track slow resources
               reportMetric('SLOW_RESOURCE', loadTime)'
             }
-          }
         })
       })
       resourceObserver.observe({/* TODO: Fix JSX expression */})
@@ -167,7 +144,6 @@ const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart
       // Cleanup
       return () => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
         lcpObserver.disconnect()
         fidObserver.disconnect()
         clsObserver.disconnect()
@@ -177,28 +153,21 @@ const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart
       }
     } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       return () => {}
-    }
   }, [reportMetric])
   // Monitor page load performance
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
     const handleLoad = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
       if (typeof window === 'undefined') return;';
 const navigation = performance.getEntriesByType()
 //         'navigation''
       )[0] as PerformanceNavigationTiming
       if (navigation) {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
         const metrics = {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
-
   domContentLoaded:
 //             navigation.domContentLoadedEventEnd -
 //             navigation.domContentLoadedEventStart,
@@ -209,18 +178,14 @@ const navigation = performance.getEntriesByType()
         }
         Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
           reportMetric(key.toUpperCase(), value)
         })
       }
-    }
     window.addEventListener('load', handleLoad)'
     return () => window.removeEventListener('load', handleLoad)'
   }, [reportMetric])
   return {/* TODO: Fix JSX expression */}
   O: Add content,}
-}
 //     reportMetric
   }
-}
 export default usePerformanceMonitoring;

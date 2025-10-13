@@ -53,8 +53,6 @@ class ErrorBoundary extends Component<Props, State> {
       // You can integrate with error reporting services like Sentry here
       console.error('ErrorBoundary caught an error:', error, errorInfo)'
     }
-  }
-
 export default EnhancedErrorBoundary;
 
 interface EnhancedErrorBoundaryProps {
@@ -68,4 +66,3 @@ export default function EnhancedErrorBoundary({ className = '', children }: Enha
       {children}
     </div>
   );
-}

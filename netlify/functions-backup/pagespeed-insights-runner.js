@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'pagespeed-insights-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'pagespeed-insights-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'pagespeed-insights-runner',' source: event.source || 'unknown', insights: {' status: 'active', pagesAnalyzed: 0, averageScore: 0,'
         lastAnalysis: new Date().toISOString() } }) } return result; } catch (error) {

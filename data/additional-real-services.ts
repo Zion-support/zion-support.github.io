@@ -11,7 +11,6 @@ export interface AdditionalRealService {id: string
   contact_info: unknown,
     mobile: string}
     email: string}
-}
     address: string,
   }
 export const additionalEnhancedServices: AdditionalRealService[] = [;
@@ -31,7 +30,6 @@ export interface AdditionalRealService {/* TODO: Fix JSX expression */}
   e: string}
     emai,
   l: string}
-}
     addres,
   s: string}
 export const,;
@@ -97,7 +95,6 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     address: string,
   }
 }
-}
     address: string,
     address: string
     lin,
@@ -162,7 +159,6 @@ export const additionalEnhancedServices: AdditionalRealService[] = [;
     addres,
   s: string}
 }
-}
     addres,
   s: string}
 export const,;
@@ -209,7 +205,6 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
     i,
   d: 'data-warehouse-solution''
     nam,
@@ -239,8 +234,8 @@ export const,;
       email: 'kleber@ziontechgroup.com','
       address: '364 E Main St STE 1008 Middletown DE 19709'}'
   }
-];      mobile: "+1 302 464 0950""
-      email: "kleber@ziontechgroup.com""
+];      mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com"
     id: 'data - warehouse - solution','
     name: 'Data Warehouse Solution','
     tagline: 'Enterprise - grade data management and analytics','
@@ -260,1155 +255,102 @@ export const,;
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709''
     }
-  }
 ];      mobil,
-  e: "+1 302 464 0950","
-  emai,""
-  l: "kleber@ziontechgroup.com""
-    i,
-  d: 'data - warehouse - solution','
-    nam,
-  e: 'Data Warehouse Solution','
-    taglin,
-  e: 'Enterprise - grade data management and analytics','
-    pric,
-  e: '$149 / month','
-    descriptio,
-  n: unknown,
-      'Scalable data warehouse solution with advanced analytics and business intelligence capabilities.','
+  e: "+1 302 464 0950"
+  emai,""kleber@ziontechgroup.com""+1 302 464 0950"'"ai-automation-suite""ai-automation-suite","AI Automation Suite","Intelligent automation for modern businesses","$79/month","Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.","Workflow automation","AI decision making","Integration APIs","Custom workflows","Analytics dashboard""/services/ai-automation-suite""AI & Automation""+1 302 464 0950","kleber@ziontechgroup.com","364 E Main St STE 1008 Middletown DE 19709"}"data-warehouse-solution""Data Warehouse Solution","Enterprise-grade data management and analytics","$149/month","Scalable data warehouse solution with advanced analytics and business intelligence capabilities.","Data integration","Real-time processing","Advanced analytics","Scalable architecture","Security compliance""/services/data-warehouse-solution""Data & Analytics""364 E Main St STE 1008 Middletown DE 19709","kleber@ziontechgroup.com","364 E Main St STE 1008 Middletown DE 19709",""'"+1 302 464 0950",""
+  d: ","
+    nam,"
+  e: "AI Automation Suite"
+    taglin,""Intelligent automation for modern businesses",""
+  e: ","
+    descriptio,"
+  n: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency."
     feature,
-  s: [,
-      'Data integration','
-      'Real - time processing','
-      'Advanced analytics','
-      'Scalable architecture','
-      'Security compliance'],'
-    link: '/services / data - warehouse - solution''
-    category: 'Data & Analytics''
-    real_implementation: true
-    contact_info: unknown,
-      mobile: '+1 302 464 0950','
-      email: 'kleber@ziontechgroup && ziontechgroup.com','
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"'"
-    id: "ai-automation-suite""
-    id: "ai-automation-suite","
-    name: "AI Automation Suite","
-    tagline: "Intelligent automation for modern businesses","
-    price: "$79/month","
-    description: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.","
-    features: [,
-      "Workflow automation","
-      "AI decision making","
-      "Integration APIs","
-      "Custom workflows","
-      "Analytics dashboard""
+  s: [,""Workflow automation","
+      "AI decision making""
+      ",""Custom workflows","
+      "Analytics dashboard"
     ],
-    link: "/services/ai-automation-suite""
-    category: "AI & Automation""
+    lin,""/services/ai-automation-suite",""
+  y: ","
+    realImplementatio,
+  n: true,
+    contactInf,
+  o: unknown,
+      mobil,"
+  e: "+1 302 464 0950"
+      emai,""kleber@ziontechgroup.com",""
+  s: ""
+    }
+  },
+    i,"
+  d: "data-warehouse-solution"
+    nam,""Data Warehouse Solution",""
+  e: ","
+    pric,"
+  e: "$149/month"
+    descriptio,""Scalable data warehouse solution with advanced analytics and business intelligence capabilities.",""
+      ",""Real-time processing","
+      "Advanced analytics""
+      ",""Security compliance"""
+  k: ","
+    categor,"
+  y: "Data & Analytics"
+    realImplementatio,
+  n: true,
+    contactInf,
+  o: addres,""364 E Main St STE 1008 Middletown DE 19709",""
+  l: ""
+      addres,"
+  s: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+]
+]
+    id: "ai-automation-suite"
+    name: "AI Automation Suite"
+    tagline: "Intelligent automation for modern businesses"
+    price: "$79/month"
+    description: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency."
+    features: [,
+      "Workflow automation"
+      "AI decision making"
+      "Integration APIs"
+      "Custom workflows"
+      "Analytics dashboard"
+    ],
+    link: "/services/ai-automation-suite"
+    category: "AI & Automation"
     realImplementation: true
     contactInfo: unknown,
-      mobile: "+1 302 464 0950","
-      email: "kleber@ziontechgroup.com","
-      address: "364 E Main St STE 1008 Middletown DE 19709"}"
-  },
-    id: "data-warehouse-solution""
-    name: "Data Warehouse Solution","
-    tagline: "Enterprise-grade data management and analytics","
-    price: "$149/month","
-    description: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.","
-    features: [,
-      "Data integration","
-      "Real-time processing","
-      "Advanced analytics","
-      "Scalable architecture","
-      "Security compliance""
-    ],
-    link: "/services/data-warehouse-solution""
-    category: "Data & Analytics""
-    realImplementation: true,
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709","
-      email: "kleber@ziontechgroup.com","
-      address: "364 E Main St STE 1008 Middletown DE 19709","
-    lin,
-  k: '/services / data - warehouse - solution','
-    categor,
-  y: 'Data & Analytics','
-    real_implementatio,
-  n: true,
-    contact_inf,
-  o: unknown,
-      mobil,
-  e: '+1 302 464 0950','
-      emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com','
-      addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobil,""'"
-  e: "+1 302 464 0950","
-  i,""
-  d: "ai-automation-suite","
-    nam,""
-  e: "AI Automation Suite","
-    taglin,""
-  e: "Intelligent automation for modern businesses","
-    pric,""
-  e: "$79/month","
-    descriptio,""
-  n: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.","
+      mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    i,""ai-automation-suite",""
+  e: ","
+    taglin,"
+  e: "Intelligent automation for modern businesses"
+    pric,""$79/month",""
+  n: ","
     feature,
-  s: [,""
-      "Workflow automation",""
-      "AI decision making",""
-      "Integration APIs",""
-      "Custom workflows",""
-      "Analytics dashboard""
+  s: [,"
+      "Workflow automation""
+      ",""Integration APIs","
+      "Custom workflows""
+      ""
     ],
-    lin,""
-  k: "/services/ai-automation-suite","
-    categor,""
-  y: "AI & Automation","
-    realImplementatio,
-  n: true,
-    contactInf,
-  o: unknown,
-      mobil,""
-  e: "+1 302 464 0950","
-      emai,""
-  l: "kleber@ziontechgroup.com","
-      addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709""
-    }
-  },
-    i,""
-  d: "data-warehouse-solution","
-    nam,""
-  e: "Data Warehouse Solution","
-    taglin,""
-  e: "Enterprise-grade data management and analytics","
-    pric,""
-  e: "$149/month","
-    descriptio,""
-  n: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.","
-    feature,
-  s: [,""
-      "Data integration",""
-      "Real-time processing",""
-      "Advanced analytics",""
-      "Scalable architecture",""
-      "Security compliance""
-    ],
-    lin,""
-  k: "/services/data-warehouse-solution","
-    categor,""
-  y: "Data & Analytics","
-    realImplementatio,
-  n: true,
-    contactInf,
-  o: addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709","
-  emai,""
-  l: "kleber@ziontechgroup.com""
-      addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709""
-    }
-  }
-]
-]
-    id: "ai-automation-suite""
-    name: "AI Automation Suite","
-    tagline: "Intelligent automation for modern businesses","
-    price: "$79/month","
-    description: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.","
-    features: [,
-      "Workflow automation","
-      "AI decision making","
-      "Integration APIs","
-      "Custom workflows","
-      "Analytics dashboard""
-    ],
-    link: "/services/ai-automation-suite""
-    category: "AI & Automation""
-    realImplementation: true
-    contactInfo: unknown,
-      mobile: "+1 302 464 0950","
-      email: "kleber@ziontechgroup.com","
-      address: "364 E Main St STE 1008 Middletown DE 19709","
-    i,""
-  d: "ai-automation-suite","
-    nam,""
-  e: "AI Automation Suite","
-    taglin,""
-  e: "Intelligent automation for modern businesses","
-    pric,""
-  e: "$79/month","
-    descriptio,""
-  n: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.","
-    feature,
-  s: [,""
-      "Workflow automation",""
-      "AI decision making",""
-      "Integration APIs",""
-      "Custom workflows",""
-      "Analytics dashboard""
-    ],
-    lin,""
-  k: "/services/ai-automation-suite","
-    categor,""
-  y: "AI & Automation","
-    realImplementatio,
-  n: true,
-    contactInf,
-  o: unknown,
-      mobil,""
-  e: "+1 302 464 0950","
-      emai,""
-  l: "kleber@ziontechgroup.com","
-      addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709""
-    }
-  },
-    i,
-  d: 'mobile-first-survey','
-    nam,
-  e: 'Mobile-First Survey Tool','
-    taglin,
-  e: 'Tap-friendly micro-surveys with AI insights','
-    pric,
-  e: '$19','
-    perio,
-  d: '/month','
-    descriptio,
-  n: 'Launch branded, mobile-optimized surveys with AI-based insight clustering and churn-risk flags.','
-    feature,
-  s: [,
-      'One-tap answers and NPS','
-      'AI clustering and summaries','
-      'Embeddable widgets','
-      'Export CSV/Sheets''
-    ],
-    popular: false,
-    icon: '''
-    color: 'from-emerald-600 to-teal-700''
-    textColor: 'text-emerald-300','
-    link: 'https://ziontechgroup.com/services/mobile-first-survey','
-    marketPosition: 'Lightweight alternative to heavy survey suites with AI summaries out-of-the-box.','
-    targetAudience: 'Product, growth, CX','
-    trialDays: 7,
-    setupTime: '15 minutes','
-    category: 'Growth & Marketing','
-    realService: true,
-    technology: ['Next.js, Edge Functions'],'
-    integrations: ['HubSpot, Segment, GA4'],'
-    useCases: ['NPS, Post-purchase survey, In-app feedback'],'
-    roi: 'Accelerates feedback cycles by 3 x','
-    competitors: ['Typeform, Survicate'],'
-    marketSize: '$3.1 B feedback tools','
-    growthRate: '14% CAGR','
-    variant: 'neural-quantum','
-    contactInfo: contact
-    realImplementation: true,
-    implementationDetails: 'Embeds, web SDK, event tracking.','
-    launchDate: '2025-05-15''
-    customers: 55
-    rating: 4.5
-    reviews: 18,
-    popula,
-  r: false,
-    ico,
-  n: ',''
-    colo,
-  r: 'from-emerald-600 to-teal-700','
-    textColo,
-  r: 'text-emerald-300','
-    lin,
-  k: 'http,'
-  s://ziontechgroup.com/services/mobile-first-survey','
-    marketPositio,
-  n: 'Lightweight alternative to heavy survey suites with AI summaries out-of-the-box.','
-    targetAudienc,
-  e: 'Product, growth, CX','
-    trialDay,
-  s: 7,
-    setupTim,
-  e: '15 minutes','
-    categor,
-  y: 'Growth & Marketing','
-    realServic,
-  e: true,
-    technolog,
-  y: ['Next.js, Edge Functions'],'
-    integration,
-  s: ['HubSpot, Segment, GA4'],'
-    useCase,
-  s: ['NPS, Post-purchase survey, In-app feedback'],'
-    ro,
-  i: 'Accelerates feedback cycles by 3x','
-    competitor,
-  s: ['Typeform, Survicate'],'
-    marketSiz,
-  e: '$3.1B feedback tools','
-    growthRat,
-  e: '14% CAGR','
-    varian,
-  t: 'neural-quantum','
-    contactInf,
-  o: contact,
-    realImplementatio,
-  n: true,
-    implementationDetail,
-  s: 'Embeds, web SDK, event tracking.','
-    launchDat,
-  e: '2025-05-15','
-    customer,
-  s: 55,
-    ratin,
-  g: 4.5,
-    review,
-  s: 18},
-    i,
-  d: 'event-management-dashboard','
-    nam,
-  e: 'Event Management Dashboard','
-    taglin,
-  e: 'Tickets, check-in, schedules, feedback in one place','
-    pric,
-  e: '$89','
-    perio,
-  d: '/month','
-    descriptio,
-  n: 'All-in-one portal to sell tickets, manage RSVPs, schedule sessions, and analyze attendee feedback.','
-    feature,
-  s: [,
-      'Tickets and invoices','
-      'QR check-in and badges','
-      'Speaker and agenda planner','
-      'Post-event feedback analytics''
-    ],
-    popular: true,
-    icon: '''
-    color: 'from-cyan-600 to-blue-700''
-    textColor: 'text-cyan-300','
-    link: 'https://ziontechgroup.com/services/event-management-dashboard','
-    marketPosition: 'Faster setup and lower fees than legacy event suites.','
-    targetAudience: 'Marketing, ops, agencies','
-    trialDays: 14,
-    setupTime: '1 day','
-    category: 'Business Operations','
-    realService: true,
-    technology: ['Stripe, Webhooks, Next.js'],'
-    integrations: ['Stripe, Zapier, HubSpot'],'
-    useCases: ['Meetups, webinars, conferences'],'
-    roi: 'Cuts ops time by 40%','
-    competitors: ['Eventbrite, Hopin'],'
-    marketSize: '$6.1 B events tech','
-    growthRate: '16% CAGR','
-    variant: 'ai-futuristic','
-    contactInfo: contact
-    realImplementation: true,
-    implementationDetails: 'Ticketing, QR check-in, analytics.','
-    launchDate: '2025-04-10''
-    customers: 35
-    rating: 4.6
-    reviews: 24,
-  },
-    id: 'churn-risk-alerts''
-    name: 'Churn Risk Alerts for Slack''
-    tagline: 'Behavior + sentiment = proactive retention pings','
-    price: '$49','
-    period: '/month','
-    description: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.','
-    features: [,
-    popula,
-  r: true,
-    ico,
-  n: '','
-    colo,
-  r: 'from-cyan-600 to-blue-700','
-    textColo,
-  r: 'text-cyan-300','
-    lin,
-  k: 'http,'
-  s://ziontechgroup.com/services/event-management-dashboard','
-    marketPositio,
-  n: 'Faster setup and lower fees than legacy event suites.','
-    targetAudienc,
-  e: 'Marketing, ops, agencies','
-    trialDay,
-  s: 14,
-    setupTim,
-  e: '1 day','
-    categor,
-  y: 'Business Operations','
-    realServic,
-  e: true,
-    technolog,
-  y: ['Stripe, Webhooks, Next.js'],'
-    integration,
-  s: ['Stripe, Zapier, HubSpot'],'
-    useCase,
-  s: ['Meetups, webinars, conferences'],'
-    ro,
-  i: 'Cuts ops time by 40%','
-    competitor,
-  s: ['Eventbrite, Hopin'],'
-    marketSiz,
-  e: '$6.1B events tech','
-    growthRat,
-  e: '16% CAGR','
-    varian,
-  t: 'ai-futuristic','
-    contactInf,
-  o: contact,
-    realImplementatio,
-  n: true,
-    implementationDetail,
-  s: 'Ticketing, QR check-in, analytics.','
-    launchDat,
-  e: '2025-04-10','
-    customer,
-  s: 35,
-    ratin,
-  g: 4.6,
-    review,
-  s: 24},
-    i,
-  d: 'churn-risk-alerts','
-    nam,
-  e: 'Churn Risk Alerts for Slack','
-    taglin,
-  e: 'Behavior + sentiment = proactive retention pings','
-    pric,
-  e: '$49','
-    perio,
-  d: '/month','
-    descriptio,
-  n: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.','
-    feature,
-  s: [,
-      'Usage anomaly detection','
-      'Sentiment from tickets/reviews','
-      'Playbooks and tasks','
-      'Owner assignment''
-    ],
-    popular: false,
-    icon: '''
-    color: 'from-amber-600 to-orange-700''
-    textColor: 'text-amber-300','
-    link: 'https://ziontechgroup.com/services/churn-risk-alerts','
-    marketPosition: 'Actionable CS alerts without heavy CDPs.','
-    targetAudience: 'Customer success, product','
-    trialDays: 14,
-    setupTime: '30 minutes','
-    category: 'AI & Data','
-    realService: true,
-    technology: ['Segment, Webhooks, LLMs'],'
-    integrations: ['Slack, HubSpot, Salesforce'],'
-    useCases: ['Churn prevention, Expansion triggers'],'
-    roi: 'Improves retention by 25 pts','
-    competitors: ['Vitally, Gainsight'],'
-    marketSize: '$4.2 B CS tools','
-    growthRate: '17% CAGR','
-    variant: 'holographic','
-    contactInfo: contact
-    realImplementation: true,
-    implementationDetails: 'Event collector, rules engine, Slack app.','
-    launchDate: '2025-03-01''
-    customers: 28
-    rating: 4.5
-    reviews: 15,
-    popula,
-  r: false,
-    ico,
-  n: ',''
-    colo,
-  r: 'from-amber-600 to-orange-700','
-    textColo,
-  r: 'text-amber-300','
-    lin,
-  k: 'http,'
-  s://ziontechgroup.com/services/churn-risk-alerts','
-    marketPositio,
-  n: 'Actionable CS alerts without heavy CDPs.','
-    targetAudienc,
-  e: 'Customer success, product','
-    trialDay,
-  s: 14,
-    setupTim,
-  e: '30 minutes','
-    categor,
-  y: 'AI & Data','
-    realServic,
-  e: true,
-    technolog,
-  y: ['Segment, Webhooks, LLMs'],'
-    integration,
-  s: ['Slack, HubSpot, Salesforce'],'
-    useCase,
-  s: ['Churn prevention, Expansion triggers'],'
-    ro,
-  i: 'Improves retention by 25 pts','
-    competitor,
-  s: ['Vitally, Gainsight'],'
-    marketSiz,
-  e: '$4.2B CS tools','
-    growthRat,
-  e: '17% CAGR','
-    varian,
-  t: 'holographic','
-    contactInf,
-  o: contact,
-    realImplementatio,
-  n: true,
-    implementationDetail,
-  s: 'Event collector, rules engine, Slack app.','
-    launchDat,
-  e: '2025-03-01','
-    customer,
-  s: 28,
-    ratin,
-  g: 4.5,
-    review,
-  s: 15},
-    i,
-  d: 'subscription-revenue-analytics','
-    nam,
-  e: 'Subscription Revenue Analytics','
-    taglin,
-  e: 'MRR, churn, cohorts with anomaly flags','
-    pric,
-  e: '$59','
-    perio,
-  d: '/month','
-    descriptio,
-  n: 'Self-serve dashboards for MRR, churn, LTV/CAC, and cohorts with anomaly detection and revenue projections.','
-    feature,
-  s: [,
-      'MRR/ARR trends and cohorts','
-      'Anomaly flags and forecasts','
-      'CSV/Stripe imports','
-      'Board-ready reports''
-    ],
-    popular: true,
-    icon: '''
-    color: 'from-fuchsia-600 to-pink-700','
-    textColor: 'text-fuchsia-300','
-    link: 'https://ziontechgroup.com/services/subscription-revenue-analytics','
-    marketPosition: 'Faster deploy vs. BI stacks, purpose-built for SaaS.','
-    targetAudience: 'Founders, finance, ops','
-    trialDays: 14,
-    setupTime: '45 minutes','
-    category: 'Business Intelligence','
-    realService: true,
-    technology: ['Next.js, ClickHouse/DBT optional'],'
-    integrations: ['Stripe, Chargebee, Paddle'],'
-    useCases: ['Board metrics, Revenue ops, Cohort analysis'],'
-    roi: 'Reduces reporting prep by 80%','
-    competitors: ['ChartMogul, ProfitWell'],'
-    marketSize: '$2.4 B RevOps tools','
-    growthRate: '20% CAGR','
-    variant: 'quantum-holographic','
-    contactInfo: contact
-    realImplementation: true,
-    implementationDetails: 'Data loaders, metric engine, exports.',';'
-    launchDate: '2025-07-01''
-    customers: 22
-    rating: 4.6
-    reviews: 12,
-    popula,
-  r: true,
-    ico,
-  n: ',''
-    colo,
-  r: 'from-fuchsia-600 to-pink-700','
-    textColo,
-  r: 'text-fuchsia-300','
-    lin,
-  k: 'http,'
-  s://ziontechgroup.com/services/subscription-revenue-analytics','
-    marketPositio,
-  n: 'Faster deploy vs. BI stacks, purpose-built for SaaS.','
-    targetAudienc,
-  e: 'Founders, finance, ops','
-    trialDay,
-  s: 14,
-    setupTim,
-  e: '45 minutes','
-    categor,
-  y: 'Business Intelligence','
-    realServic,
-  e: true,
-    technolog,
-  y: ['Next.js, ClickHouse/DBT optional'],'
-    integration,
-  s: ['Stripe, Chargebee, Paddle'],'
-    useCase,
-  s: ['Board metrics, Revenue ops, Cohort analysis'],'
-    ro,
-  i: 'Reduces reporting prep by 80%','
-    competitor,
-  s: ['ChartMogul, ProfitWell'],'
-    marketSiz,
-  e: '$2.4B RevOps tools','
-    growthRat,
-  e: '20% CAGR','
-    varian,
-  t: 'quantum-holographic','
-    contactInf,
-  o: contact,
-    realImplementatio,
-  n: true,
-    implementationDetail,
-  s: 'Data loaders, metric engine, exports.',';'
-    launchDat,
-  e: '2025-07-01','
-    customer,
-  s: 22,
-    ratin,
-  g: 4.6,
-    review,
-  s: 12},
-    i,
-  d: 'iso-27001-evidence-kit','
-    nam,
-  e: 'ISO 27001 Evidence Kit','
-    taglin,
-  e: 'Prebuilt controls, evidence collectors, and audit packs','
-    pric,
-  e: '$149','
-    perio,
-  d: '/month','
-    descriptio,
-  n: 'Automate common ISO 27001 evidence with connectors, control mappings, timelines, and exportable audit packs.',';'
-    feature,
-  s: [,
-      'Control library and mappings','
-      'Evidence collectors and snapshots','
-      'Exceptions and approvals','
-      'Audit-ready exports';'
-    ],
-    popular: false,
-    icon: '''
-    color: 'from-indigo-600 to-blue-700''
-    textColor: 'text-indigo-300','
-    link: 'https://ziontechgroup.com/services/iso-27001-evidence-kit','
-    marketPosition: 'Faster time-to-audit than generic GRC tools.','
-    targetAudience: 'Security, compliance, IT','
-    trialDays: 14,
-    setupTime: '1 day','
-    category: 'Security & Compliance','
-    realService: true,
-    technology: ['Cloud APIs, IdP, Endpoint'],'
-    integrations: ['AWS, Azure, GCP, Okta, JAMF'],'
-    useCases: ['ISO readiness, Continuous compliance'],'
-    roi: 'Cuts audit prep by 60%','
-    competitors: ['Vanta, Drata'],'
-    marketSize: '$5.5B GRC''
-    growthRate: '13% CAGR''
-          variant: 'security-futuristic''
-      contactInfo: contact
-      realImplementation: true
-      implementationDetails: 'Connectors + evidence timelines.''
-      launchDate: '2025-06-15''
-      customers: 18
-      rating: 4.5
-      reviews: 10,
-    popula,
-  r: false,
-    ico,
-  n: ',''
-    colo,
-  r: 'from-indigo-600 to-blue-700','
-    textColo,
-  r: 'text-indigo-300','
-    lin,
-  k: 'http,'
-  s://ziontechgroup.com/services/iso-27001-evidence-kit','
-    marketPositio,
-  n: 'Faster time-to-audit than generic GRC tools.','
-    targetAudienc,
-  e: 'Security, compliance, IT','
-    trialDay,
-  s: 14,
-    setupTim,
-  e: '1 day','
-    categor,
-  y: 'Security & Compliance','
-    realServic,
-  e: true,
-    technolog,
-  y: ['Cloud APIs, IdP, Endpoint'],'
-    integration,
-  s: ['AWS, Azure, GCP, Okta, JAMF'],'
-    useCase,
-  s: ['ISO readiness, Continuous compliance'],'
-    ro,
-  i: 'Cuts audit prep by 60%','
-    competitor,
-  s: ['Vanta, Drata'],'
-    marketSiz,
-  e: '$5.5B GRC','
-    growthRat,
-  e: '13% CAGR','
-          varian,
-  t: 'security-futuristic','
-      contactInf,
-  o: contact,
-      realImplementatio,
-  n: true,
-      implementationDetail,
-  s: 'Connectors + evidence timelines.','
-      launchDat,
-  e: '2025-06-15','
-      customer,
-  s: 18,
-      ratin,
-  g: 4.5,
-      review,
-  s: 10},
-    i,
-  d: 'api-changelog-notifier','
-    nam,
-  e: 'API Changelog Notifier','
-    taglin,
-  e: 'Diffs, deprecations, and alerts for your integrators','
-    pric,
-  e: '$19','
-    perio,
-  d: '/month','
-    descriptio,
-  n: 'Monitor OpenAPI/GraphQL changes and send release notes, breaking-change alerts, and migration timelines.','
-    feature,
-  s: [,
-      'Schema diffing and impact','
-      'Release notes generator','
-      'Deprecation timelines','
-      'Email/Slack/webhook alerts''
-    ],
-    popular: false
-    icon: '''
-    color: 'from-cyan-600 to-blue-700''
-    textColor: 'text-cyan-300''
-    link: 'https://ziontechgroup.com/services/api-changelog-notifier''
-    marketPosition: 'Turns API changes into transparent communication.''
-    targetAudience: 'API/platform teams''
-    trialDays: 7,
-    setupTime: '10 minutes''
-    category: 'Developer Experience','
-    realService: true,
-    technology: ['OpenAPI/GraphQL parsers'],'
-    integrations: ['GitHub, Slack, Email'],'
-    useCases: ['Changelog, Deprecation management'],'
-    roi: 'Reduces integrator breakage by 70%','
-    competitors: ['ReadMe, Stoplight (partial)'],'
-    marketSize: '$1.5B dev tools''
-    growthRate: '18% CAGR''
-    variant: 'ai-futuristic''
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Schema watchers + release generator.''
-    launchDate: '2025-05-01''
-    customers: 30
-    rating: 4.6
-    reviews: 14,
-    popula,
-  r: false,
-    ico,
-  n: ',''
-    colo,
-  r: 'from-cyan-600 to-blue-700','
-    textColo,
-  r: 'text-cyan-300','
-    lin,
-  k: 'http,'
-  s://ziontechgroup.com/services/api-changelog-notifier','
-    marketPositio,
-  n: 'Turns API changes into transparent communication.','
-    targetAudienc,
-  e: 'API/platform teams','
-    trialDay,
-  s: 7,
-    setupTim,
-  e: '10 minutes','
-    categor,
-  y: 'Developer Experience','
-    realServic,
-  e: true,
-    technolog,
-  y: ['OpenAPI/GraphQL parsers'],'
-    integration,
-  s: ['GitHub, Slack, Email'],'
-    useCase,
-  s: ['Changelog, Deprecation management'],'
-    ro,
-  i: 'Reduces integrator breakage by 70%','
-    competitor,
-  s: ['ReadMe, Stoplight (partial)'],'
-    marketSiz,
-  e: '$1.5B dev tools','
-    growthRat,
-  e: '18% CAGR','
-    varian,
-  t: 'ai-futuristic','
-    contactInf,
-  o: contact,
-    realImplementatio,
-  n: true,
-    implementationDetail,
-  s: 'Schema watchers + release generator.','
-    launchDat,
-  e: '2025-05-01','
-    customer,
-  s: 30,
-    ratin,
-  g: 4.6,
-    review,
-  s: 14},
-    i,
-  d: 'runbook-generator','
-    nam,
-  e: 'Runbook Generator','
-    taglin,
-  e: 'Generate, version, and validate ops runbooks with AI','
-    pric,
-  e: '$29','
-    perio,
-  d: '/month','
-    descriptio,
-  n: 'Create consistent runbooks from incident timelines and postmortems, validate steps and link to on-call.','
-    feature,
-  s: [,
-      'Templates and versioning','
-      'AI draft from incidents','
-      'Step validation checklists','
-      'On-call links and owners''
-    ],
-    popular: false,
-    icon: '''
-    color: 'from-sky-600 to-blue-700','
-    textColor: 'text-sky-300','
-    link: 'https://ziontechgroup.com/services/runbook-generator','
-    marketPosition: 'Eliminates ad-hoc docs, codifies reliability.','
-    targetAudience: 'SRE, platform, ops','
-    trialDays: 14,
-    setupTime: '20 minutes','
-    category: 'Quality & Monitoring','
-    realService: true,
-    technology: ['LLMs, Incident APIs'],'
-    integrations: ['PagerDuty, Jira, Slack'],'
-    useCases: ['SRE runbooks, On-call playbooks'],'
-    roi: 'Faster incident resolution by 2030%','
-    competitors: ['Blameless (partial), Notion'],'
-    marketSize: '$7.2B DevOps''
-    growthRate: '19% CAGR''
-          variant: 'monitoring-futuristic''
-      contactInfo: contact
-      realImplementation: true
-      implementationDetails: 'Incident parsers + templates.''
-      launchDate: '2025-02-20''
-      customers: 26
-      rating: 4.5
-      reviews: 11,
-    popula,
-  r: false,
-    ico,
-  n: ',''
-    colo,
-  r: 'from-sky-600 to-blue-700','
-    textColo,
-  r: 'text-sky-300','
-    lin,
-  k: 'http,'
-  s://ziontechgroup.com/services/runbook-generator','
-    marketPositio,
-  n: 'Eliminates ad-hoc docs, codifies reliability.','
-    targetAudienc,
-  e: 'SRE, platform, ops','
-    trialDay,
-  s: 14,
-    setupTim,
-  e: '20 minutes','
-    categor,
-  y: 'Quality & Monitoring','
-    realServic,
-  e: true,
-    technolog,
-  y: ['LLMs, Incident APIs'],'
-    integration,
-  s: ['PagerDuty, Jira, Slack'],'
-    useCase,
-  s: ['SRE runbooks, On-call playbooks'],'
-    ro,
-  i: 'Faster incident resolution by 2030%','
-    competitor,
-  s: ['Blameless (partial), Notion'],'
-    marketSiz,
-  e: '$7.2B DevOps','
-    growthRat,
-  e: '19% CAGR','
-          varian,
-  t: 'monitoring-futuristic','
-      contactInf,
-  o: contact,
-      realImplementatio,
-  n: true,
-      implementationDetail,
-  s: 'Incident parsers + templates.','
-      launchDat,
-  e: '2025-02-20','
-      customer,
-  s: 26,
-      ratin,
-  g: 4.5,
-      review,
-  s: 11},
-    i,
-  d: 'incident-timeline-composer','
-    nam,
-  e: 'Incident Timeline Composer','
-    taglin,
-  e: 'Auto-build timelines and comms from alerts and chat','
-    pric,
-  e: '$19','
-    perio,
-  d: '/month','
-    descriptio,
-  n: 'Aggregates alerts, changes, and chat to build a single incident timeline for comms and postmortems.','
-    feature,
-  s: [,
-      'Alert + change aggregation','
-      'Chat timeline extraction','
-      'Customer comms templates','
-      'Postmortem export';'
-    ],
-    popular: false,
-    icon: '''
-    color: 'from-rose-600 to-pink-700''
-    textColor: 'text-rose-300','
-    link: 'https://ziontechgroup.com/services/incident-timeline-composer','
-    marketPosition: 'Makes incident comms accurate and fast.','
-    targetAudience: 'SRE, support, comms','
-    trialDays: 7,
-    setupTime: '10 minutes','
-    category: 'Observability','
-    realService: true,
-    technology: ['Webhooks, LLMs'],'
-    integrations: ['PagerDuty, Opsgenie, Slack, Statuspage'],'
-    useCases: ['Major incident comms, RCA inputs'],'
-    roi: 'Reduces coordination overhead by 50%','
-    competitors: ['Blameless, Incident.io (partial)'],'
-    marketSize: '$7.2B DevOps''
-    growthRate: '19% CAGR''
-    variant: 'holographic-advanced''
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Event collectors + composer.''
-    launchDate: '2025-03-15''
-    customers: 19
-    rating: 4.5
-    reviews: 9,
-    popula,
-  r: false,
-    ico,
-  n: ',''
-    colo,
-  r: 'from-rose-600 to-pink-700','
-    textColo,
-  r: 'text-rose-300','
-    lin,
-  k: 'http,'
-  s://ziontechgroup.com/services/incident-timeline-composer','
-    marketPositio,
-  n: 'Makes incident comms accurate and fast.','
-    targetAudienc,
-  e: 'SRE, support, comms','
-    trialDay,
-  s: 7,
-    setupTim,
-  e: '10 minutes','
-    categor,
-  y: 'Observability','
-    realServic,
-  e: true,
-    technolog,
-  y: ['Webhooks, LLMs'],'
-    integration,
-  s: ['PagerDuty, Opsgenie, Slack, Statuspage'],'
-    useCase,
-  s: ['Major incident comms, RCA inputs'],'
-    ro,
-  i: 'Reduces coordination overhead by 50%','
-    competitor,
-  s: ['Blameless, Incident.io (partial)'],'
-    marketSiz,
-  e: '$7.2B DevOps','
-    growthRat,
-  e: '19% CAGR','
-    varian,
-  t: 'holographic-advanced','
-    contactInf,
-  o: contact,
-    realImplementatio,
-  n: true,
-    implementationDetail,
-  s: 'Event collectors + composer.','
-    launchDat,
-  e: '2025-03-15','
-    customer,
-  s: 19,
-    ratin,
-  g: 4.5,
-    review,
-  s: 9},
-    i,
-  d: 'ad-creative-generator','
-    nam,
-  e: 'Ad Creative Generator','
-    taglin,
-  e: 'Generate on-brand ads with variants and A/B insights','
-    pric,
-  e: '$49','
-    perio,
-  d: '/month','
-    descriptio,
-  n: 'Create compliant, on-brand image and text ads with variants, audiences, and performance tips.','
-    feature,
-  s: [,
-      'Brand presets and guardrails','
-      'Multi-platform variants','
-      'Headlines and copy suggestions','
-      'Performance tips and tags''
-    ],
-    popular: true,
-    icon: '''
-    color: 'from-violet-600 to-purple-700''
-    textColor: 'text-violet-300','
-    link: 'https://ziontechgroup.com/services/ad-creative-generator','
-    marketPosition: 'Faster creative cycles for small teams.','
-    targetAudience: 'Growth, agencies, founders','
-    trialDays: 7,
-    setupTime: '10 minutes','
-    category: 'Growth & Marketing','
-    realService: true,
-    technology: ['LLMs, Vision models'],'
-    integrations: ['Meta, Google Ads (export)'],'
-    useCases: ['Ad variants, Landing page assets'],'
-    roi: 'Improves CTR by 1020% on average','
-    competitors: ['Canva (partial), Jasper'],'
-    marketSize: '$8.9B martech genAI''
-    growthRate: '22% CAGR''
-    variant: 'quantum-holographic''
-    contactInfo: contact
-    realImplementation: true
-    implementationDetails: 'Brand presets + asset generator.''
-    launchDate: '2025-07-15''
-    customers: 33
-    rating: 4.6
-    reviews: 13,
-    popula,
-  r: true,
-    ico,
-  n: ',''
-    colo,
-  r: 'from-violet-600 to-purple-700','
-    textColo,
-  r: 'text-violet-300','
-    lin,
-  k: 'http,'
-  s://ziontechgroup.com/services/ad-creative-generator','
-    marketPositio,
-  n: 'Faster creative cycles for small teams.','
-    targetAudienc,
-  e: 'Growth, agencies, founders','
-    trialDay,
-  s: 7,
-    setupTim,
-  e: '10 minutes','
-    categor,
-  y: 'Growth & Marketing','
-    realServic,
-  e: true,
-    technolog,
-  y: ['LLMs, Vision models'],'
-    integration,
-  s: ['Meta, Google Ads (export)'],'
-    useCase,
-  s: ['Ad variants, Landing page assets'],'
-    ro,
-  i: 'Improves CTR by 1020% on average','
-    competitor,
-  s: ['Canva (partial), Jasper'],'
-    marketSiz,
-  e: '$8.9B martech genAI','
-    growthRat,
-  e: '22% CAGR','
-    varian,
-  t: 'quantum-holographic','
-    contactInf,
-  o: contact,
-    realImplementatio,
-  n: true,
-    implementationDetail,
-  s: 'Brand presets + asset generator.','
-    launchDat,
-  e: '2025-07-15','
-    customer,
-  s: 33,
-    ratin,
-  g: 4.6,
-    review,
-  s: 13},
-    i,
-  d: 'cloud-cost-optimizer-pro','
-    nam,
-  e: 'Cloud Cost Optimizer Pro','
-    taglin,
-  e: 'Automated rightsizing, lifecycle policies, and anomaly detection','
-    pric,
-  e: '$99','
-    perio,
-  d: '/month','
-    descriptio,
-  n: 'Continuously analyze AWS, Azure, and GCP usage to recommend rightsizing, lifecycle policies, and scheduling. Detect anomalies and export IaC for approvals.',';'
-    feature,
-  s: [,""
-      "Data integration",""
-      "Real-time processing",""
-      "Advanced analytics",""
-      "Scalable architecture",""
-  },
-    id: 'cloud-cost-optimizer-pro','
-    name: 'Cloud Cost Optimizer Pro','
-    tagline: 'Automated rightsizing, lifecycle policies, and anomaly detection','
-    price: '$99','
-    period: '/month','
-    description: 'Continuously analyze AWS, Azure, and GCP usage to recommend rightsizing, lifecycle policies, and scheduling. Detect anomalies and export IaC for approvals.',';'
-    id: "data-warehouse-solution","
-    name: "Data Warehouse Solution","
-    tagline: "Enterprise-grade data management and analytics","
-    price: "$149/month","
-    description: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.","
-    features: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-      "Data integration","
-      "Real-time processing","
-      "Advanced analytics","
-      "Scalable architecture","
-      "Security compliance""
-    ],
-    link: "/services/data-warehouse-solution""
-    category: "Data & Analytics""
-    realImplementation: true
-    implementationDetails: 'SaaS analyzer with exporters for Terraform/Helm and alerting.';'
-    launchDate: '2025-01-15''
-    customers: 90
-    rating: 4.6
-    reviews: 54,
-    lin,""
-  k: "/services/data-warehouse-solution","
-    categor,""
-  y: "Data & Analytics","
+    lin,"
+  k: "/services/ai-automation-suite"
+    categor,""AI & Automation",""
+  e: ","
+      emai,"
+  l: "kleber@ziontechgroup.com"
+      addres,""364 E Main St STE 1008 Middletown DE 19709"""
+      ",""Real-time processing","
+      "Advanced analytics""
+      ",""data-warehouse-solution","Data Warehouse Solution","Enterprise-grade data management and analytics","$149/month","Scalable data warehouse solution with advanced analytics and business intelligence capabilities.","Data integration","Real-time processing","Advanced analytics","Scalable architecture","Security compliance""/services/data-warehouse-solution""Data & Analytics"""
+  k: ","
+    categor,"
+  y: "Data & Analytics"
     realImplementatio,
   n: true,
     implementationDetail,
@@ -1456,7 +398,7 @@ export const,;
     useCases: ['Performance tuning', 'SLO management', 'Incident response'],'
     roi: 'Reduce p95 latency by 2050% in month 1','
     competitors: ['Percona PMM', 'Datadog APM', 'New Relic'],'
-    marketSize: '$6B DB monitoring''
+    marketSize: '$6 B DB monitoring''
     growthRate: '15% CAGR''
     variant: 'holographic-advanced''
     contactInfo: contact
@@ -1500,7 +442,7 @@ export const,;
     competitor,
   s: ['Percona PMM', 'Datadog APM', 'New Relic'],'
     marketSiz,
-  e: '$6B DB monitoring','
+  e: '$6 B DB monitoring','
     growthRat,
   e: '15% CAGR','
     varian,
@@ -1594,11 +536,11 @@ export const,;
     useCase,
   s: ['Public API docs', 'Internal APIs', 'SDK portals'],'
     ro,
-  i: 'Ship and maintain docs 5x faster','
+  i: 'Ship and maintain docs 5 x faster','
     competitor,
   s: ['ReadMe', 'Redocly', 'Stoplight'],'
     marketSiz,
-  e: '$1.5B dev docs','
+  e: '$1.5 B dev docs','
     growthRat,
   e: '18% CAGR','
     varian,
@@ -1696,7 +638,7 @@ export const,;
     competitor,
   s: ['MailMonitor', 'Postmaster Tools'],'
     marketSiz,
-  e: '$2B email tools','
+  e: '$2 B email tools','
     growthRat,
   e: '12% CAGR','
     varian,
@@ -1794,7 +736,7 @@ export const,;
     competitor,
   s: ['OneTrust', 'Transcend'],'
     marketSiz,
-  e: '$3B privacy ops','
+  e: '$3 B privacy ops','
     growthRat,
   e: '20% CAGR','
     varian,
@@ -1848,7 +790,7 @@ export const,;
     useCases: ['Security testing', 'Pre-deploy checks'],'
     roi: 'Reduce security escapes by 60%','
     competitors: ['StackHawk', 'Noname'],'
-    marketSize: '$4B API security''
+    marketSize: '$4 B API security''
     growthRate: '23% CAGR''
     variant: 'quantum-cyberpunk''
     contactInfo: contact
@@ -1892,7 +834,7 @@ export const,;
     competitor,
   s: ['StackHawk', 'Noname'],'
     marketSiz,
-  e: '$4B API security','
+  e: '$4 B API security','
     growthRat,
   e: '23% CAGR','
     varian,
@@ -2000,7 +942,7 @@ export const,;
     competitor,
   s: ['Datadog APM', 'New Relic', 'Elastic APM'],'
     marketSiz,
-  e: '$30B+ observability','
+  e: '$30 B+ observability','
     growthRat,
   e: '18% CAGR','
     varian,
@@ -2054,7 +996,7 @@ export const,;
     useCases: ['Customer comms', 'Reliability transparency'],'
     roi: 'Reduce support tickets during incidents by 40%','
     competitors: ['Statuspage', 'Better Uptime'],'
-    marketSize: '$1B status pages''
+    marketSize: '$1 B status pages''
     growthRate: '10% CAGR''
     variant: 'neural-cyberpunk''
     contactInfo: contact
@@ -2098,7 +1040,7 @@ export const,;
     competitor,
   s: ['Statuspage', 'Better Uptime'],'
     marketSiz,
-  e: '$1B status pages','
+  e: '$1 B status pages','
     growthRat,
   e: '10% CAGR','
     varian,
@@ -2152,7 +1094,7 @@ export const,;
     useCases: ['SLO governance', 'Release checks'],'
     roi: 'Catch issues before customers notice','
     competitors: ['Checkly', 'UptimeRobot'],'
-    marketSize: '$1.2B synthetic''
+    marketSize: '$1.2 B synthetic''
     growthRate: '14% CAGR''
     variant: 'quantum-matrix''
     contactInfo: contact
@@ -2196,7 +1138,7 @@ export const,;
     competitor,
   s: ['Checkly', 'UptimeRobot'],'
     marketSiz,
-  e: '$1.2B synthetic','
+  e: '$1.2 B synthetic','
     growthRat,
   e: '14% CAGR','
     varian,
@@ -2250,7 +1192,7 @@ export const,;
     useCases: ['Webhook reliability', 'Local testing', 'Sandboxing'],'
     roi: 'Reduce missed events to near-zero''
     competitors: ['Hookdeck']'
-    marketSize: '$500M webhook tools''
+    marketSize: '$500 M webhook tools''
     growthRate: '16% CAGR''
     variant: 'holographic-quantum''
     contactInfo: contact
@@ -2294,7 +1236,7 @@ export const,;
     competitor,
   s: ['Hookdeck'],'
     marketSiz,
-  e: '$500M webhook tools','
+  e: '$500 M webhook tools','
     growthRat,
   e: '16% CAGR','
     varian,
@@ -2348,7 +1290,7 @@ export const,;
     useCases: ['Gradual rollouts', 'A/B tests', 'Emergency off-switch'],'
     roi: 'Ship faster with fewer incidents','
     competitors: ['LaunchDarkly', 'Unleash'],'
-    marketSize: '$1.8B flags''
+    marketSize: '$1.8 B flags''
     growthRate: '20% CAGR''
     variant: 'quantum-holographic-advanced''
     contactInfo: contact
@@ -2392,7 +1334,7 @@ export const,;
     competitor,
   s: ['LaunchDarkly', 'Unleash'],'
     marketSiz,
-  e: '$1.8B flags','
+  e: '$1.8 B flags','
     growthRat,
   e: '20% CAGR','
     varian,
@@ -2436,7 +1378,7 @@ export const,;
     textColor: 'text-emerald-300','
     link: 'https://ziontechgroup.com/sso-in-a-box','
     marketPosition: 'Minutes to enterprise SSO without reinventing auth.','
-    targetAudience: 'B2B SaaS, platform, security','
+    targetAudience: 'B2 B SaaS, platform, security','
     trialDays: 21,
     setupTime: '2 hours','
     category: 'Security','
@@ -2446,7 +1388,7 @@ export const,;
     useCases: ['Enterprise SSO', 'Provisioning', 'B2 B readiness'],'
     roi: 'Unblock enterprise deals faster','
     competitors: ['WorkOS', 'Auth0'],'
-    marketSize: '$6B identity''
+    marketSize: '$6 B identity''
     growthRate: '24% CAGR''
     variant: 'neural-quantum-cyberpunk''
     contactInfo: contact
@@ -2470,7 +1412,7 @@ export const,;
     marketPositio,
   n: 'Minutes to enterprise SSO without reinventing auth.','
     targetAudienc,
-  e: 'B2B SaaS, platform, security','
+  e: 'B2 B SaaS, platform, security','
     trialDay,
   s: 21,
     setupTim,
@@ -2484,13 +1426,13 @@ export const,;
     integration,
   s: ['Okta', 'Azure AD', 'Google'],'
     useCase,
-  s: ['Enterprise SSO', 'Provisioning', 'B2B readiness'],'
+  s: ['Enterprise SSO', 'Provisioning', 'B2 B readiness'],'
     ro,
   i: 'Unblock enterprise deals faster','
     competitor,
   s: ['WorkOS', 'Auth0'],'
     marketSiz,
-  e: '$6B identity','
+  e: '$6 B identity','
     growthRat,
   e: '24% CAGR','
     varian,
@@ -2588,7 +1530,7 @@ export const,;
     competitor,
   s: ['Algolia Neural', 'Pinecone serverless'],'
     marketSiz,
-  e: '$3B search AI','
+  e: '$3 B search AI','
     growthRat,
   e: '22% CAGR','
     varian,
@@ -2686,7 +1628,7 @@ export const,;
     competitor,
   s: ['Monte Carlo', 'Bigeye'],'
     marketSiz,
-  e: '$1.2B data observability','
+  e: '$1.2 B data observability','
     growthRat,
   e: '26% CAGR','
     varian,
@@ -2740,7 +1682,7 @@ export const,;
     useCases: ['Reliability', 'On-call ops'],'
     roi: 'Reduce data downtime by 60%','
     competitors: ['Meto', 'Monte Carlo'],'
-    marketSize: '$1.2B data observability''
+    marketSize: '$1.2 B data observability''
     growthRate: '26% CAGR''
     variant: 'quantum-holographic''
     contactInfo: contact
@@ -2784,7 +1726,7 @@ export const,;
     competitor,
   s: ['Meto', 'Monte Carlo'],'
     marketSiz,
-  e: '$1.2B data observability','
+  e: '$1.2 B data observability','
     growthRat,
   e: '26% CAGR','
     varian,
@@ -2882,7 +1824,7 @@ export const,;
     competitor,
   s: ['Guardrails AI', 'Lakera'],'
     marketSiz,
-  e: '$1B AI safety','
+  e: '$1 B AI safety','
     growthRat,
   e: '30% CAGR','
     varian,
@@ -2936,7 +1878,7 @@ export const,;
     useCases: ['Pipeline growth', 'Outbound automation'],'
     roi: 'Increase qualified meetings by 2035%','
     competitors: ['Apollo', 'Outreach'],'
-    marketSize: '$4B sales tech''
+    marketSize: '$4 B sales tech''
     growthRate: '18% CAGR''
     variant: 'ai-futuristic''
     contactInfo: contact
@@ -2980,7 +1922,7 @@ export const,;
     competitor,
   s: ['Apollo', 'Outreach'],'
     marketSiz,
-  e: '$4B sales tech','
+  e: '$4 B sales tech','
     growthRat,
   e: '18% CAGR','
     varian,
@@ -3034,7 +1976,7 @@ export const,;
     useCases: ['Analytics sandboxes', 'Non-prod testing', 'Model pre-training'],'
     roi: 'Unblock data access, cut compliance review time by 70%','
     competitors: ['Mostly AI', 'Gretel'],'
-    marketSize: '$1.5B privacy tech''
+    marketSize: '$1.5 B privacy tech''
     growthRate: '25% CAGR''
     variant: 'holographic-advanced''
     contactInfo: contact
@@ -3078,7 +2020,7 @@ export const,;
     competitor,
   s: ['Mostly AI', 'Gretel'],'
     marketSiz,
-  e: '$1.5B privacy tech','
+  e: '$1.5 B privacy tech','
     growthRat,
   e: '25% CAGR','
     varian,
@@ -3176,7 +2118,7 @@ export const,;
     competitor,
   s: ['Mailparser', 'Parseur'],'
     marketSiz,
-  e: '$800M parsing tools','
+  e: '$800 M parsing tools','
     growthRat,
   e: '14% CAGR','
     varian,
@@ -3252,7 +2194,7 @@ export const,;
   k: 'http,'
   s://ziontechgroup.com/services/kubernetes-cost-analyzer','
     marketPositio,
-  n: 'Actionable K8s FinOps without cluster vendor lock-in.','
+  n: 'Actionable K8 s FinOps without cluster vendor lock-in.','
     targetAudienc,
   e: 'Platform, FinOps, SRE','
     trialDay,
@@ -3274,7 +2216,7 @@ export const,;
     competitor,
   s: ['Kubecost', 'CAST AI'],'
     marketSiz,
-  e: '$2B K8s mgmt','
+  e: '$2 B K8 s mgmt','
     growthRat,
   e: '20% CAGR','
     varian,
@@ -3372,7 +2314,7 @@ export const,;
     competitor,
   s: ['AWS Control Tower', 'Azure Landing Zones'],'
     marketSiz,
-  e: '$5B platform eng','
+  e: '$5 B platform eng','
     growthRat,
   e: '18% CAGR','
     varian,
@@ -3426,7 +2368,7 @@ export const,;
     useCases: ['AppSec hygiene', 'Compliance checks'],'
     roi: 'Reduce security review cycles 50%''
     competitors: ['Mozilla Observatory']'
-    marketSize: '$3B AppSec''
+    marketSize: '$3 B AppSec''
     growthRate: '15% CAGR''
     variant: 'quantum-cyberpunk''
     contactInfo: contact
@@ -3470,7 +2412,7 @@ export const,;
     competitor,
   s: ['Mozilla Observatory'],'
     marketSiz,
-  e: '$3B AppSec','
+  e: '$3 B AppSec','
     growthRat,
   e: '15% CAGR','
     varian,
@@ -3568,7 +2510,7 @@ export const,;
     competitor,
   s: ['Calibre', 'SpeedCurve'],'
     marketSiz,
-  e: '$1B web perf','
+  e: '$1 B web perf','
     growthRat,
   e: '12% CAGR','
     varian,
@@ -3622,7 +2564,7 @@ export const,;
     useCases: ['ELT ingestion', 'Analytics', 'Compliance archiving'],'
     roi: 'Reduce pipeline toil by 60%','
     competitors: ['Fivetran (files)', 'Airbyte'],'
-    marketSize: '$3B data ingest''
+    marketSize: '$3 B data ingest''
     growthRate: '20% CAGR''
     variant: 'neural-quantum''
     contactInfo: contact
@@ -3666,7 +2608,7 @@ export const,;
     competitor,
   s: ['Fivetran (files)', 'Airbyte'],'
     marketSiz,
-  e: '$3B data ingest','
+  e: '$3 B data ingest','
     growthRat,
   e: '20% CAGR','
     varian,
@@ -3772,7 +2714,7 @@ export const,;
     competitor,
   s: ['Percy', 'Chromatic'],'
     marketSiz,
-  e: '$600M visual test','
+  e: '$600 M visual test','
     growthRat,
   e: '16% CAGR','
     varian,
@@ -3870,7 +2812,7 @@ export const,;
     competitor,
   s: ['Protegrity', 'Immuta'],'
     marketSiz,
-  e: '$2B data security','
+  e: '$2 B data security','
     growthRat,
   e: '18% CAGR','
     varian,
@@ -3976,7 +2918,7 @@ export const,;
     competitor,
   s: ['Fathom', 'Grain'],'
     marketSiz,
-  e: '$1.2B meeting AI','
+  e: '$1.2 B meeting AI','
     growthRat,
   e: '30% CAGR','
     varian,
@@ -4074,7 +3016,7 @@ export const,;
     competitor,
   s: ['Bridgecrew', 'Snyk IaC'],'
     marketSiz,
-  e: '$3B cloud security','
+  e: '$3 B cloud security','
     growthRat,
   e: '22% CAGR','
     varian,
@@ -4174,7 +3116,7 @@ export const,;
     competitor,
   s: ['PDFMonkey', 'PDFShift', 'DocRaptor'],'
     marketSiz,
-  e: '$500M+ doc rendering','
+  e: '$500 M+ doc rendering','
     growthRat,
   e: '10% CAGR','
     varian,
@@ -4274,7 +3216,7 @@ export const,;
     competitor,
   s: ['Veryfi', 'Rossum', 'Nanonets'],'
     marketSiz,
-  e: '$1B+ document AI','
+  e: '$1 B+ document AI','
     growthRat,
   e: '32% CAGR','
     varian,
@@ -4374,7 +3316,7 @@ export const,;
     competitor,
   s: ['Datadog Logs', 'Splunk', 'Elastic Cloud'],'
     marketSiz,
-  e: '$15B+ log analytics','
+  e: '$15 B+ log analytics','
     growthRat,
   e: '18% CAGR','
     varian,
@@ -4473,7 +3415,7 @@ export const,;
     competitor,
   s: ['Transcend', 'OneTrust', 'DataGrail'],'
     marketSiz,
-  e: '$2.1B privacy tech','
+  e: '$2.1 B privacy tech','
     growthRat,
   e: '22% CAGR','
     varian,
@@ -4572,7 +3514,7 @@ export const,;
     competitor,
   s: ['Snyk Code', 'SonarQube + AI', 'Codeium Review'],'
     marketSiz,
-  e: '$4.5B DevSecOps','
+  e: '$4.5 B DevSecOps','
     growthRat,
   e: '21% CAGR','
     varian,
@@ -4670,7 +3612,7 @@ export const,;
     competitor,
   s: ['Microsoft Secure Score', 'Wiz', 'Tenable'],'
     marketSiz,
-  e: '$3.2B SaaS security posture','
+  e: '$3.2 B SaaS security posture','
     growthRat,
   e: '28% CAGR','
     varian,
@@ -4776,7 +3718,7 @@ export const,;
     competitor,
   s: ['Humanloop', 'TruEra', 'Robust Intelligence'],'
     marketSiz,
-  e: '$1.1B AI eval tooling','
+  e: '$1.1 B AI eval tooling','
     growthRat,
   e: '30% CAGR','
     varian,
@@ -4871,11 +3813,11 @@ export const,;
     useCase,
   s: ['Portfolio optimization', 'Drug discovery', 'Supply chain optimization'],'
     ro,
-  i: '10-100x faster than classical computing for specific problems','
+  i: '10-100 x faster than classical computing for specific problems','
     competitor,
   s: ['D-Wave', 'IBM Quantum', 'Rigetti'],'
     marketSiz,
-  e: '$8.5B quantum computing','
+  e: '$8.5 B quantum computing','
     growthRat,
   e: '25% CAGR','
     varian,
@@ -4974,7 +3916,7 @@ export const,;
     competitor,
   s: ['Darktrace', 'CrowdStrike', 'SentinelOne'],'
     marketSiz,
-  e: '$45B cybersecurity','
+  e: '$45 B cybersecurity','
     growthRat,
   e: '22% CAGR','
     varian,
@@ -5073,7 +4015,7 @@ export const,;
     competitor,
   s: ['HashiCorp', 'Pulumi', 'Spacelift'],'
     marketSiz,
-  e: '$12B DevOps tools','
+  e: '$12 B DevOps tools','
     growthRat,
   e: '19% CAGR','
     varian,
@@ -5172,7 +4114,7 @@ export const,;
     competitor,
   s: ['ConsenSys', 'R3 Corda', 'Hyperledger'],'
     marketSiz,
-  e: '$19B blockchain','
+  e: '$19 B blockchain','
     growthRat,
   e: '87% CAGR','
     varian,
@@ -5271,7 +4213,7 @@ export const,;
     competitor,
   s: ['Jasper', 'Copy.ai', 'Writesonic'],'
     marketSiz,
-  e: '$7.8B content marketing','
+  e: '$7.8 B content marketing','
     growthRat,
   e: '16% CAGR','
     varian,
@@ -5370,7 +4312,7 @@ export const,;
     competitor,
   s: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT'],'
     marketSiz,
-  e: '$35B IoT platforms','
+  e: '$35 B IoT platforms','
     growthRat,
   e: '28% CAGR','
     varian,
@@ -5477,7 +4419,7 @@ export const,;
     competitor,
   s: ['Gainsight', 'Vitally', 'Totango'],'
     marketSiz,
-  e: '$4.2B customer success','
+  e: '$4.2 B customer success','
     growthRat,
   e: '17% CAGR','
     varian,
@@ -5576,7 +4518,7 @@ export const,;
     competitor,
   s: ['ISARA', 'Post-Quantum', 'Quantum Xchange'],'
     marketSiz,
-  e: '$3.2B quantum security','
+  e: '$3.2 B quantum security','
     growthRat,
   e: '45% CAGR','
     varian,
@@ -5675,7 +4617,7 @@ export const,;
     competitor,
   s: ['Blue Yonder', 'Manhattan Associates', 'SAP'],'
     marketSiz,
-  e: '$18B supply chain management','
+  e: '$18 B supply chain management','
     growthRat,
   e: '15% CAGR','
     varian,
@@ -5774,7 +4716,7 @@ export const,;
     competitor,
   s: ['Betterment', 'Wealthfront', 'Personal Capital'],'
     marketSiz,
-  e: '$12B robo-advisory','
+  e: '$12 B robo-advisory','
     growthRat,
   e: '23% CAGR','
     varian,
@@ -5869,11 +4811,11 @@ export const,;
     useCase,
   s: ['AI research', 'Consciousness studies', 'Creative AI'],'
     ro,
-  i: 'Accelerates AI consciousness research by 10x','
+  i: 'Accelerates AI consciousness research by 10 x','
     competitor,
   s: ['OpenAI', 'Anthropic', 'DeepMind'],'
     marketSiz,
-  e: '$2.1B AI consciousness','
+  e: '$2.1 B AI consciousness','
     growthRat,
   e: '35% CAGR','
     varian,
@@ -5972,7 +4914,7 @@ export const,;
     competitor,
   s: ['IBM Quantum', 'D-Wave', 'Space companies'],'
     marketSiz,
-  e: '$4.8B space technology','
+  e: '$4.8 B space technology','
     growthRat,
   e: '28% CAGR','
     varian,
@@ -6071,7 +5013,7 @@ export const,;
     competitor,
   s: ['Siemens', 'GE Digital', 'Rockwell Automation'],'
     marketSiz,
-  e: '$22B smart manufacturing','
+  e: '$22 B smart manufacturing','
     growthRat,
   e: '18% CAGR','
     varian,
@@ -6166,11 +5108,11 @@ export const,;
     useCase,
   s: ['Drug discovery', 'Genetic research', 'Clinical trials'],'
     ro,
-  i: 'Accelerates drug discovery by 5x','
+  i: 'Accelerates drug discovery by 5 x','
     competitor,
   s: ['Insitro', 'Atomwise', 'BenevolentAI'],'
     marketSiz,
-  e: '$15B AI in biotech','
+  e: '$15 B AI in biotech','
     growthRat,
   e: '32% CAGR','
     varian,
@@ -6200,7 +5142,7 @@ export const,;
     perio,
   d: '/month','
     descriptio,
-  n: 'Comprehensive metaverse platform enabling enterprises to create virtual workspaces, conduct meetings, and collaborate in immersive 3D environments.','
+  n: 'Comprehensive metaverse platform enabling enterprises to create virtual workspaces, conduct meetings, and collaborate in immersive 3 D environments.','
     feature,
   s: [,
       'Virtual workspaces','
@@ -6220,7 +5162,7 @@ export const,;
     setupTime: '1 week','
     category: 'Metaverse & Virtual Reality','
     realService: true,
-    technology: ['VR/AR', '3D graphics', 'WebGL', 'WebRTC'],'
+    technology: ['VR/AR', '3 D graphics', 'WebGL', 'WebRTC'],'
     integrations: ['Slack', 'Microsoft Teams', 'Zoom', 'Webex'],'
     useCases: ['Virtual meetings', 'Remote collaboration', 'Virtual events'],'
     roi: 'Reduces travel costs by 40%','
@@ -6230,7 +5172,7 @@ export const,;
     variant: 'metaverse-futuristic','
     contactInfo: contact
     realImplementation: true,
-    implementationDetails: '3D engine, collaboration tools, integration APIs.','
+    implementationDetails: '3 D engine, collaboration tools, integration APIs.','
     launchDate: '2025-06-25''
     customers: 26
     rating: 4.5
@@ -6259,7 +5201,7 @@ export const,;
     realServic,
   e: true,
     technolog,
-  y: ['VR/AR', '3D graphics', 'WebGL', 'WebRTC'],'
+  y: ['VR/AR', '3 D graphics', 'WebGL', 'WebRTC'],'
     integration,
   s: ['Slack', 'Microsoft Teams', 'Zoom', 'Webex'],'
     useCase,
@@ -6269,7 +5211,7 @@ export const,;
     competitor,
   s: ['Meta', 'Microsoft Mesh', 'Spatial'],'
     marketSiz,
-  e: '$8.9B metaverse','
+  e: '$8.9 B metaverse','
     growthRat,
   e: '45% CAGR','
     varian,
@@ -6279,7 +5221,7 @@ export const,;
     realImplementatio,
   n: true,
     implementationDetail,
-  s: '3D engine, collaboration tools, integration APIs.','
+  s: '3 D engine, collaboration tools, integration APIs.','
     launchDat,
   e: '2025-06-25','
     customer,
@@ -6368,7 +5310,7 @@ export const,;
     competitor,
   s: ['Goldman Sachs Quantum', 'JP Morgan Quantum', 'Quantum startups'],'
     marketSiz,
-  e: '$6.2B quantum finance','
+  e: '$6.2 B quantum finance','
     growthRat,
   e: '38% CAGR','
     varian,
@@ -6418,7 +5360,7 @@ export const,;
     setupTime: '2 weeks','
     category: 'Autonomous Vehicles & Transportation','
     realService: true,
-    technology: ['AI/ML', 'Computer vision', 'IoT', '5G'],'
+    technology: ['AI/ML', 'Computer vision', 'IoT', '5 G'],'
     integrations: ['Vehicle APIs', 'GPS systems', 'Traffic data'],'
     useCases: ['Fleet management', 'Route optimization', 'Safety monitoring'],'
     roi: 'Reduces transportation costs by 30%','
@@ -6465,7 +5407,7 @@ export const,;
     realServic,
   e: true,
     technolog,
-  y: ['AI/ML', 'Computer vision', 'IoT', '5G'],'
+  y: ['AI/ML', 'Computer vision', 'IoT', '5 G'],'
     integration,
   s: ['Vehicle APIs', 'GPS systems', 'Traffic data'],'
     useCase,
@@ -6475,7 +5417,7 @@ export const,;
     competitor,
   s: ['Waymo', 'Cruise', 'Tesla'],'
     marketSiz,
-  e: '$12B autonomous vehicles','
+  e: '$12 B autonomous vehicles','
     growthRat,
   e: '42% CAGR','
     varian,
@@ -6574,7 +5516,7 @@ export const,;
     competitor,
   s: ['ISARA', 'Post-Quantum', 'Quantum Xchange'],'
     marketSiz,
-  e: '$3.2B quantum security','
+  e: '$3.2 B quantum security','
     growthRat,
   e: '45% CAGR','
     varian,
@@ -6673,7 +5615,7 @@ export const,;
     competitor,
   s: ['Collibra', 'Informatica', 'Alation'],'
     marketSiz,
-  e: '$7.2B data governance','
+  e: '$7.2 B data governance','
     growthRat,
   e: '16% CAGR','
     varian,
@@ -6772,7 +5714,7 @@ export const,;
     competitor,
   s: ['Visier', 'Tableau', 'Power BI'],'
     marketSiz,
-  e: '$3.8B HR analytics','
+  e: '$3.8 B HR analytics','
     growthRat,
   e: '19% CAGR','
     varian,
@@ -6871,7 +5813,7 @@ export const,;
     competitor,
   s: ['CloudEndure', 'AWS Migration Hub', 'Azure Migrate'],'
     marketSiz,
-  e: '$18B cloud migration','
+  e: '$18 B cloud migration','
     growthRat,
   e: '24% CAGR','
     varian,
@@ -6966,11 +5908,11 @@ export const,;
     useCase,
   s: ['Digital strategy', 'Change management', 'Process optimization'],'
     ro,
-  i: 'Accelerates transformation by 3x','
+  i: 'Accelerates transformation by 3 x','
     competitor,
   s: ['McKinsey', 'BCG', 'Bain'],'
     marketSiz,
-  e: '$45B digital transformation','
+  e: '$45 B digital transformation','
     growthRat,
   e: '21% CAGR','
     varian,
@@ -7069,7 +6011,7 @@ export const,;
     competitor,
   s: ['AI ethics startups', 'Compliance platforms'],'
     marketSiz,
-  e: '$2.8B AI ethics','
+  e: '$2.8 B AI ethics','
     growthRat,
   e: '28% CAGR','
     varian,
@@ -7168,7 +6110,7 @@ export const,;
     competitor,
   s: ['AWS Greengrass', 'Azure IoT Edge', 'Google Edge TPU'],'
     marketSiz,
-  e: '$11B edge computing','
+  e: '$11 B edge computing','
     growthRat,
   e: '32% CAGR','
     varian,
@@ -7267,7 +6209,7 @@ export const,;
     competitor,
   s: ['Palo Alto', 'Cisco', 'Fortinet'],'
     marketSiz,
-  e: '$38B zero trust security','
+  e: '$38 B zero trust security','
     growthRat,
   e: '26% CAGR','
     varian,
@@ -7366,7 +6308,7 @@ export const,;
     competitor,
   s: ['Adobe Experience', 'Salesforce', 'HubSpot'],'
     marketSiz,
-  e: '$14B customer experience','
+  e: '$14 B customer experience','
     growthRat,
   e: '22% CAGR','
     varian,
@@ -7420,17 +6362,17 @@ export const,;
     useCases: ['Outbound prospecting', 'Lead qualification', 'Meeting booking'],'
     roi: '24 x meetings per rep','
     competitors: ['Regie.ai', 'Lyne.ai'],'
-    marketSize: '$12B sales tech''
+    marketSize: '$12 B sales tech''
     growthRate: '19% CAGR''
     variant: 'agentic-suite''
     contactInfo: unknown,
-      mobile: "+1 302 464 0950""
-      email: "kleber@ziontechgroup.com""
+      mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950','
       email: 'kleber@ziontechgroup.com','
       address: '364 E Main St STE 1008 Middletown DE 19709'}}'
-];      mobile: "+1 302 464 0950","
-      email: "kleber@ziontechgroup.com","
+];      mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com"
       address: '364 E Main St STE 1008 Middletown DE 19709','
     },
     realImplementation: true,
@@ -7477,7 +6419,7 @@ export const,;
     useCases: ['Internal Q&A', 'Policy queries', 'Runbooks'],'
     roi: 'Reduces time-to-answer by 70%','
     competitors: ['Glean', 'Cohere Coral'],'
-    marketSize: '$9B knowledge AI','
+    marketSize: '$9 B knowledge AI','
     growthRate: '23% CAGR','
     variant: 'secure-rag','
     contactInfo: {
@@ -7533,7 +6475,7 @@ export const,;
     useCases: ['Model quality', 'Cost control', 'Incident response'],'
     roi: 'Cuts model outages by 60%','
     competitors: ['WhyLabs', 'Arize', 'Weights & Biases'],'
-    marketSize: '$4B MLOps','
+    marketSize: '$4 B MLOps','
     growthRate: '28% CAGR','
     variant: 'ml-observe','
     contactInfo: {
@@ -7589,7 +6531,7 @@ export const,;
     useCases: ['Cost control', 'Chargeback', 'Savings plans'],'
     roi: '10–30% cloud savings','
     competitors: ['CloudZero', 'CloudHealth'],'
-    marketSize: '$5B FinOps','
+    marketSize: '$5 B FinOps','
     growthRate: '21% CAGR','
     variant: 'finops','
     contactInfo: {
@@ -7634,7 +6576,7 @@ export const,;
     color: 'from-slate-600 to-gray-700','
     textColor: 'text-slate-300','
     link: 'https://ziontechgroup.com/services/kubernetes-sre-assurance','
-    marketPosition: 'Platform-ops friendly reliability guardrails for K8s.','
+    marketPosition: 'Platform-ops friendly reliability guardrails for K8 s.','
     targetAudience: 'SRE, platform, DevOps','
     trialDays: 7,
     setupTime: '1 week','
@@ -7645,7 +6587,7 @@ export const,;
     useCases: ['Reliability, compliance, cost control'],'
     roi: 'Reduces incidents by 40%','
     competitors: ['Fairwinds', 'Rafay'],'
-    marketSize: '$7B K8s tooling','
+    marketSize: '$7 B K8 s tooling','
     growthRate: '25% CAGR','
     variant: 'sre-guardrails','
     contactInfo: {
@@ -7701,7 +6643,7 @@ export const,;
     useCases: ['Compliance audits', 'Security posture'],'
     roi: 'Cuts audit prep time by 70%','
     competitors: ['Nightfall', 'Snyk'],'
-    marketSize: '$10B AppSec','
+    marketSize: '$10 B AppSec','
     growthRate: '20% CAGR','
     variant: 'privacy-guardian','
     contactInfo: {
@@ -7757,7 +6699,7 @@ export const,;
     useCases: ['Back-office automation', 'Reconciliation', 'Reporting'],'
     roi: 'Saves 20–50% of manual hours','
     competitors: ['UiPath', 'Automation Anywhere'],'
-    marketSize: '$13B RPA','
+    marketSize: '$13 B RPA','
     growthRate: '26% CAGR','
     variant: 'agent-rpa','
     contactInfo: {
@@ -7813,7 +6755,7 @@ export const,;
     useCases: ['Model training', 'Product analytics', 'Test data'],'
     roi: 'Shortens data acquisition by 80%','
     competitors: ['Mostly AI', 'Gretel'],'
-    marketSize: '$2.5B synthetic data','
+    marketSize: '$2.5 B synthetic data','
     growthRate: '34% CAGR','
     variant: 'synthdata','
     contactInfo: {
@@ -7869,7 +6811,7 @@ export const,;
     useCases: ['Remote monitoring', 'Predictive maintenance'],'
     roi: 'Reduces downtime by 25%','
     competitors: ['Balena', 'Particle'],'
-    marketSize: '$15B IoT platforms','
+    marketSize: '$15 B IoT platforms','
     growthRate: '18% CAGR','
     variant: 'edge-fleet','
     contactInfo: {
@@ -7925,7 +6867,7 @@ export const,;
     useCases: ['Reliable dashboards', 'ML pipelines', 'Compliance'],'
     roi: 'Cuts data incidents by 50%','
     competitors: ['Monte Carlo', 'Bigeye'],'
-    marketSize: '$3B data observability','
+    marketSize: '$3 B data observability','
     growthRate: '24% CAGR','
     variant: 'data-gov','
     contactInfo: {
@@ -7981,7 +6923,7 @@ export const,;
     useCases: ['Outage RCA', 'Performance tuning', 'UX optimization'],'
     roi: 'Mean-time-to-recovery reduced by 45%','
     competitors: ['New Relic', 'Dynatrace'],'
-    marketSize: '$17B observability','
+    marketSize: '$17 B observability','
     growthRate: '20% CAGR','
     variant: 'obs-unified','
     contactInfo: {
@@ -8037,7 +6979,7 @@ export const,;
     useCases: ['Ransomware recovery', 'Compliance'],'
     roi: 'Cuts RTO/RPO by 50%','
     competitors: ['Veeam', 'Druva'],'
-    marketSize: '$9B backup/DR','
+    marketSize: '$9 B backup/DR','
     growthRate: '18% CAGR','
     variant: 'dr-saas','
     contactInfo: {
@@ -8094,7 +7036,7 @@ export const,;
     useCases: ['DSAR automation', 'Right to be forgotten', 'Access/export requests'],';'
     roi: 'Reduces DSAR handling time by 70%','
     competitors: ['Transcend', 'OneTrust'],'
-    marketSize: '$3B privacy ops','
+    marketSize: '$3 B privacy ops','
     growthRate: '19% CAGR','
     variant: 'compliance-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8138,7 +7080,7 @@ export const,;
     useCases: ['SOC 2 Type 1/2 evidence', 'Internal audits'],'
     roi: 'Cuts audit prep by 50%','
     competitors: ['Drata', 'Vanta'],'
-    marketSize: '$2.2B compliance tech','
+    marketSize: '$2.2 B compliance tech','
     growthRate: '21% CAGR','
     variant: 'security-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8182,7 +7124,7 @@ export const,;
     useCases: ['Regression watch', 'Release QA'],'
     roi: 'Prevents SEO regressions post‑deploy','
     competitors: ['Little Warden', 'ContentKing'],'
-    marketSize: '$1.2B SEO tooling','
+    marketSize: '$1.2 B SEO tooling','
     growthRate: '12% CAGR','
     variant: 'growth-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8226,7 +7168,7 @@ export const,;
     useCases: ['Build stability', 'Developer velocity'],'
     roi: 'Cuts CI cost 10–30%','
     competitors: ['BuildPulse'],'
-    marketSize: '$2B DevEx tools','
+    marketSize: '$2 B DevEx tools','
     growthRate: '18% CAGR','
     variant: 'devex-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8270,7 +7212,7 @@ export const,;
     useCases: ['Spend control', 'Anomaly response'],'
     roi: 'Saves 5–15% monthly spend','
     competitors: ['CloudZero', 'Vantage'],'
-    marketSize: '$3.5B FinOps','
+    marketSize: '$3.5 B FinOps','
     growthRate: '22% CAGR','
     variant: 'finops-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8314,7 +7256,7 @@ export const,;
     useCases: ['Safety testing', 'Release gates'],'
     roi: 'Prevents incidents and data leaks','
     competitors: ['Lakera Guard'],'
-    marketSize: '$0.8B LLM safety','
+    marketSize: '$0.8 B LLM safety','
     growthRate: '40% CAGR','
     variant: 'ai-safety-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8358,7 +7300,7 @@ export const,;
     useCases: ['Trust in data', 'Stakeholder comms'],'
     roi: 'Reduces broken dashboards by 60%','
     competitors: ['Monte Carlo', 'Metaplane'],'
-    marketSize: '$2.6B data observability','
+    marketSize: '$2.6 B data observability','
     growthRate: '28% CAGR','
     variant: 'data-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8402,7 +7344,7 @@ export const,;
     useCases: ['CWV improvement', 'Bandwidth savings'],'
     roi: 'Improves LCP by 20–40%','
     competitors: ['imgix', 'Cloudinary'],'
-    marketSize: '$1.5B media optimization','
+    marketSize: '$1.5 B media optimization','
     growthRate: '17% CAGR','
     variant: 'perf-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8446,7 +7388,7 @@ export const,;
     useCases: ['Production readiness', 'Reliability'],'
     roi: 'Improves uptime to 99.9%+','
     competitors: ['Cloud providers PS'],'
-    marketSize: '$10B SRE services','
+    marketSize: '$10 B SRE services','
     growthRate: '15% CAGR','
     variant: 'it-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8488,9 +7430,9 @@ export const,;
     technology: ['SSO/SCIM', 'ZTNA'],'
     integrations: ['Okta', 'Cloudflare', 'Zscaler'],'
     useCases: ['Zero trust rollout', 'Audit prep'],'
-    roi: 'Accelerates rollout by 2–3x','
+    roi: 'Accelerates rollout by 2–3 x','
     competitors: ['Big 4 consultancies'],'
-    marketSize: '$20B security services','
+    marketSize: '$20 B security services','
     growthRate: '12% CAGR','
     variant: 'consulting-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8534,7 +7476,7 @@ export const,;
     useCases: ['Security questionnaires', 'Renewal reviews'],'
     roi: 'Cuts review time by 70%','
     competitors: ['Secureframe Questionnaire Automation', 'Whistic'],'
-    marketSize: '$8B TPRM','
+    marketSize: '$8 B TPRM','
     growthRate: '14% CAGR','
     variant: 'ai-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8582,7 +7524,7 @@ export const,;
     useCases: ['Access/Delete requests', 'DSR reporting'],'
     roi: 'Reduces manual hours by 80%','
     competitors: ['Transcend', 'OneTrust'],'
-    marketSize: '$3B privacy ops','
+    marketSize: '$3 B privacy ops','
     growthRate: '16% CAGR','
     variant: 'saas-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8630,7 +7572,7 @@ export const,;
     useCases: ['MTTR reduction', 'On‑call quality'],'
     roi: 'Cuts MTTR by 35%','
     competitors: ['FireHydrant AI', 'Rootly AI'],'
-    marketSize: '$7B AIOps','
+    marketSize: '$7 B AIOps','
     growthRate: '19% CAGR','
     variant: 'ai-ops-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8678,7 +7620,7 @@ export const,;
     useCases: ['Model selection', 'Regression testing'],'
     roi: 'Prevents degradations and outages','
     competitors: ['Humanloop', 'PromptLayer'],'
-    marketSize: '$2B model ops','
+    marketSize: '$2 B model ops','
     growthRate: '22% CAGR','
     variant: 'mlops-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8726,7 +7668,7 @@ export const,;
     useCases: ['Cost controls', 'Budget alerts'],'
     roi: 'Saves 10–25% monthly spend','
     competitors: ['CloudZero', 'Vantage'],'
-    marketSize: '$6B FinOps','
+    marketSize: '$6 B FinOps','
     growthRate: '20% CAGR','
     variant: 'saas-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8774,7 +7716,7 @@ export const,;
     useCases: ['Help centers', 'Internal KB'],'
     roi: 'Deflects 25% tickets','
     competitors: ['Algolia Neural Search', 'Elastic'],'
-    marketSize: '$10B search','
+    marketSize: '$10 B search','
     growthRate: '13% CAGR','
     variant: 'saas-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8822,7 +7764,7 @@ export const,;
     useCases: ['Backoffice automation', 'Support bots'],'
     roi: 'Automates 15–40% tasks','
     competitors: ['Akaike Agent Studio', 'Mendable Agents'],'
-    marketSize: '$12B automation','
+    marketSize: '$12 B automation','
     growthRate: '21% CAGR','
     variant: 'agents-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8870,7 +7812,7 @@ export const,;
     useCases: ['Abuse prevention', 'Fair usage'],'
     roi: 'Prevents outages and overages','
     competitors: ['Cloudflare Rules', 'Kong Rate Limit'],'
-    marketSize: '$2B API mgt','
+    marketSize: '$2 B API mgt','
     growthRate: '11% CAGR','
     variant: 'edge-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8918,7 +7860,7 @@ export const,;
     useCases: ['Campaigns', 'Lifecycle email'],'
     roi: 'Increases deliverability by 10–20%','
     competitors: ['Warmup Inbox', 'GlockApps'],'
-    marketSize: '$4B email tools','
+    marketSize: '$4 B email tools','
     growthRate: '9% CAGR','
     variant: 'saas-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -8966,7 +7908,7 @@ export const,;
     useCases: ['Data reliability', 'Self‑service data'],'
     roi: 'Cuts data breakages by 40%','
     competitors: ['Monte Carlo', 'Datafold'],'
-    marketSize: '$5B data ops','
+    marketSize: '$5 B data ops','
     growthRate: '18% CAGR','
     variant: 'saas-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -9014,7 +7956,7 @@ export const,;
     useCases: ['Resilience validation', 'Training'],'
     roi: 'Reduces breach impact','
     competitors: ['Big 4', 'MSSPs'],'
-    marketSize: '$25B services','
+    marketSize: '$25 B services','
     growthRate: '10% CAGR','
     variant: 'consulting-real','
     contactInfo: { mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709' },'
@@ -9029,9 +7971,9 @@ export const,;
 }
   // TODO: Add properties
 }
-      mobile: "+1 302 464 0950","
-      email: "kleber@ziontechgroup.com","
-      address: "364 E Main St STE 1008 Middletown DE 19709","
+      mobile: "+1 302 464 0950"
+      email: "kleber@ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     popula,
   r: true,
     ico,
@@ -9062,127 +8004,35 @@ export const,;
     useCase,
   s: ['Outbound prospecting', 'Lead qualification', 'Meeting booking'],'
     ro,
-  i: '24x meetings per rep','
+  i: '24 x meetings per rep','
     competitor,
   s: ['Regie.ai', 'Lyne.ai'],'
     marketSiz,
-  e: '$12B sales tech','
+  e: '$12 B sales tech','
     growthRat,
   e: '19% CAGR','
     varian,
   t: 'agentic-suite','
     contactInf,
   o: unknown,
-      mobil,""
-  e: "+1 302 464 0950","
-      emai,""
-  l: "kleber@ziontechgroup.com","
+      mobil,""+1 302 464 0950",""
+  l: ","
       mobil,
   e: '+1 302 464 0950','
       emai,
   l: 'kleber@ziontechgroup.com','
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'}}'
-];      mobil,""
-  e: "+1 302 464 0950","
-  emai,""
-  l: "kleber@ziontechgroup.com""
-      mobil,""
-  e: "+1 302 464 0950","
-      emai,""
-  l: "kleber@ziontechgroup.com","
-      addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709""
-    }
-  }
-];
-export interface AdditionalRealService,;
-  id: string, nam,
-  e: string, taglin,
-  e: string, pric,
-  e: string, descriptio,
-  n: string, feature,
-  s: string[], lin,
-  k: string, categor,
-  y: string, real_implementatio,
-  n: boolean, contact_inf,
-  o: mobil,
-  e: string, emai,
-  l: string} addres,
-  s: string} export const,;
-  additionalEnhancedServices: AdditionalRealService[] = [ addres,
-  s: string} export const,;
-  additionalEnhancedServices: AdditionalRealService[] = [, i,
-  d: 'ai - automation - suite',' nam,'
-  e: 'AI Automation Suite',' taglin,'
-  e: 'Intelligent automation for modern businesses',' pric,'
-  e: '$79 / month', descriptio,'
-  n:  ,' 'Comprehensive AI - powered automation platform that streamlines business processes and increases efficiency.', feature,'
-  s: [,' 'Workflow automation',' 'AI decision making',' 'Integration APIs',' 'Custom workflows',' 'Analytics dashboard'],' lin,'
-  k: '/services / ai - automation - suite',' categor,'
-  y: 'AI & Automation', real_implementatio,'
-  n: true, contact_inf,
-  o: ' mobil,'
-  e: '+1 302 464 0950',' emai,'
-  l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,'
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}, i,'
-  d: string, nam,
-  e: string, taglin,
-  e: string, pric,
-  e: string, descriptio,
-  n: string, feature,
-  s: string[], lin,
-  k: string, categor,
-  y: string, realImplementatio,
-  n: boolean, contactInf,
-  o: mobil,
-  e: string, emai,
-  l: string, addres,
-  s: string,
-  id: string, nam,
-  e: string, taglin,
-  e: string, pric,
-  e: string, descriptio,
-  n: string, feature,
-  s: string[], lin,
-  k: string, categor,
-  y: string, realImplementatio,
-  n: boolean, contactInf,
-  o: mobil,
-  e: string, emai,
-  l: string, addres,
-  s: string} } } addres,
-  s: string} export const,;
-  additionalEnhancedServices: AdditionalRealService[] = [ ' i,'
-  d: 'ai-automation-suite' nam,''
-  e: 'AI Automation Suite' taglin,''
-  e: 'Intelligent automation for modern businesses' pric,''
-  e: '$79/month' descriptio,'
-  n:' 'Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.' feature,'
-  s: [' 'Workflow automation' 'AI decision making' 'Integration APIs' 'Custom workflows' 'Analytics dashboard' ]' lin,'
-  k: '/services/ai-automation-suite' categor,''
-  y: 'AI & Automation' realImplementatio,'
-  n: true,
-  contactInfo: ' mobil,'
-  e: '+1 302 464 0950' emai,''
-  l: 'kleber@ziontechgroup.com' addres,''
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ' i,'
-  d: 'data-warehouse-solution' nam,''
-  e: 'Data Warehouse Solution' taglin,''
-  e: 'Enterprise-grade data management and analytics' pric,''
-  e: '$149/month' descriptio,'
-  n:' 'Scalable data warehouse solution with advanced analytics and business intelligence capabilities.' feature,'
-  s: [' 'Data integration' 'Real-time processing' 'Advanced analytics' 'Scalable architecture' 'Security compliance' ]' lin,'
-  k: '/services/data-warehouse-solution' categor,''
-  y: 'Data & Analytics' realImplementatio,'
-  n: true,
-  contactInfo: ' mobil,'
-  e: '+1 302 464 0950' emai,''
-  l: 'kleber@ziontechgroup.com' addres,''
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; mobil,"'"
-  e: "+1 302 464 0950","
-  emai,""
-  l: "kleber@ziontechgroup.com"' i,'"
+];      mobil,"
+  e: "+1 302 464 0950"
+  emai,""kleber@ziontechgroup.com"""
+  e: ","
+      emai,"
+  l: "kleber@ziontechgroup.com"
+      addres,""364 E Main St STE 1008 Middletown DE 19709""'"
+  e: ","
+  emai,"
+  l: "kleber@ziontechgroup.com"
   d: 'data - warehouse - solution',' nam,'
   e: 'Data Warehouse Solution',' taglin,'
   e: 'Enterprise - grade data management and analytics',' pric,'
@@ -9195,49 +8045,34 @@ export interface AdditionalRealService,;
   o: ' mobil,'
   e: '+1 302 464 0950',' emai,'
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,'
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,"'"
-  e: "+1 302 464 0950","
-  i,""
-  d: "ai-automation-suite", nam,""
-  e: "AI Automation Suite", taglin,""
-  e: "Intelligent automation for modern businesses", pric,""
-  e: "$79/month", descriptio,""
-  n: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.", feature,""
-  s: [ "Workflow automation", "AI decision making", "Integration APIs", "Custom workflows", "Analytics dashboard" ], lin,""
-  k: "/services/ai-automation-suite", categor,""
-  y: "AI & Automation", realImplementatio,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,"'"+1 302 464 0950",""
+  d: ", nam,""AI Automation Suite", taglin,"
+  e: "Intelligent automation for modern businesses""
+  e: ", descriptio,""Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.", feature,"
+  s: [ "Workflow automation"AI decision making", ", "Custom workflows"Analytics dashboard" ], lin,"
+  k: "/services/ai-automation-suite""
+  y: ", realImplementatio,"
   n: true, contactInf,
-  o: mobil,""
-  e: "+1 302 464 0950", emai,""
-  l: "kleber@ziontechgroup.com", addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709" } }, i,""
-  d: "data-warehouse-solution", nam,""
-  e: "Data Warehouse Solution", taglin,""
-  e: "Enterprise-grade data management and analytics", pric,""
-  e: "$149/month", descriptio,""
-  n: "Scalable data warehouse solution with advanced analytics and business intelligence capabilities.", feature,""
-  s: [ "Data integration", "Real-time processing", "Advanced analytics", "Scalable architecture", "Security compliance" ], lin,""
-  k: "/services/data-warehouse-solution", categor,""
-  y: "Data & Analytics", realImplementatio,"
+  o: mobil,"
+  e: "+1 302 464 0950""
+  l: ", addres,""364 E Main St STE 1008 Middletown DE 19709" } }, i,"
+  d: "data-warehouse-solution""
+  e: ", taglin,""Enterprise-grade data management and analytics", pric,"
+  e: "$149/month""
+  n: ", feature,""Data integration", ", "Advanced analytics"Scalable architecture", " ], lin,""/services/data-warehouse-solution", categor,"
+  y: "Data & Analytics"
   n: true, contactInf,
-  o: addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709","
-  emai,""
-  l: "kleber@ziontechgroup.com" addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; ]; i,""
-  d: "ai-automation-suite", nam,""
-  e: "AI Automation Suite", taglin,""
-  e: "Intelligent automation for modern businesses", pric,""
-  e: "$79/month", descriptio,""
-  n: "Comprehensive AI-powered automation platform that streamlines business processes and increases efficiency.", feature,""
-  s: [ "Workflow automation", "AI decision making", "Integration APIs", "Custom workflows", "Analytics dashboard" ], lin,""
-  k: "/services/ai-automation-suite", categor,""
-  y: "AI & Automation", realImplementatio,"
+  o: addres,""364 E Main St STE 1008 Middletown DE 19709",""
+  l: " addres,""364 E Main St STE 1008 Middletown DE 19709" } } ]; ]; i,"
+  d: "ai-automation-suite""
+  e: ", taglin,""Intelligent automation for modern businesses", pric,"
+  e: "$79/month""
+  n: ", feature,""Workflow automation", ", "Integration APIs"Custom workflows", " ], lin,""/services/ai-automation-suite", categor,"
+  y: "AI & Automation"
   n: true, contactInf,
-  o: mobil,""
-  e: "+1 302 464 0950", emai,""
-  l: "kleber@ziontechgroup.com", addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709" } }, ' i,'"
+  o: mobil,""+1 302 464 0950", emai,"
+  l: "kleber@ziontechgroup.com""
+  s: " } }, ' i,'"
   d: 'mobile-first-survey',' nam,'
   e: 'Mobile-First Survey Tool',' taglin,'
   e: 'Tap-friendly micro-surveys with AI insights',' pric,'
@@ -9260,9 +8095,9 @@ export interface AdditionalRealService,;
   y: ['Next.js, Edge Functions'],' integration,'
   s: ['HubSpot, Segment, GA4'],' useCase,'
   s: ['NPS, Post-purchase survey, In-app feedback'],' ro,'
-  i: 'Accelerates feedback cycles by 3x',' competitor,'
+  i: 'Accelerates feedback cycles by 3 x',' competitor,'
   s: ['Typeform, Survicate'],' marketSiz,'
-  e: '$3.1B feedback tools',' growthRat,'
+  e: '$3.1 B feedback tools',' growthRat,'
   e: '14% CAGR',' varian,'
   t: 'neural-quantum', contactInf,'
   o: contact, realImplementatio,
@@ -9296,7 +8131,7 @@ export interface AdditionalRealService,;
   s: ['Meetups, webinars, conferences'],' ro,'
   i: 'Cuts ops time by 40%',' competitor,'
   s: ['Eventbrite, Hopin'],' marketSiz,'
-  e: '$6.1B events tech',' growthRat,'
+  e: '$6.1 B events tech',' growthRat,'
   e: '16% CAGR',' varian,'
   t: 'ai-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -9330,7 +8165,7 @@ export interface AdditionalRealService,;
   s: ['Churn prevention, Expansion triggers'],' ro,'
   i: 'Improves retention by 2–5 pts',' competitor,'
   s: ['Vitally, Gainsight'],' marketSiz,'
-  e: '$4.2B CS tools',' growthRat,'
+  e: '$4.2 B CS tools',' growthRat,'
   e: '17% CAGR',' varian,'
   t: 'holographic', contactInf,'
   o: contact, realImplementatio,
@@ -9364,7 +8199,7 @@ export interface AdditionalRealService,;
   s: ['Board metrics, Revenue ops, Cohort analysis'],' ro,'
   i: 'Reduces reporting prep by 80%',' competitor,'
   s: ['ChartMogul, ProfitWell'],' marketSiz,'
-  e: '$2.4B RevOps tools',' growthRat,'
+  e: '$2.4 B RevOps tools',' growthRat,'
   e: '20% CAGR',' varian,'
   t: 'quantum-holographic', contactInf,'
   o: contact, realImplementatio,
@@ -9398,7 +8233,7 @@ export interface AdditionalRealService,;
   s: ['ISO readiness, Continuous compliance'],' ro,'
   i: 'Cuts audit prep by 60%',' competitor,'
   s: ['Vanta, Drata'],' marketSiz,'
-  e: '$5.5B GRC',' growthRat,'
+  e: '$5.5 B GRC',' growthRat,'
   e: '13% CAGR',' varian,'
   t: 'security-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -9432,7 +8267,7 @@ export interface AdditionalRealService,;
   s: ['Changelog, Deprecation management'],' ro,'
   i: 'Reduces integrator breakage by 70%',' competitor,'
   s: ['ReadMe, Stoplight (partial)'],' marketSiz,'
-  e: '$1.5B dev tools',' growthRat,'
+  e: '$1.5 B dev tools',' growthRat,'
   e: '18% CAGR',' varian,'
   t: 'ai-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -9466,7 +8301,7 @@ export interface AdditionalRealService,;
   s: ['SRE runbooks, On-call playbooks'],' ro,'
   i: 'Faster incident resolution by 20–30%',' competitor,'
   s: ['Blameless (partial), Notion'],' marketSiz,'
-  e: '$7.2B DevOps',' growthRat,'
+  e: '$7.2 B DevOps',' growthRat,'
   e: '19% CAGR',' varian,'
   t: 'monitoring-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -9500,7 +8335,7 @@ export interface AdditionalRealService,;
   s: ['Major incident comms, RCA inputs'],' ro,'
   i: 'Reduces coordination overhead by 50%',' competitor,'
   s: ['Blameless, Incident.io (partial)'],' marketSiz,'
-  e: '$7.2B DevOps',' growthRat,'
+  e: '$7.2 B DevOps',' growthRat,'
   e: '19% CAGR',' varian,'
   t: 'holographic-advanced', contactInf,'
   o: contact, realImplementatio,
@@ -9534,7 +8369,7 @@ export interface AdditionalRealService,;
   s: ['Ad variants, Landing page assets'],' ro,'
   i: 'Improves CTR by 10–20% on average',' competitor,'
   s: ['Canva (partial), Jasper'],' marketSiz,'
-  e: '$8.9B martech genAI',' growthRat,'
+  e: '$8.9 B martech genAI',' growthRat,'
   e: '22% CAGR',' varian,'
   t: 'quantum-holographic', contactInf,'
   o: contact, realImplementatio,
@@ -9549,10 +8384,10 @@ export interface AdditionalRealService,;
   e: 'Automated rightsizing, lifecycle policies, and anomaly detection',' pric,'
   e: '$99',' perio,'
   d: '/month',' descriptio,'
-  n: 'Continuously analyze AWS, Azure, and GCP usage to recommend rightsizing, lifecycle policies, and scheduling. Detect anomalies and export IaC for approvals.', feature,";'"
-  s: [ "Data integration", "Real-time processing", "Advanced analytics", "Scalable architecture", "Security compliance" ], lin,""
-  k: "/services/data-warehouse-solution", categor,""
-  y: "Data & Analytics", realImplementatio,"
+  n: 'Continuously analyze AWS, Azure, and GCP usage to recommend rightsizing, lifecycle policies, and scheduling. Detect anomalies and export IaC for approvals.', feature,"
+  s: [ "Data integration"Real-time processing", ", "Scalable architecture"Security compliance" ], lin,"
+  k: "/services/data-warehouse-solution""
+  y: ", realImplementatio,"
   n: true,' implementationDetail,'
   s: 'SaaS analyzer with exporters for Terraform/Helm and alerting.',' launchDat,';'
   e: '2025-01-15', customer,'
@@ -9583,7 +8418,7 @@ export interface AdditionalRealService,;
   s: ['Performance tuning', 'SLO management', 'Incident response'],' ro,'
   i: 'Reduce p95 latency by 20–50% in month 1',' competitor,'
   s: ['Percona PMM', 'Datadog APM', 'New Relic'],' marketSiz,'
-  e: '$6B DB monitoring',' growthRat,'
+  e: '$6 B DB monitoring',' growthRat,'
   e: '15% CAGR',' varian,'
   t: 'holographic-advanced', contactInf,'
   o: contact, realImplementatio,
@@ -9615,9 +8450,9 @@ export interface AdditionalRealService,;
   y: ['Next.js', 'MDX', 'OpenAPI'],' integration,'
   s: ['GitHub', 'GitLab', 'Bitbucket'],' useCase,'
   s: ['Public API docs', 'Internal APIs', 'SDK portals'],' ro,'
-  i: 'Ship and maintain docs 5x faster',' competitor,'
+  i: 'Ship and maintain docs 5 x faster',' competitor,'
   s: ['ReadMe', 'Redocly', 'Stoplight'],' marketSiz,'
-  e: '$1.5B dev docs',' growthRat,'
+  e: '$1.5 B dev docs',' growthRat,'
   e: '18% CAGR',' varian,'
   t: 'neural-quantum', contactInf,'
   o: contact, realImplementatio,
@@ -9651,7 +8486,7 @@ export interface AdditionalRealService,;
   s: ['Auth compliance', 'Reputation monitoring', 'Alerting'],' ro,'
   i: 'Improve inbox rate by 5–15%',' competitor,'
   s: ['MailMonitor', 'Postmaster Tools'],' marketSiz,'
-  e: '$2B email tools',' growthRat,'
+  e: '$2 B email tools',' growthRat,'
   e: '12% CAGR',' varian,'
   t: 'holographic', contactInf,'
   o: contact, realImplementatio,
@@ -9685,7 +8520,7 @@ export interface AdditionalRealService,;
   s: ['DSAR fulfillment', 'Privacy compliance'],' ro,'
   i: 'Cut manual effort by 70%',' competitor,'
   s: ['OneTrust', 'Transcend'],' marketSiz,'
-  e: '$3B privacy ops',' growthRat,'
+  e: '$3 B privacy ops',' growthRat,'
   e: '20% CAGR',' varian,'
   t: 'cyberpunk-holographic', contactInf,'
   o: contact, realImplementatio,
@@ -9719,7 +8554,7 @@ export interface AdditionalRealService,;
   s: ['Security testing', 'Pre-deploy checks'],' ro,'
   i: 'Reduce security escapes by 60%',' competitor,'
   s: ['StackHawk', 'Noname'],' marketSiz,'
-  e: '$4B API security',' growthRat,'
+  e: '$4 B API security',' growthRat,'
   e: '23% CAGR',' varian,'
   t: 'quantum-cyberpunk', contactInf,'
   o: contact, realImplementatio,
@@ -9753,7 +8588,7 @@ export interface AdditionalRealService,;
   s: ['Error triage', 'Latency analysis', 'SLO tracking'],' ro,'
   i: 'Reduce MTTR by 30–50% with basic but effective telemetry.',' competitor,'
   s: ['Datadog APM', 'New Relic', 'Elastic APM'],' marketSiz,'
-  e: '$30B+ observability',' growthRat,'
+  e: '$30 B+ observability',' growthRat,'
   e: '18% CAGR',' varian,'
   t: 'neural-quantum-cyberpunk', contactInf,'
   o: contact, realImplementatio,
@@ -9787,7 +8622,7 @@ export interface AdditionalRealService,;
   s: ['Customer comms', 'Reliability transparency'],' ro,'
   i: 'Reduce support tickets during incidents by 40%',' competitor,'
   s: ['Statuspage', 'Better Uptime'],' marketSiz,'
-  e: '$1B status pages',' growthRat,'
+  e: '$1 B status pages',' growthRat,'
   e: '10% CAGR',' varian,'
   t: 'neural-cyberpunk', contactInf,'
   o: contact, realImplementatio,
@@ -9821,7 +8656,7 @@ export interface AdditionalRealService,;
   s: ['SLO governance', 'Release checks'],' ro,'
   i: 'Catch issues before customers notice',' competitor,'
   s: ['Checkly', 'UptimeRobot'],' marketSiz,'
-  e: '$1.2B synthetic',' growthRat,'
+  e: '$1.2 B synthetic',' growthRat,'
   e: '14% CAGR',' varian,'
   t: 'quantum-matrix', contactInf,'
   o: contact, realImplementatio,
@@ -9855,7 +8690,7 @@ export interface AdditionalRealService,;
   s: ['Webhook reliability', 'Local testing', 'Sandboxing'],' ro,'
   i: 'Reduce missed events to near-zero',' competitor,'
   s: ['Hookdeck'],' marketSiz,'
-  e: '$500M webhook tools',' growthRat,'
+  e: '$500 M webhook tools',' growthRat,'
   e: '16% CAGR',' varian,'
   t: 'holographic-quantum', contactInf,'
   o: contact, realImplementatio,
@@ -9889,7 +8724,7 @@ export interface AdditionalRealService,;
   s: ['Gradual rollouts', 'A/B tests', 'Emergency off-switch'],' ro,'
   i: 'Ship faster with fewer incidents',' competitor,'
   s: ['LaunchDarkly', 'Unleash'],' marketSiz,'
-  e: '$1.8B flags',' growthRat,'
+  e: '$1.8 B flags',' growthRat,'
   e: '20% CAGR',' varian,'
   t: 'quantum-holographic-advanced', contactInf,'
   o: contact, realImplementatio,
@@ -9913,17 +8748,17 @@ export interface AdditionalRealService,;
   k: 'http,'
   s://ziontechgroup.com/sso-in-a-box',' marketPositio,'
   n: 'Minutes to enterprise SSO without reinventing auth.',' targetAudienc,'
-  e: 'B2B SaaS, platform, security', trialDay,'
+  e: 'B2 B SaaS, platform, security', trialDay,'
   s: 21,' setupTim,'
   e: '2 hours',' categor,'
   y: 'Security', realServic,'
   e: true,' technolog,'
   y: ['SAML', 'OIDC', 'SCIM'],' integration,'
   s: ['Okta', 'Azure AD', 'Google'],' useCase,'
-  s: ['Enterprise SSO', 'Provisioning', 'B2B readiness'],' ro,'
+  s: ['Enterprise SSO', 'Provisioning', 'B2 B readiness'],' ro,'
   i: 'Unblock enterprise deals faster',' competitor,'
   s: ['WorkOS', 'Auth0'],' marketSiz,'
-  e: '$6B identity',' growthRat,'
+  e: '$6 B identity',' growthRat,'
   e: '24% CAGR',' varian,'
   t: 'neural-quantum-cyberpunk', contactInf,'
   o: contact, realImplementatio,
@@ -9957,7 +8792,7 @@ export interface AdditionalRealService,;
   s: ['Product search', 'Knowledge base', 'Recommendations'],' ro,'
   i: 'Increase discovery and conversion 5–12%',' competitor,'
   s: ['Algolia Neural', 'Pinecone serverless'],' marketSiz,'
-  e: '$3B search AI',' growthRat,'
+  e: '$3 B search AI',' growthRat,'
   e: '22% CAGR',' varian,'
   t: 'ai-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -9991,7 +8826,7 @@ export interface AdditionalRealService,;
   s: ['Quality SLAs', 'Contract testing'],' ro,'
   i: 'Reduce incident fallout and rework',' competitor,'
   s: ['Monte Carlo', 'Bigeye'],' marketSiz,'
-  e: '$1.2B data observability',' growthRat,'
+  e: '$1.2 B data observability',' growthRat,'
   e: '26% CAGR',' varian,'
   t: 'holographic-advanced', contactInf,'
   o: contact, realImplementatio,
@@ -10025,7 +8860,7 @@ export interface AdditionalRealService,;
   s: ['Reliability', 'On-call ops'],' ro,'
   i: 'Reduce data downtime by 60%',' competitor,'
   s: ['Meto', 'Monte Carlo'],' marketSiz,'
-  e: '$1.2B data observability',' growthRat,'
+  e: '$1.2 B data observability',' growthRat,'
   e: '26% CAGR',' varian,'
   t: 'quantum-holographic', contactInf,'
   o: contact, realImplementatio,
@@ -10059,7 +8894,7 @@ export interface AdditionalRealService,;
   s: ['AI governance', 'Safety compliance'],' ro,'
   i: 'Reduce safety incidents and brand risk',' competitor,'
   s: ['Guardrails AI', 'Lakera'],' marketSiz,'
-  e: '$1B AI safety',' growthRat,'
+  e: '$1 B AI safety',' growthRat,'
   e: '30% CAGR',' varian,'
   t: 'quantum-neural-advanced', contactInf,'
   o: contact, realImplementatio,
@@ -10093,7 +8928,7 @@ export interface AdditionalRealService,;
   s: ['Pipeline growth', 'Outbound automation'],' ro,'
   i: 'Increase qualified meetings by 20–35%',' competitor,'
   s: ['Apollo', 'Outreach'],' marketSiz,'
-  e: '$4B sales tech',' growthRat,'
+  e: '$4 B sales tech',' growthRat,'
   e: '18% CAGR',' varian,'
   t: 'ai-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -10127,7 +8962,7 @@ export interface AdditionalRealService,;
   s: ['Analytics sandboxes', 'Non-prod testing', 'Model pre-training'],' ro,'
   i: 'Unblock data access, cut compliance review time by 70%',' competitor,'
   s: ['Mostly AI', 'Gretel'],' marketSiz,'
-  e: '$1.5B privacy tech',' growthRat,'
+  e: '$1.5 B privacy tech',' growthRat,'
   e: '25% CAGR',' varian,'
   t: 'holographic-advanced', contactInf,'
   o: contact, realImplementatio,
@@ -10161,7 +8996,7 @@ export interface AdditionalRealService,;
   s: ['Ticket intake', 'Order parsing', 'Lead capture'],' ro,'
   i: 'Automate manual triage, reduce handling time 40%',' competitor,'
   s: ['Mailparser', 'Parseur'],' marketSiz,'
-  e: '$800M parsing tools',' growthRat,'
+  e: '$800 M parsing tools',' growthRat,'
   e: '14% CAGR',' varian,'
   t: 'quantum-holographic', contactInf,'
   o: contact, realImplementatio,
@@ -10184,7 +9019,7 @@ export interface AdditionalRealService,;
   r: 'text-emerald-300',' lin,'
   k: 'http,'
   s://ziontechgroup.com/services/kubernetes-cost-analyzer',' marketPositio,'
-  n: 'Actionable K8s FinOps without cluster vendor lock-in.',' targetAudienc,'
+  n: 'Actionable K8 s FinOps without cluster vendor lock-in.',' targetAudienc,'
   e: 'Platform, FinOps, SRE', trialDay,'
   s: 14,' setupTim,'
   e: '1 hour',' categor,'
@@ -10195,7 +9030,7 @@ export interface AdditionalRealService,;
   s: ['Rightsizing', 'Budget governance'],' ro,'
   i: 'Save 10–25% cluster spend in 60 days',' competitor,'
   s: ['Kubecost', 'CAST AI'],' marketSiz,'
-  e: '$2B K8s mgmt',' growthRat,'
+  e: '$2 B K8 s mgmt',' growthRat,'
   e: '20% CAGR',' varian,'
   t: 'neural-quantum', contactInf,'
   o: contact, realImplementatio,
@@ -10229,7 +9064,7 @@ export interface AdditionalRealService,;
   s: ['Foundations', 'Multi-env setup'],' ro,'
   i: 'Cut setup time by 80%, fewer misconfigs',' competitor,'
   s: ['AWS Control Tower', 'Azure Landing Zones'],' marketSiz,'
-  e: '$5B platform eng',' growthRat,'
+  e: '$5 B platform eng',' growthRat,'
   e: '18% CAGR',' varian,'
   t: 'holographic-quantum', contactInf,'
   o: contact, realImplementatio,
@@ -10263,7 +9098,7 @@ export interface AdditionalRealService,;
   s: ['AppSec hygiene', 'Compliance checks'],' ro,'
   i: 'Reduce security review cycles 50%',' competitor,'
   s: ['Mozilla Observatory'],' marketSiz,'
-  e: '$3B AppSec',' growthRat,'
+  e: '$3 B AppSec',' growthRat,'
   e: '15% CAGR',' varian,'
   t: 'quantum-cyberpunk', contactInf,'
   o: contact, realImplementatio,
@@ -10297,7 +9132,7 @@ export interface AdditionalRealService,;
   s: ['Perf budgets', 'DX improvements'],' ro,'
   i: 'Prevent perf regressions, faster pages',' competitor,'
   s: ['Calibre', 'SpeedCurve'],' marketSiz,'
-  e: '$1B web perf',' growthRat,'
+  e: '$1 B web perf',' growthRat,'
   e: '12% CAGR',' varian,'
   t: 'holographic-advanced', contactInf,'
   o: contact, realImplementatio,
@@ -10331,7 +9166,7 @@ export interface AdditionalRealService,;
   s: ['ELT ingestion', 'Analytics', 'Compliance archiving'],' ro,'
   i: 'Reduce pipeline toil by 60%',' competitor,'
   s: ['Fivetran (files)', 'Airbyte'],' marketSiz,'
-  e: '$3B data ingest',' growthRat,'
+  e: '$3 B data ingest',' growthRat,'
   e: '20% CAGR',' varian,'
   t: 'neural-quantum', contactInf,'
   o: contact, realImplementatio,
@@ -10365,7 +9200,7 @@ export interface AdditionalRealService,;
   s: ['Design integrity', 'Release gates'],' ro,'
   i: 'Reduce UI bugs escaping to prod',' competitor,'
   s: ['Percy', 'Chromatic'],' marketSiz,'
-  e: '$600M visual test',' growthRat,'
+  e: '$600 M visual test',' growthRat,'
   e: '16% CAGR',' varian,'
   t: 'holographic-matrix', contactInf,'
   o: contact, realImplementatio,
@@ -10399,7 +9234,7 @@ export interface AdditionalRealService,;
   s: ['Safe replicates', 'Analytics sandboxes'],' ro,'
   i: 'Accelerate testing while staying compliant',' competitor,'
   s: ['Protegrity', 'Immuta'],' marketSiz,'
-  e: '$2B data security',' growthRat,'
+  e: '$2 B data security',' growthRat,'
   e: '18% CAGR',' varian,'
   t: 'neural-quantum-cyberpunk', contactInf,'
   o: contact, realImplementatio,
@@ -10433,7 +9268,7 @@ export interface AdditionalRealService,;
   s: ['Sales calls', 'Customer interviews', 'Standups'],' ro,'
   i: 'Reduce note-taking time by 80%',' competitor,'
   s: ['Fathom', 'Grain'],' marketSiz,'
-  e: '$1.2B meeting AI',' growthRat,'
+  e: '$1.2 B meeting AI',' growthRat,'
   e: '30% CAGR',' varian,'
   t: 'ai-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -10467,7 +9302,7 @@ export interface AdditionalRealService,;
   s: ['Evidence automation', 'Guardrails'],' ro,'
   i: 'Shorten audits, prevent drift-related incidents',' competitor,'
   s: ['Bridgecrew', 'Snyk IaC'],' marketSiz,'
-  e: '$3B cloud security',' growthRat,'
+  e: '$3 B cloud security',' growthRat,'
   e: '22% CAGR',' varian,'
   t: 'holographic-neural', contactInf,'
   o: contact, realImplementatio,
@@ -10501,7 +9336,7 @@ export interface AdditionalRealService,;
   s: ['Invoices', 'Agreements', 'Reports'],' ro,'
   i: 'Replace brittle DIY scripts, cut maintenance by 80%.',' competitor,'
   s: ['PDFMonkey', 'PDFShift', 'DocRaptor'],' marketSiz,'
-  e: '$500M+ doc rendering',' growthRat,'
+  e: '$500 M+ doc rendering',' growthRat,'
   e: '10% CAGR',' varian,'
   t: 'cyberpunk-holographic', contactInf,'
   o: contact, realImplementatio,
@@ -10535,7 +9370,7 @@ export interface AdditionalRealService,;
   s: ['AP automation', 'Expense processing', 'Reconciliation'],' ro,'
   i: 'Reduce manual data entry by 80–95%',' competitor,'
   s: ['Veryfi', 'Rossum', 'Nanonets'],' marketSiz,'
-  e: '$1B+ document AI',' growthRat,'
+  e: '$1 B+ document AI',' growthRat,'
   e: '32% CAGR',' varian,'
   t: 'neural-quantum', contactInf,'
   o: contact, realImplementatio,
@@ -10569,7 +9404,7 @@ export interface AdditionalRealService,;
   s: ['Incident triage', 'Audit retention', 'Cost control'],' ro,'
   i: 'Cut log bills by 40–70% with tiered retention',' competitor,'
   s: ['Datadog Logs', 'Splunk', 'Elastic Cloud'],' marketSiz,'
-  e: '$15B+ log analytics',' growthRat,'
+  e: '$15 B+ log analytics',' growthRat,'
   e: '18% CAGR',' varian,'
   t: 'quantum-matrix', contactInf,'
   o: contact, realImplementatio,
@@ -10603,7 +9438,7 @@ export interface AdditionalRealService,;
   s: ['DSAR automation', 'Consent management', 'Data retention'],' ro,'
   i: 'Cut DSAR handling time by 70% and reduce legal costs',' competitor,'
   s: ['Transcend', 'OneTrust', 'DataGrail'],' marketSiz,'
-  e: '$2.1B privacy tech',' growthRat,'
+  e: '$2.1 B privacy tech',' growthRat,'
   e: '22% CAGR',' varian,'
   t: 'ai-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -10637,7 +9472,7 @@ export interface AdditionalRealService,;
   s: ['Shift-left quality', 'Architecture compliance', 'Secure coding'],' ro,'
   i: 'Reduce PR cycle time by 30% and defects by 25%',' competitor,'
   s: ['Snyk Code', 'SonarQube + AI', 'Codeium Review'],' marketSiz,'
-  e: '$4.5B DevSecOps',' growthRat,'
+  e: '$4.5 B DevSecOps',' growthRat,'
   e: '21% CAGR',' varian,'
   t: 'quantum', contactInf,'
   o: contact, realImplementatio,
@@ -10671,7 +9506,7 @@ export interface AdditionalRealService,;
   s: ['Baseline enforcement', 'Drift detection', 'Audit readiness'],' ro,'
   i: 'Reduce misconfig incidents by 60% in 90 days',' competitor,'
   s: ['Microsoft Secure Score', 'Wiz', 'Tenable'],' marketSiz,'
-  e: '$3.2B SaaS security posture',' growthRat,'
+  e: '$3.2 B SaaS security posture',' growthRat,'
   e: '28% CAGR',' varian,'
   t: 'matrix', contactInf,'
   o: contact, realImplementatio,
@@ -10705,7 +9540,7 @@ export interface AdditionalRealService,;
   s: ['Agent regression testing', 'Safety certification', 'RAG validation'],' ro,'
   i: 'Reduce AI incident rate by 50%',' competitor,'
   s: ['Humanloop', 'TruEra', 'Robust Intelligence'],' marketSiz,'
-  e: '$1.1B AI eval tooling',' growthRat,'
+  e: '$1.1 B AI eval tooling',' growthRat,'
   e: '30% CAGR',' varian,'
   t: 'ai-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -10737,9 +9572,9 @@ export interface AdditionalRealService,;
   y: ['Quantum algorithms', 'AI/ML', 'Cloud computing'],' integration,'
   s: ['AWS Braket', 'Azure Quantum', 'Google Quantum'],' useCase,'
   s: ['Portfolio optimization', 'Drug discovery', 'Supply chain optimization'],' ro,'
-  i: '10-100x faster than classical computing for specific problems',' competitor,'
+  i: '10-100 x faster than classical computing for specific problems',' competitor,'
   s: ['D-Wave', 'IBM Quantum', 'Rigetti'],' marketSiz,'
-  e: '$8.5B quantum computing',' growthRat,'
+  e: '$8.5 B quantum computing',' growthRat,'
   e: '25% CAGR',' varian,'
   t: 'quantum-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -10773,7 +9608,7 @@ export interface AdditionalRealService,;
   s: ['Threat detection', 'Incident response', 'Compliance monitoring'],' ro,'
   i: 'Reduces security incidents by 85%',' competitor,'
   s: ['Darktrace', 'CrowdStrike', 'SentinelOne'],' marketSiz,'
-  e: '$45B cybersecurity',' growthRat,'
+  e: '$45 B cybersecurity',' growthRat,'
   e: '22% CAGR',' varian,'
   t: 'security-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -10807,7 +9642,7 @@ export interface AdditionalRealService,;
   s: ['Infrastructure automation', 'Deployment optimization', 'Cost reduction'],' ro,'
   i: 'Reduces DevOps overhead by 60%',' competitor,'
   s: ['HashiCorp', 'Pulumi', 'Spacelift'],' marketSiz,'
-  e: '$12B DevOps tools',' growthRat,'
+  e: '$12 B DevOps tools',' growthRat,'
   e: '19% CAGR',' varian,'
   t: 'ai-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -10841,7 +9676,7 @@ export interface AdditionalRealService,;
   s: ['Supply chain tracking', 'Digital identity', 'Asset tokenization'],' ro,'
   i: 'Increases transparency and reduces fraud by 90%',' competitor,'
   s: ['ConsenSys', 'R3 Corda', 'Hyperledger'],' marketSiz,'
-  e: '$19B blockchain',' growthRat,'
+  e: '$19 B blockchain',' growthRat,'
   e: '87% CAGR',' varian,'
   t: 'blockchain-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -10875,7 +9710,7 @@ export interface AdditionalRealService,;
   s: ['Blog writing', 'Product descriptions', 'Social media content'],' ro,'
   i: 'Increases content engagement by 150%',' competitor,'
   s: ['Jasper', 'Copy.ai', 'Writesonic'],' marketSiz,'
-  e: '$7.8B content marketing',' growthRat,'
+  e: '$7.8 B content marketing',' growthRat,'
   e: '16% CAGR',' varian,'
   t: 'ai-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -10909,7 +9744,7 @@ export interface AdditionalRealService,;
   s: ['Smart manufacturing', 'Asset monitoring', 'Predictive maintenance'],' ro,'
   i: 'Reduces operational costs by 30%',' competitor,'
   s: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT'],' marketSiz,'
-  e: '$35B IoT platforms',' growthRat,'
+  e: '$35 B IoT platforms',' growthRat,'
   e: '28% CAGR',' varian,'
   t: 'iot-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -10943,7 +9778,7 @@ export interface AdditionalRealService,;
   s: ['Churn prevention', 'Customer expansion', 'Success automation'],' ro,'
   i: 'Increases customer retention by 25%',' competitor,'
   s: ['Gainsight', 'Vitally', 'Totango'],' marketSiz,'
-  e: '$4.2B customer success',' growthRat,'
+  e: '$4.2 B customer success',' growthRat,'
   e: '17% CAGR',' varian,'
   t: 'ai-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -10977,7 +9812,7 @@ export interface AdditionalRealService,;
   s: ['Data protection', 'Secure communications', 'Compliance readiness'],' ro,'
   i: 'Future-proofs security investments against quantum threats',' competitor,'
   s: ['ISARA', 'Post-Quantum', 'Quantum Xchange'],' marketSiz,'
-  e: '$3.2B quantum security',' growthRat,'
+  e: '$3.2 B quantum security',' growthRat,'
   e: '45% CAGR',' varian,'
   t: 'quantum-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11011,7 +9846,7 @@ export interface AdditionalRealService,;
   s: ['Inventory optimization', 'Demand planning', 'Risk management'],' ro,'
   i: 'Reduces inventory costs by 20%',' competitor,'
   s: ['Blue Yonder', 'Manhattan Associates', 'SAP'],' marketSiz,'
-  e: '$18B supply chain management',' growthRat,'
+  e: '$18 B supply chain management',' growthRat,'
   e: '15% CAGR',' varian,'
   t: 'ai-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11045,7 +9880,7 @@ export interface AdditionalRealService,;
   s: ['Portfolio management', 'Financial planning', 'Tax optimization'],' ro,'
   i: 'Increases portfolio returns by 2-3% annually',' competitor,'
   s: ['Betterment', 'Wealthfront', 'Personal Capital'],' marketSiz,'
-  e: '$12B robo-advisory',' growthRat,'
+  e: '$12 B robo-advisory',' growthRat,'
   e: '23% CAGR',' varian,'
   t: 'ai-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11077,9 +9912,9 @@ export interface AdditionalRealService,;
   y: ['Neural networks', 'Consciousness algorithms', 'Emotional AI'],' integration,'
   s: ['Research platforms', 'AI frameworks', 'Cloud computing'],' useCase,'
   s: ['AI research', 'Consciousness studies', 'Creative AI'],' ro,'
-  i: 'Accelerates AI consciousness research by 10x',' competitor,'
+  i: 'Accelerates AI consciousness research by 10 x',' competitor,'
   s: ['OpenAI', 'Anthropic', 'DeepMind'],' marketSiz,'
-  e: '$2.1B AI consciousness',' growthRat,'
+  e: '$2.1 B AI consciousness',' growthRat,'
   e: '35% CAGR',' varian,'
   t: 'consciousness-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11113,7 +9948,7 @@ export interface AdditionalRealService,;
   s: ['Satellite optimization', 'Space missions', 'Orbital calculations'],' ro,'
   i: 'Reduces satellite launch costs by 25%',' competitor,'
   s: ['IBM Quantum', 'D-Wave', 'Space companies'],' marketSiz,'
-  e: '$4.8B space technology',' growthRat,'
+  e: '$4.8 B space technology',' growthRat,'
   e: '28% CAGR',' varian,'
   t: 'space-quantum-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11147,7 +9982,7 @@ export interface AdditionalRealService,;
   s: ['Production optimization', 'Quality control', 'Predictive maintenance'],' ro,'
   i: 'Increases manufacturing efficiency by 35%',' competitor,'
   s: ['Siemens', 'GE Digital', 'Rockwell Automation'],' marketSiz,'
-  e: '$22B smart manufacturing',' growthRat,'
+  e: '$22 B smart manufacturing',' growthRat,'
   e: '18% CAGR',' varian,'
   t: 'manufacturing-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11179,9 +10014,9 @@ export interface AdditionalRealService,;
   y: ['AI/ML', 'Bioinformatics', 'Computational biology'],' integration,'
   s: ['Research databases', 'Lab equipment', 'Clinical systems'],' useCase,'
   s: ['Drug discovery', 'Genetic research', 'Clinical trials'],' ro,'
-  i: 'Accelerates drug discovery by 5x',' competitor,'
+  i: 'Accelerates drug discovery by 5 x',' competitor,'
   s: ['Insitro', 'Atomwise', 'BenevolentAI'],' marketSiz,'
-  e: '$15B AI in biotech',' growthRat,'
+  e: '$15 B AI in biotech',' growthRat,'
   e: '32% CAGR',' varian,'
   t: 'biotech-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11196,8 +10031,8 @@ export interface AdditionalRealService,;
   e: 'Enterprise metaverse solutions for business collaboration',' pric,'
   e: '$299',' perio,'
   d: '/month',' descriptio,'
-  n: 'Comprehensive metaverse platform enabling enterprises to create virtual workspaces, conduct meetings, and collaborate in immersive 3D environments.', feature,'
-  s: [' 'Virtual workspaces',' '3D collaboration tools',' 'Avatar customization',' 'Virtual meetings',' 'Integration APIs' ], popula,'
+  n: 'Comprehensive metaverse platform enabling enterprises to create virtual workspaces, conduct meetings, and collaborate in immersive 3 D environments.', feature,'
+  s: [' 'Virtual workspaces',' '3 D collaboration tools',' 'Avatar customization',' 'Virtual meetings',' 'Integration APIs' ], popula,'
   r: false,' ico,'
   n: '🌐',' colo,'
   r: 'from-purple-600 to-pink-700',' textColo,'
@@ -11210,17 +10045,17 @@ export interface AdditionalRealService,;
   e: '1 week',' categor,'
   y: 'Metaverse & Virtual Reality', realServic,'
   e: true,' technolog,'
-  y: ['VR/AR', '3D graphics', 'WebGL', 'WebRTC'],' integration,'
+  y: ['VR/AR', '3 D graphics', 'WebGL', 'WebRTC'],' integration,'
   s: ['Slack', 'Microsoft Teams', 'Zoom', 'Webex'],' useCase,'
   s: ['Virtual meetings', 'Remote collaboration', 'Virtual events'],' ro,'
   i: 'Reduces travel costs by 40%',' competitor,'
   s: ['Meta', 'Microsoft Mesh', 'Spatial'],' marketSiz,'
-  e: '$8.9B metaverse',' growthRat,'
+  e: '$8.9 B metaverse',' growthRat,'
   e: '45% CAGR',' varian,'
   t: 'metaverse-futuristic', contactInf,'
   o: contact, realImplementatio,
   n: true,' implementationDetail,'
-  s: '3D engine, collaboration tools, integration APIs.',' launchDat,'
+  s: '3 D engine, collaboration tools, integration APIs.',' launchDat,'
   e: '2025-06-25', customer,'
   s: 26, ratin,
   g: 4.5, review,
@@ -11249,7 +10084,7 @@ export interface AdditionalRealService,;
   s: ['Algorithmic trading', 'Risk management', 'Portfolio optimization'],' ro,'
   i: 'Increases trading performance by 15-25%',' competitor,'
   s: ['Goldman Sachs Quantum', 'JP Morgan Quantum', 'Quantum startups'],' marketSiz,'
-  e: '$6.2B quantum finance',' growthRat,'
+  e: '$6.2 B quantum finance',' growthRat,'
   e: '38% CAGR',' varian,'
   t: 'quantum-finance-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11278,12 +10113,12 @@ export interface AdditionalRealService,;
   e: '2 weeks',' categor,'
   y: 'Autonomous Vehicles & Transportation', realServic,'
   e: true,' technolog,'
-  y: ['AI/ML', 'Computer vision', 'IoT', '5G'],' integration,'
+  y: ['AI/ML', 'Computer vision', 'IoT', '5 G'],' integration,'
   s: ['Vehicle APIs', 'GPS systems', 'Traffic data'],' useCase,'
   s: ['Fleet management', 'Route optimization', 'Safety monitoring'],' ro,'
   i: 'Reduces transportation costs by 30%',' competitor,'
   s: ['Waymo', 'Cruise', 'Tesla'],' marketSiz,'
-  e: '$12B autonomous vehicles',' growthRat,'
+  e: '$12 B autonomous vehicles',' growthRat,'
   e: '42% CAGR',' varian,'
   t: 'autonomous-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11317,7 +10152,7 @@ export interface AdditionalRealService,;
   s: ['Data protection', 'Secure communications', 'Compliance readiness'],' ro,'
   i: 'Future-proofs security investments against quantum threats',' competitor,'
   s: ['ISARA', 'Post-Quantum', 'Quantum Xchange'],' marketSiz,'
-  e: '$3.2B quantum security',' growthRat,'
+  e: '$3.2 B quantum security',' growthRat,'
   e: '45% CAGR',' varian,'
   t: 'quantum-security-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11351,7 +10186,7 @@ export interface AdditionalRealService,;
   s: ['Data compliance', 'Quality management', 'Audit preparation'],' ro,'
   i: 'Reduces compliance risks by 80%',' competitor,'
   s: ['Collibra', 'Informatica', 'Alation'],' marketSiz,'
-  e: '$7.2B data governance',' growthRat,'
+  e: '$7.2 B data governance',' growthRat,'
   e: '16% CAGR',' varian,'
   t: 'data-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11385,7 +10220,7 @@ export interface AdditionalRealService,;
   s: ['Workforce planning', 'Retention strategies', 'Recruitment optimization'],' ro,'
   i: 'Improves retention by 20%',' competitor,'
   s: ['Visier', 'Tableau', 'Power BI'],' marketSiz,'
-  e: '$3.8B HR analytics',' growthRat,'
+  e: '$3.8 B HR analytics',' growthRat,'
   e: '19% CAGR',' varian,'
   t: 'hr-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11419,7 +10254,7 @@ export interface AdditionalRealService,;
   s: ['Cloud migration', 'Cost optimization', 'Performance tuning'],' ro,'
   i: 'Reduces migration time by 60%',' competitor,'
   s: ['CloudEndure', 'AWS Migration Hub', 'Azure Migrate'],' marketSiz,'
-  e: '$18B cloud migration',' growthRat,'
+  e: '$18 B cloud migration',' growthRat,'
   e: '24% CAGR',' varian,'
   t: 'cloud-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11451,9 +10286,9 @@ export interface AdditionalRealService,;
   y: ['Strategy frameworks', 'Change management', 'Process optimization'],' integration,'
   s: ['Project management', 'Communication tools', 'Analytics platforms'],' useCase,'
   s: ['Digital strategy', 'Change management', 'Process optimization'],' ro,'
-  i: 'Accelerates transformation by 3x',' competitor,'
+  i: 'Accelerates transformation by 3 x',' competitor,'
   s: ['McKinsey', 'BCG', 'Bain'],' marketSiz,'
-  e: '$45B digital transformation',' growthRat,'
+  e: '$45 B digital transformation',' growthRat,'
   e: '21% CAGR',' varian,'
   t: 'consulting-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11487,7 +10322,7 @@ export interface AdditionalRealService,;
   s: ['AI ethics', 'Compliance management', 'Bias mitigation'],' ro,'
   i: 'Reduces compliance risks by 90%',' competitor,'
   s: ['AI ethics startups', 'Compliance platforms'],' marketSiz,'
-  e: '$2.8B AI ethics',' growthRat,'
+  e: '$2.8 B AI ethics',' growthRat,'
   e: '28% CAGR',' varian,'
   t: 'ethics-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11521,7 +10356,7 @@ export interface AdditionalRealService,;
   s: ['Edge optimization', 'IoT management', 'Performance tuning'],' ro,'
   i: 'Reduces latency by 40%',' competitor,'
   s: ['AWS Greengrass', 'Azure IoT Edge', 'Google Edge TPU'],' marketSiz,'
-  e: '$11B edge computing',' growthRat,'
+  e: '$11 B edge computing',' growthRat,'
   e: '32% CAGR',' varian,'
   t: 'edge-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11555,7 +10390,7 @@ export interface AdditionalRealService,;
   s: ['Security implementation', 'Compliance', 'Threat prevention'],' ro,'
   i: 'Reduces security incidents by 95%',' competitor,'
   s: ['Palo Alto', 'Cisco', 'Fortinet'],' marketSiz,'
-  e: '$38B zero trust security',' growthRat,'
+  e: '$38 B zero trust security',' growthRat,'
   e: '26% CAGR',' varian,'
   t: 'security-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11589,7 +10424,7 @@ export interface AdditionalRealService,;
   s: ['Customer personalization', 'Journey optimization', 'Experience improvement'],' ro,'
   i: 'Increases customer satisfaction by 35%',' competitor,'
   s: ['Adobe Experience', 'Salesforce', 'HubSpot'],' marketSiz,'
-  e: '$14B customer experience',' growthRat,'
+  e: '$14 B customer experience',' growthRat,'
   e: '22% CAGR',' varian,'
   t: 'cx-futuristic', contactInf,'
   o: contact, realImplementatio,
@@ -11621,20 +10456,18 @@ export interface AdditionalRealService,;
   y: ['LLMs', 'RAG', 'Email APIs', 'LinkedIn automation'],' integration,'
   s: ['HubSpot', 'Salesforce', 'Pipedrive', 'Outreach'],' useCase,'
   s: ['Outbound prospecting', 'Lead qualification', 'Meeting booking'],' ro,'
-  i: '2–4x meetings per rep',' competitor,'
+  i: '2–4 x meetings per rep',' competitor,'
   s: ['Regie.ai', 'Lyne.ai'],' marketSiz,'
-  e: '$12B sales tech',' growthRat,'
+  e: '$12 B sales tech',' growthRat,'
   e: '19% CAGR',' varian,'
   t: 'agentic-suite', contactInf,'
-  o: mobil,""
-  e: "+1 302 464 0950", emai,""
-  l: "kleber@ziontechgroup.com",' mobil,'"
+  o: mobil,"
+  e: "+1 302 464 0950""
+  l: ",' mobil,'"
   e: '+1 302 464 0950',' emai,'
   l: 'kleber@ziontechgroup.com',' addres,'
-  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,"'"
-  e: "+1 302 464 0950","
-  emai,""
-  l: "kleber@ziontechgroup.com" mobil,""
-  e: "+1 302 464 0950", emai,""
-  l: "kleber@ziontechgroup.com", addres,""
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,"
+  e: "+1 302 464 0950"
+  emai,""kleber@ziontechgroup.com" mobil,"
+  e: "+1 302 464 0950""
+  l: ", addres,""364 E Main St STE 1008 Middletown DE 19709" } } ]; '"

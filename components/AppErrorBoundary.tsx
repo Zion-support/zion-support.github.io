@@ -14,7 +14,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
 }
   return ()
             onClick={() => window?.location.reload()}
-            className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">"
+            className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
             Reload page</span></div>
 </div></div>
   ),
@@ -46,14 +46,12 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
 }
     super(props),
     this.state = { hasError: false, error: undefined }
-  }
   static getDerivedStateFromError(error: Error): AppErrorBoundaryState {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
     return { hasError: true, error }
-  }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
   // TODO: Add properties
 }

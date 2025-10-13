@@ -54,8 +54,6 @@ const getStatusBadge = (status: string,) => {
       default:
         return status
     }
-
-  }
 ;
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';';
 import Link from 'next/link', // Changed from react-router-dom';';
@@ -79,8 +77,8 @@ import {
         return (
   // TODO: Add parameters
 )
-          <Badge variant="warning" className="flex items-center gap-1">"
-<Clock className="h-3 w-3" /> In Escrow"
+          <Badge variant="warning"flex items-center gap-1"
+<Clock className="
           </Badge>
         ),
       case 'released':'
@@ -88,29 +86,28 @@ import {
         return (
   // TODO: Add parameters
 )
-          <Badge variant="success" className="flex items-center gap-1">"
-<CheckCircle2 className="h-3 w-3" /> Released"
+          <Badge variant="success"flex items-center gap-1"
+<CheckCircle2 className="
           </Badge>
         ),
       case 'disputed':'
         return (
   // TODO: Add parameters
 )
-          <Badge variant="destructive" className="flex items-center gap-1">"
-<ShieldAlert className="h-3 w-3" /> Disputed"
+          <Badge variant="destructive"flex items-center gap-1"
+<ShieldAlert className="
           </Badge>
         )
       default:
         return status
     }
-  }
   },
 
   return (
   // TODO: Add parameters
 )
-    <div className='container max-w-4xl py-10'>'
-<h1 className='text-3xl font-bold mb-6'>Order History</h1>'
+    <div className='container max-w-4 xl py-10'>'
+<h1 className='text-3 xl font-bold mb-6'>Order History</h1>'
       {isLoading ? (
   // TODO: Add parameters
 )
@@ -146,33 +143,8 @@ import {
 )
         <EmptyState
           icon={<FileText className='h-10 w-10' />}'
-          title='No Orders'          description="You haven't purchased anything yet."'"
-          icon={<FileText className="h-10 w-10" />}"
-          title="No Orders""
-          description="You haven't purchased anything yet."'"
-
-        />
-      ) : (
-  // TODO: Add parameters
-)
-        <Table>
-<TableHeader>
-<TableRow>
-<TableHead>Order #</TableHead>
-<TableHead>Date</TableHead>
-<TableHead>Total</TableHead>
-<TableHead>Status</TableHead>
-<TableHead>View</TableHead></TableRow>
-</TableHeader>
-<TableBody>
-
-            {orders.map(order => (              <TableRow key={order.orderId}>
-<TableCell className='font-medium'>{order.orderId}</TableCell>'
-            {orders.map((order) => (
-  // TODO: Add parameters
-)
-              <TableRow key={order.orderId}>
-<TableCell className="font-medium">{order.orderId}</TableCell>"
+          title='No Orders'          description="You haven't purchased anything yet."
+          icon={<FileText className="h-10 w-10"No Orders""You haven't purchased anything yet."'"font-medium"
 <TableCell>{formatDate(order.date)}</TableCell>
 <TableCell>{order.total}</TableCell>
 <TableCell>{getStatusBadge(order.status)}</TableCell>
@@ -184,7 +156,7 @@ import {
                     View
                   </Link></TableCell>
 </TableRow>
-          title='No Orders'          description="You haven't purchased anything yet."'"
+          title='No Orders'          description="'"
         />
       ) : (
   // TODO: Add parameters
@@ -269,13 +241,11 @@ const getStatusBadge = (status: string, ) =>: any {
       default:
         return status
     }
-  }
-
   return (
   // TODO: Add parameters
 )
-    <div className='container max - w-4xl py - 10'>'
-<h1 className='text - 3xl font - bold mb - 6'>Order History</h1>'
+    <div className='container max - w-4 xl py - 10'>'
+<h1 className='text - 3 xl font - bold mb - 6'>Order History</h1>'
       {is_loading ? (
   // TODO: Add parameters
 )
@@ -309,7 +279,7 @@ const getStatusBadge = (status: string, ) =>: any {
 )
         <EmptyState
           icon={<FileText className='h - 10 w - 10' />}'
-          title='No Orders'          description="You haven't purchased anything yet."'"
+          title='No Orders'          description="'"
         />) : (
   // TODO: Add parameters
 )

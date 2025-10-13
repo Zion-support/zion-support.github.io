@@ -7,4 +7,3 @@ export const messageChannelHandler = {
   receiveMessage: (callback: any) => {},
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
-}

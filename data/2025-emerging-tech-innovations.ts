@@ -124,7 +124,7 @@ export const emergingTechInnovations2025: EmergingTechInnovationService[] = [;
       'Scalable quantum processing units''
     ],
     category: 'AI & Quantum Computing','
-    marketSize: '$15.2B','
+    marketSize: '$15.2 B','
     targetAudience: ['Research institutions', 'Tech companies', 'Financial services', 'Healthcare organizations'],'
     competitiveAdvantage: 'First-to-market AI-quantum fusion technology with proprietary algorithms','
     useCases: [
@@ -250,7 +250,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     useCases: ['Secure government communications, Financial transactions, Healthcare data, Critical infrastructure'],'
     roi: 'Enable quantum-secure communications and future-proof infrastructure','
     competitors: ['IBM Quantum Network, Google Quantum Internet, China Quantum Network'],'
-    marketSize: '$15B+ quantum internet market','
+    marketSize: '$15 B+ quantum internet market','
     growthRate: '200% YoY','
     variant: 'quantum-internet-enterprise','
     contactInfo: contact,
@@ -326,9 +326,9 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     technology: ['TensorFlow, PyTorch, Computer Vision, Robotics, Python, C++'],'
     integrations: ['Vehicle control systems, Sensor networks, Cloud platforms, Fleet management systems'],'
     useCases: ['Passenger vehicles, Commercial trucks, Delivery robots, Agricultural vehicles'],'
-    roi: 'Accelerate autonomous vehicle development by 3x and improve safety by 40%','
+    roi: 'Accelerate autonomous vehicle development by 3 x and improve safety by 40%','
     competitors: ['Waymo, Tesla, Cruise, Argo AI'],'
-    marketSize: '$45B+ autonomous vehicle market','
+    marketSize: '$45 B+ autonomous vehicle market','
     growthRate: '35% YoY','
     variant: 'ai-autonomous-vehicles','
     contactInfo: contact,
@@ -343,7 +343,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 ]
   // TODO: Add items
 ]
-      '3x faster development','
+      '3 x faster development','
       '40% improvement in safety','
       'Regulatory compliance','
       'Real-time learning','
@@ -381,7 +381,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 ]
       'Real-time asset monitoring and visualization','
       'Predictive maintenance and analytics','
-      '3D modeling and simulation','
+      '3 D modeling and simulation','
       'IoT sensor integration and management','
       'Performance optimization algorithms','
       'Historical data analysis and trending','
@@ -401,17 +401,17 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     setupTime: '3-4 weeks','
     category: 'Edge Computing & IoT','
     realService: true,
-    technology: ['Unity3D, Unreal Engine, Python, Node.js, IoT protocols, 3D modeling'],'
+    technology: ['Unity3 D, Unreal Engine, Python, Node.js, IoT protocols, 3 D modeling'],'
     integrations: ['IoT platforms, ERP systems, SCADA systems, Cloud platforms, CAD software'],'
     useCases: ['Manufacturing optimization, Energy management, Infrastructure monitoring, Smart cities'],'
     roi: 'Reduce maintenance costs by 30% and improve operational efficiency by 25%','
     competitors: ['Siemens Mindsphere, GE Digital Twin, PTC ThingWorx, Microsoft Azure Digital Twins'],'
-    marketSize: '$30B+ digital twin market','
+    marketSize: '$30 B+ digital twin market','
     growthRate: '50% YoY','
     variant: 'ai-edge-enterprise','
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native platform with 3D visualization and IoT integration','
+    implementationDetails: 'Cloud-native platform with 3 D visualization and IoT integration','
     launchDate: '2025-01-01','
     customers: 89,
     rating: 4.7,
@@ -425,7 +425,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
       '25% improvement in efficiency','
       'Real-time monitoring','
       'Predictive maintenance','
-      '3D visualization''
+      '3 D visualization''
     ],
     capabilities: [
   // TODO: Add items
@@ -434,11 +434,11 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 ]
       'Real-time monitoring','
       'Predictive analytics','
-      '3D modeling','
+      '3 D modeling','
       'IoT integration','
       'Performance optimization''
     ],
-    marketAdvantage: 'Most comprehensive digital twin platform with advanced 3D visualization and AI analytics''
+    marketAdvantage: 'Most comprehensive digital twin platform with advanced 3 D visualization and AI analytics''
   },
   // Advanced Robotics & Automation Services
   {
@@ -484,7 +484,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     useCases: ['Manufacturing automation, Warehouse operations, Healthcare robotics, Research automation'],'
     roi: 'Increase operational efficiency by 40% and reduce robotics costs by 30%','
     competitors: ['ABB Robotics, KUKA, FANUC, Universal Robots'],'
-    marketSize: '$25B+ robotics market','
+    marketSize: '$25 B+ robotics market','
     growthRate: '30% YoY','
     variant: 'ai-autonomous-enterprise','
     contactInfo: contact,
@@ -560,9 +560,9 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     technology: ['Qiskit, Cirq, Python, C++, Quantum algorithms, Molecular modeling'],'
     integrations: ['Laboratory systems, Research databases, Cloud platforms, Quantum hardware'],'
     useCases: ['Drug discovery, Materials development, Chemical synthesis, Research optimization'],'
-    roi: 'Accelerate materials discovery by 10-100x and reduce research costs by 60%','
+    roi: 'Accelerate materials discovery by 10-100 x and reduce research costs by 60%','
     competitors: ['Schrödinger, Materials Project, Citrine Informatics, Exscientia'],'
-    marketSize: '$18B+ materials discovery market','
+    marketSize: '$18 B+ materials discovery market','
     growthRate: '40% YoY','
     variant: 'quantum-materials-enterprise','
     contactInfo: contact,
@@ -577,7 +577,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 ]
   // TODO: Add items
 ]
-      '10-100x faster discovery','
+      '10-100 x faster discovery','
       '60% reduction in costs','
       'Quantum advantage','
       'AI optimization','
@@ -607,13 +607,13 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     tagline: 'Build and manage immersive virtual environments for business applications','
     price: '$3,299','
     period: '/month','
-    description: 'Comprehensive metaverse platform that enables businesses to create, deploy, and manage immersive 3D virtual environments for collaboration, training, and customer engagement.','
+    description: 'Comprehensive metaverse platform that enables businesses to create, deploy, and manage immersive 3 D virtual environments for collaboration, training, and customer engagement.','
     features: [
   // TODO: Add items
 ]
   // TODO: Add items
 ]
-      '3D world building and environment creation','
+      '3 D world building and environment creation','
       'AI-powered content generation and NPCs','
       'Multi-user collaboration and social features','
       'VR/AR device compatibility and optimization','
@@ -635,17 +635,17 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     setupTime: '2-4 weeks','
     category: 'Metaverse & VR/AR','
     realService: true,
-    technology: ['Unity3D, Unreal Engine, WebGL, Three.js, Python, JavaScript'],'
+    technology: ['Unity3 D, Unreal Engine, WebGL, Three.js, Python, JavaScript'],'
     integrations: ['Business systems, CRM platforms, Learning management systems, Social platforms'],'
     useCases: ['Virtual meetings, Employee training, Customer engagement, Virtual events'],'
     roi: 'Reduce travel costs by 70% and improve collaboration efficiency by 40%','
     competitors: ['Meta Horizon, Microsoft Mesh, Spatial, VRChat'],'
-    marketSize: '$28B+ metaverse market','
+    marketSize: '$28 B+ metaverse market','
     growthRate: '60% YoY','
     variant: 'ai-creative-enterprise','
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cloud-native platform with 3D creation tools and business integration','
+    implementationDetails: 'Cloud-native platform with 3 D creation tools and business integration','
     launchDate: '2024-11-01','
     customers: 134,
     rating: 4.7,
@@ -666,7 +666,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 ]
   // TODO: Add items
 ]
-      '3D world building','
+      '3 D world building','
       'AI content generation','
       'Multi-user collaboration','
       'VR/AR optimization','
@@ -718,7 +718,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     useCases: ['Grid optimization, Renewable integration, Energy storage, Demand response'],'
     roi: 'Reduce energy costs by 25% and improve grid efficiency by 30%','
     competitors: ['GE Grid Solutions, Siemens Energy, ABB Energy, Schneider Electric'],'
-    marketSize: '$35B+ energy optimization market','
+    marketSize: '$35 B+ energy optimization market','
     growthRate: '25% YoY','
     variant: 'quantum-energy-enterprise','
     contactInfo: contact,
@@ -794,9 +794,9 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     technology: ['TensorFlow, PyTorch, Python, Bioinformatics, Molecular modeling, AI/ML'],'
     integrations: ['Laboratory systems, Research databases, Cloud platforms, Scientific instruments'],'
     useCases: ['Drug discovery, Genetic research, Protein analysis, Biological simulation'],'
-    roi: 'Accelerate research by 5x and reduce development costs by 50%','
-    competitors: ['Benchling, DNAnexus, Illumina, 10x Genomics'],'
-    marketSize: '$20B+ biotech research market','
+    roi: 'Accelerate research by 5 x and reduce development costs by 50%','
+    competitors: ['Benchling, DNAnexus, Illumina, 10 x Genomics'],'
+    marketSize: '$20 B+ biotech research market','
     growthRate: '35% YoY','
     variant: 'ai-healthcare-enterprise','
     contactInfo: contact,
@@ -811,7 +811,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 ]
   // TODO: Add items
 ]
-      '5x faster research','
+      '5 x faster research','
       '50% reduction in costs','
       'AI-powered discovery','
       'Laboratory integration','
@@ -874,7 +874,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     useCases: ['Threat detection, Incident response, Security monitoring, Compliance'],'
     roi: 'Reduce threat detection time by 90% and false positives by 70%','
     competitors: ['CrowdStrike, SentinelOne, Palo Alto Networks, FireEye'],'
-    marketSize: '$25B+ cybersecurity market','
+    marketSize: '$25 B+ cybersecurity market','
     growthRate: '45% YoY','
     variant: 'quantum-cybersecurity-enterprise','
     contactInfo: contact,
@@ -909,4 +909,3 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration''
   }
 ]
-}

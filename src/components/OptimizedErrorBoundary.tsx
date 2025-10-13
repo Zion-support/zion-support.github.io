@@ -45,7 +45,6 @@ class OptimizedErrorBoundary extends Component
       errorInfo: null,
       errorId:     ,
 $4}
-  }
   static getDerivedStateFromError(error: Error): Partial<State> {
   // TODO: Add properties
 }
@@ -60,7 +59,6 @@ $4}
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     }
-  }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
   // TODO: Add properties
 }
@@ -88,7 +86,6 @@ $4}
     if (process.env['NODE_ENV'] === 'production') {'
     this.reportError(error, errorInfo)
   }
-  }
   componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {;
 const { resetKeys, resetOnPropsChange } = this.props;
 const { hasError } = this.state
@@ -111,7 +108,6 @@ const { hasError } = this.state
 }
           this.resetErrorBoundary()
   }
-      }
     }
     if (
   // TODO: Add parameters
@@ -126,7 +122,6 @@ const { hasError } = this.state
 }
     this.resetErrorBoundary()
   }
-  }
   componentWillUnmount() {
   // TODO: Add properties
 }
@@ -138,7 +133,6 @@ const { hasError } = this.state
   // TODO: Add properties
 }
       clearTimeout(this.resetTimeoutId)
-  }
   }
   private reportError = (error: Error, errorInfo: ErrorInfo) => {
   // TODO: Add properties
@@ -177,7 +171,6 @@ const gtag = (
         }
       })
     }
-  }
   private resetErrorBoundary = () => {
   // TODO: Implement
 }
@@ -256,7 +249,6 @@ $4})
     }
     return this.props.children
   }
-}
 interface ErrorFallbackProps {
   // TODO: Add properties
 }
@@ -287,7 +279,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(
                 strokeLinecap='round''
                 strokeLinejoin='round''
                 strokeWidth={2}
-                d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z''
+                d='M12 9 v2 m0 4 h.01 m-6.938 4 h13.856 c1.54 0 2.502-1.667 1.732-2.5 L13.732 4 c-.77-.833-1.732-.833-2.5 0 L4.268 19.5 c-.77.833.192 2.5 1.732 2.5 z''
               />
 <h1 className='text-xl font-semibold text-gray-900 mb-2'>'
           Something went wrong

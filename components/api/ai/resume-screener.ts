@@ -51,7 +51,6 @@ const text = await generateText(prompt, 'You are an expert technical recruiter. 
   return res.status(200).json({ results: text })
 }
 }
-}
     return res
       .status (400)
       .json ({ error: 'job_description and resumes[] required' });';
@@ -79,4 +78,3 @@ const text = await generateText(prompt, 'You are an expert technical recruiter. 
   return res.status(200).json({ results: text })
 }
 
-}}

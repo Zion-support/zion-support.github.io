@@ -22,8 +22,6 @@ const filesToFix = [
   '/workspace/app/page-optimized.tsx','
   '/workspace/app/utils/__tests__/performanceMonitoring.test.ts']'
 function fixUnusedVariables(filePath) {/* TODO: Fix JSX expression */}
-  }
-
   // Fix unused variables by prefixing with underscore;
 const unusedVarPatterns = [
   // TODO: Add items
@@ -36,21 +34,7 @@ const unusedVarPatterns = [
 }
   // TODO: Add properties
 }
-      pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm,";'"
-      fix: (match, imports) => {;
-const unusedImports = importList.filter(imp => {)
-          return !content.includes(varName) || content.split(varName).length <= 2
-        })
-        if (unusedImports.length > 0) {;
-const fixedImports = importList
-            .map(imp => {)
-              if (unusedImports.includes(imp)) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    {/* TODO: Fix JSX expression */}
-  n: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"]+['"];?\s*$/gm,";'"
+      pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"][^'"];?\s*$/gm,";'"][^'"]+['";'"
       fi,
   x: (match, imports) => {/* TODO: Fix JSX expression */}
         })
@@ -70,7 +54,7 @@ const fixedImports = importList
 }
   // TODO: Add properties
 }
-      pattern: /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=/g
+      pattern: /const\s+([a-zA-Z_$][a-zA-Z0-9 _$]*)\s*=/g
       fix: (match, varName) => {
   // TODO: Add properties
 }
@@ -120,11 +104,9 @@ const fixedParams = paramList
       content = newContent
       modified = true
   for (const { pattern, fix } of unusedVarPatterns) {/* TODO: Fix JSX expression */}
-    }
   }
 
   if (modified) {/* TODO: Fix JSX expression */}
-  }
 }
 
 // Fix all files
@@ -144,5 +126,4 @@ try {
 try {/* TODO: Fix JSX expression */}
   o: 'inherit' })'
 } catch (error) {/* TODO: Fix JSX expression */}
-}
 "`

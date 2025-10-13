@@ -79,7 +79,6 @@ const raw = fs.readFileSync(coursesPath, 'utf8')'
 }
     res.status(500).json({ error: e?.message ?? 'Failed to save course' })'
   }
-}
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2)),
     res.status(200).json({ ok: true, course: body })
   } catch (e: any) {
@@ -89,7 +88,6 @@ const raw = fs.readFileSync(coursesPath, 'utf8')'
 }
     res.status(500).json({ error: e?.message ?? 'Failed to save course' })'
   }
-}
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2))
     res.json({ success: true })
   } catch (error) {
@@ -97,9 +95,6 @@ const raw = fs.readFileSync(coursesPath, 'utf8')'
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
-
-}

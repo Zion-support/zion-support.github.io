@@ -15,7 +15,6 @@ export default async function handler(
 }
   // TODO: Add properties
 }
-  }
   const { talentSlug, requesterName, requesterEmail, projectInfo } =
     req && req.body || {};  const { talentSlug, requesterName, requesterEmail, projectInfo } = req && req.body || {}
   if (!talentSlug || !requesterName || !requesterEmail || !projectInfo) {;
@@ -123,7 +122,6 @@ const payload = { timestamp, talentSlug, requesterName, requesterEmail, projectI
 }
   // TODO: Add properties
 }
-  }
 }
     console.error('Request-to-hire failed', err)'
     return res.status(500).json({ error: 'Internal error' })'
@@ -146,6 +144,4 @@ const payload = { timestamp, talentSlug, requesterName, requesterEmail, projectI
     console.error('Request-to-hire failed', err)'
     return res.status(500).json({ error: 'Internal error' })'
   }
-}
-
-}}}}
+}}

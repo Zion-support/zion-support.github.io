@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';';
 import { Helmet } from 'react-helmet-async';'
 interface SEOProps {/* TODO: Fix JSX expression */}
-}
 const EnhancedSEO: React.FC<SEOProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions','
   description = 'Leading provider of AI and IT solutions, offering cutting-edge technology services, enterprise software development, and digital transformation solutions.','
@@ -70,7 +69,7 @@ const structuredData = {/* TODO: Fix JSX expression */}`
       addressCountry: 'US','
     addres,
   s: {/* TODO: Fix JSX expression */}
-    }}
+    }
   // Add article structured data if type is article
   if (type === 'article') {;';
 const articleData = {
@@ -109,11 +108,9 @@ const articleData = {
   d: modifiedTime || currentTime,
       mainEntityOfPag,
   e: {/* TODO: Fix JSX expression */}
-      }}
+      }
     if (section) {/* TODO: Fix JSX expression */}
-    }
     if (tags.length > 0) {/* TODO: Fix JSX expression */}
-    }
     (structuredData as any)['@graph'] = [structuredData, articleData]'
   }
   // Track page view
@@ -147,65 +144,55 @@ const articleData = {
   return(<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}
-      <meta name="description" content={description} />"
-<meta name="keywords" content={keywords} />"
-<meta name="author" content={author} />"
+      <meta name="description"
+<meta name="keywords"
+<meta name="author"
       {/* Robots */}
       <meta
-        name="robots""
+        name="robots"
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}'
       />
       {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl} />"
+      <link rel="canonical"
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />"
-<meta property="og:title" content={title} />)"
-      <meta property="og:description" content={description} />)"
+      <meta property="og:type"
+<meta property="og:title"
+      <meta property="og:description"
       <meta;)
-        property="og: image"),"
+        property="og: image"
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}'
       />
-<meta property="og:url" content={currentUrl} />"
-<meta property="og: site_name" content="Zion Tech Group" />,"
-      <meta property="og:locale" content="en_US" />,"
+<meta property="og:url"
+<meta property="og: site_name"Zion Tech Group" />,"og:locale" content=" />,"
 ,
       {/* Twitter */}
-      <meta name="twitter: card" content="summary_large_image" />,"
-      <meta name="twitter:title" content={title} />"
-<meta name="twitter:description" content={description} />"
+      <meta name=" content="summary_large_image"
+      <meta name="twitter:title"
+<meta name="twitter:description"
 <meta
-        name="twitter: image","
+        name="twitter: image"
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}'
       />
-<meta name="twitter: site" content="@ziontechgroup" />,"
-      <meta name="twitter:creator" content="@ziontechgroup" />,"
+<meta name="twitter: site"@ziontechgroup" />,"twitter:creator" content=" />,"
 ,
       {/* Additional Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />"
-<meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />"
-<meta name="language" content="English" />"
-<meta name="revisit-after" content="7 days" />"
-<meta name="distribution" content="global" />"
-<meta name="rating" content="general" />"
+      <meta name=" content="width=device-width, initial-scale=1.0"
+<meta httpEquiv="Content-Type"text/html; charset=utf-8" />"language" content=" />"
+<meta name=" content="7 days"
+<meta name="distribution"global" />"rating" content=" />"
       {/* Theme Color */}
-      <meta name="theme-color" content="#1f2937" />"
-<meta name="msapplication-TileColor" content="#1f2937" />"
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />"
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />"
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />"
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />"
-<link rel="manifest" href="/site.webmanifest" />"
+      <meta name=" content="#1 f2937"
+<meta name="msapplication-TileColor"#1 f2937" />"icon" type=" href="/favicon.ico"
+<link rel="apple-touch-icon"180 x180" href=" />"
+<link rel=" type="image/png"32 x32" href=" />"
+<link rel=" type="image/png"16 x16" href=" />"
+<link rel=" href="/site.webmanifest"
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https: //fonts.googleapis.com" />,"
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,"
-      <link rel="preconnect" href="https://www.google-analytics.com" />,"
-,
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />"
-<link rel="dns-prefetch" href="//www.google-analytics.com" />"
+      <link rel="preconnect"https: //fonts.googleapis.com" />,"preconnect" href=" crossOrigin="anonymous"
+      <link rel="preconnect"https://www.google-analytics.com" />,"dns-prefetch" href=" />"
+<link rel=" href="//www.google-analytics.com"
       {/* Structured Data */}
-      <script type="application/ld+json">{JSON.stringify(structuredData)}"
+      <script type="application/ld+json"
       {/* Additional structured data for breadcrumbs */}
       {
   // TODO: Add properties
@@ -213,7 +200,7 @@ const articleData = {
   // TODO: Add properties
 }
     location.pathname !== '/' && ('
-        <script type="application/ld+json"></scrip>"
+        <script type="application/ld+json"
           {JSON.stringify({
   // TODO: Add properties
 }
@@ -249,80 +236,55 @@ const articleData = {
   return (<Helmet>
       {/* Basic Meta Tags */}
       <title>{title}
-      <meta name="description" content={description} /></meta>""
-      <meta name="keywords" content={keywords} /></meta>""
-      <meta name="author" content={author} />"
-      {/* Robots */}
-      <meta></meta>""
-        name="robots"`"
+      <meta name="description""
+      <meta name=" content={keywords} /></meta>""author" content={author} />""
+        name="`"
         content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`}'
       />
-      {/* Canonical URL */}""
-      <link rel="canonical" href={canonicalUrl} />"
-      {/* Open Graph / Facebook */}""
-      <meta property="o,""
-  g:type" content={type} /></meta>""
-      <meta property="o,""
-  g:title" content={title} /></meta>""
-      <meta property="o,""
-  g:description" content={description} />"
-<meta></meta>""
-        property="o,""
-  g:image")`"
-        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}'
-      />""
-      <meta property="o,""
-  g:url" content={currentUrl} /></meta>""
-      <meta property="o,""
-  g:site_name" content="Zion Tech Group" /></meta>""
-      <meta property="o,""
-  g:locale" content="en_US" />"
-      {/* Twitter */}""
-      <meta name="twitte,""
-  r:card" content="summary_large_image" /></meta>""
-      <meta name="twitte,""
-  r:title" content={title} /></meta>""
-      <meta name="twitte,""
-  r:description" content={description} />"
-<meta></meta>""
-        name="twitte,""
-  r:image"`"
-        content={image.startsWith('http') ? image : `${window.location.origin}${image}`}'
-      />""
-      <meta name="twitte,""
-  r:site" content="@ziontechgroup" /></meta>""
-      <meta name="twitte,""
-  r:creator" content="@ziontechgroup" />"
-      {/* Additional Meta Tags */}""
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" /></meta>""
-      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /></meta>""
-      <meta name="language" content="English" /></meta>""
-      <meta name="revisit-after" content="7 days" /></meta>""
-      <meta name="distribution" content="global" /></meta>""
-      <meta name="rating" content="general" />"
-      {/* Theme Color */}""
-      <meta name="theme-color" content="#1f2937" /></meta>""
-      <meta name="msapplication-TileColor" content="#1f2937" />"
-      {/* Favicon */}""
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" /></link>""
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /></link>""
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /></link>""
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /></link>""
-      <link rel="manifest" href="/site.webmanifest" />"
-      {/* Preconnect to external domains */}""
-      <nk rel="preconnect" href="http,"$2 />"
-  s://fonts.googleapis.com" />"
-</link>""
-      <nk rel="preconnect" href="http,"$2 />"
-  s://fonts.gstatic.com" crossOrigin="anonymous" />"
-</link>""
-      <nk rel="preconnect" href="http,"$2 />"
-  s://www.google-analytics.com" />"
-      {/* DNS Prefetch */}""
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" /></link>""
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />"
-      {/* Structured Data */}""
-      <script type="application/ld+json">{JSON.stringify(structuredData)}"
+      {/* Canonical URL */}"
+      <link rel="canonical"
+      {/* Open Graph / Facebook */}""o,"" content={type} /></meta>""o,"" content={title} /></meta>""o,"" content={description} />"
+<meta></meta>"
+        property="o,"
+  g:image")`""
+      <meta property=""
+  g:url""
+      <meta property=""
+  g:site_name"Zion Tech Group" /></meta>"
+      <meta property="o,"
+  g:locale" content=" />"
+      {/* Twitter */}"
+      <meta name="twitte,"
+  r:card" content=" /></meta>""twitte,"" content={title} /></meta>""twitte,"" content={description} />"
+<meta></meta>"
+        name="twitte,"
+  r:image"`""
+      <meta name=""
+  r:site"@ziontechgroup" /></meta>"
+      <meta name="twitte,"
+  r:creator" content=" />"
+      {/* Additional Meta Tags */}"
+      <meta name="viewport"width=device-width, initial-scale=1.0" /></meta>"
+      <meta httpEquiv="Content-Type"text/html; charset=utf-8" /></meta>"
+      <meta name="language"English" /></meta>"
+      <meta name="revisit-after"7 days" /></meta>"
+      <meta name="distribution"global" /></meta>"
+      <meta name="rating"general" />""
+      <meta name=" content="#1 f2937""
+      <meta name=" content="#1 f2937"
+      {/* Favicon */}""icon" type=" href="/favicon.ico""
+      <link rel=" sizes="180 x180"/apple-touch-icon.png" /></link>"
+      <link rel="icon"image/png" sizes=" href="/favicon-32 x32.png""
+      <link rel=" type="image/png"16 x16" href=" /></link>""manifest" href=" />"
+      {/* Preconnect to external domains */}"
+      <nk rel="preconnect"http,"$2 />" />"
+</link>"
+      <nk rel="preconnect"http,"$2 />" crossOrigin="anonymous"
+</link>""preconnect" href="$2 />"
+  s://www.google-analytics.com"
+      {/* DNS Prefetch */}""dns-prefetch" href=" /></link>""dns-prefetch" href=" />"
+      {/* Structured Data */}"
+      <script type="application/ld+json"
       {/* Additional structured data for breadcrumbs */}
       {/* TODO: Fix JSX expression */}
               },

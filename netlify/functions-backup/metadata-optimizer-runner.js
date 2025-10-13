@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'metadata-optimizer-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'metadata-optimizer-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'metadata-optimizer-runner',' source: event.source || 'unknown', optimization: {' status: 'active', metadataOptimized: 0,'
         lastOptimization: new Date().toISOString() } }) } return result; } catch (error) {

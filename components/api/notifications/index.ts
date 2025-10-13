@@ -153,14 +153,12 @@ const fallback: NotificationItem[] = [
 }
   // TODO: Add properties
 }
-    }
     return res.status(200).json({ notifications: data as NotificationItem[] })
   } catch (e) {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
-  }
 }
       return res.status (200).json ({ notifications: fallback })
     }
@@ -173,9 +171,7 @@ const fallback: NotificationItem[] = [
 return res.status (500).json ({ error: 'Unexpected error' })'
   }    return res.status (500).json ({ error: 'Unexpected error' })'
   }
-}
   }
-}
           id: 'seed-1','
           user_id: userId,
           type: 'onboarding','
@@ -209,5 +205,4 @@ return res.status (500).json ({ error: 'Unexpected error' })'
   // TODO: Add properties
 }
     return res.status(500).json({ error: 'Unexpected error' })'
-  }
-}
+  

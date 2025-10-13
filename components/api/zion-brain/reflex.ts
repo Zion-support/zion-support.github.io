@@ -98,7 +98,6 @@ const latencyMs = Date && Date.now() - started
   }
   return res && res.status(405).json({ error: 'Method not allowed' })'
 }
-}
 import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';'
 function isAuthorized(req: NextApiRequest): boolean {;
 const token = req.headers['x-admin-token'] || req.query.token;';
@@ -135,7 +134,6 @@ const latencyMs = Date.now() - started
       appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } })'
       return res.status(500).json({ error: 'Reflex failure' })'
     }
-  }
   return res.status(405).json({ error: 'Method not allowed' })'
 }
 </a></a>

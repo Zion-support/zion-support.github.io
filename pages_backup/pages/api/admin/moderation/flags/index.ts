@@ -31,7 +31,6 @@ const flag = await createFlag(init)
 }
       return res.status(400).json({ error: e.message || 'Invalid payload' })'
     }
-  }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   // TODO: Add properties
 }
@@ -51,7 +50,6 @@ const user = parseUserFromRequest(req)
   // TODO: Add properties
 }
       return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) '
-    }
     }
   res.setHeader('AllowGET,POST'),'
   return res.status(405).end('Method Not Allowed')'
@@ -79,9 +77,8 @@ const filtered = flags.filter(f =>
 }
   // TODO: Add properties
 }
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
+    console.error("Error:"
+    return res.status(500).json({ error: "Internal server error"
   }
-}
   res.setHeader('Allow', 'GET,POST')'
   return res.status(405).end('Method Not Allowed')'

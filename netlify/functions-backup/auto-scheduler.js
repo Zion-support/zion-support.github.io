@@ -48,7 +48,6 @@ const result = {
         message: error.message),
         function: 'auto-scheduler'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -57,7 +56,6 @@ const result = {
   n: 'auto-scheduler'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'auto-scheduler',' source: event.source || 'unknown', scheduling: {' status: 'active', tasksScheduled: 0,'
         lastSchedule: new Date().toISOString() } }) } return result; } catch (error) {

@@ -10,19 +10,17 @@ export const securityConfig = {
   // Content Security Policy
   csp: {,
     directives: {,
-      'default-src': ["'self'"],"'"
+      'default-src': ["'self'"'"
       'script-src': [,'
-        "'self'","'"
-        "'unsafe-inline'","'"
-        "'unsafe-eval'","'"
+        ","'"'unsafe-inline'","
+        "'unsafe-eval'"'"
         'https: //www.googletagmanager.com'],'
-      'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],'"
-      'img-src': ["'self'", 'data:', 'https:', 'blob: '],'"
-      'font-src': ["'self'", 'https: //fonts.gstatic.com'],'"
-      'connect-src': ["'self'", 'https: //www.google-analytics.com'],'"
-      'frame-ancestors': ["'none'"],"'"
-      'base-uri': ["'self'"],"'"
-      'form-action': ["'self'"]},"'"
+      'style-src': [", "'unsafe-inline'"
+      'img-src': ["'self'"
+      'font-src': ["'self'"
+      'connect-src': ["'self'"
+      'frame-ancestors': ["'none'"'"
+      'base-uri': ["],"'"'self'"]},"
     reportOnly: false,
   },
 
@@ -44,7 +42,7 @@ export const securityConfig = {
     ,
     maxInputLength: 10000,
     allowedFileTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'application/pdf'],'
-    maxFileSize: 10 * 1024 * 1024, // 10MB
+    maxFileSize: 10 * 1024 * 1024, // 10 MB
   },
 
   // Rate limiting
@@ -127,6 +125,6 @@ export const securityConfig = {/* TODO: Fix JSX expression */}
 
   // Data sanitization,
   sanitization: {/* TODO: Fix JSX expression */}
-  }}
+  }
 ;
 export default securityConfig;

@@ -1,8 +1,7 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";";
-import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0";"
+import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
+import { createClient } from "https://esm.sh/@supabase/supabase-js@2.45.0"
 // Initialize Supabase client;
-const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? ";"";
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? ";"";
+const supabaseUrl = Deno.env.get("SUPABASE_URL";""SUPABASE_SERVICE_ROLE_KEY") ?? "";
 const supabase = createClient(supabaseUrl, supabaseServiceKey)
 serve(async (req) => {
   // TODO: Add properties
@@ -15,32 +14,16 @@ serve(async (req) => {
   // TODO: Add properties
 }
     // Authenticate the request - should be called by a cron job or authorized system only
-    if (req.method === "POST") {;";
+    if (req.method === ") {;";
 const body = await req.json();
 const cronSecret = body.secret
-      if (cronSecret !== Deno.env.get("CRON_SECRET")) {"
-        return new Response(JSON.stringify({ error: "Unauthorized" }), {"
+      if (cronSecret !== Deno.env.get(")) {"
+        return new Response(JSON.stringify({ error: " }), {"
           status: 401,
-          headers: { "Content-Type": "application/json" }})"
-          headers: { "Content-Type": "application/json" },"
-        })
-      }
-    }
-    // Call the process-retention-emails function;
-const response = await fetch(`${supabaseUrl}/functions/v1/process-retention-emails`, {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      method: "POST","
-      headers: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        "Content-Type": "application/json","
-        "Authorization": `Bearer ${supabaseServiceKey}`}})"
-        "Authorization": `Bearer ${supabaseServiceKey}`,"
+          headers: { ": "application/json"
+          headers: { "Content-Type"application/json" },"POST","Content-Type": ","
+        ": `Bearer ${supabaseServiceKey}`}})"
+        ": `Bearer ${supabaseServiceKey}`,"
       },
     });
 const result = await response.json()
@@ -50,14 +33,14 @@ const result = await response.json()
   // TODO: Add properties
 }
       success: true,
-      message: "Daily retention process executed","
+      message: ","
       result}), {
   // TODO: Add properties
 }
   // TODO: Add properties
 }
       status: 200,
-      headers: { "Content-Type": "application/json" }})"
+      headers: { ": "application/json"
       result,
     }), {
   // TODO: Add properties
@@ -65,27 +48,7 @@ const result = await response.json()
   // TODO: Add properties
 }
       status: 200,
-      headers: { "Content-Type": "application/json" },"
-    })
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error in cron-daily-retention:", error)"
-    return new Response(JSON.stringify({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      success: false,
-      error: error.message}), {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      status: 500,
-      headers: { "Content-Type": "application/json" }})"
+      headers: { "Content-Type"application/json" },"Error in cron-daily-retention:", error)"Content-Type": " }})"
       error: error.message,
     }), {
   // TODO: Add properties
@@ -93,7 +56,7 @@ const result = await response.json()
   // TODO: Add properties
 }
       status: 500,
-      headers: { "Content-Type": "application/json" },"
+      headers: { ": "application/json"
     })
   }
 })

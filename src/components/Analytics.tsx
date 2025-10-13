@@ -1,20 +1,14 @@
 'use client'';
 import React, { useEffect } from 'react';'
 interface AnalyticsProps {/* TODO: Fix JSX expression */}
-}
 const,
   Analytics: React.FC<AnalyticsProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-    }
     if (enablePerformanceMonitoring) {/* TODO: Fix JSX expression */}
-    }
     if (enableErrorTracking) {/* TODO: Fix JSX expression */}
-    }
     if (enableUserBehaviorTracking) {/* TODO: Fix JSX expression */}
-    }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
 const initializeGoogleAnalytics = () => {/* TODO: Fix JSX expression */}
-    }
     (window as any).gtag = gtag
     gtag('js', new Date())'
     gtag('config', 'GA_MEASUREMENT_ID', {/* TODO: Fix JSX expression */})'
@@ -24,7 +18,6 @@ const initializeGoogleAnalytics = () => {/* TODO: Fix JSX expression */}
           } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}'
           } else if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}'
             }
-          }
         }
       })
       observer.observe({/* TODO: Fix JSX expression */})
@@ -34,7 +27,6 @@ const initializeGoogleAnalytics = () => {/* TODO: Fix JSX expression */}
         }
       })
     }
-  }
   const initializeErrorTracking = () => {/* TODO: Fix JSX expression */}
       })
     })
@@ -54,7 +46,6 @@ const initializeGoogleAnalytics = () => {/* TODO: Fix JSX expression */}
 let maxScroll = 0
     window.addEventListener('scroll', () => {/* TODO: Fix JSX expression */}'
         }
-      }
     })
     // Track time on page;
 const startTime = Date.now()
@@ -77,7 +68,6 @@ const startTime = Date.now()
   n: string, value?: any) => {/* TODO: Fix JSX expression */}
       })
     }
-  }
   return null
 }
 export default Analytics</AnalyticsProps>;

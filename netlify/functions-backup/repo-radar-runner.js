@@ -49,7 +49,6 @@ const result = {
         message: error.message),
         function: 'repo-radar-runner'}'
 //   } catch (error) {/* TODO: Fix JSX expression */}
-      }
     return {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}'
       },
@@ -58,7 +57,6 @@ const result = {
   n: 'repo-radar-runner'})'
       })
     }
-  }
 }
         timestamp: new Date().toISOString(),' function: 'repo-radar-runner',' source: event.source || 'unknown', radar: {' status: 'scanning', repositories: 0, signals: 0,'
         lastScan: new Date().toISOString() } }) } return result; } catch (error) {
