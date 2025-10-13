@@ -12,21 +12,15 @@ const withErrorLogging = (handler) => {
 };
 
 async function handler(req, res) {
-<<<<<<< HEAD
-=======
 
 export default function handler(req, res) {
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const { amount, currency = 'usd' } = req.body || {};
 
@@ -38,13 +32,10 @@ export default function handler(req, res) {
   }
 
   try {
-=======
 
   try {
     const { amount = 100, currency = 'usd' } = req.body || {};
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
+
   try {
     const { amount, currency = 'usd' } = req.body || {};
     if (!amount) {
@@ -53,7 +44,7 @@ export default function handler(req, res) {
       res.end(JSON.stringify({ error: 'Amount is required' }));
       return;
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+
     // Mock payment intent creation
     const paymentIntent = {
       id: `pi_${Date.now()}`,
@@ -61,39 +52,29 @@ export default function handler(req, res) {
       currency,
       status: 'requires_payment_method',
       created: Math.floor(Date.now() / 1000)
-<<<<<<< HEAD
-=======
+
       status: 'requires_payment_method'
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+
     };
     
     res.statusCode = 200;
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     res.json({ paymentIntent });
   } catch (error) {
-=======
+
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ paymentIntent }));
   } catch (error) {
     console.error('Payment intent creation error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
+
     res.json({ paymentIntent });
   } catch (_error) {
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }
 }
 
-<<<<<<< HEAD
 export default withErrorLogging(handler);
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+

@@ -3,73 +3,90 @@
 import fs from 'fs';
 import path from 'path';
 
-// List of files with merge conflicts
+// Files with merge conflicts
 const filesWithConflicts = [
-  './api/newsletter/subscribe.js',
-  './api/onsite-request.js',
-  './api/quotes.js',
-  './api/shipping-rates.js',
-  './api/subscribe.js',
-  './api/wallet.js',
-  './app/components/AccessibilityEnhancer.tsx',
-  './app/zion-ai-voice-assistant-pro/page.tsx',
-  './app/zion-smart-expense-categorizer/page.tsx',
-  './app/zion-ai-inventory-manager/page.tsx',
-  './app/zion-ai-performance-optimizer/page.tsx',
-  './app/zion-ai-social-media-manager/page.tsx',
-  './app/zion-ai-email-analyzer/page.tsx',
-  './app/zion-smart-inventory-optimizer/page.tsx',
-  './scripts/generate-sitemap.cjs',
-  './performance-report.json',
-  './fix-syntax-errors.cjs'
+  'app/cloud-infrastructure/page.tsx',
+  'app/components/AccessibilityEnhancer.tsx',
+  'app/components/PerformanceMonitor.tsx',
+  'app/components/SEOEnhancer.tsx',
+  'app/components/ErrorFallback.tsx',
+  'app/contexts/AnalyticsContext.tsx',
+  'app/contact/page.tsx',
+  'app/zion-ai-email-analyzer/page.tsx',
+  'app/zion-ai-voice-assistant-pro/page.tsx',
+  'app/zion-smart-expense-categorizer/page.tsx',
+  'app/zion-smart-inventory-optimizer/page.tsx',
+  'app/zion-ai-social-media-manager/page.tsx',
+  'app/zion-ai-performance-optimizer/page.tsx',
+  'app/zion-ai-inventory-manager/page.tsx',
+  'SidebarNavigation.tsx',
+  'App_minimal.tsx',
+  'eslint.config.js',
+  'api/newsletter/subscribe.js',
+  'api/quotes.js',
+  'api/error-report.js',
+  'api/create-payment-intent.js',
+  'api/wallet.js',
+  'api/onsite-request.js',
+  'api/subscribe.js',
+  'api/create-checkout-session.js',
+  'api/shipping-rates.js'
 ];
 
-function fixMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove merge conflict markers and keep the HEAD version
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
-    
-    // Remove any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD\n?/g, '');
-    content = content.replace(/=======\n?/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
-    
-    // Clean up any duplicate lines that might have been created
-    const lines = content.split('\n');
-    const cleanedLines = [];
-    let prevLine = '';
-    
-    for (const line of lines) {
-      if (line.trim() !== prevLine.trim() || line.trim() === '') {
-        cleanedLines.push(line);
-        prevLine = line;
+function cleanMergeConflicts(content) {
+  // Remove all merge conflict markers and keep the latest version
+  let cleaned = content;
+  
+  // Remove all conflict markers
+  cleaned = cleaned.replace(/^<<<<<<< .*$/gm, '');
+  cleaned = cleaned.replace(/^=======.*$/gm, '');
+  cleaned = cleaned.replace(/^>>>>>>> .*$/gm, '');
+  
+  // Remove empty lines that might be left behind
+  cleaned = cleaned.replace(/\n\s*\n\s*\n/g, '\n\n');
+  
+  // Remove duplicate imports
+  const lines = cleaned.split('\n');
+  const seenImports = new Set();
+  const filteredLines = [];
+  
+  for (const line of lines) {
+    if (line.trim().startsWith('import ')) {
+      if (!seenImports.has(line.trim())) {
+        seenImports.add(line.trim());
+        filteredLines.push(line);
       }
+    } else {
+      filteredLines.push(line);
+    }
+  }
+  
+  return filteredLines.join('\n');
+}
+
+function fixFile(filePath) {
+  try {
+    if (!fs.existsSync(filePath)) {
+      console.log(`File not found: ${filePath}`);
+      return;
     }
     
-    content = cleanedLines.join('\n');
+    const content = fs.readFileSync(filePath, 'utf8');
+    const cleaned = cleanMergeConflicts(content);
     
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed merge conflicts in: ${filePath}`);
-    return true;
+    // Only write if content changed
+    if (cleaned !== content) {
+      fs.writeFileSync(filePath, cleaned);
+      console.log(`Fixed merge conflicts in: ${filePath}`);
+    } else {
+      console.log(`No conflicts found in: ${filePath}`);
+    }
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
-console.log('Starting to fix merge conflicts...');
-
-let fixedCount = 0;
-for (const file of filesWithConflicts) {
-  if (fs.existsSync(file)) {
-    if (fixMergeConflicts(file)) {
-      fixedCount++;
-    }
-  } else {
-    console.log(`File not found: ${file}`);
-  }
-}
-
-console.log(`Fixed merge conflicts in ${fixedCount} files.`);
+// Process all files
+console.log('Starting merge conflict cleanup...');
+filesWithConflicts.forEach(fixFile);
+console.log('Merge conflict cleanup completed!');

@@ -1,18 +1,45 @@
-'use client';
+#!/usr/bin/env node
+
+import fs from 'fs';
+
+// Pages that need JSX fixes
+const pagesToFix = [
+  'app/zion-ai-inventory-manager/page.tsx',
+  'app/zion-ai-performance-optimizer/page.tsx',
+  'app/zion-ai-social-media-manager/page.tsx',
+  'app/zion-ai-voice-assistant-pro/page.tsx',
+  'app/zion-smart-expense-categorizer/page.tsx',
+  'app/zion-smart-inventory-optimizer/page.tsx'
+];
+
+function fixPage(filePath) {
+  try {
+    if (!fs.existsSync(filePath)) {
+      console.log(`File not found: ${filePath}`);
+      return;
+    }
+    
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Extract the service name from the file path
+    const serviceName = filePath.split('/')[1].replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    
+    // Create a proper page structure
+    const fixedContent = `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function ZionAiVoiceAssistantPro() {
+export default function ${serviceName.replace(/\s+/g, '')}() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Zion Ai Voice Assistant Pro | Zion Tech Group</title>
-        <meta name="description" content="Professional Zion Ai Voice Assistant Pro services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <title>${serviceName} | Zion Tech Group</title>
+        <meta name="description" content="Professional ${serviceName} services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Zion Ai Voice Assistant Pro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+            ${serviceName} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Advanced AI-powered solutions for modern businesses.
@@ -57,7 +84,7 @@ export default function ZionAiVoiceAssistantPro() {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="text-gray-300 mb-6">
-              Our zion ai voice assistant pro experts are ready to help you optimize your operations.
+              Our ${serviceName.toLowerCase()} experts are ready to help you optimize your operations.
             </p>
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
               Get Started Today
@@ -67,4 +94,16 @@ export default function ZionAiVoiceAssistantPro() {
       </div>
     </div>
   );
+}`;
+    
+    fs.writeFileSync(filePath, fixedContent);
+    console.log(`Fixed JSX structure in: ${filePath}`);
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+  }
 }
+
+// Process all pages
+console.log('Starting JSX page fixes...');
+pagesToFix.forEach(fixPage);
+console.log('JSX page fixes completed!');

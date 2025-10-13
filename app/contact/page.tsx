@@ -126,18 +126,6 @@ export default function ContactPage() {
           </h2>
           
           {isSubmitted ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-white" />
@@ -159,27 +147,6 @@ export default function ContactPage() {
                   });
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-=======
-            <div className="text-center">
-              <div className="bg-green-500/20 border border-green-500/30 rounded-xl p-8 mb-8">
-                <h3 className="text-2xl font-bold text-green-400 mb-4">Message Sent Successfully!</h3>
-                <p className="text-gray-300 mb-6">
-                  Thank you for your message. We'll get back to you within 24 hours.
-                </p>
-                <button
-                  onClick={() => {
-                    setIsSubmitted(false);
-                    setFormData({
-                      name: '',
-                      email: '',
-                      company: '',
-                      phone: '',
-                      subject: '',
-                      message: ''
-                    });
-                  }}
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
               >
                 Send Another Message
               </button>
@@ -263,8 +230,8 @@ export default function ContactPage() {
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   <option value="">Select a subject</option>
-                  {subjects.map((subject, index) => (
-                    <option key={index} value={subject}>
+                  {subjects.map((subject) => (
+                    <option key={subject} value={subject}>
                       {subject}
                     </option>
                   ))}
@@ -283,7 +250,7 @@ export default function ContactPage() {
                   required
                   rows={6}
                   className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                  placeholder="Tell us about your project or how we can help you..."
+                  placeholder="Tell us about your project and how we can help..."
                 />
               </div>
 
@@ -291,23 +258,49 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
                     </>
                   ) : (
                     <>
+                      <Send className="w-5 h-5 mr-2" />
                       Send Message
-                      <Send className="w-5 h-5 ml-2 inline" />
                     </>
                   )}
                 </button>
               </div>
             </form>
           )}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join hundreds of businesses that trust Zion Tech Group for their AI and IT needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/services"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+            >
+              View Our Services
+            </a>
+            <a
+              href="/about"
+              className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Learn More About Us
+            </a>
+          </div>
         </div>
       </section>
     </div>

@@ -1,31 +1,13 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
 export default function ZionSmartExpenseCategorizer() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Zion Smart Expense Categorizer | Zion Tech Group</title>
-        <meta name="description" content="Professional Smart Expense Categorizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="description" content="Professional Zion Smart Expense Categorizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -38,51 +20,51 @@ export default function ZionSmartExpenseCategorizer() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-4">AI-Powered Features</h3>
+            <h3 className="text-xl font-semibold text-white mb-4">AI-Powered Analysis</h3>
             <p className="text-gray-300 mb-4">
-              Cutting-edge AI technology for enhanced business operations.
+              Advanced AI analysis and intelligent processing capabilities.
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Machine learning</li>
+              <li>• Smart data processing</li>
+              <li>• Pattern recognition</li>
               <li>• Predictive analytics</li>
-              <li>• Automated processes</li>
             </ul>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Smart Integration</h3>
+            <h3 className="text-xl font-semibold text-white mb-4">Automation</h3>
             <p className="text-gray-300 mb-4">
-              Seamless integration with your existing business systems.
+              Streamline your workflow with intelligent automation.
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Workflow optimization</li>
+              <li>• Task automation</li>
+              <li>• Process improvement</li>
+            </ul>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Integration</h3>
+            <p className="text-gray-300 mb-4">
+              Seamless integration with your existing systems.
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• API integration</li>
               <li>• Data synchronization</li>
-              <li>• Real-time updates</li>
+              <li>• Custom solutions</li>
             </ul>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-4">24/7 Support</h3>
-            <p className="text-gray-300 mb-4">
-              Round-the-clock support for all your business needs.
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Expert support</li>
-              <li>• Quick response</li>
-              <li>• Proactive monitoring</li>
-            </ul>
-          </div>
+        </div>
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="text-gray-300 mb-6">
-              Our AI experts are ready to help you implement cutting-edge solutions.
+              Our zion smart expense categorizer experts are ready to help you optimize your operations.
             </p>
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
               Get Started Today
             </button>
           </div>
+        </div>
+      </div>
+    </div>
   );
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
