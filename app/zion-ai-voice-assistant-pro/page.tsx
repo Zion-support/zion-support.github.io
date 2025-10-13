@@ -23,17 +23,6 @@ export default function ZionAIVoiceAssistantPro() {
     "Multi-device synchronization"
   ];
 
-  const benefits = [
-    "Increase productivity by 60%",
-    "Reduce manual tasks by 80%",
-    "Improve accessibility for all users",
-    "Enable hands-free operation",
-    "Scale customer support efficiently",
-    "Enhance user experience",
-    "Reduce training time for new employees",
-    "Improve response accuracy"
-  ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -84,33 +73,6 @@ export default function ZionAIVoiceAssistantPro() {
         "Custom deployment"
       ],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion AI Voice Assistant Pro has revolutionized how our team works. We've increased productivity by 65% and our customer satisfaction scores are through the roof.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "CTO",
-      content: "The voice recognition is incredibly accurate, even with our technical jargon. It's like having a personal AI assistant that actually understands our business.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Operations Director",
-      content: "Our team can now handle 3x more customer inquiries thanks to the voice automation. The ROI was immediate and continues to grow.",
-      rating: 5,
-      avatar: "ER"
     }
   ];
 

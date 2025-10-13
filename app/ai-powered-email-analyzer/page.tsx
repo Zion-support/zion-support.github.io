@@ -3,14 +3,11 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
   Mail, 
-  TrendingUp, 
   Shield, 
   Zap, 
   BarChart3, 
   Users, 
-  Clock, 
   CheckCircle,
-  Star,
   ArrowRight,
   Brain,
   Target,
@@ -99,13 +96,6 @@ const AIPoweredEmailAnalyzerPage = () => {
       ],
       popular: false
     }
-  ];
-
-  const stats = [
-    { number: "95%", label: "Accuracy Rate" },
-    { number: "2.5x", label: "Faster Response Time" },
-    { number: "40%", label: "Increase in Engagement" },
-    { number: "10k+", label: "Happy Customers" }
   ];
 
   return (

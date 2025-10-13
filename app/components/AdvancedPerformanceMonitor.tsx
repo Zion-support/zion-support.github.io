@@ -26,30 +26,20 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
   const [isVisible, setIsVisible] = useState(false);
   const [isRecording, setIsRecording] = useState(false);
 
+  const trackMetric = (name: string, value: number) => {
+    console.log(`Performance Metric: ${name} = ${value}ms`);
+    
+    // Send to custom analytics
+    if (typeof window !== 'undefined' && (window as any).analytics) {
+      (window as any).analytics.track('Performance Metric', {
+        name,
+        value: Math.round(value),
+        timestamp: Date.now()
+      });
+    }
+  };
+
   useEffect(() => {
-    // Report metrics to analytics
-    const reportMetric = (name: string, value: number) => {
-      console.log(`Metric ${name}: ${value}`);
-      
-      // Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          metric_name: name,
-          metric_value: Math.round(value),
-          metric_delta: Math.round(value)
-        });
-      }
-
-      // Send to custom analytics
-      if (typeof window !== 'undefined' && (window as any).analytics) {
-        (window as any).analytics.track('Performance Metric', {
-          name,
-          value: Math.round(value),
-          timestamp: Date.now()
-        });
-      }
-    };
-
     const measureWebVitals = () => {
       // Web vitals measurement logic
       if (typeof window !== 'undefined' && 'performance' in window) {
@@ -62,24 +52,54 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
       // Memory measurement logic
       if (typeof window !== 'undefined' && 'memory' in performance) {
         const memory = (performance as any).memory;
-        setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }));
+        setMetrics(prev => ({
+          ...prev,
+          memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+        }));
       }
     };
 
     const measureLoadTime = () => {
-      // Load time measurement logic
-      if (typeof window !== 'undefined' && performance.timing) {
-        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-        setMetrics(prev => ({ ...prev, loadTime }));
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+          setMetrics(prev => ({ ...prev, loadTime }));
+          trackMetric('Load Time', loadTime);
+        }
       }
     };
 
-    try {
-      measureWebVitals();
-      measureMemory();
-      measureLoadTime();
-    } catch (error) {
-      console.error('Failed to measure performance metrics:', error);
+    // Initialize measurements
+    measureWebVitals();
+    measureMemory();
+    measureLoadTime();
+
+    // Set up performance observer
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'paint') {
+            const paintEntry = entry as PerformancePaintTiming;
+            if (paintEntry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: paintEntry.startTime }));
+              trackMetric('FCP', paintEntry.startTime);
+            }
+          }
+          if (entry.entryType === 'largest-contentful-paint') {
+            const lcpEntry = entry as PerformanceEntry;
+            setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
+            trackMetric('LCP', lcpEntry.startTime);
+          }
+        });
+      });
+
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
+
+      return () => {
+        observer.disconnect();
+      };
     }
   }, []);
 
@@ -91,17 +111,15 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
     setIsRecording(!isRecording);
   };
 
-  const formatBytes = (bytes: number) => {
-    if (bytes === 0) return '0 Bytes';
-    const k = 1024;
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-    const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  const getPerformanceGrade = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'good';
+    if (value <= thresholds.poor) return 'needs-improvement';
+    return 'poor';
   };
 
-  const formatTime = (ms: number) => {
-    return `${ms.toFixed(2)}ms`;
-  };
+  const fcpGrade = getPerformanceGrade(metrics.fcp, { good: 1800, poor: 3000 });
+  const lcpGrade = getPerformanceGrade(metrics.lcp, { good: 2500, poor: 4000 });
+  const ttfbGrade = getPerformanceGrade(metrics.ttfb, { good: 800, poor: 1800 });
 
   if (!showDetails) {
     return null;
@@ -109,59 +127,91 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
-      <div className="bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl">
-        <div className="p-4">
-          <div className="flex items-center justify-between mb-4">
-            <h3 className="text-white font-semibold">Performance Monitor</h3>
+      <button
+        onClick={toggleVisibility}
+        className="bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-colors duration-200"
+        title="Performance Monitor"
+      >
+        📊
+      </button>
+
+      {isVisible && (
+        <div className="absolute bottom-16 right-0 bg-slate-800 border border-purple-500/20 rounded-lg p-4 w-80 shadow-xl">
+          <div className="flex justify-between items-center mb-4">
+            <h3 className="text-lg font-semibold text-white">Performance Monitor</h3>
             <div className="flex space-x-2">
               <button
                 onClick={toggleRecording}
-                className={`px-3 py-1 rounded text-xs font-medium transition-colors ${
-                  isRecording 
-                    ? 'bg-red-500 text-white' 
+                className={`px-3 py-1 rounded text-xs font-medium transition-colors duration-200 ${
+                  isRecording
+                    ? 'bg-red-600 text-white'
                     : 'bg-gray-600 text-gray-300 hover:bg-gray-500'
                 }`}
               >
-                {isRecording ? 'Stop' : 'Record'}
+                {isRecording ? 'Recording' : 'Record'}
               </button>
               <button
                 onClick={toggleVisibility}
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
               >
-                {isVisible ? '−' : '+'}
+                ✕
               </button>
             </div>
           </div>
 
-          {isVisible && (
-            <div className="space-y-3 text-sm">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <div className="text-gray-400">FCP</div>
-                  <div className="text-white font-mono">{formatTime(metrics.fcp)}</div>
-                </div>
-                <div>
-                  <div className="text-gray-400">LCP</div>
-                  <div className="text-white font-mono">{formatTime(metrics.lcp)}</div>
-                </div>
-                <div>
-                  <div className="text-gray-400">TTFB</div>
-                  <div className="text-white font-mono">{formatTime(metrics.ttfb)}</div>
-                </div>
-                <div>
-                  <div className="text-gray-400">Memory</div>
-                  <div className="text-white font-mono">{formatBytes(metrics.memoryUsage)}</div>
-                </div>
-              </div>
-              
-              <div className="pt-2 border-t border-gray-600">
-                <div className="text-gray-400">Load Time</div>
-                <div className="text-white font-mono">{formatTime(metrics.loadTime)}</div>
-              </div>
+          <div className="space-y-3">
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-300">First Contentful Paint</span>
+              <span className={`text-sm font-medium ${
+                fcpGrade === 'good' ? 'text-green-400' :
+                fcpGrade === 'needs-improvement' ? 'text-yellow-400' : 'text-red-400'
+              }`}>
+                {Math.round(metrics.fcp)}ms
+              </span>
             </div>
-          )}
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-300">Largest Contentful Paint</span>
+              <span className={`text-sm font-medium ${
+                lcpGrade === 'good' ? 'text-green-400' :
+                lcpGrade === 'needs-improvement' ? 'text-yellow-400' : 'text-red-400'
+              }`}>
+                {Math.round(metrics.lcp)}ms
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-300">Time to First Byte</span>
+              <span className={`text-sm font-medium ${
+                ttfbGrade === 'good' ? 'text-green-400' :
+                ttfbGrade === 'needs-improvement' ? 'text-yellow-400' : 'text-red-400'
+              }`}>
+                {Math.round(metrics.ttfb)}ms
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-300">Memory Usage</span>
+              <span className="text-sm font-medium text-blue-400">
+                {metrics.memoryUsage.toFixed(1)}MB
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-sm text-gray-300">Load Time</span>
+              <span className="text-sm font-medium text-purple-400">
+                {Math.round(metrics.loadTime)}ms
+              </span>
+            </div>
+          </div>
+
+          <div className="mt-4 pt-3 border-t border-gray-700">
+            <div className="text-xs text-gray-400">
+              {isRecording ? 'Recording performance data...' : 'Click Record to start monitoring'}
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

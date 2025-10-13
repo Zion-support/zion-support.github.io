@@ -1,20 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Eye, 
-  Box, 
-  Zap, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Brain,
-  Users,
-  Globe,
-  Settings,
-  Shield
-} from 'lucide-react';
+import { Eye, Box, ArrowRight, Sparkles, CheckCircle, Brain, Globe } from 'lucide-react';
 
 const ARVRDevelopmentPage = () => {
   const features = [
@@ -42,15 +29,6 @@ const ARVRDevelopmentPage = () => {
       icon: <Globe className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
-  const benefits = [
-    "Increase user engagement by 300%",
-    "Reduce training costs by 70%",
-    "Improve learning retention by 80%",
-    "Create unique brand experiences",
-    "Scale across multiple platforms",
-    "Future-proof your technology"
   ];
 
   return (

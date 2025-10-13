@@ -140,40 +140,6 @@ const CybersecuritySolutions = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Jennifer Martinez",
-      company: "Financial Services Inc",
-      role: "CISO",
-      content: "Zion's cybersecurity solutions have significantly improved our security posture. We've achieved zero security incidents in the past year.",
-      rating: 5,
-      avatar: "JM"
-    },
-    {
-      name: "Robert Chen",
-      company: "Healthcare Systems",
-      role: "IT Director",
-      content: "The AI-powered threat detection caught several advanced persistent threats that other solutions missed. Excellent service and support.",
-      rating: 5,
-      avatar: "RC"
-    },
-    {
-      name: "Lisa Thompson",
-      company: "E-commerce Solutions",
-      role: "Security Manager",
-      content: "Comprehensive security solutions that scale with our business. The compliance features helped us pass our audit with flying colors.",
-      rating: 5,
-      avatar: "LT"
-    }
-  ];
-
-  const stats = [
-    { number: "1000+", label: "Security Incidents Prevented", icon: <Shield className="w-6 h-6" /> },
-    { number: "99.9%", label: "Threat Detection Accuracy", icon: <Award className="w-6 h-6" /> },
-    { number: "24/7", label: "Security Monitoring", icon: <Clock className="w-6 h-6" /> },
-    { number: "50+", label: "Compliance Frameworks", icon: <FileText className="w-6 h-6" /> }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <Helmet>

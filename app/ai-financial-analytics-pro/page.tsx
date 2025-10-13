@@ -158,30 +158,6 @@ export default function AiFinancialAnalyticsProPage() {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "David Chen",
-      company: "CFO, TechCorp",
-      content:
-        "AI Financial Analytics Pro has revolutionized our financial planning. The predictive insights have helped us make better decisions and increase profitability by 25%.",
-      rating: 5,
-    },
-    {
-      name: "Sarah Martinez",
-      company: "Finance Director, Global Inc",
-      content:
-        "The real-time analytics and risk management features are exceptional. We can now identify potential issues before they become problems.",
-      rating: 5,
-    },
-    {
-      name: "Michael Johnson",
-      company: "CEO, StartupXYZ",
-      content:
-        "This platform has given us the financial intelligence we needed to scale our business. The AI insights are incredibly accurate and actionable.",
-      rating: 5,
-    },
-  ];
-
   return (
     <>
       <Helmet>

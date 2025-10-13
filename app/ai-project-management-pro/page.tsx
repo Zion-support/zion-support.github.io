@@ -134,30 +134,6 @@ export default function AIProjectManagementPro() {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "Project Manager, TechCorp",
-      content:
-        "AI Project Management Pro has revolutionized how we manage projects. The AI insights help us deliver projects 30% faster.",
-      rating: 5,
-    },
-    {
-      name: "Michael Chen",
-      company: "CTO, StartupXYZ",
-      content:
-        "The automated scheduling and resource allocation features have eliminated our project delays completely.",
-      rating: 5,
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Operations Director, Global Inc",
-      content:
-        "The predictive analytics help us identify potential issues before they become problems. Game changer!",
-      rating: 5,
-    },
-  ];
-
   return (
     <>
       <Helmet>

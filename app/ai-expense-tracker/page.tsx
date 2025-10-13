@@ -118,30 +118,6 @@ export default function AIExpenseTracker() {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "Freelance Designer",
-      content:
-        "AI Expense Tracker has completely transformed how I manage my finances. The automatic categorization saves me hours every week.",
-      rating: 5,
-    },
-    {
-      name: "Michael Chen",
-      company: "Small Business Owner",
-      content:
-        "The receipt scanning feature is incredible. I just take a photo and everything is automatically entered and categorized.",
-      rating: 5,
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Marketing Manager",
-      content:
-        "The insights and reports help me understand my spending patterns and make better financial decisions.",
-      rating: 5,
-    },
-  ];
-
   return (
     <>
       <Helmet>

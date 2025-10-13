@@ -69,12 +69,6 @@ export default defineConfig({
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Node modules - vendor chunk
-          if (id.includes('node_modules')) {
-            return 'vendor'
-          }
-<<<<<<< HEAD
-=======
           // Performance monitoring - separate chunk
           if (id.includes('web-vitals')) {
             return 'performance'
@@ -129,9 +123,16 @@ export default defineConfig({
             }
             return 'components-common'
           }
+          // Node modules - vendor chunk
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
           // Default chunk for other modules
           return 'vendor'
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-c316
         },
       },
     },

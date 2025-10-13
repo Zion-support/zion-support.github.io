@@ -12,9 +12,13 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import ErrorBoundary from "./app/components/ErrorBoundary";
 >>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
+=======
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+>>>>>>> cursor/fix-errors-and-merge-to-main-c316
 import Breadcrumb from "./app/components/Breadcrumb";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
@@ -127,11 +131,16 @@ function App() {
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
+      <EnhancedErrorBoundary>
         <AnalyticsProvider>
           <EnhancedAnalytics>
             <PerformanceOptimizer>
               <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
+<<<<<<< HEAD
+=======
+                <div></div>
+              </PerformanceMonitor>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c316
               <WebVitalsTracker>
                 <AccessibilityEnhancer>
                   <Router>
@@ -253,7 +262,7 @@ function App() {
             </PerformanceOptimizer>
           </EnhancedAnalytics>
         </AnalyticsProvider>
-      </ErrorBoundary>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 }

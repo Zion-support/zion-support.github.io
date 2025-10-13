@@ -104,36 +104,6 @@ const SmartInventoryOptimizerPage = () => {
     }
   ];
 
-  const benefits = [
-    {
-      icon: <DollarSign className="w-12 h-12 text-green-400" />,
-      title: "Reduce Inventory Costs",
-      description: "Save up to 30% on inventory costs through optimized stock levels and reduced carrying costs."
-    },
-    {
-      icon: <Truck className="w-12 h-12 text-blue-400" />,
-      title: "Improve Order Fulfillment",
-      description: "Increase order fulfillment rates by 25% with better stock availability and demand prediction."
-    },
-    {
-      icon: <AlertTriangle className="w-12 h-12 text-yellow-400" />,
-      title: "Prevent Stockouts",
-      description: "Eliminate stockouts and lost sales with intelligent demand forecasting and automated reordering."
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-purple-400" />,
-      title: "Increase Profitability",
-      description: "Boost profit margins by 15-20% through optimized inventory management and reduced waste."
-    }
-  ];
-
-  const stats = [
-    { number: "30%", label: "Cost Reduction" },
-    { number: "95%", label: "Forecast Accuracy" },
-    { number: "25%", label: "Faster Fulfillment" },
-    { number: "50%", label: "Less Waste" }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

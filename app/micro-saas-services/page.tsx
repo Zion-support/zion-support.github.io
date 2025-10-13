@@ -389,28 +389,6 @@ export default function MicroSaasServices() {
     }
   ];
 
-  const categories = [
-    { name: "AI Analytics", icon: <AnalyticsIcon className="w-5 h-5" />, count: 2 },
-    { name: "Cybersecurity", icon: <ProtectionIcon className="w-5 h-5" />, count: 1 },
-    { name: "Cloud Storage", icon: <CloudIcon className="w-5 h-5" />, count: 1 },
-    { name: "CRM & Sales", icon: <TeamIcon className="w-5 h-5" />, count: 1 },
-    { name: "Marketing Automation", icon: <MarketingIcon className="w-5 h-5" />, count: 1 },
-    { name: "Project Management", icon: <ScheduleIcon className="w-5 h-5" />, count: 1 },
-    { name: "Email Management", icon: <EmailIcon className="w-5 h-5" />, count: 1 },
-    { name: "Inventory Management", icon: <Package className="w-5 h-5" />, count: 1 },
-    { name: "Customer Analytics", icon: <Heart className="w-5 h-5" />, count: 1 },
-    { name: "Financial Management", icon: <Receipt className="w-5 h-5" />, count: 1 },
-    { name: "Content Creation", icon: <DocumentIcon className="w-5 h-5" />, count: 1 },
-    { name: "DevOps & Automation", icon: <ConfigIcon className="w-5 h-5" />, count: 1 }
-  ];
-
-  const stats = [
-    { number: "12+", label: "Micro SAAS Solutions", icon: <Rocket className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <SupportIcon className="w-6 h-6" /> },
-    { number: "50%", label: "Average Cost Savings", icon: <TrendingUp className="w-6 h-6" /> }
-  ];
-
   return (
     <>
       <Helmet>
