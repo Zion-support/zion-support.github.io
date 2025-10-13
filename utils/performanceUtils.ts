@@ -86,11 +86,6 @@ export class PerformanceUtils {
       fps: 0
     };
   }
-<<<<<<< HEAD
-}
-
-export default PerformanceUtils;
-=======
 
   init(): void {
     if (this.config.enabled) {
@@ -98,4 +93,4 @@ export default PerformanceUtils;
     }
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-062f
+
