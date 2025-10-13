@@ -25,6 +25,26 @@ const PrivacyPage = lazy(() => import("./privacy/page"));
 const TermsPage = lazy(() => import("./terms/page"));
 const CookiesPage = lazy(() => import("./cookies/page"));
 
+// Additional Pages
+const DemoPage = lazy(() => import("./demo/page"));
+const SupportPage = lazy(() => import("./support/page"));
+const ConsultationPage = lazy(() => import("./consultation/page"));
+const NewsPage = lazy(() => import("./news/page"));
+const PressPage = lazy(() => import("./press/page"));
+const PartnersPage = lazy(() => import("./partners/page"));
+const DocsPage = lazy(() => import("./docs/page"));
+const ApiPage = lazy(() => import("./api/page"));
+const TutorialsPage = lazy(() => import("./tutorials/page"));
+const WebinarsPage = lazy(() => import("./webinars/page"));
+const WhitepapersPage = lazy(() => import("./whitepapers/page"));
+const SitemapPage = lazy(() => import("./sitemap/page"));
+const SecurityPage = lazy(() => import("./security/page"));
+const AccessibilityPage = lazy(() => import("./accessibility/page"));
+
+// AI Services Pages
+const AIServicesPage = lazy(() => import("./ai-services/page"));
+const MicroSAASPage = lazy(() => import("./micro-saas/page"));
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"));
 const FiveGEdgeComputingPage = lazy(() => import("./5g-edge-computing/page"));
@@ -69,6 +89,26 @@ function App() {
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/cookies" element={<CookiesPage />} />
+
+              {/* Additional Pages */}
+              <Route path="/demo" element={<DemoPage />} />
+              <Route path="/support" element={<SupportPage />} />
+              <Route path="/consultation" element={<ConsultationPage />} />
+              <Route path="/news" element={<NewsPage />} />
+              <Route path="/press" element={<PressPage />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/docs" element={<DocsPage />} />
+              <Route path="/api" element={<ApiPage />} />
+              <Route path="/tutorials" element={<TutorialsPage />} />
+              <Route path="/webinars" element={<WebinarsPage />} />
+              <Route path="/whitepapers" element={<WhitepapersPage />} />
+              <Route path="/sitemap" element={<SitemapPage />} />
+              <Route path="/security" element={<SecurityPage />} />
+              <Route path="/accessibility" element={<AccessibilityPage />} />
+
+              {/* AI Services */}
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/micro-saas" element={<MicroSAASPage />} />
 
               {/* 5G Solutions Routes */}
               <Route
