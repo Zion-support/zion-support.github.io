@@ -55,18 +55,45 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         About
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
                       </Link>
-                      <Link
-                        to="/services"
-                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
-                      >
-                        Services
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
-                      </Link>
+                      <div className="relative group">
+                        <button className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center">
+                          Services
+                          <svg className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                          </svg>
+                        </button>
+                        <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                          <div className="py-2">
+                            <Link to="/services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                              All Services
+                            </Link>
+                            <Link to="/ai-services" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                              AI Services
+                            </Link>
+                            <Link to="/micro-saas" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                              Micro SAAS
+                            </Link>
+                            <Link to="/5g-solutions" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                              5G Solutions
+                            </Link>
+                            <Link to="/cloud-infrastructure" className="block px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors">
+                              Cloud Infrastructure
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
                       <Link
                         to="/contact"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                       >
                         Contact
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                      </Link>
+                      <Link
+                        to="/consultation"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                      >
+                        Consultation
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
                       </Link>
                     </nav>
@@ -88,20 +115,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-12 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
                     {/* Company Info */}
-                    <div className="space-y-4">
+                    <div className="space-y-4 lg:col-span-2">
                       <h3 className="text-xl font-bold text-white mb-4">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                           Zion Tech Group
                         </span>
                       </h3>
-                      <p className="text-gray-300 text-sm leading-relaxed">
-                        Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.
+                      <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                        Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
+                        We help companies leverage cutting-edge technology to drive growth and innovation.
                       </p>
                       <div className="flex space-x-4">
                         <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                           <span className="text-white text-xs font-bold">Z</span>
+                        </div>
+                        <div className="text-gray-300 text-sm">
+                          <div className="font-semibold">Trusted by 10,000+ businesses</div>
+                          <div className="text-xs">4.9/5 rating • 99.9% uptime</div>
                         </div>
                       </div>
                     </div>
@@ -110,36 +142,73 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <div className="space-y-4">
                       <h4 className="text-lg font-semibold text-white">Quick Links</h4>
                       <div className="space-y-2">
-                        <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                        <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           About Us
                         </Link>
-                        <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
-                          Our Services
+                        <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          All Services
                         </Link>
-                        <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                        <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Services
+                        </Link>
+                        <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Micro SAAS
+                        </Link>
+                        <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           Contact
                         </Link>
-                        <Link to="/consultation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                        <Link to="/consultation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           Free Consultation
                         </Link>
                       </div>
                     </div>
 
-                    {/* Services */}
+                    {/* AI Services */}
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">Services</h4>
+                      <h4 className="text-lg font-semibold text-white">AI Services</h4>
                       <div className="space-y-2">
-                        <Link to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Business Intelligence
+                        <Link to="/ai-business-intelligence-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Business Intelligence
                         </Link>
                         <Link to="/ai-customer-support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Customer Support
+                          Customer Support
                         </Link>
-                        <Link to="/ai-content-generation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Content Generation
+                        <Link to="/ai-content-generation-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Content Generation
                         </Link>
-                        <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
-                          AI Cybersecurity
+                        <Link to="/ai-cybersecurity-monitor-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Cybersecurity
+                        </Link>
+                        <Link to="/ai-marketing-automation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Marketing Automation
+                        </Link>
+                        <Link to="/ai-data-analytics" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Data Analytics
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Micro SAAS */}
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold text-white">Micro SAAS</h4>
+                      <div className="space-y-2">
+                        <Link to="/zion-analytics-pro" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Analytics Pro
+                        </Link>
+                        <Link to="/zion-security-shield" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Security Shield
+                        </Link>
+                        <Link to="/zion-cloud-vault" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Cloud Vault
+                        </Link>
+                        <Link to="/zion-task-master" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Task Master
+                        </Link>
+                        <Link to="/zion-email-optimizer" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Email Optimizer
+                        </Link>
+                        <Link to="/zion-website-builder" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Website Builder
                         </Link>
                       </div>
                     </div>
@@ -152,19 +221,29 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                           <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded flex items-center justify-center">
                             <span className="text-white text-xs">@</span>
                           </div>
-                          <span className="text-gray-300 text-sm">kleber@ziontechgroup.com</span>
+                          <div>
+                            <div className="text-gray-300 text-sm">kleber@ziontechgroup.com</div>
+                            <div className="text-gray-400 text-xs">24/7 Support</div>
+                          </div>
                         </div>
                         <div className="flex items-center space-x-3">
                           <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded flex items-center justify-center">
                             <span className="text-white text-xs">📞</span>
                           </div>
-                          <span className="text-gray-300 text-sm">+1 302 464 0950</span>
+                          <div>
+                            <div className="text-gray-300 text-sm">+1 302 464 0950</div>
+                            <div className="text-gray-400 text-xs">Mon-Fri 9AM-6PM EST</div>
+                          </div>
                         </div>
                         <div className="flex items-start space-x-3">
                           <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded flex items-center justify-center mt-0.5">
                             <span className="text-white text-xs">📍</span>
                           </div>
-                          <span className="text-gray-300 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                          <div>
+                            <div className="text-gray-300 text-sm">364 E Main St STE 1008</div>
+                            <div className="text-gray-300 text-sm">Middletown DE 19709</div>
+                            <div className="text-gray-400 text-xs">United States</div>
+                          </div>
                         </div>
                       </div>
                     </div>
