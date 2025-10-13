@@ -5,16 +5,19 @@ interface AccessibilityManagerProps {
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
+  enableReducedMotion?: boolean;
 }
 
 const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
-  enableFocusManagement = true
+  enableFocusManagement = true,
+  enableReducedMotion = true
 }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [focusVisible, setFocusVisible] = useState(false);
 
   // Keyboard navigation enhancements
   const setupKeyboardNavigation = useCallback(() => {
@@ -24,26 +27,33 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       // Skip to main content
       if (event.key === 'Tab' && event.shiftKey && event.altKey) {
         event.preventDefault();
-        const mainContent = document.querySelector('main, #main-content');
+        const mainContent = document.getElementById('main-content');
         if (mainContent) {
-          (mainContent as HTMLElement).focus();
+          mainContent.focus();
+          mainContent.scrollIntoView({ behavior: 'smooth' });
         }
       }
 
-      // Skip to navigation
-      if (event.key === 'Tab' && event.altKey) {
-        event.preventDefault();
-        const navigation = document.querySelector('nav, [role="navigation"]');
-        if (navigation) {
-          (navigation as HTMLElement).focus();
-        }
-      }
-
-      // Escape key to close modals/dropdowns
+      // Escape key handling
       if (event.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
+        // Close any open modals or dropdowns
+        const modals = document.querySelectorAll('[role="dialog"]');
+        modals.forEach(modal => {
+          if (modal.getAttribute('aria-hidden') === 'false') {
+            const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]');
+            if (closeButton instanceof HTMLElement) {
+              closeButton.click();
+            }
+          }
+        });
+      }
+
+      // Arrow key navigation for custom components
+      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+        const target = event.target as HTMLElement;
+        if (target.getAttribute('role') === 'menuitem' || target.classList.contains('focusable')) {
+          event.preventDefault();
+          navigateWithArrows(target, event.key);
         }
       }
     };
@@ -52,31 +62,34 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [enableKeyboardNavigation]);
 
+  // Arrow key navigation helper
+  const navigateWithArrows = (currentElement: HTMLElement, direction: string) => {
+    const focusableElements = Array.from(
+      document.querySelectorAll('[tabindex]:not([tabindex="-1"]), button, [href], input, select, textarea, [role="menuitem"]')
+    ) as HTMLElement[];
+
+    const currentIndex = focusableElements.indexOf(currentElement);
+    let nextIndex = currentIndex;
+
+    switch (direction) {
+      case 'ArrowUp':
+      case 'ArrowLeft':
+        nextIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
+        break;
+      case 'ArrowDown':
+      case 'ArrowRight':
+        nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
+        break;
+    }
+
+    if (nextIndex !== currentIndex) {
+      focusableElements[nextIndex]?.focus();
+    }
+  };
+
   // Screen reader enhancements
   const setupScreenReaderSupport = useCallback(() => {
     if (!enableScreenReader) return;
-
-    // Add ARIA landmarks
-    const main = document.querySelector('main');
-    if (main && !main.hasAttribute('role')) {
-      main.setAttribute('role', 'main');
-    }
-
-    // Add skip links
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded';
-    skipLink.style.cssText = `
-      position: absolute;
-      left: -9999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-    `;
-    
-    document.body.insertBefore(skipLink, document.body.firstChild);
 
     // Add live region for announcements
     const liveRegion = document.createElement('div');
@@ -85,154 +98,230 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     liveRegion.className = 'sr-only';
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
+
+    // Enhance form labels
+    const inputs = document.querySelectorAll('input, textarea, select');
+    inputs.forEach(input => {
+      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
+        const label = document.querySelector(`label[for="${input.id}"]`);
+        if (label) {
+          input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
+          if (!label.id) {
+            label.id = `label-${input.id}`;
+          }
+        }
+      }
+    });
+
+    // Add role attributes where needed
+    const buttons = document.querySelectorAll('button:not([role])');
+    buttons.forEach(button => {
+      if (!button.getAttribute('role')) {
+        button.setAttribute('role', 'button');
+      }
+    });
+
+    // Enhance navigation landmarks
+    const nav = document.querySelector('nav');
+    if (nav && !nav.getAttribute('aria-label')) {
+      nav.setAttribute('aria-label', 'Main navigation');
+    }
+
+    return () => {
+      const liveRegion = document.getElementById('live-region');
+      if (liveRegion) {
+        liveRegion.remove();
+      }
+    };
   }, [enableScreenReader]);
 
   // High contrast mode
-  const setupHighContrastMode = useCallback(() => {
+  const setupHighContrast = useCallback(() => {
     if (!enableHighContrast) return;
 
-    const toggleHighContrast = () => {
-      setIsHighContrast(!isHighContrast);
-      document.documentElement.classList.toggle('high-contrast', !isHighContrast);
-      
-      // Announce the change
-      const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {
-        liveRegion.textContent = `High contrast mode ${!isHighContrast ? 'enabled' : 'disabled'}`;
+    const handleHighContrastToggle = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.altKey && event.key === 'h') {
+        event.preventDefault();
+        setIsHighContrast(prev => !prev);
       }
     };
 
-    // Add high contrast toggle button
-    const toggleButton = document.createElement('button');
-    toggleButton.textContent = 'Toggle High Contrast';
-    toggleButton.className = 'fixed top-4 right-4 z-50 px-3 py-2 bg-gray-800 text-white rounded text-sm';
-    toggleButton.setAttribute('aria-label', 'Toggle high contrast mode');
-    toggleButton.onclick = toggleHighContrast;
-    document.body.appendChild(toggleButton);
-
-    // Add CSS for high contrast mode
-    const style = document.createElement('style');
-    style.textContent = `
-      .high-contrast {
-        filter: contrast(150%) brightness(120%);
-      }
-      .high-contrast * {
-        border-color: currentColor !important;
-      }
-      .high-contrast button,
-      .high-contrast a {
-        border: 2px solid currentColor !important;
-      }
-    `;
-    document.head.appendChild(style);
-  }, [enableHighContrast, isHighContrast]);
+    document.addEventListener('keydown', handleHighContrastToggle);
+    return () => document.removeEventListener('keydown', handleHighContrastToggle);
+  }, [enableHighContrast]);
 
   // Focus management
   const setupFocusManagement = useCallback(() => {
     if (!enableFocusManagement) return;
 
-    // Focus management setup
+    // Track focus visibility
+    const handleFocusIn = () => setFocusVisible(true);
+    const handleFocusOut = () => setFocusVisible(false);
+    const handleMouseDown = () => setFocusVisible(false);
 
-    // Enhanced focus indicators
-    const style = document.createElement('style');
-    style.textContent = `
-      *:focus {
-        outline: 3px solid #3b82f6 !important;
-        outline-offset: 2px !important;
-      }
-      *:focus:not(:focus-visible) {
-        outline: none !important;
-      }
-      *:focus-visible {
-        outline: 3px solid #3b82f6 !important;
-        outline-offset: 2px !important;
-      }
-    `;
-    document.head.appendChild(style);
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    // Trap focus in modals
+    const trapFocus = (element: HTMLElement) => {
+      const focusableElements = element.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      const firstElement = focusableElements[0] as HTMLElement;
+      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+      const handleTabKey = (e: KeyboardEvent) => {
+        if (e.key === 'Tab') {
+          if (e.shiftKey) {
+            if (document.activeElement === firstElement) {
+              lastElement.focus();
+              e.preventDefault();
+            }
+          } else {
+            if (document.activeElement === lastElement) {
+              firstElement.focus();
+              e.preventDefault();
+            }
+          }
+        }
+      };
+
+      element.addEventListener('keydown', handleTabKey);
+      firstElement?.focus();
+
+      return () => element.removeEventListener('keydown', handleTabKey);
+    };
+
+    // Apply focus trap to modals
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        mutation.addedNodes.forEach((node) => {
+          if (node instanceof HTMLElement) {
+            const modal = node.querySelector('[role="dialog"]');
+            if (modal) {
+              trapFocus(modal as HTMLElement);
+            }
+          }
+        });
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
+      document.removeEventListener('mousedown', handleMouseDown);
+      observer.disconnect();
+    };
   }, [enableFocusManagement]);
 
-  // Font size controls
-  const setupFontSizeControls = useCallback(() => {
-    const increaseFontSize = () => {
-      setFontSize(prev => Math.min(prev + 2, 24));
-      document.documentElement.style.fontSize = `${fontSize + 2}px`;
+  // Reduced motion support
+  const setupReducedMotion = useCallback(() => {
+    if (!enableReducedMotion) return;
+
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setIsReducedMotion(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsReducedMotion(e.matches);
     };
 
-    const decreaseFontSize = () => {
-      setFontSize(prev => Math.max(prev - 2, 12));
-      document.documentElement.style.fontSize = `${fontSize - 2}px`;
-    };
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, [enableReducedMotion]);
 
-    const resetFontSize = () => {
-      setFontSize(16);
-      document.documentElement.style.fontSize = '16px';
-    };
-
-    // Add font size controls
-    const controls = document.createElement('div');
-    controls.className = 'fixed top-4 left-4 z-50 flex gap-2';
-    controls.innerHTML = `
-      <button onclick="decreaseFontSize()" aria-label="Decrease font size" class="px-2 py-1 bg-gray-800 text-white rounded text-sm">A-</button>
-      <button onclick="resetFontSize()" aria-label="Reset font size" class="px-2 py-1 bg-gray-800 text-white rounded text-sm">A</button>
-      <button onclick="increaseFontSize()" aria-label="Increase font size" class="px-2 py-1 bg-gray-800 text-white rounded text-sm">A+</button>
-    `;
-    
-    // Make functions globally available
-    (window as any).increaseFontSize = increaseFontSize;
-    (window as any).decreaseFontSize = decreaseFontSize;
-    (window as any).resetFontSize = resetFontSize;
-    
-    document.body.appendChild(controls);
-  }, [fontSize]);
-
-  // Announce page changes
-  const announcePageChange = useCallback((title: string) => {
+  // Announce page changes to screen readers
+  const announcePageChange = useCallback((message: string) => {
     const liveRegion = document.getElementById('live-region');
     if (liveRegion) {
-      liveRegion.textContent = `Page changed to ${title}`;
+      liveRegion.textContent = message;
     }
   }, []);
 
-  // Setup all accessibility features
+  // Apply accessibility styles
   useEffect(() => {
-    const cleanupFunctions = [
-      setupKeyboardNavigation(),
-      setupScreenReaderSupport(),
-      setupHighContrastMode(),
-      setupFocusManagement(),
-      setupFontSizeControls()
-    ].filter(Boolean);
+    const style = document.createElement('style');
+    style.textContent = `
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      .focus-visible:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: 2px;
+      }
+
+      ${isHighContrast ? `
+        * {
+          background-color: ${isHighContrast ? '#000000' : 'inherit'} !important;
+          color: ${isHighContrast ? '#ffffff' : 'inherit'} !important;
+          border-color: ${isHighContrast ? '#ffffff' : 'inherit'} !important;
+        }
+        
+        a {
+          text-decoration: underline !important;
+        }
+        
+        button, input, select, textarea {
+          border: 2px solid #ffffff !important;
+        }
+      ` : ''}
+
+      ${isReducedMotion ? `
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      ` : ''}
+
+      ${focusVisible ? `
+        .focus-visible:focus {
+          outline: 2px solid #3b82f6;
+          outline-offset: 2px;
+        }
+      ` : ''}
+    `;
+    document.head.appendChild(style);
 
     return () => {
-      cleanupFunctions.forEach(cleanup => {
-        if (typeof cleanup === 'function') {
-          cleanup();
-        }
-      });
+      document.head.removeChild(style);
     };
-  }, [
-    setupKeyboardNavigation,
-    setupScreenReaderSupport,
-    setupHighContrastMode,
-    setupFocusManagement,
-    setupFontSizeControls
-  ]);
+  }, [isHighContrast, isReducedMotion, focusVisible]);
 
-  // Monitor page changes for announcements
+  // Setup all accessibility features
   useEffect(() => {
-    const observer = new MutationObserver(() => {
-      const title = document.title;
-      if (title) {
-        announcePageChange(title);
-      }
-    });
+    const cleanupKeyboard = setupKeyboardNavigation();
+    const cleanupScreenReader = setupScreenReaderSupport();
+    const cleanupHighContrast = setupHighContrast();
+    const cleanupFocus = setupFocusManagement();
+    const cleanupMotion = setupReducedMotion();
 
-    observer.observe(document.head, {
-      childList: true,
-      subtree: true
-    });
+    return () => {
+      cleanupKeyboard?.();
+      cleanupScreenReader?.();
+      cleanupHighContrast?.();
+      cleanupFocus?.();
+      cleanupMotion?.();
+    };
+  }, [setupKeyboardNavigation, setupScreenReaderSupport, setupHighContrast, setupFocusManagement, setupReducedMotion]);
 
-    return () => observer.disconnect();
+  // Announce page changes
+  useEffect(() => {
+    const path = window.location.pathname;
+    const pageName = path === '/' ? 'Home' : path.split('/').pop()?.replace(/-/g, ' ') || 'Page';
+    announcePageChange(`Navigated to ${pageName} page`);
   }, [announcePageChange]);
 
   return null; // This component doesn't render anything

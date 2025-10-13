@@ -157,31 +157,82 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   const setupPerformanceMonitoring = useCallback(() => {
     // Monitor Core Web Vitals
     import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
-      onCLS((metric: any) => {
-        console.log('CLS:', metric.value);
+      onCLS((metric: { value: number; name: string }) => {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('CLS:', metric.value);
+        }
+        // Send to analytics in production
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'web_vitals', {
+            event_category: 'Performance',
+            event_label: metric.name,
+            value: Math.round(metric.value),
+            non_interaction: true,
+          });
+        }
       });
-      onINP((metric: any) => {
-        console.log('INP:', metric.value);
+      onINP((metric: { value: number; name: string }) => {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('INP:', metric.value);
+        }
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'web_vitals', {
+            event_category: 'Performance',
+            event_label: metric.name,
+            value: Math.round(metric.value),
+            non_interaction: true,
+          });
+        }
       });
-      onFCP((metric: any) => {
-        console.log('FCP:', metric.value);
+      onFCP((metric: { value: number; name: string }) => {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('FCP:', metric.value);
+        }
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'web_vitals', {
+            event_category: 'Performance',
+            event_label: metric.name,
+            value: Math.round(metric.value),
+            non_interaction: true,
+          });
+        }
       });
-      onLCP((metric: any) => {
-        console.log('LCP:', metric.value);
+      onLCP((metric: { value: number; name: string }) => {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('LCP:', metric.value);
+        }
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'web_vitals', {
+            event_category: 'Performance',
+            event_label: metric.name,
+            value: Math.round(metric.value),
+            non_interaction: true,
+          });
+        }
       });
-      onTTFB((metric: any) => {
-        console.log('TTFB:', metric.value);
+      onTTFB((metric: { value: number; name: string }) => {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('TTFB:', metric.value);
+        }
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'web_vitals', {
+            event_category: 'Performance',
+            event_label: metric.name,
+            value: Math.round(metric.value),
+            non_interaction: true,
+          });
+        }
       });
     });
 
     // Monitor memory usage
     if ('memory' in performance) {
       const checkMemory = () => {
-        const memory = (performance as any).memory;
-        if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.9) {
+        const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+        if (memory && memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.9) {
           // Memory usage is high, trigger garbage collection
           if ('gc' in window) {
-            (window as any).gc();
+            (window as Window & { gc?: () => void }).gc?.();
           }
         }
       };

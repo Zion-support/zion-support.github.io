@@ -97,6 +97,7 @@
     "deploy:production": "npm run optimize:enhanced && npm run build:check && echo 'Ready for production deployment'",
     "generate:sitemap": "node scripts/generate-sitemap.cjs",
     "optimize:performance": "node scripts/performance-optimizer.cjs",
+    "optimize:advanced-performance": "node scripts/advanced-performance-optimizer.js",
     "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\"",
     "analyze:full": "npm run build && npm run analyze:bundle",

@@ -83,15 +83,18 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+          // Core React libraries - split further
+          if (id.includes('react/') && !id.includes('react-dom')) {
+            return 'react-core'
+          }
+          if (id.includes('react-dom')) {
+            return 'react-dom'
           }
           // Router
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - split by size
           if (id.includes('framer-motion')) {
             return 'animations'
           }
@@ -118,20 +121,44 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - split into smaller chunks
+          // Common components
+          if (id.includes('/components/') && !id.includes('/page.tsx')) {
+            return 'components'
+          }
+          // AI service pages - group by category
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
+            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
+              return 'ai-analytics'
+            }
+            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
+              return 'ai-content'
+            }
+            if (serviceName?.includes('customer') || serviceName?.includes('service')) {
+              return 'ai-customer'
+            }
+            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
+              return 'ai-security'
+            }
             return `ai-${serviceName || 'services'}`
           }
-          // Zion service pages
+          // Zion service pages - group by category
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/zion-')[1]?.split('/')[0];
+            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
+              return 'zion-analytics'
+            }
+            if (serviceName?.includes('content') || serviceName?.includes('studio')) {
+              return 'zion-content'
+            }
+            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
+              return 'zion-security'
+            }
             return `zion-${serviceName || 'services'}`
           }
           // 5G service pages
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/5g-')[1]?.split('/')[0];
-            return `5g-${serviceName || 'services'}`
+            return '5g-services'
           }
           // Other service pages
           if (id.includes('/app/') && id.includes('/page.tsx') && 
@@ -144,6 +171,10 @@ export default defineConfig({
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: 'assets/[name]-[hash].[ext]',
+        // Optimize chunk size
+        maxParallelFileOps: 5,
+        // Add source map support for debugging
+        sourcemap: false,
       },
     },
     // Enable tree shaking
