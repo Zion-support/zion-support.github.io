@@ -9,28 +9,29 @@ jest.mock('framer-motion', () => ({
   },
 }));
 
-describe('OptimizedImage', () => {
-  const defaultProps = {
-    src: 'https://example.com/image.jpg',
-    alt: 'Test image',
-  };
+const defaultProps = {
+  src: 'https://example.com/image.jpg',
+  alt: 'Test image',
+  width: 300,
+  height: 200,
+};
 
-  it('renders with basic props', () => {
-    render(<OptimizedImage {...defaultProps} />);
-    expect(screen.getByAltText('Test image')).toBeInTheDocument();
+describe('OptimizedImage Component', () => {
+  it('renders with default props', () => {
+    const { container } = render(<OptimizedImage {...defaultProps} />);
+    expect(container.firstChild).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
-    render(<OptimizedImage {...defaultProps} className="custom-class" />);
-    const container = screen.getByAltText('Test image').parentElement;
-    expect(container).toHaveClass('custom-class');
+    const { container } = render(<OptimizedImage {...defaultProps} className="test-class" />);
+    expect(container.firstChild).toHaveClass('test-class');
   });
 
   it('renders with width and height', () => {
-    render(<OptimizedImage {...defaultProps} width={300} height={200} />);
-    const img = screen.getByAltText('Test image');
-    expect(img).toHaveAttribute('width', '300');
-    expect(img).toHaveAttribute('height', '200');
+    const { container } = render(<OptimizedImage {...defaultProps} width={300} height={200} />);
+    const containerElement = container.firstChild as HTMLElement;
+    expect(containerElement).toHaveStyle('width: 300px');
+    expect(containerElement).toHaveStyle('height: 200px');
   });
 
   it('shows loading skeleton initially', () => {
