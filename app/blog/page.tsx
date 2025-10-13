@@ -1,12 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+=======
+import EnhancedSEO from '../components/EnhancedSEO';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
 
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -21,6 +28,7 @@ export default function Blog() {
     { id: "development", name: "Development", count: 2 }
   ];
 
+<<<<<<< HEAD
   const posts = [
 =======
 'use client';
@@ -52,12 +60,16 @@ export default function BlogPage() {
 =======
   const blogPosts = [
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0acf
+=======
+  const blogPosts = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
     {
       id: 1,
       title: "The Future of AI in Business: 2024 Trends and Predictions",
       excerpt: "Explore the latest AI trends shaping the business landscape in 2024 and how companies can leverage these technologies for growth.",
       author: "Zion Tech Group",
       date: "2024-01-15",
+<<<<<<< HEAD
       category: "AI & Machine Learning",
       readTime: "5 min read",
       image: "/images/blog/ai-business-2024.jpg",
@@ -113,10 +125,17 @@ const BlogPage: React.FC = () => {
       category: 'AI & Technology',
       image: '/images/blog/ai-trends.jpg',
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
+=======
+      readTime: "8 min read",
+      category: "ai",
+      readTime: "5 min read",
+      image: "/images/blog/ai-business-2024.jpg",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
       featured: true
     },
     {
       id: 2,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -125,6 +144,13 @@ const BlogPage: React.FC = () => {
       content: "Small businesses are increasingly targeted by cybercriminals...",
       author: "Michael Chen",
       date: "2024-01-12",
+=======
+      title: "Cybersecurity Best Practices for Small Businesses",
+      excerpt: "Essential security measures every small business should implement to protect their digital assets.",
+      content: "In today's digital landscape, small businesses are increasingly targeted by cybercriminals...",
+      author: "Michael Chen",
+      date: "2024-01-10",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
       category: "cybersecurity",
       readTime: "7 min read",
       image: "/images/blog/cybersecurity-small-business.jpg",
@@ -354,7 +380,6 @@ const BlogPage: React.FC = () => {
             </p>
           </div>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
 <<<<<<< HEAD
@@ -389,6 +414,7 @@ const BlogPage: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
                 />
               </div>
+<<<<<<< HEAD
 =======
       title: "5G Technology: Transforming Industries and Creating New Opportunities",
       excerpt: "Discover how 5G technology is revolutionizing various industries and creating new business opportunities for forward-thinking companies.",
@@ -509,6 +535,22 @@ const BlogPage: React.FC = () => {
     "Cloud Computing",
     "Digital Transformation"
   ]
+=======
+      date: "2024-01-05",
+      category: "cloud",
+      readTime: "8 min read",
+      image: "/images/blog/cloud-migration-guide.jpg",
+      featured: false
+    }
+  ]
+
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === "all" || post.category === selectedCategory
+    return matchesSearch && matchesCategory
+  })
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -694,6 +736,7 @@ const BlogPage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 
         {/* Categories */}
         <section className="py-8 px-4 sm:px-6 lg:px-8">
@@ -823,10 +866,51 @@ const BlogPage: React.FC = () => {
                     <Link
                       to={`/blog/${post.id}`}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors text-sm"
+=======
+      )}
+
+      {/* All Posts */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+            {selectedCategory === "all" ? "All Articles" : categories.find(c => c.id === selectedCategory)?.name}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredPosts.map((post) => (
+              <article
+                key={post.id}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+              >
+                <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg mb-4 flex items-center justify-center">
+                  <BookOpen className="w-12 h-12 text-cyan-400" />
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-2 text-sm text-gray-400">
+                    <Calendar className="w-4 h-4" />
+                    <span>{new Date(post.date).toLocaleDateString()}</span>
+                    <Clock className="w-4 h-4 ml-2" />
+                    <span>{post.readTime}</span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between pt-4">
+                    <div className="flex items-center space-x-2">
+                      <User className="w-4 h-4 text-gray-400" />
+                      <span className="text-sm text-gray-400">{post.author}</span>
+                    </div>
+                    <Link
+                      to={`/blog/${post.id}`}
+                      className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
                     >
                       Read More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
+<<<<<<< HEAD
 =======
 
           {/* Featured Post */}
@@ -916,10 +1000,13 @@ const BlogPage: React.FC = () => {
                       <ArrowRight className="w-3 h-3" />
                     </button>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
                   </div>
                 </div>
               </article>
             ))}
+<<<<<<< HEAD
           </div>
 
           {filteredPosts.length === 0 && (
@@ -1069,14 +1156,45 @@ const BlogPage: React.FC = () => {
             Get the latest technology insights and industry news delivered to your inbox.
           </p>
           
+=======
+          </ResponsiveGrid>
+
+          {filteredPosts.length === 0 && (
+            <div className="text-center py-16">
+              <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">No articles found</h3>
+              <p className="text-gray-400">Try adjusting your search or filter criteria.</p>
+            </div>
+          )}
+        </ResponsiveContainer>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Stay Updated
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Subscribe to our newsletter for the latest technology insights and industry updates.
+          </p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <input
               type="email"
               placeholder="Enter your email"
+<<<<<<< HEAD
               className="flex-1 px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
             />
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
               Subscribe
+=======
+              className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            />
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg font-semibold text-white transition-all duration-300 flex items-center justify-center">
+              Subscribe
+              <ArrowRight className="w-4 h-4 ml-2" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
             </button>
           </div>
         </div>
@@ -1086,6 +1204,7 @@ const BlogPage: React.FC = () => {
 };
 
 export default BlogPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
 =======
       </div>
@@ -1124,3 +1243,5 @@ export default BlogPage;
 
 export default BlogPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e

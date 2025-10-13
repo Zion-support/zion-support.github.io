@@ -40,6 +40,7 @@ const CoreWebVitals: React.FC = () => {
     if (process.env['NODE_ENV'] === 'development') {
       console.log('Web Vital:', data);
     }
+<<<<<<< HEAD
   }, []);
 
   useEffect(() => {
@@ -56,3 +57,9 @@ const CoreWebVitals: React.FC = () => {
 
 export default CoreWebVitals;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
+=======
+
+    // Log in development
+    if (process.env['NODE_ENV'] === 'development') {
+      }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e

@@ -24,9 +24,13 @@ const DYNAMIC_CACHE = 'zion-dynamic-v1';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 const STATIC_ASSETS = [
   '/',
+<<<<<<< HEAD
   '/about',
   '/services',
 <<<<<<< HEAD
+=======
+  '/index.html',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
   '/manifest.json',
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -295,4 +299,7 @@ function doBackgroundSync() {
     })
   });
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e

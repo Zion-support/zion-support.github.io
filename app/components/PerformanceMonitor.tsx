@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 =======
 import React from 'react';
@@ -35,6 +36,11 @@ import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
 
 interface PerformanceMetrics {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
+=======
+import React, { useEffect, useState } from 'react';
+
+interface PerformanceMetrics {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
   lcp: number | null;
   fid: number | null;
   cls: number | null;
@@ -56,6 +62,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showInProductio
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const [isVisible, setIsVisible] = useState(false);
 =======
@@ -64,6 +71,9 @@ import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
 
 export default function PerformanceMonitor() {
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
   useEffect(() => {
 <<<<<<< HEAD
     // Only run in development
@@ -206,6 +216,7 @@ const PerformanceMonitor: React.FC = () => {
     measurePerformance();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Show/hide with Ctrl+Shift+P
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === 'P') {
@@ -260,6 +271,13 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ enabled = false
 <<<<<<< HEAD
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
+=======
+    // Cleanup
+    return () => {
+      clearInterval(memoryInterval);
+      window.removeEventListener('load', measurePageLoad);
+    };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
   }, []);
 
 <<<<<<< HEAD
@@ -376,6 +394,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ enabled = false
             </span>
           </div>
         )}
+<<<<<<< HEAD
 =======
     observer.observe({ 
       entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] 
@@ -710,12 +729,19 @@ export default PerformanceMonitor;
           </div>
         </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
+=======
+      </div>
+      
+      <div className="mt-3 pt-3 border-t border-cyan-500/20 text-xs text-cyan-400">
+        Press Ctrl+Shift+P to toggle
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
       </div>
     </div>
   );
 };
 
 export default PerformanceMonitor;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-08bc
 =======
@@ -725,3 +751,5 @@ export default PerformanceMonitor;
 
 export default PerformanceMonitor;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e

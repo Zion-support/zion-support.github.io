@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import { ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
 
 export default function WebDevelopment() {
   return (
@@ -29,6 +35,7 @@ export default function WebDevelopment() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 'use client';
 import React from 'react';
@@ -309,3 +316,5 @@ export default WebDevelopmentPage;
 
 export default WebDevelopmentPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
