@@ -1,259 +1,238 @@
 /* Enhanced Futuristic Design System */
 :root {
-  /* Enhanced Color Palette */
-  --electric-blue: #00d4ff;
-  --plasma-green: #00ff88;
-  --quantum-purple: #a855f7;
-  --neon-pink: #ff0080;
-  --cyber-orange: #ff6b35;
-  --matrix-green: #00ff41;
-  --hologram-cyan: #00ffff;
-  --laser-red: #ff0040;
+  --primary-purple: #8b5cf6;
+  --primary-pink: #ec4899;
+  --primary-cyan: #06b6d4;
+  --primary-blue: #3b82f6;
+  --primary-green: #10b981;
+  --primary-orange: #f59e0b;
+  --primary-red: #ef4444;
 
-  /* Advanced Gradients */
-  --gradient-cyber: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-neon: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-quantum: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --gradient-plasma: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-  --gradient-hologram: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  --dark-bg: #0f172a;
+  --darker-bg: #020617;
+  --card-bg: #1e293b;
+  --border-color: #334155;
 
-  /* Advanced Shadows */
-  --shadow-neon: 0 0 20px rgba(0, 212, 255, 0.5);
-  --shadow-plasma: 0 0 30px rgba(0, 255, 136, 0.4);
-  --shadow-quantum: 0 0 25px rgba(168, 85, 247, 0.6);
-  --shadow-cyber: 0 0 35px rgba(102, 126, 234, 0.3);
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  --glow-purple: 0 0 20px rgba(139, 92, 246, 0.3);
+  --glow-pink: 0 0 20px rgba(236, 72, 153, 0.3);
+  --glow-cyan: 0 0 20px rgba(6, 182, 212, 0.3);
+  --glow-green: 0 0 20px rgba(16, 185, 129, 0.3);
 }
 
-/* Advanced Background Effects */
-.quantum-field {
+/* Advanced Cyber Grid Background */
+.cyber-grid-enhanced {
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
   position: relative;
+  animation: gridPulse 4s ease-in-out infinite;
+}
+
+.cyber-grid-enhanced::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background:
     radial-gradient(
-      circle at 20% 30%,
-      rgba(0, 212, 255, 0.1) 0%,
+      circle at 20% 20%,
+      rgba(139, 92, 246, 0.1) 0%,
       transparent 50%
     ),
     radial-gradient(
-      circle at 80% 70%,
-      rgba(0, 255, 136, 0.1) 0%,
+      circle at 80% 80%,
+      rgba(236, 72, 153, 0.1) 0%,
       transparent 50%
     ),
     radial-gradient(
-      circle at 50% 50%,
-      rgba(168, 85, 247, 0.05) 0%,
+      circle at 40% 60%,
+      rgba(6, 182, 212, 0.1) 0%,
       transparent 50%
     );
-  animation: quantumPulse 10s ease-in-out infinite;
+  animation: neuralPulse 8s ease-in-out infinite;
+  pointer-events: none;
 }
 
-@keyframes quantumPulse {
-  0%,
-  100% {
+@keyframes gridPulse {
+  0%, 100% {
     opacity: 0.3;
-    transform: scale(1) rotate(0deg);
-  }
-  25% {
-    opacity: 0.6;
-    transform: scale(1.1) rotate(90deg);
   }
   50% {
-    opacity: 0.4;
-    transform: scale(0.9) rotate(180deg);
-  }
-  75% {
-    opacity: 0.7;
-    transform: scale(1.05) rotate(270deg);
+    opacity: 0.6;
   }
 }
 
-/* Holographic Grid */
-.holographic-grid {
-  background-image:
-    linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(rgba(0, 255, 136, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 136, 0.05) 1px, transparent 1px);
-  background-size:
-    100px 100px,
-    100px 100px,
-    20px 20px,
-    20px 20px;
-  animation: gridShift 15s linear infinite;
-}
-
-@keyframes gridShift {
-  0% {
-    background-position:
-      0 0,
-      0 0,
-      0 0,
-      0 0;
-  }
-  100% {
-    background-position:
-      100px 100px,
-      100px 100px,
-      20px 20px,
-      20px 20px;
-  }
-}
-
-/* Plasma Effect */
-.plasma-effect {
+/* Holographic Matrix Effect */
+.holographic-matrix {
   position: relative;
   overflow: hidden;
 }
 
-.plasma-effect::before {
+.holographic-matrix::before {
   content: "";
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background:
-    radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%),
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(0, 212, 255, 0.1) 0%,
-      transparent 70%
+    linear-gradient(
+      45deg,
+      transparent 0%,
+      rgba(6, 182, 212, 0.1) 25%,
+      transparent 50%,
+      rgba(139, 92, 246, 0.1) 75%,
+      transparent 100%
     );
-  animation: plasmaRotate 8s linear infinite;
+  background-size: 200% 200%;
+  animation: holographicShift 6s ease-in-out infinite;
   pointer-events: none;
 }
 
-@keyframes plasmaRotate {
-  0% {
-    transform: rotate(0deg) scale(1);
+.holographic-matrix::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(236, 72, 153, 0.05) 50%,
+      transparent 100%
+    );
+  background-size: 100% 2px;
+  animation: scanMove 3s linear infinite;
+  pointer-events: none;
+}
+
+/* Advanced Neon Glow Effects */
+.neon-glow-enhanced {
+  box-shadow:
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor,
+    0 0 35px currentColor,
+    0 0 40px currentColor;
+  animation: neonFlicker 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonFlicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    box-shadow:
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor,
+      0 0 35px currentColor,
+      0 0 40px currentColor;
   }
-  50% {
-    transform: rotate(180deg) scale(1.2);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
+  20%, 24%, 55% {
+    box-shadow:
+      0 0 2px currentColor,
+      0 0 5px currentColor,
+      0 0 8px currentColor,
+      0 0 12px currentColor,
+      0 0 18px currentColor,
+      0 0 20px currentColor;
   }
 }
 
 /* Cyberpunk Text Effects */
 .text-cyberpunk {
-  font-family: "Orbitron", "Courier New", monospace;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-family: "Courier New", monospace;
   letter-spacing: 3px;
-  background: linear-gradient(45deg, #00d4ff, #ff0080, #00ff88);
-  background-size: 200% 200%;
+  text-transform: uppercase;
+  background: linear-gradient(
+    45deg,
+    var(--primary-cyan),
+    var(--primary-purple),
+    var(--primary-pink)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: cyberpunkText 3s ease-in-out infinite;
+  animation: cyberpunkGlow 3s ease-in-out infinite alternate;
 }
 
-@keyframes cyberpunkText {
-  0%,
+@keyframes cyberpunkGlow {
+  0% {
+    filter: brightness(1) saturate(1);
+  }
   100% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    filter: brightness(1.2) saturate(1.5);
   }
 }
 
-/* Advanced Neon Glow */
-.neon-advanced {
+/* Floating Particles */
+.floating-particles {
   position: relative;
-  color: var(--electric-blue);
-  text-shadow:
-    0 0 5px var(--electric-blue),
-    0 0 10px var(--electric-blue),
-    0 0 15px var(--electric-blue),
-    0 0 20px var(--electric-blue),
-    0 0 35px var(--electric-blue),
-    0 0 40px var(--electric-blue);
-  animation: neonFlicker 2s ease-in-out infinite alternate;
-}
-
-@keyframes neonFlicker {
-  0%,
-  100% {
-    opacity: 1;
-    text-shadow:
-      0 0 5px var(--electric-blue),
-      0 0 10px var(--electric-blue),
-      0 0 15px var(--electric-blue),
-      0 0 20px var(--electric-blue),
-      0 0 35px var(--electric-blue),
-      0 0 40px var(--electric-blue);
-  }
-  50% {
-    opacity: 0.8;
-    text-shadow:
-      0 0 2px var(--electric-blue),
-      0 0 5px var(--electric-blue),
-      0 0 8px var(--electric-blue),
-      0 0 12px var(--electric-blue),
-      0 0 18px var(--electric-blue),
-      0 0 22px var(--electric-blue);
-  }
-}
-
-/* Holographic Cards */
-.holographic-card {
-  position: relative;
-  background: rgba(30, 41, 59, 0.3);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 212, 255, 0.3);
-  border-radius: 16px;
   overflow: hidden;
-  transition: all 0.4s ease;
 }
 
-.holographic-card::before {
+.floating-particles::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(0, 212, 255, 0.1),
-    rgba(0, 255, 136, 0.1),
-    transparent
-  );
-  transition: left 0.6s ease;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, rgba(6, 182, 212, 0.3), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(139, 92, 246, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(236, 72, 153, 0.3), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(16, 185, 129, 0.3), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(6, 182, 212, 0.3), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: particleFloat 20s linear infinite;
+  pointer-events: none;
 }
 
-.holographic-card:hover::before {
-  left: 100%;
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  100% {
+    transform: translateY(-100px) translateX(50px);
+  }
 }
 
-.holographic-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: var(--electric-blue);
-  box-shadow:
-    0 20px 40px rgba(0, 212, 255, 0.2),
-    0 0 30px rgba(0, 255, 136, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-/* Quantum Buttons */
-.btn-quantum {
+/* Advanced Button Effects */
+.btn-cyberpunk {
   position: relative;
-  background: linear-gradient(45deg, var(--electric-blue), var(--plasma-green));
-  border: none;
+  background: linear-gradient(
+    45deg,
+    var(--primary-purple),
+    var(--primary-pink),
+    var(--primary-cyan)
+  );
+  border: 2px solid transparent;
   color: white;
-  padding: 14px 28px;
-  border-radius: 12px;
-  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   overflow: hidden;
-  transition: all 0.4s ease;
-  cursor: pointer;
+  transition: all 0.3s ease;
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
 }
 
-.btn-quantum::before {
+.btn-cyberpunk::before {
   content: "";
   position: absolute;
   top: 0;
@@ -266,213 +245,318 @@
     rgba(255, 255, 255, 0.3),
     transparent
   );
-  transition: left 0.6s ease;
+  transition: left 0.5s ease;
 }
 
-.btn-quantum:hover::before {
+.btn-cyberpunk:hover::before {
   left: 100%;
 }
 
-.btn-quantum:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow:
-    0 15px 30px rgba(0, 212, 255, 0.4),
-    0 0 20px rgba(0, 255, 136, 0.3);
+.btn-cyberpunk:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 
+    0 10px 25px rgba(139, 92, 246, 0.4),
+    0 0 20px rgba(6, 182, 212, 0.3);
 }
 
-.btn-quantum:active {
-  transform: translateY(-1px) scale(1.02);
+.btn-cyberpunk:active {
+  transform: translateY(0) scale(1);
 }
 
-/* Advanced Loading Animations */
-.loading-quantum {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  border: 3px solid rgba(0, 212, 255, 0.3);
-  border-radius: 50%;
-  border-top-color: var(--electric-blue);
-  animation: quantumSpin 1s ease-in-out infinite;
-}
-
-@keyframes quantumSpin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.loading-pulse {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: var(--electric-blue);
-  border-radius: 50%;
-  animation: quantumPulse 1.5s ease-in-out infinite;
-}
-
-@keyframes quantumPulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.5);
-    opacity: 0.5;
-  }
-}
-
-/* Cyberpunk Navigation */
-.nav-cyberpunk {
-  background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(20px);
-  border-bottom: 2px solid var(--electric-blue);
-  box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
-}
-
-.nav-cyberpunk .nav-link {
-  position: relative;
-  color: var(--text-secondary);
-  text-decoration: none;
-  padding: 12px 16px;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 600;
-}
-
-.nav-cyberpunk .nav-link::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--electric-blue), var(--plasma-green));
-  transition: width 0.3s ease;
-}
-
-.nav-cyberpunk .nav-link:hover::before {
-  width: 100%;
-}
-
-.nav-cyberpunk .nav-link:hover {
-  color: var(--electric-blue);
-  text-shadow: 0 0 10px var(--electric-blue);
-}
-
-/* Advanced Hover Effects */
-.hover-quantum {
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hover-quantum:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow:
-    0 20px 40px rgba(0, 212, 255, 0.3),
-    0 0 30px rgba(0, 255, 136, 0.2);
-}
-
-.hover-plasma:hover {
-  background: linear-gradient(45deg, var(--plasma-green), var(--electric-blue));
-  box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
-}
-
-/* Data Stream Effect */
-.data-stream {
+/* Holographic Cards */
+.card-holographic {
+  background: rgba(30, 41, 59, 0.3);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
-.data-stream::before {
+.card-holographic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-purple),
+    var(--primary-pink),
+    var(--primary-cyan),
+    var(--primary-green)
+  );
+  background-size: 200% 100%;
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+.card-holographic::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background:
-    linear-gradient(
-      90deg,
-      transparent 0%,
-      rgba(0, 255, 136, 0.1) 50%,
-      transparent 100%
-    ),
-    linear-gradient(
-      0deg,
-      transparent 0%,
-      rgba(0, 212, 255, 0.1) 50%,
-      transparent 100%
-    );
-  background-size:
-    200px 200px,
-    200px 200px;
-  animation: dataFlow 3s linear infinite;
+  background: linear-gradient(
+    45deg,
+    rgba(139, 92, 246, 0.05) 0%,
+    rgba(236, 72, 153, 0.05) 25%,
+    rgba(6, 182, 212, 0.05) 50%,
+    rgba(16, 185, 129, 0.05) 75%,
+    rgba(139, 92, 246, 0.05) 100%
+  );
+  background-size: 200% 200%;
+  animation: holographicShift 4s ease-in-out infinite;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-@keyframes dataFlow {
-  0% {
-    transform: translateX(-200px) translateY(-200px);
+.card-holographic:hover::after {
+  opacity: 1;
+}
+
+.card-holographic:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--primary-cyan);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 30px rgba(6, 182, 212, 0.2);
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    background-position: 0% 50%;
   }
-  100% {
-    transform: translateX(200px) translateY(200px);
+  50% {
+    background-position: 100% 50%;
   }
 }
 
-/* Responsive Enhancements */
+/* Cyberpunk Loading Animation */
+.cyberpunk-loader {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(6, 182, 212, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary-cyan);
+  animation: cyberpunkSpin 1s ease-in-out infinite;
+}
+
+.cyberpunk-loader::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid rgba(139, 92, 246, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary-purple);
+  animation: cyberpunkSpin 0.8s ease-in-out infinite reverse;
+}
+
+@keyframes cyberpunkSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Glitch Effect */
+.glitch {
+  position: relative;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  animation: glitch 2s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-1 0.5s infinite;
+  color: #ff0000;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 0.5s infinite;
+  color: #00ff00;
+  z-index: -2;
+}
+
+@keyframes glitch {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+}
+
+@keyframes glitch-1 {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(2px, -2px);
+  }
+  40% {
+    transform: translate(-2px, 2px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(2px, 2px);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(-2px, -2px);
+  }
+}
+
+/* Advanced Hover Effects */
+.hover-cyberpunk {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-cyberpunk::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(6, 182, 212, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.hover-cyberpunk:hover::before {
+  left: 100%;
+}
+
+.hover-cyberpunk:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+/* Responsive Design Enhancements */
 @media (max-width: 768px) {
+  .cyber-grid-enhanced {
+    background-size: 25px 25px, 25px 25px, 12px 12px, 12px 12px;
+  }
+
   .text-cyberpunk {
     letter-spacing: 1px;
-    font-size: 0.9em;
+    font-size: 1.5rem;
   }
 
-  .holographic-grid {
-    background-size:
-      50px 50px,
-      50px 50px,
-      10px 10px,
-      10px 10px;
+  .floating-particles::before {
+    background-size: 100px 50px;
   }
 
-  .btn-quantum {
-    padding: 12px 20px;
-    font-size: 0.9em;
+  .card-holographic {
+    padding: 16px;
   }
-}
-
-/* Performance Optimizations */
-.will-change-transform {
-  will-change: transform;
-}
-
-.will-change-opacity {
-  will-change: opacity;
 }
 
 /* Accessibility Enhancements */
 @media (prefers-reduced-motion: reduce) {
-  .quantum-field,
-  .plasma-effect,
-  .holographic-grid,
-  .data-stream {
-    animation: none;
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
-
-  .neon-advanced {
-    animation: none;
-    text-shadow: 0 0 5px var(--electric-blue);
+  
+  .floating-particles::before,
+  .holographic-matrix::before,
+  .holographic-matrix::after {
+    display: none;
   }
 }
 
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
-  .holographic-card {
-    border: 2px solid var(--electric-blue);
-    background: rgba(15, 23, 42, 0.9);
+  :root {
+    --text-primary: #ffffff;
+    --text-secondary: #e2e8f0;
+    --border-color: #64748b;
   }
+  
+  .card-holographic {
+    border: 2px solid var(--border-color);
+  }
+  
+  .neon-glow-enhanced {
+    box-shadow: 0 0 10px currentColor;
+  }
+}
 
-  .neon-advanced {
-    text-shadow: 0 0 10px var(--electric-blue);
+/* Dark Mode Optimizations */
+@media (prefers-color-scheme: dark) {
+  .card-holographic {
+    background: rgba(15, 23, 42, 0.8);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .cyber-grid-enhanced,
+  .holographic-matrix,
+  .floating-particles::before {
+    display: none;
+  }
+  
+  .card-holographic {
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
   }
 }
