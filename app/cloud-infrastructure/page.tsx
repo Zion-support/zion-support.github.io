@@ -1,23 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
 import { Helmet } from 'react-helmet-async';
 
 export default function CloudInfrastructure() {
@@ -92,22 +74,3 @@ export default function CloudInfrastructure() {
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c

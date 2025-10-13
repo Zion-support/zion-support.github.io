@@ -26,13 +26,11 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-<<<<<<< HEAD
-  } catch (_error) {
-    // console.error('Error reading existing wallets:', error);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
+  } catch (error) {
+    console.error('Error reading existing wallets:', error);
     existing = [];
   }
+  
   // Check if wallet address already exists
   const existingWallet = existing.find(wallet => wallet.address === address);
   if (existingWallet) {
@@ -60,11 +58,8 @@ export default function handler(req, res) {
       message: 'Wallet added successfully',
       id: newWallet.id
     }));
-<<<<<<< HEAD
-  } catch (_error) {
-    // console.error('Error saving wallet:', error);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
+  } catch (error) {
+    console.error('Error saving wallet:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save wallet' }));

@@ -29,13 +29,6 @@ export default async function handler(req, res) {
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
-<<<<<<< HEAD
-    // // console.log('Quote request received:', quoteData);
-=======
-
-    console.log('Quote request received:', quoteData);
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -44,14 +37,8 @@ export default async function handler(req, res) {
       quoteId: `quote_${Date.now()}`,
       data: quoteData
     }));
-<<<<<<< HEAD
-  } catch (_error) {
-    // console.error('Quote submission error:', error);
-=======
-
   } catch (error) {
-    console.error('Quote submission error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
+    console.error('Quote request error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
