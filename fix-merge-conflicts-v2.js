@@ -17,16 +17,7 @@ const filesWithConflicts = [
   'app/zion-smart-expense-categorizer/page.tsx',
   'app/zion-ai-performance-optimizer/page.tsx',
   'app/zion-ai-social-media-manager/page.tsx',
-  'app/zion-ai-inventory-manager/page.tsx',
-  'api/newsletter/subscribe.js',
-  'api/quotes.js',
-  'api/error-report.js',
-  'api/create-payment-intent.js',
-  'api/onsite-request.js',
-  'api/subscribe.js',
-  'api/create-checkout-session.js',
-  'api/shipping-rates.js',
-  'fix-merge-conflicts.cjs'
+  'app/zion-ai-inventory-manager/page.tsx'
 ];
 
 function resolveMergeConflicts(content) {
@@ -37,19 +28,11 @@ function resolveMergeConflicts(content) {
   while (i < lines.length) {
     const line = lines[i];
     
-    if (line.startsWith('<<<<<<<')) {
-      // Skip until we find =======
-      while (i < lines.length && !lines[i].startsWith('=======')) {
+    if (line.startsWith('<<<<<<<') || line.startsWith('=======') || line.startsWith('>>>>>>>')) {
+      // Skip all conflict markers until we find the end
+      while (i < lines.length && (lines[i].startsWith('<<<<<<<') || lines[i].startsWith('=======') || lines[i].startsWith('>>>>>>>'))) {
         i++;
       }
-      i++; // Skip the ======= line
-      
-      // Keep content until >>>>>>>
-      while (i < lines.length && !lines[i].startsWith('>>>>>>>')) {
-        resolved.push(lines[i]);
-        i++;
-      }
-      i++; // Skip the >>>>>>> line
     } else {
       resolved.push(line);
       i++;

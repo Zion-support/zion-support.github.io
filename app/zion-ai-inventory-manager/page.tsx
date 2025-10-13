@@ -1,25 +1,10 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
 export default function ZionAIInventoryManager() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -70,6 +55,7 @@ export default function ZionAIInventoryManager() {
               <li>• Efficiency metrics</li>
             </ul>
           </div>
+        </div>
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Optimize Your Inventory?</h2>
@@ -80,9 +66,8 @@ export default function ZionAIInventoryManager() {
               Get Started Today
             </button>
           </div>
+        </div>
+      </div>
+    </div>
   );
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
