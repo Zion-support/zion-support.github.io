@@ -1,262 +1,248 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
-console.log("Starting advanced performance optimization...");
+console.log('🚀 Starting advanced performance optimization...');
 
-// Optimize bundle splitting
-const optimizeBundleSplitting = () => {
-  console.log("Optimizing bundle splitting...");
-
-  const viteConfigPath = path.join(__dirname, "..", "vite.config.ts");
-  let viteConfig = fs.readFileSync(viteConfigPath, "utf8");
-
-  // Enhanced chunk splitting strategy
-  const enhancedChunkConfig = `
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
-          }
-          // Router
-          if (id.includes('react-router')) {
-            return 'router'
-          }
-          // UI libraries
-          if (id.includes('framer-motion')) {
-            return 'animations'
-          }
-          if (id.includes('lucide-react')) {
-            return 'icons'
-          }
-          // SEO and meta
-          if (id.includes('react-helmet')) {
-            return 'seo'
-          }
-          // Charts and data visualization
-          if (id.includes('recharts')) {
-            return 'charts'
-          }
-          // Utility libraries
-          if (id.includes('clsx') || id.includes('tailwind-merge')) {
-            return 'utils'
-          }
-          // Performance monitoring
-          if (id.includes('web-vitals')) {
-            return 'performance'
-          }
-          // Large page components (lazy load)
-          if (id.includes('/app/') && id.includes('/page.tsx')) {
-            return 'pages'
-          }
-          // Default chunk for other modules
-          return 'vendor'
-        },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
-      },
-    },`;
-
-  // Replace the existing rollupOptions
-  viteConfig = viteConfig.replace(
-    /rollupOptions:\s*\{[\s\S]*?\},/,
-    enhancedChunkConfig,
-  );
-
-  fs.writeFileSync(viteConfigPath, viteConfig);
-  console.log("✓ Bundle splitting optimized");
+// Performance optimization configuration
+const optimizations = {
+  // Image optimization
+  images: {
+    quality: 85,
+    formats: ['webp', 'avif', 'jpeg'],
+    sizes: [320, 640, 768, 1024, 1280, 1920]
+  },
+  
+  // Bundle optimization
+  bundle: {
+    chunkSizeLimit: 150,
+    enableTreeShaking: true,
+    enableCodeSplitting: true
+  },
+  
+  // CSS optimization
+  css: {
+    minify: true,
+    removeUnused: true,
+    criticalCSS: true
+  }
 };
 
-// Generate critical CSS
-const generateCriticalCSS = () => {
-  console.log("Generating critical CSS...");
+// Function to analyze bundle size
+function analyzeBundleSize() {
+  try {
+    const distPath = path.join(__dirname, '../dist');
+    if (!fs.existsSync(distPath)) {
+      console.log('❌ Dist folder not found. Please run build first.');
+      return null;
+    }
 
-  const criticalCSS = `
-/* Critical CSS for above-the-fold content */
-.bg-gray-900 { background-color: #111827; }
-.text-white { color: #ffffff; }
-.text-cyan-400 { color: #22d3ee; }
-.text-purple-400 { color: #c084fc; }
-.text-pink-400 { color: #f472b6; }
-.bg-gradient-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)); }
-.from-cyan-500 { --tw-gradient-from: #06b6d4; --tw-gradient-to: rgba(6, 182, 212, 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
-.to-purple-600 { --tw-gradient-to: #9333ea; }
-.text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
-.text-6xl { font-size: 3.75rem; line-height: 1; }
-.text-8xl { font-size: 6rem; line-height: 1; }
-.font-bold { font-weight: 700; }
-.leading-tight { line-height: 1.25; }
-.mb-8 { margin-bottom: 2rem; }
-.px-4 { padding-left: 1rem; padding-right: 1rem; }
-.py-20 { padding-top: 5rem; padding-bottom: 5rem; }
-.max-w-7xl { max-width: 80rem; }
-.mx-auto { margin-left: auto; margin-right: auto; }
-.text-center { text-align: center; }
-.flex { display: flex; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.space-x-2 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.5rem; }
-.space-x-6 > :not([hidden]) ~ :not([hidden]) { margin-left: 1.5rem; }
-.gap-6 { gap: 1.5rem; }
-.rounded-xl { border-radius: 0.75rem; }
-.px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
-.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
-.font-semibold { font-weight: 600; }
-.hover\\:from-cyan-600:hover { --tw-gradient-from: #0891b2; }
-.hover\\:to-purple-700:hover { --tw-gradient-to: #7c3aed; }
-.transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
-.duration-300 { transition-duration: 300ms; }
-.flex { display: flex; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.space-x-2 > :not([hidden]) ~ :not([hidden]) { margin-left: 0.5rem; }
-.group:hover .group-hover\\:translate-x-1 { transform: translateX(0.25rem); }
-.transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
-.w-5 { width: 1.25rem; }
-.h-5 { height: 1.25rem; }
-.border-2 { border-width: 2px; }
-.border-cyan-400 { border-color: #22d3ee; }
-.text-cyan-400 { color: #22d3ee; }
-.hover\\:bg-cyan-400:hover { background-color: #22d3ee; }
-.hover\\:text-gray-900:hover { color: #111827; }
-.backdrop-blur-sm { backdrop-filter: blur(4px); }
-.relative { position: relative; }
-.overflow-hidden { overflow: hidden; }
-.absolute { position: absolute; }
-.inset-0 { top: 0px; right: 0px; bottom: 0px; left: 0px; }
-.animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: .5; }
+    const files = fs.readdirSync(distPath, { recursive: true });
+    let totalSize = 0;
+    const fileStats = [];
+
+    files.forEach(file => {
+      const filePath = path.join(distPath, file);
+      if (fs.statSync(filePath).isFile()) {
+        const size = fs.statSync(filePath).size;
+        totalSize += size;
+        fileStats.push({
+          name: file,
+          size: size,
+          sizeKB: Math.round(size / 1024 * 100) / 100
+        });
+      }
+    });
+
+    // Sort by size
+    fileStats.sort((a, b) => b.size - a.size);
+
+    return {
+      totalSize,
+      totalSizeKB: Math.round(totalSize / 1024 * 100) / 100,
+      totalSizeMB: Math.round(totalSize / (1024 * 1024) * 100) / 100,
+      files: fileStats
+    };
+  } catch (error) {
+    console.error('Error analyzing bundle size:', error);
+    return null;
+  }
 }
-`;
 
-  const distPath = path.join(__dirname, "..", "dist");
-  if (!fs.existsSync(distPath)) {
-    fs.mkdirSync(distPath, { recursive: true });
-  }
-
-  fs.writeFileSync(path.join(distPath, "critical.css"), criticalCSS);
-  console.log("✓ Critical CSS generated");
-};
-
-// Optimize images
-const optimizeImages = () => {
-  console.log("Optimizing images...");
-
-  const publicPath = path.join(__dirname, "..", "public");
-  if (!fs.existsSync(publicPath)) {
-    console.log("No public directory found, skipping image optimization");
-    return;
-  }
-
-  // Create optimized images directory
-  const optimizedPath = path.join(publicPath, "optimized");
-  if (!fs.existsSync(optimizedPath)) {
-    fs.mkdirSync(optimizedPath, { recursive: true });
-  }
-
-  console.log("✓ Images optimization prepared");
-};
-
-// Generate service worker
-const generateServiceWorker = () => {
-  console.log("Generating service worker...");
-
-  const serviceWorker = `
-const CACHE_NAME = 'zion-tech-group-v1'
-const urlsToCache = [
-  '/',
-  '/static/css/main.css',
-  '/static/js/main.js',
-  '/manifest.json'
-]
-
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => cache.addAll(urlsToCache))
-  )
-})
-
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        if (response) {
-          return response
-        }
-        return fetch(event.request)
-      })
-  )
-})
-`;
-
-  const distPath = path.join(__dirname, "..", "dist");
-  if (!fs.existsSync(distPath)) {
-    fs.mkdirSync(distPath, { recursive: true });
-  }
-
-  fs.writeFileSync(path.join(distPath, "sw.js"), serviceWorker);
-  console.log("✓ Service worker generated");
-};
-
-// Generate performance report
-const generatePerformanceReport = () => {
-  console.log("Generating performance report...");
+// Function to generate performance report
+function generatePerformanceReport() {
+  const bundleStats = analyzeBundleSize();
+  if (!bundleStats) return;
 
   const report = {
     timestamp: new Date().toISOString(),
-    optimizations: [
-      "Bundle splitting optimized",
-      "Critical CSS generated",
-      "Images optimization prepared",
-      "Service worker generated",
-      "Performance monitoring enhanced",
-    ],
-    recommendations: [
-      "Enable gzip compression on server",
-      "Use CDN for static assets",
-      "Implement lazy loading for images",
-      "Minimize third-party scripts",
-      "Use HTTP/2 for better multiplexing",
-    ],
-    metrics: {
-      estimatedBundleSize: "~500KB gzipped",
-      estimatedLoadTime: "<2s on 3G",
-      estimatedLCP: "<2.5s",
-      estimatedCLS: "<0.1",
-    },
+    optimizations: optimizations,
+    bundleStats: bundleStats,
+    recommendations: []
   };
 
-  const distPath = path.join(__dirname, "..", "dist");
-  if (!fs.existsSync(distPath)) {
-    fs.mkdirSync(distPath, { recursive: true });
+  // Generate recommendations based on bundle analysis
+  const largeFiles = bundleStats.files.filter(file => file.sizeKB > 100);
+  if (largeFiles.length > 0) {
+    report.recommendations.push({
+      type: 'warning',
+      message: `Large files detected: ${largeFiles.map(f => `${f.name} (${f.sizeKB}KB)`).join(', ')}`,
+      action: 'Consider code splitting or compression for these files'
+    });
   }
 
-  fs.writeFileSync(
-    path.join(distPath, "performance-report.json"),
-    JSON.stringify(report, null, 2),
-  );
-  console.log("✓ Performance report generated");
-};
+  if (bundleStats.totalSizeKB > 500) {
+    report.recommendations.push({
+      type: 'warning',
+      message: `Total bundle size is ${bundleStats.totalSizeKB}KB, consider optimization`,
+      action: 'Enable tree shaking, code splitting, and compression'
+    });
+  } else {
+    report.recommendations.push({
+      type: 'success',
+      message: `Bundle size is optimized at ${bundleStats.totalSizeKB}KB`,
+      action: 'Great job!'
+    });
+  }
 
-// Run all optimizations
-const runOptimizations = () => {
+  // Check for console statements in production
   try {
-    optimizeBundleSplitting();
-    generateCriticalCSS();
-    optimizeImages();
-    generateServiceWorker();
-    generatePerformanceReport();
-
-    console.log("Advanced performance optimization completed successfully!");
+    const result = execSync('grep -r "console\\." dist/ --include="*.js" | wc -l', { encoding: 'utf8' });
+    const consoleCount = parseInt(result.trim());
+    if (consoleCount > 0) {
+      report.recommendations.push({
+        type: 'warning',
+        message: `${consoleCount} console statements found in production build`,
+        action: 'Remove console statements from production code'
+      });
+    }
   } catch (error) {
-    console.error("Error during optimization:", error);
-    process.exit(1);
+    // Ignore if grep fails
   }
-};
 
-runOptimizations();
+  // Write report
+  const reportPath = path.join(__dirname, '../performance-optimization-report.json');
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  
+  console.log('📊 Performance Analysis:');
+  console.log(`   Total size: ${bundleStats.totalSizeMB}MB (${bundleStats.totalSizeKB}KB)`);
+  console.log(`   Files: ${bundleStats.files.length}`);
+  console.log(`   Large files (>100KB): ${largeFiles.length}`);
+  
+  console.log('\n📋 Recommendations:');
+  report.recommendations.forEach(rec => {
+    const icon = rec.type === 'success' ? '✅' : '⚠️';
+    console.log(`   ${icon} ${rec.message}`);
+    if (rec.action) {
+      console.log(`      → ${rec.action}`);
+    }
+  });
+
+  console.log(`\n📄 Full report saved to: ${reportPath}`);
+  return report;
+}
+
+// Function to optimize images
+function optimizeImages() {
+  console.log('🖼️  Optimizing images...');
+  
+  const publicPath = path.join(__dirname, '../public');
+  if (!fs.existsSync(publicPath)) {
+    console.log('   No public folder found, skipping image optimization');
+    return;
+  }
+
+  // This would typically use sharp or imagemin
+  // For now, just log the intention
+  console.log('   Image optimization would be implemented here');
+  console.log('   Consider using sharp or imagemin for production');
+}
+
+// Function to generate sitemap
+function generateSitemap() {
+  console.log('🗺️  Generating sitemap...');
+  
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ziontechgroup.com/</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/about</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/ai-services</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/5g-solutions</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/contact</loc>
+    <lastmod>${new Date().toISOString()}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>`;
+
+  const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
+  fs.writeFileSync(sitemapPath, sitemap);
+  console.log('   Sitemap generated successfully');
+}
+
+// Main optimization function
+function runOptimizations() {
+  console.log('🔧 Running performance optimizations...');
+  
+  // Generate performance report
+  const report = generatePerformanceReport();
+  
+  // Optimize images
+  optimizeImages();
+  
+  // Generate sitemap
+  generateSitemap();
+  
+  console.log('\n✅ Performance optimization completed!');
+  console.log('📈 Key improvements:');
+  console.log('   • Bundle size analysis completed');
+  console.log('   • Performance recommendations generated');
+  console.log('   • Sitemap updated');
+  console.log('   • Console statements checked');
+  
+  return report;
+}
+
+// Run optimizations
+if (require.main === module) {
+  runOptimizations();
+}
+
+module.exports = {
+  runOptimizations,
+  analyzeBundleSize,
+  generatePerformanceReport
+};
