@@ -30,7 +30,10 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 };
 
 export default EnhancedSEO;
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-0f93

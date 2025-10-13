@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
@@ -12,6 +13,9 @@ const withErrorLogging = (handler) => {
 };
 
 async function handler(req, res) {
+=======
+export default async function handler(req, res) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-0f93
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -19,6 +23,7 @@ async function handler(req, res) {
     return;
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { amount, currency = 'usd' } = req.body || {};
 
@@ -40,6 +45,11 @@ async function handler(req, res) {
   try {
     const { amount, currency = 'usd' } = req.body || {};
     
+=======
+  try {
+    const { amount, currency = 'usd' } = req.body || {};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-0f93
     if (!amount) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
@@ -52,8 +62,13 @@ async function handler(req, res) {
       id: 'pi_' + Math.random().toString(36).substr(2, 9),
       amount: amount * 100, // Convert to cents
       currency,
+<<<<<<< HEAD
       status: 'requires_payment_method'
 >>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
+=======
+      status: 'requires_payment_method',
+      client_secret: 'pi_' + Math.random().toString(36).substr(2, 9) + '_secret_' + Math.random().toString(36).substr(2, 9)
+>>>>>>> cursor/fix-errors-and-merge-to-main-0f93
     };
 
     res.statusCode = 200;
@@ -61,6 +76,7 @@ async function handler(req, res) {
   } catch {
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
+<<<<<<< HEAD
 <<<<<<< HEAD
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }
@@ -74,3 +90,8 @@ export default withErrorLogging(handler);
 
 export default withErrorLogging(handler);
 >>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
+=======
+    res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-0f93

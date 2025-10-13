@@ -72,6 +72,7 @@ export default [
       },
       globals: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         console: 'readonly',
         process: 'readonly',
         Buffer: 'readonly',
@@ -111,6 +112,26 @@ export default [
         PerformanceNavigationTiming: 'readonly',
         performance: 'readonly'
 >>>>>>> cursor/fix-errors-and-merge-to-main-c5cd
+=======
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+        HTMLElement: 'readonly',
+        Event: 'readonly',
+        KeyboardEvent: 'readonly',
+        MediaQueryListEvent: 'readonly',
+        PerformanceObserver: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly'
+>>>>>>> cursor/fix-errors-and-merge-to-main-0f93
       }
     },
     plugins: {
