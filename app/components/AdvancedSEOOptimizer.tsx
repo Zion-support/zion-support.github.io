@@ -99,27 +99,27 @@ const AdvancedSEOOptimizer: React.FC = () => {
     
     // Apply optimizations based on settings
     if (settings.metaTags) {
-      console.log('Optimizing meta tags...');
+      // Optimizing meta tags...
     }
     
     if (settings.structuredData) {
-      console.log('Adding structured data...');
+      // Adding structured data...
     }
     
     if (settings.sitemap) {
-      console.log('Generating sitemap...');
+      // Generating sitemap...
     }
     
     if (settings.robotsTxt) {
-      console.log('Updating robots.txt...');
+      // Updating robots.txt...
     }
     
     if (settings.canonicalUrls) {
-      console.log('Setting canonical URLs...');
+      // Setting canonical URLs...
     }
     
     if (settings.altTexts) {
-      console.log('Adding alt texts to images...');
+      // Adding alt texts to images...
     }
     
     setIsOptimizing(false);

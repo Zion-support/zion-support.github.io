@@ -84,32 +84,32 @@ const AdvancedPerformanceOptimizer: React.FC = () => {
     // Apply optimizations based on settings
     if (settings.imageOptimization) {
       // Simulate image optimization
-      console.log('Optimizing images...');
+      // Optimizing images...
     }
     
     if (settings.codeSplitting) {
       // Simulate code splitting
-      console.log('Implementing code splitting...');
+      // Implementing code splitting...
     }
     
     if (settings.lazyLoading) {
       // Simulate lazy loading implementation
-      console.log('Implementing lazy loading...');
+      // Implementing lazy loading...
     }
     
     if (settings.compression) {
       // Simulate compression
-      console.log('Enabling compression...');
+      // Enabling compression...
     }
     
     if (settings.caching) {
       // Simulate caching setup
-      console.log('Setting up caching...');
+      // Setting up caching...
     }
     
     if (settings.minification) {
       // Simulate minification
-      console.log('Minifying assets...');
+      // Minifying assets...
     }
     
     setIsOptimizing(false);
