@@ -45,31 +45,31 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         // Measure Core Web Vitals
         getCLS((metric) => {
           updateMetrics({ cls: metric.value });
-          if (logMetrics) console.log('CLS:', metric);
+          if (logMetrics) console.log($1);
         });
 
         getFID((metric) => {
           updateMetrics({ fid: metric.value });
-          if (logMetrics) console.log('FID:', metric);
+          if (logMetrics) console.log($1);
         });
 
         getFCP((metric) => {
           updateMetrics({ fcp: metric.value });
-          if (logMetrics) console.log('FCP:', metric);
+          if (logMetrics) console.log($1);
         });
 
         getLCP((metric) => {
           updateMetrics({ lcp: metric.value });
-          if (logMetrics) console.log('LCP:', metric);
+          if (logMetrics) console.log($1);
         });
 
         getTTFB((metric) => {
           updateMetrics({ ttfb: metric.value });
-          if (logMetrics) console.log('TTFB:', metric);
+          if (logMetrics) console.log($1);
         });
 
       } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
+        console.warn($1);
       }
     };
 
@@ -123,7 +123,7 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     try {
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] });
     } catch (e) {
-      console.warn('Performance Observer not supported:', e);
+      console.warn($1);
     }
 
     // Monitor memory every 5 seconds

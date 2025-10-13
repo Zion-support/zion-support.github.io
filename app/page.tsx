@@ -12,6 +12,7 @@ import LazyImage from "./components/LazyImage";
 import EnhancedLoadingSpinner from "./components/EnhancedLoadingSpinner";
 import EnhancedAccessibility from "./components/EnhancedAccessibility";
 import PerformanceOptimizer from "./components/PerformanceOptimizer";
+import EnhancedWebVitals from "./components/EnhancedWebVitals";
 
 const HomePage = () => {
   const structuredData = {
@@ -177,6 +178,7 @@ const HomePage = () => {
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
+        <EnhancedWebVitals />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
           <EnhancedSEO
             title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"

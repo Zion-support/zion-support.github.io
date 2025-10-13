@@ -29,7 +29,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error($1);
     }
     
     // Call custom error handler if provided
@@ -141,7 +141,7 @@ export const withErrorBoundary = <P extends object>(
 // Hook for functional components to handle errors
 export const useErrorHandler = () => {
   return (error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by hook:', error, errorInfo);
+    console.error($1);
     
     // In production, you might want to send this to an error reporting service
     // Example: errorReportingService.captureException(error, { extra: errorInfo });

@@ -35,8 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 200, // Increased threshold for better chunking
-    assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 150, // Reduced threshold for better optimization
+    assetsInlineLimit: 2048, // Reduced for better caching balance
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -83,40 +83,51 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries - keep together for better caching
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
-          // Router
+          // Router - separate chunk for better code splitting
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - group by functionality
           if (id.includes('framer-motion')) {
             return 'animations'
           }
           if (id.includes('lucide-react')) {
             return 'icons'
           }
-          // SEO and meta
+          // SEO and meta - lightweight chunk
           if (id.includes('react-helmet')) {
             return 'seo'
           }
-          // Charts and data visualization
+          // Charts and data visualization - separate heavy library
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Utility libraries
+          // Utility libraries - small utilities together
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
           }
-          // Performance monitoring
+          // Performance monitoring - separate for lazy loading
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // Error handling
+          // Error handling - separate for better error isolation
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
+          }
+          // Large vendor libraries - separate chunks
+          if (id.includes('node_modules')) {
+            // Group by library size and usage
+            if (id.includes('axios') || id.includes('lodash')) {
+              return 'http-utils'
+            }
+            if (id.includes('date-fns') || id.includes('moment')) {
+              return 'date-utils'
+            }
+            return 'vendor'
           }
           // AI service pages - group by category
           if (id.includes('/ai-') && id.includes('/page.tsx')) {

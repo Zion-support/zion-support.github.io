@@ -28,7 +28,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   useEffect(() => {
     const sendToAnalytics = (metric: any) => {
-      console.log('Performance Metric:', metric.name, metric.value);
+      console.log($1);
       
       setMetrics(prev => ({
         ...prev,

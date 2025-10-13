@@ -16,9 +16,9 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
   useEffect(() => {
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error);
+      console.error($1);
       if (errorInfo) {
-        console.error('Error info:', errorInfo);
+        console.error($1);
       }
     }
 
@@ -46,7 +46,7 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
     };
 
     // In a real app, you would send this to your error reporting service
-    console.log('Error report:', errorReport);
+    console.log($1);
     
     // For now, we'll just copy to clipboard
     navigator.clipboard.writeText(JSON.stringify(errorReport, null, 2));

@@ -4,28 +4,81 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Find all TypeScript and JavaScript files
-const files = await glob('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
+// Configuration
+const isProduction = process.env.NODE_ENV === 'production';
 
-let totalRemoved = 0;
+// Console log patterns to replace
+const consolePatterns = [
+  {
+    pattern: /console\.log\([^)]*\);?/g,
+    replacement: isProduction ? '' : 'console.log($1);'
+  },
+  {
+    pattern: /console\.error\([^)]*\);?/g,
+    replacement: 'console.error($1);' // Keep errors in production
+  },
+  {
+    pattern: /console\.warn\([^)]*\);?/g,
+    replacement: 'console.warn($1);' // Keep warnings in production
+  },
+  {
+    pattern: /console\.info\([^)]*\);?/g,
+    replacement: isProduction ? '' : 'console.info($1);'
+  },
+  {
+    pattern: /console\.debug\([^)]*\);?/g,
+    replacement: isProduction ? '' : 'console.debug($1);'
+  }
+];
 
-for (const file of files) {
-  const filePath = path.join(process.cwd(), file);
-  let content = fs.readFileSync(filePath, 'utf8');
-  
-  // Remove console.log, console.warn, console.error statements
-  const originalContent = content;
-  content = content.replace(/console\.(log|warn|error|info|debug)\([^)]*\);?\s*/g, '');
-  
-  // Remove empty lines that might be left behind
-  content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-  
-  if (content !== originalContent) {
-    fs.writeFileSync(filePath, content);
-    const removed = (originalContent.match(/console\.(log|warn|error|info|debug)/g) || []).length;
-    totalRemoved += removed;
-    console.log(`Removed ${removed} console statements from ${file}`);
+// Files to process
+const filePatterns = [
+  'app/**/*.tsx',
+  'app/**/*.ts',
+  'utils/**/*.ts',
+  'utils/**/*.tsx'
+];
+
+async function processFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Apply console log replacements
+    consolePatterns.forEach(({ pattern, replacement }) => {
+      const newContent = content.replace(pattern, replacement);
+      if (newContent !== content) {
+        content = newContent;
+        modified = true;
+      }
+    });
+
+    // Write back if modified
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Processed: ${filePath}`);
+    }
+  } catch (error) {
+    console.error(`❌ Error processing ${filePath}:`, error.message);
   }
 }
 
-console.log(`\nTotal console statements removed: ${totalRemoved}`);
+async function main() {
+  console.log('🧹 Removing console logs from production code...');
+  
+  for (const pattern of filePatterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    for (const file of files) {
+      await processFile(file);
+    }
+  }
+
+  console.log('✨ Console log cleanup completed!');
+}
+
+// Run if this is the main module
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch(console.error);
+}
+
+export { processFile, consolePatterns };

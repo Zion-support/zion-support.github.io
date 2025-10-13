@@ -8,7 +8,7 @@ interface WebVitalsTrackerProps {
 export default function WebVitalsTracker({ children }: WebVitalsTrackerProps) {
   useEffect(() => {
     const sendToAnalytics = (metric: any) => {
-      console.log('Web Vital:', metric.name, metric.value);
+      console.log($1);
       // Add actual analytics tracking here
     };
 

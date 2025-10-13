@@ -141,7 +141,7 @@ const ImprovedContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       // In a real app, you would send the data to your backend
-      console.log('Form submitted:', formData);
+      console.log($1);
       
       setIsSubmitted(true);
       setFormData({
@@ -155,7 +155,7 @@ const ImprovedContactForm: React.FC = () => {
         timeline: "",
       });
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error($1);
     } finally {
       setIsSubmitting(false);
     }

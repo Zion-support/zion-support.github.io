@@ -22,16 +22,16 @@ interface AnalyticsProviderProps {
 export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
   useEffect(() => {
     // Initialize analytics
-    console.log('Analytics initialized');
+    console.log($1);
   }, []);
 
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    console.log('Analytics Event:', eventName, properties);
+    console.log($1);
     // Add actual analytics tracking here
   };
 
   const trackPageView = (pageName: string) => {
-    console.log('Page View:', pageName);
+    console.log($1);
     // Add actual page view tracking here
   };
 

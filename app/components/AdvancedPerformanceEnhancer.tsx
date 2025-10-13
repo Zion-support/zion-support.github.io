@@ -73,7 +73,7 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         return registration.update();
       })
       .catch((error) => {
-        console.error('Service worker registration failed:', error);
+        console.error($1);
       });
   }, [enableCaching]);
 
@@ -158,19 +158,19 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     // Monitor Core Web Vitals
     import('web-vitals').then(({ onCLS, onINP, onFCP, onLCP, onTTFB }) => {
       onCLS((metric: any) => {
-        console.log('CLS:', metric.value);
+        console.log($1);
       });
       onINP((metric: any) => {
-        console.log('INP:', metric.value);
+        console.log($1);
       });
       onFCP((metric: any) => {
-        console.log('FCP:', metric.value);
+        console.log($1);
       });
       onLCP((metric: any) => {
-        console.log('LCP:', metric.value);
+        console.log($1);
       });
       onTTFB((metric: any) => {
-        console.log('TTFB:', metric.value);
+        console.log($1);
       });
     });
 

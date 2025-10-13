@@ -52,7 +52,7 @@ const ContactForm: React.FC = () => {
       });
 
     } catch (error) {
-      console.error('Failed to submit contact form:', error);
+      console.error($1);
     } finally {
       setIsSubmitting(false);
     }

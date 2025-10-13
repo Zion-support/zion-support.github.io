@@ -38,7 +38,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
 
     // Log to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by ProductionErrorBoundary:', error, errorInfo);
+      console.error($1);
     }
 
     // In production, you would typically send this to an error reporting service
@@ -72,7 +72,7 @@ class ProductionErrorBoundary extends Component<Props, State> {
       });
     } catch (reportingError) {
       // Fallback: log to console if reporting fails
-      console.error('Failed to report error:', reportingError);
+      console.error($1);
     }
   };
 
