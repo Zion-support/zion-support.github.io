@@ -1,156 +1,243 @@
-import React, { useEffect, ReactNode } from 'react'
+<<<<<<< HEAD
+import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: ReactNode
+  children: React.ReactNode;
+<<<<<<< HEAD
+  enableKeyboardNavigation?: boolean;
+  enableScreenReader?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+=======
+import React, { useEffect, ReactNode } from 'react';
+
+interface AccessibilityEnhancerProps {
+  children: ReactNode;
+  enableHighContrast?: boolean;
+  enableReducedMotion?: boolean;
+  enableFocusManagement?: boolean;
+  enableKeyboardNavigation?: boolean;
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
+<<<<<<< HEAD
+  enableKeyboardNavigation = true,
+  enableScreenReader = true,
+  enableHighContrast = true,
+  enableFocusManagement = true,
+}) => {
   useEffect(() => {
-    // Skip if not in browser environment
-    if (typeof window === 'undefined') return
+    // Skip to main content functionality
+=======
+  enableHighContrast = true,
+  enableReducedMotion = true,
+  enableFocusManagement = true,
+  enableKeyboardNavigation = true
+}) => {
+  useEffect(() => {
+    const cleanupFunctions: (() => void)[] = [];
 
-    // Initialize accessibility features
-    const initAccessibility = () => {
-      // Add skip navigation link
-      const skipLink = document.createElement('a')
-      skipLink.href = '#main-content'
-      skipLink.textContent = 'Skip to main content'
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-cyan-500 focus:text-white focus:rounded-lg focus:shadow-lg'
+    // Skip link functionality
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
+    const addSkipLink = () => {
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+<<<<<<< HEAD
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50';
       skipLink.style.cssText = `
         position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #00ffff;
-        color: #000;
-        padding: 8px;
-        text-decoration: none;
-        border-radius: 4px;
-        z-index: 1000;
-        transition: top 0.3s;
-      `
-      
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.top = '6px'
-      })
-      
-      skipLink.addEventListener('blur', () => {
-        skipLink.style.top = '-40px'
-      })
-      
-      document.body.insertBefore(skipLink, document.body.firstChild)
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      `;
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    };
 
-      // Add ARIA landmarks
-      const main = document.querySelector('main')
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main')
-      }
+    // Keyboard navigation enhancements
+    const enhanceKeyboardNavigation = () => {
+      if (!enableKeyboardNavigation) return;
 
-      const nav = document.querySelector('nav')
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation')
-      }
-
-      const footer = document.querySelector('footer')
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo')
-      }
-
-      // Enhance focus management
-      const enhanceFocusManagement = () => {
-        // Add focus indicators to interactive elements
-        const interactiveElements = document.querySelectorAll(
-          'button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        )
-
-        interactiveElements.forEach(element => {
-          if (!element.classList.contains('focus-enhanced')) {
-            element.classList.add('focus-enhanced')
-            element.addEventListener('focus', (e) => {
-              e.currentTarget.classList.add('focus-visible')
-            })
-            element.addEventListener('blur', (e) => {
-              e.currentTarget.classList.remove('focus-visible')
-            })
+      const handleKeyDown = (e: KeyboardEvent) => {
+        // Escape key to close modals/dropdowns
+        if (e.key === 'Escape') {
+          const activeElement = document.activeElement as HTMLElement;
+          if (activeElement && activeElement.blur) {
+            activeElement.blur();
           }
-        })
-      }
+        }
 
-      // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [role="menu"]')
-      modals.forEach(modal => {
-        const focusableElements = modal.querySelectorAll(
-          'button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])'
-        )
-        
-        if (focusableElements.length > 0) {
-          const firstElement = focusableElements[0] as HTMLElement
-          const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement
+        // Tab navigation improvements
+        if (e.key === 'Tab') {
+          document.body.classList.add('keyboard-navigation');
+        }
+      };
 
-          const trapFocus = (e: KeyboardEvent) => {
-            if (e.key === 'Tab') {
-              if (e.shiftKey) {
-                if (document.activeElement === firstElement) {
-                  e.preventDefault()
-                  lastElement.focus()
-                }
-              } else {
-                if (document.activeElement === lastElement) {
-                  e.preventDefault()
-                  firstElement.focus()
-                }
+      // Remove keyboard navigation class on mouse use
+      const handleMouseDown = () => {
+        document.body.classList.remove('keyboard-navigation');
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      document.addEventListener('mousedown', handleMouseDown);
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('mousedown', handleMouseDown);
+      };
+    };
+
+    // Focus management
+    const enhanceFocusManagement = () => {
+      if (!enableFocusManagement) return () => {};
+
+      const trapFocus = (element: HTMLElement) => {
+        const focusableElements = element.querySelectorAll(
+          'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+        );
+        const firstFocusableElement = focusableElements[0] as HTMLElement;
+        const lastFocusableElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+=======
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:rounded';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+      
+      return () => {
+        skipLink.remove();
+      };
+    };
+
+    // Focus management
+    const enhanceFocusManagement = () => {
+      if (!enableFocusManagement) return () => {};
+
+      const trapFocus = (element: HTMLElement) => {
+        const focusableElements = element.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstElement = focusableElements[0] as HTMLElement;
+        const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
+
+        const handleTabKey = (e: KeyboardEvent) => {
+          if (e.key === 'Tab') {
+            if (e.shiftKey) {
+<<<<<<< HEAD
+              if (document.activeElement === firstFocusableElement) {
+                lastFocusableElement.focus();
+                e.preventDefault();
+              }
+            } else {
+              if (document.activeElement === lastFocusableElement) {
+                firstFocusableElement.focus();
+=======
+              if (document.activeElement === firstElement) {
+                lastElement.focus();
+                e.preventDefault();
+              }
+            } else {
+              if (document.activeElement === lastElement) {
+                firstElement.focus();
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
+                e.preventDefault();
               }
             }
           }
+        };
 
-          modal.addEventListener('keydown', trapFocus)
-        }
-      })
+        element.addEventListener('keydown', handleTabKey);
+<<<<<<< HEAD
+        firstFocusableElement?.focus();
+=======
+        firstElement?.focus();
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
 
-      // Enhance keyboard navigation
-      const enhanceKeyboardNavigation = () => {
-        // Add keyboard support for custom components
-        const customButtons = document.querySelectorAll('[data-custom-button]')
-        customButtons.forEach(button => {
-          button.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault()
-              button.click()
-            }
-          })
-        })
-      }
+        return () => {
+          element.removeEventListener('keydown', handleTabKey);
+        };
+      };
 
 <<<<<<< HEAD
       // Apply focus trap to modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
       const cleanupFunctions = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
-=======
+
       // Initialize all enhancements
       enhanceFocusManagement()
       enhanceKeyboardNavigation()
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
+=======
+      // Apply focus management to modals and dropdowns
+      const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
+      modals.forEach(modal => {
+        const cleanup = trapFocus(modal as HTMLElement);
+        cleanupFunctions.push(cleanup);
+      });
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
 
-      // Re-run enhancements when DOM changes
-      const observer = new MutationObserver(() => {
-        enhanceFocusManagement()
-        enhanceKeyboardNavigation()
-      })
-
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true
-      })
-
-      // Cleanup function
       return () => {
-<<<<<<< HEAD
         cleanupFunctions.forEach(cleanup => cleanup());
+      };
+    };
+
+    // Keyboard navigation
+    const enhanceKeyboardNavigation = () => {
+      if (!enableKeyboardNavigation) return () => {};
+
+      const handleKeyDown = (e: KeyboardEvent) => {
+        // Escape key handling
+        if (e.key === 'Escape') {
+          const activeElement = document.activeElement as HTMLElement;
+          if (activeElement?.closest('[role="dialog"]')) {
+            const closeButton = activeElement.closest('[role="dialog"]')?.querySelector('[aria-label="Close"]') as HTMLElement;
+            closeButton?.click();
+          }
+        }
+
+        // Arrow key navigation for menus
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+          const menu = (e.target as HTMLElement).closest('[role="menu"]');
+          if (menu) {
+            e.preventDefault();
+            const items = Array.from(menu.querySelectorAll('[role="menuitem"]')) as HTMLElement[];
+            const currentIndex = items.indexOf(e.target as HTMLElement);
+            
+            if (e.key === 'ArrowDown') {
+              const nextIndex = (currentIndex + 1) % items.length;
+              items[nextIndex]?.focus();
+            } else {
+              const prevIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
+              items[prevIndex]?.focus();
+            }
+          }
+        }
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
       };
     };
 
     // High contrast mode
     const enhanceHighContrast = () => {
       if (!enableHighContrast) return () => {};
+
+      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+      
+      const handleContrastChange = (e: MediaQueryListEvent) => {
+        if (e.matches) {
+          document.body.classList.add('high-contrast');
+        } else {
+          document.body.classList.remove('high-contrast');
+        }
+      };
 
       const addHighContrastStyles = () => {
         const style = document.createElement('style');
@@ -168,21 +255,24 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
       mediaQuery.addEventListener('change', handleContrastChange);
       handleContrastChange(mediaQuery as any);
+      addHighContrastStyles();
 
       return () => {
         const existingStyle = document.getElementById('accessibility-high-contrast');
-        if (existingStyle) {
-          existingStyle.remove();
-        }
+        existingStyle?.remove();
+        mediaQuery.removeEventListener('change', handleContrastChange);
       };
     };
 
-    // Reduced motion detection
-    const handleReducedMotion = () => {
+    // Reduced motion
+    const enhanceReducedMotion = () => {
+      if (!enableReducedMotion) return () => {};
+
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
       
       const handleMotionChange = (e: MediaQueryListEvent) => {
         if (e.matches) {
+<<<<<<< HEAD
           document.documentElement.classList.add('reduce-motion');
         } else {
           document.documentElement.classList.remove('reduce-motion');
@@ -221,73 +311,77 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         const footer = document.querySelector('footer');
         if (footer && !footer.getAttribute('role')) {
           footer.setAttribute('role', 'contentinfo');
+=======
+          document.body.classList.add('reduce-motion');
+        } else {
+          document.body.classList.remove('reduce-motion');
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
         }
       };
 
-      // Add live regions for dynamic content
-      const addLiveRegions = () => {
-        let liveRegion = document.getElementById('live-region');
-        if (!liveRegion) {
-          liveRegion = document.createElement('div');
-          liveRegion.id = 'live-region';
-          liveRegion.setAttribute('aria-live', 'polite');
-          liveRegion.setAttribute('aria-atomic', 'true');
-          liveRegion.className = 'sr-only';
-          document.body.appendChild(liveRegion);
-        }
+      const addReducedMotionStyles = () => {
+        const style = document.createElement('style');
+        style.id = 'accessibility-reduced-motion';
+        style.textContent = `
+          .reduce-motion * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+          }
+        `;
+        document.head.appendChild(style);
       };
 
-      addLandmarks();
-      addLiveRegions();
+      mediaQuery.addEventListener('change', handleMotionChange);
+      handleMotionChange(mediaQuery as any);
+      addReducedMotionStyles();
 
       return () => {
-        const liveRegion = document.getElementById('live-region');
-        if (liveRegion) {
-          liveRegion.remove();
-        }
+        const existingStyle = document.getElementById('accessibility-reduced-motion');
+        existingStyle?.remove();
+        mediaQuery.removeEventListener('change', handleMotionChange);
       };
     };
 
     // Initialize all enhancements
-    addSkipLink();
-    const cleanupKeyboard = enhanceKeyboardNavigation();
-    const cleanupFocus = enhanceFocusManagement();
-    const cleanupContrast = enhanceHighContrast();
-    const cleanupMotion = enhanceScreenReader();
+    cleanupFunctions.push(addSkipLink());
+    cleanupFunctions.push(enhanceFocusManagement());
+    cleanupFunctions.push(enhanceKeyboardNavigation());
+    cleanupFunctions.push(enhanceHighContrast());
+    cleanupFunctions.push(enhanceReducedMotion());
 
-    return () => {
-      if (cleanupKeyboard) cleanupKeyboard();
-      if (cleanupFocus) cleanupFocus();
-      if (cleanupContrast) cleanupContrast();
-      if (cleanupMotion) cleanupMotion();
-    };
-  }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
+    // Re-run enhancements when DOM changes
+    const observer = new MutationObserver(() => {
+      enhanceFocusManagement();
+      enhanceKeyboardNavigation();
+    });
 
+<<<<<<< HEAD
     // Large text mode
     if (newSettings.largeText) {
       root.classList.add('large-text');
     } else {
       root.classList.remove('large-text');
-=======
-        observer.disconnect()
-        skipLink.remove()
-      }
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
     }
 
-    // Initialize accessibility features
-    const cleanup = initAccessibility()
+    // Reduced motion
+    if (newSettings.reducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
 
-    // Cleanup on unmount
-    return cleanup
-  }, [])
+    // Focus visible
+    if (newSettings.focusVisible) {
+      root.classList.add('focus-visible');
+    } else {
+      root.classList.remove('focus-visible');
+    }
 
-  return <>{children}</>
-}
+    // Save to localStorage
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+  };
 
-<<<<<<< HEAD
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
@@ -381,6 +475,78 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 };
 
 export default AccessibilityEnhancer;
+<<<<<<< HEAD
 =======
 export default AccessibilityEnhancer
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
+>>>>>>> cursor/analyze-improve-and-deploy-application-b200
+=======
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  useEffect(() => {
+    // Add accessibility enhancements
+    document.documentElement.setAttribute('lang', 'en');
+    
+    // Add skip to main content link
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50 focus:outline-none focus:ring-2 focus:ring-cyan-300';
+    document.body.insertBefore(skipLink, document.body.firstChild);
+
+    // Add focus management
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    };
+
+    const handleMouseDown = () => {
+      document.body.classList.remove('keyboard-navigation');
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    // Add ARIA landmarks
+    const main = document.querySelector('main');
+    if (main && !main.getAttribute('role')) {
+      main.setAttribute('role', 'main');
+    }
+
+    return () => {
+      const existingSkipLink = document.querySelector('a[href="#main-content"]');
+      if (existingSkipLink) {
+        existingSkipLink.remove();
+      }
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, []);
+
+  return <>{children}</>;
+};
+
+export default AccessibilityEnhancer;
+>>>>>>> cursor/analyze-improve-and-deploy-application-a281
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+=======
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    cleanupFunctions.push(() => observer.disconnect());
+
+    // Cleanup function
+    return () => {
+      cleanupFunctions.forEach(cleanup => cleanup());
+    };
+  }, [enableHighContrast, enableReducedMotion, enableFocusManagement, enableKeyboardNavigation]);
+
+  return <>{children}</>;
+};
+
+export default AccessibilityEnhancer;
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146

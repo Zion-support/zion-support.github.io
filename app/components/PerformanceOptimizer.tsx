@@ -1,210 +1,216 @@
-import React, { useEffect, useCallback } from 'react'
+import React, { useEffect, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
-  enableImageOptimization?: boolean
-  enablePreloading?: boolean
-  enableCaching?: boolean
-  enableCompression?: boolean
-  enableLazyLoading?: boolean
+  children: React.ReactNode;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
-  enablePreloading = true,
-  enableCaching = true,
-  enableCompression = true,
-  enableLazyLoading = true
-}) => {
-  // Image optimization
-  const optimizeImages = useCallback(() => {
-    if (!enableImageOptimization || typeof window === 'undefined') return
-
-    const images = document.querySelectorAll('img')
-    images.forEach(img => {
-      // Add loading="lazy" for better performance
-      if (enableLazyLoading && !img.getAttribute('loading')) {
-        img.setAttribute('loading', 'lazy')
-      }
-
-      // Add decoding="async" for non-blocking image loading
-      if (!img.getAttribute('decoding')) {
-        img.setAttribute('decoding', 'async')
-      }
-
-      // Add error handling
-      img.addEventListener('error', () => {
-        img.style.display = 'none'
-        console.warn('Failed to load image:', img.src)
-      })
-
-      // Add loading state
-      img.addEventListener('load', () => {
-        img.style.opacity = '1'
-        img.style.transition = 'opacity 0.3s ease-in-out'
-      })
-
-      // Set initial opacity for smooth loading
-      img.style.opacity = '0'
-    })
-  }, [enableImageOptimization, enableLazyLoading])
-
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   // Preload critical resources
   const preloadCriticalResources = useCallback(() => {
-    if (!enablePreloading || typeof window === 'undefined') return
+    // Preload critical fonts
+    const fontLinks = [
+      'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
+    ];
+    
+    fontLinks.forEach(href => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = href;
+      link.as = 'style';
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    });
 
-    const criticalResources = [
-      '/fonts/inter-var.woff2',
+    // Preload critical images
+    const criticalImages = [
       '/images/hero-bg.jpg',
-      '/images/logo.svg'
-    ]
+      '/images/logo.svg',
+      '/images/og-image.jpg'
+    ];
 
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link')
-      link.rel = 'preload'
-      link.href = resource
-      
-      if (resource.endsWith('.woff2')) {
-        link.as = 'font'
-        link.type = 'font/woff2'
-        link.crossOrigin = 'anonymous'
-      } else if (resource.endsWith('.jpg') || resource.endsWith('.png')) {
-        link.as = 'image'
+    criticalImages.forEach(src => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = src;
+      link.as = 'image';
+      document.head.appendChild(link);
+    });
+  }, []);
+
+  // Optimize images
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+      // Add loading="lazy" to non-critical images
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
       }
       
-      document.head.appendChild(link)
-    })
-  }, [enablePreloading])
+      // Add decoding="async" for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+      }
+    });
+  }, []);
 
-  // Enable service worker for caching
-  const enableServiceWorker = useCallback(() => {
-    if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in navigator)) return
+  // Optimize third-party scripts
+  const optimizeThirdPartyScripts = useCallback(() => {
+    // Defer non-critical scripts
+    const scripts = document.querySelectorAll('script[src]');
+    scripts.forEach(script => {
+      if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
+        script.setAttribute('defer', 'true');
+      }
+    });
+  }, []);
 
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then(registration => {
-          console.log('Service Worker registered:', registration)
-        })
-        .catch(error => {
-          console.log('Service Worker registration failed:', error)
-        })
+  // Add performance monitoring
+  const addPerformanceMonitoring = useCallback(() => {
+    // Monitor Core Web Vitals
+    if ('web-vitals' in window) {
+      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+        getCLS(console.log);
+        getFID(console.log);
+        getFCP(console.log);
+        getLCP(console.log);
+        getTTFB(console.log);
+      });
     }
-  }, [enableCaching])
+
+    // Monitor resource loading
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'navigation') {
+            console.log('Navigation timing:', entry);
+          } else if (entry.entryType === 'resource') {
+            console.log('Resource timing:', entry);
+          }
+        });
+      });
+      
+      observer.observe({ entryTypes: ['navigation', 'resource'] });
+    }
+  }, []);
 
   // Optimize scroll performance
   const optimizeScrollPerformance = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    let ticking = false
-
+    let ticking = false;
+    
     const updateScrollPosition = () => {
       // Throttle scroll events for better performance
       if (!ticking) {
         requestAnimationFrame(() => {
-          // Update scroll position for parallax effects
-          const scrolled = window.pageYOffset
-          const parallax = document.querySelectorAll('[data-parallax]')
-          
-          parallax.forEach(element => {
-            const speed = parseFloat(element.getAttribute('data-parallax') || '0.5')
-            const yPos = -(scrolled * speed)
-            element.style.transform = `translateY(${yPos}px)`
-          })
-          
-          ticking = false
-        })
-        ticking = true
+          // Add scroll-based optimizations here
+          ticking = false;
+        });
+        ticking = true;
       }
-    }
+    };
 
-    window.addEventListener('scroll', updateScrollPosition, { passive: true })
+    window.addEventListener('scroll', updateScrollPosition, { passive: true });
     
     return () => {
-      window.removeEventListener('scroll', updateScrollPosition)
+      window.removeEventListener('scroll', updateScrollPosition);
+    };
+  }, []);
+
+  // Add intersection observer for lazy loading
+  const addIntersectionObserver = useCallback(() => {
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const element = entry.target as HTMLElement;
+            element.classList.add('animate-in');
+            observer.unobserve(element);
+          }
+        });
+      }, {
+        rootMargin: '50px 0px',
+        threshold: 0.1
+      });
+
+      // Observe elements with lazy-load class
+      const lazyElements = document.querySelectorAll('.lazy-load');
+      lazyElements.forEach(el => observer.observe(el));
+
+      return () => observer.disconnect();
     }
-  }, [])
+  }, []);
 
-  // Optimize resize performance
-  const optimizeResizePerformance = useCallback(() => {
-    if (typeof window === 'undefined') return
-
-    let resizeTimeout: NodeJS.Timeout
-
-    const handleResize = () => {
-      clearTimeout(resizeTimeout)
-      resizeTimeout = setTimeout(() => {
-        // Trigger resize-dependent updates
-        window.dispatchEvent(new CustomEvent('optimizedResize'))
-      }, 250)
-    }
-
-    window.addEventListener('resize', handleResize, { passive: true })
-    
-    return () => {
-      window.removeEventListener('resize', handleResize)
-      clearTimeout(resizeTimeout)
-    }
-  }, [])
-
-  // Enable compression hints
-  const enableCompressionHints = useCallback(() => {
-    if (!enableCompression || typeof window === 'undefined') return
-
-    // Add compression hints to meta tags
-    const compressionHint = document.createElement('meta')
-    compressionHint.name = 'compression'
-    compressionHint.content = 'gzip, deflate, br'
-    document.head.appendChild(compressionHint)
-
-    // Add resource hints
-    const resourceHints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
-    ]
-
-    resourceHints.forEach(hint => {
-      const link = document.createElement('link')
-      Object.entries(hint).forEach(([key, value]) => {
-        link.setAttribute(key, value)
-      })
-      document.head.appendChild(link)
-    })
-  }, [enableCompression])
-
-  // Initialize all optimizations
   useEffect(() => {
-    const cleanupFunctions: (() => void)[] = []
-
-    // Run optimizations after a short delay to ensure DOM is ready
-    const timeoutId = setTimeout(() => {
-      optimizeImages()
-      preloadCriticalResources()
-      enableServiceWorker()
-      enableCompressionHints()
-      
-      const scrollCleanup = optimizeScrollPerformance()
-      const resizeCleanup = optimizeResizePerformance()
-      
-      if (scrollCleanup) cleanupFunctions.push(scrollCleanup)
-      if (resizeCleanup) cleanupFunctions.push(resizeCleanup)
-    }, 100)
+    // Run optimizations after component mounts
+    preloadCriticalResources();
+    optimizeImages();
+    optimizeThirdPartyScripts();
+    addPerformanceMonitoring();
+    
+    const scrollCleanup = optimizeScrollPerformance();
+    const observerCleanup = addIntersectionObserver();
 
     return () => {
-      clearTimeout(timeoutId)
-      cleanupFunctions.forEach(cleanup => cleanup())
-    }
+      scrollCleanup?.();
+      observerCleanup?.();
+    };
   }, [
-    optimizeImages,
     preloadCriticalResources,
-    enableServiceWorker,
-    enableCompressionHints,
+    optimizeImages,
+    optimizeThirdPartyScripts,
+    addPerformanceMonitoring,
     optimizeScrollPerformance,
-    optimizeResizePerformance
-  ])
+    addIntersectionObserver
+  ]);
 
-  // This component doesn't render anything
-  return null
-}
+  // Add performance CSS
+  useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      /* Performance optimizations */
+      * {
+        box-sizing: border-box;
+      }
+      
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      
+      .lazy-load {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      
+      .lazy-load.animate-in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Reduce motion for users who prefer it */
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+      
+      /* Optimize for mobile */
+      @media (max-width: 768px) {
+        .lazy-load {
+          transform: translateY(10px);
+        }
+      }
+    `;
+    document.head.appendChild(style);
 
-export default PerformanceOptimizer
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, []);
+
+  return <>{children}</>;
+};
+
+export default PerformanceOptimizer;
