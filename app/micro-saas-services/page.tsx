@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Code, Globe as WebIcon, Calendar as ScheduleIcon, Cloud as CloudIcon, Shield as ProtectionIcon } from 'lucide-react';
+import { ArrowRight, Globe, Phone, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, BarChart3, Users, Mail, FileText, Headphones, Shield, Cloud, Calendar, Settings } from 'lucide-react';
 
 export default function MicroSaasServices() {
   const microSaasServices = [
@@ -8,7 +8,7 @@ export default function MicroSaasServices() {
       id: "zion-ai-analytics-pro",
       name: "Zion AI Analytics Pro",
       description: "Advanced AI-powered business intelligence platform with real-time dashboards, predictive analytics, and automated reporting. Transform your data into actionable insights with 99.9% accuracy.",
-      icon: <AnalyticsIcon className="w-8 h-8" />,
+      icon: <BarChart3 className="w-8 h-8" />,
       price: "From $299/month",
       originalPrice: "$599/month",
       features: [
@@ -35,7 +35,7 @@ export default function MicroSaasServices() {
       id: "zion-security-shield-pro",
       name: "Zion Security Shield Pro",
       description: "Advanced cybersecurity protection with AI-powered threat detection, automated response, and 24/7 monitoring. Protect your business with enterprise-grade security.",
-      icon: <ProtectionIcon className="w-8 h-8" />,
+      icon: <Shield className="w-8 h-8" />,
       price: "From $499/month",
       originalPrice: "$999/month",
       features: [
@@ -62,7 +62,7 @@ export default function MicroSaasServices() {
       id: "zion-cloud-vault-pro",
       name: "Zion Cloud Vault Pro",
       description: "Secure cloud storage solution with end-to-end encryption, unlimited scalability, and advanced backup capabilities. Your data, secured and accessible anywhere.",
-      icon: <CloudIcon className="w-8 h-8" />,
+      icon: <Cloud className="w-8 h-8" />,
       price: "From $99/month",
       originalPrice: "$199/month",
       features: [
@@ -89,7 +89,7 @@ export default function MicroSaasServices() {
       id: "zion-ai-crm-pro",
       name: "Zion AI CRM Pro",
       description: "AI-powered customer relationship management with intelligent lead scoring, automated follow-ups, and predictive sales analytics. Boost your sales performance.",
-      icon: <TeamIcon className="w-8 h-8" />,
+      icon: <Users className="w-8 h-8" />,
       price: "From $199/month",
       originalPrice: "$399/month",
       features: [
@@ -116,7 +116,7 @@ export default function MicroSaasServices() {
       id: "zion-ai-marketing-automation-pro",
       name: "Zion AI Marketing Automation Pro",
       description: "AI-powered marketing automation with predictive content generation, multi-channel orchestration, and advanced personalization. Scale your marketing efforts.",
-      icon: <MarketingIcon className="w-8 h-8" />,
+      icon: <TrendingUp className="w-8 h-8" />,
       price: "From $149/month",
       originalPrice: "$299/month",
       features: [
@@ -143,7 +143,7 @@ export default function MicroSaasServices() {
       id: "zion-ai-project-manager-pro",
       name: "Zion AI Project Manager Pro",
       description: "AI-powered project management with intelligent task prioritization, resource allocation, and predictive project analytics. Manage projects like never before.",
-      icon: <ScheduleIcon className="w-8 h-8" />,
+      icon: <Calendar className="w-8 h-8" />,
       price: "From $99/month",
       originalPrice: "$199/month",
       features: [
@@ -170,7 +170,7 @@ export default function MicroSaasServices() {
       id: "zion-ai-email-analyzer-pro",
       name: "Zion AI Email Analyzer Pro",
       description: "Intelligent email analysis with sentiment detection, priority scoring, and automated response suggestions. Transform your email productivity.",
-      icon: <EmailIcon className="w-8 h-8" />,
+      icon: <Mail className="w-8 h-8" />,
       price: "From $79/month",
       originalPrice: "$159/month",
       features: [
@@ -278,7 +278,7 @@ export default function MicroSaasServices() {
       id: "zion-ai-content-studio-pro",
       name: "Zion AI Content Studio Pro",
       description: "Comprehensive AI content creation platform with multi-format support, brand voice training, and SEO optimization. Create content at scale.",
-      icon: <DocumentIcon className="w-8 h-8" />,
+      icon: <FileText className="w-8 h-8" />,
       price: "From $159/month",
       originalPrice: "$319/month",
       features: [
@@ -305,7 +305,7 @@ export default function MicroSaasServices() {
       id: "zion-ai-devops-automation-pro",
       name: "Zion AI DevOps Automation Pro",
       description: "Intelligent DevOps automation with AI-powered deployment optimization, performance monitoring, and automated testing. Accelerate your development cycle.",
-      icon: <ConfigIcon className="w-8 h-8" />,
+      icon: <Settings className="w-8 h-8" />,
       price: "From $229/month",
       originalPrice: "$459/month",
       features: [
@@ -331,24 +331,24 @@ export default function MicroSaasServices() {
   ];
 
   const categories = [
-    { name: "AI Analytics", icon: <AnalyticsIcon className="w-5 h-5" />, count: 2 },
-    { name: "Cybersecurity", icon: <ProtectionIcon className="w-5 h-5" />, count: 1 },
-    { name: "Cloud Storage", icon: <CloudIcon className="w-5 h-5" />, count: 1 },
-    { name: "CRM & Sales", icon: <TeamIcon className="w-5 h-5" />, count: 1 },
-    { name: "Marketing Automation", icon: <MarketingIcon className="w-5 h-5" />, count: 1 },
-    { name: "Project Management", icon: <ScheduleIcon className="w-5 h-5" />, count: 1 },
-    { name: "Email Management", icon: <EmailIcon className="w-5 h-5" />, count: 1 },
+    { name: "AI Analytics", icon: <BarChart3 className="w-5 h-5" />, count: 2 },
+    { name: "Cybersecurity", icon: <Shield className="w-5 h-5" />, count: 1 },
+    { name: "Cloud Storage", icon: <Cloud className="w-5 h-5" />, count: 1 },
+    { name: "CRM & Sales", icon: <Users className="w-5 h-5" />, count: 1 },
+    { name: "Marketing Automation", icon: <TrendingUp className="w-5 h-5" />, count: 1 },
+    { name: "Project Management", icon: <Calendar className="w-5 h-5" />, count: 1 },
+    { name: "Email Management", icon: <Mail className="w-5 h-5" />, count: 1 },
     { name: "Inventory Management", icon: <Package className="w-5 h-5" />, count: 1 },
     { name: "Customer Analytics", icon: <Heart className="w-5 h-5" />, count: 1 },
     { name: "Financial Management", icon: <Receipt className="w-5 h-5" />, count: 1 },
-    { name: "Content Creation", icon: <DocumentIcon className="w-5 h-5" />, count: 1 },
-    { name: "DevOps & Automation", icon: <ConfigIcon className="w-5 h-5" />, count: 1 }
+    { name: "Content Creation", icon: <FileText className="w-5 h-5" />, count: 1 },
+    { name: "DevOps & Automation", icon: <Settings className="w-5 h-5" />, count: 1 }
   ];
 
   const stats = [
     { number: "12+", label: "Micro SAAS Solutions", icon: <Rocket className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <SupportIcon className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> },
     { number: "50%", label: "Average Cost Savings", icon: <TrendingUp className="w-6 h-6" /> }
   ];
 
@@ -573,7 +573,7 @@ export default function MicroSaasServices() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <EmailIcon className="w-6 h-6 text-white" />
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
                   <p className="text-cyan-400">kleber@ziontechgroup.com</p>

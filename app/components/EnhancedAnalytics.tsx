@@ -179,7 +179,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       (window as any).trackFormSubmission = trackFormSubmission;
       (window as any).trackButtonClick = trackButtonClick;
     }
-  }, []);
+  }, [trackButtonClick, trackFormSubmission, trackServiceClick]);
 
   return <>{children}</>;
 };

@@ -68,14 +68,6 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
     `
   };
 
-  const glowColors = {
-    cyan: 'shadow-cyan-500/25',
-    purple: 'shadow-purple-500/25',
-    pink: 'shadow-pink-500/25',
-    green: 'shadow-green-500/25',
-    blue: 'shadow-blue-500/25',
-    orange: 'shadow-orange-500/25'
-  };
 
   const buttonVariants = {
     initial: { 
@@ -93,14 +85,6 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
     }
   };
 
-  const rippleVariants = {
-    initial: { scale: 0, opacity: 1 },
-    animate: { 
-      scale: 4, 
-      opacity: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  };
 
   const content = (
     <>
