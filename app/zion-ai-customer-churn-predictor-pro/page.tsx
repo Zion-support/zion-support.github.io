@@ -1,27 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  TrendingDown, 
-  BarChart3, 
-  Target, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-  Users, 
-  Zap, 
-  Sparkles,
-  AlertTriangle,
-  Database,
-  Cpu,
-  Globe,
-  Heart,
-  MessageCircle,
-  ThumbsUp,
-  Eye,
-  MousePointer
-} from 'lucide-react';
+import { TrendingDown, BarChart3, Target, ArrowRight, CheckCircle, Star, Clock, Users, Sparkles, AlertTriangle, Cpu, Globe, Heart, MousePointer } from 'lucide-react';
 
 const ZionAICustomerChurnPredictorProPage: React.FC = () => {
   const features = [
