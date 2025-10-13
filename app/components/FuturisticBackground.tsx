@@ -8,21 +8,6 @@ interface FuturisticBackgroundProps {
 export default function FuturisticBackground({ children, className = '' }: FuturisticBackgroundProps) {
   return (
     <div className={`futuristic-background ${className}`}>
-<<<<<<< HEAD
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 opacity-90">
-      <div className="relative z-10">
-        {children}
-  );
-=======
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 opacity-90"></div>"
-      <div className="relative z-10">
-        {children}
-      </div>
-    </div>
-  ).
-  ).
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
   const canvasRef = useRef<HTMLCanvasElement>(null).
 

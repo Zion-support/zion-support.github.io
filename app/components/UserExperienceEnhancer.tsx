@@ -27,15 +27,6 @@ useEffect(() => {// UX enhancement logic.
       `.
       document.head.appendChild(style).
     }
-<<<<<<< HEAD
-enhanceUX();
-  }, []);
-return <React.Fragment>{children</React.Fragment>}
-=======
-enhanceUX().
-  }, []).
-return <React.Fragment>{children</React.Fragment>}</React.Fragment>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
 export default UserExperienceEnhancer.

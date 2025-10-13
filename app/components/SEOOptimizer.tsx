@@ -90,25 +90,6 @@ export default function SEOOptimizer({
   )
     <Helmet>
       {/* Basic Meta Tags */}
-<<<<<<< HEAD
-      <title>{title}
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta charSet="utf-8" />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-=======
-      <title>{title}</title>
-      <meta name="description" content={description} />"
-      <meta name="keywords" content={keywords.join(', ')} />"
-      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />"'
-      <meta name="viewport" content="width=device-width, initial-scale=1" />"
-      <meta charSet="utf-8" />"
-      <meta name="author" content="Zion Tech Group" />"
-      <meta name="publisher" content="Zion Tech Group" />"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       <meta name="language" content="en-US" />
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -139,13 +120,6 @@ export default function SEOOptimizer({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
-<<<<<<< HEAD
-  );
-=======
-      </script>
-    </Helmet>
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
       
       {/* Structured Data */}
@@ -158,11 +132,5 @@ export default function SEOOptimizer({
       <link rel="preconnect" href="https://fonts.googleapis.com" />"
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />"
       <link rel="dns-prefetch" href="https://ziontechgroup.com" />
-<<<<<<< HEAD
-  );
-=======
-    </Helmet>
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
 </li></li></li></li></li>

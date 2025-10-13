@@ -80,12 +80,6 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
           }}
         >
           {description}
-<<<<<<< HEAD
-        <a
-=======
-        </p>
-        <a.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
           href={ctaUrl}
           className="inline-block px-6 py-3 rounded-md font-bold transition-all duration-200 hover:opacity-80"
           style={{
@@ -106,15 +100,6 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
           }}
         >
           {ctaText}
-<<<<<<< HEAD
-  );
-=======
-        </a>
-      </div>
-    </div>
-  ).
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
 export default AdvertisingBanner.

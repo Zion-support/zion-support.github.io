@@ -9,11 +9,4 @@ export default function WebVitalsTracker({ className = '', children }: WebVitals
   return (
     <div className={`web-vitals-tracker ${className}`}>
       {children}
-<<<<<<< HEAD
-  );
-=======
-    </div>
-  ).
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }

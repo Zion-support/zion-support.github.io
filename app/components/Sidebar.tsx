@@ -220,17 +220,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   if (!isOpen) return null.
 
   return (
-<<<<<<< HEAD
-    <React.Fragment>
-=======
-    <div>
-  )
-    </div>
-  ).
-  ).
-  )
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       {/* Overlay */}
       <div 
         className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
@@ -248,15 +237,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <div className="flex items-center space-x-2">"
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">"
                 <Zap className="w-5 h-5 text-white" />
-<<<<<<< HEAD
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group
-            <button
-=======
-              </div>
-              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
-            </div>
-            <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               onClick={onClose}
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors lg:hidden"
             >
@@ -266,12 +246,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             {/* Company Links */}
             <div className="p-4">"
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-<<<<<<< HEAD
-                Company
-=======
-                Company.
-              </h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               <ul className="space-y-1">
                 {companyLinks.map((link, index) => (
                   <li key={index}>
@@ -286,12 +260,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             {/* Service Categories */}
             <div className="p-4">"
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-<<<<<<< HEAD
-                Services
-=======
-                Services.
-              </h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               <div className="space-y-1">
                 {serviceCategories.map((category, index) => (
                   <div key={index}>
@@ -324,12 +292,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             {/* Support Links */}
             <div className="p-4">"
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-<<<<<<< HEAD
-                Support
-=======
-                Support.
-              </h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               <ul className="space-y-1">
                 {supportLinks.map((link, index) => (
                   <li key={index}>
@@ -346,30 +308,3 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             <div className="space-y-3">"
               <div className="flex items-center space-x-2 text-sm text-gray-600">"
                 <Phone className="w-4 h-4" />
-<<<<<<< HEAD
-                <span>(302) 464-0950
-              <div className="flex items-center space-x-2 text-sm text-gray-600">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com
-  );
-};
-
-export default Sidebar;
-</div></div></li>
-=======
-                <span>(302) 464-0950</span>
-              </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-600">"
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  ).
-};
-
-export default Sidebar.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706

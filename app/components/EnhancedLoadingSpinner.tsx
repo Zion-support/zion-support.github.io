@@ -51,31 +51,13 @@ const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <p className={`text-sm ${colorClasses[color]} animate-pulse`}>
           {text}
       )}
-<<<<<<< HEAD
-  );
-=======
-    </div>
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
   if (fullScreen) {
     return (
     <div className="fixed inset-0 bg-gray-900/80 backdrop-blur-sm flex items-center justify-center z-50">
         {spinner}
-<<<<<<< HEAD
-    );
-=======
-      </div>
-  ).
-    ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
   }
 
   return spinner.
 };
 
-<<<<<<< HEAD
-export default EnhancedLoadingSpinner;
-=======
-export default EnhancedLoadingSpinner.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706

@@ -97,24 +97,6 @@ declare global {interface Window {}
     gtag: (...args: any[]) => void;,}}
 };
 
-<<<<<<< HEAD
-export default Analytics;
-// Analytics Provider for context;
-export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return(<React.Fragment>)
-=======
-export default Analytics.
-// Analytics Provider for context.
-export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return (
-    <div>
-  )
-    </div>
-  ).
-  ).
-  )
-    <>
-    </>
-  )
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       <Analytics />}{children}
       {children}
 

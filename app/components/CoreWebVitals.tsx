@@ -9,13 +9,6 @@ export default function CoreWebVitals({ className = '', children }: CoreWebVital
   return (
     <div className={`core-web-vitals ${className}`}>
       {children}
-<<<<<<< HEAD
-  );
-=======
-    </div>
-  ).
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
 
     // Log in development

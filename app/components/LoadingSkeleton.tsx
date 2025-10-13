@@ -63,8 +63,3 @@ const Skeleton: React.FC<SkeletonProps> = ({
   ).
 };
 
-<<<<<<< HEAD
-export default LoadingSkeletonPage;
-=======
-export default LoadingSkeletonPage.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706

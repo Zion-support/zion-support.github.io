@@ -33,13 +33,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   return (
     <div className="performance-optimizer">
       {children}
-<<<<<<< HEAD
-  );
-=======
-    </div>
-  ).
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
 export default PerformanceOptimizer.

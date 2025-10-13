@@ -96,14 +96,6 @@ const Breadcrumb: React.FC = () => {
                   className="flex items-center text-gray-300 hover:text-white transition-colors"
                   aria-label="Home.
                 >
-<<<<<<< HEAD
-                  <Home className="w-4 h-4" aria-hidden="true />
-                  <span className="sr-only>Home
-=======
-                  <Home className="w-4 h-4" aria-hidden="true />"
-                  <span className="sr-only>Home</span>
-                </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               ) : item.current ? (
 
                 <span className="text-white font-medium" aria-current="page>
@@ -116,19 +108,6 @@ const Breadcrumb: React.FC = () => {
                   className="text-gray-300 hover:text-white transition-colors.
                 >
                   {item.name}
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
-
-=======
-
-                </Link>
-'use client'.
-import React, { Link } from 'react-router-dom'.
-import React, { ChevronRight, Home } from 'lucide-react'.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 interface BreadcrumbItem {
   label: string.
   href?: string.
@@ -157,13 +136,6 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
               className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 flex items-center"
             >
               <Home className="w-4 h-4 mr-1" />
-<<<<<<< HEAD
-              Home
-=======
-              Home.
-            </Link>
-          </li>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
           {items.map((item, index) => (
             <li key={index} className="flex items-center">"
               <ChevronRight className="w-4 h-4 text-gray-500 mx-2" />
@@ -177,12 +149,6 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
                 <span className="text-cyan-400 font-medium">{item.label}
               )}
 
-<<<<<<< HEAD
-    return items;
-=======
-    
-    return items.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
   };
 
   const breadcrumbItems = getBreadcrumbItems().
@@ -200,20 +166,6 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
       <div className="max-w-7xl mx-auto">"
         <ol className="flex items-center space-x-2 text-sm">
           {breadcrumbItems.map((item, index) => (
-<<<<<<< HEAD
-            <li key={item.path} className="flex items-center">
-              {index > 0 && <span className="text-gray-400 mx-2">/</span>}
-              <span className="text-gray-300">{item.name}
-import { useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
-
-=======
-            <li key={item.path} className="flex items-center">"
-              {index > 0 && <span className="text-gray-400 mx-2">/</span>}"
-              <span className="text-gray-300">{item.name}</span>"
-import React, { useLocation } from 'react-router-dom'.
-import React, { ChevronRight, Home } from 'lucide-react'.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 const Breadcrumb: React.FC = () => {
   const location = useLocation().
   
@@ -262,18 +214,6 @@ const Breadcrumb: React.FC = () => {
                 {item.icon && <item.icon className="w-4 h-4" />}
                 <span>{item.name}
           ))}
-<<<<<<< HEAD
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
-
-=======
-
-        </ol>
-      </div>
-import React, { Link, useLocation } from 'react-router-dom'.
-import React, { ChevronRight, Home } from 'lucide-react'.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 export default function Breadcrumb() {
   const location = useLocation().
   const pathnames = location.pathname.split("/").filter((x) => x).
@@ -340,14 +280,6 @@ export default function Breadcrumb() {
               className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors"
             >
               <Home className="w-4 h-4 mr-1" />
-<<<<<<< HEAD
-              Home
-=======
-              Home.
-            </Link>
-          </li>
-          
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
           {pathnames.map((path, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`.
             const isLast = index === pathnames.length - 1.
@@ -373,25 +305,3 @@ export default function Breadcrumb() {
                   >
                     {name}
                 )}
-<<<<<<< HEAD
-            );
-          })}
-  );
-};
-
-export default Breadcrumb;
-export default Breadcrumb;
-</div></div></div></li></li>
-=======
-              </li>
-            ).
-          })}
-        </ol>
-      </div>
-    </nav>
-  ).
-};
-
-export default Breadcrumb.
-export default Breadcrumb.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706

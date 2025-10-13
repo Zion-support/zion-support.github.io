@@ -20,36 +20,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className = '',
   priority = false,
   onLoad,
-<<<<<<< HEAD
-  onError,
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-=======
-  onError;
-}: OptimizedImageProps) {
-  const [isLoading, setIsLoading] = useState(true);
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   const handleLoad = () => {
-<<<<<<< HEAD
-    setIsLoaded(true);
-=======
-  
-    setIsLoading(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
     onLoad?.();
   };
 
   const handleError = () => {
-<<<<<<< HEAD
-=======
-  
-    setIsLoading(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
     setHasError(true);
     onError?.();
@@ -57,18 +37,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   if (hasError) {
     return (
-<<<<<<< HEAD
-      <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      >
-        <span className="text-gray-500">Failed to load image
-=======
-    <div className={`optimized-image-error ${className}`}>
-        <div className="flex items-center justify-center w-full h-full bg-gray-100 text-gray-500">
-          Failed to load image;
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
       </div>
   );
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706
@@ -102,9 +70,4 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   );
 };
 
-<<<<<<< HEAD
-export default OptimizedImage;
-=======
-export default OptimizedImage;
->>>>>>> origin/main
 >>>>>>> cursor/fix-errors-and-merge-to-main-9706

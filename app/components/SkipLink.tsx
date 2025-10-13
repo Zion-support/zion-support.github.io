@@ -28,14 +28,6 @@ const SkipLink: React.FC = () => {}
       }}
 
     >
-<<<<<<< HEAD
-      Skip to main content
-  );
-=======
-      Skip to main content.
-    </a>
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
 };
 

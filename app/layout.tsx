@@ -71,12 +71,5 @@ import React from 'react'.
         />
       <body className='antialiased'>
         {children}
-<<<<<<< HEAD
-  );
-=======
-      </body>
-    </html>
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
 </li></li></li></li></li></li></li></li></li></li>

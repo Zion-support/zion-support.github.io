@@ -81,30 +81,6 @@ class ErrorHandler extends Component<Props, State> {
             <div className="flex justify-center mb-4">"
               <AlertTriangle className="w-16 h-16 text-red-500" />
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
-<<<<<<< HEAD
-              Oops! Something went wrong
-            <p className="text-gray-600 mb-6">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                  Error Details (Development)
-                <div className="mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto">
-=======
-              Oops! Something went wrong.
-            </h1>
-            
-            <p className="text-gray-600 mb-6">"
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.'
-            </p>
-
-            {process.env['NODE_ENV'] === 'development' && this.state.error && ('
-              <details className="mb-6 text-left">"
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
-                  Error Details (Development)
-                </summary>
-                <div className="mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto">"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
                   <div className="mb-2">
                     <strong>Error:</strong> {this.state.error.message}
                   {this.state.error.stack && (
@@ -123,30 +99,10 @@ class ErrorHandler extends Component<Props, State> {
                 className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-                Try Again
-              <button
-=======
-                Try Again.
-              </button>
-              
-              <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-                Go Home
-=======
-                Go Home.
-              </button>
-            </div>
-          </div>
-        </div>
-  ).
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       )
     }
 

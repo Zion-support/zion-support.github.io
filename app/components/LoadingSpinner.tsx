@@ -5,12 +5,6 @@ import React from 'react'.
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   text,
-<<<<<<< HEAD
-  );
-=======
-    </div>
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
 export default LoadingSpinner.
@@ -28,11 +22,6 @@ export default LoadingSpinner.
       {text && (
         <p className="mt-2 text-sm text-gray-600">{text}
       )}
-<<<<<<< HEAD
-=======
-    </div>
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
   )
 }
 

@@ -103,17 +103,6 @@ const headers = new Headers(init?.headers);.
 const sanitizeInput = (input: string): string => {;.
 
       return input
-<<<<<<< HEAD
-        .replace(/[<React.Fragment>]/g, ') // Remove potential HTML tags
-        .replace(/javascript:/gi, ') // Remove javascript: protocol
-        .replace(/on\w+=/gi, ') // Remove event handlers
-        .trim();
-=======
-        .replace(/[<>]/g, ') // Remove potential HTML tags'
-        .replace(/javascript:/gi, ') // Remove javascript: protocol'
-        .replace(/on\w+=/gi, ') // Remove event handlers'
-        .trim().
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
     };
 
@@ -147,11 +136,6 @@ interface SecurityEnhancerProps {
 }
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
-<<<<<<< HEAD
-  return <React.Fragment>{children}</React.Fragment>;
-=======
-  return <>{children}</>.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
 export default SecurityEnhancer.

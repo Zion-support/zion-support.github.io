@@ -7,18 +7,6 @@ interface AdvancedPerformanceMonitorProps {
 export default function AdvancedPerformanceMonitor({ className = '' }: AdvancedPerformanceMonitorProps) {
   return (
     <div className={`advanced-performance-monitor ${className}`}>
-<<<<<<< HEAD
-      <h3>Performance Monitor
-      <p>Advanced performance monitoring component
-  );
-=======
-      <h3>Performance Monitor</h3>
-      <p>Advanced performance monitoring component</p>
-    </div>
-  ).
-  ).
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
 const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   onMetricsUpdate,
@@ -405,35 +393,6 @@ interface PerformanceMetrics {fcp: number | null;,}
       )}if (metrics.fid && metrics.fid > 100) {recommendations.push('First Input Delay is high. Reduce JavaScript execution time.')
       )}if (metrics.cls && metrics.cls > 0.1) {recommendations.push('Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.')
       )}if (metrics.ttfb && metrics.ttfb > 600) {recommendations.push('Time to First Byte is slow. Optimize server response time.')
-<<<<<<< HEAD
-      )}return recommendations;
-  }, [metrics]);
-  const _recommendations = getPerformanceRecommendations();
-  if (process.env['NODE_ENV'] === 'development') {return(<div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>)
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor
-        <div className='text-xs space-y-1'>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0),</div>}ms` : 'N/A'}
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0),</div>}ms` : 'N/A'}
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0),</div>}ms` : 'N/A'}
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A',</div>}
-          <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0),</div>}ms` : 'N/A'}
-          <div>Memory: {' ',</div>}{metrics.memory;
-      onMetricsUpdate(metrics);
-=======
-      )}return recommendations.
-  }, [metrics]).
-  const _recommendations = getPerformanceRecommendations().
-  if (process.env['NODE_ENV'] === 'development') {return (<div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>)</div>
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-        <div className='text-xs space-y-1'>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0),</div>}ms` : 'N/A'}</div>
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0),</div>}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0),</div>}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A',</div>}</div>
-          <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0),</div>}ms` : 'N/A'}</div>
-          <div>Memory: {' ',</div>}{metrics.memory.
-      onMetricsUpdate(metrics).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
     }
   }, [metrics, onMetricsUpdate]).
 
@@ -476,33 +435,6 @@ interface PerformanceMetrics {fcp: number | null;,}
 
   const _recommendations = getPerformanceRecommendations().
 
-<<<<<<< HEAD
-  if (process.env['NODE_ENV'] === 'development') {
-    return (
-      <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor
-        <div className='text-xs space-y-1'>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
-            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
-=======
-  if (process.env['NODE_ENV'] === 'development') {'
-    const Component = () => {
-  
-      return (
-    <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-        <div className='text-xs space-y-1'></div>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-          <div>
-            TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
-          <div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
             Memory:{' '}
             {metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
@@ -516,15 +448,6 @@ interface PerformanceMetrics {fcp: number | null;,}
               {_recommendations.map((rec, index) => (
                 <li key={index}>• {rec}
               ))}
-<<<<<<< HEAD
-    );
-=======
-            </ul>
-          </li>
-        </li>
-      </li>
-    ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
   }
 
             <h4 className='font-semibold text-xs text-red-600'>
@@ -616,86 +539,9 @@ interface PerformanceMetrics {fcp: number | null;,}
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">"
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
       {isVisible && (
-<<<<<<< HEAD
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80">
-          <h3 className="text-lg font-semibold mb-4 text-gray-800">Performance Metrics
-          <div className="space-y-3 text-sm">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">Load Time:
-              <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">FCP:
-              <span className={`font-mono ${metrics.fcp ? getMetricColor(metrics.fcp, { good: 1800, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">LCP:
-              <span className={`font-mono ${metrics.lcp ? getMetricColor(metrics.lcp, { good: 2500, poor: 4000 }) : 'text-gray-400'}`}>
-                {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">CLS:
-              <span className={`font-mono ${metrics.cls !== null ? getMetricColor(metrics.cls, { good: 0.1, poor: 0.25 }) : 'text-gray-400'}`}>
-                {metrics.cls !== null ? metrics.cls.toFixed(3) : 'N/A'}
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">TTFB:
-=======
-        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80">"
-          <h3 className="text-lg font-semibold mb-4 text-gray-800">Performance Metrics</h3>
-          
-          <div className="space-y-3 text-sm">"
-            <div className="flex justify-between items-center">"
-              <span className="text-gray-600">Load Time:</span>"
-              <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">"
-              <span className="text-gray-600">FCP:</span>"
-              <span className={`font-mono ${metrics.fcp ? getMetricColor(metrics.fcp, { good: 1800, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">"
-              <span className="text-gray-600">LCP:</span>"
-              <span className={`font-mono ${metrics.lcp ? getMetricColor(metrics.lcp, { good: 2500, poor: 4000 }) : 'text-gray-400'}`}>
-                {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">"
-              <span className="text-gray-600">CLS:</span>"
-              <span className={`font-mono ${metrics.cls !== null ? getMetricColor(metrics.cls, { good: 0.1, poor: 0.25 }) : 'text-gray-400'}`}>
-                {metrics.cls !== null ? metrics.cls.toFixed(3) : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">"
-              <span className="text-gray-600">TTFB:</span>"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               <span className={`font-mono ${metrics.ttfb ? getMetricColor(metrics.ttfb, { good: 800, poor: 1800 }) : 'text-gray-400'}`}>
                 {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
             {metrics.memoryUsage && (
-<<<<<<< HEAD
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Memory:
-                <span className="font-mono text-gray-600">
-                  {metrics.memoryUsage.toFixed(1)}MB
-            )}
-          <div className="mt-4 pt-4 border-t border-gray-200">
-=======
-              <div className="flex justify-between items-center">"
-                <span className="text-gray-600">Memory:</span>"
-                <span className="font-mono text-gray-600">
-                  {metrics.memoryUsage.toFixed(1)}MB.
-                </span>
-              </div>
-            )}
-          </div>
-          
-          <div className="mt-4 pt-4 border-t border-gray-200">"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
             <div className="text-xs text-gray-500">
               <p>Green: Good | Yellow: Needs Improvement | Red: Poor
       )}
@@ -817,12 +663,6 @@ export default AdvancedPerformanceMonitor.
     <div className="fixed bottom-4 left-20 bg-white dark:bg-gray-800 p-4 rounded-lg shadow-lg border min-w-80 z-50 max-h-96 overflow-y-auto">"
       <div className="flex justify-between items-center mb-3">"
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-<<<<<<< HEAD
-          Performance Monitor
-=======
-          Performance Monitor.
-        </h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
         <div className="flex space-x-2">
           <button.
             onClick={() => setIsRecording(!isRecording)}
@@ -832,135 +672,17 @@ export default AdvancedPerformanceMonitor.
                 : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'
             }`}
           >
-<<<<<<< HEAD
-            {isRecording ? '⏹️' : '⏺️'}
-          <button
-=======
-            {isRecording ? '⏹️' : '⏺️'}'
-          </button>
-          <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
             onClick={() => setIsVisible(false)}
             className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
             aria-label="Close performance monitor"
           >
             ✕
-<<<<<<< HEAD
-      <div className="mb-4">
-        <div className="flex justify-between items-center">
-          <span className="text-sm text-gray-600 dark:text-gray-400">Performance Score:
-          <span className={`text-lg font-bold ${scoreColor}`}>{score}/100
-=======
-          </button>
-        </div>
-      </div>
-
-      <div className="mb-4">"
-        <div className="flex justify-between items-center">"
-          <span className="text-sm text-gray-600 dark:text-gray-400">Performance Score:</span>"
-          <span className={`text-lg font-bold ${scoreColor}`}>{score}/100</span>
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mt-1">
           <div 
             className={`h-2 rounded-full ${
               score >= 80 ? 'bg-green-500' : score >= 60 ? 'bg-yellow-500' : 'bg-red-500'
             }`}
             style={{ width: `${score}%` }}
-<<<<<<< HEAD
-          >
-      <div className="space-y-2 text-sm">
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">First Contentful Paint:
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.firstContentfulPaint)}
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">Largest Contentful Paint:
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.largestContentfulPaint)}
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">First Input Delay:
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.firstInputDelay)}
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">Cumulative Layout Shift:
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.cumulativeLayoutShift)}
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">Time to First Byte:
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.timeToFirstByte)}
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">Memory Usage:
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.memoryUsage, 'MB')}
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">Load Time:
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.loadTime)}
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">DOM Content Loaded:
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.domContentLoaded)}
-        <div className="flex justify-between">
-          <span className="text-gray-600 dark:text-gray-400">Total Blocking Time:
-=======
-          ></div>
-        </div>
-      </div>
-
-      <div className="space-y-2 text-sm">"
-        <div className="flex justify-between">"
-          <span className="text-gray-600 dark:text-gray-400">First Contentful Paint:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.firstContentfulPaint)}
-          </span>
-        </div>
-        <div className="flex justify-between">"
-          <span className="text-gray-600 dark:text-gray-400">Largest Contentful Paint:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.largestContentfulPaint)}
-          </span>
-        </div>
-        <div className="flex justify-between">"
-          <span className="text-gray-600 dark:text-gray-400">First Input Delay:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.firstInputDelay)}
-          </span>
-        </div>
-        <div className="flex justify-between">"
-          <span className="text-gray-600 dark:text-gray-400">Cumulative Layout Shift:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.cumulativeLayoutShift)}
-          </span>
-        </div>
-        <div className="flex justify-between">"
-          <span className="text-gray-600 dark:text-gray-400">Time to First Byte:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.timeToFirstByte)}
-          </span>
-        </div>
-        <div className="flex justify-between">"
-          <span className="text-gray-600 dark:text-gray-400">Memory Usage:</span>"
-          <span className="text-blue-600 dark:text-blue-400">"
-            {formatMetric(metrics.memoryUsage, 'MB')}
-          </span>
-        </div>
-        <div className="flex justify-between">"
-          <span className="text-gray-600 dark:text-gray-400">Load Time:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.loadTime)}
-          </span>
-        </div>
-        <div className="flex justify-between">"
-          <span className="text-gray-600 dark:text-gray-400">DOM Content Loaded:</span>"
-          <span className="text-blue-600 dark:text-blue-400">
-            {formatMetric(metrics.domContentLoaded)}
-          </span>
-        </div>
-        <div className="flex justify-between">"
-          <span className="text-gray-600 dark:text-gray-400">Total Blocking Time:</span>"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
           <span className="text-blue-600 dark:text-blue-400">
             {formatMetric(metrics.totalBlockingTime)}
       <div className="mt-4 space-y-2">
@@ -968,14 +690,6 @@ export default AdvancedPerformanceMonitor.
           onClick={exportMetrics}
           className="w-full bg-blue-500 text-white px-3 py-2 rounded text-sm hover:bg-blue-600 transition-colors"
         >
-<<<<<<< HEAD
-          Export Metrics
-        <button
-=======
-          Export Metrics.
-        </button>
-        <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
           onClick={() => setMetrics({
             loadTime: null,
             firstContentfulPaint: null,
@@ -989,19 +703,3 @@ export default AdvancedPerformanceMonitor.
           })}
           className="w-full bg-gray-500 text-white px-3 py-2 rounded text-sm hover:bg-gray-600 transition-colors"
         >
-<<<<<<< HEAD
-          Reset Metrics
-  )
-}
-
-export default AdvancedPerformanceMonitor
-=======
-          Reset Metrics.
-        </button>
-      </div>
-    </div>
-  )
-}
-
-export default AdvancedPerformanceMonitor.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706

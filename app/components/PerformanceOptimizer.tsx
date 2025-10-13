@@ -77,13 +77,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     return () => {
       // Cleanup if needed.
     };
-<<<<<<< HEAD
-  }, []);
-  return <React.Fragment>{children}</React.Fragment>;
-=======
-  }, []).
-  return <>{children}</>.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode.
@@ -113,26 +106,12 @@ export default PerformanceOptimizer.
       return () => observer.disconnect().
   }, [optimizeImages]).
 
-<<<<<<< HEAD
-  return <React.Fragment>{children}</React.Fragment>;
-=======
-  return <>{children}</>.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
 export default PerformanceOptimizer.
   const optimizeMemory = useCallback(() => {if ('memory' in performance) {
   const runOptimizations = useCallback(async () => {setIsOptimizing(true).
     const newOptimizations: string[] = [],
-<<<<<<< HEAD
-    // Optimize images;
-  return(<div className="performance-optimizer">)
-=======
-    // Optimize images.
-  const Component = () => {
-  
-    return (<div className="performance-optimizer">)</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       {children}{/* Performance Status Indicator (only in development) */}
       {process.env['NODE_ENV'] === 'development' && ('
   ).
@@ -157,12 +136,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
         '/images/logo.png'
       ]
 
-<<<<<<< HEAD
-        // Add decoding="async" for better performance
-=======
-        
-        // Add decoding="async" for better performance"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
         if (!img.hasAttribute('decoding')) {
           img.setAttribute('decoding', 'async');'
         }

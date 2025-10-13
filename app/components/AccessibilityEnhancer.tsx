@@ -151,21 +151,6 @@ export default function AccessibilityEnhancer() {
   
       const skipLinks = document.createElement('div').
       skipLinks.innerHTML = `
-<<<<<<< HEAD
-        <a href="#main-content" class="skip-link">Skip to main content
-        <a href="#navigation" class="skip-link">Skip to navigation
-        <a href="#footer" class="skip-link">Skip to footer
-      `;
-      skipLinks.className = 'skip-links';
-      document.body.insertBefore(skipLinks, document.body.firstChild);
-=======
-        <a href="#main-content" class="skip-link">Skip to main content</a>"
-        <a href="#navigation" class="skip-link">Skip to navigation</a>"
-        <a href="#footer" class="skip-link">Skip to footer</a>"
-      `.
-      skipLinks.className = 'skip-links'.
-      document.body.insertBefore(skipLinks, document.body.firstChild).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
     };
 
     addSkipLinks().
@@ -279,21 +264,6 @@ export default function AccessibilityEnhancer() {
     applyAccessibilitySettings(defaultSettings).
   };
 
-<<<<<<< HEAD
-  return (
-    <React.Fragment>
-=======
-  const Component = () => {
-  
-    return (
-    <div>
-  )
-    </div>
-  ).
-  ).
-  )
-    <>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       {/* Toggle Button */}
       <button.
         onClick={togglePanel}
@@ -307,15 +277,6 @@ export default function AccessibilityEnhancer() {
       {isVisible && (
         <div className="fixed top-16 right-4 z-50 bg-white rounded-lg shadow-xl p-6 w-80 max-w-sm">"
           <h3 className="text-lg font-semibold text-gray-900 mb-4">
-<<<<<<< HEAD
-            Accessibility Settings
-          <div className="space-y-4">
-=======
-            Accessibility Settings.
-          </h3>
-          
-          <div className="space-y-4">"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
             <label className="flex items-center space-x-3">
               <input
                 type="checkbox"
@@ -347,26 +308,6 @@ export default function AccessibilityEnhancer() {
                 onChange={(e) => updateSetting('focusVisible', e.target.checked)}
                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500"
               />
-<<<<<<< HEAD
-              <span className="text-sm text-gray-700">Enhanced Focus
-          <button
-            onClick={togglePanel}
-            className="mt-4 w-full bg-gray-200 text-gray-800 py-2 px-4 rounded hover:bg-gray-300 transition-colors duration-200"
-          >
-            Close
-=======
-              <span className="text-sm text-gray-700">Enhanced Focus</span>
-            </label>
-          </div>
-
-          <button.
-            onClick={togglePanel}
-            className="mt-4 w-full bg-gray-200 text-gray-800 py-2 px-4 rounded hover:bg-gray-300 transition-colors duration-200"
-          >
-            Close.
-          </button>
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       )}
 
       {/* CSS for accessibility features */}
@@ -411,18 +352,6 @@ export default function AccessibilityEnhancer() {
         }
         `
       }} />
-<<<<<<< HEAD
-  enableKeyboardNavigation?: boolean;
-  enableScreenReaderSupport?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-=======
-    </>
-  enableKeyboardNavigation?: boolean.
-  enableScreenReaderSupport?: boolean.
-  enableHighContrast?: boolean.
-  enableFocusManagement?: boolean.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
@@ -560,25 +489,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     return (
     <div className="accessibility-enhanced">
       {/* Accessibility Controls */}
-<<<<<<< HEAD
-      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg border border-slate-700">
-        <h3 className="text-white text-sm font-semibold mb-3">Accessibility
-=======
-      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-slate-800 p-4 rounded-lg shadow-lg border border-slate-700">"
-        <h3 className="text-white text-sm font-semibold mb-3">Accessibility</h3>"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
         <div className="space-y-2">
           <button.
             onClick={toggleHighContrast}
             className="block w-full text-left text-sm text-gray-300 hover:text-white transition-colors"
             aria-label="Toggle high contrast mode"
           >
-<<<<<<< HEAD
-            {isHighContrast ? 'Disable' : 'Enable'} High Contrast
-=======
-            {isHighContrast ? 'Disable' : 'Enable'} High Contrast;'
-          </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
           <div className="flex items-center space-x-2">
             <button.
               onClick={decreaseFontSize}
@@ -586,28 +502,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
               aria-label="Decrease font size"
             >
               A-
-<<<<<<< HEAD
-            <span className="text-sm text-gray-300">{fontSize}px
-            <button
-=======
-            </button>
-            <span className="text-sm text-gray-300">{fontSize}px</span>
-            <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               onClick={increaseFontSize}
               className="text-sm text-gray-300 hover:text-white transition-colors"
               aria-label="Increase font size"
             >
               A+
       {children}
-<<<<<<< HEAD
-  );
-=======
-    </div>
-  ).
-  ).
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
 'use client'.
 import React, { useEffect, useState } from 'react'.
@@ -682,11 +582,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableScreenReaderSupport]).
 
-<<<<<<< HEAD
-  return <React.Fragment>{children}</React.Fragment>;
-=======
-  return <>{children}</>.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
 export default AccessibilityEnhancer.
@@ -911,15 +806,6 @@ export default AccessibilityEnhancer.
           style={{ display: 'none' }}
         >
           <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-white">
-<<<<<<< HEAD
-            Accessibility Settings
-          <div className="space-y-3">
-=======
-            Accessibility Settings.
-          </h3>
-          
-          <div className="space-y-3">"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
             <label className="flex items-center space-x-2">
               <input
                 type="checkbox"
@@ -951,30 +837,6 @@ export default AccessibilityEnhancer.
                 onChange={(e) => updateSetting('focusVisible', e.target.checked)}
                 className="rounded"
               />
-<<<<<<< HEAD
-              <span className="text-sm text-gray-700 dark:text-gray-300">Focus Indicators
-          <button
-            onClick={resetSettings}
-            className="mt-3 w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded text-sm hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-          >
-            Reset to Defaults
-  );
-=======
-              <span className="text-sm text-gray-700 dark:text-gray-300">Focus Indicators</span>
-            </label>
-          </div>
-          
-          <button.
-            onClick={resetSettings}
-            className="mt-3 w-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-3 py-1 rounded text-sm hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
-          >
-            Reset to Defaults.
-          </button>
-        </div>
-      </div>
-    </div>
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
     // Large text mode.
@@ -1017,12 +879,3 @@ export default AccessibilityEnhancer.
       return cleanup.
     }, []).
 
-<<<<<<< HEAD
-export default AccessibilityEnhancer;
-export default AccessibilityEnhancer;
-export default AccessibilityEnhancer;
-=======
-export default AccessibilityEnhancer.
-export default AccessibilityEnhancer.
-export default AccessibilityEnhancer.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706

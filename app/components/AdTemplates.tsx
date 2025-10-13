@@ -208,39 +208,10 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
       {/* Header */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">"
         <div className="flex items-center justify-between mb-6">
-<<<<<<< HEAD
-            <h1 className="text-3xl font-bold text-gray-900">Ad Templates
-            <p className="text-gray-600 mt-1">Choose from professional ad templates or create your own
-          <div className="flex items-center gap-3">
-            <button className="px-4 py-2 text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors flex items-center gap-2">
-              <Upload className="w-4 h-4" />
-              Import
-            <button
-=======
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">Ad Templates</h1>"
-            <p className="text-gray-600 mt-1">Choose from professional ad templates or create your own</p>
-          </div>
-          <div className="flex items-center gap-3">"
-            <button className="px-4 py-2 text-gray-600 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors flex items-center gap-2">"
-              <Upload className="w-4 h-4" />
-              Import.
-            </button>
-            <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               onClick={() => setIsCreating(true)}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors"
             >
               <Plus className="w-5 h-5" />
-<<<<<<< HEAD
-              Create Template
-=======
-              Create Template.
-            </button>
-          </div>
-        </div>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
         {/* Filters and Search */}
         <div className="flex flex-col md:flex-row gap-4">"
           <div className="flex-1">"
@@ -260,70 +231,14 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
               onChange={(e) => setFilter(e.target.value as any)}
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
-<<<<<<< HEAD
-              <option value="all">All Categories
-              <option value="banner">Banner
-              <option value="popup">Popup
-              <option value="sidebar">Sidebar
-              <option value="inline">Inline
-              <option value="video">Video
-              <option value="social">Social
-            <select
-=======
-              <option value="all">All Categories</option>"
-              <option value="banner">Banner</option>"
-              <option value="popup">Popup</option>"
-              <option value="sidebar">Sidebar</option>"
-              <option value="inline">Inline</option>"
-              <option value="video">Video</option>"
-              <option value="social">Social</option>
-            </select>
-            
-            <select.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               value={typeFilter}
               onChange={(e) => setTypeFilter(e.target.value as any)}
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
-<<<<<<< HEAD
-              <option value="all">All Types
-              <option value="promotional">Promotional
-              <option value="informational">Informational
-              <option value="educational">Educational
-              <option value="seasonal">Seasonal
-              <option value="retargeting">Retargeting
-            <select
-=======
-              <option value="all">All Types</option>"
-              <option value="promotional">Promotional</option>"
-              <option value="informational">Informational</option>"
-              <option value="educational">Educational</option>"
-              <option value="seasonal">Seasonal</option>"
-              <option value="retargeting">Retargeting</option>
-            </select>
-            
-            <select.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
-<<<<<<< HEAD
-              <option value="newest">Newest
-              <option value="popular">Most Popular
-              <option value="rating">Highest Rated
-              <option value="name">Name A-Z
-=======
-              <option value="newest">Newest</option>"
-              <option value="popular">Most Popular</option>"
-              <option value="rating">Highest Rated</option>"
-              <option value="name">Name A-Z</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       {/* Templates Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         <AnimatePresence>
@@ -336,50 +251,10 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
               className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
             >
               {/* Template Preview */}
-<<<<<<< HEAD
-              <div className="relative">
-                <div className="aspect-video bg-gray-100 flex items-center justify-center">
-                  <div className="text-6xl">{getCategoryIcon(template.category)}
-                <div className="absolute top-2 right-2 flex gap-1">
-                  {template.isPremium && (
-                    <span className="px-2 py-1 bg-yellow-500 text-white text-xs font-bold rounded">
-                      PRO
-=======
-              <div className="relative">"
-                <div className="aspect-video bg-gray-100 flex items-center justify-center">"
-                  <div className="text-6xl">{getCategoryIcon(template.category)}</div>
-                </div>
-                <div className="absolute top-2 right-2 flex gap-1">
-                  {template.isPremium && (
-                    <span className="px-2 py-1 bg-yellow-500 text-white text-xs font-bold rounded">
-                      PRO.
-                    </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
                   )}
                   <span className={`px-2 py-1 text-xs font-medium rounded ${getTypeColor(template.type)}`}>
                     {template.type}
               {/* Template Info */}
-<<<<<<< HEAD
-              <div className="p-4">
-                <div className="flex items-start justify-between mb-2">
-                  <h3 className="font-semibold text-gray-900 truncate">{template.name}
-                  <div className="flex items-center gap-1 text-yellow-500">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="text-sm font-medium">{template.rating}
-                <p className="text-sm text-gray-600 mb-3 line-clamp-2">{template.description}
-=======
-              <div className="p-4">"
-                <div className="flex items-start justify-between mb-2">"
-                  <h3 className="font-semibold text-gray-900 truncate">{template.name}</h3>"
-                  <div className="flex items-center gap-1 text-yellow-500">"
-                    <Star className="w-4 h-4 fill-current" />"
-                    <span className="text-sm font-medium">{template.rating}</span>
-                  </div>
-                </div>
-                
-                <p className="text-sm text-gray-600 mb-3 line-clamp-2">{template.description}</p>
-                
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
                   <span>{template.usageCount.toLocaleString()} uses
                   <span>{template.author}
@@ -401,47 +276,21 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
                     onClick={() => handleUseTemplate(template)}
                     className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded text-sm font-medium transition-colors"
                   >
-<<<<<<< HEAD
-                    Use Template
-                  <button
-=======
-                    Use Template.
-                  </button>
-                  <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
                     onClick={() => setSelectedTemplate(template)}
                     className="p-2 text-gray-400 hover:text-blue-600 transition-colors"
                     title="Preview"
                   >
                     <Eye className="w-4 h-4" />
-<<<<<<< HEAD
-                  <button
-=======
-                  </button>
-                  <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
                     onClick={() => handleEditTemplate(template)}
                     className="p-2 text-gray-400 hover:text-green-600 transition-colors"
                     title="Edit"
                   >
                     <Edit className="w-4 h-4" />
-<<<<<<< HEAD
-                  <button
-=======
-                  </button>
-                  <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
                     onClick={() => handleDuplicateTemplate(template)}
                     className="p-2 text-gray-400 hover:text-purple-600 transition-colors"
                     title="Duplicate"
                   >
                     <Copy className="w-4 h-4" />
-<<<<<<< HEAD
-                  <button
-=======
-                  </button>
-                  <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
                     onClick={() => handleDeleteTemplate(template.id)}
                     className="p-2 text-gray-400 hover:text-red-600 transition-colors"
                     title="Delete"
@@ -450,38 +299,10 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
           ))}
       {/* Empty State */}
       {sortedTemplates.length === 0 && (
-<<<<<<< HEAD
-        <div className="text-center py-12">
-          <Palette className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-          <h3 className="text-lg font-medium text-gray-900 mb-2">No templates found
-          <p className="text-gray-500 mb-6">
-=======
-        <div className="text-center py-12">"
-          <Palette className="w-16 h-16 text-gray-300 mx-auto mb-4" />"
-          <h3 className="text-lg font-medium text-gray-900 mb-2">No templates found</h3>"
-          <p className="text-gray-500 mb-6">"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
             {searchTerm || filter !== 'all' || typeFilter !== 'all'
               ? 'Try adjusting your search or filter criteria'
               : 'Get started by creating your first template'
             }
-<<<<<<< HEAD
-          {!searchTerm && filter === 'all' && typeFilter === 'all' && (
-            <button
-              onClick={() => setIsCreating(true)}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-            >
-              Create Your First Template
-=======
-          </p>
-          {!searchTerm && filter === 'all' && typeFilter === 'all' && ('
-            <button.
-              onClick={() => setIsCreating(true)}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-            >
-              Create Your First Template.
-            </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
           )}
       )}
 
@@ -502,29 +323,12 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
             >
               <div className="p-6">"
                 <div className="flex items-center justify-between mb-6">
-<<<<<<< HEAD
-                    <h2 className="text-2xl font-bold text-gray-900">{selectedTemplate.name}
-                    <p className="text-gray-600">{selectedTemplate.description}
-                  <button
-=======
-                  <div>
-                    <h2 className="text-2xl font-bold text-gray-900">{selectedTemplate.name}</h2>"
-                    <p className="text-gray-600">{selectedTemplate.description}</p>
-                  </div>
-                  <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
                     onClick={() => setSelectedTemplate(null)}
                     className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
                   >
                     <X className="w-6 h-6" />
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   {/* Preview */}
-<<<<<<< HEAD
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Preview
-=======
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Preview</h3>"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
                     <div className="border border-gray-200 rounded-lg overflow-hidden">
                       <div
                         className="p-6 text-center"
@@ -533,62 +337,9 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
                           color: selectedTemplate.components.textColor.
                         }}
                       >
-<<<<<<< HEAD
-                        <h4 className="text-2xl font-bold mb-4">{selectedTemplate.components.title}
-                        <p className="mb-6">{selectedTemplate.components.description}
-=======
-                        <h4 className="text-2xl font-bold mb-4">{selectedTemplate.components.title}</h4>"
-                        <p className="mb-6">{selectedTemplate.components.description}</p>"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
                         <button className="px-6 py-3 bg-white bg-opacity-20 rounded-lg font-medium hover:bg-opacity-30 transition-colors">
                           {selectedTemplate.components.ctaText}
                   {/* Template Details */}
-<<<<<<< HEAD
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Template Details
-                    <div className="space-y-4">
-                        <span className="text-sm font-medium text-gray-500">Category:
-                        <p className="text-gray-900">{selectedTemplate.category}
-                        <span className="text-sm font-medium text-gray-500">Type:
-                        <p className="text-gray-900">{selectedTemplate.type}
-                        <span className="text-sm font-medium text-gray-500">Author:
-                        <p className="text-gray-900">{selectedTemplate.author}
-                        <span className="text-sm font-medium text-gray-500">Rating:
-                        <div className="flex items-center gap-1">
-                          <Star className="w-4 h-4 text-yellow-500 fill-current" />
-                          <span className="text-gray-900">{selectedTemplate.rating}/5.0
-                        <span className="text-sm font-medium text-gray-500">Usage Count:
-                        <p className="text-gray-900">{selectedTemplate.usageCount.toLocaleString()}
-                        <span className="text-sm font-medium text-gray-500">Tags:
-=======
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Template Details</h3>"
-                    <div className="space-y-4">
-                      <div>
-                        <span className="text-sm font-medium text-gray-500">Category:</span>"
-                        <p className="text-gray-900">{selectedTemplate.category}</p>
-                      </div>
-                      <div>
-                        <span className="text-sm font-medium text-gray-500">Type:</span>"
-                        <p className="text-gray-900">{selectedTemplate.type}</p>
-                      </div>
-                      <div>
-                        <span className="text-sm font-medium text-gray-500">Author:</span>"
-                        <p className="text-gray-900">{selectedTemplate.author}</p>
-                      </div>
-                      <div>
-                        <span className="text-sm font-medium text-gray-500">Rating:</span>"
-                        <div className="flex items-center gap-1">"
-                          <Star className="w-4 h-4 text-yellow-500 fill-current" />"
-                          <span className="text-gray-900">{selectedTemplate.rating}/5.0</span>
-                        </div>
-                      </div>
-                      <div>
-                        <span className="text-sm font-medium text-gray-500">Usage Count:</span>"
-                        <p className="text-gray-900">{selectedTemplate.usageCount.toLocaleString()}</p>
-                      </div>
-                      <div>
-                        <span className="text-sm font-medium text-gray-500">Tags:</span>"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
                         <div className="flex flex-wrap gap-1 mt-1">
                           {selectedTemplate.tags.map((tag, index) => (
                             <span.
@@ -602,28 +353,11 @@ const AdTemplates: React.FC<AdTemplatesProps> = ({ className = '' }) => {
                         onClick={() => handleUseTemplate(selectedTemplate)}
                         className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
                       >
-<<<<<<< HEAD
-                        Use This Template
-                      <button
-=======
-                        Use This Template.
-                      </button>
-                      <button.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
                         onClick={() => handleDuplicateTemplate(selectedTemplate)}
                         className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
                       >
                         <Copy className="w-4 h-4" />
         )}
-<<<<<<< HEAD
-  );
-=======
-      </AnimatePresence>
-    </div>
-  ).
-  ).
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 
 export default AdTemplates.

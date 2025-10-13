@@ -64,19 +64,6 @@ const SEOHead: React.FC = () => {
     <Helmet>
       {/* Basic Meta Tags */}
 
-<<<<<<< HEAD
-      <title>{fullTitle}
-      <meta name="description content={fullDescription} />
-      <meta name="keywords" content={fullKeywords.join(', )} />
-      <meta name="author content={author} />
-      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow} />
-=======
-      <title>{fullTitle}</title>
-      <meta name="description content={fullDescription} />"
-      <meta name="keywords" content={fullKeywords.join(', )} />"'
-      <meta name="author content={author} />"
-      <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow} />"'
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       <link rel="canonical href={canonicalUrl} />
       {/* Open Graph Tags */}
 
@@ -167,34 +154,6 @@ const SEOHead: React.FC = () => {
             https://twitter.com/ziontechgroup]
           ],
         })}
-<<<<<<< HEAD
-  );
-
-};
-
-export default EnhancedSEOHead;
-      <title>{fullTitle}
-      <meta name="description" content={fullDescription} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'},${noFollow ? 'nofollow' : 'follow'}`} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-=======
-
-      </script>
-    </Helmet>
-  ).
-
-};
-
-export default EnhancedSEOHead.
-      <title>{fullTitle}</title>
-      <meta name="description" content={fullDescription} />"
-      <meta name="keywords" content={keywords} />"
-      <meta name="author" content="Zion Tech Group" />"
-      <meta name="robots" content={`${noIndex ? 'noindex' : 'index'},${noFollow ? 'nofollow' : 'follow'}`} />"'
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
@@ -257,16 +216,3 @@ export default EnhancedSEOHead.
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />"
       <link rel="dns-prefetch" href="//www.google-analytics.com" />"
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-<<<<<<< HEAD
-  );
-};
-
-export default SEOHead;
-</li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li>
-=======
-    </Helmet>
-  ).
-};
-
-export default SEOHead.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706

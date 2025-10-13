@@ -28,17 +28,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ).
   )
     <Helmet>
-<<<<<<< HEAD
-      <title>{fullTitle}
-      <meta name="title" content={fullTitle} />
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-=======
-      <title>{fullTitle}</title>
-      <meta name="title" content={fullTitle} />"
-      <meta name="description" content={description} />"
-      {keywords && <meta name="keywords" content={keywords} />}"
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
       <link rel="canonical" href={fullCanonical} />
       {/* Open Graph Tags */}
       <meta property="og:title" content={fullTitle} />"
@@ -55,15 +44,3 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />"
       <meta name="author" content="Zion Tech Group" />
-<<<<<<< HEAD
-  );
-};
-
-export default SEOHead;
-=======
-    </Helmet>
-  ).
-};
-
-export default SEOHead.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706

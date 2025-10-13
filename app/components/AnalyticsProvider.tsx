@@ -53,14 +53,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   )
     <AnalyticsContext.Provider value={value}>
       {children}
-<<<<<<< HEAD
-'use client';
-import React, {createContext, useContext, useEffect, ReactNode}from 'react';
-=======
-    </AnalyticsContext.Provider>
-'use client'.
-import React, { createContext, useContext, useEffect, ReactNode } from 'react'.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
 interface AnalyticsContextType {trackEvent: (eventName: string, parameters?: Record<string, any>) => void;}
   trackPageView: (pageName: string, pagePath: string) => void;,}const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined).
@@ -166,20 +158,6 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       gtag('js', new Date()).
       gtag('config', googleAnalyticsId, {
         page_title: document.title,
-<<<<<<< HEAD
-        page_location: window.location.href
-      });
-    trackPageView,}return(<AnalyticsContext.Provider value={value)}>
-      {children}
-  );
-=======
-        page_location: window.location.href.
-      }).
-    trackPageView,}return (<AnalyticsContext.Provider value={value)}>
-  )
-      {children} </AnalyticsContext.Provider>
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 };
 export default AnalyticsProvider.
 

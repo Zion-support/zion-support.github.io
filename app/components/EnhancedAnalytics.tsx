@@ -26,11 +26,6 @@ interface AnalyticsProviderProps {
     }
   }, [enableTracking]).
 
-<<<<<<< HEAD
-  return <React.Fragment>{children}</React.Fragment>;
-=======
-  return <>{children}</>.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
   const value: AnalyticsContextType = {
     track,
     identify,

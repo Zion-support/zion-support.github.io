@@ -32,47 +32,10 @@ export default function LoadingOptimizer({
   }, [delay]).
 
   if (isLoading && showFallback) {
-<<<<<<< HEAD
-    return <React.Fragment>{fallback}</React.Fragment>;
-  }
-
-  return <React.Fragment>{children}</React.Fragment>;
-=======
-    return <>{fallback}</>.
-  }
-
-  return <>{children}</>.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
 
 function DefaultLoadingSpinner() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <div className="relative">
-          <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-8 h-8 bg-blue-600 rounded-full animate-pulse">
-        <h2 className="text-xl font-semibold text-white mb-2">Loading Zion Tech Group
-        <p className="text-gray-300">Preparing your experience...
-  );
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">"
-      <div className="text-center">"
-        <div className="relative">"
-          <div className="w-16 h-16 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin mx-auto mb-4"></div>"
-          <div className="absolute inset-0 flex items-center justify-center">"
-            <div className="w-8 h-8 bg-blue-600 rounded-full animate-pulse"></div>
-          </div>
-        </div>
-        <h2 className="text-xl font-semibold text-white mb-2">Loading Zion Tech Group</h2>"
-        <p className="text-gray-300">Preparing your experience...</p>
-      </div>
-    </div>
-  ).
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
 
 // Preload critical resources.
@@ -165,11 +128,4 @@ export function LazyImage({
           loading="lazy"
         />
       )}
-<<<<<<< HEAD
-  );
-=======
-    </div>
-  ).
-  ).
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 }
