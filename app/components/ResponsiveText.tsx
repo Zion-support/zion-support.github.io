@@ -1,3 +1,6 @@
-  return (
-    <div className={`responsivetext-component ${className}`} {...props}>
+  return (;
+    <div className={`responsivetext-component ${className}`} {...props}></div>;
       {children}
+;
+</div>;
+);

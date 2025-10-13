@@ -1,1 +1,2 @@
-interface LoadingProps {
+interface LoadingProps {;
+}

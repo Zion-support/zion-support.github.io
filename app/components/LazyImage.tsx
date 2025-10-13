@@ -11,4 +11,3 @@ export default function Lazyimage({ className = '', children, ...props }: Lazyim
     </div>
   );
 }
->>>>>>> origin/main

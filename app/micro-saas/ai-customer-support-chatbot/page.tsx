@@ -5,7 +5,6 @@ const Page = () => {
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">

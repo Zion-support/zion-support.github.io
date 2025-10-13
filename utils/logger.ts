@@ -107,4 +107,3 @@ export const logger = {
     console.warn(`[WARN] ${message}`);
   }
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-bd18

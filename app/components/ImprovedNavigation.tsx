@@ -781,7 +781,6 @@ const ImprovedNavigation = () => {
       <Sidebar />
     </>
 import React, { useState, useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 
 interface ImprovednavigationProps {
   className?: string;
@@ -794,4 +793,3 @@ export default function Improvednavigation({ className = '', children, ...props 
       {children}
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1

@@ -1,6 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 
 interface Props {
   children: ReactNode;

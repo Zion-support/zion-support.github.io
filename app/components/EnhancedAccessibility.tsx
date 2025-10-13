@@ -6,7 +6,6 @@ import React from 'react';
 interface EnhancedaccessibilityProps {
   className?: string;
   children?: React.ReactNode;
->>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 }
 
 const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
@@ -87,7 +86,6 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
   }, []);
 
   return (
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
       {children}
     </div>
   );

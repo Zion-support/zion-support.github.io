@@ -22,4 +22,3 @@ export function usePerformanceMonitor() {
   useEffect(() => {
     setState('initialized');
   }, []);
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
