@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -293,6 +294,10 @@ const AIFinancialAnalysisZionTechGroup = () => {
       popular: false
     }
   ];
+=======
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
 <<<<<<< HEAD
 <<<<<<< HEAD

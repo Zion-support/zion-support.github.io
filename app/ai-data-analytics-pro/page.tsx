@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -60,6 +61,10 @@ const AIDataAnalyticsProPage = () => {
     "Integrate with existing systems"
   ];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp, Brain, BarChart3, Database } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 

@@ -10,6 +10,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+<<<<<<< HEAD
 "use client";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
@@ -29,6 +30,9 @@ export default function aiInvoiceGenerator() {
 export default function Page() {
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default function AiInvoiceGeneratorZionTechGroup() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +48,11 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Server, Globe, Shield, Monitor, Settings } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight, Zap, Server, Globe, Shield, Monitor, Cloud, Settings } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
 export default function DevopsservicesPage() {
   return (

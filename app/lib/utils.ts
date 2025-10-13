@@ -9,6 +9,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // utils utility functions
 
 export interface utilsConfig {
@@ -87,11 +88,28 @@ export function formatDate(date: Date | string): string {
     day: 'numeric',
   });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
+export function formatDate(date: Date | string): string {
+  const d = new Date(date)
+  return d.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  })
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 }
 
 export function formatCurrency(amount: number, currency = 'USD'): string {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     currency
@@ -100,6 +118,10 @@ export function formatCurrency(amount: number, currency = 'USD'): string {
     currency,
   }).format(amount)
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
+=======
+    currency
+  }).format(amount)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 }
 
 export function slugify(text: string): string {
@@ -107,6 +129,7 @@ export function slugify(text: string): string {
     .toLowerCase()
     .replace(/[^\w\s-]/g, '')
     .replace(/[\s_-]+/g, '-')
+<<<<<<< HEAD
 <<<<<<< HEAD
     .replace(/^-+|-+$/g, '');
 }
@@ -199,6 +222,14 @@ export function truncateText(text: string, maxLength: number): string {
     currency,
   }).format(amount);
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+    .replace(/^-+|-+$/g, '')
+}
+
+export function truncate(text: string, length: number): string {
+  if (text.length <= length) return text
+  return text.slice(0, length).trim() + '...'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 }
 
 export function debounce<T extends (...args: any[]) => any>(
@@ -208,13 +239,17 @@ export function debounce<T extends (...args: any[]) => any>(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -230,6 +265,8 @@ export function debounce<T extends (...args: any[]) => any>(
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 }
 
 export function throttle<T extends (...args: any[]) => any>(
@@ -239,8 +276,11 @@ export function throttle<T extends (...args: any[]) => any>(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
   let inThrottle: boolean
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
@@ -249,6 +289,7 @@ export function throttle<T extends (...args: any[]) => any>(
       setTimeout(() => (inThrottle = false), limit)
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
@@ -325,3 +366,6 @@ export function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5

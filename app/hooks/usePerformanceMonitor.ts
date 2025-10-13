@@ -7,8 +7,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // usePerformanceMonitor hook
 import { useEffect, useRef } from 'react';
+=======
+import { useState, useEffect, useRef, useCallback } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
 export function usePerformanceMonitor() {
   const metricsRef = useRef({});
@@ -41,6 +45,7 @@ interface PerformanceMetrics {
   firstInputDelay: number;
   cumulativeLayoutShift: number;
   timeToInteractive: number;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 }
@@ -452,6 +457,68 @@ export function usePerformanceMonitor() {
       stopMonitoring();
     };
   }, [isMonitoring, startMonitoring, stopMonitoring]);
+=======
+}
+
+export function usePerformanceMonitor() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isMonitoring, setIsMonitoring] = useState(false);
+  const observerRef = useRef<PerformanceObserver | null>(null);
+
+  const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
+    setMetrics(prev => prev ? { ...prev, ...newMetrics } : newMetrics as PerformanceMetrics);
+  }, []);
+
+  const startMonitoring = useCallback(() => {
+    if (typeof window === 'undefined' || observerRef.current) return;
+
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      
+      entries.forEach((entry) => {
+        if (entry.entryType === 'paint') {
+          if (entry.name === 'first-contentful-paint') {
+            updateMetrics({ firstContentfulPaint: entry.startTime });
+          }
+        } else if (entry.entryType === 'largest-contentful-paint') {
+          updateMetrics({ largestContentfulPaint: entry.startTime });
+        } else if (entry.entryType === 'first-input') {
+          updateMetrics({ firstInputDelay: (entry as any).processingStart - entry.startTime });
+        } else if (entry.entryType === 'layout-shift') {
+          const layoutShiftEntry = entry as any;
+          if (!layoutShiftEntry.hadRecentInput) {
+            updateMetrics({ 
+              cumulativeLayoutShift: (metrics?.cumulativeLayoutShift || 0) + layoutShiftEntry.value 
+            });
+          }
+        }
+      });
+    });
+
+    try {
+      observer.observe({ 
+        entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] 
+      });
+      observerRef.current = observer;
+      setIsMonitoring(true);
+    } catch (error) {
+      console.warn('Performance monitoring not supported:', error);
+    }
+  }, [updateMetrics, metrics?.cumulativeLayoutShift]);
+
+  const stopMonitoring = useCallback(() => {
+    if (observerRef.current) {
+      observerRef.current.disconnect();
+      observerRef.current = null;
+      setIsMonitoring(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    startMonitoring();
+    return stopMonitoring;
+  }, [startMonitoring, stopMonitoring]);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
   return {
     metrics,
@@ -459,6 +526,7 @@ export function usePerformanceMonitor() {
     startMonitoring,
     stopMonitoring
   };
+<<<<<<< HEAD
 };
 
 export default usePerformanceMonitor;
@@ -503,3 +571,8 @@ export default usePerformanceMonitor;
 
 export default usePerformanceMonitor;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+}
+
+export default usePerformanceMonitor;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5

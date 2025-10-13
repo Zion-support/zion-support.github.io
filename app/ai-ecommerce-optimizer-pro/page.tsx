@@ -13,10 +13,13 @@ import React from 'react';
 
 import { Brain, TrendingUp, BarChart3, Zap } from 'lucide-react';
 
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Brain, TrendingUp, BarChart3, Zap } from 'lucide-react';
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 export default function AIEcommerceOptimizerPro() {
   const features = [
     {
@@ -142,6 +145,7 @@ export default function AIEcommerceOptimizerPro() {
     },
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
@@ -156,15 +160,24 @@ import { ArrowRight } from 'lucide-react';
 
 export default function PagePage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+<<<<<<< HEAD
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Professional page services by Zion Tech Group." />
+=======
+        <title>AI Ecommerce Optimizer Pro - Zion Tech Group</title>
+        <meta name="description" content="AI Ecommerce Optimizer Pro solutions by Zion Tech Group" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
       </Helmet>
       
 <<<<<<< HEAD
       <div className="container mx-auto px-4 py-20">
+<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Ecommerce Optimizer Pro</h1>
           <p className="text-xl text-gray-300 mb-8">
@@ -196,6 +209,12 @@ export default function AiecommerceoptimizerproPage() {
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+        <h1 className="text-4xl font-bold mb-8">AI Ecommerce Optimizer Pro</h1>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-xl text-gray-300 mb-8">
+            Discover our comprehensive AI ecommerce optimizer pro solutions designed to meet your business needs.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
           </p>
         </div>
         

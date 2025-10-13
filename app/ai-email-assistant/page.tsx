@@ -41,9 +41,12 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Users, Star, Shield, Zap, Brain, Settings, BarChart3, Mail, MessageSquare, Hand, Sparkles, Target } from 'lucide-react';
 
+<<<<<<< HEAD
 "use client";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 export default function AIEmailAssistant() {
   const features = [
     {,

@@ -5,13 +5,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
 interface SEOOptimizerProps {
+<<<<<<< HEAD
   className?: string;
   children?: React.ReactNode;
 }
@@ -451,3 +457,49 @@ const services = [
 export default function Seooptimizer({ className = '', children, ...props }: SeooptimizerProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  children?: React.ReactNode;
+}
+
+export default function SEOOptimizer({
+  title,
+  description,
+  keywords = [],
+  canonical,
+  ogImage,
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  children
+}: SEOOptimizerProps) {
+  return (
+    <>
+      <Helmet>
+        {title && <title>{title}</title>}
+        {description && <meta name="description" content={description} />}
+        {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+        {canonical && <link rel="canonical" href={canonical} />}
+        
+        {/* Open Graph */}
+        {title && <meta property="og:title" content={title} />}
+        {description && <meta property="og:description" content={description} />}
+        {ogImage && <meta property="og:image" content={ogImage} />}
+        <meta property="og:type" content={ogType} />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content={twitterCard} />
+        {title && <meta name="twitter:title" content={title} />}
+        {description && <meta name="twitter:description" content={description} />}
+        {ogImage && <meta name="twitter:image" content={ogImage} />}
+      </Helmet>
+      {children}
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5

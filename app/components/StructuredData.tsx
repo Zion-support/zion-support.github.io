@@ -4,14 +4,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 <<<<<<< HEAD
 interface StructuredDataProps {
+<<<<<<< HEAD
   className?: string;
   children?: React.ReactNode;
 }
@@ -324,3 +329,25 @@ export const serviceSchema = (serviceName: string, description: string) => ({
 export default function Structureddata({ className = '', children, ...props }: StructureddataProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
+  data: any;
+}
+
+export default function StructuredData({ type, data }: StructuredDataProps) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    ...data
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(structuredData, null, 2)
+      }}
+    />
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
