@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -10,6 +11,9 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 
 interface NavigationProps {
   onSidebarToggle?: () => void;

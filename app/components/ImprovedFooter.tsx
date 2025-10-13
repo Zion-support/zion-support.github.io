@@ -1,6 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Shield, Zap, Users, Award, Shield, User, Users } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 
 interface ImprovedfooterProps {
   className?: string;

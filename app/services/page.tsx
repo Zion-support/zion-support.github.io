@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 import { Brain, Shield, Globe, Code, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { Brain, Bot, FileText, Shield, Wifi, Cloud, Code, Target, FileText, Users, TrendingUp, Brain, Globe, FileText, Zap, Database, Monitor, Lock, Server, Settings, HardDrive, Phone, Laptop, Headphones, Network, Cpu, Shield, Server, Settings, Globe } from 'lucide-react';
+=======
+import React from 'react';
+import { Brain, Shield, Globe, Code, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones, Phone } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 
 export default function Services() {
   const services = [
@@ -341,21 +347,28 @@ export default function Services() {
     }
   ];
 
-export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Services solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Services</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive services solutions designed to meet your business needs.
           </p>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
@@ -363,14 +376,22 @@ export default function Page() {
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
               <p className="text-gray-300">
                 We use the latest technologies and best practices to ensure optimal performance.
               </p>
             </div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
               <p className="text-gray-300">
@@ -382,6 +403,9 @@ export default function Page() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 }

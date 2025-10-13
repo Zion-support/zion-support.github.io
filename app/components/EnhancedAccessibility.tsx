@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
+=======
+import React from 'react';
+interface EnhancedaccessibilityProps {
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 }
 
 const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children }) => {

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown, Menu } from 'lucide-react';
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 
 interface ImprovednavigationProps {
   className?: string;

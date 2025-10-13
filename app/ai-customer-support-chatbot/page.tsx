@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
 import { Brain, BarChart3, Target, BarChart, Clock } from 'lucide-react';
@@ -40,6 +41,36 @@ const testimonials = [
     }
   ];
 export default function AICustomerSupportChatbot() {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Clock, Users, Globe } from 'lucide-react';
+
+export default function AiCustomerSupportChatbotPage() {
+  const mainFeatures = [
+    {
+      title: "AI-Powered Responses",
+      description: "Intelligent chatbot that understands context and provides accurate answers",
+      icon: <Brain className="w-8 h-8" />
+    },
+    {
+      title: "24/7 Availability",
+      description: "Round-the-clock customer support without human intervention",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Multi-language Support",
+      description: "Support customers in multiple languages with real-time translation",
+      icon: <Globe className="w-8 h-8" />
+    },
+    {
+      title: "Seamless Handoff",
+      description: "Intelligent escalation to human agents when needed",
+      icon: <Users className="w-8 h-8" />
+    }
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -149,6 +180,7 @@ export default function AICustomerSupportChatbot() {
         "Track customer satisfaction, response times, and identify improvement opportunities",
     },
   ];
+<<<<<<< HEAD
 
   const testimonials = [
     {
@@ -176,22 +208,31 @@ export default function AICustomerSupportChatbot() {
       avatar: "ER"
     }
   ];
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 
-export default function Page() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Customer Support Chatbot - Zion Tech Group</title>
         <meta name="description" content="Ai Customer Support Chatbot solutions by Zion Tech Group" />
       </Helmet>
+<<<<<<< HEAD
 
+=======
+      
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
       <div className="container mx-auto px-4 py-20">
         <h1 className="text-4xl font-bold mb-8">Ai Customer Support Chatbot</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive ai customer support chatbot solutions designed to meet your business needs.
           </p>
+<<<<<<< HEAD
 
+=======
+          
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
@@ -199,14 +240,22 @@ export default function Page() {
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
               <p className="text-gray-300">
                 We use the latest technologies and best practices to ensure optimal performance.
               </p>
             </div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
               <p className="text-gray-300">
@@ -218,6 +267,9 @@ export default function Page() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 }

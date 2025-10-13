@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -16,6 +17,9 @@ import {
   Award,
   Users
 } from "lucide-react";
+=======
+import React from "react";
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

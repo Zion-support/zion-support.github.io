@@ -1,5 +1,7 @@
 import React from 'react';
+// Removed unused imports
 
+<<<<<<< HEAD
 import {
   BarChart3,
   Zap,
@@ -68,3 +70,12 @@ export default function AIAnalyticsPage() {
   ];
 
 }
+=======
+export default function AIAnalyticsPage() {
+  return (
+    <div>
+      <h1>Page Content</h1>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
