@@ -120,6 +120,63 @@ const CloudInfrastructure = () => {
     }
   ];
 
+  const benefits = [
+    {
+      title: "Scalability",
+      description: "Scale your infrastructure up or down based on demand",
+      icon: <Activity className="w-6 h-6" />
+    },
+    {
+      title: "Reliability",
+      description: "99.99% uptime with redundant systems and failover",
+      icon: <Shield className="w-6 h-6" />
+    },
+    {
+      title: "Security",
+      description: "Enterprise-grade security with encryption and compliance",
+      icon: <Lock className="w-6 h-6" />
+    },
+    {
+      title: "Cost Efficiency",
+      description: "Pay only for what you use with intelligent resource management",
+      icon: <BarChart3 className="w-6 h-6" />
+    }
+  ];
+
+  const stats = [
+    { icon: <Cloud className="w-6 h-6" />, number: "500+", label: "Infrastructures Deployed" },
+    { icon: <Shield className="w-6 h-6" />, number: "99.99%", label: "Uptime Achieved" },
+    { icon: <BarChart3 className="w-6 h-6" />, number: "40%", label: "Cost Reduction" },
+    { icon: <Activity className="w-6 h-6" />, number: "24/7", label: "Monitoring" }
+  ];
+
+  const testimonials = [
+    {
+      content: "Zion Tech Group transformed our cloud infrastructure. We achieved 99.99% uptime and reduced costs by 40%.",
+      name: "John Smith",
+      role: "CTO",
+      company: "CloudFirst Corp",
+      avatar: "JS",
+      rating: 5
+    },
+    {
+      content: "Their cloud migration expertise helped us move to the cloud seamlessly with zero downtime.",
+      name: "Maria Garcia",
+      role: "IT Director",
+      company: "TechSolutions Inc",
+      avatar: "MG",
+      rating: 5
+    },
+    {
+      content: "The monitoring and security solutions they implemented give us complete peace of mind.",
+      name: "Robert Johnson",
+      role: "VP Engineering",
+      company: "SecureCloud Ltd",
+      avatar: "RJ",
+      rating: 5
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>

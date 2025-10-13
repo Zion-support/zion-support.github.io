@@ -5,31 +5,13 @@ import {
   Shield, 
   Zap, 
   Globe, 
-  ArrowRight, 
   Star, 
   Users, 
-  Award, 
-  BarChart3, 
-  Cloud, 
   Sparkles, 
   Mail, 
-  Smartphone, 
-  Monitor,
-  Phone,
-  MapPin,
-  Code,
-  Database,
   ChevronDown,
   Menu,
-  X,
-  Package,
-  Heart,
-  Receipt,
-  TrendingUp,
-  Cpu,
-  Network,
-  FileText,
-  Clock
+  X
 } from 'lucide-react';
 
 interface NavigationProps {
