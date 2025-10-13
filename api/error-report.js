@@ -29,17 +29,16 @@ export default function handler(req, res) {
     });
 
     res.status(200).json({ success: true });
-<<<<<<< HEAD
+
   } catch (error) {
     console.error('Error reporting error:', error);
     res.status(500).json({ error: 'Failed to process error report' });
   }
 }
-=======
+
   } catch (_error) { // eslint-disable-line no-unused-vars
     // console.error('Error reporting error:', error);
     // console.error removed for production
     res.status(500).json({ error: 'Internal server error' });
   }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
+

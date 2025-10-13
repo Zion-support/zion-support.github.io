@@ -1,88 +1,44 @@
-&amp;apos;use client&amp;apos;;
-import React from &amp;apos;react&amp;apos;;
-import { Helmet } from &amp;apos;react-helmet-async&amp;apos;;
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-const ErrorFallback: React.FC = () =&amp;gt; {
+interface ErrorFallbackProps {
+  error: Error;
+  resetErrorBoundary: () => void;
+}
+
+const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
   return (
-    &amp;lt;div className=&amp;quot;min-h-screen bg-white&amp;quot;&amp;gt;
-      &amp;lt;Helmet&amp;gt;
-        &amp;lt;title&amp;gt;Error Fallback - Zion Tech Group&amp;lt;/title&amp;gt;
-        &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Professional error fallback services by Zion Tech Group.&amp;quot; /&amp;gt;
-      &amp;lt;/Helmet&amp;gt;
-
-      {/* Hero Section */}
-      &amp;lt;section className=&amp;quot;py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100&amp;quot;&amp;gt;
-        &amp;lt;div className=&amp;quot;max-w-6xl mx-auto text-center&amp;quot;&amp;gt;
-          &amp;lt;h1 className=&amp;quot;text-5xl font-bold text-gray-900 mb-6&amp;quot;&amp;gt;
-            Error Fallback
-          &amp;lt;/h1&amp;gt;
-          &amp;lt;p className=&amp;quot;text-xl text-gray-600 max-w-3xl mx-auto&amp;quot;&amp;gt;
-            Professional error fallback services 
-            designed to help your business grow and succeed.
-          &amp;lt;/p&amp;gt;
-        &amp;lt;/div&amp;gt;
-      &amp;lt;/section&amp;gt;
-
-      {/* Content Section */}
-      &amp;lt;section className=&amp;quot;py-16 px-4&amp;quot;&amp;gt;
-        &amp;lt;div className=&amp;quot;max-w-6xl mx-auto&amp;quot;&amp;gt;
-          &amp;lt;div className=&amp;quot;grid md:grid-cols-2 gap-12 items-center&amp;quot;&amp;gt;
-            &amp;lt;div&amp;gt;
-              &amp;lt;h2 className=&amp;quot;text-3xl font-bold text-gray-900 mb-6&amp;quot;&amp;gt;Our Services&amp;lt;/h2&amp;gt;
-              &amp;lt;p className=&amp;quot;text-lg text-gray-600 mb-6&amp;quot;&amp;gt;
-                We provide comprehensive error fallback 
-                solutions tailored to your specific needs and requirements.
-              &amp;lt;/p&amp;gt;
-              &amp;lt;ul className=&amp;quot;space-y-3&amp;quot;&amp;gt;
-                &amp;lt;li className=&amp;quot;flex items-center&amp;quot;&amp;gt;
-                  &amp;lt;span className=&amp;quot;w-2 h-2 bg-blue-600 rounded-full mr-3&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
-                  Custom solutions
-                &amp;lt;/li&amp;gt;
-                &amp;lt;li className=&amp;quot;flex items-center&amp;quot;&amp;gt;
-                  &amp;lt;span className=&amp;quot;w-2 h-2 bg-blue-600 rounded-full mr-3&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
-                  Expert consultation
-                &amp;lt;/li&amp;gt;
-                &amp;lt;li className=&amp;quot;flex items-center&amp;quot;&amp;gt;
-                  &amp;lt;span className=&amp;quot;w-2 h-2 bg-blue-600 rounded-full mr-3&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
-                  Ongoing support
-                &amp;lt;/li&amp;gt;
-              &amp;lt;/ul&amp;gt;
-            &amp;lt;/div&amp;gt;
-            &amp;lt;div className=&amp;quot;bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white&amp;quot;&amp;gt;
-              &amp;lt;h3 className=&amp;quot;text-2xl font-bold mb-4&amp;quot;&amp;gt;Get Started&amp;lt;/h3&amp;gt;
-              &amp;lt;p className=&amp;quot;mb-6&amp;quot;&amp;gt;
-                Ready to transform your business with our error fallback services?
-              &amp;lt;/p&amp;gt;
-              &amp;lt;a
-                href=&amp;quot;/contact&amp;quot;
-                className=&amp;quot;inline-block bg-white text-blue-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors&amp;quot;
-              &amp;gt;
-                Contact Us
-              &amp;lt;/a&amp;gt;
-            &amp;lt;/div&amp;gt;
-          &amp;lt;/div&amp;gt;
-        &amp;lt;/div&amp;gt;
-      &amp;lt;/section&amp;gt;
-
-      {/* CTA Section */}
-      &amp;lt;section className=&amp;quot;py-16 px-4 bg-blue-600&amp;quot;&amp;gt;
-        &amp;lt;div className=&amp;quot;max-w-4xl mx-auto text-center&amp;quot;&amp;gt;
-          &amp;lt;h2 className=&amp;quot;text-3xl font-bold text-white mb-6&amp;quot;&amp;gt;
-            Ready to Get Started?
-          &amp;lt;/h2&amp;gt;
-          &amp;lt;p className=&amp;quot;text-xl text-blue-100 mb-8&amp;quot;&amp;gt;
-            Let&amp;apos;s discuss how our error fallback 
-            services can help you achieve your goals.
-          &amp;lt;/p&amp;gt;
-          &amp;lt;a
-            href=&amp;quot;/contact&amp;quot;
-            className=&amp;quot;inline-block bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors&amp;quot;
-          &amp;gt;
-            Get Started Today
-          &amp;lt;/a&amp;gt;
-        &amp;lt;/div&amp;gt;
-      &amp;lt;/section&amp;gt;
-    &amp;lt;/div&amp;gt;
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Error - Zion Tech Group</title>
+        <meta name="description" content="An error occurred. Please try again." />
+      </Helmet>
+      
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">
+        <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+          <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
+            <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+            </svg>
+          </div>
+          <div className="mt-4 text-center">
+            <h1 className="text-lg font-medium text-gray-900">Something went wrong</h1>
+            <p className="mt-2 text-sm text-gray-500">
+              {error.message}
+            </p>
+            <div className="mt-6">
+              <button
+                onClick={resetErrorBoundary}
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+              >
+                Try again
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
