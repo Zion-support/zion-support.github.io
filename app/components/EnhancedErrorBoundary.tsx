@@ -1,6 +1,6 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
+import React from 'react';
 
+<<<<<<< HEAD
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -174,3 +174,17 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 }
 
 export default EnhancedErrorBoundary;
+=======
+interface EnhancederrorboundaryProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Enhancederrorboundary({ className = '', children, ...props }: EnhancederrorboundaryProps) {
+  return (
+    <div className={`enhancederrorboundary-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba4f

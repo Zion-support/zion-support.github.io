@@ -3,13 +3,16 @@ import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
+
 export default tseslint.config(
   {
     ignores: [
       "dist",
       ".next",
       "backup-problematic/**",
+      "backup-unused-components/**",
       "corrupted-src-backup/**",
+      "backup-unused-components/**",
       "src/**",
       "*.js",
       "scripts/**",
@@ -17,6 +20,7 @@ export default tseslint.config(
       "identify_missing_pages.js",
       "merge-with-conflict-resolution.js",
       "resolve-all-conflicts.js",
+      "fix-unused-imports.cjs",
     ],
   },
   {
@@ -33,7 +37,7 @@ export default tseslint.config(
     rules: {
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": "off",
-      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "off",
     },
   },

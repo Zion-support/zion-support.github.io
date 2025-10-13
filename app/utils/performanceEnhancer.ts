@@ -1,15 +1,8 @@
 // Performanceenhancer utility functions
 
-export const Performanceenhancer = {
-  init: () => {
-    },
+export function performanceenhancer() {
+  // Implementation here
+  return null;
+}
 
-  process: (data: any) => {
-    return data;
-  },
-
-  cleanup: () => {
-    },
-};
-
-export default Performanceenhancer;
+export default performanceenhancer;

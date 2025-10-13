@@ -1,5 +1,6 @@
-"use client";
+import React from 'react';
 
+<<<<<<< HEAD
 import ErrorBoundary from "./components/ErrorBoundary";
 import PerformanceMonitor from "./components/PerformanceMonitor";
 import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
@@ -112,6 +113,17 @@ function App() {
       </BrowserRouter>
     </HelmetProvider>
   );
+=======
+interface AppProps {
+  className?: string;
+  children?: React.ReactNode;
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 }
 
-export default App;
+export default function App({ className = '', children, ...props }: AppProps) {
+  return (
+    <div className={`app-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}

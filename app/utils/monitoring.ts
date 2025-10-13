@@ -2,16 +2,9 @@ import { Monitor } from 'lucide-react';
 
 // Monitoring utility functions
 
-export const Monitoring = {
-  init: () => {
-    },
+export function monitoring() {
+  // Implementation here
+  return null;
+}
 
-  process: (data: any) => {
-    return data;
-  },
-
-  cleanup: () => {
-    },
-};
-
-export default Monitoring;
+export default monitoring;

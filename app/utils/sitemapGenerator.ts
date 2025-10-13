@@ -1,15 +1,8 @@
 // Sitemapgenerator utility functions
 
-export const Sitemapgenerator = {
-  init: () => {
-    },
+export function sitemapgenerator() {
+  // Implementation here
+  return null;
+}
 
-  process: (data: any) => {
-    return data;
-  },
-
-  cleanup: () => {
-    },
-};
-
-export default Sitemapgenerator;
+export default sitemapgenerator;

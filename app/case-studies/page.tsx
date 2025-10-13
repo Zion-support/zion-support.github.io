@@ -1,25 +1,43 @@
 import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
+import { Helmet } from 'react-helmet-async';
 
-export default function CaseStudies() {
-
+export default function CaseStudiesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
-        title="Case Studies - Zion Tech Group | Success Stories"
-        description="Discover how Zion Tech Group has helped businesses transform with our AI and technology solutions. Read our success stories and case studies."
-        keywords="case studies, success stories, AI transformation, business results, technology solutions"
-        canonical="https://ziontechgroup.com/case-studies"
-      />
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Case Studies - Zion Tech Group</title>
+        <meta name="description" content="Case Studies solutions by Zion Tech Group" />
+      </Helmet>
       
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Success Stories
-          </h1>
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Case Studies</h1>
+        <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
-            See how we've helped businesses transform with technology
+            Discover our comprehensive case studies solutions designed to meet your business needs.
           </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
+              <p className="text-gray-300">
+                Our team of experts delivers tailored solutions for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
+              <p className="text-gray-300">
+                We use the latest technologies and best practices to ensure optimal performance.
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-300">
+                Get round-the-clock support from our dedicated team of professionals.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

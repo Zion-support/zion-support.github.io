@@ -1,15 +1,8 @@
 // Accessibilityutils utility functions
 
-export const Accessibilityutils = {
-  init: () => {
-    },
+export function accessibilityutils() {
+  // Implementation here
+  return null;
+}
 
-  process: (data: any) => {
-    return data;
-  },
-
-  cleanup: () => {
-    },
-};
-
-export default Accessibilityutils;
+export default accessibilityutils;

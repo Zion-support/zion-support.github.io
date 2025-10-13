@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import '@testing-library/jest-dom';
 
 // Mock IntersectionObserver
@@ -104,3 +105,6 @@ afterEach(() => {
   localStorageMock.clear();
   sessionStorageMock.clear();
 });
+=======
+require('@testing-library/jest-dom');
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba4f

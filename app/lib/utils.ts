@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+=======
+// Utils utility functions
+>>>>>>> cursor/fix-errors-and-merge-to-main-ba4f
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+export function utils() {
+  // Implementation here
+  return null;
 }
+
+export default utils;

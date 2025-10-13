@@ -1,40 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
-const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+interface FuturisticbackgroundProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    };
-  }, []);
-
+export default function Futuristicbackground({ className = '', children, ...props }: FuturisticbackgroundProps) {
   return (
-    <div className="relative">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: 1 }}
-      />
-      <div className="relative" style={{ zIndex: 2 }}>
-        {children}
-      </div>
+    <div className={`futuristicbackground-component ${className}`} {...props}>
+      {children}
     </div>
   );
-};
-
-export default FuturisticBackground;
+}
