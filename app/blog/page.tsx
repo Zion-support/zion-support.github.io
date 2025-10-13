@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-=======
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
@@ -29,7 +24,7 @@ const BlogPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
 
-  const blogPosts: BlogPost[] = [
+  const blogPosts: BlogPost[] = useMemo(() => [
     {
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
@@ -82,7 +77,7 @@ const BlogPage: React.FC = () => {
       image: '/images/blog/scalable-apps.jpg',
       featured: false
     }
-  ];
+  ], []);
 
   const categories = ['all', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Development'];
 
@@ -102,41 +97,11 @@ const BlogPage: React.FC = () => {
     }
 
     setFilteredPosts(filtered);
-  }, [searchTerm, selectedCategory]);
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
+  }, [searchTerm, selectedCategory, blogPosts]);
 
-export default function Blog() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Blog - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Latest news and insights from Zion Tech Group"
-        />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Blog</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Latest news and insights coming soon.
-          </p>
-
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
-=======
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and IT solutions from our expert team." />
         <meta name="keywords" content="AI blog, IT insights, technology trends, cloud computing, cybersecurity, software development" />
@@ -318,4 +283,3 @@ export default function Blog() {
 };
 
 export default BlogPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7

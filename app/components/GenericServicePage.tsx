@@ -156,7 +156,6 @@ const GenericServicePage: React.FC<GenericServicePageProps> = ({
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-cyan-400 mb-2">
-                    24/7
                   </div>
                   <div className="text-gray-300">Support</div>
                 </div>

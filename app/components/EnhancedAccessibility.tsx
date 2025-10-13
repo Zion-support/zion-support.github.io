@@ -156,7 +156,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   // Add keyboard navigation support
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Escape key to close modals/dropdowns
+      // Escape key to close
       if (event.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.blur) {
