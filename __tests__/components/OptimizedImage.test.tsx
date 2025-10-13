@@ -2,9 +2,12 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { render, screen } from '@testing-library/react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-7beb
 import { render, screen, waitFor, act } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
 =======
@@ -56,6 +59,13 @@ describe('OptimizedImage Component', () => {
 
     const img = screen.getByAltText('Test image');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+    await act(async () => {
+      img.dispatchEvent(new Event('error'));
+    });
+>>>>>>> cursor/fix-errors-and-merge-to-main-7beb
     
     await act(async () => {
       img.dispatchEvent(new Event('error'));
@@ -79,6 +89,13 @@ describe('OptimizedImage Component', () => {
 
     const img = screen.getByAltText('Test image');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+    await act(async () => {
+      img.dispatchEvent(new Event('load'));
+    });
+>>>>>>> cursor/fix-errors-and-merge-to-main-7beb
     
     await act(async () => {
       img.dispatchEvent(new Event('load'));
