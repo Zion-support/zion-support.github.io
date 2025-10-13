@@ -1,9 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight, Target, Star, Globe, Shield, CheckCircle } from 'lucide-react';
-import Footer from '../components/Footer';
 
 interface CaseStudy {
   id: string;
@@ -86,11 +84,6 @@ const CaseStudiesPage = () => {
     "Energy"
   ];
 
-
-=======
-import { ArrowRight, Target, Star, Globe, Shield, CheckCircle, Users, Clock, Award } from 'lucide-react';
-
-export default function CaseStudies() {
   const caseStudies = [
     {
       id: 1,
@@ -154,8 +147,6 @@ export default function CaseStudies() {
     { number: "50+", label: "Industries Served", icon: <Globe className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
-
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <Helmet>
@@ -169,7 +160,6 @@ export default function CaseStudies() {
           content="case studies, success stories, client results, AI implementation, digital transformation, technology solutions, business outcomes"
         />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -185,7 +175,6 @@ export default function CaseStudies() {
           </div>
         </section>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
         <section className="flex items-center justify-center py-20 px-4">
@@ -203,34 +192,22 @@ export default function CaseStudies() {
             </Link>
           </div>
         </section>
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
         {/* Stats Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-<<<<<<< HEAD
-                  <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300 mb-2">{stat.label}</div>
-                  <div className="flex justify-center text-blue-400">
-                    {stat.icon}
-                  </div>
-=======
                   <div className="text-cyan-400 mb-4 flex justify-center">
                     {stat.icon}
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
@@ -354,8 +331,6 @@ export default function CaseStudies() {
           </div>
         </section>
 
-=======
-
         {/* Case Studies Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -464,11 +439,10 @@ export default function CaseStudies() {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
       </div>
     </div>
   );
-};
+}
 
 export default CaseStudiesPage;
 

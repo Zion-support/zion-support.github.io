@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { AlertTriangle, X, RefreshCw, Bug, Send } from 'lucide-react';
+import { AlertTriangle, X, RefreshCw, Send } from 'lucide-react';
 
 interface ErrorFeedbackProps {
   error?: Error;

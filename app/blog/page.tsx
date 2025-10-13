@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar, User } from 'lucide-react';
-=======
-import { useState } from "react";
-import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
->>>>>>> cursor/analyze-improve-and-deploy-application-462b
 
-<<<<<<< HEAD
 interface BlogPost {
   id: string;
   title: string;
@@ -24,12 +16,6 @@ interface BlogPost {
   readTime: string;
 }
 
-const BlogPage = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const blogPosts: BlogPost[] = [
-=======
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -41,8 +27,7 @@ export default function Blog() {
     { id: "business", name: "Business", count: 3 }
   ];
 
-  const blogPosts = [
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
+  const blogPosts: BlogPost[] = [
     {
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
