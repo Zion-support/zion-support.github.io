@@ -17,6 +17,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'AI Services', path: '/ai-services', icon: <Brain className="w-5 h-5" /> },
     { name: 'Micro SAAS', path: '/micro-saas', icon: <Zap className="w-5 h-5" /> },
     { name: '5G Solutions', path: '/5g-solutions', icon: <Globe className="w-5 h-5" /> },
+    { name: 'Blog', path: '/blog', icon: <Code className="w-5 h-5" /> },
+    { name: 'Tutorials', path: '/tutorials', icon: <Code className="w-5 h-5" /> },
+    { name: 'Demo', path: '/demo', icon: <Code className="w-5 h-5" /> },
+    { name: 'Pricing', path: '/pricing', icon: <Code className="w-5 h-5" /> },
+    { name: 'Case Studies', path: '/case-studies', icon: <Code className="w-5 h-5" /> },
     { name: 'Contact', path: '/contact', icon: <Mail className="w-5 h-5" /> },
   ];
 
