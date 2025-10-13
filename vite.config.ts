@@ -35,45 +35,10 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
-    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 150, // Increased threshold for better chunking
+    assetsInlineLimit: 4096, // Increased for better caching
     // Enable compression
     reportCompressedSize: true,
-    // Optimize for production
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3, // More passes for better optimization
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true,
-        conditionals: true,
-        dead_code: true,
-        evaluate: true,
-        if_return: true,
-        join_vars: true,
-        loops: true,
-        sequences: true,
-        side_effects: false,
-        unused: true,
-      },
-      mangle: {
-        safari10: true, // Better Safari compatibility
-        toplevel: true,
-        properties: {
-          regex: /^_/
-        }
-      },
-      format: {
-        comments: false,
-        ascii_only: true
-      }
-    },
     // Enhanced build optimizations
     rollupOptions: {
       treeshake: {
@@ -121,35 +86,6 @@ export default defineConfig({
           // AI service pages - group by category
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
-<<<<<<< HEAD
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'ai-analytics'
-            }
-            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
-              return 'ai-content'
-            }
-            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
-              return 'ai-security'
-            }
-            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
-              return 'ai-customer'
-            }
-            return 'ai-other'
-          }
-          // Zion service pages - group by category
-          if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/zion-')[1]?.split('/')[0];
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'zion-analytics'
-            }
-            if (serviceName?.includes('ai-')) {
-              return 'zion-ai'
-            }
-            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
-              return 'zion-security'
-            }
-            return 'zion-other'
-=======
             if (serviceName && ['analytics', 'automation', 'business-intelligence', 'content-generation'].includes(serviceName)) {
               return 'ai-core'
             }
@@ -161,7 +97,6 @@ export default defineConfig({
           // Zion service pages - group together
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
             return 'zion-services'
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
           }
           // 5G service pages - group together
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
