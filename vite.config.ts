@@ -23,6 +23,7 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
+<<<<<<< HEAD
     sourcemap: false,
     minify: "terser",
     target: "es2020",
@@ -172,15 +173,62 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
+=======
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Group node_modules
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor'
+            }
+            if (id.includes('lucide-react')) {
+              return 'icons'
+            }
+            if (id.includes('framer-motion')) {
+              return 'animations'
+            }
+            return 'vendor'
+          }
+          
+          // Group app pages by category
+          if (id.includes('/app/') && id.includes('/page.tsx')) {
+            if (id.includes('/ai-')) {
+              return 'ai-pages'
+            }
+            if (id.includes('/micro-saas')) {
+              return 'micro-saas-pages'
+            }
+            if (id.includes('/zion-')) {
+              return 'zion-pages'
+            }
+            if (id.includes('/components/')) {
+              return 'components'
+            }
+            return 'pages'
+          }
+          
+          // Group utilities
+          if (id.includes('/utils/') || id.includes('/hooks/')) {
+            return 'utils'
+          }
+        }
+      }
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
   },
   server: {
     port: 3000,
     open: true,
+<<<<<<< HEAD
     host: true,
     // Enable HMR
     hmr: {
       overlay: true,
     },
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
   },
   preview: {
     port: 4173,
@@ -190,6 +238,7 @@ export default defineConfig({
   // Optimize dependencies
   optimizeDeps: {
     include: [
+<<<<<<< HEAD
       "react",
       "react-dom",
       "react-router-dom",
@@ -203,3 +252,13 @@ export default defineConfig({
     devSourcemap: true,
   },
 });
+=======
+      'react',
+      'react-dom',
+      'react-router-dom',
+      'lucide-react',
+      'framer-motion'
+    ]
+  }
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-91ea
