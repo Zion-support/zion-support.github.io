@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Users, Brain, Clock, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Calendar, Heart } from 'lucide-react';
-=======
 import React from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -142,7 +136,6 @@ const ZionHRAssistantPro = () => {
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function ZionHrAssistantProPage() {
   return (

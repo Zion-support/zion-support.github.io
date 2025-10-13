@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, BarChart3, Cloud, Sparkles, Mail, Monitor, Target } from "lucide-react";
-=======
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -32,7 +25,6 @@ import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const HomePage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -128,7 +120,6 @@ const HomePage = () => {
     }
   ];
 =======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function AppPage() {
   return (

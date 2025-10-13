@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from "lucide-react";
-=======
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -23,61 +19,6 @@ import { Globe } from 'lucide-react';
 import { Code } from 'lucide-react';
 
 const AICodeAssistantProZionTechGroup = () => {
-<<<<<<< HEAD
-  const testimonials = [
-    {
-      name: "Alex Thompson",
-      company: "TechStart Inc",
-      role: "Lead Developer",
-      content: "Zion's AI Code Assistant has revolutionized our development process. It's like having a senior developer available 24/7.",
-      rating: 5,
-      avatar: "AT"
-    },
-    {
-      name: "Maria Garcia",
-      company: "CloudScale Solutions",
-      role: "CTO",
-      content: "The code generation quality is exceptional. It understands context and produces production-ready code consistently.",
-      rating: 5,
-      avatar: "MG"
-    },
-    {
-      name: "David Kim",
-      company: "DataFlow Systems",
-      role: "Senior Engineer",
-      content: "The debugging capabilities are incredible. It finds issues I would have spent hours tracking down manually.",
-      rating: 5,
-      avatar: "DK"
-    }
-  ];
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Zion AI Code Assistant Pro",
-    "description": "AI-powered code generation, debugging, and optimization with support for 50+ programming languages",
-    "url": "https://ziontechgroup.com/ai-code-assistant-pro",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Web, Windows, macOS, Linux",
-    "offers": {
-      "@type": "Offer",
-      "price": "199",
-      "priceCurrency": "USD",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "199",
-        "priceCurrency": "USD",
-        "unitText": "MONTH"
-      }
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
-    }
-  };
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
   const features = [
     {

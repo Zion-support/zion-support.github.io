@@ -1,30 +1,10 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Receipt } from 'lucide-react';
-
-"use client";
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 import { Receipt, Bot, Brain, Shield, CheckCircle, Star, BarChart3, TrendingUp, DollarSign } from 'lucide-react';
 =======
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 export default function AIExpenseTracker() {
   const features = [

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Home, ArrowLeft, Search, AlertTriangle } from 'lucide-react';
-=======
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
@@ -12,14 +7,12 @@ import { Search } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 import { Mic } from 'lucide-react';
 
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 const NotFoundPage = () => {
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function NotFoundPage() {
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
   return (
     <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
       <Helmet>

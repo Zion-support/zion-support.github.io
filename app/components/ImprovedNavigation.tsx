@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link, useLocation } from 'react-router-dom';
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles, Search, User, Settings, HelpCircle, Phone, Mail, MapPin, Star, TrendingUp, Users, Award, Clock, CheckCircle, DollarSign, Play } from 'lucide-react';
 =======
 import React, { useState, useEffect } from 'react';
@@ -33,7 +28,6 @@ import { DollarSign } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 interface ImprovednavigationProps {
   className?: string;

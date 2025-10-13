@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Brain, Mail, Smartphone, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -22,7 +16,6 @@ import { Hand } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 export default function Pricing() {
 =======
@@ -75,7 +68,6 @@ export default function Page() {
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }
   ];
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
   const aiServicesPricing = [
     {
       name: "AI Analytics Dashboard",

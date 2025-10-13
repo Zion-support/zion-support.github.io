@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-=======
 import React from 'react';
 import { 
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
   Mic, 
   Play, 
   Settings, 
@@ -20,7 +15,6 @@ import {
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mic, Play, Settings, Users, Zap, CheckCircle, Brain, Volume2, FileAudio, Globe } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

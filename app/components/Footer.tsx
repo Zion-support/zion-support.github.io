@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Star, 
-  Users, 
-  Sparkles, 
-  Mail, 
-  Monitor,
-  ChevronDown,
-  ChevronUp,
-  Menu,
-  X,
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Phone, 
-  MapPin,
-  ArrowRight,
-  Award
-} from 'lucide-react';
-=======
 import React, { useMemo } from "react";
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -44,7 +17,6 @@ import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const services = [
     {
@@ -93,7 +65,6 @@ import {
   Award,
   Users
 } from "lucide-react";
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();

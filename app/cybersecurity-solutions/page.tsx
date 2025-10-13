@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Users, Star, Activity, Database, FileText } from 'lucide-react';
-=======
 import React from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { ArrowRight } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -23,7 +15,6 @@ import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import { FileText } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const CybersecuritySolutions = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -126,7 +117,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { ArrowRight, Shield, CheckCircle } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function CybersecuritySolutionsPage() {
   const capabilities = [

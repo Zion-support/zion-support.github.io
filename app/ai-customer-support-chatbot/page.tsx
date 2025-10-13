@@ -1,20 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Clock } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-
-"use client";
-<<<<<<< HEAD
-import { Brain, Clock, Target, BarChart3 } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 =======
 const features = [
@@ -55,7 +40,6 @@ const testimonials = [
       rating: 5
     }
   ];
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 export default function AICustomerSupportChatbot() {
   const testimonials = [
     {

@@ -1,19 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
-const WebinarsPage = () => {
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function WebinarsPage() {
   return (

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Search } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-
-"use client";
-<<<<<<< HEAD
-import { Brain, Zap, CheckCircle, Star, BarChart3, TrendingUp } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 export default function AIEcommerceOptimizerPro() {
   const features = [
@@ -144,7 +126,6 @@ export default function AIEcommerceOptimizerPro() {
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function AiEcommerceOptimizerProPage() {
   return (

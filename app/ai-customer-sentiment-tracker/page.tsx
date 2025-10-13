@@ -1,22 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  Heart, 
-  Zap, 
-  BarChart3, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Target, 
-  Brain, 
-  Users, 
-  CheckCircle,
-=======
 import { 
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
   ArrowRight,
   Users,
   Star,
@@ -24,22 +8,16 @@ import {
   Zap,
   Brain,
   Globe,
-<<<<<<< HEAD
-  AlertCircle,
-  Clock
-=======
   Monitor,
   Target,
   BarChart3,
   Heart,
   AlertCircle,
   TrendingUp
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 } from 'lucide-react';
 =======
 import { ArrowRight } from 'lucide-react';
 import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 const AICustomerSentimentTrackerPage = () => {
   const stats = [
@@ -181,40 +159,7 @@ const AICustomerSentimentTrackerPage = () => {
     }
   ];
 
-<<<<<<< HEAD
-  const stats = [
-    { number: "95%", label: "Accuracy Rate" },
-    { number: "2.5M+", label: "Mentions Analyzed" },
-    { number: "50+", label: "Languages Supported" },
-    { number: "99.9%", label: "Uptime" }
-  ];
-
-  const benefits = [
-    {
-      icon: <TrendingUp className="w-12 h-12 text-green-400" />,
-      title: "Increase Customer Satisfaction",
-      description: "Proactively identify and resolve issues before they impact customer experience"
-    },
-    {
-      icon: <Target className="w-12 h-12 text-blue-400" />,
-      title: "Improve Response Time",
-      description: "Get instant alerts for negative sentiment and respond within minutes, not hours"
-    },
-    {
-      icon: <BarChart3 className="w-12 h-12 text-purple-400" />,
-      title: "Data-Driven Decisions",
-      description: "Make informed business decisions based on comprehensive sentiment analytics"
-    },
-    {
-      icon: <Users className="w-12 h-12 text-cyan-400" />,
-      title: "Team Collaboration",
-      description: "Enable seamless collaboration across teams with shared insights and task management"
-    }
-  ];
-
-=======
 export default function AiCustomerSentimentTrackerPage() {
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

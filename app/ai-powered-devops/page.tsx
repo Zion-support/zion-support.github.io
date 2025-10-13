@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
 import { Link } from "react-router-dom";
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import React from "react";
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import SEOOptimizer from "../../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -32,7 +25,6 @@ import { Cloud } from 'lucide-react';
 =======
 import { ArrowRight } from 'lucide-react';
 import { Brain, ArrowRight, Monitor, Zap, CheckCircle, Award, DollarSign, MessageSquare, Phone, Globe, Star } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function AIPoweredDevOpsPage() {
   const testimonials = [

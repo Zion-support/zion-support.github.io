@@ -1,8 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import { Clock } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
@@ -119,7 +117,6 @@ export default function ZionCloudVaultPro() {
       popular: false
     }
   ];
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 export default function Page() {
   return (

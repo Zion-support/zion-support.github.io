@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-export default function DevOpsServicesPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>DevOps Services - Coming Soon | Zion Tech Group</title>
-        <meta name="description" content="Professional DevOps services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">DevOps Services</h1>
-        <p className="text-xl text-gray-300">Coming Soon</p>
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -40,7 +25,6 @@ export default function DevopsServicesZionTechGroup() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
       </div>
 =======
 import React from 'react';
@@ -234,7 +218,6 @@ const DevOpsServicesPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
     </div>
   );
 };

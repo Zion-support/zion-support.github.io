@@ -1,24 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import {
-  BarChart3, 
-  Cloud, 
-  Users, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  TrendingUp,
-  Settings,
-  Workflow,
-  Target,
-  TrendingUp,
-  Settings,
-  Users,
-  Sparkles,
-  ArrowRight,
-  CheckCircle
-=======
 import { 
   ArrowRight,
   Users,
@@ -31,7 +12,6 @@ import {
   BarChart3,
   Cloud,
   Workflow
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -100,9 +80,6 @@ const AIAutomationPlatformPage = () => {
     }
   ];
 
-<<<<<<< HEAD
-const Page = () => {
-=======
   const benefits = [
     "Reduce manual work by 80%",
     "Improve process efficiency by 300%",
@@ -116,7 +93,6 @@ const Page = () => {
     "Cost reduction up to 60%"
   ];
 
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

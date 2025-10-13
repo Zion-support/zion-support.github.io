@@ -1,10 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe } from 'lucide-react';
-=======
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
@@ -12,7 +7,6 @@ import { Globe } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 export default function Community() {
   const stats = [
@@ -76,7 +70,6 @@ export default function Community() {
     }
   ];
 =======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function CommunityPage() {
   return (

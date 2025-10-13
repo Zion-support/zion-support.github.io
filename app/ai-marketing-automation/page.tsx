@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, Target, Mail, Share2, BarChart3, Users, Zap, Mail as Email, Smartphone, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -19,7 +13,6 @@ import { Share2 } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 export default function AIMarketingAutomation() {
 =======
@@ -60,7 +53,6 @@ export default function Page() {
     "Benefit 1",
     "Benefit 2"
   ];
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
   const features = [
     {
       title: "Email Marketing Automation",

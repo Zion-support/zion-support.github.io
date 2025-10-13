@@ -1,10 +1,6 @@
 "use client";
 
-<<<<<<< HEAD
-import { Suspense, lazy } from 'react';
-=======
 import React, { lazy, Suspense } from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -58,13 +54,7 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
-<<<<<<< HEAD
-          <PerformanceMonitor showDetails={false}>
-            <div>Performance monitoring active</div>
-          </PerformanceMonitor>
-=======
           <PerformanceMonitor />
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
           <AccessibilityEnhancer>
             <CriticalResourcePreloader />
             <CacheManager />

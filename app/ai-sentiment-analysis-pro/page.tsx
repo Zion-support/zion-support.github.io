@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 import { ArrowRight, TrendingUp, Globe, CheckCircle, MessageSquare, Target, BarChart3 } from 'lucide-react';
 =======
 import React from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -17,7 +12,6 @@ import { MessageSquare } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Phone } from 'lucide-react';
 
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 =======
 import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, Globe, Play, Address } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
@@ -26,7 +20,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Target, Users, MessageSquare, Brain, Zap, ArrowRight, Play, CheckCircle, Mail, Phone, Globe } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function page() {
   const stats = [
