@@ -18,6 +18,8 @@ import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
+import AccessibilityImprovements from "./app/components/AccessibilityImprovements";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
 
@@ -456,6 +458,8 @@ function App() {
                   <div>
                     <PerformanceMonitor />
                     <PerformanceEnhancer />
+                    <PerformanceOptimizer />
+                    <AccessibilityImprovements />
                     <SEOOptimizer />
                     <EnhancedSEO />
                   </div>

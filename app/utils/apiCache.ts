@@ -2,7 +2,7 @@
 
 export const Apicache = {
   init: () => {
-    console.log("Apicache initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Apicache = {
   },
 
   cleanup: () => {
-    console.log("Apicache cleaned up");
+
   },
 };
 

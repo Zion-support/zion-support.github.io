@@ -2,7 +2,7 @@
 
 export const Sitemapgenerator = {
   init: () => {
-    console.log("Sitemapgenerator initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Sitemapgenerator = {
   },
 
   cleanup: () => {
-    console.log("Sitemapgenerator cleaned up");
+
   },
 };
 

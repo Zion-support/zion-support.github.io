@@ -53,12 +53,7 @@ class ErrorHandler extends Component<Props, State> {
     // Example: Send to monitoring service
     try {
       // Replace with your actual error reporting service
-      console.log('Error reported to monitoring service:', {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString()
-      })
+      // Report error to monitoring service
     } catch (reportingError) {
       console.error('Failed to report error:', reportingError)
     }

@@ -2,7 +2,7 @@
 
 export const Performancemetrics = {
   init: () => {
-    console.log("Performancemetrics initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Performancemetrics = {
   },
 
   cleanup: () => {
-    console.log("Performancemetrics cleaned up");
+
   },
 };
 

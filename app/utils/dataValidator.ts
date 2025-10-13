@@ -2,7 +2,7 @@
 
 export const Datavalidator = {
   init: () => {
-    console.log("Datavalidator initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Datavalidator = {
   },
 
   cleanup: () => {
-    console.log("Datavalidator cleaned up");
+
   },
 };
 

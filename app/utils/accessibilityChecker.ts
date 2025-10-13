@@ -2,7 +2,7 @@
 
 export const Accessibilitychecker = {
   init: () => {
-    console.log("Accessibilitychecker initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Accessibilitychecker = {
   },
 
   cleanup: () => {
-    console.log("Accessibilitychecker cleaned up");
+
   },
 };
 

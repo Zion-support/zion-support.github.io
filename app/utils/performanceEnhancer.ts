@@ -2,7 +2,7 @@
 
 export const Performanceenhancer = {
   init: () => {
-    console.log("Performanceenhancer initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Performanceenhancer = {
   },
 
   cleanup: () => {
-    console.log("Performanceenhancer cleaned up");
+
   },
 };
 

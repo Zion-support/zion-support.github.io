@@ -2,7 +2,7 @@
 
 export const Advancedanalytics = {
   init: () => {
-    console.log("Advancedanalytics initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Advancedanalytics = {
   },
 
   cleanup: () => {
-    console.log("Advancedanalytics cleaned up");
+
   },
 };
 

@@ -60,7 +60,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
 
       // Custom analytics
-      console.log("Analytics Event:", event, properties);
+
     }
   };
 
@@ -79,7 +79,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
 
       // Custom analytics
-      console.log("Analytics Identify:", userId, traits);
+
     }
   };
 
@@ -99,7 +99,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
 
       // Custom analytics
-      console.log("Analytics Page:", name, properties);
+
     }
   };
 

@@ -2,7 +2,7 @@
 
 export const Accessibilityutils = {
   init: () => {
-    console.log("Accessibilityutils initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Accessibilityutils = {
   },
 
   cleanup: () => {
-    console.log("Accessibilityutils cleaned up");
+
   },
 };
 

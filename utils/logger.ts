@@ -29,7 +29,7 @@ class Logger {
 
   log(message: string, ...args: any[]): void {
     if (this.shouldLog()) {
-      console.log(this.formatMessage('log', message), ...args);
+
     }
   }
 
@@ -41,7 +41,7 @@ class Logger {
 
   warn(message: string, ...args: any[]): void {
     if (this.shouldLog()) {
-      console.warn(this.formatMessage('warn', message), ...args);
+
     }
   }
 

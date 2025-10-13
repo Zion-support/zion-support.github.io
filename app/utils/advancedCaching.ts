@@ -2,7 +2,7 @@
 
 export const Advancedcaching = {
   init: () => {
-    console.log("Advancedcaching initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Advancedcaching = {
   },
 
   cleanup: () => {
-    console.log("Advancedcaching cleaned up");
+
   },
 };
 

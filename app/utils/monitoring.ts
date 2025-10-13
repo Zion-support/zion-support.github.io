@@ -2,7 +2,7 @@
 
 export const Monitoring = {
   init: () => {
-    console.log("Monitoring initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Monitoring = {
   },
 
   cleanup: () => {
-    console.log("Monitoring cleaned up");
+
   },
 };
 
