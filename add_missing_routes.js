@@ -60,9 +60,6 @@ const newAppContent =
   );
 // Write the updated App.tsx;
 fs.writeFileSync("/workspace/App.tsx", newAppContent);
-console.log(`Added ${brokenLinks.length} routes to App.tsx`);
-console.log(
-  "Routes added for:",
-  brokenLinks.slice(0, 10).join(", "),
+.join(", "),
   "... and more",
 );

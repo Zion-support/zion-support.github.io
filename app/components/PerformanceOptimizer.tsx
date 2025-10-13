@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  const [isOptimized, setIsOptimized] = useState(false);
 
   useEffect(() => {
     // Performance optimization logic
@@ -14,6 +13,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const criticalResources = [
         '/fonts/inter-var.woff2',
         '/images/hero-bg.jpg',
+        '/images/logo.svg',
         '/icons/sprite.svg'
       ];
 
@@ -39,41 +39,39 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         }
       });
 
-      // Enable service worker for caching
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            console.log('SW registered: ', registration);
-          })
-          .catch(registrationError => {
-            console.log('SW registration failed: ', registrationError);
-          });
-      }
+      // Preconnect to external domains
+      const externalDomains = [
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com',
+        'https://cdnjs.cloudflare.com'
+      ];
 
-      // Optimize scroll performance
-      let ticking = false;
-      const optimizeScroll = () => {
-        if (!ticking) {
-          requestAnimationFrame(() => {
-            // Scroll optimization logic here
-            ticking = false;
-          });
-          ticking = true;
-        }
-      };
+      externalDomains.forEach(domain => {
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = domain;
+        document.head.appendChild(link);
+      });
 
-      window.addEventListener('scroll', optimizeScroll, { passive: true });
+      // Enable resource hints
+      const resourceHints = [
+        { rel: 'dns-prefetch', href: '//fonts.googleapis.com' },
+        { rel: 'dns-prefetch', href: '//fonts.gstatic.com' },
+        { rel: 'dns-prefetch', href: '//cdnjs.cloudflare.com' }
+      ];
 
-      // Cleanup
-      return () => {
-        window.removeEventListener('scroll', optimizeScroll);
-      };
+      resourceHints.forEach(hint => {
+        const link = document.createElement('link');
+        link.rel = hint.rel;
+        link.href = hint.href;
+        document.head.appendChild(link);
+      });
+
     };
 
-    const cleanup = optimizePerformance();
-    setIsOptimized(true);
-
-    return cleanup;
+    // Run optimization after component mounts
+    const timer = setTimeout(optimizePerformance, 100);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
