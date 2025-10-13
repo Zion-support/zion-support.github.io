@@ -1,5 +1,5 @@
 'use client'
-import React, { memo, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import {
   X,
@@ -253,4 +253,3 @@ const Sidebar: React.FC = () => {
 
 Sidebar.displayName = 'Sidebar'
 export default Sidebar
->>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-8d25
