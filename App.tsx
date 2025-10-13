@@ -8,6 +8,7 @@ import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import LoadingSpinner from './app/components/LoadingSpinner';
 
 // Page Components
 import HomePage from './app/page';
@@ -70,7 +71,8 @@ function App() {
             <Navigation />
             <main className="relative z-10" id="main-content" role="main">
               <ErrorBoundary>
-                <Routes>
+                <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
+                  <Routes>
                   {/* Main Pages */}
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -108,7 +110,8 @@ function App() {
                       </div>
                     </div>
                   } />
-                </Routes>
+                  </Routes>
+                </Suspense>
               </ErrorBoundary>
             </main>
             <Footer />

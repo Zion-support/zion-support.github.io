@@ -39,23 +39,74 @@ const SEO: React.FC<SEOProps> = ({
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.svg',
     description: 'Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.',
+    foundingDate: '2020',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: '364 E Main St STE 1008',
       addressLocality: 'Middletown',
       addressRegion: 'DE',
+      postalCode: '19709',
       addressCountry: 'US'
     },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com'
-    },
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+1-302-464-0950',
+        contactType: 'customer service',
+        email: 'kleber@ziontechgroup.com',
+        availableLanguage: 'English'
+      },
+      {
+        '@type': 'ContactPoint',
+        contactType: 'sales',
+        email: 'info@ziontechgroup.com',
+        availableLanguage: 'English'
+      }
+    ],
     sameAs: [
       'https://www.linkedin.com/company/zion-tech-group',
       'https://twitter.com/ziontechgroup',
       'https://github.com/ziontechgroup'
-    ]
+    ],
+    serviceArea: {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: 39.4496,
+        longitude: -75.7163
+      },
+      geoRadius: '50000'
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Technology Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'AI Solutions',
+            description: 'Advanced artificial intelligence services including machine learning, natural language processing, and predictive analytics.'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Cybersecurity',
+            description: 'Comprehensive security solutions to protect your digital assets, data, and infrastructure from evolving threats.'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Cloud Infrastructure',
+            description: 'Scalable cloud solutions and infrastructure management to optimize performance and reduce operational costs.'
+          }
+        }
+      ]
+    }
   };
 
   return (

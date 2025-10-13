@@ -39,6 +39,23 @@ const PerformanceMonitor: React.FC = () => {
           non_interaction: true,
         });
       }
+
+      // Send to custom analytics endpoint
+      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
+        fetch('/api/analytics/vitals', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            metric: metric.name,
+            value: metric.value,
+            id: metric.id,
+            url: window.location.href,
+            timestamp: Date.now()
+          })
+        }).catch(console.error);
+      }
     };
 
     onCLS(handleMetric);
