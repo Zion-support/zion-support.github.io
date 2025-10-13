@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Video, FileText } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -90,6 +90,38 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Video Generator",
+      description: "Create professional videos with AI-powered script generation and multi-language support",
+      price: "From $49/month",
+      icon: <Video className="w-6 h-6" />,
+      link: "/zion-ai-video-generator",
+      featured: true
+    },
+    {
+      name: "Zion AI Invoice Generator",
+      description: "Automate invoicing with AI-powered creation, payment tracking, and multi-currency support",
+      price: "From $29/month",
+      icon: <FileText className="w-6 h-6" />,
+      link: "/zion-ai-invoice-generator",
+      featured: true
+    },
+    {
+      name: "Zion AI Customer Insights",
+      description: "Unlock deep customer insights with AI-powered sentiment analysis and behavior prediction",
+      price: "From $99/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-customer-insights",
+      featured: true
+    },
+    {
+      name: "Zion AI Email Analyzer",
+      description: "Analyze emails with AI-powered sentiment analysis, spam detection, and performance metrics",
+      price: "From $39/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/zion-ai-email-analyzer",
+      featured: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
@@ -114,27 +146,11 @@ const HomePage = () => {
       featured: true
     },
     {
-      name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
+      name: "Zion AI Content Studio",
+      description: "AI-powered content creation platform with automated writing, editing, and optimization",
+      price: "From $79/month",
+      icon: <Sparkles className="w-6 h-6" />,
+      link: "/zion-content-studio",
       featured: true
     }
   ];

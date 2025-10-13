@@ -32,10 +32,7 @@ import {
   FileText,
   Clock
 } from 'lucide-react';
-<<<<<<< HEAD
 import FuturisticButton from './FuturisticButton';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
 interface NavigationProps {
   onSidebarToggle: () => void;
