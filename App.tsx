@@ -14,13 +14,7 @@ import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-<<<<<<< HEAD
-=======
-import LoadingPage from "./app/components/Loading";
 import EnhancedSEO from "./app/components/EnhancedSEO";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
->>>>>>> cursor/analyze-improve-and-deploy-application-5cc2
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
