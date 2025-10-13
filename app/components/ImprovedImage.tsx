@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface ImprovedImageProps {
@@ -28,3 +29,6 @@ export default function ImprovedImage({ className = '', children, ...props }: Im
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+import { ImageIcon } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -78,3 +79,7 @@ export default function ZioncloudvaultproPage() {
     </div>
   );
 }
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

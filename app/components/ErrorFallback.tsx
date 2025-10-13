@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface ErrorFallbackProps {
@@ -32,3 +33,7 @@ export default function ErrorFallback({ className = '', children, ...props }: Er
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+import { AlertTriangle, RefreshCw, Home, Mail, Bug } from 'lucide-react';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

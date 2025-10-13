@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -110,3 +111,9 @@ export default function ChatAnalytics() {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

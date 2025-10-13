@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface mainProps {
@@ -18,4 +19,33 @@ export default function main({ className = '', children }: mainProps) {
   </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
+<<<<<<< HEAD
 }
+=======
+}
+=======
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+// Register service worker for PWA functionality
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/sw.js")
+      .then((registration) => {
+        // Service worker registered successfully
+      })
+      .catch((registrationError) => {
+        // Service worker registration failed
+      });
+  });
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -69,3 +70,10 @@ root.render(
 =======
 );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import App from "./App";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

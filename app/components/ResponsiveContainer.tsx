@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -10,10 +11,14 @@ interface ResponsivecontainerProps {
 =======
 interface ResponsiveContainerProps {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+interface ResponsiveContainerProps {
+  children: React.ReactNode;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   className?: string;
-  children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function ResponsiveContainer({ className = '', children }: ResponsiveContainerProps) {
@@ -48,3 +53,19 @@ export default function ResponsiveContainer({ className = '', children, ...props
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ 
+  children, 
+  className = '' 
+}) => {
+  return (
+    <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default ResponsiveContainer;
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

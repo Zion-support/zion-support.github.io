@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useState } from 'react';
@@ -196,3 +197,20 @@ export default function Navigation({ className = '', children, ...props }: Navig
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+import { Link, useLocation } from 'react-router-dom';
+import { 
+  Brain,
+  Shield, 
+  Zap, 
+  Globe, 
+  Star, 
+  Users, 
+  Sparkles, 
+  Mail, 
+  Monitor,
+  ChevronDown,
+  Menu,
+  X
+} from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

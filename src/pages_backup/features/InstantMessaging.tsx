@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface InstantMessagingProps {
@@ -19,3 +20,17 @@ export default function InstantMessaging({ className = '', children }: InstantMe
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
 }
+=======
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+export default InstantmessagingPage;
+'use client'
+        <title>Instantmessaging - Zion Tech Group</title>
+            <h1 className = "text-4xl font-bold text-white mb-4">Instantmessaging</h1>
+            <p className="text-gray-300 mb-8">This page is under construction.</p>;
+              Learn More;
+  );
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

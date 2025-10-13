@@ -18,4 +18,37 @@ export default function AnimatedText({ className = '', children }: AnimatedTextP
   </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
+<<<<<<< HEAD
 }
+=======
+}
+<<<<<<< HEAD
+=======
+
+const AnimatedText: React.FC<AnimatedTextProps> = ({
+//   text,
+  className = "",
+  delay = 0,
+  speed = 100,
+}) => {
+  const [displayedText, setDisplayedText] = useState("");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (currentIndex < text.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + text[currentIndex]);
+        setCurrentIndex((prev) => prev + 1);
+      }, delay + speed);
+
+      return () => clearTimeout(timeout);
+    }
+    return undefined;
+  }, [currentIndex, text, delay, speed]);
+
+  return <span className={className}>{displayedText}</span>;
+};
+
+export default AnimatedText;
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

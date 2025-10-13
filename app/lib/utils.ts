@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // utils utility functions
 
 export interface utilsConfig {
@@ -79,3 +80,7 @@ export const utils = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+import { clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

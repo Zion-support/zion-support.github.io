@@ -31,24 +31,40 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
             <li key="{item.path}" className="flex items-center"></li>
               
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
+<<<<<<< HEAD
 
+<<<<<<< HEAD
                 <Link;
+=======
+              
+                <Link
+=======
+              )}
+              {index === 0 ? (
+//                 <Link
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
                   to={item.path}
                   className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors"
-                >
+//                 >
                   <Home className="w-4 h-4 mr-1" />
                   {item.name}
-                </Link>
+</Link>
               ) : index === breadcrumbItems.length - 1 ? (
                 <span className="text-cyan-400 font-medium"></span>
                   {item.name}
-                </span>
+</span>
               ) : (
+<<<<<<< HEAD
                 <Link;
+=======
+//                 <Link
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
                   to={item.path}
                   className="text-gray-300 hover:text-cyan-400 transition-colors"
-                >
+//                 >
                   {item.name}
+<<<<<<< HEAD
                 </Link>
 
             </li>
@@ -56,6 +72,18 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
         </ol>
   </div>
     </nav>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+=======
+</Link>
+              )}
+//             </li>
+          ))}
+//         </ol>
+</div>
+//     </nav>
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   );
 }

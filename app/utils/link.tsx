@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface linkProps {
@@ -95,3 +96,8 @@ export const Link = ({ href, children, className = '' }: LinkProps) => {
   );
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

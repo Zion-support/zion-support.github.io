@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -138,3 +139,5 @@ export default function EnhancedAccessibility({ children, className = '' }: Enha
   return <div className={className}>{children}</div>;
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

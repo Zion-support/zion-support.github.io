@@ -1,6 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function fix-syntax-errors.js() {
   return (
@@ -18,11 +20,25 @@ export default function fix-syntax-errors.js() {
           </p>
         </div>
       </div>
+=======
+export default function Component() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>This component is under construction.</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
     </div>
   );
 }
 =======
+<<<<<<< HEAD
 // Function to fix syntax errors in a file;
+=======
+import fs from 'fs';
+import path from 'path';
+
+// Function to fix syntax errors in a file
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 function fixSyntaxErrors(filePath) {
   try {
     if (!fs.existsSync(filePath) || (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts'))) {
@@ -111,4 +127,8 @@ files.forEach(file => {
 });
 
 console.log('Finished fixing syntax errors.');
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

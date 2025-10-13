@@ -1,14 +1,31 @@
 import React from 'react';
+<<<<<<< HEAD
 
 interface FuturisticButtonProps {
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight, ExternalLink } from 'lucide-react';
+
+interface FuturisticButtonProps {
+  href?: string;
+  to?: string;
+  variant?: 'primary' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  icon?: React.ReactNode;
+  children: React.ReactNode;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   className?: string;
-  children?: React.ReactNode;
+  onClick?: () => void;
+  external?: boolean;
 }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function FuturisticButton({ className = '', children }: FuturisticButtonProps) {
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   href,
   to,
@@ -33,6 +50,7 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     md: 'px-6 py-3 text-base',
     lg: 'px-8 py-4 text-lg'
   };
+<<<<<<< HEAD
   
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   
@@ -73,9 +91,20 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
   return (
     <div className={`${className}`}>
+=======
+
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+
+  const content = (
+    <div>
+      {icon && <span className="mr-2">{icon}</span>}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       {children}
-    </div>
+      {external && <ExternalLink className="w-4 h-4 ml-2" />}
+      {!external && !icon && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />}
+</div>
   );
+<<<<<<< HEAD
 }
 =======
 export default function FuturisticButton({ className = '', children, ...props }: FuturisticButtonProps) {
@@ -86,3 +115,45 @@ export default function FuturisticButton({ className = '', children, ...props }:
       );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        className={classes}
+        onClick={onClick}
+        target={external ? '_blank' : undefined}
+        rel={external ? 'noopener noreferrer' : undefined}
+      >
+        {content}
+      </a>
+    );
+  }
+
+  if (to) {
+    return (
+      <Link
+        to={to}
+        className={classes}
+        onClick={onClick}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <button
+      className={classes}
+      onClick={onClick}
+    >
+      {content}
+    </button>
+  );
+};
+
+export default FuturisticButton;
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

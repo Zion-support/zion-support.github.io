@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
 interface microSaasServicesProps {
+=======
+import React from "react";
+
+interface MicrosaasservicesProps {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   className?: string;
-  children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 export default function microSaasServices({ className = '', children }: microSaasServicesProps) {
   return (
     <div className={`${className}`}>
@@ -22,3 +28,18 @@ export default function Component() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+const Microsaasservices: React.FC<MicrosaasservicesProps> = ({
+  className = "",
+}) => {
+  return (
+    <div className={className}>
+      <h2>Microsaasservices</h2>
+    </div>
+  );
+};
+
+export default Microsaasservices;
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // logger utility functions
 
 export interface loggerConfig {
@@ -17,6 +18,16 @@ export class logger {
   }
 =======
 const LOG_LEVELS = {
+=======
+interface LogLevel {
+  ERROR: 'error';
+  WARN: 'warn';
+  INFO: 'info';
+  DEBUG: 'debug';
+}
+
+const LOG_LEVELS: LogLevel = {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   ERROR: 'error',
   WARN: 'warn',
   INFO: 'info',
@@ -124,6 +135,7 @@ export default loggerInstance;
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 const logger = new Logger();
+<<<<<<< HEAD
 export const logger = {
   // Logger implementation
   info: (message: string) => {
@@ -150,3 +162,6 @@ export default logger;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+export default logger;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

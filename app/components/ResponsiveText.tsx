@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -10,10 +11,23 @@ interface ResponsivetextProps {
 =======
 interface ResponsiveTextProps {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+interface ResponsiveTextProps {
+  children: React.ReactNode;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   className?: string;
-  children?: React.ReactNode;
+  size?: {
+    default?: string;
+    sm?: string;
+    md?: string;
+    lg?: string;
+    xl?: string;
+  };
+  weight?: 'light' | 'normal' | 'medium' | 'semibold' | 'bold';
+  color?: 'primary' | 'secondary' | 'accent' | 'muted' | 'white' | 'gray';
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function ResponsiveText({ className = '', children }: ResponsiveTextProps) {
@@ -31,9 +45,44 @@ export default function ResponsiveText({ children, className = '', ...props }: R
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
   return (
     <div className={`${className}`}>
+=======
+const ResponsiveText: React.FC<ResponsiveTextProps> = ({
+  children,
+  className = '',
+  size = { default: 'base', sm: 'lg', md: 'xl' },
+  weight = 'normal',
+  color = 'white'
+}) => {
+  const weightClasses = {
+    light: 'font-light',
+    normal: 'font-normal',
+    medium: 'font-medium',
+    semibold: 'font-semibold',
+    bold: 'font-bold'
+  };
+
+  const colorClasses = {
+    primary: 'text-cyan-400',
+    secondary: 'text-purple-400',
+    accent: 'text-pink-400',
+    muted: 'text-gray-400',
+    white: 'text-white',
+    gray: 'text-gray-300'
+  };
+
+  const sizeClasses = `text-${size.default || 'base'} ${
+    size.sm ? `sm:text-${size.sm}` : ''
+  } ${size.md ? `md:text-${size.md}` : ''} ${
+    size.lg ? `lg:text-${size.lg}` : ''
+  } ${size.xl ? `xl:text-${size.xl}` : ''}`;
+
+  return (
+    <span className={`${sizeClasses} ${weightClasses[weight]} ${colorClasses[color]} ${className}`}>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       {children}
-    </div>
+    </span>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 =======
@@ -48,3 +97,10 @@ export default function ResponsiveText({ className = '', children, ...props }: R
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+};
+
+export default ResponsiveText;
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

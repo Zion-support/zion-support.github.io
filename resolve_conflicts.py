@@ -1,20 +1,30 @@
 #!/usr/bin/env python3
+"""
+Script to automatically resolve merge conflicts by keeping the newer version (after =======)
+"""
 import os
 import re
 import glob
 
 def resolve_merge_conflicts(file_path):
-    """Resolve merge conflicts by keeping the HEAD version"""
+    """Resolve merge conflicts in a single file by keeping the newer version"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
+<<<<<<< HEAD
         # Pattern to match merge conflict markers
         conflict_pattern = r'\n(.*?)\n
+=======
+        # Check if file has merge conflicts
+        if '<<<<<<< HEAD' not in content:
+            return False
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
         
-        # Replace conflicts with HEAD version
-        resolved_content = re.sub(conflict_pattern, r'\1\n', content, flags=re.DOTALL)
+        # Split by merge conflict markers
+        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
         
+<<<<<<< HEAD
         # Also handle cases where there might be multiple conflict markers in one block
         conflict_pattern2 = r'\n(.*?)\n
         resolved_content = re.sub(conflict_pattern2, r'\1', resolved_content, flags=re.DOTALL)
@@ -22,40 +32,54 @@ def resolve_merge_conflicts(file_path):
         # Remove any remaining conflict markers
         resolved_content = re.sub(r'\n', '', resolved_content)
         resolved_content = re.sub(r'
+=======
+        if len(parts) < 3:
+            print(f"Warning: Could not parse merge conflicts in {file_path}")
+            return False
         
-        if content != resolved_content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(resolved_content)
-            print(f"Resolved conflicts in {file_path}")
-            return True
-        return False
+        # Reconstruct content by keeping the newer version (after =======)
+        new_content = parts[0]  # Content before first conflict
+        
+        for i in range(1, len(parts), 3):
+            if i + 2 < len(parts):
+                # Keep the newer version (after =======)
+                new_content += parts[i + 1]  # Content after =======
+                if i + 3 < len(parts):
+                    new_content += parts[i + 3]  # Content after >>>>>>>
+        
+        # Write the resolved content back
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        
+        print(f"Resolved conflicts in {file_path}")
+        return True
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+        
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript and JavaScript files
+    """Main function to resolve all merge conflicts"""
+    # Find all TypeScript/JavaScript files in the app directory
     patterns = [
-        '**/*.tsx',
-        '**/*.ts',
-        '**/*.jsx',
-        '**/*.js'
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'app/**/*.jsx',
+        'app/**/*.js'
     ]
     
     files_processed = 0
-    files_resolved = 0
+    conflicts_resolved = 0
     
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            # Skip node_modules and dist directories
-            if 'node_modules' in file_path or 'dist' in file_path:
-                continue
-                
             files_processed += 1
             if resolve_merge_conflicts(file_path):
-                files_resolved += 1
+                conflicts_resolved += 1
     
-    print(f"Processed {files_processed} files, resolved conflicts in {files_resolved} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Resolved conflicts in {conflicts_resolved} files")
 
 if __name__ == "__main__":
     main()

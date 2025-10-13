@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // monitoring utility functions
 
 export interface monitoringConfig {
@@ -31,3 +32,21 @@ export const monitoring = () => {
   return null;
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+
+// Monitoring utility functions
+
+export const Monitoring = {
+  init: () => {
+    },
+
+  process: (data: any) => {
+    return data;
+  },
+
+  cleanup: () => {
+    },
+};
+
+export default Monitoring;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

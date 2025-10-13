@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
 interface servicesProps {
+=======
+interface ServicesProps {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   className?: string;
-  children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 export default function services({ className = '', children }: servicesProps) {
   return (
     <div className={`${className}`}>
@@ -22,3 +26,16 @@ export default function Component() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+const Services: React.FC<ServicesProps> = ({ className = "" }) => {
+  return (
+    <div className={className}>
+      <h2>Services</h2>
+    </div>
+  );
+};
+
+export default Services;
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

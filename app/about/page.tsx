@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -49,3 +50,8 @@ export default function about() {
     </div>
   );
 }
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

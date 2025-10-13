@@ -1,15 +1,22 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 <<<<<<< HEAD
 export default function aiServices() {
+=======
+import { Helmet } from 'react-helmet-async';
+
+export default function AIServices() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
-        <title>Ai Services - Zion Tech Group</title>
-        <meta name="description" content="Ai Services solutions by Zion Tech Group" />
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="AI Services page coming soon." />
       </Helmet>
+<<<<<<< HEAD
       
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
@@ -74,6 +81,11 @@ export default function AiservicesPage() {
             Get Started
           </button>
         </div>
+=======
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">AI Services</h1>
+        <p className="text-xl text-gray-300">Coming Soon</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
       </div>
     </div>
   );

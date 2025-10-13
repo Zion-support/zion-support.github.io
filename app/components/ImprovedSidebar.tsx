@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -42,3 +43,6 @@ export default function ImprovedSidebar({ className = '', children, ...props }: 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+import { Link, useLocation } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

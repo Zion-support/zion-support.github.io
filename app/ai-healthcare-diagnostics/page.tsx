@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -77,4 +78,15 @@ export default function AihealthcarediagnosticsPage() {
       </div>
     </div>
   );
+=======
+import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+export default function AIHealthcareDiagnostics() {
+  return (
+    <div>
+    </div>
+);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 }

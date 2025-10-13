@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+=======
+import { ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 import { Helmet } from 'react-helmet-async';
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 
+<<<<<<< HEAD
 export default function press() {
   return (
 <<<<<<< HEAD
@@ -80,3 +85,6 @@ export default function press() {
     </div>
   );
 }
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

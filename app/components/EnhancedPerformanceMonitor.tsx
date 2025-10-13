@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedPerformanceMonitorProps {
@@ -28,3 +29,6 @@ export default function EnhancedPerformanceMonitor({ className = '', children, .
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f

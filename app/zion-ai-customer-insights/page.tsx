@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -78,3 +79,10 @@ export default function ZionaicustomerinsightsPage() {
     </div>
   );
 }
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight, Users, BarChart3, TrendingUp, Target, Eye, Heart, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Cloud, Settings, Headphones, DollarSign, CreditCard, TrendingDown, Play, Zap, ShoppingCart, Store } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+
+const ZionAICustomerInsightsPage = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
