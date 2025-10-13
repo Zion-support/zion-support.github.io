@@ -27,7 +27,7 @@ const Footer = React.memo(() => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -108,6 +108,22 @@ const Footer = React.memo(() => {
                   Web Development
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/ai-video-generator"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Video Generator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-blockchain-analytics"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Blockchain Analytics
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -169,6 +185,22 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Custom Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-chatbot-builder"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Chatbot Builder
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-smart-inventory"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Smart Inventory
                 </Link>
               </li>
             </ul>
@@ -247,6 +279,53 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Consultation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Latest Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Latest Services</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/ai-video-generator"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Video Generator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-blockchain-analytics"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Blockchain Analytics
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-climate-solutions-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Climate Solutions Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-chatbot-builder"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Chatbot Builder
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-smart-inventory"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Smart Inventory
                 </Link>
               </li>
             </ul>

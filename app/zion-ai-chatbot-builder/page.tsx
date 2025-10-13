@@ -1,38 +1,38 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Play, Zap, Star, ArrowRight, CheckCircle, Users, Clock, Sparkles, Video, Camera, Edit3, Download } from 'lucide-react';
+import { Bot, Zap, Star, ArrowRight, CheckCircle, Users, Clock, Sparkles, MessageCircle, Brain, Settings, BarChart3 } from 'lucide-react';
 
-export default function AIVideoGenerator() {
+export default function ZionAIChatbotBuilder() {
   const features = [
     {
-      title: "AI-Powered Script Generation",
-      description: "Generate engaging video scripts from text prompts using advanced natural language processing",
-      icon: <Edit3 className="w-6 h-6" />
+      title: "No-Code Chatbot Builder",
+      description: "Create sophisticated chatbots without writing a single line of code using our intuitive drag-and-drop interface",
+      icon: <Bot className="w-6 h-6" />
     },
     {
-      title: "Automated Voice Synthesis",
-      description: "Convert text to natural-sounding speech with multiple voice options and languages",
-      icon: <Users className="w-6 h-6" />
+      title: "Advanced AI Training",
+      description: "Train your chatbot with your own data and knowledge base for accurate, context-aware responses",
+      icon: <Brain className="w-6 h-6" />
     },
     {
-      title: "Smart Video Editing",
-      description: "AI automatically selects the best clips, adds transitions, and optimizes pacing",
-      icon: <Video className="w-6 h-6" />
+      title: "Multi-Channel Deployment",
+      description: "Deploy your chatbot across websites, mobile apps, social media, and messaging platforms",
+      icon: <MessageCircle className="w-6 h-6" />
     },
     {
-      title: "Brand Customization",
-      description: "Apply your brand colors, fonts, and style automatically to all generated content",
-      icon: <Sparkles className="w-6 h-6" />
+      title: "Real-time Analytics",
+      description: "Track conversation metrics, user satisfaction, and performance insights with detailed analytics",
+      icon: <BarChart3 className="w-6 h-6" />
     },
     {
-      title: "Multi-Format Export",
-      description: "Export videos in various formats optimized for different platforms and devices",
-      icon: <Download className="w-6 h-6" />
+      title: "Custom Integrations",
+      description: "Connect with CRM, helpdesk, payment systems, and other business tools seamlessly",
+      icon: <Settings className="w-6 h-6" />
     },
     {
-      title: "Real-time Collaboration",
-      description: "Work with your team in real-time with live editing and commenting features",
+      title: "Live Agent Handoff",
+      description: "Smoothly transfer complex conversations to human agents when needed",
       icon: <Users className="w-6 h-6" />
     }
   ];
@@ -42,89 +42,112 @@ export default function AIVideoGenerator() {
       name: "Starter",
       price: "$29",
       period: "/month",
-      description: "Perfect for small businesses and content creators",
+      description: "Perfect for small businesses and startups",
       features: [
-        "10 video generations/month",
-        "HD quality export",
-        "5 voice options",
-        "Basic templates",
-        "Email support"
+        "1 chatbot",
+        "1,000 conversations/month",
+        "Basic AI training",
+        "Email support",
+        "Standard templates"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$99",
       period: "/month",
-      description: "Ideal for marketing teams and agencies",
+      description: "Ideal for growing businesses and agencies",
       features: [
-        "50 video generations/month",
-        "4K quality export",
-        "15 voice options",
-        "Premium templates",
-        "Brand customization",
-        "Priority support"
+        "5 chatbots",
+        "10,000 conversations/month",
+        "Advanced AI training",
+        "Priority support",
+        "Custom integrations",
+        "Analytics dashboard"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$299",
       period: "/month",
       description: "For large organizations with high-volume needs",
       features: [
-        "Unlimited video generations",
-        "4K & 8K quality export",
-        "Unlimited voice options",
-        "Custom templates",
-        "API access",
+        "Unlimited chatbots",
+        "Unlimited conversations",
+        "Custom AI training",
         "Dedicated support",
-        "White-label options"
+        "White-label solution",
+        "API access",
+        "Custom development"
       ],
       popular: false
     }
   ];
 
+  const useCases = [
+    {
+      title: "Customer Support",
+      description: "24/7 automated customer support with instant responses and issue resolution",
+      icon: <MessageCircle className="w-8 h-8" />
+    },
+    {
+      title: "Lead Generation",
+      description: "Qualify leads and capture contact information through engaging conversations",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "E-commerce Assistant",
+      description: "Help customers find products, answer questions, and process orders",
+      icon: <Bot className="w-8 h-8" />
+    },
+    {
+      title: "Booking & Scheduling",
+      description: "Automate appointment booking and scheduling for service businesses",
+      icon: <Clock className="w-8 h-8" />
+    }
+  ];
+
   const testimonials = [
     {
-      name: "Sarah Chen",
-      company: "Digital Marketing Pro",
-      role: "Content Director",
-      content: "Zion AI Video Generator has revolutionized our content creation process. We can now produce professional videos 10x faster than before.",
+      name: "Jennifer Martinez",
+      company: "TechStart Solutions",
+      role: "Customer Success Manager",
+      content: "Zion AI Chatbot Builder has revolutionized our customer support. We've reduced response time by 80% and increased customer satisfaction significantly.",
       rating: 5,
-      avatar: "SC"
+      avatar: "JM"
     },
     {
-      name: "Michael Rodriguez",
-      company: "E-commerce Solutions",
+      name: "Robert Kim",
+      company: "E-commerce Plus",
       role: "CEO",
-      content: "The AI-powered script generation is incredible. Our product videos now have 40% higher engagement rates.",
+      content: "The no-code interface is amazing. We built a sophisticated chatbot in just a few hours that handles 90% of our customer inquiries.",
       rating: 5,
-      avatar: "MR"
+      avatar: "RK"
     },
     {
-      name: "Emily Johnson",
-      company: "Creative Agency",
-      role: "Creative Director",
-      content: "The brand customization features are perfect for our clients. We can maintain consistent branding across all video content.",
+      name: "Lisa Thompson",
+      company: "Service Pro",
+      role: "Operations Director",
+      content: "The analytics dashboard gives us incredible insights into customer behavior. Our conversion rates have improved by 35% since implementing the chatbot.",
       rating: 5,
-      avatar: "EJ"
+      avatar: "LT"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Video Generator - Create Professional Videos with AI | Zion Tech Group</title>
+        <title>Zion AI Chatbot Builder - No-Code AI Chatbot Creation Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your ideas into professional videos with our AI Video Generator. Automated script creation, voice synthesis, and smart editing. Start creating engaging content today."
+          content="Create intelligent chatbots without coding using Zion AI Chatbot Builder. Deploy across multiple channels, integrate with business tools, and provide 24/7 customer support."
         />
         <meta
           name="keywords"
-          content="AI video generator, video creation, automated video editing, AI script generation, voice synthesis, video marketing, content creation, AI video tools"
+          content="AI chatbot builder, no-code chatbot, customer support automation, lead generation chatbot, e-commerce chatbot, chatbot platform, conversational AI"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-video-generator" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-chatbot-builder" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -134,19 +157,19 @@ export default function AIVideoGenerator() {
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Creation</span>
+              <span className="text-cyan-400 text-sm font-medium">No-Code AI Chatbot Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Video
+              Zion AI Chatbot
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                {" "}Generator
+                {" "}Builder
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your ideas into professional videos with our advanced AI technology. 
-              Generate scripts, create voiceovers, and produce engaging content in minutes, not hours.
+              Create intelligent, conversational chatbots without coding. Deploy across multiple channels, 
+              integrate with your business tools, and provide 24/7 customer support with ease.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -154,35 +177,35 @@ export default function AIVideoGenerator() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Creating Videos
+                Start Building
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo
+                <Bot className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Try Demo
               </Link>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">10x</div>
-                <div className="text-gray-300">Faster Creation</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">10K+</div>
+                <div className="text-gray-300">Chatbots Created</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-gray-300">Voice Options</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+                <div className="text-gray-300">Customer Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">4K</div>
-                <div className="text-gray-300">Quality Export</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">24/7</div>
+                <div className="text-gray-300">Always Available</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300">AI Processing</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">5min</div>
+                <div className="text-gray-300">Setup Time</div>
               </div>
             </div>
           </div>
@@ -193,11 +216,11 @@ export default function AIVideoGenerator() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful AI Features
+                Powerful Chatbot Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI Video Generator combines cutting-edge technology with intuitive design 
-                to make professional video creation accessible to everyone.
+                Everything you need to create, deploy, and manage intelligent chatbots 
+                that provide exceptional customer experiences.
               </p>
             </div>
             
@@ -222,15 +245,48 @@ export default function AIVideoGenerator() {
           </div>
         </section>
 
-        {/* Pricing Section */}
+        {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Perfect for Every Business
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                From customer support to lead generation, our chatbot builder adapts to your business needs
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
+                >
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    {useCase.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {useCase.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {useCase.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options to fit your video creation needs. 
+                Flexible pricing options to match your chatbot needs. 
                 Start with our free trial and scale as you grow.
               </p>
             </div>
@@ -288,14 +344,14 @@ export default function AIVideoGenerator() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Content Creators
+                Trusted by Businesses Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our users say about the AI Video Generator
+                See what our customers say about Zion AI Chatbot Builder
               </p>
             </div>
             
@@ -330,10 +386,10 @@ export default function AIVideoGenerator() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Create Amazing Videos?
+              Ready to Build Your AI Chatbot?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of creators using AI to produce professional videos. 
+              Join thousands of businesses using our platform to create intelligent chatbots. 
               Start your free trial today and see the difference AI can make.
             </p>
             
@@ -349,8 +405,8 @@ export default function AIVideoGenerator() {
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Demo
+                <Bot className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Try Demo
               </Link>
             </div>
           </div>

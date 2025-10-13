@@ -47,18 +47,18 @@ const HomePage = () => {
       link: "/zion-analytics-pro"
     },
     {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection",
-      price: "From $49/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield"
+      name: "Zion AI Chatbot Builder",
+      description: "No-code AI chatbot creation platform",
+      price: "From $29/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-chatbot-builder"
     },
     {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $9/month",
+      name: "Zion Smart Inventory",
+      description: "AI-powered inventory management system",
+      price: "From $49/month",
       icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
+      link: "/zion-smart-inventory"
     }
   ];
 
@@ -126,7 +126,8 @@ const HomePage = () => {
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
-            Transform your operations with cutting-edge technology and innovative solutions.
+            From AI video generation to blockchain analytics, climate solutions to smart inventory management - 
+            we deliver cutting-edge technology that drives real business results.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -200,6 +201,81 @@ const HomePage = () => {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Innovations Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Latest AI Innovations
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our newest AI-powered solutions that are transforming industries and driving innovation.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Link
+              to="/ai-video-generator"
+              className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10"
+            >
+              <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-pink-400 transition-colors">
+                AI Video Generator
+              </h3>
+              <p className="text-gray-300 text-center mb-4 leading-relaxed">
+                Create professional videos with AI-powered script generation, voice synthesis, and automated editing.
+              </p>
+              <div className="text-center">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-pink-500/20 to-rose-500/20 text-pink-400">
+                  From $29/month
+                </span>
+              </div>
+            </Link>
+            
+            <Link
+              to="/ai-blockchain-analytics"
+              className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/10"
+            >
+              <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-indigo-400 transition-colors">
+                AI Blockchain Analytics
+              </h3>
+              <p className="text-gray-300 text-center mb-4 leading-relaxed">
+                Comprehensive blockchain intelligence for DeFi, NFTs, and crypto trading with real-time monitoring.
+              </p>
+              <div className="text-center">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-400">
+                  From $99/month
+                </span>
+              </div>
+            </Link>
+            
+            <Link
+              to="/ai-climate-solutions-pro"
+              className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10"
+            >
+              <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-green-400 transition-colors">
+                AI Climate Solutions Pro
+              </h3>
+              <p className="text-gray-300 text-center mb-4 leading-relaxed">
+                Comprehensive climate and sustainability platform with carbon footprint analysis and ESG reporting.
+              </p>
+              <div className="text-center">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-400">
+                  From $199/month
+                </span>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

@@ -111,6 +111,33 @@ export default function Services() {
       color: "from-amber-500 to-yellow-500",
       price: "Starting at $349/month",
       features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
+    },
+    {
+      title: "AI Video Generator",
+      description: "Create professional videos with AI-powered script generation, voice synthesis, and automated editing. Perfect for marketing and content creation.",
+      icon: <Mail className="w-8 h-8" />,
+      path: "/ai-video-generator",
+      color: "from-pink-500 to-rose-500",
+      price: "Starting at $29/month",
+      features: ["Script Generation", "Voice Synthesis", "Auto Editing", "Multi-format Export"]
+    },
+    {
+      title: "AI Blockchain Analytics",
+      description: "Comprehensive blockchain intelligence platform for DeFi, NFTs, and crypto trading. Real-time monitoring and risk assessment.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/ai-blockchain-analytics",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $99/month",
+      features: ["DeFi Analytics", "Smart Contract Analysis", "Risk Assessment", "Multi-chain Support"]
+    },
+    {
+      title: "AI Climate Solutions Pro",
+      description: "Comprehensive climate and sustainability platform with carbon footprint analysis, ESG reporting, and climate risk assessment.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/ai-climate-solutions-pro",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $199/month",
+      features: ["Carbon Analysis", "ESG Reporting", "Climate Risk", "Sustainability Planning"]
     }
   ];
 

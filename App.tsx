@@ -201,6 +201,15 @@ const FiveGSmartCitySolutionsPage = React.lazy(
 );
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 
+// New AI Services Pages
+const AIVideoGeneratorPage = React.lazy(() => import("./app/ai-video-generator/page"));
+const AIBlockchainAnalyticsPage = React.lazy(() => import("./app/ai-blockchain-analytics/page"));
+const AIClimateSolutionsProPage = React.lazy(() => import("./app/ai-climate-solutions-pro/page"));
+
+// New Micro SAAS Pages
+const ZionAIChatbotBuilderPage = React.lazy(() => import("./app/zion-ai-chatbot-builder/page"));
+const ZionSmartInventoryPage = React.lazy(() => import("./app/zion-smart-inventory/page"));
+
 // Main App Component
 function App() {
   // Initialize performance optimizations
@@ -453,6 +462,30 @@ function App() {
                   <Route
                     path="/5g-solutions"
                     element={<FiveGSolutionsPage />}
+                  />
+
+                  {/* New AI Services Routes */}
+                  <Route
+                    path="/ai-video-generator"
+                    element={<AIVideoGeneratorPage />}
+                  />
+                  <Route
+                    path="/ai-blockchain-analytics"
+                    element={<AIBlockchainAnalyticsPage />}
+                  />
+                  <Route
+                    path="/ai-climate-solutions-pro"
+                    element={<AIClimateSolutionsProPage />}
+                  />
+
+                  {/* New Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-chatbot-builder"
+                    element={<ZionAIChatbotBuilderPage />}
+                  />
+                  <Route
+                    path="/zion-smart-inventory"
+                    element={<ZionSmartInventoryPage />}
                   />
                       </Routes>
                     </Suspense>
