@@ -1,4 +1,3 @@
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

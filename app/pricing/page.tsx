@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
 export default function Pricing() {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, ArrowRight } from 'lucide-react';
@@ -218,7 +216,6 @@ export default function Page() {
   ];
 
 export default function Page() {
->>>>>>> cursor/fix-errors-and-merge-to-main-c22f
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-20">
@@ -231,8 +228,5 @@ export default function Page() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-c22f

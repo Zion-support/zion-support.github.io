@@ -5,7 +5,6 @@ interface ImageOptimizerProps {
   alt: string;
   width?: number;
   height?: number;
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
   className?: string;
   priority?: boolean;
   onLoad?: () => void;

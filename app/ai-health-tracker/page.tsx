@@ -1,12 +1,18 @@
-import React from "react";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function Page() {
+export default function AiHealthTrackerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Ai Health Tracker - Zion Tech Group</title>
+        <meta name="description" content="Advanced ai health tracker solutions by Zion Tech Group" />
+      </Helmet>
+      
       <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Page
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Ai Health Tracker
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.

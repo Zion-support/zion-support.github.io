@@ -106,7 +106,6 @@ import { Home } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Hand } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 
 interface Props {
   children: ReactNode;
@@ -120,4 +119,3 @@ export default function Improvederrorboundary({ className = '', children, ...pro
       {children}
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1

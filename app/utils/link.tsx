@@ -1,13 +1,35 @@
->>>>>>> cursor/fix-errors-and-merge-to-main-eba1
+import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
+
+interface LinkProps {
+  to: string;
+  children: React.ReactNode;
+  className?: string;
+  external?: boolean;
+}
+
+export default function Link({ 
+  to, 
+  children, 
+  className = '', 
+  external = false 
+}: LinkProps) {
+  if (external) {
+    return (
+      <a
+        href={to}
+        className={className}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <div className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            link
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This component is under development. Please check back later.
-          </p>
-        </div>
-      </div>
+    <RouterLink to={to} className={className}>
+      {children}
+    </RouterLink>
+  );
+}
