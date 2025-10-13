@@ -1,4 +1,5 @@
 import React, { useEffect, ReactNode } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB, type WebVitalsData } from 'web-vitals';
 
 interface WebVitalsTrackerProps {
   children: ReactNode;
@@ -6,7 +7,6 @@ interface WebVitalsTrackerProps {
 
 const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
   useEffect(() => {
-<<<<<<< HEAD
     const sendToAnalytics = (metric: WebVitalsData) => {
       // Send to Google Analytics or other analytics service
       if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -41,7 +41,6 @@ const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
-<<<<<<< HEAD
 
     // Track additional performance metrics
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -73,34 +72,6 @@ const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ children }) => {
         });
       }
     }
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
-    // Track Core Web Vitals
-    const trackWebVitals = () => {
-      if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS((metric) => {
-            console.log('CLS:', metric);
-          });
-          getFID((metric) => {
-            console.log('FID:', metric);
-          });
-          getFCP((metric) => {
-            console.log('FCP:', metric);
-          });
-          getLCP((metric) => {
-            console.log('LCP:', metric);
-          });
-          getTTFB((metric) => {
-            console.log('TTFB:', metric);
-          });
-        });
-      }
-    };
-
-    trackWebVitals();
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
   }, []);
 
   return <>{children}</>;

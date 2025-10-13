@@ -1,36 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-import { X } from 'lucide-react';
-=======
-import React, { useState, useCallback, useMemo } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { 
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Home,
-  Users,
-  Settings,
-  BarChart3,
-  Shield,
-  Cloud,
-  Code,
-  Brain,
-  Zap,
-  Database,
-  Star,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { X, Brain, Shield, Zap, Globe, Home, Mail, Phone } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
+import { Link, useLocation } from 'react-router-dom';
+import { X, Globe, Users, Code, Mail, Brain, Shield, Zap, Package, Heart } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -38,123 +8,83 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-<<<<<<< HEAD
-  if (!isOpen) return null;
+  const location = useLocation();
 
-  return (
-<<<<<<< HEAD
-    <div className="fixed inset-0 z-50 md:hidden">
-      <div className="fixed inset-0 bg-black/50" onClick={onClose} />
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-md border-l border-cyan-500/20">
-        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
-          <h2 className="text-lg font-semibold text-white">Menu</h2>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        <div className="p-4">
-          <p className="text-gray-300">Sidebar content goes here</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Sidebar;
-=======
-=======
-  const mainNavItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Brain },
-    { name: 'Contact', href: '/contact', icon: Mail },
+  const navigationItems = [
+    { name: 'Home', path: '/', icon: <Globe className="w-5 h-5" /> },
+    { name: 'About', path: '/about', icon: <Users className="w-5 h-5" /> },
+    { name: 'Services', path: '/services', icon: <Code className="w-5 h-5" /> },
+    { name: 'AI Services', path: '/ai-services', icon: <Brain className="w-5 h-5" /> },
+    { name: 'Micro SAAS', path: '/micro-saas', icon: <Package className="w-5 h-5" /> },
+    { name: '5G Solutions', path: '/5g-solutions', icon: <Zap className="w-5 h-5" /> },
+    { name: 'Blog', path: '/blog', icon: <Heart className="w-5 h-5" /> },
+    { name: 'Contact', path: '/contact', icon: <Mail className="w-5 h-5" /> },
   ];
 
-  const serviceItems = [
-    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/services', icon: Shield },
-    { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
-    { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
-  ];
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
 
   if (!isOpen) return null;
 
   return (
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
     <>
       {/* Overlay */}
       <div
-        className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+        className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
         onClick={onClose}
       />
       
       {/* Sidebar */}
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-sm border-l border-cyan-500/20 z-50 transform transition-transform duration-300 ease-in-out">
-        <div className="p-6">
-          {/* Header */}
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+      <div className="fixed inset-y-0 left-0 z-50 w-64 bg-gray-900 shadow-xl transform transition-transform duration-300 ease-in-out lg:hidden">
+        <div className="flex items-center justify-between h-16 px-4 border-b border-gray-700">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
             </div>
-            <button
-              onClick={onClose}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-6 h-6" />
-            </button>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </div>
-
-          {/* Main Navigation */}
-          <div className="space-y-2 mb-8">
-            {mainNavItems.map((item) => (
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-white transition-colors duration-200"
+          >
+            <X className="w-6 h-6" />
+          </button>
+        </div>
+        
+        <nav className="mt-4 px-4">
+          <div className="space-y-2">
+            {navigationItems.map((item) => (
               <Link
                 key={item.name}
-                to={item.href}
+                to={item.path}
+                className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200 ${
+                  isActive(item.path)
+                    ? 'text-white bg-blue-600/20 border border-blue-500/30'
+                    : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                }`}
                 onClick={onClose}
-                className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors group"
               >
-                <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                {item.icon}
                 <span>{item.name}</span>
               </Link>
             ))}
           </div>
-
-          {/* Services */}
-          <div className="mb-8">
-            <h3 className="text-cyan-400 font-semibold mb-4 px-4">Services</h3>
-            <div className="space-y-2">
-              {serviceItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  onClick={onClose}
-                  className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors group"
-                >
-                  <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  <span>{item.name}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="border-t border-gray-700 pt-6">
-            <h3 className="text-cyan-400 font-semibold mb-4 px-4">Contact Us</h3>
-            <div className="space-y-3 px-4">
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-sm">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-sm">+1 302 464 0950</span>
-              </div>
-            </div>
+        </nav>
+        
+        <div className="absolute bottom-4 left-4 right-4">
+          <div className="bg-gray-800 rounded-lg p-4">
+            <h3 className="text-white font-semibold mb-2">Need Help?</h3>
+            <p className="text-gray-300 text-sm mb-3">
+              Our team is here to help you succeed.
+            </p>
+            <Link
+              to="/contact"
+              className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold py-2 px-4 rounded-lg transition-colors duration-200"
+              onClick={onClose}
+            >
+              Get in Touch
+            </Link>
           </div>
         </div>
       </div>
@@ -162,9 +92,4 @@ export default Sidebar;
   );
 };
 
-<<<<<<< HEAD
-export default Sidebar
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
 export default Sidebar;
->>>>>>> cursor/analyze-improve-and-deploy-application-30da

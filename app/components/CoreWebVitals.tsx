@@ -1,73 +1,44 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import React, { useEffect, ReactNode } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB, type WebVitalsData } from 'web-vitals';
 
-const CoreWebVitals: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const reportWebVitals = useCallback((data: WebVitalsData) => {
-    // Send to Google Analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'web_vitals', {
-        metric_name: data.name,
-        metric_value: Math.round(data.value),
-        metric_delta: Math.round(data.delta),
-        metric_id: data.id,
-        metric_navigation_type: data.navigationType,
-      });
-    }
+interface CoreWebVitalsProps {
+  children: ReactNode;
+}
 
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vital:', data);
-    }
-  }, []);
-
+const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
   useEffect(() => {
-    // Track Cumulative Layout Shift (CLS)
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
-              const clsValue = (entry as any).value;
-              reportWebVitals({
-                name: 'CLS',
-                value: clsValue,
-                delta: clsValue,
-                id: 'cls-' + Date.now(),
-                navigationType: 'navigate',
-              });
-            }
-          }
-        });
+    // Skip if not in browser environment
+    if (typeof window === 'undefined') return;
 
-        observer.observe({ entryTypes: ['layout-shift'] });
-
-        return () => {
-          observer.disconnect();
-        };
-      } catch (error) {
-        console.warn('PerformanceObserver not supported:', error);
-      }
-    }
-  }, [reportWebVitals]);
-=======
-  useEffect(() => {
-    const sendToAnalytics = (data: any) => {
-      // Send to Google Analytics or other analytics service
+    const sendToAnalytics = (metric: WebVitalsData) => {
+      // Send to Google Analytics
       if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', data.name, {
+        (window as any).gtag('event', metric.name, {
           event_category: 'Web Vitals',
-          event_label: data.id,
-          value: Math.round(data.name === 'CLS' ? data.value * 1000 : data.value),
+          event_label: metric.id,
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
           non_interaction: true,
         });
       }
 
+      // Send to custom analytics endpoint
+      if (process.env.NODE_ENV === 'production') {
+        fetch('/api/analytics/web-vitals', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            ...metric,
+            url: window.location.href,
+            timestamp: new Date().toISOString(),
+          }),
+        }).catch(console.error);
+      }
+
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', data.name, data.value);
+        console.log('Core Web Vital:', metric);
       }
     };
 
@@ -77,52 +48,65 @@ const CoreWebVitals: React.FC = () => {
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
-  }, []);
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 
-  return null;
-};
+    // Track additional performance metrics
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      // Track page load time
+      window.addEventListener('load', () => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+          sendToAnalytics({
+            name: 'LOAD_TIME',
+            value: loadTime,
+            delta: loadTime,
+            id: 'load-time',
+            navigationType: navigation.type,
+          });
+        }
+      });
 
-export default CoreWebVitals;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-=======
-import React, { useEffect, ReactNode } from 'react';
-
-interface CoreWebVitalsProps {
-  children: ReactNode;
-}
-
-const CoreWebVitals: React.FC<CoreWebVitalsProps> = ({ children }) => {
-  useEffect(() => {
-    // Track Core Web Vitals
-    const trackCoreWebVitals = () => {
-      if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS((metric) => {
-            console.log('Core Web Vitals - CLS:', metric);
-          });
-          getFID((metric) => {
-            console.log('Core Web Vitals - FID:', metric);
-          });
-          getFCP((metric) => {
-            console.log('Core Web Vitals - FCP:', metric);
-          });
-          getLCP((metric) => {
-            console.log('Core Web Vitals - LCP:', metric);
-          });
-          getTTFB((metric) => {
-            console.log('Core Web Vitals - TTFB:', metric);
-          });
+      // Track memory usage (if available)
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+        sendToAnalytics({
+          name: 'MEMORY_USAGE',
+          value: memoryUsage,
+          delta: memoryUsage,
+          id: 'memory-usage',
+          navigationType: 'reload',
         });
       }
-    };
 
-    trackCoreWebVitals();
+      // Track resource loading performance
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'resource') {
+            const resourceEntry = entry as PerformanceResourceTiming;
+            if (resourceEntry.duration > 1000) { // Only track slow resources
+              sendToAnalytics({
+                name: 'SLOW_RESOURCE',
+                value: resourceEntry.duration,
+                delta: resourceEntry.duration,
+                id: `resource-${resourceEntry.name}`,
+                navigationType: 'reload',
+              });
+            }
+          }
+        }
+      });
+
+      observer.observe({ entryTypes: ['resource'] });
+
+      // Cleanup observer
+      return () => {
+        observer.disconnect();
+      };
+    }
   }, []);
 
   return <>{children}</>;
 };
 
 export default CoreWebVitals;
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
