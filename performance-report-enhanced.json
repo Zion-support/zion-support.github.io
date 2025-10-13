@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-10-13T09:54:17.811Z",
+  "buildStats": {
+    "totalFiles": 15,
+    "totalSize": 764608,
+    "jsFiles": 14,
+    "jsSize": 762797,
+    "cssFiles": 1,
+    "cssSize": 1811,
+    "imageFiles": 0,
+    "imageSize": 0
+  },
+  "performanceScore": 60,
+  "recommendations": [
+    {
+      "type": "warning",
+      "message": "JavaScript bundle size is large. Consider implementing more granular code splitting."
+    },
+    {
+      "type": "info",
+      "message": "No images found. Consider adding optimized images for better visual appeal."
+    },
+    {
+      "type": "warning",
+      "message": "Large chunks detected: react-vendor-DzMnZtsS.js. Consider further code splitting."
+    },
+    {
+      "type": "success",
+      "message": "Performance Score: 60/100 - Good"
+    }
+  ],
+  "largeChunks": [
+    {
+      "name": "react-vendor-DzMnZtsS.js",
+      "size": 218307
+    }
+  ]
+}
