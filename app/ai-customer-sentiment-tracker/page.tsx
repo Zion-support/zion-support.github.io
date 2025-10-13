@@ -6,6 +6,7 @@
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -124,6 +125,13 @@ export default function aiCustomerSentimentTracker() {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+import { Helmet } from "react-helmet-async";
+
+
+
+export default function AiCustomerSentimentTrackerPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
   return (
 =======
 export default function AiCustomerSentimentTrackerPage() {

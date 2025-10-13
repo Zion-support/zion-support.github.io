@@ -2,6 +2,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+'use client'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
 import React from 'react';
 
 <<<<<<< HEAD

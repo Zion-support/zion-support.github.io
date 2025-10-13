@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet-async';
 import React from "react";
 import { Helmet } from "react-helmet-async";
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
 =======
 
@@ -26,6 +27,11 @@ import { Helmet } from "react-helmet-async";
 // Removed unused imports
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
+=======
+
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
 
 export default function AboutPage() {
 

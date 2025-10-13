@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 =======
@@ -165,6 +166,14 @@ export default function aiCustomerSupportChatbot() {
   ];
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+import { Helmet } from "react-helmet-async";
+
+
+
+
+export default function AiCustomerSupportChatbotPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
   return (
 =======
 export default function AiCustomerSupportChatbotPage() {

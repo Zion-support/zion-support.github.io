@@ -6,6 +6,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function aiAnalytics() {
@@ -89,6 +90,10 @@ import {
 } from "lucide-react";
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
+=======
+
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
 
 export default function page() {
 

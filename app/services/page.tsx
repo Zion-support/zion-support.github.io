@@ -6,6 +6,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 import { Brain, Shield, Globe, Code, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones, Phone } from 'lucide-react';
@@ -365,6 +366,14 @@ export default function Services() {
         category: "Asset Management"
     }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+import { Helmet } from "react-helmet-async";
+
+
+
+
+export default function Services() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
   return (
 =======
 import { Helmet } from "react-helmet-async";

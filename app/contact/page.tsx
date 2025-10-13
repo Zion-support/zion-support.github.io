@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -130,6 +131,12 @@ export default function Contact() {
     "CRM Assistant",
     "Financial Analytics"
   ];
+=======
+import React from "react";
+import { Helmet } from "react-helmet-async";
+
+export default function Contact() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
 
   return (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665

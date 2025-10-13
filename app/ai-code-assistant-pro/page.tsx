@@ -3,11 +3,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function aiCodeAssistantPro() {
+=======
+
+
+import React from 'react';
+import { Helmet } from "react-helmet-async";
+
+export default function AiCodeAssistantProPage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

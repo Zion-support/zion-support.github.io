@@ -2,13 +2,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
 // Performance optimization hook
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
 export default function usePerformanceOptimization() {
   // Hook implementation would go here
+<<<<<<< HEAD
 <<<<<<< HEAD
   return {};
 <<<<<<< HEAD
@@ -252,6 +256,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
 export default function usePerformanceOptimization() {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
   return {};
 }
 

@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -304,6 +305,14 @@ export default function Page() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+=======
+import React from 'react';
+import { Helmet } from "react-helmet-async";
+
+
+
+export default function Pricing() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
   return (
 =======
 import React from 'react';

@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 export default function UtilsPage() {
@@ -44,6 +45,10 @@ import { ArrowRight } from 'lucide-react';
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
+=======
+// Image utility component
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
 
 interface imageProps {
   className?: string;
