@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { ArrowRight, Brain, Shield, Globe, Database, Code, Smartphone } from "lucide-react";
-=======
 import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail } from "lucide-react";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6c84
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -124,19 +120,11 @@ export default function Services() {
         <title>Services - Zion Tech Group | AI & IT Solutions</title>
         <meta
           name="description"
-<<<<<<< HEAD
-          content="Comprehensive technology services including AI, cloud infrastructure, cybersecurity, 5G solutions, data analytics, and custom development."
-        />
-        <meta
-          name="keywords"
-          content="technology services, AI services, cloud infrastructure, cybersecurity, 5G solutions, data analytics, web development, mobile development"
-=======
           content="Comprehensive AI and IT services including business intelligence, customer support automation, content generation, cybersecurity, 5G solutions, and cloud infrastructure. Transform your business with cutting-edge technology."
         />
         <meta
           name="keywords"
           content="AI services, business intelligence, customer support automation, content generation, cybersecurity, 5G solutions, cloud infrastructure, data analytics, code assistant, marketing automation, document processing, CRM, financial analytics"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6c84
         />
       </Helmet>
 
@@ -148,16 +136,6 @@ export default function Services() {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                {" "}Services
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
-=======
             <div className="inline-block">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
                 Our
@@ -170,7 +148,6 @@ export default function Services() {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Comprehensive AI and IT solutions designed to accelerate your business growth and digital transformation. 
               From intelligent automation to cutting-edge infrastructure, we provide end-to-end technology services.
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6c84
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -207,23 +184,6 @@ export default function Services() {
               {services.map((service, index) => (
                 <div
                   key={index}
-<<<<<<< HEAD
-                  to={service.path}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-                >
-                  <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    {service.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 text-center">
-                    {service.description}
-                  </p>
-                </Link>
-=======
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   {/* Animated background effect */}
@@ -270,7 +230,6 @@ export default function Services() {
                     </div>
                   </div>
                 </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6c84
               ))}
             </div>
           </div>
@@ -279,28 +238,6 @@ export default function Services() {
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using our solutions to drive growth and innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
-              >
-                Start Your Journey
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                View Pricing
-              </Link>
-=======
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -350,7 +287,6 @@ export default function Services() {
                   Free Consultation
                 </Link>
               </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6c84
             </div>
           </div>
         </section>
