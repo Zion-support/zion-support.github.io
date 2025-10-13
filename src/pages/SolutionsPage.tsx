@@ -44,7 +44,7 @@ const SolutionsPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>AI & IT Solutions | Zion Tech Group
+        <title>AI & IT Solutions | Zion Tech Group</title>
         <meta
           name="description"
           content="Comprehensive AI and IT solutions including enterprise AI, quantum computing, digital transformation, and cybersecurity services."
@@ -60,13 +60,17 @@ const SolutionsPage: React.FC = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/services" />
+      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl font-bold mb-6">Our Solutions
+            <h1 className="text-5xl font-bold mb-6">Our Solutions</h1>
             <p className="text-xl max-w-3xl mx-auto">
               Comprehensive AI and IT solutions designed to transform your business and drive unprecedented growth.
+            </p>
+          </div>
+        </section>
         {/* Services Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -76,33 +80,47 @@ const SolutionsPage: React.FC = () => {
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div className="text-4xl mb-4">{service.icon}
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}
-                  <p className="text-gray-600 mb-6">{service.description}
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-700">
-                        <span className="w-2 h-2 bg-indigo-600 rounded-full mr-3">
+                        <span className="w-2 h-2 bg-indigo-600 rounded-full mr-3"></span>
                         {feature}
+                      </li>
                     ))}
+                  </ul>
+                </div>
               ))}
+            </div>
+          </div>
+        </section>
         {/* CTA Section */}
         <section className="py-16 bg-gray-900 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?
+            <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact our experts to discuss how our solutions can drive your business forward.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
               >
                 Call: (302) 464-0950
+              </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
               >
                 Email Us
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </React.Fragment>
   );
 };
 

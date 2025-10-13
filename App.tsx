@@ -4,15 +4,16 @@ import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from 'react-error-boundary';
 
 // Components
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import PerformanceOptimizer from './app/components/PerformanceOptimizer';
-import FuturisticBackground from './app/components/FuturisticBackground';
-import AnalyticsProvider from './app/components/AnalyticsProvider';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import LoadingSpinner from './app/components/LoadingSpinner';
+import Navigation from './src/components/Navigation';
+import Footer from './src/components/Footer';
+import LoadingStates from './app/components/LoadingStates';
+
+// Pages
+import HomePage from './src/pages/HomePage';
+import AboutPage from './src/pages/AboutPage';
+import ContactPage from './src/pages/ContactPage';
+import BlogPage from './src/pages/BlogPage';
+import SolutionsPage from './src/pages/SolutionsPage';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -45,25 +46,18 @@ function App() {
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <HelmetProvider>
-        <AnalyticsProvider>
-          <Router>
-            <div className="min-h-screen bg-gray-900">
-              <Navigation />
-              <main className="relative z-10" id="main-content" role="main">
-                <Suspense fallback={<LoadingStates />}>
+        <Router>
+          <div className="min-h-screen bg-gray-900">
+            <Navigation />
+            <main className="relative z-10" id="main-content" role="main">
+              <Suspense fallback={<LoadingStates />}>
                   <Routes>
                     {/* Main Pages */}
                     <Route path="/" element={<HomePage />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/services" element={<SolutionsPage />} />
                     <Route path="/blog" element={<BlogPage />} />
-                    <Route path="/tutorials" element={<TutorialsPage />} />
-                    <Route path="/demo" element={<DemoPage />} />
-                    <Route path="/support" element={<SupportPage />} />
-                    <Route path="/privacy" element={<PrivacyPage />} />
-                    <Route path="/terms" element={<TermsPage />} />
-                    <Route path="/pricing" element={<PricingPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={
@@ -78,12 +72,11 @@ function App() {
                       </div>
                     } />
                   </Routes>
-                </Suspense>
-              </main>
-              <Footer />
-            </div>
-          </Router>
-        </AnalyticsProvider>
+              </Suspense>
+            </main>
+            <Footer />
+          </div>
+        </Router>
       </HelmetProvider>
     </ErrorBoundary>
   );

@@ -63,7 +63,7 @@ const BlogPage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>AI & Technology Blog | Zion Tech Group
+        <title>AI & Technology Blog | Zion Tech Group</title>
         <meta
           name="description"
           content="Latest insights on AI, enterprise automation, and digital transformation from Zion Tech Group experts."
@@ -79,13 +79,17 @@ const BlogPage: React.FC = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/blog" />
+      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl font-bold mb-6">AI & Technology Blog
+            <h1 className="text-5xl font-bold mb-6">AI & Technology Blog</h1>
             <p className="text-xl max-w-3xl mx-auto">
               Latest insights on AI, enterprise automation, and digital transformation from our experts
+            </p>
+          </div>
+        </section>
         {/* Blog Posts Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -96,25 +100,36 @@ const BlogPage: React.FC = () => {
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="p-8">
-                    <div className="text-4xl mb-4">{post.image}
+                    <div className="text-4xl mb-4">{post.image}</div>
                     <div className="flex items-center text-sm text-gray-500 mb-3">
                       <span className="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-semibold mr-3">
                         {post.category}
-                      <span>{post.readTime}
+                      </span>
+                      <span>{post.readTime}</span>
+                    </div>
                     <h2 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
                       {post.title}
-                    <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}
+                    </h2>
+                    <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">{post.date}
+                      <span className="text-sm text-gray-500">{post.date}</span>
                       <button className="text-indigo-600 hover:text-indigo-800 font-semibold text-sm">
                         Read More →
+                      </button>
+                    </div>
+                  </div>
+                </article>
               ))}
+            </div>
+          </div>
+        </section>
         {/* Newsletter Signup */}
         <section className="py-16 bg-gray-900 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Stay Updated
+            <h2 className="text-3xl font-bold mb-6">Stay Updated</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Subscribe to our newsletter for the latest insights on AI, technology, and digital transformation.
+            </p>
             <div className="max-w-md mx-auto flex gap-4">
               <input
                 type="email"
@@ -123,6 +138,12 @@ const BlogPage: React.FC = () => {
               />
               <button className="bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
                 Subscribe
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </React.Fragment>
   );
 };
 

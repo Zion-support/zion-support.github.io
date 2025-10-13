@@ -1,92 +1,135 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('resize', handleResize);
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsOpen(false);
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    
     return () => {
-      window.removeEventListener('resize', handleResize);
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  const closeAllMenus = () => {
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
-    setIsOpen(false);
-  };
+  const closeMenu = () => setIsOpen(false);
 
-  ];
+  return (
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-gray-900/95 backdrop-blur-sm' : 'bg-transparent'
+    }`}>
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <Link to="/" className="flex items-center space-x-2" onClick={closeMenu}>
+            <div className="text-2xl font-bold text-white">
+              Zion Tech Group
+            </div>
+          </Link>
 
-              <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group
-              <p className="text-xs text-cyan-400">AI & IT Solutions
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About
-                            <Link
-                              to={`/${category.title.toLowerCase().replace(' ', '-')}`}
-                    <Link
-                      to="/services"
-              )}
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
             <Link 
-              to="/case-studies"
-            <Link
-              to="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
+              to="/about" 
+              className="text-white hover:text-cyan-400 transition-colors font-medium"
+            >
+              About
+            </Link>
+            <Link 
+              to="/services" 
+              className="text-white hover:text-cyan-400 transition-colors font-medium"
+            >
+              Services
+            </Link>
+            <Link 
+              to="/blog" 
+              className="text-white hover:text-cyan-400 transition-colors font-medium"
             >
               Blog
-            <Link
-              to="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
+            </Link>
+            <Link 
+              to="/contact" 
+              className="text-white hover:text-cyan-400 transition-colors font-medium"
             >
               Contact
-            {/* CTA Button */}
+            </Link>
             <a
               href="tel:+13024640950"
-              className="cyber-button inline-flex items-center"
-              onClick={closeAllMenus}
+              className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors inline-flex items-center"
             >
               <Phone className="w-4 h-4 mr-2" />
               (302) 464-0950
-              <Link
-                to="/"
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden text-white hover:text-cyan-400 transition-colors"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden bg-gray-900/95 backdrop-blur-sm border-t border-gray-800">
+            <div className="px-4 py-4 space-y-4">
               <Link
                 to="/about"
-                className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
+                className="block text-white hover:text-cyan-400 transition-colors font-medium"
+                onClick={closeMenu}
               >
                 About
-              {/* Mobile Services */}
-                <button
-                          <Link
-                            to="/services"
-                            className="block text-xs text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"
-                          >
-              <div className="mt-4 pt-4 border-t border-gray-700">
-                <a
-                  href="tel:+13024640950"
-                  className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
-                  onClick={closeAllMenus}
-                >
-                  <Phone className="w-4 h-4 inline mr-2" />
-                  (302) 464-0950
+              </Link>
+              <Link
+                to="/services"
+                className="block text-white hover:text-cyan-400 transition-colors font-medium"
+                onClick={closeMenu}
+              >
+                Services
+              </Link>
+              <Link
+                to="/blog"
+                className="block text-white hover:text-cyan-400 transition-colors font-medium"
+                onClick={closeMenu}
+              >
+                Blog
+              </Link>
+              <Link
+                to="/contact"
+                className="block text-white hover:text-cyan-400 transition-colors font-medium"
+                onClick={closeMenu}
+              >
+                Contact
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="block w-full text-center bg-indigo-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
+                onClick={closeMenu}
+              >
+                <Phone className="w-4 h-4 inline mr-2" />
+                (302) 464-0950
+              </a>
+            </div>
+          </div>
         )}
+      </div>
+    </nav>
   );
 };
 
