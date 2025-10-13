@@ -1,8 +1,52 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.svg",
+    "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 1008",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-302-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"
+    },
+    "sameAs": [
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup"
+    ],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "AI Solutions",
+        "description": "Artificial intelligence and machine learning services"
+      },
+      {
+        "@type": "Offer", 
+        "name": "Cybersecurity",
+        "description": "Advanced cybersecurity solutions and protection"
+      },
+      {
+        "@type": "Offer",
+        "name": "Cloud Infrastructure", 
+        "description": "Cloud computing and infrastructure services"
+      }
+    ]
+  };
   const features = [
     {
       title: "AI-Powered Solutions",
@@ -94,11 +138,29 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEOOptimizer
-        title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
+    <>
+      <Helmet>
+        <title>Zion Tech Group - Leading AI & Technology Solutions Provider</title>
+        <meta name="description" content="Transform your business with Zion Tech Group's cutting-edge AI solutions, cybersecurity services, cloud infrastructure, and micro SAAS products. 99.9% uptime SLA." />
+        <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, micro SAAS, digital transformation, technology services, machine learning, automation" />
+        <meta property="og:title" content="Zion Tech Group - Leading AI & Technology Solutions Provider" />
+        <meta property="og:description" content="Transform your business with cutting-edge AI solutions, cybersecurity services, and cloud infrastructure. 99.9% uptime SLA." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Leading AI & Technology Solutions Provider" />
+        <meta name="twitter:description" content="Transform your business with cutting-edge AI solutions, cybersecurity services, and cloud infrastructure." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <SEOOptimizer
+          title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
+          description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
+          keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
         canonical="https://ziontechgroup.com"
       />
 
@@ -338,7 +400,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

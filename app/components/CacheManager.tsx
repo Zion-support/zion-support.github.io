@@ -19,15 +19,6 @@ const CacheManager = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Service Worker registration for caching
-    const registerServiceWorker = async () => {
-      if ('serviceWorker' in navigator) {
-        try {
-          const registration = await navigator.serviceWorker.register('/sw.js');
-          console.log('Service Worker registered:', registration);
-        } catch (error) {
-          console.error('Service Worker registration failed:', error);
         }
       }
     }
@@ -49,9 +40,6 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
-          console.log('Static assets cached');
-        } catch (error) {
-          console.error('Failed to cache static assets:', error);
         }
       }
 
@@ -66,8 +54,6 @@ const CacheManager = () => {
           }
           
           return response
-        } catch (error) {
-          console.error('Cache API error:', error);
           return fetch(request);
         }
       }
@@ -125,7 +111,6 @@ const CacheManager = () => {
               imageObserver.unobserve(img)
             }
           }
-=======
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return
 
@@ -158,7 +143,6 @@ const CacheManager = () => {
               size: totalSize
             }))
           })
->>>>>>> cursor/fix-errors-and-merge-to-main-102c
         })
       }
     }

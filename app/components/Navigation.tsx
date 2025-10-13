@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon, Globe } from 'lucide-react'
 
 interface NavigationProps {
   onSidebarToggle?: () => void
@@ -27,7 +26,6 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const toggleItServices = useCallback(() => {
     setIsItServicesOpen(!isItServicesOpen)
   }, [isItServicesOpen])
-
 
   const itServices = useMemo(() => [
     { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },

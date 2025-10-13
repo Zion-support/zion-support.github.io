@@ -7,7 +7,6 @@ function fixMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
-    if (!content.includes('.*?\n    content = content.replace(/=======.*?\n    
     // Clean up any remaining conflict markers
     content = content.replace(/.*?    
     // Write the cleaned content back
