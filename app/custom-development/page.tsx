@@ -1,17 +1,16 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
+import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import { Code, Globe, Smartphone, Zap, Database, ArrowRight, ArrowRight, Mail, Smartphone, Globe, ArrowRight } from 'lucide-react';
 
-
-export default function CustomDevelopment() {
+export default function page() {
+  return (
+    <div>
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
   const services = [
     {
       title: "Custom Software Development",
@@ -70,7 +69,7 @@ export default function CustomDevelopment() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Custom Development Services - Zion Tech Group | Software Development Solutions</title>
         <meta
@@ -90,6 +89,7 @@ export default function CustomDevelopment() {
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-block">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
@@ -124,6 +124,7 @@ export default function CustomDevelopment() {
 
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -168,7 +169,7 @@ export default function CustomDevelopment() {
                             key={idx}
                             className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30"
                           >
-                            {feature}
+                            {feature.title}
                           </span>
                         ))}
                       </div>
@@ -192,6 +193,7 @@ export default function CustomDevelopment() {
 
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -246,6 +248,6 @@ export default function CustomDevelopment() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

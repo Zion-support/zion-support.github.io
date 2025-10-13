@@ -1,6 +1,4 @@
-
 import { useState, useEffect } from 'react';
-
 
 export const useEnhancedPerformance = () => {
   const [data, setData] = useState<any>(null);

@@ -1,19 +1,11 @@
-import React from 'react';
-
-interface EnhancedloadingspinnerProps {
+import { Loader2 } from 'lucide-react';
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+  text?: string;
   className?: string;
-  children?: React.ReactNode;
+  fullScreen?: boolean;
 }
 
-<<<<<<< HEAD
-export default function Enhancedloadingspinner({ className = '', children, ...props }: EnhancedloadingspinnerProps) {
-  return (
-    <div className={`enhancedloadingspinner-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-}
-=======
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   text = 'Loading...',
@@ -21,10 +13,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   fullScreen = false
 }) => {
   const sizeClasses = {
-//     sm: 'w-4 h-4',
-//     md: 'w-6 h-6',
-//     lg: 'w-8 h-8',
-//     xl: 'w-12 h-12'
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+    xl: 'w-12 h-12'
   };
 
   const spinner = (
@@ -33,7 +25,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {text && (
         <p className="mt-2 text-sm text-gray-400 animate-pulse">{text}</p>
       )}
-</div>
+    </div>
   );
 
   if (fullScreen) {
@@ -41,8 +33,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
           {spinner}
-</div>
-</div>
+        </div>
+      </div>
     );
   }
 
@@ -50,4 +42,5 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 };
 
 export default LoadingSpinner;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+  );
+}

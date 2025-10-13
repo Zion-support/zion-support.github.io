@@ -1,20 +1,16 @@
-import React from 'react';
-
-interface SeoheadProps {
-  className?: string;
-  children?: React.ReactNode;
+import { Helmet } from 'react-helmet-async';
+interface SEOHeadProps {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
 }
 
-<<<<<<< HEAD
-export default function Seohead({ className = '', children, ...props }: SeoheadProps) {
-  return (
-    <div className={`seohead-component ${className}`} {...props}>
-      {children}
-    </div>
-=======
 const SEOHead: React.FC<SEOHeadProps> = ({
-//   title,
-//   description,
+  title,
+  description,
   keywords = '',
   canonical = '',
   ogImage = '/og-image.jpg',
@@ -24,7 +20,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullCanonical = canonical || `https://ziontechgroup.com${window.location.pathname}`;
 
   return (
-//     <Helmet>
+    <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
@@ -47,7 +43,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
-//     </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+    </Helmet>
+  );
+};
+
+export default SEOHead;
   );
 }

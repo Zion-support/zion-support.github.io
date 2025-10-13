@@ -1,18 +1,53 @@
-import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Pause } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Cloud } from 'lucide-react';
+import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar } from 'lucide-react';
 
-export default function DemoPage() {
+export default function Page() {
+  return (
+    <div>
+  const stats = [
+    { label: "Stat 1", value: "100%" }
+  ];
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2"
+  ];
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
   const [currentDemo, setCurrentDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
+
+  const stats = [
+    { number: "500+", label: "Demos Available" },
+    { number: "50K+", label: "Users Trained" },
+    { number: "95%", label: "Success Rate" },
+    { number: "24/7", label: "Support Available" }
+  ];
+
+  const benefits = [
+    {
+      icon: <Play className="w-8 h-8 text-cyan-400" />,
+      title: "Interactive Demos",
+      description: "Hands-on experience with our solutions"
+    },
+    {
+      icon: <Users className="w-8 h-8 text-green-400" />,
+      title: "Expert Guidance",
+      description: "Learn from our experienced team"
+    },
+    {
+      icon: <Award className="w-8 h-8 text-purple-400" />,
+      title: "Proven Results",
+      description: "See real-world success stories"
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
+      title: "Data-Driven",
+      description: "Make informed decisions with data"
+    }
+  ];
 
   const demos = [
     {
@@ -92,7 +127,7 @@ export default function DemoPage() {
   };
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Live Demos - Zion Tech Group | Interactive AI & IT Solutions</title>
         <meta
@@ -112,6 +147,7 @@ export default function DemoPage() {
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Play className="w-4 h-4 text-cyan-400 mr-2" />
@@ -133,6 +169,7 @@ export default function DemoPage() {
 
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
@@ -151,6 +188,7 @@ export default function DemoPage() {
 
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -179,6 +217,7 @@ export default function DemoPage() {
 
         {/* Main Demo Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -256,7 +295,7 @@ export default function DemoPage() {
                   {demos[currentDemo].features.map((feature, index) => (
                     <div key={index} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </div>
                   ))}
                 </div>
@@ -313,6 +352,7 @@ export default function DemoPage() {
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6">
@@ -344,6 +384,6 @@ export default function DemoPage() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

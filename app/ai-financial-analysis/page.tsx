@@ -1,53 +1,72 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { PieChart } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Activity } from 'lucide-react';
+import { TrendingUp, ArrowRight, Sparkles, CheckCircle, PieChart, Activity, Shield } from 'lucide-react';
 
 const AIFinancialAnalysisPage = () => {
+  const benefits = [
+    "Increase investment returns by 25%",
+    "Reduce financial risk by 60%",
+    "Automate 90% of analysis tasks",
+    "Real-time market monitoring",
+    "Advanced fraud detection",
+    "Comprehensive compliance reporting"
+  ];
+
   const features = [
     {
-      title: "Predictive Financial Modeling",
-      description: "AI-powered financial forecasting with 95% accuracy for better investment decisions",
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models predict market trends and investment opportunities with 95% accuracy."
+    },
+    {
       icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis using AI to identify potential threats and opportunities in real-time."
     },
     {
-      title: "Risk Assessment & Management",
-      description: "Advanced risk analysis and automated portfolio optimization using machine learning",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      icon: <DollarSign className="w-8 h-8" />,
+      title: "Portfolio Optimization",
+      description: "AI-driven portfolio management that automatically rebalances investments for maximum returns."
     },
     {
-      title: "Real-time Market Analysis",
-      description: "Continuous monitoring of market trends and instant financial insights",
-      icon: <Activity className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      icon: <Target className="w-8 h-8" />,
+      title: "Goal Tracking",
+      description: "Set financial goals and track progress with AI-powered insights and recommendations."
     },
     {
-      title: "Automated Reporting",
-      description: "Generate comprehensive financial reports and insights automatically",
-      icon: <PieChart className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      icon: <Zap className="w-8 h-8" />,
+      title: "Real-time Alerts",
+      description: "Instant notifications for market changes, opportunities, and potential risks."
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "Smart Insights",
+      description: "AI-generated insights and recommendations based on your financial data and market conditions."
     }
+  ];
+
+  const benefits = [
+    "95% accuracy in financial predictions",
+    "Real-time market analysis and alerts",
+    "Automated portfolio optimization",
+    "Comprehensive risk assessment",
+    "Personalized investment recommendations",
+    "Advanced fraud detection and prevention"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
-        <title>AI Financial Analysis - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered financial analysis platform with predictive modeling, risk assessment, and automated reporting for better financial decisions." />
-        <meta name="keywords" content="AI financial analysis, financial forecasting, risk management, investment analysis, financial modeling, fintech" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-financial-analysis" />
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI services with cutting-edge technology and expert solutions." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        </section>
+        </section>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -56,34 +75,34 @@ const AIFinancialAnalysisPage = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Intelligent Financial Analysis</span>
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Solutions</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Financial Analysis
+              AI Services
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your financial decision-making with AI-powered analysis, predictive modeling, 
-            and automated risk assessment. Make smarter investments with 95% accuracy.
+            Transform your business with our comprehensive AI services. From machine learning to automation, 
+            we provide cutting-edge solutions tailored to your needs.
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              Get Started
+              <Zap className="w-5 h-5 ml-2" />
             </Link>
-            <Link
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            <Link 
+              to="/demo" 
+              className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300"
             >
-              Watch Demo
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              View Demo
+              <Target className="w-5 h-5 ml-2" />
             </Link>
           </div>
         </div>
@@ -91,6 +110,8 @@ const AIFinancialAnalysisPage = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -109,7 +130,7 @@ const AIFinancialAnalysisPage = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
                 >
                   {feature.icon}
                 </div>
@@ -127,58 +148,76 @@ const AIFinancialAnalysisPage = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        </section>
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your Financial Strategy
+              Our AI Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of AI-driven financial analysis and make better investment decisions
+              Comprehensive AI solutions designed to accelerate your digital transformation
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300 font-medium">{benefit}</span>
+            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
+                <BarChart3 className="w-6 h-6 text-white" />
               </div>
-            ))}
+              <h3 className="text-xl font-semibold text-white mb-4">Data Analytics</h3>
+              <p className="text-gray-300">
+                Advanced analytics and insights to drive data-driven decision making
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
+                <Brain className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Machine Learning</h3>
+              <p className="text-gray-300">
+                Custom ML models and algorithms tailored to your specific use cases
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">AI Security</h3>
+              <p className="text-gray-300">
+                Robust security measures to protect your AI systems and data
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        </section>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Optimize Your Finances?
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of investors using our AI financial analysis platform to make smarter decisions. 
-            Start your financial transformation today.
+          <p className="text-xl text-gray-300 mb-8">
+            Let our AI experts help you implement the perfect solution for your needs
           </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-            >
-              Start Analysis Today
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-            >
-              Schedule Demo
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
-          </div>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+          >
+            Start Your AI Journey
+            <Zap className="w-5 h-5 ml-2" />
+          </Link>
         </div>
       </section>
     </div>
   );
 };
 
-export default AIFinancialAnalysisPage;
+export default Page;
+  );
+}

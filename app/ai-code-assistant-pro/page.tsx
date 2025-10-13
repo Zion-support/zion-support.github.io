@@ -10,60 +10,7 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AICodeAssistantProZionTechGroup = () => {
-
-  const testimonials = [
-    {
-      name: "Alex Thompson",
-      company: "TechStart Inc",
-      role: "Lead Developer",
-      content: "Zion's AI Code Assistant has revolutionized our development process. It's like having a senior developer available 24/7.",
-      rating: 5,
-      avatar: "AT"
-    },
-    {
-      name: "Maria Garcia",
-      company: "CloudScale Solutions",
-      role: "CTO",
-      content: "The code generation quality is exceptional. It understands context and produces production-ready code consistently.",
-      rating: 5,
-      avatar: "MG"
-    },
-    {
-      name: "David Kim",
-      company: "DataFlow Systems",
-      role: "Senior Engineer",
-      content: "The debugging capabilities are incredible. It finds issues I would have spent hours tracking down manually.",
-      rating: 5,
-      avatar: "DK"
-    }
-  ];
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Zion AI Code Assistant Pro",
-    "description": "AI-powered code generation, debugging, and optimization with support for 50+ programming languages",
-    "url": "https://ziontechgroup.com/ai-code-assistant-pro",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Web, Windows, macOS, Linux",
-    "offers": {
-      "@type": "Offer",
-      "price": "199",
-      "priceCurrency": "USD",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "199",
-        "priceCurrency": "USD",
-        "unitText": "MONTH"
-      }
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
-    }
-  };
-
+import { useState, useEffect } from 'react';
 
   const features = [
     {
@@ -169,7 +116,7 @@ const AICodeAssistantProZionTechGroup = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI analytics platform with real-time insights and predictive modeling." />
@@ -221,7 +168,7 @@ const AICodeAssistantProZionTechGroup = () => {
       </section>
 
       {/* Features Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -280,7 +227,7 @@ const AICodeAssistantProZionTechGroup = () => {
             </section>
 
             {/* Features Section */}
-            </section><section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+            <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
               <ResponsiveContainer>
                 <div className="text-center mb-16"></div>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -314,7 +261,7 @@ const AICodeAssistantProZionTechGroup = () => {
             </section>
 
             {/* Pricing Section */}
-            </section><section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50"></section>
+            <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50"></section>
               <div className="max-w-7xl mx-auto"></div>
                 <div className="text-center mb-16"></div>
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -370,7 +317,7 @@ const AICodeAssistantProZionTechGroup = () => {
             </div>
 
             {/* Testimonials Section */}
-            </section><section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+            <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
               <div className="max-w-7xl mx-auto"></div>
                 <div className="text-center mb-16"></div>
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -409,7 +356,7 @@ const AICodeAssistantProZionTechGroup = () => {
       </section>
 
             {/* CTA Section */}
-            </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-purple-900/30"></section>
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-purple-900/30"></section>
               <div className="max-w-4xl mx-auto text-center"></div>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                   Ready to Transform Your Development?
@@ -447,4 +394,5 @@ const AICodeAssistantProZionTechGroup = () => {
 };
 
 export default Page;
-</section>
+  );
+}

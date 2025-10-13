@@ -1,20 +1,15 @@
-import React from 'react';
-
-interface ErrorhandlerProps {
+interface ErrorhandlerxProps {
   className?: string;
-  children?: React.ReactNode;
 }
 
-export default function Errorhandler({ className = '', children, ...props }: ErrorhandlerProps) {
+const Errorhandlerx: React.FC<ErrorhandlerxProps> = ({ className = "" }) => {
   return (
-<<<<<<< HEAD
-    <div className={`errorhandler-component ${className}`} {...props}>
-      {children}
-    </div>
-=======
     <div className={className}>
-<h2>Errorhandlerx</h2>
-</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+      <h2>Errorhandlerx</h2>
+    </div>
+  );
+};
+
+export default Errorhandlerx;
   );
 }

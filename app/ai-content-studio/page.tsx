@@ -10,60 +10,7 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AIContentStudioZionTechGroup = () => {
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "Creative Marketing Co",
-      role: "Content Director",
-      content: "Zion's AI Content Studio has transformed our content creation process. We're producing 5x more content with higher quality than ever before.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Digital Agency Pro",
-      role: "Creative Lead",
-      content: "The AI understands brand voice perfectly and creates content that resonates with our audience. It's like having a team of expert writers.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "E-commerce Solutions",
-      role: "Marketing Manager",
-      content: "From product descriptions to social media posts, the AI generates exactly what we need. It's saved us countless hours and improved our engagement.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Zion AI Content Studio Pro",
-    "description": "AI-powered content creation platform with automated writing, design, and video generation",
-    "url": "https://ziontechgroup.com/ai-content-studio",
-    "applicationCategory": "ContentCreationApplication",
-    "operatingSystem": "Web, Windows, macOS, Linux",
-    "offers": {
-      "@type": "Offer",
-      "price": "149",
-      "priceCurrency": "USD",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "149",
-        "priceCurrency": "USD",
-        "unitText": "MONTH"
-      }
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
-    }
-  };
-
+import { useState, useEffect } from 'react';
 
   const features = [
     {
@@ -172,7 +119,7 @@ const AIContentStudioZionTechGroup = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI analytics platform with real-time insights and predictive modeling." />
@@ -224,7 +171,7 @@ const AIContentStudioZionTechGroup = () => {
       </section>
 
       {/* Features Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -283,7 +230,7 @@ const AIContentStudioZionTechGroup = () => {
             </section>
 
             {/* Features Section */}
-            </section><section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+            <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
               <ResponsiveContainer>
                 <div className="text-center mb-16"></div>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -316,7 +263,7 @@ const AIContentStudioZionTechGroup = () => {
             </section>
 
             {/* Pricing Section */}
-            </section><section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
+            <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
               <div className="max-w-7xl mx-auto"></div>
                 <div className="text-center mb-16"></div>
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -372,7 +319,7 @@ const AIContentStudioZionTechGroup = () => {
             </div>
 
             {/* Testimonials Section */}
-            </section><section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+            <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
               <div className="max-w-7xl mx-auto"></div>
                 <div className="text-center mb-16"></div>
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -411,7 +358,7 @@ const AIContentStudioZionTechGroup = () => {
       </section>
 
             {/* CTA Section */}
-            </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30"></section>
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30"></section>
               <div className="max-w-4xl mx-auto text-center"></div>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                   Ready to Create Amazing Content?
@@ -449,4 +396,5 @@ const AIContentStudioZionTechGroup = () => {
 };
 
 export default Page;
-</section>
+  );
+}

@@ -200,3 +200,5 @@ const Analytics: React.FC<AnalyticsProps> = ({
 };
 
 export default Analytics;
+  );
+}

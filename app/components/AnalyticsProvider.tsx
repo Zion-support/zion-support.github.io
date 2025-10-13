@@ -1,13 +1,9 @@
-import React from 'react';
 
-interface AnalyticsproviderProps {
-  className?: string;
-  children?: React.ReactNode;
+interface AnalyticsContextType {
+  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
+  trackPageView: (pageName: string, properties?: Record<string, any>) => void;
 }
 
-<<<<<<< HEAD
-export default function Analyticsprovider({ className = '', children, ...props }: AnalyticsproviderProps) {
-=======
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 export const useAnalytics = () => {
@@ -39,18 +35,17 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
   };
 
   const value = {
-//     trackEvent,
-//     trackPageView,
+    trackEvent,
+    trackPageView,
   };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   return (
-    <div className={`analyticsprovider-component ${className}`} {...props}>
+    <AnalyticsContext.Provider value={value}>
       {children}
-<<<<<<< HEAD
-    </div>
-=======
-//     </AnalyticsContext.Provider>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+    </AnalyticsContext.Provider>
+  );
+};
+
+export default AnalyticsProvider;
   );
 }

@@ -1,16 +1,9 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+import { ArrowRight, TrendingUp, Globe, CheckCircle, MessageSquare, Target, BarChart3 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-import { ArrowRight } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
 
 const AISentimentAnalysisPro = () => {
   const features = [
@@ -60,6 +53,8 @@ const AISentimentAnalysisPro = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        </section>
+        </section>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -105,6 +100,8 @@ const AISentimentAnalysisPro = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        </section>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -139,6 +136,8 @@ const AISentimentAnalysisPro = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        </section>
+        </section>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -161,6 +160,8 @@ const AISentimentAnalysisPro = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        </section>
         <ResponsiveContainer>
           <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -195,3 +196,5 @@ const AISentimentAnalysisPro = () => {
 };
 
 export default AISentimentAnalysisPro;
+  );
+}

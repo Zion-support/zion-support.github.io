@@ -1,24 +1,27 @@
-import React from 'react';
-
-interface ResponsivegridProps {
+interface ResponsiveGridProps {
+  children: React.ReactNode;
   className?: string;
-  children?: React.ReactNode;
+  cols?: {
+    default?: number;
+    sm?: number;
+    md?: number;
+    lg?: number;
+    xl?: number;
+  };
+  gap?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
-<<<<<<< HEAD
-export default function Responsivegrid({ className = '', children, ...props }: ResponsivegridProps) {
-=======
 const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
-//   children,
+  children,
   className = '',
   cols = { default: 1, sm: 2, md: 3, lg: 4 },
   gap = 'md'
 }) => {
   const gapClasses = {
-//     sm: 'gap-2',
-//     md: 'gap-6',
-//     lg: 'gap-8',
-//     xl: 'gap-12'
+    sm: 'gap-2',
+    md: 'gap-6',
+    lg: 'gap-8',
+    xl: 'gap-12'
   };
 
   const gridCols = `grid-cols-${cols.default || 1} ${
@@ -27,10 +30,13 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
     cols.lg ? `lg:grid-cols-${cols.lg}` : ''
   } ${cols.xl ? `xl:grid-cols-${cols.xl}` : ''}`;
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   return (
-    <div className={`responsivegrid-component ${className}`} {...props}>
+    <div className={`grid ${gridCols} ${gapClasses[gap]} ${className}`}>
       {children}
-</div>
+    </div>
+  );
+};
+
+export default ResponsiveGrid;
   );
 }

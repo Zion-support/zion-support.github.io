@@ -1,9 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Home } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Mail } from 'lucide-react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -141,7 +137,7 @@ export const withErrorBoundary = <P extends object>(
 };
 
 // Hook for functional components to handle errors
-export const useErrorHandler = () => {
+export const _useErrorHandler = () => {
   return (error: Error, errorInfo?: ErrorInfo) => {
     console.error('Error caught by hook:', error, errorInfo);
     
@@ -151,3 +147,5 @@ export const useErrorHandler = () => {
 };
 
 export default ImprovedErrorBoundary;
+  );
+}

@@ -1,16 +1,14 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { FileText } from 'lucide-react';
+import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award } from 'lucide-react';
 
-export default function Compliance() {
+export default function page() {
+  return (
+    <div>
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
   const complianceFrameworks = [
     {
       name: "SOC 2 Type II",
@@ -74,7 +72,7 @@ export default function Compliance() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Compliance Services - Zion Tech Group | Regulatory Compliance & Security</title>
         <meta
@@ -90,6 +88,7 @@ export default function Compliance() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4">
+        </section>
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -120,6 +119,7 @@ export default function Compliance() {
 
         {/* Compliance Frameworks Section */}
         <section className="py-20 px-4">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Our Compliance Certifications</h2>
@@ -149,6 +149,7 @@ export default function Compliance() {
 
         {/* Services Section */}
         <section className="py-20 px-4 bg-gray-800/30">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Our Compliance Services</h2>
@@ -178,6 +179,7 @@ export default function Compliance() {
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Why Choose Our Compliance Services?</h2>
@@ -202,6 +204,7 @@ export default function Compliance() {
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gray-800/30">
+        </section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Achieve Compliance?</h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -217,7 +220,7 @@ export default function Compliance() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }
 

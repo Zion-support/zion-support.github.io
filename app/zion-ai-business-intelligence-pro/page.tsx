@@ -1,79 +1,16 @@
-import React from 'react';
-import { TrendingUp, Users, ArrowRight, CheckCircle, Star, Globe, Zap, Brain, BarChart3, Database, Activity } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
+import { BarChart3, TrendingUp, Brain, Zap, CheckCircle, ArrowRight, Activity, Users, Globe, Star, Database, Eye } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Activity } from 'lucide-react';
-// import { Plus } from 'lucide-react'; // Unused import
 
 const ZionAiBusinessIntelligencePro = () => {
-  const testimonials = [
-    {
-      name: "John Smith",
-      role: "CEO, TechCorp",
-      content: "Zion Tech Group transformed our business with their AI solutions.",
-      avatar: "/images/testimonials/john-smith.jpg"
-    },
-    {
-      name: "Sarah Johnson",
-      role: "CTO, InnovateLabs",
-      content: "The team's expertise in AI and automation is unmatched.",
-      avatar: "/images/testimonials/sarah-johnson.jpg"
-    },
-    {
-      name: "Mike Chen",
-      role: "Founder, StartupXYZ",
-      content: "We saw immediate results after implementing their solutions.",
-      avatar: "/images/testimonials/mike-chen.jpg"
-    }
-  ];
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
-  const stats = [
-    { label: "Projects Completed", value: "500+" },
-    { label: "Happy Clients", value: "200+" },
-    { label: "Years Experience", value: "5+" },
-    { label: "Team Members", value: "50+" }
-  ];
+  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
 
-  const features = [
-    {
-      title: "AI-Powered Insights",
-      description: "Automatically generate actionable business insights using advanced machine learning and natural language processing",
-      icon: <Brain className="w-6 h-6" />,
-      stats: "95% accuracy"
-    },
-    {
-      title: "Real-Time Analytics",
-      description: "Monitor key performance indicators and business metrics in real-time with instant updates and alerts",
-      icon: <Activity className="w-6 h-6" />,
-      stats: "Sub-second response"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast future trends, customer behavior, and business outcomes with AI-powered predictive models",
-      icon: <TrendingUp className="w-6 h-6" />,
-      stats: "85% prediction accuracy"
-    },
-    {
-      title: "Natural Language Queries",
-      description: "Ask questions about your data in plain English and get instant answers with visualizations",
-      icon: <Zap className="w-6 h-6" />,
-      stats: "50+ languages"
-    }
-  ];
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 
   const pricingPlans = [
     {
@@ -183,11 +120,12 @@ const ZionAiBusinessIntelligencePro = () => {
         <title>Zion AI Business Intelligence Pro - AI-Powered Analytics Platform | Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with Zion AI Business Intelligence Pro. AI-powered analytics, predictive modeling, and real-time dashboards for enterprise organizations." />
         <meta name="keywords" content="business intelligence, AI analytics, data visualization, predictive analytics, business intelligence platform, data insights, enterprise analytics" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-business-intelligence-pro" />
+        <link rel="canonical" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        </section>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -212,19 +150,11 @@ const ZionAiBusinessIntelligencePro = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <FuturisticButton
-              href="#pricing"
-              variant="primary"
-              size="lg"
-              icon={<BarChart3 className="w-5 h-5" />}
-            >
+              >
               Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-              href="#demo"
-              variant="outline"
-              size="lg"
-              icon={<Eye className="w-5 h-5" />}
-            >
+              >
               View Demo
             </FuturisticButton>
           </div>
@@ -245,7 +175,8 @@ const ZionAiBusinessIntelligencePro = () => {
       </section>
 
       {/* Features Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -283,7 +214,8 @@ const ZionAiBusinessIntelligencePro = () => {
       </section>
 
       {/* Capabilities Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+        </section>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -313,7 +245,7 @@ const ZionAiBusinessIntelligencePro = () => {
                   {capability.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </div>
                   ))}
                 </div>
@@ -324,7 +256,8 @@ const ZionAiBusinessIntelligencePro = () => {
       </section>
 
       {/* Pricing Section */}
-      </section><section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -364,7 +297,7 @@ const ZionAiBusinessIntelligencePro = () => {
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>
@@ -372,7 +305,6 @@ const ZionAiBusinessIntelligencePro = () => {
                 <FuturisticButton
                   href={plan.cta === "Contact Sales" ? "/contact" : "#signup"}
                   variant={plan.popular ? "primary" : "outline"}
-                  size="lg"
                   className="w-full"
                 >
                   {plan.cta}
@@ -384,7 +316,8 @@ const ZionAiBusinessIntelligencePro = () => {
       </section>
 
       {/* Testimonials Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+        </section>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -411,7 +344,7 @@ const ZionAiBusinessIntelligencePro = () => {
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                    {testimonial.avatar}
+                    {`/avatars/avatar-${index + 1}.jpg`}
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
@@ -425,7 +358,8 @@ const ZionAiBusinessIntelligencePro = () => {
       </section>
 
       {/* CTA Section */}
-      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+        </section>
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -437,19 +371,11 @@ const ZionAiBusinessIntelligencePro = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
-                href="#signup"
-                variant="primary"
-                size="lg"
-                icon={<BarChart3 className="w-5 h-5" />}
-              >
+                >
                 Start Free Trial
               </FuturisticButton>
               <FuturisticButton
-                href="/contact"
-                variant="outline"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-              >
+                >
                 Contact Sales
               </FuturisticButton>
             </div>
@@ -464,4 +390,6 @@ const ZionAiBusinessIntelligencePro = () => {
   );
 };
 
-export default ZionAiBusinessIntelligencePro;</section>
+export default ZionAiBusinessIntelligencePro;
+  );
+}
