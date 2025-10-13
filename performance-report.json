@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T00:57:17.542Z",
-=======
   "timestamp": "2025-10-13T01:31:59.624Z",
->>>>>>> 0fa3538cbce94898a07a498bdaad8c321313d101
   "optimizations": [
     "Icon imports optimized",
     "Bundle splitting improved",
