@@ -1,9 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 // Define all the routes in your application
 const routes = [
   '/',
