@@ -50,12 +50,6 @@ const AccessibilityEnhancer: React.FC = () => {
         main.setAttribute('role', 'main');
       }
 
-<<<<<<< HEAD
-    return () => {
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-=======
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
@@ -67,22 +61,58 @@ const AccessibilityEnhancer: React.FC = () => {
       }
     };
 
-    // Add alt text to images without alt attributes
-    const addAltText = () => {
-      const images = document.querySelectorAll('img:not([alt])');
-      images.forEach((img, index) => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', `Image ${index + 1}`);
+    // Add focus trap for modals and dropdowns
+    const addFocusTrap = () => {
+      const focusableElements = document.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+
+      const handleFocus = (event: FocusEvent) => {
+        const target = event.target as HTMLElement;
+        if (target.closest('[data-focus-trap]')) {
+          const trap = target.closest('[data-focus-trap]') as HTMLElement;
+          const focusableInTrap = trap.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          );
+          const firstFocusable = focusableInTrap[0] as HTMLElement;
+          const lastFocusable = focusableInTrap[focusableInTrap.length - 1] as HTMLElement;
+
+          if (event.shiftKey && target === firstFocusable) {
+            event.preventDefault();
+            lastFocusable.focus();
+          } else if (!event.shiftKey && target === lastFocusable) {
+            event.preventDefault();
+            firstFocusable.focus();
+          }
         }
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
+      };
+
+      focusableElements.forEach(element => {
+        element.addEventListener('focus', handleFocus);
       });
+
+      return () => {
+        focusableElements.forEach(element => {
+          element.removeEventListener('focus', handleFocus);
+        });
+      };
     };
 
-    // Initialize accessibility enhancements
+    // Add screen reader announcements
+    const addScreenReaderAnnouncements = () => {
+      const announcement = document.createElement('div');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.setAttribute('aria-atomic', 'true');
+      announcement.className = 'sr-only';
+      announcement.id = 'screen-reader-announcements';
+      document.body.appendChild(announcement);
+    };
+
+    // Initialize accessibility features
     addSkipLink();
     addFocusStyles();
     addAriaLandmarks();
-    addAltText();
+    addScreenReaderAnnouncements();
 
     // Add event listeners
     document.addEventListener('keydown', handleKeyDown);
@@ -92,6 +122,18 @@ const AccessibilityEnhancer: React.FC = () => {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
+      
+      // Remove skip link
+      const skipLink = document.querySelector('a[href="#main-content"]');
+      if (skipLink) {
+        skipLink.remove();
+      }
+
+      // Remove announcement div
+      const announcement = document.getElementById('screen-reader-announcements');
+      if (announcement) {
+        announcement.remove();
+      }
     };
   }, []);
 
