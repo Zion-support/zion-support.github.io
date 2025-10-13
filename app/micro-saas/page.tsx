@@ -7,6 +7,192 @@ import SEOOptimizer from "../components/SEOOptimizer";
 export default function MicroSaas() {
   const microSaasServices = [
     {
+      id: "zion-ai-voice-assistant-pro",
+      name: "Zion AI Voice Assistant Pro",
+      description: "Advanced voice AI with natural language understanding, multi-language support, and 99.9% accuracy",
+      price: "From $99/month",
+      originalPrice: "$199/month",
+      discount: "50% OFF",
+      icon: <Mic className="w-8 h-8" />,
+      color: "from-cyan-500 to-teal-500",
+      features: [
+        "Natural language understanding",
+        "Voice synthesis & generation",
+        "Multi-modal interactions",
+        "Context-aware conversations",
+        "Multi-language support (100+ languages)",
+        "Custom voice training",
+        "Integration with smart devices",
+        "Real-time voice processing"
+      ],
+      benefits: [
+        "Enhance customer experience",
+        "Reduce support costs by 50%",
+        "Enable hands-free operations",
+        "Scale voice interactions"
+      ],
+      category: "Voice AI",
+      rating: 4.8,
+      reviews: 789,
+      link: "/zion-ai-voice-assistant-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-image-recognition-pro",
+      name: "Zion AI Image Recognition Pro",
+      description: "Advanced computer vision with object detection, facial recognition, and image analysis capabilities",
+      price: "From $79/month",
+      originalPrice: "$159/month",
+      discount: "50% OFF",
+      icon: <Eye className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      features: [
+        "Object detection & classification",
+        "Facial recognition & analysis",
+        "OCR text extraction",
+        "Image quality assessment",
+        "Custom model training",
+        "Real-time processing",
+        "Batch image analysis",
+        "API integration"
+      ],
+      benefits: [
+        "Automate visual inspections",
+        "Improve security systems",
+        "Extract data from images",
+        "Enhance user experience"
+      ],
+      category: "Computer Vision",
+      rating: 4.9,
+      reviews: 1123,
+      link: "/zion-ai-image-recognition-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-fraud-detection-pro",
+      name: "Zion AI Fraud Detection Pro",
+      description: "Advanced fraud detection with real-time monitoring, pattern recognition, and risk scoring",
+      price: "From $199/month",
+      originalPrice: "$399/month",
+      discount: "50% OFF",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Real-time fraud detection",
+        "Pattern recognition algorithms",
+        "Risk scoring & assessment",
+        "Transaction monitoring",
+        "Behavioral analysis",
+        "Machine learning models",
+        "False positive reduction",
+        "Compliance reporting"
+      ],
+      benefits: [
+        "Detect fraud with 99.5% accuracy",
+        "Reduce false positives by 80%",
+        "Protect against new fraud types",
+        "Ensure regulatory compliance"
+      ],
+      category: "Security",
+      rating: 4.9,
+      reviews: 876,
+      link: "/zion-ai-fraud-detection-pro",
+      featured: true
+    },
+    {
+      id: "zion-ai-language-translation",
+      name: "Zion AI Language Translation",
+      description: "Advanced neural machine translation with real-time processing, context awareness, and domain-specific models",
+      price: "From $49/month",
+      originalPrice: "$99/month",
+      discount: "50% OFF",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-blue-500 to-indigo-500",
+      features: [
+        "Neural machine translation",
+        "Real-time translation",
+        "Context-aware translation",
+        "Domain-specific models",
+        "100+ language support",
+        "Batch translation processing",
+        "API integration",
+        "Custom model training"
+      ],
+      benefits: [
+        "Break language barriers",
+        "Improve global communication",
+        "Reduce translation costs",
+        "Maintain translation quality"
+      ],
+      category: "Language Processing",
+      rating: 4.7,
+      reviews: 1234,
+      link: "/zion-ai-language-translation",
+      featured: true
+    },
+    {
+      id: "zion-ai-chatbot-enterprise",
+      name: "Zion AI Chatbot Enterprise",
+      description: "Enterprise-grade conversational AI with advanced NLP, knowledge management, and multi-channel deployment",
+      price: "From $199/month",
+      originalPrice: "$399/month",
+      discount: "50% OFF",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        "Advanced NLP capabilities",
+        "Knowledge base integration",
+        "Multi-channel deployment",
+        "Human handoff automation",
+        "Conversation analytics",
+        "Custom training & fine-tuning",
+        "Enterprise security",
+        "Scalable infrastructure"
+      ],
+      benefits: [
+        "Reduce support costs by 70%",
+        "Improve response times",
+        "Scale customer service",
+        "Enhance user satisfaction"
+      ],
+      category: "Customer Service",
+      rating: 4.8,
+      reviews: 1654,
+      link: "/zion-ai-chatbot-enterprise",
+      featured: true
+    },
+    {
+      id: "ai-data-mining-pro",
+      name: "AI Data Mining Pro",
+      description: "Advanced data mining with pattern discovery, anomaly detection, and predictive modeling",
+      price: "From $299/month",
+      originalPrice: "$599/month",
+      discount: "50% OFF",
+      icon: <Database className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      features: [
+        "Pattern discovery algorithms",
+        "Anomaly detection",
+        "Predictive modeling",
+        "Big data processing",
+        "Real-time analysis",
+        "Custom algorithm development",
+        "Data visualization",
+        "Integration capabilities"
+      ],
+      benefits: [
+        "Discover hidden patterns",
+        "Identify anomalies early",
+        "Improve decision making",
+        "Extract valuable insights"
+      ],
+      category: "Data Analytics",
+      rating: 4.7,
+      reviews: 543,
+      link: "/ai-data-mining-pro",
+      featured: true
+    },
+    {
       id: "zion-analytics-pro",
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time analytics, predictive insights, and automated reporting",
@@ -35,7 +221,7 @@ export default function MicroSaas() {
       rating: 4.9,
       reviews: 1247,
       link: "/zion-analytics-pro",
-      featured: true
+      featured: false
     },
     {
       id: "zion-ai-inventory-manager",

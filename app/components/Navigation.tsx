@@ -1,6 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import { 
   Brain, 
   Shield, 
@@ -26,9 +25,6 @@ import {
   SidebarIcon
 } from 'lucide-react'
 import FuturisticButton from './FuturisticButton'
-=======
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe, Cpu, Link as LinkIcon, Sidebar as SidebarIcon } from 'lucide-react'
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
 
 interface NavigationProps {
   onSidebarToggle?: () => void

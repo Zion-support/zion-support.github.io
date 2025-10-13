@@ -36,6 +36,12 @@ const EnhancedNavigation = () => {
         { label: 'AI Video Analysis', href: '/ai-video-analysis' },
         { label: 'AI Time Series Forecasting', href: '/ai-time-series-forecasting' },
         { label: 'AI NLP Text Analysis', href: '/ai-nlp-text-analysis' },
+        { label: 'AI 3D Generation', href: '/ai-3d-generation' },
+        { label: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
+        { label: 'AI Climate Prediction Engine', href: '/ai-climate-prediction-engine' },
+        { label: 'AI Computer Vision', href: '/ai-computer-vision' },
+        { label: 'AI Conversational AI', href: '/ai-conversational-ai' },
+        { label: 'AI DevOps Automation', href: '/ai-devops-automation' },
         { label: 'View All AI Services', href: '/ai-services' }
       ]
     },
@@ -82,6 +88,12 @@ const EnhancedNavigation = () => {
       href: '/micro-saas',
       icon: <Zap className="w-4 h-4" />,
       dropdown: [
+        { label: 'Zion AI Voice Assistant Pro', href: '/zion-ai-voice-assistant-pro' },
+        { label: 'Zion AI Image Recognition Pro', href: '/zion-ai-image-recognition-pro' },
+        { label: 'Zion AI Fraud Detection Pro', href: '/zion-ai-fraud-detection-pro' },
+        { label: 'Zion AI Language Translation', href: '/zion-ai-language-translation' },
+        { label: 'Zion AI Chatbot Enterprise', href: '/zion-ai-chatbot-enterprise' },
+        { label: 'AI Data Mining Pro', href: '/ai-data-mining-pro' },
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
         { label: 'Zion Security Shield', href: '/zion-security-shield' },
         { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },

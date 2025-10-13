@@ -1,13 +1,6 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Mic, Eye, MessageSquare, Database } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
-=======
-import SEOOptimizer from "./components/SEOOptimizer";
-=======
-import EnhancedSEO from "./components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
@@ -104,51 +97,51 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
-      price: "From $299/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro",
-      featured: true
-    },
-    {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
-      price: "From $499/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
-      featured: true
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
+      name: "Zion AI Voice Assistant Pro",
+      description: "Advanced voice AI with natural language understanding, multi-language support, and 99.9% accuracy",
       price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
+      icon: <Mic className="w-6 h-6" />,
+      link: "/zion-ai-voice-assistant-pro",
       featured: true
     },
     {
-      name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
+      name: "Zion AI Image Recognition Pro",
+      description: "Advanced computer vision with object detection, facial recognition, and image analysis capabilities",
+      price: "From $79/month",
+      icon: <Eye className="w-6 h-6" />,
+      link: "/zion-ai-image-recognition-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Fraud Detection Pro",
+      description: "Advanced fraud detection with real-time monitoring, pattern recognition, and risk scoring",
       price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-pro",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-ai-fraud-detection-pro",
       featured: true
     },
     {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
+      name: "Zion AI Language Translation",
+      description: "Advanced neural machine translation with real-time processing and 100+ language support",
+      price: "From $49/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-language-translation",
       featured: true
     },
     {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
+      name: "Zion AI Chatbot Enterprise",
+      description: "Enterprise-grade conversational AI with advanced NLP and multi-channel deployment",
+      price: "From $199/month",
+      icon: <MessageSquare className="w-6 h-6" />,
+      link: "/zion-ai-chatbot-enterprise",
+      featured: true
+    },
+    {
+      name: "AI Data Mining Pro",
+      description: "Advanced data mining with pattern discovery, anomaly detection, and predictive modeling",
+      price: "From $299/month",
+      icon: <Database className="w-6 h-6" />,
+      link: "/ai-data-mining-pro",
       featured: true
     }
   ];
