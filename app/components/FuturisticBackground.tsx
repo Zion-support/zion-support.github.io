@@ -1,48 +1,10 @@
+import React, { useRef, useEffect } from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface FuturisticBackgroundProps {
-=======
-import React from 'react';
-
-interface FuturisticbackgroundProps {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-  className?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function FuturisticBackground({ className = '', children }: FuturisticBackgroundProps) {
-=======
-export default function Futuristicbackground({ className = '', children, ...props }: FuturisticbackgroundProps) {
-<<<<<<< HEAD
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-  return (
-    <div className={`${className}`}>
-=======
-export default function FuturisticBackground({ className = '', children, ...props }: FuturisticBackgroundProps) {
-  return (
-    <div className={`futuristic-background-component ${className}`} {...props}>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-      {children}
-    </div>
-  );
-<<<<<<< HEAD
-}
-=======
-export default function FuturisticBackground({ className = '', children, ...props }: FuturisticBackgroundProps) {
-    return (
-        <div className="component" {...props}>
-          {children}
-        </div>
-      );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
-const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -57,45 +19,46 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
       canvas.height = window.innerHeight;
     };
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Create animated particles
+      const time = Date.now() * 0.001;
+      const particleCount = 50;
+      
+      for (let i = 0; i < particleCount; i++) {
+        const x = (i / particleCount) * canvas.width;
+        const y = canvas.height / 2 + Math.sin(time + i * 0.1) * 100;
+        const size = Math.sin(time + i * 0.2) * 2 + 2;
+        
+        ctx.beginPath();
+        ctx.arc(x, y, size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(59, 130, 246, ${Math.sin(time + i * 0.3) * 0.3 + 0.3})`;
+        ctx.fill();
+      }
+      
+      requestAnimationFrame(animate);
     };
+
+    resizeCanvas();
+    animate();
+
+    window.addEventListener('resize', resizeCanvas);
+    return () => window.removeEventListener('resize', resizeCanvas);
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative min-h-screen">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: 1 }}
+        style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%)' }}
       />
-      <div className="relative" style={{ zIndex: 2 }}>
+      <div className="relative z-10">
         {children}
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default FuturisticBackground;
-  );
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
-
-}
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
-export default FuturisticBackground;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
-=======
-export default FuturisticBackground;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

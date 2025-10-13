@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-interface mainProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function main({ className = '', children }: mainProps) {
-  return (
-<<<<<<< HEAD
-    <div className={`${className}`}>
-      {children}
-    </div>
-=======
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-  );
-<<<<<<< HEAD
-}
-=======
-}
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -53,11 +21,3 @@ if ("serviceWorker" in navigator) {
       });
   });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

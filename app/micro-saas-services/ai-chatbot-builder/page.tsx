@@ -1,73 +1,40 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
-<<<<<<< HEAD
 export default function aiChatbotBuilder() {
-=======
 export default function Page() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
-=======
-
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+8b27
+ef50
+365c
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
+7665
 export default function Page() {
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
+c68e
+365c
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function GDataAnalyticsZionTechGroupPage() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+07e8
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Page - Zion Tech Group</title>
         <meta name="description" content="Page solutions by Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
-      
       <div className="container mx-auto px-4 py-20">
-<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Chatbot Builder</h1>
           <p className="text-xl text-gray-300 mb-8">
             This page is under development. Please check back later.
-=======
-=======
       <div className="container mx-auto px-4 py-20">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+c68e
         <h1 className="text-4xl font-bold mb-8">Page</h1>
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive page solutions designed to meet your business needs.
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
+8b27
           </p>
-=======
 import React from 'react';
-
 export default function MicrosaasservicesaichatbotbuilderPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -78,14 +45,12 @@ export default function MicrosaasservicesaichatbotbuilderPage() {
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
             <p className="text-gray-600">
               Comprehensive solution for your business requirements.
             </p>
-=======
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -106,34 +71,29 @@ export default function MicrosaasservicesaichatbotbuilderPage() {
                 Get round-the-clock support from our dedicated team of professionals.
               </p>
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+c68e
           </div>
-          
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
             <p className="text-gray-600">
               Advanced technology integration and optimization.
             </p>
           </div>
-          
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
               Scalable and secure implementation.
             </p>
           </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+5a44
         </div>
-        
         <div className="text-center mt-12">
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 export default function AiChatbotBuilder() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -152,39 +112,24 @@ export default function AiChatbotBuilder() {
             Go Home
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
+a9f6
         </div>
       </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+365c
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
+5a44
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
+a9f6
 import { ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
+214f
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
-
+c68e
+365c
 export default function GDataAnalyticsZionTechGroupPage() {
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+34b5

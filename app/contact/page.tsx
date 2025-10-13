@@ -1,47 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
-
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-import React, { useState } from "react";
-
-import { Helmet } from "react-helmet-async";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-
-export default function contact() {
-  return (
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-
-export default function Contact() {
-=======
-=======
-import React, { useState } from "react";
-import { Helmet } from "react-helmet-async";
-import { Clock, MapPin, Code, Mail, Phone, Smartphone, Cloud } from 'lucide-react';
+import { Clock, MapPin, Mail, Phone, Send } from 'lucide-react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -52,263 +11,211 @@ export default function ContactPage() {
     service: '',
     message: ''
   });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
-export default function Contact() {
-  const [formData, setFormData] = useState({,
-    name: '',
-      email: '',
-      company: '',
-      phone: '',
-      service: '',
-      message: ''
-  });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-
-<<<<<<< HEAD
-      return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
-=======
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value;
-    }));
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend;
-    setIsSubmitted(true);
-    // Reset form after 3 seconds;
-    setTimeout(() => {
-<<<<<<< HEAD
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    }, 3000);
+    console.log('Form submitted:', formData);
+    // Add form submission logic here
   };
 
-=======
-      setFormData({,
-    name: '',
-          email: '',
-          company: '',
-          phone: '',
-          service: '',
-          message: ''
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-  const contactInfo = [
-    {,
-    icon: <Mail className="w-6 h-6" />,
-        title: "Email",
-        details: "kleber@ziontechgroup.com",
-        description: "Send us an email anytime"
-    },
-    {,
-    icon: <Smartphone className="w-6 h-6" />,
-        title: "Phone",
-        details: "+1 302 464 0950",
-        description: "Call us during business hours"
-    },
-    {,
-    icon: <MapPin className="w-6 h-6" />,
-        title: "Address",
-        details: "364 E Main St STE 1008",
-        description: "Middletown DE 19709"
-    },
-    {,
-    icon: <Clock className="w-6 h-6" />,
-        title: "Business Hours",
-        details: "Mon - Fri: 9:00 AM - 6:00 PM",
-        description: "EST Time Zone"
-    }
-  ];
-
-  const services = [
-    "AI Business Intelligence",
-    "AI Customer Support",
-    "AI Content Generation",
-    "AI Cybersecurity",
-    "5G Solutions",
-    "Cloud Infrastructure",
-    "Data Analytics",
-    "Code Assistant",
-    "Marketing Automation",
-    "Document Processing",
-    "CRM Assistant",
-    "Financial Analytics"
-  ];
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-export default function Contact() {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ac37
-
-  return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-export default function Contact() {
-
-      return (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6eb7
-    <div className="min-h-screen bg-gray-900 text-white">
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function PagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
+        <title>Contact Us - Zion Tech Group</title>
+        <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, cybersecurity, cloud services, and 5G technology. Contact our expert team today." />
       </Helmet>
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">Contact</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            This page is under development. Please check back later.
-=======
-import React from 'react';
 
-<<<<<<< HEAD
-export default function ContactPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced AI and IT solutions for your business needs.
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-            <p className="text-gray-600">
-              Comprehensive solution for your business requirements.
-            </p>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-            <p className="text-gray-600">
-              Advanced technology integration and optimization.
-            </p>
-=======
-
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Contact</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive contact solutions designed to meet your business needs.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-            <p className="text-gray-600">
-              Scalable and secure implementation.
-            </p>
-          </div>
-        </div>
-        
-        <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-            Get Started
-          </button>
-=======
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Page
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional page services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Ready to transform your business with cutting-edge technology? Get in touch with our expert team.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-2xl font-bold text-white mb-6">Get in Touch</h2>
+              <p className="text-gray-300 mb-8">
+                We're here to help you with your technology needs. Reach out to us through any of the channels below.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
+                  <p className="text-gray-300">info@ziontechgroup.com</p>
+                  <p className="text-gray-400 text-sm">We'll respond within 24 hours</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
+                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="text-gray-400 text-sm">Mon-Fri 9AM-6PM PST</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-1">Office</h3>
+                  <p className="text-gray-300">San Francisco, CA</p>
+                  <p className="text-gray-400 text-sm">Remote consultations available</p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-1">Response Time</h3>
+                  <p className="text-gray-300">Within 24 hours</p>
+                  <p className="text-gray-400 text-sm">Emergency support available</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+            <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Your company"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="+1 (555) 123-4567"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                  Service Interest
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                >
+                  <option value="">Select a service</option>
+                  <option value="ai-solutions">AI Solutions</option>
+                  <option value="cybersecurity">Cybersecurity</option>
+                  <option value="cloud-services">Cloud Services</option>
+                  <option value="5g-solutions">5G Solutions</option>
+                  <option value="micro-saas">Micro SAAS</option>
+                  <option value="data-analytics">Data Analytics</option>
+                  <option value="consultation">General Consultation</option>
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={5}
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+                  placeholder="Tell us about your project or requirements..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <Send className="w-5 h-5" />
+                <span>Send Message</span>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-}
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
-=======
-  );
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
-=======
-import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { useState } from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
-
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
-=======
-}}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
-}
-}}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-=======
-<<<<<<< HEAD
-import React from 'react';
-=======
-import fs from 'fs';
-import path from 'path';
-export default ${componentName};`;
-// List of components that need to be fixed;
-const componentsToFix = [
-  'EnhancedPerformanceOptimizer', 'AccessibilityEnhancer', 'EnhancedAccessibility',
-  'PerformanceMonitor', 'EnhancedErrorBoundary', 'Breadcrumb';
-];
- `'use client';
-  return (
-<div>Content</div>
-  );
-      {/* ${componentName} component placeholder */}
-  );
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-
 import fs from 'fs';
 import path from 'path';
 
@@ -52,16 +28,6 @@ export default function ${componentName}({
   children 
 }: ${componentName}Props) {
   return (
-<<<<<<< HEAD
-    <div className={\`${fileName.toLowerCase()} \${className}\`}>
-      {children}
-    </div>
-=======
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
 }`;
       
