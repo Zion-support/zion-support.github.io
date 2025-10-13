@@ -1,4 +1,4 @@
-import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Users, Mail, Smartphone as Phone } from "lucide-react";
+import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail, Smartphone as Phone } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 

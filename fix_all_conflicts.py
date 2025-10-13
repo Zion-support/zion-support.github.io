@@ -1,78 +1,81 @@
 #!/usr/bin/env python3
-"""
-Advanced Merge Conflict Resolver
-Resolves all types of merge conflicts including nested ones
-"""
-
+import os
 import re
-from pathlib import Path
+import glob
 
-def resolve_all_conflicts(file_path):
-    """Resolve all merge conflicts in a file"""
+def fix_merge_conflicts_comprehensive(file_path):
+    """Fix all types of merge conflicts in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
+        # Check if file has merge conflicts
+        if '<<<<<<< HEAD' not in content and '=======' not in content and '>>>>>>>' not in content:
+            return False
+        
         original_content = content
-        max_iterations = 10
-        iteration = 0
         
-        while iteration < max_iterations:
-            # Pattern for standard conflicts
-            pattern1 = r'\n(.*?)\n
-            
-            # Replace with incoming version (group 2)
-            new_content = re.sub(pattern1, r'\2\n', content, flags=re.DOTALL)
-            
-            # Check if we made any changes
-            if new_content == content:
-                break
-                
-            content = new_content
-            iteration += 1
+        # Remove all merge conflict markers and keep HEAD version
+        # Pattern 1: <<<<<<< HEAD ... ======= ... >>>>>>> branch
+        content = re.sub(
+            r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+',
+            r'\1',
+            content,
+            flags=re.DOTALL
+        )
         
-        # Remove any remaining conflict markers (in case of malformed conflicts)
-        content = re.sub(r'\n', '', content)
-        content = re.sub(r'
+        # Pattern 2: <<<<<<< HEAD ... ======= ... >>>>>>> branch (without newlines)
+        content = re.sub(
+            r'<<<<<<< HEAD(.*?)=======(.*?)>>>>>>> [^\n]+',
+            r'\1',
+            content,
+            flags=re.DOTALL
+        )
         
-        # Write back if changed
+        # Pattern 3: Just remove remaining conflict markers
+        content = re.sub(r'<<<<<<< HEAD\n?', '', content)
+        content = re.sub(r'=======\n?', '', content)
+        content = re.sub(r'>>>>>>> [^\n]+\n?', '', content)
+        
+        # Clean up any double newlines that might have been created
+        content = re.sub(r'\n\n\n+', '\n\n', content)
+        
+        # If content changed, write it back
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"✓ Fixed {file_path}")
+            print(f"Fixed merge conflicts in: {file_path}")
             return True
-        else:
-            print(f"- No changes needed for {file_path}")
-            return False
-            
+        
+        return False
+        
     except Exception as e:
-        print(f"✗ Error processing {file_path}: {e}")
+        print(f"Error fixing {file_path}: {e}")
         return False
 
 def main():
-    """Main function"""
-    files = [
-        'app/components/NewestContent2025Banner.tsx',
-        'app/enterprise/page.tsx',
-        'app/page-optimized.tsx',
-        'src/hooks/usePerformance.ts',
-        'src/utils/analytics.ts',
-        'src/utils/codeSplitting.ts',
-        'src/utils/errorHandler.ts',
+    # Find all TypeScript and JavaScript files
+    patterns = [
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'components/**/*.tsx',
+        'components/**/*.ts',
+        '*.tsx',
+        '*.ts'
     ]
     
-    fixed_count = 0
-    for file_path in files:
-        full_path = Path('/workspace') / file_path
-        if full_path.exists():
-            if resolve_all_conflicts(full_path):
-                fixed_count += 1
-        else:
-            print(f"! File not found: {file_path}")
+    files_processed = 0
+    files_fixed = 0
     
-    print(f"\n{'='*60}")
-    print(f"Fixed {fixed_count} file(s)")
-    print(f"{'='*60}")
+    for pattern in patterns:
+        for file_path in glob.glob(pattern, recursive=True):
+            if os.path.isfile(file_path):
+                files_processed += 1
+                if fix_merge_conflicts_comprehensive(file_path):
+                    files_fixed += 1
+    
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed merge conflicts in {files_fixed} files")
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
