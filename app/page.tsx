@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Cpu } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -135,6 +135,22 @@ const HomePage = () => {
       price: "From $99/month",
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
+      featured: true
+    },
+    {
+      name: "AI Code Reviewer",
+      description: "AI-powered code review tool that automatically detects bugs, security vulnerabilities, and code quality issues",
+      price: "From $49/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/micro-saas-ai-code-reviewer",
+      featured: true
+    },
+    {
+      name: "AI Social Media Manager",
+      description: "AI-powered social media management platform that automates content creation, scheduling, and analytics",
+      price: "From $79/month",
+      icon: <Target className="w-6 h-6" />,
+      link: "/micro-saas-ai-social-media-manager",
       featured: true
     }
   ];
@@ -339,6 +355,76 @@ const HomePage = () => {
               View All Micro SAAS Solutions
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Advanced AI Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Advanced AI Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge AI technologies that push the boundaries of what's possible
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <FuturisticCard className="group hover:scale-105 transition-all duration-300">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-6 group-hover:scale-110 transition-transform">
+                  <Brain className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">AI Quantum Computing</h3>
+                <p className="text-gray-300 mb-4">Revolutionary quantum computing services powered by AI for complex problem solving and optimization</p>
+                <div className="text-2xl font-bold text-purple-400 mb-4">From $5,000/month</div>
+                <Link
+                  to="/ai-quantum-computing"
+                  className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            </FuturisticCard>
+
+            <FuturisticCard className="group hover:scale-105 transition-all duration-300">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-6 group-hover:scale-110 transition-transform">
+                  <Cpu className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">AI Neural Interface</h3>
+                <p className="text-gray-300 mb-4">Advanced brain-computer interface technology powered by AI for seamless human-machine interaction</p>
+                <div className="text-2xl font-bold text-blue-400 mb-4">From $25,000</div>
+                <Link
+                  to="/ai-neural-interface"
+                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            </FuturisticCard>
+
+            <FuturisticCard className="group hover:scale-105 transition-all duration-300">
+              <div className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 mb-6 group-hover:scale-110 transition-transform">
+                  <Globe className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">AI Space Technology</h3>
+                <p className="text-gray-300 mb-4">Advanced AI-powered space technology solutions for satellite operations and space exploration</p>
+                <div className="text-2xl font-bold text-indigo-400 mb-4">From $100,000/month</div>
+                <Link
+                  to="/ai-space-technology"
+                  className="inline-flex items-center text-indigo-400 hover:text-indigo-300 transition-colors"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
+            </FuturisticCard>
           </div>
         </div>
       </section>

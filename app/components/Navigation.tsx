@@ -98,6 +98,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             { name: 'AI Marketing Automation', path: '/ai-marketing-automation', icon: <TrendingUp className="w-4 h-4" /> },
             { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', icon: <BarChart3 className="w-4 h-4" /> },
             { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Smartphone className="w-4 h-4" /> },
+            { name: 'AI Quantum Computing', path: '/ai-quantum-computing', icon: <Cpu className="w-4 h-4" /> },
+            { name: 'AI Neural Interface', path: '/ai-neural-interface', icon: <Brain className="w-4 h-4" /> },
+            { name: 'AI Space Technology', path: '/ai-space-technology', icon: <Globe className="w-4 h-4" /> },
             { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: <Zap className="w-4 h-4" /> }
           ]
         },
@@ -111,7 +114,8 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             { name: 'Network Security', path: '/network-security', icon: <Shield className="w-4 h-4" /> },
             { name: 'Software Development', path: '/software-development', icon: <Code className="w-4 h-4" /> },
             { name: 'System Integration', path: '/system-integration', icon: <Database className="w-4 h-4" /> },
-            { name: 'Web Development', path: '/web-development', icon: <Globe className="w-4 h-4" /> }
+            { name: 'Web Development', path: '/web-development', icon: <Globe className="w-4 h-4" /> },
+            { name: 'Blockchain Infrastructure', path: '/it-blockchain-infrastructure', icon: <Database className="w-4 h-4" /> }
           ]
         },
         {
@@ -144,7 +148,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             { name: 'AI Email Analyzer', path: '/ai-powered-email-analyzer', icon: <Mail className="w-4 h-4" /> },
             { name: 'Customer Sentiment Tracker', path: '/ai-customer-sentiment-tracker', icon: <Heart className="w-4 h-4" /> },
             { name: 'Smart Expense Categorizer', path: '/smart-expense-categorizer', icon: <Receipt className="w-4 h-4" /> },
-            { name: 'Smart Inventory Optimizer', path: '/smart-inventory-optimizer', icon: <Package className="w-4 h-4" /> }
+            { name: 'Smart Inventory Optimizer', path: '/smart-inventory-optimizer', icon: <Package className="w-4 h-4" /> },
+            { name: 'AI Code Reviewer', path: '/micro-saas-ai-code-reviewer', icon: <Code className="w-4 h-4" /> },
+            { name: 'AI Social Media Manager', path: '/micro-saas-ai-social-media-manager', icon: <TrendingUp className="w-4 h-4" /> }
           ]
         },
         {

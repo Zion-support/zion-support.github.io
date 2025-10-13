@@ -76,6 +76,18 @@ const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-
 const SmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-inventory-smart/page"));
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/ai-financial-crime-detection-pro/page"));
+
+// New Advanced AI Services
+const AIQuantumComputingPage = React.lazy(() => import("./app/ai-quantum-computing/page"));
+const AINeuralInterfacePage = React.lazy(() => import("./app/ai-neural-interface/page"));
+const AISpaceTechnologyPage = React.lazy(() => import("./app/ai-space-technology/page"));
+
+// New Micro SAAS Services
+const MicroSaasAICodeReviewerPage = React.lazy(() => import("./app/micro-saas-ai-code-reviewer/page"));
+const MicroSaasAISocialMediaManagerPage = React.lazy(() => import("./app/micro-saas-ai-social-media-manager/page"));
+
+// New IT Services
+const ITBlockchainInfrastructurePage = React.lazy(() => import("./app/it-blockchain-infrastructure/page"));
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -174,6 +186,18 @@ function App() {
                                     <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
                                     <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
                                     <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
+
+                                    {/* New Advanced AI Services */}
+                                    <Route path="/ai-quantum-computing" element={<AIQuantumComputingPage />} />
+                                    <Route path="/ai-neural-interface" element={<AINeuralInterfacePage />} />
+                                    <Route path="/ai-space-technology" element={<AISpaceTechnologyPage />} />
+
+                                    {/* New Micro SAAS Services */}
+                                    <Route path="/micro-saas-ai-code-reviewer" element={<MicroSaasAICodeReviewerPage />} />
+                                    <Route path="/micro-saas-ai-social-media-manager" element={<MicroSaasAISocialMediaManagerPage />} />
+
+                                    {/* New IT Services */}
+                                    <Route path="/it-blockchain-infrastructure" element={<ITBlockchainInfrastructurePage />} />
 
                                     {/* Catch all route */}
                                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
