@@ -32,33 +32,12 @@ import {
   FileText,
   Clock
 } from 'lucide-react';
-<<<<<<< HEAD
-import FuturisticButton from './FuturisticButton';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
 interface NavigationProps {
   onSidebarToggle: () => void;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-<<<<<<< HEAD
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const location = useLocation();
-
-  const toggleMenu = useCallback(() => {
-    setIsMenuOpen(prev => !prev);
-  }, []);
-
-  const toggleDropdown = useCallback((dropdown: string) => {
-    setActiveDropdown(prev => prev === dropdown ? null : dropdown);
-  }, []);
-
-  const closeDropdowns = useCallback(() => {
-    setActiveDropdown(null);
-  }, []);
-=======
   const [isAiServicesOpen, setIsAiServicesOpen] = useState(false);
   const [isItServicesOpen, setIsItServicesOpen] = useState(false);
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
@@ -81,7 +60,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const toggle5GServices = useCallback(() => {
     setIs5GServicesOpen(!is5GServicesOpen);
   }, [is5GServicesOpen]);
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
   const isActive = useCallback((path: string) => {
     return location.pathname === path;
@@ -90,6 +68,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const navigationItems = useMemo(() => [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
       name: 'Home',
       path: '/',
       icon: <Globe className="w-4 h-4" />
@@ -108,8 +90,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       name: 'Contact',
       path: '/contact',
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: <Phone className="w-4 h-4" />
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
       label: 'Home',
       href: '/',
       icon: <Star className="w-4 h-4" />
@@ -185,10 +170,16 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       label: 'Contact',
       href: '/contact',
       icon: <Mail className="w-4 h-4" />
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-b200
 =======
       icon: <Mail className="w-4 h-4" />
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+=======
+      icon: <Mail className="w-4 h-4" />
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
     }
   ], []);
 
@@ -236,6 +227,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
     <nav className="relative z-50 bg-black/20 backdrop-blur-md border-b border-cyan-500/20">
@@ -249,6 +242,10 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               </div>
               <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -262,13 +259,14 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <Brain className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
                 Zion Tech Group
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -346,64 +344,158 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               onClick={onSidebarToggle}
               className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <div key={item.label} className="relative group">
-                <Link
-                  to={item.href}
-                  className={`flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors py-2 ${
-                    isActive(item.href) ? 'text-cyan-400' : ''
-                  }`}
-                  onMouseEnter={() => item.dropdown && setActiveDropdown(item.label)}
-                  onMouseLeave={() => item.dropdown && setActiveDropdown(null)}
-                >
-                  {item.icon}
-                  <span>{item.label}</span>
-                  {item.dropdown && (
-                    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
-                  )}
-                </Link>
-                
-                {/* Dropdown Menu */}
-                {item.dropdown && activeDropdown === item.label && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm rounded-lg border border-white/10 shadow-xl z-50">
-                    <div className="py-2">
-                      {item.dropdown.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.label}
-                          to={dropdownItem.href}
-                          className="flex items-center px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 transition-colors"
-                          onClick={closeDropdowns}
-                        >
-                          <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                          {dropdownItem.label}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 flex items-center space-x-2 ${
+                  isActive(item.path)
+                    ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                {item.icon}
+                <span>{item.name}</span>
+              </Link>
             ))}
+
+            {/* AI Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleAiServices}
+                className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 flex items-center space-x-2"
+              >
+                <Brain className="w-4 h-4" />
+                <span>AI Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isAiServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isAiServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-900/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-xl z-50">
+                  <div className="py-2">
+                    {aiServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="flex items-center space-x-3 px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 transition-colors duration-200"
+                        onClick={() => setIsAiServicesOpen(false)}
+                      >
+                        {service.icon}
+                        <span>{service.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* IT Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleItServices}
+                className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 flex items-center space-x-2"
+              >
+                <Code className="w-4 h-4" />
+                <span>IT Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isItServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-900/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-xl z-50">
+                  <div className="py-2">
+                    {itServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="flex items-center space-x-3 px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 transition-colors duration-200"
+                        onClick={() => setIsItServicesOpen(false)}
+                      >
+                        {service.icon}
+                        <span>{service.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Micro SAAS Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleMicroSaas}
+                className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 flex items-center space-x-2"
+              >
+                <Package className="w-4 h-4" />
+                <span>Micro SAAS</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {isMicroSaasOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-900/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-xl z-50">
+                  <div className="py-2">
+                    {microSaasServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="flex items-center space-x-3 px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 transition-colors duration-200"
+                        onClick={() => setIsMicroSaasOpen(false)}
+                      >
+                        {service.icon}
+                        <span>{service.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* 5G Solutions Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggle5GServices}
+                className="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 flex items-center space-x-2"
+              >
+                <Zap className="w-4 h-4" />
+                <span>5G Solutions</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${is5GServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {is5GServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-slate-900/95 backdrop-blur-md border border-cyan-500/20 rounded-lg shadow-xl z-50">
+                  <div className="py-2">
+                    {fiveGServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="flex items-center space-x-3 px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 transition-colors duration-200"
+                        onClick={() => setIs5GServicesOpen(false)}
+                      >
+                        {service.icon}
+                        <span>{service.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <FuturisticButton
-              href="/demo"
-              variant="outline"
-              size="sm"
-              icon={<Monitor className="w-4 h-4" />}
+            <Link
+              to="/demo"
+              className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-cyan-400 transition-colors"
             >
               Demo
-            </FuturisticButton>
-            <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="sm"
-              icon={<Sparkles className="w-4 h-4" />}
+            </Link>
+            <Link
+              to="/contact"
+              className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center space-x-2"
             >
-              Get Started
-            </FuturisticButton>
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -412,19 +504,16 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               onClick={onSidebarToggle}
               className="p-2 text-gray-300 hover:text-cyan-400 transition-colors"
               aria-label="Toggle sidebar"
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
             >
               <SidebarIcon className="w-6 h-6" />
             </button>
             <button
-              onClick={toggleMenu}
 <<<<<<< HEAD
-              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
-=======
+              onClick={toggleMenu}
               className="p-2 text-gray-300 hover:text-cyan-400 transition-colors"
               aria-label="Toggle menu"
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
             >
+<<<<<<< HEAD
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 =======
                 <Link
@@ -572,11 +661,23 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <Menu className="block h-6 w-6" />
               )}
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
+=======
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+=======
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 text-gray-300 hover:text-cyan-400 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
             </button>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Mobile Navigation */}
@@ -609,6 +710,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 </Link>
               </div>
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden border-t border-white/10 mt-4 pt-4 pb-4">
@@ -644,17 +747,18 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             </div>
 =======
       {/* Mobile menu */}
+=======
+      {/* Mobile Menu */}
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
       {isMobileMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-900/95 backdrop-blur-md border-t border-cyan-500/20">
+        <div className="lg:hidden border-t border-white/10 mt-4 pt-4 pb-4">
+          <div className="space-y-2">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-300 flex items-center space-x-2 ${
-                  isActive(item.path)
-                    ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                className={`flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg hover:bg-white/5 ${
+                  isActive(item.path) ? 'text-cyan-400' : ''
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
@@ -662,7 +766,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 <span>{item.name}</span>
               </Link>
             ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
             
             {/* Mobile AI Services */}
             <div className="pt-2">
@@ -670,6 +773,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 onClick={toggleAiServices}
                 className="w-full text-left px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-300 flex items-center justify-between"
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
                 Demo
               </FuturisticButton>
@@ -682,8 +786,11 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               >
                 Get Started
               </FuturisticButton>
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-b200
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
                 <div className="flex items-center space-x-2">
                   <Brain className="w-4 h-4" />
                   <span>AI Services</span>
@@ -804,13 +911,20 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   ))}
                 </div>
               )}
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
             </div>
           </div>
         </div>
       )}
     </nav>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 });
@@ -822,5 +936,11 @@ Navigation.displayName = 'Navigation';
 =======
 };
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
+=======
+};
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
+=======
+};
+>>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
 
 export default Navigation;
