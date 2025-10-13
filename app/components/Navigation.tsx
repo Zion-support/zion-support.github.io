@@ -55,8 +55,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
+    { name: 'AI Services', path: '/ai-services' },
+    { name: 'Micro SAAS', path: '/micro-saas' },
+    { name: 'IT Services', path: '/it-services' },
     { name: 'Pricing', path: '/pricing' },
-    { name: 'Case Studies', path: '/case-studies' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' }
   ], [])

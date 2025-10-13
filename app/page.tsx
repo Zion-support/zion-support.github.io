@@ -25,7 +25,7 @@ const HomePage = () => {
       description: "Ready-to-use software solutions for immediate deployment including analytics, security, and productivity tools",
       icon: <Zap className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      stats: "50+ solutions",
+      stats: "12+ solutions",
       link: "/micro-saas"
     },
     {
@@ -65,7 +65,7 @@ const HomePage = () => {
   const stats = [
     { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "36+", label: "Total Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
