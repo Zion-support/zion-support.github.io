@@ -31,6 +31,12 @@ import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
 import CaseStudiesPage from './app/pages/CaseStudiesPage';
 import CareersPage from './app/pages/CareersPage';
 
+// Micro SAAS Service Pages
+import AIBlockchainAnalyticsPage from './app/ai-blockchain-analytics/page';
+import AIClimatePredictionEnginePage from './app/ai-climate-prediction-engine/page';
+import AITelepathicInterfacePage from './app/ai-telepathic-interface/page';
+import AIAgriculturalIntelligenceProPage from './app/ai-agricultural-intelligence-pro/page';
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -90,6 +96,12 @@ function App() {
               <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
               <Route path="/case-studies" element={<CaseStudiesPage />} />
               <Route path="/careers" element={<CareersPage />} />
+              
+              {/* Micro SAAS Services */}
+              <Route path="/ai-blockchain-analytics" element={<AIBlockchainAnalyticsPage />} />
+              <Route path="/ai-climate-prediction-engine" element={<AIClimatePredictionEnginePage />} />
+              <Route path="/ai-telepathic-interface" element={<AITelepathicInterfacePage />} />
+              <Route path="/ai-agricultural-intelligence-pro" element={<AIAgriculturalIntelligenceProPage />} />
               
               {/* Catch all route */}
               <Route path="*" element={
