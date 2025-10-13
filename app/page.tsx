@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Navigation from './components/Navigation';
@@ -50,6 +51,63 @@ import LoadingSpinner from './components/LoadingSpinner'
 import PerformanceMonitor from './components/PerformanceMonitor'
 import AccessibilityEnhancer from './components/AccessibilityEnhancer'
       benefits: ['AI Content Generation - $500/month', 'AI Chatbots - $300/month', 'Process Automation - $800/month', 'AI Analytics - $400/month'],
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { Brain, Shield, Zap, Globe, ArrowRight, CheckCircle, Star, Users, Award } from "lucide-react";
+import ImageOptimizer from "./components/ImageOptimizer";
+
+const HomePage = () => {
+  const features = [
+    {
+      title: "AI-Powered Solutions",
+      description:
+        "Cutting-edge artificial intelligence to transform your business operations",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      link: "/ai-services"
+    },
+    {
+      title: "IT Services",
+      description: "Comprehensive technology solutions for modern businesses",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      link: "/services"
+    },
+    {
+      title: "Micro SAAS",
+      description: "Ready-to-use software solutions for immediate deployment",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      link: "/micro-saas"
+    },
+    {
+      title: "5G Solutions",
+      description: "Next-generation connectivity and infrastructure services",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      link: "/5g-solutions"
+    },
+  ];
+
+  const stats = [
+    { number: "500+", label: "Projects Completed", icon: <CheckCircle className="w-6 h-6" /> },
+    { number: "50+", label: "Happy Clients", icon: <Users className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime Guarantee", icon: <Award className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <Star className="w-6 h-6" /> },
+  ];
+
+  const benefits = [
+    "Advanced AI and Machine Learning Solutions",
+    "Enterprise-grade Security and Compliance",
+    "Scalable Cloud Infrastructure",
+    "24/7 Technical Support",
+    "Custom Development Services",
+    "5G Implementation and Optimization"
+  ];
+
+  return (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -98,6 +156,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
         {/* Navigation */}
 
+<<<<<<< HEAD
         <Navigation />
         
         {/* Skip to main content for accessibility */}
@@ -169,6 +228,72 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
                 >
                   View Our Work
                 </a>
+=======
+      {/* Features Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Core Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive technology solutions designed to accelerate your
+              business growth and digital transformation.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <Link
+                key={index}
+                to={feature.link}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+              >
+                <div
+                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                >
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 text-center">
+                  {feature.description}
+                </p>
+                <div className="mt-4 flex items-center justify-center text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <ArrowRight className="w-4 h-4" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Trusted by Industry Leaders
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our track record speaks for itself. We deliver results that matter.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center">
+                    {stat.icon}
+                  </div>
+                </div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-300 text-sm md:text-base">
+                  {stat.label}
+                </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
               </div>
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text"
           >
@@ -177,6 +302,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
           <p className="text-lg sm:text-xl md:text-2xl text-cyan-400 mb-8 font-medium" role="doc-subtitle">
         {/* Services Section */}
 
+<<<<<<< HEAD
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentStatistics />
@@ -239,6 +365,45 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
         {/* Call to Action Section */}
         <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/10">
           <h2 className="text-3xl font-bold text-white mb-4">
+=======
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
+              </p>
+              <div className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <ImageOptimizer
+                src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="Team working on technology solutions"
+                className="rounded-xl shadow-2xl"
+                width={600}
+                height={400}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
             Ready to Transform Your Business?
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">

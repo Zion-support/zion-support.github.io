@@ -20,6 +20,19 @@ export default defineConfig(({ mode }) => ({
     sourcemap: mode !== "production",
     cssCodeSplit: true,
     chunkSizeWarningLimit: 1000,
+<<<<<<< HEAD
+=======
+    assetsInlineLimit: 4096,
+    // Enable compression
+    reportCompressedSize: true,
+    // Additional optimizations
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
     rollupOptions: {
       output: {
         manualChunks: (id) => {

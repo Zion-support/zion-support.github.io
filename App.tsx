@@ -1,7 +1,34 @@
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 <<<<<<< HEAD
+=======
+"use client";
+import React, { Suspense } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import "./app/styles/futuristic.css";
+import "./app/styles/futuristic-enhanced.css";
+import Navigation from "./app/components/Navigation";
+import Footer from "./app/components/Footer";
+import HomePage from "./app/page";
+import { LoadingPage } from "./app/components/LoadingStates";
+import ErrorBoundary from "./app/components/ErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import PerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
+import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
+import SEOOptimizer from "./app/components/SEOOptimizer";
+import ErrorHandler from "./app/components/ErrorHandler";
+import ServiceWorker from "./app/components/ServiceWorker";
+import SecurityHeaders from "./app/components/SecurityHeaders";
+import EnhancedSEO from "./app/components/EnhancedSEO";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
 
 // Components
 import Navigation from './app/components/Navigation';
@@ -189,6 +216,9 @@ const App: React.FC = () => {
       <HelmetProvider>
         <ServiceWorkerRegistration />
         <Router>
+          <SecurityHeaders />
+          <ServiceWorker />
+          <EnhancedSEO />
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <EnhancedSEOHead />
             <Navigation />
