@@ -1,51 +1,51 @@
-import { ArrowRight, Package, TrendingUp, Shield, Zap, Globe, CheckCircle, Star, Brain, Truck, BarChart3, Target } from "lucide-react";
+import { ArrowRight, Video, Eye, BarChart3, Zap, Shield, CheckCircle, Star, Brain, Target, TrendingUp, Play } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAiSupplyChainOptimizer() {
+export default function ZionAiVideoAnalyzer() {
   const features = [
     {
-      icon: <Package className="w-6 h-6" />,
-      title: "AI-Powered Demand Forecasting",
-      description: "Predict demand patterns with 95% accuracy using machine learning and historical data analysis"
+      icon: <Video className="w-6 h-6" />,
+      title: "AI Video Analysis",
+      description: "Advanced computer vision to analyze video content, detect objects, faces, and extract meaningful insights"
     },
     {
-      icon: <Truck className="w-6 h-6" />,
-      title: "Route Optimization",
-      description: "Optimize delivery routes to reduce costs by up to 30% and improve delivery times"
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Inventory Management",
-      description: "Smart inventory tracking with automated reorder points and stock level optimization"
+      icon: <Eye className="w-6 h-6" />,
+      title: "Real-time Processing",
+      description: "Process video streams in real-time with low latency and high accuracy for live monitoring applications"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Analytics",
-      description: "Comprehensive dashboard with supply chain KPIs, performance metrics, and cost analysis"
+      title: "Content Analytics",
+      description: "Extract detailed analytics including viewer engagement, content performance, and behavioral insights"
+    },
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "Object Recognition",
+      description: "Identify and track objects, people, vehicles, and other entities with advanced machine learning models"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Risk Management",
-      description: "Identify and mitigate supply chain risks with predictive analytics and contingency planning"
+      title: "Content Moderation",
+      description: "Automatically detect inappropriate content, violence, or policy violations in video content"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Streamline operations with AI-driven process automation and exception handling"
+      title: "Automated Tagging",
+      description: "Automatically generate tags, captions, and metadata for better content organization and searchability"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$79",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small content creators",
       features: [
-        "Up to 5 suppliers",
-        "Basic demand forecasting",
-        "Inventory tracking",
+        "Up to 100 hours/month",
+        "Basic video analysis",
+        "Object detection",
         "Standard reports",
         "Email support",
         "30-day data retention"
@@ -54,29 +54,29 @@ export default function ZionAiSupplyChainOptimizer() {
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$199",
       period: "/month",
       description: "Most popular for growing businesses",
       features: [
-        "Up to 25 suppliers",
-        "Advanced forecasting",
-        "Route optimization",
-        "Risk management",
+        "Up to 500 hours/month",
+        "Advanced AI analysis",
+        "Real-time processing",
+        "Content moderation",
         "Priority support",
         "90-day data retention",
         "API access",
-        "Custom workflows"
+        "Custom models"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$499",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited suppliers",
-        "AI-powered optimization",
+        "Unlimited video processing",
+        "AI-powered insights",
         "Real-time monitoring",
         "Advanced analytics",
         "White-label reports",
@@ -91,24 +91,24 @@ export default function ZionAiSupplyChainOptimizer() {
 
   const testimonials = [
     {
-      name: "Robert Chen",
-      company: "Global Manufacturing Inc.",
-      role: "Supply Chain Director",
-      content: "Zion AI Supply Chain Optimizer reduced our logistics costs by 28% and improved delivery times by 40%. Incredible ROI.",
+      name: "Alex Chen",
+      company: "Media Production Co.",
+      role: "Content Director",
+      content: "Zion AI Video Analyzer revolutionized our content workflow. The automated tagging and analysis saved us 20 hours per week.",
       rating: 5
     },
     {
-      name: "Maria Rodriguez",
-      company: "Retail Solutions Ltd.",
-      role: "Operations Manager",
-      content: "The demand forecasting is incredibly accurate. We've reduced stockouts by 60% and overstock by 45%.",
+      name: "Sarah Martinez",
+      company: "Security Solutions Inc.",
+      role: "Security Manager",
+      content: "The real-time object detection and tracking is incredibly accurate. Our security monitoring efficiency improved by 60%.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "E-commerce Giant",
-      role: "VP of Operations",
-      content: "The route optimization alone paid for itself in the first month. Our delivery efficiency improved dramatically.",
+      name: "Mike Johnson",
+      company: "E-learning Platform",
+      role: "CTO",
+      content: "The content moderation features help us maintain quality standards automatically. False positives are minimal and accuracy is excellent.",
       rating: 5
     }
   ];
@@ -116,14 +116,14 @@ export default function ZionAiSupplyChainOptimizer() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Supply Chain Optimizer - Intelligent Logistics & Inventory Management | Zion Tech Group</title>
+        <title>Zion AI Video Analyzer - Advanced Video Intelligence Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Optimize your supply chain with Zion AI Supply Chain Optimizer. Advanced demand forecasting, route optimization, and inventory management for maximum efficiency."
+          content="Transform video content with Zion AI Video Analyzer. Advanced computer vision, real-time processing, and automated content analysis for modern businesses."
         />
         <meta
           name="keywords"
-          content="supply chain optimization, demand forecasting, inventory management, logistics, route optimization, AI supply chain"
+          content="video analysis, computer vision, AI video processing, content moderation, object detection, video analytics"
         />
       </Helmet>
 
@@ -131,30 +131,30 @@ export default function ZionAiSupplyChainOptimizer() {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 mb-6">
-              <Package className="w-4 h-4 text-orange-400 mr-2" />
-              <span className="text-orange-400 text-sm font-medium">#1 Supply Chain AI Platform 2024</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
+              <Video className="w-4 h-4 text-purple-400 mr-2" />
+              <span className="text-purple-400 text-sm font-medium">#1 AI Video Platform 2024</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-                Zion AI Supply Chain Optimizer
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                Zion AI Video Analyzer
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, 
-              and ensure seamless operations with our intelligent logistics platform.
+              Unlock the power of video content with AI-powered analysis. Extract insights, detect objects, 
+              and automate content processing with our advanced computer vision platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -163,16 +163,16 @@ export default function ZionAiSupplyChainOptimizer() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-2">30%</div>
-                <div className="text-gray-300">Cost Reduction</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+                <div className="text-gray-300">Accuracy Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-400 mb-2">95%</div>
-                <div className="text-gray-300">Forecast Accuracy</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">60%</div>
+                <div className="text-gray-300">Efficiency Gain</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">40%</div>
-                <div className="text-gray-300">Faster Delivery</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">Real-time</div>
+                <div className="text-gray-300">Processing Speed</div>
               </div>
             </div>
           </div>
@@ -183,10 +183,10 @@ export default function ZionAiSupplyChainOptimizer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Intelligent Supply Chain Management
+                Advanced Video Intelligence
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to optimize your supply chain operations with AI-powered insights and automation.
+                Everything you need to analyze and process video content with AI-powered computer vision technology.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -195,7 +195,7 @@ export default function ZionAiSupplyChainOptimizer() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -218,7 +218,7 @@ export default function ZionAiSupplyChainOptimizer() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs. All plans include 14-day free trial.
+                Choose the plan that fits your video processing needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -227,13 +227,13 @@ export default function ZionAiSupplyChainOptimizer() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-orange-400 bg-gradient-to-br from-orange-500/10 to-red-500/10'
-                      : 'border-white/20 hover:border-orange-400'
+                      ? 'border-purple-400 bg-gradient-to-br from-purple-500/10 to-pink-500/10'
+                      : 'border-white/20 hover:border-purple-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -258,8 +258,8 @@ export default function ZionAiSupplyChainOptimizer() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700'
-                        : 'border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
+                        : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -275,10 +275,10 @@ export default function ZionAiSupplyChainOptimizer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Supply Chain Leaders
+                Trusted by Content Creators
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Supply Chain Optimizer
+                See what our customers say about Zion AI Video Analyzer
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -307,22 +307,22 @@ export default function ZionAiSupplyChainOptimizer() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Analyze Your Video Content?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join industry leaders using Zion AI Supply Chain Optimizer to reduce costs and improve efficiency.
+              Join content creators and businesses using Zion AI Video Analyzer to unlock video insights and automate processing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>

@@ -1,69 +1,69 @@
-import { ArrowRight, Package, TrendingUp, Shield, Zap, Globe, CheckCircle, Star, Brain, Truck, BarChart3, Target } from "lucide-react";
+import { ArrowRight, Users, Brain, FileText, Shield, Zap, CheckCircle, Star, Target, BarChart3, Clock, Award } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAiSupplyChainOptimizer() {
+export default function ZionAiHrAssistant() {
   const features = [
     {
-      icon: <Package className="w-6 h-6" />,
-      title: "AI-Powered Demand Forecasting",
-      description: "Predict demand patterns with 95% accuracy using machine learning and historical data analysis"
+      icon: <Users className="w-6 h-6" />,
+      title: "AI-Powered Recruitment",
+      description: "Streamline hiring with intelligent candidate screening, resume analysis, and interview scheduling"
     },
     {
-      icon: <Truck className="w-6 h-6" />,
-      title: "Route Optimization",
-      description: "Optimize delivery routes to reduce costs by up to 30% and improve delivery times"
+      icon: <Brain className="w-6 h-6" />,
+      title: "Employee Performance Analytics",
+      description: "Track and analyze employee performance with AI-driven insights and personalized development plans"
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Inventory Management",
-      description: "Smart inventory tracking with automated reorder points and stock level optimization"
+      icon: <FileText className="w-6 h-6" />,
+      title: "Automated Documentation",
+      description: "Generate contracts, policies, and reports automatically with compliance-ready templates"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Analytics",
-      description: "Comprehensive dashboard with supply chain KPIs, performance metrics, and cost analysis"
+      title: "HR Analytics Dashboard",
+      description: "Comprehensive insights into workforce trends, retention rates, and productivity metrics"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Risk Management",
-      description: "Identify and mitigate supply chain risks with predictive analytics and contingency planning"
+      title: "Compliance Management",
+      description: "Stay compliant with labor laws and regulations with automated monitoring and alerts"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Streamline operations with AI-driven process automation and exception handling"
+      title: "Workflow Automation",
+      description: "Automate routine HR tasks like onboarding, offboarding, and performance reviews"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$49",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams",
       features: [
-        "Up to 5 suppliers",
-        "Basic demand forecasting",
-        "Inventory tracking",
+        "Up to 25 employees",
+        "Basic recruitment tools",
+        "Performance tracking",
         "Standard reports",
         "Email support",
-        "30-day data retention"
+        "Basic automation"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$149",
       period: "/month",
-      description: "Most popular for growing businesses",
+      description: "Most popular for growing companies",
       features: [
-        "Up to 25 suppliers",
-        "Advanced forecasting",
-        "Route optimization",
-        "Risk management",
+        "Up to 100 employees",
+        "Advanced recruitment AI",
+        "Employee analytics",
+        "Compliance monitoring",
         "Priority support",
-        "90-day data retention",
+        "Advanced automation",
         "API access",
         "Custom workflows"
       ],
@@ -71,17 +71,16 @@ export default function ZionAiSupplyChainOptimizer() {
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited suppliers",
-        "AI-powered optimization",
-        "Real-time monitoring",
+        "Unlimited employees",
+        "AI-powered insights",
         "Advanced analytics",
+        "Full compliance suite",
         "White-label reports",
         "24/7 dedicated support",
-        "Unlimited data retention",
         "Custom integrations",
         "Advanced security"
       ],
@@ -91,24 +90,24 @@ export default function ZionAiSupplyChainOptimizer() {
 
   const testimonials = [
     {
-      name: "Robert Chen",
-      company: "Global Manufacturing Inc.",
-      role: "Supply Chain Director",
-      content: "Zion AI Supply Chain Optimizer reduced our logistics costs by 28% and improved delivery times by 40%. Incredible ROI.",
+      name: "Jennifer Walsh",
+      company: "Tech Innovations Inc.",
+      role: "Head of HR",
+      content: "Zion AI HR Assistant reduced our hiring time by 50% and improved candidate quality significantly. The AI screening is incredibly accurate.",
       rating: 5
     },
     {
-      name: "Maria Rodriguez",
-      company: "Retail Solutions Ltd.",
-      role: "Operations Manager",
-      content: "The demand forecasting is incredibly accurate. We've reduced stockouts by 60% and overstock by 45%.",
+      name: "Marcus Johnson",
+      company: "Global Services Ltd.",
+      role: "HR Director",
+      content: "The performance analytics helped us identify top performers and create targeted development programs. Employee satisfaction increased by 30%.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "E-commerce Giant",
-      role: "VP of Operations",
-      content: "The route optimization alone paid for itself in the first month. Our delivery efficiency improved dramatically.",
+      name: "Sarah Kim",
+      company: "Startup Solutions",
+      role: "People Operations Manager",
+      content: "The automation features saved us hours every week. Onboarding is now seamless and compliance is never a concern.",
       rating: 5
     }
   ];
@@ -116,14 +115,14 @@ export default function ZionAiSupplyChainOptimizer() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Supply Chain Optimizer - Intelligent Logistics & Inventory Management | Zion Tech Group</title>
+        <title>Zion AI HR Assistant - Intelligent Human Resources Management Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Optimize your supply chain with Zion AI Supply Chain Optimizer. Advanced demand forecasting, route optimization, and inventory management for maximum efficiency."
+          content="Transform HR operations with Zion AI HR Assistant. AI-powered recruitment, performance analytics, and workflow automation for modern HR teams."
         />
         <meta
           name="keywords"
-          content="supply chain optimization, demand forecasting, inventory management, logistics, route optimization, AI supply chain"
+          content="HR management, AI recruitment, employee analytics, HR automation, performance tracking, compliance management"
         />
       </Helmet>
 
@@ -131,30 +130,30 @@ export default function ZionAiSupplyChainOptimizer() {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 mb-6">
-              <Package className="w-4 h-4 text-orange-400 mr-2" />
-              <span className="text-orange-400 text-sm font-medium">#1 Supply Chain AI Platform 2024</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border border-blue-500/30 mb-6">
+              <Users className="w-4 h-4 text-blue-400 mr-2" />
+              <span className="text-blue-400 text-sm font-medium">#1 AI HR Platform 2024</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
-                Zion AI Supply Chain Optimizer
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+                Zion AI HR Assistant
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, 
-              and ensure seamless operations with our intelligent logistics platform.
+              Revolutionize your HR operations with AI-powered recruitment, performance analytics, and workflow automation. 
+              Build better teams and improve employee experience with intelligent HR management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -163,16 +162,16 @@ export default function ZionAiSupplyChainOptimizer() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-400 mb-2">30%</div>
-                <div className="text-gray-300">Cost Reduction</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">50%</div>
+                <div className="text-gray-300">Faster Hiring</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-400 mb-2">95%</div>
-                <div className="text-gray-300">Forecast Accuracy</div>
+                <div className="text-3xl font-bold text-indigo-400 mb-2">30%</div>
+                <div className="text-gray-300">Higher Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">40%</div>
-                <div className="text-gray-300">Faster Delivery</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
+                <div className="text-gray-300">Accuracy Rate</div>
               </div>
             </div>
           </div>
@@ -183,10 +182,10 @@ export default function ZionAiSupplyChainOptimizer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Intelligent Supply Chain Management
+                Intelligent HR Management
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to optimize your supply chain operations with AI-powered insights and automation.
+                Everything you need to manage your workforce effectively with AI-powered insights and automation.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -195,7 +194,7 @@ export default function ZionAiSupplyChainOptimizer() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-orange-500 to-red-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -218,7 +217,7 @@ export default function ZionAiSupplyChainOptimizer() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs. All plans include 14-day free trial.
+                Choose the plan that fits your team size. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -227,13 +226,13 @@ export default function ZionAiSupplyChainOptimizer() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-orange-400 bg-gradient-to-br from-orange-500/10 to-red-500/10'
-                      : 'border-white/20 hover:border-orange-400'
+                      ? 'border-blue-400 bg-gradient-to-br from-blue-500/10 to-indigo-500/10'
+                      : 'border-white/20 hover:border-blue-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -258,8 +257,8 @@ export default function ZionAiSupplyChainOptimizer() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-orange-500 to-red-600 text-white hover:from-orange-600 hover:to-red-700'
-                        : 'border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white hover:from-blue-600 hover:to-indigo-700'
+                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -275,10 +274,10 @@ export default function ZionAiSupplyChainOptimizer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Supply Chain Leaders
+                Trusted by HR Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Supply Chain Optimizer
+                See what our customers say about Zion AI HR Assistant
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -307,22 +306,22 @@ export default function ZionAiSupplyChainOptimizer() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
+              Ready to Transform Your HR Operations?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join industry leaders using Zion AI Supply Chain Optimizer to reduce costs and improve efficiency.
+              Join forward-thinking companies using Zion AI HR Assistant to build better teams and improve employee experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>
