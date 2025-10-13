@@ -65,6 +65,22 @@ const AIServicesPage = () => {
       color: "from-yellow-500 to-orange-500",
       link: "/ai-workflow-automation",
       features: ["Process Optimization", "Task Automation", "Smart Routing"]
+    },
+    {
+      title: "AI Blockchain Solutions",
+      description: "Revolutionize blockchain projects with AI-powered smart contracts, DeFi optimization, and cross-chain solutions.",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      link: "/ai-blockchain-solutions",
+      features: ["Smart Contracts", "DeFi Optimization", "Cross-chain Solutions", "NFT Platforms", "Security Auditing"]
+    },
+    {
+      title: "AI Climate Solutions Pro",
+      description: "Lead the fight against climate change with AI-powered environmental solutions and sustainability tools.",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      link: "/ai-climate-solutions-pro",
+      features: ["Carbon Tracking", "Renewable Energy", "Climate Prediction", "Environmental Monitoring", "Sustainable Agriculture"]
     }
   ];
 

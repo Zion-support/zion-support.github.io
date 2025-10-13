@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Video, Package, Mic } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -94,51 +94,51 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
-      price: "From $299/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro",
-      featured: true
-    },
-    {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
-      price: "From $499/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
-      featured: true
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
+      name: "Zion AI Video Generator Pro",
+      description: "Create professional videos in minutes with AI-powered video generation and automated editing",
       price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
+      icon: <Video className="w-6 h-6" />,
+      link: "/zion-ai-video-generator",
       featured: true
     },
     {
-      name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
+      name: "Zion AI Customer Insights Pro",
+      description: "Deep customer analytics with AI-powered sentiment analysis and predictive customer lifetime value",
       price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-customer-insights",
       featured: true
     },
     {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
+      name: "Zion Smart Inventory Optimizer",
+      description: "AI-powered inventory management with demand forecasting and automated reordering",
+      price: "From $199/month",
+      icon: <Package className="w-6 h-6" />,
+      link: "/zion-smart-inventory-optimizer",
+      featured: true
+    },
+    {
+      name: "Zion AI Voice Assistant Pro",
+      description: "Advanced voice assistant for business operations with custom commands and integrations",
+      price: "From $129/month",
+      icon: <Mic className="w-6 h-6" />,
+      link: "/zion-ai-voice-assistant-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Blockchain Solutions",
+      description: "Revolutionize blockchain projects with AI-powered smart contracts and DeFi optimization",
+      price: "From $1,999/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/ai-blockchain-solutions",
+      featured: true
+    },
+    {
+      name: "Zion AI Climate Solutions Pro",
+      description: "Lead the fight against climate change with AI-powered environmental solutions",
+      price: "From $1,499/month",
+      icon: <Target className="w-6 h-6" />,
+      link: "/ai-climate-solutions-pro",
       featured: true
     }
   ];

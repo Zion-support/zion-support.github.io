@@ -58,12 +58,15 @@ const Footer: React.FC = () => {
   const services = [
     { name: "AI Analytics", path: "/ai-analytics" },
     { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
+    { name: "AI Blockchain Solutions", path: "/ai-blockchain-solutions" },
+    { name: "AI Climate Solutions", path: "/ai-climate-solutions-pro" },
     { name: "AI Content Generation", path: "/ai-content-generation" },
     { name: "AI Customer Support", path: "/ai-customer-support" },
     { name: "Cloud Migration", path: "/cloud-migration" },
     { name: "Web Development", path: "/web-development" },
     { name: "DevOps", path: "/devops" },
     { name: "IT Consulting", path: "/it-consulting" },
+    { name: "AI-Powered IT Consulting", path: "/ai-powered-it-consulting" },
   ];
 
   const microSaasServices = [

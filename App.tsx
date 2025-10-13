@@ -95,6 +95,15 @@ const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleane
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
 
+// AI Blockchain Solutions
+const AIBlockchainSolutionsPage = React.lazy(() => import("./app/ai-blockchain-solutions/page"));
+
+// AI Climate Solutions
+const AIClimateSolutionsProPage = React.lazy(() => import("./app/ai-climate-solutions-pro/page"));
+
+// AI-Powered IT Consulting
+const AIPoweredITConsultingPage = React.lazy(() => import("./app/ai-powered-it-consulting/page"));
+
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -214,6 +223,15 @@ function App() {
                             <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+
+                            {/* AI Blockchain Solutions Routes */}
+                            <Route path="/ai-blockchain-solutions" element={<AIBlockchainSolutionsPage />} />
+
+                            {/* AI Climate Solutions Routes */}
+                            <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
+
+                            {/* AI-Powered IT Consulting Routes */}
+                            <Route path="/ai-powered-it-consulting" element={<AIPoweredITConsultingPage />} />
                           </Routes>
                         </Suspense>
                       </main>

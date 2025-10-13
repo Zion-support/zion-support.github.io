@@ -82,6 +82,16 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       description: 'AI-powered security solutions'
     },
     {
+      name: 'AI Blockchain Solutions',
+      path: '/ai-blockchain-solutions',
+      description: 'AI-powered blockchain technology'
+    },
+    {
+      name: 'AI Climate Solutions',
+      path: '/ai-climate-solutions-pro',
+      description: 'Environmental AI solutions'
+    },
+    {
       name: 'Cloud Migration',
       path: '/cloud-migration',
       description: 'Seamless cloud transition'
@@ -100,6 +110,11 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       name: 'IT Consulting',
       path: '/it-consulting',
       description: 'Strategic technology guidance'
+    },
+    {
+      name: 'AI-Powered IT Consulting',
+      path: '/ai-powered-it-consulting',
+      description: 'AI-driven IT transformation'
     }
   ];
 
@@ -201,6 +216,37 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                   <span>{item.name}</span>
                 </Link>
               ))}
+              
+              {/* Mobile Services Dropdown */}
+              <div className="pt-4 border-t border-cyan-500/20">
+                <h3 className="text-white font-semibold mb-3 text-sm px-3">Popular Services</h3>
+                <div className="space-y-1">
+                  {serviceDropdownItems.slice(0, 6).map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.path}
+                      className="block px-3 py-2 rounded-lg hover:bg-cyan-500/10 transition-colors group"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <div className="font-medium text-white group-hover:text-cyan-400 transition-colors text-sm">
+                        {service.name}
+                      </div>
+                      <div className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
+                        {service.description}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+                <div className="mt-3 pt-3 border-t border-cyan-500/20">
+                  <Link
+                    to="/services"
+                    className="block text-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors px-3"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    View All Services →
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         )}

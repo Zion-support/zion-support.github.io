@@ -142,12 +142,94 @@ import {
   Flag,
   Anchor,
   Sailboat,
-  Leaf,
-  TreePine,
-  Recycle,
   Zap,
-  Battery,
-  Lightbulb,
+  Code,
+  Database as DatabaseIcon,
+  Cloud,
+  Smartphone as SmartphoneIcon,
+  Laptop as LaptopIcon,
+  Monitor as MonitorIcon,
+  Server as ServerIcon,
+  Network as NetworkIcon,
+  HardDrive as HardDriveIcon,
+  Settings as SettingsIcon,
+  Wrench as WrenchIcon,
+  Search as SearchIcon,
+  Filter as FilterIcon,
+  Download as DownloadIcon,
+  Upload as UploadIcon,
+  Share as ShareIcon,
+  Eye as EyeIcon,
+  Heart as HeartIcon,
+  ThumbsUp as ThumbsUpIcon,
+  Clock as ClockIcon,
+  MapPin as MapPinIcon,
+  PhoneCall as PhoneCallIcon,
+  Building as BuildingIcon,
+  Briefcase as BriefcaseIcon,
+  GraduationCap as GraduationCapIcon,
+  ShoppingCart as ShoppingCartIcon,
+  CreditCard as CreditCardIcon,
+  Truck as TruckIcon,
+  Package as PackageIcon,
+  Home as HomeIcon,
+  Car as CarIcon,
+  Plane as PlaneIcon,
+  Train as TrainIcon,
+  Ship as ShipIcon,
+  Bike as BikeIcon,
+  Coffee as CoffeeIcon,
+  Utensils as UtensilsIcon,
+  Gamepad2 as Gamepad2Icon,
+  Book as BookIcon,
+  Newspaper as NewspaperIcon,
+  FileImage as FileImageIcon,
+  FileVideo as FileVideoIcon,
+  FileAudio as FileAudioIcon,
+  FileCode as FileCodeIcon,
+  FileSpreadsheet as FileSpreadsheetIcon,
+  FilePdf as FilePdfIcon,
+  FileZip as FileZipIcon,
+  Folder as FolderIcon,
+  Archive as ArchiveIcon,
+  Trash2 as Trash2Icon,
+  Edit as EditIcon,
+  Copy as CopyIcon,
+  Cut as CutIcon,
+  Paste as PasteIcon,
+  Save as SaveIcon,
+  Undo as UndoIcon,
+  Redo as RedoIcon,
+  RefreshCw as RefreshCwIcon,
+  RotateCcw as RotateCcwIcon,
+  RotateCw as RotateCwIcon,
+  Move as MoveIcon,
+  Maximize as MaximizeIcon,
+  Minimize as MinimizeIcon,
+  X as XIcon,
+  Plus as PlusIcon,
+  Minus as MinusIcon,
+  Divide as DivideIcon,
+  Equal as EqualIcon,
+  Percent as PercentIcon,
+  Hash as HashIcon,
+  AtSign as AtSignIcon,
+  Euro as EuroIcon,
+  Pound as PoundIcon,
+  Yen as YenIcon,
+  Bitcoin as BitcoinIcon,
+  CreditCard as CreditCardIcon2,
+  Wallet as WalletIcon,
+  Banknote as BanknoteIcon,
+  Coins as CoinsIcon,
+  PiggyBank as PiggyBankIcon,
+  TrendingDown as TrendingDownIcon,
+  BarChart as BarChartIcon,
+  LineChart as LineChartIcon,
+  Scatter as ScatterIcon,
+  AreaChart as AreaChartIcon,
+  Candlestick as CandlestickIcon,
+  Gauge as GaugeIcon,
   Thermometer as ThermometerIcon,
   Droplet as DropletIcon,
   Wind as WindIcon,
@@ -169,176 +251,170 @@ import {
   Navigation as NavigationIcon,
   Flag as FlagIcon,
   Anchor as AnchorIcon,
-  Sailboat as SailboatIcon,
-  Leaf as LeafIcon,
-  TreePine as TreePineIcon,
-  Recycle as RecycleIcon,
-  Zap as ZapIcon,
-  Battery as BatteryIcon,
-  Lightbulb as LightbulbIcon
+  Sailboat as SailboatIcon
 } from 'lucide-react';
 
-const AIClimateSolutionsProPage = () => {
-  const climateServices = [
+const AIPoweredITConsultingPage = () => {
+  const consultingServices = [
     {
-      title: "AI Climate Prediction Engine",
-      description: "Advanced climate modeling with AI-powered weather forecasting, extreme event prediction, and long-term climate trend analysis.",
-      icon: <CloudLightning className="w-8 h-8" />,
+      title: "AI-Powered Digital Transformation",
+      description: "Complete digital transformation strategy with AI-driven assessment, roadmap development, and implementation guidance.",
+      icon: <Rocket className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
-      price: "Starting at $2,499/month",
-      originalPrice: "$4,999/month",
-      features: ["Weather Forecasting", "Extreme Event Prediction", "Climate Modeling", "Risk Assessment", "Real-time Alerts", "Historical Analysis"],
-      category: "Climate Prediction",
+      price: "Starting at $2,999/month",
+      originalPrice: "$5,999/month",
+      features: ["AI Assessment", "Transformation Roadmap", "Implementation Guidance", "Change Management", "ROI Analysis", "Continuous Optimization"],
+      category: "Digital Transformation",
       popular: true
     },
     {
-      title: "AI Carbon Footprint Tracker",
-      description: "Comprehensive carbon footprint monitoring with AI-powered emissions tracking, reduction recommendations, and sustainability reporting.",
-      icon: <Leaf className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $899/month",
-      originalPrice: "$1,799/month",
-      features: ["Emissions Tracking", "Reduction Recommendations", "Sustainability Reporting", "Carbon Credits", "Supply Chain Analysis", "Compliance Monitoring"],
-      category: "Carbon Management",
-      popular: true
-    },
-    {
-      title: "AI Renewable Energy Optimizer",
-      description: "Intelligent renewable energy management with AI-powered grid optimization, storage management, and demand forecasting.",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-yellow-500 to-orange-500",
-      price: "Starting at $1,599/month",
-      originalPrice: "$3,199/month",
-      features: ["Grid Optimization", "Storage Management", "Demand Forecasting", "Energy Trading", "Load Balancing", "Efficiency Monitoring"],
-      category: "Renewable Energy",
-      popular: true
-    },
-    {
-      title: "AI Smart Agriculture Platform",
-      description: "Precision agriculture with AI-powered crop monitoring, yield optimization, and sustainable farming practices.",
-      icon: <TreePine className="w-8 h-8" />,
-      color: "from-emerald-500 to-green-500",
-      price: "Starting at $1,299/month",
-      originalPrice: "$2,599/month",
-      features: ["Crop Monitoring", "Yield Optimization", "Soil Analysis", "Pest Detection", "Irrigation Control", "Weather Integration"],
-      category: "Smart Agriculture"
-    },
-    {
-      title: "AI Water Management System",
-      description: "Intelligent water resource management with AI-powered consumption monitoring, leak detection, and quality analysis.",
-      icon: <Droplet className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500",
-      price: "Starting at $999/month",
-      originalPrice: "$1,999/month",
-      features: ["Consumption Monitoring", "Leak Detection", "Quality Analysis", "Usage Optimization", "Predictive Maintenance", "Cost Reduction"],
-      category: "Water Management"
-    },
-    {
-      title: "AI Waste Management Optimizer",
-      description: "Smart waste management with AI-powered sorting, recycling optimization, and circular economy solutions.",
-      icon: <Recycle className="w-8 h-8" />,
-      color: "from-slate-500 to-gray-500",
-      price: "Starting at $799/month",
-      originalPrice: "$1,599/month",
-      features: ["Waste Sorting", "Recycling Optimization", "Circular Economy", "Collection Routes", "Composting", "Sustainability Metrics"],
-      category: "Waste Management"
-    },
-    {
-      title: "AI Environmental Monitoring",
-      description: "Comprehensive environmental monitoring with AI-powered air quality, water quality, and biodiversity tracking.",
-      icon: <Activity className="w-8 h-8" />,
+      title: "AI Cloud Architecture Design",
+      description: "Intelligent cloud architecture with AI-powered optimization, cost analysis, and performance monitoring.",
+      icon: <Cloud className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      price: "Starting at $1,199/month",
-      originalPrice: "$2,399/month",
-      features: ["Air Quality Monitoring", "Water Quality Tracking", "Biodiversity Analysis", "Pollution Detection", "Environmental Alerts", "Compliance Reporting"],
-      category: "Environmental Monitoring"
+      price: "Starting at $1,999/month",
+      originalPrice: "$3,999/month",
+      features: ["Cloud Strategy", "Architecture Design", "Cost Optimization", "Security Planning", "Migration Planning", "Performance Monitoring"],
+      category: "Cloud Architecture",
+      popular: true
     },
     {
-      title: "AI Green Building Analytics",
-      description: "Smart building optimization with AI-powered energy efficiency, indoor air quality, and sustainability metrics.",
-      icon: <Building className="w-8 h-8" />,
-      color: "from-indigo-500 to-purple-500",
-      price: "Starting at $1,399/month",
-      originalPrice: "$2,799/month",
-      features: ["Energy Efficiency", "Indoor Air Quality", "Sustainability Metrics", "HVAC Optimization", "Lighting Control", "Occupancy Analytics"],
-      category: "Green Buildings"
-    },
-    {
-      title: "AI Climate Risk Assessment",
-      description: "Advanced climate risk analysis with AI-powered vulnerability assessment, adaptation planning, and resilience strategies.",
+      title: "AI Cybersecurity Assessment",
+      description: "Comprehensive security assessment with AI-powered vulnerability analysis, threat modeling, and risk mitigation.",
       icon: <Shield className="w-8 h-8" />,
       color: "from-red-500 to-orange-500",
-      price: "Starting at $1,799/month",
-      originalPrice: "$3,599/month",
-      features: ["Vulnerability Assessment", "Adaptation Planning", "Resilience Strategies", "Risk Modeling", "Scenario Analysis", "Insurance Integration"],
-      category: "Climate Risk"
-    },
-    {
-      title: "AI Sustainable Supply Chain",
-      description: "Green supply chain optimization with AI-powered sustainability tracking, ethical sourcing, and circular economy integration.",
-      icon: <Truck className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500",
       price: "Starting at $1,499/month",
       originalPrice: "$2,999/month",
-      features: ["Sustainability Tracking", "Ethical Sourcing", "Circular Economy", "Carbon Footprint", "Supplier Assessment", "Green Logistics"],
-      category: "Sustainable Supply Chain"
+      features: ["Security Assessment", "Vulnerability Analysis", "Threat Modeling", "Risk Mitigation", "Compliance Audit", "Security Training"],
+      category: "Cybersecurity",
+      popular: true
     },
     {
-      title: "AI Ocean Health Monitor",
-      description: "Marine ecosystem monitoring with AI-powered ocean health analysis, pollution tracking, and marine life protection.",
-      icon: <Anchor className="w-8 h-8" />,
-      color: "from-blue-500 to-indigo-500",
-      price: "Starting at $1,699/month",
-      originalPrice: "$3,399/month",
-      features: ["Ocean Health Analysis", "Pollution Tracking", "Marine Life Protection", "Coral Reef Monitoring", "Fisheries Management", "Marine Conservation"],
-      category: "Ocean Health"
+      title: "AI Data Strategy Consulting",
+      description: "Intelligent data strategy with AI-powered analytics, governance, and monetization strategies.",
+      icon: <Database className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $1,799/month",
+      originalPrice: "$3,599/month",
+      features: ["Data Strategy", "Analytics Planning", "Data Governance", "Monetization", "Quality Management", "Privacy Compliance"],
+      category: "Data Strategy"
     },
     {
-      title: "AI Climate Finance Platform",
-      description: "Green finance solutions with AI-powered ESG analysis, sustainable investment recommendations, and climate impact assessment.",
-      icon: <DollarSign className="w-8 h-8" />,
-      color: "from-green-500 to-teal-500",
+      title: "AI DevOps Transformation",
+      description: "Modern DevOps implementation with AI-powered automation, monitoring, and continuous improvement.",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $1,299/month",
+      originalPrice: "$2,599/month",
+      features: ["DevOps Strategy", "CI/CD Implementation", "Automation", "Monitoring", "Culture Change", "Tool Selection"],
+      category: "DevOps"
+    },
+    {
+      title: "AI IT Infrastructure Optimization",
+      description: "Intelligent infrastructure optimization with AI-powered performance analysis and cost reduction strategies.",
+      icon: <Server className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $1,599/month",
+      originalPrice: "$3,199/month",
+      features: ["Infrastructure Assessment", "Performance Optimization", "Cost Reduction", "Scalability Planning", "Modernization", "Monitoring"],
+      category: "Infrastructure"
+    },
+    {
+      title: "AI Application Modernization",
+      description: "Legacy application modernization with AI-powered analysis, migration planning, and optimization strategies.",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
       price: "Starting at $1,899/month",
       originalPrice: "$3,799/month",
-      features: ["ESG Analysis", "Sustainable Investment", "Climate Impact", "Green Bonds", "Carbon Pricing", "Financial Risk Assessment"],
-      category: "Climate Finance"
+      features: ["Application Assessment", "Modernization Planning", "Migration Strategy", "Performance Optimization", "Security Enhancement", "User Experience"],
+      category: "Application Modernization"
+    },
+    {
+      title: "AI Network Architecture Design",
+      description: "Intelligent network design with AI-powered optimization, security, and performance monitoring.",
+      icon: <Network className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $1,399/month",
+      originalPrice: "$2,799/month",
+      features: ["Network Design", "Security Planning", "Performance Optimization", "Monitoring", "Scalability", "Cost Analysis"],
+      category: "Network Architecture"
+    },
+    {
+      title: "AI IT Governance Framework",
+      description: "Comprehensive IT governance with AI-powered policy development, compliance monitoring, and risk management.",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $1,199/month",
+      originalPrice: "$2,399/month",
+      features: ["Governance Framework", "Policy Development", "Compliance Monitoring", "Risk Management", "Audit Preparation", "Training Programs"],
+      category: "IT Governance"
+    },
+    {
+      title: "AI Business Process Optimization",
+      description: "Intelligent process optimization with AI-powered analysis, automation opportunities, and efficiency improvements.",
+      icon: <Workflow className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      price: "Starting at $1,699/month",
+      originalPrice: "$3,399/month",
+      features: ["Process Analysis", "Automation Opportunities", "Efficiency Improvements", "Workflow Design", "Change Management", "Performance Metrics"],
+      category: "Process Optimization"
+    },
+    {
+      title: "AI Technology Roadmap Planning",
+      description: "Strategic technology planning with AI-powered market analysis, trend prediction, and investment recommendations.",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $2,199/month",
+      originalPrice: "$4,399/month",
+      features: ["Technology Assessment", "Market Analysis", "Trend Prediction", "Investment Planning", "Risk Analysis", "Implementation Roadmap"],
+      category: "Technology Planning"
+    },
+    {
+      title: "AI IT Cost Optimization",
+      description: "Intelligent cost optimization with AI-powered analysis, budget planning, and resource allocation strategies.",
+      icon: <DollarSign className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      price: "Starting at $999/month",
+      originalPrice: "$1,999/month",
+      features: ["Cost Analysis", "Budget Planning", "Resource Optimization", "Vendor Management", "ROI Analysis", "Cost Monitoring"],
+      category: "Cost Optimization"
     }
   ];
 
   const benefits = [
     {
-      title: "Environmental Impact",
-      description: "Reduce carbon footprint and environmental impact with AI-optimized solutions",
-      icon: <Leaf className="w-6 h-6" />,
-      stat: "50% carbon reduction"
+      title: "AI-Driven Insights",
+      description: "Get data-driven recommendations based on AI analysis of your current IT infrastructure and business needs",
+      icon: <Brain className="w-6 h-6" />,
+      stat: "90% accuracy"
     },
     {
       title: "Cost Savings",
-      description: "Optimize resource usage and reduce operational costs through intelligent automation",
+      description: "Optimize your IT investments and reduce operational costs through intelligent resource allocation",
       icon: <DollarSign className="w-6 h-6" />,
-      stat: "30% cost savings"
+      stat: "40% cost reduction"
     },
     {
-      title: "Compliance",
-      description: "Ensure regulatory compliance with automated monitoring and reporting",
-      icon: <Shield className="w-6 h-6" />,
-      stat: "100% compliance"
+      title: "Faster Implementation",
+      description: "Accelerate your digital transformation with AI-optimized implementation strategies and automation",
+      icon: <Rocket className="w-6 h-6" />,
+      stat: "3x faster delivery"
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Climate Projects", icon: <CloudLightning className="w-6 h-6" /> },
-    { number: "1M+", label: "Tons CO2 Reduced", icon: <Leaf className="w-6 h-6" /> },
-    { number: "50+", label: "Countries Served", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Environmental Monitoring", icon: <Activity className="w-6 h-6" /> }
+    { number: "500+", label: "Projects Completed", icon: <Award className="w-6 h-6" /> },
+    { number: "99.9%", label: "Client Satisfaction", icon: <Star className="w-6 h-6" /> },
+    { number: "50+", label: "Industries Served", icon: <Building className="w-6 h-6" /> },
+    { number: "24/7", label: "Expert Support", icon: <Headphones className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Climate Solutions Pro - Zion Tech Group | Advanced Climate Technology</title>
-        <meta name="description" content="Transform your environmental impact with our AI-powered climate solutions including carbon tracking, renewable energy optimization, and sustainable agriculture." />
-        <meta name="keywords" content="AI climate solutions, carbon tracking, renewable energy, sustainable agriculture, environmental monitoring, climate prediction, green technology" />
+        <title>AI-Powered IT Consulting - Zion Tech Group | Intelligent Technology Consulting</title>
+        <meta name="description" content="Transform your IT infrastructure with our AI-powered consulting services including digital transformation, cloud architecture, cybersecurity, and data strategy." />
+        <meta name="keywords" content="AI IT consulting, digital transformation, cloud architecture, cybersecurity consulting, data strategy, DevOps transformation, IT optimization" />
       </Helmet>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -346,18 +422,18 @@ const AIClimateSolutionsProPage = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI Climate Solutions Pro</span>
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered IT Consulting</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Climate Solutions Pro
+              AI-Powered IT Consulting
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Lead the fight against climate change with our advanced AI-powered environmental solutions. 
-            From carbon tracking to renewable energy optimization, we provide comprehensive tools for a sustainable future.
+            Transform your IT infrastructure with our AI-powered consulting services. From digital transformation to cloud architecture, 
+            we provide intelligent solutions that drive business growth and operational efficiency.
           </p>
 
           {/* Stats */}
@@ -390,7 +466,7 @@ const AIClimateSolutionsProPage = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {climateServices.map((service, index) => (
+          {consultingServices.map((service, index) => (
             <div
               key={index}
               className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
@@ -467,11 +543,11 @@ const AIClimateSolutionsProPage = () => {
         <div className="text-center">
           <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl p-8 border border-cyan-500/20">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Make a Climate Impact?
+              Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the global movement towards sustainability with our AI-powered climate solutions. 
-              Together, we can build a greener, more sustainable future for generations to come.
+              Let our AI-powered consulting experts help you create a technology strategy that drives business growth, 
+              reduces costs, and improves operational efficiency.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -503,14 +579,14 @@ const AIClimateSolutionsProPage = () => {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Your Climate Journey
+                Start Your Transformation
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Schedule Demo
+                Schedule Consultation
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
@@ -521,4 +597,4 @@ const AIClimateSolutionsProPage = () => {
   );
 };
 
-export default AIClimateSolutionsProPage;
+export default AIPoweredITConsultingPage;

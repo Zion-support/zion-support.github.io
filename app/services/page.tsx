@@ -336,6 +336,42 @@ export default function Services() {
       originalPrice: "$299/month",
       features: ["Asset Inventory", "Lifecycle Management", "Cost Tracking", "License Management", "Depreciation Tracking", "Compliance Reporting"],
       category: "Asset Management"
+    },
+    {
+      title: "AI Blockchain Solutions",
+      description: "Revolutionize blockchain projects with AI-powered smart contracts, DeFi optimization, and cross-chain interoperability solutions.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/ai-blockchain-solutions",
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $1,999/month",
+      originalPrice: "$3,999/month",
+      features: ["Smart Contract Development", "DeFi Optimization", "Cross-chain Solutions", "NFT Platforms", "Security Auditing", "Governance Tools"],
+      category: "Blockchain Technology",
+      popular: true
+    },
+    {
+      title: "AI Climate Solutions Pro",
+      description: "Lead the fight against climate change with AI-powered environmental solutions, carbon tracking, and sustainable technology.",
+      icon: <Target className="w-8 h-8" />,
+      path: "/ai-climate-solutions-pro",
+      color: "from-emerald-500 to-green-500",
+      price: "Starting at $1,499/month",
+      originalPrice: "$2,999/month",
+      features: ["Carbon Footprint Tracking", "Renewable Energy Optimization", "Climate Prediction", "Environmental Monitoring", "Sustainable Agriculture", "Green Finance"],
+      category: "Climate Technology",
+      popular: true
+    },
+    {
+      title: "AI-Powered IT Consulting",
+      description: "Transform your IT infrastructure with AI-driven consulting services including digital transformation, cloud architecture, and cybersecurity.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/ai-powered-it-consulting",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $1,999/month",
+      originalPrice: "$3,999/month",
+      features: ["Digital Transformation", "Cloud Architecture", "Cybersecurity Assessment", "Data Strategy", "DevOps Transformation", "Cost Optimization"],
+      category: "IT Consulting",
+      popular: true
     }
   ];
 
