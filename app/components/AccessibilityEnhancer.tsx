@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
   useEffect(() => {
@@ -12,7 +12,7 @@ const AccessibilityEnhancer: React.FC = () => {
       skipLink.style.zIndex = '9999';
       document.body.insertBefore(skipLink, document.body.firstChild);
 =======
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;

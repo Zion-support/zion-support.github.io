@@ -1,5 +1,5 @@
-import React from 'react;
-import { useEffect, Node } from 'react;
+import React from 'react';
+import React from 'react';
 interface PerformanceOptimizerProps {
   children: Node;
 }

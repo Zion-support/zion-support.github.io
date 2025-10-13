@@ -1,9 +1,9 @@
 <<<<<<< HEAD
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react;
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react;
-import FuturisticBackground from '../components/FuturisticBackground;
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
 const AiServicesPage: React.FC = () => {
   const services = [{
       icon: icon: Brain,
@@ -42,11 +42,11 @@ const AiServicesPage: React.FC = () => {
       color: 'from-cyan-500 to-blue-500'';
 =======
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
 
-import { Right, Star, Zap } from 'lucide-react';
+import React from 'react';
 
-import FuturisticBackground from '../components/FuturisticBackground';
+import React from 'react';
 
 const AiServicesPage: React.FC = () => {
   const services = [

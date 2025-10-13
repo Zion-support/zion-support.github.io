@@ -1,5 +1,5 @@
-import React from 'react;
-import { createContext, useContext, useEffect, ReactNode } from 'react;
+import React from 'react';
+import React from 'react';
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
   identify: (userId: string, traits?: Record<string, any>) => void;

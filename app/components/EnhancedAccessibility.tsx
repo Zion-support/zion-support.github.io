@@ -1,10 +1,10 @@
 <<<<<<< HEAD
-import React from 'react;
-import { useEffect, Node } from 'react;
+import React from 'react';
+import React from 'react';
 interface EnhancedAccessibilityProps {
   children: Node;
 =======
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 interface AccessibilitySettings {
   highContrast: boolean;

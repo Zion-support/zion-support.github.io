@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react;
+import React from 'react';
 'use client';
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;

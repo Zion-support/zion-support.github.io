@@ -1,8 +1,8 @@
 <<<<<<< HEAD
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { Link } from 'react-router-dom;
-import { Right, Circle } from 'lucide-react;
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
 const SupportPage: React.FC = () => {
   const supportOptions = [{
       icon: 'Chat',';
@@ -33,10 +33,10 @@ const SupportPage: React.FC = () => {
       color: 'from-orange-500 to-red-500'';
 =======
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import React from 'react';
 
-import { Right, Circle, MessageCircle, Mail, Phone, BookOpen } from 'lucide-react';
+import React from 'react';
 
 const SupportPage: React.FC = () => {
   const supportOptions = [

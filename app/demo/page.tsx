@@ -1,7 +1,7 @@
 <<<<<<< HEAD
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { Play, Right, Circle, Star } from 'lucide-react;
+import React from 'react';
+import React from 'react';
+import React from 'react';
 const DemoPage: React.FC = () => {
   const features = [{
       icon: 'Analytics',';
@@ -28,9 +28,9 @@ const DemoPage: React.FC = () => {
       demo: 'Collaboration Demo'';
 =======
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
 
-import { Play, Right, Star, BarChart3, Shield } from 'lucide-react';
+import React from 'react';
 
 const DemoPage: React.FC = () => {
   const features = [

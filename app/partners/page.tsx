@@ -1,7 +1,7 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { } from 'react-router-dom;
-import { Circle, Right, } from 'lucide-react;
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
 const PartnersPage: React.FC = () => {
   const partners = [{
       name: 'Microsoft',';

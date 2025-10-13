@@ -1,8 +1,8 @@
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
 
 const AIAutomationPlatform = () => {
   const features = [

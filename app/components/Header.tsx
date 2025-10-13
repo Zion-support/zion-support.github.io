@@ -1,7 +1,7 @@
-import React from 'react;
-import { useState } from 'react;
-import { Link } from 'react-router-dom;
-import { Menu, X, ChevronDown } from 'lucide-react;
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);

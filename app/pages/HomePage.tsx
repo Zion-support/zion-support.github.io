@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import SEOHead from '../components/SEOHead';
+import React from 'react';
+import React from 'react';
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -15,10 +15,10 @@ import {
   SparklesIcon,
   BoltIcon
 } from '@heroicons/react/24/outline';
-import FuturisticBackground from '../components/FuturisticBackground';
-import NeonButton from '../components/NeonButton';
-import AnimatedCard from '../components/AnimatedCard';
-import { services } from '../data/servicesData';
+import React from 'react';
+import React from 'react';
+import React from 'react';
+import React from 'react';
 
 export default function HomePage() {
 

@@ -1,5 +1,5 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
-import LoadingSpinner from './LoadingSpinner';
+import React from 'react';
+import React from 'react';
 
 interface LazyWrapperProps {
   children: React.ReactNode;
