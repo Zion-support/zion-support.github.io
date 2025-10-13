@@ -1,30 +1,28 @@
-import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { 
+  ArrowRight, 
+  AlertTriangle, 
+  Users, 
+  Star, 
+  Shield, 
+  Database, 
+  CheckCircle, 
+  Lock, 
+  Activity, 
+  FileText, 
+  Eye 
+} from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Activity } from 'lucide-react';
-import { FileText } from 'lucide-react';
-import { Eye } from 'lucide-react';
 
 const CybersecuritySolutions = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
   const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
 
-  const capabilities: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 
-  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 
   const services = [
     {
@@ -112,8 +110,6 @@ const CybersecuritySolutions = () => {
       cta: "Contact Sales",
     }
   ];
-
-export default function CybersecuritySolutionsPage() {
   const capabilities = [
     {
       title: "AI-Powered Security",
@@ -235,11 +231,6 @@ export default function CybersecuritySolutionsPage() {
                 <p className="text-gray-300 text-center mb-4 leading-relaxed">
                   {capability.description}
                 </p>
-                <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-red-500/20 to-orange-500/20 text-red-400">
-                    {capability.stats}
-                  </span>
-                </div>
               </FuturisticCard>
             ))}
           </div>

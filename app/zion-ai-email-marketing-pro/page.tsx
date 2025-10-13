@@ -18,6 +18,7 @@ import {
   Globe,
   Send,
   Heart,
+  Shield,
   MessageCircle,
   ThumbsUp,
   Eye,

@@ -1,36 +1,25 @@
-// apiClient utility functions
+// ApiClient utility functions
 
-export interface apiClientConfig {
+export interface ApiClientConfig {
   enabled: boolean;
 }
 
-export class apiClient {
-  private config: apiClientConfig;
+export class ApiClient {
+  private config: ApiClientConfig;
 
-  constructor(config: Partial<apiClientConfig> = {}) {
+  constructor(config: Partial<ApiClientConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// apiClient utility
-export const apiClient = {
-  // Utility implementation,
-    init: () => {
-    console.log('apiClient initialized');
   }
 
   init(): void {
     if (this.config.enabled) {
-      console.log('apiClient initialized');
+      console.log('ApiClient initialized');
     }
   }
 }
 
-export const apiclient = new apiClient();
+export const apiclient = new ApiClient();
 export default apiclient;
-// apiClient
-export const apiClient = () => {
-  // Utility function implementation
-  return null;
-};

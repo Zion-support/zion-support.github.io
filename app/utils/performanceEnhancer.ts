@@ -1,36 +1,25 @@
-// performanceEnhancer utility functions
+// PerformanceEnhancer utility functions
 
-export interface performanceEnhancerConfig {
+export interface PerformanceEnhancerConfig {
   enabled: boolean;
 }
 
-export class performanceEnhancer {
-  private config: performanceEnhancerConfig;
+export class PerformanceEnhancer {
+  private config: PerformanceEnhancerConfig;
 
-  constructor(config: Partial<performanceEnhancerConfig> = {}) {
+  constructor(config: Partial<PerformanceEnhancerConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// performanceEnhancer utility
-export const performanceEnhancer = {
-  // Utility implementation,
-    init: () => {
-    console.log('performanceEnhancer initialized');
   }
 
   init(): void {
     if (this.config.enabled) {
-      console.log('performanceEnhancer initialized');
+      console.log('PerformanceEnhancer initialized');
     }
   }
 }
 
-export const performanceenhancer = new performanceEnhancer();
+export const performanceenhancer = new PerformanceEnhancer();
 export default performanceenhancer;
-// performanceEnhancer
-export const performanceEnhancer = () => {
-  // Utility function implementation
-  return null;
-};

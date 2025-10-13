@@ -1,36 +1,25 @@
-// performanceMonitoring utility functions
+// PerformanceMonitoring utility functions
 
-export interface performanceMonitoringConfig {
+export interface PerformanceMonitoringConfig {
   enabled: boolean;
 }
 
-export class performanceMonitoring {
-  private config: performanceMonitoringConfig;
+export class PerformanceMonitoring {
+  private config: PerformanceMonitoringConfig;
 
-  constructor(config: Partial<performanceMonitoringConfig> = {}) {
+  constructor(config: Partial<PerformanceMonitoringConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// performanceMonitoring utility
-export const performanceMonitoring = {
-  // Utility implementation,
-    init: () => {
-    console.log('performanceMonitoring initialized');
   }
 
   init(): void {
     if (this.config.enabled) {
-      console.log('performanceMonitoring initialized');
+      console.log('PerformanceMonitoring initialized');
     }
   }
 }
 
-export const performancemonitoring = new performanceMonitoring();
+export const performancemonitoring = new PerformanceMonitoring();
 export default performancemonitoring;
-// performanceMonitoring
-export const performanceMonitoring = () => {
-  // Utility function implementation
-  return null;
-};
