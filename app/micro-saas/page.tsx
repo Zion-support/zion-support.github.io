@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-=======
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { Mic } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function Page() {
 
   const benefits = [
@@ -40,12 +33,8 @@ export default function Page() {
       features: ['Auto Video Creation', 'Multiple Templates', 'Voice Synthesis', 'Brand Customization'],
       link: '/zion-ai-video-generator',
       price: '$79/month'
-<<<<<<< HEAD
     },
     {
-=======
-    },    {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
       title: 'Zion Analytics Pro',
       description: 'Advanced analytics dashboard with real-time insights and customizable reports.',
       icon: <BarChart3 className="w-8 h-8" />,
@@ -160,21 +149,12 @@ export default function Page() {
       avatar: "ER"
   ];
 
-<<<<<<< HEAD
 export default function MicroSaasPage() {
   return (
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Mic } from 'lucide-react';
-=======
-  return null;
-};
-
-export default function MicroSaasPage() {
-
-  return (
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function MicroSaasZionTechGroup() {
   return (
@@ -234,19 +214,8 @@ export default function MicroSaasZionTechGroup() {
               </p>
             </div>
           </div>
-<<<<<<< HEAD
         </div>
       </div>
     </div>
   );
 }
-
-}
-=======
-        </div>      </div>
-    </div>
-  );
-}
-}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa

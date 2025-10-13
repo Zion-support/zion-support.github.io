@@ -10,10 +10,7 @@ import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { FileText } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function page() {
 
   const features = [
@@ -79,14 +76,6 @@ export default function page() {
       description: "Continuous monitoring and maintenance of compliance programs",
       features: ["Regular Assessments", "Policy Updates", "Training Programs", "Incident Response"]
   ];
-<<<<<<< HEAD
-=======
-=======
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
-
 export default function CompliancePage() {
 
   return (
@@ -129,5 +118,4 @@ export default function CompliancePage() {
       </div>
     </div>
   );
-}
 }

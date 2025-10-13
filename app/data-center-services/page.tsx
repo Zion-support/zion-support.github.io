@@ -10,10 +10,7 @@ import { Globe } from 'lucide-react';
 import { Server } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const DataCenterServicesPage = () => {
   const benefits = [
     "99.99% uptime guarantee",

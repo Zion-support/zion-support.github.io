@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-import React, { useState, useRef, useEffect } from 'react';
-import { Box } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 interface ImageOptimizerProps {
   src: string;
   alt: string;
@@ -18,4 +13,3 @@ export default function Imageoptimizer({ className = '', children, ...props }: I
     </div>
   );
 };
-

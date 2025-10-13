@@ -1,21 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-const WebinarsPage = () => {
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function WebinarsPage() {
 
@@ -59,5 +43,4 @@ export default function WebinarsPage() {
       </div>
     </div>
   );
-}
 }

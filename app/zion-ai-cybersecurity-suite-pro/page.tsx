@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React from 'react';
-=======
-import React from 'react';import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { Shield, Brain, Lock, Zap, ArrowRight, CheckCircle, Star, Award, BarChart3, Clock, Target, Sparkles, TrendingUp, Globe, Smartphone, Monitor, AlertTriangle, Eye, Search, Database, Network, Shield as FileShield, Key, Bug, Activity, Server, Wifi, HardDrive, Cloud, Settings, Users, Bell, FileText, Download, Upload } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
@@ -216,4 +210,3 @@ export default function ZionAiCybersecuritySuiteProPage() {
   );
 }
 };
-}

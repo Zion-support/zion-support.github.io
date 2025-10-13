@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -112,21 +111,11 @@ const CybersecuritySolutions = () => {
       cta: "Contact Sales"
     }
   ];
-=======
-=======
-import React from 'react';import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { ArrowRight, Shield, CheckCircle } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function CybersecuritySolutionsPage() {
 
   const capabilities = [

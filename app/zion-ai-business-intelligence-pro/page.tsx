@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import FuturisticCard from '../components/FuturisticCard';
-=======
-import React from 'react';import FuturisticCard from '../components/FuturisticCard';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import React from 'react';
@@ -21,10 +17,7 @@ import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import { Plus } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function ZionAiBusinessIntelligenceProPage() {
 
   return (
@@ -67,5 +60,4 @@ export default function ZionAiBusinessIntelligenceProPage() {
       </div>
     </div>
   );
-}
 }

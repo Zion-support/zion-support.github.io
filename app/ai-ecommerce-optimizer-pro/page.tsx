@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 export default function AIEcommerceOptimizerPro() {
   const features = [
     {
@@ -124,19 +122,6 @@ export default function AIEcommerceOptimizerPro() {
       popular: false,
     },
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-export default function AIEcommerceOptimizerPro() {
-  return null;
-};
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function AiEcommerceOptimizerProPage() {
   return (
@@ -179,6 +164,4 @@ export default function AiEcommerceOptimizerProPage() {
       </div>
     </div>
   );
-}
-}
 }

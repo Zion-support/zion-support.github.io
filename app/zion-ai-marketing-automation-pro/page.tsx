@@ -11,21 +11,13 @@ import { Mail } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Phone } from 'lucide-react';
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, Globe, Play, Address } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Target, Users, MessageSquare, Brain, Zap, ArrowRight, Play, CheckCircle, Mail, Phone, Globe } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function page() {
 
   const stats = [
@@ -173,6 +165,4 @@ export default function ZionAiMarketingAutomationProPage() {
       </div>
     </div>
   );
-}
-}
 }

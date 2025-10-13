@@ -11,11 +11,8 @@ import { Brain } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Receipt } from 'lucide-react';
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
 const ZionAIAccountingSuite = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -100,15 +97,8 @@ const ZionAIAccountingSuite = () => {
       icon: <Calculator className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
   ];
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function ZionAiAccountingSuitePage() {
 
@@ -152,5 +142,4 @@ export default function ZionAiAccountingSuitePage() {
       </div>
     </div>
   );
-}
 }

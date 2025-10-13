@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { 
   Mic, 
@@ -12,9 +11,6 @@ import {
   FileAudio,
   Globe
 } from 'lucide-react';
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import React from 'react';
 import {   Mic, 
 import { Helmet } from 'react-helmet-async';
@@ -97,7 +93,4 @@ export default function AiVoiceCloningStudioPage() {
       </div>
     </div>
   );
-}
-}
-};
 }

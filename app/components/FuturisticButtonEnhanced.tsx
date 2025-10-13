@@ -1,9 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 interface FuturisticbuttonenhancedProps {
   className?: string;
   children?: React.ReactNode;

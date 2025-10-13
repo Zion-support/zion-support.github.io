@@ -1,23 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
-import { Mic } from 'lucide-react';
-const AIVoiceAssistantProPage = () => {
-  return null;
-};
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function AiVoiceAssistantProPage() {
   return (
@@ -60,6 +42,4 @@ export default function AiVoiceAssistantProPage() {
       </div>
     </div>
   );
-}
-}
 }

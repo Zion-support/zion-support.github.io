@@ -17,12 +17,9 @@ import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-<<<<<<< HEAD
-
-=======
 import React from 'react';
 import { 
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
 const services = [
     {
       title: "Cloud Migration",
@@ -65,10 +62,7 @@ const microSaasServices = [
   Award,
   Users
 } from "lucide-react";
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
@@ -296,5 +290,3 @@ export default function Footer({ className = '', children, ...props }: FooterPro
 };
 
 export default Footer;
-
-}

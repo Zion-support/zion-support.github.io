@@ -2,14 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Receipt, Bot, Brain, Shield, CheckCircle, Star, BarChart3, TrendingUp, DollarSign } from 'lucide-react';
-=======
-
-=======
-import { Link } from 'react-router-dom';import { Receipt, Bot, Brain, Shield, CheckCircle, Star, BarChart3, TrendingUp, DollarSign } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function AIExpenseTracker() {
   return null;
 };
@@ -58,7 +52,4 @@ export default function AiExpenseTrackerPage() {
       </div>
     </div>
   );
-}
-}
-}
-}
+  return null;

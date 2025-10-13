@@ -11,10 +11,7 @@ import { Globe } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Receipt } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const SmartExpenseCategorizerPage = () => {
   const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
 
@@ -70,14 +67,6 @@ const SmartExpenseCategorizerPage = () => {
       ],
       popular: false
   ];
-<<<<<<< HEAD
-=======
-=======
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
-
 export default function SmartExpenseCategorizerPage() {
 
   return (
@@ -120,5 +109,4 @@ export default function SmartExpenseCategorizerPage() {
       </div>
     </div>
   );
-}
 }

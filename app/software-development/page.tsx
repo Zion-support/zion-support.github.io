@@ -25,17 +25,8 @@ export default function SoftwareDevelopmentZionTechGroup() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-<<<<<<< HEAD
         </div>
       </div>
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Code, Clock, Award, ArrowRight, CheckCircle, BarChart3, Users, Settings, Zap, Globe, Smartphone, Monitor } from 'lucide-react';
-=======
-        </div>      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 const SoftwareDevelopmentPage: React.FC = () => {
   const services = [
@@ -261,4 +252,3 @@ const SoftwareDevelopmentPage: React.FC = () => {
     </div>
   );
 };
-

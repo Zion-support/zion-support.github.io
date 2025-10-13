@@ -11,7 +11,6 @@ import {
   Target,
   BarChart3,
   Cloud,
-<<<<<<< HEAD
   Workflow
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -94,10 +93,6 @@ const AIAutomationPlatformPage = () => {
     "Cost reduction up to 60%"
   ];
 
-=======
-  Workflow} from 'lucide-react';
-const AIAutomationPlatformPage = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

@@ -1,14 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-<<<<<<< HEAD
 import { Cloud } from 'lucide-react';
-=======
-import React, { useRef, useState, useEffect } from 'react';
-import { ImageIcon } from 'lucide-react';
-
-=======
-import { Cloud } from 'lucide-react';import React, { useRef, useState, useEffect } from 'react';
-import { ImageIcon } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 interface ImprovedimageProps {
   className?: string;
   children?: React.ReactNode;
@@ -53,4 +44,3 @@ export const BlurImage: React.FC<ImprovedImageProps & { blurDataURL?: string }> 
     />
   );
 };
-

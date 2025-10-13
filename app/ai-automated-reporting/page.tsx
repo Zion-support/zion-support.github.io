@@ -1,11 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function AiAutomatedReporting() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -47,6 +41,4 @@ export default function AiAutomatedReporting() {
       </div>
     </div>
   );
-}
-}
 }

@@ -1,13 +1,5 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-
 'use client'
-=======
-'use client'
-
-=======
-'use client''use client'
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 interface CriticalresourcepreloaderProps {
   className?: string;
   children?: React.ReactNode;

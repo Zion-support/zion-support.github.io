@@ -8,15 +8,11 @@ import { CheckCircle } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { Activity } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const AIFinancialAnalysisPage = () => {
   return null;
 };
 
-<<<<<<< HEAD
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -58,11 +54,6 @@ const AIFinancialAnalysisPage = () => {
     "Personalized investment recommendations",
     "Advanced fraud detection and prevention"
   ];
-=======
-=======
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function AiFinancialAnalysisPage() {
   return (
@@ -105,6 +96,4 @@ export default function AiFinancialAnalysisPage() {
       </div>
     </div>
   );
-}
-}
 }

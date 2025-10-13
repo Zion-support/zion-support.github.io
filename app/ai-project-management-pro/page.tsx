@@ -2,14 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Brain, Clock, Target, BarChart3 } from 'lucide-react';
-=======
-
-=======
-import { Link } from 'react-router-dom';import { CheckCircle, Star, Brain, Clock, Target, BarChart3 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function AIProjectManagementPro() {
   return null;
 };
@@ -58,7 +52,4 @@ export default function AiProjectManagementProPage() {
       </div>
     </div>
   );
-}
-}
-}
-}
+  return null;

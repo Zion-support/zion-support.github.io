@@ -25,17 +25,8 @@ export default function DevopsServicesZionTechGroup() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-<<<<<<< HEAD
         </div>
       </div>
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Server, Clock, Award, ArrowRight, CheckCircle, BarChart3, Database, Lock, Users, Settings, Zap, Globe } from 'lucide-react';
-=======
-        </div>      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 const DevOpsServicesPage: React.FC = () => {
   const services = [
@@ -224,4 +215,3 @@ const DevOpsServicesPage: React.FC = () => {
     </div>
   );
 };
-

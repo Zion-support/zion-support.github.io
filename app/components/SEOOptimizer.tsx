@@ -1,10 +1,7 @@
 import { Code } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-<<<<<<< HEAD
-
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
 interface SEOOptimizerProps {
   children: React.ReactNode;
 interface SeooptimizerProps {

@@ -34,12 +34,6 @@ const ARVRDevelopmentPage = () => {
       icon: <Globe className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
   ];
-<<<<<<< HEAD
-=======
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function Page() {
 
@@ -66,5 +60,4 @@ export default function Page() {
       </div>
     </div>
   );
-}
 }

@@ -13,11 +13,7 @@ import { Monitor } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
-<<<<<<< HEAD
 
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function Cybersecurity() {
 
 const features = [
@@ -175,6 +171,4 @@ export default function CybersecurityPage() {
       </div>
     </div>
   );
-}
-}
 }

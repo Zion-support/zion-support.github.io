@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 export default function Page() {
-=======
-import { Star } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
-const NotFoundPage = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>

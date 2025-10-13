@@ -45,7 +45,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State>
     if (this.props.onError) 
       this.props.onError(error, errorInfo);
 
-
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => 
     // In a real application, you would send this to an error reporting service
     // like Sentry, LogRocket, or Bugsnag
@@ -154,7 +153,6 @@ class ComprehensiveErrorBoundary extends Component<Props, State>
       );
 
     return this.props.children;
-
 
 export default ComprehensiveErrorBoundary;
 </State>

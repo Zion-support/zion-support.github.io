@@ -1,13 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { 
   ArrowRight,
-=======
-import {   ArrowRight,
-import { ArrowRight } from 'lucide-react';
-import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
   Users,
   Star,
   CheckCircle,
@@ -19,16 +14,8 @@ import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckC
   BarChart3,
   Heart,
   AlertCircle,
-<<<<<<< HEAD
   TrendingUp
 } from 'lucide-react';
-=======
-import { ArrowRight } from 'lucide-react';
-import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
-
-=======
-  TrendingUp} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const AICustomerSentimentTrackerPage = () => {
   return null;
 };
@@ -36,7 +23,6 @@ const AICustomerSentimentTrackerPage = () => {
   return null;
 };
 
-<<<<<<< HEAD
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
@@ -160,8 +146,6 @@ const AICustomerSentimentTrackerPage = () => {
     }
   ];
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function AiCustomerSentimentTrackerPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -203,7 +187,4 @@ export default function AiCustomerSentimentTrackerPage() {
       </div>
     </div>
   );
-}
-}
-}
-}
+  return null;

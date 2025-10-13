@@ -17,8 +17,6 @@ import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Code } from 'lucide-react';
 const AICodeAssistantProZionTechGroup = () => {
-<<<<<<< HEAD
-
   const features = [
     {
       title: "AI Code Generation",
@@ -121,13 +119,6 @@ const AICodeAssistantProZionTechGroup = () => {
       avatar: "EJ"
     }
   ];
-=======
-  return null;
-};
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function AiCodeAssistantProPage() {
   return (
@@ -170,7 +161,4 @@ export default function AiCodeAssistantProPage() {
       </div>
     </div>
   );
-}
-}
-}
 }

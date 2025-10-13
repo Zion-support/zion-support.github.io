@@ -7,10 +7,7 @@ import { Globe } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function Community() {
 
   const stats = [
@@ -71,14 +68,6 @@ export default function Community() {
       description: "Contribute to our open source initiatives and make a global impact.",
       participants: "100+ contributors"
   ];
-<<<<<<< HEAD
-=======
-=======
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
-
 export default function CommunityPage() {
 
   return (
@@ -121,5 +110,4 @@ export default function CommunityPage() {
       </div>
     </div>
   );
-}
 }

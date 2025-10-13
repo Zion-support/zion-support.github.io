@@ -6,8 +6,6 @@ import { TrendingUp } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
-<<<<<<< HEAD
-
 const AIDataAnalyticsProPage = () => {
   const benefits: string[] = [];
 
@@ -46,21 +44,9 @@ const AIDataAnalyticsProPage = () => {
     "Scale to handle any data volume",
     "Integrate with existing systems"
   ];
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import React from 'react';
 import { TrendingUp, Zap, Brain, PieChart, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-const AIDataAnalyticsProPage = () => {
-  return null;
-};
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function AiDataAnalyticsProPage() {
   return (
@@ -103,6 +89,4 @@ export default function AiDataAnalyticsProPage() {
       </div>
     </div>
   );
-}
-}
 }

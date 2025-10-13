@@ -2,12 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Database } from 'lucide-react';
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function DatabaseManagementZionTechGroup() {
 
   return (
@@ -34,5 +29,4 @@ export default function DatabaseManagementZionTechGroup() {
       </div>
 </div>
   );
-}
 }

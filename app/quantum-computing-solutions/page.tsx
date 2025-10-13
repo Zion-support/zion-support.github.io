@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { 
   Cpu, 
@@ -12,9 +11,6 @@ import {
   Lock,
   Gauge
 } from 'lucide-react';
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import React from 'react';
 import {   Cpu, 
 import { Helmet } from 'react-helmet-async';
@@ -210,4 +206,3 @@ export default function QuantumComputingSolutionsPage() {
   );
 }
 };
-}

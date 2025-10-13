@@ -2,11 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
-<<<<<<< HEAD
 
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function Page() {
 
   return (
@@ -32,5 +28,4 @@ export default function Page() {
       </div>
     </div>
   );
-}
 }

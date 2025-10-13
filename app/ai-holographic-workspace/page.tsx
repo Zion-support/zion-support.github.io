@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import { Link } from 'react-router-dom';
-=======
-import React from 'react';import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { Monitor, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
@@ -65,7 +59,4 @@ export default function AiHolographicWorkspacePage() {
       </div>
     </div>
   );
-}
-}
-};
 }

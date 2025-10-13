@@ -1,11 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function Zionaicustomersentimenttrackerpro() {
 
   return (
@@ -48,5 +42,4 @@ export default function Zionaicustomersentimenttrackerpro() {
       </div>
     </div>
   );
-}
 }

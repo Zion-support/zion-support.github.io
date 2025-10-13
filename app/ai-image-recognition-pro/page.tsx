@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { ArrowRight, Camera, Users, CheckCircle, Eye, Image, Target, Scan } from 'lucide-react';
-=======
-import React from 'react';
-=======
-import React from 'react';import { ArrowRight, Camera, Users, CheckCircle, Eye, Image, Target, Scan } from 'lucide-react';
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -65,7 +58,4 @@ export default function AiImageRecognitionProPage() {
       </div>
     </div>
   );
-}
-}
-};
 }

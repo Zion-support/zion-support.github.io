@@ -10,14 +10,8 @@ import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
 import { Hand } from 'lucide-react';
-<<<<<<< HEAD
-
 "use client";
 
-=======
-import { MessageSquare, Brain, Shield, Zap, Star, Mail, BarChart3, Settings, Users } from 'lucide-react';
-"use client";
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function AIEmailAssistant() {
   return (
     <div>

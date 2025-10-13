@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import { Link } from 'react-router-dom';
-=======
-import React from 'react';import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { Shield, ArrowRight, CheckCircle, Lock, Award, Globe, Eye, Key } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
@@ -191,4 +185,3 @@ export default function QuantumDataEncryptionVaultPage() {
   );
 }
 };
-}

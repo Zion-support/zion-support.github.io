@@ -14,10 +14,7 @@ import { Mail } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const ZionAICRMProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -128,14 +125,6 @@ const ZionAICRMProPage = () => {
     { name: 'Zapier', logo: 'ZP', category: 'Automation' },
     { name: 'Salesforce', logo: 'SF', category: 'CRM' }
   ];
-<<<<<<< HEAD
-=======
-=======
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
-
 export default function ZionAiCrmProPage() {
 
   return (
@@ -178,5 +167,4 @@ export default function ZionAiCrmProPage() {
       </div>
     </div>
   );
-}
 }

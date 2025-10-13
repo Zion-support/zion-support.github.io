@@ -7,11 +7,8 @@ import { Zap } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-<<<<<<< HEAD
-
-=======
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
 const CloudServicesPage: React.FC = () => {
   const benefits = [
     {
@@ -59,14 +56,7 @@ const CloudServicesPage: React.FC = () => {
     "Faster time to market",
     "Disaster recovery and backup"
   ];
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
-=======
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function CloudServicesPage() {
 
@@ -110,5 +100,4 @@ export default function CloudServicesPage() {
       </div>
     </div>
   );
-}
 }

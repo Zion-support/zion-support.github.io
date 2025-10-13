@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -23,16 +22,6 @@ import { Plus } from 'lucide-react';
 import { DollarSign } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-=======
-import { ArrowRight } from 'lucide-react';
-import { Brain, ArrowRight, Monitor, Zap, CheckCircle, Award, DollarSign, MessageSquare, Phone, Globe, Star } from 'lucide-react';
-
-=======
-import { Link } from "react-router-dom";import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Brain, ArrowRight, Monitor, Zap, CheckCircle, Award, DollarSign, MessageSquare, Phone, Globe, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function AIPoweredDevOpsPage() {
   return null;
 };
@@ -81,7 +70,4 @@ export default function AiPoweredDevopsPage() {
       </div>
     </div>
   );
-}
-}
-}
-}
+  return null;

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 import React from "react";
-=======
-import React from "react";
-=======
-import React from "react";import React from "react";
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { ArrowRight, CheckCircle, TrendingUp, Video, Calendar } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -136,6 +130,4 @@ export default function ZionAiSalesPredictorPage() {
       </div>
     </div>
   );
-}
-}
 }

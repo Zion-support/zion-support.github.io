@@ -1,15 +1,6 @@
 import React from "react";
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Monitor } from 'lucide-react';
-=======
-import { Helmet } from 'react-helmet-async';
-import { Helmet } from "react-helmet-async";
-
-=======
-import { Monitor } from 'lucide-react';import { Helmet } from 'react-helmet-async';
-import { Helmet } from "react-helmet-async";
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function ZionCustomerSatisfactionMonitorPage() {
 
   return (
@@ -52,5 +43,4 @@ export default function ZionCustomerSatisfactionMonitorPage() {
       </div>
     </div>
   );
-}
 }

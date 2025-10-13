@@ -107,9 +107,11 @@ function App() {
   };
 
   useEffect(() => {
+    
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
       console.log('Zion Tech Group App initialized');
+    }
   }, []);
 
   return (
@@ -235,4 +237,3 @@ function App() {
       </HelmetProvider>
     );
 }
-export default App;

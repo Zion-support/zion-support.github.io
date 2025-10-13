@@ -6,13 +6,8 @@ import { Home } from 'lucide-react';
 import { Search } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 import { Mic } from 'lucide-react';
-<<<<<<< HEAD
-
 const NotFoundPage = () => {
-=======
 import React from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { Helmet } from 'react-helmet-async';
 const NotFoundPage = () => {
   return null;
@@ -42,6 +37,4 @@ export default function NotFoundPage() {
       </div>
     </div>
   );
-}
-}
 }

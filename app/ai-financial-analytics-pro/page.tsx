@@ -12,7 +12,6 @@ export default function AiFinancialAnalyticsProPage() {
   return null;
 };
 
-<<<<<<< HEAD
   const analyticsFeatures = [
     {
       category: "Financial Analysis",
@@ -108,10 +107,6 @@ export default function AiFinancialAnalyticsProPage() {
       popular: false,
     },
   ];
-=======
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function Page() {
   return (
@@ -180,10 +175,3 @@ export default function AiFinancialAnalyticsProPage() {
         </div>
       </div>
     </div>
-  );
-}
-<<<<<<< HEAD
-=======
-}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa

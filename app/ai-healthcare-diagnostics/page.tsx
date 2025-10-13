@@ -12,11 +12,7 @@ import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
-<<<<<<< HEAD
 
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function AIHealthcareDiagnostics() {
   return null;
 };
@@ -25,7 +21,6 @@ export default function AIHealthcareDiagnostics() {
 };
 
 export default function Page() {
-<<<<<<< HEAD
   const benefits = [
     "Benefit 1",
     "Benefit 2"
@@ -56,10 +51,6 @@ export default function Page() {
       benefits: ["Prognosis Prediction", "Treatment Optimization", "Risk Assessment", "Resource Planning"]
     }
   ];
-=======
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
   return null;
 };
@@ -105,7 +96,4 @@ export default function AiHealthcareDiagnosticsPage() {
       </div>
     </div>
   );
-}
-}
-}
-}
+  return null;

@@ -29,16 +29,7 @@ import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import { Package } from 'lucide-react';
 import { Heart } from 'lucide-react';
-<<<<<<< HEAD
 import { Receipt } from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
-import { Menu, X, Brain, Shield, Zap, Globe, ChevronDown, ChevronUp } from 'lucide-react';
-
-=======
-import { Receipt } from 'lucide-react';import { Link } from 'react-router-dom';
-import { Menu, X, Brain, Shield, Zap, Globe, ChevronDown, ChevronUp } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
@@ -243,5 +234,4 @@ export default function Navigation({ className = '', children, ...props }: Navig
       </div>
     </nav>
   );
-}
 }

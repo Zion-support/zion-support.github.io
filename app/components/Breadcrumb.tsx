@@ -1,10 +1,5 @@
 import React from 'react';
 import { Home } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 interface BreadcrumbProps {
   className?: string;
   children?: React.ReactNode;

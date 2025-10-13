@@ -4,10 +4,7 @@ import { Home } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Hand } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -34,4 +31,3 @@ export const _useErrorHandler = () => {
     // Example: errorReportingService.captureException(error, { extra: errorInfo });
   };
 };
-

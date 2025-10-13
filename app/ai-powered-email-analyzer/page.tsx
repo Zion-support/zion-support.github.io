@@ -9,8 +9,6 @@ import { Globe } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
-<<<<<<< HEAD
-
 const AIPoweredEmailAnalyzerPage = () => {
   const stats = [
     { label: "Emails Analyzed", value: "1M+", icon: <Mail className="w-6 h-6" /> },
@@ -91,21 +89,6 @@ const AIPoweredEmailAnalyzerPage = () => {
       popular: false
     }
   ];
-=======
-import React from 'react';
-import { Mail, TrendingUp, Shield, Zap, BarChart3, Target, Brain, Sparkles } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-=======
-import React from 'react';
-import { Mail, TrendingUp, Shield, Zap, BarChart3, Target, Brain, Sparkles } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-const AIPoweredEmailAnalyzerPage = () => {
-  return null;
-};
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function AiPoweredEmailAnalyzerPage() {
   return (
@@ -148,6 +131,4 @@ export default function AiPoweredEmailAnalyzerPage() {
       </div>
     </div>
   );
-}
-}
 }

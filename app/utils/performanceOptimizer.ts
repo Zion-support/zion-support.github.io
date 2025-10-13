@@ -2,6 +2,3 @@
 export function performanceoptimizer() {
   // Implementation here
   return null;
-}
-}
-export default performanceoptimizer;

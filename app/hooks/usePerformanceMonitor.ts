@@ -1,11 +1,7 @@
 import { Star } from 'lucide-react';
 import { Monitor } from 'lucide-react';
-<<<<<<< HEAD
-
-
-=======
 import { useState, useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
 interface PerformanceMetrics {
   loadTime: number
   firstContentfulPaint: number
@@ -23,11 +19,7 @@ export const usePerformanceMonitor = () => {
     cumulativeLayoutShift: 0,
     timeToInteractive: 0
   })
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export function usePerformanceMonitor() {
 

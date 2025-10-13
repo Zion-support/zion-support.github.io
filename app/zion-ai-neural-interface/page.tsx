@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
-=======
-import React from 'react';import EnhancedSEO from '../components/EnhancedSEO';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -138,15 +134,8 @@ const ZionAINeuralInterface = () => {
     { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> }
   ];
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function ZionAiNeuralInterfacePage() {
 
@@ -190,5 +179,4 @@ export default function ZionAiNeuralInterfacePage() {
       </div>
     </div>
   );
-}
 }

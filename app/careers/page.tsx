@@ -1,14 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function CareersPage() {
 
   return (
@@ -51,5 +45,4 @@ export default function CareersPage() {
       </div>
     </div>
   );
-}
 }

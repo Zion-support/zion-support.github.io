@@ -1,13 +1,9 @@
 import React from "react";
 import { Mic } from 'lucide-react';
-<<<<<<< HEAD
-
-=======
 import React from 'react';
 
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
 interface MicrosaasservicesProps {
   className?: string;
   children?: React.ReactNode;

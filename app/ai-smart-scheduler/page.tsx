@@ -47,7 +47,6 @@ const testimonials = [
       content: "Incredible accuracy and insights that have improved our portfolio performance.",
       rating: 5
     }
-<<<<<<< HEAD
   ];
 export default function AISmartScheduler() {
   const testimonials = [
@@ -76,11 +75,6 @@ export default function AISmartScheduler() {
       avatar: "ER"
     }
   ];
-=======
-  ];export default function AISmartScheduler() {
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
   return null;
 };
@@ -126,7 +120,4 @@ export default function AiSmartSchedulerPage() {
       </div>
     </div>
   );
-}
-}
-}
 }

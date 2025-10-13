@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { 
   Rocket, 
@@ -12,9 +11,6 @@ import {
   Navigation,
   Gauge
 } from 'lucide-react';
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import React from 'react';
 import {   Rocket, 
 import { Helmet } from 'react-helmet-async';
@@ -96,7 +92,4 @@ export default function AiSpaceMissionOptimizerPage() {
       </div>
     </div>
   );
-}
-}
-};
 }

@@ -10,12 +10,8 @@ import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
-<<<<<<< HEAD
-
-
-=======
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
+
 export default function page() {
 
   const features = [
@@ -77,15 +73,8 @@ export default function page() {
       price: "Starting at $2,000",
       features: ["RESTful APIs", "GraphQL", "API Documentation", "Rate Limiting"]
   ];
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function CustomDevelopmentPage() {
 
@@ -129,5 +118,4 @@ export default function CustomDevelopmentPage() {
       </div>
     </div>
   );
-}
 }

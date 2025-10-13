@@ -2,15 +2,8 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Network } from 'lucide-react';
-<<<<<<< HEAD
-
-
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function NetworkInfrastructureZionTechGroup() {
 
   return (
@@ -53,5 +46,4 @@ export default function NetworkInfrastructureZionTechGroup() {
       </div>
     </div>
   );
-}
 }

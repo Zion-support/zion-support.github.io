@@ -1,11 +1,6 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles, Search, User, Settings, HelpCircle, Phone, Mail, MapPin, Star, TrendingUp, Users, Award, Clock, CheckCircle, DollarSign, Play } from 'lucide-react';
-=======
-=======
-import { ArrowRight } from 'lucide-react';import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles, Search, User, Settings, HelpCircle, Phone, Mail, MapPin, Star, TrendingUp, Users, Award, Clock, CheckCircle, DollarSign, Play } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import React, { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Search } from 'lucide-react';
@@ -31,10 +26,7 @@ import { DollarSign } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 interface ImprovednavigationProps {
   className?: string;
   children?: React.ReactNode;
@@ -215,4 +207,3 @@ export default function Improvednavigation({ className = '', children, ...props 
 </div>
   );
 };
-

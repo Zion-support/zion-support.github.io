@@ -1,9 +1,4 @@
 import { Star } from 'lucide-react';
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { ArrowRight } from 'lucide-react';
 const features = [
     {

@@ -2,6 +2,3 @@
 export function performanceutils() {
   // Implementation here
   return null;
-}
-}
-export default performanceutils;

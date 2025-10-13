@@ -2,6 +2,3 @@
 export function accessibilitychecker() {
   // Implementation here
   return null;
-}
-}
-export default accessibilitychecker;

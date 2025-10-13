@@ -16,10 +16,7 @@ import { BarChart3 } from 'lucide-react';
 import { Headphones } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function ITServices() {
 
   const itServices = [

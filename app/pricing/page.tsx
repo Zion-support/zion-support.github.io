@@ -15,70 +15,8 @@ import { Smartphone } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-<<<<<<< HEAD
-
-
-export default function Pricing() {
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
-import React from 'react';
 export default function Pricing() {
 
-
-  return null;
-};
-
-export default function Pricing() {
-  const features = [
-    {
-      title: "Predictive Analytics",
-      description: "Advanced machine learning models for accurate financial forecasting",
-      icon: "Brain"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and mitigation strategies",
-      icon: "Shield"
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of financial metrics and KPIs",
-      icon: "Activity"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate detailed reports automatically",
-      icon: "FileText"
-  ];
-const services = [
-    {
-      title: "Cloud Migration",
-      description: "Seamless migration to cloud infrastructure",
-      icon: "Cloud"
-    },
-    {
-      title: "Security Solutions",
-      description: "Advanced security and compliance",
-      icon: "Shield"
-    },
-    {
-      title: "Performance Optimization",
-      description: "Optimize your cloud performance",
-      icon: "Zap"
-  ];
-<<<<<<< HEAD
-=======
-  return null;
-};
-
-export default function Page() {
-
-  const features = [
-    { title: "Feature 1", description: "Description 1" },
-    { title: "Feature 2", description: "Description 2" }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
   const aiServicesPricing = [
     {
       name: "AI Analytics Dashboard",
@@ -243,14 +181,6 @@ export default function Page() {
       answer: "We'll notify you before you reach your limits and offer options to upgrade or purchase additional capacity."
   ];
 
-<<<<<<< HEAD
-=======
-  return null;
-};
-
-export default function PricingPage() {
-
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -448,5 +378,4 @@ export default function PricingPage() {
       </div>
     </div>
   );
-}
 }

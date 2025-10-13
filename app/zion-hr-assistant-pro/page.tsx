@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
-=======
-import React from 'react';import EnhancedSEO from '../components/EnhancedSEO';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Clock } from 'lucide-react';
@@ -135,15 +131,8 @@ const ZionHRAssistantPro = () => {
       icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
   ];
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-=======
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function ZionHrAssistantProPage() {
 
@@ -187,5 +176,4 @@ export default function ZionHrAssistantProPage() {
       </div>
     </div>
   );
-}
 }

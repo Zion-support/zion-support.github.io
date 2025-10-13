@@ -1,10 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const features = [
     {
       title: "Predictive Analytics",
@@ -42,7 +37,6 @@ const testimonials = [
       content: "Incredible accuracy and insights that have improved our portfolio performance.",
       rating: 5
     }
-<<<<<<< HEAD
   ];
 export default function AICustomerSupportChatbot() {
   const testimonials = [
@@ -71,11 +65,6 @@ export default function AICustomerSupportChatbot() {
       avatar: "ER"
     }
   ];
-=======
-  ];export default function AICustomerSupportChatbot() {
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
   return null;
 };
@@ -121,7 +110,4 @@ export default function AiCustomerSupportChatbotPage() {
       </div>
     </div>
   );
-}
-}
-}
 }

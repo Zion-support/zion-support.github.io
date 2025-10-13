@@ -11,16 +11,10 @@ import { Monitor } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { useState } from 'react';
 import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar, Users, Award } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function Page() {
 
   const [currentDemo, setCurrentDemo] = useState(0);
@@ -185,6 +179,4 @@ export default function DemoPage() {
       </div>
     </div>
   );
-}
-}
-}
+  return null;

@@ -114,12 +114,6 @@ export default function ZionCloudVaultPro() {
       ],
       popular: false
   ];
-<<<<<<< HEAD
-=======
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function Page() {
 
@@ -146,5 +140,4 @@ export default function Page() {
       </div>
     </div>
   );
-}
 }

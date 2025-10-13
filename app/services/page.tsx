@@ -28,19 +28,11 @@ import { Smartphone } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import React from 'react';
 import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function Services() {
 
   const services = [
@@ -423,9 +415,4 @@ export default function ServicesPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
-}
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 }

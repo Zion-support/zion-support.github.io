@@ -1,12 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-<<<<<<< HEAD
-
-
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function CloudMigration() {
 
   return (
@@ -49,5 +43,4 @@ export default function CloudMigration() {
       </div>
     </div>
   );
-}
 }

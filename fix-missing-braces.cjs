@@ -1,91 +1,62 @@
-const fs = require("fs");
-const path = require("path");
+#!/usr/bin/env node
 
-// Function to fix missing closing braces in a file
-function fixMissingBraces(filePath) {
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
+
+// Fix missing closing braces
+function fixMissingBraces() {
+  console.log('🔧 Fixing missing closing braces...');
+  
+  // Get all TypeScript/JSX files
+  const files = execSync('find /workspace -name "*.tsx" -o -name "*.ts" | grep -v node_modules', { encoding: 'utf8' })
+    .trim().split('\n').filter(line => line.trim());
+  
+  let fixed = 0;
+  
+  files.forEach(file => {
+    try {
+      let content = fs.readFileSync(file, 'utf8');
+      let originalContent = content;
+      
+      // Fix missing closing braces for function components
+      if (content.includes('export default function') && !content.trim().endsWith('}')) {
+        content = content.trim() + '\n}';
+      }
+      
+      // Fix missing closing braces for arrow functions
+      if (content.includes('const') && content.includes('= () => {') && !content.trim().endsWith('}')) {
+        content = content.trim() + '\n}';
+      }
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(file, content);
+        console.log(`✅ Fixed: ${file}`);
+        fixed++;
+      }
+    } catch (error) {
+      console.log(`⚠️  Could not process ${file}: ${error.message}`);
+    }
+  });
+  
+  console.log(`\n📊 Fixed ${fixed} files`);
+  return fixed;
+}
+
+// Run the fix
+const fixed = fixMissingBraces();
+
+if (fixed > 0) {
+  console.log('\n🎉 Running final checks...');
   try {
-    let content = fs.readFileSync(filePath, "utf8");
-    let modified = false;
-
-    // Check if file is missing closing brace for function
-    const lines = content.split("\n");
-    let braceCount = 0;
-    let inFunction = false;
-    let functionStartLine = -1;
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-
-      // Check for function declaration
-      if (line.includes("export default function") && line.includes("{")) {
-        inFunction = true;
-        functionStartLine = i;
-        braceCount = 1;
-      } else if (inFunction) {
-        // Count braces
-        for (const char of line) {
-          if (char === "{") braceCount++;
-          if (char === "}") braceCount--;
-        }
-
-        // If we reach the end of file and braces are not balanced
-        if (i === lines.length - 1 && braceCount > 0) {
-          // Add missing closing braces
-          for (let j = 0; j < braceCount; j++) {
-            lines.push("}");
-          }
-          modified = true;
-          break;
-        }
-      }
-    }
-
-    if (modified) {
-      content = lines.join("\n");
-      fs.writeFileSync(filePath, content);
-      return true;
-    }
-    return false;
+    execSync('cd /workspace && pnpm run type-check 2>&1 | head -10', { stdio: 'inherit' });
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
+    console.log('Type check completed with some issues');
+  }
+  
+  try {
+    execSync('cd /workspace && pnpm run lint 2>&1 | head -10', { stdio: 'inherit' });
+  } catch (error) {
+    console.log('Lint check completed with some issues');
   }
 }
-
-// Get all page.tsx files
-function getAllPageFiles(dir) {
-  const files = [];
-  const items = fs.readdirSync(dir);
-
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-
-    if (stat.isDirectory()) {
-      const pageFile = path.join(fullPath, "page.tsx");
-      if (fs.existsSync(pageFile)) {
-        files.push(pageFile);
-      }
-      // Recursively search subdirectories
-      files.push(...getAllPageFiles(fullPath));
-    }
-  }
-
-  return files;
-}
-
-// Fix all page files
-const appDir = path.join(__dirname, "app");
-const pageFiles = getAllPageFiles(appDir);
-
-console.log(`Found ${pageFiles.length} page files to check...`);
-
-let fixedCount = 0;
-pageFiles.forEach((file) => {
-  if (fixMissingBraces(file)) {
-    console.log(`Fixed: ${file}`);
-    fixedCount++;
-  }
-});
-
-console.log(`Fixed ${fixedCount} files`);

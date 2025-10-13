@@ -14,14 +14,7 @@ import { Code } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
-<<<<<<< HEAD
 import { Cloud } from 'lucide-react';
-=======
-import { Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Users, Award, Zap, Shield } from 'lucide-react';
-
-=======
-import { Cloud } from 'lucide-react';import { Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Users, Award, Zap, Shield } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 interface ImprovedfooterProps {
   className?: string;
   children?: React.ReactNode;
@@ -81,14 +74,10 @@ export default function ImprovedFooter({ className = '', children, ...props }: I
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709'
   };
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
   return (
     <div className={`improvedfooter-component ${className}`} {...props}>
       {children}
     </div>
   );
 };
-

@@ -25,10 +25,7 @@ import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 const HomePage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -120,14 +117,6 @@ const HomePage = () => {
       link: "/data-analytics",
       features: ["Business Intelligence", "Data Visualization", "Predictive Modeling", "Real-time Analytics"]
   ];
-<<<<<<< HEAD
-=======
-=======
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
-
 export default function AppPage() {
 
   return (
@@ -170,5 +159,4 @@ export default function AppPage() {
       </div>
     </div>
   );
-}
 }

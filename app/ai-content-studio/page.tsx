@@ -14,8 +14,6 @@ import { CheckCircle } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { FileText } from 'lucide-react';
 const AIContentStudioZionTechGroup = () => {
-<<<<<<< HEAD
-
   const features = [
     {
       title: "AI Writing Assistant",
@@ -121,13 +119,6 @@ const AIContentStudioZionTechGroup = () => {
       avatar: "MG"
     }
   ];
-=======
-  return null;
-};
-
-  return null;
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 
 export default function AiContentStudioPage() {
   return (
@@ -170,7 +161,4 @@ export default function AiContentStudioPage() {
       </div>
     </div>
   );
-}
-}
-}
 }

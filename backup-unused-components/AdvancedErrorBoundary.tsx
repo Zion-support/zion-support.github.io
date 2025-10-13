@@ -39,7 +39,6 @@ class AdvancedErrorBoundary extends Component<Props, State>
     if (process.env.NODE_ENV === 'production') 
       this.logErrorToService(error, errorInfo);
 
-
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => 
     // You can integrate with services like Sentry, LogRocket, etc.
     const errorData = 
@@ -104,7 +103,6 @@ class AdvancedErrorBoundary extends Component<Props, State>
                 </p>
               </div>
 
-            
               <details className="mb-6 text-left"></details>
                 <summary className="cursor-pointer text-sm font-medium text-gray-700 mb-2"></summary>
                   Error Details (Development)
@@ -163,6 +161,5 @@ class AdvancedErrorBoundary extends Component<Props, State>
       );
 
     return this.props.children;
-
 
 export default AdvancedErrorBoundary;

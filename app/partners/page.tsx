@@ -1,13 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Database } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 export default function Partners() {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
   const partners = [
     {
       name: "Microsoft",
@@ -72,10 +69,7 @@ export default function Partners() {
       benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
     }
   ];
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

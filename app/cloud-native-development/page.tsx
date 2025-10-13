@@ -2,15 +2,8 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-<<<<<<< HEAD
-
-
-
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 export default function CloudNativeDevelopmentZionTechGroup() {
 
   return (
@@ -53,5 +46,4 @@ export default function CloudNativeDevelopmentZionTechGroup() {
       </div>
     </div>
   );
-}
 }

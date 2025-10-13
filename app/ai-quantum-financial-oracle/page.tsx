@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { 
   Brain, 
@@ -14,9 +13,6 @@ import {
   Activity,
   PieChart
 } from 'lucide-react';
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import React from 'react';
 import {   Brain, 
 import { Helmet } from 'react-helmet-async';
@@ -103,7 +99,4 @@ export default function AiQuantumFinancialOraclePage() {
       </div>
     </div>
   );
-}
-}
-};
 }

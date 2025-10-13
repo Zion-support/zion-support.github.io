@@ -25,18 +25,7 @@ import { DollarSign } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Mic } from 'lucide-react';
-<<<<<<< HEAD
 import { Cloud } from 'lucide-react';
-=======
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play } from 'lucide-react';
-
-=======
-import { Cloud } from 'lucide-react';import React, { useState, useEffect } from 'react';
-import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 interface ImprovedsidebarProps {
   className?: string;
   children?: React.ReactNode;
@@ -48,4 +37,3 @@ export default function Improvedsidebar({ className = '', children, ...props }: 
     </div>
   );
 };
-

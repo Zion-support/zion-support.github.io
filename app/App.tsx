@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 "use client";
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ddba
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-=======
-import React, { lazy, Suspense } from 'react';import { BrowserRouter, Routes, Route } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from "./components/ErrorBoundary";
 import PerformanceMonitor from "./components/PerformanceMonitor";
@@ -53,8 +46,6 @@ const FiveGSmartCitySolutionsPage = lazy(
   () => import("./5g-smart-city-solutions/page"),
 );
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
-<<<<<<< HEAD
-
 // Loading component
 const LoadingSpinner = () => (
   <div className="min-h-screen flex items-center justify-center bg-gray-900">
@@ -62,26 +53,17 @@ const LoadingSpinner = () => (
   </div>
 );
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
 // Main App Component
 export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <ErrorBoundary>
           <PerformanceMonitor />
           <AccessibilityEnhancer>
-=======
-        <ErrorBoundary>
-          <PerformanceMonitor />          <AccessibilityEnhancer>
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
             <CriticalResourcePreloader />
             <CacheManager />
             <AdvancedPerformanceMonitor />
-}
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
               <Route path="/" element={<HomePage />} />
@@ -134,69 +116,8 @@ export default function App() {
             </Suspense>
           </AccessibilityEnhancer>
         </ErrorBoundary>
-=======
-        <Suspense fallback={<LoadingSpinner />}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/pricing" element={<PricingPage />} />
-            <Route path="/case-studies" element={<CaseStudiesPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/team" element={<TeamPage />} />
-            <Route path="/careers" element={<CareersPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/terms" element={<TermsPage />} />
-            <Route path="/cookies" element={<CookiesPage />} />
 
-            {/* 5G Solutions Routes */}
-            <Route
-              path="/5g-data-analytics"
-              element={<FiveGDataAnalyticsPage />}
-            />
-            <Route
-              path="/5g-edge-computing"
-              element={<FiveGEdgeComputingPage />}
-            />
-            <Route
-              path="/5g-implementation"
-              element={<FiveGImplementationPage />}
-            />
-            <Route
-              path="/5g-iot-solutions"
-              element={<FiveGIoTSolutionsPage />}
-            />
-            <Route
-              path="/5g-mobile-applications"
-              element={<FiveGMobileApplicationsPage />}
-            />
-            <Route
-              path="/5g-network-infrastructure"
-              element={<FiveGNetworkInfrastructurePage />}
-            />
-            <Route
-              path="/5g-private-networks"
-              element={<FiveGPrivateNetworksPage />}
-            />
-            <Route
-              path="/5g-smart-city-solutions"
-              element={<FiveGSmartCitySolutionsPage />}
-            />
-            <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-          </Routes>
-        </Suspense>
->>>>>>> cursor/fix-errors-and-merge-to-main-ddba
       </BrowserRouter>
     </HelmetProvider>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default App;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-ddba
-=======
-export default App;
->>>>>>> cursor/fix-errors-and-merge-to-main-fbfa
