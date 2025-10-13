@@ -28,8 +28,4 @@ export default function handler(req, res) {
     console.error('Error processing error report:', error);
     res.status(500).json({ error: 'Failed to process error report' });
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-3792

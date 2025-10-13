@@ -1,9 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 export default function handler(req, res) {
@@ -44,10 +40,7 @@ export default function handler(req, res) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
-<<<<<<< HEAD
       success: true,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
       id: newRequest.id
     }));
   } catch {
