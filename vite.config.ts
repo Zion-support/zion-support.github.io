@@ -32,6 +32,7 @@ export default defineConfig({
     target: 'es2020',
     cssCodeSplit: true,
     
+    
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -66,28 +67,13 @@ export default defineConfig({
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // AI service pages
-          if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
-            return 'ai-pages'
-          }
-          // IT service pages
-          if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
-            return 'it-pages'
-          }
-          // Micro SAAS pages
-          if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
-            return 'saas-pages'
-          }
-          // Other pages
+          // Large page components (lazy load)
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
           }
           // Default chunk for other modules
           return 'vendor'
         },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
     // Optimize bundle size
