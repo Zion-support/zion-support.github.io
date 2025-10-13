@@ -21,7 +21,20 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
     );
   }
 
-<<<<<<< HEAD
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="text-center">
+        <div className="w-16 h-16 mx-auto mb-6 relative">
+          <div className="absolute inset-0 rounded-full border-4 border-cyan-500/20"></div>
+          <div className="absolute inset-0 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin"></div>
+        </div>
+        <h2 className="text-2xl font-bold text-white mb-2">Loading</h2>
+        <p className="text-gray-300">{message}</p>
+      </div>
+    </div>
+  );
+};
+
 export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
   const getServiceIcon = (serviceName: string) => {
     switch (serviceName.toLowerCase()) {
@@ -41,7 +54,6 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
         return <Brain className="w-8 h-8 text-cyan-400" />;
     }
   };
-=======
   if (variant === 'default') {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -53,7 +65,6 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
       </div>
     );
   }
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
   // Futuristic variant
   return (
@@ -111,7 +122,6 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
   );
 };
 
-<<<<<<< HEAD
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   return (
     <div className="animate-pulse">
@@ -141,6 +151,4 @@ export const CardSkeleton: React.FC = () => {
   );
 };
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 export default LoadingPage;
