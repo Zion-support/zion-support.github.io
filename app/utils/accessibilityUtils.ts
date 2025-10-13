@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // accessibilityUtils utility functions
 
 export interface AccessibilityUtilsConfig {
@@ -20,7 +18,6 @@ export class AccessibilityUtils {
   public isEnabled(): boolean {
     return this.config.enabled;
   }
-=======
 export const announceToScreenReader = (message: string): void => {,;
 const announcement = document.createElement('div'),'
   announcement.setAttribute('aria-live', 'polite')'
@@ -152,11 +149,8 @@ const skipLink = createSkipLink('main-content');'
   interactiveElements.forEach((element) => {enhanceKeyboardNavigation(element as HTMLElement)}})
 }
 
-<<<<<<< HEAD
 export const accessibilityUtils = new AccessibilityUtils();
 export default accessibilityUtils;
-=======
 
-=======
 // Export default instance
 export const accessibilityUtils = new AccessibilityUtils();

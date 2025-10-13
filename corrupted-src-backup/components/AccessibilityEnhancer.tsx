@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 interface AccessibilityEnhancerProps {
   className?: string;
   children?: React.ReactNode;
@@ -8,7 +7,6 @@ interface AccessibilityEnhancerProps {
 export default function AccessibilityEnhancer({ className = '', children }: AccessibilityEnhancerProps) {
   return (
     <div className={`${className}`}>
-=======
 import React, { useEffect, useState } from 'react';'
 interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 }
@@ -254,7 +252,6 @@ const _main = document.querySelector('main') || document.querySelector('#main-co
   </div>
   );
 }
-<<<<<<< HEAD
 import React from 'react'
 import {Helmet} from 'react-helmet-async'
 import Navigation from '../components/Navigation'
@@ -270,10 +267,8 @@ export default AccessibilityenhancerPage;
               Learn More;
   );
 };
-=======
 export default AccessibilityEnhancer;
 "`"
   </AccessibilityEnhancerProps></AccessibilityEnhancerProps>
 </div></div>
 </button></button>
-=======

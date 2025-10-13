@@ -4,7 +4,6 @@ import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarCha
 import FuturisticButton from './FuturisticButton'
 
 interface NavigationEnhancedProps {
-<<<<<<< HEAD
   className?: string;
   children?: React.ReactNode;
 }
@@ -521,4 +520,3 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
 NavigationEnhanced.displayName = 'NavigationEnhanced'
 
 export default NavigationEnhanced
-=======

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // performanceMetrics utility functions
 
 export interface PerformanceMetricsConfig {
@@ -22,10 +20,8 @@ export class PerformanceMetrics {
   }
 }
 
-<<<<<<< HEAD
 export const performanceMetrics = new PerformanceMetrics();
 export default performanceMetrics;
-=======
 'use client';'
 /**;
  * Performance Metrics Utility;
@@ -583,8 +579,6 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */,}
 export const performanceMetrics = PerformanceMetrics.getInstance();
 export default PerformanceMetrics;
 `;
-=======
 
-=======
 // Export default instance
 export const performanceMetrics = new PerformanceMetrics();

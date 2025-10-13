@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 interface EnhancedAccessibilityManagerProps {
   className?: string;
   children?: React.ReactNode;
@@ -403,6 +402,5 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
         )}
 </div>
 </div>
-=======
   );
 }

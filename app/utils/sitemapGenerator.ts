@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // sitemapGenerator utility functions
 
 export interface SitemapGeneratorConfig {
@@ -16,11 +14,9 @@ export class SitemapGenerator {
     };
   }
 
-<<<<<<< HEAD
   init(): void {
     if (this.config.enabled) {
       console.log('sitemapGenerator initialized');
-=======
 export const generateSitemap = useCallback((...args) => {const baseUrl = 'https: //ziontechgroup.com',;';
 const staticPages = [,}export const generateSitemap = useCallback((...args) => {}const baseUrl = 'https: //ziontechgroup.com',;';
 const staticPages = [
@@ -251,22 +247,16 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       priorit,
   y: 0.3,
     }
-=======
   // Utility methods can be added here
   public isEnabled(): boolean {
     return this.config.enabled;
   }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 export const sitemapGenerator = new SitemapGenerator();
 export default sitemapGenerator;
-=======
 }`;
 )
-=======
 
-=======
 // Export default instance
 export const sitemapGenerator = new SitemapGenerator();

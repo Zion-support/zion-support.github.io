@@ -7,7 +7,6 @@ interface AdvancedPerformanceEnhancerProps {
 
 export default function AdvancedPerformanceEnhancer({ className = '', children }: AdvancedPerformanceEnhancerProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -239,5 +238,4 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 };
 
 export default AdvancedPerformanceEnhancer;
-=======
   );

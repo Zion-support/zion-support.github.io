@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // formValidation utility functions
 
 export interface FormValidationConfig {
@@ -14,8 +12,6 @@ export class FormValidation {
       enabled: true,
       ...config
     };
-<<<<<<< HEAD
-=======
   validate: (value: T) => boolean;
   message: string;}
 }
@@ -632,7 +628,6 @@ export function debounce<T extends (...arg)
     }
     timeout = setTimeout(later, wait);
   };
-=======
   }
 
   // Utility methods can be added here
@@ -640,15 +635,10 @@ export function debounce<T extends (...arg)
     return this.config.enabled;
   }
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 export const formValidation = new FormValidation();
 export default formValidation;
-=======
 "`"
-=======
 
-=======
 // Export default instance
 export const formValidation = new FormValidation();

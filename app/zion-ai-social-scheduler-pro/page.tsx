@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Calendar, 
@@ -143,8 +142,6 @@ const ZionAISocialSchedulerProPage: React.FC = () => {
       avatar: "LT",
     }
   ];
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
 
 export default function ZionAiSocialSchedulerPro() {
   return (

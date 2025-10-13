@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // apiCache utility functions
 
 export interface ApiCacheConfig {
@@ -22,10 +20,8 @@ export class ApiCache {
   }
 }
 
-<<<<<<< HEAD
 export const apiCache = new ApiCache();
 export default apiCache;
-=======
 'use client';';
 import React from 'react';';';
 import {Helmet}}from 'react-helmet-async';';';
@@ -240,8 +236,6 @@ export default ApiCachePage</span></button>;
 </p></h1>
 </h2></h2>
 </h2>
-=======
 
-=======
 // Export default instance
 export const apiCache = new ApiCache();

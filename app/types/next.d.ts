@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 declare module 'next' {
   export interface NextPageProps {
     params: { [key: string]: string | string[] | undefined };
@@ -53,7 +51,6 @@ declare module 'next' {
 }
 
 export {};
-=======
 const Next.dPage: React.FC = () => {
   // TODO: Implement
 }
@@ -395,5 +392,4 @@ declare module 'next' {'
 }
 ;
 export {}
-=======
 

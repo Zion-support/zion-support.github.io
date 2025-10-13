@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // metadata
 export const metadata = () => {
   // Utility function implementation
   return null;
 };
-=======
 // Metadata utility functions
 
 export const siteMetadata = {
@@ -52,7 +49,6 @@ export function generateMetadata(pageTitle?: string, pageDescription?: string) {
   };
 }
 
-<<<<<<< HEAD
 export default metadata;
 export const siteMetadata = {
 //   title: "Zion Tech Group - Advanced AI and IT Solutions",
@@ -90,7 +86,5 @@ export const metadata = {
     title: 'Zion - AI-Powered Technology Solutions',
     description: 'Leading provider of AI-powered technology solutions',
 };
-=======
 
-=======
 export default siteMetadata;

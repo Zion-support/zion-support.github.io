@@ -1,6 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -9,7 +8,6 @@ export default function Component() {
   </div>
   );
 }
-=======
 'use client';';
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 import { useEffect, useCallback } from 'react';';';

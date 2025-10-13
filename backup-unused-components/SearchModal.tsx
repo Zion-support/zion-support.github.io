@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 interface SearchModalProps;
@@ -30,7 +29,6 @@ const SearchModal: React.FC<SearchModalProps> = ({
       {children}
   </div>
 </div>
-=======
 return (
     <div className={`${className}`}>
       {children}

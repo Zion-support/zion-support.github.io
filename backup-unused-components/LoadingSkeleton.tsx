@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface LoadingSkeletonProps {
@@ -41,5 +40,4 @@ export default function LoadingSkeleton() {
 //     </>
   );
 }
-=======
 

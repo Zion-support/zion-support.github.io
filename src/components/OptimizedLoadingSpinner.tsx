@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 interface OptimizedLoadingSpinnerProps {
   className?: string;
   children?: React.ReactNode;
@@ -51,7 +50,6 @@ export default OptimizedLoadingSpinner;
   );
 );
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';
-=======
 import React from 'react';'
 'use client''
 interface OptimizedLoadingSpinnerProps {
@@ -174,4 +172,3 @@ $4}
 OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner';';
 export default OptimizedLoadingSpinner</div></p>;
 </a>
-=======

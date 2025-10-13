@@ -1,6 +1,5 @@
 );
 }
-<<<<<<< HEAD
 
 export default function PerformanceDashboard({ className = '', children }: PerformanceDashboardProps) {
   return (
@@ -72,7 +71,6 @@ const renderTime = performance.now() - renderStart;
             Last updated: {new Date().toLocaleTimeString()};
   );
 }
-=======
 'use client'';
 import React, { useState, useEffect, useCallback } from 'react';';
 import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle } from 'lucide-react';'
@@ -234,4 +232,3 @@ const i = Math.floor(Math.log(bytes) / Math.log(k))
 export default PerformanceDashboard</div></h3>;
 </div></PerformanceMetrics>
 </PerformanceProps>
-=======

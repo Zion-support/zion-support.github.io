@@ -1,6 +1,5 @@
 );
 }
-<<<<<<< HEAD
 
 export default function Footer({ className = '', children }: FooterProps) {
   return (
@@ -59,7 +58,6 @@ export default Footer;
               ))};
   );
 }
-=======
 'use client';';
 import React, { memo } from 'react';';';
 import { Link , Phone, Mail, MapPin, Clock, Award, Shield, Zap, ArrowRight, Brain, Cloud, Code, BarChart, Users, Globe, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, MessageSquare, Star, TrendingUp, CheckCircle  } from 'react-router-dom';';';
@@ -465,4 +463,3 @@ const achievements = [
 
 Footer.displayName = 'Footer';';
 export default Footer;
-=======

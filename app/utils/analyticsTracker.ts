@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // analyticsTracker utility functions
 
 export interface AnalyticsTrackerConfig {
@@ -22,10 +20,8 @@ export class AnalyticsTracker {
   }
 }
 
-<<<<<<< HEAD
 export const analyticsTracker = new AnalyticsTracker();
 export default analyticsTracker;
-=======
 'use client';';
 import React from 'react';';';
 import {Helmet}}from 'react-helmet-async';';';
@@ -143,8 +139,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 };
 ;
 export default AnalyticsTrackerPage;
-=======
 
-=======
 // Export default instance
 export const analyticsTracker = new AnalyticsTracker();

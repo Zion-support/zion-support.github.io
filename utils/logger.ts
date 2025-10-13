@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -107,9 +105,7 @@ class Logger {
 
 export const logger = new Logger();
 export default logger;
-=======
 
-=======
 // logger utility functions
 
 export interface LoggerConfig {

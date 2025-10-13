@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function PageTsxPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -27,27 +26,7 @@ export default function PageTsxPage() {
           </p>
         </div>
       
-        </div>
-=======
-export default function AiAutomationPlatformPage() {
-export default function AiAutomationPlatform() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Ai Automation Platform - Zion Tech Group</title>
-        <meta name="description" content="Advanced ai automation platform solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Ai Automation Platform
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced ai automation platform solutions by Zion Tech Group.
-          </p>
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-      </div>
+        </div>      </div>
     </div>
   );
 }

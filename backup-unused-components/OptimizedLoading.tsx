@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface OptimizedLoadingProps {
@@ -34,5 +33,4 @@ export default function OptimizedLoading() {
 </div>
   );
 }
-=======
 

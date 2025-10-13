@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -85,7 +83,6 @@ const link = document.createElement('link');
     preloadCriticalResources;
   };
 };
-=======
 
 'use client''
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
@@ -255,5 +252,4 @@ if (process.env['NODE_ENV'] === 'development') {if (import.meta.env.DEV) {}'
   return {measurePerformance}
     optimizeImages,
     preloadCriticalResources
-=======
 

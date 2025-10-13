@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useState, useEffect } from "react";
 
@@ -44,7 +43,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
     };
   }, [end, duration]);
 
-=======
 interface AnimatedCounterProps {
   className?: string;
   children?: React.ReactNode;
@@ -52,7 +50,6 @@ interface AnimatedCounterProps {
 
 export default function AnimatedCounter({ className = '', children }: AnimatedCounterProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -69,6 +66,5 @@ export default function AnimatedCounter({ className = '', children }: AnimatedCo
       {count.toLocaleString()}
       {suffix}
 </span>
-=======
   );
 }

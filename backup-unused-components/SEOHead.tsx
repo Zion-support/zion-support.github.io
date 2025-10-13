@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps;
   title?: string;
@@ -113,7 +112,6 @@ const SEOHead: React.FC<SEOHeadProps> = (
         {JSON.stringify(structuredData)}
 //       </script>
 //     </Helmet>
-=======
 
   );
 }

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect, useRef, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -174,7 +171,6 @@ export function usePerformanceMonitor(): UsePerformanceMonitorReturn {
 }
 
 export default usePerformanceMonitor;
-=======
 export const usePerformanceMonitor = () => {useEffect(() => {
   // TODO: Implement
 }
@@ -206,9 +202,7 @@ const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
     // Run monitoring after page load;
     if (document.readyState === 'complete') {monitorWebVitals();}else {window.addEventListener('load', monitorWebVitals);}}return () => {window.removeEventListener('load', monitorWebVitals);}}, []);'
 }
-=======
 
-=======
 import { useState, useEffect } from 'react';
 
 export function usePerformanceMonitor() {

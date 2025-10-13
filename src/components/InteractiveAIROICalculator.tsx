@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface InteractiveAIROICalculatorProps {
@@ -8,7 +7,6 @@ interface InteractiveAIROICalculatorProps {
 
 export default function InteractiveAIROICalculator({ className = '', children }: InteractiveAIROICalculatorProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -18,7 +16,6 @@ export default function InteractiveAIROICalculator({ className = '', children }:
   </div>
   );
 }
-=======
 'use client'';
 import React, { useState } from 'react';'
 const,
@@ -95,6 +92,5 @@ export default InteractiveAIROICalculator</div></div>;
 </div></p>
 </h2></h3>
 </section>
-=======
   );
 }

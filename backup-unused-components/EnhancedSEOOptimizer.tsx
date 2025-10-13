@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useEffect } from 'react';
 import StructuredData from "../components/StructuredData";
@@ -401,7 +400,6 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
     }
   }, [title, currentUrl]);
 
-=======
 interface EnhancedSEOOptimizerProps {
   className?: string;
   children?: React.ReactNode;
@@ -409,7 +407,6 @@ interface EnhancedSEOOptimizerProps {
 
 export default function EnhancedSEOOptimizer({ className = '', children }: EnhancedSEOOptimizerProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -523,6 +520,5 @@ export default function EnhancedSEOOptimizer({ className = '', children }: Enhan
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 //     </Helmet>
-=======
   );
 }

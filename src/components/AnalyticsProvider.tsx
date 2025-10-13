@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface AnalyticsProviderProps {
@@ -8,7 +7,6 @@ interface AnalyticsProviderProps {
 
 export default function AnalyticsProvider({ className = '', children }: AnalyticsProviderProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -17,7 +15,6 @@ export default function AnalyticsProvider({ className = '', children }: Analytic
       <p>This component is under construction.</p>
   </div>
   );
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';'
 interface AnalyticsContextType {
   // TODO: Add properties
@@ -167,6 +164,5 @@ declare global {
     gtag: (...args: any[]) => void
   }
 }
-=======
   );
 }

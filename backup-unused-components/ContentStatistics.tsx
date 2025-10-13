@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface ContentStatisticsProps {
@@ -139,7 +138,6 @@ const ContentStatistics: React.FC<ContentStatisticsProps> = (
 </div>
 </div>
 </div>
-=======
 className?: string;
   children?: React.ReactNode;
 }

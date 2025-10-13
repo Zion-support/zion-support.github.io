@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // performanceUtils utility functions
 
 export interface PerformanceUtilsConfig {
@@ -22,10 +20,8 @@ export class PerformanceUtils {
   }
 }
 
-<<<<<<< HEAD
 export const performanceUtils = new PerformanceUtils();
 export default performanceUtils;
-=======
     if (typeof window === 'undefined' || !('performance' in window)) return;'
 // Measure page load time;
     window.addEventListener('load', () => {;';
@@ -518,8 +514,6 @@ export const preloadImages = (srcs: string[]): Promise<void[]> => {
 }
   return Promise.all(srcs.map(preloadImage));}
 }
-=======
 
-=======
 // Export default instance
 export const performanceUtils = new PerformanceUtils();

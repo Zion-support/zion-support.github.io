@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // validators utility functions
 
 export interface ValidatorsConfig {
@@ -22,10 +20,8 @@ export class Validators {
   }
 }
 
-<<<<<<< HEAD
 export const validators = new Validators();
 export default validators;
-=======
 import React from 'react';';'
 'use client';'
 /**;
@@ -975,8 +971,6 @@ export function validateRequired(value: unknown, fieldName: string = 'Field'): V
 export async function validateAsync(validator: (val: string) => Promise<ValidationResult>, value: string): Promise<ValidationResult> {,
     try {return await validator(value)}}} catch (error) {}return {isValid: false, errors: ['Validation failed'], error: 'Validation failed' ,}}}'
 }
-=======
 
-=======
 // Export default instance
 export const validators = new Validators();

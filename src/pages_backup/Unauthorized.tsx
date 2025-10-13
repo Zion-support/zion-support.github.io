@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 interface UnauthorizedProps {
   className?: string;
   children?: React.ReactNode;
@@ -28,7 +27,6 @@ export default UnauthorizedPage;
               Learn More;
   );
 };
-=======
 const { t } = useTranslation()
   return (
   // TODO: Add parameters
@@ -120,4 +118,3 @@ const { t } = useTranslation()
             </Link></$1>
 </$1></$1>
 </$1></div>)
-=======

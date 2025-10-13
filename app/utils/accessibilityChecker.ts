@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // accessibilityChecker utility functions
 
 export interface AccessibilityCheckerConfig {
@@ -22,10 +20,8 @@ export class AccessibilityChecker {
   }
 }
 
-<<<<<<< HEAD
 export const accessibilityChecker = new AccessibilityChecker();
 export default accessibilityChecker;
-=======
 
   const benefits = [
   // TODO: Add items
@@ -135,8 +131,6 @@ export default accessibilityChecker;
 export default AccessibilityCheckerPage;
 
 }
-=======
 
-=======
 // Export default instance
 export const accessibilityChecker = new AccessibilityChecker();

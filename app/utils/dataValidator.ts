@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // dataValidator utility functions
 
 export interface DataValidatorConfig {
@@ -22,10 +20,8 @@ export class DataValidator {
   }
 }
 
-<<<<<<< HEAD
 export const dataValidator = new DataValidator();
 export default dataValidator;
-=======
   return {isValid,;}
   return {
   // TODO: Add properties
@@ -582,8 +578,6 @@ export async function validateAsync(validato,;)
   }
 }
 "`
-=======
 
-=======
 // Export default instance
 export const dataValidator = new DataValidator();

@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -69,7 +67,6 @@ export default config;
  * Check if running in development;
  */
   return config.app.environment === 'development';
-=======
 /**
  * Application Configuration
  * Centralized configuration management for the Zion Tech Group application
@@ -205,5 +202,4 @@ export function isDevelopment(): boolean {/* TODO: Fix JSX expression */}
 }
   return config.app.environment === 'development';';
 export default config;
-=======
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
@@ -105,7 +104,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     );
   }
 
-=======
 interface ImageOptimizerProps {
   className?: string;
   children?: React.ReactNode;
@@ -113,7 +111,6 @@ interface ImageOptimizerProps {
 
 export default function ImageOptimizer({ className = '', children }: ImageOptimizerProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -140,6 +137,5 @@ export default function ImageOptimizer({ className = '', children }: ImageOptimi
       loading="lazy"
       decoding="async"
 //     />
-=======
   );
 }

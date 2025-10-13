@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface MobileOptimizerProps {
@@ -40,5 +39,4 @@ export default function MobileOptimizer() {
 //     </>
   );
 }
-=======
 

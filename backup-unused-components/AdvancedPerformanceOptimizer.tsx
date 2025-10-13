@@ -7,7 +7,6 @@ interface AdvancedPerformanceOptimizerProps {
 
 export default function AdvancedPerformanceOptimizer({ className = '', children }: AdvancedPerformanceOptimizerProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -270,5 +269,4 @@ const getNextLikelyPage = (currentPath: string): string | null => {
 };
 
 export default AdvancedPerformanceOptimizer;
-=======
   );

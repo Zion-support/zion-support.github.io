@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // performanceOptimizations utility functions
 
 export interface PerformanceOptimizationsConfig {
@@ -22,10 +20,8 @@ export class PerformanceOptimizations {
   }
 }
 
-<<<<<<< HEAD
 export const performanceOptimizations = new PerformanceOptimizations();
 export default performanceOptimizations;
-=======
 'use client''
 ): ((...args: Parameters<T>) => void) => {,;
 let timeout: NodeJS.Timeout,
@@ -545,8 +541,6 @@ export default {/* TODO: Fix JSX expression */}
 };
 }
 export default {/* TODO: Fix JSX expression */,}}}
-=======
 
-=======
 // Export default instance
 export const performanceOptimizations = new PerformanceOptimizations();

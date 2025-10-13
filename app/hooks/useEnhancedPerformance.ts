@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceData {
@@ -58,7 +55,6 @@ export function useEnhancedPerformance(): UseEnhancedPerformanceReturn {
   useEffect(() => {
     fetchData();
   }, [fetchData]);
-=======
 import { useState, useEffect } from 'react';
 
 export function useEnhancedPerformance() {
@@ -102,7 +98,6 @@ export function useEnhancedPerformance() {
     data,
     loading,
     error,
-<<<<<<< HEAD
     setData,
     setLoading,
     setError,
@@ -111,7 +106,6 @@ export function useEnhancedPerformance() {
   };
 }
 
-=======
   trackAnalytics?: boolean;}}
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {,)}) {const {component = 'Unknown',;}'
     trackErrors = true,;
@@ -426,9 +420,7 @@ const _duration = performance.now() - startTime
 }
 ;
 export default useEnhancedPerformance;
-=======
 
-=======
     processData,
     fetchData
   };

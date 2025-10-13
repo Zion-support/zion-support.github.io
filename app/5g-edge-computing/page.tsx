@@ -1,33 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-8">Page</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-        <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-        <p className="text-gray-300">
-          This page is under development. Please check back later for updates.
-        </p>
-      </div>
-    
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Cpu, Zap, Globe, Shield, TrendingUp, Database } from 'lucide-react';
 
@@ -49,30 +21,22 @@ export default function FiveGEdgeComputingPage() {
             Bring computing power closer to your users with our 5G edge computing solutions. 
             Ultra-low latency, real-time processing, and distributed intelligence.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/demo"
-              className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-            >
-              View Demo
-            </Link>
-          </div>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+          >
+            Contact Us Today
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
             <Cpu className="w-12 h-12 text-cyan-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Ultra-Low Latency</h3>
             <p className="text-gray-300">
-              Process data at the edge with sub-millisecond latency for real-time applications.
+              Achieve sub-millisecond latency with edge computing infrastructure deployed at the network edge.
             </p>
           </div>
 
@@ -80,50 +44,50 @@ export default function FiveGEdgeComputingPage() {
             <Zap className="w-12 h-12 text-purple-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Real-time Processing</h3>
             <p className="text-gray-300">
-              Execute complex computations at the edge for instant response times.
+              Process data and run applications in real-time at the edge for instant responsiveness.
             </p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
             <Globe className="w-12 h-12 text-yellow-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Distributed Architecture</h3>
+            <h3 className="text-xl font-semibold text-white mb-3">Distributed Intelligence</h3>
             <p className="text-gray-300">
-              Deploy computing resources across multiple edge locations for optimal coverage.
+              Deploy AI and machine learning models across edge locations for intelligent decision making.
             </p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
             <Shield className="w-12 h-12 text-green-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Edge Security</h3>
+            <h3 className="text-xl font-semibold text-white mb-3">Enhanced Security</h3>
             <p className="text-gray-300">
-              Secure edge computing with advanced encryption and access controls.
+              Secure edge computing with advanced encryption and security protocols for data protection.
             </p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <Database className="w-12 h-12 text-blue-400 mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-3">Edge Data Storage</h3>
-            <p className="text-gray-300">
-              Store and manage data locally at the edge for faster access and reduced bandwidth.
-            </p>
-          </div>
-
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-            <TrendingUp className="w-12 h-12 text-pink-400 mb-4" />
+            <TrendingUp className="w-12 h-12 text-blue-400 mb-4" />
             <h3 className="text-xl font-semibold text-white mb-3">Scalable Infrastructure</h3>
             <p className="text-gray-300">
-              Scale your edge computing resources based on demand and usage patterns.
+              Scale your edge computing resources dynamically based on demand and usage patterns.
+            </p>
+          </div>
+
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <Database className="w-12 h-12 text-red-400 mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-3">Edge Data Management</h3>
+            <p className="text-gray-300">
+              Efficiently manage and process data at the edge with our advanced data management solutions.
             </p>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-2xl p-12 border border-white/20">
-          <h2 className="text-3xl font-bold text-white mb-4">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
             Ready to Deploy Edge Computing?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact our experts to learn how our 5G edge computing solutions can transform your applications.
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+            Transform your 5G network with our edge computing solutions and deliver ultra-fast, responsive applications.
           </p>
           <Link
             to="/contact"
@@ -132,13 +96,8 @@ export default function FiveGEdgeComputingPage() {
             Contact Us Today
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-c832

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -57,7 +56,6 @@ export default function Component() {
   }, []);
   return { metrics, isMonitoring };
 };
-=======
 import { useState, useEffect, useCallback } from 'react';'
 interface PerformanceMetrics {
   // TODO: Add properties
@@ -297,4 +295,3 @@ const largestContentfulPaint =
   return { metrics, isMonitoring }
 }
 
-=======

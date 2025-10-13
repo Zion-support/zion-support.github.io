@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // monitoring utility functions
 
 export interface MonitoringConfig {
@@ -22,10 +20,8 @@ export class Monitoring {
   }
 }
 
-<<<<<<< HEAD
 export const monitoring = new Monitoring();
 export default monitoring;
-=======
 'use client';'
 /**;
  * Comprehensive Monitoring Utility;
@@ -168,8 +164,6 @@ const navigation = performance.getEntriesByType('navigation')[0] as PerformanceN
 // Singleton instance;
 const monitoring = new MonitoringService();
 export default monitoring;
-=======
 
-=======
 // Export default instance
 export const monitoring = new Monitoring();

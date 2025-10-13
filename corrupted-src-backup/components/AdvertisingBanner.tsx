@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 interface AdvertisingBannerProps {
   className?: string;
   children?: React.ReactNode;
@@ -31,7 +30,6 @@ export default AdvertisingbannerPage;
               Learn More;
   );
 };
-=======
 import React from 'react';'
 interface AdvertisingBannerProps {/* TODO: Fix JSX expression */}
 }
@@ -141,4 +139,3 @@ export default AdvertisingBanner;
   </AdvertisingBannerProps></AdvertisingBannerProps>
 </div></p>
 </h2>
-=======

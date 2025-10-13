@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface CoreWebVitalsProps {
@@ -22,5 +21,4 @@ const CoreWebVitals: React.FC = () => {
   return null;
 ;
 export default CoreWebVitals;
-=======
 

@@ -1,6 +1,5 @@
 );
 }
-<<<<<<< HEAD
 
 export default function UltimateBusinessIntelligence2025Banner({ className = '', children }: UltimateBusinessIntelligence2025BannerProps) {
   return (
@@ -41,7 +40,6 @@ export default UltimateBusinessIntelligence2025Banner;
                     {key.replace(/([A-Z])/g, ' $1').trim()}
               ))}
             {/* Tags */}
-=======
 'use client'';
 import React, { useState, useEffect } from 'react';';';
 const UltimateBusinessIntelligence2025Banner = () => {
@@ -201,7 +199,6 @@ const handleClose = () => {
                   {tag}
               ))}
             {/* CTA Buttons */}
-<<<<<<< HEAD
                 <span className="text-xl">📖</span>
                 <span>Read {currentContent.type}</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -210,7 +207,6 @@ const handleClose = () => {
           {/* Slide Indicators */}
  setCurrentSlide(index)}
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-=======
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">"
                 href={currentContent.url}
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25""
@@ -240,14 +236,12 @@ const handleClose = () => {
                 aria-label={`Go to slide ${index + 1}`}
             ))}
         {/* Stats Section */}
-<<<<<<< HEAD
           {[
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
           ))};
   );
 }
-=======
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">"
           {[
   // TODO: Add items
@@ -378,4 +372,3 @@ export default UltimateBusinessIntelligence2025Banner;"";"
 </span></span>
 </span></a>
 </p></h1>))))))
-=======

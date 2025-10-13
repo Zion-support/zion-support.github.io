@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 interface TalentMarketplaceProps {
   className?: string;
   children?: React.ReactNode;
@@ -28,7 +27,6 @@ export default TalentmarketplacePage;
               Learn More;
   );
 };
-=======
 class ErrorBoundary extends React.Component {
   // TODO: Add properties
 }
@@ -261,4 +259,3 @@ const schema = {
 </$1></$1>
 </$1></$1>
 }})
-=======

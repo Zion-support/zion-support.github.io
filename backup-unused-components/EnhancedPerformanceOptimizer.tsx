@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedPerformanceOptimizerProps {
@@ -219,5 +218,4 @@ export default function EnhancedPerformanceOptimizer() {
 
   return null;
 }
-=======
 

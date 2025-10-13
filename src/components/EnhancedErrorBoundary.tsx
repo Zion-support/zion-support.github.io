@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedErrorBoundaryProps {
@@ -8,7 +7,6 @@ interface EnhancedErrorBoundaryProps {
 
 export default function EnhancedErrorBoundary({ className = '', children }: EnhancedErrorBoundaryProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -18,7 +16,6 @@ export default function EnhancedErrorBoundary({ className = '', children }: Enha
   </div>
   );
 }
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';'
 interface Props {/* TODO: Fix JSX expression */}
 }
@@ -170,6 +167,5 @@ export default EnhancedErrorBoundary;
 </button></button>
 </p></h1>
 </h2>
-=======
   );
 }

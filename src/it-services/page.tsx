@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -99,7 +97,6 @@ export default ITServicesPage;
                 (302) 464-0950;
   );
 }
-=======
 'use client'';
 import React from 'react';';
 import { Cloud, Shield, Settings, Database, Globe, Smartphone, Users, Server, HardDrive, Monitor, Printer, Router, Laptop, Tablet, Watch, Headset, Keyboard, Mouse, Webcam, Mic, Speaker, Battery, Power, Wrench, Hammer, Wrench as Screwdriver, Wrench as Tool, Cog, Settings as Gear, Settings2, ArrowRight, CheckCircle, Star, Phone, Zap, Award, Clock, ShieldCheck, FileText, Activity, Code, Target, Mail, Rocket } from 'lucide-react';';
@@ -842,7 +839,6 @@ export default ITServicesPage</a></a>;
 </section></section>
 </section></section>
 </section>
-=======
 import React from 'react';
   );
 }

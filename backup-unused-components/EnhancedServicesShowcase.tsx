@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedServicesShowcaseProps {
@@ -256,6 +255,5 @@ const EnhancedServicesShowcase: React.FC = () => {
 </div>
   );
 }
-=======
 );
 }

@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect } from 'react';
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-69e1
-import React, { useState, useCallback } from 'react';
+import React, { useState, useRef, useEffect } from 'react';import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
 interface OptimizedImageProps {
@@ -34,7 +24,6 @@ export default function OptimizedImage({
 }: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-=======
               </span>
 <br>
 <span className="text-white">Solutions</span></h1>"
@@ -221,7 +210,6 @@ interface OptimizedImageProps {
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
 
   const handleLoad = useCallback(() => {
     setIsLoaded(true);
@@ -233,7 +221,6 @@ interface OptimizedImageProps {
     onError?.();
   }, [onError]);
 
-<<<<<<< HEAD
   const containerStyle: React.CSSProperties = {
     width: width ? `${width}px` : undefined,
     height: height ? `${height}px` : undefined,
@@ -245,44 +232,11 @@ interface OptimizedImageProps {
         className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
         style={containerStyle}
       >
-        <span>Failed to load image</span>
-=======
-  // Generate optimized image URL if using a service like Cloudinary
-  const getOptimizedSrc = (originalSrc: string) => {
-    if (originalSrc.startsWith('http') && !originalSrc.includes('cloudinary')) {
-      return originalSrc;
-    }
-    
-    // Add optimization parameters for Cloudinary or similar services
-    const params = new URLSearchParams();
-    if (quality) params.set('q', quality.toString());
-    if (format) params.set('f', format);
-    if (width) params.set('w', width.toString());
-    if (height) params.set('h', height.toString());
-    
-    const separator = originalSrc.includes('?') ? '&' : '?';
-    return `${originalSrc}${separator}${params.toString()}`;
-  };
-
-  const optimizedSrc = getOptimizedSrc(src);
-
-  if (hasError) {
-    return (
-      <div 
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width, height }}
-      >
-        <span className="text-gray-500 text-sm">Failed to load image</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-      </div>
+        <span>Failed to load image</span>      </div>
     );
   }
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className={`${className} relative`}>
       {!isLoaded && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
@@ -301,33 +255,10 @@ interface OptimizedImageProps {
         className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
       />
       {children}
-    </div>
-=======
-    <LazyLoadImage
-      src={optimizedSrc}
-      alt={alt}
-      className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
-      width={width}
-      height={height}
-      effect={effect}
-      threshold={threshold}
-      placeholderSrc={placeholder}
-      onLoad={handleLoad}
-      onError={handleError}
-      loading={priority ? 'eager' : 'lazy'}
-      decoding="async"
-    />
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-  );
+    </div>  );
 };
 
 export default OptimizedImage;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-69e1
     <div className={`relative ${className}`} style={containerStyle}>
       {!isLoaded && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
@@ -348,25 +279,3 @@ export default OptimizedImage;
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
-=======
-
-interface OptimizedImageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function OptimizedImage({ className = '', children }: OptimizedImageProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-69e1

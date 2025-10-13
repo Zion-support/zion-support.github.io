@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticHeroProps {
@@ -32,5 +31,4 @@ export default function FuturisticHero() {
 //     </>
   );
 }
-=======
 

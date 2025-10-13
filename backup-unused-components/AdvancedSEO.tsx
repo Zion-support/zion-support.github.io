@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 
 interface AdvancedSEOProps {
   className?: string;
@@ -357,6 +356,5 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
         })}
 //       </script>
 //     </Helmet>
-=======
   );
 }

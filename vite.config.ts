@@ -1,13 +1,6 @@
-<<<<<<< HEAD
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
-=======
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { resolve } from 'path';
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-
 export default defineConfig({
   plugins: [
     react({
@@ -19,14 +12,7 @@ export default defineConfig({
     alias: {
       "@": resolve(__dirname, "./app"),
       "@/components": resolve(__dirname, "./app/components"),
-<<<<<<< HEAD
-      "@/utils": resolve(__dirname, "./app/utils"),
-=======
-      "@/pages": resolve(__dirname, "./app"),
-      "@/utils": resolve(__dirname, "./app/utils"),
-      "@/types": resolve(__dirname, "./types"),
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-      "@/hooks": resolve(__dirname, "./hooks"),
+      "@/utils": resolve(__dirname, "./app/utils"),      "@/hooks": resolve(__dirname, "./hooks"),
     },
   },
   build: {
@@ -121,7 +107,6 @@ export default defineConfig({
           if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
             return 'ai-pages'
           }
-<<<<<<< HEAD
           // IT service pages
           if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
             return 'it-pages'
@@ -132,40 +117,11 @@ export default defineConfig({
           }
           // 5G Solutions pages
           if (id.includes('/app/5g-') && id.includes('/page.tsx')) {
-            return '5g-pages'
-=======
-          // AI service pages - more granular splitting
-          if (id.includes('/ai-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/ai-')[1]?.split('/')[0];
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'ai-analytics'
-            }
-            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
-              return 'ai-content'
-            }
-            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
-              return 'ai-security'
-            }
-            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
-              return 'ai-customer'
-            }
-            return 'ai-other'
-          }
-          // 5G service pages - group together
-          if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            return '5g-services'
-          }
-          // Main pages - keep core pages together
-          if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/5g-')) {
-            return 'main-pages'
->>>>>>> cursor/fix-errors-and-merge-to-main-69e1
-          }
+            return '5g-pages'          }
           // Default chunk for other pages
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
           }
-<<<<<<< HEAD
           // Default chunk for other modules
           return 'vendor'
         },
@@ -174,85 +130,27 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
     // Enable tree shaking
-    treeshake: true,
-=======
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ["react", "react-dom"],
-          router: ["react-router-dom"],
-          ui: ["framer-motion", "lucide-react"],
-        },
-      },
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
-=======
-        }
+    treeshake: true,        }
       }
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-69e1
   },
   server: {
     port: 3000,
     open: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-69e1
     host: true,
     // Enable HMR
     hmr: {
       overlay: true,
     },
-<<<<<<< HEAD
     cors: true,
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
-=======
     cors: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
-=======
-    cors: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-69e1
   },
   preview: {
     port: 4173,
     open: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+    host: true,    host: true,
     host: true,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-=======
-    host: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
-=======
-    host: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-69e1
   },
   optimizeDeps: {
     include: [
@@ -266,21 +164,10 @@ export default defineConfig({
   // CSS optimization
   css: {
     devSourcemap: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
   },
->>>>>>> cursor/fix-errors-and-merge-to-main-4aee
-=======
-  },
->>>>>>> cursor/fix-errors-and-merge-to-main-69e1
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
   },
 });
-=======
   },
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-c832

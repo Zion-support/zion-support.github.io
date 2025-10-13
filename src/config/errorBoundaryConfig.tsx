@@ -1,9 +1,7 @@
 
-<<<<<<< HEAD
 interface errorBoundaryConfigProps {
   className?: string;
   children?: React.ReactNode;
-=======
 'use client''
 /**
  * Error Boundary Configuration
@@ -139,7 +137,6 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
 
 export default function errorBoundaryConfig({ className = '', children }: errorBoundaryConfigProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -246,7 +243,6 @@ export default getErrorBoundaryConfig;
  */
     url: typeof window !== 'undefined' ? window.location.href : 'unknown'
   };
-=======
   // TODO: Add parameters
 )
           <div>Coming Soon
@@ -453,4 +449,3 @@ export function formatErrorForLogging(error: Error): Record,
 </button></p>
 </p></h2>
 </a></a>
-=======

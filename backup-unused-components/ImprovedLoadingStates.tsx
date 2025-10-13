@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Loader2, Brain, Zap, Shield } from 'lucide-react';
 
 interface LoadingSpinnerProps {
@@ -16,7 +15,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 //     md: 'w-8 h-8',
 //     lg: 'w-12 h-12'
   };
-=======
 
 interface ImprovedLoadingStatesProps {
   className?: string;
@@ -25,7 +23,6 @@ interface ImprovedLoadingStatesProps {
 
 export default function ImprovedLoadingStates({ className = '', children }: ImprovedLoadingStatesProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -142,6 +139,5 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) =
 };
 
 export default LoadingPage;
-=======
   );
 }

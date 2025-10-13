@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -83,7 +81,6 @@ const cfConnectingIp = headers.get('cf-connecting-ip');
     // Request allowed - headers can be added to response later;
     return null;
   };
-=======
 'use client''
 /**
  * Rate Limiting Middleware
@@ -550,5 +547,4 @@ return null
 }
 
 ))))))))
-=======
 

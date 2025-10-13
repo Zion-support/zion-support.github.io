@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 import StructuredData from "../components/StructuredData";
@@ -160,6 +159,5 @@ const SEOHead: React.FC<SEOHeadProps> = (
 //     </Helmet>
   );
 }
-=======
 );
 }

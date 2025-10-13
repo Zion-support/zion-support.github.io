@@ -1,6 +1,5 @@
 );
 }
-<<<<<<< HEAD
 
 export default function AdvancedErrorBoundary({ className = '', children }: AdvancedErrorBoundaryProps) {
   return (
@@ -109,7 +108,6 @@ class AdvancedErrorBoundary extends Component;
                     kleber@ziontechgroup.com;
   );
 }
-=======
 'use client'';
 import React, { Component, ErrorInfo, ReactNode } from 'react';'
 interface ErrorBoundaryState {
@@ -348,4 +346,3 @@ export default AdvancedErrorBoundary</div></div>;
 </p></p>
 </p></h3>
 </h4>
-=======

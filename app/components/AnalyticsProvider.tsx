@@ -1,41 +1,5 @@
-<<<<<<< HEAD
 import React, { useEffect, ReactNode } from 'react';
 import { AnalyticsContext } from '../contexts/AnalyticsContext';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AnalyticsProviderPage() {
-  return (
-}
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  children,
-  googleAnalyticsId,
-  enableDebug = false
-}) => {;
-const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    if (typeof window === 'undefined') return;'
-
-    // Google Analytics;
-    if ('gtag' in window) {;';
-const gtag = (window as {gtag: (command: string, action: string, parameters: Record<string, any>) => void}}).gtag;
-      gtag('event', eventName, {)'
-        event_category: parameters.category || 'engagement','
-        event_label: parameters.label,
-        value: parameters.value,
-        ...parameters,})
-    }
-  }
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-
     // Google Analytics;
     if ('gtag' in window) {;';
 const gtag = (window as {gtag: (command: string, targetId: string, config: any) => void ,}}).gtag;
@@ -205,7 +169,6 @@ const script = document.createElement('script');'
       script.src = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
       document.head.appendChild(script);
 
-<<<<<<< HEAD
   const trackEvent = (eventName: string, properties?: Record<string, unknown>) => {
     console.log('Analytics Event:', eventName, properties);
     // Add your analytics tracking logic here
@@ -215,30 +178,6 @@ const script = document.createElement('script');'
     console.log('Page View:', pageName, properties);
     // Add your page view tracking logic here
   };
-=======
-
-    // Track performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {'
-      window.addEventListener('load', () => {'
-        setTimeout(() => {;
-const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;'
-          if (navigation) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-            trackEvent('page_performance', {'
-              load_time: navigation.loadEventEnd - navigation.loadEventStart,
-              dom_content_loaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-              first_paint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,'
-              first_contentful_paint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0'
-            });
-          }
-        }, 1000);
-      });
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-c832
-
   }, [googleAnalyticsId]);
 const value: AnalyticsContextType = {,
     trackEvent,

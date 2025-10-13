@@ -7,7 +7,6 @@ interface EnhancedLoadingSkeletonProps {
 
 export default function EnhancedLoadingSkeleton({ className = '', children }: EnhancedLoadingSkeletonProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -23,10 +22,8 @@ export default function EnhancedLoadingSkeleton({ className = '', children }: En
       className={`bg-gray-700 ${rounded ? "rounded" : ""} ${animated ? "animate-pulse" : ""} ${className}`}
       style={style}
 //     />
-=======
   );
 }
-<<<<<<< HEAD
 
 const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
   type = "card",
@@ -100,4 +97,3 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
 </div>
   );
 }
-=======

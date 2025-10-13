@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 interface UserExperienceEnhancerProps;
@@ -30,7 +29,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
       {children}
   </div>
 </div>
-=======
 return (
     <div className={`${className}`}>
       {children}

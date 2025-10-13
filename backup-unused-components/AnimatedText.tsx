@@ -7,7 +7,6 @@ interface AnimatedTextProps {
 
 export default function AnimatedText({ className = '', children }: AnimatedTextProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -44,5 +43,4 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({
 };
 
 export default AnimatedText;
-=======
   );

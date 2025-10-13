@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // performanceMonitoring utility functions
 
 export interface PerformanceMonitoringConfig {
@@ -22,10 +20,8 @@ export class PerformanceMonitoring {
   }
 }
 
-<<<<<<< HEAD
 export const performanceMonitoring = new PerformanceMonitoring();
 export default performanceMonitoring;
-=======
 'use client';'
 /**;
  * Advanced Performance Monitoring System;
@@ -970,8 +966,6 @@ export const getRecommendations = (): string[] => {/* TODO: Fix JSX expression *
   return recommendations
 }
 `
-=======
 
-=======
 // Export default instance
 export const performanceMonitoring = new PerformanceMonitoring();

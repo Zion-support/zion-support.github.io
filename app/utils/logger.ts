@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // logger utility functions
 
 export interface LoggerConfig {
@@ -22,10 +20,8 @@ export class Logger {
   }
 }
 
-<<<<<<< HEAD
 export const logger = new Logger();
 export default logger;
-=======
 export enum LogLevel {DEBUG = 0,;}
   INFO = 1,;
   WARN = 2,;
@@ -470,8 +466,6 @@ export const logger = new Logger();
    */;
   private getLevelString(leve);
   l: LogLevel): string {/* TODO: Fix JSX expression */,}}}
-=======
 
-=======
 // Export default instance
 export const logger = new Logger();

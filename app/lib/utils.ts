@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
-=======
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -10,7 +7,6 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-<<<<<<< HEAD
 export function formatDate(date: Date | string): string {
   const d = new Date(date);
   return d.toLocaleDateString('en-US', {
@@ -176,9 +172,7 @@ export function pick<T extends Record<string, any>, K extends keyof T>(
   });
   return result;
 }
-=======
 
-=======
 export interface UtilsConfig {
   enabled: boolean;
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface ServiceCardSkeletonProps {
@@ -46,5 +45,4 @@ export default function ComponentsPage() {
 //     </>
   );
 }
-=======
 

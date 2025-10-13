@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 interface InstantMessagingProps {
   className?: string;
   children?: React.ReactNode;
@@ -28,7 +27,6 @@ export default InstantmessagingPage;
               Learn More;
   );
 };
-=======
 class ErrorBoundary extends React.Component {
   // TODO: Add properties
 }
@@ -272,4 +270,3 @@ const schema = {
 </$1></div>
 </main>
 }})
-=======

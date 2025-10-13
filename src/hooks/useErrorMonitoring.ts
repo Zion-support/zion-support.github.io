@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -18,10 +16,8 @@ export default useErrorMonitoring;
       // trackError(error, context);
 //     []
   );
-=======
 );
 }
-=======
 ;
 import React from 'react';'
 'use client''

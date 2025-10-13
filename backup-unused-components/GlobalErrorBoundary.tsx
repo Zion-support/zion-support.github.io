@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface GlobalErrorBoundaryProps {
@@ -113,5 +112,4 @@ export default GlobalErrorBoundary;
 export default GlobalErrorBoundary;
 export default GlobalErrorBoundary;
 export default GlobalErrorBoundary;
-=======
 

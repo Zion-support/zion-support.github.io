@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 interface ProjectDetailsProps {
   className?: string;
   children?: React.ReactNode;
@@ -28,7 +27,6 @@ export default ProjectdetailsPage;
               Learn More;
   );
 };
-=======
 class ErrorBoundary extends React.Component {
   // TODO: Add properties
 }
@@ -1961,4 +1959,3 @@ const ProjectDetails = () => {
 <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">"
                 Contact Us
 
-=======

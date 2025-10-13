@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedSkipLinkProps {
@@ -30,5 +29,4 @@ export default function EnhancedSkipLink() {
 </div>
   );
 }
-=======
 

@@ -7,7 +7,6 @@ interface EnhancedAnalyticsProps {
 
 export default function EnhancedAnalytics({ className = '', children }: EnhancedAnalyticsProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -209,5 +208,4 @@ declare global {
 }
 
 export default EnhancedAnalytics;
-=======
   );

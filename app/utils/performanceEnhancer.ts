@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // performanceEnhancer utility functions
 
 export interface PerformanceEnhancerConfig {
@@ -22,10 +20,8 @@ export class PerformanceEnhancer {
   }
 }
 
-<<<<<<< HEAD
 export const performanceEnhancer = new PerformanceEnhancer();
 export default performanceEnhancer;
-=======
 'use client''
 /**
  * Performance Enhancement Utilities
@@ -414,8 +410,6 @@ export const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */},
 }
 export const initializePerformanceEnhancements = () => {/* TODO: Fix JSX expression */,}}
 }`;
-=======
 
-=======
 // Export default instance
 export const performanceEnhancer = new PerformanceEnhancer();

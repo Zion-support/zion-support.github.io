@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -249,7 +248,7 @@ import { Link } from 'react-router-dom';
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
-<<<<<<< HEAD:app/cybersecurity-solutions/page.tsx
+:app/cybersecurity-solutions/page.tsx
 
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
@@ -557,4 +556,3 @@ export default function PagePage() {
     </div>
   );
 }
-=======

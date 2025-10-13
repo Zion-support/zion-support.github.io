@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticLoaderProps {
@@ -30,5 +29,4 @@ export default function FuturisticLoader() {
 </div>
   );
 }
-=======
 

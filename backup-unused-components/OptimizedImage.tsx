@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useState, useRef, useEffect } from 'react';
 
@@ -62,7 +61,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const imageSrc = isInView ? src : placeholder;
 
-=======
 interface OptimizedImageProps {
   className?: string;
   children?: React.ReactNode;
@@ -70,7 +68,6 @@ interface OptimizedImageProps {
 
 export default function OptimizedImage({ className = '', children }: OptimizedImageProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -111,6 +108,5 @@ export default function OptimizedImage({ className = '', children }: OptimizedIm
 //         />
       )}
 </div>
-=======
   );
 }

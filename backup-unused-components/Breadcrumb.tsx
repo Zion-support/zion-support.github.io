@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 const Breadcrumb: React.FC = () =>
@@ -80,7 +79,6 @@ export default function Breadcrumb({ className = '', children }: BreadcrumbProps
 //         </ol>
 </div>
 //     </nav>
-=======
 
   return (
   );

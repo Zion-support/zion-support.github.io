@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -16,10 +14,8 @@ export default usePerformanceMonitoring;
       // trackPerformance(name, value);
 //     []
   );
-=======
 );
 }
-=======
 
 'use client''
 // PerformanceMetrics interface removed as it's not used in this hook;';

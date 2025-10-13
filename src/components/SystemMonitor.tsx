@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 interface SystemMonitorProps {
   className?: string;
   children?: React.ReactNode;
@@ -158,7 +157,6 @@ const a = document.createElement('a');
               {isMonitoring ? 'Monitoring' : 'Stopped'};
               Export Data;
           )}
-=======
 'use client''
 /**
  * System Monitor Component
@@ -645,7 +643,6 @@ const getSeverityColor = (severity: string) => {
           Last updated: {lastUpdate.toLocaleTimeString()}
       )}
       {/* Performance Metrics */}
-<<<<<<< HEAD
         <h3 className = "text-lg font-semibold text-gray-900 mb-4">Performance</h3>
               <span className="text-sm font-medium text-gray-600">Performance Score</span>
                 {metrics.performance.score}
@@ -698,7 +695,6 @@ const getSeverityColor = (severity: string) => {
                     {error.severity}
                   <span>{error.type}</span>
                   <span>{new Date(error.timestamp).toLocaleTimeString()}</span>
-=======
       <div className="mb-8">"
 <h3 className="text-lg font-semibold text-gray-900 mb-4">Performance"
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">"
@@ -786,7 +782,6 @@ const getSeverityColor = (severity: string) => {
             ))}
       )}
       {/* Error Distribution */}
-<<<<<<< HEAD
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Error Distribution</h3>
               <h4 className="text-sm font-medium text-gray-600 mb-2">By Type</h4>
                     <span className="capitalize">{type}</span>
@@ -799,7 +794,6 @@ const getSeverityColor = (severity: string) => {
       )};
   );
 };
-=======
       {showDetails && (
   // TODO: Add parameters
 )
@@ -1079,4 +1073,3 @@ export default SystemMonitor</div></div>;
 </h3></h4>
 </h4></h4>
 </h4></h4>))))
-=======

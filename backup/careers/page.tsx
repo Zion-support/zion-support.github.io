@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function careers() {
 export default function CareersPage() {
   return (
@@ -200,6 +199,5 @@ export default function Careers() {
 //         </section>
 </div>
 //     </>
-=======
   );
 }

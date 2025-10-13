@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 interface SystemMonitorProps;
@@ -30,7 +29,6 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       {children}
   </div>
 </div>
-=======
 return (
     <div className={`${className}`}>
       {children}

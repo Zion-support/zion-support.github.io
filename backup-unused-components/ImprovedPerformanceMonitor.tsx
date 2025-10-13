@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Activity, TrendingUp } from 'lucide-react';
@@ -179,7 +178,6 @@ const ImprovedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return null;
   }
 
-=======
 interface ImprovedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
@@ -187,7 +185,6 @@ interface ImprovedPerformanceMonitorProps {
 
 export default function ImprovedPerformanceMonitor({ className = '', children }: ImprovedPerformanceMonitorProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -307,6 +304,5 @@ export default function ImprovedPerformanceMonitor({ className = '', children }:
 </div>
       )}
 </div>
-=======
   );
 }

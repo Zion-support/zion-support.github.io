@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -58,7 +56,6 @@ const duration = performance.now() - startTime;
   );
     measureOperation;
   };
-=======
 'use client''
 /**
  * Enhanced Performance Hook
@@ -193,6 +190,4 @@ analytics.trackPerformance(
     trackError,
     trackUserAction,
     measureOperation;)`
-
-=======
 

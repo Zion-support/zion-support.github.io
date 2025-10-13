@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -111,7 +109,6 @@ const formErrors = getFormErrors(validationResults);
  errorArray.length === 0);
     validateAllFields;
   };
-=======
 import React from 'react';'
 'use client''
 /**
@@ -382,6 +379,4 @@ const isValid = Object.keys(errors).length === 0 ||
     validateField: validateSingleField,
     validateAllFields
   }
-
-=======
 

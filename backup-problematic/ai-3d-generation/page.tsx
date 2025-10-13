@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 
 export default function ai3dGeneration() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai 3d Generation - Zion Tech Group</title>
@@ -91,4 +90,3 @@ export default function ai3dGeneration() {
                 Get Started Today;
                 View All AI Services;
   );
-=======

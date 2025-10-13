@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface NeonButtonProps {
@@ -91,7 +90,6 @@ export default function NeonButton({ className = '', children }: NeonButtonProps
     <button onClick="{onClick}" disabled="{disabled}" className="{buttonClasses}"></button>
       {content}
 </button>
-=======
 className?: string;
 
 export default function NeonButton({ className = '', children }: NeonButtonProps) {

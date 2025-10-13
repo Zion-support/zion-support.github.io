@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface OptimizedLoadingSpinnerProps {
@@ -290,7 +289,6 @@ export default OptimizedLoadingSpinner;
   </div>
   </div>
   </div>
-=======
 className?: string;
   children?: React.ReactNode;
 }

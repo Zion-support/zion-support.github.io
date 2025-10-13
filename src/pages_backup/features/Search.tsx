@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 interface SearchProps {
   className?: string;
   children?: React.ReactNode;
@@ -28,7 +27,6 @@ export default SearchPage;
               Learn More;
   );
 };
-=======
 class ErrorBoundary extends React.Component {
   // TODO: Add properties
 }
@@ -271,4 +269,3 @@ const schema = {
 </$1></$1>
 </div></main>
 }})
-=======

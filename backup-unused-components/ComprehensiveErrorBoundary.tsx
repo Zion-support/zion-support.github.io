@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface ComprehensiveErrorBoundaryProps {
@@ -394,5 +393,4 @@ class ComprehensiveErrorBoundary extends Component<Props, State> {
 export default ComprehensiveErrorBoundary;
 </State>
 export default ComprehensiveErrorBoundary;
-=======
 

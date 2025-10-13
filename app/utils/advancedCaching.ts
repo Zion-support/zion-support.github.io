@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // advancedCaching utility functions
 
 export interface AdvancedCachingConfig {
@@ -22,10 +20,8 @@ export class AdvancedCaching {
   }
 }
 
-<<<<<<< HEAD
 export const advancedCaching = new AdvancedCaching();
 export default advancedCaching;
-=======
 'use client';';
 import React from 'react';';';
 import {Helmet}}from 'react-helmet-async';';';
@@ -149,8 +145,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 };
 ;
 export default AdvancedCachingPage;
-=======
 
-=======
 // Export default instance
 export const advancedCaching = new AdvancedCaching();

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface EnhancedNavigationProps {
@@ -421,5 +420,4 @@ const EnhancedNavigation = () => {
 };
 
 export default EnhancedNavigation;
-=======
 );

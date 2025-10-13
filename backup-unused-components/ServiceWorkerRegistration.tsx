@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 interface ServiceWorkerRegistrationProps;
@@ -27,5 +26,4 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
 ;
 export default ServiceWorkerRegistration;
 </ServiceWorkerRegistrationProps>
-=======
 

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 
 interface SEOEnhancerProps {
   className?: string;
@@ -183,6 +182,5 @@ export default function SEOEnhancer({ className = '', children }: SEOEnhancerPro
       {/* Cache Control */}
       <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
 //     </Helmet>
-=======
   );
 }

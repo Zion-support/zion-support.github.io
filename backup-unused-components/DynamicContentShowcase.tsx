@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
@@ -84,7 +83,6 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
 
   const currentItem = items[currentIndex];
 
-=======
 interface DynamicContentShowcaseProps {
   className?: string;
   children?: React.ReactNode;
@@ -92,7 +90,6 @@ interface DynamicContentShowcaseProps {
 
 export default function DynamicContentShowcase({ className = '', children }: DynamicContentShowcaseProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -190,6 +187,5 @@ export default function DynamicContentShowcase({ className = '', children }: Dyn
 </div>
 </div>
 </div>
-=======
   );
 }

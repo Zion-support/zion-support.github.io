@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // securityManager utility functions
 
 export interface SecurityManagerConfig {
@@ -22,10 +20,8 @@ export class SecurityManager {
   }
 }
 
-<<<<<<< HEAD
 export const securityManager = new SecurityManager();
 export default securityManager;
-=======
 import React from 'react';';'
 'use client';'
 /**;
@@ -121,8 +117,6 @@ const validRequests = requests.filter((time: number) => time > windowStart)
 }
 export default SecurityManager.getInstance()</string>;
 export default SecurityManager.getInstance()
-=======
 
-=======
 // Export default instance
 export const securityManager = new SecurityManager();

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface IconsProps {
@@ -14,7 +13,6 @@ export const Icon = ({
 }: {
   name: string;
   ...props
-=======
 ...props
 : ,
     name: string;
@@ -24,7 +22,6 @@ export const Icon = ({
 
 export default function Icons({ className = '', children }: IconsProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -33,4 +30,3 @@ export default function Icons({ className = '', children }: IconsProps) {
 </span>
   );
 }
-=======

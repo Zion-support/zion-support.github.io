@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -78,7 +77,6 @@ export default function ContentCarousel({
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-=======
 interface ContentCarouselProps {
   className?: string;
   children?: React.ReactNode;
@@ -86,7 +84,6 @@ interface ContentCarouselProps {
 
 export default function ContentCarousel({ className = '', children }: ContentCarouselProps) {
   return (
-<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
     </div>
@@ -171,6 +168,5 @@ export default function ContentCarousel({ className = '', children }: ContentCar
         ))}
 </div>
 </div>
-=======
   );
 }

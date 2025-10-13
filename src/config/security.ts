@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 
-<<<<<<< HEAD
 export default function Component() {
   return (
     <div>
@@ -58,7 +56,6 @@ export default function Component() {
  byte.toString(16).padStart(2, '0')).join('');
   generateSecureToken;
 };
-=======
 /**
  * Security Configuration
  * Defines security headers and policies for the application
@@ -238,6 +235,4 @@ export default {securityHeaders}
   validateEmail,
   validateUrl,
   generateSecureToken;""
-
-=======
 

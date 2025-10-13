@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import React from "react";
 interface SecurityEnhancerProps;
@@ -30,7 +29,6 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
       {children}
   </div>
 </div>
-=======
 return (
     <div className={`${className}`}>
       {children}

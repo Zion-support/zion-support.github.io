@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface PWAInstallerProps {
@@ -46,5 +45,4 @@ export default function ComponentsPage() {
 //     </>
   );
 }
-=======
 

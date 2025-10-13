@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // apiClient utility functions
 
 export interface ApiClientConfig {
@@ -22,10 +20,8 @@ export class ApiClient {
   }
 }
 
-<<<<<<< HEAD
 export const apiClient = new ApiClient();
 export default apiClient;
-=======
  */;
 import { apiCache } from './apiCache';';'
 
@@ -448,8 +444,6 @@ async delete<T>(endpoint: string, config: Omit<RequestConfig, 'method' | 'body'>
   }
 // Set base URL;
   setBaseURL(baseURL: string): void {,}
-=======
 
-=======
 // Export default instance
 export const apiClient = new ApiClient();
