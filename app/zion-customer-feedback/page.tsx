@@ -1,129 +1,111 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Mic, Headphones, Zap, CheckCircle, ArrowRight, Star, Smartphone, Users, BarChart3, Shield } from "lucide-react";
+import { MessageSquare, BarChart3, Users, CheckCircle, ArrowRight, Star, Zap, Smartphone, Target, TrendingUp } from "lucide-react";
 
-export default function AIVoiceAssistant() {
+export default function ZionCustomerFeedback() {
   const features = [
     {
-      title: "Natural Voice Recognition",
-      description: "Advanced speech-to-text with 99% accuracy, supporting 50+ languages and accents",
-      icon: <Mic className="w-6 h-6" />,
-      benefits: ["99% accuracy", "50+ languages", "Accent recognition"]
+      title: "Multi-Channel Collection",
+      description: "Collect feedback from websites, mobile apps, email, SMS, and social media platforms",
+      icon: <MessageSquare className="w-6 h-6" />,
+      benefits: ["15+ collection channels", "Real-time feedback", "Customizable forms"]
     },
     {
-      title: "Intelligent Responses",
-      description: "AI-powered voice responses that understand context and provide helpful, natural answers",
-      icon: <Headphones className="w-6 h-6" />,
-      benefits: ["Context awareness", "Natural responses", "Multi-turn conversations"]
-    },
-    {
-      title: "Multi-Platform Integration",
-      description: "Deploy across mobile apps, websites, smart devices, and IoT platforms",
-      icon: <Smartphone className="w-6 h-6" />,
-      benefits: ["Mobile apps", "Web integration", "IoT devices", "Smart speakers"]
-    },
-    {
-      title: "Custom Voice Training",
-      description: "Train custom voice models for your brand voice and specific use cases",
+      title: "AI Sentiment Analysis",
+      description: "Advanced AI analyzes customer sentiment, emotions, and intent from feedback text",
       icon: <Zap className="w-6 h-6" />,
-      benefits: ["Brand voice training", "Custom models", "Industry-specific training"]
+      benefits: ["95% sentiment accuracy", "Emotion detection", "Intent classification"]
+    },
+    {
+      title: "Real-time Analytics",
+      description: "Comprehensive dashboards with live feedback metrics, trends, and actionable insights",
+      icon: <BarChart3 className="w-6 h-6" />,
+      benefits: ["Live dashboards", "Trend analysis", "Custom reports"]
+    },
+    {
+      title: "Automated Actions",
+      description: "Set up automated responses, alerts, and workflows based on feedback triggers",
+      icon: <Target className="w-6 h-6" />,
+      benefits: ["Smart alerts", "Auto-responses", "Workflow automation"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$29",
       period: "per month",
       description: "Perfect for small businesses",
       features: [
-        "1,000 voice interactions/month",
-        "Basic voice recognition",
-        "Standard integrations",
+        "500 feedback responses/month",
+        "Basic analytics",
         "Email support",
-        "Mobile app SDK"
+        "3 team members",
+        "Standard integrations"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$79",
       period: "per month",
       description: "Ideal for growing businesses",
       features: [
-        "10,000 voice interactions/month",
-        "Advanced AI features",
-        "Custom voice training",
-        "Multi-platform deployment",
+        "2,000 feedback responses/month",
+        "Advanced analytics",
+        "AI sentiment analysis",
+        "10 team members",
         "Priority support",
-        "Analytics dashboard"
+        "Custom integrations"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$199",
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited interactions",
+        "Unlimited responses",
         "Everything in Professional",
         "Custom AI models",
-        "White-label options",
+        "Unlimited team members",
         "Dedicated support",
-        "Advanced security"
+        "White-label options"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
-    {
-      title: "Customer Service",
-      description: "24/7 voice-based customer support with natural conversation flow",
-      icon: <Users className="w-8 h-8" />,
-      savings: "Reduce call center costs by 70%"
-    },
-    {
-      title: "Smart Home Control",
-      description: "Voice control for smart home devices and IoT systems",
-      icon: <Zap className="w-8 h-8" />,
-      savings: "Enhance user experience"
-    },
-    {
-      title: "Accessibility Support",
-      description: "Voice assistance for users with disabilities and accessibility needs",
-      icon: <Headphones className="w-8 h-8" />,
-      savings: "Improve accessibility compliance"
-    },
-    {
-      title: "Voice Commerce",
-      description: "Voice-enabled shopping and e-commerce transactions",
-      icon: <Mic className="w-8 h-8" />,
-      savings: "Increase conversion rates by 40%"
-    }
+  const integrations = [
+    { name: "Slack", logo: "S" },
+    { name: "Microsoft Teams", logo: "MT" },
+    { name: "Zendesk", logo: "Z" },
+    { name: "Intercom", logo: "I" },
+    { name: "HubSpot", logo: "H" },
+    { name: "Salesforce", logo: "SF" }
   ];
 
   const testimonials = [
     {
-      name: "Alex Chen",
-      company: "Smart Home Tech",
-      role: "Product Manager",
-      content: "Zion AI Voice Assistant has revolutionized our smart home products. The natural conversation flow makes our devices feel truly intelligent.",
-      rating: 5
-    },
-    {
-      name: "Maria Santos",
+      name: "Rachel Green",
       company: "E-commerce Platform",
-      role: "Customer Experience Director",
-      content: "The voice commerce features are incredible. Our customers can now shop hands-free, and we've seen a 40% increase in mobile conversions.",
+      role: "Customer Experience Manager",
+      content: "Zion Customer Feedback has transformed how we understand our customers. The AI sentiment analysis helps us identify issues before they become problems.",
       rating: 5
     },
     {
-      name: "David Kim",
-      company: "Healthcare Provider",
-      role: "Accessibility Coordinator",
-      content: "This voice assistant has made our services much more accessible. Patients with visual impairments can now navigate our app independently.",
+      name: "Tom Wilson",
+      company: "SaaS Company",
+      role: "Product Manager",
+      content: "The real-time analytics are incredible. We can see customer sentiment changes instantly and respond immediately to negative feedback.",
+      rating: 5
+    },
+    {
+      name: "Sarah Kim",
+      company: "Retail Chain",
+      role: "Operations Director",
+      content: "The automated workflows have saved us hours every week. We can now respond to customer feedback within minutes instead of hours.",
       rating: 5
     }
   ];
@@ -131,16 +113,16 @@ export default function AIVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Advanced Conversational AI | Zion Tech Group</title>
+        <title>Zion Customer Feedback - AI-Powered Feedback Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="AI-powered voice assistant with natural speech recognition, intelligent responses, and multi-platform deployment. Build voice-enabled applications and experiences."
+          content="AI-powered customer feedback platform with sentiment analysis, real-time analytics, and automated workflows. Collect, analyze, and act on customer feedback effectively."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice recognition, speech-to-text, conversational AI, voice commerce, smart home, accessibility"
+          content="customer feedback, feedback management, sentiment analysis, customer experience, feedback analytics, customer insights"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-customer-feedback" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -153,19 +135,19 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">Advanced Voice AI</span>
+                <MessageSquare className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Feedback Management</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  AI Voice Assistant
+                  Zion Customer Feedback
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                The most advanced AI voice assistant with natural speech recognition, intelligent responses, 
-                and multi-platform deployment. Build voice-enabled applications that understand and respond naturally.
+                The most intelligent customer feedback platform with AI sentiment analysis, real-time analytics, 
+                and automated workflows. Turn customer feedback into actionable insights and improved experiences.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -187,20 +169,20 @@ export default function AIVoiceAssistant() {
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
-                  <div className="text-gray-300 text-sm">Accuracy</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
+                  <div className="text-gray-300 text-sm">Sentiment Accuracy</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-                  <div className="text-gray-300 text-sm">Languages</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">15+</div>
+                  <div className="text-gray-300 text-sm">Collection Channels</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
-                  <div className="text-gray-300 text-sm">Cost Reduction</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">60%</div>
+                  <div className="text-gray-300 text-sm">Faster Response Time</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
-                  <div className="text-gray-300 text-sm">Conversion Boost</div>
+                  <div className="text-gray-300 text-sm">Customer Satisfaction</div>
                 </div>
               </div>
             </div>
@@ -212,10 +194,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Voice AI Features
+                Powerful Feedback Management Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to build intelligent, voice-enabled applications and experiences.
+                Everything you need to collect, analyze, and act on customer feedback effectively.
               </p>
             </div>
             
@@ -248,36 +230,30 @@ export default function AIVoiceAssistant() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Integrations Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Popular Voice AI Use Cases
+                Seamless Integrations
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how businesses are using AI Voice Assistant to enhance user experiences and drive innovation.
+                Connect with your favorite tools and platforms for a complete feedback management workflow.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
+              {integrations.map((integration, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    {useCase.icon}
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                    <span className="text-white font-bold text-lg">{integration.logo}</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {useCase.title}
+                  <h3 className="text-white font-medium group-hover:text-cyan-300 transition-colors">
+                    {integration.name}
                   </h3>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {useCase.description}
-                  </p>
-                  <div className="text-cyan-400 font-medium text-sm">
-                    {useCase.savings}
-                  </div>
                 </div>
               ))}
             </div>
@@ -289,7 +265,7 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Choose Your Voice AI Plan
+                Choose Your Feedback Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Flexible pricing options for businesses of all sizes. All plans include a 14-day free trial.
@@ -353,10 +329,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Innovation Leaders
+                Trusted by Customer Experience Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Voice Assistant
+                See what our customers say about Zion Customer Feedback
               </p>
             </div>
             
@@ -388,11 +364,11 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Build Voice-Enabled Experiences?
+              Ready to Transform Your Customer Experience?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses already using AI Voice Assistant to create 
-              innovative voice-enabled applications and enhance user experiences.
+              Join thousands of businesses already using Zion Customer Feedback to understand 
+              their customers better and improve their experiences.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

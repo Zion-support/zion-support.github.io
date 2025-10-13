@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Mic } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -39,6 +39,15 @@ export default function Services() {
       color: "from-red-500 to-orange-500",
       price: "Starting at $399/month",
       features: ["Threat Detection", "Automated Response", "Compliance Reports", "24/7 Monitoring"]
+    },
+    {
+      title: "AI Voice Assistant",
+      description: "Advanced voice AI with natural speech recognition, intelligent responses, and multi-platform deployment for voice-enabled applications.",
+      icon: <Mic className="w-8 h-8" />,
+      path: "/ai-voice-assistant",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $99/month",
+      features: ["99% Accuracy", "50+ Languages", "Real-time Processing", "Custom Training"]
     },
     {
       title: "5G Network Infrastructure",

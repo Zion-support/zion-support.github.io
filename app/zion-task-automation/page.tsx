@@ -1,77 +1,77 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Mic, Headphones, Zap, CheckCircle, ArrowRight, Star, Smartphone, Users, BarChart3, Shield } from "lucide-react";
+import { Zap, Workflow, Bot, CheckCircle, ArrowRight, Star, Clock, BarChart3, Settings, Smartphone } from "lucide-react";
 
-export default function AIVoiceAssistant() {
+export default function ZionTaskAutomation() {
   const features = [
     {
-      title: "Natural Voice Recognition",
-      description: "Advanced speech-to-text with 99% accuracy, supporting 50+ languages and accents",
-      icon: <Mic className="w-6 h-6" />,
-      benefits: ["99% accuracy", "50+ languages", "Accent recognition"]
+      title: "Visual Workflow Builder",
+      description: "Drag-and-drop interface to create complex automation workflows without coding knowledge",
+      icon: <Workflow className="w-6 h-6" />,
+      benefits: ["No-code automation", "Visual workflow designer", "Pre-built templates"]
     },
     {
-      title: "Intelligent Responses",
-      description: "AI-powered voice responses that understand context and provide helpful, natural answers",
-      icon: <Headphones className="w-6 h-6" />,
-      benefits: ["Context awareness", "Natural responses", "Multi-turn conversations"]
+      title: "AI-Powered Triggers",
+      description: "Smart triggers that learn from your behavior and automatically suggest automation opportunities",
+      icon: <Bot className="w-6 h-6" />,
+      benefits: ["Smart suggestions", "Behavior learning", "Predictive automation"]
     },
     {
-      title: "Multi-Platform Integration",
-      description: "Deploy across mobile apps, websites, smart devices, and IoT platforms",
-      icon: <Smartphone className="w-6 h-6" />,
-      benefits: ["Mobile apps", "Web integration", "IoT devices", "Smart speakers"]
+      title: "Multi-App Integration",
+      description: "Connect 200+ popular apps and services to create powerful cross-platform automations",
+      icon: <Settings className="w-6 h-6" />,
+      benefits: ["200+ app integrations", "Real-time sync", "Custom connectors"]
     },
     {
-      title: "Custom Voice Training",
-      description: "Train custom voice models for your brand voice and specific use cases",
-      icon: <Zap className="w-6 h-6" />,
-      benefits: ["Brand voice training", "Custom models", "Industry-specific training"]
+      title: "Advanced Analytics",
+      description: "Track automation performance, identify bottlenecks, and optimize your workflows for maximum efficiency",
+      icon: <BarChart3 className="w-6 h-6" />,
+      benefits: ["Performance metrics", "Bottleneck detection", "Optimization suggestions"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$19",
       period: "per month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individuals and small teams",
       features: [
-        "1,000 voice interactions/month",
-        "Basic voice recognition",
-        "Standard integrations",
+        "10 automation workflows",
+        "5 app integrations",
+        "Basic analytics",
         "Email support",
-        "Mobile app SDK"
+        "Mobile app access"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$49",
       period: "per month",
       description: "Ideal for growing businesses",
       features: [
-        "10,000 voice interactions/month",
-        "Advanced AI features",
-        "Custom voice training",
-        "Multi-platform deployment",
+        "Unlimited workflows",
+        "20 app integrations",
+        "Advanced analytics",
+        "AI suggestions",
         "Priority support",
-        "Analytics dashboard"
+        "Team collaboration"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$149",
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited interactions",
         "Everything in Professional",
-        "Custom AI models",
-        "White-label options",
+        "Unlimited integrations",
+        "Custom connectors",
         "Dedicated support",
-        "Advanced security"
+        "Advanced security",
+        "White-label options"
       ],
       popular: false
     }
@@ -79,51 +79,51 @@ export default function AIVoiceAssistant() {
 
   const useCases = [
     {
-      title: "Customer Service",
-      description: "24/7 voice-based customer support with natural conversation flow",
-      icon: <Users className="w-8 h-8" />,
-      savings: "Reduce call center costs by 70%"
-    },
-    {
-      title: "Smart Home Control",
-      description: "Voice control for smart home devices and IoT systems",
+      title: "Email Marketing Automation",
+      description: "Automatically send personalized emails based on customer behavior and engagement",
       icon: <Zap className="w-8 h-8" />,
-      savings: "Enhance user experience"
+      savings: "Save 10+ hours/week"
     },
     {
-      title: "Accessibility Support",
-      description: "Voice assistance for users with disabilities and accessibility needs",
-      icon: <Headphones className="w-8 h-8" />,
-      savings: "Improve accessibility compliance"
+      title: "Lead Management",
+      description: "Automatically qualify leads, assign them to sales reps, and follow up based on actions",
+      icon: <Bot className="w-8 h-8" />,
+      savings: "Increase conversions by 40%"
     },
     {
-      title: "Voice Commerce",
-      description: "Voice-enabled shopping and e-commerce transactions",
-      icon: <Mic className="w-8 h-8" />,
-      savings: "Increase conversion rates by 40%"
+      title: "Data Synchronization",
+      description: "Keep data synchronized across multiple platforms and eliminate manual data entry",
+      icon: <Settings className="w-8 h-8" />,
+      savings: "Reduce errors by 95%"
+    },
+    {
+      title: "Customer Support",
+      description: "Automatically route tickets, send responses, and escalate issues based on priority",
+      icon: <Clock className="w-8 h-8" />,
+      savings: "Improve response time by 60%"
     }
   ];
 
   const testimonials = [
     {
-      name: "Alex Chen",
-      company: "Smart Home Tech",
-      role: "Product Manager",
-      content: "Zion AI Voice Assistant has revolutionized our smart home products. The natural conversation flow makes our devices feel truly intelligent.",
+      name: "Jennifer Lee",
+      company: "E-commerce Store",
+      role: "Operations Manager",
+      content: "Zion Task Automation has revolutionized our operations. We've automated 80% of our repetitive tasks and saved 20+ hours per week.",
       rating: 5
     },
     {
-      name: "Maria Santos",
-      company: "E-commerce Platform",
-      role: "Customer Experience Director",
-      content: "The voice commerce features are incredible. Our customers can now shop hands-free, and we've seen a 40% increase in mobile conversions.",
+      name: "Mark Davis",
+      company: "Marketing Agency",
+      role: "Automation Specialist",
+      content: "The visual workflow builder is incredibly intuitive. We can create complex automations in minutes that used to take hours to code.",
       rating: 5
     },
     {
-      name: "David Kim",
-      company: "Healthcare Provider",
-      role: "Accessibility Coordinator",
-      content: "This voice assistant has made our services much more accessible. Patients with visual impairments can now navigate our app independently.",
+      name: "Lisa Wang",
+      company: "SaaS Startup",
+      role: "Head of Operations",
+      content: "The AI suggestions are game-changing. It constantly finds new automation opportunities we never thought of before.",
       rating: 5
     }
   ];
@@ -131,16 +131,16 @@ export default function AIVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Advanced Conversational AI | Zion Tech Group</title>
+        <title>Zion Task Automation - AI-Powered Workflow Automation | Zion Tech Group</title>
         <meta
           name="description"
-          content="AI-powered voice assistant with natural speech recognition, intelligent responses, and multi-platform deployment. Build voice-enabled applications and experiences."
+          content="AI-powered task automation platform with visual workflow builder, multi-app integration, and smart triggers. Automate repetitive tasks and boost productivity."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice recognition, speech-to-text, conversational AI, voice commerce, smart home, accessibility"
+          content="task automation, workflow automation, business process automation, no-code automation, AI automation, productivity tools"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-task-automation" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -153,19 +153,19 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">Advanced Voice AI</span>
+                <Zap className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Task Automation</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  AI Voice Assistant
+                  Zion Task Automation
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                The most advanced AI voice assistant with natural speech recognition, intelligent responses, 
-                and multi-platform deployment. Build voice-enabled applications that understand and respond naturally.
+                The most powerful task automation platform with AI-powered triggers, visual workflow builder, 
+                and seamless app integrations. Automate repetitive tasks and boost productivity by 300%.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -187,20 +187,20 @@ export default function AIVoiceAssistant() {
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
-                  <div className="text-gray-300 text-sm">Accuracy</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">200+</div>
+                  <div className="text-gray-300 text-sm">App Integrations</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-                  <div className="text-gray-300 text-sm">Languages</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
+                  <div className="text-gray-300 text-sm">Productivity Boost</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
-                  <div className="text-gray-300 text-sm">Cost Reduction</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">20+</div>
+                  <div className="text-gray-300 text-sm">Hours Saved/Week</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
-                  <div className="text-gray-300 text-sm">Conversion Boost</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
+                  <div className="text-gray-300 text-sm">Error Reduction</div>
                 </div>
               </div>
             </div>
@@ -212,10 +212,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Voice AI Features
+                Powerful Automation Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to build intelligent, voice-enabled applications and experiences.
+                Everything you need to automate your business processes and eliminate repetitive tasks.
               </p>
             </div>
             
@@ -253,10 +253,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Popular Voice AI Use Cases
+                Popular Automation Use Cases
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how businesses are using AI Voice Assistant to enhance user experiences and drive innovation.
+                See how businesses are using Zion Task Automation to transform their operations.
               </p>
             </div>
             
@@ -289,7 +289,7 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Choose Your Voice AI Plan
+                Choose Your Automation Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Flexible pricing options for businesses of all sizes. All plans include a 14-day free trial.
@@ -353,10 +353,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Innovation Leaders
+                Trusted by Operations Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Voice Assistant
+                See what our customers say about Zion Task Automation
               </p>
             </div>
             
@@ -388,11 +388,11 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Build Voice-Enabled Experiences?
+              Ready to Automate Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses already using AI Voice Assistant to create 
-              innovative voice-enabled applications and enhance user experiences.
+              Join thousands of businesses already using Zion Task Automation to eliminate 
+              repetitive tasks and boost productivity by 300%.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

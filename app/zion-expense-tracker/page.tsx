@@ -1,129 +1,111 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Mic, Headphones, Zap, CheckCircle, ArrowRight, Star, Smartphone, Users, BarChart3, Shield } from "lucide-react";
+import { Receipt, PieChart, Smartphone, Shield, CheckCircle, ArrowRight, Star, CreditCard, TrendingUp, FileText } from "lucide-react";
 
-export default function AIVoiceAssistant() {
+export default function ZionExpenseTracker() {
   const features = [
     {
-      title: "Natural Voice Recognition",
-      description: "Advanced speech-to-text with 99% accuracy, supporting 50+ languages and accents",
-      icon: <Mic className="w-6 h-6" />,
-      benefits: ["99% accuracy", "50+ languages", "Accent recognition"]
+      title: "Smart Receipt Scanning",
+      description: "AI-powered receipt scanning that automatically extracts expense data and categorizes transactions",
+      icon: <Receipt className="w-6 h-6" />,
+      benefits: ["99.5% accuracy rate", "Supports 50+ receipt formats", "Automatic categorization"]
     },
     {
-      title: "Intelligent Responses",
-      description: "AI-powered voice responses that understand context and provide helpful, natural answers",
-      icon: <Headphones className="w-6 h-6" />,
-      benefits: ["Context awareness", "Natural responses", "Multi-turn conversations"]
+      title: "Real-time Analytics",
+      description: "Comprehensive dashboards with spending insights, budget tracking, and financial forecasting",
+      icon: <PieChart className="w-6 h-6" />,
+      benefits: ["Live spending alerts", "Budget vs actual reports", "Predictive analytics"]
     },
     {
-      title: "Multi-Platform Integration",
-      description: "Deploy across mobile apps, websites, smart devices, and IoT platforms",
+      title: "Mobile-First Design",
+      description: "Native mobile apps for iOS and Android with offline capabilities and instant sync",
       icon: <Smartphone className="w-6 h-6" />,
-      benefits: ["Mobile apps", "Web integration", "IoT devices", "Smart speakers"]
+      benefits: ["Offline expense entry", "Photo receipt capture", "Push notifications"]
     },
     {
-      title: "Custom Voice Training",
-      description: "Train custom voice models for your brand voice and specific use cases",
-      icon: <Zap className="w-6 h-6" />,
-      benefits: ["Brand voice training", "Custom models", "Industry-specific training"]
+      title: "Enterprise Security",
+      description: "Bank-level security with encryption, audit trails, and compliance with financial regulations",
+      icon: <Shield className="w-6 h-6" />,
+      benefits: ["256-bit encryption", "SOC 2 compliance", "Role-based access control"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$99",
+      name: "Personal",
+      price: "$4.99",
       period: "per month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individuals and freelancers",
       features: [
-        "1,000 voice interactions/month",
-        "Basic voice recognition",
-        "Standard integrations",
-        "Email support",
-        "Mobile app SDK"
+        "Unlimited expense entries",
+        "Receipt scanning (50/month)",
+        "Basic reporting",
+        "Mobile app access",
+        "Email support"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$299",
+      name: "Business",
+      price: "$19.99",
       period: "per month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for small to medium businesses",
       features: [
-        "10,000 voice interactions/month",
-        "Advanced AI features",
-        "Custom voice training",
-        "Multi-platform deployment",
-        "Priority support",
-        "Analytics dashboard"
+        "Everything in Personal",
+        "Unlimited receipt scanning",
+        "Advanced analytics",
+        "Team collaboration",
+        "API access",
+        "Priority support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$79.99",
       period: "per month",
       description: "For large organizations",
       features: [
-        "Unlimited interactions",
-        "Everything in Professional",
-        "Custom AI models",
-        "White-label options",
+        "Everything in Business",
+        "Custom integrations",
+        "Advanced security",
         "Dedicated support",
-        "Advanced security"
+        "Custom reporting",
+        "White-label options"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
-    {
-      title: "Customer Service",
-      description: "24/7 voice-based customer support with natural conversation flow",
-      icon: <Users className="w-8 h-8" />,
-      savings: "Reduce call center costs by 70%"
-    },
-    {
-      title: "Smart Home Control",
-      description: "Voice control for smart home devices and IoT systems",
-      icon: <Zap className="w-8 h-8" />,
-      savings: "Enhance user experience"
-    },
-    {
-      title: "Accessibility Support",
-      description: "Voice assistance for users with disabilities and accessibility needs",
-      icon: <Headphones className="w-8 h-8" />,
-      savings: "Improve accessibility compliance"
-    },
-    {
-      title: "Voice Commerce",
-      description: "Voice-enabled shopping and e-commerce transactions",
-      icon: <Mic className="w-8 h-8" />,
-      savings: "Increase conversion rates by 40%"
-    }
+  const integrations = [
+    { name: "QuickBooks", logo: "QB" },
+    { name: "Xero", logo: "X" },
+    { name: "Sage", logo: "S" },
+    { name: "FreshBooks", logo: "FB" },
+    { name: "Wave", logo: "W" },
+    { name: "Zoho Books", logo: "ZB" }
   ];
 
   const testimonials = [
     {
-      name: "Alex Chen",
-      company: "Smart Home Tech",
-      role: "Product Manager",
-      content: "Zion AI Voice Assistant has revolutionized our smart home products. The natural conversation flow makes our devices feel truly intelligent.",
-      rating: 5
-    },
-    {
-      name: "Maria Santos",
-      company: "E-commerce Platform",
-      role: "Customer Experience Director",
-      content: "The voice commerce features are incredible. Our customers can now shop hands-free, and we've seen a 40% increase in mobile conversions.",
-      rating: 5
-    },
-    {
       name: "David Kim",
-      company: "Healthcare Provider",
-      role: "Accessibility Coordinator",
-      content: "This voice assistant has made our services much more accessible. Patients with visual impairments can now navigate our app independently.",
+      company: "Freelance Consultant",
+      role: "Independent Contractor",
+      content: "Zion Expense Tracker has completely transformed how I manage my business expenses. The receipt scanning is incredibly accurate and saves me hours every week.",
+      rating: 5
+    },
+    {
+      name: "Lisa Martinez",
+      company: "Marketing Agency",
+      role: "Finance Director",
+      content: "The analytics dashboard gives us incredible insights into our spending patterns. We've reduced unnecessary expenses by 30% since implementing this tool.",
+      rating: 5
+    },
+    {
+      name: "James Wilson",
+      company: "Tech Startup",
+      role: "CFO",
+      content: "The mobile app is fantastic for our sales team. They can capture receipts instantly and we get real-time visibility into all expenses.",
       rating: 5
     }
   ];
@@ -131,16 +113,16 @@ export default function AIVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Advanced Conversational AI | Zion Tech Group</title>
+        <title>Zion Expense Tracker - AI-Powered Expense Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="AI-powered voice assistant with natural speech recognition, intelligent responses, and multi-platform deployment. Build voice-enabled applications and experiences."
+          content="AI-powered expense tracking with smart receipt scanning, real-time analytics, and mobile-first design. Perfect for individuals, businesses, and enterprises."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice recognition, speech-to-text, conversational AI, voice commerce, smart home, accessibility"
+          content="expense tracker, receipt scanning, expense management, business expenses, financial analytics, mobile expense app, AI expense tracking"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-expense-tracker" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -153,19 +135,19 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">Advanced Voice AI</span>
+                <Receipt className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Expense Management</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  AI Voice Assistant
+                  Zion Expense Tracker
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                The most advanced AI voice assistant with natural speech recognition, intelligent responses, 
-                and multi-platform deployment. Build voice-enabled applications that understand and respond naturally.
+                The most intelligent expense tracking solution with AI-powered receipt scanning, real-time analytics, 
+                and mobile-first design. Perfect for individuals, businesses, and enterprises.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -187,20 +169,20 @@ export default function AIVoiceAssistant() {
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
-                  <div className="text-gray-300 text-sm">Accuracy</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">99.5%</div>
+                  <div className="text-gray-300 text-sm">Scan Accuracy</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-                  <div className="text-gray-300 text-sm">Languages</div>
+                  <div className="text-gray-300 text-sm">Receipt Formats</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">70%</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">30%</div>
                   <div className="text-gray-300 text-sm">Cost Reduction</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
-                  <div className="text-gray-300 text-sm">Conversion Boost</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">2hrs</div>
+                  <div className="text-gray-300 text-sm">Time Saved/Week</div>
                 </div>
               </div>
             </div>
@@ -212,10 +194,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Voice AI Features
+                Powerful Features for Modern Finance
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to build intelligent, voice-enabled applications and experiences.
+                Everything you need to streamline expense management and gain financial insights.
               </p>
             </div>
             
@@ -248,36 +230,30 @@ export default function AIVoiceAssistant() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Integrations Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Popular Voice AI Use Cases
+                Seamless Integrations
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how businesses are using AI Voice Assistant to enhance user experiences and drive innovation.
+                Connect with your favorite accounting and business tools for a complete financial workflow.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
+              {integrations.map((integration, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    {useCase.icon}
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                    <span className="text-white font-bold text-lg">{integration.logo}</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {useCase.title}
+                  <h3 className="text-white font-medium group-hover:text-cyan-300 transition-colors">
+                    {integration.name}
                   </h3>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {useCase.description}
-                  </p>
-                  <div className="text-cyan-400 font-medium text-sm">
-                    {useCase.savings}
-                  </div>
                 </div>
               ))}
             </div>
@@ -289,10 +265,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Choose Your Voice AI Plan
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options for businesses of all sizes. All plans include a 14-day free trial.
+                Choose the plan that fits your needs. All plans include a 14-day free trial.
               </p>
             </div>
             
@@ -353,10 +329,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Innovation Leaders
+                Trusted by Finance Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Voice Assistant
+                See what our customers say about Zion Expense Tracker
               </p>
             </div>
             
@@ -388,11 +364,11 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Build Voice-Enabled Experiences?
+              Ready to Simplify Your Expense Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses already using AI Voice Assistant to create 
-              innovative voice-enabled applications and enhance user experiences.
+              Join thousands of businesses already using Zion Expense Tracker to streamline 
+              their financial processes and gain valuable insights.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

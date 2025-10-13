@@ -25,13 +25,23 @@ const Navigation = React.memo(() => {
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI Translator', path: '/zion-ai-translator', icon: <Code className="w-4 h-4" /> },
+    { name: 'AI Chatbot', path: '/zion-ai-chatbot', icon: <Brain className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Scheduler', path: '/zion-ai-scheduler', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Zion Expense Tracker', path: '/zion-expense-tracker', icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: 'Zion Social Media Manager', path: '/zion-social-media-manager', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion Task Automation', path: '/zion-task-automation', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Zion Customer Feedback', path: '/zion-customer-feedback', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Translator', path: '/zion-ai-translator', icon: <Code className="w-4 h-4" /> },
+    { name: 'Zion AI Chatbot', path: '/zion-ai-chatbot', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
