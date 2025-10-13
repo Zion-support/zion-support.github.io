@@ -1,19 +1,25 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
-interface WebVitalsData {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
+interface WebVitalsTrackerProps {
+  onMetric?: (metric: any) => void;
 }
 
-const WebVitalsTracker: React.FC = () => {
+const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = ({ onMetric }) => {
   useEffect(() => {
-    const sendToAnalytics = (metric: WebVitalsData) => {
-      // Send to Google Analytics or other analytics service
-      if (typeof window !== 'undefined' && 'gtag' in window) {
+    const handleMetric = (metric: any) => {
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`Web Vital - ${metric.name}:`, metric.value);
+      }
+
+      // Send to analytics in production
+      if (process.env.NODE_ENV === 'production' && onMetric) {
+        onMetric(metric);
+      }
+
+      // Send to Google Analytics if available
+      if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', metric.name, {
           event_category: 'Web Vitals',
           event_label: metric.id,
@@ -21,64 +27,17 @@ const WebVitalsTracker: React.FC = () => {
           non_interaction: true,
         });
       }
-
-      // Send to custom analytics endpoint
-      if (process.env.NODE_ENV === 'production') {
-        fetch('/api/analytics/web-vitals', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(metric),
-        }).catch(console.error);
-      }
-
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
-      }
     };
 
-    // Track Core Web Vitals
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics); // INP replaces FID in newer versions
-    onFCP(sendToAnalytics);
-    onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
+    // Measure Core Web Vitals
+    onCLS(handleMetric);
+    onINP(handleMetric);
+    onFCP(handleMetric);
+    onLCP(handleMetric);
+    onTTFB(handleMetric);
+  }, [onMetric]);
 
-    // Track additional performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Track page load time
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          sendToAnalytics({
-            name: 'LOAD_TIME',
-            value: loadTime,
-            delta: loadTime,
-            id: 'load-time',
-            navigationType: navigation.type,
-          });
-        }
-      });
-
-      // Track memory usage (if available)
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        sendToAnalytics({
-          name: 'MEMORY_USAGE',
-          value: memoryUsage,
-          delta: memoryUsage,
-          id: 'memory-usage',
-          navigationType: 'reload',
-        });
-      }
-    }
-  }, []);
-
-  return null;
+  return null; // This component doesn't render anything
 };
 
 export default WebVitalsTracker;
