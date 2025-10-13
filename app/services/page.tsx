@@ -6,13 +6,13 @@ export default function Services() {
   const services = [
     {
       title: "AI-Powered Business Intelligence Pro",
-      description: "Transform raw data into actionable insights with our advanced AI analytics platform. Real-time dashboards, predictive analytics, and automated reporting with 99.9% accuracy.",
+      description: "Transform raw data into actionable insights with our advanced AI analytics platform. Real-time dashboards, predictive analytics, and automated reporting with 99.9% accuracy. Perfect for data-driven decision making.",
       icon: <Brain className="w-8 h-8" />,
       path: "/ai-business-intelligence",
       color: "from-blue-500 to-cyan-500",
       price: "Starting at $299/month",
       originalPrice: "$599/month",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Mobile App", "White-label Options"],
+      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Mobile App", "White-label Options", "Advanced Reporting", "Data Visualization"],
       category: "AI Analytics",
       popular: true
     },

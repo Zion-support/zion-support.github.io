@@ -6,13 +6,8 @@ import {
   Brain, 
   Shield, 
   Zap, 
-<<<<<<< HEAD
-  Globe,
-  ChevronDown,
-=======
   Globe, 
   ChevronDown
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -85,6 +80,21 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       name: 'AI Cybersecurity',
       path: '/ai-cybersecurity',
       description: 'AI-powered security solutions'
+    },
+    {
+      name: 'AI Blockchain Solutions',
+      path: '/ai-blockchain-solutions',
+      description: 'AI-powered blockchain technology'
+    },
+    {
+      name: 'AI DevOps Automation',
+      path: '/ai-devops-automation',
+      description: 'Intelligent DevOps and CI/CD'
+    },
+    {
+      name: 'AI Cloud Infrastructure',
+      path: '/ai-cloud-infrastructure',
+      description: 'Intelligent cloud management'
     },
     {
       name: 'Cloud Migration',

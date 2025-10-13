@@ -58,6 +58,9 @@ const Footer: React.FC = () => {
   const services = [
     { name: "AI Analytics", path: "/ai-analytics" },
     { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
+    { name: "AI Blockchain Solutions", path: "/ai-blockchain-solutions" },
+    { name: "AI DevOps Automation", path: "/ai-devops-automation" },
+    { name: "AI Cloud Infrastructure", path: "/ai-cloud-infrastructure" },
     { name: "AI Content Generation", path: "/ai-content-generation" },
     { name: "AI Customer Support", path: "/ai-customer-support" },
     { name: "Cloud Migration", path: "/cloud-migration" },
@@ -67,12 +70,12 @@ const Footer: React.FC = () => {
   ];
 
   const microSaasServices = [
+    { name: "Zion AI Video Generator", path: "/zion-ai-video-generator" },
+    { name: "Zion AI Invoice Generator", path: "/zion-ai-invoice-generator" },
+    { name: "Zion AI Customer Insights", path: "/zion-ai-customer-insights" },
     { name: "Zion Analytics Pro", path: "/zion-analytics-pro" },
     { name: "Zion Security Shield", path: "/zion-security-shield-pro" },
     { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
-    { name: "Zion Cloud Vault", path: "/zion-cloud-vault-pro" },
-    { name: "Zion AI Marketing", path: "/zion-ai-marketing-automation" },
-    { name: "Zion AI Video Generator", path: "/zion-ai-video-generator" },
   ];
 
   const fiveGServices = [

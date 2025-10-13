@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Video, FileText } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
 import FuturisticBackground from "./components/FuturisticBackground";
@@ -95,6 +95,30 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Video Generator",
+      description: "Create professional videos from text prompts with AI-powered generation, voice synthesis, and brand customization",
+      price: "From $49/month",
+      icon: <Video className="w-6 h-6" />,
+      link: "/zion-ai-video-generator",
+      featured: true
+    },
+    {
+      name: "Zion AI Invoice Generator",
+      description: "Automated invoice creation with smart payment tracking, multi-currency support, and recurring billing",
+      price: "From $29/month",
+      icon: <FileText className="w-6 h-6" />,
+      link: "/zion-ai-invoice-generator",
+      featured: true
+    },
+    {
+      name: "Zion AI Customer Insights",
+      description: "Advanced customer analytics with AI-powered behavior prediction, sentiment analysis, and churn prevention",
+      price: "From $199/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-customer-insights",
+      featured: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
@@ -111,35 +135,11 @@ const HomePage = () => {
       featured: true
     },
     {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
-      price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
-      featured: true
-    },
-    {
       name: "Zion AI CRM Pro",
       description: "AI-powered customer relationship management with intelligent lead scoring and automation",
       price: "From $199/month",
       icon: <Users className="w-6 h-6" />,
       link: "/zion-ai-crm-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
       featured: true
     }
   ];
@@ -176,7 +176,6 @@ const HomePage = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <PerformanceOptimizer>
       <EnhancedAccessibility>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -185,32 +184,23 @@ const HomePage = () => {
             description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
             keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
             canonical="https://ziontechgroup.com"
+            structuredData={structuredData}
           />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
-        title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
-        canonical="https://ziontechgroup.com"
-        structuredData={structuredData}
-      />
-      
-      <StructuredData type="Organization" data={structuredData} />
-      
-      <StructuredData 
-        type="WebSite" 
-        data={{
-          name: "Zion Tech Group",
-          url: "https://ziontechgroup.com",
-          potentialAction: {
-            "@type": "SearchAction",
-            "target": "https://ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        }} 
-      />
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
+          
+          <StructuredData type="Organization" data={structuredData} />
+          
+          <StructuredData 
+            type="WebSite" 
+            data={{
+              name: "Zion Tech Group",
+              url: "https://ziontechgroup.com",
+              potentialAction: {
+                "@type": "SearchAction",
+                "target": "https://ziontechgroup.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }} 
+          />
 
       {/* Main Content */}
       <main id="main-content" role="main" aria-label="Main content">
@@ -465,7 +455,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      </main>
+          </main>
         </div>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
