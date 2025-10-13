@@ -5,29 +5,33 @@ import { Brain, Shield, Zap, Globe, ArrowRight } from "lucide-react";
 const HomePage = () => {
   const features = [
     {
-      title: "AI-Powered Solutions",
+      title: "AI Services",
       description:
-        "Cutting-edge artificial intelligence to transform your business operations",
+        "Advanced artificial intelligence solutions including machine learning, computer vision, and natural language processing",
       icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-    },
-    {
-      title: "IT Services",
-      description: "Comprehensive technology solutions for modern businesses",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
+      color: "from-purple-500 to-pink-500",
+      link: "/ai-services"
     },
     {
       title: "Micro SAAS",
-      description: "Ready-to-use software solutions for immediate deployment",
+      description: "Ready-to-use software solutions for immediate deployment with AI-powered automation",
       icon: <Zap className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
+      color: "from-blue-500 to-cyan-500",
+      link: "/micro-saas"
+    },
+    {
+      title: "IT Services",
+      description: "Comprehensive technology solutions including cybersecurity, cloud infrastructure, and custom development",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      link: "/it-services"
     },
     {
       title: "5G Solutions",
-      description: "Next-generation connectivity and infrastructure services",
+      description: "Next-generation connectivity and infrastructure services for the future",
       icon: <Globe className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
+      link: "/5g-solutions"
     },
   ];
 
@@ -92,22 +96,27 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                to={feature.link}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group cursor-pointer"
               >
                 <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto`}
+                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 text-center">
+                <p className="text-gray-300 text-center group-hover:text-white transition-colors">
                   {feature.description}
                 </p>
-              </div>
+                <div className="mt-4 flex items-center justify-center text-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="text-sm font-medium">Learn More</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </div>
+              </Link>
             ))}
           </div>
         </div>

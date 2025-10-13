@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
-import Navigation from "./app/components/Navigation";
-import Footer from "./app/components/Footer";
+import FuturisticNavigation from "./app/components/FuturisticNavigation";
+import FuturisticFooter from "./app/components/FuturisticFooter";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import ErrorBoundary from "./app/components/ErrorBoundary";
@@ -24,11 +24,14 @@ import ErrorHandler from "./app/components/ErrorHandler";
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
+const MicroSAASPage = React.lazy(() => import("./app/micro-saas/page"));
+const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
+const ITServicesPage = React.lazy(() => import("./app/it-services/page"));
+const AIEmailAutomationPage = React.lazy(() => import("./app/ai-email-automation/page"));
 const PricingPage = React.lazy(() => import("./app/pricing/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
 const CareersPage = React.lazy(() => import("./app/careers/page"));
-const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
@@ -184,9 +187,9 @@ function App() {
       <ErrorBoundary>
         <HelmetProvider>
         <Router>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <FuturisticBackground>
-              <Navigation />
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative">
+            <FuturisticBackground />
+            <FuturisticNavigation />
               <Breadcrumb />
               <Suspense fallback={<LoadingPage />}>
                 <Routes>
@@ -194,13 +197,14 @@ function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSAASPage />} />
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/ai-email-automation" element={<AIEmailAutomationPage />} />
                   <Route path="/pricing" element={<PricingPage />} />
                   <Route path="/blog" element={<BlogPage />} />
                   <Route path="/case-studies" element={<CaseStudiesPage />} />
                   <Route path="/careers" element={<CareersPage />} />
-                  <Route path="/ai-services" element={<AIServicesPage />} />
-                  <Route path="/it-services" element={<ServicesPage />} />
-                  <Route path="/micro-saas" element={<ServicesPage />} />
                   <Route path="/tutorials" element={<TutorialsPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
                   <Route path="/demo" element={<DemoPage />} />
@@ -399,13 +403,12 @@ function App() {
                   />
                 </Routes>
               </Suspense>
-              <Footer />
+              <FuturisticFooter />
               <PerformanceOptimizer />
               <AccessibilityEnhancer />
               <EnhancedAccessibility>
                 <div></div>
               </EnhancedAccessibility>
-            </FuturisticBackground>
             <AnalyticsProvider>
               <div>
                 <PerformanceMonitor />
