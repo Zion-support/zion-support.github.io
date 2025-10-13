@@ -3,6 +3,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 import React from "react";
@@ -30,8 +31,9 @@ import {
   ArrowRight,
   CheckCircle
 } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
 const AIAutomationPlatformPage = () => {
   const features = [

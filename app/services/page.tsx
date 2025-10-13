@@ -2,6 +2,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 import { Brain, Shield, Globe, Code, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones, Phone } from 'lucide-react';
@@ -14,6 +15,11 @@ import { Link } from "react-router-dom";
 
 export default function services() {
   return (
+=======
+import { Helmet } from "react-helmet-async";
+export default function Services() {
+    return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Services - Zion Tech Group</title>

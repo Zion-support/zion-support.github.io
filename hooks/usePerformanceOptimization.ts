@@ -1,5 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+// Performance optimization hook
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
 export default function usePerformanceOptimization() {
+  // Hook implementation would go here
   return {};
 <<<<<<< HEAD
 }

@@ -2,9 +2,14 @@
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 
 export default function aiCustomerSupportChatbot() {
   return (
+=======
+export default function AiCustomerSupportChatbotPage() {
+            return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Ai Customer Support Chatbot - Zion Tech Group</title>

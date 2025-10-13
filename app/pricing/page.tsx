@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export default function Pricing() {
@@ -129,6 +130,12 @@ export default function Page() {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
   return (
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+export default function Pricing() {
+          return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Pricing - Zion Tech Group</title>

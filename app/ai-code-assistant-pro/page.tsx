@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -205,6 +206,13 @@ const AICodeAssistantProZionTechGroup = () => {
       popular: false
     }
   ];
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function AiCodeAssistantProPage() {
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
 
   return (
     <PerformanceOptimizer>

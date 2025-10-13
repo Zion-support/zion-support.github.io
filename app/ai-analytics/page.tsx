@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function aiAnalytics() {
@@ -82,6 +83,8 @@ import {
   Sparkles,
   Lightbulb
 } from "lucide-react";
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
 
 export default function page() {
 

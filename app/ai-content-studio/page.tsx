@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -218,6 +219,25 @@ const AIContentStudioZionTechGroup = () => {
             canonical="https://ziontechgroup.com/ai-content-studio"
           />
           <StructuredData data={structuredData} />
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function AiContentStudioPage() {
+        return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Ai Content Studio - Zion Tech Group</title>
+        <meta name="description" content="Ai Content Studio solutions by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Ai Content Studio</h1>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-xl text-gray-300 mb-8">
+            Discover our comprehensive ai content studio solutions designed to meet your business needs.
+          </p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
           
           <main className="min-h-screen">
             {/* Hero Section */}
