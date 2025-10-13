@@ -15,10 +15,6 @@ export class SEOUtils {
     this.config = config;
   }
 
-
-
-
-
   generateMetaTags() {
     return {
       title: this.config.title,
