@@ -48,14 +48,14 @@ const AiServicesPage: React.FC = () => {
       name: "Dr. Sarah Johnson",
       company: "MedTech Solutions",
       role: "CTO",
-      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",
+      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We&apos;ve seen a 40% improvement in accuracy.",
       rating: 5
     },
     {
       name: "Michael Chen",
       company: "E-commerce Plus",
       role: "CEO",
-      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",
+      content: "The AI automation tools have transformed our operations. We&apos;ve reduced manual work by 80% and increased productivity significantly.",
       rating: 5
     },
     {

@@ -126,25 +126,16 @@ export default function ContactPage() {
           </h2>
           
           {isSubmitted ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
               <p className="text-gray-300 mb-6">
-                Thank you for contacting us. We'll get back to you within 24 hours.
+                Thank you for contacting us. We&apos;ll get back to you within 24 hours.
               </p>
               <button
                 onClick={() => {
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
                   setIsSubmitted(false);
                   setFormData({
                     name: '',

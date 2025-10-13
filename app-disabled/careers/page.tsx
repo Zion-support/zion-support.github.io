@@ -284,7 +284,7 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
                 {departments.map((dept) => (
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-              Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
+              Be part of a team that's shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
           {/* Why Work With Us */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
@@ -367,7 +367,7 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Don't See Your Role?
+              Don&apos;t See Your Role?
         </section>
       )}
 
