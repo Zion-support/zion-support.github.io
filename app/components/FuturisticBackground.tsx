@@ -6,6 +6,7 @@ interface FuturisticBackgroundProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function FuturisticBackground({ className = '', children }: FuturisticBackgroundProps) {
   return (
     <div className={`${className}`}>
@@ -18,3 +19,12 @@ export default function FuturisticBackground({ className = '', children, ...prop
     </div>
   );
 }
+=======
+export default function FuturisticBackground({ className = '', children, ...props }: FuturisticBackgroundProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

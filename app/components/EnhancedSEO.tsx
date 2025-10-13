@@ -5,6 +5,7 @@ interface EnhancedSEOProps {
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 export default function EnhancedSEO({ className = '', children }: EnhancedSEOProps) {
   return (
     <div className={`${className}`}>
@@ -12,3 +13,12 @@ export default function EnhancedSEO({ className = '', children }: EnhancedSEOPro
     </div>
   );
 }
+=======
+export default function EnhancedSEO({ className = '', children, ...props }: EnhancedSEOProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

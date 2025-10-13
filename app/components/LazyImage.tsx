@@ -5,6 +5,7 @@ interface LazyImageProps {
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 export default function LazyImage({ className = '', children }: LazyImageProps) {
   return (
     <div className={`${className}`}>
@@ -19,3 +20,12 @@ export default function LazyImage({ className = '', children }: LazyImageProps) 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+export default function LazyImage({ className = '', children, ...props }: LazyImageProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

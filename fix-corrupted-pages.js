@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from "fs";
 import path from "path";
 
@@ -19,15 +18,15 @@ export default function {PAGE_NAME}() {;
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">{PAGE_TITLE}</h1>
           <p className="text-lg text-gray-300 mb-8">{PAGE_DESCRIPTION}</p>
-          <Link 
+          <Link;
             to="/contact" 
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Contact Us
+            Contact Us;
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-        </div>
-      </div>
+  </div>
+  </div>
     </>
   );
 }`;
@@ -138,7 +137,7 @@ const pages = [
 ];
 
 function fixPage(pageInfo) {
-  const content = pageTemplate
+  const content = pageTemplate;
     .replace(/{PAGE_NAME}/g, pageInfo.name)
     .replace(/{PAGE_TITLE}/g, pageInfo.title)
     .replace(/{PAGE_DESCRIPTION}/g, pageInfo.description);

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface imageProps {
@@ -66,3 +67,23 @@ export default function Image({
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 }
+=======
+import React from 'react';
+
+interface ImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+}
+
+export const Image = ({ src, alt, className = '' }: ImageProps) => {
+  return (
+    <img 
+      src={src} 
+      alt={alt} 
+      className={className}
+      loading="lazy"
+    />
+  );
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

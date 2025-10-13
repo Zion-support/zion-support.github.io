@@ -1,14 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 
 interface NavigationProps {
   className?: string;
   children?: React.ReactNode;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 
@@ -177,3 +182,14 @@ export default Navigation;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+}
+
+export default function Navigation({ className = '', children, ...props }: NavigationProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

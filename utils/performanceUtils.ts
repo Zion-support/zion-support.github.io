@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 // performanceUtils utility functions
 
 export interface performanceUtilsConfig {
   enabled: boolean;
+=======
+// Utility functions;
+export function utilityFunction() {
+  // Implementation here;
+  return null;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 }
 
 export class performanceUtils {

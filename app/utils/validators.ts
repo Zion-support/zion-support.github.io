@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // validators utility functions
 
 export interface validatorsConfig {
@@ -23,3 +24,10 @@ export class validators {
 
 export const validatorsInstance = new validators();
 export default validatorsInstance;
+=======
+// validators
+export const validators = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

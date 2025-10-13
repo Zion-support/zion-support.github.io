@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // performanceEnhancer utility functions
 
 export interface performanceEnhancerConfig {
@@ -23,3 +24,10 @@ export class performanceEnhancer {
 
 export const performanceenhancer = new performanceEnhancer();
 export default performanceenhancer;
+=======
+// performanceEnhancer
+export const performanceEnhancer = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

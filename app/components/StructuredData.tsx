@@ -5,6 +5,7 @@ interface StructuredDataProps {
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 export default function StructuredData({ className = '', children }: StructuredDataProps) {
   return (
     <div className={`${className}`}>
@@ -12,3 +13,12 @@ export default function StructuredData({ className = '', children }: StructuredD
     </div>
   );
 }
+=======
+export default function StructuredData({ className = '', children, ...props }: StructuredDataProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

@@ -9,6 +9,7 @@ export default function aiCybersecuritySuite() {
         <meta name="description" content="Ai Cybersecurity Suite solutions by Zion Tech Group" />
       </Helmet>
       
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Ai Cybersecurity Suite</h1>
@@ -18,5 +19,14 @@ export default function aiCybersecuritySuite() {
         </div>
       </div>
     </div>
+=======
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8"></h1>
+        <div className="prose prose-invert max-w-none">
+          <p>This page is under construction. Please check back later for  solutions.</p>
+  </div>
+  </div>
+  </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
 }

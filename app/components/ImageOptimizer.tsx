@@ -2,6 +2,7 @@ import React from 'react';
 
 interface ImageOptimizerProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   src: string;
   alt: string;
@@ -11,10 +12,13 @@ interface ImageOptimizerProps {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   className?: string;
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function ImageOptimizer({ className = '', children }: ImageOptimizerProps) {
 =======
@@ -81,3 +85,12 @@ export default function ImageOptimizer({
     </div>
   );
 }
+=======
+export default function ImageOptimizer({ className = '', children, ...props }: ImageOptimizerProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

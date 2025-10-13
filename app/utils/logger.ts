@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // logger utility functions
 
 export interface loggerConfig {
@@ -23,3 +24,10 @@ export class logger {
 
 export const loggerInstance = new logger();
 export default loggerInstance;
+=======
+// logger
+export const logger = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

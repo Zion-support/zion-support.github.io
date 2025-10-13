@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // apiCache utility functions
 
 export interface apiCacheConfig {
@@ -23,3 +24,10 @@ export class apiCache {
 
 export const apicache = new apiCache();
 export default apicache;
+=======
+// apiCache
+export const apiCache = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

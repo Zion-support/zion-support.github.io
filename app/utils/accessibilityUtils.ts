@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // accessibilityUtils utility functions
 
 export interface accessibilityUtilsConfig {
@@ -23,3 +24,10 @@ export class accessibilityUtils {
 
 export const accessibilityutils = new accessibilityUtils();
 export default accessibilityutils;
+=======
+// accessibilityUtils
+export const accessibilityUtils = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

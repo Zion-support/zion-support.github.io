@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // formValidation utility functions
 
 export interface formValidationConfig {
@@ -23,3 +24,10 @@ export class formValidation {
 
 export const formvalidation = new formValidation();
 export default formvalidation;
+=======
+// formValidation
+export const formValidation = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

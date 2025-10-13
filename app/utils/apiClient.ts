@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // apiClient utility functions
 
 export interface apiClientConfig {
@@ -23,3 +24,10 @@ export class apiClient {
 
 export const apiclient = new apiClient();
 export default apiclient;
+=======
+// apiClient
+export const apiClient = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

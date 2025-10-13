@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // utils utility functions
 
 export interface utilsConfig {
@@ -68,3 +69,10 @@ export function truncateText(text: string, maxLength: number): string {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+// utils
+export const utils = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

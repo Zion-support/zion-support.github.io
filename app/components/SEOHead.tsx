@@ -5,6 +5,7 @@ interface SEOHeadProps {
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 export default function SEOHead({ className = '', children }: SEOHeadProps) {
   return (
     <div className={`${className}`}>
@@ -12,3 +13,12 @@ export default function SEOHead({ className = '', children }: SEOHeadProps) {
     </div>
   );
 }
+=======
+export default function SEOHead({ className = '', children, ...props }: SEOHeadProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

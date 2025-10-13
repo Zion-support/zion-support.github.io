@@ -6,6 +6,7 @@ interface FuturisticButtonProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function FuturisticButton({ className = '', children }: FuturisticButtonProps) {
 =======
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
@@ -76,3 +77,12 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     </div>
   );
 }
+=======
+export default function FuturisticButton({ className = '', children, ...props }: FuturisticButtonProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

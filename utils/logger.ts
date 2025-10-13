@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // logger utility functions
 
 export interface loggerConfig {
@@ -135,3 +136,11 @@ export const logger = {
 
 export { logger };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+// Logger utility
+export function logger(message: string, level: 'info' | 'warn' | 'error' = 'info') {
+  console[level](message);
+}
+
+export default logger;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

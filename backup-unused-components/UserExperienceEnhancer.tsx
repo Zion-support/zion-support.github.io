@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+import React from "react";
+interface UserExperienceEnhancerProps;
+  children?: React.ReactNode;
+  className?: string;
+  title?: string;
+  description?: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 
 interface UserExperienceEnhancerProps {
   className?: string;
@@ -9,6 +18,6 @@ export default function UserExperienceEnhancer({ className = '', children }: Use
   return (
     <div className={`${className}`}>
       {children}
-    </div>
+  </div>
   );
 }

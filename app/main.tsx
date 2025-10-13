@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 <<<<<<< HEAD
@@ -29,6 +30,15 @@ import "./index.css";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement,
+=======
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
+
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 );
 
 root.render(
@@ -36,8 +46,12 @@ root.render(
     <App />
   </React.StrictMode>
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 =======
 );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

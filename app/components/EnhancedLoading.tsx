@@ -5,6 +5,7 @@ interface EnhancedLoadingProps {
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 export default function EnhancedLoading({ className = '', children }: EnhancedLoadingProps) {
   return (
     <div className={`${className}`}>
@@ -12,3 +13,12 @@ export default function EnhancedLoading({ className = '', children }: EnhancedLo
     </div>
   );
 }
+=======
+export default function EnhancedLoading({ className = '', children, ...props }: EnhancedLoadingProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

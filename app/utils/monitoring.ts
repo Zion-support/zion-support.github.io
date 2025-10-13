@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // monitoring utility functions
 
 export interface monitoringConfig {
@@ -23,3 +24,10 @@ export class monitoring {
 
 export const monitoringInstance = new monitoring();
 export default monitoringInstance;
+=======
+// monitoring
+export const monitoring = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

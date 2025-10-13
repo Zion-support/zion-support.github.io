@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 // accessibilityUtils utility functions
 
 export interface accessibilityUtilsConfig {
   enabled: boolean;
+=======
+// Utility functions;
+export function utilityFunction() {
+  // Implementation here;
+  return null;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 }
 
 export class accessibilityUtils {

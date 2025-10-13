@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // performanceUtils utility functions
 
 export interface performanceUtilsConfig {
@@ -23,3 +24,10 @@ export class performanceUtils {
 
 export const performanceutils = new performanceUtils();
 export default performanceutils;
+=======
+// performanceUtils
+export const performanceUtils = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

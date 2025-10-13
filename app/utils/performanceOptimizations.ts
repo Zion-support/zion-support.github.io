@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // performanceOptimizations utility functions
 
 export interface performanceOptimizationsConfig {
@@ -23,3 +24,10 @@ export class performanceOptimizations {
 
 export const performanceoptimizations = new performanceOptimizations();
 export default performanceoptimizations;
+=======
+// performanceOptimizations
+export const performanceOptimizations = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

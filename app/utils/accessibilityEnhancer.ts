@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // accessibilityEnhancer utility functions
 
 export interface accessibilityEnhancerConfig {
@@ -12,6 +13,13 @@ export class accessibilityEnhancer {
       enabled: true,
       ...config
     };
+=======
+// accessibilityEnhancer utility;
+export const accessibilityEnhancer = {
+  // Utility implementation;
+  init: () => {
+    console.log('accessibilityEnhancer initialized');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   }
 
   init(): void {

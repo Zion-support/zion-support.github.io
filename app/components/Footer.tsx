@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface FooterProps {
   className?: string;
@@ -310,3 +311,18 @@ export default Footer;
 =======
 export default Footer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+
+interface FooterProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Footer({ className = '', children, ...props }: FooterProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

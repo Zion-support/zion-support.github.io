@@ -1,6 +1,7 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface AnalyticsProps {
   className?: string;
   children?: React.ReactNode;
@@ -33,3 +34,17 @@ export default function Analytics({ children }: AnalyticsProps) {
   return <>{children}</>;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 }
+=======
+interface AnalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

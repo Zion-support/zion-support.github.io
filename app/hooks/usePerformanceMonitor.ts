@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // usePerformanceMonitor hook
 import { useEffect, useRef } from 'react';
 
@@ -46,3 +47,10 @@ export function slugify(text: string): string {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+// usePerformanceMonitor
+export const usePerformanceMonitor = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

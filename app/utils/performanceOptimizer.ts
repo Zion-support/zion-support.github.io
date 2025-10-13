@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // performanceOptimizer utility functions
 
 export interface performanceOptimizerConfig {
@@ -23,3 +24,10 @@ export class performanceOptimizer {
 
 export const performanceoptimizer = new performanceOptimizer();
 export default performanceoptimizer;
+=======
+// performanceOptimizer
+export const performanceOptimizer = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

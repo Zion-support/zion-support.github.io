@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface servicetemplateProps {
   className?: string;
@@ -56,3 +57,13 @@ export default function ServiceTemplate() {
     </div>
   );
 }
+=======
+
+export default function Component() {
+  return (
+    <div>
+      <h1>Component</h1>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

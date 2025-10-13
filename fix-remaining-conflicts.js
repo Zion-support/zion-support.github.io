@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 import fs from "fs";
 import path from "path";
 
@@ -38,28 +37,28 @@ export default function Page() {;
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Service
+                Service;
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Professional services by Zion Tech Group. Expert solutions tailored to your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center group"
               >
-                Get Started
+                Get Started;
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link 
+              <Link;
                 to="/contact"
                 className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
               >
-                Learn More
+                Learn More;
               </Link>
-            </div>
-          </div>
+  </div>
+  </div>
         </section>
 
         <section className="py-20">
@@ -72,23 +71,23 @@ export default function Page() {;
                 Contact us to learn more about our solutions and how we can help your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+                <Link;
                   to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                 >
-                  Contact Us
+                  Contact Us;
                 </Link>
-                <Link
+                <Link;
                   to="/services"
                   className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
                 >
-                  View All Services
+                  View All Services;
                 </Link>
-              </div>
-            </div>
-          </div>
+  </div>
+  </div>
+  </div>
         </section>
-      </div>
+  </div>
     </>
   );
 }`;
@@ -99,4 +98,3 @@ for (const file of filesToFix) {
     } catch (error) {
     }
 }
-

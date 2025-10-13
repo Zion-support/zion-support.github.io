@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface IconsProps {
+=======
+export const Icon = (
+  name,
+  className = "",
+  ...props;
+: 
+  name: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   className?: string;
   children?: React.ReactNode;
 }

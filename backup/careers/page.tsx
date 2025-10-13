@@ -10,6 +10,7 @@ export default function careers() {
       </Helmet>
       
       <div className="container mx-auto px-4 py-20">
+<<<<<<< HEAD
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-8">Careers</h1>
           <p className="text-xl text-gray-300 mb-8">
@@ -18,5 +19,11 @@ export default function careers() {
         </div>
       </div>
     </div>
+=======
+        <h1 className="text-4xl font-bold mb-8">Careers</h1>
+        <p className="text-gray-300">Join our team and help shape the future of technology.</p>
+  </div>
+  </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
 }

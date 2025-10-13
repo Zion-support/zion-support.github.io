@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // dataValidator utility functions
 
 export interface dataValidatorConfig {
@@ -23,3 +24,10 @@ export class dataValidator {
 
 export const datavalidator = new dataValidator();
 export default datavalidator;
+=======
+// dataValidator
+export const dataValidator = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

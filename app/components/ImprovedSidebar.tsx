@@ -1,14 +1,19 @@
 import React from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ImprovedSidebarProps {
 =======
 interface ImprovedsidebarProps {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
+=======
+interface ImprovedSidebarProps {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   className?: string;
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function ImprovedSidebar({ className = '', children }: ImprovedSidebarProps) {
   return (
@@ -25,3 +30,12 @@ export default function Improvedsidebar({ className = '', children, ...props }: 
 }
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+export default function ImprovedSidebar({ className = '', children, ...props }: ImprovedSidebarProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

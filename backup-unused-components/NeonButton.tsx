@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface NeonButtonProps {
+=======
+import React from "react";
+import { ArrowRight } from "lucide-react";
+interface NeonButtonProps;
+  children?: React.ReactNode;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   className?: string;
   children?: React.ReactNode;
 }

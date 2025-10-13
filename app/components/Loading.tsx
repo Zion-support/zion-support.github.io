@@ -6,6 +6,7 @@ interface LoadingProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function Loading({ className = '', children }: LoadingProps) {
   return (
     <div className={`${className}`}>
@@ -18,3 +19,12 @@ export default function Loading({ className = '', children, ...props }: LoadingP
     </div>
   );
 }
+=======
+export default function Loading({ className = '', children, ...props }: LoadingProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

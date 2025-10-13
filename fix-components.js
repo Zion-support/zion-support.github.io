@@ -30,9 +30,16 @@ export default function ${componentName}({
   children 
 }: ${componentName}Props) {
   return (
+<<<<<<< HEAD
     <div className={\`${fileName.toLowerCase()} \${className}\`}>
       {children}
     </div>
+=======
+    <div>
+      <h1>Component</h1>
+      <p>This component is under construction.</p>
+  </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   );
 }`;
       

@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -59,6 +60,15 @@ function resolveMergeConflicts(filePath) {
     console.error(`Error resolving conflicts in ${filePath}:`, error.message);
     return false;
   }
+=======
+export default function Component() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>This component is under construction.</p>
+  </div>
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 }
 
 // Function to find all TypeScript/JavaScript files

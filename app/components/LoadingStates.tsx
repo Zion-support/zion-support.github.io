@@ -6,6 +6,7 @@ interface LoadingStatesProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function LoadingStates({ className = '', children }: LoadingStatesProps) {
   return (
     <div className={`${className}`}>
@@ -18,3 +19,12 @@ export default function LoadingStates({ className = '', children, ...props }: Lo
     </div>
   );
 }
+=======
+export default function LoadingStates({ className = '', children, ...props }: LoadingStatesProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

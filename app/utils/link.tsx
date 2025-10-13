@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface linkProps {
@@ -74,3 +75,20 @@ export default function Link({
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 }
+=======
+import React from 'react';
+
+interface LinkProps {
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const Link = ({ href, children, className = '' }: LinkProps) => {
+  return (
+    <a href={href} className={className}>
+      {children}
+    </a>
+  );
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

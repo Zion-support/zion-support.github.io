@@ -5,6 +5,7 @@ interface LoadingSpinnerProps {
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 export default function LoadingSpinner({ className = '', children }: LoadingSpinnerProps) {
   return (
 <<<<<<< HEAD
@@ -20,3 +21,12 @@ export default function LoadingSpinner({ className = '', children }: LoadingSpin
     </div>
   );
 }
+=======
+export default function LoadingSpinner({ className = '', children, ...props }: LoadingSpinnerProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

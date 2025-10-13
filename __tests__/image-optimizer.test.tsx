@@ -3,6 +3,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Mock component for testing
 const ImageOptimizer = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {
   return (
@@ -14,6 +15,10 @@ const ImageOptimizer = ({ className = '', children }: { className?: string; chil
 =======
 // Mock IntersectionObserver
 global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+=======
+// Mock IntersectionObserver;
+global.IntersectionObserver = jest.fn().mockImplementation((callback) => ({
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
   observe: jest.fn(),
   unobserve: jest.fn(),
   disconnect: jest.fn(),

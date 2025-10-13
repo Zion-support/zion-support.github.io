@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // sitemapGenerator utility functions
 
 export interface sitemapGeneratorConfig {
@@ -23,3 +24,10 @@ export class sitemapGenerator {
 
 export const sitemapgenerator = new sitemapGenerator();
 export default sitemapgenerator;
+=======
+// sitemapGenerator
+export const sitemapGenerator = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

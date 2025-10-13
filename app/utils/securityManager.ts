@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // securityManager utility functions
 
 export interface securityManagerConfig {
@@ -23,3 +24,10 @@ export class securityManager {
 
 export const securitymanager = new securityManager();
 export default securitymanager;
+=======
+// securityManager
+export const securityManager = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

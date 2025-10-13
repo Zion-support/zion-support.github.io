@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // performanceMonitoring utility functions
 
 export interface performanceMonitoringConfig {
@@ -23,3 +24,10 @@ export class performanceMonitoring {
 
 export const performancemonitoring = new performanceMonitoring();
 export default performancemonitoring;
+=======
+// performanceMonitoring
+export const performanceMonitoring = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

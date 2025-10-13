@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 const MobileNavigation: React.FC = () => {
@@ -113,12 +114,16 @@ const MobileNavigation: React.FC = () => {
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 
 interface MobileNavigationProps {
   className?: string;
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 export default function MobileNavigation({ className = '', children }: MobileNavigationProps) {
   return (
     <div className={`${className}`}>
@@ -132,3 +137,12 @@ export default function MobileNavigation({ className = '', children }: MobileNav
 
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+export default function MobileNavigation({ className = '', children, ...props }: MobileNavigationProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

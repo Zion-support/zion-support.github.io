@@ -1,16 +1,21 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import React, { useState, useCallback } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 
 interface OptimizedImageProps {
   className?: string;
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function OptimizedImage({ className = '', children }: OptimizedImageProps) {
   return (
@@ -129,3 +134,12 @@ export default function OptimizedImage({
     </div>
   );
 }
+=======
+export default function OptimizedImage({ className = '', children, ...props }: OptimizedImageProps) {
+    return (
+        <div className="component" {...props}>
+          {children}
+        </div>
+      );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44

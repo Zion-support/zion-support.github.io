@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // analyticsTracker utility functions
 
 export interface analyticsTrackerConfig {
@@ -23,3 +24,10 @@ export class analyticsTracker {
 
 export const analyticstracker = new analyticsTracker();
 export default analyticstracker;
+=======
+// analyticsTracker
+export const analyticsTracker = () => {
+  // Utility function implementation
+  return null;
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
