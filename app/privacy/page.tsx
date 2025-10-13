@@ -1,22 +1,18 @@
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async";
-=======
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
-export default function Privacy() {
+export default function PrivacyPage() {
   return (
-    <div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Privacy Policy - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Privacy policy for Zion Tech Group services." />
+        <title>Privacy Policy | Zion Tech Group</title>
+        <meta name="description" content="Our privacy policy and data protection practices" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
+      
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-white mb-8">Privacy Policy</h1>
+        <p className="text-gray-300">Coming soon...</p>
       </div>
-</div>
+    </div>
   );
 }

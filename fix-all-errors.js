@@ -1,3 +1,4 @@
+import React from 'react';
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -8,54 +9,26 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix unused imports more aggressively
-function fixUnusedImports(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const lines = content.split('\n');
-    const result = [];
-    const usedIdentifiers = new Set();
-    
-    // First pass: collect all used identifiers
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      // Skip import lines for now
-      if (line.trim().startsWith('import ')) {
-        continue;
+function fixUnusedImports(filePath) 
       }
       
       // Find used identifiers in the line
       const matches = line.match(/\b[A-Z][a-zA-Z0-9]*\b/g);
-      if (matches) {
-        matches.forEach(match => usedIdentifiers.add(match));
+      if (matches) 
       }
       
       // Also check for JSX components
       const jsxMatches = line.match(/<([A-Z][a-zA-Z0-9]*)/g);
-      if (jsxMatches) {
-        jsxMatches.forEach(match => {
-          const component = match.replace('<', '');
-          usedIdentifiers.add(component);
+      if (jsxMatches) 
         });
       }
     }
     
     // Second pass: filter imports
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.trim().startsWith('import ')) {
-        // Handle named imports
+    for (let i = 0; i < lines.length; i++) 
         const namedImportMatch = line.match(/import\s*\{([^}]+)\}/);
-        if (namedImportMatch) {
-          const importedItems = namedImportMatch[1].split(',').map(item => item.trim());
-          const usedItems = importedItems.filter(item => usedIdentifiers.has(item));
-          
-          if (usedItems.length === 0) {
-            // Remove the entire import line
-            continue;
-          } else if (usedItems.length < importedItems.length) {
-            // Keep only used items
+        if (namedImportMatch) 
+          } else if (usedItems.length < importedItems.length) 
             const newImport = line.replace(/\{[^}]+\}/, `{ ${usedItems.join(', ')} }`);
             result.push(newImport);
             continue;
@@ -64,14 +37,12 @@ function fixUnusedImports(filePath) {
         
         // Handle default imports
         const defaultImportMatch = line.match(/import\s+(\w+)\s+from/);
-        if (defaultImportMatch && !usedIdentifiers.has(defaultImportMatch[1])) {
-          continue; // Remove unused default import
+        if (defaultImportMatch && !usedIdentifiers.has(defaultImportMatch[1])) 
         }
         
         // Handle namespace imports
         const namespaceImportMatch = line.match(/import\s+\*\s+as\s+(\w+)/);
-        if (namespaceImportMatch && !usedIdentifiers.has(namespaceImportMatch[1])) {
-          continue; // Remove unused namespace import
+        if (namespaceImportMatch && !usedIdentifiers.has(namespaceImportMatch[1])) 
         }
       }
       
@@ -80,35 +51,21 @@ function fixUnusedImports(filePath) {
     
     fs.writeFileSync(filePath, result.join('\n'));
     return true;
-  } catch (error) {
+  } catch (error) 
     console.error(`Error fixing unused imports in ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Function to fix unused variables
-function fixUnusedVariables(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const lines = content.split('\n');
-    const result = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
-      
-      // Remove unused variable assignments
-      if (line.includes('is assigned a value but never used')) {
-        continue; // Skip this line
+function fixUnusedVariables(filePath) 
       }
       
       // Remove unused variable declarations
       const unusedVarMatch = line.match(/^\s*const\s+(\w+)\s*=.*$/);
-      if (unusedVarMatch) {
-        const varName = unusedVarMatch[1];
-        // Check if this variable is used anywhere in the file
+      if (unusedVarMatch) 
         const isUsed = content.includes(varName) && !content.includes(`const ${varName} =`);
-        if (!isUsed) {
-          continue; // Skip this line
+        if (!isUsed) 
         }
       }
       
@@ -117,25 +74,18 @@ function fixUnusedVariables(filePath) {
     
     fs.writeFileSync(filePath, result.join('\n'));
     return true;
-  } catch (error) {
+  } catch (error) 
     console.error(`Error fixing unused variables in ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Function to fix specific parsing errors
-function fixParsingErrors(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix missing closing braces
-    if (content.includes("'}' expected")) {
-      // Count opening and closing braces
-      const openBraces = (content.match(/\{/g) || []).length;
+function fixParsingErrors(filePath) 
+    if (content.includes("'}' expected")) 
       const closeBraces = (content.match(/\}/g) || []).length;
       
-      if (openBraces > closeBraces) {
-        const missingBraces = openBraces - closeBraces;
+      if (openBraces > closeBraces) 
         content += '\n' + '}'.repeat(missingBraces);
       }
     }
@@ -146,48 +96,34 @@ function fixParsingErrors(filePath) {
     
     fs.writeFileSync(filePath, content);
     return true;
-  } catch (error) {
+  } catch (error) 
     console.error(`Error fixing parsing errors in ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Function to fix specific files with known issues
-function fixSpecificFiles() {
-  const specificFixes = [
-    {
-      file: 'app/ai-services/page.tsx',
-      fixes: [
+function fixSpecificFiles() 
         { from: 'const AIServicesPage = () => {', to: 'export default function AIServices() {' },
         { from: 'const aiServices = [', to: '// const aiServices = [' },
         { from: '];', to: '// ];' }
       ]
     },
-    {
-      file: 'app/devops-services/page.tsx',
-      fixes: [
+    
         { from: 'const DevOpsServicesPage = () => {', to: 'export default function DevOpsServices() {' }
       ]
     },
-    {
-      file: 'app/software-development/page.tsx',
-      fixes: [
+    
         { from: 'const SoftwareDevelopmentPage = () => {', to: 'export default function SoftwareDevelopment() {' }
       ]
     }
   ];
   
-  for (const fix of specificFixes) {
-    const filePath = path.join(__dirname, fix.file);
-    if (fs.existsSync(filePath)) {
-      try {
-        let content = fs.readFileSync(filePath, 'utf8');
-        for (const replacement of fix.fixes) {
-          content = content.replace(replacement.from, replacement.to);
+  for (const fix of specificFixes) 
         }
         fs.writeFileSync(filePath, content);
         console.log(`Fixed specific issues in ${fix.file}`);
-      } catch (error) {
+      } catch (error) 
         console.error(`Error fixing ${fix.file}:`, error.message);
       }
     }
@@ -195,21 +131,8 @@ function fixSpecificFiles() {
 }
 
 // Main function
-function main() {
-  const appDir = path.join(__dirname, 'app');
-  const filesToFix = [];
-  
-  // Find all .tsx and .ts files in app directory
-  function findFiles(dir) {
-    const files = fs.readdirSync(dir);
-    for (const file of files) {
-      const filePath = path.join(dir, file);
-      const stat = fs.statSync(filePath);
-      
-      if (stat.isDirectory()) {
-        findFiles(filePath);
-      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-        filesToFix.push(filePath);
+function main() 
+      } else if (file.endsWith('.tsx') || file.endsWith('.ts')) 
       }
     }
   }
@@ -223,13 +146,10 @@ function main() {
   // Fix specific files first
   fixSpecificFiles();
   
-  for (const filePath of filesToFix) {
-    if (fixUnusedImports(filePath)) {
-      fixedCount++;
+  for (const filePath of filesToFix) 
     }
     
-    if (fixParsingErrors(filePath)) {
-      fixedCount++;
+    if (fixParsingErrors(filePath)) 
     }
   }
   

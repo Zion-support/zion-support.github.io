@@ -1,10 +1,9 @@
-interface ServicesProps {
-  className?: string;
+import React from 'react';
+interface ServicesProps 
 }
 
-const Services: React.FC<ServicesProps> = ({ className = "" }) => {
-  return (
-    <div className={className}>
+const Services: React.FC<ServicesProps> = ({ className = "" }) => 
+    <div className={className} />
       <h2>Services</h2>
     </div>
   );

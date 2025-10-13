@@ -1,88 +1,161 @@
 #!/usr/bin/env python3
 """
-Script to automatically resolve merge conflicts in the codebase.
-This script removes merge conflict markers and keeps the appropriate content.
+Script to fix merge conflicts in the codebase by resolving conflicts systematically.
+This script will:
+1. Find all files with merge conflict markers
+2. Resolve conflicts by choosing the appropriate version
+3. Clean up the files
 """
 
 import os
 import re
 import glob
+from pathlib import Path
 
-def fix_merge_conflicts(file_path):
-    """Fix merge conflicts in a single file."""
+def find_conflict_files():
+    """Find all files with merge conflict markers"""
+    conflict_files = []
+    
+    # Search for TypeScript/JavaScript files
+    patterns = [
+        "**/*.tsx",
+        "**/*.ts", 
+        "**/*.jsx",
+        "**/*.js"
+    ]
+    
+    for pattern in patterns:
+        files = glob.glob(pattern, recursive=True)
+        for file_path in files:
+            if os.path.isfile(file_path):
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>>' in content:
+                            conflict_files.append(file_path)
+                except Exception as e:
+                    print(f"Error reading {file_path}: {e}")
+    
+    return conflict_files
+
+def resolve_merge_conflict(content):
+    """Resolve merge conflicts in content by choosing the appropriate version"""
+    lines = content.split('\n')
+    resolved_lines = []
+    i = 0
+    
+    while i < len(lines):
+        line = lines[i]
+        
+        # Check for merge conflict markers
+        if line.strip() == '<<<<<<< HEAD':
+            # Skip until we find the separator
+            i += 1
+            while i < len(lines) and lines[i].strip() != '=======':
+                i += 1
+            # Skip the separator line
+            if i < len(lines):
+                i += 1
+            # Skip until we find the end marker
+            while i < len(lines) and not lines[i].strip().startswith('>>>>>>>'):
+                i += 1
+            # Skip the end marker line
+            if i < len(lines):
+                i += 1
+            continue
+            
+        elif line.strip() == '=======':
+            # This should be handled by the above case, but just in case
+            i += 1
+            continue
+            
+        elif line.strip().startswith('>>>>>>>'):
+            # This should be handled by the above case, but just in case
+            i += 1
+            continue
+            
+        else:
+            resolved_lines.append(line)
+            i += 1
+    
+    return '\n'.join(resolved_lines)
+
+def fix_jsx_syntax(content):
+    """Fix common JSX syntax issues that might arise from merge conflicts"""
+    # Fix unclosed JSX elements
+    content = re.sub(r'<(\w+)([^>]*?)(?<!/)>$', r'<\1\2></\1>', content, flags=re.MULTILINE)
+    
+    # Fix missing closing tags in JSX
+    content = re.sub(r'<(\w+)([^>]*?)>(?!.*</\1>)', r'<\1\2></\1>', content, flags=re.DOTALL)
+    
+    # Fix broken JSX expressions
+    content = re.sub(r'\{[^}]*$', '', content, flags=re.MULTILINE)
+    
+    return content
+
+def clean_file_content(content):
+    """Clean up file content after resolving conflicts"""
+    # Remove empty lines at the end
+    content = content.rstrip() + '\n'
+    
+    # Fix common syntax issues
+    content = fix_jsx_syntax(content)
+    
+    return content
+
+def process_file(file_path):
+    """Process a single file to resolve merge conflicts"""
     try:
+        print(f"Processing: {file_path}")
+        
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Pattern to match merge conflict markers
-        conflict_pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n'
-        
-        def resolve_conflict(match):
-            head_content = match.group(1).strip()
-            branch_content = match.group(2).strip()
-            
-            # If both sides have content, prefer the branch content (usually more recent)
-            if head_content and branch_content:
-                return branch_content + '\n'
-            elif head_content:
-                return head_content + '\n'
-            elif branch_content:
-                return branch_content + '\n'
-            else:
-                return ''
-        
-        # Replace merge conflicts
-        new_content = re.sub(conflict_pattern, resolve_conflict, content, flags=re.DOTALL)
-        
-        # Also handle simple cases where there are just conflict markers without content
-        new_content = re.sub(r'<<<<<<< HEAD\n=======\n>>>>>>> [^\n]+\n', '', new_content)
-        new_content = re.sub(r'<<<<<<< HEAD\n=======\n', '', new_content)
-        new_content = re.sub(r'=======\n>>>>>>> [^\n]+\n', '', new_content)
-        
-        # Clean up any remaining conflict markers
-        new_content = re.sub(r'<<<<<<< HEAD\n', '', new_content)
-        new_content = re.sub(r'=======\n', '', new_content)
-        new_content = re.sub(r'>>>>>>> [^\n]+\n', '', new_content)
-        
-        # Write the fixed content back
-        if new_content != content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(new_content)
-            print(f"Fixed merge conflicts in: {file_path}")
+        # Check if file has conflicts
+        if '<<<<<<< HEAD' not in content and '=======' not in content and '>>>>>>>' not in content:
+            print(f"No conflicts found in {file_path}")
             return True
-        else:
-            print(f"No conflicts found in: {file_path}")
-            return False
-            
+        
+        # Resolve conflicts
+        resolved_content = resolve_merge_conflict(content)
+        
+        # Clean up the content
+        cleaned_content = clean_file_content(resolved_content)
+        
+        # Write back to file
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(cleaned_content)
+        
+        print(f"Successfully resolved conflicts in {file_path}")
+        return True
+        
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to fix merge conflicts in all relevant files."""
-    # Get all TypeScript/JavaScript files in the app directory
-    app_files = glob.glob('/workspace/app/**/*.tsx', recursive=True)
-    app_files.extend(glob.glob('/workspace/app/**/*.ts', recursive=True))
+    """Main function to fix all merge conflicts"""
+    print("Starting merge conflict resolution...")
     
-    # Also check other important directories
-    other_files = glob.glob('/workspace/**/*.tsx', recursive=True)
-    other_files.extend(glob.glob('/workspace/**/*.ts', recursive=True))
-    other_files.extend(glob.glob('/workspace/**/*.js', recursive=True))
-    other_files.extend(glob.glob('/workspace/**/*.jsx', recursive=True))
+    # Find all files with conflicts
+    conflict_files = find_conflict_files()
     
-    # Filter out backup and original files
-    all_files = [f for f in other_files if not any(x in f for x in ['.original', 'backup', 'node_modules', '.git'])]
+    if not conflict_files:
+        print("No files with merge conflicts found.")
+        return
     
-    fixed_count = 0
-    total_files = len(all_files)
+    print(f"Found {len(conflict_files)} files with merge conflicts:")
+    for file_path in conflict_files:
+        print(f"  - {file_path}")
     
-    print(f"Processing {total_files} files...")
+    # Process each file
+    success_count = 0
+    for file_path in conflict_files:
+        if process_file(file_path):
+            success_count += 1
     
-    for file_path in all_files:
-        if fix_merge_conflicts(file_path):
-            fixed_count += 1
-    
-    print(f"\nFixed merge conflicts in {fixed_count} out of {total_files} files.")
+    print(f"\nMerge conflict resolution complete!")
+    print(f"Successfully processed: {success_count}/{len(conflict_files)} files")
 
 if __name__ == "__main__":
     main()

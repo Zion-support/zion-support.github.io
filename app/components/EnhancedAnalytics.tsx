@@ -1,27 +1,12 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
-interface EnhancedAnalyticsProps {
-  children: React.ReactNode;
+interface EnhancedAnalyticsProps 
 }
 
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
-  useEffect(() => {
-    // Initialize analytics tracking
-    const initializeAnalytics = () => {
-      // Google Analytics 4 tracking
-      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
-        // Google Analytics initialization would go here
-        console.log('Analytics initialized');
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps></EnhancedAnalyticsProps> = ({ children }) => 
       }
     };
 
     // Track page views
-    const trackPageView = () => {
-      if (typeof window !== 'undefined') {
-        // Page view tracking would go here
-        console.log('Page view tracked:', window.location.pathname);
+    const trackPageView = () => 
       }
     };
 

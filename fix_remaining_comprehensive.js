@@ -1,12 +1,11 @@
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import React from 'react';
 import fs from 'fs';
 import path from 'path';
 #!/usr/bin/env node;
 // Function to fix all remaining comprehensive issues;
-function fixRemainingComprehensive(content) {
-  // Fix malformed meta tags with spaces;
-  content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/  \/>/g, '<meta name="$1" content="$2" />');
-  content = content.replace(/<meta name="([^"]*)" content="([^"]*)" \/>/g, '<meta name="$1" content="$2" />');
-  // Fix malformed className attributes with spaces;
+function fixRemainingComprehensive(content) 
     return `className="${part1}${part2}"`;
   });
   // Fix specific patterns;
@@ -47,30 +46,8 @@ function fixRemainingComprehensive(content) {
   content = content.replace(/<button className="([^"]*)"\s*\/>\s*([^<]+)\s*<\/button>/g, '<button className="$1">$2</button>');
   return content;
 // Function to process a single file;
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-const fixedContent = fixRemainingComprehensive(content);
-    if (content !== fixedContent) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      return true;
-    return false;
-  } catch (error) {
-    return false;
-// Function to recursively find and process TSX files;
-function processDirectory(dirPath) {
-  let processedCount = 0;
-  function walkDir(currentPath) {
-    const items = fs.readdirSync(currentPath);
-    for (const item, of, items) {
-      const fullPath = path.join(currentPath, item);
-const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
-        walkDir(fullPath);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
-        if (processFile(fullPath)) {
-          processedCount++;
-  walkDir(dirPath);
-  return processedCount;
-// Main execution;
-const processedCount = processDirectory('./app');
+function processFile(filePath) 
+  } catch (error) 
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts')) 
+
+export default fixRemainingComprehensive;

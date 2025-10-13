@@ -1,9 +1,5 @@
-export default function AiDrugDiscoveryProPage() {
-  return (
-    <div>Content</div>
-  );
-    <div>Component content</div>
-  );
+import React from 'react';
+export default function AiDrugDiscoveryProPage() 
 }
   return (
     <div>Content</div>
@@ -34,7 +30,7 @@ export default function AiDrugDiscoveryProPage() {
               Transform your pharmaceutical research with our AI-powered drug discovery platform.;
                 Contact Our Experts;
                 View All AI Services;
-      </section>    <div></div>
+      </section>    <div />
         <title>AI Drug Discovery Pro - Zion Tech Group</title>
       {/* Hero Section */}
               AI Drug Discovery Pro;

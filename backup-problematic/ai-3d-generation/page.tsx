@@ -1,9 +1,5 @@
-export default function Ai3dGenerationPage() {
-  return (
-    <div>Content</div>
-  );
-    <div>Component content</div>
-  );
+import React from 'react';
+export default function Ai3dGenerationPage() 
 }
   return (
     <div>Content</div>
@@ -34,7 +30,7 @@ export default function Ai3dGenerationPage() {
               Start generating professional 3D models with our AI-powered technology today.;
                 Get Started Today;
                 View All AI Services;
-      </section>    <div></div>
+      </section>    <div />
         <title>AI 3D Generation - Zion Tech Group</title>
       {/* Hero Section */}
               AI 3D Generation;

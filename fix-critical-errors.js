@@ -1,3 +1,4 @@
+import React from 'react';
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -34,3 +35,5 @@ import { fileURLToPath } from 'url'
 // Function to find all files that need fixing;
 const filesToFix = findFilesToFix(srcDir);`
 "`
+
+export default declarations;

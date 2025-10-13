@@ -1,108 +1,53 @@
-interface LogLevel {
-  ERROR: 'error';
-  WARN: 'warn';
-  INFO: 'info';
-  DEBUG: 'debug';
+interface LogLevel 
 }
 
-const LOG_LEVELS: LogLevel = {
-  ERROR: 'error',
-  WARN: 'warn',
-  INFO: 'info',
-  DEBUG: 'debug',
+const LOG_LEVELS: LogLevel = 
 };
 
 type LogLevelType = LogLevel[keyof LogLevel];
 
-class Logger {
-  private isDevelopment = process.env.NODE_ENV === 'development';
-  private isProduction = process.env.NODE_ENV === 'production';
-
-  private log(level: LogLevelType, message: string, ...args: any[]): void {
-    if (!this.isDevelopment && level === 'debug') {
-      return;
+class Logger 
     }
 
     // const timestamp = new Date().toISOString();
-<<<<<<< HEAD
-=======
-    // const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
->>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
-    switch (level) {
-      case 'error':
-        break;
-      case 'warn':
-        break;
-      case 'info':
-        break;
-      case 'debug':
-        break;
+    switch (level) 
     }
 
     // In production, you might want to send logs to an external service
-    if (this.isProduction && (level === 'error' || level === 'warn')) {
-      this.sendToExternalService(level, message, ...args);
+    if (this.isProduction && (level === 'error' || level === 'warn')) 
     }
   }
 
-  private sendToExternalService(level: LogLevelType, message: string, ...args: any[]): void {
-    // This is where you would send logs to an external service like Sentry, LogRocket, etc.
-    // For now, we'll just store them in localStorage for debugging
-    try {
-      const logs = JSON.parse(localStorage.getItem('app-logs') || '[]');
-      logs.push({
-        level,
-        message,
-        args,
-        timestamp: new Date().toISOString(),
-        url: window.location.href,
-        userAgent: navigator.userAgent,
+  private sendToExternalService(level: LogLevelType, message: string, ...args: any[]): void 
       });
       
       // Keep only the last 100 logs
-      if (logs.length > 100) {
-        logs.splice(0, logs.length - 100);
+      if (logs.length > 100) 
       }
       
       localStorage.setItem('app-logs', JSON.stringify(logs));
-<<<<<<< HEAD
-    } catch (e) { console.error(e); }}
-=======
-    } catch {
-      // Error saving logs
-    }
-  }
->>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
-  error(message: string, ...args: any[]): void {
-    this.log(LOG_LEVELS.ERROR, message, ...args);
+  error(message: string, ...args: any[]): void 
   }
 
-  warn(message: string, ...args: any[]): void {
-    this.log(LOG_LEVELS.WARN, message, ...args);
+  warn(message: string, ...args: any[]): void 
   }
 
-  info(message: string, ...args: any[]): void {
-    this.log(LOG_LEVELS.INFO, message, ...args);
+  info(message: string, ...args: any[]): void 
   }
 
-  debug(message: string, ...args: any[]): void {
-    this.log(LOG_LEVELS.DEBUG, message, ...args);
+  debug(message: string, ...args: any[]): void 
   }
 
   // Utility method to get stored logs
-  getLogs(): any[] {
-    try {
-      return JSON.parse(localStorage.getItem('app-logs') || '[]');
-    } catch {
-      return [];
+  getLogs(): any[] 
+    } catch 
     }
   }
 
   // Utility method to clear stored logs
-  clearLogs(): void {
-    localStorage.removeItem('app-logs');
+  clearLogs(): void 
   }
 }
 
