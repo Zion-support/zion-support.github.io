@@ -36,6 +36,11 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
+
+// Micro SAAS Services
+const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
 
 // Main App Component
 function App() {
@@ -73,6 +78,11 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+                        <Route path="/micro-saas" element={<MicroSaasPage />} />
+                        
+                        {/* Micro SAAS Services */}
+                        <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                        <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
                       </Routes>
                     </Suspense>
                   </main>
