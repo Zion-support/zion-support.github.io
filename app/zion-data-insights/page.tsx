@@ -1,73 +1,73 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Workflow, Zap, Clock, Shield, Users, CheckCircle, ArrowRight, Star, Globe, Smartphone, Mail, Settings, Bot } from 'lucide-react';
+import { BarChart3, TrendingUp, Database, Zap, Shield, Users, CheckCircle, ArrowRight, Star, Globe, Smartphone, Mail, Eye, Brain } from 'lucide-react';
 
-export default function ZionWorkflowAutomation() {
+export default function ZionDataInsights() {
   const features = [
     {
-      icon: <Workflow className="w-6 h-6" />,
-      title: "Visual Workflow Builder",
-      description: "Drag-and-drop interface to create complex automation workflows without coding"
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Real-time Analytics",
+      description: "Live dashboards with instant data visualization and insights"
+    },
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI-Powered Insights",
+      description: "Machine learning algorithms that discover hidden patterns in your data"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Smart Triggers",
-      description: "Automate based on events, schedules, or conditions with intelligent trigger system"
-    },
-    {
-      icon: <Bot className="w-6 h-6" />,
-      title: "AI-Powered Automation",
-      description: "Machine learning algorithms that optimize and improve your workflows over time"
+      title: "Automated Reports",
+      description: "Generate comprehensive reports automatically with customizable schedules"
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Enterprise Security",
-      description: "Bank-level security with role-based access control and audit trails"
+      description: "Bank-level encryption and compliance with GDPR, HIPAA, and SOC 2"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$39",
+      price: "$49",
       period: "/month",
       description: "Perfect for small teams",
       features: [
-        "Up to 10 workflows",
-        "Basic integrations",
+        "Up to 5 data sources",
+        "Basic analytics dashboard",
+        "Standard reports",
         "Email support",
-        "Standard templates",
-        "1,000 executions/month"
+        "1GB data storage"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$149",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 50 workflows",
-        "Advanced integrations",
+        "Up to 25 data sources",
+        "Advanced AI insights",
+        "Custom dashboards",
         "Priority support",
-        "Custom templates",
-        "10,000 executions/month",
+        "10GB data storage",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited workflows",
-        "All integrations",
-        "24/7 dedicated support",
+        "Unlimited data sources",
+        "Custom AI models",
         "White-label solution",
-        "Unlimited executions",
+        "24/7 dedicated support",
+        "Unlimited storage",
         "Advanced security features",
         "SLA guarantee"
       ],
@@ -75,23 +75,23 @@ export default function ZionWorkflowAutomation() {
     }
   ];
 
-  const integrations = [
-    "Slack", "Microsoft Teams", "Gmail", "Outlook", "Salesforce", "HubSpot", 
-    "Zapier", "Google Workspace", "Microsoft 365", "Dropbox", "Google Drive",
-    "Trello", "Asana", "Jira", "GitHub", "Stripe", "PayPal", "QuickBooks"
+  const dataSources = [
+    "Google Analytics", "Salesforce", "HubSpot", "MySQL", "PostgreSQL", 
+    "MongoDB", "AWS S3", "Google Sheets", "Excel", "CSV Files",
+    "REST APIs", "Webhooks", "Social Media APIs", "Email Marketing Tools"
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion Workflow Automation - AI-Powered Business Automation | Zion Tech Group</title>
+        <title>Zion Data Insights - AI-Powered Analytics Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your business processes with AI-powered workflow automation. Visual builder, smart triggers, and 50+ integrations. Starting at $39/month."
+          content="Transform your data into actionable insights with AI-powered analytics. Real-time dashboards, automated reports, and machine learning insights. Starting at $49/month."
         />
         <meta
           name="keywords"
-          content="workflow automation, business process automation, AI automation, workflow builder, business automation, process optimization"
+          content="data analytics, business intelligence, AI insights, data visualization, automated reporting, real-time analytics, data dashboard"
         />
       </Helmet>
 
@@ -105,19 +105,19 @@ export default function ZionWorkflowAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Workflow className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Workflow Automation</span>
+                <BarChart3 className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Analytics Platform</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Zion Workflow Automation
+                  Zion Data Insights
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Automate your business processes with AI-powered workflows. Create, optimize, and scale 
-                your automation without coding. Save time, reduce errors, and boost productivity.
+                Transform your raw data into actionable insights with our AI-powered analytics platform. 
+                Discover hidden patterns, predict trends, and make data-driven decisions with confidence.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -133,7 +133,7 @@ export default function ZionWorkflowAutomation() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Settings className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  <Eye className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
 
@@ -141,15 +141,15 @@ export default function ZionWorkflowAutomation() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-                  <div className="text-gray-300">Integrations</div>
+                  <div className="text-gray-300">Data Sources</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
-                  <div className="text-gray-300">Time Saved</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
+                  <div className="text-gray-300">Uptime SLA</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
-                  <div className="text-gray-300">Reliability</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">Real-time</div>
+                  <div className="text-gray-300">Data Processing</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">5min</div>
@@ -165,10 +165,10 @@ export default function ZionWorkflowAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Automation Features
+                Powerful Analytics Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to automate your business processes and boost productivity.
+                Everything you need to turn your data into actionable business insights.
               </p>
             </div>
             
@@ -193,25 +193,25 @@ export default function ZionWorkflowAutomation() {
           </div>
         </section>
 
-        {/* Integrations Section */}
+        {/* Data Sources Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Connect Your Favorite Tools
+                Connect Any Data Source
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Seamlessly integrate with 50+ popular business tools and platforms.
+                Seamlessly integrate with 50+ popular data sources and platforms.
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-              {integrations.map((integration, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+              {dataSources.map((source, index) => (
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
-                  <span className="text-gray-300 text-sm font-medium">{integration}</span>
+                  <span className="text-gray-300 text-sm font-medium">{source}</span>
                 </div>
               ))}
             </div>
@@ -226,7 +226,7 @@ export default function ZionWorkflowAutomation() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your automation needs. All plans include our core features.
+                Choose the plan that fits your data needs. All plans include our core features.
               </p>
             </div>
             
@@ -286,10 +286,10 @@ export default function ZionWorkflowAutomation() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Business?
+              Ready to Unlock Your Data's Potential?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion Workflow Automation to boost productivity. 
+              Join thousands of businesses using Zion Data Insights to make smarter decisions. 
               Start your free trial today - no credit card required.
             </p>
             
@@ -331,7 +331,7 @@ export default function ZionWorkflowAutomation() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Settings className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Eye className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

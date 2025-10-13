@@ -1,29 +1,29 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Workflow, Zap, Clock, Shield, Users, CheckCircle, ArrowRight, Star, Globe, Smartphone, Mail, Settings, Bot } from 'lucide-react';
+import { Share2, Calendar, BarChart3, Zap, Shield, Users, CheckCircle, ArrowRight, Star, Globe, Smartphone, Mail, Instagram, Twitter } from 'lucide-react';
 
-export default function ZionWorkflowAutomation() {
+export default function ZionSocialMediaManager() {
   const features = [
     {
-      icon: <Workflow className="w-6 h-6" />,
-      title: "Visual Workflow Builder",
-      description: "Drag-and-drop interface to create complex automation workflows without coding"
+      icon: <Calendar className="w-6 h-6" />,
+      title: "Smart Scheduling",
+      description: "AI-powered optimal posting times across all social media platforms"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Smart Triggers",
-      description: "Automate based on events, schedules, or conditions with intelligent trigger system"
+      title: "Content Automation",
+      description: "Automatically create and schedule posts based on trending topics and your brand voice"
     },
     {
-      icon: <Bot className="w-6 h-6" />,
-      title: "AI-Powered Automation",
-      description: "Machine learning algorithms that optimize and improve your workflows over time"
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive insights into engagement, reach, and ROI across all platforms"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with role-based access control and audit trails"
+      title: "Brand Safety",
+      description: "AI-powered content moderation and brand safety checks before posting"
     }
   ];
 
@@ -32,13 +32,13 @@ export default function ZionWorkflowAutomation() {
       name: "Starter",
       price: "$39",
       period: "/month",
-      description: "Perfect for small teams",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 10 workflows",
-        "Basic integrations",
+        "Up to 3 social accounts",
+        "Basic scheduling",
+        "Standard analytics",
         "Email support",
-        "Standard templates",
-        "1,000 executions/month"
+        "5 posts per day"
       ],
       popular: false
     },
@@ -48,50 +48,53 @@ export default function ZionWorkflowAutomation() {
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 50 workflows",
-        "Advanced integrations",
+        "Up to 10 social accounts",
+        "Advanced scheduling",
+        "Advanced analytics",
         "Priority support",
-        "Custom templates",
-        "10,000 executions/month",
-        "API access"
+        "Unlimited posts",
+        "Content suggestions"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$249",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited workflows",
-        "All integrations",
-        "24/7 dedicated support",
+        "Unlimited social accounts",
+        "All features",
         "White-label solution",
-        "Unlimited executions",
-        "Advanced security features",
+        "24/7 dedicated support",
+        "Custom integrations",
+        "Advanced security",
         "SLA guarantee"
       ],
       popular: false
     }
   ];
 
-  const integrations = [
-    "Slack", "Microsoft Teams", "Gmail", "Outlook", "Salesforce", "HubSpot", 
-    "Zapier", "Google Workspace", "Microsoft 365", "Dropbox", "Google Drive",
-    "Trello", "Asana", "Jira", "GitHub", "Stripe", "PayPal", "QuickBooks"
+  const platforms = [
+    { name: "Facebook", icon: <Share2 className="w-6 h-6" /> },
+    { name: "Instagram", icon: <Instagram className="w-6 h-6" /> },
+    { name: "Twitter", icon: <Twitter className="w-6 h-6" /> },
+    { name: "LinkedIn", icon: <Share2 className="w-6 h-6" /> },
+    { name: "TikTok", icon: <Share2 className="w-6 h-6" /> },
+    { name: "YouTube", icon: <Share2 className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion Workflow Automation - AI-Powered Business Automation | Zion Tech Group</title>
+        <title>Zion Social Media Manager - AI-Powered Social Media Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your business processes with AI-powered workflow automation. Visual builder, smart triggers, and 50+ integrations. Starting at $39/month."
+          content="Manage all your social media accounts with AI-powered scheduling, content creation, and analytics. Boost engagement and grow your audience. Starting at $39/month."
         />
         <meta
           name="keywords"
-          content="workflow automation, business process automation, AI automation, workflow builder, business automation, process optimization"
+          content="social media management, social media scheduling, social media analytics, social media automation, content creation, social media marketing"
         />
       </Helmet>
 
@@ -105,19 +108,19 @@ export default function ZionWorkflowAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Workflow className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Workflow Automation</span>
+                <Share2 className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Social Media Management</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Zion Workflow Automation
+                  Zion Social Media Manager
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Automate your business processes with AI-powered workflows. Create, optimize, and scale 
-                your automation without coding. Save time, reduce errors, and boost productivity.
+                Manage all your social media accounts from one platform. AI-powered content creation, 
+                smart scheduling, and advanced analytics to grow your audience and engagement.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -133,23 +136,23 @@ export default function ZionWorkflowAutomation() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Settings className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  <Share2 className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-                  <div className="text-gray-300">Integrations</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">6+</div>
+                  <div className="text-gray-300">Platforms</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">3x</div>
+                  <div className="text-gray-300">Higher Engagement</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-pink-400 mb-2">50%</div>
                   <div className="text-gray-300">Time Saved</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
-                  <div className="text-gray-300">Reliability</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">5min</div>
@@ -165,10 +168,10 @@ export default function ZionWorkflowAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Automation Features
+                Powerful Social Media Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to automate your business processes and boost productivity.
+                Everything you need to manage and grow your social media presence across all platforms.
               </p>
             </div>
             
@@ -193,25 +196,28 @@ export default function ZionWorkflowAutomation() {
           </div>
         </section>
 
-        {/* Integrations Section */}
+        {/* Platforms Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Connect Your Favorite Tools
+                Connect All Your Platforms
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Seamlessly integrate with 50+ popular business tools and platforms.
+                Manage all your social media accounts from one unified dashboard.
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-              {integrations.map((integration, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {platforms.map((platform, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
-                  <span className="text-gray-300 text-sm font-medium">{integration}</span>
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    {platform.icon}
+                  </div>
+                  <span className="text-gray-300 text-sm font-medium">{platform.name}</span>
                 </div>
               ))}
             </div>
@@ -226,7 +232,7 @@ export default function ZionWorkflowAutomation() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your automation needs. All plans include our core features.
+                Choose the plan that fits your social media needs. All plans include our core features.
               </p>
             </div>
             
@@ -286,10 +292,10 @@ export default function ZionWorkflowAutomation() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Business?
+              Ready to Grow Your Social Media?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion Workflow Automation to boost productivity. 
+              Join thousands of businesses using Zion Social Media Manager to boost their engagement. 
               Start your free trial today - no credit card required.
             </p>
             
@@ -331,7 +337,7 @@ export default function ZionWorkflowAutomation() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Settings className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Share2 className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

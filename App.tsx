@@ -176,6 +176,19 @@ const ZionComplianceManagerPage = React.lazy(
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
+const ZionAIChatbotPage = React.lazy(() => import("./app/zion-ai-chatbot/page"));
+const ZionDataInsightsPage = React.lazy(() => import("./app/zion-data-insights/page"));
+const ZionEmailMarketingPage = React.lazy(() => import("./app/zion-email-marketing/page"));
+const ZionSocialMediaManagerPage = React.lazy(() => import("./app/zion-social-media-manager/page"));
+const ZionCRMProPage = React.lazy(() => import("./app/zion-crm-pro/page"));
+const ZionInventoryManagerPage = React.lazy(() => import("./app/zion-inventory-manager/page"));
+const ZionProjectManagementPage = React.lazy(() => import("./app/zion-project-management/page"));
+const ZionFinanceManagerPage = React.lazy(() => import("./app/zion-finance-manager/page"));
+const ZionHRManagerPage = React.lazy(() => import("./app/zion-hr-manager/page"));
+const ZionCustomerSupportPage = React.lazy(() => import("./app/zion-customer-support/page"));
+const ZionMarketingAutomationPage = React.lazy(() => import("./app/zion-marketing-automation/page"));
+const ZionDocumentManagerPage = React.lazy(() => import("./app/zion-document-manager/page"));
+const ZionTimeTrackerPage = React.lazy(() => import("./app/zion-time-tracker/page"));
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
@@ -425,6 +438,62 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-chatbot"
+                    element={<ZionAIChatbotPage />}
+                  />
+                  <Route
+                    path="/zion-data-insights"
+                    element={<ZionDataInsightsPage />}
+                  />
+                  <Route
+                    path="/zion-workflow-automation"
+                    element={<ZionWorkflowAutomationPage />}
+                  />
+                  <Route
+                    path="/zion-email-marketing"
+                    element={<ZionEmailMarketingPage />}
+                  />
+                  <Route
+                    path="/zion-social-media-manager"
+                    element={<ZionSocialMediaManagerPage />}
+                  />
+                  <Route
+                    path="/zion-crm-pro"
+                    element={<ZionCRMProPage />}
+                  />
+                  <Route
+                    path="/zion-inventory-manager"
+                    element={<ZionInventoryManagerPage />}
+                  />
+                  <Route
+                    path="/zion-project-management"
+                    element={<ZionProjectManagementPage />}
+                  />
+                  <Route
+                    path="/zion-finance-manager"
+                    element={<ZionFinanceManagerPage />}
+                  />
+                  <Route
+                    path="/zion-hr-manager"
+                    element={<ZionHRManagerPage />}
+                  />
+                  <Route
+                    path="/zion-customer-support"
+                    element={<ZionCustomerSupportPage />}
+                  />
+                  <Route
+                    path="/zion-marketing-automation"
+                    element={<ZionMarketingAutomationPage />}
+                  />
+                  <Route
+                    path="/zion-document-manager"
+                    element={<ZionDocumentManagerPage />}
+                  />
+                  <Route
+                    path="/zion-time-tracker"
+                    element={<ZionTimeTrackerPage />}
                   />
 
                   {/* 5G Solutions Routes */}

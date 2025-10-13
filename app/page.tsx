@@ -40,11 +40,39 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform",
+      name: "Zion AI Chatbot",
+      description: "Intelligent customer support automation",
       price: "From $29/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-chatbot"
+    },
+    {
+      name: "Zion Data Insights",
+      description: "AI-powered analytics platform",
+      price: "From $49/month",
       icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro"
+      link: "/zion-data-insights"
+    },
+    {
+      name: "Zion Workflow Automation",
+      description: "AI-powered business process automation",
+      price: "From $39/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-workflow-automation"
+    },
+    {
+      name: "Zion Email Marketing",
+      description: "AI-powered email marketing platform",
+      price: "From $29/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/zion-email-marketing"
+    },
+    {
+      name: "Zion Social Media Manager",
+      description: "AI-powered social media management",
+      price: "From $39/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-social-media-manager"
     },
     {
       name: "Zion Security Shield",
@@ -54,18 +82,32 @@ const HomePage = () => {
       link: "/zion-security-shield"
     },
     {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $9/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
+      name: "Zion CRM Pro",
+      description: "AI-powered customer relationship management",
+      price: "From $59/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-crm-pro"
+    },
+    {
+      name: "Zion Finance Manager",
+      description: "AI-powered financial management",
+      price: "From $29/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-finance-manager"
+    },
+    {
+      name: "Zion HR Manager",
+      description: "AI-powered human resources management",
+      price: "From $49/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-hr-manager"
     }
   ];
 
   const stats = [
     { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "75+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -94,7 +136,7 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen holographic-bg particle-bg">
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
@@ -118,7 +160,7 @@ const HomePage = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Welcome to
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
+            <span className="holographic-text neon-text text-4xl md:text-6xl lg:text-7xl font-bold">
               {" "}
               Zion Tech Group
             </span>
@@ -132,14 +174,14 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              className="btn-cyberpunk flex items-center justify-center group"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="btn-cyberpunk flex items-center justify-center group"
             >
               Watch Demo
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
@@ -178,7 +220,7 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={feature.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                className="group card-futuristic-enhanced hover-lift focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
                 aria-label={`Learn more about ${feature.title}`}
               >
                 <div
@@ -215,12 +257,12 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className="group card-futuristic-enhanced hover-lift"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
@@ -266,7 +308,7 @@ const HomePage = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group card-futuristic-enhanced hover-lift relative overflow-hidden"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -285,7 +327,7 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 scan-lines-enhanced">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -323,14 +365,14 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              className="btn-cyberpunk flex items-center justify-center group"
             >
               Start Your Journey
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="btn-cyberpunk flex items-center justify-center group"
             >
               Explore Services
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />

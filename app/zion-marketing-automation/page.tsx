@@ -1,58 +1,58 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Workflow, Zap, Clock, Shield, Users, CheckCircle, ArrowRight, Star, Globe, Smartphone, Mail, Settings, Bot } from 'lucide-react';
+import { Target, Mail, BarChart3, Zap, Shield, CheckCircle, ArrowRight, Star, Globe, Smartphone, Users, TrendingUp } from 'lucide-react';
 
-export default function ZionWorkflowAutomation() {
+export default function ZionMarketingAutomation() {
   const features = [
     {
-      icon: <Workflow className="w-6 h-6" />,
-      title: "Visual Workflow Builder",
-      description: "Drag-and-drop interface to create complex automation workflows without coding"
+      icon: <Target className="w-6 h-6" />,
+      title: "AI-Powered Segmentation",
+      description: "Automatically segment your audience based on behavior and preferences"
+    },
+    {
+      icon: <Mail className="w-6 h-6" />,
+      title: "Email Campaign Automation",
+      description: "Create and automate complex email sequences that nurture leads"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Track campaign performance and ROI with detailed insights"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Smart Triggers",
-      description: "Automate based on events, schedules, or conditions with intelligent trigger system"
-    },
-    {
-      icon: <Bot className="w-6 h-6" />,
-      title: "AI-Powered Automation",
-      description: "Machine learning algorithms that optimize and improve your workflows over time"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level security with role-based access control and audit trails"
+      title: "Workflow Automation",
+      description: "Automate marketing processes from lead capture to conversion"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$39",
+      price: "$49",
       period: "/month",
-      description: "Perfect for small teams",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 10 workflows",
-        "Basic integrations",
+        "Up to 5,000 contacts",
+        "Basic automation",
         "Email support",
-        "Standard templates",
-        "1,000 executions/month"
+        "Standard reports",
+        "5 campaigns"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$129",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 50 workflows",
-        "Advanced integrations",
+        "Up to 25,000 contacts",
+        "Advanced automation",
         "Priority support",
-        "Custom templates",
-        "10,000 executions/month",
+        "Advanced analytics",
+        "Unlimited campaigns",
         "API access"
       ],
       popular: true
@@ -63,35 +63,29 @@ export default function ZionWorkflowAutomation() {
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited workflows",
-        "All integrations",
-        "24/7 dedicated support",
+        "Unlimited contacts",
+        "All features",
         "White-label solution",
-        "Unlimited executions",
-        "Advanced security features",
+        "24/7 dedicated support",
+        "Custom integrations",
+        "Advanced security",
         "SLA guarantee"
       ],
       popular: false
     }
   ];
 
-  const integrations = [
-    "Slack", "Microsoft Teams", "Gmail", "Outlook", "Salesforce", "HubSpot", 
-    "Zapier", "Google Workspace", "Microsoft 365", "Dropbox", "Google Drive",
-    "Trello", "Asana", "Jira", "GitHub", "Stripe", "PayPal", "QuickBooks"
-  ];
-
   return (
     <>
       <Helmet>
-        <title>Zion Workflow Automation - AI-Powered Business Automation | Zion Tech Group</title>
+        <title>Zion Marketing Automation - AI-Powered Marketing Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your business processes with AI-powered workflow automation. Visual builder, smart triggers, and 50+ integrations. Starting at $39/month."
+          content="Automate your marketing with AI-powered campaigns, lead nurturing, and analytics. Boost conversions and grow your business. Starting at $49/month."
         />
         <meta
           name="keywords"
-          content="workflow automation, business process automation, AI automation, workflow builder, business automation, process optimization"
+          content="marketing automation, email marketing, lead nurturing, campaign management, marketing analytics, lead generation"
         />
       </Helmet>
 
@@ -105,19 +99,19 @@ export default function ZionWorkflowAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Workflow className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Workflow Automation</span>
+                <Target className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Marketing Automation</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Zion Workflow Automation
+                  Zion Marketing Automation
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Automate your business processes with AI-powered workflows. Create, optimize, and scale 
-                your automation without coding. Save time, reduce errors, and boost productivity.
+                Automate your marketing with AI-powered campaigns, lead nurturing, and analytics. 
+                Boost conversions, grow your audience, and maximize your marketing ROI.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -133,23 +127,23 @@ export default function ZionWorkflowAutomation() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Settings className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  <TrendingUp className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-                  <div className="text-gray-300">Integrations</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">3x</div>
+                  <div className="text-gray-300">Higher Conversions</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">50%</div>
                   <div className="text-gray-300">Time Saved</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
-                  <div className="text-gray-300">Reliability</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">40%</div>
+                  <div className="text-gray-300">Better ROI</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">5min</div>
@@ -165,10 +159,10 @@ export default function ZionWorkflowAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Automation Features
+                Powerful Marketing Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to automate your business processes and boost productivity.
+                Everything you need to automate your marketing and grow your business.
               </p>
             </div>
             
@@ -193,40 +187,15 @@ export default function ZionWorkflowAutomation() {
           </div>
         </section>
 
-        {/* Integrations Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Connect Your Favorite Tools
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Seamlessly integrate with 50+ popular business tools and platforms.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-              {integrations.map((integration, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-                >
-                  <span className="text-gray-300 text-sm font-medium">{integration}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your automation needs. All plans include our core features.
+                Choose the plan that fits your marketing needs. All plans include our core features.
               </p>
             </div>
             
@@ -286,10 +255,10 @@ export default function ZionWorkflowAutomation() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Business?
+              Ready to Automate Your Marketing?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion Workflow Automation to boost productivity. 
+              Join thousands of businesses using Zion Marketing Automation to grow their revenue. 
               Start your free trial today - no credit card required.
             </p>
             
@@ -331,7 +300,7 @@ export default function ZionWorkflowAutomation() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Settings className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <TrendingUp className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

@@ -1,97 +1,91 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Workflow, Zap, Clock, Shield, Users, CheckCircle, ArrowRight, Star, Globe, Smartphone, Mail, Settings, Bot } from 'lucide-react';
+import { FileText, Search, Shield, Zap, CheckCircle, ArrowRight, Star, Globe, Smartphone, Mail, Folder, Eye } from 'lucide-react';
 
-export default function ZionWorkflowAutomation() {
+export default function ZionDocumentManager() {
   const features = [
     {
-      icon: <Workflow className="w-6 h-6" />,
-      title: "Visual Workflow Builder",
-      description: "Drag-and-drop interface to create complex automation workflows without coding"
+      icon: <FileText className="w-6 h-6" />,
+      title: "AI-Powered OCR",
+      description: "Automatically extract text from scanned documents and images"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Smart Triggers",
-      description: "Automate based on events, schedules, or conditions with intelligent trigger system"
-    },
-    {
-      icon: <Bot className="w-6 h-6" />,
-      title: "AI-Powered Automation",
-      description: "Machine learning algorithms that optimize and improve your workflows over time"
+      icon: <Search className="w-6 h-6" />,
+      title: "Smart Search",
+      description: "Find documents instantly with AI-powered search and categorization"
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Enterprise Security",
-      description: "Bank-level security with role-based access control and audit trails"
+      description: "Bank-level encryption and access controls for sensitive documents"
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Workflow Automation",
+      description: "Automate document approval and collaboration workflows"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$39",
+      price: "$29",
       period: "/month",
       description: "Perfect for small teams",
       features: [
-        "Up to 10 workflows",
-        "Basic integrations",
+        "Up to 1,000 documents",
+        "Basic OCR",
         "Email support",
-        "Standard templates",
-        "1,000 executions/month"
+        "Standard search",
+        "1GB storage"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$79",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 50 workflows",
-        "Advanced integrations",
+        "Up to 10,000 documents",
+        "Advanced AI features",
         "Priority support",
-        "Custom templates",
-        "10,000 executions/month",
+        "Advanced search",
+        "10GB storage",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited workflows",
-        "All integrations",
-        "24/7 dedicated support",
+        "Unlimited documents",
+        "All features",
         "White-label solution",
-        "Unlimited executions",
-        "Advanced security features",
+        "24/7 dedicated support",
+        "Unlimited storage",
+        "Custom integrations",
         "SLA guarantee"
       ],
       popular: false
     }
   ];
 
-  const integrations = [
-    "Slack", "Microsoft Teams", "Gmail", "Outlook", "Salesforce", "HubSpot", 
-    "Zapier", "Google Workspace", "Microsoft 365", "Dropbox", "Google Drive",
-    "Trello", "Asana", "Jira", "GitHub", "Stripe", "PayPal", "QuickBooks"
-  ];
-
   return (
     <>
       <Helmet>
-        <title>Zion Workflow Automation - AI-Powered Business Automation | Zion Tech Group</title>
+        <title>Zion Document Manager - AI-Powered Document Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your business processes with AI-powered workflow automation. Visual builder, smart triggers, and 50+ integrations. Starting at $39/month."
+          content="Organize and manage your documents with AI-powered OCR, smart search, and workflow automation. Starting at $29/month."
         />
         <meta
           name="keywords"
-          content="workflow automation, business process automation, AI automation, workflow builder, business automation, process optimization"
+          content="document management, document storage, OCR, document search, file management, document workflow"
         />
       </Helmet>
 
@@ -105,19 +99,19 @@ export default function ZionWorkflowAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Workflow className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">AI-Powered Workflow Automation</span>
+                <FileText className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">AI-Powered Document Management</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Zion Workflow Automation
+                  Zion Document Manager
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Automate your business processes with AI-powered workflows. Create, optimize, and scale 
-                your automation without coding. Save time, reduce errors, and boost productivity.
+                Organize and manage your documents with AI-powered OCR, smart search, and workflow automation. 
+                Never lose a document again and boost your team's productivity.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -133,23 +127,23 @@ export default function ZionWorkflowAutomation() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Settings className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  <Eye className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
 
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
-                  <div className="text-gray-300">Integrations</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
+                  <div className="text-gray-300">OCR Accuracy</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">90%</div>
                   <div className="text-gray-300">Time Saved</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
-                  <div className="text-gray-300">Reliability</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">24/7</div>
+                  <div className="text-gray-300">Access Available</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">5min</div>
@@ -165,10 +159,10 @@ export default function ZionWorkflowAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful Automation Features
+                Powerful Document Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to automate your business processes and boost productivity.
+                Everything you need to organize, search, and manage your documents efficiently.
               </p>
             </div>
             
@@ -193,40 +187,15 @@ export default function ZionWorkflowAutomation() {
           </div>
         </section>
 
-        {/* Integrations Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Connect Your Favorite Tools
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Seamlessly integrate with 50+ popular business tools and platforms.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-              {integrations.map((integration, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-                >
-                  <span className="text-gray-300 text-sm font-medium">{integration}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your automation needs. All plans include our core features.
+                Choose the plan that fits your document needs. All plans include our core features.
               </p>
             </div>
             
@@ -286,10 +255,10 @@ export default function ZionWorkflowAutomation() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Business?
+              Ready to Organize Your Documents?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion Workflow Automation to boost productivity. 
+              Join thousands of teams using Zion Document Manager to stay organized. 
               Start your free trial today - no credit card required.
             </p>
             
@@ -331,7 +300,7 @@ export default function ZionWorkflowAutomation() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Settings className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Eye className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

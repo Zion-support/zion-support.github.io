@@ -32,11 +32,23 @@ const Navigation = React.memo(() => {
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Chatbot', path: '/zion-ai-chatbot', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion Data Insights', path: '/zion-data-insights', icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: 'Zion Workflow Automation', path: '/zion-workflow-automation', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Zion Email Marketing', path: '/zion-email-marketing', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Social Media Manager', path: '/zion-social-media-manager', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion CRM Pro', path: '/zion-crm-pro', icon: <Users className="w-4 h-4" /> },
+    { name: 'Zion Inventory Manager', path: '/zion-inventory-manager', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Project Management', path: '/zion-project-management', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Finance Manager', path: '/zion-finance-manager', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion HR Manager', path: '/zion-hr-manager', icon: <Users className="w-4 h-4" /> },
+    { name: 'Zion Customer Support', path: '/zion-customer-support', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Marketing Automation', path: '/zion-marketing-automation', icon: <Zap className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
