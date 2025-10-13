@@ -1,101 +1,130 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-// Function to remove unused imports from a file
-function removeUnusedImports(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
+// Get all TypeScript/JavaScript files
+const getAllFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) => {
+  let files = [];
+  const items = fs.readdirSync(dir);
+  
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    // Skip if file doesn't exist or is not a TypeScript/JavaScript file
-    if (!fs.existsSync(filePath) || (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts') && !filePath.endsWith('.jsx') && !filePath.endsWith('.js'))) {
-      return;
+    if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git')) {
+      files = files.concat(getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
     }
+  }
+  
+  return files;
+};
 
-    // Use ESLint to fix unused imports
+// Remove unused imports from a file
+const removeUnusedImports = (filePath) => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
+    
+    // Get unused imports from ESLint
     try {
-      execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"extends": ["@typescript-eslint/recommended"], "parser": "@typescript-eslint/parser", "rules": {"@typescript-eslint/no-unused-vars": "error"}}'`, { 
-//         stdio: 'pipe',
-//         cwd: '/workspace'
+      const eslintOutput = execSync(`npx eslint "${filePath}" --format=json --no-fix`, { 
+        encoding: 'utf8',
+        cwd: '/workspace',
+        stdio: 'pipe'
       });
-      console.log(`Fixed unused imports in: ${filePath}`);
-    } catch (error) {
-      // If ESLint fails, try a simple approach to remove unused imports
-      console.log(`ESLint failed for ${filePath}, trying manual approach...`);
       
-      // Simple regex to remove unused imports (this is a basic approach)
-      const lines = content.split('\n');
-      const newLines = lines.filter(line => {
-        // Keep import statements that are likely used
-        if (line.trim().startsWith('import ')) {
-          // Check if any of the imported items are used in the file
-          const importMatch = line.match(/import\s*\{([^}]+)\}/);
+      const eslintResult = JSON.parse(eslintOutput);
+      const unusedVars = eslintResult[0]?.messages?.filter(msg => 
+        msg.ruleId === '@typescript-eslint/no-unused-vars' && 
+        msg.message.includes('is defined but never used')
+      ) || [];
+      
+      for (const unusedVar of unusedVars) {
+        const lineNumber = unusedVar.line - 1;
+        const lines = content.split('\n');
+        const line = lines[lineNumber];
+        
+        if (line && line.includes('import')) {
+          // Extract the import statement
+          const importMatch = line.match(/import\s*{([^}]+)}\s*from\s*['"]([^'"]+)['"]/);
           if (importMatch) {
-            const imports = importMatch[1].split(',').map(imp => imp.trim());
-            const isUsed = imports.some(imp => {
-              const cleanImp = imp.replace(/\s+as\s+\w+/, '').trim();
-              return content.includes(cleanImp) && !line.includes(cleanImp);
-            });
-            return isUsed || imports.length === 0;
+            const [, imports, source] = importMatch;
+            const importList = imports.split(',').map(imp => imp.trim());
+            const unusedImport = unusedVar.message.match(/'([^']+)'/)?.[1];
+            
+            if (unusedImport && importList.includes(unusedImport)) {
+              // Remove the unused import
+              const newImportList = importList.filter(imp => imp !== unusedImport);
+              
+              if (newImportList.length === 0) {
+                // Remove entire import line if no imports left
+                lines[lineNumber] = '';
+              } else {
+                // Update import line
+                lines[lineNumber] = line.replace(
+                  /import\s*{([^}]+)}\s*from\s*['"]([^'"]+)['"]/,
+                  `import { ${newImportList.join(', ')} } from '${source}'`
+                );
+              }
+              
+              content = lines.join('\n');
+            }
           }
-          return true;
         }
-        return true;
-      });
-      
-      if (newLines.length !== lines.length) {
-        fs.writeFileSync(filePath, newLines.join('\n'));
-        console.log(`Manually fixed unused imports in: ${filePath}`);
       }
+      
+      // Clean up empty lines
+      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content);
+        console.log(`Fixed unused imports in: ${filePath}`);
+        return true;
+      }
+    } catch (error) {
+      // ESLint might fail, continue with other files
+      console.log(`Skipping ${filePath} due to ESLint error: ${error.message}`);
     }
+    
+    return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.log(`Error processing ${filePath}: ${error.message}`);
+    return false;
+  }
+};
+
+// Main execution
+console.log('Starting unused imports cleanup...');
+
+const files = getAllFiles('/workspace/app');
+let fixedCount = 0;
+
+for (const file of files) {
+  if (removeUnusedImports(file)) {
+    fixedCount++;
   }
 }
 
-// Function to recursively find all TypeScript/JavaScript files
-function findFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.includes('node_modules') && !file.includes('.git')) {
-      findFiles(filePath, fileList);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      fileList.push(filePath);
-    }
-  });
-  
-  return fileList;
+console.log(`Fixed unused imports in ${fixedCount} files.`);
+
+// Also fix some specific files that have issues
+const specificFiles = [
+  '/workspace/App_clean.tsx',
+  '/workspace/app/components/Analytics.tsx',
+  '/workspace/app/components/EnhancedPerformanceMonitor.tsx',
+  '/workspace/app/components/Footer.tsx',
+  '/workspace/app/components/ImprovedFooter.tsx',
+  '/workspace/app/components/ImprovedImage.tsx',
+  '/workspace/app/components/Navigation.tsx',
+  '/workspace/app/components/PerformanceOptimizer.tsx'
+];
+
+for (const file of specificFiles) {
+  if (fs.existsSync(file)) {
+    removeUnusedImports(file);
+  }
 }
 
-// Main execution
-console.log('Starting to fix unused imports...');
-
-const files = findFiles('/workspace/app');
-files.forEach(file => {
-  removeUnusedImports(file);
-});
-
-// Also fix component files
-const componentFiles = findFiles('/workspace/app/components');
-componentFiles.forEach(file => {
-  removeUnusedImports(file);
-});
-
-console.log('Finished fixing unused imports.');
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+console.log('Cleanup completed!');

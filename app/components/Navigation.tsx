@@ -1,18 +1,18 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import { Home } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Cloud } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { 
+  Brain, 
+  Shield, 
+  Zap, 
+  Globe, 
+  Star, 
+  Users, 
+  Sparkles, 
+  Mail, 
+  ChevronDown,
+  Menu,
+  X
+} from 'lucide-react';
 
 interface NavigationProps {
   onSidebarToggle: () => void;
