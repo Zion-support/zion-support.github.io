@@ -14,17 +14,7 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-export default function AboutPage()    {
-return (
-    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and expertise in AI and IT solutions. Discover our team and company culture." />
-        <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" />
-      </Helmet>
-    }
-  ];
-
+export default function AboutPage() {
   const stats = [
     { number: '50+', label: 'Projects Completed' },
     { number: '25+', label: 'Happy Clients' },
@@ -34,14 +24,11 @@ return (
 
   return (
     <>
-<SEO 
-        title="About Us - Zion Tech Group"
-        description="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions."
-        keywords="about us, team, mission, values, AI company, IT solutions"
-        url="/about"
-      />
-
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and expertise in AI and IT solutions. Discover our team and company culture." />
+        <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
@@ -54,9 +41,8 @@ return (
               About Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-Empowering businesses through innovative technology solutions
+              Empowering businesses through innovative technology solutions
             </p>
-<<<<<<< HEAD
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
               Founded in 2020, we've been at the forefront of digital transformation, 
               helping companies leverage the power of artificial intelligence, cybersecurity, 
@@ -154,6 +140,10 @@ Empowering businesses through innovative technology solutions
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
 interface PerformanceMetrics {
   cls: number | null;
@@ -18,7 +16,6 @@ const PerformanceMonitor: React.FC = () => {
     inp: null,
     fcp: null,
     lcp: null,
-<<<<<<< HEAD
     ttfb: null
   });
 

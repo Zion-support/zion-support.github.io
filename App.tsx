@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -8,7 +8,6 @@ import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-<<<<<<< HEAD
 
 // Page Components
 import HomePage from './app/page';
@@ -119,12 +118,6 @@ function App() {
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
-=======
-=======
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
-import LoadingSpinner from './app/components/LoadingSpinner';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
->>>>>>> origin/main
   );
 }
 
