@@ -2,10 +2,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
+  Mic, 
+  FileText, 
+  Clock, 
   Users, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
+  Globe, 
   CheckCircle, 
   ArrowRight, 
   Star, 
@@ -13,107 +14,133 @@ import {
   Shield, 
   Brain,
   Download,
-  Upload,
+  Share2,
   Search,
   Filter,
-  Bell,
-  Clock
+  Play,
+  Pause,
+  Volume2
 } from 'lucide-react';
 
-export default function ZionAICustomerInsights() {
+export default function ZionAIMeetingTranscriber() {
   const features = [
     {
-      title: "Customer Segmentation",
-      description: "AI-powered customer segmentation based on behavior, preferences, and engagement patterns",
+      title: "Real-time Transcription",
+      description: "Live transcription of meetings with 99.5% accuracy using advanced AI speech recognition",
+      icon: <Mic className="w-6 h-6" />
+    },
+    {
+      title: "Multi-language Support",
+      description: "Supports 50+ languages with automatic language detection and translation",
+      icon: <Globe className="w-6 h-6" />
+    },
+    {
+      title: "Speaker Identification",
+      description: "Automatically identifies and labels different speakers in meetings",
       icon: <Users className="w-6 h-6" />
     },
     {
-      title: "Predictive Analytics",
-      description: "Predict customer behavior and preferences using advanced machine learning algorithms",
-      icon: <Brain className="w-6 h-6" />
+      title: "Action Items Extraction",
+      description: "AI-powered extraction of action items, decisions, and key points from meetings",
+      icon: <CheckCircle className="w-6 h-6" />
     },
     {
-      title: "Engagement Tracking",
-      description: "Monitor customer engagement across all touchpoints and channels",
-      icon: <Target className="w-6 h-6" />
+      title: "Search & Filter",
+      description: "Search through transcripts with advanced filtering and keyword highlighting",
+      icon: <Search className="w-6 h-6" />
     },
     {
-      title: "Churn Prediction",
-      description: "Identify customers at risk of churning and take proactive retention actions",
-      icon: <TrendingUp className="w-6 h-6" />
-    },
-    {
-      title: "Personalization Engine",
-      description: "Create personalized experiences based on individual customer insights",
-      icon: <Zap className="w-6 h-6" />
-    },
-    {
-      title: "Real-time Dashboards",
-      description: "Comprehensive dashboards with real-time customer insights and analytics",
-      icon: <BarChart3 className="w-6 h-6" />
+      title: "Export Options",
+      description: "Export transcripts in multiple formats: PDF, Word, TXT, and more",
+      icon: <Download className="w-6 h-6" />
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams",
       features: [
-        "Up to 1,000 customers",
-        "Basic segmentation",
-        "Standard analytics",
+        "Up to 10 hours of transcription/month",
+        "Basic speaker identification",
+        "PDF export",
         "Email support",
-        "Monthly reports"
+        "Standard accuracy (95%)"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$79",
       period: "/month",
       description: "Most popular for growing businesses",
       features: [
-        "Up to 10,000 customers",
-        "Advanced segmentation",
-        "Predictive analytics",
+        "Up to 50 hours of transcription/month",
+        "Advanced speaker identification",
+        "Multiple export formats",
+        "Action items extraction",
         "Priority support",
-        "Real-time dashboards",
-        "Churn prediction",
-        "API access"
+        "High accuracy (99.5%)",
+        "Team collaboration features"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited customers",
-        "AI-powered insights",
-        "Custom models",
-        "Dedicated support",
+        "Unlimited transcription",
+        "Custom speaker profiles",
+        "API access",
         "White-label options",
-        "Advanced integrations",
-        "Custom reporting"
+        "Dedicated support",
+        "Maximum accuracy (99.8%)",
+        "Advanced analytics",
+        "Custom integrations"
       ],
       popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Chen",
+      company: "TechStart Inc.",
+      role: "Product Manager",
+      content: "Zion AI Meeting Transcriber has revolutionized our team meetings. The accuracy is incredible and the action items extraction saves us hours every week.",
+      rating: 5
+    },
+    {
+      name: "Michael Rodriguez",
+      company: "Consulting Firm",
+      role: "Senior Partner",
+      content: "The multi-language support is a game-changer for our international clients. We can now transcribe meetings in any language with perfect accuracy.",
+      rating: 5
+    },
+    {
+      name: "Emily Johnson",
+      company: "Marketing Agency",
+      role: "Creative Director",
+      content: "The speaker identification feature is so accurate, even in noisy environments. It's like having a professional stenographer at every meeting.",
+      rating: 5
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Customer Insights - AI-Powered Customer Analytics | Zion Tech Group</title>
+        <title>Zion AI Meeting Transcriber - AI-Powered Meeting Transcription | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your customer understanding with AI-powered insights. Customer segmentation, predictive analytics, churn prediction, and personalized experiences."
+          content="Transform your meetings with AI-powered transcription. Real-time transcription, speaker identification, action items extraction, and multi-language support. Start your free trial today!"
         />
         <meta
           name="keywords"
-          content="AI customer insights, customer analytics, customer segmentation, churn prediction, customer behavior, predictive analytics, personalization"
+          content="AI meeting transcription, real-time transcription, speaker identification, meeting notes, action items, multi-language support, voice recognition, meeting analytics"
         />
       </Helmet>
 
@@ -123,18 +150,18 @@ export default function ZionAICustomerInsights() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Customer Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Meeting Solutions</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Customer Insights
+                Zion AI Meeting Transcriber
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your customer understanding with AI-powered insights. Get deep insights into customer behavior, 
-              preferences, and engagement patterns to drive better business decisions.
+              Transform your meetings with AI-powered transcription that captures every word with 99.5% accuracy. 
+              Real-time transcription, speaker identification, and intelligent action items extraction.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -150,8 +177,40 @@ export default function ZionAICustomerInsights() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Users className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              <div className="text-center group">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Brain className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">99.5%</div>
+                <div className="text-gray-300 text-xs md:text-sm">Accuracy Rate</div>
+              </div>
+              <div className="text-center group">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Globe className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">50+</div>
+                <div className="text-gray-300 text-xs md:text-sm">Languages</div>
+              </div>
+              <div className="text-center group">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Clock className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">Real-time</div>
+                <div className="text-gray-300 text-xs md:text-sm">Processing</div>
+              </div>
+              <div className="text-center group">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">100%</div>
+                <div className="text-gray-300 text-xs md:text-sm">Secure</div>
+              </div>
             </div>
           </div>
         </section>
@@ -161,10 +220,10 @@ export default function ZionAICustomerInsights() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Deep Customer Understanding
+                Powerful Features for Modern Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to understand, predict, and engage your customers with AI-powered intelligence.
+                Everything you need to capture, analyze, and act on your meeting content with AI-powered intelligence.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -193,10 +252,10 @@ export default function ZionAICustomerInsights() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Plan
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start with our free trial and scale as your customer base grows.
+                Choose the plan that fits your team's needs. All plans include our core AI transcription features.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -249,15 +308,48 @@ export default function ZionAICustomerInsights() {
           </div>
         </section>
 
+        {/* Testimonials Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Trusted by Teams Worldwide
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                See what our customers say about Zion AI Meeting Transcriber
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                >
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Understand Your Customers?
+              Ready to Transform Your Meetings?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using AI to better understand their customers. 
-              Start your free trial today and unlock the power of customer intelligence.
+              Join thousands of teams already using Zion AI Meeting Transcriber to capture every important detail. 
+              Start your free trial today and experience the future of meeting transcription.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

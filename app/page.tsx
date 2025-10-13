@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Mic, Receipt, Share2 } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -135,6 +135,30 @@ const HomePage = () => {
       price: "From $99/month",
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Meeting Transcriber",
+      description: "AI-powered meeting transcription with 99.5% accuracy, speaker identification, and action items extraction",
+      price: "From $29/month",
+      icon: <Mic className="w-6 h-6" />,
+      link: "/zion-ai-meeting-transcriber",
+      featured: true
+    },
+    {
+      name: "Zion AI Expense Tracker",
+      description: "Smart expense management with AI-powered receipt scanning, automatic categorization, and real-time analytics",
+      price: "From $9/month",
+      icon: <Receipt className="w-6 h-6" />,
+      link: "/zion-ai-expense-tracker",
+      featured: true
+    },
+    {
+      name: "Zion AI Social Scheduler",
+      description: "AI-powered social media management with content generation, optimal timing, and multi-platform scheduling",
+      price: "From $19/month",
+      icon: <Share2 className="w-6 h-6" />,
+      link: "/zion-ai-social-scheduler",
       featured: true
     }
   ];

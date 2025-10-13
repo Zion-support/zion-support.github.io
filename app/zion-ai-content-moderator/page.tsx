@@ -2,35 +2,28 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Video, 
-  Play, 
-  Download, 
-  Upload, 
+  Shield, 
+  BarChart3, 
+  TrendingUp, 
   CheckCircle, 
   ArrowRight, 
   Star, 
   Zap, 
-  Shield, 
-  Brain,
-  Search,
-  Filter,
-  Bell,
-  Target,
-  Clock
+  Brain
 } from 'lucide-react';
 
-export default function ZionAIVideoGenerator() {
+export default function ZionAIContentModerator() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Video Generator - AI-Powered Video Creation | Zion Tech Group</title>
+        <title>Zion AI Content Moderator - AI-Powered Content Moderation | Zion Tech Group</title>
         <meta
           name="description"
-          content="Create stunning videos with AI-powered video generation. Automated video creation, editing, and optimization for all your marketing needs."
+          content="Moderate content with AI-powered analysis. Automated content filtering, moderation, and compliance checking for your platform."
         />
         <meta
           name="keywords"
-          content="AI video generator, video creation, automated video, video editing, video marketing, AI video tools"
+          content="AI content moderation, content filtering, automated moderation, content compliance, content safety, moderation AI"
         />
       </Helmet>
 
@@ -39,18 +32,18 @@ export default function ZionAIVideoGenerator() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Creation</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Content Moderation</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Video Generator
+                Zion AI Content Moderator
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Create stunning videos with AI-powered video generation. Automated video creation, editing, 
-              and optimization for all your marketing and content needs.
+              Moderate content with AI-powered analysis. Automated content filtering, 
+              moderation, and compliance checking for your platform.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -61,13 +54,6 @@ export default function ZionAIVideoGenerator() {
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
-                to="#demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-              >
-                Watch Demo
-                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
-              </Link>
             </div>
           </div>
         </section>
@@ -75,11 +61,11 @@ export default function ZionAIVideoGenerator() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Create Amazing Videos?
+              Ready to Moderate Content with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of creators using AI to produce professional videos. 
-              Start your free trial today and experience the future of video creation.
+              Join thousands of platforms using AI for content moderation. 
+              Start your free trial today and experience the power of AI content intelligence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

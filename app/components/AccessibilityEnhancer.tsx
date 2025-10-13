@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
-<<<<<<< HEAD
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
   enableHighContrast?: boolean;
@@ -105,18 +104,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         };
       };
 
-<<<<<<< HEAD
       // Apply focus trap to modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
       const cleanupFunctions = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
-=======
+
       // Initialize all enhancements
       enhanceFocusManagement()
       enhanceKeyboardNavigation()
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
 
       return () => {
-<<<<<<< HEAD
         cleanupFunctions.forEach(cleanup => cleanup());
       };
     };

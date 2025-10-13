@@ -2,10 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Users, 
+  Mail, 
   BarChart3, 
   TrendingUp, 
-  Target, 
+  Users, 
   CheckCircle, 
   ArrowRight, 
   Star, 
@@ -17,87 +17,88 @@ import {
   Search,
   Filter,
   Bell,
+  Target,
   Clock
 } from 'lucide-react';
 
-export default function ZionAICustomerInsights() {
+export default function ZionAIEmailAnalyzer() {
   const features = [
     {
-      title: "Customer Segmentation",
-      description: "AI-powered customer segmentation based on behavior, preferences, and engagement patterns",
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Predict customer behavior and preferences using advanced machine learning algorithms",
+      title: "Sentiment Analysis",
+      description: "AI-powered sentiment analysis to understand customer emotions and satisfaction levels",
       icon: <Brain className="w-6 h-6" />
     },
     {
-      title: "Engagement Tracking",
-      description: "Monitor customer engagement across all touchpoints and channels",
+      title: "Response Time Tracking",
+      description: "Monitor and optimize email response times for better customer service",
+      icon: <Clock className="w-6 h-6" />
+    },
+    {
+      title: "Keyword Analysis",
+      description: "Identify trending topics and keywords in customer communications",
+      icon: <Search className="w-6 h-6" />
+    },
+    {
+      title: "Performance Metrics",
+      description: "Comprehensive analytics on email engagement and effectiveness",
+      icon: <BarChart3 className="w-6 h-6" />
+    },
+    {
+      title: "Automated Insights",
+      description: "AI-generated insights and recommendations for email optimization",
       icon: <Target className="w-6 h-6" />
     },
     {
-      title: "Churn Prediction",
-      description: "Identify customers at risk of churning and take proactive retention actions",
-      icon: <TrendingUp className="w-6 h-6" />
-    },
-    {
-      title: "Personalization Engine",
-      description: "Create personalized experiences based on individual customer insights",
-      icon: <Zap className="w-6 h-6" />
-    },
-    {
-      title: "Real-time Dashboards",
-      description: "Comprehensive dashboards with real-time customer insights and analytics",
-      icon: <BarChart3 className="w-6 h-6" />
+      title: "Team Collaboration",
+      description: "Share insights and collaborate with team members on email strategies",
+      icon: <Users className="w-6 h-6" />
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$49",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams",
       features: [
-        "Up to 1,000 customers",
-        "Basic segmentation",
-        "Standard analytics",
+        "Up to 1,000 emails/month",
+        "Basic sentiment analysis",
+        "Response time tracking",
         "Email support",
-        "Monthly reports"
+        "Standard analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$79",
       period: "/month",
       description: "Most popular for growing businesses",
       features: [
-        "Up to 10,000 customers",
-        "Advanced segmentation",
-        "Predictive analytics",
+        "Up to 10,000 emails/month",
+        "Advanced sentiment analysis",
+        "Keyword analysis",
         "Priority support",
-        "Real-time dashboards",
-        "Churn prediction",
-        "API access"
+        "Team collaboration",
+        "Advanced analytics",
+        "Custom reports"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited customers",
+        "Unlimited emails",
         "AI-powered insights",
-        "Custom models",
+        "Custom integrations",
         "Dedicated support",
         "White-label options",
-        "Advanced integrations",
-        "Custom reporting"
+        "API access",
+        "Advanced security"
       ],
       popular: false
     }
@@ -106,14 +107,14 @@ export default function ZionAICustomerInsights() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Customer Insights - AI-Powered Customer Analytics | Zion Tech Group</title>
+        <title>Zion AI Email Analyzer - AI-Powered Email Analytics | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your customer understanding with AI-powered insights. Customer segmentation, predictive analytics, churn prediction, and personalized experiences."
+          content="Transform your email communications with AI-powered analysis. Sentiment analysis, response time tracking, keyword analysis, and performance metrics for better customer engagement."
         />
         <meta
           name="keywords"
-          content="AI customer insights, customer analytics, customer segmentation, churn prediction, customer behavior, predictive analytics, personalization"
+          content="AI email analyzer, email analytics, sentiment analysis, email performance, customer communication, email insights, email optimization"
         />
       </Helmet>
 
@@ -123,18 +124,18 @@ export default function ZionAICustomerInsights() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Customer Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Email Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Customer Insights
+                Zion AI Email Analyzer
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your customer understanding with AI-powered insights. Get deep insights into customer behavior, 
-              preferences, and engagement patterns to drive better business decisions.
+              Transform your email communications with AI-powered analysis. Get insights into customer sentiment, 
+              response times, and engagement patterns to optimize your email strategy.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -150,7 +151,7 @@ export default function ZionAICustomerInsights() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Users className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Mail className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>
@@ -161,10 +162,10 @@ export default function ZionAICustomerInsights() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Deep Customer Understanding
+                Powerful Email Analytics
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to understand, predict, and engage your customers with AI-powered intelligence.
+                Everything you need to analyze, optimize, and improve your email communications with AI intelligence.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -196,7 +197,7 @@ export default function ZionAICustomerInsights() {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start with our free trial and scale as your customer base grows.
+                Start with our free trial and scale as your email volume grows.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -253,11 +254,11 @@ export default function ZionAICustomerInsights() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Understand Your Customers?
+              Ready to Optimize Your Emails?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using AI to better understand their customers. 
-              Start your free trial today and unlock the power of customer intelligence.
+              Join thousands of businesses using AI to improve their email communications. 
+              Start your free trial today and experience the power of email intelligence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -2,10 +2,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Users, 
-  BarChart3, 
+  Receipt, 
+  CreditCard, 
   TrendingUp, 
-  Target, 
+  PieChart, 
+  Smartphone, 
+  Camera, 
   CheckCircle, 
   ArrowRight, 
   Star, 
@@ -17,103 +19,133 @@ import {
   Search,
   Filter,
   Bell,
-  Clock
+  Target,
+  DollarSign,
+  BarChart3
 } from 'lucide-react';
 
-export default function ZionAICustomerInsights() {
+export default function ZionAIExpenseTracker() {
   const features = [
     {
-      title: "Customer Segmentation",
-      description: "AI-powered customer segmentation based on behavior, preferences, and engagement patterns",
-      icon: <Users className="w-6 h-6" />
+      title: "Smart Receipt Scanning",
+      description: "AI-powered receipt scanning with automatic data extraction and categorization",
+      icon: <Camera className="w-6 h-6" />
     },
     {
-      title: "Predictive Analytics",
-      description: "Predict customer behavior and preferences using advanced machine learning algorithms",
+      title: "Automatic Categorization",
+      description: "Intelligent expense categorization using machine learning algorithms",
       icon: <Brain className="w-6 h-6" />
     },
     {
-      title: "Engagement Tracking",
-      description: "Monitor customer engagement across all touchpoints and channels",
+      title: "Real-time Analytics",
+      description: "Comprehensive spending analytics with visual charts and insights",
+      icon: <BarChart3 className="w-6 h-6" />
+    },
+    {
+      title: "Multi-currency Support",
+      description: "Track expenses in multiple currencies with automatic conversion",
+      icon: <DollarSign className="w-6 h-6" />
+    },
+    {
+      title: "Budget Management",
+      description: "Set budgets and get alerts when approaching limits",
       icon: <Target className="w-6 h-6" />
     },
     {
-      title: "Churn Prediction",
-      description: "Identify customers at risk of churning and take proactive retention actions",
-      icon: <TrendingUp className="w-6 h-6" />
-    },
-    {
-      title: "Personalization Engine",
-      description: "Create personalized experiences based on individual customer insights",
-      icon: <Zap className="w-6 h-6" />
-    },
-    {
-      title: "Real-time Dashboards",
-      description: "Comprehensive dashboards with real-time customer insights and analytics",
-      icon: <BarChart3 className="w-6 h-6" />
+      title: "Tax Preparation",
+      description: "Automated tax categorization and report generation for easy filing",
+      icon: <Receipt className="w-6 h-6" />
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$49",
+      name: "Personal",
+      price: "$9",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individuals",
       features: [
-        "Up to 1,000 customers",
-        "Basic segmentation",
-        "Standard analytics",
+        "Up to 100 receipts/month",
+        "Basic categorization",
+        "Mobile app access",
+        "Basic reports",
         "Email support",
-        "Monthly reports"
+        "1 bank account sync"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$29",
       period: "/month",
-      description: "Most popular for growing businesses",
+      description: "Most popular for freelancers",
       features: [
-        "Up to 10,000 customers",
-        "Advanced segmentation",
-        "Predictive analytics",
+        "Up to 500 receipts/month",
+        "Advanced AI categorization",
+        "Real-time analytics",
+        "Budget management",
         "Priority support",
-        "Real-time dashboards",
-        "Churn prediction",
-        "API access"
+        "5 bank account syncs",
+        "Tax preparation tools",
+        "Export to accounting software"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$399",
+      name: "Business",
+      price: "$79",
       period: "/month",
-      description: "For large organizations",
+      description: "For small businesses",
       features: [
-        "Unlimited customers",
-        "AI-powered insights",
-        "Custom models",
+        "Unlimited receipts",
+        "Team collaboration",
+        "Advanced reporting",
+        "Custom categories",
         "Dedicated support",
+        "Unlimited bank accounts",
+        "API access",
         "White-label options",
-        "Advanced integrations",
-        "Custom reporting"
+        "Advanced tax features"
       ],
       popular: false
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: "David Kim",
+      company: "Freelance Consultant",
+      role: "Independent Contractor",
+      content: "Zion AI Expense Tracker has saved me hours every week. The receipt scanning is incredibly accurate and the automatic categorization makes tax season a breeze.",
+      rating: 5
+    },
+    {
+      name: "Lisa Martinez",
+      company: "Small Business Owner",
+      role: "CEO",
+      content: "The real-time analytics help me understand our spending patterns and make better financial decisions. The team collaboration features are fantastic.",
+      rating: 5
+    },
+    {
+      name: "James Wilson",
+      company: "Marketing Agency",
+      role: "Finance Manager",
+      content: "The multi-currency support is perfect for our international clients. The AI categorization is so accurate, it's like having a personal accountant.",
+      rating: 5
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Customer Insights - AI-Powered Customer Analytics | Zion Tech Group</title>
+        <title>Zion AI Expense Tracker - Smart Expense Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your customer understanding with AI-powered insights. Customer segmentation, predictive analytics, churn prediction, and personalized experiences."
+          content="Revolutionize expense tracking with AI-powered receipt scanning, automatic categorization, and real-time analytics. Perfect for individuals, freelancers, and businesses."
         />
         <meta
           name="keywords"
-          content="AI customer insights, customer analytics, customer segmentation, churn prediction, customer behavior, predictive analytics, personalization"
+          content="AI expense tracker, receipt scanning, expense management, budget tracking, tax preparation, financial analytics, expense categorization, receipt OCR"
         />
       </Helmet>
 
@@ -123,18 +155,18 @@ export default function ZionAICustomerInsights() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Customer Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Financial Management</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Customer Insights
+                Zion AI Expense Tracker
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your customer understanding with AI-powered insights. Get deep insights into customer behavior, 
-              preferences, and engagement patterns to drive better business decisions.
+              Transform your expense management with AI-powered receipt scanning, automatic categorization, 
+              and intelligent financial insights. Save time and money with smart expense tracking.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -150,8 +182,40 @@ export default function ZionAICustomerInsights() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Users className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Smartphone className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              <div className="text-center group">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Camera className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">99.2%</div>
+                <div className="text-gray-300 text-xs md:text-sm">OCR Accuracy</div>
+              </div>
+              <div className="text-center group">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Brain className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">95%</div>
+                <div className="text-gray-300 text-xs md:text-sm">Auto Categorization</div>
+              </div>
+              <div className="text-center group">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Clock className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">2 min</div>
+                <div className="text-gray-300 text-xs md:text-sm">Setup Time</div>
+              </div>
+              <div className="text-center group">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="w-6 h-6 text-cyan-400" />
+                </div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">Bank-level</div>
+                <div className="text-gray-300 text-xs md:text-sm">Security</div>
+              </div>
             </div>
           </div>
         </section>
@@ -161,10 +225,10 @@ export default function ZionAICustomerInsights() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Deep Customer Understanding
+                Intelligent Expense Management
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to understand, predict, and engage your customers with AI-powered intelligence.
+                Everything you need to track, analyze, and optimize your expenses with AI-powered intelligence.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -196,7 +260,7 @@ export default function ZionAICustomerInsights() {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start with our free trial and scale as your customer base grows.
+                Start with our free trial and upgrade as your needs grow. All plans include core AI features.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -249,15 +313,48 @@ export default function ZionAICustomerInsights() {
           </div>
         </section>
 
+        {/* Testimonials Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Loved by Users Worldwide
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                See what our customers say about Zion AI Expense Tracker
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                >
+                  <div className="flex items-center mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Understand Your Customers?
+              Ready to Simplify Your Expenses?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using AI to better understand their customers. 
-              Start your free trial today and unlock the power of customer intelligence.
+              Join thousands of users who have transformed their expense management with AI. 
+              Start your free trial today and experience the future of financial tracking.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -273,7 +370,7 @@ export default function ZionAICustomerInsights() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Contact Sales
-                <Users className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <CreditCard className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>

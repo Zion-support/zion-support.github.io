@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
   lcp: number | null;
   fid: number | null;
   cls: number | null;
