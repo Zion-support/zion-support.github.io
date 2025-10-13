@@ -24,7 +24,6 @@ import { Play } from 'lucide-react';
 import { DollarSign } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { FileText } from 'lucide-react';
-import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 interface SidebarProps {

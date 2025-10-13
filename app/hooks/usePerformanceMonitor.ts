@@ -1,5 +1,3 @@
-import { Star } from 'lucide-react';
-import { Monitor } from 'lucide-react';
 
 
 interface PerformanceMetrics {

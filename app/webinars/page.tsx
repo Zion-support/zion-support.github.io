@@ -7,7 +7,6 @@ import { Brain } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Play } from 'lucide-react';
-import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 const WebinarsPage = () => {

@@ -9,7 +9,6 @@ import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
-import { Filter } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 

@@ -1,27 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Heart } from 'lucide-react';
-  Heart, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  AlertCircle
-} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Users, CheckCircle, Zap, Brain, Globe, Monitor, Target, BarChart3, Heart, AlertCircle, TrendingUp } from 'lucide-react';
 
 const AICustomerSentimentTrackerPage = () => {
   const features = [
@@ -54,6 +34,36 @@ const AICustomerSentimentTrackerPage = () => {
       icon: <Users className="w-8 h-8 text-blue-400" />,
       title: "Team Collaboration",
       description: "Share insights across teams, assign tasks, and track resolution progress for better customer experience."
+    }
+  ];
+
+  const stats = [
+    { number: "95%", label: "Accuracy Rate" },
+    { number: "2.5M+", label: "Mentions Analyzed" },
+    { number: "500+", label: "Happy Customers" },
+    { number: "24/7", label: "Real-time Monitoring" }
+  ];
+
+  const benefits = [
+    {
+      icon: <TrendingUp className="w-8 h-8 text-green-400" />,
+      title: "Increase Customer Satisfaction",
+      description: "Identify and address issues before they impact customer experience"
+    },
+    {
+      icon: <Target className="w-8 h-8 text-blue-400" />,
+      title: "Improve Response Time",
+      description: "Get instant alerts for negative sentiment and respond proactively"
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+      title: "Data-Driven Decisions",
+      description: "Make informed decisions based on comprehensive sentiment analytics"
+    },
+    {
+      icon: <Users className="w-8 h-8 text-cyan-400" />,
+      title: "Team Collaboration",
+      description: "Share insights and coordinate responses across your entire team"
     }
   ];
 

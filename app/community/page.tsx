@@ -6,7 +6,6 @@ import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Calendar } from 'lucide-react';
-import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 export default function Community() {

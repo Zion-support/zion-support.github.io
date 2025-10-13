@@ -19,7 +19,6 @@ import { Headphones } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { FileText } from 'lucide-react';
-import { Hand } from 'lucide-react';
 
 const ZionAIInvoiceGeneratorPage = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');

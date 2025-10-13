@@ -8,7 +8,6 @@ import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Home } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -18,12 +17,10 @@ import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { Globe } from 'lucide-react';
-import { Code } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
-import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 const HomePage = () => {

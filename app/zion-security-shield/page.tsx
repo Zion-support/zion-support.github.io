@@ -8,7 +8,6 @@ import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Lock } from 'lucide-react';
-import { Monitor } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 

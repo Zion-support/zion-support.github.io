@@ -10,7 +10,6 @@ import { Sparkles } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { Filter } from 'lucide-react';
-import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 const WhitepapersPage = () => {

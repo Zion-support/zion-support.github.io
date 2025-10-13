@@ -12,7 +12,6 @@ import { Database } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Lock } from 'lucide-react';
-import { Monitor } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import { FileText } from 'lucide-react';
 

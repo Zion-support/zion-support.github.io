@@ -15,7 +15,6 @@ import { Code } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
-import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 interface SidebarProps {

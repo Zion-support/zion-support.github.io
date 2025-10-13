@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
@@ -14,6 +13,13 @@ import { Globe as GlobeIcon } from 'lucide-react';
 
 
 export default function AboutPage() {
+
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "50+", label: "Happy Clients" },
+    { number: "5+", label: "Years Experience" },
+    { number: "24/7", label: "Support Available" }
+  ];
 
   const values = [
     {

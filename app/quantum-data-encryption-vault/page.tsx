@@ -9,7 +9,6 @@ import { Shield } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
-import { Mic } from 'lucide-react';
 
 const QuantumDataEncryptionVault = () => {
   const features = [

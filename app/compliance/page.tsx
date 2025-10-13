@@ -4,12 +4,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
-import { Monitor } from 'lucide-react';
 import { FileText } from 'lucide-react';
 
 export default function Compliance() {

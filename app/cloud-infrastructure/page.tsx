@@ -12,7 +12,6 @@ import { Globe } from 'lucide-react';
 import { Network } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Code } from 'lucide-react';
-import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import { Cloud } from 'lucide-react';

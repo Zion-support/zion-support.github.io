@@ -3,110 +3,116 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 // Get all TypeScript/JavaScript files
-<<<<<<< HEAD
-function getAllFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      getAllFiles(filePath, fileList);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      fileList.push(filePath);
-    }
-  });
-  
-  return fileList;
-=======
-function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let results = [];
-  const list = fs.readdirSync(dir);
-  
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat && stat.isDirectory()) {
-      // Skip node_modules and other directories
-      if (!['node_modules', '.git', 'dist', 'build'].includes(file)) {
-        results = results.concat(getAllFiles(filePath, extensions));
-      }
-    } else {
-      if (extensions.some(ext => file.endsWith(ext))) {
-        results.push(filePath);
-      }
-    }
-  });
-  
-  return results;
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
-}
+const files = execSync('find . -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | grep -v node_modules | grep -v dist', { encoding: 'utf8' })
+  .trim()
+  .split('\n')
+  .filter(file => file.length > 0);
 
-// Fix unused imports in a file
-function fixUnusedImports(filePath) {
-  try {
-<<<<<<< HEAD
-    console.log(`Fixing unused imports in: ${filePath}`);
-    
-    // Use ESLint to fix unused imports
-    execSync(`npx eslint "${filePath}" --fix --ext .ts,.tsx`, { 
-      stdio: 'pipe',
-      cwd: '/workspace'
-    });
-    
-    console.log(`✅ Fixed: ${filePath}`);
-  } catch (error) {
-    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
-=======
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Skip if file has merge conflicts
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Skipping ${filePath} - has merge conflicts`);
-      return;
-    }
-    
-    // Run ESLint with --fix to remove unused imports
-    try {
-      execSync(`npx eslint "${filePath}" --fix --ext .ts,.tsx,.js,.jsx`, { 
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      console.log(`Fixed unused imports in ${filePath}`);
-    } catch (error) {
-      // ESLint might fail for some files, that's okay
-      console.log(`Could not auto-fix ${filePath}: ${error.message}`);
-    }
-  } catch (error) {
-    console.log(`Error processing ${filePath}: ${error.message}`);
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
-  }
-}
+console.log(`Found ${files.length} files to process`);
 
-// Main execution
-<<<<<<< HEAD
-console.log('🔧 Starting to fix unused imports...');
-
-const files = getAllFiles('/workspace/app');
-let fixedCount = 0;
+let fixedFiles = 0;
 
 files.forEach(file => {
   try {
-    fixUnusedImports(file);
-    fixedCount++;
+    const content = fs.readFileSync(file, 'utf8');
+    let newContent = content;
+    
+    // Remove unused imports (simple pattern matching)
+    const lines = content.split('\n');
+    const newLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Skip if it's not an import line
+      if (!line.trim().startsWith('import ')) {
+        newLines.push(line);
+        continue;
+      }
+      
+      // Check if this is a multi-line import
+      if (line.includes('{') && !line.includes('}')) {
+        // Multi-line import starting
+        const importLines = [line];
+        let j = i + 1;
+        while (j < lines.length && !lines[j].includes('}')) {
+          importLines.push(lines[j]);
+          j++;
+        }
+        if (j < lines.length) {
+          importLines.push(lines[j]);
+        }
+        
+        // Check if any of the imported items are used in the file
+        const fullImport = importLines.join('\n');
+        const importMatches = fullImport.match(/\{([^}]+)\}/);
+        if (importMatches) {
+          const imports = importMatches[1].split(',').map(imp => imp.trim().split(' as ')[0].trim());
+          const usedImports = imports.filter(imp => {
+            if (imp === 'React' || imp === 'lazy' || imp === 'Suspense') return true;
+            const regex = new RegExp(`\\b${imp}\\b`, 'g');
+            const fileContent = content.replace(fullImport, '');
+            return regex.test(fileContent);
+          });
+          
+          if (usedImports.length === 0) {
+            // Remove the entire import
+            i = j;
+            continue;
+          } else if (usedImports.length < imports.length) {
+            // Keep only used imports
+            const newImport = fullImport.replace(/\{[^}]+\}/, `{ ${usedImports.join(', ')} }`);
+            newLines.push(newImport);
+            i = j;
+            continue;
+          }
+        }
+        
+        // Keep the original import
+        importLines.forEach(l => newLines.push(l));
+        i = j;
+      } else {
+        // Single line import
+        const importMatch = line.match(/import\s+.*\s+from\s+['"]([^'"]+)['"]/);
+        if (importMatch) {
+          const moduleName = importMatch[1];
+          if (moduleName.includes('lucide-react')) {
+            // Check if any lucide-react imports are used
+            const importMatches = line.match(/\{([^}]+)\}/);
+            if (importMatches) {
+              const imports = importMatches[1].split(',').map(imp => imp.trim().split(' as ')[0].trim());
+              const usedImports = imports.filter(imp => {
+                const regex = new RegExp(`\\b${imp}\\b`, 'g');
+                const fileContent = content.replace(line, '');
+                return regex.test(fileContent);
+              });
+              
+              if (usedImports.length === 0) {
+                // Remove the entire import
+                continue;
+              } else if (usedImports.length < imports.length) {
+                // Keep only used imports
+                const newImport = line.replace(/\{[^}]+\}/, `{ ${usedImports.join(', ')} }`);
+                newLines.push(newImport);
+                continue;
+              }
+            }
+          }
+        }
+        
+        newLines.push(line);
+      }
+    }
+    
+    const finalContent = newLines.join('\n');
+    if (finalContent !== content) {
+      fs.writeFileSync(file, finalContent);
+      console.log(`Fixed: ${file}`);
+      fixedFiles++;
+    }
   } catch (error) {
-    console.log(`Error processing ${file}: ${error.message}`);
+    console.error(`Error processing ${file}:`, error.message);
   }
 });
 
-console.log(`\n🎉 Fixed unused imports in ${fixedCount} files!`);
-=======
-console.log('Fixing unused imports...');
-
-const files = getAllFiles('./app');
-files.forEach(fixUnusedImports);
-
-console.log('Done fixing unused imports!');
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
+console.log(`Fixed ${fixedFiles} files`);
