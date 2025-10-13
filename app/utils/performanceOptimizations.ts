@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// performanceOptimizations utility functions
-
-export interface PerformanceOptimizationsConfig {
-  enabled: boolean;
-}
-
-export class PerformanceOptimizations {
-  private config: PerformanceOptimizationsConfig;
-
-  constructor(config: Partial<PerformanceOptimizationsConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('performanceOptimizations initialized');
-    }
-  }
-}
-
-export const performanceOptimizations = new PerformanceOptimizations();
-export default performanceOptimizations;
-=======
 'use client''
 ): ((...args: Parameters<T>) => void) => {,;
 let timeout: NodeJS.Timeout,
@@ -36,7 +8,6 @@ let timeout: NodeJS.Timeout,
       ...args: Parameters</T>
 <T></React.Fragment>
   ) => {,
->>>>>>> origin/main
     clearTimeout(timeout),
   func: T,
 ): ((...args: Parameters<T>) => void) => {}

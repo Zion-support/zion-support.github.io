@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// advancedAnalytics utility functions
-
-export interface AdvancedAnalyticsConfig {
-  enabled: boolean;
-}
-
-export class AdvancedAnalytics {
-  private config: AdvancedAnalyticsConfig;
-
-  constructor(config: Partial<AdvancedAnalyticsConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('advancedAnalytics initialized');
-    }
-  }
-}
-
-export const advancedAnalytics = new AdvancedAnalytics();
-export default advancedAnalytics;
-=======
 'use client';';
 import React from 'react';';';
 import {Helmet}}from 'react-helmet-async';';';
@@ -99,7 +71,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <div className="max-w-7xl mx-auto"></div>"
 <div className="text-center mb-16"></div>"
 <h2>Why Choose Our AdvancedAnalytics?,</h2>
->>>>>>> origin/main
             </h2>
 <p>Our advancedanalytics solutions deliver unmatched performance, security, and scalability.;</p></p>
 </div>

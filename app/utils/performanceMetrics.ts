@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// performanceMetrics utility functions
-
-export interface PerformanceMetricsConfig {
-  enabled: boolean;
-}
-
-export class PerformanceMetrics {
-  private config: PerformanceMetricsConfig;
-
-  constructor(config: Partial<PerformanceMetricsConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('performanceMetrics initialized');
-    }
-  }
-}
-
-export const performanceMetrics = new PerformanceMetrics();
-export default performanceMetrics;
-=======
 'use client';'
 /**;
  * Performance Metrics Utility;
@@ -127,7 +99,6 @@ const navObserver = new PerformanceObserver(list => {</div>
 const navEntry = entry as PerformanceNavigationTiming
               this.recordMetric({</div>
                 name: 'pageLoadTime','
->>>>>>> origin/main
                 value: navEntry.loadEventEnd - navEntry.fetchStart,
                 unit: 'ms','
                 timestamp: new Date(),

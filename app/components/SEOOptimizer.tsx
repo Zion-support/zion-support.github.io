@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 'use client';';
 import React, { useEffect } from 'react';';';
 import Head from 'next/head';';'
@@ -240,31 +235,9 @@ const meta = document.createElement('meta');'
     }
 
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
->>>>>>> cursor/delete-records-a75e
 
 export default function SEOOptimizerPage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>SEOOptimizer - Zion Tech Group</title>
-        <meta name="description" content="Advanced SEOOptimizer solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            SEOOptimizer
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
   // TODO: Add parameters
 )
     <Head>
@@ -288,7 +261,6 @@ export default function SEOOptimizerPage() {
   )
 }
 export default SEOOptimizer;
->>>>>>> cursor/website-audit-and-update-with-deployment-acbe
       <meta name="twitter:image" content={ogImage} />"
 
       {/* Additional SEO meta tags */}

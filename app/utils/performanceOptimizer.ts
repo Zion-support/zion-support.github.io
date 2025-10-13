@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// performanceOptimizer utility functions
-
-export interface PerformanceOptimizerConfig {
-  enabled: boolean;
-}
-
-export class PerformanceOptimizer {
-  private config: PerformanceOptimizerConfig;
-
-  constructor(config: Partial<PerformanceOptimizerConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('performanceOptimizer initialized');
-    }
-  }
-}
-
-export const performanceOptimizer = new PerformanceOptimizer();
-export default performanceOptimizer;
-=======
 // Performance optimization utilities;
 export const debounce = <T extends (...args: any[]) => any>(,
   func: T,
@@ -118,7 +90,6 @@ const logger = {/* TODO: Fix JSX expression */},
   a: Record</OptimizationConfig>
 <string, unknown>, context?: string) => {/* TODO: Fix JSX expression */},
   erro,
->>>>>>> origin/main
   r: (messag,
   e: string, erro);
   r: Error) => {/* TODO: Fix JSX expression */,}}

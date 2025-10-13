@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-}
-=======
 #!/usr/bin/env node;
 import fs from 'fs';';
 import path from 'path';'
@@ -195,4 +183,3 @@ directories.forEach(dir => {/* TODO: Fix JSX expression */})
 // Process each file
 files.forEach(fixImportsInFile)
 // "</Link>
->>>>>>> cursor/delete-records-a75e

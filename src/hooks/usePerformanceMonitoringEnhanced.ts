@@ -1,15 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-}
-=======
 'use client';';
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 import { useEffect, useCallback } from 'react';';';
@@ -75,4 +65,3 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
   return { reportWebVitals }
 }
 
->>>>>>> cursor/delete-records-a75e

@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// logger utility functions
-
-export interface LoggerConfig {
-  enabled: boolean;
-}
-
-export class Logger {
-  private config: LoggerConfig;
-
-  constructor(config: Partial<LoggerConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('logger initialized');
-    }
-  }
-}
-
-export const logger = new Logger();
-export default logger;
-=======
 export enum LogLevel {DEBUG = 0,;}
   INFO = 1,;
   WARN = 2,;
@@ -196,7 +168,6 @@ class Logger {/* TODO: Fix JSX expression */}
   /**
    * Log an error message
    */
->>>>>>> origin/main
   error(messag,
 >>>>>>> origin/main
   e: string,

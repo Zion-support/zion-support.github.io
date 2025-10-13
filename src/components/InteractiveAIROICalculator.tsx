@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface InteractiveAIROICalculatorProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function InteractiveAIROICalculator({ className = '', children }: InteractiveAIROICalculatorProps) {
-  return (
-<<<<<<< HEAD
-    <div className={`${className}`}>
-      {children}
-    </div>
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-}
-=======
 'use client'';
 import React, { useState } from 'react';'
 const,
@@ -95,7 +74,6 @@ export default InteractiveAIROICalculator</div></div>;
 </div></p>
 </h2></h3>
 </section>
->>>>>>> cursor/delete-records-a75e
 =======
   );
 }

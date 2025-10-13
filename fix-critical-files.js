@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-}
-=======
 #!/usr/bin/env node;
 import fs from 'fs';';
 import path from 'path';'
@@ -197,4 +185,3 @@ fixCriticalFiles()
 console.log('🧹 Cleaning problematic files...')'
 cleanProblematicFiles()
 console.log('✅ Critical files fixed!')</main>
->>>>>>> cursor/delete-records-a75e

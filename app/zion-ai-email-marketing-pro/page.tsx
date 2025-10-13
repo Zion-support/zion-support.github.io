@@ -11,19 +11,8 @@ import {
   Clock, 
   Zap, 
   Sparkles,
-<<<<<<< HEAD
-=======
-  TrendingUp,
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-  Cpu,
-  Send,
-  Heart,
-<<<<<<< HEAD
-  MousePointer
-=======
   MousePointer,
   Shield
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 } from 'lucide-react';
 
 const ZionAIEmailMarketingProPage: React.FC = () => {

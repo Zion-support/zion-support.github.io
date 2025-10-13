@@ -1,28 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// accessibilityEnhancer utility functions
-
-export interface AccessibilityEnhancerConfig {
-=======
 interface AccessibilityConfig {
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
   enabled: boolean;
   highContrast: boolean;
   fontSize: 'small' | 'medium' | 'large';
   screenReader: boolean;
 }
 
-<<<<<<< HEAD
-export class AccessibilityEnhancer {
-  private config: AccessibilityEnhancerConfig;
-
-  constructor(config: Partial<AccessibilityEnhancerConfig> = {}) {
-=======
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
 
   constructor() {
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
     this.config = {
       enabled: true,
       highContrast: false,
@@ -60,9 +46,6 @@ class AccessibilityEnhancer {
 }
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
-<<<<<<< HEAD
-export default accessibilityEnhancer;
-=======
 export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [],}
   private skipLinks: HTMLElement[] = [],
   private landmarks: HTMLElement[] = [],
@@ -876,7 +859,6 @@ Recommendations:
   // TODO: Add properties
 }
     // Close any open modals or dropdowns
->>>>>>> origin/main;
 const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');'"
     modals.forEach(modal => {);
 const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;'"

@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-=======
 const fs = require('fs');';
 const path = require('path')'
 // Generate sitemap for the website;
@@ -45,7 +36,6 @@ ${pages.map(page => `  <url>
 const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml')'
   fs.writeFileSync(sitemapPath, sitemap)
   console.log('Sitemap generated successfully')'
->>>>>>> cursor/delete-records-a75e
 }
 import fs from 'fs';
 import path from 'path';

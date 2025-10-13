@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-// accessibilityUtils utility functions
-
-<<<<<<< HEAD
-export interface accessibilityUtilsConfig {
-  enabled: boolean;
-// Utility functions;
-export function utilityFunction() {
-  // Implementation here;
-  return null;
-=======
 interface AccessibilityUtilsConfig {
   enabled: boolean;
   highContrast: boolean;
   fontSize: 'small' | 'medium' | 'large';
   screenReader: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 
 export class AccessibilityUtils {
@@ -57,10 +45,6 @@ export class AccessibilityUtils {
   }
 }
 
-<<<<<<< HEAD
-export const accessibilityutils = new accessibilityUtils();
-export default accessibilityutils;
-=======
 // Focus management utilities;
 export const focusManagement = {
   // TODO: Add properties
@@ -489,7 +473,6 @@ export const initAccessibility = (): void => {/* TODO: Fix JSX expression */}
   })
   document.body.insertBefore(skipLink, document.body.firstChild)
 "`
->>>>>>> cursor/delete-records-a75e
 =======
 export const accessibilityUtils = new AccessibilityUtils();
 export default accessibilityUtils;

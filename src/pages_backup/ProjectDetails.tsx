@@ -1,34 +1,4 @@
 
-<<<<<<< HEAD
-interface ProjectDetailsProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function ProjectDetails({ className = '', children }: ProjectDetailsProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-}
-import React from 'react'
-import {Helmet} from 'react-helmet-async'
-import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'
-export default ProjectdetailsPage;
-'use client'
-        <title>Projectdetails - Zion Tech Group</title>
-            <h1 className = "text-4xl font-bold text-white mb-4">Projectdetails</h1>
-            <p className="text-gray-300 mb-8">This page is under construction.</p>;
-              Learn More;
-  );
-};
-=======
 class ErrorBoundary extends React.Component {
   // TODO: Add properties
 }
@@ -1961,6 +1931,5 @@ const ProjectDetails = () => {
 <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">"
                 Contact Us
 
->>>>>>> cursor/delete-records-a75e
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1

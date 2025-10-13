@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// formValidation utility functions
-
-export interface FormValidationConfig {
-  enabled: boolean;
-}
-
-export class FormValidation {
-  private config: FormValidationConfig;
-
-  constructor(config: Partial<FormValidationConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-=======
   validate: (value: T) => boolean;
   message: string;}
 }
@@ -51,7 +34,6 @@ export const validationRules = {}
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0;
   required: (message = 'This field is required'): ValidationRule<string> => ({}'
     validate: (value: string) => value !== null && value !== undefined && value.trim().length > 0,
->>>>>>> origin/main
     message}
   /**;
 >>>>>>> origin/main
@@ -653,13 +635,7 @@ export function debounce<T extends (...arg)
     }
   }
 }
-<<<<<<< HEAD
-
-export const formValidation = new FormValidation();
-export default formValidation;
-=======
 "`"
->>>>>>> cursor/delete-records-a75e
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1

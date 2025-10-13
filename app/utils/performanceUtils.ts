@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// performanceUtils utility functions
-
-export interface PerformanceUtilsConfig {
-  enabled: boolean;
-}
-
-export class PerformanceUtils {
-  private config: PerformanceUtilsConfig;
-
-  constructor(config: Partial<PerformanceUtilsConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('performanceUtils initialized');
-    }
-  }
-}
-
-export const performanceUtils = new PerformanceUtils();
-export default performanceUtils;
-=======
     if (typeof window === 'undefined' || !('performance' in window)) return;'
 // Measure page load time;
     window.addEventListener('load', () => {;';
@@ -518,7 +490,6 @@ export const preloadImages = (srcs: string[]): Promise<void[]> => {
 }
   return Promise.all(srcs.map(preloadImage));}
 }
->>>>>>> origin/main
 >>>>>>> cursor/delete-records-a75e
 =======
 

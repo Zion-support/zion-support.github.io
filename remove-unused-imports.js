@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-}
-=======
 import fs from 'fs';';
 import path from 'path';';
 import { execSync } from 'child_process';'
@@ -177,4 +165,3 @@ files.forEach(file => {/* TODO: Fix JSX expression */}
 `
 console.log(`Fixed ${fixedCount} files`)
 }"`
->>>>>>> cursor/delete-records-a75e

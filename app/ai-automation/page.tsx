@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -280,7 +277,6 @@ const features = [
               <div key={index} className="flex items-center text-gray-300">"
 <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />"
 <span>{feature}</span>
->>>>>>> origin/main
 >>>>>>> origin/main
               </div>
             ))}

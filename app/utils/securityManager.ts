@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// securityManager utility functions
-
-export interface SecurityManagerConfig {
-  enabled: boolean;
-}
-
-export class SecurityManager {
-  private config: SecurityManagerConfig;
-
-  constructor(config: Partial<SecurityManagerConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('securityManager initialized');
-    }
-  }
-}
-
-export const securityManager = new SecurityManager();
-export default securityManager;
-=======
 import React from 'react';';'
 'use client';'
 /**;
@@ -121,7 +93,6 @@ const validRequests = requests.filter((time: number) => time > windowStart)
 }
 export default SecurityManager.getInstance()</string>;
 export default SecurityManager.getInstance()
->>>>>>> cursor/delete-records-a75e
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1

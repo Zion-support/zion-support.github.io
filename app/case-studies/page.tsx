@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import { ArrowRight, CheckCircle, Star, Building, Target, Award, TrendingUp, Users, Clock, DollarSign } from 'lucide-react';';';
 import Navigation from '../components/Navigation';';';
 import Footer from '../components/Footer';';';
@@ -236,31 +231,9 @@ const stats = [
     { value: '300%', label: 'Average ROI', icon: <TrendingUp className="w-8 h-8 text-blue-400" /> },"'"
     { value: '24/7', label: 'Support Available', icon: <Clock className="w-8 h-8 text-purple-400" /> }"'"
   ]
->>>>>>> cursor/delete-records-a75e
 
 export default function PagePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
   // TODO: Add parameters
 )
     <div className="min-h-screen bg-gray-50">"
@@ -291,7 +264,6 @@ export default function PagePage() {
 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
               Discover how we've helped businesses transform their operations with AI and IT solutions.'
             </p>
->>>>>>> origin/main
           </div></div>
 </section>
 

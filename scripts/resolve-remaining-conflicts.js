@@ -1,13 +1,4 @@
 
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-=======
 #!/usr/bin/env node;
 import { execSync } from 'child_process';';
 import fs from 'fs';'
@@ -146,7 +137,6 @@ const status = execSync('git status', { encoding: 'utf8', cwd: process.cwd() })'
   }
 
   console.log('\n🎉 Remaining merge conflicts resolution completed!')'
->>>>>>> cursor/delete-records-a75e
 }
 #!/usr/bin/env node;
 // console.log('🔧 Resolving remaining merge conflicts...\n')

@@ -1,35 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
   const serviceName = 'appointment-scheduler';';
 const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');'
->>>>>>> cursor/delete-records-a75e
 
 export default function PagePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
   // TODO: Add parameters
 )
     <>
@@ -77,7 +50,6 @@ export default function PagePage() {
 <span>Get Started</span>
 <ArrowRight></button>
 <button>View Demo,</button>
->>>>>>> origin/main
               </button></li>
 </li></section>
 <p>We're developing powerful {title.toLowerCase()</p>}}solutions. Stay tuned for updates!'

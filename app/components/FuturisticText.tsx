@@ -11,8 +11,4 @@ export default function FuturisticText({ className = '', children }: FuturisticT
       {children}
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

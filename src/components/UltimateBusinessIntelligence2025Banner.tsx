@@ -1,47 +1,5 @@
 );
 }
-<<<<<<< HEAD
-
-export default function UltimateBusinessIntelligence2025Banner({ className = '', children }: UltimateBusinessIntelligence2025BannerProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-    </div>
-export default UltimateBusinessIntelligence2025Banner;
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isVisible] = useState(true);
-  ];
-  const currentContent = content[currentSlide];
- (prev + 1) % content.length);
-    }, 5000);
- clearInterval(timer);
-  }, [content.length]);
-  // Removed unused handleClose function;
-  if (!isVisible) return null;
-      {/* Animated Background Effects */}
-        <div className = "absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-//         ></div>
-//         ></div>
-        {/* Header */}
-            <span className="text-2xl">🚀</span>;
-              BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025;
-            <span className = 'text-2xl'>⚡</span>
-            {currentContent.title}
-            {currentContent.description};
-              Get Started Today;
-              Schedule Consultation;
-          {/* Key Benefits Grid */}
-            {/* Metrics Grid */}
-                  <div className = "text-3xl font-bold text-cyan-400 mb-2">{value}</div>
-                    {key.replace(/([A-Z])/g, ' $1').trim()}
-              ))}
-            {/* Tags */}
-=======
 'use client'';
 import React, { useState, useEffect } from 'react';';';
 const UltimateBusinessIntelligence2025Banner = () => {
@@ -198,20 +156,9 @@ const handleClose = () => {
                 <$2 />
                   key={tag}
                   className="bg-white/10 text-white px-3 py-1 rounded-full text-sm border border-white/20""
->>>>>>> cursor/delete-records-a75e
                   {tag}
               ))}
             {/* CTA Buttons */}
-<<<<<<< HEAD
-                <span className="text-xl">📖</span>
-                <span>Read {currentContent.type}</span>
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-                <span className="text-xl">📞</span>
-<span>Call +1 302 464 0950</span>
-          {/* Slide Indicators */}
- setCurrentSlide(index)}
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
-=======
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">"
                 href={currentContent.url}
                 className="flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-cyan-500/25""
@@ -237,19 +184,10 @@ const handleClose = () => {
   // TODO: Add properties
 }
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30''
->>>>>>> cursor/delete-records-a75e
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
             ))}
         {/* Stats Section */}
-<<<<<<< HEAD
-          {[
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
-          ))};
-  );
-}
-=======
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">"
           {[
   // TODO: Add items
@@ -380,6 +318,5 @@ export default UltimateBusinessIntelligence2025Banner;"";"
 </span></span>
 </span></a>
 </p></h1>))))))
->>>>>>> cursor/delete-records-a75e
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1

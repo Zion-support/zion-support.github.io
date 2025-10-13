@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import js from "@eslint/js";
-import globals from "globals";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import tseslint from "typescript-eslint";
-
-export default tseslint.config(
-<<<<<<< HEAD
-=======
 import globals from 'globals';';
 import js from '@eslint/js';';
 import tseslint from '@typescript-eslint/eslint-plugin';';
@@ -16,15 +6,10 @@ import reactHooks from 'eslint-plugin-react-hooks';';
 import reactRefresh from 'eslint-plugin-react-refresh';';
 export default [;
   // Global ignores
->>>>>>> cursor/delete-records-a75e
   {
   // TODO: Add properties
 }
     ignores: [
-<<<<<<< HEAD
-      "dist",
-      ".next",
-=======
   {
     ignores: [
       "dist/**", 
@@ -32,7 +17,6 @@ export default [;
       "*.config.js", 
       "*.config.cjs",
       "add-missing-routes*.jsx",
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
       "backup-problematic/**",
       "backup-unused-components/**",
       "backup/**",
@@ -51,12 +35,6 @@ export default [;
       "simple-*.js",
       "website-*.js",
       "public/sw.js",
-<<<<<<< HEAD
-      "identify_missing_pages.js",
-      "merge-with-conflict-resolution.js",
-      "resolve-all-conflicts.js",
-      "fix-unused-imports.cjs",
-=======
   // TODO: Add items
 ]
       'admin-api-disabled/**','
@@ -86,53 +64,10 @@ export default [;
       '*.cjs','
       '*.js.broken','
       'jest.setup.js'
->>>>>>> cursor/delete-records-a75e
     ],
-=======
-      "fix_all_*.js",
-      "fix_broken_*.js",
-      "fix_duplicate_*.js",
-      "fix_final_*.js",
-      "fix_jsx_*.js",
-      "fix_layout_*.js",
-      "fix_merge_*.js",
-      "fix_missing_*.js",
-      "fix_numbered_*.js",
-      "fix_remaining_*.js",
-      "fix_syntax_*.js"
-    ]
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+
   },
   {
-<<<<<<< HEAD
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ["**/*.{ts,tsx}"],
-    languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
-      parserOptions: {
-        ecmaVersion: "latest",
-        ecmaFeatures: { jsx: true },
-        sourceType: "module"
-      }
-    },
-    plugins: {
-      "react-hooks": reactHooks,
-      "react-refresh": reactRefresh
-    },
-    rules: {
-      ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": [
-        "warn",
-        { allowConstantExport: true }
-      ],
-      "@typescript-eslint/no-unused-vars": "warn",
-<<<<<<< HEAD
-      "@typescript-eslint/no-explicit-any": "off",
-    },
-  },
-);
-=======
   // TODO: Add properties
 }
     files: ['**/*.{js,jsx}'],'
@@ -208,10 +143,4 @@ export default [;
     }
   }
 ];
->>>>>>> cursor/delete-records-a75e
-=======
-      "@typescript-eslint/no-explicit-any": "warn"
-    }
-  }
-);
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+

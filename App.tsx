@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
@@ -66,23 +62,22 @@ const ServicesPage = () => (
   <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
     <div className="container mx-auto px-4 py-16">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6 text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8 text-center">
           Our Services
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { title: 'AI Development', description: 'Custom AI solutions tailored to your business needs.' },
-            { title: 'Cybersecurity', description: 'Comprehensive security services to protect your data.' },
-            { title: 'Cloud Migration', description: 'Seamless migration to cloud infrastructure.' },
-            { title: 'Data Analytics', description: 'Advanced analytics and business intelligence.' },
-            { title: 'Mobile Development', description: 'Native and cross-platform mobile applications.' },
-            { title: 'Consulting', description: 'Strategic technology consulting and planning.' }
-          ].map((service, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-              <p className="text-gray-600">{service.description}</p>
-            </div>
-          ))}
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">AI Development</h3>
+            <p className="text-gray-600">Custom AI solutions tailored to your business needs.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Cloud Migration</h3>
+            <p className="text-gray-600">Seamless migration to cloud infrastructure.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl font-semibold mb-4">Security Audits</h3>
+            <p className="text-gray-600">Comprehensive security assessments and recommendations.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -97,21 +92,41 @@ const ContactPage = () => (
           Contact Us
         </h1>
         <p className="text-xl text-gray-600 mb-8">
-          Get in touch with our team to discuss your project needs.
+          Get in touch with our team to discuss your project requirements.
         </p>
         <div className="bg-white p-8 rounded-lg shadow-lg">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-semibold mb-4">Contact Information</h3>
-              <p className="text-gray-600 mb-2">Email: kleber@ziontechgroup.com</p>
-              <p className="text-gray-600 mb-2">Phone: +1-302-464-0950</p>
-              <p className="text-gray-600">Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
+              <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
+              <p className="text-gray-600 mb-4">Email: contact@ziontechgroup.com</p>
+              <p className="text-gray-600 mb-4">Phone: +1 (555) 123-4567</p>
+              <p className="text-gray-600">Address: 123 Tech Street, Innovation City</p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-4">Business Hours</h3>
-              <p className="text-gray-600 mb-2">Monday - Friday: 9:00 AM - 6:00 PM</p>
-              <p className="text-gray-600 mb-2">Saturday: 10:00 AM - 4:00 PM</p>
-              <p className="text-gray-600">Sunday: Closed</p>
+              <h3 className="text-xl font-semibold mb-4">Send us a Message</h3>
+              <form className="space-y-4">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <textarea
+                  placeholder="Your Message"
+                  rows={4}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                ></textarea>
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Send Message
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -120,6 +135,7 @@ const ContactPage = () => (
   </div>
 );
 
+// Navigation Component
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -127,10 +143,10 @@ const Navigation = () => {
     <nav className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-2xl font-bold text-gray-800">
+          <Link to="/" className="text-2xl font-bold text-gray-900">
             Zion Tech Group
           </Link>
-          
+
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-gray-600 hover:text-gray-900 transition-colors">
@@ -149,8 +165,8 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-600 hover:text-gray-900"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-gray-600 hover:text-gray-900 transition-colors"
             aria-label="Toggle menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -181,9 +197,9 @@ const Navigation = () => {
       </div>
     </nav>
   );
-<<<<<<< HEAD
 };
 
+// Footer Component
 const Footer = () => (
   <footer className="bg-gray-800 text-white py-8">
     <div className="container mx-auto px-4">
@@ -206,41 +222,23 @@ const Footer = () => (
         <div>
           <h3 className="text-xl font-semibold mb-4">Contact Info</h3>
           <p className="text-gray-300 mb-2">kleber@ziontechgroup.com</p>
-          <p className="text-gray-300">+1-302-464-0950</p>
+          <p className="text-gray-300">+1 (555) 123-4567</p>
         </div>
       </div>
       <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-        <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
       </div>
     </div>
   </footer>
 );
 
-export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="loading">
-        <div className="spinner"></div>
-      </div>
-    );
-  }
-
+// Main App Component
+const App = () => {
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
         <Navigation />
-        <main id="main-content" className="flex-1">
+        <main className="flex-1">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
@@ -252,58 +250,6 @@ export default function App() {
       </div>
     </Router>
   );
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
-}
-=======
-'use client';
-import React, { Suspense } from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import './app/globals.css';
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import HomePage from './app/page';
-import { PageLoader } from './app/components/LoadingStates';
-import ErrorBoundary from './app/components/ErrorBoundary';
-
-// Lazy load pages for better performance
-const AboutPage = React.lazy(() => import('./app/about/page'));
-const ContactPage = React.lazy(() => import('./app/contact/page'));
-const ServicesPage = React.lazy(() => import('./app/services/page'));
-const PricingPage = React.lazy(() => import('./app/pricing/page'));
-const BlogPage = React.lazy(() => import('./app/blog/page'));
-
-function App() {
-  return (
-    <HelmetProvider>
-      <Router>
-        <ErrorBoundary>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <Navigation />
-            <main>
-              <Suspense fallback={<PageLoader />}>
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                </Routes>
-              </Suspense>
-            </main>
-            <Footer />
-          </div>
-        </ErrorBoundary>
-      </Router>
-    </HelmetProvider>
-  );
-}
+};
 
 export default App;
->>>>>>> cursor/delete-records-a75e
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

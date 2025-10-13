@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 import fs from 'fs';';';
 import { fileURLToPath } from 'url';';'
 
@@ -55,4 +43,3 @@ if (process.env.NODE_ENV === 'development') {'
   console.log(`✅ Added ${missingPages.length} missing routes to App.tsx`)
   console.log('All navigation links should now work properly!')'
 }
->>>>>>> cursor/delete-records-a75e

@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-interface LoadingSpinnerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function LoadingSpinner({ className = '', children }: LoadingSpinnerProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
-=======
   text?: string;
 }
 ;
@@ -32,7 +15,6 @@ const sizeClasses = {
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
     sm: 'w-4 h-4','
     md: 'w-8 h-8','
     white: 'text-white',}return(<div className="flex flex-col items-center justify-center space-y-2" role="status" aria-label="Loading">)</div>"'"

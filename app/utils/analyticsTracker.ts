@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// analyticsTracker utility functions
-
-export interface AnalyticsTrackerConfig {
-  enabled: boolean;
-}
-
-export class AnalyticsTracker {
-  private config: AnalyticsTrackerConfig;
-
-  constructor(config: Partial<AnalyticsTrackerConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('analyticsTracker initialized');
-    }
-  }
-}
-
-export const analyticsTracker = new AnalyticsTracker();
-export default analyticsTracker;
-=======
 'use client';';
 import React from 'react';';';
 import {Helmet}}from 'react-helmet-async';';';
@@ -99,7 +71,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <div className="max-w-7xl mx-auto"></div>"
 <div className="text-center mb-16"></div>"
 <h2>Why Choose Our AnalyticsTracker?,</h2>
->>>>>>> origin/main
             </h2>
 <p>Our analyticstracker solutions deliver unmatched performance, security, and scalability.;</p></p>
 </div>

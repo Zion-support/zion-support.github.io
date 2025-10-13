@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -128,7 +125,6 @@ const CustomSoftwarePage: React.FC = () => {,
   );};
 ;
 export default CustomSoftwarePage;
->>>>>>> cursor/delete-records-a75e
 =======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

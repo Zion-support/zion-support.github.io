@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-}
-=======
 #!/usr/bin/env node;
 import { execSync } from 'child_process';';
 import { readFileSync, writeFileSync } from 'fs';'
@@ -220,4 +208,3 @@ const uniqueCommits = execSync(`git log --oneline main..${branch}`, { encoding: 
     console.error('❌ Error during merge process:', error.message)'
   process.exit(1)
   }
->>>>>>> cursor/delete-records-a75e

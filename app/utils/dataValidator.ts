@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// dataValidator utility functions
-
-export interface DataValidatorConfig {
-  enabled: boolean;
-}
-
-export class DataValidator {
-  private config: DataValidatorConfig;
-
-  constructor(config: Partial<DataValidatorConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('dataValidator initialized');
-    }
-  }
-}
-
-export const dataValidator = new DataValidator();
-export default dataValidator;
-=======
   return {isValid,;}
   return {
   // TODO: Add properties
@@ -33,7 +5,6 @@ export default dataValidator;
   // TODO: Add properties
 }
     isValid,
->>>>>>> origin/main
     error: isValid ? undefined : 'Invalid email format',;';
 export function validateURL(ur,;)
   l: string, requireProtoco);

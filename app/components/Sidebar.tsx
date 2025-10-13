@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import React, {Suspense, lazy}from 'react';';';
 import {Link, useLocation}}from 'react-router-dom';';';
 import {X,}
@@ -150,7 +145,6 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
     {
   // TODO: Add properties
 }
@@ -219,23 +213,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       ]
     },
     {
-<<<<<<< HEAD
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      title: 'Resources','
-      items: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-        { name: 'Documentation', path: '/docs', icon: Settings },'
-        { name: 'API Docs', path: '/api-docs', icon: Code },'
-        { name: 'Support', path: '/support', icon: Users },'
-        { name: 'Status', path: '/status', icon: Settings },'
-      ]
-=======
       name: 'AI Services',
       path: '/ai-services',
       icon: <Brain className="w-5 h-5" />
@@ -254,7 +231,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       name: 'Contact',
       path: '/contact',
       icon: <Globe className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
     }
   ];
 ;
@@ -270,30 +246,6 @@ const contactInfo = {
   };
 >>>>>>> cursor/delete-records-a75e
 
-<<<<<<< HEAD
-export default function SidebarPage() {
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Sidebar - Zion Tech Group</title>
-        <meta name="description" content="Advanced Sidebar solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Sidebar
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
   // TODO: Add parameters
 )
     <>
@@ -414,7 +366,6 @@ Sidebar.displayName = 'Sidebar';'
 export default Sidebar;
 
 }}}}))))))))
->>>>>>> cursor/delete-records-a75e
 =======
   return (
     <>

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -68,7 +65,6 @@ export default function PagePage() {
   // TODO: Add properties
 }
     icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics','
       description: 'Comprehensive analytics dashboard with real-time data visualization.','
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]'

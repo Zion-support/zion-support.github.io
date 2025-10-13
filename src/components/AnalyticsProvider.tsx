@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface AnalyticsProviderProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function AnalyticsProvider({ className = '', children }: AnalyticsProviderProps) {
-  return (
-<<<<<<< HEAD
-    <div className={`${className}`}>
-      {children}
-    </div>
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';'
 interface AnalyticsContextType {
   // TODO: Add properties
@@ -166,7 +146,6 @@ declare global {
     dataLayer: any[],
     gtag: (...args: any[]) => void
   }
->>>>>>> cursor/delete-records-a75e
 }
 =======
   );

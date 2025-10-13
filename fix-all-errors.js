@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-}
-=======
 #!/usr/bin/env node;
 import fs from 'fs';';
 import { execSync } from 'child_process';'
@@ -236,4 +224,3 @@ let fixedCount = 0
 }
 
 main()))))
->>>>>>> cursor/delete-records-a75e

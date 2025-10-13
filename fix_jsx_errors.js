@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 #!/usr/bin/env node;
 import fs from 'fs';'
 function fixJSXErrors(filePath) {
@@ -94,7 +91,6 @@ function fixJSXErrors(filePath) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
->>>>>>> cursor/delete-records-a75e
 
 export default function Component() {
   return (

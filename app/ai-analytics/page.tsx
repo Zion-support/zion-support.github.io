@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -52,7 +49,6 @@ import Navigation from '../components/Navigation';';';
 import Footer from '../components/Footer';';';
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';';';
 const AiAnalyticsPage: React.FC = () => {,
->>>>>>> origin/main;
 const features = [
   // TODO: Add items
 ]

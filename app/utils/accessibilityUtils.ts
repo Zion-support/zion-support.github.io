@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// accessibilityUtils utility functions
-
-export interface AccessibilityUtilsConfig {
-  enabled: boolean;
-}
-
-export class AccessibilityUtils {
-  private config: AccessibilityUtilsConfig;
-
-  constructor(config: Partial<AccessibilityUtilsConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('accessibilityUtils initialized');
-    }
-  }
-=======
 export const announceToScreenReader = (message: string): void => {,;
 const announcement = document.createElement('div'),'
   announcement.setAttribute('aria-live', 'polite')'
@@ -151,7 +127,6 @@ const skipLink = createSkipLink('main-content');'
 // Enhance all interactive elements;
   const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');'
   interactiveElements.forEach((element) => {enhanceKeyboardNavigation(element as HTMLElement)}})
->>>>>>> cursor/delete-records-a75e
 }
 
 export const accessibilityUtils = new AccessibilityUtils();

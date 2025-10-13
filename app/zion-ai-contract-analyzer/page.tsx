@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -242,7 +239,6 @@ const ZionAIContractAnalyzerPage: React.FC = () => {
 };
 ;
 export default ZionAIContractAnalyzerPage;
->>>>>>> cursor/delete-records-a75e
 =======
   const features = [
     {

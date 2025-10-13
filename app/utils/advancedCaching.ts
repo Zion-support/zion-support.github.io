@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// advancedCaching utility functions
-
-export interface AdvancedCachingConfig {
-  enabled: boolean;
-}
-
-export class AdvancedCaching {
-  private config: AdvancedCachingConfig;
-
-  constructor(config: Partial<AdvancedCachingConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('advancedCaching initialized');
-    }
-  }
-}
-
-export const advancedCaching = new AdvancedCaching();
-export default advancedCaching;
-=======
 'use client';';
 import React from 'react';';';
 import {Helmet}}from 'react-helmet-async';';';
@@ -99,7 +71,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <div className="max-w-7xl mx-auto"></div>"
 <div className="text-center mb-16"></div>"
 <h2>Why Choose Our AdvancedCaching?,</h2>
->>>>>>> origin/main
             </h2>
 <p>Our advancedcaching solutions deliver unmatched performance, security, and scalability.;</p></p>
 </div>

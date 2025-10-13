@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface EnhancedErrorBoundaryProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function EnhancedErrorBoundary({ className = '', children }: EnhancedErrorBoundaryProps) {
-  return (
-<<<<<<< HEAD
-    <div className={`${className}`}>
-      {children}
-    </div>
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-}
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';'
 interface Props {/* TODO: Fix JSX expression */}
 }
@@ -170,7 +149,6 @@ export default EnhancedErrorBoundary;
 </button></button>
 </p></h1>
 </h2>
->>>>>>> cursor/delete-records-a75e
 =======
   );
 }

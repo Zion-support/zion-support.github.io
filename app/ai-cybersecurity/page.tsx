@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},'
     {icon: BarChart,
       title: 'Advanced Analytics','
@@ -251,7 +224,6 @@ const benefits = [
 <feature.icon className="h-6 w-6 text-white" /></div>"
 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
 <p className="text-gray-300">{feature.description}</p>"
->>>>>>> origin/main
               </div>
             ))}
           </div></div>

@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-
-interface PerformanceOptimizerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function PerformanceOptimizer({ className = '', children }: PerformanceOptimizerProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
-=======
   const optimizeMemory = useCallback(() => {if ('memory' in performance) {;';
 const memory = (performance as any).memory;
       if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
@@ -205,7 +188,6 @@ const observer = new MutationObserver(() => {
 
   return <>{children}</>
 }
->>>>>>> origin/main;
 export default PerformanceOptimizer;
 >>>>>>> origin/main
 >>>>>>> cursor/delete-records-a75e

@@ -1,22 +1,11 @@
 interface PerformanceUtilsConfig {
   enabled: boolean;
-<<<<<<< HEAD
-// Utility functions;
-export function utilityFunction() {
-  // Implementation here;
-  return null;
-}
-
-export class performanceUtils {
-  private config: performanceUtilsConfig;
-=======
   monitoring: boolean;
   optimization: boolean;
 }
 
 export class PerformanceUtils {
   private config: PerformanceUtilsConfig;
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 
   constructor(config: Partial<PerformanceUtilsConfig> = {}) {
     this.config = {
@@ -51,56 +40,6 @@ export class PerformanceUtils {
   }
 }
 
-<<<<<<< HEAD
-export const performanceutils = new performanceUtils();
-export default performanceutils;
-export default utilityFunction;
-  optimizeImages() {
-    // Lazy load images
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              observer.unobserve(img);
-            }
-          }
-        });
-      });
-
-      document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-      });
-    }
-  },
-
-  setupLazyLoading() {
-    // Preload critical resources
-    const criticalResources = [
-//       '/app/styles/futuristic.css',
-//       '/app/styles/futuristic-enhanced.css'
-    ];
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = 'style';
-      document.head.appendChild(link);
-    });
-  },
-
-  cleanup() {
-    // Cleanup performance monitoring
-    if (typeof window !== 'undefined') {
-      // Remove any performance observers
-      const observers = (window as any).__performanceObservers || [];
-      observers.forEach((observer: any) => observer.disconnect());
-    }
-=======
 /**
  * Performance utility functions
  */;
@@ -137,7 +76,6 @@ const _images = document.querySelectorAll('img')'
 export const optimizeImages = () => {/* TODO: Fix JSX expression */}
       }
     })
->>>>>>> cursor/delete-records-a75e
   }
 };
 

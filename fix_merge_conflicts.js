@@ -1,73 +1,4 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
 
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import { execSync } from 'child_process';
-
-// Function to resolve merge conflicts in a file
-function resolveMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-
-    // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('      return false; // No conflicts to resolve
-    }
-
-    console.log(`Resolving merge conflicts in: ${filePath}`);
-
-    // Split content by merge conflict markers
-    const lines = content.split('\n');
-    const resolvedLines = [];
-    let inConflict = false;
-    let conflictStart = -1;
-    let conflictEnd = -1;
-
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-
-      if (line.startsWith('<<<<<<<')) {
-        inConflict = true;
-        conflictStart = i;
-        continue;
-      }
-
-      if (line.startsWith('        continue;
-      }
-
-      if (line.startsWith('>>>>>>>')) {
-        inConflict = false;
-        conflictEnd = i;
-
-        // For now, we'll keep the content before the conflict markers
-        // and remove the conflict markers themselves
-        continue;
-      }
-
-      if (!inConflict) {
-        resolvedLines.push(line);
-      }
-    }
-
-    // Write the resolved content back to the file
-    const resolvedContent = resolvedLines.join('\n');
-    fs.writeFileSync(filePath, resolvedContent, 'utf8');
-
-    return true;
-  } catch (error) {
-    console.error(`Error resolving conflicts in ${filePath}:`, error.message);
-    return false;
-  }
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
-  );
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
 }
 
 // Function to find all TypeScript/JavaScript files
@@ -134,8 +65,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export { resolveMergeConflicts, findSourceFiles };
-<<<<<<< HEAD
-=======
+
 #!/usr/bin/env node;
 import fs from 'fs';';
 import path from 'path';'
@@ -212,6 +142,4 @@ console.log(`\nSummary:`)
 console.log(`- Files processed: ${conflictFiles.length}`)
 console.log(`- Files fixed: ${fixedCount}`)
 console.log(`- Errors: ${errorCount}`)))
->>>>>>> cursor/delete-records-a75e
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+

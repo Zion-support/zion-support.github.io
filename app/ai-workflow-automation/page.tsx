@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';';';
 const AiWorkflowAutomationPage: React.FC = () => {,;
 const features = [;
@@ -12,7 +7,6 @@ const features = [
 ]
   // TODO: Add items
 ]
->>>>>>> origin/main
     {
   // TODO: Add properties
 }
@@ -235,22 +229,6 @@ const stats = [
 
 export default function PagePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Zap } from 'lucide-react';
@@ -301,14 +279,10 @@ export default function PagePage() {
               <p className="text-gray-300">{feature.description}</p>
             </div>
           ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
   // TODO: Add parameters
 )
     <>
@@ -368,7 +342,6 @@ export default function PagePage() {
                   Learn More
                 </button>
 
->>>>>>> origin/main
 >>>>>>> origin/main
               </div></div>
           ))

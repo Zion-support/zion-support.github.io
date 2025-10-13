@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// apiCache utility functions
-
-export interface ApiCacheConfig {
-  enabled: boolean;
-}
-
-export class ApiCache {
-  private config: ApiCacheConfig;
-
-  constructor(config: Partial<ApiCacheConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('apiCache initialized');
-    }
-  }
-}
-
-export const apiCache = new ApiCache();
-export default apiCache;
-=======
 'use client';';
 import React from 'react';';';
 import {Helmet}}from 'react-helmet-async';';';
@@ -99,7 +71,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         <div className="max-w-7xl mx-auto"></div>"
 <div className="text-center mb-16"></div>"
 <h2>Why Choose Our ApiCache?,</h2>
->>>>>>> origin/main
             </h2>
 <p>Our apicache solutions deliver unmatched performance, security, and scalability.;</p></p>
 </div>

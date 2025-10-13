@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-=======
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';';'
 ;
@@ -64,22 +59,9 @@ const benefits = [
     'Cost-effective pricing plans','
     'Proven track record of success''
   ];
->>>>>>> cursor/delete-records-a75e
 
 export default function PagePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { MessageCircle, Bot, Zap, BarChart3 } from 'lucide-react';
@@ -119,33 +101,10 @@ export default function MicroSaasAiChatbotBuilderPage() {
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
             AI Chatbot Builder
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Create intelligent chatbots for your business with our micro SAAS solution. No coding required.
           </p>
-<<<<<<< HEAD
-=======
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mx-auto mb-6">
-                {feature.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
-}
-=======
   // TODO: Add parameters
 )
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
@@ -220,7 +179,6 @@ export default function MicroSaasAiChatbotBuilderPage() {
   // TODO: Add properties
 }
     icon: BarChart,
->>>>>>> origin/main
       title: 'Advanced Analytics','
       description: 'Comprehensive analytics dashboard with real-time data visualization.','
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}];';

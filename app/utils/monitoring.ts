@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// monitoring utility functions
-
-export interface MonitoringConfig {
-  enabled: boolean;
-}
-
-export class Monitoring {
-  private config: MonitoringConfig;
-
-  constructor(config: Partial<MonitoringConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('monitoring initialized');
-    }
-  }
-}
-
-export const monitoring = new Monitoring();
-export default monitoring;
-=======
 'use client';'
 /**;
  * Comprehensive Monitoring Utility;
@@ -57,7 +29,6 @@ class MonitoringService {}}private metrics: PerformanceMetrics = {,}private erro
 }
   // TODO: Add properties
 }
->>>>>>> origin/main
             this.metrics.fid = (entry as any).processingStart - entry.startTime,
             this.reportMetric('fid', this.metrics.fid)}})'
         });

@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function EnhancedPerformanceMonitorPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>EnhancedPerformanceMonitor - Zion Tech Group</title>
-        <meta name="description" content="Advanced EnhancedPerformanceMonitor solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            EnhancedPerformanceMonitor
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-=======
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'react-helmet-async';';';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react';';'
 ;
@@ -84,7 +57,6 @@ const benefits = [
 ]
   // TODO: Add items
 ]
->>>>>>> origin/main
     'Advanced AI technology integration','
     'Real-time processing and analytics','
     'Enterprise-grade security and compliance','
