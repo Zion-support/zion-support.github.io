@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import React, { useEffect } from 'react';
 
 interface WebVitalsData {
   name: string;
@@ -11,82 +10,115 @@ interface WebVitalsData {
 
 const WebVitalsTracker: React.FC = () => {
   useEffect(() => {
-<<<<<<< HEAD
     const sendToAnalytics = (metric: WebVitalsData) => {
       // Send to Google Analytics or other analytics service
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          event_label: metric.id,
-          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true,
-        });
-      }
-
-      // Send to custom analytics endpoint
-      if (process.env.NODE_ENV === 'production') {
-        fetch('/api/analytics/web-vitals', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(metric),
-        }).catch(console.error);
-      }
-
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', metric);
-      }
+      console.log('Web Vitals:', metric);
     };
 
-    // Track Core Web Vitals
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics); // INP replaces FID in newer versions
-    onFCP(sendToAnalytics);
-    onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
+    const getCLS = (onPerfEntry: (metric: WebVitalsData) => void) => {
+      let clsValue = 0;
+      let clsEntries: PerformanceEntry[] = [];
+      let sessionValue = 0;
+      let sessionEntries: PerformanceEntry[] = [];
 
-    // Track additional performance metrics
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Track page load time
-      window.addEventListener('load', () => {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          sendToAnalytics({
-            name: 'LOAD_TIME',
-            value: loadTime,
-            delta: loadTime,
-            id: 'load-time',
-            navigationType: navigation.type,
-          });
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            const firstSessionEntry = sessionEntries[0];
+            const lastSessionEntry = sessionEntries[sessionEntries.length - 1];
+
+            if (sessionValue && entry.startTime - (lastSessionEntry as any).startTime < 1000 && entry.startTime - (firstSessionEntry as any).startTime < 5000) {
+              sessionValue += (entry as any).value;
+              sessionEntries.push(entry);
+            } else {
+              sessionValue = (entry as any).value;
+              sessionEntries = [entry];
+            }
+
+            if (sessionValue > clsValue) {
+              clsValue = sessionValue;
+              clsEntries = [...sessionEntries];
+              onPerfEntry({
+                name: 'CLS',
+                value: clsValue,
+                delta: clsValue,
+                id: 'cls',
+                navigationType: 'navigate'
+              });
+            }
+          }
         }
       });
 
-      // Track memory usage (if available)
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
-        sendToAnalytics({
-          name: 'MEMORY_USAGE',
-          value: memoryUsage,
-          delta: memoryUsage,
-          id: 'memory-usage',
-          navigationType: 'reload',
-        });
-      }
-    }
-=======
-    // Track Core Web Vitals
-    const trackWebVitals = () => {
-      // This is a placeholder for web vitals tracking
-      // In a real implementation, you would use libraries like web-vitals
-      console.log('Web Vitals tracking initialized');
+      observer.observe({ entryTypes: ['layout-shift'] });
     };
 
-    trackWebVitals();
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
+    const getFID = (onPerfEntry: (metric: WebVitalsData) => void) => {
+      new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          onPerfEntry({
+            name: 'FID',
+            value: (entry as any).processingStart - entry.startTime,
+            delta: (entry as any).processingStart - entry.startTime,
+            id: 'fid',
+            navigationType: 'navigate'
+          });
+        }
+      }).observe({ entryTypes: ['first-input'] });
+    };
+
+    const getFCP = (onPerfEntry: (metric: WebVitalsData) => void) => {
+      new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.name === 'first-contentful-paint') {
+            onPerfEntry({
+              name: 'FCP',
+              value: entry.startTime,
+              delta: entry.startTime,
+              id: 'fcp',
+              navigationType: 'navigate'
+            });
+          }
+        }
+      }).observe({ entryTypes: ['paint'] });
+    };
+
+    const getLCP = (onPerfEntry: (metric: WebVitalsData) => void) => {
+      new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        onPerfEntry({
+          name: 'LCP',
+          value: lastEntry.startTime,
+          delta: lastEntry.startTime,
+          id: 'lcp',
+          navigationType: 'navigate'
+        });
+      }).observe({ entryTypes: ['largest-contentful-paint'] });
+    };
+
+    const getTTFB = (onPerfEntry: (metric: WebVitalsData) => void) => {
+      new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            onPerfEntry({
+              name: 'TTFB',
+              value: (entry as any).responseStart - entry.startTime,
+              delta: (entry as any).responseStart - entry.startTime,
+              id: 'ttfb',
+              navigationType: 'navigate'
+            });
+          }
+        }
+      }).observe({ entryTypes: ['navigation'] });
+    };
+
+    // Initialize web vitals tracking
+    getCLS(sendToAnalytics);
+    getFID(sendToAnalytics);
+    getFCP(sendToAnalytics);
+    getLCP(sendToAnalytics);
+    getTTFB(sendToAnalytics);
   }, []);
 
   return null;
