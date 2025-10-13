@@ -1,10 +1,19 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-10-13T08:55:29.385Z",
   "buildStats": {
     "totalFiles": 17,
     "totalSize": 528173,
     "jsFiles": 14,
     "jsSize": 519211,
+=======
+  "timestamp": "2025-10-13T09:02:12.194Z",
+  "buildStats": {
+    "totalFiles": 17,
+    "totalSize": 531352,
+    "jsFiles": 14,
+    "jsSize": 522390,
+>>>>>>> origin/main
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 0,
