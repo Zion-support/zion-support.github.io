@@ -3,12 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-<<<<<<< HEAD
 import Navigation from './app/components/Navigation';
-=======
-import Header from './app/components/Header';
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
 import Footer from './app/components/Footer';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 
 // Page Components
 import HomePage from './app/page';
@@ -65,15 +63,12 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 function App() {
   return (
     <HelmetProvider>
-      <Router>
-<<<<<<< HEAD
-        <div className="min-h-screen bg-slate-900">
-          <Navigation />
-=======
-        <div className="min-h-screen bg-gray-900">
-          <Header />
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
-          <main className="relative z-10" id="main-content" role="main">
+      <EnhancedErrorBoundary>
+        <Router>
+          <div className="min-h-screen bg-slate-900">
+            <PerformanceMonitor />
+            <Navigation />
+            <main className="relative z-10" id="main-content" role="main">
             <Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
@@ -113,10 +108,11 @@ function App() {
                 </div>
               } />
             </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
+            </main>
+            <Footer />
+          </div>
+        </Router>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 }
