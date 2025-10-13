@@ -1,83 +1,85 @@
-
-
 import React, { useEffect, useState } from 'react';
+
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
   const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState('normal');
 
   useEffect(() => {
-    // for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    // Check for high contrast preference
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+    setIsHighContrast(highContrastQuery.matches);
     
-    setIsReducedMotion(prefersReducedMotion);
-    setIsHighContrast(prefersHighContrast);
+    // Check for reduced motion preference
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setIsReducedMotion(reducedMotionQuery.matches);
 
-    // Listen for changes in user preferences
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)');
+    // Listen for changes
+    const handleHighContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
+    const handleReducedMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
 
-    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
-    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
+    highContrastQuery.addEventListener('change', handleHighContrastChange);
+    reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
 
-    motionQuery.addEventListener('change', handleMotionChange);
-    contrastQuery.addEventListener('change', handleContrastChange);
+    // Load saved preferences
+    const savedFontSize = localStorage.getItem('fontSize');
+    if (savedFontSize) {
+      setFontSize(savedFontSize);
+    }
 
     return () => {
-      motionQuery.removeEventListener('change', handleMotionChange);
-      contrastQuery.removeEventListener('change', handleContrastChange);
+      highContrastQuery.removeEventListener('change', handleHighContrastChange);
+      reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
     };
   }, []);
 
   useEffect(() => {
-    // Apply accessibility styles
+    // Apply accessibility preferences
     const root = document.documentElement;
     
+    // High contrast mode
     if (isHighContrast) {
-      root.style.setProperty('--contrast-ratio', '4.5');
-      root.style.setProperty('--text-color', '#000000');
-      root.style.setProperty('--bg-color', '#ffffff');
+      root.classList.add('high-contrast');
     } else {
-      root.style.setProperty('--contrast-ratio', '3');
-      root.style.removeProperty('--text-color');
-      root.style.removeProperty('--bg-color');
+      root.classList.remove('high-contrast');
     }
 
+    // Reduced motion mode
     if (isReducedMotion) {
-      root.style.setProperty('--animation-duration', '0.01ms');
-      root.style.setProperty('--animation-iteration-count', '1');
+      root.classList.add('reduced-motion');
     } else {
-      root.style.removeProperty('--animation-duration');
-      root.style.removeProperty('--animation-iteration-count');
+      root.classList.remove('reduced-motion');
     }
 
-    // Apply font size
-    root.style.setProperty('--base-font-size', `${fontSize}px`);
+    // Font size adjustment
+    root.style.setProperty('--font-size-multiplier', 
+      fontSize === 'large' ? '1.2' : 
+      fontSize === 'extra-large' ? '1.4' : 
+      fontSize === 'small' ? '0.9' : '1'
+    );
   }, [isHighContrast, isReducedMotion, fontSize]);
 
-  // Keyboard navigation enhancements
+  // Keyboard navigation enhancement
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        const mainContent = document.querySelector('main, [role="main"]');
+        e.preventDefault();
+        const mainContent = document.getElementById('main-content');
         if (mainContent) {
-          (mainContent as HTMLElement).focus();
-          e.preventDefault();
+          mainContent.focus();
         }
       }
 
-      // Skip to navigation
-      if (e.key === 'Tab' && !e.shiftKey && e.target === document.body) {
-        const navigation = document.querySelector('nav, [role="navigation"]');
-        if (navigation) {
-          (navigation as HTMLElement).focus();
-          e.preventDefault();
+      // Escape key to close modals/dropdowns
+      if (e.key === 'Escape') {
+        const activeElement = document.activeElement as HTMLElement;
+        if (activeElement && activeElement.blur) {
+          activeElement.blur();
         }
       }
     };
@@ -88,82 +90,117 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   // Focus management
   useEffect(() => {
-    const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-
-    const handleFocus = (e: Event) => {
+    const handleFocusIn = (e: FocusEvent) => {
       const target = e.target as HTMLElement;
-      target.style.outline = '2px solid #0066cc';
-      target.style.outlineOffset = '2px';
+      if (target) {
+        target.classList.add('focus-visible');
+      }
     };
 
-    const handleBlur = (e: Event) => {
+    const handleFocusOut = (e: FocusEvent) => {
       const target = e.target as HTMLElement;
-      target.style.outline = '';
-      target.style.outlineOffset = '';
+      if (target) {
+        target.classList.remove('focus-visible');
+      }
     };
 
-    focusableElements.forEach(element => {
-      element.addEventListener('focus', handleFocus);
-      element.addEventListener('blur', handleBlur);
-    });
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
 
     return () => {
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-      });
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
     };
   }, []);
 
   return (
-    <div 
-      className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
-      style={{ fontSize: `${fontSize}px` }}
-    >
-      {children}
-      
-      {/* Accessibility controls */}
-      <div className="fixed top-4 right-4 z-50 bg-white border border-gray-300 rounded-lg p-4 shadow-lg">
-        <h3 className="text-sm font-semibold mb-2">Accessibility Controls</h3>
-        <div className="space-y-2">
-          <label className="flex items-center space-x-2">
-            <input
-              type="checkbox"
-              checked={isHighContrast}
-              onChange={(e) => setIsHighContrast(e.target.checked)}
-              className="rounded"
-            />
-            <span className="text-sm">High Contrast</span>
-          </label>
-          <label className="flex items-center space-x-2">
-            <input
-              type="checkbox"
-              checked={isReducedMotion}
-              onChange={(e) => setIsReducedMotion(e.target.checked)}
-              className="rounded"
-            />
-            <span className="text-sm">Reduce Motion</span>
-          </label>
-          <div className="flex items-center space-x-2">
-            <label htmlFor="font-size" className="text-sm">Font Size:</label>
-            <input
-              id="font-size"
-              type="range"
-              min="12"
-              max="24"
-              value={fontSize}
-              onChange={(e) => setFontSize(Number(e.target.value))}
-              className="w-20"
-            />
-            <span className="text-sm">{fontSize}px</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    <>
+      <style jsx global>{`
+        :root {
+          --font-size-multiplier: 1;
+        }
 
+        .high-contrast {
+          --tw-bg-opacity: 1;
+          --tw-text-opacity: 1;
+        }
+
+        .high-contrast .bg-slate-900 {
+          background-color: #000000 !important;
+        }
+
+        .high-contrast .text-white {
+          color: #ffffff !important;
+        }
+
+        .high-contrast .text-gray-300 {
+          color: #ffffff !important;
+        }
+
+        .high-contrast .border-slate-600 {
+          border-color: #ffffff !important;
+        }
+
+        .reduced-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+
+        .focus-visible {
+          outline: 2px solid #3b82f6 !important;
+          outline-offset: 2px !important;
+        }
+
+        /* Skip to content link */
+        .skip-link {
+          position: absolute;
+          top: -40px;
+          left: 6px;
+          background: #3b82f6;
+          color: white;
+          padding: 8px;
+          text-decoration: none;
+          border-radius: 4px;
+          z-index: 1000;
+          transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+          top: 6px;
+        }
+
+        /* Font size adjustments */
+        .font-size-small {
+          font-size: calc(0.9rem * var(--font-size-multiplier));
+        }
+
+        .font-size-normal {
+          font-size: calc(1rem * var(--font-size-multiplier));
+        }
+
+        .font-size-large {
+          font-size: calc(1.2rem * var(--font-size-multiplier));
+        }
+
+        .font-size-extra-large {
+          font-size: calc(1.4rem * var(--font-size-multiplier));
+        }
+      `}</style>
+      
+      {/* Skip to content link */}
+      <a 
+        href="#main-content" 
+        className="skip-link"
+        onFocus={(e) => e.target.style.top = '6px'}
+        onBlur={(e) => e.target.style.top = '-40px'}
+      >
+        Skip to main content
+      </a>
+
+      {children}
+    </>
+  );
 };
 
 export default AccessibilityEnhancer;
