@@ -1,14 +1,10 @@
 import React, { useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  Menu, 
-  X, 
   Brain, 
   Shield, 
   Zap, 
   Globe, 
-<<<<<<< HEAD
-=======
   ArrowRight, 
   Star, 
   Users, 
@@ -37,7 +33,6 @@ import {
   Calendar,
   Clock,
   FileText
->>>>>>> cursor/analyze-improve-and-deploy-application-0f46
 } from 'lucide-react';
 
 interface NavigationProps {
