@@ -36,6 +36,7 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+const TeamPage = React.lazy(() => import("./app/team/page"));
 
 // AI Service Pages
 
@@ -207,6 +208,7 @@ function App() {
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/cookies" element={<CookiesPage />} />
                   <Route path="/sitemap" element={<SitemapPage />} />
+                  <Route path="/team" element={<TeamPage />} />
 
                   {/* AI Service Routes */}
 
