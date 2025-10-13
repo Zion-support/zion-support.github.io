@@ -131,6 +131,7 @@ export default defineConfig({
           // AI service pages - more granular splitting
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
+<<<<<<< HEAD
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
               return 'ai-analytics'
             }
@@ -162,6 +163,8 @@ export default defineConfig({
           }
           // 5G service pages
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-cec7
             if (serviceName && ['analytics', 'automation', 'business-intelligence', 'content-generation'].includes(serviceName)) {
               return 'ai-core'
             }
@@ -177,7 +180,6 @@ export default defineConfig({
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
           }
           // 5G service pages - group together
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
