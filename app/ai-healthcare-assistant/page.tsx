@@ -1,99 +1,99 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Share2, TrendingUp, Users, BarChart3, Clock, DollarSign, CheckCircle, Star, ArrowRight, Zap, Brain, Target, Calendar, MessageSquare, Image, Video, Hash } from 'lucide-react';
+import { Heart, Stethoscope, Brain, Shield, BarChart3, Clock, CheckCircle, Star, ArrowRight, Zap, Target, Calendar, Users, Activity, AlertTriangle, Award, FileText, Smartphone, Globe } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const AISocialMediaManagerPage: React.FC = () => {
+const AIHealthcareAssistantPage: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI Content Generation",
-      description: "Automatically generate engaging posts, captions, and hashtags using advanced AI algorithms"
+      title: "AI Symptom Analysis",
+      description: "Advanced AI analyzes symptoms and provides preliminary health assessments with accuracy rates above 95%"
     },
     {
-      icon: <Calendar className="w-6 h-6" />,
-      title: "Smart Scheduling",
-      description: "Optimal posting times based on audience engagement patterns and platform algorithms"
+      icon: <Stethoscope className="w-6 h-6" />,
+      title: "Virtual Health Monitoring",
+      description: "Continuous monitoring of vital signs and health metrics with real-time alerts and recommendations"
+    },
+    {
+      icon: <Heart className="w-6 h-6" />,
+      title: "Personalized Health Plans",
+      description: "AI-generated personalized wellness and treatment plans based on individual health profiles"
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Preventive Care",
+      description: "Proactive health recommendations and early warning systems to prevent serious health issues"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Analytics Dashboard",
-      description: "Comprehensive insights into performance, reach, engagement, and ROI metrics"
+      title: "Health Analytics",
+      description: "Comprehensive health data analysis with trends, patterns, and predictive health insights"
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Audience Targeting",
-      description: "AI-powered audience segmentation and targeting for maximum engagement"
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Trend Analysis",
-      description: "Real-time trend monitoring and content suggestions based on viral topics"
-    },
-    {
-      icon: <MessageSquare className="w-6 h-6" />,
-      title: "Comment Management",
-      description: "Automated comment responses and community management across platforms"
+      icon: <Users className="w-6 h-6" />,
+      title: "Doctor Connect",
+      description: "Seamless connection with healthcare professionals and specialists when needed"
     }
   ];
 
-  const platforms = [
-    { name: "Facebook", icon: "📘", users: "2.9B" },
-    { name: "Instagram", icon: "📷", users: "2B" },
-    { name: "Twitter", icon: "🐦", users: "450M" },
-    { name: "LinkedIn", icon: "💼", users: "900M" },
-    { name: "TikTok", icon: "🎵", users: "1B" },
-    { name: "YouTube", icon: "📺", users: "2.7B" }
+  const healthCategories = [
+    { name: "General Health", icon: "🏥", description: "Overall wellness and preventive care" },
+    { name: "Mental Health", icon: "🧠", description: "AI-powered mental wellness support" },
+    { name: "Chronic Conditions", icon: "🩺", description: "Management of diabetes, hypertension, etc." },
+    { name: "Fitness & Nutrition", icon: "💪", description: "Personalized fitness and diet plans" },
+    { name: "Women's Health", icon: "👩", description: "Specialized women's health monitoring" },
+    { name: "Pediatric Care", icon: "👶", description: "Child health monitoring and guidance" }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: 49,
+      name: "Basic",
+      price: 19,
       period: "month",
-      description: "Perfect for small businesses and influencers",
+      description: "Essential health monitoring for individuals",
       features: [
-        "3 Social Media Accounts",
-        "50 AI-Generated Posts/Month",
-        "Basic Analytics",
-        "1 Platform Integration",
+        "Basic Symptom Analysis",
+        "Health Tracking Dashboard",
+        "Monthly Health Reports",
         "Email Support",
-        "Basic Scheduling"
+        "Mobile App Access",
+        "Basic Health Tips"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: 99,
+      price: 49,
       period: "month",
-      description: "Ideal for growing businesses and agencies",
+      description: "Comprehensive health management for families",
       features: [
-        "10 Social Media Accounts",
-        "200 AI-Generated Posts/Month",
-        "Advanced Analytics & Reports",
-        "All Platform Integrations",
+        "Advanced AI Analysis",
+        "Family Health Dashboard",
+        "Weekly Health Reports",
         "Priority Support",
-        "Advanced Scheduling",
-        "Hashtag Research",
-        "Competitor Analysis"
+        "Doctor Consultation",
+        "Health Goal Tracking",
+        "Medication Reminders",
+        "Emergency Alerts"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: 199,
+      price: 99,
       period: "month",
-      description: "For large businesses and marketing teams",
+      description: "Advanced healthcare for organizations",
       features: [
-        "Unlimited Social Media Accounts",
-        "Unlimited AI-Generated Posts",
-        "Custom Analytics Dashboard",
-        "All Platform Integrations",
-        "24/7 Priority Support",
+        "Premium AI Analysis",
+        "Multi-User Dashboard",
+        "Daily Health Reports",
+        "24/7 Support",
+        "Specialist Consultations",
+        "Custom Health Programs",
+        "Integration with EHR",
         "White-label Options",
-        "API Access",
-        "Custom Integrations",
-        "Team Collaboration Tools"
+        "API Access"
       ],
       popular: false
     }
@@ -101,38 +101,45 @@ const AISocialMediaManagerPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Sarah Martinez",
-      company: "Digital Marketing Agency",
-      role: "Social Media Manager",
-      content: "Zion AI Social Media Manager has increased our client engagement by 300%. The AI content generation is incredibly accurate and saves us hours every day.",
+      name: "Dr. Sarah Williams",
+      company: "City Medical Center",
+      role: "Chief Medical Officer",
+      content: "Zion AI Healthcare Assistant has transformed our patient care. The AI analysis accuracy is remarkable, helping us catch potential issues early and improve patient outcomes.",
       rating: 5,
-      avatar: "SM"
+      avatar: "SW"
     },
     {
-      name: "David Chen",
-      company: "E-commerce Store",
-      role: "Marketing Director",
-      content: "The analytics and scheduling features are game-changers. We've seen a 150% increase in organic reach since implementing this tool.",
+      name: "Michael Rodriguez",
+      company: "HealthTech Startup",
+      role: "CEO",
+      content: "As someone with diabetes, this AI assistant has been life-changing. The continuous monitoring and personalized recommendations have helped me manage my condition better than ever.",
       rating: 5,
-      avatar: "DC"
+      avatar: "MR"
     },
     {
-      name: "Emily Rodriguez",
-      company: "Fitness Influencer",
-      role: "Content Creator",
-      content: "As a solo creator, this tool handles everything I need. The AI suggestions are spot-on and help me maintain consistent posting.",
+      name: "Emily Chen",
+      company: "Family Practice",
+      role: "Family Physician",
+      content: "The integration with our practice has been seamless. Our patients love the convenience, and we've seen a 40% reduction in unnecessary office visits.",
       rating: 5,
-      avatar: "ER"
+      avatar: "EC"
     }
+  ];
+
+  const stats = [
+    { number: "95%", label: "Diagnosis Accuracy", icon: <Brain className="w-6 h-6" /> },
+    { number: "40%", label: "Reduced Hospital Visits", icon: <Heart className="w-6 h-6" /> },
+    { number: "500K+", label: "Lives Improved", icon: <Users className="w-6 h-6" /> },
+    { number: "24/7", label: "Health Monitoring", icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="AI Social Media Manager - Zion Tech Group"
-        description="Revolutionary AI-powered social media management platform with automated content generation, smart scheduling, and advanced analytics. Boost your social media presence with cutting-edge technology."
-        keywords="AI social media manager, social media automation, content generation, social media analytics, social media scheduling, digital marketing"
-        canonical="/ai-social-media-manager"
+        title="AI Healthcare Assistant - Zion Tech Group"
+        description="Revolutionary AI-powered healthcare platform with symptom analysis, health monitoring, and personalized medical recommendations. Transform healthcare with cutting-edge technology."
+        keywords="AI healthcare, medical AI, health monitoring, symptom analysis, telemedicine, digital health, healthcare technology, medical diagnosis"
+        canonical="/ai-healthcare-assistant"
       />
       
       {/* Hero Section */}
@@ -140,18 +147,18 @@ const AISocialMediaManagerPage: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Social Media Management</span>
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Healthcare Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Social Media Manager
+              AI Healthcare Assistant
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your social media presence with AI-powered content generation, smart scheduling, 
-            and advanced analytics. Save time, increase engagement, and grow your audience automatically.
+            Revolutionize healthcare with AI-powered symptom analysis, health monitoring, and personalized medical recommendations. 
+            Get 24/7 health support and early detection with cutting-edge artificial intelligence.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -159,7 +166,7 @@ const AISocialMediaManagerPage: React.FC = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center group"
             >
-              Start Free Trial
+              Start Free Assessment
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -167,28 +174,21 @@ const AISocialMediaManagerPage: React.FC = () => {
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group"
             >
               Watch Demo
-              <Video className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              <Stethoscope className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
             </Link>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">300%</div>
-              <div className="text-gray-300 text-sm">Average Engagement Increase</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-              <div className="text-gray-300 text-sm">Supported Platforms</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-pink-400 mb-2">10K+</div>
-              <div className="text-gray-300 text-sm">Active Users</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-              <div className="text-gray-300 text-sm">AI Monitoring</div>
-            </div>
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  {stat.icon}
+                </div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -198,10 +198,11 @@ const AISocialMediaManagerPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful Features for Modern Social Media
+              Advanced AI Healthcare Technology
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to manage, grow, and optimize your social media presence with AI-powered automation.
+              Harness the power of artificial intelligence to revolutionize healthcare with accurate diagnosis, 
+              continuous monitoring, and personalized treatment recommendations.
             </p>
           </div>
           
@@ -226,27 +227,27 @@ const AISocialMediaManagerPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Supported Platforms */}
+      {/* Health Categories */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Connect All Your Platforms
+              Comprehensive Health Coverage
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Manage all your social media accounts from one powerful dashboard
+              AI-powered healthcare solutions for every aspect of your health and wellness
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {platforms.map((platform, index) => (
+            {healthCategories.map((category, index) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
               >
-                <div className="text-4xl mb-3">{platform.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{platform.name}</h3>
-                <p className="text-cyan-400 text-sm">{platform.users} users</p>
+                <div className="text-4xl mb-3">{category.icon}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
+                <p className="text-gray-300 text-sm">{category.description}</p>
               </div>
             ))}
           </div>
@@ -258,10 +259,10 @@ const AISocialMediaManagerPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Choose Your Health Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your needs. All plans include our core AI features.
+              Select the plan that best fits your healthcare needs and budget
             </p>
           </div>
           
@@ -322,10 +323,10 @@ const AISocialMediaManagerPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Social Media Professionals
+              Trusted by Healthcare Professionals
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our users say about AI Social Media Manager
+              See what medical professionals say about our AI Healthcare Assistant
             </p>
           </div>
           
@@ -360,11 +361,11 @@ const AISocialMediaManagerPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Social Media?
+            Ready to Transform Your Healthcare?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already using AI Social Media Manager to boost their online presence. 
-            Start your free trial today and see the difference AI can make.
+            Join thousands of users already using AI Healthcare Assistant to improve their health and wellness. 
+            Start your free health assessment today and experience the future of healthcare.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -372,14 +373,14 @@ const AISocialMediaManagerPage: React.FC = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center group"
             >
-              Start Free Trial
+              Start Free Assessment
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group"
             >
-              Schedule Demo
+              Schedule Consultation
               <Calendar className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
             </Link>
           </div>
@@ -389,4 +390,4 @@ const AISocialMediaManagerPage: React.FC = () => {
   );
 };
 
-export default AISocialMediaManagerPage;
+export default AIHealthcareAssistantPage;
