@@ -19,7 +19,18 @@ import {
   Database,
   Users,
   Award,
-  Star
+  Star,
+  Cpu,
+  Layers,
+  Target,
+  Settings,
+  Sparkles,
+  TrendingUp,
+  CheckCircle,
+  ExternalLink,
+  ChevronRight,
+  Heart,
+  Star as StarIcon
 } from "lucide-react";
 
 const Footer: React.FC = () => {
@@ -44,22 +55,34 @@ const Footer: React.FC = () => {
   ];
 
   const quickLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "AI Services", path: "/ai-services" },
-    { name: "Micro SAAS", path: "/micro-saas" },
-    { name: "5G Solutions", path: "/5g-solutions" },
-    { name: "Contact", path: "/contact" },
+    { name: "Home", path: "/", icon: <Globe className="w-4 h-4" /> },
+    { name: "About", path: "/about", icon: <Brain className="w-4 h-4" /> },
+    { name: "Services", path: "/services", icon: <Shield className="w-4 h-4" /> },
+    { name: "AI Services", path: "/ai-services", icon: <Cpu className="w-4 h-4" /> },
+    { name: "Micro SAAS", path: "/micro-saas", icon: <Zap className="w-4 h-4" /> },
+    { name: "5G Solutions", path: "/5g-solutions", icon: <Layers className="w-4 h-4" /> },
+    { name: "Contact", path: "/contact", icon: <Mail className="w-4 h-4" /> },
   ];
 
-  const services = [
-    { name: "AI Analytics", path: "/ai-analytics" },
-    { name: "Cybersecurity", path: "/ai-cybersecurity" },
-    { name: "Cloud Migration", path: "/cloud-migration" },
-    { name: "Web Development", path: "/web-development" },
-    { name: "DevOps", path: "/devops" },
-    { name: "IT Consulting", path: "/it-consulting" },
+  const aiServices = [
+    { name: "AI Analytics", path: "/ai-analytics", icon: <BarChart3 className="w-4 h-4" /> },
+    { name: "AI Content Generation", path: "/ai-content-generation", icon: <Code className="w-4 h-4" /> },
+    { name: "AI Cybersecurity", path: "/ai-cybersecurity", icon: <Shield className="w-4 h-4" /> },
+    { name: "AI Customer Support", path: "/ai-customer-support", icon: <Users className="w-4 h-4" /> },
+  ];
+
+  const microSaasServices = [
+    { name: "Meeting Transcriber", path: "/zion-ai-meeting-transcriber", icon: <Target className="w-4 h-4" /> },
+    { name: "Sales Predictor", path: "/zion-ai-sales-predictor", icon: <TrendingUp className="w-4 h-4" /> },
+    { name: "HR Assistant", path: "/zion-ai-hr-assistant", icon: <Users className="w-4 h-4" /> },
+    { name: "Expense Tracker", path: "/zion-ai-expense-tracker", icon: <BarChart3 className="w-4 h-4" /> },
+  ];
+
+  const itServices = [
+    { name: "Cloud Migration", path: "/cloud-migration", icon: <Cloud className="w-4 h-4" /> },
+    { name: "Web Development", path: "/web-development", icon: <Code className="w-4 h-4" /> },
+    { name: "DevOps", path: "/devops", icon: <Settings className="w-4 h-4" /> },
+    { name: "IT Consulting", path: "/it-consulting", icon: <Brain className="w-4 h-4" /> },
   ];
 
   const stats = [

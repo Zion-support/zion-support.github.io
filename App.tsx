@@ -95,6 +95,12 @@ const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleane
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
 
+// Latest Innovative Micro SAAS Services
+const ZionAIMeetingTranscriberPage = React.lazy(() => import("./app/zion-ai-meeting-transcriber/page"));
+const ZionAISalesPredictorPage = React.lazy(() => import("./app/zion-ai-sales-predictor/page"));
+const ZionAIHRAssistantPage = React.lazy(() => import("./app/zion-ai-hr-assistant/page"));
+const ZionAIExpenseTrackerPage = React.lazy(() => import("./app/zion-ai-expense-tracker/page"));
+
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -214,6 +220,12 @@ function App() {
                             <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+
+                            {/* Latest Innovative Micro SAAS Services Routes */}
+                            <Route path="/zion-ai-meeting-transcriber" element={<ZionAIMeetingTranscriberPage />} />
+                            <Route path="/zion-ai-sales-predictor" element={<ZionAISalesPredictorPage />} />
+                            <Route path="/zion-ai-hr-assistant" element={<ZionAIHRAssistantPage />} />
+                            <Route path="/zion-ai-expense-tracker" element={<ZionAIExpenseTrackerPage />} />
                           </Routes>
                         </Suspense>
                       </main>
