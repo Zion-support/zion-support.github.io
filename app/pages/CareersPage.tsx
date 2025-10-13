@@ -1,70 +1,70 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;
+import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react';
 const CareersPage: React.FC = () => {
   const benefits = [{
       icon: Heart,
-      title: 'Health & Wellness',';
-      description: 'Comprehensive health insurance, mental health support, and wellness programs.'';
+        title: 'Health & Wellness',
+        description: 'Comprehensive health insurance, mental health support, and wellness programs.'
     },
     {
       icon: Zap,
-      title: 'Learning & Development',';
-      description: 'Continuous learning opportunities, conferences, and professional development budget.'';
+      title: 'Learning & Development',
+      description: 'Continuous learning opportunities, conferences, and professional development budget.'
     },
     {
       icon: Users,
-      title: 'Collaborative Culture',';
-      description: 'Work with talented professionals in an inclusive and innovative environment.'';
+      title: 'Collaborative Culture',
+      description: 'Work with talented professionals in an inclusive and innovative environment.'
     },
     {
       icon: Target,
-      title: 'Career Growth',';
-      description: 'Clear career paths, mentorship programs, and opportunities for advancement.'';
+      title: 'Career Growth',
+      description: 'Clear career paths, mentorship programs, and opportunities for advancement.'
     }
   ];
 
   const openPositions = [{
-      title: 'Senior AI Engineer',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Engineering',';
-      description: 'Lead AI model development and implementation for enterprise clients.'';
+      title: 'Senior AI Engineer',
+      location: 'Remote / Delaware',
+      type: 'Full-time',
+      department: 'Engineering',
+      description: 'Lead AI model development and implementation for enterprise clients.'
     },
     {
-      title: 'Cloud Solutions Architect',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Engineering',';
-      description: 'Design and implement scalable cloud infrastructure solutions.'';
+      title: 'Cloud Solutions Architect',
+      location: 'Remote / Delaware',
+      type: 'Full-time',
+      department: 'Engineering',
+      description: 'Design and implement scalable cloud infrastructure solutions.'
     },
     {
-      title: 'Cybersecurity Specialist',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Security',';
-      description: 'Protect client systems and data with advanced security measures.'';
+      title: 'Cybersecurity Specialist',
+      location: 'Remote / Delaware',
+      type: 'Full-time',
+      department: 'Security',
+      description: 'Protect client systems and data with advanced security measures.'
     },
     {
-      title: 'Product Manager',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Product',';
-      description: 'Drive product strategy and roadmap for our AI and IT solutions.'';
+      title: 'Product Manager',
+      location: 'Remote / Delaware',
+      type: 'Full-time',
+      department: 'Product',
+      description: 'Drive product strategy and roadmap for our AI and IT solutions.'
     },
     {
-      title: 'Sales Engineer',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Sales',';
-      description: 'Help clients understand and implement our technology solutions.'';
+      title: 'Sales Engineer',
+      location: 'Remote / Delaware',
+      type: 'Full-time',
+      department: 'Sales',
+      description: 'Help clients understand and implement our technology solutions.'
     },
     {
-      title: 'UX/UI Designer',';
-      location: 'Remote / Delaware',';
-      type: 'Full-time',';
-      department: 'Design',';
-      description: 'Create intuitive and engaging user experiences for our products.'';
+      title: 'UX/UI Designer',
+      location: 'Remote / Delaware',
+      type: 'Full-time',
+      department: 'Design',
+      description: 'Create intuitive and engaging user experiences for our products.'
     }
   ];
 

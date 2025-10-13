@@ -6,7 +6,7 @@ const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     company: ',
     phone: ',
     service: ',
-    message: ';)
+    message: ',)
 })const [isSubmitting, setIsSubmitting] = useState(false);
 
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
@@ -14,7 +14,7 @@ const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(i
 const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
 
     setFormData(prev => ({
-    message: '';)
+    message: '',)
 })
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
@@ -275,3 +275,7 @@ message: ']
 };
 
 export default ContactPage;}
+}
+}
+}
+}

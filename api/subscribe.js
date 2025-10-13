@@ -49,6 +49,11 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-
+      message: 'Successfully subscribed'
+    }));
+  } catch (error) {
+    console.error('Error writing subscribers:', error);
+    res.setHeader('Content-Type', 'application/json');
+    res.status(500).end(JSON.stringify({ error: 'Internal server error' }));
   }
 }

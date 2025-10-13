@@ -25,7 +25,7 @@ function findFilesWithConflicts(dir) {
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+          if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {
             files.push(fullPath);
           }
         } catch (err) {
@@ -46,8 +46,7 @@ function fixMergeConflicts(filePath) {
     const originalContent = content;
     
     // Fix common merge conflict patterns
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, (match, headContent, branchContent) => {
-      // For most cases, prefer the HEAD content (current branch)
+    content = content.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n      // For most cases, prefer the HEAD content (current branch)
       return headContent.trim();
     });
     
@@ -58,16 +57,16 @@ function fixMergeConflicts(filePath) {
     
     // Fix malformed JSX
     content = content.replace(/<>/g, '<>');
-    content = content.replace(/<\/>;/g, '</>');
+    content = content.replace(/<\/>/g, '</>');
     content = content.replace(/<Helmet>/g, '<Helmet>');
-    content = content.replace(/<\/Helmet>;/g, '</Helmet>');
-    content = content.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
+    content = content.replace(/<\/Helmet>/g, '</Helmet>');
+    content = content.replace(/<title>([^<]*)<\/title>/g, '<title>$1</title>');
     content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
     
     // Fix common syntax errors
     content = content.replace(/export default function ([^   {]+)\s*{/g, 'export default function $1    {');
     content = content.replace(/return \(\s*<>/g, 'return (\n    <>');
-    content = content.replace(/;\s*<\/>;/g, '\n    </>');
+    content = content.replace(/;\s*<\/>/g, '\n    </>');
     content = content.replace(/;\s*\);/g, '\n  );');
     
     // Remove duplicate React imports
@@ -125,10 +124,10 @@ function fixUnterminatedStrings(filePath) {
       
       // Fix malformed JSX syntax
       line = line.replace(/<>/g, '<>');
-      line = line.replace(/<\/>;/g, '</>');
+      line = line.replace(/<\/>/g, '</>');
       line = line.replace(/<Helmet>/g, '<Helmet>');
-      line = line.replace(/<\/Helmet>;/g, '</Helmet>');
-      line = line.replace(/<title>([^<]*)<\/title>;/g, '<title>$1</title>');
+      line = line.replace(/<\/Helmet>/g, '</Helmet>');
+      line = line.replace(/<title>([^<]*)<\/title>/g, '<title>$1</title>');
       line = line.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
       
       fixedLines.push(line);
@@ -213,4 +212,13 @@ async function main() {
   console.log('🎉 Error fixing process completed!');
 }
 
-main().catch(console.error);
+main().catch(console.error);)
+)
+)
+)
+)
+)
+)
+)
+)
+)

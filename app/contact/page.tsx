@@ -56,7 +56,6 @@ export default function ContactPage()    {
     {
       icon: 'Clock',
 
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       description: '9:00 AM - 6:00 PM EST'
     }
   ];

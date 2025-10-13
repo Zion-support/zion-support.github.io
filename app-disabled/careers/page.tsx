@@ -1,4 +1,4 @@
-import { useState } from 'react;
+import { useState } from 'react'
 
 import { Helmet } from 'react-helmet-async';'lucide-react;
 
@@ -28,7 +28,7 @@ const PagePage: React.FC = () => {}
 
   benefits: string[];
 
-  featured: boolean;
+  featured: boolean'
 
 }
 const eersPage: React.FC = () => {
@@ -404,3 +404,17 @@ import { Right, Circle, Star, } from 'lucide-react';
                         <li className="text-sm text-gray-400>
             </div>  ));)
 export default eersPage;
+}
+}
+}
+}
+}
+]
+]
+]
+]
+]
+]
+]
+)
+)

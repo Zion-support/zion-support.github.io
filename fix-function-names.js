@@ -1,6 +1,6 @@
-import fs from 'fs;
+import fs from 'fs'
 import path from 'path;
-#!/usr/bin// Fixed regex;
+#!/usr/bin// Fixed regex'
   '';
   '';
   '';
@@ -11,5 +11,8 @@ import path from 'path;
 console.log('Fixing function names that start with numbers...'';
       let content = fs.readFileSync(filePath, 'utf8'';
         const newName = 'Page'';
-  console.error('Error:'';
-      fs.writeFileSync(filePath, content, 'utf8'';
+  console.error('Error: '',
+      fs.writeFileSync(filePath, content, 'utf8'';)
+)
+)
+)

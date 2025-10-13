@@ -1,9 +1,9 @@
-import fs from 'fs;
-import path from 'path;
-import { fileURLToPath } from 'url;
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react;
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react'
 const createGenericPage = (serviceName, title, description) => `'use client'';
       title: 'Advanced Technology'';
       description: 'Cutting-edge technology solutions for modern businesses.'';
@@ -20,4 +20,13 @@ const createGenericPage = (serviceName, title, description) => `'use client'';
     { label: 'Years Experience', value: '5+'';
     /^\s*title:\s*['"][^'"]*['';
     /^\s*description:\s*['"][^'"]*['';
-    /^\s*color:\s*["'][^"'';
+    /^\s*color:\s*["'][^"'';}
+}
+}
+}
+]
+]
+]
+]
+]
+]

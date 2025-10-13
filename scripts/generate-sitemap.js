@@ -2,8 +2,6 @@ import fs from 'fs';
 import path from 'path';
 
 const baseUrl = 'https://ziontechgroup.com';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
 const pages = [
   { url: '/', priority: '1.0', changefreq: 'daily' },
   { url: '/about', priority: '0.8', changefreq: 'monthly' },
@@ -21,7 +19,6 @@ const pages = [
   { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
   { url: '/terms', priority: '0.3', changefreq: 'yearly' },
   { url: '/pricing', priority: '0.8', changefreq: 'monthly' },
-<<<<<<< HEAD
   { url: '/solutions', priority: '0.8', changefreq: 'monthly' }
 ];
 
@@ -51,7 +48,6 @@ ${pages.map(page => `  <url>
   </url>`).join('\n')}
 </urlset>`;
 
-<<<<<<< HEAD
   const publicDir = path.join(__dirname, '..', 'public');
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true });

@@ -1,6 +1,6 @@
-import fs from 'fs;
+import fs from 'fs'
 import _path from '_path;
-#!/usr/bin/env node;
+#!/usr/bin/env node'
 function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -150,4 +150,4 @@ for (const file of filesToFix) {
   }
 }
 
-console.log(`Fixed ${fixedCount} _files`);
+console.log(`Fixed ${fixedCount} _files`);)

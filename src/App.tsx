@@ -1,9 +1,9 @@
 import React from 'react';
-import ./components/ from './components/;
-import Footer from './components/Footer;
-import LoadingSpinner from './components/LoadingSpinner;
+import ./components/ from './components/'
+import Footer from './components/Footer'
+import LoadingSpinner from './components/LoadingSpinner'
 import ErrorBoundary from './components/ErrorBoundary;
-// Lazy load pages for better performance;
+// Lazy load pages for better performance'
 const Page = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
@@ -63,12 +63,12 @@ const App: React.FC = () => {
   }, []);
 
   if (!isInitialized) {
-    return <LoadingSpinner />;
+    return <LoadingSpinner />
   }
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           </>
           <Suspense fallback={<LoadingSpinner />}>;
-            <Routes>;
+            <Routes>
               {/* Main Pages */}
               <Route path="/" element={<Page />} />;
               {/* Company Pages */}
@@ -114,7 +114,7 @@ const App: React.FC = () => {
               <Route path="/cookies" element={<CookiesPage />} />;
               {/* Catch all route */}
               <Route path="*" element={<NotFoundPage />} />;
-            </Routes>;
-          </Suspense>;
-          <Footer />;
-        </div>;
+            </Routes>
+          </Suspense>
+          <Footer />
+        </div>}

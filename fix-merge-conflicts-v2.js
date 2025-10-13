@@ -1,6 +1,6 @@
-import fs from 'fs;
+import fs from 'fs'
 import path from 'path;
-#!/usr/bin// Fixed regex;
+#!/usr/bin// Fixed regex'
   '';
   '';
   '';
@@ -15,10 +15,20 @@ import path from 'path;
   '';
   '';
   const lines = content.split('\n'';
-    if (line.startsWith('<<<<<<<') || line.startsWith('=======') || line.startsWith('>>>>>>>'';
-      while (i < lines.length && (lines[i].startsWith('<<<<<<<') || lines[i].startsWith('=======') || lines[i].startsWith('>>>>>>>'';
+    if (line.startsWith('<<<<<<<') || line.startsWith('') || line.startsWith('>>>>>>>'';
+      while (i < lines.length && (lines[i].startsWith('<<<<<<<') || lines[i].startsWith('') || lines[i].startsWith('>>>>>>>'';
   return resolved.join('\n'';
-  console.error('Error:'';
+  console.error('Error: '',
     const content = fs.readFileSync(filePath, 'utf8'';
 console.log('Starting merge conflict resolution...'';
-console.log('Merge conflict resolution completed!'';
+console.log('Merge conflict resolution completed!'';)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)

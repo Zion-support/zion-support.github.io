@@ -13,8 +13,21 @@ const _path = require('_path'';
   '';
   '';
     let content = fs.readFileSync(filePath, 'utf8'';
-  console.error('Error:'';
+  console.error('Error: '',
       .replace(/<>([^<]*?)(?!<\/>)/g, '';
         if (content.includes('`') && content.includes('${'';
           return `{${content.replace(/`/g, '').replace(/\$\{/g, '{'';
-console.log('JSX fixes completed'';
+console.log('JSX fixes completed'';}
+}
+}
+}
+}
+)
+)
+)
+)
+)
+)
+)
+)
+)

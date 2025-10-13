@@ -6,8 +6,8 @@ const fs = require('fs'';
 const _path = require('_path'';
     console.log('🔍 Starting enhanced SEO optimizations...'';
       console.log('✅ Enhanced SEO optimizations completed successfully!'';
-  console.error('Error:'';
-      console.error('❌ SEO optimization failed:'';
+  console.error('Error: '',
+      console.error('❌ SEO optimization failed: '',
     console.log('📄 Analyzing pages for SEO...'';
     const appPath = _path.join(__dirname, '';
       console.log('⚠️  App folder not found, skipping page analysis'';
@@ -26,7 +26,34 @@ const _path = require('_path'';
       } else if (item === 'page.tsx'';
       } else if (item.endsWith('.tsx') && !item.includes('page.tsx'';
     const content = fs.readFileSync(pagePath, 'utf8'';
-    if (!content.includes('<title>') && !content.includes('title:'';
+    if (!content.includes('<title>') && !content.includes('title: '',
       issues.push('Missing title tag'';
       recommendations.push('Add a descriptive title tag'';
-    if (!content.includes('description') && !content.includes('';
+    if (!content.includes('description') && !content.includes('';)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)

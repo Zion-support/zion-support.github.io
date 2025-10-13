@@ -6,4 +6,13 @@
       if (['node_modules', '.git', 'dist', 'build', '.next'';
       if (item.endsWith('.ts') || item.endsWith('.tsx') || item.endsWith('.js') || item.endsWith('.jsx'';
 console.log('Starting merge conflict cleanup...'';
-const cleanedCount = cleanDirectory('';
+const cleanedCount = cleanDirectory('';]
+)
+)
+)
+)
+)
+)
+)
+)
+)

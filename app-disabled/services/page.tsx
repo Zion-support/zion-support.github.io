@@ -7,7 +7,7 @@ import { }
 
 ;
 
-const ServicesPage: React.FC = () => {const services = [;
+const ServicesPage: React.FC = () => {const services = ['
     // AI Services
     {      ico,
     n: title: 'AI Solutions,
@@ -95,3 +95,4 @@ const ServicesPage: React.FC = () => {const services = [;
     </div>
   );
 }
+]

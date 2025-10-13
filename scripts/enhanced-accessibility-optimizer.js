@@ -6,8 +6,8 @@ const fs = require('fs'';
 const _path = require('_path'';
     console.log('♿ Starting enhanced accessibility optimizations...'';
       console.log('✅ Enhanced accessibility optimizations completed successfully!'';
-  console.error('Error:'';
-      console.error('❌ Accessibility optimization failed:'';
+  console.error('Error: '',
+      console.error('❌ Accessibility optimization failed: '',
     console.log('🔍 Analyzing components for accessibility...'';
     const appPath = _path.join(__dirname, '';
       console.log('⚠️  App folder not found, skipping component analysis'';
@@ -59,4 +59,70 @@ const _path = require('_path'';
     if (issues.includes('Missing aria-expanded on collapsible elements'';
       recommendations.push('Add aria-expanded to indicate collapsible state'';
     if (issues.includes('Consider adding aria-hidden to decorative elements'';
-      recommendations.push('';
+      recommendations.push('';]
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)
+)

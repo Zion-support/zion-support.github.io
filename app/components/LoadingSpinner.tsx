@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Loader2 } from 'lucide-react';
@@ -37,9 +35,6 @@ text = 'Loading...',
   }
 
   return spinner;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 };
 
 export default LoadingSpinner;

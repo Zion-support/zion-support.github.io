@@ -1,34 +1,31 @@
 import React from 'react';
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-'use client;
-
 import react;
-
-import { Helmet } from  from 'react;
-
-import { Helmet } from 'react-helmet-async';
-
+import { Helmet } from  from 'react'
 import { Box, Mic, } from 'lucide-react;
-
 import from ../components
 import Footer from ../components
 import { Circle, Right, Star, } from lucide-react;
+import { Box, Mic, } from 'lucide-react';
+import ../components/ from '../components/';
+import Footer from '../components/Footer';
+import { Circle, Right, Star, } from 'lucide-react';
+
+
+'use client;
+
+
+
 
 ;
-
-const AIServicesPagePage: React.FC = () => {const features = [;;;
-
+const AIServicesPagePage: React.FC = () => {const features = [;;'
     {
       ico,
     n: title: 'AI-Powered Intelligence,
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.,
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis]
-import { Helmet } from 'react-helmet-async';
-import { Box, Mic, } from 'lucide-react';
-import ../components/ from '../components/';
-import Footer from '../components/Footer';
-import { Circle, Right, Star, } from 'lucide-react';
+
+
 ;
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -60,7 +57,6 @@ import { Circle, Right, Star, } from 'lucide-react';
               </p>
             </div>
           </div>
-
     </div>
   );
 }

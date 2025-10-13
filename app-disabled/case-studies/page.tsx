@@ -1,7 +1,7 @@
 import React from 'react';
 import react;
 
-import from  from 'react;
+import from  from 'react'
 
 import from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -286,3 +286,14 @@ import { Right, Star, } from 'lucide-react';
 
   );  ));)
 export default CaseStudiesPage;
+}
+}
+}
+}
+}
+}
+}
+]
+]
+]
+]

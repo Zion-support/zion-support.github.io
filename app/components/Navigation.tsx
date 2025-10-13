@@ -40,7 +40,6 @@ const Navigation = () => {
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-<<<<<<< HEAD
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
@@ -48,11 +47,6 @@ const Navigation = () => {
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
   ];
 
   const isActive = (path: string) => {
@@ -73,7 +67,6 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
@@ -111,7 +104,6 @@ const Navigation = () => {
                 </div>
               );
             })}
-=======
 {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
@@ -142,7 +134,6 @@ const Navigation = () => {
                 )}
               </div>
             ))}
->>>>>>> origin/main
           </div>
 
           {/* CTA Button */}
