@@ -70,18 +70,18 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-services"
+                  to="/services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Solutions
+                  IT Solutions
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity"
+                  to="/micro-saas"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cybersecurity
+                  Micro SAAS
                 </Link>
               </li>
               <li>
@@ -94,18 +94,18 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/data-analytics"
+                  to="/consultation"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Data Analytics
+                  Consultation
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/web-development"
+                  to="/demo"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Web Development
+                  Demo
                 </Link>
               </li>
             </ul>
@@ -113,7 +113,7 @@ const Footer = React.memo(() => {
 
           {/* Solutions */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+            <h4 className="text-lg font-semibold mb-4">AI Solutions</h4>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -157,18 +157,10 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/data-analytics"
+                  to="/ai-healthcare"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/custom-development"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Custom Development
+                  AI Healthcare
                 </Link>
               </li>
             </ul>
@@ -219,49 +211,10 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/contact"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/support"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Help Center
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/pricing"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/consultation"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Consultation
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/blog"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Blog
                 </Link>
               </li>
               <li>
@@ -282,10 +235,65 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
+                  to="/consultation"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Free Consultation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Resources</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/blog"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/case-studies"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/sitemap"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Sitemap
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/privacy"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/terms"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cookies"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cookie Policy
                 </Link>
               </li>
             </ul>
