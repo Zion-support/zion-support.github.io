@@ -60,11 +60,7 @@ class ErrorHandler extends Component<Props, State> {
         timestamp: new Date().toISOString()
       };
       // Send to your error reporting service here
-<<<<<<< HEAD
       console.log('Error data prepared for reporting:', errorData);
-=======
-      // Error data prepared for reporting
->>>>>>> cursor/analyze-improve-and-deploy-application-e0b7
     } catch (reportingError) {
       // Error reporting failed
 

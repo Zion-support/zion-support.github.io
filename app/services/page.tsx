@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Settings, Zap, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,9 @@ export default function Services() {
       path: "/ai-business-intelligence",
       color: "from-blue-500 to-cyan-500",
       price: "Starting at $299/month",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"]
+      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"],
+      category: "AI Analytics",
+      popular: true
     },
     {
       title: "AI Customer Support Automation",
@@ -20,7 +22,9 @@ export default function Services() {
       path: "/ai-customer-support",
       color: "from-green-500 to-emerald-500",
       price: "Starting at $199/month",
-      features: ["Multi-language Support", "Sentiment Analysis", "CRM Integration", "Live Chat Handoff"]
+      features: ["Multi-language Support", "Sentiment Analysis", "CRM Integration", "Live Chat Handoff"],
+      category: "AI Automation",
+      popular: true
     },
     {
       title: "AI Content Generation Suite",
@@ -29,7 +33,9 @@ export default function Services() {
       path: "/ai-content-generation",
       color: "from-purple-500 to-pink-500",
       price: "Starting at $149/month",
-      features: ["SEO Optimization", "Brand Voice Training", "Multi-format Output", "Plagiarism Detection"]
+      features: ["SEO Optimization", "Brand Voice Training", "Multi-format Output", "Plagiarism Detection"],
+      category: "AI Content",
+      popular: false
     },
     {
       title: "AI Cybersecurity Monitor",
@@ -38,7 +44,9 @@ export default function Services() {
       path: "/ai-cybersecurity",
       color: "from-red-500 to-orange-500",
       price: "Starting at $399/month",
-      features: ["Threat Detection", "Automated Response", "Compliance Reports", "24/7 Monitoring"]
+      features: ["Threat Detection", "Automated Response", "Compliance Reports", "24/7 Monitoring"],
+      category: "Cybersecurity",
+      popular: true
     },
     {
       title: "5G Network Infrastructure",
@@ -47,7 +55,9 @@ export default function Services() {
       path: "/5g-solutions",
       color: "from-cyan-500 to-blue-500",
       price: "Custom Pricing",
-      features: ["Network Planning", "Edge Computing", "IoT Integration", "Performance Monitoring"]
+      features: ["Network Planning", "Edge Computing", "IoT Integration", "Performance Monitoring"],
+      category: "5G Solutions",
+      popular: false
     },
     {
       title: "Cloud Infrastructure Management",
@@ -56,7 +66,9 @@ export default function Services() {
       path: "/cloud-infrastructure",
       color: "from-indigo-500 to-purple-500",
       price: "Starting at $249/month",
-      features: ["Auto-scaling", "Disaster Recovery", "Cost Optimization", "Security Hardening"]
+      features: ["Auto-scaling", "Disaster Recovery", "Cost Optimization", "Security Hardening"],
+      category: "Cloud Services",
+      popular: true
     },
     {
       title: "AI-Powered Data Analytics",
@@ -65,7 +77,9 @@ export default function Services() {
       path: "/ai-data-analytics",
       color: "from-teal-500 to-cyan-500",
       price: "Starting at $179/month",
-      features: ["ML Models", "Interactive Dashboards", "Data Pipeline", "Real-time Processing"]
+      features: ["ML Models", "Interactive Dashboards", "Data Pipeline", "Real-time Processing"],
+      category: "AI Analytics",
+      popular: false
     },
     {
       title: "AI Code Assistant Pro",
@@ -74,7 +88,9 @@ export default function Services() {
       path: "/ai-code-assistant",
       color: "from-yellow-500 to-orange-500",
       price: "Starting at $129/month",
-      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Documentation"]
+      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Documentation"],
+      category: "AI Development",
+      popular: true
     },
     {
       title: "AI Marketing Automation",
@@ -83,7 +99,9 @@ export default function Services() {
       path: "/ai-marketing-automation",
       color: "from-pink-500 to-rose-500",
       price: "Starting at $199/month",
-      features: ["Email Automation", "Social Media", "Lead Scoring", "A/B Testing"]
+      features: ["Email Automation", "Social Media", "Lead Scoring", "A/B Testing"],
+      category: "AI Marketing",
+      popular: false
     },
     {
       title: "AI Document Processing",
@@ -92,7 +110,9 @@ export default function Services() {
       path: "/ai-document-processing",
       color: "from-emerald-500 to-green-500",
       price: "Starting at $159/month",
-      features: ["OCR Technology", "Form Recognition", "Data Extraction", "Workflow Automation"]
+      features: ["OCR Technology", "Form Recognition", "Data Extraction", "Workflow Automation"],
+      category: "AI Automation",
+      popular: false
     },
     {
       title: "AI Sales CRM Assistant",
@@ -101,7 +121,9 @@ export default function Services() {
       path: "/ai-crm-assistant",
       color: "from-violet-500 to-purple-500",
       price: "Starting at $229/month",
-      features: ["Lead Scoring", "Sales Forecasting", "Automated Follow-ups", "CRM Integration"]
+      features: ["Lead Scoring", "Sales Forecasting", "Automated Follow-ups", "CRM Integration"],
+      category: "AI Sales",
+      popular: true
     },
     {
       title: "AI Financial Analytics",
@@ -110,7 +132,130 @@ export default function Services() {
       path: "/ai-financial-analytics",
       color: "from-amber-500 to-yellow-500",
       price: "Starting at $349/month",
-      features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
+      features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"],
+      category: "AI Finance",
+      popular: false
+    },
+    {
+      title: "AI Healthcare Solutions",
+      description: "Revolutionary healthcare AI platform with medical image analysis, patient monitoring, and diagnostic assistance. Improve patient outcomes with cutting-edge technology.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/ai-healthcare-solutions",
+      color: "from-green-500 to-teal-500",
+      price: "Starting at $499/month",
+      features: ["Medical Image Analysis", "Patient Monitoring", "Diagnostic Assistance", "HIPAA Compliance"],
+      category: "AI Healthcare",
+      popular: true
+    },
+    {
+      title: "AI Supply Chain Optimization",
+      description: "Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation. Reduce costs and improve efficiency.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/ai-supply-chain-optimization",
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $379/month",
+      features: ["Demand Forecasting", "Inventory Optimization", "Logistics Automation", "Risk Management"],
+      category: "AI Logistics",
+      popular: false
+    },
+    {
+      title: "AI Legal Document Analysis",
+      description: "Advanced legal AI platform for contract analysis, document review, and compliance monitoring. Accelerate legal processes with intelligent automation.",
+      icon: <FileText className="w-8 h-8" />,
+      path: "/ai-legal-document-analysis",
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $429/month",
+      features: ["Contract Analysis", "Document Review", "Compliance Monitoring", "Legal Research"],
+      category: "AI Legal",
+      popular: false
+    },
+    {
+      title: "AI Real Estate Intelligence",
+      description: "Comprehensive real estate AI platform with property valuation, market analysis, and investment recommendations. Make informed real estate decisions.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      path: "/ai-real-estate-intelligence",
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $299/month",
+      features: ["Property Valuation", "Market Analysis", "Investment Recommendations", "Risk Assessment"],
+      category: "AI Real Estate",
+      popular: true
+    },
+    {
+      title: "AI Manufacturing Optimization",
+      description: "Smart manufacturing solutions with predictive maintenance, quality control, and production optimization. Maximize efficiency and minimize downtime.",
+      icon: <Settings className="w-8 h-8" />,
+      path: "/ai-manufacturing-optimization",
+      color: "from-gray-500 to-slate-500",
+      price: "Starting at $549/month",
+      features: ["Predictive Maintenance", "Quality Control", "Production Optimization", "IoT Integration"],
+      category: "AI Manufacturing",
+      popular: false
+    },
+    {
+      title: "AI Energy Management",
+      description: "Intelligent energy management system with consumption optimization, renewable energy integration, and cost reduction strategies.",
+      icon: <Zap className="w-8 h-8" />,
+      path: "/ai-energy-management",
+      color: "from-yellow-500 to-amber-500",
+      price: "Starting at $279/month",
+      features: ["Consumption Optimization", "Renewable Integration", "Cost Reduction", "Sustainability Tracking"],
+      category: "AI Energy",
+      popular: false
+    },
+    {
+      title: "AI Education Platform",
+      description: "Personalized learning platform with adaptive content, progress tracking, and intelligent tutoring. Transform education with AI-powered learning.",
+      icon: <Users className="w-8 h-8" />,
+      path: "/ai-education-platform",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $199/month",
+      features: ["Adaptive Learning", "Progress Tracking", "Intelligent Tutoring", "Assessment Tools"],
+      category: "AI Education",
+      popular: true
+    },
+    {
+      title: "AI Agriculture Intelligence",
+      description: "Smart agriculture solutions with crop monitoring, yield prediction, and resource optimization. Revolutionize farming with AI technology.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/ai-agriculture-intelligence",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $349/month",
+      features: ["Crop Monitoring", "Yield Prediction", "Resource Optimization", "Weather Analysis"],
+      category: "AI Agriculture",
+      popular: false
+    },
+    {
+      title: "AI Transportation Optimization",
+      description: "Intelligent transportation management with route optimization, fleet management, and predictive maintenance. Streamline logistics operations.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/ai-transportation-optimization",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $399/month",
+      features: ["Route Optimization", "Fleet Management", "Predictive Maintenance", "Fuel Efficiency"],
+      category: "AI Transportation",
+      popular: false
+    },
+    {
+      title: "AI Retail Analytics",
+      description: "Advanced retail intelligence with customer behavior analysis, inventory optimization, and sales forecasting. Boost retail performance with AI insights.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      path: "/ai-retail-analytics",
+      color: "from-pink-500 to-rose-500",
+      price: "Starting at $249/month",
+      features: ["Customer Behavior Analysis", "Inventory Optimization", "Sales Forecasting", "Price Optimization"],
+      category: "AI Retail",
+      popular: true
+    },
+    {
+      title: "AI Insurance Risk Assessment",
+      description: "Intelligent insurance platform with risk assessment, fraud detection, and claims processing automation. Modernize insurance operations.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/ai-insurance-risk-assessment",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $379/month",
+      features: ["Risk Assessment", "Fraud Detection", "Claims Processing", "Policy Optimization"],
+      category: "AI Insurance",
+      popular: false
     }
   ];
 
@@ -180,35 +325,60 @@ export default function Services() {
                 Discover our comprehensive suite of AI-powered services and cutting-edge technology solutions designed to transform your business.
               </p>
             </div>
+            
+            {/* Categories Filter */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {Array.from(new Set(services.map(s => s.category))).map((category, index) => (
+                <button
+                  key={index}
+                  className="px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
+                  {/* Popular Badge */}
+                  {service.popular && (
+                    <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full flex items-center">
+                      <Star className="w-3 h-3 mr-1" />
+                      POPULAR
+                    </div>
+                  )}
+                  
                   {/* Animated background effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
                   <div className="relative z-10">
-                    <div
-                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                    >
-                      {service.icon}
+                    <div className="flex items-center justify-between mb-4">
+                      <div
+                        className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      >
+                        {service.icon}
+                      </div>
+                      <div className="text-right">
+                        <div className="text-lg font-bold text-cyan-400">{service.price}</div>
+                        <div className="text-xs text-gray-400">{service.category}</div>
+                      </div>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
+                    
+                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-gray-300 text-center mb-4 leading-relaxed">
+                    <p className="text-gray-300 mb-4 leading-relaxed text-sm">
                       {service.description}
                     </p>
                     
-                    {/* Price and Features */}
-                    <div className="space-y-3">
-                      <div className="text-center">
-                        <span className="text-cyan-400 font-bold text-lg">{service.price}</span>
-                      </div>
-                      <div className="flex flex-wrap gap-2 justify-center">
-                        {service.features.map((feature, idx) => (
+                    {/* Features */}
+                    <div className="space-y-2 mb-4">
+                      <div className="flex flex-wrap gap-1">
+                        {service.features.slice(0, 3).map((feature, idx) => (
                           <span
                             key={idx}
                             className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30"
@@ -216,10 +386,15 @@ export default function Services() {
                             {feature}
                           </span>
                         ))}
+                        {service.features.length > 3 && (
+                          <span className="text-xs text-gray-400">
+                            +{service.features.length - 3} more
+                          </span>
+                        )}
                       </div>
                     </div>
                     
-                    <div className="mt-4 text-center">
+                    <div className="flex items-center justify-between mt-6">
                       <Link
                         to={service.path}
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
@@ -227,6 +402,9 @@ export default function Services() {
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </Link>
+                      <span className="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded-full">
+                        {service.category}
+                      </span>
                     </div>
                   </div>
                 </div>

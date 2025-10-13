@@ -63,6 +63,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
                       </Link>
                       <Link
+                        to="/micro-saas"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                      >
+                        Micro SAAS
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                      </Link>
+                      <Link
+                        to="/5g-solutions"
+                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                      >
+                        5G Solutions
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                      </Link>
+                      <Link
                         to="/contact"
                         className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                       >
@@ -88,7 +102,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-12 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
                     {/* Company Info */}
                     <div className="space-y-4">
                       <h3 className="text-xl font-bold text-white mb-4">
@@ -116,6 +130,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                           Our Services
                         </Link>
+                        <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                          Micro SAAS
+                        </Link>
+                        <Link to="/5g-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                          5G Solutions
+                        </Link>
                         <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                           Contact
                         </Link>
@@ -125,9 +145,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                       </div>
                     </div>
 
-                    {/* Services */}
+                    {/* AI Services */}
                     <div className="space-y-4">
-                      <h4 className="text-lg font-semibold text-white">Services</h4>
+                      <h4 className="text-lg font-semibold text-white">AI Services</h4>
                       <div className="space-y-2">
                         <Link to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Business Intelligence
@@ -140,6 +160,37 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         </Link>
                         <Link to="/ai-cybersecurity" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Cybersecurity
+                        </Link>
+                        <Link to="/ai-marketing-automation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Marketing Automation
+                        </Link>
+                        <Link to="/ai-data-analytics" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Data Analytics
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* IT Services */}
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold text-white">IT Services</h4>
+                      <div className="space-y-2">
+                        <Link to="/cloud-infrastructure" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Cloud Infrastructure
+                        </Link>
+                        <Link to="/5g-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          5G Solutions
+                        </Link>
+                        <Link to="/ai-code-assistant" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Code Assistant
+                        </Link>
+                        <Link to="/ai-document-processing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Document Processing
+                        </Link>
+                        <Link to="/ai-api-management" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          API Management
+                        </Link>
+                        <Link to="/ai-devops-automation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          DevOps Automation
                         </Link>
                       </div>
                     </div>
