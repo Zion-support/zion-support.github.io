@@ -3,7 +3,10 @@ import { ArrowRight, Video, Play, Edit, Settings, Sparkles, CheckCircle, Star, U
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIVideoGeneratorPage = () => {
+<<<<<<< HEAD
   // const [selectedPlan, setSelectedPlan] = useState('pro');
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
   const features = [
     {

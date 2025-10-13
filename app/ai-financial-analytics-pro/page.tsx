@@ -1,7 +1,7 @@
 "use client";
 import { Brain, Shield, CheckCircle, Star, Target, BarChart3 } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export default function page() {
   const benefits = [

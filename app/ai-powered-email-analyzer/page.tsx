@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { 
   Mail, 
@@ -11,6 +12,8 @@ import {
   Brain, 
   Sparkles
 } from 'lucide-react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import { Helmet } from 'react-helmet-async';
 import { 
   Mail, 

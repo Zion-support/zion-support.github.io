@@ -1,22 +1,18 @@
+<<<<<<< HEAD
 import React from 'react';
 import { 
+=======
+import {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
   Rocket, 
   Satellite, 
   Orbit, 
   Zap, 
   Target, 
   CheckCircle, 
-  ArrowRight,
-  Cpu,
   Globe,
-  Clock,
-  Users,
-  Award,
-  Star,
   Activity,
-  PieChart,
   Navigation,
-  MapPin,
   Gauge
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';

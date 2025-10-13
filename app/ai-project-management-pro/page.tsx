@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+=======
+"use client";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import { CheckCircle, Star, Brain, Clock, Target, BarChart3 } from 'lucide-react';
 
 export default function AIProjectManagementPro() {

@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';
 import { 
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
   BarChart3, 
   Cloud, 
   Users, 

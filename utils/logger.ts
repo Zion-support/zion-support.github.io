@@ -23,8 +23,8 @@ class Logger {
       return;
     }
 
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
+    // const timestamp = new Date().toISOString();
+    // const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
 
     switch (level) {
       case 'error':
@@ -63,8 +63,9 @@ class Logger {
       }
       
       localStorage.setItem('app-logs', JSON.stringify(logs));
-    } catch (error) {
-      }
+    } catch {
+      // Error saving logs
+    }
   }
 
   error(message: string, ...args: any[]): void {

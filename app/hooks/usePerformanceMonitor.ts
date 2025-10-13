@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import { useEffect, useRef } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
 interface PerformanceMetrics {
   loadTime: number

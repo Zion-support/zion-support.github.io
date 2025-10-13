@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import { 
+=======
+import {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
   Brain, 
   TrendingUp, 
   Shield, 
@@ -8,13 +12,8 @@ import {
   DollarSign, 
   Target, 
   CheckCircle, 
-  ArrowRight,
   Cpu,
   Globe,
-  Clock,
-  Users,
-  Award,
-  Star,
   Activity,
   PieChart
 } from 'lucide-react';
