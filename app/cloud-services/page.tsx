@@ -62,6 +62,7 @@ export default function CloudServices() {
               </Link>
             </div>
           </div>
+        </div>
         </section>
 
         {/* Key Benefits */}
@@ -87,6 +88,16 @@ export default function CloudServices() {
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
                     {service.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
                   </p>
                 </div>
               ))}
