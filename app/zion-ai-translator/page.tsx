@@ -1,75 +1,78 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Mic, Brain, Zap, Shield, Users, BarChart3, ArrowRight, CheckCircle, Star, Globe, Smartphone, Headphones } from 'lucide-react';
+import { Globe, Brain, Zap, Users, BarChart3, FileText, ArrowRight, CheckCircle, Star, Smartphone, Mail, Languages } from 'lucide-react';
 
-export default function AIVoiceAssistant() {
+export default function ZionAITranslator() {
   const features = [
     {
-      icon: <Mic className="w-6 h-6" />,
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities for human-like conversations"
+      icon: <Globe className="w-6 h-6" />,
+      title: "100+ Languages",
+      description: "Support for over 100 languages with high accuracy translation"
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI Learning Engine",
-      description: "Continuously learns and improves from interactions"
+      title: "Context-Aware AI",
+      description: "Understands context and cultural nuances for better translations"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Instant response times with low latency"
+      title: "Real-time Translation",
+      description: "Instant translation with low latency for live conversations"
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level encryption and compliance standards"
+      icon: <FileText className="w-6 h-6" />,
+      title: "Document Translation",
+      description: "Translate documents while preserving formatting and structure"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$49",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individuals",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "Basic NLP capabilities",
+        "Up to 50,000 words/month",
+        "50+ languages",
+        "Basic AI translation",
         "Email support",
-        "Standard integrations",
-        "Basic analytics dashboard"
+        "Standard accuracy",
+        "Web interface"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$149",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "Ideal for businesses",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "Advanced AI learning",
+        "Up to 200,000 words/month",
+        "100+ languages",
+        "Advanced AI features",
         "Priority support",
-        "Custom integrations",
-        "Advanced analytics",
-        "Multi-language support",
-        "API access"
+        "High accuracy",
+        "API access",
+        "Custom glossaries",
+        "Document translation"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice interactions",
+        "Unlimited words",
+        "All languages",
         "Custom AI training",
-        "24/7 dedicated support",
+        "24/7 support",
+        "Highest accuracy",
         "White-label solution",
-        "Custom analytics",
-        "Advanced security features",
+        "Advanced security",
         "SLA guarantee"
       ],
       popular: false
@@ -78,38 +81,38 @@ export default function AIVoiceAssistant() {
 
   const useCases = [
     {
-      title: "Customer Support",
-      description: "Handle customer inquiries 24/7 with intelligent voice responses",
-      icon: <Headphones className="w-8 h-8" />
-    },
-    {
-      title: "Sales Automation",
-      description: "Qualify leads and schedule appointments automatically",
+      title: "Global Business",
+      description: "Communicate with international clients and partners seamlessly",
       icon: <Users className="w-8 h-8" />
     },
     {
-      title: "Internal Operations",
-      description: "Streamline internal processes with voice commands",
-      icon: <Zap className="w-8 h-8" />
+      title: "Content Creation",
+      description: "Translate marketing materials and content for global audiences",
+      icon: <FileText className="w-8 h-8" />
     },
     {
-      title: "Analytics & Insights",
-      description: "Get detailed analytics on voice interactions and performance",
-      icon: <BarChart3 className="w-8 h-8" />
+      title: "Customer Support",
+      description: "Provide multilingual support to customers worldwide",
+      icon: <Globe className="w-8 h-8" />
+    },
+    {
+      title: "Education",
+      description: "Break language barriers in educational content and courses",
+      icon: <Languages className="w-8 h-8" />
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Zion Tech Group | Intelligent Voice Solutions</title>
+        <title>Zion AI Translator - Zion Tech Group | Advanced Translation Solution</title>
         <meta
           name="description"
-          content="Advanced AI voice assistant with natural language processing, real-time processing, and enterprise security. Perfect for customer support, sales automation, and internal operations."
+          content="AI-powered translation solution supporting 100+ languages with context-aware AI, real-time translation, and document processing. Perfect for global business, content creation, and customer support."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, natural language processing, voice automation, customer support AI, voice analytics, conversational AI"
+          content="AI translator, machine translation, multilingual support, document translation, real-time translation, global business, language barriers"
         />
       </Helmet>
 
@@ -122,20 +125,20 @@ export default function AIVoiceAssistant() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI Voice Technology</span>
+              <Globe className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI Translation</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Voice
+              Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Assistant
+                {" "}Translator
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with intelligent voice AI that understands, learns, and responds naturally. 
-              Perfect for customer support, sales automation, and internal operations.
+              Break down language barriers with our advanced AI translation solution. 
+              Support for 100+ languages with context-aware intelligence and real-time processing.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -150,7 +153,7 @@ export default function AIVoiceAssistant() {
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Watch Demo
+                Try Demo
                 <Globe className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
@@ -162,10 +165,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful AI Voice Capabilities
+                Advanced Translation Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI voice assistant combines cutting-edge technology with intuitive design to deliver exceptional voice experiences.
+                Our AI translator combines neural machine translation with context understanding for the most accurate results.
               </p>
             </div>
             
@@ -195,10 +198,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Transform Your Business Operations
+                Perfect for Every Use Case
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how our AI voice assistant can revolutionize different aspects of your business.
+                Discover how Zion AI Translator can help you communicate across languages and cultures.
               </p>
             </div>
             
@@ -228,10 +231,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Simple, Transparent Pricing
+                Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs. All plans include our core AI voice capabilities.
+                Choose the perfect plan for your translation needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -292,10 +295,10 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Voice Experience?
+              Ready to Break Language Barriers?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses using our AI voice assistant to improve customer experience and operational efficiency.
+              Join thousands of businesses using Zion AI Translator to communicate globally and reach new markets.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -308,14 +311,14 @@ export default function AIVoiceAssistant() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Globe className="w-6 h-6 text-white" />
+                  <Mail className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <p className="text-cyan-400">kleber@ziontechgroup.com</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Shield className="w-6 h-6 text-white" />
+                  <Globe className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>

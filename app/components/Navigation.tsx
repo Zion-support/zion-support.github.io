@@ -25,7 +25,10 @@ const Navigation = React.memo(() => {
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI Video Analytics', path: '/ai-video-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions', icon: <Shield className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
@@ -36,7 +39,9 @@ const Navigation = React.memo(() => {
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion AI Scheduler', path: '/zion-ai-scheduler', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Translator', path: '/zion-ai-translator', icon: <Globe className="w-4 h-4" />, featured: true }
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -93,7 +98,7 @@ const Navigation = React.memo(() => {
 
   return (
     <nav 
-      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md"
+      className="nav-cyberpunk-advanced text-white"
       role="navigation"
       aria-label="Main navigation"
     >
@@ -112,7 +117,7 @@ const Navigation = React.memo(() => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="relative group hover:text-cyan-400 transition-all duration-300 font-medium"
+                className="nav-link relative group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
@@ -213,7 +218,7 @@ const Navigation = React.memo(() => {
 
             <Link
               to="/consultation"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
+              className="btn-quantum-advanced flex items-center space-x-2 group"
             >
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -330,7 +335,7 @@ const Navigation = React.memo(() => {
 
               <Link
                 to="/consultation"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-4 py-3 rounded-lg transition-all duration-300 text-center font-semibold mt-4 flex items-center justify-center space-x-2"
+                className="btn-quantum-advanced text-center mt-4 flex items-center justify-center space-x-2"
                 onClick={toggleMenu}
               >
                 <span>Get Started</span>

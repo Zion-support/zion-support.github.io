@@ -1,74 +1,77 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Mic, Brain, Zap, Shield, Users, BarChart3, ArrowRight, CheckCircle, Star, Globe, Smartphone, Headphones } from 'lucide-react';
+import { Video, Brain, Eye, BarChart3, Shield, Zap, ArrowRight, CheckCircle, Star, Globe, Smartphone, Camera } from 'lucide-react';
 
-export default function AIVoiceAssistant() {
+export default function AIVideoAnalytics() {
   const features = [
     {
-      icon: <Mic className="w-6 h-6" />,
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities for human-like conversations"
+      icon: <Video className="w-6 h-6" />,
+      title: "Real-time Video Analysis",
+      description: "Process video streams in real-time with advanced AI algorithms"
     },
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI Learning Engine",
-      description: "Continuously learns and improves from interactions"
+      title: "Object Recognition",
+      description: "Identify and track objects, people, and vehicles with high accuracy"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Instant response times with low latency"
+      icon: <Eye className="w-6 h-6" />,
+      title: "Behavioral Analysis",
+      description: "Analyze human behavior patterns and detect anomalies"
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "Bank-level encryption and compliance standards"
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Generate detailed insights and reports from video data"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$99",
+      name: "Basic",
+      price: "$199",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "Basic NLP capabilities",
+        "Up to 10 camera feeds",
+        "Basic object detection",
+        "Real-time alerts",
         "Email support",
-        "Standard integrations",
-        "Basic analytics dashboard"
+        "Standard analytics dashboard",
+        "7-day video retention"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$499",
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "Advanced AI learning",
+        "Up to 50 camera feeds",
+        "Advanced AI recognition",
+        "Custom alert rules",
         "Priority support",
-        "Custom integrations",
         "Advanced analytics",
-        "Multi-language support",
-        "API access"
+        "30-day video retention",
+        "API access",
+        "Multi-site management"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$1,299",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice interactions",
-        "Custom AI training",
+        "Unlimited camera feeds",
+        "Custom AI models",
         "24/7 dedicated support",
         "White-label solution",
         "Custom analytics",
+        "90-day video retention",
         "Advanced security features",
         "SLA guarantee"
       ],
@@ -78,38 +81,38 @@ export default function AIVoiceAssistant() {
 
   const useCases = [
     {
-      title: "Customer Support",
-      description: "Handle customer inquiries 24/7 with intelligent voice responses",
-      icon: <Headphones className="w-8 h-8" />
+      title: "Retail Analytics",
+      description: "Track customer behavior, foot traffic, and optimize store layouts",
+      icon: <Camera className="w-8 h-8" />
     },
     {
-      title: "Sales Automation",
-      description: "Qualify leads and schedule appointments automatically",
-      icon: <Users className="w-8 h-8" />
+      title: "Security Monitoring",
+      description: "Detect suspicious activities and unauthorized access in real-time",
+      icon: <Shield className="w-8 h-8" />
     },
     {
-      title: "Internal Operations",
-      description: "Streamline internal processes with voice commands",
+      title: "Traffic Management",
+      description: "Monitor traffic flow and optimize signal timing for better efficiency",
       icon: <Zap className="w-8 h-8" />
     },
     {
-      title: "Analytics & Insights",
-      description: "Get detailed analytics on voice interactions and performance",
-      icon: <BarChart3 className="w-8 h-8" />
+      title: "Quality Control",
+      description: "Automate quality inspection processes in manufacturing",
+      icon: <Eye className="w-8 h-8" />
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Zion Tech Group | Intelligent Voice Solutions</title>
+        <title>AI Video Analytics - Zion Tech Group | Intelligent Video Processing</title>
         <meta
           name="description"
-          content="Advanced AI voice assistant with natural language processing, real-time processing, and enterprise security. Perfect for customer support, sales automation, and internal operations."
+          content="Advanced AI video analytics with real-time processing, object recognition, and behavioral analysis. Perfect for retail, security, traffic management, and quality control."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, natural language processing, voice automation, customer support AI, voice analytics, conversational AI"
+          content="AI video analytics, video processing, object recognition, behavioral analysis, retail analytics, security monitoring, traffic management, quality control"
         />
       </Helmet>
 
@@ -122,20 +125,20 @@ export default function AIVoiceAssistant() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI Voice Technology</span>
+              <Video className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI Video Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Voice
+              AI Video
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Assistant
+                {" "}Analytics
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with intelligent voice AI that understands, learns, and responds naturally. 
-              Perfect for customer support, sales automation, and internal operations.
+              Transform your video data into actionable insights with our advanced AI video analytics platform. 
+              Real-time processing, object recognition, and behavioral analysis for smarter decisions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -162,10 +165,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Powerful AI Voice Capabilities
+                Advanced Video Intelligence
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI voice assistant combines cutting-edge technology with intuitive design to deliver exceptional voice experiences.
+                Our AI video analytics platform combines computer vision, machine learning, and real-time processing to deliver powerful insights.
               </p>
             </div>
             
@@ -195,10 +198,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Transform Your Business Operations
+                Industry Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how our AI voice assistant can revolutionize different aspects of your business.
+                Discover how our AI video analytics can transform different industries and use cases.
               </p>
             </div>
             
@@ -228,10 +231,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Simple, Transparent Pricing
+                Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your business needs. All plans include our core AI voice capabilities.
+                Choose the perfect plan for your video analytics needs. Scale up or down as your business grows.
               </p>
             </div>
             
@@ -292,10 +295,10 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Voice Experience?
+              Ready to Unlock Video Intelligence?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses using our AI voice assistant to improve customer experience and operational efficiency.
+              Join leading companies using our AI video analytics to make smarter decisions and improve operational efficiency.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

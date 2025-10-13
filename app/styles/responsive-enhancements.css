@@ -1,0 +1,397 @@
+/* Responsive Enhancements for Futuristic Design */
+
+/* Mobile First Approach */
+@media (max-width: 640px) {
+  /* Typography adjustments */
+  .text-holographic {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .quantum-glow {
+    font-size: 1.2rem;
+  }
+  
+  /* Button adjustments */
+  .btn-quantum-advanced {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  /* Card adjustments */
+  .holographic-card-advanced {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .holographic-card-advanced:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+  
+  /* Navigation adjustments */
+  .nav-cyberpunk-advanced .nav-link {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  /* Grid adjustments */
+  .grid-cols-1 {
+    gap: 1rem;
+  }
+  
+  /* Hero section adjustments */
+  .hero-section h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  
+  .hero-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* Stats section adjustments */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  /* Micro SAAS grid adjustments */
+  .micro-saas-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* Typography adjustments */
+  .text-holographic {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+  
+  .quantum-glow {
+    font-size: 1.5rem;
+  }
+  
+  /* Button adjustments */
+  .btn-quantum-advanced {
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
+  
+  /* Card adjustments */
+  .holographic-card-advanced {
+    padding: 1.5rem;
+  }
+  
+  .holographic-card-advanced:hover {
+    transform: translateY(-8px) scale(1.03);
+  }
+  
+  /* Grid adjustments */
+  .grid-cols-2 {
+    gap: 1.5rem;
+  }
+  
+  /* Hero section adjustments */
+  .hero-section h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+  }
+  
+  .hero-section p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+  
+  /* Micro SAAS grid adjustments */
+  .micro-saas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 1025px) {
+  /* Full effects on desktop */
+  .text-holographic {
+    font-size: 3rem;
+    letter-spacing: 3px;
+  }
+  
+  .quantum-glow {
+    font-size: 2rem;
+  }
+  
+  /* Button adjustments */
+  .btn-quantum-advanced {
+    padding: 16px 32px;
+    font-size: 1rem;
+  }
+  
+  /* Card adjustments */
+  .holographic-card-advanced {
+    padding: 2rem;
+  }
+  
+  .holographic-card-advanced:hover {
+    transform: translateY(-15px) scale(1.05);
+  }
+  
+  /* Grid adjustments */
+  .grid-cols-3 {
+    gap: 2rem;
+  }
+  
+  .grid-cols-4 {
+    gap: 2rem;
+  }
+  
+  /* Hero section adjustments */
+  .hero-section h1 {
+    font-size: 4rem;
+    line-height: 1;
+  }
+  
+  .hero-section p {
+    font-size: 1.5rem;
+    line-height: 1.7;
+  }
+  
+  /* Micro SAAS grid adjustments */
+  .micro-saas-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Large desktop adjustments */
+@media (min-width: 1440px) {
+  /* Enhanced effects for large screens */
+  .text-holographic {
+    font-size: 4rem;
+    letter-spacing: 4px;
+  }
+  
+  .quantum-glow {
+    font-size: 2.5rem;
+  }
+  
+  /* Button adjustments */
+  .btn-quantum-advanced {
+    padding: 18px 36px;
+    font-size: 1.1rem;
+  }
+  
+  /* Card adjustments */
+  .holographic-card-advanced {
+    padding: 2.5rem;
+  }
+  
+  .holographic-card-advanced:hover {
+    transform: translateY(-20px) scale(1.08);
+  }
+  
+  /* Grid adjustments */
+  .grid-cols-4 {
+    gap: 2.5rem;
+  }
+  
+  /* Hero section adjustments */
+  .hero-section h1 {
+    font-size: 5rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.75rem;
+  }
+  
+  /* Micro SAAS grid adjustments */
+  .micro-saas-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Ultra-wide screen adjustments */
+@media (min-width: 1920px) {
+  /* Maximum effects for ultra-wide screens */
+  .text-holographic {
+    font-size: 5rem;
+    letter-spacing: 5px;
+  }
+  
+  .quantum-glow {
+    font-size: 3rem;
+  }
+  
+  /* Button adjustments */
+  .btn-quantum-advanced {
+    padding: 20px 40px;
+    font-size: 1.2rem;
+  }
+  
+  /* Card adjustments */
+  .holographic-card-advanced {
+    padding: 3rem;
+  }
+  
+  .holographic-card-advanced:hover {
+    transform: translateY(-25px) scale(1.1);
+  }
+  
+  /* Grid adjustments */
+  .grid-cols-4 {
+    gap: 3rem;
+  }
+  
+  /* Hero section adjustments */
+  .hero-section h1 {
+    font-size: 6rem;
+  }
+  
+  .hero-section p {
+    font-size: 2rem;
+  }
+  
+  /* Micro SAAS grid adjustments */
+  .micro-saas-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-section p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-quantum-advanced {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* High DPI display adjustments */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .holographic-card-advanced {
+    border-width: 0.5px;
+  }
+  
+  .nav-cyberpunk-advanced {
+    border-bottom-width: 1px;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .holographic-card-advanced:hover {
+    transform: translateY(-5px) scale(1.02);
+  }
+  
+  .btn-quantum-advanced:hover {
+    transform: translateY(-2px) scale(1.03);
+  }
+  
+  .text-holographic {
+    animation: none;
+  }
+  
+  .quantum-glow {
+    animation: none;
+  }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  .holographic-card-advanced {
+    border: 2px solid var(--quantum-blue);
+    background: rgba(15, 23, 42, 0.95);
+  }
+  
+  .btn-quantum-advanced {
+    border: 2px solid var(--quantum-blue);
+  }
+  
+  .nav-cyberpunk-advanced {
+    border-bottom: 3px solid var(--quantum-blue);
+  }
+}
+
+/* Print styles */
+@media print {
+  .quantum-field-advanced,
+  .neural-grid-advanced,
+  .data-stream-advanced {
+    display: none;
+  }
+  
+  .holographic-card-advanced {
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+  
+  .text-holographic,
+  .quantum-glow {
+    color: black;
+    text-shadow: none;
+    background: none;
+    -webkit-text-fill-color: initial;
+  }
+  
+  .btn-quantum-advanced {
+    background: #f0f0f0;
+    color: black;
+    border: 1px solid #ccc;
+  }
+}
+
+/* Focus management for accessibility */
+.focus-visible {
+  outline: 2px solid var(--quantum-blue);
+  outline-offset: 2px;
+}
+
+/* Skip links for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--quantum-blue);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
