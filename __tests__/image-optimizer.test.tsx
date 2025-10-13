@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -73,12 +73,14 @@ Object.defineProperty(global, 'Image', {
 });
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 describe('ImageOptimizer', () => {
   it('renders without crashing', () => {
     expect(() => render(<ImageOptimizer src="test.jpg" alt="test" />)).not.toThrow();
   });
-<<<<<<< HEAD
 });
+<<<<<<< HEAD
 =======
 
   it('renders with correct attributes', () => {
@@ -134,3 +136,5 @@ describe('ImageOptimizer', () => {
 });
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081

@@ -21,13 +21,16 @@ import { Helmet } from 'react-helmet-async';
 export default function zionSmartInventoryOptimizer() {
 =======
 import React from "react";
-// import { Helmet } from 'react-helmet-async'; // Unused import
+import { Helmet } from 'react-helmet-async';
 
 const ZionSmartInventoryOptimizer = () => {
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
   return (
     <div>
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
@@ -115,7 +118,8 @@ export default function ZionsmartinventoryoptimizerPage() {
       </div>
     </div>
   );
-}
+};
+
 export default ZionSmartInventoryOptimizer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======

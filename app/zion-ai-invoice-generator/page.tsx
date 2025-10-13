@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -298,3 +299,24 @@ export default function Page() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import React from "react";
+import { Helmet } from 'react-helmet-async';
+
+const ZionAiInvoiceGenerator = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <Helmet>
+        <title>ZionAiInvoiceGenerator - Zion Tech Group</title>
+        <meta name="description" content="Advanced zionaiinvoicegenerator service coming soon." />
+      </Helmet>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">ZionAiInvoiceGenerator</h1>
+        <p className="text-xl text-gray-300">Coming Soon</p>
+      </div>
+    </div>
+  );
+};
+
+export default ZionAiInvoiceGenerator;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081

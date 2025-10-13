@@ -162,7 +162,11 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
 export default GlobalErrorBoundary;
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+export default GlobalErrorBoundary;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081

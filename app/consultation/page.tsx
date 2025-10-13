@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -59,9 +60,14 @@ import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import React from "react";
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 
-export default function ConsultationPage() {
+const Consultation = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
@@ -428,3 +434,19 @@ export default ConsultationPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <Helmet>
+        <title>Consultation - Zion Tech Group</title>
+        <meta name="description" content="Advanced consultation service coming soon." />
+      </Helmet>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">Consultation</h1>
+        <p className="text-xl text-gray-300">Coming Soon</p>
+      </div>
+    </div>
+  );
+};
+
+export default Consultation;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081

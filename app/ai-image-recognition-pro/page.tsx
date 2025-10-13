@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 import React from 'react';
@@ -19,6 +20,22 @@ import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 =======
 const AIImageRecognitionPro = () => {
+=======
+import { useState, useEffect } from 'react';
+import { Eye, Camera, Brain, Shield, CheckCircle, ArrowRight, Star } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import EnhancedSEO from "../components/EnhancedSEO";
+import StructuredData from "../components/StructuredData";
+import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
+import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
+import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
+import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
+import ResponsiveContainer from "../components/ResponsiveContainer";
+import EnhancedAccessibility from "../components/EnhancedAccessibility";
+import PerformanceOptimizer from "../components/PerformanceOptimizer";
+
+const AIImageRecognitionProZionTechGroup = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
   const features = [
     {,
     title: "Object Detection",
@@ -151,12 +168,18 @@ const AIImageRecognitionProPage = () => {
     {
       icon: <Eye className="w-8 h-8" />,
       title: "Object Detection",
+<<<<<<< HEAD
       description: "Advanced AI algorithms detect and classify objects in images with 99% accuracy",
+=======
+      description: "Identify and locate objects in images with high accuracy using advanced AI models",
+      icon: <Eye className="w-8 h-8" />,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: <Brain className="w-8 h-8" />,
       title: "Facial Recognition",
+<<<<<<< HEAD
       description: "State-of-the-art facial recognition technology for security and identification",
       color: "from-green-500 to-emerald-500"
     },
@@ -170,12 +193,29 @@ const AIImageRecognitionProPage = () => {
       icon: <Shield className="w-8 h-8" />,
       title: "Content Moderation",
       description: "AI-powered content moderation to detect inappropriate or harmful content",
+=======
+      description: "Recognize and analyze faces with state-of-the-art facial recognition technology",
+      icon: <Camera className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Scene Understanding",
+      description: "Analyze and understand complex scenes with contextual AI interpretation",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Privacy Protection",
+      description: "Built-in privacy protection and data security for sensitive applications",
+      icon: <Shield className="w-8 h-8" />,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
+<<<<<<< HEAD
       name: "Starter",
       price: "$99",
       period: "month",
@@ -200,10 +240,38 @@ const AIImageRecognitionProPage = () => {
         "Custom model training",
         "API access",
         "Real-time processing"
+=======
+      name: "Professional",
+      price: "$199",
+      period: "month",
+      description: "For professional applications",
+      features: [
+        "Basic object detection",
+        "Facial recognition",
+        "API access",
+        "Email support",
+        "Standard accuracy"
+      ],
+      popular: false
+    },
+    {
+      name: "Enterprise",
+      price: "$499",
+      period: "month",
+      description: "For large-scale deployments",
+      features: [
+        "Everything in Professional",
+        "Advanced AI models",
+        "Custom training",
+        "Priority support",
+        "High accuracy",
+        "SLA guarantee"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       ],
       popular: true
     },
     {
+<<<<<<< HEAD
       name: "Enterprise",
       price: "$399",
       period: "month",
@@ -215,11 +283,24 @@ const AIImageRecognitionProPage = () => {
         "White-label solution",
         "SLA guarantee",
         "Advanced security"
+=======
+      name: "Custom",
+      price: "Contact",
+      period: "us",
+      description: "Tailored solutions",
+      features: [
+        "Everything in Enterprise",
+        "Custom development",
+        "Dedicated support",
+        "On-premise deployment",
+        "White-label solution"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       ],
       popular: false
     }
   ];
 
+<<<<<<< HEAD
   const testimonials = [
     {
       name: "Sarah Chen",
@@ -247,16 +328,23 @@ const AIImageRecognitionProPage = () => {
     }
   ];
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Zion AI Image Recognition Pro",
+<<<<<<< HEAD
     "description": "Advanced AI-powered image recognition platform with object detection and facial recognition",
+=======
+    "description": "Advanced AI-powered image recognition platform with object detection, facial recognition, and scene understanding",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
     "url": "https://ziontechgroup.com/ai-image-recognition-pro",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web, Windows, macOS, Linux",
     "offers": {
       "@type": "Offer",
+<<<<<<< HEAD
       "price": "199",
       "priceCurrency": "USD",
       "priceSpecification": {
@@ -270,6 +358,10 @@ const AIImageRecognitionProPage = () => {
       "@type": "Organization",
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com"
+=======
+      "price": "499",
+      "priceCurrency": "USD"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
     }
   };
 
@@ -279,6 +371,7 @@ const AIImageRecognitionProPage = () => {
         <FuturisticBackgroundEnhanced>
           <EnhancedSEO
             title="AI Image Recognition Pro - Zion Tech Group"
+<<<<<<< HEAD
             description="Advanced AI-powered image recognition platform with object detection, facial recognition, and content moderation for superior computer vision applications."
             keywords="AI image recognition, object detection, facial recognition, computer vision, image classification, content moderation"
             canonical="https://ziontechgroup.com/ai-image-recognition-pro"
@@ -330,6 +423,68 @@ const AIImageRecognitionProPage = () => {
                     iconPosition="left">
                     Watch Demo
                   </FuturisticButtonEnhanced>
+=======
+            description="Advanced AI-powered image recognition platform with object detection, facial recognition, scene understanding, and privacy protection for modern applications."
+            keywords="AI image recognition, object detection, facial recognition, computer vision, image analysis"
+            canonicalUrl="https://ziontechgroup.com/ai-image-recognition-pro"
+          />
+          <StructuredData data={structuredData} />
+          
+          <Helmet>
+            <title>AI Image Recognition Pro - Zion Tech Group</title>
+            <meta name="description" content="Advanced AI-powered image recognition platform with object detection, facial recognition, and scene understanding." />
+            <meta name="keywords" content="AI image recognition, object detection, facial recognition, computer vision" />
+            <link rel="canonical" href="https://ziontechgroup.com/ai-image-recognition-pro" />
+          </Helmet>
+
+          <main>
+            {/* Hero Section */}
+            <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+              <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+              </div>
+              
+              <ResponsiveContainer>
+                <div className="text-center relative z-10">
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
+                    <Eye className="w-4 h-4 text-blue-400 mr-2" />
+                    <span className="text-blue-400 text-sm font-medium">AI-Powered Image Recognition</span>
+                  </div>
+                  
+                  <FuturisticTextEnhanced
+                    variant="display"
+                    size="5xl"
+                    gradient={true}
+                    glow={true}
+                    className="mb-6">
+                    AI Image Recognition Pro
+                  </FuturisticTextEnhanced>
+                  
+                  <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                    Transform your images into actionable insights with our advanced AI-powered recognition platform. 
+                    Object detection, facial recognition, and scene understanding powered by cutting-edge technology.
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <FuturisticButtonEnhanced
+                      href="/contact"
+                      variant="primary"
+                      size="lg"
+                      icon={ArrowRight}
+                      iconPosition="right">
+                      Start Free Trial
+                    </FuturisticButtonEnhanced>
+                    <FuturisticButtonEnhanced
+                      href="/demo"
+                      variant="outline"
+                      size="lg"
+                      icon={Camera}
+                      iconPosition="right">
+                      View Demo
+                    </FuturisticButtonEnhanced>
+                  </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                 </div>
               </ResponsiveContainer>
             </section>
@@ -339,10 +494,17 @@ const AIImageRecognitionProPage = () => {
               <ResponsiveContainer>
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+<<<<<<< HEAD
                     Advanced Image Recognition Features
                   </h2>
                   <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                     Harness the power of AI to analyze and understand images with unprecedented accuracy.
+=======
+                    Advanced Recognition Features
+                  </h2>
+                  <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                    Harness the power of AI to understand and analyze images with unprecedented accuracy.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                   </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -352,6 +514,7 @@ const AIImageRecognitionProPage = () => {
                       className="text-center">
                       <div
                         className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+<<<<<<< HEAD
                         aria-hidden="true">
                         {feature.icon}
                       </div>
@@ -359,6 +522,15 @@ const AIImageRecognitionProPage = () => {
                         {feature.title}
                       </h3>
                       <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+=======
+                      >
+                        {feature.icon}
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-3">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-300 leading-relaxed">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                         {feature.description}
                       </p>
                     </FuturisticCardEnhanced>
@@ -368,7 +540,11 @@ const AIImageRecognitionProPage = () => {
             </section>
 
             {/* Pricing Section */}
+<<<<<<< HEAD
             <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+=======
+            <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
               <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -382,16 +558,24 @@ const AIImageRecognitionProPage = () => {
                   {pricingPlans.map((plan, index) => (
                     <FuturisticCardEnhanced
                       key={index}
+<<<<<<< HEAD
                       className={`relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
                       {plan.popular && (
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                           <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+=======
+                      className={`relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
+                      {plan.popular && (
+                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                          <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                             Most Popular
                           </span>
                         </div>
                       )}
                       <div className="text-center mb-6">
                         <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+<<<<<<< HEAD
                         <div className="text-4xl font-bold text-purple-400 mb-2">
                           {plan.price}<span className="text-lg text-gray-400">/{plan.period}</span>
                         </div>
@@ -402,14 +586,33 @@ const AIImageRecognitionProPage = () => {
                           <li key={featureIndex} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
+=======
+                        <div className="flex items-baseline justify-center">
+                          <span className="text-4xl font-bold text-white">{plan.price}</span>
+                          <span className="text-gray-400 ml-1">/{plan.period}</span>
+                        </div>
+                        <p className="text-gray-300 mt-2">{plan.description}</p>
+                      </div>
+                      <ul className="space-y-3 mb-8">
+                        {plan.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center">
+                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                            <span className="text-gray-300">{feature}</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                           </li>
                         ))}
                       </ul>
                       <FuturisticButtonEnhanced
+<<<<<<< HEAD
                         variant={plan.popular ? "primary" : "outline"}
                         size="lg"
                         icon={<ArrowRight className="w-5 h-5" />}
                         iconPosition="right"
+=======
+                        href="/contact"
+                        variant={plan.popular ? "primary" : "outline"}
+                        size="lg"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                         className="w-full">
                         Get Started
                       </FuturisticButtonEnhanced>
@@ -419,6 +622,7 @@ const AIImageRecognitionProPage = () => {
               </div>
             </section>
 
+<<<<<<< HEAD
             {/* Testimonials Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
               <div className="max-w-7xl mx-auto">
@@ -460,6 +664,17 @@ const AIImageRecognitionProPage = () => {
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
                   Join thousands of developers using Zion AI Image Recognition Pro 
                   to build advanced computer vision applications. Start your free trial today.
+=======
+            {/* CTA Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+              <div className="max-w-4xl mx-auto text-center">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                  Ready to See the Future?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                  Join thousands of organizations using Zion AI Image Recognition Pro to unlock insights from images. 
+                  Start your free trial today.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -477,7 +692,11 @@ const AIImageRecognitionProPage = () => {
                     size="lg"
                     icon={Camera}
                     iconPosition="right">
+<<<<<<< HEAD
                     Schedule Demo
+=======
+                    View Demo
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                   </FuturisticButtonEnhanced>
                 </div>
               </div>
@@ -491,6 +710,7 @@ const AIImageRecognitionProPage = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AIImageRecognitionProPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
@@ -500,3 +720,6 @@ export default AIImageRecognitionProPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+export default AIImageRecognitionProZionTechGroup;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081

@@ -282,11 +282,39 @@ import { Link } from 'react-router-dom';
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
+<<<<<<< HEAD:app/cybersecurity-solutions/page.tsx
               
               <ResponsiveContainer className="text-center relative z-10">
                 <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
                   <Shield className="w-4 h-4 text-blue-400 mr-2" />
                   <span className="text-blue-400 text-sm font-medium">Cybersecurity Solutions</span>
+=======
+            ))}
+          </div>
+        </ResponsiveContainer>
+      </section>
+
+      {/* Capabilities Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <ResponsiveContainer>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Why Choose Our Cybersecurity Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Our advanced security technologies and expert team provide comprehensive protection against the most sophisticated cyber threats
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {capabilities.map((capability, index) => (
+              <FuturisticCard
+                key={index}
+                className="group hover:scale-105 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  {capability.icon}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081:backup-problematic-pages/cybersecurity-solutions/page.tsx
                 </div>
                 
                 <FuturisticTextEnhanced

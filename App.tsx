@@ -93,6 +93,7 @@ const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-auto
 <<<<<<< HEAD
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
+<<<<<<< HEAD
 const CybersecuritySolutionsPage = React.lazy(() => import("./app/cybersecurity-solutions/page"));
 =======
 // IT Services Pages
@@ -103,6 +104,9 @@ const NetworkSecurityPage = React.lazy(() => import("./app/network-security/page
 const SoftwareDevelopmentPage = React.lazy(() => import("./app/software-development/page"));
 const SystemIntegrationPage = React.lazy(() => import("./app/system-integration/page"));
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+// const CybersecuritySolutionsPage = React.lazy(() => import("./app/cybersecurity-solutions/page"));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
 const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
 const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
@@ -274,7 +278,7 @@ function App() {
 
                                   {/* IT Services */}
                                   <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                                  <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
+                                  {/* <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} /> */}
                                   <Route path="/web-development" element={<WebDevelopmentPage />} />
                                   <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
                                   <Route path="/database-management" element={<DatabaseManagementPage />} />

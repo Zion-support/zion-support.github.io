@@ -111,6 +111,7 @@ export default function AidataanalyticsproPage() {
     </div>
 =======
 import { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
@@ -123,6 +124,10 @@ import {
   PieChart,
   BarChart3
 } from 'lucide-react';
+=======
+import { BarChart3, TrendingUp, Database, Shield, CheckCircle, ArrowRight, Star } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -132,6 +137,7 @@ import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
+<<<<<<< HEAD
 
 const AIDataAnalyticsProPage = () => {
   const benefits = [
@@ -156,14 +162,19 @@ import { TrendingUp, Brain, BarChart3, Database } from 'lucide-react';
 
 const AIDataAnalyticsProPage = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+
+const AIDataAnalyticsProZionTechGroup = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
   const features = [
     {
-      icon: <BarChart3 className="w-8 h-8" />,
       title: "Advanced Analytics",
-      description: "Comprehensive data analysis with machine learning algorithms",
+      description: "Deep insights and predictive analytics powered by machine learning algorithms",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
+<<<<<<< HEAD
       icon: <Brain className="w-8 h-8" />,
       title: "AI Predictions",
       description: "Get accurate predictions and forecasts using advanced AI models",
@@ -179,12 +190,30 @@ const AIDataAnalyticsProPage = () => {
       icon: <PieChart className="w-8 h-8" />,
       title: "Custom Dashboards",
       description: "Create personalized dashboards tailored to your business needs",
+=======
+      title: "Real-time Processing",
+      description: "Process and analyze data in real-time with lightning-fast performance",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Data Integration",
+      description: "Connect and integrate data from multiple sources seamlessly",
+      icon: <Database className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Enterprise Security",
+      description: "Bank-level security with compliance and data protection",
+      icon: <Shield className="w-8 h-8" />,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
+<<<<<<< HEAD
       name: "Starter",
       price: "$149",
       period: "month",
@@ -194,10 +223,23 @@ const AIDataAnalyticsProPage = () => {
         "Basic analytics dashboard",
         "Email support",
         "Standard integrations"
+=======
+      name: "Professional",
+      price: "$199",
+      period: "month",
+      description: "For professional analytics teams",
+      features: [
+        "Advanced analytics dashboard",
+        "Real-time data processing",
+        "10 data sources",
+        "Email support",
+        "Basic reporting"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       ],
       popular: false
     },
     {
+<<<<<<< HEAD
       name: "Professional",
       price: "$299",
       period: "month",
@@ -209,10 +251,24 @@ const AIDataAnalyticsProPage = () => {
         "Custom integrations",
         "Team collaboration",
         "API access"
+=======
+      name: "Enterprise",
+      price: "$499",
+      period: "month",
+      description: "For large organizations",
+      features: [
+        "Everything in Professional",
+        "Unlimited data sources",
+        "Custom AI models",
+        "Priority support",
+        "Advanced security",
+        "SLA guarantee"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       ],
       popular: true
     },
     {
+<<<<<<< HEAD
       name: "Enterprise",
       price: "$599",
       period: "month",
@@ -259,18 +315,38 @@ import { Helmet } from 'react-helmet-async';
       rating: 5,
       avatar: "EJ"
     }
+=======
+      name: "Custom",
+      price: "Contact",
+      period: "us",
+      description: "Tailored solutions",
+      features: [
+        "Everything in Enterprise",
+        "Custom development",
+        "Dedicated support",
+        "On-premise deployment",
+        "White-label solution"
+      ],
+      popular: false
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
   ];
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Zion AI Data Analytics Pro",
+<<<<<<< HEAD
     "description": "Advanced AI-powered data analytics platform with real-time insights and predictive modeling",
+=======
+    "description": "Advanced AI-powered data analytics platform with real-time processing and predictive insights",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
     "url": "https://ziontechgroup.com/ai-data-analytics-pro",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Web, Windows, macOS, Linux",
     "offers": {
       "@type": "Offer",
+<<<<<<< HEAD
       "price": "299",
       "priceCurrency": "USD",
       "priceSpecification": {
@@ -288,6 +364,12 @@ import { Helmet } from 'react-helmet-async';
   };
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+      "price": "499",
+      "priceCurrency": "USD"
+    }
+  };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 
   return (
     <PerformanceOptimizer>
@@ -295,6 +377,7 @@ import { Helmet } from 'react-helmet-async';
         <FuturisticBackgroundEnhanced>
           <EnhancedSEO
             title="AI Data Analytics Pro - Zion Tech Group"
+<<<<<<< HEAD
             description="Advanced AI-powered data analytics platform with real-time insights, predictive modeling, and custom dashboards for businesses of all sizes."
             keywords="AI data analytics, business intelligence, predictive analytics, data visualization, machine learning, real-time analytics"
             canonical="https://ziontechgroup.com/ai-data-analytics-pro"
@@ -346,6 +429,68 @@ import { Helmet } from 'react-helmet-async';
                     iconPosition="left">
                     Watch Demo
                   </FuturisticButtonEnhanced>
+=======
+            description="Advanced AI-powered data analytics platform with real-time processing, predictive insights, and enterprise-grade security for data-driven decision making."
+            keywords="AI data analytics, business intelligence, data analysis, predictive analytics, real-time processing"
+            canonicalUrl="https://ziontechgroup.com/ai-data-analytics-pro"
+          />
+          <StructuredData data={structuredData} />
+          
+          <Helmet>
+            <title>AI Data Analytics Pro - Zion Tech Group</title>
+            <meta name="description" content="Advanced AI-powered data analytics platform with real-time processing and predictive insights." />
+            <meta name="keywords" content="AI data analytics, business intelligence, data analysis, predictive analytics" />
+            <link rel="canonical" href="https://ziontechgroup.com/ai-data-analytics-pro" />
+          </Helmet>
+
+          <main>
+            {/* Hero Section */}
+            <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+              <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+              </div>
+              
+              <ResponsiveContainer>
+                <div className="text-center relative z-10">
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
+                    <BarChart3 className="w-4 h-4 text-blue-400 mr-2" />
+                    <span className="text-blue-400 text-sm font-medium">AI-Powered Analytics</span>
+                  </div>
+                  
+                  <FuturisticTextEnhanced
+                    variant="display"
+                    size="5xl"
+                    gradient={true}
+                    glow={true}
+                    className="mb-6">
+                    AI Data Analytics Pro
+                  </FuturisticTextEnhanced>
+                  
+                  <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                    Transform your data into actionable insights with our advanced AI-powered analytics platform. 
+                    Real-time processing, predictive modeling, and enterprise-grade security.
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <FuturisticButtonEnhanced
+                      href="/contact"
+                      variant="primary"
+                      size="lg"
+                      icon={ArrowRight}
+                      iconPosition="right">
+                      Start Free Trial
+                    </FuturisticButtonEnhanced>
+                    <FuturisticButtonEnhanced
+                      href="/demo"
+                      variant="outline"
+                      size="lg"
+                      icon={BarChart3}
+                      iconPosition="right">
+                      View Demo
+                    </FuturisticButtonEnhanced>
+                  </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                 </div>
               </ResponsiveContainer>
             </section>
@@ -355,7 +500,11 @@ import { Helmet } from 'react-helmet-async';
               <ResponsiveContainer>
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+<<<<<<< HEAD
                     Powerful Analytics Features
+=======
+                    Advanced Analytics Features
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                   </h2>
                   <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                     Harness the power of AI to unlock insights from your data and make better business decisions.
@@ -368,6 +517,7 @@ import { Helmet } from 'react-helmet-async';
                       className="text-center">
                       <div
                         className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+<<<<<<< HEAD
                         aria-hidden="true">
                         {feature.icon}
                       </div>
@@ -375,6 +525,15 @@ import { Helmet } from 'react-helmet-async';
                         {feature.title}
                       </h3>
                       <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+=======
+                      >
+                        {feature.icon}
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-3">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-300 leading-relaxed">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                         {feature.description}
                       </p>
                     </FuturisticCardEnhanced>
@@ -384,7 +543,11 @@ import { Helmet } from 'react-helmet-async';
             </section>
 
             {/* Pricing Section */}
+<<<<<<< HEAD
             <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-cyan-800/50">
+=======
+            <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
               <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -398,16 +561,24 @@ import { Helmet } from 'react-helmet-async';
                   {pricingPlans.map((plan, index) => (
                     <FuturisticCardEnhanced
                       key={index}
+<<<<<<< HEAD
                       className={`relative ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                       {plan.popular && (
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                           <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+=======
+                      className={`relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}>
+                      {plan.popular && (
+                        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                          <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                             Most Popular
                           </span>
                         </div>
                       )}
                       <div className="text-center mb-6">
                         <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+<<<<<<< HEAD
                         <div className="text-4xl font-bold text-cyan-400 mb-2">
                           {plan.price}<span className="text-lg text-gray-400">/{plan.period}</span>
                         </div>
@@ -418,14 +589,33 @@ import { Helmet } from 'react-helmet-async';
                           <li key={featureIndex} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {feature}
+=======
+                        <div className="flex items-baseline justify-center">
+                          <span className="text-4xl font-bold text-white">{plan.price}</span>
+                          <span className="text-gray-400 ml-1">/{plan.period}</span>
+                        </div>
+                        <p className="text-gray-300 mt-2">{plan.description}</p>
+                      </div>
+                      <ul className="space-y-3 mb-8">
+                        {plan.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center">
+                            <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                            <span className="text-gray-300">{feature}</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                           </li>
                         ))}
                       </ul>
                       <FuturisticButtonEnhanced
+<<<<<<< HEAD
                         variant={plan.popular ? "primary" : "outline"}
                         size="lg"
                         icon={<ArrowRight className="w-5 h-5" />}
                         iconPosition="right"
+=======
+                        href="/contact"
+                        variant={plan.popular ? "primary" : "outline"}
+                        size="lg"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                         className="w-full">
                         Get Started
                       </FuturisticButtonEnhanced>
@@ -435,6 +625,7 @@ import { Helmet } from 'react-helmet-async';
               </div>
             </section>
 
+<<<<<<< HEAD
             {/* Testimonials Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
               <div className="max-w-7xl mx-auto">
@@ -498,15 +689,52 @@ import { Helmet } from 'react-helmet-async';
                 </div>
               </div>
             </section>
+=======
+            {/* CTA Section */}
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+              <div className="max-w-4xl mx-auto text-center">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                  Ready to Transform Your Data?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                  Join thousands of organizations using Zion AI Data Analytics Pro to make data-driven decisions. 
+                  Start your free trial today.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <FuturisticButtonEnhanced
+                    href="/contact"
+                    variant="primary"
+                    size="lg"
+                    icon={ArrowRight}
+                    iconPosition="right">
+                    Start Free Trial
+                  </FuturisticButtonEnhanced>
+                  <FuturisticButtonEnhanced
+                    href="/demo"
+                    variant="outline"
+                    size="lg"
+                    icon={BarChart3}
+                    iconPosition="right">
+                    View Demo
+                  </FuturisticButtonEnhanced>
+                </div>
+              </div>
+            </section>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
           </main>
         </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
   );
 <<<<<<< HEAD
 };
 
+<<<<<<< HEAD
 export default AIDataAnalyticsProPage;
 =======
 }
@@ -556,3 +784,6 @@ export default function PagePage() {
 
 export default AIDataAnalyticsProPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6cf2
+=======
+export default AIDataAnalyticsProZionTechGroup;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081

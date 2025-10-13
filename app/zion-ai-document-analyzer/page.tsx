@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -17,23 +18,12 @@ import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 export default function zionAiDocumentAnalyzer() {
 =======
+=======
+import React from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 import { Helmet } from 'react-helmet-async';
-import { FileText } from 'lucide-react';
-  Brain, 
-  Shield, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Award, 
-  Clock, 
-  DollarSign, 
-  Globe, 
-  Smartphone,
-  Monitor
-} from 'lucide-react';
 
+<<<<<<< HEAD
 const features = [
   {
     title: "AI-Powered Document Processing",
@@ -133,11 +123,13 @@ export default function ZionAIDocumentAnalyzer() {
 
 export default function ZionAiDocumentAnalyzerPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+const ZionAiDocumentAnalyzer = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
   return (
-    <div>
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
+<<<<<<< HEAD
         <title>Zion AI Document Analyzer - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered document analysis and processing platform with OCR, NLP, and intelligent data extraction capabilities." />
         <meta name="keywords" content="AI document analysis, OCR, NLP, document processing, data extraction, Zion Tech Group" />
@@ -388,3 +380,17 @@ export default function ZionaidocumentanalyzerPage() {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
 }
+=======
+        <title>ZionAiDocumentAnalyzer - Zion Tech Group</title>
+        <meta name="description" content="Advanced zionaidocumentanalyzer service coming soon." />
+      </Helmet>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-white mb-4">ZionAiDocumentAnalyzer</h1>
+        <p className="text-xl text-gray-300">Coming Soon</p>
+      </div>
+    </div>
+  );
+};
+
+export default ZionAiDocumentAnalyzer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081

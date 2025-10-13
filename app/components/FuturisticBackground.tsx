@@ -78,6 +78,7 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+<<<<<<< HEAD
 export default FuturisticBackground;
   );
 }
@@ -87,3 +88,6 @@ export default FuturisticBackground;
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default FuturisticBackground;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081

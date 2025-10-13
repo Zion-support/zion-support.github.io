@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -80,6 +81,10 @@ export default function AicodeassistantproPage() {
 import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe, Sparkles, Target, BarChart3 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+=======
+import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe, BarChart3 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -95,24 +100,21 @@ import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 
 const AICodeAssistantProZionTechGroup = () => {
-  const testimonials = [
+  const features = [
     {
-      name: "Alex Thompson",
-      company: "TechStart Inc",
-      role: "Lead Developer",
-      content: "Zion's AI Code Assistant has revolutionized our development process. It's like having a senior developer available 24/7.",
-      rating: 5,
-      avatar: "AT"
+      title: "AI Code Generation",
+      description: "Generate high-quality code in 50+ programming languages with advanced AI models",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      name: "Maria Garcia",
-      company: "CloudScale Solutions",
-      role: "CTO",
-      content: "The code generation quality is exceptional. It understands context and produces production-ready code consistently.",
-      rating: 5,
-      avatar: "MG"
+      title: "Smart Debugging",
+      description: "Automatically detect and fix bugs with intelligent debugging assistance",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
     },
     {
+<<<<<<< HEAD
       name: "David Kim",
       company: "DataFlow Systems",
       role: "Senior Engineer",
@@ -141,6 +143,62 @@ const AICodeAssistantProZionTechGroup = () => {
         content: "We saw immediate results after implementing their solutions.",
         avatar: "/images/testimonials/mike-chen.jpg"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+      title: "Code Optimization",
+      description: "Optimize your code for performance, security, and best practices",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Multi-Language Support",
+      description: "Support for 50+ programming languages and frameworks",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Developer",
+      price: "$29",
+      period: "month",
+      description: "Perfect for individual developers",
+      features: [
+        "Unlimited code generation",
+        "Basic debugging assistance",
+        "10 programming languages",
+        "Email support"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$79",
+      period: "month",
+      description: "For professional development teams",
+      features: [
+        "Advanced AI models",
+        "50+ programming languages",
+        "Priority support",
+        "Team collaboration",
+        "Custom integrations"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$199",
+      period: "month",
+      description: "For large organizations",
+      features: [
+        "Everything in Professional",
+        "Dedicated support",
+        "Custom AI training",
+        "On-premise deployment",
+        "SLA guarantee"
+      ],
+      popular: false
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
     }
   ];
 
@@ -155,18 +213,7 @@ const AICodeAssistantProZionTechGroup = () => {
     "offers": {
       "@type": "Offer",
       "price": "199",
-      "priceCurrency": "USD",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "199",
-        "priceCurrency": "USD",
-        "unitText": "MONTH"
-      }
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
+      "priceCurrency": "USD"
     }
 <<<<<<< HEAD
   };
@@ -179,6 +226,7 @@ import { Zap } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Code } from 'lucide-react';
 
+<<<<<<< HEAD
 const AICodeAssistantProZionTechGroup = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
@@ -287,12 +335,15 @@ export default function AiCodeAssistantProPage() {
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ad48
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
         <FuturisticBackgroundEnhanced>
           <EnhancedSEO
             title="AI Code Assistant Pro - Zion Tech Group"
+<<<<<<< HEAD
             description="Revolutionize your development workflow with AI-powered code generation, intelligent debugging, and optimization across 50+ programming languages."
             keywords="AI code assistant, code generation, debugging, optimization, programming languages, development tools"
             canonical="https://ziontechgroup.com/ai-code-assistant-pro"
@@ -304,46 +355,68 @@ export default function AiCodeAssistantProPage() {
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
               <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+=======
+            description="Advanced AI-powered code generation, debugging, and optimization tool with support for 50+ programming languages. Boost your development productivity with intelligent coding assistance."
+            keywords="AI code assistant, code generation, debugging, programming, development tools, AI coding"
+            canonicalUrl="https://ziontechgroup.com/ai-code-assistant-pro"
+          />
+          <StructuredData data={structuredData} />
+          
+          <Helmet>
+            <title>AI Code Assistant Pro - Zion Tech Group</title>
+            <meta name="description" content="Advanced AI-powered code generation, debugging, and optimization tool with support for 50+ programming languages." />
+            <meta name="keywords" content="AI code assistant, code generation, debugging, programming, development tools" />
+            <link rel="canonical" href="https://ziontechgroup.com/ai-code-assistant-pro" />
+          </Helmet>
+
+          <main>
+            {/* Hero Section */}
+            <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+              <div className="absolute inset-0 overflow-hidden">
+                <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                 <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
               </div>
               
-              <ResponsiveContainer className="text-center relative z-10">
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-                  <Brain className="w-4 h-4 text-blue-400 mr-2" />
-                  <span className="text-blue-400 text-sm font-medium">AI-Powered Development Tool</span>
-                </div>
-                
-                <FuturisticTextEnhanced
-                  variant="display"
-                  size="5xl"
-                  gradient={true}
-                  glow={true}
-                  className="mb-6 leading-tight">
-                  Zion AI Code Assistant Pro
-                </FuturisticTextEnhanced>
-                
-                <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-                  Revolutionize your development workflow with AI-powered code generation, intelligent debugging, 
-                  and optimization across 50+ programming languages.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                  <FuturisticButtonEnhanced
-                    href="#pricing"
-                    variant="primary"
-                    size="lg"
-                    icon={Code}
-                    iconPosition="left">
-                    Start Free Trial
-                  </FuturisticButtonEnhanced>
-                  <FuturisticButtonEnhanced
-                    href="#demo"
-                    variant="outline"
-                    size="lg"
-                    icon={ArrowRight}
-                    iconPosition="left">
-                    Watch Demo
-                  </FuturisticButtonEnhanced>
+              <ResponsiveContainer>
+                <div className="text-center relative z-10">
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
+                    <Brain className="w-4 h-4 text-blue-400 mr-2" />
+                    <span className="text-blue-400 text-sm font-medium">AI-Powered Development Tool</span>
+                  </div>
+                  
+                  <FuturisticTextEnhanced
+                    variant="display"
+                    size="5xl"
+                    gradient={true}
+                    glow={true}
+                    className="mb-6">
+                    AI Code Assistant Pro
+                  </FuturisticTextEnhanced>
+                  
+                  <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                    Revolutionize your development workflow with our advanced AI-powered code generation, 
+                    debugging, and optimization tools. Support for 50+ programming languages.
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <FuturisticButtonEnhanced
+                      href="/contact"
+                      variant="primary"
+                      size="lg"
+                      icon={ArrowRight}
+                      iconPosition="right">
+                      Start Free Trial
+                    </FuturisticButtonEnhanced>
+                    <FuturisticButtonEnhanced
+                      href="/demo"
+                      variant="outline"
+                      size="lg"
+                      icon={Code}
+                      iconPosition="right">
+                      Watch Demo
+                    </FuturisticButtonEnhanced>
+                  </div>
                 </div>
               </ResponsiveContainer>
             </section>
@@ -367,13 +440,13 @@ export default function AiCodeAssistantProPage() {
                       className="text-center">
                       <div
                         className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                        aria-hidden="true">
+                      >
                         {feature.icon}
                       </div>
-                      <h3 className="text-lg md:text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                      <h3 className="text-xl font-semibold text-white mb-3">
                         {feature.title}
                       </h3>
-                      <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+                      <p className="text-gray-300 leading-relaxed">
                         {feature.description}
                       </p>
                     </FuturisticCardEnhanced>
@@ -407,24 +480,28 @@ export default function AiCodeAssistantProPage() {
                       )}
                       <div className="text-center mb-6">
                         <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                        <div className="text-4xl font-bold text-blue-400 mb-2">
-                          {plan.price}<span className="text-lg text-gray-400">/{plan.period}</span>
+                        <div className="flex items-baseline justify-center">
+                          <span className="text-4xl font-bold text-white">{plan.price}</span>
+                          <span className="text-gray-400 ml-1">/{plan.period}</span>
                         </div>
-                        <p className="text-gray-300">{plan.description}</p>
+                        <p className="text-gray-300 mt-2">{plan.description}</p>
                       </div>
                       <ul className="space-y-3 mb-8">
                         {plan.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-gray-300">
+                          <li key={featureIndex} className="flex items-center">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+<<<<<<< HEAD
                             {feature}
+=======
+                            <span className="text-gray-300">{feature}</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
                           </li>
                         ))}
                       </ul>
                       <FuturisticButtonEnhanced
+                        href="/contact"
                         variant={plan.popular ? "primary" : "outline"}
                         size="lg"
-                        icon={<ArrowRight className="w-5 h-5" />}
-                        iconPosition="right"
                         className="w-full">
                         Get Started
                       </FuturisticButtonEnhanced>
@@ -433,6 +510,7 @@ export default function AiCodeAssistantProPage() {
                 </div>
               </div>
             </section>
+<<<<<<< HEAD
 
             {/* Testimonials Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -465,6 +543,8 @@ export default function AiCodeAssistantProPage() {
                 </div>
               </div>
             </section>
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 
             {/* CTA Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-purple-900/30">
@@ -504,6 +584,7 @@ export default function AiCodeAssistantProPage() {
   );
 };
 
+<<<<<<< HEAD
 export default AICodeAssistantProZionTechGroup;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
@@ -584,3 +665,6 @@ export default AICodeAssistantProZionTechGroup;
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default AICodeAssistantProZionTechGroup;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081

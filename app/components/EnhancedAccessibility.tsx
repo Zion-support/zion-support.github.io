@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -198,3 +199,12 @@ export default function Page() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+import React from 'react';
+
+const EnhancedAccessibility = ({ children }: { children: React.ReactNode }) => {
+  return <>{children}</>;
+};
+
+export default EnhancedAccessibility;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081

@@ -1,14 +1,16 @@
-<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 =======
 import { render } from '@testing-library/react';
 import LoadingSpinner from '../app/components/LoadingSpinner';
+<<<<<<< HEAD
 =======
 import { render, screen } from '@testing-library/react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
 
 // Mock component for testing
 const LoadingSpinner = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {

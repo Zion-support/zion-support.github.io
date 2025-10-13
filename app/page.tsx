@@ -244,6 +244,7 @@ export default function PagePage() {
             This page is under development. Please check back later.
           </p>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
         </div>
       </section>
@@ -254,6 +255,13 @@ export default function PagePage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Our Services
+=======
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive technology solutions designed to accelerate your digital transformation.
