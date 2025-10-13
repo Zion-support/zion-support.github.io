@@ -1,14 +1,13 @@
-import { describe, it, expect, beforeEach } from '@jest/globals';
+import { describe, it, expect } from '@jest/globals';
+import { usePerformanceMonitor } from '../performanceMonitor';
 
 describe('Performance Monitoring', () => {
   it('should be implemented', () => {
     expect(true).toBe(true);
   });
-});
-import { usePerformanceMonitor } from '../usePerformanceMonitor';
 
-describe('Performance Monitoring', () => {
-  it('should be defined', () => {
+  it('should have usePerformanceMonitor function', () => {
     expect(usePerformanceMonitor).toBeDefined();
+    expect(typeof usePerformanceMonitor).toBe('function');
   });
 });
