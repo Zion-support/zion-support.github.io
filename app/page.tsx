@@ -8,6 +8,8 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
+import LazyComponent from "./components/LazyComponent";
+import ImageOptimizer from "./components/ImageOptimizer";
 
 const HomePage = () => {
   const structuredData = {

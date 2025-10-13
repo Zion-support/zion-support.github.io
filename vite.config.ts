@@ -39,6 +39,11 @@ export default defineConfig({
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
+    // Enhanced build optimizations
+    cssMinify: true,
+    minifyIdentifiers: true,
+    minifySyntax: true,
+    minifyWhitespace: true,
     // Optimize for production
     terserOptions: {
       compress: {

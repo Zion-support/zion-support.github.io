@@ -35,6 +35,25 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         console.log(`Performance metric updated - ${name}:`, value);
       }
       
+      // Send to analytics in production
+      if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
+        // Send to Google Analytics 4
+        if ('gtag' in window) {
+          (window as any).gtag('event', 'performance_metric', {
+            metric_name: name,
+            metric_value: value,
+            event_category: 'Performance'
+          });
+        }
+        
+        // Send to custom analytics endpoint
+        fetch('/api/analytics/performance', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ metric: name, value, timestamp: Date.now() })
+        }).catch(() => {}); // Silent fail for analytics
+      }
+      
       return updated;
     });
   }, [onMetricsUpdate, debug]);

@@ -9,9 +9,11 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-import { LoadingPage } from "./app/components/LoadingStates";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import { LoadingPage } from "./app/components/EnhancedLoadingStates";
+import ErrorBoundary from "./app/components/ErrorBoundary";
+import SkipToContent from "./app/components/SkipToContent";
+import KeyboardNavigation from "./app/components/KeyboardNavigation";
+import SecurityHeaders from "./app/components/SecurityHeaders";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
@@ -19,7 +21,6 @@ import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedSEO from "./app/components/EnhancedSEO";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -123,17 +124,19 @@ function App() {
   }, []);
 
   return (
-    <GlobalErrorBoundary>
-      <EnhancedErrorBoundary>
-        <HelmetProvider>
-          <AccessibilityEnhancer>
+    <ErrorBoundary>
+      <HelmetProvider>
+        <AccessibilityEnhancer>
+          <SecurityHeaders />
+          <KeyboardNavigation>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <FuturisticBackground>
+                  <SkipToContent />
                   <Navigation onSidebarToggle={toggleSidebar} />
                   <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                   <Breadcrumb />
-                  <main id="main-content" role="main">
+                  <main id="main-content" role="main" tabIndex={-1}>
                     <Suspense fallback={<LoadingPage />}>
                       <Routes>
                         {/* Main Pages */}
@@ -247,10 +250,10 @@ function App() {
               </div>
               <AnalyticsProvider />
             </Router>
-          </AccessibilityEnhancer>
-        </HelmetProvider>
-      </EnhancedErrorBoundary>
-    </GlobalErrorBoundary>
+          </KeyboardNavigation>
+        </AccessibilityEnhancer>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
 }
 
