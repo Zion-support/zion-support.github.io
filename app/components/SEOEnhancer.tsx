@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 import { useEffect } from 'react;
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -59,25 +59,25 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },';
   ];
   return (
-    <Helmet>;
-      <title>{title}</title>;
+    <Helmet>
+      <title>{title}</title>
       {metaTags.map((tag, _index) => (
-        <meta key={_index} {...tag} />;
+        <meta key={_index} {...tag} />
       ))}
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />;
+      <link rel="canonical" href={url} />
       {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />;
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />;
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />;
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />;
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />;
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />;
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       {/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />;
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />;
-    </Helmet>;
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    </Helmet>
   );
 };
 // Default structured data for the organization;

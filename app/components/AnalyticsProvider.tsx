@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 import { createContext, useContext, useEffect, ReactNode } from 'react;
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
@@ -58,9 +58,9 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   };
 
   return (
-    <AnalyticsContext.Provider value={value}>;
+    <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>;
+    </AnalyticsContext.Provider>
   );
 };
 

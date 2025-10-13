@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
@@ -18,9 +18,9 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   };
 
   return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>;
+    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
-    </div>;
+    </div>
   );
 };
 

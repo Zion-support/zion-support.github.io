@@ -2,7 +2,7 @@ import react;
 
 import { Helmet } from  from 'react;
 
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 
 import { } from 'react-router-dom;
 
@@ -13,7 +13,7 @@ interface MicroSaasProduct {
 }
   id: string;
 
-  icon: .ComponentType<any>;
+  icon: .ComponentType<any>
 
   title: string;
 

@@ -30,7 +30,7 @@ interface SEOConfig {
   alternate?: Array<{
     href: string;
     hreflang: string;
-  }>;
+  }>
   structuredData?: any;
 }
 
@@ -129,14 +129,14 @@ export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zi
 
 export const generateSitemap = (pages: Array<{ path: string; lastmod?: string; priority?: number }>) => {
   const baseUrl = 'https://zion.app';
-  return `<?xml version="1.0" encoding="UTF-8"?>;
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">;
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   ${pages.map(page => `;
-    <url>;
-      <loc>${baseUrl}${page.path}</loc>;
+    <url>
+      <loc>${baseUrl}${page.path}</loc>
       <lastmod>${page.lastmod || new Date().toISOString().split('T')[0]}</lastmod>';
-      <priority>${page.priority || 0.5}</priority>;
-    </url>;
+      <priority>${page.priority || 0.5}</priority>
+    </url>
   `).join('')}';
 </urlset>`;
 };

@@ -1,6 +1,6 @@
-import React from 'react;
+import React from 'react';
 import { useEffect, useCallback, useRef } from 'react;
-import { Helmet } from 'react-helmet-async;
+import { Helmet } from 'react-helmet-async';
 &apos;use client&apos;
 interface SEOData {
   title: string;
@@ -48,32 +48,32 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const finalStructuredData = structuredData || baseStructuredData;
 
   return (
-    <.Fragment>;
-      <Helmet>;
+    <.Fragment>
+      <Helmet>
         {/* Basic Meta Tags */}
         <title>{title}
-        <meta name="description" content={description} />;
+        <meta name="description" content={description} />
         <meta name="keywords" content={keywords.join(', ')} />';
-        <meta name="author" content="Zion Tech Group" />;
+        <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />';
         {/* Canonical URL */}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         
         {/* Open Graph Tags */}
-        <meta property="og:title" content={title} />;
-        <meta property="og:description" content={description} />;
-        <meta property="og:type" content="website" />;
-        <meta property="og:url" content={canonicalUrl || "https://ziontechgroup.com"} />;
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl || "https://ziontechgroup.com"} />
         {ogImage && <meta property="og:image" content={ogImage} />}
         
         {/* Twitter d Tags */}
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={title} />;
-        <meta name="twitter:description" content={description} />;
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
         {ogImage && <meta name="twitter:image" content={ogImage} />}
         
         {/* Structured Data */}
-        <script type="application/ld+json">;
+        <script type="application/ld+json">
           {JSON.stringify(finalStructuredData)}
       {children}
   );

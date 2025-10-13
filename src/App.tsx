@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 import ./components/ from './components/;
 import Footer from './components/Footer;
 import LoadingSpinner from './components/LoadingSpinner;
@@ -63,58 +63,58 @@ const App: React.FC = () => {
   }, []);
 
   if (!isInitialized) {
-    return <LoadingSpinner />;
+    return <LoadingSpinner />
   }
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
-          </>;
-          <Suspense fallback={<LoadingSpinner />}>;
-            <Routes>;
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          </>
+          <Suspense fallback={<LoadingSpinner />}>
+            <Routes>
               {/* Main Pages */}
-              <Route path="/" element={<Page />} />;
+              <Route path="/" element={<Page />} />
               {/* Company Pages */}
-              <Route path="/about" element={<AboutPage />} />;
-              <Route path="/team" element={<TeamPage />} />;
-              <Route path="/careers" element={<eersPage />} />;
-              <Route path="/news" element={<NewsPage />} />;
-              <Route path="/contact" element={<ContactPage />} />;
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/team" element={<TeamPage />} />
+              <Route path="/careers" element={<eersPage />} />
+              <Route path="/news" element={<NewsPage />} />
+              <Route path="/contact" element={<ContactPage />} />
               {/* Main Services */}
-              <Route path="/services" element={<ItServicesPage />} />;
-              <Route path="/pricing" element={<PricingPage />} />;
-              <Route path="/demo" element={<DemoPage />} />;
-              <Route path="/consultation" element={<ConsultationPage />} />;
+              <Route path="/services" element={<ItServicesPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/demo" element={<DemoPage />} />
+              <Route path="/consultation" element={<ConsultationPage />} />
               {/* AI Services */}
-              <Route path="/ai-services" element={<AiServicesPage />} />;
-              <Route path="/ai-marketing" element={<AiMarketingPage />} />;
-              <Route path="/ai-automation" element={<AiAutomationPage />} />;
-              <Route path="/ai-healthcare" element={<AiHealthcarePage />} />;
-              <Route path="/ai-fintech" element={<AiFintechPage />} />;
+              <Route path="/ai-services" element={<AiServicesPage />} />
+              <Route path="/ai-marketing" element={<AiMarketingPage />} />
+              <Route path="/ai-automation" element={<AiAutomationPage />} />
+              <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+              <Route path="/ai-fintech" element={<AiFintechPage />} />
               {/* IT Services */}
-              <Route path="/it-services" element={<ItServicesPage />} />;
-              <Route path="/cloud-services" element={<ServicesPage />} />;
-              <Route path="/cybersecurity" element={<CybersecurityPage />} />;
-              <Route path="/data-analytics" element={<DataAnalyticsPage />} />;
-              <Route path="/devops" element={<DevOpsPage />} />;
+              <Route path="/it-services" element={<ItServicesPage />} />
+              <Route path="/cloud-services" element={<ServicesPage />} />
+              <Route path="/cybersecurity" element={<CybersecurityPage />} />
+              <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+              <Route path="/devops" element={<DevOpsPage />} />
               {/* Specialized Solutions */}
-              <Route path="/quantum-computing" element={<QuantumComputingPage />} />;
-              <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />;
-              <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />;
-              <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />;
-              <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />;
-              <Route path="/robotics" element={<RoboticsPage />} />;
+              <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+              <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+              <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+              <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
+              <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+              <Route path="/robotics" element={<RoboticsPage />} />
               {/* Support Pages */}
-              <Route path="/support" element={<SupportPage />} />;
-              <Route path="/documentation" element={<DocumentationPage />} />;
-              <Route path="/faq" element={<FAQPage />} />;
+              <Route path="/support" element={<SupportPage />} />
+              <Route path="/documentation" element={<DocumentationPage />} />
+              <Route path="/faq" element={<FAQPage />} />
               {/* Content Pages */}
-              <Route path="/case-studies" element={<CaseStudiesPage />} />;
-              <Route path="/blog" element={<BlogPage />} />;
+              <Route path="/case-studies" element={<CaseStudiesPage />} />
+              <Route path="/blog" element={<BlogPage />} />
               {/* Legal Pages */}
-              <Route path="/privacy" element={<PrivacyPage />} />;
-              <Route path="/terms" element={<TermsPage />} />;
-              <Route path="/cookies" element={<CookiesPage />} />;
+              <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/terms" element={<TermsPage />} />
+              <Route path="/cookies" element={<CookiesPage />} />
               {/* Catch all route */}
-              <Route path="*" element={<NotFoundPage />} />;
-            </Routes>;
-          </Suspense>;
-          <Footer />;
-        </div>;
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </Suspense>
+          <Footer />
+        </div>

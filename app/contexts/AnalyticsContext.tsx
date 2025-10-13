@@ -35,9 +35,9 @@ const  ({ children }) => {
     isEnabled,
   };
   return (
-    <AnalyticsContext.Provider value={value}>;
+    <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>;
+    </AnalyticsContext.Provider>
   );
 };
 export { AnalyticsContext };

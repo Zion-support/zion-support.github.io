@@ -51,10 +51,10 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
     );
   }
 
-  return <>{children}</>;
+  return <>{children}</>
 };
 
-const TestComponent = () => <div>Test Component</div>;
+const TestComponent = () => <div>Test Component</div>
 const ErrorComponent = () => {
   throw new Error('Test error');
 };

@@ -4,8 +4,8 @@ import '@testing-library/jest-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Mock components
-const LoadingSpinner = () => <div role="status">Loading...</div>;
-const SEOEnhancer = () => <div>SEO Enhanced</div>;
+const LoadingSpinner = () => <div role="status">Loading...</div>
+const SEOEnhancer = () => <div>SEO Enhanced</div>
 
 describe('Component Tests', () => {
   test('LoadingSpinner renders correctly', () => {
