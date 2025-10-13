@@ -35,8 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 200, // Increased threshold for better chunking
-    assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 500, // Increased threshold for better chunking
+    assetsInlineLimit: 2048, // Reduced for better caching
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -45,7 +45,7 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3, // More passes for better optimization
+        passes: 3,
         unsafe: true,
         unsafe_comps: true,
         unsafe_math: true,
@@ -63,7 +63,7 @@ export default defineConfig({
         unused: true,
       },
       mangle: {
-        safari10: true, // Better Safari compatibility
+        safari10: true,
         toplevel: true,
         properties: {
           regex: /^_/
@@ -83,7 +83,7 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries - keep separate for better caching
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
@@ -91,7 +91,7 @@ export default defineConfig({
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - split by usage
           if (id.includes('framer-motion')) {
             return 'animations'
           }
@@ -118,7 +118,7 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - group by category
+          // AI service pages - group by category for better loading
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
@@ -132,6 +132,18 @@ export default defineConfig({
             }
             if (serviceName?.includes('customer') || serviceName?.includes('support')) {
               return 'ai-customer'
+            }
+            if (serviceName?.includes('marketing') || serviceName?.includes('automation')) {
+              return 'ai-marketing'
+            }
+            if (serviceName?.includes('voice') || serviceName?.includes('assistant')) {
+              return 'ai-voice'
+            }
+            if (serviceName?.includes('document') || serviceName?.includes('processing')) {
+              return 'ai-document'
+            }
+            if (serviceName?.includes('workflow') || serviceName?.includes('business')) {
+              return 'ai-workflow'
             }
             return 'ai-other'
           }
@@ -147,16 +159,29 @@ export default defineConfig({
             if (serviceName?.includes('security') || serviceName?.includes('shield')) {
               return 'zion-security'
             }
+            if (serviceName?.includes('cloud') || serviceName?.includes('vault')) {
+              return 'zion-cloud'
+            }
+            if (serviceName?.includes('marketing') || serviceName?.includes('social')) {
+              return 'zion-marketing'
+            }
             return 'zion-other'
           }
           // 5G service pages - group together
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
-          // Main pages
+          // Main pages - split by importance
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
-            return 'main-pages'
+            const pageName = id.split('/app/')[1]?.split('/')[0];
+            if (['about', 'contact', 'services'].includes(pageName)) {
+              return 'main-core'
+            }
+            if (['blog', 'tutorials', 'demo', 'consultation'].includes(pageName)) {
+              return 'main-content'
+            }
+            return 'main-other'
           }
           // Default chunk for other modules
           return 'vendor'
