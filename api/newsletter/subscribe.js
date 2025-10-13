@@ -11,6 +11,7 @@ async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default function handler(req, res) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
@@ -24,6 +25,11 @@ export default async function handler(req, res) {
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-8341
+=======
+
+export default async function handler(req, res) {
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -59,6 +65,7 @@ export default async function handler(req, res) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
 =======
     res.statusCode = 200;
@@ -70,6 +77,8 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8341
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -89,23 +98,32 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
 }
 
 export default handler;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
 }
 
 export default handler;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-8341
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-d3c2

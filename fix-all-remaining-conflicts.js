@@ -135,7 +135,7 @@ export default function Page() {
               Coming Soon
             </h2>
             <p className="text-blue-700">
-              We're working hard to bring you the best experience. This page will be available shortly.
+              We&apos;re working hard to bring you the best experience. This page will be available shortly.
             </p>
           </div>
         </div>

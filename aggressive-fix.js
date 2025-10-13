@@ -219,7 +219,7 @@ const main = () => {
       const fileName = path.basename(filePath, path.extname(filePath));
       
       if (filePath.includes('/page.tsx')) {
-        // It's a page file
+        // It&apos;s a page file
         const serviceName = path.basename(path.dirname(filePath))
           .split('-')
           .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -234,14 +234,14 @@ const main = () => {
         
         newContent = createGenericPage(serviceName, title, description);
       } else if (filePath.includes('/components/')) {
-        // It's a component file
+        // It&apos;s a component file
         const componentName = fileName
           .split('-')
           .map(word => word.charAt(0).toUpperCase() + word.slice(1))
           .join('');
         newContent = createComponentTemplate(componentName);
       } else if (filePath.includes('/utils/')) {
-        // It's a utility file
+        // It&apos;s a utility file
         const utilityName = fileName
           .split('-')
           .map(word => word.charAt(0).toUpperCase() + word.slice(1))

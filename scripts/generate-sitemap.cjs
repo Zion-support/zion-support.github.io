@@ -215,7 +215,6 @@ function generateSitemap() {
       changefreq: 'weekly'
     });
 
-
   microSaasServices.forEach(service => {
     pages.push({
       url: `/micro-saas/${service}`,
