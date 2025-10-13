@@ -35,18 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-<<<<<<< HEAD
-<<<<<<< HEAD
-    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
+    chunkSizeWarningLimit: 150, // Balanced threshold for better chunking
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
-=======
-    chunkSizeWarningLimit: 500, // Increased threshold for better chunking
-    assetsInlineLimit: 1024, // Optimized for better caching and faster initial load
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
-    chunkSizeWarningLimit: 150, // Increased threshold for better chunking
-    assetsInlineLimit: 4096, // Increased for better caching of small assets
->>>>>>> cursor/analyze-improve-and-deploy-application-c69e
     // Enable compression
     reportCompressedSize: true,
     // Better compression settings
@@ -131,7 +121,6 @@ export default defineConfig({
           // AI service pages - more granular splitting
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
-<<<<<<< HEAD
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
               return 'ai-analytics'
             }
@@ -159,25 +148,6 @@ export default defineConfig({
               return 'zion-security'
             }
             return 'zion-other'
-<<<<<<< HEAD
-          }
-          // 5G service pages
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
-            if (serviceName && ['analytics', 'automation', 'business-intelligence', 'content-generation'].includes(serviceName)) {
-              return 'ai-core'
-            }
-            if (serviceName && ['healthcare', 'marketing', 'sales', 'customer-service'].includes(serviceName)) {
-              return 'ai-business'
-            }
-            return 'ai-other'
-          }
-          // Zion service pages - group together
-          if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            return 'zion-services'
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
           }
           // 5G service pages - group together
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
