@@ -1,27 +1,21 @@
-<<<<<<< HEAD
-// Simple email validation function
-const isValidEmail = (email) => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-};
-async function handler(req, res) {
-=======
 export default function handler(req, res) {
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
+  
   try {
     const { email } = req.body || {};
+    
     if (!email) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Email is required' }));
       return;
     }
+    
     // Simple email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -30,6 +24,7 @@ export default function handler(req, res) {
       res.end(JSON.stringify({ error: 'Invalid email format' }));
       return;
     }
+    
     // Save subscription logic here
     // In a real application, you would:
     // 1. Save to your database
@@ -39,10 +34,7 @@ export default function handler(req, res) {
       email: req.body.email,
       timestamp: new Date().toISOString()
     });
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
+    
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -58,9 +50,4 @@ export default function handler(req, res) {
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }));
   }
-<<<<<<< HEAD
 }
-export default handler;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-3792

@@ -1,37 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
 import React, { useEffect, useState } from 'react';
-
-=======
-import React, { useEffect, useState } from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-=======
-import React, { useEffect, useState } from 'react';
-
-// Type definitions for browser APIs
-declare global {
-  interface MediaQueryListEvent extends Event {
-    matches: boolean;
-  }
-  
-  interface MediaQueryList {
-    matches: boolean;
-    addEventListener(type: 'change', listener: (event: MediaQueryListEvent) => void): void;
-    removeEventListener(type: 'change', listener: (event: MediaQueryListEvent) => void): void;
-  }
-}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
-=======
-import React, { useEffect, useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -194,22 +161,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
 };
 
 export default AccessibilityEnhancer;

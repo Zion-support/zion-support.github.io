@@ -1,22 +1,12 @@
 import React, { useEffect, useState } from 'react';
+
 // Type definitions for browser APIs
 declare global {
-  interface PerformanceObserver {
-    observe(options: { entryTypes: string[] }): void;
-    disconnect(): void;
-  }
   interface PerformanceNavigationTiming extends PerformanceEntry {
     requestStart: number;
     responseStart: number;
   }
-  const PerformanceObserver: {
-    new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver;
-  };
-  const performance: {
-    getEntriesByType(type: string): PerformanceEntry[];
-  };
 }
-import React, { useEffect, useState } from 'react';
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -45,15 +35,9 @@ const PerformanceMonitor: React.FC = () => {
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
           } else if (entry.entryType === 'first-input') {
             const inputEntry = entry as any;
-<<<<<<< HEAD
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
           } else if (entry.entryType === 'layout-shift') {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
           }

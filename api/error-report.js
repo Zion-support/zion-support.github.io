@@ -3,8 +3,10 @@ export default function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
+  
   try {
     const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
+    
     // Log the error details
     console.error('Client Error Report:', {
       error: error?.message || error,
@@ -14,6 +16,7 @@ export default function handler(req, res) {
       userAgent,
       url
     });
+    
     // Log error details (in production you would send this to your monitoring service)
     // In a real application, you would:
     // 1. Send to Sentry, LogRocket, Bugsnag, etc.
@@ -23,13 +26,10 @@ export default function handler(req, res) {
       error: req.body.error,
       timestamp: new Date().toISOString()
     });
+    
     res.status(200).json({ success: true });
   } catch (error) {
     console.error('Error processing error report:', error);
     res.status(500).json({ error: 'Failed to process error report' });
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
