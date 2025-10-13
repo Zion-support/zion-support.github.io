@@ -1,4 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  largeText: boolean;
+  reducedMotion: boolean;
+  focusVisible: boolean;
+}
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -13,60 +20,64 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = true,
-  enableFocusManagement = true,
+  enableFocusManagement = true
 }) => {
-  useEffect(() => {
-    // Skip to main content functionality
-    const addSkipLink = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50';
-      skipLink.style.cssText = `
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-      `;
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
+  const [settings, setSettings] = useState<AccessibilitySettings>({
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    focusVisible: true
+  });
 
+  useEffect(() => {
+    // Load settings from localStorage
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      try {
+        setSettings(JSON.parse(savedSettings));
+      } catch (error) {
+        console.warn('Failed to parse accessibility settings:', error);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
     // Keyboard navigation enhancements
     const enhanceKeyboardNavigation = () => {
-      if (!enableKeyboardNavigation) return;
+      if (!enableKeyboardNavigation) return () => {};
 
-      const handleKeyDown = (e: KeyboardEvent) => {
-        // Escape key to close modals/dropdowns
-        if (e.key === 'Escape') {
-          const activeElement = document.activeElement as HTMLElement;
-          if (activeElement && activeElement.blur) {
-            activeElement.blur();
+      const handleKeyDown = (event: KeyboardEvent) => {
+        // Skip links for better keyboard navigation
+        if (event.key === 'Tab') {
+          const focusableElements = document.querySelectorAll(
+            'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+          );
+          const firstElement = focusableElements[0] as HTMLElement;
+          const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+          if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement?.focus();
+          } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement?.focus();
           }
         }
 
-        // Tab navigation improvements
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation');
+        // Escape key to close modals
+        if (event.key === 'Escape') {
+          const modals = document.querySelectorAll('[role="dialog"]');
+          modals.forEach(modal => {
+            const closeButton = modal.querySelector('[aria-label="Close"], [data-close]');
+            if (closeButton) {
+              (closeButton as HTMLElement).click();
+            }
+          });
         }
       };
 
-      // Remove keyboard navigation class on mouse use
-      const handleMouseDown = () => {
-        document.body.classList.remove('keyboard-navigation');
-      };
-
       document.addEventListener('keydown', handleKeyDown);
-      document.addEventListener('mousedown', handleMouseDown);
-
-      return () => {
-        document.removeEventListener('keydown', handleKeyDown);
-        document.removeEventListener('mousedown', handleMouseDown);
-      };
+      return () => document.removeEventListener('keydown', handleKeyDown);
     };
 
     // Focus management
@@ -75,7 +86,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       const trapFocus = (element: HTMLElement) => {
         const focusableElements = element.querySelectorAll(
-          'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+          'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
         );
         const firstFocusableElement = focusableElements[0] as HTMLElement;
         const lastFocusableElement = focusableElements[focusableElements.length - 1] as HTMLElement;
@@ -84,12 +95,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           if (e.key === 'Tab') {
             if (e.shiftKey) {
               if (document.activeElement === firstFocusableElement) {
-                lastFocusableElement.focus();
+                lastFocusableElement?.focus();
                 e.preventDefault();
               }
             } else {
               if (document.activeElement === lastFocusableElement) {
-                firstFocusableElement.focus();
+                firstFocusableElement?.focus();
                 e.preventDefault();
               }
             }
@@ -104,21 +115,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         };
       };
 
-<<<<<<< HEAD
-      // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
+      // Apply focus trapping to modals and dropdowns
+      const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
       const cleanupFunctions = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
 
       return () => {
         cleanupFunctions.forEach(cleanup => cleanup());
-=======
-      // Apply focus trapping to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [role="alertdialog"]');
-      modals.forEach(modal => trapFocus(modal as HTMLElement));
-
-      return () => {
-        // Cleanup handled by individual trapFocus returns
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
       };
     };
 
@@ -140,12 +142,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         document.head.appendChild(style);
       };
 
-<<<<<<< HEAD
-      mediaQuery.addEventListener('change', handleContrastChange);
-      handleContrastChange(mediaQuery as any);
-=======
       addHighContrastStyles();
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
 
       return () => {
         const existingStyle = document.getElementById('accessibility-high-contrast');
@@ -155,7 +152,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
     };
 
-<<<<<<< HEAD
     // Reduced motion detection
     const handleReducedMotion = () => {
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -176,10 +172,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
     };
 
-    // Screen reader announcements
-=======
     // Screen reader optimizations
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
     const enhanceScreenReader = () => {
       if (!enableScreenReader) return;
 
@@ -206,36 +199,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
 
-      // Add live regions for dynamic content
-      const addLiveRegions = () => {
-        let liveRegion = document.getElementById('live-region');
-        if (!liveRegion) {
-          liveRegion = document.createElement('div');
-          liveRegion.id = 'live-region';
-          liveRegion.setAttribute('aria-live', 'polite');
-          liveRegion.setAttribute('aria-atomic', 'true');
-          liveRegion.className = 'sr-only';
-          document.body.appendChild(liveRegion);
-        }
-      };
-
       addLandmarks();
-      addLiveRegions();
-
-      return () => {
-        const liveRegion = document.getElementById('live-region');
-        if (liveRegion) {
-          liveRegion.remove();
-        }
-      };
     };
 
-    // Initialize all enhancements
-    addSkipLink();
+    // Apply all enhancements
     const cleanupKeyboard = enhanceKeyboardNavigation();
     const cleanupFocus = enhanceFocusManagement();
     const cleanupContrast = enhanceHighContrast();
-    const cleanupMotion = enhanceScreenReader();
+    const cleanupMotion = handleReducedMotion();
+    enhanceScreenReader();
 
     return () => {
       if (cleanupKeyboard) cleanupKeyboard();
@@ -244,14 +216,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       if (cleanupMotion) cleanupMotion();
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
 
@@ -291,92 +256,21 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       highContrast: false,
       largeText: false,
       reducedMotion: false,
-      screenReader: false,
       focusVisible: true
     };
     setSettings(defaultSettings);
     applyAccessibilitySettings(defaultSettings);
   };
 
-<<<<<<< HEAD
-  // Removed unused functions - functionality is handled by updateSetting directly
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
+  // Apply current settings
+  useEffect(() => {
+    applyAccessibilitySettings(settings);
+  }, [settings]);
+
   return (
-    <>
+    <div className="accessibility-enhanced">
       {children}
-      <style>{`
-        /* Keyboard navigation styles */
-        .keyboard-navigation *:focus {
-          outline: 2px solid #06b6d4;
-          outline-offset: 2px;
-        }
-
-        /* Screen reader only content */
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-
-        .sr-only:focus {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-
-        /* High contrast mode */
-        .high-contrast {
-          filter: contrast(150%) brightness(110%);
-        }
-
-        .high-contrast * {
-          border-color: currentColor !important;
-        }
-
-        /* Focus indicators */
-        .focus-visible:focus-visible {
-          outline: 2px solid #06b6d4;
-          outline-offset: 2px;
-        }
-
-        /* Reduced motion */
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-
-        /* Large text mode */
-        .large-text {
-          font-size: 1.2em;
-          line-height: 1.6;
-        }
-
-        .large-text h1 { font-size: 2.5em; }
-        .large-text h2 { font-size: 2em; }
-        .large-text h3 { font-size: 1.75em; }
-        .large-text h4 { font-size: 1.5em; }
-        .large-text h5 { font-size: 1.25em; }
-        .large-text h6 { font-size: 1.1em; }
-      `}</style>
-    </>
+    </div>
   );
 };
 
