@@ -4,13 +4,11 @@ import { Helmet } from 'react-helmet-async';
 interface EnhancedSEOProps {
   title: string;
   description: string;
-  keywords?: string;
+  keywords: string;
   canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
   ogImage?: string;
-  ogUrl?: string;
   ogType?: string;
+<<<<<<< HEAD
   twitterCard?: string;
   twitterTitle?: string;
   twitterDescription?: string;
@@ -20,6 +18,8 @@ interface EnhancedSEOProps {
   lang?: string;
   noindex?: boolean;
   nofollow?: boolean;
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-a281
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
@@ -27,21 +27,10 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   description,
   keywords,
   canonical,
-  ogTitle,
-  ogDescription,
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogUrl,
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
-  twitterTitle,
-  twitterDescription,
-  twitterImage,
-  structuredData,
-  noIndex = false,
-  noindex = false,
-  nofollow = false,
-  lang = 'en'
+  ogImage = '/og-image.svg',
+  ogType = 'website'
 }) => {
+<<<<<<< HEAD
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';
   const defaultImage = 'https://ziontechgroup.com/og-image.jpg';
@@ -84,11 +73,13 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 
   const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
 
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-a281
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>{title}</title>
       <meta name="description" content={description} />
+<<<<<<< HEAD
       <meta name="keywords" content={finalKeywords} />
       <meta name="author" content={siteName} />
       <meta name="robots" content={`${noIndex || noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
@@ -136,6 +127,23 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/manifest.json" />
+=======
+      <meta name="keywords" content={keywords} />
+      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {/* Open Graph */}
+      <meta property="og:type" content={ogType} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={ogImage} />
+      {canonical && <meta property="og:url" content={canonical} />}
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+>>>>>>> cursor/analyze-improve-and-deploy-application-a281
     </Helmet>
   );
 };

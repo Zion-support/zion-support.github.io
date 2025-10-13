@@ -155,6 +155,7 @@ const CloudInfrastructureManagementPage = () => {
       color: "from-indigo-500 to-blue-500"
     },
     {
+<<<<<<< HEAD
       title: "Performance Monitoring",
       description: "Real-time monitoring, alerting, and performance optimization across all cloud resources",
       icon: <Monitor className="w-8 h-8" />,
@@ -617,3 +618,14 @@ const CloudInfrastructureManagementPage = () => {
 };
 
 export default CloudInfrastructureManagementPage;
+=======
+      icon: <BarChart3 className="w-6 h-6 text-pink-400" />,
+      title: "Analytics & Insights",
+      description:
+        "Advanced analytics to optimize infrastructure performance and make data-driven decisions",
+    },
+  ];
+
+  const managementFeatures = [
+    {
+>>>>>>> main
