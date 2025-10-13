@@ -1,15 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { ErrorBoundary } from 'react-error-boundary';
-import Navigation from "./app/components/Navigation";
-import Footer from "./app/components/Footer";
-import HomePage from "./app/page";
-import LoadingStates from './app/components/LoadingStates';
-import { AnalyticsProvider } from './app/contexts/AnalyticsContext.tsx';
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
 
 // Components
 import Navigation from './app/components/Navigation';
@@ -39,51 +31,6 @@ import DemoPage from './app/demo/page';
 import SupportPage from './app/support/page';
 import TutorialsPage from './app/tutorials/page';
 
-<<<<<<< HEAD
-function App() {
-  return (
-    <HelmetProvider>
-      <ErrorBoundary>
-        <Router>
-          <AnalyticsProvider>
-            <PerformanceOptimizer>
-              <EnhancedAccessibility>
-                <AccessibilityEnhancer>
-                  <div className="min-h-screen bg-gray-900 text-white">
-                    <FuturisticBackground>
-                      <Navigation />
-                      <main className="relative z-10">
-                        <Suspense fallback={<LoadingSpinner />}>
-                          <Routes>
-                            <Route path="/" element={<HomePage />} />
-                            <Route path="/about" element={<AboutPage />} />
-                            <Route path="/contact" element={<ContactPage />} />
-                            <Route path="/services" element={<ServicesPage />} />
-                            <Route path="/case-studies" element={<CaseStudiesPage />} />
-                            <Route path="/partners" element={<PartnersPage />} />
-                            <Route path="/privacy" element={<PrivacyPage />} />
-                            <Route path="/terms" element={<TermsPage />} />
-                            <Route path="/ai-services" element={<AIServicesPage />} />
-                            <Route path="/micro-saas" element={<MicroSAASPage />} />
-                            <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                            <Route path="/blog" element={<BlogPage />} />
-                            <Route path="/demo" element={<DemoPage />} />
-                            <Route path="/support" element={<SupportPage />} />
-                            <Route path="/tutorials" element={<TutorialsPage />} />
-                          </Routes>
-                        </Suspense>
-                      </main>
-                      <Footer />
-                    </FuturisticBackground>
-                  </div>
-                </AccessibilityEnhancer>
-              </EnhancedAccessibility>
-            </PerformanceOptimizer>
-          </AnalyticsProvider>
-        </Router>
-      </ErrorBoundary>
-    </HelmetProvider>
-=======
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -156,7 +103,6 @@ function App() {
         </AnalyticsProvider>
       </HelmetProvider>
     </ErrorBoundary>
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
   );
 }
 
