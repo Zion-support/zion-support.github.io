@@ -1,6 +1,6 @@
 import React from 'react';
-import { } from 'react-router-dom';
-import { Right, Facebook, Twitter, edin, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Facebook, Twitter, Linkedin, Github, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -9,20 +9,24 @@ const Footer: React.FC = () => {
     services: [
       { name: 'AI Services', href: '/ai-services' },
       { name: 'IT Services', href: '/it-services' },
-      { name: 'Solutions', href: '/cloud-infrastructure' },
-      { name: 'Digital Transformation', href: '/digital-transformation' }
+      { name: 'Cloud Solutions', href: '/cloud-solutions' },
+      { name: 'Digital Transformation', href: '/digital-transformation' },
+      { name: 'Cybersecurity', href: '/cybersecurity' },
+      { name: 'Data Analytics', href: '/data-analytics' }
     ],
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Case Studies', href: '/case-studies' },
       { name: 'Blog', href: '/blog' },
-      { name: 'eers', href: '/careers' }
+      { name: 'Careers', href: '/careers' },
+      { name: 'Pricing', href: '/pricing' }
     ],
     support: [
       { name: 'Contact', href: '/contact' },
       { name: 'Support', href: '/support' },
       { name: 'Documentation', href: '/docs' },
-      { name: 'Tutorials', href: '/tutorials' }
+      { name: 'Tutorials', href: '/tutorials' },
+      { name: 'Demo', href: '/demo' }
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
@@ -34,7 +38,7 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'edIn', href: '#', icon: edin },
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
     { name: 'GitHub', href: '#', icon: Github }
   ];
 
@@ -44,13 +48,37 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <to="/" className="text-2xl font-bold text-white mb-4 block">
+            <Link to="/" className="text-2xl font-bold text-white mb-4 block">
               Zion Tech Group
-            </>
+            </Link>
             <p className="text-gray-300 mb-6 max-w-md">
               Transforming businesses through cutting-edge AI and IT solutions. 
               We help companies innovate and grow in the digital age.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center text-gray-300">
+                <Phone className="w-4 h-4 mr-3 text-cyan-400" />
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Mail className="w-4 h-4 mr-3 text-cyan-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-start text-gray-300">
+                <MapPin className="w-4 h-4 mr-3 mt-1 text-cyan-400 flex-shrink-0" />
+                <span className="text-sm">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </span>
+              </div>
+            </div>
+
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
@@ -74,11 +102,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <to={link.href}
+                  <Link to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
-                  </>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -90,11 +118,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <to={link.href}
+                  <Link to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
-                  </>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -106,11 +134,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <to={link.href}
+                  <Link to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
-                  </>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -132,22 +160,22 @@ const Footer: React.FC = () => {
               />
               <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-r-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Subscribe
-                <Right className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2" />
               </button>
             </div>
           </div>
         </div>
 
-        {/* tom Bar */}
+        {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
             {footerLinks.legal.map((link) => (
-              <key={link.name}
+              <Link key={link.name}
                 to={link.href}
                 className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
               >
                 {link.name}
-              </>
+              </Link>
             ))}
           </div>
           <p className="text-gray-400 text-sm">
