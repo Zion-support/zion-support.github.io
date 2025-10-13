@@ -6,7 +6,8 @@ import {
   Brain, 
   Shield, 
   Zap, 
-  Globe, 
+  Globe,
+  ChevronDown
 } from 'lucide-react';
 
 interface NavigationProps {
