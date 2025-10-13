@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Video, Play, Pause, Download, Upload, Edit, Settings, Sparkles, CheckCircle, Star, Users, Clock, Zap, Brain, Mic, Camera, Image, Music, Palette, Share, Eye, Heart, ThumbsUp, Mail, Smartphone, Globe, Award, Shield, Lock, Cloud, Database, BarChart3, TrendingUp, Target, MessageSquare, Headphones, ExternalLink, ChevronRight, RefreshCw, RotateCcw, Save, Trash2, Plus, Minus, X, Menu, MoreHorizontal, MoreVertical, Grid, List, Layout, Maximize, Minimize, Move, Copy, Scissors, Clipboard, Bookmark, Tag, Flag, Bell, BellOff, Volume2, VolumeX, CameraOff, Wifi, WifiOff, Battery, BatteryLow, Signal, SignalLow, SignalZero, SignalHigh } from 'lucide-react';
+import { ArrowRight, Video, Play, Edit, Settings, Sparkles, CheckCircle, Users, Brain, Mic, Palette, Share, Mail, Smartphone, Globe, Cloud, Database, BarChart3, Target, Headphones, Trash2, Layout } from "lucide-react";
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIVideoGeneratorPage = () => {
@@ -80,6 +80,46 @@ const ZionAIVideoGeneratorPage = () => {
       included: true
     }
   ];
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "The team's expertise and dedication to excellence is unmatched. Our productivity increased by 300%.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Founder, StartupXYZ",
+    "content": "Professional, reliable, and innovative. They delivered exactly what we needed and more.",
+    "rating": 5
+  }
+];
+
+  const stats = [
+  {
+    "number": "500+",
+    "label": "Projects Completed"
+  },
+  {
+    "number": "50+",
+    "label": "Happy Clients"
+  },
+  {
+    "number": "5+",
+    "label": "Years Experience"
+  },
+  {
+    "number": "99%",
+    "label": "Client Satisfaction"
+  }
+];
 
   const pricingPlans = [
     {
@@ -222,7 +262,7 @@ const ZionAIVideoGeneratorPage = () => {
             
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {stats.map((stat, index) => (
+              {stats.map((stat: any, index: number) => (
                 <div key={index} className="text-center group">
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
@@ -398,7 +438,7 @@ const ZionAIVideoGeneratorPage = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial: any, index: number) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden"

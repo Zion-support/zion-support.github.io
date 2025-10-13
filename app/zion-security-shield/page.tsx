@@ -1,4 +1,4 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from "lucide-react";
+import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Zap, Brain } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -35,6 +35,27 @@ export default function ZionSecurityShield() {
       description: "Advanced user behavior analysis to detect insider threats and anomalies"
     }
   ];
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "The team's expertise and dedication to excellence is unmatched. Our productivity increased by 300%.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Founder, StartupXYZ",
+    "content": "Professional, reliable, and innovative. They delivered exactly what we needed and more.",
+    "rating": 5
+  }
+];
 
   const securityFeatures = [
     "Multi-factor Authentication (MFA)",
@@ -296,7 +317,7 @@ export default function ZionSecurityShield() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial: any, index: number) => (
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"

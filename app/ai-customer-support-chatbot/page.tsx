@@ -34,6 +34,27 @@ export default function AICustomerSupportChatbot() {
     },
   ];
 
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "The team's expertise and dedication to excellence is unmatched. Our productivity increased by 300%.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Founder, StartupXYZ",
+    "content": "Professional, reliable, and innovative. They delivered exactly what we needed and more.",
+    "rating": 5
+  }
+];
+
   const pricingPlans = [
     {
       name: "Starter",
@@ -230,7 +251,7 @@ export default function AICustomerSupportChatbot() {
               What Our Customers Say
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial: any, index: number) => (
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"

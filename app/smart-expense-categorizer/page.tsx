@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Receipt, TrendingUp, Shield, Zap, BarChart3, Users, Clock, CheckCircle, Star, ArrowRight, Brain, Target, Globe, DollarSign, FileText } from 'lucide-react';
+import { Receipt, Shield, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe } from "lucide-react";
 
 const SmartExpenseCategorizerPage = () => {
   const features = [
@@ -36,6 +36,34 @@ const SmartExpenseCategorizerPage = () => {
       description: "Manage team expenses with role-based permissions, approval workflows, and centralized expense reporting."
     }
   ];
+
+  const benefits = [
+  "80% reduction in manual tasks",
+  "Real-time process optimization",
+  "Seamless system integration",
+  "Predictive maintenance alerts",
+  "Automated compliance reporting",
+  "Enhanced data accuracy"
+];
+
+  const stats = [
+  {
+    "number": "500+",
+    "label": "Projects Completed"
+  },
+  {
+    "number": "50+",
+    "label": "Happy Clients"
+  },
+  {
+    "number": "5+",
+    "label": "Years Experience"
+  },
+  {
+    "number": "99%",
+    "label": "Client Satisfaction"
+  }
+];
 
   const pricingPlans = [
     {
@@ -144,7 +172,7 @@ const SmartExpenseCategorizerPage = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat: any, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -183,7 +211,7 @@ const SmartExpenseCategorizerPage = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit: any, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

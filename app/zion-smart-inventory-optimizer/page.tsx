@@ -171,6 +171,46 @@ const ZionSmartInventoryOptimizerPage = () => {
     }
   ];
 
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "The team's expertise and dedication to excellence is unmatched. Our productivity increased by 300%.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Founder, StartupXYZ",
+    "content": "Professional, reliable, and innovative. They delivered exactly what we needed and more.",
+    "rating": 5
+  }
+];
+
+  const stats = [
+  {
+    "number": "500+",
+    "label": "Projects Completed"
+  },
+  {
+    "number": "50+",
+    "label": "Happy Clients"
+  },
+  {
+    "number": "5+",
+    "label": "Years Experience"
+  },
+  {
+    "number": "99%",
+    "label": "Client Satisfaction"
+  }
+];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -312,7 +352,7 @@ const ZionSmartInventoryOptimizerPage = () => {
             
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {stats.map((stat, index) => (
+              {stats.map((stat: any, index: number) => (
                 <div key={index} className="text-center group">
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
@@ -488,7 +528,7 @@ const ZionSmartInventoryOptimizerPage = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial: any, index: number) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/10 relative overflow-hidden"

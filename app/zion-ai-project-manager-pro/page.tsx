@@ -77,6 +77,27 @@ const ZionAIProjectManagerProPage = () => {
     }
   ];
 
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "The team's expertise and dedication to excellence is unmatched. Our productivity increased by 300%.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Founder, StartupXYZ",
+    "content": "Professional, reliable, and innovative. They delivered exactly what we needed and more.",
+    "rating": 5
+  }
+];
+
   const pricingPlans = [
     {
       name: "Starter",
@@ -473,7 +494,7 @@ const ZionAIProjectManagerProPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial: any, index: number) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"

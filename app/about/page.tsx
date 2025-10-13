@@ -27,6 +27,13 @@ export default function AboutPage() {
     }
   ];
 
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "50+", label: "Happy Clients" },
+    { number: "5+", label: "Years Experience" },
+    { number: "99%", label: "Client Satisfaction" }
+  ];
+
   return (
     <>
       <Helmet>

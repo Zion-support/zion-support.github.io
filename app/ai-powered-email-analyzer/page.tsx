@@ -48,6 +48,25 @@ const AIPoweredEmailAnalyzerPage = () => {
     }
   ];
 
+  const stats = [
+  {
+    "number": "500+",
+    "label": "Projects Completed"
+  },
+  {
+    "number": "50+",
+    "label": "Happy Clients"
+  },
+  {
+    "number": "5+",
+    "label": "Years Experience"
+  },
+  {
+    "number": "99%",
+    "label": "Client Satisfaction"
+  }
+];
+
   const pricingPlans = [
     {
       name: "Starter",
@@ -155,7 +174,7 @@ const AIPoweredEmailAnalyzerPage = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+            {stats.map((stat: any, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

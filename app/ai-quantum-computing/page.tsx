@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Cpu, Brain, Atom, Users, Award, Globe, Lock, TrendingUp, Monitor, MessageSquare, Phone } from 'lucide-react';
 import { Link } from "react-router-dom";
-import SEOOptimizer from "../../components/SEOOptimizer";
 
 export default function AiQuantumComputing() {
   const features = [
@@ -18,6 +17,27 @@ export default function AiQuantumComputing() {
     "Quantum state preparation and manipulation",
     "Quantum entanglement and teleportation protocols",
     "Custom quantum circuit design and optimization"
+  ];
+
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their innovative AI solutions. Highly recommended!",
+      rating: 5
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise and dedication to excellence is unmatched. Our productivity increased by 300%.",
+      rating: 5
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "Professional, reliable, and innovative. They delivered exactly what we needed and more.",
+      rating: 5
+    }
   ];
 
   const pricingPlans = [
@@ -120,10 +140,6 @@ export default function AiQuantumComputing() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing" />
       </Helmet>
-      <SEOOptimizer
-        title="AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group"
-        description="Harness the power of quantum computing with AI. Zion's quantum platform offers quantum machine learning, simulation, and optimization for breakthrough discoveries and solutions."
-      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -341,7 +357,7 @@ export default function AiQuantumComputing() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial: any, index: number) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"

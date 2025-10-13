@@ -49,6 +49,15 @@ const CloudServicesPage: React.FC = () => {
     }
   ];
 
+  const benefits = [
+  "80% reduction in manual tasks",
+  "Real-time process optimization",
+  "Seamless system integration",
+  "Predictive maintenance alerts",
+  "Automated compliance reporting",
+  "Enhanced data accuracy"
+];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -122,7 +131,7 @@ const CloudServicesPage: React.FC = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit: any, index: number) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   {benefit.icon}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Users, ArrowRight, Sparkles, CheckCircle, Star, Brain, Target, TrendingUp, Shield, Clock, Zap, BarChart3, Award, Globe, Smartphone, Monitor, Mail, Phone, MapPin, Play, Download, Share, Settings, PieChart, LineChart, Activity, Database, Cloud, Lock, Eye, Filter, Search, RefreshCw, Maximize, Minimize, RotateCcw, RotateCw, ZoomIn, ZoomOut, Move, Copy, Scissors, Save, Folder, File, Archive, Tag, Flag, Bookmark, Bell, AlertCircle, Info, HelpCircle, X, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, MoreHorizontal, MoreVertical, Grid, List, Layout, Sidebar, Navigation, Compass, Map, Home, Building, Store, Factory, Warehouse, School, Hospital, Car, Plane, Train, Ship, Bike, Bus, Package, Box, Gift, ShoppingBag, CreditCard, Wallet, Coins, note, Receipt, Calculator, Percent, TrendingDown, Thermometer, Gauge, Battery, Wifi, Bluetooth, Radio, Tv, Laptop, Tablet, Watch, Headphones, Speaker, Mic, Camera, Video, Image, Music, Film, Book, Newspaper, FileText, Folder as FolderIcon, Archive as ArchiveIcon, HardDrive, Server, Cpu, MemoryStick, Disc } from 'lucide-react';
+import { Users, ArrowRight, Sparkles, CheckCircle, Target, TrendingUp, Zap, BarChart3, Mail, Phone, MapPin, Play, Database, Compass, Folder as FolderIcon, Archive as ArchiveIcon } from "lucide-react";
 
 const ZionAICRMProPage = () => {
   const features = [
@@ -42,6 +42,36 @@ const ZionAICRMProPage = () => {
       benefits: ['AI segmentation', 'Behavioral grouping', 'Custom segments', 'Dynamic updates']
     }
   ];
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "The team's expertise and dedication to excellence is unmatched. Our productivity increased by 300%.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Founder, StartupXYZ",
+    "content": "Professional, reliable, and innovative. They delivered exactly what we needed and more.",
+    "rating": 5
+  }
+];
+
+  const benefits = [
+  "80% reduction in manual tasks",
+  "Real-time process optimization",
+  "Seamless system integration",
+  "Predictive maintenance alerts",
+  "Automated compliance reporting",
+  "Enhanced data accuracy"
+];
 
   const pricingPlans = [
     {
@@ -311,7 +341,7 @@ const ZionAICRMProPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial: any, index: number) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"

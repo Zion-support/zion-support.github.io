@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Brain, Lock, Zap, ArrowRight, CheckCircle, Star, Award, BarChart3, Clock, Target, Sparkles, TrendingUp, Globe, Smartphone, Monitor, AlertTriangle, Eye, Search, Database, Network, Shield as FileShield, Key, Bug, Activity, Server, Wifi, HardDrive, Cloud, Settings, Users, Bell, FileText, Download } from 'lucide-react';
+import { Shield, Brain, Lock, Zap, CheckCircle, Award, BarChart3, Sparkles, Globe, Smartphone, Monitor, AlertTriangle, Eye, Database, Network, Shield as FileShield, Key, Bug, Cloud, Users } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -45,6 +45,27 @@ const ZionAICybersecuritySuiteProPage = () => {
       color: "from-cyan-500 to-blue-500"
     }
   ];
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "The team's expertise and dedication to excellence is unmatched. Our productivity increased by 300%.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Founder, StartupXYZ",
+    "content": "Professional, reliable, and innovative. They delivered exactly what we needed and more.",
+    "rating": 5
+  }
+];
 
   const pricingPlans = [
     {
@@ -444,7 +465,7 @@ const ZionAICybersecuritySuiteProPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial: any, index: number) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"

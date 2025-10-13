@@ -101,6 +101,9 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
         observer.disconnect();
       };
     }
+    
+    // Return undefined if PerformanceObserver is not available
+    return undefined;
   }, []);
 
   const toggleVisibility = () => {

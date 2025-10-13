@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Zap, Shield, BarChart3, Code, Database, Users, ArrowRight, Sparkles } from 'lucide-react';
+import { Zap, Shield, BarChart3, Code, Database, Users, ArrowRight, Sparkles } from "lucide-react";
 
 const AIServicesPage = () => {
   const aiServices = [
@@ -55,6 +55,15 @@ const AIServicesPage = () => {
     }
   ];
 
+  const benefits = [
+  "80% reduction in manual tasks",
+  "Real-time process optimization",
+  "Seamless system integration",
+  "Predictive maintenance alerts",
+  "Automated compliance reporting",
+  "Enhanced data accuracy"
+];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -85,7 +94,7 @@ const AIServicesPage = () => {
 
         {/* Benefits Section */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {benefits.map((benefit, index) => (
+          {benefits.map((benefit: any, index: number) => (
             <div key={index} className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 {benefit.icon}

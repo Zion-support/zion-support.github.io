@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Brain, CheckCircle, Star, Users, Award, Zap, Cloud, Smartphone, Globe, Mail, Phone, TrendingUp, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Headphones, Sparkles, Target, Calendar, FileText, Code, Bot, Wifi, Heart, Receipt, Package, Clock, AlertTriangle, Eye, Key, Fingerprint, Search } from 'lucide-react';
+import { ArrowRight, Shield, Brain, CheckCircle, Award, Zap, Globe, Mail, Phone, Database, Sparkles, FileText, Eye, Fingerprint, Search } from "lucide-react";
 
 export default function ZionSecurityShieldPro() {
   const features = [
@@ -41,6 +41,36 @@ export default function ZionSecurityShieldPro() {
       benefits: ["Biometric authentication", "Hardware tokens", "Mobile app verification", "SSO integration"]
     }
   ];
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "The team's expertise and dedication to excellence is unmatched. Our productivity increased by 300%.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Founder, StartupXYZ",
+    "content": "Professional, reliable, and innovative. They delivered exactly what we needed and more.",
+    "rating": 5
+  }
+];
+
+  const benefits = [
+  "80% reduction in manual tasks",
+  "Real-time process optimization",
+  "Seamless system integration",
+  "Predictive maintenance alerts",
+  "Automated compliance reporting",
+  "Enhanced data accuracy"
+];
 
   const securityStats = [
     { number: "99.9%", label: "Threat Detection Accuracy", icon: <Shield className="w-6 h-6" /> },
@@ -340,7 +370,7 @@ export default function ZionSecurityShieldPro() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial: any, index: number) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"

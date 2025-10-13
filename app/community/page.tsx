@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star } from 'lucide-react';
+import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe } from "lucide-react";
 
 export default function Community() {
   const events = [
@@ -30,6 +30,25 @@ export default function Community() {
       attendees: 25
     }
   ];
+
+  const stats = [
+  {
+    "number": "500+",
+    "label": "Projects Completed"
+  },
+  {
+    "number": "50+",
+    "label": "Happy Clients"
+  },
+  {
+    "number": "5+",
+    "label": "Years Experience"
+  },
+  {
+    "number": "99%",
+    "label": "Client Satisfaction"
+  }
+];
 
   const initiatives = [
     {
@@ -107,7 +126,7 @@ export default function Community() {
         <section className="py-16 px-4 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat: any, index: number) => (
                 <div key={index} className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
                     {stat.icon}

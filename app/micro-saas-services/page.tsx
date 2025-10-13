@@ -389,6 +389,48 @@ export default function MicroSaasServices() {
     }
   ];
 
+  const categories = [
+  {
+    "name": "AI Solutions",
+    "count": 15,
+    "description": "Advanced AI-powered applications"
+  },
+  {
+    "name": "Cloud Services",
+    "count": 8,
+    "description": "Scalable cloud infrastructure"
+  },
+  {
+    "name": "Cybersecurity",
+    "count": 12,
+    "description": "Enterprise security solutions"
+  },
+  {
+    "name": "Data Analytics",
+    "count": 10,
+    "description": "Business intelligence and insights"
+  }
+];
+
+  const stats = [
+  {
+    "number": "500+",
+    "label": "Projects Completed"
+  },
+  {
+    "number": "50+",
+    "label": "Happy Clients"
+  },
+  {
+    "number": "5+",
+    "label": "Years Experience"
+  },
+  {
+    "number": "99%",
+    "label": "Client Satisfaction"
+  }
+];
+
   return (
     <>
       <Helmet>
@@ -447,7 +489,7 @@ export default function MicroSaasServices() {
             
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {stats.map((stat, index) => (
+              {stats.map((stat: any, index: number) => (
                 <div key={index} className="text-center group">
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
@@ -470,7 +512,7 @@ export default function MicroSaasServices() {
               <p className="text-gray-300">Find the perfect solution for your business needs</p>
             </div>
             <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category, index) => (
+              {categories.map((category: any, index: number) => (
                 <div
                   key={index}
                   className="flex items-center space-x-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer group"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Star, Award, Users, Shield, Zap, Brain, BarChart3, Cloud, Settings, HelpCircle, ExternalLink, CheckCircle, TrendingUp } from 'lucide-react';
+import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Shield, Zap, Brain, CheckCircle } from "lucide-react";
 
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();
@@ -107,6 +107,25 @@ const ImprovedFooter = () => {
     }
   ];
 
+  const stats = [
+  {
+    "number": "500+",
+    "label": "Projects Completed"
+  },
+  {
+    "number": "50+",
+    "label": "Happy Clients"
+  },
+  {
+    "number": "5+",
+    "label": "Years Experience"
+  },
+  {
+    "number": "99%",
+    "label": "Client Satisfaction"
+  }
+];
+
   const companyLinks = [
     { label: 'About Us', href: '/about' },
     { label: 'Our Team', href: '/team' },
@@ -159,7 +178,7 @@ const ImprovedFooter = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
+          {stats.map((stat: any, index: number) => (
             <div key={index} className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 {stat.icon}

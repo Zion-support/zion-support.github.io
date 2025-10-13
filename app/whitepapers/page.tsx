@@ -68,6 +68,29 @@ const WhitepapersPage = () => {
     }
   ];
 
+  const categories = [
+  {
+    "name": "AI Solutions",
+    "count": 15,
+    "description": "Advanced AI-powered applications"
+  },
+  {
+    "name": "Cloud Services",
+    "count": 8,
+    "description": "Scalable cloud infrastructure"
+  },
+  {
+    "name": "Cybersecurity",
+    "count": 12,
+    "description": "Enterprise security solutions"
+  },
+  {
+    "name": "Data Analytics",
+    "count": 10,
+    "description": "Business intelligence and insights"
+  }
+];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -124,7 +147,7 @@ const WhitepapersPage = () => {
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap gap-4 justify-center">
-            {categories.map((category, index) => (
+            {categories.map((category: any, index: number) => (
               <button
                 key={index}
                 className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${

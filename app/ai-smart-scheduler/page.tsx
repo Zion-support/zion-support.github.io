@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Users, Zap, Globe, Clock, CheckCircle } from "lucide-react";
+import { Brain, Users, Zap, Globe, CheckCircle, Clock } from "lucide-react";
 import Layout from "../layout";
 
 export default function AISmartScheduler() {
@@ -28,6 +28,27 @@ export default function AISmartScheduler() {
       description: "Works with all major calendar platforms and time zones",
     },
   ];
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "The team's expertise and dedication to excellence is unmatched. Our productivity increased by 300%.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Founder, StartupXYZ",
+    "content": "Professional, reliable, and innovative. They delivered exactly what we needed and more.",
+    "rating": 5
+  }
+];
 
   const pricingPlans = [
     {
@@ -208,7 +229,7 @@ export default function AISmartScheduler() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial: any, index: number) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg">
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (

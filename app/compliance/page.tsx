@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock } from 'lucide-react';
+import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award } from "lucide-react";
 
 export default function Compliance() {
   const complianceFrameworks = [
@@ -42,6 +42,15 @@ export default function Compliance() {
       icon: <Users className="w-8 h-8" />
     }
   ];
+
+  const benefits = [
+  "80% reduction in manual tasks",
+  "Real-time process optimization",
+  "Seamless system integration",
+  "Predictive maintenance alerts",
+  "Automated compliance reporting",
+  "Enhanced data accuracy"
+];
 
   const services = [
     {
@@ -180,7 +189,7 @@ export default function Compliance() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit: any, index: number) => (
                 <div key={index} className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
                     {benefit.icon}

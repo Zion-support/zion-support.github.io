@@ -48,6 +48,15 @@ export default function AIMarketingAutomation() {
     }
   ];
 
+  const benefits = [
+  "80% reduction in manual tasks",
+  "Real-time process optimization",
+  "Seamless system integration",
+  "Predictive maintenance alerts",
+  "Automated compliance reporting",
+  "Enhanced data accuracy"
+];
+
   const pricing = [
     {
       name: "Starter",

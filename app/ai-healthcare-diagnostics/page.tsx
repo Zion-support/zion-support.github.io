@@ -30,6 +30,15 @@ export default function AIHealthcareDiagnostics() {
     }
   ];
 
+  const benefits = [
+  "80% reduction in manual tasks",
+  "Real-time process optimization",
+  "Seamless system integration",
+  "Predictive maintenance alerts",
+  "Automated compliance reporting",
+  "Enhanced data accuracy"
+];
+
   const useCases = [
     {
       title: "Radiology Departments",

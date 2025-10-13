@@ -57,6 +57,46 @@ const CybersecuritySolutions = () => {
     }
   ];
 
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "The team's expertise and dedication to excellence is unmatched. Our productivity increased by 300%.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Founder, StartupXYZ",
+    "content": "Professional, reliable, and innovative. They delivered exactly what we needed and more.",
+    "rating": 5
+  }
+];
+
+  const stats = [
+  {
+    "number": "500+",
+    "label": "Projects Completed"
+  },
+  {
+    "number": "50+",
+    "label": "Happy Clients"
+  },
+  {
+    "number": "5+",
+    "label": "Years Experience"
+  },
+  {
+    "number": "99%",
+    "label": "Client Satisfaction"
+  }
+];
+
   const pricingPlans = [
     {
       name: "Essential",
@@ -194,7 +234,7 @@ const CybersecuritySolutions = () => {
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
+            {stats.map((stat: any, index: number) => (
               <div key={index} className="text-center group">
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
@@ -362,7 +402,7 @@ const CybersecuritySolutions = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial: any, index: number) => (
               <FuturisticCard
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"

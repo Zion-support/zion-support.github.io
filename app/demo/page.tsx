@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Play, Pause, SkipForward, SkipBack, Volume2, VolumeX, Maximize, ArrowRight, CheckCircle, Star, Users, Award, BarChart3, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Calendar } from 'lucide-react';
+import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar } from "lucide-react";
 
 export default function DemoPage() {
   const [currentDemo, setCurrentDemo] = useState(0);
@@ -70,6 +70,34 @@ export default function DemoPage() {
     }
   ];
 
+  const benefits = [
+  "80% reduction in manual tasks",
+  "Real-time process optimization",
+  "Seamless system integration",
+  "Predictive maintenance alerts",
+  "Automated compliance reporting",
+  "Enhanced data accuracy"
+];
+
+  const stats = [
+  {
+    "number": "500+",
+    "label": "Projects Completed"
+  },
+  {
+    "number": "50+",
+    "label": "Happy Clients"
+  },
+  {
+    "number": "5+",
+    "label": "Years Experience"
+  },
+  {
+    "number": "99%",
+    "label": "Client Satisfaction"
+  }
+];
+
   const handlePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
@@ -128,7 +156,7 @@ export default function DemoPage() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat: any, index: number) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                     {stat.number}
@@ -157,7 +185,7 @@ export default function DemoPage() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit: any, index: number) => (
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     {benefit.icon}

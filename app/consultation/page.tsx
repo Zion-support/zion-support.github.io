@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Calendar, Clock, CheckCircle, ArrowRight, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star, Users, Award } from 'lucide-react';
+import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star } from "lucide-react";
 
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({
@@ -78,6 +78,15 @@ export default function ConsultationPage() {
     }
   ];
 
+  const benefits = [
+  "80% reduction in manual tasks",
+  "Real-time process optimization",
+  "Seamless system integration",
+  "Predictive maintenance alerts",
+  "Automated compliance reporting",
+  "Enhanced data accuracy"
+];
+
   return (
     <>
       <Helmet>
@@ -133,7 +142,7 @@ export default function ConsultationPage() {
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit: any, index: number) => (
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     {benefit.icon}

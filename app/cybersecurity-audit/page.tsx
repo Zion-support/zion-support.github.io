@@ -44,6 +44,15 @@ const CybersecurityAuditPage = () => {
     }
   ];
 
+  const benefits = [
+  "80% reduction in manual tasks",
+  "Real-time process optimization",
+  "Seamless system integration",
+  "Predictive maintenance alerts",
+  "Automated compliance reporting",
+  "Enhanced data accuracy"
+];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
@@ -145,7 +154,7 @@ const CybersecurityAuditPage = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit: any, index: number) => (
               <div key={index} className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300 font-medium">{benefit}</span>

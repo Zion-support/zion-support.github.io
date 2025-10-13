@@ -1,4 +1,4 @@
-import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Calendar, Users, TrendingUp, Shield, Globe, Clock, Award, Database, Eye, Filter, Search, Bell, Settings, Lock, RefreshCw, Download, Upload, Share2, Plus, Minus, X, Check, AlertTriangle, Info, ExternalLink, Play, Pause,SkipForward, SkipBack, Volume2, VolumeX, Mic, MicOff, Video, VideoOff, Camera, CameraOff, Image, FileText, File, Folder, FolderOpen, Archive, Trash2, Edit, Save, Copy, Cut, Paste, Undo, Redo, Bold, Italic, Underline, AlignLeft, AlignCenter, AlignRight, List, Grid, Table, Columns, Rows, PlusCircle, MinusCircle, XCircle, CheckCircle2, AlertCircle, HelpCircle, InfoIcon, Lightbulb, Bookmark, Heart, ThumbsUp, ThumbsDown, Flag, FlagOff, Star as StarIcon, StarOff, Moon, Sun, Cloud, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Activity,Heart as HeartIcon, Zap as ZapIcon, Flash, Thunder, Fire, Water, Earth, Air, Space, Rocket, Satellite, Planet, Sun as SunIcon, Moon as MoonIcon, Star as StarIcon2, Comet, Meteor, Galaxy, Nebula, BlackHole, Wormhole, Time, Space as SpaceIcon, Infinity, Atom, Molecule, DNA, Cell, Organism, Evolution, Growth, Development, Progress, Success, Achievement, Victory, Trophy, Medal, Badge, Certificate, Diploma, Degree, License, Permit, Passport, ID, Card, Ticket, Voucher, Coupon, Discount, Sale, Price, Money, Dollar, Euro, Pound, Yen, Rupee, Bitcoin, Ethereum, Crypto, Blockchain, Wallet,Credit, Debit, Payment, Transaction, Transfer, Exchange, Trade, Market, Stock, Bond, Investment, Portfolio, Fund, Asset, Liability, Equity, Revenue, Profit, Loss, Income, Expense, Budget, Finance, Accounting, Bookkeeping, Tax, Audit, Compliance, Legal, Contract, Agreement, Terms, Conditions, Privacy, Security, Protection, Safety, Risk, Insurance, Claim, Policy, Coverage, Premium, Deductible, Copay, Coinsurance, OutOfPocket, Maximum, Minimum, Limit, Cap, Floor, Ceiling, Range, Scale, Level, Grade, Rank, Position, Status, State, Condition, Situation, Circumstance, Context, Environment, Setting, Location, Place, Address, City, State, Country, Region, Area, Zone, District, Neighborhood, Street, Road, Avenue, Boulevard, Lane, Drive, Court, Circle, Square, Plaza, Mall, Center, Complex, Building, Tower, Skyscraper, House, Home, Apartment, Condo, Townhouse, Villa, Mansion, Palace, Castle, Fort, Tower, Bridge, Tunnel, Highway, Freeway, Expressway, Parkway, Street, Road, Avenue, Boulevard, Lane, Drive, Court, Circle, Square, Plaza, Mall, Center, Complex, Building, Tower, Skyscraper, House, Home, Apartment, Condo, Townhouse, Villa, Mansion, Palace, Castle, Fort, Tower, Bridge, Tunnel, Highway, Freeway, Expressway, Parkway } from "lucide-react";
+import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Zap, Mail, MessageSquare, Users, Globe, Database, Play, Trash2, Paste, Star as StarIcon, Heart as HeartIcon, Zap as ZapIcon, Flash, Sun as SunIcon, Moon as MoonIcon, Star as StarIcon2, Space as SpaceIcon, Passport, Castle, Castle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -41,6 +41,55 @@ export default function ZionAiMarketingAutomationPro() {
       benefits: ["Behavioral triggers", "Personalized sequences", "Lead scoring integration", "Conversion optimization"]
     }
   ];
+
+  const testimonials = [
+  {
+    "name": "John Smith",
+    "role": "CEO, TechCorp",
+    "content": "Zion Tech Group transformed our business with their innovative AI solutions. Highly recommended!",
+    "rating": 5
+  },
+  {
+    "name": "Sarah Johnson",
+    "role": "CTO, InnovateLabs",
+    "content": "The team's expertise and dedication to excellence is unmatched. Our productivity increased by 300%.",
+    "rating": 5
+  },
+  {
+    "name": "Mike Chen",
+    "role": "Founder, StartupXYZ",
+    "content": "Professional, reliable, and innovative. They delivered exactly what we needed and more.",
+    "rating": 5
+  }
+];
+
+  const benefits = [
+  "80% reduction in manual tasks",
+  "Real-time process optimization",
+  "Seamless system integration",
+  "Predictive maintenance alerts",
+  "Automated compliance reporting",
+  "Enhanced data accuracy"
+];
+
+  const stats = [
+  {
+    "number": "500+",
+    "label": "Projects Completed"
+  },
+  {
+    "number": "50+",
+    "label": "Happy Clients"
+  },
+  {
+    "number": "5+",
+    "label": "Years Experience"
+  },
+  {
+    "number": "99%",
+    "label": "Client Satisfaction"
+  }
+];
 
   const pricingPlans = [
     {
@@ -155,7 +204,7 @@ export default function ZionAiMarketingAutomationPro() {
                 
                 {/* Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  {stats.map((stat, index) => (
+                  {stats.map((stat: any, index: number) => (
                     <div key={index} className="text-center group">
                       <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         {stat.icon}
@@ -330,7 +379,7 @@ export default function ZionAiMarketingAutomationPro() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial: any, index: number) => (
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
