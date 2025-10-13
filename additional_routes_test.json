@@ -1,0 +1,32 @@
+{
+  "working": [
+    "/ai-chatbot-builder",
+    "/ai-code-assistant",
+    "/ai-design-studio",
+    "/ai-computer-vision",
+    "/ai-conversational-ai",
+    "/ai-crm",
+    "/ai-customer-insights",
+    "/ai-data-visualization",
+    "/ai-devops-automation",
+    "/ai-document-intelligence",
+    "/cloud-consulting",
+    "/data-center-solutions",
+    "/disaster-recovery",
+    "/it-support",
+    "/managed-services",
+    "/security-audit",
+    "/technology-consulting",
+    "/zion-ai-video-generator",
+    "/zion-ai-invoice-generator",
+    "/zion-ai-customer-insights",
+    "/zion-ai-voice-assistant-pro",
+    "/zion-ai-code-reviewer",
+    "/zion-ai-contract-analyzer",
+    "/zion-ai-supply-chain-optimizer",
+    "/zion-ai-translator-pro",
+    "/zion-ai-data-cleaner"
+  ],
+  "broken": [],
+  "missing": []
+}

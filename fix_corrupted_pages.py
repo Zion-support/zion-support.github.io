@@ -1,28 +1,55 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield } from 'lucide-react';
+#!/usr/bin/env python3
+"""
+Script to fix corrupted page files by creating clean versions.
+"""
+
+import os
+import glob
+
+def create_clean_page(file_path, page_name):
+    """Create a clean page file."""
+    
+    # Extract the route from the file path
+    route = file_path.replace('/workspace/app/', '').replace('/page.tsx', '')
+    
+    # Generate title and description based on route
+    title = route.replace('-', ' ').replace('/', ' ').title()
+    if route == '':
+        title = "Home"
+    elif route == "ai-services":
+        title = "AI Services"
+    elif route == "micro-saas":
+        title = "Micro SAAS"
+    elif route == "5g-solutions":
+        title = "5G Solutions"
+    
+    description = f"Discover {title.lower()} solutions and services from Zion Tech Group. Leading provider of AI-powered solutions, IT services, and digital transformation."
+    
+    content = f'''import React from 'react';
+import {{ Link }} from 'react-router-dom';
+import {{ ArrowRight, CheckCircle, Star, Users, Zap, Shield }} from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const Cloudinfrastructuremanagement = () => {
+const {page_name} = () => {{
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Cloud Infrastructure Management - Zion Tech Group"
-        description="Discover cloud infrastructure management solutions and services from Zion Tech Group. Leading provider of AI-powered solutions, IT services, and digital transformation."
-        keywords="cloud infrastructure management, AI solutions, IT services, digital transformation, Zion Tech Group"
+        title="{title} - Zion Tech Group"
+        description="{description}"
+        keywords="{title.lower()}, AI solutions, IT services, digital transformation, Zion Tech Group"
       />
       
       <div className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Cloud Infrastructure Management
+            {title}
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Solutions
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive cloud infrastructure management solutions designed to transform your business and drive innovation.
+            Discover our comprehensive {title.lower()} solutions designed to transform your business and drive innovation.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -46,7 +73,7 @@ const Cloudinfrastructuremanagement = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Why Choose Our Cloud Infrastructure Management?
+            Why Choose Our {title}?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We deliver cutting-edge solutions with unmatched expertise and support.
@@ -92,7 +119,7 @@ const Cloudinfrastructuremanagement = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Get started with our cloud infrastructure management solutions today and experience the difference.
+            Get started with our {title.lower()} solutions today and experience the difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -112,6 +139,50 @@ const Cloudinfrastructuremanagement = () => {
       </div>
     </div>
   );
-};
+}};
 
-export default Cloudinfrastructuremanagement;
+export default {page_name};
+'''
+
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.write(content)
+    
+    return True
+
+def main():
+    """Fix all corrupted page files."""
+    # Find all page.tsx files
+    page_files = glob.glob('/workspace/app/**/page.tsx', recursive=True)
+    
+    fixed_count = 0
+    
+    for file_path in page_files:
+        try:
+            # Read the file to check if it's corrupted
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            # Check for common corruption patterns
+            if ('</span>' in content and 'return (' not in content) or \
+               ('Expected identifier' in content) or \
+               ('<<<<<<< HEAD' in content) or \
+               (len(content) < 100):
+                
+                # Extract page name from path
+                page_name = file_path.split('/')[-2].replace('-', '').title()
+                if page_name == 'Page':
+                    page_name = 'Page'
+                
+                if create_clean_page(file_path, page_name):
+                    print(f"Fixed: {file_path}")
+                    fixed_count += 1
+                else:
+                    print(f"Failed to fix: {file_path}")
+        
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
+    
+    print(f"\nFixed {fixed_count} corrupted page files")
+
+if __name__ == "__main__":
+    main()

@@ -1,36 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-import { X } from 'lucide-react';
-=======
-import React, { useState, useCallback, useMemo } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { 
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Home,
-  Users,
-  Settings,
-  BarChart3,
-  Shield,
-  Cloud,
-  Code,
-  Brain,
-  Zap,
-  Database,
-  Star,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
-import React from 'react';
+import { X, Home, Users, Brain, Settings, Wifi, BarChart3, Globe, Phone, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { X, Brain, Shield, Zap, Globe, Home, Mail, Phone } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 
 interface SidebarProps {
   isOpen: boolean;
@@ -38,122 +8,205 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-<<<<<<< HEAD
   if (!isOpen) return null;
 
-  return (
-<<<<<<< HEAD
-    <div className="fixed inset-0 z-50 md:hidden">
-      <div className="fixed inset-0 bg-black/50" onClick={onClose} />
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-md border-l border-cyan-500/20">
-        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
-          <h2 className="text-lg font-semibold text-white">Menu</h2>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        <div className="p-4">
-          <p className="text-gray-300">Sidebar content goes here</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Sidebar;
-=======
-=======
-  const mainNavItems = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Brain },
-    { name: 'Contact', href: '/contact', icon: Mail },
+  const mainLinks = [
+    { to: '/', label: 'Home', icon: Home },
+    { to: '/about', label: 'About', icon: Users },
+    { to: '/blog', label: 'Blog', icon: Globe },
+    { to: '/contact', label: 'Contact', icon: Phone },
   ];
 
-  const serviceItems = [
-    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
-    { name: 'IT Services', href: '/services', icon: Shield },
-    { name: 'Micro SAAS', href: '/micro-saas', icon: Zap },
-    { name: '5G Solutions', href: '/5g-solutions', icon: Globe },
+  const aiServices = [
+    { to: '/ai-services', label: 'All AI Services' },
+    { to: '/ai-analytics', label: 'AI Analytics' },
+    { to: '/ai-content-generation', label: 'Content Generation' },
+    { to: '/ai-customer-support', label: 'Customer Support' },
+    { to: '/ai-cybersecurity', label: 'AI Cybersecurity' },
+    { to: '/zion-ai-video-generator', label: 'AI Video Generator' },
+    { to: '/zion-ai-invoice-generator', label: 'AI Invoice Generator' },
+    { to: '/zion-ai-voice-assistant-pro', label: 'Voice Assistant Pro' },
   ];
 
-  if (!isOpen) return null;
+  const itServices = [
+    { to: '/services', label: 'All Services' },
+    { to: '/cloud-migration', label: 'Cloud Migration' },
+    { to: '/web-development', label: 'Web Development' },
+    { to: '/devops-services', label: 'DevOps Services' },
+    { to: '/network-security', label: 'Network Security' },
+    { to: '/software-development', label: 'Software Development' },
+    { to: '/it-support', label: 'IT Support' },
+    { to: '/managed-services', label: 'Managed Services' },
+  ];
+
+  const fiveGServices = [
+    { to: '/5g-solutions', label: 'All 5G Solutions' },
+    { to: '/5g-network-infrastructure', label: 'Network Infrastructure' },
+    { to: '/5g-edge-computing', label: 'Edge Computing' },
+    { to: '/5g-iot-solutions', label: 'IoT Solutions' },
+    { to: '/5g-smart-city-solutions', label: 'Smart City Solutions' },
+    { to: '/5g-mobile-applications', label: 'Mobile Applications' },
+  ];
+
+  const microSaas = [
+    { to: '/micro-saas', label: 'All Micro SAAS' },
+    { to: '/project-management-tool', label: 'Project Management' },
+    { to: '/customer-relationship-manager', label: 'CRM System' },
+    { to: '/inventory-management-system', label: 'Inventory Management' },
+    { to: '/social-media-scheduler', label: 'Social Media Scheduler' },
+    { to: '/email-marketing-platform', label: 'Email Marketing' },
+    { to: '/website-analytics-tool', label: 'Website Analytics' },
+  ];
+
+  const additionalLinks = [
+    { to: '/tutorials', label: 'Tutorials' },
+    { to: '/demo', label: 'Demo' },
+    { to: '/support', label: 'Support' },
+    { to: '/privacy', label: 'Privacy Policy' },
+    { to: '/terms', label: 'Terms of Service' },
+  ];
 
   return (
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
     <>
       {/* Overlay */}
-      <div
-        className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+      <div 
+        className="fixed inset-0 bg-black/50 z-40"
         onClick={onClose}
       />
       
       {/* Sidebar */}
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-sm border-l border-cyan-500/20 z-50 transform transition-transform duration-300 ease-in-out">
-        <div className="p-6">
-          {/* Header */}
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
-            </div>
-            <button
-              onClick={onClose}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
-
+      <div className="fixed inset-y-0 right-0 w-80 bg-black/90 backdrop-blur-md border-l border-white/10 z-50 overflow-y-auto">
+        <div className="flex items-center justify-between p-4 border-b border-white/10">
+          <h2 className="text-white font-bold text-lg">Menu</h2>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-white p-2"
+          >
+            <X className="h-6 w-6" />
+          </button>
+        </div>
+        
+        <div className="p-4 space-y-6">
           {/* Main Navigation */}
-          <div className="space-y-2 mb-8">
-            {mainNavItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                onClick={onClose}
-                className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors group"
-              >
-                <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span>{item.name}</span>
-              </Link>
-            ))}
+          <div>
+            <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Main</h3>
+            <div className="space-y-1">
+              {mainLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    className="flex items-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors py-2 px-3 rounded-lg"
+                    onClick={onClose}
+                  >
+                    <Icon className="h-4 w-4 mr-3" />
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </div>
           </div>
 
-          {/* Services */}
-          <div className="mb-8">
-            <h3 className="text-cyan-400 font-semibold mb-4 px-4">Services</h3>
-            <div className="space-y-2">
-              {serviceItems.map((item) => (
+          {/* AI Services */}
+          <div>
+            <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3 flex items-center">
+              <Brain className="h-4 w-4 mr-2 text-blue-400" />
+              AI Services
+            </h3>
+            <div className="space-y-1">
+              {aiServices.map((link) => (
                 <Link
-                  key={item.name}
-                  to={item.href}
+                  key={link.to}
+                  to={link.to}
+                  className="flex items-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors py-2 px-3 rounded-lg text-sm"
                   onClick={onClose}
-                  className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors group"
                 >
-                  <item.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                  <span>{item.name}</span>
+                  <ChevronRight className="h-3 w-3 mr-2" />
+                  {link.label}
                 </Link>
               ))}
             </div>
           </div>
 
-          {/* Contact Info */}
-          <div className="border-t border-gray-700 pt-6">
-            <h3 className="text-cyan-400 font-semibold mb-4 px-4">Contact Us</h3>
-            <div className="space-y-3 px-4">
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <span className="text-sm">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <span className="text-sm">+1 302 464 0950</span>
-              </div>
+          {/* IT Services */}
+          <div>
+            <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3 flex items-center">
+              <Settings className="h-4 w-4 mr-2 text-blue-400" />
+              IT Services
+            </h3>
+            <div className="space-y-1">
+              {itServices.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="flex items-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors py-2 px-3 rounded-lg text-sm"
+                  onClick={onClose}
+                >
+                  <ChevronRight className="h-3 w-3 mr-2" />
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* 5G Solutions */}
+          <div>
+            <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3 flex items-center">
+              <Wifi className="h-4 w-4 mr-2 text-blue-400" />
+              5G Solutions
+            </h3>
+            <div className="space-y-1">
+              {fiveGServices.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="flex items-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors py-2 px-3 rounded-lg text-sm"
+                  onClick={onClose}
+                >
+                  <ChevronRight className="h-3 w-3 mr-2" />
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3 flex items-center">
+              <BarChart3 className="h-4 w-4 mr-2 text-blue-400" />
+              Micro SAAS
+            </h3>
+            <div className="space-y-1">
+              {microSaas.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="flex items-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors py-2 px-3 rounded-lg text-sm"
+                  onClick={onClose}
+                >
+                  <ChevronRight className="h-3 w-3 mr-2" />
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Additional Links */}
+          <div>
+            <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">More</h3>
+            <div className="space-y-1">
+              {additionalLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="flex items-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors py-2 px-3 rounded-lg text-sm"
+                  onClick={onClose}
+                >
+                  <ChevronRight className="h-3 w-3 mr-2" />
+                  {link.label}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
@@ -162,9 +215,4 @@ export default Sidebar;
   );
 };
 
-<<<<<<< HEAD
-export default Sidebar
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
 export default Sidebar;
->>>>>>> cursor/analyze-improve-and-deploy-application-30da

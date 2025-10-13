@@ -1,124 +1,208 @@
 #!/usr/bin/env python3
+"""
+Comprehensive script to fix all remaining corrupted files.
+"""
+
 import os
-import re
 import glob
+import re
 
-def create_basic_component(component_name, file_path):
-    """Create a basic React component structure."""
+def create_clean_page(file_path, page_name):
+    """Create a clean page file."""
+    
+    # Extract the route from the file path
+    route = file_path.replace('/workspace/app/', '').replace('/page.tsx', '')
+    
+    # Generate title and description based on route
+    title = route.replace('-', ' ').replace('/', ' ').title()
+    if route == '':
+        title = "Home"
+    elif route == "ai-services":
+        title = "AI Services"
+    elif route == "micro-saas":
+        title = "Micro SAAS"
+    elif route == "5g-solutions":
+        title = "5G Solutions"
+    elif route.startswith("zion-ai-"):
+        title = route.replace("zion-ai-", "").replace("-", " ").title() + " - Zion AI"
+    elif route.startswith("ai-"):
+        title = route.replace("ai-", "").replace("-", " ").title() + " - AI Service"
+    elif route.startswith("5g-"):
+        title = route.replace("5g-", "").replace("-", " ").title() + " - 5G Solution"
+    
+    description = f"Discover {title.lower()} solutions and services from Zion Tech Group. Leading provider of AI-powered solutions, IT services, and digital transformation."
+    
     content = f'''import React from 'react';
+import {{ Link }} from 'react-router-dom';
+import {{ ArrowRight, CheckCircle, Star, Users, Zap, Shield }} from 'lucide-react';
+import EnhancedSEO from '../components/EnhancedSEO';
 
-interface {component_name}Props {{
-  children?: React.ReactNode;
-  className?: string;
-}}
-
-const {component_name}: React.FC<{component_name}Props> = ({{
-  children,
-  className = ''
-}}) => {{
+const {page_name} = () => {{
   return (
-    <div className={{className}}>
-      {{children}}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <EnhancedSEO
+        title="{title} - Zion Tech Group"
+        description="{description}"
+        keywords="{title.lower()}, AI solutions, IT services, digital transformation, Zion Tech Group"
+      />
+      
+      <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            {title}
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Solutions
+            </span>
+          </h1>
+          
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover our comprehensive {title.lower()} solutions designed to transform your business and drive innovation.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link
+              to="/demo"
+              className="border border-white/20 hover:border-white/40 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
+            >
+              View Demo
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Why Choose Our {title}?
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            We deliver cutting-edge solutions with unmatched expertise and support.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-300">
+            <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">
+              <Zap className="h-6 w-6 text-blue-400" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Leverage the latest technologies and methodologies to stay ahead of the competition.
+            </p>
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-300">
+            <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6">
+              <Shield className="h-6 w-6 text-green-400" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-4">Secure & Reliable</h3>
+            <p className="text-gray-300">
+              Enterprise-grade security and reliability to protect your business operations.
+            </p>
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-300">
+            <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6">
+              <Users className="h-6 w-6 text-purple-400" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl border border-white/10 p-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Get started with our {title.lower()} solutions today and experience the difference.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
+            >
+              Contact Us
+            </Link>
+            <Link
+              to="/demo"
+              className="border border-white/20 hover:border-white/40 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
+            >
+              Schedule Demo
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }};
 
-export default {component_name};
+export default {page_name};
 '''
-    return content
 
-def create_enhanced_component(component_name, file_path):
-    """Create an enhanced component with more features."""
-    content = f'''import React from 'react';
-
-interface {component_name}Props {{
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
-}}
-
-const {component_name}: React.FC<{component_name}Props> = ({{
-  children,
-  className = '',
-  title,
-  description
-}}) => {{
-  return (
-    <div className={{`enhanced-component ${{className}}`}}>
-      {{title && <h2 className="text-2xl font-bold mb-4">{{title}}</h2>}}
-      {{description && <p className="text-gray-600 mb-4">{{description}}</p>}}
-      {{children}}
-    </div>
-  );
-}};
-
-export default {component_name};
-'''
-    return content
-
-def fix_specific_files():
-    """Fix specific known corrupted files."""
-    fixes = {
-        '/workspace/app/components/FuturisticHero.tsx': create_enhanced_component('FuturisticHero', ''),
-        '/workspace/app/components/FuturisticLoader.tsx': create_basic_component('FuturisticLoader', ''),
-        '/workspace/app/components/FuturisticServiceCard.tsx': create_enhanced_component('FuturisticServiceCard', ''),
-        '/workspace/app/components/EnhancedServicesShowcase.tsx': create_enhanced_component('EnhancedServicesShowcase', ''),
-        '/workspace/app/components/EnhancedSkipLink.tsx': create_basic_component('EnhancedSkipLink', ''),
-        '/workspace/app/components/GenericServicePage.tsx': create_enhanced_component('GenericServicePage', ''),
-        '/workspace/app/components/Icons.tsx': '''import React from 'react';
-
-export const Icon = ({ name, className = '', ...props }: { name: string; className?: string; [key: string]: any }) => {
-  return <span className={`icon ${className}`} {...props}>{name}</span>;
-};
-
-export default Icon;
-''',
-        '/workspace/app/components/LazyImage.tsx': create_basic_component('LazyImage', ''),
-        '/workspace/app/components/LazyWrapper.tsx': create_basic_component('LazyWrapper', ''),
-        '/workspace/app/components/LoadingOptimizer.tsx': create_basic_component('LoadingOptimizer', ''),
-        '/workspace/app/components/LoadingSkeleton.tsx': create_basic_component('LoadingSkeleton', ''),
-        '/workspace/app/components/MobileOptimizer.tsx': create_basic_component('MobileOptimizer', ''),
-        '/workspace/app/components/NeonButton.tsx': create_enhanced_component('NeonButton', ''),
-        '/workspace/app/components/NewsletterSignup.tsx': create_enhanced_component('NewsletterSignup', ''),
-        '/workspace/app/components/OptimizedImage.tsx': create_basic_component('OptimizedImage', ''),
-        '/workspace/app/components/OptimizedLoading.tsx': create_basic_component('OptimizedLoading', ''),
-        '/workspace/app/components/OptimizedLoadingSpinner.tsx': create_basic_component('OptimizedLoadingSpinner', ''),
-        '/workspace/app/components/PerformanceDashboard.tsx': create_enhanced_component('PerformanceDashboard', ''),
-        '/workspace/app/components/PerformanceEnhancer.tsx': create_basic_component('PerformanceEnhancer', ''),
-        '/workspace/app/components/PerformanceOptimizer.tsx': create_enhanced_component('PerformanceOptimizer', ''),
-        '/workspace/app/components/SEOEnhancer.tsx': create_enhanced_component('SEOEnhancer', ''),
-        '/workspace/app/components/SEOOptimizer.tsx': create_basic_component('SEOOptimizer', ''),
-        '/workspace/app/components/SearchBar.tsx': create_enhanced_component('SearchBar', ''),
-        '/workspace/app/components/SearchModal.tsx': create_enhanced_component('SearchModal', ''),
-        '/workspace/app/components/SecurityEnhancer.tsx': create_enhanced_component('SecurityEnhancer', ''),
-        '/workspace/app/components/ServiceWorker.tsx': create_basic_component('ServiceWorker', ''),
-        '/workspace/app/components/ServiceWorkerRegistration.tsx': create_basic_component('ServiceWorkerRegistration', ''),
-        '/workspace/app/components/Sidebar.tsx': create_enhanced_component('Sidebar', ''),
-        '/workspace/app/components/SkipLink.tsx': create_basic_component('SkipLink', ''),
-        '/workspace/app/components/SystemMonitor.tsx': create_enhanced_component('SystemMonitor', ''),
-        '/workspace/app/components/ThemeToggle.tsx': create_enhanced_component('ThemeToggle', ''),
-        '/workspace/app/components/UserExperienceEnhancer.tsx': create_enhanced_component('UserExperienceEnhancer', ''),
-    }
+    with open(file_path, 'w', encoding='utf-8') as f:
+        f.write(content)
     
-    files_fixed = 0
-    
-    for file_path, content in fixes.items():
-        if os.path.exists(file_path):
-            try:
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(content)
-                print(f"Fixed: {file_path}")
-                files_fixed += 1
-            except Exception as e:
-                print(f"Error fixing {file_path}: {e}")
-    
-    return files_fixed
+    return True
+
+def is_corrupted_file(file_path):
+    """Check if a file is corrupted."""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Check for common corruption patterns
+        corruption_patterns = [
+            '</span>' in content and 'return (' not in content,
+            'Expected identifier' in content,
+            '<<<<<<< HEAD' in content,
+            'Unexpected' in content,
+            len(content) < 100,
+            'import' in content and 'export default' not in content,
+            '}' in content and 'const ' not in content and 'function ' not in content,
+            'title:' in content and 'const ' not in content
+        ]
+        
+        return any(corruption_patterns)
+    except:
+        return True
 
 def main():
-    print("Fixing corrupted component files...")
-    files_fixed = fix_specific_files()
-    print(f"\nFixed {files_fixed} component files")
+    """Fix all corrupted page files."""
+    # Find all page.tsx files
+    page_files = glob.glob('/workspace/app/**/page.tsx', recursive=True)
+    
+    fixed_count = 0
+    
+    for file_path in page_files:
+        try:
+            if is_corrupted_file(file_path):
+                # Extract page name from path
+                page_name = file_path.split('/')[-2].replace('-', '').title()
+                if page_name == 'Page':
+                    page_name = 'Page'
+                
+                if create_clean_page(file_path, page_name):
+                    print(f"Fixed: {file_path}")
+                    fixed_count += 1
+                else:
+                    print(f"Failed to fix: {file_path}")
+        
+        except Exception as e:
+            print(f"Error processing {file_path}: {e}")
+    
+    print(f"\nFixed {fixed_count} corrupted page files")
 
 if __name__ == "__main__":
     main()

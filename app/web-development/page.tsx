@@ -1,201 +1,111 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Users, Clock, DollarSign } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const WebDevelopmentPage = () => {
-  const services = [
-    {
-      id: 'frontend-development',
-      title: 'Frontend Development',
-      description: 'Modern, responsive web applications using React, Vue, and Angular.',
-      icon: Code,
-      features: ['React Applications', 'Vue.js Development', 'Angular Solutions', 'Progressive Web Apps'],
-      price: 'Starting at $2,500'
-    },
-    {
-      id: 'backend-development',
-      title: 'Backend Development',
-      description: 'Robust server-side applications and APIs for your business needs.',
-      icon: Database,
-      features: ['Node.js APIs', 'Python/Django', 'PHP/Laravel', 'Microservices'],
-      price: 'Starting at $3,000'
-    },
-    {
-      id: 'full-stack-development',
-      title: 'Full-Stack Development',
-      description: 'Complete web solutions from frontend to backend and everything in between.',
-      icon: Globe,
-      features: ['End-to-End Solutions', 'Database Design', 'API Integration', 'Deployment'],
-      price: 'Starting at $5,000'
-    },
-    {
-      id: 'mobile-web-apps',
-      title: 'Mobile Web Apps',
-      description: 'Cross-platform mobile applications that work on all devices.',
-      icon: Smartphone,
-      features: ['Responsive Design', 'Mobile Optimization', 'Touch Interfaces', 'Offline Support'],
-      price: 'Starting at $3,500'
-    },
-    {
-      id: 'e-commerce-solutions',
-      title: 'E-commerce Solutions',
-      description: 'Complete online stores with payment processing and inventory management.',
-      icon: Shield,
-      features: ['Payment Integration', 'Inventory Management', 'Order Processing', 'Security'],
-      price: 'Starting at $4,500'
-    },
-    {
-      id: 'web-optimization',
-      title: 'Web Optimization',
-      description: 'Performance optimization and SEO improvements for existing websites.',
-      icon: Zap,
-      features: ['Speed Optimization', 'SEO Enhancement', 'Security Updates', 'Analytics'],
-      price: 'Starting at $1,500'
-    }
-  ];
-
-  const process = [
-    {
-      step: '01',
-      title: 'Discovery & Planning',
-      description: 'We analyze your requirements and create a detailed project plan.'
-    },
-    {
-      step: '02',
-      title: 'Design & Prototyping',
-      description: 'We create wireframes and prototypes to visualize your project.'
-    },
-    {
-      step: '03',
-      title: 'Development',
-      description: 'Our team builds your application using the latest technologies.'
-    },
-    {
-      step: '04',
-      title: 'Testing & Launch',
-      description: 'We thoroughly test your application and deploy it to production.'
-    }
-  ];
-
+const Webdevelopment = () => {
   return (
-    <div className="min-h-screen">
-      <EnhancedSEO 
-        title="Web Development Services - Zion Tech Group"
-        description="Professional web development services including frontend, backend, full-stack, and mobile web applications."
-        keywords="web development, frontend development, backend development, full-stack development, mobile web apps, e-commerce"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <EnhancedSEO
+        title="Web Development - Zion Tech Group"
+        description="Discover web development solutions and services from Zion Tech Group. Leading provider of AI-powered solutions, IT services, and digital transformation."
+        keywords="web development, AI solutions, IT services, digital transformation, Zion Tech Group"
       />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Web Development Services
+      <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Web Development
+            <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Solutions
+            </span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Professional web development services to bring your ideas to life with modern, scalable, and secure web applications.
+          
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Discover our comprehensive web development solutions designed to transform your business and drive innovation.
           </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors flex items-center justify-center gap-2"
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center"
             >
-              Get Started <ArrowRight className="w-5 h-5" />
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
-            <Link 
-              to="/demo" 
-              className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-3 px-8 rounded-lg transition-colors"
+            <Link
+              to="/demo"
+              className="border border-white/20 hover:border-white/40 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
             >
-              View Portfolio
+              View Demo
             </Link>
           </div>
         </div>
+      </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service) => {
-            const IconComponent = service.icon;
-            return (
-              <div key={service.id} className="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 hover:border-blue-500 transition-colors p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <IconComponent className="w-12 h-12 text-blue-400" />
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                  </div>
-                </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-lg font-bold text-blue-400">{service.price}</span>
-                  <div className="flex items-center text-sm text-gray-400">
-                    <Clock className="w-4 h-4 mr-1" />
-                    <span>2-8 weeks</span>
-                  </div>
-                </div>
-                
-                <Link 
-                  to={`/${service.id}`}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-                >
-                  Learn More <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            );
-          })}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Why Choose Our Web Development?
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            We deliver cutting-edge solutions with unmatched expertise and support.
+          </p>
         </div>
 
-        {/* Development Process */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Development Process</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">{step.step}</span>
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                <p className="text-gray-300">{step.description}</p>
-              </div>
-            ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-300">
+            <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6">
+              <Zap className="h-6 w-6 text-blue-400" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-4">Advanced Technology</h3>
+            <p className="text-gray-300">
+              Leverage the latest technologies and methodologies to stay ahead of the competition.
+            </p>
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-300">
+            <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6">
+              <Shield className="h-6 w-6 text-green-400" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-4">Secure & Reliable</h3>
+            <p className="text-gray-300">
+              Enterprise-grade security and reliability to protect your business operations.
+            </p>
+          </div>
+
+          <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-300">
+            <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6">
+              <Users className="h-6 w-6 text-purple-400" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
+            <p className="text-gray-300">
+              Dedicated support team to help you succeed with our solutions.
+            </p>
           </div>
         </div>
+      </div>
 
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Build Your Web Application?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss your project requirements and create a custom web solution that meets your business needs.
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl border border-white/10 p-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Get started with our web development solutions today and experience the difference.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
             >
-              <Code className="w-5 h-5" />
-              Start Your Project
+              Contact Us
             </Link>
-            <Link 
-              to="/pricing" 
-              className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-colors"
+            <Link
+              to="/demo"
+              className="border border-white/20 hover:border-white/40 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
             >
-              View Pricing
+              Schedule Demo
             </Link>
           </div>
         </div>
@@ -204,8 +114,4 @@ const WebDevelopmentPage = () => {
   );
 };
 
-export default WebDevelopmentPage;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
+export default Webdevelopment;
