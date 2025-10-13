@@ -39,7 +39,8 @@ class ErrorHandler extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      }
+      console.error('Error caught by handler:', error, errorInfo);
+    }
 
     // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {
@@ -59,8 +60,9 @@ class ErrorHandler extends Component<Props, State> {
         timestamp: new Date().toISOString()
       };
       // Send to your error reporting service here
+      console.error('Error data for reporting:', errorData);
     } catch (reportingError) {
-      // Silent fail for error reporting
+      console.error('Failed to report error:', reportingError);
     }
   }
 

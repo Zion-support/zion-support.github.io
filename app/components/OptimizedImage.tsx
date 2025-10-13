@@ -24,9 +24,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   className = '',
   priority = false,
-  placeholder = 'empty',
-  blurDataURL,
-  quality = 75,
+  placeholder = 'empty', // eslint-disable-line @typescript-eslint/no-unused-vars
+  blurDataURL = '', // eslint-disable-line @typescript-eslint/no-unused-vars
+  quality = 75, // eslint-disable-line @typescript-eslint/no-unused-vars
   sizes = '100vw',
   loading = 'lazy',
   onLoad,
