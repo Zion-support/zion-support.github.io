@@ -6,6 +6,10 @@ interface AccessibilitySettings {
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
+  focusVisible: boolean;
+  skipLinks: boolean;
+  keyboardNavigation: boolean;
+  colorBlindFriendly: boolean;
 }
 
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -14,6 +18,10 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     largeText: false,
     reducedMotion: false,
     screenReader: false,
+    focusVisible: true,
+    skipLinks: true,
+    keyboardNavigation: true,
+    colorBlindFriendly: false,
   });
 
   useEffect(() => {
@@ -82,6 +90,18 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       body.classList.add('screen-reader');
     } else {
       body.classList.remove('screen-reader');
+    }
+
+    if (settings.focusVisible) {
+      body.classList.add('focus-visible');
+    } else {
+      body.classList.remove('focus-visible');
+    }
+
+    if (settings.colorBlindFriendly) {
+      body.classList.add('color-blind-friendly');
+    } else {
+      body.classList.remove('color-blind-friendly');
     }
 
     logger.info('Accessibility settings applied:', settings);
@@ -161,6 +181,15 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
         const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.blur) {
           activeElement.blur();
+        }
+      }
+
+      // Arrow key navigation for custom components
+      if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+        const activeElement = document.activeElement as HTMLElement;
+        if (activeElement && activeElement.getAttribute('data-navigable') === 'true') {
+          event.preventDefault();
+          // Handle custom navigation logic here
         }
       }
 

@@ -1,4 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import logger from '../../utils/logger';
 
 interface Props {
   children: ReactNode;
@@ -20,14 +21,14 @@ class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      }
-
-    // Log error to external service in production
+    // Log error using logger (handles dev/prod automatically)
+    logger.error('GlobalErrorBoundary caught an error:', error, errorInfo);
+    
+    // In production, you could also send to external logging service
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send the error to a logging service
-      }
+      // Example: sendToLoggingService(error, errorInfo);
+    }
   }
 
   render() {
