@@ -98,7 +98,6 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
   }, [enableReporting, reportEndpoint]);
 
   useEffect(() => {
-<<<<<<< HEAD
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return
 
@@ -141,11 +140,9 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
         const loadTime = performance.now()
         setMetrics(prev => ({ ...prev, loadTime }))
       }
-=======
     // Only show in development or if explicitly enabled
     if (process.env.NODE_ENV === 'production' && !showInProduction) {
       return;
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
     }
 
     // Set up Web Vitals monitoring
@@ -159,7 +156,6 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
       reportMetric(metric);
     });
 
-<<<<<<< HEAD
     // Set up performance observer for additional metrics
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -178,7 +174,6 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
           setMetrics(prev => ({ ...prev, cls: metric.value }))
           reportMetric('CLS', metric.value)
         })
-=======
     onLCP((metric) => {
       setMetrics(prev => ({ ...prev, largestContentfulPaint: metric.value }));
       reportMetric(metric);
@@ -188,7 +183,6 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
       setMetrics(prev => ({ ...prev, timeToFirstByte: metric.value }));
       reportMetric(metric);
     });
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
 
     onINP((metric) => {
       setMetrics(prev => ({ ...prev, interactionToNextPaint: metric.value }));
@@ -354,7 +348,4 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
   );
 };
 
-<<<<<<< HEAD
-=======
 export default AdvancedPerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-0571

@@ -6,7 +6,6 @@ const DYNAMIC_CACHE = 'dynamic-v1.0.0'
 // Files to cache immediately
 const STATIC_FILES = [
   '/',
-<<<<<<< HEAD
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json'
@@ -17,7 +16,6 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_NAME)
       .then((cache) => {
         return cache.addAll(urlsToCache);
-=======
   '/index.html',
   '/manifest.json',
   '/favicon.ico',
@@ -33,7 +31,6 @@ self.addEventListener('install', event => {
       .then(cache => {
         console.log('Caching static files...')
         return cache.addAll(STATIC_FILES)
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
       })
       .then(() => {
         console.log('Static files cached successfully')
@@ -82,7 +79,6 @@ self.addEventListener('fetch', event => {
     return
   }
 
-<<<<<<< HEAD
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
@@ -109,7 +105,6 @@ self.addEventListener('activate', (event) => {
     })
   );
 });
-=======
   event.respondWith(
     caches.match(request)
       .then(cachedResponse => {
@@ -199,4 +194,3 @@ self.addEventListener('message', event => {
     self.skipWaiting()
   }
 })
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18

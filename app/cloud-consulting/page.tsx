@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight, Code, Cloud, Shield, Zap, Users, Award, BarChart3 } from 'lucide-react';
 
 const CloudConsultingPage = () => {
@@ -23,7 +22,6 @@ const CloudConsultingPage = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Professional cloud consulting services and solutions. Expert implementation and support for your business needs.
-=======
 import { ArrowRight, CheckCircle, Cloud, Shield, Zap, Users, BarChart3, Settings, TrendingUp, Globe, Database } from 'lucide-react';
 
 const CloudConsultingPage = () => {
@@ -92,7 +90,6 @@ const CloudConsultingPage = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Transform your business with expert cloud consulting services. From strategy and migration to 
             optimization and support, we help you leverage the full power of cloud technology.
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -102,20 +99,16 @@ const CloudConsultingPage = () => {
               Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-<<<<<<< HEAD
-=======
             <Link
               to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               Schedule Consultation
             </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -140,7 +133,6 @@ const CloudConsultingPage = () => {
                 color: "from-purple-500 to-indigo-500"
               }
             ].map((service, index) => (
-=======
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -155,18 +147,15 @@ const CloudConsultingPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
-<<<<<<< HEAD
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 text-white`}>
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
-=======
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4">
                   {service.icon}
                 </div>
@@ -203,7 +192,6 @@ const CloudConsultingPage = () => {
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-2">{platform.name}</h3>
                 <p className="text-cyan-400">{platform.description}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
               </div>
             ))}
           </div>
@@ -214,7 +202,6 @@ const CloudConsultingPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
             Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -227,7 +214,6 @@ const CloudConsultingPage = () => {
             Contact Us Today
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
-=======
             Ready to Transform Your Business with Cloud?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -248,15 +234,11 @@ const CloudConsultingPage = () => {
               View All Services
             </Link>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
         </div>
       </section>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default CloudConsultingPage;
-=======
 export default CloudConsultingPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Cube, Scale } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -356,7 +355,6 @@ export default function AIServices() {
       featured: false
     },
     {
-<<<<<<< HEAD
       id: "ai-video-generation-pro",
       name: "AI Video Generation Pro",
       description: "Revolutionary AI video creation platform with text-to-video, voice synthesis, and advanced editing capabilities",
@@ -557,7 +555,6 @@ export default function AIServices() {
       rating: 4.6,
       reviews: 1123,
       link: "/ai-document-analysis-pro",
-=======
       id: "ai-voice-assistant-pro",
       name: "AI Voice Assistant Pro",
       description: "Advanced conversational AI with natural language understanding, voice synthesis, and multi-modal interactions",
@@ -613,27 +610,22 @@ export default function AIServices() {
       rating: 4.9,
       reviews: 1123,
       link: "/ai-image-recognition-pro",
->>>>>>> main
       featured: false
     },
     {
       id: "ai-predictive-maintenance",
       name: "AI Predictive Maintenance",
       description: "Intelligent equipment monitoring with failure prediction, maintenance scheduling, and cost optimization",
-<<<<<<< HEAD
       price: "From $2,600/month",
       icon: <Settings className="w-8 h-8" />,
       color: "from-red-500 to-orange-500",
-=======
       price: "From $2,200/month",
       icon: <Settings className="w-8 h-8" />,
       color: "from-amber-500 to-orange-500",
->>>>>>> main
       features: [
         "Equipment failure prediction",
         "Maintenance scheduling optimization",
         "Sensor data analysis",
-<<<<<<< HEAD
         "Cost optimization algorithms",
         "Real-time monitoring",
         "Alert system",
@@ -649,7 +641,6 @@ export default function AIServices() {
       category: "Maintenance",
       rating: 4.7,
       reviews: 567,
-=======
         "Cost-benefit analysis",
         "Real-time monitoring",
         "Alert & notification system",
@@ -665,12 +656,10 @@ export default function AIServices() {
       category: "IoT & Maintenance",
       rating: 4.7,
       reviews: 654,
->>>>>>> main
       link: "/ai-predictive-maintenance",
       featured: false
     },
     {
-<<<<<<< HEAD
       id: "ai-energy-optimization",
       name: "AI Energy Optimization",
       description: "Smart energy management with consumption optimization, renewable integration, and cost reduction",
@@ -812,7 +801,6 @@ export default function AIServices() {
       category: "Analytics",
       rating: 4.6,
       reviews: 1234,
-=======
       id: "ai-sentiment-analysis-pro",
       name: "AI Sentiment Analysis Pro",
       description: "Advanced sentiment analysis with emotion detection, brand monitoring, and social media insights",
@@ -838,14 +826,12 @@ export default function AIServices() {
       category: "Analytics",
       rating: 4.6,
       reviews: 987,
->>>>>>> main
       link: "/ai-sentiment-analysis-pro",
       featured: false
     },
     {
       id: "ai-recommendation-engine",
       name: "AI Recommendation Engine",
-<<<<<<< HEAD
       description: "Intelligent recommendation system with personalization, A/B testing, and performance optimization",
       price: "From $1,700/month",
       icon: <Target className="w-8 h-8" />,
@@ -867,7 +853,6 @@ export default function AIServices() {
         "Enhance user experience"
       ],
       category: "Recommendation",
-=======
       description: "Intelligent recommendation system with personalization, collaborative filtering, and content-based suggestions",
       price: "From $1,800/month",
       icon: <Target className="w-8 h-8" />,
@@ -889,13 +874,10 @@ export default function AIServices() {
         "Enhance customer experience"
       ],
       category: "Personalization",
->>>>>>> main
       rating: 4.8,
       reviews: 1456,
       link: "/ai-recommendation-engine",
       featured: false
-<<<<<<< HEAD
-=======
     },
     {
       id: "ai-fraud-detection-pro",
@@ -1099,7 +1081,6 @@ export default function AIServices() {
       reviews: 1123,
       link: "/ai-nlp-text-analysis",
       featured: false
->>>>>>> main
     }
   ];
 
@@ -1117,7 +1098,6 @@ export default function AIServices() {
     { name: "HR & Recruitment", count: aiServices.filter(s => s.category === "HR & Recruitment").length, active: false },
     { name: "Finance", count: aiServices.filter(s => s.category === "Finance").length, active: false },
     { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false },
-<<<<<<< HEAD
     { name: "Video", count: aiServices.filter(s => s.category === "Video").length, active: false },
     { name: "Voice", count: aiServices.filter(s => s.category === "Voice").length, active: false },
     { name: "Image", count: aiServices.filter(s => s.category === "Image").length, active: false },
@@ -1134,7 +1114,6 @@ export default function AIServices() {
   const stats = [
     { number: "40+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
     { number: "25,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
-=======
     { name: "Voice AI", count: aiServices.filter(s => s.category === "Voice AI").length, active: false },
     { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length, active: false },
     { name: "IoT & Maintenance", count: aiServices.filter(s => s.category === "IoT & Maintenance").length, active: false },
@@ -1145,7 +1124,6 @@ export default function AIServices() {
   const stats = [
     { number: "35+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
     { number: "20,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
->>>>>>> main
     { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "AI Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];
@@ -1249,7 +1227,6 @@ const AIServicesPage: React.FC = () => {
             <a href="/ai-analytics" className="text-cyan-400 hover:text-cyan-300 transition-colors">Learn More →</a>
           </div>
           
-<<<<<<< HEAD
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -1265,19 +1242,16 @@ const AIServicesPage: React.FC = () => {
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-<<<<<<< HEAD
                   <span className="text-sm">40+ AI services</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
                   <span className="text-sm">25,000+ models trained</span>
-=======
                   <span className="text-sm">35+ AI services</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
                   <span className="text-sm">20,000+ models trained</span>
->>>>>>> main
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />

@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Loader2, CheckCircle, AlertCircle, RefreshCw } from 'lucide-react';
 
 interface LoadingStateProps {
@@ -72,7 +71,6 @@ const LoadingState: React.FC<LoadingStateProps> = ({
           Try Again
         </button>
       )}
-=======
 import { Loader2, Sparkles, Zap, Brain, Shield } from 'lucide-react';
 
 interface LoadingProps {
@@ -216,7 +214,6 @@ const EnhancedLoading: React.FC<LoadingProps> = ({
           Please wait while we prepare everything for you...
         </p>
       </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a546
     </div>
   );
 };

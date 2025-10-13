@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
 
 interface ErrorBoundaryState {
   hasError: boolean;
-<<<<<<< HEAD
   error?: Error;
 }
 
@@ -29,7 +25,6 @@ class EnhancedErrorBoundary extends React.Component<
     console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
   }
 
-=======
   error: Error | null;
   errorInfo: ErrorInfo | null;
 }
@@ -87,11 +82,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.reload();
   };
 
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
   render() {
     if (this.state.hasError) {
       return (
-<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
@@ -102,7 +95,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             >
               Try Again
             </button>
-=======
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
             <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -170,7 +162,6 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 Development Mode - Error details shown above
               </div>
             )}
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
           </div>
         </div>
       );

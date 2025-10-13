@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight, Code, Cloud, Shield, Zap, Users, Award, BarChart3 } from 'lucide-react';
 
 const DevOpsServicesPage = () => {
@@ -18,7 +17,6 @@ const DevOpsServicesPage = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-=======
 import { ArrowRight, CheckCircle, Clock, Shield, Zap, Users, BarChart3, Cloud, Settings, Code, Database, Server } from 'lucide-react';
 
 const DevOpsServicesPage = () => {
@@ -97,18 +95,14 @@ const DevOpsServicesPage = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
               DevOps Services
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD
             Streamline your development pipeline with our comprehensive DevOps solutions. 
             From CI/CD implementation to infrastructure automation, we help you deliver faster and more reliably.
-=======
             Accelerate your development lifecycle with our comprehensive DevOps solutions. 
             From CI/CD pipelines to cloud migration, we help you build, deploy, and scale faster.
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -118,20 +112,16 @@ const DevOpsServicesPage = () => {
               Get Started
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-<<<<<<< HEAD
-=======
             <Link
               to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
               Schedule Consultation
             </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -174,7 +164,6 @@ const DevOpsServicesPage = () => {
                 color: "from-cyan-500 to-blue-500"
               }
             ].map((service, index) => (
-=======
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -189,18 +178,15 @@ const DevOpsServicesPage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
-<<<<<<< HEAD
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 text-white`}>
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
-=======
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4">
                   {service.icon}
                 </div>
@@ -240,7 +226,6 @@ const DevOpsServicesPage = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
               </div>
             ))}
           </div>
@@ -248,17 +233,13 @@ const DevOpsServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-=======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your DevOps?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
             Let our expert team help you implement DevOps best practices and accelerate your development lifecycle.
           </p>
           <Link
@@ -268,7 +249,6 @@ const DevOpsServicesPage = () => {
             Start Your DevOps Journey
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
           </Link>
-=======
             Let our DevOps experts help you build a more efficient, reliable, and scalable development process.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -286,7 +266,6 @@ const DevOpsServicesPage = () => {
               View All Services
             </Link>
           </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
         </div>
       </section>
     </div>

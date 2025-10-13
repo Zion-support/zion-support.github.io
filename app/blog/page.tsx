@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -21,9 +15,7 @@ export default function Blog() {
     { id: "development", name: "Development", count: 2 }
   ];
 
-<<<<<<< HEAD
   const posts = [
-=======
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Calendar, User, Tag, Search } from 'lucide-react'
@@ -31,7 +23,6 @@ import EnhancedSEO from '../components/EnhancedSEO'
 
 const BlogPage: React.FC = () => {
   const blogPosts = [
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
     {
       id: 1,
       title: "The Future of AI in Business: 2024 Trends and Predictions",
@@ -40,36 +31,29 @@ const BlogPage: React.FC = () => {
       date: "2024-01-15",
       category: "AI & Machine Learning",
       readTime: "5 min read",
-<<<<<<< HEAD
       image: "/images/blog/ai-business-2024.jpg",
       featured: true
-=======
       image: "/images/blog/ai-trends-2024.jpg",
       slug: "future-ai-business-2024-trends"
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
     },
     {
       id: 2,
       title: "Cybersecurity Best Practices for Small Businesses",
-<<<<<<< HEAD
       excerpt: "Essential cybersecurity measures every small business should implement to protect their data and operations.",
       content: "Small businesses are increasingly targeted by cybercriminals...",
       author: "Michael Chen",
       date: "2024-01-12",
       category: "cybersecurity",
-=======
       excerpt: "Learn essential cybersecurity measures that every small business should implement to protect their digital assets and customer data.",
       author: "Zion Tech Group",
       date: "2024-01-10",
       category: "Cybersecurity",
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
       readTime: "7 min read",
       image: "/images/blog/cybersecurity-small-business.jpg",
       slug: "cybersecurity-best-practices-small-businesses"
     },
     {
       id: 3,
-<<<<<<< HEAD
       title: "Cloud Migration: A Step-by-Step Guide",
       excerpt: "Learn how to successfully migrate your business to the cloud with our comprehensive guide.",
       content: "Cloud migration can seem daunting, but with proper planning...",
@@ -90,7 +74,6 @@ const BlogPage: React.FC = () => {
       category: "development",
       readTime: "12 min read",
       image: "/images/blog/microservices-devops.jpg",
-=======
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight, Search, Filter } from 'lucide-react';
@@ -154,12 +137,10 @@ const BlogPage = () => {
       category: 'development',
       readTime: '8 min read',
       image: '/api/placeholder/400/250',
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
       featured: false
     },
     {
       id: 5,
-<<<<<<< HEAD
       title: "Zero-Trust Security Architecture: A Complete Implementation Guide",
       excerpt: "Learn how to implement zero-trust security principles to protect your organization from modern cyber threats.",
       author: "Michael Rodriguez",
@@ -179,7 +160,6 @@ const BlogPage = () => {
       category: "cloud",
       image: "/api/placeholder/600/300",
       featured: false
-=======
   const blogPosts = [
     {
       id: 1,
@@ -246,7 +226,6 @@ const BlogPage = () => {
       category: "cybersecurity",
       featured: false,
       image: "/blog/zero-trust.jpg"
->>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
     }
   ];
 
@@ -257,17 +236,13 @@ const BlogPage = () => {
     return matchesSearch && matchesCategory;
   });
 
-<<<<<<< HEAD
   const featuredPosts = posts.filter(post => post.featured);
-=======
   const featuredPosts = filteredPosts.filter(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
->>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-<<<<<<< HEAD
         <title>Tech Insights & Innovation Blog | Zion Tech Group</title>
         <meta name="description" content="Stay ahead with the latest trends, insights, and best practices in AI, cybersecurity, cloud computing, and technology innovation." />
         <meta name="keywords" content="tech blog, AI insights, cybersecurity, cloud computing, technology trends, innovation" />
@@ -295,7 +270,6 @@ const BlogPage = () => {
                   className="w-full pl-12 pr-4 py-4 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-300 focus:border-transparent"
                 />
               </div>
-=======
       title: "5G Technology: Transforming Industries and Creating New Opportunities",
       excerpt: "Discover how 5G technology is revolutionizing various industries and creating new business opportunities for forward-thinking companies.",
       author: "Zion Tech Group",
@@ -359,13 +333,11 @@ const BlogPage = () => {
         canonical="https://ziontechgroup.com/blog"
       />
 
-=======
         <title>Blog - Zion Tech Group | Latest Technology Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends from Zion Tech Group experts." />
         <meta name="keywords" content="technology blog, AI insights, cybersecurity, cloud computing, tech trends, Zion Tech Group" />
       </Helmet>
 
->>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -374,7 +346,6 @@ const BlogPage = () => {
               Technology Blog
             </span>
           </h1>
-<<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Stay ahead of the curve with insights, trends, and expert analysis from our technology experts.
           </p>
@@ -382,7 +353,6 @@ const BlogPage = () => {
           {/* Search Bar */}
           <div className="max-w-md mx-auto relative">
             <div className="relative">
-=======
       title: 'AI-Powered Analytics: Transforming Data into Insights',
       excerpt: 'How AI is revolutionizing data analytics and business intelligence.',
       content: 'Data is the new oil, and AI is the refinery...',
@@ -439,7 +409,6 @@ const BlogPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row gap-4 mb-8">
             <div className="relative flex-1">
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -464,36 +433,28 @@ const BlogPage = () => {
               />
 >>>>>>> cursor/analyze-improve-and-deploy-application-2b18
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
         {/* Categories */}
         <section className="py-8 bg-slate-800/50">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-4">
-=======
             
             <div className="flex flex-wrap gap-2 justify-center">
->>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
               {categories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-<<<<<<< HEAD
                   className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                     selectedCategory === category.id
                       ? "bg-gradient-to-r from-cyan-500 to-purple-600 text-white"
                       : "bg-white/10 text-gray-300 hover:bg-white/20"
-=======
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white'
                       : 'bg-white/10 text-gray-300 hover:bg-white/20'
->>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
                   }`}
                 >
                   {category.name} ({category.count})
@@ -504,7 +465,6 @@ const BlogPage = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
         {/* Featured Posts */}
         {selectedCategory === "all" && (
           <section className="py-16 px-4">
@@ -624,7 +584,6 @@ const BlogPage = () => {
               Get the latest tech insights and industry updates delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-=======
       {/* Categories Filter */}
       <section className="pb-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -637,7 +596,6 @@ const BlogPage = () => {
                 {category}
               </button>
             ))}
-=======
             <div className="relative">
               <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <select
@@ -652,12 +610,10 @@ const BlogPage = () => {
                 ))}
               </select>
             </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Blog Posts Grid */}
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -706,7 +662,6 @@ const BlogPage = () => {
                   >
                     Read More
                     <ArrowRight className="w-4 h-4 ml-1" />
-=======
       {/* Featured Post */}
       {featuredPost && (
         <section className="py-8 px-4 sm:px-6 lg:px-8">
@@ -740,7 +695,6 @@ const BlogPage = () => {
                   </Link>
                 </div>
               </div>
-=======
       {/* Featured Posts */}
       {featuredPosts.length > 0 && (
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -786,13 +740,11 @@ const BlogPage = () => {
                   </Link>
                 </article>
               ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
             </div>
           </div>
         </section>
       )}
 
-<<<<<<< HEAD
       {/* Blog Posts Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -828,7 +780,6 @@ const BlogPage = () => {
                   >
                     Read More
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
                   </Link>
                 </div>
 =======
@@ -878,8 +829,6 @@ const BlogPage = () => {
       </section>
 
       {/* Newsletter Signup */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -891,13 +840,11 @@ const BlogPage = () => {
           
           <div className="max-w-md mx-auto">
             <div className="flex gap-2">
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
-<<<<<<< HEAD
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -909,18 +856,15 @@ const BlogPage = () => {
     </>
   );
 }
-=======
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
                 Subscribe
               </button>
             </div>
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Stay Updated</h2>
           <p className="text-xl text-gray-300 mb-8">
             Subscribe to our newsletter for the latest tech insights and industry updates.
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -928,7 +872,6 @@ const BlogPage = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Get the latest technology insights delivered directly to your inbox.
->>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
@@ -936,11 +879,9 @@ const BlogPage = () => {
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             />
-<<<<<<< HEAD
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
               Subscribe
             </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
 =======
             <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
               Subscribe
@@ -950,13 +891,10 @@ const BlogPage = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   )
 }
 
 export default BlogPage
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
 =======
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';

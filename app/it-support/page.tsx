@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { ArrowRight, Code, Cloud, Shield, Zap, Users, Award, BarChart3 } from 'lucide-react';
 
 const ItSupportPage = () => {
@@ -93,7 +92,6 @@ const ItSupportPage = () => {
           </Link>
         </div>
       </section>
-=======
 import { ArrowRight, CheckCircle, Shield, Zap, Users, BarChart3, Settings, TrendingUp, Globe, Database } from 'lucide-react';
 
 const ITSupportPage = () => {
@@ -207,13 +205,9 @@ const ITSupportPage = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default ItSupportPage;
-=======
 export default ITSupportPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
