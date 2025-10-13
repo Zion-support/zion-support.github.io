@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -12,6 +13,19 @@ if (typeof window !== 'undefined') {
     window.performance = window.performance || {};
     window.performance.now = window.performance.now || (() => Date.now());
   }
+=======
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import './app/globals.css'
+const root = document.getElementById('root')
+if (root) {
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  )
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0373
 }
 
 const rootElement = document.getElementById("root");

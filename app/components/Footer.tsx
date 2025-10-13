@@ -129,6 +129,7 @@ export default function Footer() {
     { name: 'Terms of Service', path: '/terms' }
   ]
 
+const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900/50 backdrop-blur-lg border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -568,6 +569,13 @@ export default Footer;
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
   )
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
+=======
+  );
+};
+
+export default Footer;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0373

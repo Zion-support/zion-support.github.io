@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 'use client;
 
+<<<<<<< HEAD
 import React from 'react;
 
 import { useLocation } from 'react-router-dom;
@@ -133,6 +134,17 @@ const Breadcrumb: React.FC = () => {}
     return null;
 
   }
+=======
+const Breadcrumb: React.FC = () => {
+  const pathSegments = typeof window !== 'undefined' ? window.location.pathname.split('/').filter(segment => segment !== '') : [];
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    ...pathSegments.map((segment, index) => ({
+      label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
+      href: index === pathSegments.length - 1 ? undefined : `/${pathSegments.slice(0, index + 1).join('/')}`
+    }))
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0373
 
   return (
 <<<<<<< HEAD
@@ -258,9 +270,15 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
     </nav>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 };
 
 export default Breadcrumb;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+};
+
+export default Breadcrumb;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0373
