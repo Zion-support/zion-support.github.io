@@ -90,11 +90,18 @@ export class RateLimiter {// TODO: Add content};
    * Check if request is allowed
    * @param identifier - Unique identifier (e.g., IP address)
    * @returns Whether the request is allowed
+<<<<<<< HEAD
   check(identifier: string): { allowed: boolean; remaining: number, resetTime: number } {
     const now = Date.now();
     const record = this.requests.get(identifier);
     const __now = Date.now();
     const _record = this.requests.get(identifier);
+=======
+   */
+  check(identifier: string): { allowed: boolean; remaining: number; resetTime: number } {
+    const now = Date.now();
+    const record = this.requests.get(identifier);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1493
     // No record or expired
     if (!record || now > record.resetTime) {
       const resetTime = now + this.config.windowMs;
@@ -160,7 +167,11 @@ export class RateLimiter {// TODO: Add content};
     this.requests.delete(identifier)
    * Cleanup expired entries
   private cleanup(): void {
+<<<<<<< HEAD
     const now = Date.now(),
+=======
+    const now = Date.now();
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1493
     for (const [key, record] of this.requests.entries()) {
       if (now > record.resetTime) {
         this.requests.delete(key);
@@ -309,12 +320,15 @@ export function getClientIdentifier(request: Request): string {
 }
   // Try to get real IP from headers (for proxied requests)
   const headers = request.headers;
+<<<<<<< HEAD
 =======
 export function getClientIdentifier(request: Request): string {// TODO: Add content};
 };
   // Try to get real IP from headers (for proxied requests);
 const headers = request.headers;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1493
   const forwardedFor = headers.get('x-forwarded-for');
   const realIp = headers.get('x-real-ip');
   const cfConnectingIp = headers.get('cf-connecting-ip');
@@ -328,7 +342,11 @@ const headers = request.headers;
  * @returns Middleware function
 export function createRateLimitMiddleware(limiter: RateLimiter) {
   return async (request: Request): Promise<Response | null> => {
+<<<<<<< HEAD
     const identifier = getClientIdentifier(request),
+=======
+    const identifier = getClientIdentifier(request);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1493
     const { allowed, remaining, resetTime } = limiter.check(identifier);
     if (!allowed) {
     return new Response(
