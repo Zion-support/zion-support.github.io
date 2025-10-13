@@ -46,8 +46,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
         </div>
       </div>
     </div>
-  </div>
-);
+  </div>);
 
 function App() {
   return (
@@ -84,8 +83,7 @@ function App() {
                             Go Home
                           </a>
                         </div>
-                      </div>
-                    } />
+                      </div>} />
                   </Routes>
                 </Suspense>
               </main>
@@ -94,8 +92,7 @@ function App() {
           </Router>
         </AnalyticsProvider>
       </HelmetProvider>
-    </ErrorBoundary>
-  );
+    </ErrorBoundary>);
 }
 
 export default App;

@@ -30,7 +30,7 @@ const PagePage: React.FC = ()  => {};
 
   featured: boolean;
 ;
-}
+;
 const CareersPage: React.FC = () => {;
   const [selectedDepartment, setSelectedDepartment] = useState('all);
 
@@ -204,14 +204,14 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
         'Flexible remote work,
         Professional development budget
       description: 'Lead the development of cutting-edge AI solutions and machine learning models for enterprise clients.',
-      requirements: []
+      requirements: [];
         '5+ years experience in AI/ML development',
         'Expertise in Python, TensorFlow, PyTorch',
         'Experience with cloud platforms (AWS, Azure, GCP)',
         'Strong understanding of deep learning algorithms',
         'Previous experience in production AI systems'
       ],
-      benefits: []
+      benefits: [];
         'Competitive salary: $120,000 - $180,000',
         'Equity participation',
         'Flexible remote work',
@@ -259,8 +259,7 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
-        {/* Hero Section */}
-
+        {/* Hero Section */;
         <section className="pt-24 pb-16 px-4">          <div className="max-w-7xl mx-auto text-center>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6>
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent>
@@ -271,21 +270,18 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
               Build the future of technology with us. Were looking for passionate individuals to join our mission of advancing AI and emerging technologies.
             </p>
             
-            {/* Filter Controls */}
-
+            {/* Filter Controls */;
             <div className="flex flex-wrap justify-center gap-4 mb-8>
               <select
-                value={selectedDepartment}
-
-                onChange={(e) => setSelectedDepartment(e.target.value)}
-
+                value={selectedDepartment;
+                onChange={(e) => setSelectedDepartment(e.target.value);
                 className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors
               >
                 {departments.map((dept) => (
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
               Be part of a team that's shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
-          {/* Why Work With Us */}
+          {/* Why Work With Us */;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">Why Work With Us?</h2>
@@ -335,8 +331,7 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
           <
         <
 
-        {/* Featured Positions */}
-
+        {/* Featured Positions */;
         {featuredPositions.length > 0 && (
 
           <section className="py-16 px-4>
@@ -353,18 +348,18 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
                   <div className="flex justify-center mb-4">
-                    {benefit.icon}
+                    {benefit.icon;
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                    {benefit.title}
+                    {benefit.title;
                   </h3>
                   <p className="text-gray-600">
-                    {benefit.description}
+                    {benefit.description;
                   </p>
         </div>
       </section>
 
-          {/* CTA Section */}
+          {/* CTA Section */;
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
             <h2 className="text-4xl font-bold text-white mb-4">
 
@@ -389,8 +384,7 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
 
                   className={bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20;
-} hover:border-purple-400 transition-all duration-300 group}
-
+} hover:border-purple-400 transition-all duration-300 group;
                 >                <div></div>
                   {position.featured && (
 

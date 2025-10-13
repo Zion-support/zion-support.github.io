@@ -10,8 +10,7 @@ interface SEOEnhancerProps {
   url?: string;
   type?: string;
   structuredData?: any;
-}
-
+;
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',
@@ -64,18 +63,18 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     <Helmet>
       <title>{title}</title>
       {metaTags.map((tag, index) => (
-        <meta key={index} {...tag} />}))}
-      {/* Canonical URL */}
+        <meta key={index} {...tag} />}));
+      {/* Canonical URL */;
       <link rel="canonical" href={url} />
-      {/* Favicon */}
+      {/* Favicon */;
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      {/* Preconnect to external domains */}
+      {/* Preconnect to external domains */;
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      {/* DNS prefetch for performance */}
+      {/* DNS prefetch for performance */;
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>})}
@@ -92,7 +91,7 @@ export const defaultStructuredData = {
     "@type": "ContactPoint",
     "telephone": "+1-555-0123",
     "contactType": "customer service",
-    "availableLanguage": "English"}
+    "availableLanguage": "English";
 },
   "sameAs": [
     "https://www.linkedin.com/company/zion-tech-group",

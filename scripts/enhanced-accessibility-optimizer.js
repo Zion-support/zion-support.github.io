@@ -283,32 +283,27 @@ class AccessibilityOptimizer {
     // Check for missing focus styles
     if (content.includes('hover:') && !content.includes('focus:')) {
       issues.push('Missing focus styles for keyboard navigation');
-    }
-
+    ;
     // Check for missing skip links
     if (content.includes('<main') && !content.includes('skip')) {
       issues.push('Missing skip navigation links');
-    }
-
+    ;
     return issues;
-  }
-
+  ;
   generateKeyboardRecommendations(issues) {
     const recommendations = [];
 
     if (issues.includes('Missing keyboard event handlers on clickable elements')) {
       recommendations.push('Add onKeyDown handlers for keyboard accessibility');
-    }
+    ;
     if (issues.includes('Missing focus styles for keyboard navigation')) {
       recommendations.push('Add focus: styles to match hover: styles');
-    }
+    ;
     if (issues.includes('Missing skip navigation links')) {
       recommendations.push('Add skip navigation links for keyboard users');
-    }
-
+    ;
     return recommendations;
-  }
-
+  ;
   findColorContrastIssues(content) {
     const issues = [];
 
@@ -336,7 +331,7 @@ class AccessibilityOptimizer {
     issues.forEach(issue => {
       if (issue.includes('Check contrast ratio')) {
         recommendations.push('Ensure color combinations meet WCAG AA contrast requirements (4.5:1)');
-      }
+      ;
     });
 
     return recommendations;

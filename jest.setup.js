@@ -40,7 +40,7 @@ beforeAll(() => {
       args[0].includes('Warning: ReactDOM.render is no longer supported')
     ) {
       return;
-    }
+    ;
     originalError.call(console, ...args);
   };
 });

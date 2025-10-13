@@ -61,7 +61,7 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
       solution: 'Complete cloud migration to AWS with microservices architecture and automated scaling.',
       challenge: 'Legacy systems causing performance issues and security concerns',
       solution: 'Complete cloud migration with enhanced security measures',
-      results: []
+      results: [];
         '50% improvement in system performance',
         '99.9% uptime achieved',
         '30% reduction in operational costs'
@@ -128,8 +128,7 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
       ],
       image: '/images/case-studies/blockchain-supply-chain.jpg,
       duration: '7 months,
-      team: '11 specialists    }
-
+      team: '11 specialists    ;
   const stats = [;
     { label: 'Projects Completed', value: '150+, icon: CheckCircle },
     { label: 'Client Satisfaction', value: '98%, icon: TrendingUp },
@@ -162,8 +161,7 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
-        {/* Hero Section */}
-
+        {/* Hero Section */;
         <section className="py-20 px-4>
           <div className="max-w-7xl mx-auto text-center>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6>
@@ -174,8 +172,7 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
           </div>
         </section>
 
-        {/* Stats Section */}
-
+        {/* Stats Section */;
         <section className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8>

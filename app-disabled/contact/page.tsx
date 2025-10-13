@@ -18,8 +18,8 @@ const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTe
 })
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
-    setFormData(prev => ({}
+const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>)  => {;
+    setFormData(prev => ({;
       ...prev,
       [e.target.name]: e.target.value;);
 })));
@@ -77,8 +77,7 @@ message: '];
         <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Helmet>
       
-      {/* Hero Section */}
-
+      {/* Hero Section */;
       <section className="relative py-20 px-4 overflow-hidden></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }} />
@@ -108,8 +107,8 @@ message: '];
                         <input
                           type="email"
                           name="email"
-                          value={formData.email}
-                          onChange={handleChange}
+                          value={formData.email;
+                          onChange={handleChange;
                           required
                           className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="your@email.com"
@@ -123,8 +122,8 @@ message: '];
                         <input
                           type="tel"
                           name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
+                          value={formData.phone;
+                          onChange={handleChange;
                           className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="+1 (555) 123-4567"
                         />
@@ -151,10 +150,10 @@ message: '];
                       <option value="consulting">Consulting</option>
                       <option value="other">Other</option>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      rows={5}
+                      rows={5;
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                       placeholder="Tell us about your project and how we can help..."
-                    disabled={isLoading}
+                    disabled={isLoading;
                     className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
                   >
                     {isLoading ? (
@@ -169,7 +168,7 @@ message: '];
         </div>
       </div>;
 );
-}
+;
       {/* Contact Form and Info *
       <section className="py-20 px-4>
         <div className="max-w-7xl mx-auto>
@@ -183,8 +182,7 @@ message: '];
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2 
                   <span className="text-green-400>Message sent successfully!<
                 <);
-)}
-
+);
               {submitStatus === 'error' && (<div className=mb-6 p-4 bg-red-500/20 border border-red-500
                   <span className="text-red-400>Failed to send message. Please try again.<
                   and well get back to you within 24 hours.
@@ -210,7 +208,7 @@ message: '];
                   className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 disabled:opacity-50 disable,
     d:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
                 >
-                  {isSubmitting ? (<>}
+                  {isSubmitting ? (<>;
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><
                       Sending...
                     <);

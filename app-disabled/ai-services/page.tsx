@@ -61,7 +61,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 
     </div>;
 );
-}
+;
       title: 'AI Content Generator',
       description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.',
       features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],
@@ -131,7 +131,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       pricing: 'Starting at $149/month',
       link: '/predictive-analytics',
       popular: false;
-}
+;
   ]
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
@@ -145,4 +145,4 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       </div>
     </div>;
 );
-}
+;

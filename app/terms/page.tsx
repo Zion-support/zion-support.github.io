@@ -1,6 +1,5 @@
-import React from 'react'}
-import { Helmet } from 'react-helmet-async'}
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const TermsPage: React.FC = () => {
   return (
     <>
@@ -11,7 +10,7 @@ const TermsPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */;
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -26,7 +25,7 @@ const TermsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Content Section */}
+        {/* Content Section */;
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
@@ -83,15 +82,14 @@ const TermsPage: React.FC = () => {
                 </p>
 
                 <p className="text-gray-400 text-sm mt-8">
-                  Last updated: {new Date().toLocaleDateString()}
+                  Last updated: {new Date().toLocaleDateString();
                 </p>
               </div>
             </div>
           </div>
         </section>
       </div>
-    </>}
+    </>;
 )
-}
-
-export default TermsPage}
+;
+export default TermsPage;

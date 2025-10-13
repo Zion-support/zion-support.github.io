@@ -1,7 +1,6 @@
 'use client'}
-import React from 'react'}
-import { Helmet } from 'react-helmet-async'}
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const EnhancedLoading: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -10,7 +9,7 @@ const EnhancedLoading: React.FC = () => {
         <meta name="description" content="Professional enhanced loading services by Zion Tech Group." />
       </Helmet>
 
-      {/* Hero Section */}
+      {/* Hero Section */;
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -25,8 +24,6 @@ const EnhancedLoading: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
-  )
-}
-
-export default EnhancedLoading}
+    </div>)
+;
+export default EnhancedLoading;

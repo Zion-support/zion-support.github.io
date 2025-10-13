@@ -5,18 +5,16 @@ import { Helmet } from 'react-helmet-async';
 interface SEOData {
   title: string;
   description: string;
-  keywords: string[]
+  keywords: string[];
   canonicalUrl?: string;
   ogImage?: string;
   noIndex?: boolean;
   structuredData?: any;
-}
-
+;
 interface AdvancedSEOOptimizerProps {
   seoData: SEOData;
   children?: React.ReactNode;
-}
-
+;
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData,
   children;
@@ -42,15 +40,14 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service";
-}
-  }
-
+;
+  ;
   const finalStructuredData = structuredData || baseStructuredData;
 
   return (
     <React.Fragment>
       <Helmet>
-        {/* Basic Meta Tags */}
+        {/* Basic Meta Tags */;
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords.join(', ')} />
@@ -79,8 +76,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         </script>
       </Helmet>
       {children}
-    </React.Fragment>
-  )
+    </React.Fragment>)
 }
 
 export default AdvancedSEOOptimizer;

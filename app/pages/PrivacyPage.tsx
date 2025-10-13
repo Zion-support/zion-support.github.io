@@ -1,6 +1,5 @@
-import React from 'react'}
-import { Helmet } from 'react-helmet-async'}
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 export default function PrivacyPage() {
   return (
     <>
@@ -19,6 +18,6 @@ export default function PrivacyPage() {
           </div>
         </div>
       </div>
-    </>}
+    </>;
 )
-}
+;

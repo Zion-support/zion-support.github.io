@@ -1,5 +1,5 @@
 
-import { Helmet } from 'react-helmet-async'}
+import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/main
 export default function CloudInfrastructure() {
   return (
@@ -73,10 +73,10 @@ export default function CloudInfrastructure() {
 
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
 =======
-    </div>})}
+    </div>});
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 =======
-}
+;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
 =======;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e;

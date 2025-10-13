@@ -9,16 +9,14 @@ interface PerformanceMetrics {
   fmp?: number;
   tti?: number;
   tbt?: number;
-}
-
+;
 interface PerformanceEntryExtended extends PerformanceEntry {
   processingStart?: number;
   hadRecentInput?: boolean;
   value?: number;
   responseStart?: number;
   requestStart?: number;
-}
-
+;
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isSupported, setIsSupported] = useState(false);

@@ -1,6 +1,5 @@
 'use client'}
-import React from 'react'}
-
+import React from 'react';
 export default function UtilsPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
@@ -10,6 +9,6 @@ export default function UtilsPage() {
           This page is under development.
         </p>
       </div>
-    </div>}
+    </div>;
 )
-}
+;

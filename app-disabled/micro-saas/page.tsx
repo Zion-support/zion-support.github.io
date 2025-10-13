@@ -25,9 +25,8 @@ interface MicroSaasProduct {}
 
   category: string;
 ;
-}
-
-const MicroSaasPage: React.FC = () => {}
+;
+const MicroSaasPage: React.FC = ()  => {;
   const microSaasProducts: MicroSaasProduct[] = [
     {
       id: '1,
@@ -128,10 +127,8 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
       icon: Rocket,
       title: 'Rapid Innovation,
       description: Frequent updates and new features based on user feedback and market needs;
-}
-
+;
   ];
-
 
     <>
       <Helmet>
@@ -161,7 +158,6 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
                       : bg-white/10 text-gray-300 hover:bg-white/20;
 }}
 
-
         <section className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
             <div className="text-center mb-16>
@@ -175,8 +171,7 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
               {microSaasProducts.map((product) => (
 
                 <div
-                  key={product.id}
-
+                  key={product.id;
                   className={relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group ${
                     product.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20 : border-slate-700;
 }}

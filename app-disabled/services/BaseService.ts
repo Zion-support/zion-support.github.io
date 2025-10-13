@@ -14,13 +14,11 @@ export interface ServiceOptions {
   retries?: number;
   cache?: boolean;
   cacheDuration?: number;
-}
-
+;
 export interface CacheEntry<T> {
   data: T;
   timestamp: number;
-}
-
+;
 export class BaseService {
   protected baseUrl: string;
   protected options: ServiceOptions;
@@ -46,8 +44,7 @@ export class BaseService {
 
     const _age = Date.now() - entry.timestamp;
     return age < (this.options.cacheDuration || 300000);
-  }
-
+  ;
   /**
    * Get data from cache
    */

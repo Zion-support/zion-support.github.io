@@ -4,12 +4,11 @@ import { Helmet } from 'react-helmet-async';
 interface SEOEnhancerProps {
   title: string;
   description: string;
-  keywords: string[]
+  keywords: string[];
   noIndex?: boolean;
   structuredData?: any;
   children?: ReactNode;
-}
-
+;
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title,
   description,
@@ -29,15 +28,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service";
-}
-  }
-
+;
+  ;
   const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
     <React.Fragment>
       <Helmet>
-        {/* Basic Meta Tags */}
+        {/* Basic Meta Tags */;
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords.join(', ')} />
@@ -57,7 +55,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
         
-        {/* Twitter Card Tags */}
+        {/* Twitter Card Tags */;
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
@@ -68,8 +66,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         </script>
       </Helmet>
       {children}
-    </React.Fragment>
-  )
+    </React.Fragment>)
 }
 
 export default SEOEnhancer;

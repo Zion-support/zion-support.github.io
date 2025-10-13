@@ -8,9 +8,8 @@ declare module 'next' {
   interface NextConfig {
     // Add any Next.js specific types here
     [key: string]: unknown;
-  }
-}
-
+  ;
+;
 // Export a utility function
 export const nextUtil = () => {;
   // Implementation;

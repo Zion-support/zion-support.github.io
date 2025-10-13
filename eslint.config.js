@@ -67,7 +67,7 @@ export default [
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true
-        }
+        ;
       },
       globals: {
         window: 'readonly',
@@ -104,7 +104,7 @@ export default [
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 >>>>>>> origin/main
-      }
+      ;
     },
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
     plugins: {
@@ -127,7 +127,7 @@ export default [
     settings: {
       react: {
         version: 'detect'
-      }
-    }
-  }
+      ;
+    ;
+  ;
 ];

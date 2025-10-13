@@ -17,11 +17,11 @@ const ${pageName}: React.FC = () => {
         <meta name="description" content="Professional ${pageName.replace(/([A-Z])/g, ' $1').trim().toLowerCase()} services by Zion Tech Group." />
       </Helmet>
 
-      {/* Hero Section */}
+      {/* Hero Section */;
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            ${pageName.replace(/([A-Z])/g, ' $1').trim()}
+            ${pageName.replace(/([A-Z])/g, ' $1').trim();
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional ${pageName.replace(/([A-Z])/g, ' $1').trim().toLowerCase()} services 
@@ -30,14 +30,14 @@ const ${pageName}: React.FC = () => {
         </div>
       </section>
 
-      {/* Content Section */}
+      {/* Content Section */;
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
               <p className="text-lg text-gray-600 mb-6">
-                We provide comprehensive ${pageName.replace(/([A-Z])/g, ' $1').trim().toLowerCase()} 
+                We provide comprehensive ${pageName.replace(/([A-Z])/g, ' $1').trim().toLowerCase();
                 solutions tailored to your specific needs and requirements.
               </p>
               <ul className="space-y-3">
@@ -71,7 +71,7 @@ const ${pageName}: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section */;
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">

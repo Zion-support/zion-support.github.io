@@ -14,7 +14,7 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { children: R
       setError(error);
       if (onError) {
         onError(error);
-      }
+      ;
     };
 
     // Simulate error boundary behavior
@@ -61,7 +61,7 @@ const AdvancedSEOOptimizer = ({ seoData }: { seoData?: any }) => {
           <meta name="description" content={seoData?.description || 'Default description'} />
         </Helmet>
       </HelmetProvider>
-      {seoData?.title} - {seoData?.description}
+      {seoData?.title} - {seoData?.description;
     </div>;
 );
 };
@@ -89,7 +89,7 @@ const AdvancedPerformanceMonitor = ({ enableRealTimeMonitoring, onMetricsUpdate,
             <li>Enable compression</li>
           </ul>
         </div>;
-)}
+);
     </div>;
 );
 };
@@ -228,8 +228,8 @@ describe('AdvancedSEOOptimizer', () => {
       <MemoryRouter>
         <HelmetProvider context={helmetContext}>
           <AdvancedSEOOptimizer
-            seoData={mockSEOData}
-            enableStructuredData={true}
+            seoData={mockSEOData;
+            enableStructuredData={true;
           />
         </HelmetProvider>
       </MemoryRouter>;
@@ -291,13 +291,12 @@ describe('AdvancedPerformanceMonitor', () => {
   class MockPerformanceObserver {
     constructor(callback: PerformanceObserverCallback) {
       this.callback = callback;
-    }
+    ;
     callback: PerformanceObserverCallback;
-    observe() {}
-    disconnect() {}
-    takeRecords() { return []; }
-  }
-
+    observe() {;
+    disconnect() {;
+    takeRecords() { return []; ;
+  ;
   beforeEach(() => {
     // Mock performance API
     Object.defineProperty(window, 'performance', {

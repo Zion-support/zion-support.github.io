@@ -18,6 +18,4 @@ export default function AIAnalytics() {
           </p>
         </div>
         <div className="text-center">
-          <p className="text-gray-300">Coming Soon - Advanced AI Analytics Solutions</p>
-
-)}
+          <p className="text-gray-300">Coming Soon - Advanced AI Analytics Solutions</p>);

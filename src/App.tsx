@@ -61,8 +61,7 @@ const NotFoundPage = () => (
               <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
       <a href="/" className="text-cyan-400 hover:text-cyan-300">Go Home</a>
     </div>
-  </div>
-)
+  </div>)
 
 const App: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false)

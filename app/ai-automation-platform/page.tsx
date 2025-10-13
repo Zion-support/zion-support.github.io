@@ -1,9 +1,8 @@
 import { ArrowRight, Zap, Brain, CheckCircle, TrendingUp, Settings, Workflow } from 'lucide-react'}
 import EnhancedSEO from '../components/EnhancedSEO'}
-import ResponsiveContainer from '../components/ResponsiveContainer'}
-import FuturisticCard from '../components/FuturisticCard'}
-import FuturisticButton from '../components/FuturisticButton'}
-
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import FuturisticCard from '../components/FuturisticCard';
+import FuturisticButton from '../components/FuturisticButton';
 const AIAutomationPlatform = () => {
   const features = [
     {
@@ -29,7 +28,7 @@ const AIAutomationPlatform = () => {
       description: "Connect and automate across all your business systems",
       icon: <Settings className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
-    }
+    ;
   ]
 
   const benefits = [
@@ -50,7 +49,7 @@ const AIAutomationPlatform = () => {
       />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */;
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
           <ResponsiveContainer>
@@ -71,13 +70,13 @@ const AIAutomationPlatform = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <FuturisticButton
-                  icon={<ArrowRight className="w-5 h-5" />}
+                  icon={<ArrowRight className="w-5 h-5" />;
                 >
                   Get Started Today
                 </FuturisticButton>
                 <FuturisticButton
                   variant="outline"
-                  icon={<Zap className="w-5 h-5" />}
+                  icon={<Zap className="w-5 h-5" />;
                 >
                   View Demo
                 </FuturisticButton>
@@ -86,7 +85,7 @@ const AIAutomationPlatform = () => {
           </ResponsiveContainer>
         </section>
 
-        {/* Features Section */}
+        {/* Features Section */;
         <section className="py-20">
           <ResponsiveContainer>
             <div className="text-center mb-16">
@@ -108,15 +107,14 @@ const AIAutomationPlatform = () => {
                     {feature.title}
                   </h3>
                   <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
-                    {feature.description}
+                    {feature.description;
                   </p>
-                </FuturisticCard>
-              ))}
+                </FuturisticCard>));
             </div>
           </ResponsiveContainer>
         </section>
 
-        {/* Benefits Section */}
+        {/* Benefits Section */;
         <section className="py-20 bg-gradient-to-r from-cyan-500/5 to-purple-500/5">
           <ResponsiveContainer>
             <div className="text-center mb-16">
@@ -133,8 +131,7 @@ const AIAutomationPlatform = () => {
                 <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
                   <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-white font-medium">{benefit}</span>
-                </div>
-              ))}
+                </div>))}
             </div>
           </ResponsiveContainer>
         </section>
@@ -151,7 +148,7 @@ const AIAutomationPlatform = () => {
               </p>
               <FuturisticButton
                 size="lg"
-                icon={<Zap className="w-6 h-6" />}
+                icon={<Zap className="w-6 h-6" />;
               >
                 Start Your Automation Journey
               </FuturisticButton>
@@ -159,8 +156,6 @@ const AIAutomationPlatform = () => {
           </ResponsiveContainer>
         </section>
       </div>
-    </>
-  )
-}
-
-export default AIAutomationPlatform}
+    </>)
+;
+export default AIAutomationPlatform;

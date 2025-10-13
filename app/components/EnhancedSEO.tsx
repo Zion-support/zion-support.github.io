@@ -1,13 +1,12 @@
-import React from 'react'}
-import { Helmet } from 'react-helmet-async'}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 interface EnhancedSEOProps {
-  title?: string}
-  description?: string}
-  keywords?: string}
-  canonical?: string}
-  children?: React.ReactNode}
-}
-
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  children?: React.ReactNode;
+;
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
@@ -18,10 +17,10 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   return (
     <>
       <Helmet>
-        {title && <title>{title}</title>}
-        {description && <meta name="description" content={description} />}
-        {keywords && <meta name="keywords" content={keywords} />}
-        {canonical && <link rel="canonical" href={canonical} />}
+        {title && <title>{title}</title>;
+        {description && <meta name="description" content={description} />;
+        {keywords && <meta name="keywords" content={keywords} />;
+        {canonical && <link rel="canonical" href={canonical} />;
       </Helmet>;
       {children};
 ;

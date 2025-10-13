@@ -15,7 +15,7 @@ const AiCybersecurityPage: React.FC = () => {,
 return(<>)
       <Helmet />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */;
         <section className="relative py-20 px-4 overflow-hidden">
         </section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -23,7 +23,7 @@ return(<>)
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Ai Cybersecurity
-        {/* CTA Section */}
+        {/* CTA Section */;
         <section className="py-20 px-4">
         </section>
           <div className="max-w-4xl mx-auto text-center">

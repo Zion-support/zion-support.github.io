@@ -1,6 +1,5 @@
-import React from 'react'}
-import { Helmet } from 'react-helmet-async'}
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 export default function AboutPage() {
   return (
     <>
@@ -19,6 +18,5 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-    </>}
-)
-}
+      </>);
+};

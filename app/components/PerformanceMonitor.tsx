@@ -1,33 +1,30 @@
 
-import React, { useEffect, useState } from 'react'}
-
+import React, { useEffect, useState } from 'react';
 >>>>>>> origin/main
 // Type definitions for browser APIs
 declare global {
   interface PerformanceObserver {
-    observe(options: { entryTypes: string[] }): void}
-    disconnect(): void}
-  }
-
+    observe(options: { entryTypes: string[] }): void;
+    disconnect(): void;
+  ;
 // Type definitions for browser APIs
 declare global {
   interface PerformanceNavigationTiming extends PerformanceEntry {
 
-    requestStart: number}
-    responseStart: number}
-  
+    requestStart: number;
+    responseStart: number;
 } catch (error) {
   console.error('Error:', error)
   res.status(500).json({ error: 'Internal server error' })}
 }
-import React, { useEffect, useState } from 'react'}
+import React, { useEffect, useState } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
   interface PerformanceEntry {
 
-    name: string}
-    entryType: string}
-    startTime: number}
-    duration: number}
+    name: string;
+    entryType: string;
+    startTime: number;
+    duration: number;
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
@@ -39,11 +36,10 @@ import React, { useEffect, useState } from 'react'}
   
   interface PerformanceEntry {
 
-    name: string}
-    entryType: string}
-    startTime: number}
-    duration: number}
-  
+    name: string;
+    entryType: string;
+    startTime: number;
+    duration: number;
 } catch (error) {
   console.error('Error:', error)
   res.status(500).json({ error: 'Internal server error' })}
@@ -52,13 +48,12 @@ import React, { useEffect, useState } from 'react'}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
 >>>>>>> origin/main
 interface PerformanceMetrics {
-  fcp: number | null}
-  lcp: number | null}
-  fid: number | null}
-  cls: number | null}
-  ttfb: number | null}
-}
-
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+;
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -130,14 +125,13 @@ const PerformanceMonitor: React.FC = () => {
       <div className="metrics-grid">
         {metrics.fcp && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>}
         {metrics.lcp && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
-        {metrics.fid && <div>FID: {metrics.fid.toFixed(2)}ms</div>}
-        {metrics.cls && <div>CLS: {metrics.cls.toFixed(4)}</div>}
-        {metrics.ttfb && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>}
+        {metrics.fid && <div>FID: {metrics.fid.toFixed(2)}ms</div>;
+        {metrics.cls && <div>CLS: {metrics.cls.toFixed(4)}</div>;
+        {metrics.ttfb && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>;
       </div>
-    </div>})}
-
+    </div>});
 =======
-export default PerformanceMonitor}
+export default PerformanceMonitor;
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405

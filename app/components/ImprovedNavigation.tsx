@@ -1,7 +1,6 @@
 'use client'}
-import React from 'react'}
-import { Helmet } from 'react-helmet-async'}
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const ImprovedNavigation: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -10,7 +9,7 @@ const ImprovedNavigation: React.FC = () => {
         <meta name="description" content="Professional improved navigation services by Zion Tech Group." />
       </Helmet>
 
-      {/* Hero Section */}
+      {/* Hero Section */;
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
@@ -23,7 +22,7 @@ const ImprovedNavigation: React.FC = () => {
         </div>
       </section>
 
-      {/* Content Section */}
+      {/* Content Section */;
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -64,7 +63,7 @@ const ImprovedNavigation: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section */;
       <section className="py-16 px-4 bg-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -82,8 +81,7 @@ const ImprovedNavigation: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>}
+    </div>;
 )
-}
-
-export default ImprovedNavigation}
+;
+export default ImprovedNavigation;

@@ -33,8 +33,7 @@ interface SEOConfig {
 
   }>;
   structuredData?: any;
-}
-
+;
 export const defaultSEOConfig: SEOConfig = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.',
@@ -73,7 +72,7 @@ export const defaultSEOConfig: SEOConfig = {
 },
   alternate: [
     { href: 'https://zion.app/en', hreflang: 'en' },
-    { href: 'https://zion.app/es', hreflang: 'es' }
+    { href: 'https://zion.app/es', hreflang: 'es' ;
   ],
   structuredData: {
     '@context': 'https://schema.org',
@@ -81,7 +80,7 @@ export const defaultSEOConfig: SEOConfig = {
     name: 'Zion Tech Group',
     url: 'https://zion.app',
     logo: 'https://zion.app/images/logo.png';
-}
+;
 };
 
 export const generateSEOMeta = (config: SEOConfig) => {

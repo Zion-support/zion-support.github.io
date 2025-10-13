@@ -1,8 +1,7 @@
 import React from 'react'}
-import { Helmet } from 'react-helmet-async'}
-import { ArrowRight, Brain, BarChart3, Bot, Zap, Shield, Users, Star } from 'lucide-react'}
-import FuturisticBackground from '../components/FuturisticBackground'}
-
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Brain, BarChart3, Bot, Zap, Shield, Users, Star } from 'lucide-react';
+import FuturisticBackground from '../components/FuturisticBackground';
 const AiServicesPage: React.FC = () => {
   const services = [
     {
@@ -40,7 +39,7 @@ const AiServicesPage: React.FC = () => {
       title: 'AI Security',
       description: 'AI-powered security solutions to protect your business and data.',
       color: 'from-cyan-500 to-blue-500'
-    }
+    ;
   ]
 
   const testimonials = [
@@ -57,8 +56,8 @@ const AiServicesPage: React.FC = () => {
       company: "FinanceFlow",
       role: "Head of Analytics",
       content: "Their AI analytics platform has given us insights we never had before. Our decision-making process is now data-driven and highly effective.",
-      rating: 5}
-}
+      rating: 5;
+;
   ]
 
   return (
@@ -72,7 +71,7 @@ const AiServicesPage: React.FC = () => {
       
       <FuturisticBackground>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          {/* Hero Section */}
+          {/* Hero Section */;
           <section className="relative py-20 px-4">
             <div className="max-w-7xl mx-auto text-center">
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -97,7 +96,7 @@ const AiServicesPage: React.FC = () => {
             </div>
           </section>
 
-          {/* Services Grid */}
+          {/* Services Grid */;
           <section className="py-20 px-4">
             <div className="max-w-7xl mx-auto">
               <h2 className="text-4xl font-bold text-white text-center mb-16">
@@ -107,7 +106,7 @@ const AiServicesPage: React.FC = () => {
                 {services.map((service, index) => (
                   <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
                     <div
-                      className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                      className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`;
                       aria-hidden="true"
                     >
                       <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
@@ -167,8 +166,7 @@ const AiServicesPage: React.FC = () => {
           </section>
         </div>
       </FuturisticBackground>
-    </>}
+    </>;
 )
-}
-
-export default AiServicesPage}
+;
+export default AiServicesPage;

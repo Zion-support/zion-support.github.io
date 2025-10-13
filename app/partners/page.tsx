@@ -1,8 +1,7 @@
 import React from 'react'}
-import { Helmet } from 'react-helmet-async'}
-import { Link } from 'react-router-dom'}
-import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react'}
-
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
 const PartnersPage: React.FC = () => {
   const partners = [
     {
@@ -40,7 +39,7 @@ const PartnersPage: React.FC = () => {
       logo: '🗄️',
       description: 'Database and enterprise application solutions',
       category: 'Database'
-    }
+    ;
   ]
 
   const benefits = [
@@ -61,7 +60,7 @@ const PartnersPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */;
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -86,7 +85,7 @@ const PartnersPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Partners Grid */}
+        {/* Partners Grid */;
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
@@ -147,8 +146,7 @@ const PartnersPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>}
+    </>;
 )
-}
-
-export default PartnersPage}
+;
+export default PartnersPage;

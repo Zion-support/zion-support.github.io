@@ -1,7 +1,6 @@
-import React from 'react'}
-import { Helmet } from 'react-helmet-async'}
-import { ArrowRight, Play, BookOpen, Clock, User, Star, CheckCircle } from 'lucide-react'}
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Play, BookOpen, Clock, User, Star, CheckCircle } from 'lucide-react';
 const TutorialsPage: React.FC = () => {
   const tutorials = [
     {
@@ -69,7 +68,7 @@ const TutorialsPage: React.FC = () => {
       rating: 4.6,
       students: 1650,
       thumbnail: "📊"
-    }
+    ;
   ]
 
   const categories = [
@@ -78,7 +77,7 @@ const TutorialsPage: React.FC = () => {
     { name: "Cloud Computing", count: 6 },
     { name: "Cybersecurity", count: 4 },
     { name: "DevOps", count: 3 },
-    { name: "Data Science", count: 3 }
+    { name: "Data Science", count: 3 ;
   ]
 
   return (
@@ -115,7 +114,7 @@ const TutorialsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Categories */}
+        {/* Categories */;
         <section className="py-10 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-wrap justify-center gap-4">
@@ -125,8 +124,7 @@ const TutorialsPage: React.FC = () => {
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
                 >
                   {category.name} ({category.count})
-                </button>
-              ))}
+                </button>))}
             </div>
           </div>
         </section>
@@ -151,7 +149,7 @@ const TutorialsPage: React.FC = () => {
                     </div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {tutorial.title}
+                    {tutorial.title;
                   </h3>
                   <p className="text-gray-300 mb-4 text-sm">{tutorial.description}</p>
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
@@ -171,13 +169,12 @@ const TutorialsPage: React.FC = () => {
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
                   </div>
-                </div>
-              ))}
+                </div>));
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */;
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -198,8 +195,6 @@ const TutorialsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  )
-}
-
-export default TutorialsPage}
+    </>)
+;
+export default TutorialsPage;

@@ -20,8 +20,7 @@ function App() {
           </div>
         </div>
       </div>
-    </Router>
-  );
+    </Router>);
 }
 
 export default App;

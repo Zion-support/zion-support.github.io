@@ -40,13 +40,13 @@ const ServicesPage: React.FC = () => {const services = [;
           {services.map((service, index) => (
             <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-                {service.icon}
+                {service.icon;
               </div>
               <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                {service.title}
+                {service.title;
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                {service.description}
+                {service.description;
               </p>
               <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
@@ -58,11 +58,11 @@ const ServicesPage: React.FC = () => {const services = [;
               </ul>
 
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
-                {service.title}
+                {service.title;
               </h3>
               
               <p className="text-gray-300 mb-6 leading-relaxed">
-                {service.description}
+                {service.description;
               </p>
 
               <div className="mb-6">
@@ -98,9 +98,9 @@ const ServicesPage: React.FC = () => {const services = [;
                 Learn More
               </a>
             </div>;
-))}
+));
         </div>
       </div>
     </div>;
 );
-}
+;

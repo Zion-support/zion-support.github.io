@@ -5,7 +5,7 @@ import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Targ
 const AiCloudInfrastructurePage: React.FC = () => {,
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */;
         <section className="relative py-20 px-4 overflow-hidden">
         </section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />

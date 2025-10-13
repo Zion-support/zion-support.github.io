@@ -13,15 +13,14 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefin
   }, [])
 
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (!isEnabled) return}
+    if (!isEnabled) return;
     // Track event logic here
 =======
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
     console.log('Analytics Event:', eventName, properties)
-  }
-
+  ;
   const trackPageView = (pageName: string) => {
-    if (!isEnabled) return}
+    if (!isEnabled) return;
     // Track page view logic here
     console.log('Page View:', pageName)
   }
@@ -38,14 +37,13 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefin
     trackEvent,
     trackPageView,
     isEnabled,
-  }
-
+  ;
 =======
-    isEnabled,}
-}
+    isEnabled,;
+;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
   return (
     <AnalyticsContext.Provider value={value}>
-      {children}
+      {children;
 ;
 >>>>>>> origin/main;

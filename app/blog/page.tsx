@@ -1,14 +1,13 @@
-import React from 'react'}
-import { Helmet } from 'react-helmet-async'}
-import { ArrowRight, Calendar, User, Search, Filter } from 'lucide-react'}
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Calendar, User, Search, Filter } from 'lucide-react';
 const BlogPage: React.FC = () => {
   const categories = [
     { id: "all", name: "All Posts", count: 12 },
     { id: "ai", name: "AI & Machine Learning", count: 5 },
     { id: "cybersecurity", name: "Cybersecurity", count: 3 },
     { id: "cloud", name: "Cloud Computing", count: 2 },
-    { id: "development", name: "Development", count: 2 }
+    { id: "development", name: "Development", count: 2 ;
   ]
 
   const blogPosts = [
@@ -71,7 +70,7 @@ const BlogPage: React.FC = () => {
       category: "cybersecurity",
       readTime: "9 min read",
       image: "🛡️"
-    }
+    ;
   ]
 
   return (
@@ -109,8 +108,7 @@ const BlogPage: React.FC = () => {
                   className="px-6 py-3 bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 text-white hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
                 >
                   {category.name} ({category.count})
-                </button>
-              ))}
+                </button>))}
             </div>
           </div>
         </section>
@@ -133,7 +131,7 @@ const BlogPage: React.FC = () => {
                     </span>
                   </div>
                   <h2 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {post.title}
+                    {post.title;
                   </h2>
                   <p className="text-gray-300 mb-4 line-clamp-3">{post.excerpt}</p>
                   <div className="flex items-center justify-between">
@@ -143,13 +141,12 @@ const BlogPage: React.FC = () => {
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
                   </div>
-                </article>
-              ))}
+                </article>));
             </div>
           </div>
         </section>
 
-        {/* Newsletter Signup */}
+        {/* Newsletter Signup */;
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -171,8 +168,6 @@ const BlogPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  )
-}
-
-export default BlogPage}
+    </>)
+;
+export default BlogPage;

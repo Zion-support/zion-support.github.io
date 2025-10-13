@@ -8,8 +8,7 @@ describe('Component Tests', () => {
     render(
       <HelmetProvider>
         <SEOEnhancer />
-      </HelmetProvider>
-    );
+      </HelmetProvider>);
     expect(document.head).toBeInTheDocument();
   });
 });

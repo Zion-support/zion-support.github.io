@@ -184,14 +184,12 @@ class SEOOptimizer {
     if (!content.includes('<title>') && !content.includes('title:')) {
       issues.push('Missing title tag');
       recommendations.push('Add a descriptive title tag');
-    }
-
+    ;
     // Check for meta description
     if (!content.includes('description') && !content.includes('meta name="description"')) {
       issues.push('Missing meta description');
       recommendations.push('Add a meta description tag');
-    }
-
+    ;
     // Check for heading structure
     const h1Count = (content.match(/<h1/g) || []).length;
     if (h1Count === 0) {
@@ -219,60 +217,53 @@ class SEOOptimizer {
     // Check for missing Open Graph tags
     if (!content.includes('og:title')) {
       issues.push('Missing og:title');
-    }
+    ;
     if (!content.includes('og:description')) {
       issues.push('Missing og:description');
-    }
+    ;
     if (!content.includes('og:image')) {
       issues.push('Missing og:image');
-    }
-
+    ;
     // Check for missing Twitter Card tags
     if (!content.includes('twitter:card')) {
       issues.push('Missing twitter:card');
-    }
+    ;
     if (!content.includes('twitter:title')) {
       issues.push('Missing twitter:title');
-    }
-
+    ;
     // Check for missing canonical URL
     if (!content.includes('canonical')) {
       issues.push('Missing canonical URL');
-    }
-
+    ;
     return issues;
-  }
-
+  ;
   generateMetaRecommendations(issues) {
     const recommendations = [];
 
     if (issues.includes('Missing og:title')) {
       recommendations.push('Add Open Graph title tag');
-    }
+    ;
     if (issues.includes('Missing og:description')) {
       recommendations.push('Add Open Graph description tag');
-    }
+    ;
     if (issues.includes('Missing og:image')) {
       recommendations.push('Add Open Graph image tag');
-    }
+    ;
     if (issues.includes('Missing twitter:card')) {
       recommendations.push('Add Twitter Card meta tag');
-    }
+    ;
     if (issues.includes('Missing canonical URL')) {
       recommendations.push('Add canonical URL link tag');
-    }
-
+    ;
     return recommendations;
-  }
-
+  ;
   findImageSEOIssues(content) {
     const issues = [];
 
     // Check for missing alt attributes
     if (content.includes('<img') && !content.includes('alt=')) {
       issues.push('Missing alt attributes');
-    }
-
+    ;
     // Check for missing width/height attributes
     if (content.includes('<img') && (!content.includes('width=') || !content.includes('height='))) {
       issues.push('Missing width/height attributes');
@@ -301,8 +292,7 @@ import React from 'react'
 interface StructuredDataProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'Article'
   data?: any;
-}
-
+;
 const StructuredData: React.FC<StructuredDataProps> = ({ 
   type = 'Organization', 
   data ;

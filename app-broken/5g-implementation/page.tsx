@@ -21,5 +21,4 @@ export default function FiveGImplementation() {
       </div>
     </div>;
 );
-}
-
+;

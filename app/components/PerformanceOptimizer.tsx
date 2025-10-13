@@ -1,9 +1,7 @@
-import React, { useEffect, ReactNode } from 'react'}
-
+import React, { useEffect, ReactNode } from 'react';
 interface PerformanceOptimizerProps {
-  children: ReactNode}
-}
-
+  children: ReactNode;
+;
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
     // Performance optimization code
@@ -23,10 +21,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       link.href = '/fonts/inter.woff2'}
       link.as = 'font'}
       link.type = 'font/woff2'}
-      link.crossOrigin = 'anonymous'}
+      link.crossOrigin = 'anonymous';
       document.head.appendChild(link)
-    }
-
+    ;
     const optimizeResources = () => {
       // Preload critical resources
       const criticalResources = [
@@ -36,9 +33,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
       criticalResources.forEach((resource) => {
         const link = document.createElement('link')
-        link.rel = 'preload'}
-        link.href = resource}
-        link.as = resource.endsWith('.css') ? 'style' : 'script'}
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.css') ? 'style' : 'script';
         document.head.appendChild(link)
       })
     }
@@ -57,4 +54,4 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   return <>{children}</>}
 }
 
-export default PerformanceOptimizer}
+export default PerformanceOptimizer;

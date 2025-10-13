@@ -1,7 +1,6 @@
 import React from 'react'}
-import { Helmet } from 'react-helmet-async'}
-import { ArrowRight, Zap, Globe, Smartphone, Wifi, CheckCircle } from 'lucide-react'}
-
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Zap, Globe, Smartphone, Wifi, CheckCircle } from 'lucide-react';
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
@@ -27,7 +26,7 @@ const FiveGSolutionsPage: React.FC = () => {
       title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
-}
+;
   ]
 
   const solutions = [
@@ -48,7 +47,7 @@ const FiveGSolutionsPage: React.FC = () => {
       description: 'IoT device connectivity and management platform',
       price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
-}
+;
   ]
 
   return (
@@ -60,7 +59,7 @@ const FiveGSolutionsPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
+        {/* Hero Section */;
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -85,7 +84,7 @@ const FiveGSolutionsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* Features Section */;
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
@@ -111,12 +110,12 @@ const FiveGSolutionsPage: React.FC = () => {
                     </ul>
                   </div>}
 )
-              })}
+              });
             </div>
           </div>
         </section>
 
-        {/* Solutions Section */}
+        {/* Solutions Section */;
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
@@ -133,19 +132,19 @@ const FiveGSolutionsPage: React.FC = () => {
                       <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                         <span>{feature}</span>
-                      </li>}
-))}
+                      </li>;
+));
                   </ul>
                   <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
                     Learn More
                   </button>
-                </div>}
-))}
+                </div>;
+));
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section */;
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -166,8 +165,7 @@ const FiveGSolutionsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>}
+    </>;
 )
-}
-
-export default FiveGSolutionsPage}
+;
+export default FiveGSolutionsPage;

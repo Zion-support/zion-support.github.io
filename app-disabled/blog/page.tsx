@@ -33,7 +33,7 @@ const BlogPage: React.FC = () => {
       author: 'Zion Tech Team',
       date: '2024-01-05',
       readTime: '6 min read';
-}
+;
   ];
 
 const categories = [
@@ -129,12 +129,12 @@ const BlogPage: React.FC = () => {
                     </button>
                   </div>
                 </article>;
-))}
+));
             </div>
           </div>
         </section>
       </div>
-{/* Blog Posts Grid */}
+{/* Blog Posts Grid */;
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold text-white mb-6">Latest Articles</h2>
@@ -149,8 +149,7 @@ const BlogPage: React.FC = () => {
                     <span className="text-sm text-gray-300">Article Image</span>
                   <div className="flex items-center gap-4 mb-3">
                     <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded">
-                      {categories.find(c => c.name === post.category)?.label}
-
+                      {categories.find(c => c.name === post.category)?.label;
                     </span>
                   </div>
                 </div>
@@ -158,18 +157,18 @@ const BlogPage: React.FC = () => {
                   <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
-                      {new Date(post.date).toLocaleDateString()}
+                      {new Date(post.date).toLocaleDateString();
                     </span>
                     <span className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
-                      {post.readTime}
+                      {post.readTime;
                     </span>
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
-                    {post.title}
+                    {post.title;
                   </h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">
-                    {post.excerpt}
+                    {post.excerpt;
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex flex-wrap gap-2">
@@ -186,12 +185,12 @@ const BlogPage: React.FC = () => {
                   </div>
                 </div>
               </div>;
-))}
-      {/* All Posts */}
+));
+      {/* All Posts */;
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-white mb-12 text-center">
-            {selectedCategory === 'all' ? 'All Articles' : categories.find(c => c.name === selectedCategory)?.label}
+            {selectedCategory === 'all' ? 'All Articles' : categories.find(c => c.name === selectedCategory)?.label;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {searchedPosts.map((post) => (
@@ -203,13 +202,13 @@ const BlogPage: React.FC = () => {
                   <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
-                      {new Date(post.date).toLocaleDateString()}
+                      {new Date(post.date).toLocaleDateString();
                     </span>
                     <span className="flex items-center gap-1">
                       <Clock className="w-4 h-4" />
-                      {post.readTime}
+                      {post.readTime;
                     </span>
-        {/* Featured Post */}
+        {/* Featured Post */;
         <section className="py-16 px-4">
         </section>
           <div className="max-w-7xl mx-auto">
@@ -225,10 +224,10 @@ const BlogPage: React.FC = () => {
                       <span className="text-cyan-400 text-sm font-medium">{post.category}</span>
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                      {post.title}
+                      {post.title;
                     </h3>
                     <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-                      {post.excerpt}
+                      {post.excerpt;
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-4 text-sm text-gray-400">
@@ -254,7 +253,7 @@ const BlogPage: React.FC = () => {
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg h-64 flex items-center justify-center">
                     <div className="text-6xl">📊</div>
                   </div>
-      {/* Featured Post */}
+      {/* Featured Post */;
       {filteredPosts.find(post => post.featured) && (
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -268,20 +267,20 @@ const BlogPage: React.FC = () => {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div>
                       <img
-                        src={featuredPost.image}
-                        alt={featuredPost.title}
+                        src={featuredPost.image;
+                        alt={featuredPost.title;
                         className="w-full h-64 object-cover rounded-lg"
                       />
                     </div>
                     <div className="flex flex-col justify-center">
                       <div className="flex items-center space-x-4 mb-4">
                         <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm font-medium">
-                          {featuredPost.category}
+                          {featuredPost.category;
                         </span>
                         <span className="text-yellow-400 text-sm font-medium">Featured</span>
                       </div>
                       <h3 className="text-3xl font-bold text-white mb-4">
-                        {featuredPost.title}
+                        {featuredPost.title;
                       </h3>
                       <p className="text-gray-300 mb-6 text-lg">
                         {featuredPost.excerpt}
@@ -335,8 +334,8 @@ const BlogPage: React.FC = () => {
             {filteredPosts.map((post) => (
               <article key={post.id} className="cyber-card hologram-card p-6 hover:scale-105 transition-all duration-300">
                 <img
-                  src={post.image}
-                  alt={post.title}
+                  src={post.image;
+                  alt={post.title;
                   className="w-full h-48 object-cover rounded-lg mb-4"
                 />
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">

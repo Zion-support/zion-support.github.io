@@ -9,8 +9,7 @@ function extractHrefs(filePath) {
   const content = fs.readFileSync(filePath, 'utf8');
   const hrefMatches = content.match(/href:\s*'([^']+)'/g) || [];
   return hrefMatches.map(match => match.match(/href:\s*'([^']+)'/)[1]);
-}
-
+;
 // Get all hrefs from both files
 const navHrefs = extractHrefs(navigationFile);
 const footerHrefs = extractHrefs(footerFile);

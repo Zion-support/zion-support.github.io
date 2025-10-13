@@ -19,8 +19,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
-);
+  </React.StrictMode>);
 
 // Register service worker for PWA functionality
 if (typeof window !== 'undefined' && "serviceWorker" in navigator) {

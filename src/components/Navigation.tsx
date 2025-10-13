@@ -15,18 +15,16 @@ const Navigation: React.FC = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false)
       }
-    }
-
+    ;
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
-    }
-
+    ;
     window.addEventListener('resize', handleResize)
     window.addEventListener('scroll', handleScroll)
     return () => {
       window.removeEventListener('resize', handleResize)
       window.removeEventListener('scroll', handleScroll)
-    }
+    ;
   }, [])
 
   const closeAllMenus = () => {
@@ -35,29 +33,28 @@ const Navigation: React.FC = () => {
     setItServicesOpen(false)
     setMicroSaasOpen(false)
     setIsOpen(false)
-  }
-
+  ;
   const services = [
     { title: 'AI Services', url: '/ai-services', icon: Brain },
     { title: 'IT Services', url: '/it-services', icon: Code },
     { title: 'Cloud Solutions', url: '/cloud-services', icon: Cloud },
     { title: 'Cybersecurity', url: '/cybersecurity', icon: Shield },
     { title: 'Data Analytics', url: '/data-analytics', icon: BarChart },
-    { title: 'DevOps', url: '/devops', icon: Settings }
+    { title: 'DevOps', url: '/devops', icon: Settings ;
   ]
 
   const aiServices = [
     { title: 'AI Marketing', url: '/ai-marketing', icon: TrendingUp },
     { title: 'AI Automation', url: '/ai-automation', icon: Zap },
     { title: 'AI Healthcare', url: '/ai-healthcare', icon: Users },
-    { title: 'AI Fintech', url: '/ai-fintech', icon: BarChart }
+    { title: 'AI Fintech', url: '/ai-fintech', icon: BarChart ;
   ]
 
   const itServices = [
     { title: 'Cloud Services', url: '/cloud-services', icon: Cloud },
     { title: 'Cybersecurity', url: '/cybersecurity', icon: Shield },
     { title: 'Data Analytics', url: '/data-analytics', icon: BarChart },
-    { title: 'DevOps', url: '/devops', icon: Settings }
+    { title: 'DevOps', url: '/devops', icon: Settings ;
   ]
 
   const microSaas = [
@@ -67,7 +64,7 @@ const Navigation: React.FC = () => {
     { title: 'AI Social Media Manager', url: '/zion-ai-social-media-manager', icon: Globe },
     { title: 'AI Voice Assistant Pro', url: '/zion-ai-voice-assistant-pro', icon: Smartphone },
     { title: 'Smart Expense Categorizer', url: '/zion-smart-expense-categorizer', icon: FileText },
-    { title: 'Smart Inventory Optimizer', url: '/zion-smart-inventory-optimizer', icon: Database }
+    { title: 'Smart Inventory Optimizer', url: '/zion-smart-inventory-optimizer', icon: Database ;
   ]
 
   return (
@@ -94,22 +91,22 @@ const Navigation: React.FC = () => {
               <Link
                 to="/"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
+                onClick={closeAllMenus;
               >
                 Home
               </Link>
               <Link
                 to="/about"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                onClick={closeAllMenus}
+                onClick={closeAllMenus;
               >
                 About
               </Link>
-              {/* Mobile Services */}
+              {/* Mobile Services */;
               <div className="space-y-1">
                 <button
                   className="flex items-center justify-between w-full px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                  onClick={() => setServicesOpen(!servicesOpen)}
+                  onClick={() => setServicesOpen(!servicesOpen);
                 >
                   <span>Services</span>
                   <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
@@ -123,20 +120,18 @@ const Navigation: React.FC = () => {
                           key={service.title}
                           to={service.url}
                           className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-gray-800 rounded-md"
-                          onClick={closeAllMenus}
+                          onClick={closeAllMenus;
                         >
                           <Icon className="w-4 h-4" />
                           <span>{service.title}</span>
-                        </Link>
-                      )
+                        </Link>)
                     })}
-                  </div>
-                )}
+                  </div>)}
               </div>
               <div className="mt-4 pt-4 border-t border-gray-700">
                 <a
                   href="tel:+13024640950"
                   className="block w-full text-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
-                  onClick={closeAllMenus}
+                  onClick={closeAllMenus;
                 >
                   <Phone className="w-4 h-4 inline mr-2" />

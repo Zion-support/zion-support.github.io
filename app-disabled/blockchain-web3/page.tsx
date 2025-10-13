@@ -3,7 +3,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-    }
+    ;
   ];
 
   const benefits = [
@@ -108,5 +108,4 @@ return(<>)
           </div>
         </div>
       </section>
-    </div>
-)
+    </div>)

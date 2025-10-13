@@ -3,8 +3,7 @@ import React from 'react';
 interface SidebarNavigationProps {
   isOpen: boolean;
   onClose: () => void;
-}
-
+;
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },

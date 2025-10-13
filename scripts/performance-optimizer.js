@@ -71,8 +71,7 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-}
-
+;
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -145,8 +144,7 @@ const imageOptimizer = `export interface ImageOptimizationOptions {
   quality?: number;
   format?: 'webp' | 'avif' | 'jpeg' | 'png';
   lazy?: boolean;
-}
-
+;
 export const optimizeImage = (
   src: string,
   options: ImageOptimizationOptions ={true} ): string => {

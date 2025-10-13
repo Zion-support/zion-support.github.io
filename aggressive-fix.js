@@ -67,7 +67,7 @@ const ${serviceName}Page: React.FC = () => {
     { label: 'Projects Completed', value: '100+' },
     { label: 'Success Rate', value: '98%' },
     { label: 'Client Satisfaction', value: '99%' },
-    { label: 'Years Experience', value: '5+' }
+    { label: 'Years Experience', value: '5+' ;
   ];
 
   return (
@@ -83,10 +83,10 @@ const ${serviceName}Page: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              ${title}
+              ${title;
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              ${description}
+              ${description;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
@@ -100,7 +100,7 @@ const ${serviceName}Page: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section */;
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -180,7 +180,7 @@ const createComponentTemplate = (componentName) => `import React from 'react';
 const ${componentName}: React.FC = () => {
   return (
     <div className="${componentName.toLowerCase()}">
-      {/* ${componentName} component */}
+      {/* ${componentName} component */;
     </div>;
 );
 };

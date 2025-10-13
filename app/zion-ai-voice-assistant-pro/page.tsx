@@ -65,7 +65,7 @@ export default function ZionAIVoiceAssistantPro() {
             </button>
 
 =======
-}
+;
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
 >>>>>>> origin/main

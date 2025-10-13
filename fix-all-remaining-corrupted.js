@@ -35,7 +35,7 @@ function findCorruptedFiles() {
       const match = line.match(/^([^(]+)\(\d+,\d+\):/);
       if (match) {
         files.add(match[1]);
-      }
+      ;
     });
     
     return Array.from(files);

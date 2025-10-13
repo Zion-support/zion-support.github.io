@@ -14,8 +14,7 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager';
   onLoad?: () => void;
   onError?: () => void;
-}
-
+;
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
@@ -58,8 +57,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <AlertCircle className="w-8 h-8 mx-auto mb-2" />
           <p className="text-sm">Failed to load image</p>
         </div>
-      </div>
-    );
+      </div>);
   }
 
   return (
@@ -68,26 +66,22 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
           {placeholder === 'blur' && blurDataURL ? (
             <img 
-              src={blurDataURL} 
+              src={blurDataURL;
               alt="" 
               className="w-full h-full object-cover filter blur-sm"
-            />
-          ) : (
+            />) : (
             <div className="text-center">
               <Loader2 className="w-6 h-6 animate-spin text-cyan-500 mx-auto mb-2" />
               <p className="text-xs text-gray-500">Loading...</p>
-            </div>
-          )}
-        </div>
-      )}
-
+            </div>);
+        </div>);
       <img
-        src={src}
-        alt={alt}
+        src={src;
+        alt={alt;
         width={width}
         height={height}
-        loading={priority ? 'eager' : loading}
-        sizes={sizes}
+        loading={priority ? 'eager' : loading;
+        sizes={sizes;
         className={`transition-opacity duration-300 ${
           imageLoaded ? 'opacity-100' : 'opacity-0'
         } ${className}`}
@@ -100,8 +94,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         }}
         decoding="async"
       />
-    </div>
-  );
+    </div>);
 };
 
 export default OptimizedImage;
