@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
+import { Loader2 } from 'lucide-react'
 
-<<<<<<< HEAD
 export const PageLoader: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -15,15 +15,6 @@ export const PageLoader: React.FC = () => {
     </div>
   );
 };
-=======
-export const PageLoader: React.FC = () => (
-  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-      <p className="text-cyan-400 text-lg font-medium">Loading...</p>
-    </div>
-  </div>
-)
 
 export const LoadingSpinner: React.FC<{ size?: 'sm' | 'md' | 'lg' | 'xl'; text?: string; fullScreen?: boolean }> = ({ 
   size = 'md', 
@@ -63,10 +54,18 @@ export const LoadingSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => 
   </div>
 );
 
+export const ServiceCardSkeleton: React.FC = () => (
+  <div className="bg-slate-800 rounded-xl p-6 animate-pulse">
+    <div className="w-12 h-12 bg-gray-600 rounded-lg mb-4"></div>
+    <div className="h-6 bg-gray-600 rounded mb-2"></div>
+    <div className="h-4 bg-gray-600 rounded mb-4"></div>
+    <div className="h-4 bg-gray-600 rounded w-3/4"></div>
+  </div>
+);
+
 export default {
   PageLoader,
   LoadingSpinner,
   LoadingSkeleton,
   ServiceCardSkeleton
 }
->>>>>>> origin/main
