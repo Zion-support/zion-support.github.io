@@ -25,7 +25,8 @@ const Navigation = React.memo(() => {
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Services Overview', path: '/ai-services', icon: <Brain className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
@@ -36,7 +37,8 @@ const Navigation = React.memo(() => {
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Micro SAAS Overview', path: '/micro-saas', icon: <Zap className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -46,6 +48,7 @@ const Navigation = React.memo(() => {
     { name: 'Pricing', path: '/pricing' },
     { name: 'Case Studies', path: '/case-studies' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' }
   ], [])
 
@@ -76,55 +79,6 @@ const Navigation = React.memo(() => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
-            
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {/* Solutions Dropdown */}
-            <div className="relative">
-              <button
-                onClick={toggleSolutions}
-                onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleSolutions();
-                  }
-                }}
-                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50 rounded-md px-2 py-1"
-                aria-expanded={isSolutionsOpen}
-                aria-haspopup="true"
-                aria-label="Solutions menu"
-              >
-                <span>Solutions</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isSolutionsOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isSolutionsOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20"
-                  role="menu"
-                  aria-label="Solutions submenu"
-                >
-                  {solutions.map((solution, index) => (
-                    <Link
-                      key={solution.name}
-                      to={solution.path}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-all duration-300 rounded-lg mx-2 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-opacity-50"
-                      onClick={() => setIsSolutionsOpen(false)}
-                      role="menuitem"
-                      tabIndex={0}
-                    >
-                      {solution.icon}
-                      <span>{solution.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-            
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-713a
             {/* AI Services Dropdown */}
             <div className="relative">
               <button

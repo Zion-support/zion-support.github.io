@@ -38,6 +38,8 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+const MicroSaaSPage = React.lazy(() => import("./app/micro-saas/page"));
+const NotFoundPage = React.lazy(() => import("./app/not-found/page"));
 
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -224,7 +226,7 @@ function App() {
                   <Route path="/careers" element={<CareersPage />} />
                   <Route path="/ai-services" element={<AIServicesPage />} />
                   <Route path="/it-services" element={<ServicesPage />} />
-                  <Route path="/micro-saas" element={<ServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSaaSPage />} />
                   <Route path="/tutorials" element={<TutorialsPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
                   <Route path="/demo" element={<DemoPage />} />
@@ -443,6 +445,9 @@ function App() {
                     path="/5g-solutions"
                     element={<FiveGSolutionsPage />}
                   />
+                  
+                  {/* 404 Route - Must be last */}
+                  <Route path="*" element={<NotFoundPage />} />
                       </Routes>
                     </Suspense>
                   </main>

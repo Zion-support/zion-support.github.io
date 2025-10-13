@@ -88,7 +88,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
               <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-12 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
                     {/* Company Info */}
                     <div className="space-y-4">
                       <h3 className="text-xl font-bold text-white mb-4">
@@ -116,6 +116,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                           Our Services
                         </Link>
+                        <Link to="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                          Pricing
+                        </Link>
+                        <Link to="/case-studies" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                          Case Studies
+                        </Link>
+                        <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                          Blog
+                        </Link>
+                        <Link to="/careers" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
+                          Careers
+                        </Link>
                         <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300">
                           Contact
                         </Link>
@@ -129,6 +141,18 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     <div className="space-y-4">
                       <h4 className="text-lg font-semibold text-white">Services</h4>
                       <div className="space-y-2">
+                        <Link to="/ai-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Services
+                        </Link>
+                        <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Micro SAAS
+                        </Link>
+                        <Link to="/5g-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          5G Solutions
+                        </Link>
+                        <Link to="/it-services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          IT Services
+                        </Link>
                         <Link to="/ai-business-intelligence" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
                           AI Business Intelligence
                         </Link>
@@ -166,6 +190,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                           </div>
                           <span className="text-gray-300 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
                         </div>
+                      </div>
+                    </div>
+
+                    {/* Resources */}
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold text-white">Resources</h4>
+                      <div className="space-y-2">
+                        <Link to="/tutorials" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Tutorials
+                        </Link>
+                        <Link to="/support" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Support
+                        </Link>
+                        <Link to="/demo" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Demo
+                        </Link>
+                        <Link to="/sitemap" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Sitemap
+                        </Link>
                       </div>
                     </div>
                   </div>
