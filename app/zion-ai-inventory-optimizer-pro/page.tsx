@@ -9,15 +9,10 @@ import {
   CheckCircle, 
   Star, 
   Clock, 
-  Users, 
   Zap, 
   Sparkles,
-  TrendingUp,
-  Database,
   Cpu,
-  Globe,
   AlertTriangle,
-  DollarSign,
   ShoppingCart,
   Truck
 } from 'lucide-react';

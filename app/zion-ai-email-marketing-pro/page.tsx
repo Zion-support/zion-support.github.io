@@ -9,18 +9,12 @@ import {
   CheckCircle, 
   Star, 
   Clock, 
-  Users, 
   Zap, 
   Sparkles,
   TrendingUp,
-  Database,
   Cpu,
-  Globe,
   Send,
   Heart,
-  MessageCircle,
-  ThumbsUp,
-  Eye,
   MousePointer,
   Shield
 } from 'lucide-react';
