@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react;
+import { createContext, useContext, useState, useEffect } from 'react';
 'use client';
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
@@ -35,9 +35,9 @@ const  ({ children }) => {
     isEnabled,
   };
   return (
-    <AnalyticsContext.Provider value={value}>;
+    <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>;
+    </AnalyticsContext.Provider>
   );
 };
 export { AnalyticsContext };

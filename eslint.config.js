@@ -16,6 +16,8 @@ export default [
       'out/**',
       'app-disabled/**',
       'app-broken/**',
+      '**/app-disabled/**',
+      '**/app-broken/**',
       '*.config.js',
       '*.config.ts',
       '*.config.mjs',

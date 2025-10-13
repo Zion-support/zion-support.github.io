@@ -1,4 +1,4 @@
-import React from 'react;
+import React from 'react';
 import { useEffect, Node } from 'react;
 interface PerformanceOptimizerProps {
   children: Node;
@@ -6,7 +6,7 @@ interface PerformanceOptimizerProps {
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
-    // Performance optimization code;
+    // Performance optimization code';
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach((img) => {
@@ -53,7 +53,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     };
   }, []);
 
-  return <>{children}</>;
+  return <>{children}</>
 };
 
 export default PerformanceOptimizer;
