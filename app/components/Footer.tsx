@@ -40,6 +40,17 @@ const Footer = React.memo(() => {
               Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            <div className="mt-4 space-y-2">
+              <p className="text-gray-400 text-sm">
+                <strong>Phone:</strong> <a href="tel:+13024640950" className="text-cyan-400 hover:text-white">+1 302 464 0950</a>
+              </p>
+              <p className="text-gray-400 text-sm">
+                <strong>Email:</strong> <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-white">kleber@ziontechgroup.com</a>
+              </p>
+              <p className="text-gray-400 text-sm">
+                <strong>Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709
+              </p>
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -70,42 +81,42 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-services"
+                  to="/services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Solutions
+                  IT Services
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity"
+                  to="/micro-saas"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Micro SAAS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-solutions"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  5G Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cloud-infrastructure"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cloud Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cybersecurity-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/5g-implementation"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  5G Implementation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/data-analytics"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/custom-development"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Custom Development
                 </Link>
               </li>
             </ul>
