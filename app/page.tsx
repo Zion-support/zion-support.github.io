@@ -1,10 +1,6 @@
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { Brain, Shield, Zap, Globe, ArrowRight } from "lucide-react";
-import EnhancedSEO from "./components/EnhancedSEO";
-=======
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, CheckCircle, Users, Award, TrendingUp, BarChart3, Cloud, Lock, Sparkles } from "lucide-react";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8391
+import { Helmet } from "react-helmet-async";
 
 const HomePage = () => {
   const features = [
@@ -49,6 +45,27 @@ const HomePage = () => {
       price: "From $29/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro"
+    },
+    {
+      name: "Zion Smart Contracts",
+      description: "AI-powered blockchain development platform",
+      price: "From $99/month",
+      icon: <Code className="w-6 h-6" />,
+      link: "/zion-smart-contracts"
+    },
+    {
+      name: "Zion AI Translator",
+      description: "Advanced multilingual translation platform",
+      price: "From $29/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-translator"
+    },
+    {
+      name: "Zion Voice Assistant",
+      description: "AI-powered voice interface platform",
+      price: "From $19/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-voice-assistant"
     },
     {
       name: "Zion Security Shield",
@@ -99,14 +116,6 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-      <EnhancedSEO
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        keywords="AI solutions, IT services, digital transformation, business automation, technology consulting, machine learning, 5G solutions, micro SaaS"
-        canonical="https://ziontechgroup.com"
-      />
-=======
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company</title>
         <meta
@@ -117,8 +126,8 @@ const HomePage = () => {
           name="keywords"
           content="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
         />
+        <link rel="canonical" href="https://ziontechgroup.com" />
       </Helmet>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8391
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -231,7 +240,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}

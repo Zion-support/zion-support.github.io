@@ -1,131 +1,104 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Atom, Zap, Shield, Users, Award, Star, CheckCircle, BarChart3, Clock, Brain, Cloud, Database } from "lucide-react";
+import { ArrowRight, Shield, Zap, Globe, Database, Code, Smartphone, Brain, BarChart3, Cloud, Lock, Star, CheckCircle, Users, Award, TrendingUp } from "lucide-react";
 
-export default function QuantumComputingSolutions() {
+export default function ZionSmartContracts() {
   const features = [
     {
-      title: "Quantum Algorithm Development",
-      description: "Custom quantum algorithms for optimization, cryptography, and machine learning applications",
-      icon: <Atom className="w-8 h-8" />,
+      title: "Automated Contract Generation",
+      description: "AI-powered smart contract creation with customizable templates and security audits",
+      icon: <Code className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Quantum Simulation",
-      description: "High-fidelity quantum simulations for research, drug discovery, and materials science",
-      icon: <Brain className="w-8 h-8" />,
+      title: "Multi-Blockchain Support",
+      description: "Deploy contracts on Ethereum, Polygon, BSC, and other major blockchains",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms",
+      title: "Security Auditing",
+      description: "Built-in security analysis and vulnerability detection for all contracts",
       icon: <Shield className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      color: "from-red-500 to-pink-500"
     },
     {
-      title: "Quantum Cloud Access",
-      description: "Access to leading quantum computers through our secure cloud platform",
-      icon: <Cloud className="w-8 h-8" />,
-      color: "from-red-500 to-orange-500"
-    }
-  ];
-
-  const applications = [
-    {
-      title: "Financial Optimization",
-      description: "Portfolio optimization, risk analysis, and high-frequency trading algorithms",
-      icon: <BarChart3 className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Drug Discovery",
-      description: "Molecular simulation and drug interaction modeling for pharmaceutical research",
-      icon: <Atom className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Supply Chain",
-      description: "Complex logistics optimization and route planning for global operations",
-      icon: <Zap className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Climate Modeling",
-      description: "Advanced climate simulations and environmental impact analysis",
-      icon: <Cloud className="w-6 h-6" />,
+      title: "Gas Optimization",
+      description: "Automatic gas fee optimization to reduce transaction costs by up to 40%",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-yellow-500 to-orange-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Research",
-      price: "$2,999",
+      name: "Starter",
+      price: "$99",
       period: "/month",
-      description: "Perfect for academic research and small projects",
+      description: "Perfect for small projects and startups",
       features: [
-        "Up to 100 quantum hours/month",
-        "Basic quantum algorithms",
-        "Standard simulation tools",
+        "Up to 5 smart contracts",
+        "Basic security auditing",
+        "Ethereum & Polygon support",
         "Email support",
-        "Documentation access"
+        "Standard templates"
       ],
       popular: false
     },
     {
-      name: "Enterprise",
-      price: "$9,999",
+      name: "Professional",
+      price: "$299",
       period: "/month",
-      description: "Ideal for corporate R&D and large projects",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 1,000 quantum hours/month",
-        "Advanced quantum algorithms",
-        "Custom simulation development",
+        "Up to 25 smart contracts",
+        "Advanced security auditing",
+        "All blockchain support",
         "Priority support",
-        "Dedicated quantum engineer",
-        "API access",
-        "Custom integrations"
+        "Custom templates",
+        "Gas optimization",
+        "API access"
       ],
       popular: true
     },
     {
-      name: "Custom",
-      price: "Contact",
-      period: "us",
-      description: "For specialized quantum computing needs",
+      name: "Enterprise",
+      price: "$799",
+      period: "/month",
+      description: "For large-scale operations",
       features: [
-        "Unlimited quantum hours",
-        "Full quantum computing suite",
-        "Custom algorithm development",
+        "Unlimited contracts",
+        "Full security suite",
+        "All blockchain support",
         "24/7 dedicated support",
-        "On-premise quantum systems",
-        "White-label solutions",
-        "Research partnerships"
+        "Custom development",
+        "Advanced analytics",
+        "White-label solution"
       ],
       popular: false
     }
   ];
 
   const stats = [
-    { number: "1000x", label: "Faster Processing", icon: <Zap className="w-6 h-6" /> },
-    { number: "99.9%", label: "Algorithm Accuracy", icon: <Award className="w-6 h-6" /> },
-    { number: "50+", label: "Quantum Algorithms", icon: <Atom className="w-6 h-6" /> },
-    { number: "24/7", label: "Quantum Access", icon: <Clock className="w-6 h-6" /> }
+    { number: "10,000+", label: "Contracts Deployed", icon: <Code className="w-6 h-6" /> },
+    { number: "99.9%", label: "Security Score", icon: <Shield className="w-6 h-6" /> },
+    { number: "40%", label: "Gas Savings", icon: <Zap className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <Users className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Quantum Computing Solutions - Next-Generation Computing Platform | Zion Tech Group</title>
+        <title>Zion Smart Contracts - AI-Powered Blockchain Development Platform</title>
         <meta
           name="description"
-          content="Harness the power of quantum computing for optimization, cryptography, and simulation. 1000x faster processing with our advanced quantum solutions."
+          content="Deploy secure, optimized smart contracts across multiple blockchains with our AI-powered platform. Reduce gas costs by 40% and ensure maximum security."
         />
         <meta
           name="keywords"
-          content="quantum computing, quantum algorithms, quantum simulation, quantum cryptography, quantum cloud, optimization, drug discovery, financial modeling"
+          content="smart contracts, blockchain development, AI-powered contracts, gas optimization, security auditing, multi-blockchain, Ethereum, Polygon, BSC"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/quantum-computing-solutions" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-smart-contracts" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -139,19 +112,19 @@ export default function QuantumComputingSolutions() {
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
               <Star className="w-4 h-4 text-blue-400 mr-2" />
-              <span className="text-blue-400 text-sm font-medium">#1 Quantum Computing Platform 2024</span>
+              <span className="text-blue-400 text-sm font-medium">#1 Smart Contract Platform 2024</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Quantum Computing
+              Zion
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Solutions
+                {" "}Smart Contracts
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Harness the power of quantum computing for optimization, cryptography, and simulation. 
-              1000x faster processing with our advanced quantum solutions.
+              Deploy secure, optimized smart contracts across multiple blockchains with our AI-powered platform. 
+              Reduce gas costs by 40% and ensure maximum security with automated auditing.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -159,7 +132,7 @@ export default function QuantumComputingSolutions() {
                 to="/contact"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25"
               >
-                Explore Quantum
+                Start Building
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -191,10 +164,10 @@ export default function QuantumComputingSolutions() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Quantum Features
+                Powerful Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to leverage quantum computing for your most complex challenges.
+                Everything you need to build, deploy, and manage smart contracts with confidence and efficiency.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -220,49 +193,15 @@ export default function QuantumComputingSolutions() {
           </div>
         </section>
 
-        {/* Applications Section */}
+        {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Applications
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how quantum computing can transform your industry and solve complex problems.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {applications.map((application, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
-                >
-                  <div
-                    className={`w-12 h-12 rounded-lg bg-gradient-to-r ${application.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    {application.icon}
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                    {application.title}
-                  </h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    {application.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Pricing
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Access quantum computing power with flexible pricing options for every need.
+                Choose the plan that fits your needs. All plans include our core features and security guarantees.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -318,18 +257,18 @@ export default function QuantumComputingSolutions() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Enter the Quantum Era?
+              Ready to Deploy Your Smart Contracts?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join the quantum revolution and solve problems that were previously impossible. 
-              Start your quantum computing journey today with our expert consultation.
+              Join thousands of developers already using Zion Smart Contracts to build the future of blockchain technology. 
+              Start your journey today with our free trial.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25"
               >
-                Start Quantum Journey
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link

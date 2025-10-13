@@ -5,11 +5,8 @@ import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartp
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
-<<<<<<< HEAD
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
-=======
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8391
+  const [isItServicesOpen, setIsItServicesOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -19,61 +16,54 @@ const Navigation = React.memo(() => {
     setIsServicesOpen(!isServicesOpen)
   }, [isServicesOpen])
 
-<<<<<<< HEAD
-  const toggleSolutions = useCallback(() => {
-    setIsSolutionsOpen(!isSolutionsOpen)
-  }, [isSolutionsOpen])
-
-  const services = useMemo(() => [
-    { name: 'AI & Machine Learning', path: '/ai-services', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
-    { name: '5G Solutions', path: '/5g-solutions', icon: <Globe className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <Database className="w-4 h-4" /> },
-    { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Development', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
-  ], [])
-
-  const solutions = useMemo(() => [
-    { name: 'AI Analytics', path: '/ai-analytics', icon: <Database className="w-4 h-4" /> },
-    { name: 'AI Automation', path: '/ai-automation', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Customer Service', path: '/ai-customer-service', icon: <Shield className="w-4 h-4" /> },
-    { name: 'AI Marketing', path: '/ai-marketing', icon: <Globe className="w-4 h-4" /> },
-    { name: 'AI Project Management', path: '/ai-project-management', icon: <Smartphone className="w-4 h-4" /> }
-=======
   const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
 
+  const toggleItServices = useCallback(() => {
+    setIsItServicesOpen(!isItServicesOpen)
+  }, [isItServicesOpen])
+
   const aiServices = useMemo(() => [
+    { name: 'AI Climate Solutions', path: '/ai-climate-solutions', icon: <Globe className="w-4 h-4" />, featured: true },
+    { name: 'AI Autonomous Systems', path: '/ai-autonomous-systems', icon: <Brain className="w-4 h-4" />, featured: true },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
-    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> }
+    { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
+    { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Globe className="w-4 h-4" /> },
+    { name: 'AI Project Management', path: '/ai-project-management', icon: <Smartphone className="w-4 h-4" /> }
   ], [])
 
   const itServices = useMemo(() => [
     { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI-Powered DevOps', path: '/ai-powered-devops', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Quantum Computing', path: '/quantum-computing-solutions', icon: <Brain className="w-4 h-4" />, featured: true },
     { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
     { name: 'Mobile Development', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },
     { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
-    { name: '5G Solutions', path: '/5g-solutions', icon: <Globe className="w-4 h-4" /> }
+    { name: '5G Solutions', path: '/5g-solutions', icon: <Globe className="w-4 h-4" /> },
+    { name: 'Blockchain Development', path: '/blockchain-development', icon: <Lock className="w-4 h-4" /> },
+    { name: 'Machine Learning Ops', path: '/machine-learning-ops', icon: <Brain className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion Smart Contracts', path: '/zion-smart-contracts', icon: <Code className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Translator', path: '/zion-ai-translator', icon: <Globe className="w-4 h-4" />, featured: true },
+    { name: 'Zion Voice Assistant', path: '/zion-voice-assistant', icon: <Brain className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8391
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Invoice Genius', path: '/zion-invoice-genius', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Zion Performance Monitor', path: '/zion-performance-monitor', icon: <Globe className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -106,38 +96,7 @@ const Navigation = React.memo(() => {
               </Link>
             ))}
             
-<<<<<<< HEAD
-            {/* Solutions Dropdown */}
-            <div className="relative">
-              <button
-                onClick={toggleSolutions}
-                className="flex items-center space-x-1 hover:text-blue-400 transition-colors"
-              >
-                <span>Solutions</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${isSolutionsOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isSolutionsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
-                  {solutions.map((solution) => (
-                    <Link
-                      key={solution.name}
-                      to={solution.path}
-                      className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
-                      onClick={() => setIsSolutionsOpen(false)}
-                    >
-                      {solution.icon}
-                      <span>{solution.name}</span>
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-            
-            {/* Services Dropdown */}
-=======
             {/* AI Services Dropdown */}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8391
             <div className="relative">
               <button
                 onClick={toggleServices}
@@ -156,13 +115,65 @@ const Navigation = React.memo(() => {
                     <Link
                       key={service.name}
                       to={service.path}
-                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group"
+                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group ${
+                        service.featured ? 'bg-gradient-to-r from-cyan-500/5 to-purple-500/5 border-l-2 border-cyan-400' : ''
+                      }`}
                       onClick={() => setIsServicesOpen(false)}
                     >
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-300">
                         {service.icon}
                       </div>
-                      <span className="font-medium">{service.name}</span>
+                      <div className="flex-1">
+                        <span className="font-medium">{service.name}</span>
+                        {service.featured && (
+                          <div className="flex items-center mt-1">
+                            <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
+                            <span className="text-xs text-yellow-400">Featured</span>
+                          </div>
+                        )}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* IT Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleItServices}
+                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
+              >
+                <span>IT Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isItServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-green-500/20">
+                  <div className="px-4 py-2 border-b border-gray-700 mb-2">
+                    <h3 className="text-sm font-semibold text-green-400 uppercase tracking-wider">IT Services</h3>
+                  </div>
+                  {itServices.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.path}
+                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 group ${
+                        service.featured ? 'bg-gradient-to-r from-green-500/5 to-cyan-500/5 border-l-2 border-green-400' : ''
+                      }`}
+                      onClick={() => setIsItServicesOpen(false)}
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
+                        {service.icon}
+                      </div>
+                      <div className="flex-1">
+                        <span className="font-medium">{service.name}</span>
+                        {service.featured && (
+                          <div className="flex items-center mt-1">
+                            <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
+                            <span className="text-xs text-yellow-400">Featured</span>
+                          </div>
+                        )}
+                      </div>
                     </Link>
                   ))}
                 </div>
@@ -246,41 +257,7 @@ const Navigation = React.memo(() => {
                 </Link>
               ))}
               
-<<<<<<< HEAD
-              {/* Mobile Solutions */}
-              <div>
-                <button
-                  onClick={toggleSolutions}
-                  className="flex items-center space-x-1 hover:text-blue-400 transition-colors"
-                >
-                  <span>Solutions</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isSolutionsOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isSolutionsOpen && (
-                  <div className="ml-4 mt-2 space-y-2">
-                    {solutions.map((solution) => (
-                      <Link
-                        key={solution.name}
-                        to={solution.path}
-                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors"
-                        onClick={() => {
-                          setIsSolutionsOpen(false)
-                          toggleMenu()
-                        }}
-                      >
-                        {solution.icon}
-                        <span>{solution.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-              
-              {/* Mobile Services */}
-=======
               {/* Mobile AI Services */}
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-8391
               <div>
                 <button
                   onClick={toggleServices}
@@ -304,6 +281,38 @@ const Navigation = React.memo(() => {
                       >
                         {service.icon}
                         <span>{service.name}</span>
+                        {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Mobile IT Services */}
+              <div>
+                <button
+                  onClick={toggleItServices}
+                  className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 font-medium"
+                >
+                  <span>IT Services</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isItServicesOpen && (
+                  <div className="ml-4 mt-2 space-y-1">
+                    {itServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-green-400 transition-colors rounded-lg hover:bg-green-500/10"
+                        onClick={() => {
+                          setIsItServicesOpen(false)
+                          toggleMenu()
+                        }}
+                      >
+                        {service.icon}
+                        <span>{service.name}</span>
+                        {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}
                       </Link>
                     ))}
                   </div>

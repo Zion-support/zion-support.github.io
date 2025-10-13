@@ -37,9 +37,21 @@ const Footer = React.memo(() => {
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 text-sm max-w-md">
-              Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
+              Leading provider of AI-powered solutions, micro SAAS, IT services, and digital transformation. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            <div className="mt-4 space-y-2">
+              <p className="text-gray-400 text-sm">
+                <strong>Mobile:</strong> +1 302 464 0950
+              </p>
+              <p className="text-gray-400 text-sm">
+                <strong>Email:</strong> kleber@ziontechgroup.com
+              </p>
+              <p className="text-gray-400 text-sm">
+                <strong>Address:</strong> 364 E Main St STE 1008<br />
+                Middletown DE 19709
+              </p>
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -70,15 +82,15 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-services"
+                  to="/cloud-infrastructure"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Solutions
+                  Cloud Infrastructure
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity"
+                  to="/cybersecurity-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Cybersecurity
@@ -94,81 +106,73 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/data-analytics"
+                  to="/ai-powered-devops"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Data Analytics
+                  AI-Powered DevOps
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/web-development"
+                  to="/quantum-computing-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Web Development
+                  Quantum Computing
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Solutions */}
+          {/* Micro SAAS */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+            <h4 className="text-lg font-semibold mb-4">Micro SAAS</h4>
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/ai-analytics"
+                  to="/zion-analytics-pro"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Analytics
+                  Zion Analytics Pro
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-automation"
+                  to="/zion-smart-contracts"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Automation
+                  Zion Smart Contracts
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-content-generation"
+                  to="/zion-ai-translator"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Content Generation
+                  Zion AI Translator
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-customer-service"
+                  to="/zion-voice-assistant"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Customer Service
+                  Zion Voice Assistant
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-marketing"
+                  to="/zion-security-shield"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Marketing
+                  Zion Security Shield
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/data-analytics"
+                  to="/zion-cloud-vault"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/custom-development"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Custom Development
+                  Zion Cloud Vault
                 </Link>
               </li>
             </ul>
