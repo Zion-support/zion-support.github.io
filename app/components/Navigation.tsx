@@ -16,11 +16,11 @@ const Navigation = React.memo(() => {
 
   const services = useMemo(() => [
     { name: 'AI & Machine Learning', path: '/ai-services', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Cloud Solutions', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
-    { name: '5G Implementation', path: '/5g-implementation', icon: <Globe className="w-4 h-4" /> },
+    { name: 'Cloud Solutions', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Cybersecurity', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
+    { name: '5G Implementation', path: '/5g-solutions', icon: <Globe className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <Database className="w-4 h-4" /> },
-    { name: 'Custom Development', path: '/custom-development', icon: <Code className="w-4 h-4" /> },
+    { name: 'Custom Development', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
     { name: 'Mobile Solutions', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
   ], [])
 
@@ -28,8 +28,10 @@ const Navigation = React.memo(() => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
+    { name: 'Pricing', path: '/pricing' },
     { name: 'Case Studies', path: '/case-studies' },
     { name: 'Blog', path: '/blog' },
+    { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' }
   ], [])
 

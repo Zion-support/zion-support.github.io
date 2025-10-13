@@ -27,7 +27,7 @@ const Footer = React.memo(() => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -70,7 +70,7 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-services"
+                  to="/cloud-infrastructure"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Cloud Solutions
@@ -78,7 +78,7 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cybersecurity"
+                  to="/cybersecurity-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Cybersecurity
@@ -86,7 +86,7 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/5g-implementation"
+                  to="/5g-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   5G Implementation
@@ -102,7 +102,7 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/custom-development"
+                  to="/custom-software"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Custom Development
@@ -215,6 +215,14 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Demo
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/pricing"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Pricing
                 </Link>
               </li>
               <li>
