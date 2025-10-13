@@ -10,7 +10,6 @@ interface ImageOptimizerProps {
   placeholder?: string;
 }
 
-<<<<<<< HEAD
 export default function ImageOptimizer({ 
   src, 
   alt, 
@@ -18,15 +17,6 @@ export default function ImageOptimizer({
   lazy = true,
   quality,
   format,
-=======
-export default function ImageOptimizer({
-  src,
-  alt,
-  className = '',
-  lazy = true,
-  quality = 80,
-  format = 'webp',
->>>>>>> cursor/fix-errors-and-merge-to-main-6246
   placeholder
 }: ImageOptimizerProps) {
   // Note: quality, format, and placeholder are available for future implementation
@@ -39,13 +29,9 @@ export default function ImageOptimizer({
       alt={alt}
       className={className}
       loading={lazy ? 'lazy' : 'eager'}
-<<<<<<< HEAD
       style={{
         backgroundColor: placeholder || '#f3f4f6'
       }}
-=======
-      style={{ imageRendering: 'auto' }}
->>>>>>> cursor/fix-errors-and-merge-to-main-6246
     />
   );
 }
