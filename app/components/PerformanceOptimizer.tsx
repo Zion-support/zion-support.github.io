@@ -5,7 +5,6 @@ interface PerformanceOptimizerProps {
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-<<<<<<< HEAD
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
@@ -76,7 +75,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   }, [handleResize]);
 
   return <>{children}</>;
-=======
   const [isOptimized, setIsOptimized] = useState(false);
 
   useEffect(() => {
@@ -278,7 +276,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       `}</style>
     </>
   );
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 };
 
 export default PerformanceOptimizer;
