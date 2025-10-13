@@ -499,9 +499,8 @@ function App() {
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
-      </EnhancedErrorBoundary>
-    </ErrorHandler>
-    </GlobalErrorBoundary>
+        </EnhancedErrorBoundary>
+      </ErrorHandler>
   );
 }
 
