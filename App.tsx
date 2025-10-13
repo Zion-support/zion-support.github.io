@@ -7,8 +7,6 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-<<<<<<< HEAD
-=======
 import { LoadingPage } from "./app/components/EnhancedLoadingStates";
 import AdvancedPerformanceEnhancer from "./app/components/AdvancedPerformanceEnhancer";
 import AdvancedPerformanceOptimizer from "./app/components/AdvancedPerformanceOptimizer";
@@ -18,16 +16,11 @@ import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
-<<<<<<< HEAD
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
 import FuturisticBackground from "./app/components/FuturisticBackground";
 
 // Lazy load pages for better performance
@@ -49,11 +42,7 @@ const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
-<<<<<<< HEAD
-// AI Service Pages
-=======
 // Additional service pages
-const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const ItServicesPage = React.lazy(() => import("./app/it-services/page"));
 const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
 const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
@@ -63,7 +52,6 @@ const CustomDevelopmentPage = React.lazy(() => import("./app/custom-software/pag
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
 const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
 const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
-const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
@@ -72,7 +60,6 @@ const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-netwo
 const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
 
 // AI Service pages
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AiAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
 const AiBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
@@ -89,26 +76,7 @@ const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendat
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
-<<<<<<< HEAD
 // IT Service Pages
-const CloudInfrastructurePage = React.lazy(
-  () => import("./app/cloud-infrastructure/page"),
-);
-const CybersecuritySolutionsPage = React.lazy(
-  () => import("./app/cybersecurity-solutions/page"),
-);
-const WebDevelopmentPage = React.lazy(
-  () => import("./app/web-development/page"),
-);
-const MobileDevelopmentPage = React.lazy(
-  () => import("./app/mobile-development/page"),
-);
-const DatabaseManagementPage = React.lazy(
-  () => import("./app/database-management/page"),
-);
-const CustomSoftwarePage = React.lazy(
-  () => import("./app/custom-software/page"),
-);
 const NetworkInfrastructurePage = React.lazy(
   () => import("./app/network-infrastructure/page"),
 );
@@ -210,28 +178,24 @@ const ZionPerformanceMonitorPage = React.lazy(
 );
 
 // 5G Solutions Pages
-const FiveGDataAnalyticsPage = React.lazy(
-  () => import("./app/5g-data-analytics/page"),
-);
-const FiveGEdgeComputingPage = React.lazy(
-  () => import("./app/5g-edge-computing/page"),
-);
-const FiveGImplementationPage = React.lazy(
-  () => import("./app/5g-implementation/page"),
-);
 const FiveGMobileApplicationsPage = React.lazy(
   () => import("./app/5g-mobile-applications/page"),
 );
 const FiveGNetworkInfrastructurePage = React.lazy(
   () => import("./app/5g-network-infrastructure/page"),
 );
-const FiveGPrivateNetworksPage = React.lazy(
-  () => import("./app/5g-private-networks/page"),
-);
-const FiveGSmartCitySolutionsPage = React.lazy(
-  () => import("./app/5g-smart-city-solutions/page"),
-);
-  const FiveG5gIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
+
+// New AI Services
+const AiQuantumComputingPage = React.lazy(() => import("./app/ai-quantum-computing/page"));
+const AiBlockchainSolutionsPage = React.lazy(() => import("./app/ai-blockchain-solutions/page"));
+const AiPoweredDevOpsPage = React.lazy(() => import("./app/ai-powered-devops/page"));
+
+// Additional pages
+const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
+const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
+const CareersPage = React.lazy(() => import("./app/careers/page"));
+
+// Additional AI Service pages
 const AccessibilityPage = React.lazy(() => import("./app/accessibility/page"));
 const AccessibilityPagePage = React.lazy(() => import("./app/accessibility-page/page"));
 const AdvancedSecuritySuitePage = React.lazy(() => import("./app/advanced-security-suite/page"));
@@ -246,7 +210,6 @@ const AiAutomatedReportingPage = React.lazy(() => import("./app/ai-automated-rep
 const AiAutomatedTestingPage = React.lazy(() => import("./app/ai-automated-testing/page"));
 const AiAutonomousSystemsPage = React.lazy(() => import("./app/ai-autonomous-systems/page"));
 const AiBlockchainAnalyticsPage = React.lazy(() => import("./app/ai-blockchain-analytics/page"));
-const AiBlockchainSolutionsPage = React.lazy(() => import("./app/ai-blockchain-solutions/page"));
 const AiBusinessIntelligenceProPage = React.lazy(() => import("./app/ai-business-intelligence-pro/page"));
 const AiChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
 const AiChatbotEnterprisePage = React.lazy(() => import("./app/ai-chatbot-enterprise/page"));
@@ -358,7 +321,6 @@ const AiPredictiveModelingPage = React.lazy(() => import("./app/ai-predictive-mo
 const AiProjectManagementProPage = React.lazy(() => import("./app/ai-project-management-pro/page"));
 const AiProjectManagerPage = React.lazy(() => import("./app/ai-project-manager/page"));
 const AiQualityAssurancePage = React.lazy(() => import("./app/ai-quality-assurance/page"));
-const AiQuantumComputingPage = React.lazy(() => import("./app/ai-quantum-computing/page"));
 const AiQuantumComputingSimulatorPage = React.lazy(() => import("./app/ai-quantum-computing-simulator/page"));
 const AiQuantumFinancialOraclePage = React.lazy(() => import("./app/ai-quantum-financial-oracle/page"));
 const AiQuantumOptimizationPage = React.lazy(() => import("./app/ai-quantum-optimization/page"));
@@ -597,29 +559,9 @@ const ZionChatAiPage = React.lazy(() => import("./app/zion-chat-ai/page"));
 const ZionCrmIntelligencePage = React.lazy(() => import("./app/zion-crm-intelligence/page"));
 const ZionCustomerInsightsPage = React.lazy(() => import("./app/zion-customer-insights/page"));
 
-=======
-// New AI Services
-const AiQuantumComputingPage = React.lazy(() => import("./app/ai-quantum-computing/page"));
-const AiBlockchainSolutionsPage = React.lazy(() => import("./app/ai-blockchain-solutions/page"));
-const AiPoweredDevOpsPage = React.lazy(() => import("./app/ai-powered-devops/page"));
-
-// Micro SAAS pages
-const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
-const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
-const ZionCloudVaultPage = React.lazy(() => import("./app/zion-cloud-vault/page"));
-const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio/page"));
-
 // New Micro SAAS Services
 const ZionAiVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
 const ZionAiCustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
-
-// Additional pages
-const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
-const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
-const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
-const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
-const CareersPage = React.lazy(() => import("./app/careers/page"));
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
 
 // Main App Component
 function App() {
@@ -665,8 +607,6 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
-<<<<<<< HEAD
-=======
                         <Route path="/case-studies" element={<CaseStudiesPage />} />
                         <Route path="/data-analytics" element={<DataAnalyticsPage />} />
                         <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
@@ -674,7 +614,6 @@ function App() {
                         <Route path="/careers" element={<CareersPage />} />
                         
                         {/* Service Pages */}
-                        <Route path="/micro-saas" element={<MicroSaasPage />} />
                         <Route path="/it-services" element={<ItServicesPage />} />
                         <Route path="/cloud-services" element={<CloudServicesPage />} />
                         <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
@@ -686,7 +625,6 @@ function App() {
                         <Route path="/database-management" element={<DatabaseManagementPage />} />
                         
                         {/* 5G Solutions */}
-                        <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                         <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
                         <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
                         <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
@@ -716,13 +654,10 @@ function App() {
                         {/* New Micro SAAS Services */}
                         <Route path="/zion-ai-video-generator" element={<ZionAiVideoGeneratorPage />} />
                         <Route path="/zion-ai-customer-insights" element={<ZionAiCustomerInsightsPage />} />
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
                       </Routes>
                     </Suspense>
                   </main>
                   <Footer />
-<<<<<<< HEAD
-=======
                   <AdvancedPerformanceOptimizer 
                     enableImageOptimization={true}
                     enablePreloading={true}
@@ -743,13 +678,10 @@ function App() {
                     enableVoiceNavigation={true}
                     enableReducedMotion={true}
                   />
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
                   <EnhancedAccessibility>
                     <div></div>
                   </EnhancedAccessibility>
                 </FuturisticBackground>
-<<<<<<< HEAD
-=======
                 <AnalyticsProvider>
                   <div>
                     <PerformanceMonitor />
@@ -757,7 +689,6 @@ function App() {
                     <EnhancedSEOOptimizer />
                   </div>
                 </AnalyticsProvider>
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
               </div>
               <EnhancedAccessibility>
                 <div></div>

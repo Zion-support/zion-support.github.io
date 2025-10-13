@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight, Search, Filter } from 'lucide-react';
@@ -13,29 +12,11 @@ const BlogPage = () => {
     { id: 'cybersecurity', name: 'Cybersecurity', count: 3 },
     { id: 'cloud', name: 'Cloud Computing', count: 2 },
     { id: 'development', name: 'Development', count: 2 }
-=======
-import React, { useState } from "react";
-import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function Blog() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("all");
-
-  const categories = [
-    { id: "all", name: "All Posts", count: 12 },
-    { id: "ai", name: "AI & Machine Learning", count: 5 },
-    { id: "cybersecurity", name: "Cybersecurity", count: 3 },
-    { id: "cloud", name: "Cloud Computing", count: 2 },
-    { id: "development", name: "Development", count: 2 }
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
   ];
 
   const posts = [
     {
       id: 1,
-<<<<<<< HEAD
       title: 'The Future of AI in Business: A Comprehensive Guide',
       excerpt: 'Explore how artificial intelligence is transforming modern business operations and what it means for your organization.',
       content: 'Full article content here...',
@@ -221,13 +202,11 @@ export default function Blog() {
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Stay ahead of the curve with expert insights, industry trends, and practical guides on AI, cybersecurity, cloud computing, and emerging technologies.
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
             </p>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Search and Filter */}
       <section className="py-8 bg-white/10 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4">
