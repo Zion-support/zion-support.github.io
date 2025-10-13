@@ -1,24 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, FileText } from "lucide-react";
-import EnhancedSEO from "./components/EnhancedSEO";
-import StructuredData from "./components/StructuredData";
-import FuturisticBackground from "./components/FuturisticBackground";
-import FuturisticCard from "./components/FuturisticCard";
-import FuturisticButton from "./components/FuturisticButton";
-import FuturisticText from "./components/FuturisticText";
-import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
-import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
-import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
-import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
-import ResponsiveContainer from "./components/ResponsiveContainer";
-import ResponsiveGrid from "./components/ResponsiveGrid";
-import ResponsiveText from "./components/ResponsiveText";
-import LazyImage from "./components/LazyImage";
-import EnhancedLoadingSpinner from "./components/EnhancedLoadingSpinner";
-import EnhancedAccessibility from "./components/EnhancedAccessibility";
-import PerformanceOptimizer from "./components/PerformanceOptimizer";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, BarChart3, Cloud, Sparkles, Mail, Monitor, Target } from "lucide-react";
 
 const HomePage = () => {
   const structuredData = {
