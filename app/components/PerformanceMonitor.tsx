@@ -1,92 +1,63 @@
-import { useEffect, useState } from 'react';
-
-// Type definitions for browser APIs
-declare global {
-  interface PerformanceObserver {
-    observe(options: { entryTypes: string[] }): void;
-    disconnect(): void;
-  }
-
-  interface PerformanceNavigationTiming extends PerformanceEntry {
-    requestStart: number;
-    responseStart: number;
-  }
-}
-  
-  interface PerformanceEntry {
-    name: string;
-    entryType: string;
-    startTime: number;
-    duration: number;
-  }
+import React, { useEffect, useState } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
+  cls: number | null;
+  inp: number | null;
   fcp: number | null;
   lcp: number | null;
-  fid: number | null;
-  cls: number | null;
   ttfb: number | null;
 }
+
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    cls: null,
+    inp: null,
     fcp: null,
     lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
+    ttfb: null
   });
+
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-            }
-          } else if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-          } else if (entry.entryType === 'first-input') {
-            const inputEntry = entry as any;
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
 
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
+    const handleMetric = (metric: any) => {
+      setMetrics(prev => ({
+        ...prev,
+        [metric.name]: metric.value
+      }));
 
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-
-          } else if (entry.entryType === 'layout-shift') {
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
-          }
-        }
-      });
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-      // Monitor TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+      // Send to analytics service
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          value: Math.round(metric.value),
+          event_label: metric.id,
+          non_interaction: true,
+        });
       }
-      return () => observer.disconnect();
-    }
-    return undefined;
+    };
+
+    onCLS(handleMetric);
+    onINP(handleMetric);
+    onFCP(handleMetric);
+    onLCP(handleMetric);
+    onTTFB(handleMetric);
   }, []);
+<<<<<<< HEAD
   // Only show in development
   if (process.env.NODE_ENV !== 'development') {
+=======
+
+  // Don't render anything in production
+  if (process.env.NODE_ENV === 'production') {
+>>>>>>> cursor/analyze-improve-and-deploy-application-c97f
     return null;
   }
+
   return (
+<<<<<<< HEAD
     <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
       <h3 className="font-bold mb-2">Performance Metrics</h3>
       <div className="space-y-1">
@@ -96,7 +67,17 @@ const PerformanceMonitor: React.FC = () => {
         <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
         <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
       </div>
+=======
+    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-xs font-mono z-50">
+      <div className="font-bold mb-2">Performance Metrics</div>
+      <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
+      <div>INP: {metrics.inp?.toFixed(1) || 'N/A'}ms</div>
+      <div>FCP: {metrics.fcp?.toFixed(1) || 'N/A'}ms</div>
+      <div>LCP: {metrics.lcp?.toFixed(1) || 'N/A'}ms</div>
+      <div>TTFB: {metrics.ttfb?.toFixed(1) || 'N/A'}ms</div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-c97f
     </div>
   );
 };
+
 export default PerformanceMonitor;
