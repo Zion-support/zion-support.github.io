@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -83,7 +80,7 @@ export default function HomePage() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {/* AI Solutions */}
             <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -109,7 +106,7 @@ export default function HomePage() {
                 Comprehensive security solutions to protect your digital assets, 
                 data, and infrastructure from evolving threats.
               </p>
-              <Link to="/cybersecurity" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+              <Link to="/cybersecurity-suite-pro" className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -124,7 +121,7 @@ export default function HomePage() {
                 Scalable cloud solutions and infrastructure management to optimize 
                 performance and reduce operational costs.
               </p>
-              <Link to="/cloud-solutions" className="text-green-400 hover:text-green-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+              <Link to="/cloud-migration-service" className="text-green-400 hover:text-green-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -154,7 +151,7 @@ export default function HomePage() {
                 Custom micro SaaS solutions designed to solve specific business 
                 challenges with scalable, cost-effective applications.
               </p>
-              <Link to="/micro-saas" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+              <Link to="/micro-saas-solutions" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -170,6 +167,36 @@ export default function HomePage() {
                 IoT applications, and ultra-low latency services.
               </p>
               <Link to="/5g-solutions" className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Learn More <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Quantum Computing */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-violet-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <CpuChipIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Quantum Computing</h3>
+              <p className="text-gray-300 mb-6">
+                Cutting-edge quantum computing solutions for optimization problems, 
+                cryptography, and breakthrough computational challenges.
+              </p>
+              <Link to="/quantum-computing-solutions" className="text-violet-400 hover:text-violet-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                Learn More <ArrowRightIcon className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* AI 3D Generation */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-pink-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <ChartBarIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">AI 3D Generation</h3>
+              <p className="text-gray-300 mb-6">
+                Revolutionary AI-powered 3D content generation for creating realistic 
+                models, animations, and virtual environments.
+              </p>
+              <Link to="/ai-3d-generation-pro" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>

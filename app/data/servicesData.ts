@@ -527,6 +527,509 @@ export const services: Service[] = [
     },
     href: '/iot-platform-solution',
     glowColor: 'yellow'
+  },
+
+  // Advanced AI Services
+  {
+    id: 'ai-3d-generation-pro',
+    title: 'AI 3D Generation Pro',
+    description: 'Revolutionary AI-powered 3D content generation platform for creating realistic 3D models, animations, and virtual environments.',
+    shortDescription: 'AI-powered 3D content generation and modeling',
+    category: 'AI',
+    icon: '🎨',
+    features: [
+      '3D Model Generation from Text',
+      'Real-time 3D Rendering',
+      'Animation Creation',
+      'Virtual Environment Design',
+      'Texture Generation',
+      'Lighting Optimization',
+      'AR/VR Integration',
+      'Export to Multiple Formats'
+    ],
+    pricing: {
+      basic: 899,
+      pro: 1999,
+      enterprise: 4999
+    },
+    benefits: [
+      '90% faster 3D content creation',
+      'Professional quality output',
+      'No 3D modeling experience required',
+      'Seamless AR/VR integration',
+      'Cost-effective alternative to traditional 3D studios'
+    ],
+    useCases: [
+      'Game Development',
+      'Architectural Visualization',
+      'Product Design',
+      'Marketing Content',
+      'Virtual Reality Experiences'
+    ],
+    technologies: ['NeRF', 'Stable Diffusion', 'Blender', 'Unity', 'Unreal Engine', 'WebGL'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-3d-generation-pro'
+    },
+    href: '/ai-3d-generation-pro',
+    glowColor: 'purple'
+  },
+  {
+    id: 'ai-climate-prediction-engine',
+    title: 'AI Climate Prediction Engine',
+    description: 'Advanced AI system for climate modeling, weather prediction, and environmental impact analysis using machine learning and satellite data.',
+    shortDescription: 'AI-powered climate modeling and weather prediction',
+    category: 'AI',
+    icon: '🌍',
+    features: [
+      'Climate Pattern Analysis',
+      'Weather Forecasting (30-90 days)',
+      'Environmental Impact Assessment',
+      'Satellite Data Processing',
+      'Carbon Footprint Analysis',
+      'Disaster Risk Prediction',
+      'Real-time Monitoring',
+      'Custom Climate Models'
+    ],
+    pricing: {
+      basic: 2499,
+      pro: 5999,
+      enterprise: 14999
+    },
+    benefits: [
+      '95% accuracy in weather predictions',
+      'Early warning systems for natural disasters',
+      'Environmental compliance support',
+      'Data-driven climate strategies',
+      'Reduced environmental risks'
+    ],
+    useCases: [
+      'Agriculture Planning',
+      'Renewable Energy Optimization',
+      'Disaster Preparedness',
+      'Environmental Compliance',
+      'Urban Planning'
+    ],
+    technologies: ['TensorFlow', 'PyTorch', 'Satellite APIs', 'Python', 'PostgreSQL', 'Docker'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-climate-prediction-engine'
+    },
+    href: '/ai-climate-prediction-engine',
+    glowColor: 'green'
+  },
+  {
+    id: 'ai-autonomous-systems',
+    title: 'AI Autonomous Systems',
+    description: 'Cutting-edge AI systems for autonomous vehicles, drones, and robotics with advanced computer vision and decision-making capabilities.',
+    shortDescription: 'AI-powered autonomous systems for vehicles and robotics',
+    category: 'AI',
+    icon: '🤖',
+    features: [
+      'Autonomous Vehicle Control',
+      'Drone Navigation Systems',
+      'Robotic Process Automation',
+      'Computer Vision Integration',
+      'Real-time Decision Making',
+      'Obstacle Detection & Avoidance',
+      'Path Planning Algorithms',
+      'Safety Monitoring Systems'
+    ],
+    pricing: {
+      basic: 4999,
+      pro: 12999,
+      enterprise: 29999
+    },
+    benefits: [
+      '99.9% safety record',
+      'Reduced operational costs',
+      '24/7 autonomous operation',
+      'Advanced safety protocols',
+      'Scalable deployment'
+    ],
+    useCases: [
+      'Autonomous Vehicles',
+      'Delivery Drones',
+      'Industrial Robotics',
+      'Agricultural Automation',
+      'Security Systems'
+    ],
+    technologies: ['ROS', 'OpenCV', 'TensorFlow', 'C++', 'Python', 'CUDA'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-autonomous-systems'
+    },
+    href: '/ai-autonomous-systems',
+    glowColor: 'cyan'
+  },
+
+  // Advanced Micro SaaS Solutions
+  {
+    id: 'ai-accounting-assistant',
+    title: 'AI Accounting Assistant Pro',
+    description: 'Intelligent accounting software with AI-powered bookkeeping, tax preparation, financial analysis, and automated compliance reporting.',
+    shortDescription: 'AI-powered accounting and financial management',
+    category: 'SaaS',
+    icon: '📊',
+    features: [
+      'Automated Bookkeeping',
+      'AI Tax Preparation',
+      'Financial Forecasting',
+      'Expense Categorization',
+      'Invoice Generation',
+      'Compliance Reporting',
+      'Multi-currency Support',
+      'Integration with Banks'
+    ],
+    pricing: {
+      basic: 199,
+      pro: 499,
+      enterprise: 1299
+    },
+    benefits: [
+      '90% reduction in bookkeeping time',
+      'Automated tax compliance',
+      'Real-time financial insights',
+      'Error-free calculations',
+      'Seamless bank integration'
+    ],
+    useCases: [
+      'Small Business Accounting',
+      'Freelancer Finance Management',
+      'Tax Preparation',
+      'Financial Planning',
+      'Audit Support'
+    ],
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'OpenAI', 'Stripe', 'Plaid'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-accounting-assistant'
+    },
+    href: '/ai-accounting-assistant',
+    glowColor: 'green'
+  },
+  {
+    id: 'ai-agricultural-intelligence-pro',
+    title: 'AI Agricultural Intelligence Pro',
+    description: 'Comprehensive AI platform for precision agriculture, crop monitoring, yield prediction, and automated farming operations.',
+    shortDescription: 'AI-powered precision agriculture and crop management',
+    category: 'SaaS',
+    icon: '🌾',
+    features: [
+      'Crop Health Monitoring',
+      'Yield Prediction Models',
+      'Soil Analysis & Recommendations',
+      'Weather Integration',
+      'Pest & Disease Detection',
+      'Irrigation Optimization',
+      'Harvest Planning',
+      'Market Price Analysis'
+    ],
+    pricing: {
+      basic: 299,
+      pro: 799,
+      enterprise: 1999
+    },
+    benefits: [
+      '25% increase in crop yields',
+      '30% reduction in water usage',
+      'Early pest detection',
+      'Optimized resource allocation',
+      'Data-driven farming decisions'
+    ],
+    useCases: [
+      'Precision Agriculture',
+      'Crop Monitoring',
+      'Farm Management',
+      'Supply Chain Optimization',
+      'Sustainable Farming'
+    ],
+    technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-agricultural-intelligence-pro'
+    },
+    href: '/ai-agricultural-intelligence-pro',
+    glowColor: 'yellow'
+  },
+  {
+    id: 'ai-blockchain-analytics',
+    title: 'AI Blockchain Analytics Pro',
+    description: 'Advanced AI-powered blockchain analytics platform for cryptocurrency analysis, DeFi insights, and smart contract auditing.',
+    shortDescription: 'AI-powered blockchain and cryptocurrency analytics',
+    category: 'Blockchain',
+    icon: '⛓️',
+    features: [
+      'Cryptocurrency Price Prediction',
+      'DeFi Protocol Analysis',
+      'Smart Contract Auditing',
+      'Transaction Pattern Analysis',
+      'Risk Assessment',
+      'Portfolio Optimization',
+      'Market Sentiment Analysis',
+      'Compliance Monitoring'
+    ],
+    pricing: {
+      basic: 499,
+      pro: 1299,
+      enterprise: 3499
+    },
+    benefits: [
+      '95% accuracy in price predictions',
+      'Real-time market insights',
+      'Automated risk assessment',
+      'Compliance automation',
+      'Portfolio optimization'
+    ],
+    useCases: [
+      'Cryptocurrency Trading',
+      'DeFi Investment',
+      'Smart Contract Development',
+      'Compliance Management',
+      'Risk Assessment'
+    ],
+    technologies: ['Python', 'TensorFlow', 'Web3.js', 'Ethereum', 'React', 'PostgreSQL'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-blockchain-analytics'
+    },
+    href: '/ai-blockchain-analytics',
+    glowColor: 'blue'
+  },
+
+  // Advanced IT Services
+  {
+    id: 'quantum-computing-solutions',
+    title: 'Quantum Computing Solutions',
+    description: 'Cutting-edge quantum computing services for optimization problems, cryptography, and advanced computational challenges.',
+    shortDescription: 'Quantum computing solutions for complex problems',
+    category: 'IT',
+    icon: '⚛️',
+    features: [
+      'Quantum Algorithm Development',
+      'Optimization Problem Solving',
+      'Quantum Cryptography',
+      'Quantum Machine Learning',
+      'Quantum Simulation',
+      'Hybrid Classical-Quantum Systems',
+      'Quantum Security Solutions',
+      'Research & Development'
+    ],
+    pricing: {
+      basic: 9999,
+      pro: 24999,
+      enterprise: 99999
+    },
+    benefits: [
+      'Exponential speed improvements',
+      'Breakthrough optimization results',
+      'Future-proof technology',
+      'Competitive advantage',
+      'Research collaboration'
+    ],
+    useCases: [
+      'Financial Modeling',
+      'Drug Discovery',
+      'Supply Chain Optimization',
+      'Cryptography',
+      'Machine Learning'
+    ],
+    technologies: ['Qiskit', 'Cirq', 'PennyLane', 'Python', 'C++', 'Quantum Hardware'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/quantum-computing-solutions'
+    },
+    href: '/quantum-computing-solutions',
+    glowColor: 'purple'
+  },
+  {
+    id: 'edge-computing-platform',
+    title: 'Edge Computing Platform',
+    description: 'Comprehensive edge computing solutions for real-time processing, IoT applications, and distributed computing infrastructure.',
+    shortDescription: 'Edge computing platform for real-time processing',
+    category: 'IT',
+    icon: '🌐',
+    features: [
+      'Distributed Edge Nodes',
+      'Real-time Data Processing',
+      'Low-latency Applications',
+      'IoT Device Management',
+      'Edge AI Inference',
+      'Content Delivery Network',
+      'Edge Security',
+      'Monitoring & Analytics'
+    ],
+    pricing: {
+      basic: 1999,
+      pro: 4999,
+      enterprise: 14999
+    },
+    benefits: [
+      'Sub-10ms latency',
+      'Reduced bandwidth costs',
+      'Improved reliability',
+      'Enhanced security',
+      'Scalable infrastructure'
+    ],
+    useCases: [
+      'Autonomous Vehicles',
+      'Industrial IoT',
+      'Real-time Analytics',
+      'Gaming & AR/VR',
+      'Smart Cities'
+    ],
+    technologies: ['Kubernetes', 'Docker', 'TensorFlow Lite', 'MQTT', 'React', 'Node.js'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/edge-computing-platform'
+    },
+    href: '/edge-computing-platform',
+    glowColor: 'cyan'
+  },
+  {
+    id: 'ai-cyber-defense-matrix',
+    title: 'AI Cyber Defense Matrix',
+    description: 'Next-generation AI-powered cybersecurity platform with advanced threat detection, automated response, and predictive security analytics.',
+    shortDescription: 'AI-powered advanced cybersecurity defense system',
+    category: 'Cybersecurity',
+    icon: '🛡️',
+    features: [
+      'AI Threat Detection',
+      'Behavioral Analysis',
+      'Automated Incident Response',
+      'Predictive Security Analytics',
+      'Zero-trust Architecture',
+      'Advanced Persistent Threat (APT) Protection',
+      'Security Orchestration',
+      'Compliance Automation'
+    ],
+    pricing: {
+      basic: 2999,
+      pro: 7999,
+      enterprise: 19999
+    },
+    benefits: [
+      '99.9% threat detection accuracy',
+      'Automated response in seconds',
+      'Predictive threat prevention',
+      'Zero false positives',
+      'Compliance automation'
+    ],
+    useCases: [
+      'Enterprise Security',
+      'Government Agencies',
+      'Financial Institutions',
+      'Healthcare Organizations',
+      'Critical Infrastructure'
+    ],
+    technologies: ['Machine Learning', 'SIEM', 'SOAR', 'Python', 'Elasticsearch', 'Kafka'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-cyber-defense-matrix'
+    },
+    href: '/ai-cyber-defense-matrix',
+    glowColor: 'red'
+  },
+
+  // 5G and Advanced Connectivity
+  {
+    id: '5g-smart-city-solutions',
+    title: '5G Smart City Solutions',
+    description: 'Comprehensive 5G-powered smart city infrastructure including traffic management, environmental monitoring, and citizen services.',
+    shortDescription: '5G-powered smart city infrastructure and services',
+    category: '5G',
+    icon: '🏙️',
+    features: [
+      'Smart Traffic Management',
+      'Environmental Monitoring',
+      'Citizen Service Apps',
+      'IoT Device Integration',
+      'Real-time Data Analytics',
+      'Emergency Response Systems',
+      'Energy Management',
+      'Public Safety Solutions'
+    ],
+    pricing: {
+      basic: 25000,
+      pro: 75000,
+      enterprise: 250000
+    },
+    benefits: [
+      '30% reduction in traffic congestion',
+      'Real-time city monitoring',
+      'Improved citizen services',
+      'Energy efficiency gains',
+      'Enhanced public safety'
+    ],
+    useCases: [
+      'Smart City Planning',
+      'Traffic Optimization',
+      'Environmental Monitoring',
+      'Public Safety',
+      'Citizen Engagement'
+    ],
+    technologies: ['5G NR', 'Edge Computing', 'IoT', 'AI/ML', 'React', 'Python'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/5g-smart-city-solutions'
+    },
+    href: '/5g-smart-city-solutions',
+    glowColor: 'green'
+  },
+  {
+    id: '5g-iot-solutions',
+    title: '5G IoT Solutions',
+    description: 'Advanced 5G-enabled IoT platform for industrial automation, smart manufacturing, and connected device management.',
+    shortDescription: '5G-powered IoT solutions for industrial applications',
+    category: '5G',
+    icon: '🏭',
+    features: [
+      'Industrial IoT Integration',
+      'Real-time Device Monitoring',
+      'Predictive Maintenance',
+      'Smart Manufacturing',
+      'Asset Tracking',
+      'Quality Control Systems',
+      'Supply Chain Optimization',
+      'Remote Operations'
+    ],
+    pricing: {
+      basic: 15000,
+      pro: 45000,
+      enterprise: 150000
+    },
+    benefits: [
+      'Ultra-low latency connectivity',
+      'Massive device connectivity',
+      'Real-time industrial control',
+      'Predictive maintenance',
+      'Operational efficiency gains'
+    ],
+    useCases: [
+      'Smart Manufacturing',
+      'Industrial Automation',
+      'Supply Chain Management',
+      'Quality Control',
+      'Remote Monitoring'
+    ],
+    technologies: ['5G', 'Industrial IoT', 'Edge Computing', 'AI/ML', 'React', 'Python'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/5g-iot-solutions'
+    },
+    href: '/5g-iot-solutions',
+    glowColor: 'blue'
   }
 ];
 

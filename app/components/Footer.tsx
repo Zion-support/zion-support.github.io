@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
@@ -9,62 +7,30 @@ import {
   ArrowRightIcon,
   HeartIcon
 } from '@heroicons/react/24/outline';
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
+    { name: 'IT Solutions', href: '/it-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity-suite-pro' },
+    { name: 'Cloud Infrastructure', href: '/cloud-migration-service' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
     { name: '5G Solutions', href: '/5g-solutions' },
+    { name: 'Blockchain Solutions', href: '/blockchain-development' },
+    { name: 'IoT Solutions', href: '/iot-platform-solution' },
+    { name: 'Quantum Computing', href: '/quantum-computing-solutions' }
   ];
-=======
-  const footerLinks = {
-    services: [
-      { name: 'AI Solutions', href: '/ai-solutions' },
-      { name: 'Cybersecurity', href: '/cybersecurity' },
-      { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-      { name: 'Digital Transformation', href: '/digital-transformation' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: '5G Solutions', href: '/5g-solutions' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Solutions', href: '/solutions' },
-      { name: 'Pricing', href: '/pricing' },
-      { name: 'Blog', href: '/blog' }
-    ],
-    support: [
-      { name: 'Contact', href: '/contact' },
-      { name: 'Support', href: '/support' },
-      { name: 'Tutorials', href: '/tutorials' },
-      { name: 'Demo', href: '/demo' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' }
-    ]
-  };
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
 
-<<<<<<< HEAD
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
     { name: 'Careers', href: '/careers' },
     { name: 'Blog', href: '/blog' },
     { name: 'Case Studies', href: '/case-studies' },
-    { name: 'News', href: '/news' },
+    { name: 'News', href: '/news' }
   ];
 
   const resources = [
@@ -73,7 +39,7 @@ const Footer: React.FC = () => {
     { name: 'API Reference', href: '/api' },
     { name: 'Support', href: '/support' },
     { name: 'Community', href: '/community' },
-    { name: 'Status', href: '/status' },
+    { name: 'Status', href: '/status' }
   ];
 
   const legal = [
@@ -82,14 +48,7 @@ const Footer: React.FC = () => {
     { name: 'Cookie Policy', href: '/cookies' },
     { name: 'GDPR', href: '/gdpr' },
     { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' },
-=======
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'GitHub', href: '#', icon: Github }
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
+    { name: 'Compliance', href: '/compliance' }
   ];
 
   return (

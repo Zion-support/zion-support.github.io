@@ -31,14 +31,16 @@ const Navigation = () => {
       icon: BriefcaseIcon,
       submenu: [
         { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
+        { name: 'IT Solutions', href: '/it-solutions' },
+        { name: 'Cybersecurity', href: '/cybersecurity-suite-pro' },
+        { name: 'Cloud Infrastructure', href: '/cloud-migration-service' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: '5G Solutions', href: '/5g-solutions' }
+        { name: '5G Solutions', href: '/5g-solutions' },
+        { name: 'Blockchain Solutions', href: '/blockchain-development' },
+        { name: 'IoT Solutions', href: '/iot-platform-solution' }
       ]
     },
-<<<<<<< HEAD
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
@@ -46,14 +48,6 @@ const Navigation = () => {
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-=======
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Support', href: '/support' },
-    { name: 'Contact', href: '/contact' }
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
   ];
 
   return (
