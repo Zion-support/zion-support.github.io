@@ -8,7 +8,6 @@ import {
   Phone, 
   MapPin, 
   Clock, 
-  ArrowRight,
   Brain,
   Shield,
   Zap,
@@ -16,10 +15,8 @@ import {
   BarChart3,
   Cloud,
   Code,
-  Database,
   Users,
-  Award,
-  Star
+  Award
 } from "lucide-react";
 
 const Footer = React.memo(() => {

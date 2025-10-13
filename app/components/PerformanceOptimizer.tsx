@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  const [isOptimized, setIsOptimized] = useState(false);
 
   useEffect(() => {
     // Performance optimization logic
@@ -68,7 +67,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         document.head.appendChild(link);
       });
 
-      setIsOptimized(true);
     };
 
     // Run optimization after component mounts
