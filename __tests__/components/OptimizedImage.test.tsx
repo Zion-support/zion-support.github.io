@@ -28,12 +28,11 @@ describe('OptimizedImage', () => {
 
   it('renders with width and height', () => {
     render(<OptimizedImage {...defaultProps} width={300} height={200} />);
-    const container = screen.getByAltText('Test image').parentElement;
-    expect(container).toHaveStyle('width: 300px');
-    expect(container).toHaveStyle('height: 200px');
+    const img = screen.getByAltText('Test image');
+    expect(img).toHaveAttribute('width', '300');
+    expect(img).toHaveAttribute('height', '200');
   });
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2024
   it('shows loading skeleton initially', () => {
     render(<OptimizedImage {...defaultProps} />);
     const skeleton = screen.getByAltText('Test image').parentElement?.querySelector('.animate-pulse');
