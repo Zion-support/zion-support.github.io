@@ -1,5 +1,30 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { 
+  Brain, 
+  Shield, 
+  Zap, 
+  Globe, 
+  ArrowRight, 
+  Star, 
+  Users, 
+  Award, 
+  BarChart3, 
+  Cloud, 
+  Sparkles, 
+  Mail, 
+  Smartphone, 
+  Monitor,
+  Phone,
+  MapPin,
+  Code,
+  Database,
+  ChevronDown,
+  Menu,
+  X,
+  SidebarIcon
+} from 'lucide-react'
+import FuturisticButton from './FuturisticButton'
 
 interface NavigationProps {
   onSidebarToggle?: () => void
