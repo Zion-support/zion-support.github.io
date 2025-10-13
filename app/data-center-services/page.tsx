@@ -1,11 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Server, Shield, ArrowRight, Sparkles, CheckCircle, Globe, Settings } from 'lucide-react';
-=======
-import { Server, Shield, Zap, ArrowRight, Sparkles, CheckCircle, Target, Brain, Users, Globe, Settings } from 'lucide-react';
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
 
 const DataCenterServicesPage = () => {
   const features = [

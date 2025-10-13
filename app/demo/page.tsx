@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Users, Award, BarChart3, Calendar } from 'lucide-react';
-=======
-import { Play, Pause, SkipForward, SkipBack, Volume2, VolumeX, Maximize, ArrowRight, CheckCircle, Star, Users, Award, BarChart3, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Calendar } from 'lucide-react';
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
 
 export default function DemoPage() {
   const [currentDemo, setCurrentDemo] = useState(0);

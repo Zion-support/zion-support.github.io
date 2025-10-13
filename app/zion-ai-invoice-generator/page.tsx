@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight, FileText, Download, Settings, Sparkles, CheckCircle, Star, Users, Brain, Mail, Smartphone, Globe, Shield, Database, BarChart3, Target, Headphones, Layout, CreditCard, Calculator, Play } from 'lucide-react';
-=======
-import { ArrowRight, FileText, Download, Upload, Edit, Settings, Sparkles, CheckCircle, Star, Users, Clock, Zap, Brain, Mail, Smartphone, Globe, Award, Shield, Lock, Cloud, Database, BarChart3, TrendingUp, Target, MessageSquare, Headphones, ExternalLink, ChevronRight, RefreshCw, RotateCcw, Save, Trash2, Plus, Minus, X, Menu, MoreHorizontal, MoreVertical, Grid, List, Layout, Maximize, Minimize, Move, Copy, Scissors, Clipboard, Bookmark, Tag, Flag, Bell, BellOff, Volume2, VolumeX, Mic, MicOff, Camera, CameraOff, Wifi, WifiOff, Battery, BatteryLow, Signal, SignalLow, SignalZero, SignalHigh, SignalMedium, DollarSign, CreditCard, Receipt, Calculator, PieChart, LineChart, BarChart, TrendingDown, AlertCircle, Info, HelpCircle, Play, Pause, Eye, Heart, ThumbsUp } from 'lucide-react';
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIInvoiceGeneratorPage = () => {

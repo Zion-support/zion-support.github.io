@@ -1,11 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { BarChart3, ArrowRight, Sparkles, CheckCircle, Star, Users, Brain, Target, Mail, Phone, MapPin, Play, Settings, Database, Cloud, Watch, FileText } from 'lucide-react';
-=======
-import { BarChart3, ArrowRight, Sparkles, CheckCircle, Star, Users, TrendingUp, Shield, Clock, Zap, Brain, Target, Award, Globe, Smartphone, Monitor, Mail, Phone, MapPin, Play, Download, Share, Settings, PieChart, LineChart, Activity, Database, Cloud, Lock, Eye, Filter, Search, RefreshCw, Maximize, Minimize, RotateCcw, RotateCw, ZoomIn, ZoomOut, Move, Copy, Scissors, Save, Folder, File, Archive, Tag, Flag, Bookmark, Bell, AlertCircle, Info, HelpCircle, X, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, MoreHorizontal, MoreVertical, Grid, List, Layout, Sidebar, Navigation, Compass, Map, Home, Building, Store, Factory, Warehouse, School, Hospital, Car, Plane, Train, Ship, Bike, Bus, Package, Box, Gift, ShoppingBag, CreditCard, Wallet, Coins, note, Receipt, Calculator, Percent, TrendingDown, Thermometer, Gauge, Battery, Wifi, Bluetooth, Radio, Tv, Laptop, Tablet, Watch, Headphones, Speaker, Mic, Camera, Video, Image, Music, Film, Book, Newspaper, FileText, Folder as FolderIcon, Archive as ArchiveIcon, HardDrive, Server, Cpu, MemoryStick, Disc } from 'lucide-react';
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
 
 const ZionAIAnalyticsProPage = () => {
   const features = [

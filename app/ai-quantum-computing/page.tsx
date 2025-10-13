@@ -20,10 +20,6 @@ export default function AiQuantumComputing() {
     "Custom quantum circuit design and optimization"
   ];
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
   const pricingPlans = [
     {
       name: "Research",
