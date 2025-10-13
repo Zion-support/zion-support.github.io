@@ -9,7 +9,7 @@ interface FuturisticCardProps {
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
   children, 
   className = '', 
-  variant = 'default' 
+  variant = 'default' ;
 }) => {
   const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm';
   
@@ -22,8 +22,8 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   return (
     <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
       {children}
-    </div>
-  );
+    </div>;
+);
 };
 
 export default FuturisticCard;

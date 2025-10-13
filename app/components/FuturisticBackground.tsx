@@ -12,6 +12,6 @@ export default function FuturisticBackground({ children, className = '' }: Futur
       <div className="relative z-10">
         {children}
       </div>
-    </div>
-  );
+    </div>;
+);
 }

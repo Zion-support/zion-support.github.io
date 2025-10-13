@@ -10,8 +10,7 @@ import { }
   Globe,
   CheckCircle,
   ArrowRight,
-  Search,
-
+  Search,;
 } from 'lucide-react;
 
 ;
@@ -54,8 +53,8 @@ const ServicesPage: React.FC = () => {const services = [;
                   <li key={featureIndex} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
                     {feature}
-                  </li>
-                ))}
+                  </li>;
+))}
               </ul>
 
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
@@ -70,8 +69,8 @@ const ServicesPage: React.FC = () => {const services = [;
                 <div className="flex items-center gap-2 mb-2">
                   <span className="text-2xl font-bold text-white">{service.price}</span>
                   {service.originalPrice && (
-                    <span className="text-lg text-gray-400 line-through">{service.originalPrice}</span>
-                  )}
+                    <span className="text-lg text-gray-400 line-through">{service.originalPrice}</span>;
+)}
                 </div>
               </div>
 
@@ -82,13 +81,13 @@ const ServicesPage: React.FC = () => {const services = [;
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 flex-shrink-0"></div>
                       {feature}
-                    </li>
-                  ))}
+                    </li>;
+))}
                   {service.features.length > 3 && (
                     <li className="text-sm text-gray-400">
                       +{service.features.length - 3} more features
-                    </li>
-                  )}
+                    </li>;
+)}
                 </ul>
               </div>
 
@@ -98,10 +97,10 @@ const ServicesPage: React.FC = () => {const services = [;
               >
                 Learn More
               </a>
-            </div>
-          ))}
+            </div>;
+))}
         </div>
       </div>
-    </div>
-  );
+    </div>;
+);
 }

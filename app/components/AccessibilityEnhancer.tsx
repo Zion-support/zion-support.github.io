@@ -1,20 +1,32 @@
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
 import React, { useEffect, useState } from 'react';
 
 // Type definitions for browser APIs
 declare global {
   interface MediaQueryListEvent extends Event {
-    matches: boolean;
+    readonly matches: boolean;
   }
   
   interface MediaQueryList {
-    matches: boolean;
+    readonly matches: boolean;
     addEventListener(type: 'change', listener: (event: MediaQueryListEvent) => void): void;
     removeEventListener(type: 'change', listener: (event: MediaQueryListEvent) => void): void;
   }
 }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+<<<<<<< HEAD
+=======
+import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
+// Using built-in DOM types
+import React, { useEffect, useState } from 'react';
+
+import React, { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -26,55 +38,53 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   useEffect(() => {
     // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    if (typeof window !== 'undefined') {
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     
-    setIsReducedMotion(prefersReducedMotion);
-    setIsHighContrast(prefersHighContrast);
+      setIsReducedMotion(prefersReducedMotion);
+      setIsHighContrast(prefersHighContrast);
 
-    // Listen for changes in user preferences
-    const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const contrastQuery = window.matchMedia('(prefers-contrast: high)');
+      // Listen for changes in user preferences
+      const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const contrastQuery = window.matchMedia('(prefers-contrast: high)');
 
-    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
-    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
+      const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
+      const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
 
-    motionQuery.addEventListener('change', handleMotionChange);
-    contrastQuery.addEventListener('change', handleContrastChange);
+      motionQuery.addEventListener('change', handleMotionChange);
+      contrastQuery.addEventListener('change', handleContrastChange);
 
-    return () => {
-      motionQuery.removeEventListener('change', handleMotionChange);
-      contrastQuery.removeEventListener('change', handleContrastChange);
-    };
+      return () => {
+        motionQuery.removeEventListener('change', handleMotionChange);
+        contrastQuery.removeEventListener('change', handleContrastChange);
+      };
+    }
   }, []);
 
   useEffect(() => {
-    // Apply accessibility styles
-    const root = document.documentElement;
-    
-    if (isHighContrast) {
-      root.style.setProperty('--contrast-ratio', '4.5');
-      root.style.setProperty('--text-color', '#000000');
-      root.style.setProperty('--bg-color', '#ffffff');
-    } else {
-      root.style.setProperty('--contrast-ratio', '3');
-      root.style.removeProperty('--text-color');
-      root.style.removeProperty('--bg-color');
+    // Apply accessibility settings to document
+    if (typeof document !== 'undefined') {
+      document.documentElement.style.setProperty('--font-size', `${fontSize}px`);
+      document.documentElement.style.setProperty('--high-contrast', isHighContrast ? '1' : '0');
+      document.documentElement.style.setProperty('--reduced-motion', isReducedMotion ? '1' : '0');
     }
+  }, [fontSize, isHighContrast, isReducedMotion]);
 
-    if (isReducedMotion) {
-      root.style.setProperty('--animation-duration', '0.01ms');
-      root.style.setProperty('--animation-iteration-count', '1');
-    } else {
-      root.style.removeProperty('--animation-duration');
-      root.style.removeProperty('--animation-iteration-count');
+  const handleKeyDown = (e: KeyboardEvent) => {
+    // Keyboard shortcuts for accessibility
+    if (e.ctrlKey && e.key === '=') {
+      e.preventDefault();
+      setFontSize(prev => Math.min(prev + 2, 24));
+    } else if (e.ctrlKey && e.key === '-') {
+      e.preventDefault();
+      setFontSize(prev => Math.max(prev - 2, 12));
+    } else if (e.ctrlKey && e.key === '0') {
+      e.preventDefault();
+      setFontSize(16);
     }
+  };
 
-    // Apply font size
-    root.style.setProperty('--base-font-size', `${fontSize}px`);
-  }, [isHighContrast, isReducedMotion, fontSize]);
-
-  // Keyboard navigation enhancements
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       // Skip to main content
@@ -84,7 +94,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           (mainContent as HTMLElement).focus();
           e.preventDefault();
         }
-      }
 
       // Skip to navigation
       if (e.key === 'Tab' && !e.shiftKey && e.target === document.body) {
@@ -103,20 +112,23 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   // Focus management
   useEffect(() => {
     const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+);
 
     const handleFocus = (e: Event) => {
       const target = e.target as HTMLElement;
       target.style.outline = '2px solid #0066cc';
       target.style.outlineOffset = '2px';
-    };
+    }
+  };
 
-    const handleBlur = (e: Event) => {
-      const target = e.target as HTMLElement;
+  const handleBlur = (e: Event) => {
+    const target = e.target as HTMLElement;
+    if (target) {
       target.style.outline = '';
       target.style.outlineOffset = '';
-    };
+    }
+  };
 
     focusableElements.forEach(element => {
       element.addEventListener('focus', handleFocus);
@@ -138,8 +150,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     >
       {children}
       
-      {/* Accessibility controls */}
-      <div className="fixed top-4 right-4 z-50 bg-white border border-gray-300 rounded-lg p-4 shadow-lg">
+      {/* Accessibility Controls */}
+      <div className="fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border">
         <h3 className="text-sm font-semibold mb-2">Accessibility Controls</h3>
         <div className="space-y-2">
           <label className="flex items-center space-x-2">
@@ -161,9 +173,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             <span className="text-sm">Reduce Motion</span>
           </label>
           <div className="flex items-center space-x-2">
-            <label htmlFor="font-size" className="text-sm">Font Size:</label>
+            <label className="text-sm">Font Size:</label>
             <input
-              id="font-size"
               type="range"
               min="12"
               max="24"
@@ -175,10 +186,22 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
   );
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
 };
 
 export default AccessibilityEnhancer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+    </div>;
+);
+};
+
+export default AccessibilityEnhancer;}}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3

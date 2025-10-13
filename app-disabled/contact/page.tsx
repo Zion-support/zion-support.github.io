@@ -6,7 +6,7 @@ const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     company: ',
     phone: ',
     service: ',
-    message: ';)
+    message: ';);
 })const [isSubmitting, setIsSubmitting] = useState(false);
 
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
@@ -14,15 +14,15 @@ const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(i
 const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
 
     setFormData(prev => ({
-    message: '';)
+    message: '';);
 })
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
     setFormData(prev => ({}
       ...prev,
-      [e.target.name]: e.target.value;)
-})))
+      [e.target.name]: e.target.value;);
+})));
 }, []);
 
 const handleSubmit = useCallback(async (e: React.FormEvent) => {    setFormData(prev => ({;
@@ -35,16 +35,16 @@ const handleSubmit = useCallback(async (e: React.FormEvent) => {    setFormData(
         company: ',
         phone: ',
         service: ',
-message: ']
-    });]
-    } catch (error) {
+message: '];
+});];
+} catch (error) {
       setSubmitStatus('error)]
       setSubmitStatus('error);
-
-    } finally {
+;
+} finally {
       setIsSubmitting(false);
-
-  }, []);
+;
+}, []);
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
       
@@ -161,14 +161,14 @@ message: ']
                       <>
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                         <span>Sending...</span>
-                      </>
-                    ) : (
+                      </>;
+) : (
                       <>
                         <Send className="w-5 h-5 mr-2" />
                         Send Message
         </div>
-      </div>
-  );
+      </div>;
+);
 }
       {/* Contact Form and Info *
       <section className="py-20 px-4>
@@ -182,8 +182,8 @@ message: ']
               {submitStatus === 'success' && (<div className=mb-6 p-4 bg-green-500/20 border border-green-500
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2 
                   <span className="text-green-400>Message sent successfully!<
-                <)
-              )}
+                <);
+)}
 
               {submitStatus === 'error' && (<div className=mb-6 p-4 bg-red-500/20 border border-red-500
                   <span className="text-red-400>Failed to send message. Please try again.<
@@ -213,13 +213,13 @@ message: ']
                   {isSubmitting ? (<>}
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"><
                       Sending...
-                    <)
-                  ) : (<>
+                    <);
+) : (<>
                       
               <div>
                 <h2 className="text-3xl font-bold text-white mb-6">Get in touch<
                 <p className="text-gray-300 mb-8">
-                  We're here to help you succeed. Reach out to us through any of the channels below, 
+                  We&apos;re here to help you succeed. Reach out to us through any of the channels below, 
                   and we'll get back to you within 24 hours.
                 <
               <
@@ -269,12 +269,13 @@ message: ']
       <
 
       <Footer 
-    <
-  );
-
-)]
-    };
-
+    <;
+);
+;
+)];
+};
+;
 };
 
 export default ContactPage;}
+}}}}

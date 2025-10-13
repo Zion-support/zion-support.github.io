@@ -9,6 +9,6 @@ export default function AiFintechPage() {
           This page is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>;
+);
 }

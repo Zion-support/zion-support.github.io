@@ -50,8 +50,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
     // Cleanup function
     return () => {
-      // Cleanup if needed
-    };
+      // Cleanup if needed;
+};
   }, []);
 
   return <>{children}</>;

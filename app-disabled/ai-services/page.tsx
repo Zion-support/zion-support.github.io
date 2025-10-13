@@ -59,16 +59,16 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
             </div>
           </div>
 
-    </div>
-  );
+    </div>;
+);
 }
       title: 'AI Content Generator',
       description: 'Generate high-quality content for blogs, social media, marketing materials, and more using advanced AI models.',
       features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content templates'],
       pricing: 'Starting at $29/month',
       link: '/ai-content-generator',
-      popular: true
-    },
+      popular: true;
+},
     {
       icon: <Zap className="w-8 h-8 text-purple-500" />,
       title: 'AI Automation',
@@ -76,8 +76,8 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       features: ['Workflow automation', 'Process optimization', 'Custom integrations', 'Real-time monitoring'],
       pricing: 'Starting at $49/month',
       link: '/ai-automation',
-      popular: true
-    },
+      popular: true;
+},
     {
       icon: <Shield className="w-8 h-8 text-red-500" />,
       title: 'AI Cybersecurity',
@@ -85,8 +85,8 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       features: ['Threat detection', 'Anomaly monitoring', 'Automated response', 'Compliance reporting'],
       pricing: 'Starting at $99/month',
       link: '/ai-cybersecurity',
-      popular: false
-    },
+      popular: false;
+},
     {
       icon: <Globe className="w-8 h-8 text-green-500" />,
       title: 'AI Analytics',
@@ -94,8 +94,8 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       features: ['Predictive analytics', 'Data visualization', 'Custom dashboards', 'Real-time insights'],
       pricing: 'Starting at $39/month',
       link: '/ai-analytics',
-      popular: false
-    },
+      popular: false;
+},
     {
       icon: <Brain className="w-8 h-8 text-orange-500" />,
       title: 'Machine Learning',
@@ -103,8 +103,8 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       features: ['Predictive Modeling', 'Pattern Recognition', 'Automated Learning', 'Real-time Adaptation'],
       pricing: 'Starting at $99/month',
       link: '/machine-learning',
-      popular: true
-    },
+      popular: true;
+},
     {
       icon: <MessageSquare className="w-8 h-8 text-green-500" />,
       title: 'Natural Language Processing',
@@ -112,8 +112,8 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
       pricing: 'Starting at $89/month',
       link: '/nlp',
-      popular: false
-    },
+      popular: false;
+},
     {
       icon: <Eye className="w-8 h-8 text-purple-500" />,
       title: 'Computer Vision',
@@ -121,8 +121,8 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Video Analysis'],
       pricing: 'Starting at $119/month',
       link: '/computer-vision',
-      popular: true
-    },
+      popular: true;
+},
     {
       icon: <BarChart3 className="w-8 h-8 text-yellow-500" />,
       title: 'Predictive Analytics',
@@ -130,8 +130,8 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       features: ['Trend Analysis', 'Risk Assessment', 'Performance Prediction', 'Scenario Planning'],
       pricing: 'Starting at $149/month',
       link: '/predictive-analytics',
-      popular: false
-    }
+      popular: false;
+}
   ]
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
@@ -143,6 +143,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>
       </div>
-    </div>
-  )
+    </div>;
+);
 }

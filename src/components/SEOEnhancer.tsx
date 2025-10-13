@@ -16,7 +16,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   keywords,
   noIndex = false,
   structuredData,
-  children
+  children;
 }) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -28,8 +28,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
-      "contactType": "customer service"
-    }
+      "contactType": "customer service";
+}
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
@@ -38,7 +38,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     <React.Fragment>
       <Helmet>
         {/* Basic Meta Tags */}
-        <title>{title}
+        <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords.join(', ')} />
         <meta name="author" content="Zion Tech Group" />
@@ -65,7 +65,10 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         {/* Structured Data */}
         <script type="application/ld+json">
           {JSON.stringify(finalStructuredData)}
+        </script>
+      </Helmet>
       {children}
+    </React.Fragment>
   );
 };
 

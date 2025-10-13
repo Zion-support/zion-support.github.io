@@ -70,6 +70,6 @@ export default function NetworkInfrastructure() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
+);
 }

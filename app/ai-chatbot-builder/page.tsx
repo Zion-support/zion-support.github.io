@@ -26,6 +26,6 @@ export default function AiChatbotBuilder() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
+);
 }

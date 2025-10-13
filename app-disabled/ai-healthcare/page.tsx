@@ -14,5 +14,5 @@ import { Helmet } from 'react-helmet-async';
           </p>
         </div>
         <div className="text-center">
-          <p className="text-gray-300">Coming Soon - AiHealthcare Solutions</p>
+          <p className="text-gray-300">Coming Soon - AiHealthcare Solutions</p>;
 }

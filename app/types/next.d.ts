@@ -1,13 +1,16 @@
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
 // Next.js type declarations
 declare module 'next' {
   interface NextApiRequest {
-    user?: any;
+    user?: Record<string, unknown>;
   }
-  
   interface NextConfig {
     // Add any Next.js specific types here
+    [key: string]: unknown;
   }
 }
 
@@ -18,5 +21,8 @@ export const nextUtil = () => {
 };
 
 export default nextUtil;
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c

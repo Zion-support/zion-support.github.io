@@ -11,9 +11,14 @@ function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>> ')) {
+<<<<<<< HEAD
+    if (!content.includes('<<<<<<< HEAD')) {
       return false; // No conflicts
     }
+=======
+    if (!content.includes('      return false; // No conflicts;
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     
     console.log(`Resolving conflicts in: ${filePath}`);
     
@@ -31,11 +36,15 @@ function resolveMergeConflicts(filePath) {
         inConflict = true;
         conflictType = 'head';
         continue;
-      } else if (line.startsWith('=======')) {
-        separatorFound = true;
+      }
+      
+      if (line.startsWith('=======')) {
         conflictType = 'separator';
+        separatorFound = true;
         continue;
-      } else if (line.startsWith('>>>>>>> ')) {
+      }
+      
+      if (line.startsWith('>>>>>>>')) {
         inConflict = false;
         conflictType = '';
         separatorFound = false;
@@ -107,8 +116,8 @@ try {
     execSync('git add .', { stdio: 'inherit' });
     console.log('Staged resolved files');
   }
-  
+  ;
 } catch (error) {
   console.error('Error during merge conflict resolution:', error.message);
   process.exit(1);
-}
+}))))

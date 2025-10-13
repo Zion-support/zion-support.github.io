@@ -11,20 +11,16 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-
   const { email, name, preferences } = req.body || {};
-
   if (!email) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
     return;
   }
-
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
-
   let existing = [];
   try {
     if (fs.existsSync(file)) {
@@ -34,18 +30,27 @@ export default function handler(req, res) {
     }
   } catch (_error) {
     // console.error('Error reading existing subscribers:', error);
+<<<<<<< HEAD
+=======
+  } catch (error) {
+    console.error('Error reading existing subscribers:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+;
+} catch (error) {
+    console.error('Error reading existing subscribers:', error);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     existing = [];
   }
-
+  
   // Check if email already exists
   const existingSubscriber = existing.find(sub => sub.email === email);
   if (existingSubscriber) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Email already subscribed' }));
+    res.end(JSON.stringify({ error: 'Invalid email format' }));
     return;
   }
-
   const newSubscriber = {
     id: Date.now().toString(),
     email,
@@ -54,22 +59,47 @@ export default function handler(req, res) {
     timestamp: new Date().toISOString(),
     status: 'active'
   };
-
   existing.push(newSubscriber);
-
   try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    const newSubscriber = {
+      id: Date.now().toString(),
+      email,
+      name: name || '',
+      preferences: preferences || {},
+      timestamp: new Date().toISOString(),
+      status: 'active'
+    };
+
+    // In a real application, you would save to a database
+    // For now, we'll just log the subscription
+    console.log('New subscription:', newSubscriber);
+
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Successfully subscribed to newsletter',
-      id: newSubscriber.id
-    }));
+      id: newSubscriber.id;
+}));
   } catch (_error) {
     // console.error('Error saving subscriber:', error);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+}}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+  } catch (error) {
+    console.error('Error saving subscriber:', error);
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save subscription' }));
+    res.end(JSON.stringify({ 
+      error: 'Failed to process subscription',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
   }
 }
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847

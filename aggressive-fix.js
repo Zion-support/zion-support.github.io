@@ -47,20 +47,20 @@ const ${serviceName}Page: React.FC = () => {
       icon: Zap,
       title: 'Advanced Technology',
       description: 'Cutting-edge technology solutions for modern businesses.',
-      benefits: ['Latest innovations', 'Scalable solutions', 'High performance', 'Future-proof']
-    },
+      benefits: ['Latest innovations', 'Scalable solutions', 'High performance', 'Future-proof'];
+},
     {
       icon: BarChart,
       title: 'Data Analytics',
       description: 'Comprehensive data analysis and insights.',
-      benefits: ['Real-time analytics', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
+      benefits: ['Real-time analytics', 'Custom reports', 'Data visualization', 'Performance metrics'];
+},
     {
       icon: Target,
       title: 'Precision Solutions',
       description: 'Targeted solutions designed for your specific needs.',
-      benefits: ['Custom solutions', 'Expert consultation', 'Proven results', 'Ongoing support']
-    }
+      benefits: ['Custom solutions', 'Expert consultation', 'Proven results', 'Ongoing support'];
+}
   ];
 
   const stats = [
@@ -126,11 +126,11 @@ const ${serviceName}Page: React.FC = () => {
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
-                    </li>
-                  ))}
+                    </li>;
+))}
                 </ul>
-              </div>
-            ))}
+              </div>;
+))}
           </div>
         </div>
       </section>
@@ -147,8 +147,8 @@ const ${serviceName}Page: React.FC = () => {
                 <div className="text-gray-300">
                   {stat.label}
                 </div>
-              </div>
-            ))}
+              </div>;
+))}
           </div>
         </div>
       </section>
@@ -167,8 +167,8 @@ const ${serviceName}Page: React.FC = () => {
           </button>
         </div>
       </section>
-    </>
-  );
+    </>;
+);
 };
 
 export default ${serviceName}Page;
@@ -181,8 +181,8 @@ const ${componentName}: React.FC = () => {
   return (
     <div className="${componentName.toLowerCase()}">
       {/* ${componentName} component */}
-    </div>
-  );
+    </div>;
+);
 };
 
 export default ${componentName};
@@ -191,7 +191,7 @@ export default ${componentName};
 // Utility template
 const createUtilityTemplate = (utilityName) => `// ${utilityName} utility
 export const ${utilityName} = () => {
-  // Implementation
+  // Implementation;
 };
 `;
 
@@ -219,7 +219,7 @@ const main = () => {
       const fileName = path.basename(filePath, path.extname(filePath));
       
       if (filePath.includes('/page.tsx')) {
-        // It's a page file
+        // It&apos;s a page file
         const serviceName = path.basename(path.dirname(filePath))
           .split('-')
           .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -234,14 +234,14 @@ const main = () => {
         
         newContent = createGenericPage(serviceName, title, description);
       } else if (filePath.includes('/components/')) {
-        // It's a component file
+        // It&apos;s a component file
         const componentName = fileName
           .split('-')
           .map(word => word.charAt(0).toUpperCase() + word.slice(1))
           .join('');
         newContent = createComponentTemplate(componentName);
       } else if (filePath.includes('/utils/')) {
-        // It's a utility file
+        // It&apos;s a utility file
         const utilityName = fileName
           .split('-')
           .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -255,8 +255,8 @@ const main = () => {
       fs.writeFileSync(fullPath, newContent);
       console.log(`Fixed: ${filePath}`);
       fixedCount++;
-      
-    } catch (error) {
+      ;
+} catch (error) {
       console.error(`Error fixing ${filePath}:`, error.message);
     }
   }

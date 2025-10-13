@@ -35,20 +35,20 @@ const DemoPage: React.FC = () => {
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
       content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
-      rating: 5
-    },
+      rating: 5;
+},
     {
       name: "Michael Chen",
       company: "DataFlow Systems",
       content: "The live demonstration helped us understand the full potential of the AI solutions.",
-      rating: 5
-    },
+      rating: 5;
+},
     {
       name: "Emily Rodriguez",
       company: "InnovateLabs",
       content: "The demo team was knowledgeable and answered all our questions thoroughly.",
-      rating: 5
-    }
+      rating: 5;
+}
   ];
 
   return (
@@ -104,8 +104,8 @@ const DemoPage: React.FC = () => {
                     <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
                       {feature.demo}
                     </button>
-                  </div>
-                );
+                  </div>;
+);
               })}
             </div>
           </div>
@@ -145,16 +145,16 @@ const DemoPage: React.FC = () => {
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
+))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
                   <div>
                     <p className="text-white font-semibold">{testimonial.name}</p>
                     <p className="text-cyan-400 text-sm">{testimonial.company}</p>
                   </div>
-                </div>
-              ))}
+                </div>;
+))}
             </div>
           </div>
         </section>
@@ -180,8 +180,8 @@ const DemoPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>;
+);
 };
 
 export default DemoPage;

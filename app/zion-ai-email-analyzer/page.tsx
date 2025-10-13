@@ -1,9 +1,12 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
 export default function ZionAIEmailAnalyzer() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -21,7 +24,7 @@ export default function ZionAIEmailAnalyzer() {
             Advanced AI-powered email analysis and management solutions for modern businesses.
           </p>
         </div>
-
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">Email Analysis</h3>
@@ -34,7 +37,7 @@ export default function ZionAIEmailAnalyzer() {
               <li>• Priority detection</li>
             </ul>
           </div>
-
+          
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">Smart Filtering</h3>
             <p className="text-gray-300 mb-4">
@@ -46,7 +49,7 @@ export default function ZionAIEmailAnalyzer() {
               <li>• Smart routing</li>
             </ul>
           </div>
-
+          
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold text-white mb-4">Response Suggestions</h3>
             <p className="text-gray-300 mb-4">
@@ -59,7 +62,10 @@ export default function ZionAIEmailAnalyzer() {
             </ul>
           </div>
         </div>
-
+<<<<<<< HEAD
+        
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Email Management?</h2>
@@ -69,11 +75,26 @@ export default function ZionAIEmailAnalyzer() {
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
               Get Started Today
             </button>
+<<<<<<< HEAD
           </div>
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+          </div>;
+);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 }
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c

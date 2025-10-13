@@ -10,6 +10,6 @@ export default function ZionEcommerceOptimizerPage() {
           This page is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>;
+);
 }

@@ -180,10 +180,8 @@ const routes = [
 
 // Generate sitemap XML
 const generateSitemap = () => {
-=======
 // Generate comprehensive sitemap
 function generateSitemap() {
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString();
   
@@ -216,8 +214,6 @@ function generateSitemap() {
       priority: '0.8',
       changefreq: 'weekly'
     });
-  });
-
 
   microSaasServices.forEach(service => {
     pages.push({
@@ -225,7 +221,6 @@ function generateSitemap() {
       priority: '0.8',
       changefreq: 'weekly'
     });
-  });
 
   // Add 5G solution pages
   const fiveGServices = [

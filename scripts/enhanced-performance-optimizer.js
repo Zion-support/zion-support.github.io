@@ -13,8 +13,8 @@ class PerformanceOptimizer {
       bundleSize: 0,
       imageOptimizations: 0,
       cssOptimizations: 0,
-      jsOptimizations: 0,
-    };
+      jsOptimizations: 0,;
+};
   }
 
   async optimize() {
@@ -86,8 +86,8 @@ class PerformanceOptimizer {
           type: 'image',
           file: file,
           recommendation: 'Convert to WebP format for better compression',
-          potentialSavings: Math.round(stats.size * 0.3),
-        });
+          potentialSavings: Math.round(stats.size * 0.3),;
+});
         optimizedCount++;
       }
     });
@@ -120,8 +120,8 @@ class PerformanceOptimizer {
           type: 'css',
           file: file,
           recommendation: `Remove ${unusedSelectors.length} unused CSS selectors`,
-          details: unusedSelectors.slice(0, 5), // Show first 5
-        });
+          details: unusedSelectors.slice(0, 5), // Show first 5;
+});
         cssOptimizations++;
       }
 
@@ -130,8 +130,8 @@ class PerformanceOptimizer {
         this.optimizations.push({
           type: 'css',
           file: file,
-          recommendation: 'Minify CSS to reduce file size',
-        });
+          recommendation: 'Minify CSS to reduce file size',;
+});
         cssOptimizations++;
       }
     });
@@ -163,8 +163,8 @@ class PerformanceOptimizer {
         this.optimizations.push({
           type: 'javascript',
           file: file,
-          recommendation: `Remove ${consoleLogs} console.log statements`,
-        });
+          recommendation: `Remove ${consoleLogs} console.log statements`,;
+});
         jsOptimizations++;
       }
 
@@ -175,8 +175,8 @@ class PerformanceOptimizer {
           type: 'javascript',
           file: file,
           recommendation: 'Consider code splitting for large bundle',
-          size: Math.round(stats.size / 1024) + 'KB',
-        });
+          size: Math.round(stats.size / 1024) + 'KB',;
+});
         jsOptimizations++;
       }
     });
@@ -230,8 +230,8 @@ class PerformanceOptimizer {
     return uniqueSelectors.filter(selector => 
       selector.includes('unused') || 
       selector.includes('old') ||
-      selector.includes('deprecated')
-    );
+      selector.includes('deprecated');
+);
   }
 
   generateBundleRecommendations(totalSize) {
@@ -243,8 +243,8 @@ class PerformanceOptimizer {
         type: 'bundle',
         recommendation: 'Bundle size is large. Consider implementing code splitting.',
         priority: 'high',
-        potentialSavings: '20-40%',
-      });
+        potentialSavings: '20-40%',;
+});
     }
 
     if (sizeMB > 2) {
@@ -252,8 +252,8 @@ class PerformanceOptimizer {
         type: 'bundle',
         recommendation: 'Implement lazy loading for non-critical components.',
         priority: 'high',
-        potentialSavings: '30-50%',
-      });
+        potentialSavings: '30-50%',;
+});
     }
 
     return recommendations;
@@ -267,9 +267,9 @@ class PerformanceOptimizer {
       summary: {
         totalOptimizations: this.optimizations.length,
         highPriority: this.optimizations.filter(opt => opt.priority === 'high').length,
-        estimatedSavings: this.calculateEstimatedSavings(),
-      },
-    };
+        estimatedSavings: this.calculateEstimatedSavings(),;
+},;
+};
 
     const reportPath = path.join(__dirname, '../performance-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

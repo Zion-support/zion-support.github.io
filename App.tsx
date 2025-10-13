@@ -21,6 +21,10 @@ import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
+<<<<<<< HEAD
+=======
+import SolutionsPage from './app/pages/SolutionsPage';
+>>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -72,6 +76,7 @@ function App() {
                     <Route path="/privacy" element={<PrivacyPage />} />
                     <Route path="/terms" element={<TermsPage />} />
                     <Route path="/pricing" element={<PricingPage />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
                     
                     {/* Catch all route */}
                     <Route path="*" element={

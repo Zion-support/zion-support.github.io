@@ -78,7 +78,7 @@ const ${pageName}: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our ${pageName.replace(/([A-Z])/g, ' $1').trim().toLowerCase()} 
+            Let&apos;s discuss how our ${pageName.replace(/([A-Z])/g, ' $1').trim().toLowerCase()} 
             services can help you achieve your goals.
           </p>
           <a
@@ -89,8 +89,8 @@ const ${pageName}: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
+);
 };
 
 export default ${pageName};`;
@@ -112,15 +112,12 @@ function hasSyntaxErrors(filePath) {
       /'}' expected/,
       /JSX expressions must have one parent element/,
       /Expected corresponding closing tag for JSX fragment/,
-      /<<<<<<< HEAD/,
-      /=======/,
-      />>>>>>> /
     ];
     
     return errorPatterns.some(pattern => pattern.test(content));
   } catch (error) {
-    return true; // If we can't read the file, consider it broken
-  }
+    return true; // If we can't read the file, consider it broken;
+}
 }
 
 // Function to fix a file
@@ -172,7 +169,7 @@ console.log(`Found ${errorFiles.length} files with errors`);
 
 // Filter to only .tsx files in the app directory
 const tsxErrorFiles = errorFiles.filter(file => 
-  file.includes('app/') && file.endsWith('.tsx')
+  file.includes('app/') && file.endsWith('.tsx');
 );
 
 console.log(`Found ${tsxErrorFiles.length} .tsx files with errors`);

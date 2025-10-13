@@ -33,8 +33,8 @@ export default function ${componentName}() {
           This page is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>;
+);
 }`;
       
       fs.writeFileSync(filePath, fixedContent, 'utf8');

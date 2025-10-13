@@ -26,9 +26,9 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
       '@app': resolve(__dirname, './app'),
       '@components': resolve(__dirname, './app/components'),
-      '@utils': resolve(__dirname, './app/utils'),
-    },
-  },
+      '@utils': resolve(__dirname, './app/utils'),;
+},;
+},
   build: {
     target: 'esnext',
     minify: 'esbuild',
@@ -38,23 +38,23 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['@heroicons/react', 'lucide-react'],
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000,
-  },
+          ui: ['@heroicons/react', 'lucide-react'],;
+},;
+},;
+},
+    chunkSizeWarningLimit: 1000,;
+},
   server: {
     port: 3000,
-    open: true,
-  },
+    open: true,;
+},
   preview: {
     port: 4173,
-    open: true,
-  },
+    open: true,;
+},
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
-  },
+    include: ['react', 'react-dom', 'react-router-dom'],;
+},;
 });`;
 
   fs.writeFileSync(viteConfigPath, viteConfig);
@@ -79,8 +79,8 @@ const PerformanceMonitor: React.FC = () => {
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null,
-  });
+    ttfb: null,;
+});
 
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -128,8 +128,8 @@ const PerformanceMonitor: React.FC = () => {
         <div>CLS: {metrics.cls ? \`\${metrics.cls.toFixed(4)}\` : 'Loading...'}</div>
         <div>TTFB: {metrics.ttfb ? \`\${metrics.ttfb.toFixed(2)}ms\` : 'Loading...'}</div>
       </div>
-    </div>
-  );
+    </div>;
+);
 };
 
 export default PerformanceMonitor;`;
@@ -149,8 +149,7 @@ const imageOptimizer = `export interface ImageOptimizationOptions {
 
 export const optimizeImage = (
   src: string,
-  options: ImageOptimizationOptions = {}
-): string => {
+  options: ImageOptimizationOptions ={true} ): string => {
   const { width, height, quality = 80, format = 'webp', lazy = true } = options;
   
   // In a real implementation, you would use a service like Cloudinary or ImageKit
@@ -169,7 +168,7 @@ export const optimizeImage = (
 
 export const generateResponsiveImages = (
   src: string,
-  sizes: number[] = [320, 640, 768, 1024, 1280, 1920]
+  sizes: number[] = [320, 640, 768, 1024, 1280, 1920];
 ): string => {
   return sizes
     .map(size => \`\${optimizeImage(src, { width: size })} \${size}w\`)
@@ -234,8 +233,8 @@ if (fs.existsSync(packageJsonPath)) {
     ...packageJson.scripts,
     'analyze:bundle': 'node scripts/analyze-bundle.js',
     'perf:monitor': 'npm run dev -- --open',
-    'perf:build': 'npm run build && npm run analyze:bundle',
-  };
+    'perf:build': 'npm run build && npm run analyze:bundle',;
+};
   
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
   console.log('✅ Package.json updated with performance scripts');

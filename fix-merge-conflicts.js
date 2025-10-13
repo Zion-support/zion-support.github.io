@@ -2,64 +2,70 @@
 
 import fs from 'fs';
 import path from 'path';
+
+// List of files with merge conflicts
+const filesWithConflicts = [
+  './api/newsletter/subscribe.js',
+  './api/onsite-request.js',
+  './api/quotes.js',
+  './api/shipping-rates.js',
+  './api/subscribe.js',
+  './api/wallet.js',
+  './app/components/AccessibilityEnhancer.tsx',
+  './app/zion-ai-voice-assistant-pro/page.tsx',
+  './app/zion-smart-expense-categorizer/page.tsx',
+  './app/zion-ai-inventory-manager/page.tsx',
+  './app/zion-ai-performance-optimizer/page.tsx',
+  './app/zion-ai-social-media-manager/page.tsx',
+  './app/zion-ai-email-analyzer/page.tsx',
+  './app/zion-smart-inventory-optimizer/page.tsx',
+  './scripts/generate-sitemap.cjs',
+  './performance-report.json',
+  './fix-syntax-errors.cjs'
+];
+
+function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Check if file has merge conflicts
-      return false;
-    }
+    // Remove merge conflict markers and keep the HEAD version
     
-    console.log(`Fixing merge conflicts in: ${filePath}`);
+    // Remove any remaining conflict markers
     
+    // Clean up any duplicate lines that might have been created
+    const lines = content.split('\n');
+    const cleanedLines = [];
+    let prevLine = '';
     
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-        separatorFound = false;
-        continue;
-      }
-      
-      } else {
-        result.push(line);
+    for (const line of lines) {
+      if (line.trim() !== prevLine.trim() || line.trim() === '') {
+        cleanedLines.push(line);
+        prevLine = line;
       }
     }
     
+    content = cleanedLines.join('\n');
+    
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Fixed merge conflicts in: ${filePath}`);
+    return true;
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Function to find all files with merge conflicts
-function findFilesWithConflicts(dir) {
-  const files = [];
-  
-  function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other irrelevant directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-          scanDirectory(fullPath);
-        }
-      } else if (stat.isFile()) {
-              files.push(fullPath);
-            }
-          } catch (error) {
-            // Skip files that can't be read
-          }
-        }
-      }
+console.log('Starting to fix merge conflicts...');
+
+let fixedCount = 0;
+for (const file of filesWithConflicts) {
+  if (fs.existsSync(file)) {
+    if (fixMergeConflicts(file)) {
+      fixedCount++;
     }
-  }
-  
-  return files;
-}
-
-// Main execution
-    fixedCount++;
+  } else {
+    console.log(`File not found: ${file}`);
   }
 }
 
+console.log(`Fixed merge conflicts in ${fixedCount} files.`);

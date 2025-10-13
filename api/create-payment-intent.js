@@ -1,17 +1,4 @@
-const withErrorLogging = (handler) => {
-  return async (req, res) => {
-    try {
-      await handler(req, res);
-    } catch (error) {
-      console.error('API Error:', error);
-      res.statusCode = 500;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Internal server error' }));
-    }
-  };
-};
-
-async function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -21,7 +8,7 @@ async function handler(req, res) {
 
   try {
     const { amount, currency = 'usd' } = req.body || {};
-    
+
     if (!amount) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
@@ -31,20 +18,18 @@ async function handler(req, res) {
 
     // Mock payment intent creation
     const paymentIntent = {
-      id: `pi_${Date.now()}`,
-      amount: Math.round(amount * 100), // Convert to cents
+      id: 'pi_' + Math.random().toString(36).substr(2, 9),
+      amount: amount * 100, // Convert to cents
       currency,
       status: 'requires_payment_method',
-      created: Math.floor(Date.now() / 1000)
+      client_secret: 'pi_' + Math.random().toString(36).substr(2, 9) + '_secret_' + Math.random().toString(36).substr(2, 9)
     };
 
     res.statusCode = 200;
     res.json({ paymentIntent });
-  } catch (_error) {
+  } catch (error) {
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
+    res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }
-
-export default withErrorLogging(handler);

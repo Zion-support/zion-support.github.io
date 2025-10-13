@@ -78,7 +78,7 @@ const ${pageName}: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our ${pageName.replace(/([A-Z])/g, ' $1').trim().toLowerCase()} 
+            Let&apos;s discuss how our ${pageName.replace(/([A-Z])/g, ' $1').trim().toLowerCase()} 
             services can help you achieve your goals.
           </p>
           <a
@@ -89,8 +89,8 @@ const ${pageName}: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
+);
 };
 
 export default ${pageName};`;
@@ -119,67 +119,14 @@ function fixBrokenFile(filePath) {
     let hasChanges = false;
     
     // Fix common JSX issues
-    if (fixedContent.includes('<<<<<<< HEAD') || fixedContent.includes('=======') || fixedContent.includes('>>>>>>> ')) {
-      console.log(`Removing merge conflict markers from: ${filePath}`);
+    if (fixedContent.includes('      console.log(`Removing merge conflict markers from: ${filePath}`);
       fixedContent = fixedContent
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*\n?/g, '')
-        .replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]*\n?/g, '');
-      hasChanges = true;
-    }
-    
-    // Fix incomplete JSX elements
-    if (fixedContent.includes('<div') && !fixedContent.includes('</div>')) {
-      console.log(`Fixing incomplete JSX in: ${filePath}`);
-      // This is a complex fix, so we'll replace with template
-      const fileName = path.basename(filePath, '.tsx');
-      const pageName = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
-      fixedContent = createBasicPageTemplate(pageName);
-      hasChanges = true;
-    }
-    
-    if (hasChanges) {
-      fs.writeFileSync(filePath, fixedContent);
-      return true;
-    }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Function to find all broken files
-function findBrokenFiles(dir) {
-  const files = [];
-  
-  function scanDirectory(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip certain directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'app-broken', 'app-disabled'].includes(item)) {
-          scanDirectory(fullPath);
-        }
-      } else if (stat.isFile() && /\.tsx$/.test(item)) {
-        try {
-          const content = fs.readFileSync(fullPath, 'utf8');
-          
-          // Check if file is broken
-          if (content.trim().split('\n').length < 10 || 
-              content.includes('<<<<<<< HEAD') || 
-              content.includes('=======') || 
-              content.includes('>>>>>>> ') ||
-              content.includes('<div') && !content.includes('</div>')) {
+        .replace(/        .replace(/              content.includes('<div') && !content.includes('</div>')) {
             files.push(fullPath);
           }
         } catch (error) {
-          // Skip files that can't be read
-        }
+          // Skip files that can't be read;
+}
       }
     }
   }
@@ -219,4 +166,4 @@ try {
   errorLines.forEach(line => console.log(`  ${line}`));
 }
 
-console.log('\nBroken file repair complete!');
+console.log('\nBroken file repair complete!');)))
