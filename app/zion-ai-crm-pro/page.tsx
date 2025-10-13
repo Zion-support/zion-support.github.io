@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Users, Phone, Mail, Calendar, BarChart3, Target } from 'lucide-react';
+import { Users, Phone, BarChart3, Target } from 'lucide-react';
 
 export default function ZionAiCrmProPage() {
   const features = [

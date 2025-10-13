@@ -6,7 +6,42 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-    ignores: ["dist/**", "node_modules/**", "*.config.js", "*.config.cjs"]
+    ignores: [
+      "dist/**", 
+      "node_modules/**", 
+      "*.config.js", 
+      "*.config.cjs",
+      "add-missing-routes*.jsx",
+      "backup-problematic/**",
+      "backup-unused-components/**",
+      "backup/**",
+      "cleanup-*.js",
+      "cleanup-*.cjs",
+      "comprehensive-*.js",
+      "fix-*.js",
+      "fix-*.cjs",
+      "*.cjs",
+      "scripts/**",
+      "src/**",
+      "create-*.js",
+      "identify-*.js",
+      "merge-*.js",
+      "remove-*.js",
+      "simple-*.js",
+      "website-*.js",
+      "public/sw.js",
+      "fix_all_*.js",
+      "fix_broken_*.js",
+      "fix_duplicate_*.js",
+      "fix_final_*.js",
+      "fix_jsx_*.js",
+      "fix_layout_*.js",
+      "fix_merge_*.js",
+      "fix_missing_*.js",
+      "fix_numbered_*.js",
+      "fix_remaining_*.js",
+      "fix_syntax_*.js"
+    ]
   },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],

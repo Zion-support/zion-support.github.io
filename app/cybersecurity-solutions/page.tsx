@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Eye, AlertTriangle, Users, Database, Check } from 'lucide-react';
+import { Eye, AlertTriangle, Users, Database, Check } from 'lucide-react';
 
 export default function CybersecuritySolutionsPage() {
   const services = [

@@ -1,4 +1,6 @@
 import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
 // Mock component for testing
 const OptimizedImage = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {
@@ -24,3 +26,4 @@ describe('OptimizedImage Component', () => {
     render(<OptimizedImage>Test content</OptimizedImage>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
+});

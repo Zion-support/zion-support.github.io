@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Lock, Eye, Check } from 'lucide-react';
+import { Shield, Lock, Eye } from 'lucide-react';
 
 export default function QuantumDataEncryptionVaultPage() {
   const features = [
