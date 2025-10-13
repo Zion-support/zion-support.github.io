@@ -1,126 +1,108 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Video, Eye, Brain, Zap, ArrowRight, CheckCircle, Star, Users, Award, Clock, Shield, PlayCircle } from "lucide-react";
+import { Calendar, Clock, Brain, Zap, ArrowRight, CheckCircle, Star, Users, Award, Shield, Smartphone, Mail } from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-const AIVideoAnalysisPage = () => {
+const ZionAISchedulerPage = () => {
   const features = [
     {
-      title: "Real-time Processing",
-      description: "Analyze video content in real-time with ultra-low latency processing",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Smart Scheduling",
+      description: "AI-powered scheduling that learns from your preferences and optimizes meetings",
+      icon: <Calendar className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Object Detection",
-      description: "Advanced computer vision for detecting objects, faces, and activities",
-      icon: <Eye className="w-6 h-6" />,
+      title: "Time Zone Intelligence",
+      description: "Automatically handles time zones and finds optimal meeting times globally",
+      icon: <Clock className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Emotion Recognition",
-      description: "Analyze facial expressions and emotions in video content",
+      title: "Conflict Resolution",
+      description: "Intelligent conflict detection and automatic rescheduling suggestions",
       icon: <Brain className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Content Moderation",
-      description: "Automatically detect inappropriate content and ensure compliance",
-      icon: <Shield className="w-6 h-6" />,
+      title: "Integration Hub",
+      description: "Seamlessly integrates with 50+ calendar and productivity tools",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$79",
+      name: "Personal",
+      price: "$9",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individuals",
       features: [
-        "Up to 100 hours/month",
-        "Basic object detection",
-        "Standard accuracy (95%)",
-        "Email support",
-        "Basic analytics"
+        "1 calendar integration",
+        "Basic AI scheduling",
+        "Email notifications",
+        "Standard support",
+        "Mobile app access"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$199",
+      price: "$29",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "Ideal for small teams",
       features: [
-        "Up to 500 hours/month",
-        "Advanced AI analysis",
-        "Real-time processing",
+        "5 calendar integrations",
+        "Advanced AI features",
+        "Team scheduling",
         "Priority support",
-        "Custom model training",
-        "API access",
-        "Advanced dashboards"
+        "Custom branding",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$499",
+      price: "$99",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited processing",
+        "Unlimited integrations",
         "Full AI capabilities",
-        "Custom model development",
-        "24/7 dedicated support",
-        "White-label solution",
         "Advanced analytics",
-        "On-premise deployment"
+        "24/7 support",
+        "White-label solution",
+        "Custom development"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
-    {
-      title: "Security Monitoring",
-      description: "Real-time surveillance and threat detection for security systems",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Content Moderation",
-      description: "Automatically moderate user-generated video content",
-      icon: <Eye className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Retail Analytics",
-      description: "Analyze customer behavior and store performance",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Healthcare",
-      description: "Medical video analysis and patient monitoring",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
+  const integrations = [
+    { name: "Google Calendar", icon: "📅" },
+    { name: "Outlook", icon: "📧" },
+    { name: "Apple Calendar", icon: "🍎" },
+    { name: "Slack", icon: "💬" },
+    { name: "Microsoft Teams", icon: "👥" },
+    { name: "Zoom", icon: "📹" },
+    { name: "Webex", icon: "🌐" },
+    { name: "Calendly", icon: "📋" }
   ];
 
   const stats = [
-    { number: "99.2%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
-    { number: "< 50ms", label: "Processing Speed", icon: <Clock className="w-6 h-6" /> },
-    { number: "1000+", label: "Objects Detected", icon: <Eye className="w-6 h-6" /> },
-    { number: "24/7", label: "Real-time Analysis", icon: <Zap className="w-6 h-6" /> }
+    { number: "95%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
+    { number: "50+", label: "Integrations", icon: <Zap className="w-6 h-6" /> },
+    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Assistance", icon: <Brain className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="AI Video Analysis - Advanced Computer Vision & Video Intelligence | Zion Tech Group"
-        description="Transform your video content with our AI Video Analysis platform. Real-time object detection, emotion recognition, content moderation, and advanced computer vision for security, retail, and healthcare applications."
-        keywords="AI video analysis, computer vision, object detection, video intelligence, content moderation, facial recognition, video analytics, real-time processing"
-        canonical="https://ziontechgroup.com/ai-video-analysis"
+        title="Zion AI Scheduler - Smart Meeting Scheduling & Calendar Management | Zion Tech Group"
+        description="Transform your scheduling with Zion AI Scheduler. AI-powered meeting optimization, time zone intelligence, and seamless calendar integration for individuals and teams."
+        keywords="AI scheduler, smart scheduling, meeting optimization, calendar management, time zone handling, productivity tools, team scheduling, automated booking"
+        canonical="https://ziontechgroup.com/zion-ai-scheduler"
       />
 
       {/* Hero Section */}
@@ -132,20 +114,20 @@ const AIVideoAnalysisPage = () => {
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Video className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Advanced Computer Vision Technology</span>
+            <Calendar className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">Revolutionary AI-Powered Scheduling</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Video
+            Zion AI
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-              {" "}Analysis
+              {" "}Scheduler
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Unlock the power of video intelligence with our advanced AI Video Analysis platform. 
-            Real-time object detection, emotion recognition, and content moderation for any industry.
+            Never miss another meeting with our intelligent AI scheduler. Smart time optimization, 
+            seamless integrations, and automated conflict resolution for maximum productivity.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -161,7 +143,7 @@ const AIVideoAnalysisPage = () => {
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
-              <PlayCircle className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              <Calendar className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
             </Link>
           </div>
           
@@ -185,11 +167,11 @@ const AIVideoAnalysisPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Video AI Features
+              Smart Scheduling Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our AI Video Analysis platform combines cutting-edge computer vision with machine learning 
-              to deliver powerful video intelligence capabilities.
+              Our AI Scheduler combines intelligent automation with seamless integrations 
+              to revolutionize how you manage your time and meetings.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -215,34 +197,27 @@ const AIVideoAnalysisPage = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Integrations Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Seamless Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how our AI Video Analysis can transform your business across various industries and use cases.
+              Connect with your favorite tools and platforms for a unified scheduling experience.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {integrations.map((integration, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
               >
-                <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                >
-                  {useCase.icon}
+                <div className="text-3xl mb-2">{integration.icon}</div>
+                <div className="text-sm text-gray-300 group-hover:text-cyan-400 transition-colors">
+                  {integration.name}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                  {useCase.title}
-                </h3>
-                <p className="text-gray-300 text-sm text-center leading-relaxed">
-                  {useCase.description}
-                </p>
               </div>
             ))}
           </div>
@@ -254,10 +229,10 @@ const AIVideoAnalysisPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
+              Simple Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your video analysis needs. All plans include our core AI features.
+              Choose the perfect plan for your scheduling needs. All plans include our core AI features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -313,11 +288,11 @@ const AIVideoAnalysisPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Analyze Your Videos?
+            Ready to Schedule Smarter?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already using our AI Video Analysis to enhance security, 
-            moderate content, and gain valuable insights from video data.
+            Join thousands of professionals already using Zion AI Scheduler to optimize their time, 
+            reduce scheduling conflicts, and boost productivity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -332,7 +307,7 @@ const AIVideoAnalysisPage = () => {
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Schedule Demo
-              <Video className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              <Calendar className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
             </Link>
           </div>
         </div>
@@ -341,4 +316,4 @@ const AIVideoAnalysisPage = () => {
   );
 };
 
-export default AIVideoAnalysisPage;
+export default ZionAISchedulerPage;
