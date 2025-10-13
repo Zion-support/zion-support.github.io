@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
+=======
+import React, { useEffect } from 'react';
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
@@ -6,16 +10,19 @@ interface PerformanceOptimizerProps {
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [isOptimized, setIsOptimized] = useState(false);
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-568e
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
       // Preload critical fonts
       const fontLink = document.createElement('link');
       fontLink.rel = 'preload';
-      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
+      fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
 
@@ -23,20 +30,27 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const criticalImages = [
         '/logo.svg',
 <<<<<<< HEAD
+<<<<<<< HEAD
         '/og-image.svg'        '/og-image.svg',
 =======
         '/og-image.svg'
+=======
+        '/og-image.svg',
+        '/api/placeholder/1200/630', // Hero image
+        '/api/placeholder/800/600',  // Service images
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
       ];
 
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
-        link.href = src;
         link.as = 'image';
+        link.href = src;
         document.head.appendChild(link);
       });
     };
 
+<<<<<<< HEAD
     preloadCriticalResources();
   }, []);
 
@@ -102,6 +116,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     };
 
 <<<<<<< HEAD>>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
@@ -118,50 +134,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       });
     };
 
-    // Preconnect to external domains
-    const preconnectExternalDomains = () => {
-      const domains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://www.google-analytics.com',
-        'https://www.googletagmanager.com'
-      ];
-
-      domains.forEach(domain => {
-        const link = document.createElement('link');
-        link.rel = 'preconnect';
-        link.href = domain;
-        link.crossOrigin = 'anonymous';
-        document.head.appendChild(link);
-      });
-    };
-
-    // Optimize third-party scripts
-    const optimizeThirdPartyScripts = () => {
-      // Defer non-critical scripts
-      const scripts = document.querySelectorAll('script[src]');
-      scripts.forEach(script => {
-        if (!script.hasAttribute('defer') && !script.hasAttribute('async')) {
-          script.setAttribute('defer', 'true');
-        }
-      });
-    };
-
     // Initialize optimizations
-    const initializeOptimizations = () => {
-      preloadCriticalResources();
-      preconnectExternalDomains();
-      optimizeImages();
-      optimizeThirdPartyScripts();
-      setIsOptimized(true);
-    };
-
-    // Run optimizations after component mount
-    const timer = setTimeout(initializeOptimizations, 100);
-
-    return () => clearTimeout(timer);
-=======
     preloadCriticalResources();
+<<<<<<< HEAD
   }, []);
 
   // Optimize scroll performance
@@ -336,6 +311,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 >>>>>>> cursor/analyze-improve-and-deploy-application-ad0b
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-568e
+=======
+    optimizeImages();
+  }, []);
+
+  return <>{children}</>;
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
 };
 
 export default PerformanceOptimizer;

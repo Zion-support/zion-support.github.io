@@ -1,6 +1,7 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "buildStats": {
     "totalFiles": 18,
     "totalSize": 621614,
@@ -44,6 +45,14 @@
     "jsFiles": 19,
     "jsSize": 623785,
 >>>>>>> cursor/analyze-improve-and-deploy-application-568e
+=======
+  "timestamp": "2025-10-13T09:59:07.415Z",
+  "buildStats": {
+    "totalFiles": 18,
+    "totalSize": 764231,
+    "jsFiles": 15,
+    "jsSize": 755268,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 0,

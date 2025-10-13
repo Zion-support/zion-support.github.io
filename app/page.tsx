@@ -2,10 +2,14 @@ import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, FileText } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
+<<<<<<< HEAD
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
 import FuturisticText from "./components/FuturisticText";import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
+=======
+import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
 import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
 import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
@@ -146,6 +150,7 @@ const HomePage = () => {
       featured: true
     },
     {
+<<<<<<< HEAD
       name: "Zion AI Document Analyzer",
       description: "AI-powered document processing with OCR, data extraction, and compliance monitoring",
       price: "From $29/month",
@@ -159,6 +164,53 @@ const HomePage = () => {
       price: "From $199/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-ai-cybersecurity-suite-pro",
+=======
+      name: "Zion AI Code Assistant Pro",
+      description: "AI-powered code generation, debugging, and optimization with support for 50+ programming languages",
+      price: "From $199/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-code-assistant-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Content Studio Pro",
+      description: "AI-powered content creation platform with automated writing, design, and video generation",
+      price: "From $149/month",
+      icon: <Sparkles className="w-6 h-6" />,
+      link: "/zion-ai-content-studio-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Customer Insights Pro",
+      description: "AI-powered customer analytics with sentiment analysis, churn prediction, and behavioral insights",
+      price: "From $249/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-customer-insights-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Cybersecurity Monitor Pro",
+      description: "Advanced AI-powered security monitoring with real-time threat detection and automated response",
+      price: "From $399/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-ai-cybersecurity-monitor-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Data Analytics Pro",
+      description: "Comprehensive AI-powered data analytics with machine learning insights and automated reporting",
+      price: "From $299/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-data-analytics-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Business Intelligence Pro",
+      description: "Advanced AI-powered business intelligence with predictive analytics and automated insights",
+      price: "From $349/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-business-intelligence-pro",
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
       featured: true
     }
   ];
@@ -358,7 +410,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {microSaasHighlights.map((saas, index) => (
               <FuturisticCardEnhanced
                 key={index}
@@ -509,10 +561,18 @@ const HomePage = () => {
             </FuturisticButtonEnhanced>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
       </main>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
+=======
+        </section>
+        </main>
+        </FuturisticBackgroundEnhanced>
+        </EnhancedAccessibility>
+      </PerformanceOptimizer>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c22b
   );
 };
 
