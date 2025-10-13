@@ -1,77 +1,113 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Cloud, Shield, Zap, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
-  const services = [
-    {
-      icon: Brain,
-      title: 'AI Solutions',
-      description: 'Custom artificial intelligence solutions including machine learning, natural language processing, and computer vision.',
-      features: ['Machine Learning Models', 'NLP Applications', 'Computer Vision', 'Predictive Analytics']
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Comprehensive cloud migration, management, and optimization services for modern businesses.',
-      features: ['Cloud Migration', 'Infrastructure Management', 'Scalability Solutions', 'Cost Optimization']
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your business from evolving cyber threats.',
-      features: ['Security Audits', 'Threat Detection', 'Compliance Management', 'Incident Response']
-    },
+  const features = [
     {
       icon: Zap,
-      title: 'IT Consulting',
-      description: 'Strategic IT consulting to help you make informed technology decisions and optimize your operations.',
-      features: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Vendor Management']
+      title: 'Advanced Technology',
+      description: 'Cutting-edge technology solutions for modern businesses.',
+      benefits: ['Latest innovations', 'Scalable solutions', 'High performance', 'Future-proof']
+    },
+    {
+      icon: BarChart,
+      title: 'Data Analytics',
+      description: 'Comprehensive data analysis and insights.',
+      benefits: ['Real-time analytics', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Solutions',
+      description: 'Targeted solutions designed for your specific needs.',
+      benefits: ['Custom solutions', 'Expert consultation', 'Proven results', 'Ongoing support']
     }
   ];
 
+  const stats = [
+    { label: 'Projects Completed', value: '100+' },
+    { label: 'Success Rate', value: '98%' },
+    { label: 'Client Satisfaction', value: '99%' },
+    { label: 'Years Experience', value: '5+' }
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Helmet>
-        <title>Our Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI and IT services including artificial intelligence solutions, cloud services, cybersecurity, and IT consulting." />
+        <title>Services | Zion Tech Group</title>
+        <meta name="description" content="Advanced services solutions powered by artificial intelligence to transform your business operations." />
+        <meta name="keywords" content="AI, Services, automation, technology, solutions" />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Comprehensive AI and IT solutions designed to transform your business operations 
-            and drive sustainable growth in the digital age.
-          </p>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Services
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced services solutions powered by artificial intelligence to transform your business operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 px-4">
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white p-8 rounded-lg shadow-lg border border-gray-200">
-                <div className="flex items-center mb-6">
-                  <service.icon className="h-12 w-12 text-blue-600 mr-4" />
-                  <h2 className="text-2xl font-bold text-gray-900">{service.title}</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Features
+            </h2>
+            <p className="text-xl text-gray-300">
+              Powerful capabilities designed to transform your business
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {feature.description}
+                </p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-purple-400 mb-2">
+                  {stat.value}
                 </div>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Key Features:</h3>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                        <span className="text-gray-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="text-gray-300">
+                  {stat.label}
                 </div>
               </div>
             ))}
@@ -79,52 +115,21 @@ const ServicesPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-            Our Process
-          </h2>
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Discovery</h3>
-              <p className="text-gray-600">We analyze your business needs and challenges to understand your requirements.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Strategy</h3>
-              <p className="text-gray-600">We develop a comprehensive strategy tailored to your specific goals.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Implementation</h3>
-              <p className="text-gray-600">We execute the solution with precision and attention to detail.</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Support</h3>
-              <p className="text-gray-600">We provide ongoing support and optimization to ensure success.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-blue-600">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our services can help transform your business.
+          <p className="text-xl text-gray-300 mb-8">
+            Get started with our Services solution today and see the difference AI can make.
           </p>
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
-            Contact Us Today
+          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            Start Your Journey
           </button>
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

@@ -1,146 +1,136 @@
 'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Link from 'next/link';
-import { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react';
 
 const ApiDocsPage: React.FC = () => {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
-  };
-  const apiEndpoints = [
+  const features = [
     {
-      title: 'AI Services',
-      description: 'Access our AI-powered services through RESTful APIs',
-      endpoints: [
-        {
-          method: 'POST',
-          path: '/api/ai/analyze',
-          description: 'Analyze text using AI',
-          example: `curl -X POST https://api.ziontechgroup.com/ai/analyze \\
-  -H "Content-Type: application/json" \\
-  -H "Authorization: Bearer YOUR_API_KEY" \\
-  -d '{"text": "Your text to analyze"}'`
-        },
-        {
-          method: 'GET',
-          path: '/api/ai/status',
-          description: 'Check AI service status',
-          example: `curl -X GET https://api.ziontechgroup.com/ai/status \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
-        }
-      ]
+      icon: Zap,
+      title: 'Advanced Technology',
+      description: 'Cutting-edge technology solutions for modern businesses.',
+      benefits: ['Latest innovations', 'Scalable solutions', 'High performance', 'Future-proof']
     },
     {
+      icon: BarChart,
       title: 'Data Analytics',
-      description: 'Retrieve and analyze your data',
-      endpoints: [
-        {
-          method: 'GET',
-          path: '/api/analytics/dashboard',
-          description: 'Get dashboard data',
-          example: `curl -X GET https://api.ziontechgroup.com/analytics/dashboard \\
-  -H "Authorization: Bearer YOUR_API_KEY"`
-        }
-      ]
+      description: 'Comprehensive data analysis and insights.',
+      benefits: ['Real-time analytics', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Solutions',
+      description: 'Targeted solutions designed for your specific needs.',
+      benefits: ['Custom solutions', 'Expert consultation', 'Proven results', 'Ongoing support']
     }
   ];
+
+  const stats = [
+    { label: 'Projects Completed', value: '100+' },
+    { label: 'Success Rate', value: '98%' },
+    { label: 'Client Satisfaction', value: '99%' },
+    { label: 'Years Experience', value: '5+' }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            API Documentation
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive API documentation for integrating with Zion Tech Group's AI and IT services
-          </p>
-        </section>
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">API Endpoints</h2>
-          <div className="space-y-8">
-            {apiEndpoints.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="cyber-card hologram-card p-6">
-                <h3 className="text-2xl font-bold text-white mb-4">{category.title}</h3>
-                <p className="text-gray-300 mb-6">{category.description}</p>
-                <div className="space-y-4">
-                  {category.endpoints.map((endpoint, endpointIndex) => (
-                    <div key={endpointIndex} className="bg-gray-800 rounded-lg p-4">
-                      <div className="flex items-center mb-2">
-                        <span className={`px-3 py-1 rounded text-sm font-bold mr-4 ${
-                          endpoint.method === 'GET' ? 'bg-green-600 text-white' : 'bg-blue-600 text-white'
-                        }`}>
-                          {endpoint.method}
-                        </span>
-                        <code className="text-cyan-400 font-mono">{endpoint.path}</code>
-                      </div>
-                      <p className="text-gray-300 mb-3">{endpoint.description}</p>
-                      <div className="bg-gray-900 rounded p-4 relative">
-                        <button
-                          onClick={() => copyToClipboard(endpoint.example, `${categoryIndex}-${endpointIndex}`)}
-                          className="absolute top-2 right-2 p-2 text-gray-400 hover:text-white transition-colors"
-                        >
-                          {copiedCode === `${categoryIndex}-${endpointIndex}` ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                        </button>
-                        <pre className="text-sm text-gray-300 overflow-x-auto">
-                          <code>{endpoint.example}</code>
-                        </pre>
-                      </div>
-                    </div>
+    <>
+      <Helmet>
+        <title>Api Docs | Zion Tech Group</title>
+        <meta name="description" content="Advanced api docs solutions powered by artificial intelligence to transform your business operations." />
+        <meta name="keywords" content="AI, ApiDocs, automation, technology, solutions" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Api Docs
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced api docs solutions powered by artificial intelligence to transform your business operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Features
+            </h2>
+            <p className="text-xl text-gray-300">
+              Powerful capabilities designed to transform your business
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {feature.description}
+                </p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
                   ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-purple-400 mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-gray-300">
+                  {stat.label}
                 </div>
               </div>
             ))}
           </div>
-        </section>
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8">Getting Started</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="cyber-card hologram-card p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Authentication</h3>
-              <p className="text-gray-300 mb-4">
-                All API requests require authentication using your API key. Include it in the Authorization header:
-              </p>
-              <code className="bg-gray-800 text-cyan-400 p-2 rounded block">
-                Authorization: Bearer YOUR_API_KEY
-              </code>
-            </div>
-            <div className="cyber-card hologram-card p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Rate Limits</h3>
-              <p className="text-gray-300 mb-4">
-                API requests are limited to 1000 requests per hour per API key. Contact us for higher limits.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">Need Help?</h2>
-          <p className="text-gray-300 mb-8">
-            Contact our developer support team for assistance with API integration
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Get started with our ApiDocs solution today and see the difference AI can make.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:dev@ziontechgroup.com"
-              className="cyber-button"
-            >
-              Email Support
-            </a>
-            <a
-              href="/contact"
-              className="cyber-button"
-            >
-              Contact Us
-            </a>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
+          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            Start Your Journey
+          </button>
+        </div>
+      </section>
+    </>
   );
 };
+
 export default ApiDocsPage;

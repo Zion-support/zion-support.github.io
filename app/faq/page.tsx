@@ -1,103 +1,136 @@
-return (;
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const [openItems, setOpenItems] = useState<number[]>
-);
-
-}([]);
-
-;
-
-const toggleItem = (index: number) => {;;
-
-    setOpenItems(prev => 
-      prev.includes(index) 
-        ? prev.filter(item => item !== index)
-        : [...prev, index]);
-
-;
-
-const faqs = [;;;
-
+const FaqPage: React.FC = () => {
+  const features = [
     {
-      questio,
-    n: "What services does Zion Tech Group offer?,
-      answer: "We offer comprehensive AI-powered solutions including enterprise AI, quantum computing, autonomous systems, digital transformation, cloud services, cybersecurity, and custom micro SaaS applications.
-    },    {
-      question: "How can AI benefit my business?,
-      answer: "AI can automate repetitive tasks, provide data-driven insights, improve customer experience, enhance security, optimize operations, and drive innovation. Our solutions typically deliver 300% ROI within the first year.
+      icon: Zap,
+      title: 'Advanced Technology',
+      description: 'Cutting-edge technology solutions for modern businesses.',
+      benefits: ['Latest innovations', 'Scalable solutions', 'High performance', 'Future-proof']
     },
     {
-      question: "Do you provide IT infrastructure services?,
-      answer: "Yes, we offer complete IT infrastructure services including cloud migration, DevOps, database management, cybersecurity, managed IT services, and IT consulting to modernize your technology stack.
+      icon: BarChart,
+      title: 'Data Analytics',
+      description: 'Comprehensive data analysis and insights.',
+      benefits: ['Real-time analytics', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      question: "What is your pricing model?,
-      answer: "We offer flexible pricing models including subscription-based plans starting at $99/month for small businesses, custom enterprise solutions, and project-based pricing. Contact us for a personalized quote.
-    },
-    {
-      question: "Do you offer 24/7 support?,
-      answer: "Yes, we provide 24/7 technical support for all our services. Our support team is available via phone, email, and live chat to ensure your systems run smoothly around the clock.
-    },
-    {
-      question: "Do you provide ongoing support?,
-      answer: Yes, we offer comprehensive support and maintenance services including 24
-    },
-    {
-      question: "What technologies do you use?,
-      answer: We use cutting-edge technologies including React, TypeScript, Python, TensorFlow, PyTorch, AWS, Azure, Docker, Kubernetes, and various AI
-    },    {
-      question: "What industries do you serve?,
-      answer: "We serve a wide range of industries including healthcare, finance, e-commerce, manufacturing, education, real estate, legal, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards.
+      icon: Target,
+      title: 'Precision Solutions',
+      description: 'Targeted solutions designed for your specific needs.',
+      benefits: ['Custom solutions', 'Expert consultation', 'Proven results', 'Ongoing support']
     }
-
   ];
 
-  return (<div>
-        <title>Frequently Asked Questions - Zion Tech Group<
-        <meta name="description" content="Find answers to common questions about our AI and IT solutions, services, development process, and how we can help transform your business. 
-      <
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20>
-        <div className="container mx-auto px-4>
-          <div className="text-center mb-16>
-            <h1 className="text-5xl font-bold text-white mb-6>
-              Frequently Asked Questions
-            <
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto>
-              Find answers to common questions about our AI and IT solutions, 
-              services, and how we can help transform your business.
-            <
-          <
-  );
-};
+  const stats = [
+    { label: 'Projects Completed', value: '100+' },
+    { label: 'Success Rate', value: '98%' },
+    { label: 'Client Satisfaction', value: '99%' },
+    { label: 'Years Experience', value: '5+' }
+  ];
 
-export default FAQPage;
-                  </p>
-                </div>
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
-              Frequently Asked <span className="text-cyan-400">Questions</span>
+  return (
+    <>
+      <Helmet>
+        <title>Faq | Zion Tech Group</title>
+        <meta name="description" content="Advanced faq solutions powered by artificial intelligence to transform your business operations." />
+        <meta name="keywords" content="AI, Faq, automation, technology, solutions" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Faq
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Find answers to common questions about our AI and IT services, pricing, and implementation.</p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced faq solutions powered by artificial intelligence to transform your business operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Features
+            </h2>
+            <p className="text-xl text-gray-300">
+              Powerful capabilities designed to transform your business
             </p>
           </div>
-        </section>
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-4">{faqs.map((faq, index) => (</div>
-                <div key={index}className="bg-slate-800/50 backdrop-blur-sm rounded-lg border border-cyan-500/20">
-                  <button;
-                    onClick={() =>toggleItem(index)</button>}className="w-full px-6 py-4 text-left flex items-center justify-between hover: bg-slate-700/30 transition-colors">,
-                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
-                    )} </button>
-                  {openItems.includes(index) && (
-                    <div className="px-6 pb-4">
-                      <p className="text-gray-300 leading-relaxed">{faq.answer</p>}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {feature.description}
+                </p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
-      ))
+      </section>
 
+      {/* Stats Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-purple-400 mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-gray-300">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Get started with our Faq solution today and see the difference AI can make.
+          </p>
+          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            Start Your Journey
+          </button>
+        </div>
+      </section>
+    </>
   );
 };
 
-export default FAQPage;
+export default FaqPage;

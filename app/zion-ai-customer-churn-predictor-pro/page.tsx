@@ -1,62 +1,91 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
-  Target,
-  CheckCircle,
-  AlertTriangle,
-  Cpu
-} from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const ZionAICustomerChurnPredictorProPage: React.FC = () => {
+const ZionAiCustomerChurnPredictorProPage: React.FC = () => {
   const features = [
     {
-      title: "AI-Powered Churn Prediction",
-      description: "Advanced machine learning algorithms predict customer churn with 94% accuracy using behavioral patterns and engagement data.",
-      icon: <Cpu className="w-6 h-6" />,
-      benefits: ["94% prediction accuracy", "Real-time risk scoring", "Behavioral pattern analysis"]
+      icon: Zap,
+      title: 'Advanced Technology',
+      description: 'Cutting-edge technology solutions for modern businesses.',
+      benefits: ['Latest innovations', 'Scalable solutions', 'High performance', 'Future-proof']
     },
     {
-      title: "Early Warning System",
-      description: "Get instant alerts when customers show signs of potential churn, allowing proactive intervention strategies.",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      benefits: ["Real-time alerts", "Risk level indicators", "Customizable thresholds"]
+      icon: BarChart,
+      title: 'Data Analytics',
+      description: 'Comprehensive data analysis and insights.',
+      benefits: ['Real-time analytics', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      title: "Personalized Retention Campaigns",
-      description: "AI generates personalized retention strategies and campaigns based on individual customer risk profiles.",
-      icon: <Target className="w-6 h-6" />,
-      benefits: ["Personalized strategies", "Automated campaigns", "A/B testing recommendations"]
+      icon: Target,
+      title: 'Precision Solutions',
+      description: 'Targeted solutions designed for your specific needs.',
+      benefits: ['Custom solutions', 'Expert consultation', 'Proven results', 'Ongoing support']
     }
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Zion AI Customer Churn Predictor Pro - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered customer churn prediction and retention solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Zion AI Customer Churn Predictor Pro
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Predict and prevent customer churn with our advanced AI-powered platform. 
-            Reduce churn by up to 40% with intelligent prediction and personalized retention strategies.
-          </p>
-        </div>
+  const stats = [
+    { label: 'Projects Completed', value: '100+' },
+    { label: 'Success Rate', value: '98%' },
+    { label: 'Client Satisfaction', value: '99%' },
+    { label: 'Years Experience', value: '5+' }
+  ];
 
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+  return (
+    <>
+      <Helmet>
+        <title>Zion Ai Customer Churn Predictor Pro | Zion Tech Group</title>
+        <meta name="description" content="Advanced zion ai customer churn predictor pro solutions powered by artificial intelligence to transform your business operations." />
+        <meta name="keywords" content="AI, ZionAiCustomerChurnPredictorPro, automation, technology, solutions" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Zion Ai Customer Churn Predictor Pro
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced zion ai customer churn predictor pro solutions powered by artificial intelligence to transform your business operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Features
+            </h2>
+            <p className="text-xl text-gray-300">
+              Powerful capabilities designed to transform your business
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="text-blue-400 mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
+              <div key={index} className="bg-gray-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {feature.description}
+                </p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
                     </li>
@@ -65,25 +94,43 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to Reduce Customer Churn?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Start predicting and preventing customer churn with our AI-powered platform.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-all duration-300">
-                Start Free Trial
-              </button>
-              <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
+      {/* Stats Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-purple-400 mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-gray-300">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Get started with our ZionAiCustomerChurnPredictorPro solution today and see the difference AI can make.
+          </p>
+          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            Start Your Journey
+          </button>
+        </div>
+      </section>
+    </>
   );
 };
 
-export default ZionAICustomerChurnPredictorProPage;
+export default ZionAiCustomerChurnPredictorProPage;

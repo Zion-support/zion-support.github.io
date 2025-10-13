@@ -1,259 +1,136 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Eye, AlertTriangle, Users, Database, CheckCircle } from 'lucide-react';
-export default function CybersecuritySolutions() {
-  const services = [
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react';
+
+const CybersecuritySolutionsPage: React.FC = () => {
+  const features = [
     {
-      title: "Security Assessment",
-      description: "Comprehensive security audits to identify vulnerabilities and assess your current security posture",
-      icon: <Eye className="w-8 h-8" />,
-      features: ["Vulnerability scanning", "Penetration testing", "Risk assessment", "Compliance audit"],
-      price: "From $2,499/assessment",
+      icon: Zap,
+      title: 'Advanced Technology',
+      description: 'Cutting-edge technology solutions for modern businesses.',
+      benefits: ['Latest innovations', 'Scalable solutions', 'High performance', 'Future-proof']
     },
     {
-      title: "Threat Detection",
-      description: "Advanced threat detection and response systems to identify and neutralize security threats in real-time",
-      icon: <AlertTriangle className="w-8 h-8" />,
-      features: ["AI-powered detection", "Real-time monitoring", "Automated response", "Threat intelligence"],
-      price: "From $1,999/month",
+      icon: BarChart,
+      title: 'Data Analytics',
+      description: 'Comprehensive data analysis and insights.',
+      benefits: ['Real-time analytics', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      title: "Identity Management",
-      description: "Secure identity and access management solutions to control user access and prevent unauthorized access",
-      icon: <Users className="w-8 h-8" />,
-      features: ["Multi-factor authentication", "Single sign-on", "Access governance", "Privileged access"],
-      price: "From $1,299/month",
-    },
-    {
-      title: "Data Protection",
-      description: "Comprehensive data protection solutions to secure sensitive information and ensure compliance",
-      icon: <Database className="w-8 h-8" />,
-      features: ["Data encryption", "Backup security", "Data loss prevention", "Compliance monitoring"],
-      price: "From $1,799/month",
+      icon: Target,
+      title: 'Precision Solutions',
+      description: 'Targeted solutions designed for your specific needs.',
+      benefits: ['Custom solutions', 'Expert consultation', 'Proven results', 'Ongoing support']
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: "Essential",
-      price: "$2,999",
-      period: "/month",
-      description: "Basic security protection for small to medium businesses",
-      features: [
-        "Security assessment",
-        "Basic threat monitoring",
-        "Email security",
-        "Firewall management",
-        "Standard support",
-        "Monthly reports"
-      ],
-      popular: false,
-      cta: "Get Started",
-    },
-    {
-      name: "Professional",
-      price: "$5,999",
-      period: "/month",
-      description: "Advanced security solutions for growing businesses",
-      features: [
-        "Comprehensive security assessment",
-        "Advanced threat detection",
-        "Identity management",
-        "Data protection",
-        "Priority support",
-        "Weekly reports",
-        "Incident response",
-        "Security training"
-      ],
-      popular: true,
-      cta: "Get Started",
-    },
-    {
-      name: "Enterprise",
-      price: "$9,999",
-      period: "/month",
-      description: "Complete security suite for large enterprises",
-      features: [
-        "Full security assessment",
-        "Advanced threat detection",
-        "Complete identity management",
-        "Comprehensive data protection",
-        "24/7 dedicated support",
-        "Real-time reports",
-        "Rapid incident response",
-        "Custom security training",
-        "Compliance management",
-        "Security consulting"
-      ],
-      popular: false,
-      cta: "Contact Sales",
-    }
+  const stats = [
+    { label: 'Projects Completed', value: '100+' },
+    { label: 'Success Rate', value: '98%' },
+    { label: 'Client Satisfaction', value: '99%' },
+    { label: 'Years Experience', value: '5+' }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Cybersecurity Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced cybersecurity solutions and services by Zion Tech Group" />
+        <title>Cybersecurity Solutions | Zion Tech Group</title>
+        <meta name="description" content="Advanced cybersecurity solutions solutions powered by artificial intelligence to transform your business operations." />
+        <meta name="keywords" content="AI, CybersecuritySolutions, automation, technology, solutions" />
       </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cybersecurity Solutions
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Protect your business with our comprehensive cybersecurity services and solutions
-          </p>
-        </div>
 
-        {/* Services Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Services</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="text-blue-400 mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-4">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Cybersecurity Solutions
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced cybersecurity solutions solutions powered by artificial intelligence to transform your business operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Features
+            </h2>
+            <p className="text-xl text-gray-300">
+              Powerful capabilities designed to transform your business
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800 p-6 rounded-lg">
+                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {feature.description}
+                </p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
+                      {benefit}
                     </li>
                   ))}
                 </ul>
-                <p className="text-blue-400 font-semibold">{service.price}</p>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* Pricing Section */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Pricing Plans</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-blue-400 ring-2 ring-blue-400' : 'border-white/20'} hover:bg-white/20 transition-all duration-300`}>
-                {plan.popular && (
-                  <div className="bg-blue-400 text-white text-center py-1 px-4 rounded-full text-sm font-semibold mb-4 -mt-2">
-                    Most Popular
-                  </div>
-                )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                <p className="text-gray-300 mb-4">{plan.description}</p>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>
-                  <span className="text-gray-300">{plan.period}</span>
+      {/* Stats Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-4xl font-bold text-purple-400 mb-2">
+                  {stat.value}
                 </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular ? 'bg-blue-400 text-white hover:bg-blue-500' : 'bg-white/20 text-white hover:bg-white/30'}`}>
-                  {plan.cta}
-                </button>
+                <div className="text-gray-300">
+                  {stat.label}
+                </div>
               </div>
-const CybersecuritySolutionsPage: React.FC = () => {,
-  return(<>)
-      <Helmet />
-        <title>Cybersecurity Solutions - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cybersecurity solutions including threat detection, vulnerability assessment, security monitoring, and compliance management." />
-        <meta name="keywords" content="cybersecurity solutions, threat detection, vulnerability assessment, security monitoring, compliance management, data protection" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">Cybersecurity Solutions;</h1>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Protect your organization with comprehensive cybersecurity solutions including;</p>
-              threat detection, vulnerability assessment, and 24/7 security monitoring.
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Threat Detection</h3>
-              <p className="text-gray-300 mb-4">Advanced threat detection systems to identify and respond to security threats in real-time.</p>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• Real-time monitoring</li>
-                <li>• Behavioral analysis</li>
-                <li>• Threat intelligence</li>
-                <li>• Automated response</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Vulnerability Assessment</h3>
-              <p className="text-gray-300 mb-4">Comprehensive vulnerability scanning and assessment to identify security weaknesses.</p>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• Network scanning</li>
-                <li>• Penetration testing</li>
-                <li>• Code analysis</li>
-                <li>• Risk prioritization</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Security Monitoring</h3>
-              <p className="text-gray-300 mb-4">24/7 security operations center (SOC) monitoring and incident response.</p>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• 24/7 monitoring</li>
-                <li>• Incident response</li>
-                <li>• Log analysis</li>
-                <li>• Threat hunting</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Compliance Management</h3>
-              <p className="text-gray-300 mb-4">Ensure compliance with industry regulations and security standards.</p>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• GDPR compliance</li>
-                <li>• HIPAA compliance</li>
-                <li>• SOX compliance</li>
-                <li>• Audit preparation</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Data Protection</h3>
-              <p className="text-gray-300 mb-4">Advanced data protection and encryption solutions for sensitive information.</p>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• Data encryption</li>
-                <li>• Access controls</li>
-                <li>• Data loss prevention</li>
-                <li>• Backup solutions</li>
-              </ul>
-            </div>
-
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Security Training</h3>
-              <p className="text-gray-300 mb-4">Comprehensive security awareness training for your employees.</p>
-              </p>
-              <ul className="text-sm text-gray-400 space-y-2">
-                <li>• Phishing simulation</li>
-                <li>• Security awareness</li>
-                <li>• Best practices</li>
-                <li>• Incident reporting</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">,</button>
-              Secure Your Organization;
-            </button>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Get started with our CybersecuritySolutions solution today and see the difference AI can make.
+          </p>
+          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            Start Your Journey
+          </button>
+        </div>
+      </section>
     </>
-  );};
+  );
+};
+
+export default CybersecuritySolutionsPage;
