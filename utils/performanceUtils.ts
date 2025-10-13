@@ -13,60 +13,58 @@ export class PerformanceUtils {
     fps: 0
   };
 
-  measureLoadTime() {
-
+  measureLoadTime(): number {
     if (typeof window !== 'undefined' && window.performance) {
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
     }
+    return this.metrics.loadTime;
   }
 
-  measureRenderTime() {
+  measureRenderTime(): number {
     if (typeof window !== 'undefined' && window.performance) {
       const paintEntries = window.performance.getEntriesByType('paint');
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       if (fcp) {
         this.metrics.renderTime = fcp.startTime;
       }
-
-    if (typeof window !== 'undefined') {
-      this.metrics.loadTime = performance.now();
-
     }
+    return this.metrics.renderTime;
   }
 
-  measureMemoryUsage() {
-    if (typeof window !== 'undefined' && (window as unknown as { performance?: { memory?: { usedJSHeapSize: number } } }).performance?.memory) {
-      const memory = (window as unknown as { performance: { memory: { usedJSHeapSize: number } } }).performance.memory;
+  measureMemoryUsage(): number {
+    if (typeof window !== 'undefined' && (window as any).performance?.memory) {
+      const memory = (window as any).performance.memory;
       this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
     }
+    return this.metrics.memoryUsage;
   }
 
-  measureFPS() {
-    let lastTime = performance.now();
-    let frameCount = 0;
-    
-    const measureFrame = () => {
-      frameCount++;
-      const currentTime = performance.now();
+  measureFPS(): number {
+    if (typeof window !== 'undefined') {
+      let lastTime = performance.now();
+      let frameCount = 0;
       
-      if (currentTime - lastTime >= 1000) {
-        this.metrics.fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-        frameCount = 0;
-        lastTime = currentTime;
-      }
+      const measureFrame = (currentTime: number) => {
+        frameCount++;
+        if (currentTime - lastTime >= 1000) {
+          this.metrics.fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+          frameCount = 0;
+          lastTime = currentTime;
+        }
+        requestAnimationFrame(measureFrame);
+      };
       
       requestAnimationFrame(measureFrame);
-    };
-    
-    requestAnimationFrame(measureFrame);
+    }
+    return this.metrics.fps;
   }
 
-  getMetrics(): PerformanceMetrics {
+  getAllMetrics(): PerformanceMetrics {
     return { ...this.metrics };
   }
 
-  reset() {
+  resetMetrics(): void {
     this.metrics = {
       loadTime: 0,
       renderTime: 0,
@@ -74,6 +72,41 @@ export class PerformanceUtils {
       fps: 0
     };
   }
+
+  isPerformanceGood(): boolean {
+    return (
+      this.metrics.loadTime < 3000 && // Less than 3 seconds
+      this.metrics.renderTime < 1500 && // Less than 1.5 seconds
+      this.metrics.memoryUsage < 100 && // Less than 100MB
+      this.metrics.fps > 30 // More than 30 FPS
+    );
+  }
+
+  getPerformanceScore(): number {
+    let score = 100;
+    
+    // Deduct points for slow load time
+    if (this.metrics.loadTime > 3000) score -= 30;
+    else if (this.metrics.loadTime > 2000) score -= 20;
+    else if (this.metrics.loadTime > 1000) score -= 10;
+    
+    // Deduct points for slow render time
+    if (this.metrics.renderTime > 1500) score -= 25;
+    else if (this.metrics.renderTime > 1000) score -= 15;
+    else if (this.metrics.renderTime > 500) score -= 5;
+    
+    // Deduct points for high memory usage
+    if (this.metrics.memoryUsage > 100) score -= 20;
+    else if (this.metrics.memoryUsage > 50) score -= 10;
+    else if (this.metrics.memoryUsage > 25) score -= 5;
+    
+    // Deduct points for low FPS
+    if (this.metrics.fps < 30) score -= 25;
+    else if (this.metrics.fps < 45) score -= 15;
+    else if (this.metrics.fps < 60) score -= 5;
+    
+    return Math.max(0, score);
+  }
 }
 
-export default PerformanceUtils;
+export const performanceUtils = new PerformanceUtils();

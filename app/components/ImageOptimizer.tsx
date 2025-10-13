@@ -10,7 +10,6 @@ interface ImageOptimizerProps {
   placeholder?: string;
 }
 
-
 export default function ImageOptimizer({ 
   src, 
   alt, 
@@ -19,22 +18,6 @@ export default function ImageOptimizer({
   format = 'webp',
   lazy = true,
   placeholder
-<<<<<<< HEAD
-=======
-
-  lazy = true
-
-
-
-export default function ImageOptimizer({
-  src,
-  alt,
-  className = '',
-  lazy = true,
-  placeholder
-
-
->>>>>>> 16298d5b7981c71a386c4e8d112e77e49ff2ba16
 }: ImageOptimizerProps) {
   // Note: quality and format parameters are reserved for future image optimization features
   console.log('Image optimization params:', { quality, format });
@@ -48,14 +31,6 @@ export default function ImageOptimizer({
       style={{
         backgroundColor: placeholder || '#f3f4f6'
       }}
-<<<<<<< HEAD
-=======
-
-
-
-
-
->>>>>>> 16298d5b7981c71a386c4e8d112e77e49ff2ba16
     />
   );
 }
