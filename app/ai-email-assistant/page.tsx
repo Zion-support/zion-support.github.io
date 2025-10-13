@@ -1,44 +1,83 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Mail, Bot, Zap, Target, BarChart, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
-    {icon: Target,
+const AiEmailAssistantPage: React.FC = () => {
+  const features = [
+    {
+      icon: Mail,
+      title: 'Smart Email Management',
+      description: 'Automatically organize, prioritize, and respond to emails with AI-powered intelligence.',
+      benefits: ['Smart categorization', 'Priority detection', 'Auto-responses', 'Email scheduling']
+    },
+    {
+      icon: Bot,
+      title: 'AI-Powered Responses',
+      description: 'Generate contextual and professional email responses using advanced AI.',
+      benefits: ['Context-aware replies', 'Tone matching', 'Grammar correction', 'Multi-language support']
+    },
+    {
+      icon: Zap,
+      title: 'Automated Workflows',
+      description: 'Set up intelligent email workflows that work 24/7 to improve productivity.',
+      benefits: ['Auto-forwarding', 'Smart filtering', 'Template suggestions', 'Follow-up reminders']
+    },
+    {
+      icon: Target,
       title: 'Precision Targeting',
       description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
-    {icon: TrendingUp,
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics & Insights',
+      description: 'Get detailed insights into your email performance and communication patterns.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
-    'Gain competitive advantage with advanced technology';
-  ]
-return(<>)
-      <Helmet />
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
+
+  const benefits = [
+    'Save 10+ hours per week on email management',
+    'Improve response time by 80%',
+    'Increase email open rates by 45%',
+    'Reduce email-related stress by 60%',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Email Assistant - Zion Tech Group</title>
+        <meta name="description" content="Transform your email management with our AI-powered email assistant. Automate responses, organize emails, and boost productivity." />
+      </Helmet>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              AI Email
+              <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Assistant
               </span>
-              <br />
-              <span className="text-white">Solutions</span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your email management with our AI-powered assistant. Automate responses, 
+              organize emails, and boost productivity with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Schedule Demo
               </button>
             </div>
           </div>
@@ -46,25 +85,35 @@ return(<>)
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-slate-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Powerful Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
+              Everything you need to revolutionize your email management and communication workflow.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+              <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                <div className="flex items-center mb-6">
+                  <div className="p-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white ml-4">{feature.title}</h3>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p className="text-gray-300 mb-6">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-400">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -72,22 +121,22 @@ return(<>)
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose Our AI Email Assistant?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
+              Experience the future of email management with our cutting-edge AI technology.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
+              <div key={index} className="flex items-center p-6 bg-slate-800/30 rounded-xl border border-slate-700/30">
+                <CheckCircle className="w-8 h-8 text-cyan-400 mr-4 flex-shrink-0" />
+                <span className="text-lg text-white font-medium">{benefit}</span>
               </div>
             ))}
           </div>
@@ -95,95 +144,28 @@ return(<>)
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
-        {/* Hero Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-        <section className="relative py-20 px-4 overflow-hidden">
-        </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Email Assistant
-            <p>Advanced AI-powered ai email assistant solution for modern businesses.</p>
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
-              </button>
-              <button>View Demo,</button>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-        </section>
-        {/* Features Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>Key Features;</h2>
-              </h2>
-              <p>Advanced AI technology that drives results;</p>
-                  <p className="text-gray-300 mb-4">{feature.description</p>}</p>
-                  {feature.benefits && (;
-                    <ul>
-                      {feature.benefits.map((benefit, idx) => (} <li>
-                          <CheckCircle />
-        {/* Benefits Section */} <section className="py-20 px-4">
-                    </ul>
-                  </div>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>Why Choose Our Solution?</h2>
-              </h2>
-              <p>Proven results that drive business growth and efficiency;</p>
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-              {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
-                    <CheckCircle />
-                  <p className="text-lg text-white font-medium">{benefit</p>}</p>
-                </div>
-              ))}
-            </div>
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Email Management?
+          </h2>
+          <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
+            Join thousands of professionals who have already revolutionized their email workflow 
+            with our AI-powered assistant.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-white text-cyan-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+              Get Started Now
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="px-8 py-4 border border-white/30 text-white rounded-xl font-semibold hover:bg-white/10 transition-all duration-300">
+              Schedule Demo
+            </button>
           </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-        </section>
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
-              <h2>Ready to Get Started?</h2>
-              </h2>
-              <p>Contact our experts to discuss your requirements and get started today.</p>
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>Contact Us;</button>
-                </button>
-                <button>Learn More;</button>
-      <Footer />
-
+        </div>
+      </section>
+    </>
   );
 };
 
-export default PagePage;
+export default AiEmailAssistantPage;

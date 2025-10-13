@@ -30,6 +30,20 @@ export default [
         ecmaFeatures: {
           jsx: true
         }
+      },
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        Buffer: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        navigator: 'readonly',
+        location: 'readonly'
       }
     },
     plugins: {

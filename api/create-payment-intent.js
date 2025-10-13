@@ -1,3 +1,29 @@
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
+
+  try {
+    const { amount, currency = 'usd', metadata = {} } = req.body || {};
+
+    if (!amount || amount <= 0) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Valid amount is required' }));
+      return;
+    }
+
+    // Mock payment intent for development
+    const paymentIntent = {
+      id: `pi_${Date.now()}`,
+      client_secret: `pi_${Date.now()}_secret_${Math.random().toString(36).substr(2, 9)}`,
+      amount: amount * 100, // Convert to cents
+      currency,
+      status: 'requires_payment_method',
+      metadata
     };
 
     // In a real implementation, you would:
@@ -19,3 +45,5 @@
       error: 'Failed to create payment intent',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }));
+  }
+}
