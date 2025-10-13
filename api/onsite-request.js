@@ -1,64 +1,31 @@
-const { withSentry } = require('./withSentry.cjs');
+'use client';
+import React from 'react';
 
-async function handler(req, res) {
-  try {
-    const {
-      name,
-      email,
-      phone,
-      company,
-      location,
-      details
-    } = req.body || {};
-
-    if (!name || !email) {
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Name and email are required' }));
-      return;
-    }
-
-    // Process onsite request
-    // In a real application, you would:
-    // 1. Save to your database
-    // 2. Send notification to your team
-    // 3. Send confirmation email to the customer
-    // 4. Schedule the onsite visit
-
-    const onsiteData = {
-      name,
-      email,
-      phone: phone || 'Not provided',
-      company: company || 'Not provided',
-      location: location || 'Not specified',
-      details: details || 'No additional details',
-      timestamp: new Date().toISOString(),
-      status: 'pending'
-    };
-
-    // Log the request (in production, save to database)
-    console.log('Onsite request received:', onsiteData);
-
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Onsite request submitted successfully',
-      requestId: `onsite_${Date.now()}`,
-      data: onsiteData
-    }));
-
-  } catch (error) {
-    console.error('Onsite request error:', error);
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to submit onsite request',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }));
-  }
+export default function OnsiteRequest() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Onsite Request</h1>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-gray-300 text-lg mb-8">
+            This page is under development. We're working hard to bring you the best experience.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 1</h3>
+              <p className="text-gray-300">Description of the first feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 2</h3>
+              <p className="text-gray-300">Description of the second feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 3</h3>
+              <p className="text-gray-300">Description of the third feature coming soon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-module.exports = withSentry(handler);
-module.exports = handler;
-

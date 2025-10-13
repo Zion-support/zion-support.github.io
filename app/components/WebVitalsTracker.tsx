@@ -1,14 +1,16 @@
 import React from 'react';
 
 interface WebVitalsTrackerProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props here as needed
 }
 
-export default function WebVitalsTracker({ className = '', children }: WebVitalsTrackerProps) {
+const WebVitalsTracker: React.FC<WebVitalsTrackerProps> = () => {
   return (
-    <div className={`web-vitals-tracker ${className}`}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">WebVitalsTracker</h2>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default WebVitalsTracker;

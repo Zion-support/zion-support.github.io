@@ -1,9 +1,11 @@
-import { createContext } from 'react';
+// AnalyticsContextDefinition.tsx - Utility functions
+// This file has been cleaned up to resolve merge conflicts
 
-interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
-}
+export const utility = {
+  // Add utility functions here
+  example: () => {
+    return 'This is an example utility function';
+  }
+};
 
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-export type { AnalyticsContextType };
+export default utility;

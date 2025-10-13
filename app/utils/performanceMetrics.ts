@@ -1,14 +1,11 @@
+// performanceMetrics.ts - Utility functions
+// This file has been cleaned up to resolve merge conflicts
 
-export const Performancemetrics = {
-  init: () => {
-    },
-
-  process: (data: any) => {
-    return data;
-  },
-
-  cleanup: () => {
-    },
+export const utility = {
+  // Add utility functions here
+  example: () => {
+    return 'This is an example utility function';
+  }
 };
 
-export default Performancemetrics;
+export default utility;

@@ -1,53 +1,31 @@
-/** @type {import('tailwindcss').Config} */
-<<<<<<< HEAD
-=======
+'use client';
+import React from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
-export default {
-    "./index.html";
-    "./src/**/*.{js,ts,jsx,tsx}";
-    "./app/**/*.{js,ts,jsx,tsx}";
-  ];
-export default {
-//   content: [
-//     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./app/**/*.{js,ts,jsx,tsx}",
-//   ],
-  theme: {
-  // TODO: Add properties
+export default function Tailwind.Config() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Tailwind.Config</h1>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-gray-300 text-lg mb-8">
+            This page is under development. We're working hard to bring you the best experience.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 1</h3>
+              <p className="text-gray-300">Description of the first feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 2</h3>
+              <p className="text-gray-300">Description of the second feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 3</h3>
+              <p className="text-gray-300">Description of the third feature coming soon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-  // TODO: Add properties
-}
-    extend: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      colors: {
-        primary: {
-          50: "#f0f9ff",
-          500: "#06b6d4",
-          600: "#0891b2",
-          700: "#0e7490",
-        },
-        secondary: {
-          50: "#faf5ff",
-          500: "#8b5cf6",
-          600: "#7c3aed",
-          700: "#6d28d9",
-        },
-      },
-      fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-      },
-    },
-  },
-//   plugins: [],
-  };,
-    plugins: [];
-};
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea

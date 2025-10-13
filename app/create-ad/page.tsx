@@ -1,32 +1,31 @@
+'use client';
 import React from 'react';
-import { Metadata } from 'next';
-import AdManagementSystem from '../components/AdManagementSystem';
 
-export const metadata: Metadata = {
-  title: 'Create Ad Campaign | Zion Tech Group',
-  description: 'Create and manage your advertising campaigns with our comprehensive ad management system.',
-  keywords: 'create ad, advertising campaign, ad management, marketing',
-  openGraph: {
-    title: 'Create Ad Campaign | Zion Tech Group',
-    description: 'Create and manage your advertising campaigns with our comprehensive ad management system.',
-    type: 'website',
-  },
-};
-
-const CreateAdPage: React.FC = () => {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Create New Ad Campaign</h1>
-          <p className="text-xl text-gray-600">
-            Build and launch your advertising campaigns with our powerful ad management tools.
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Page</h1>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-gray-300 text-lg mb-8">
+            This page is under development. We're working hard to bring you the best experience.
           </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 1</h3>
+              <p className="text-gray-300">Description of the first feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 2</h3>
+              <p className="text-gray-300">Description of the second feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 3</h3>
+              <p className="text-gray-300">Description of the third feature coming soon.</p>
+            </div>
+          </div>
         </div>
-        <AdManagementSystem />
       </div>
     </div>
   );
-};
-
-export default CreateAdPage;
+}

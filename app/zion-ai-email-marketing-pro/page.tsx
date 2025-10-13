@@ -1,28 +1,28 @@
+'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
-export default function ZionAIEmailMarketingPro() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content="Advanced  solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Advanced  solutions by Zion Tech Group
-          </p>
-        </div>
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Page</h1>
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
-            <p className="text-gray-600">
-              This page is under development. Please check back later for updates.
-            </p>
+          <p className="text-gray-300 text-lg mb-8">
+            This page is under development. We're working hard to bring you the best experience.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 1</h3>
+              <p className="text-gray-300">Description of the first feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 2</h3>
+              <p className="text-gray-300">Description of the second feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 3</h3>
+              <p className="text-gray-300">Description of the third feature coming soon.</p>
+            </div>
           </div>
         </div>
       </div>

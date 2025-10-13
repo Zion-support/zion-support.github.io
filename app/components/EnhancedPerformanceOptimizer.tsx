@@ -1,41 +1,16 @@
-'use client';
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-react';
+import React from 'react';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  enableImageOptimization?: boolean;
-  enableLazyLoading?: boolean;
-  enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
+interface EnhancedPerformanceOptimizerProps {
+  // Add props here as needed
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children,
-  enableImageOptimization = true,
-  enableLazyLoading = true,
-  enablePreloading = true,
-  enableCodeSplitting = true
-}) => {
-  useEffect(() => {
-    // Preload critical resources
-    if (enablePreloading) {
-      const preloadLink = document.createElement('link');
-      preloadLink.rel = 'preload';
-      preloadLink.href = '/fonts/inter.woff2';
-      preloadLink.as = 'font';
-      preloadLink.type = 'font/woff2';
-      preloadLink.crossOrigin = 'anonymous';
-      document.head.appendChild(preloadLink);
-    }
-  }, [enablePreloading]);
-
+const EnhancedPerformanceOptimizer: React.FC<EnhancedPerformanceOptimizerProps> = () => {
   return (
-    <div className="performance-optimizer">
-      {children}
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">EnhancedPerformanceOptimizer</h2>
+      <p>This component is under development.</p>
     </div>
   );
 };
 
-export default PerformanceOptimizer;
+export default EnhancedPerformanceOptimizer;

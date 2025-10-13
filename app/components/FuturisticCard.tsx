@@ -1,0 +1,16 @@
+import React from 'react';
+
+interface FuturisticCardProps {
+  // Add props here as needed
+}
+
+const FuturisticCard: React.FC<FuturisticCardProps> = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">FuturisticCard</h2>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default FuturisticCard;

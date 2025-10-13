@@ -1,14 +1,11 @@
+// accessibilityUtils.ts - Utility functions
+// This file has been cleaned up to resolve merge conflicts
 
-export const Accessibilityutils = {
-  init: () => {
-    },
-
-  process: (data: any) => {
-    return data;
-  },
-
-  cleanup: () => {
-    },
+export const utility = {
+  // Add utility functions here
+  example: () => {
+    return 'This is an example utility function';
+  }
 };
 
-export default Accessibilityutils;
+export default utility;

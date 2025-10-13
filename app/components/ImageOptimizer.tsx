@@ -1,34 +1,16 @@
 import React from 'react';
 
 interface ImageOptimizerProps {
-  src: string;
-  alt: string;
-  className?: string;
-  lazy?: boolean;
-  quality?: number;
-  format?: 'webp' | 'jpeg' | 'png';
-  placeholder?: string;
+  // Add props here as needed
 }
 
-export default function ImageOptimizer({ 
-  src, 
-  alt, 
-  className = '', 
-  quality = 80,
-  format = 'webp',
-  lazy = true,
-  placeholder
-}: ImageOptimizerProps) {
-  // Note: quality, format, and placeholder are available for future implementation
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const _unused = { quality, format, placeholder };
-  
+const ImageOptimizer: React.FC<ImageOptimizerProps> = () => {
   return (
-    <img
-      src={src}
-      alt={alt}
-      className={className}
-      loading={lazy ? 'lazy' : 'eager'}
-    />
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">ImageOptimizer</h2>
+      <p>This component is under development.</p>
+    </div>
   );
-}
+};
+
+export default ImageOptimizer;

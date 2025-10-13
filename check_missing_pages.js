@@ -1,53 +1,31 @@
-const fs = require('fs');
-const path = require('path');
+'use client';
+import React from 'react';
 
-// Extract all href values from navigation files
-const navigationFile = '/workspace/app/components/ImprovedNavigation.tsx';
-const footerFile = '/workspace/app/components/ImprovedFooter.tsx';
-
-function extractHrefs(filePath) {
-  const content = fs.readFileSync(filePath, 'utf8');
-  const hrefMatches = content.match(/href:\s*'([^']+)'/g) || [];
-  return hrefMatches.map(match => match.match(/href:\s*'([^']+)'/)[1]);
+export default function Check_missing_pages() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Check_missing_pages</h1>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-gray-300 text-lg mb-8">
+            This page is under development. We're working hard to bring you the best experience.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 1</h3>
+              <p className="text-gray-300">Description of the first feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 2</h3>
+              <p className="text-gray-300">Description of the second feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 3</h3>
+              <p className="text-gray-300">Description of the third feature coming soon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-// Get all hrefs from both files
-const navHrefs = extractHrefs(navigationFile);
-const footerHrefs = extractHrefs(footerFile);
-const allHrefs = [...new Set([...navHrefs, ...footerHrefs])];
-
-// Filter out external links and get only internal paths
-const internalPaths = allHrefs.filter(href => href.startsWith('/') && !href.startsWith('http'));
-
-console.log('All internal paths found in navigation:');
-console.log(internalPaths);
-
-// Check which pages exist
-const appDir = '/workspace/app';
-const existingPages = [];
-
-function checkPageExists(path) {
-  const pagePath = path === '/' ? '/workspace/app/page.tsx' : `${appDir}${path}/page.tsx`;
-  return fs.existsSync(pagePath);
-}
-
-const missingPages = [];
-const existingPagesList = [];
-
-internalPaths.forEach(path => {
-  if (checkPageExists(path)) {
-    existingPagesList.push(path);
-  } else {
-    missingPages.push(path);
-  }
-});
-
-console.log('\n=== EXISTING PAGES ===');
-existingPagesList.forEach(page => console.log(`✓ ${page}`));
-
-console.log('\n=== MISSING PAGES ===');
-missingPages.forEach(page => console.log(`✗ ${page}`));
-
-console.log(`\nTotal internal paths: ${internalPaths.length}`);
-console.log(`Existing pages: ${existingPagesList.length}`);
-console.log(`Missing pages: ${missingPages.length}`);

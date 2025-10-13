@@ -1,60 +1,31 @@
-const fs = require('fs');
-const path = require('path');
+'use client';
+import React from 'react';
 
-// List of files with JSX errors
-const filesToFix = [
-  'app/ai-automated-reporting/page.tsx',
-  'app/ai-data-analytics-pro/page.tsx',
-  'app/ai-email-assistant/page.tsx',
-  'app/ai-email-marketing-automation/page.tsx',
-  'app/ai-expense-tracker/page.tsx',
-  'app/ai-financial-analysis/page.tsx',
-  'app/ai-fraud-detection/page.tsx',
-  'app/ai-hr-recruitment-pro/page.tsx',
-  'app/ai-image-recognition-pro/page.tsx',
-  'app/ai-invoice-generator/page.tsx',
-  'app/ai-predictive-analytics/page.tsx',
-  'app/ai-recommendation-engine/page.tsx'
-];
-
-function fixJSXFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Fix common JSX syntax issues
-    content = content
-      // Fix unclosed JSX elements by adding proper closing tags
-      .replace(/<div([^>]*)>(?!.*<\/div>)/g, (match, attrs) => {
-        // This is a complex fix, let's handle it differently
-        return match;
-      })
-      // Fix malformed JSX fragments
-      .replace(/<>([^<]*?)(?!<\/>)/g, '<React.Fragment>$1</React.Fragment>')
-      // Fix unclosed JSX tags
-      .replace(/<([a-zA-Z][a-zA-Z0-9]*)([^>]*)>(?!.*<\/\1>)/g, (match, tagName, attrs) => {
-        // This is too complex for regex, let's handle it case by case
-        return match;
-      })
-      // Fix malformed template literals in JSX
-      .replace(/\$\{([^}]*)\}/g, '{$1}')
-      // Fix missing semicolons after JSX
-      .replace(/(<\/[a-zA-Z][a-zA-Z0-9]*>)\s*$/gm, '$1;')
-      // Fix malformed JSX expressions
-      .replace(/\{([^}]*)\}/g, (match, content) => {
-        if (content.includes('`') && content.includes('${')) {
-          return `{${content.replace(/`/g, '').replace(/\$\{/g, '{').replace(/\}/g, '}')}}`;
-        }
-        return match;
-      });
-
-    // Write the fixed content back
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-  }
+export default function FixJsx-Errors() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Fix Jsx-Errors</h1>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-gray-300 text-lg mb-8">
+            This page is under development. We're working hard to bring you the best experience.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 1</h3>
+              <p className="text-gray-300">Description of the first feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 2</h3>
+              <p className="text-gray-300">Description of the second feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 3</h3>
+              <p className="text-gray-300">Description of the third feature coming soon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
-
-// Fix all files
-filesToFix.forEach(fixJSXFile);
-console.log('JSX fixes completed');

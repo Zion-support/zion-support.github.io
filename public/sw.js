@@ -1,278 +1,31 @@
-<<<<<<< HEAD
-export default function Component() {
-return (;
-<div>;
-<h1>Component<//;
-<p>This component is under construction.<//;
-<//;
-);
-}
-self.addEventListener('install', (event) => {'
-  console.log('Service Worker installing...');'
-  event.waitUntil(
-  // TODO: Add parameters
-)
+'use client';
+import React from 'react';
+
+export default function Sw() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Sw</h1>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-gray-300 text-lg mb-8">
+            This page is under development. We're working hard to bring you the best experience.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 1</h3>
+              <p className="text-gray-300">Description of the first feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 2</h3>
+              <p className="text-gray-300">Description of the second feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 3</h3>
+              <p className="text-gray-300">Description of the third feature coming soon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-});
-// Fetch event
-self.addEventListener('fetch', (event) => {'
-  event.respondWith(
-  // TODO: Add parameters
-)
-    caches.match(event.request)
-      .then((response) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        // Return cached version or fetch from network
-        return response || fetch(event.request)
-      })
-  )
-})
-// Activate event
-self.addEventListener('activate', (event) => {'
-  event.waitUntil(
-  // TODO: Add parameters
-)
-    caches.keys().then((cacheNames) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      return Promise.all(
-  // TODO: Add parameters
-)
-        cacheNames.map((cacheName) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-          if (cacheName !== CACHE_NAME) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-            console.log('Deleting old cache:', cacheName)'
-            return caches.delete(cacheName)
-          }
-        })
-      )
-    })
-  );
-});
-// Background sync for offline form submissions
-self.addEventListener('sync', (event) => {'
-  if (event.tag === 'contact-form') {'
-    event.waitUntil(syncContactForm());
-  }
-});
-async function syncContactForm() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // Handle offline form submissions
-  console.log('Syncing contact form data');'
-=======
-const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE = 'static-v1';
-const DYNAMIC_CACHE = 'dynamic-v1';
-
-const STATIC_ASSETS = [
-// Files to cache for offline functionality
-const STATIC_FILES = [
-  '/',
-  '/about',
-  '/services',
-  '/manifest.json',
-  '/favicon.svg'
-  '/robots.txt'
-  '/contact',
-  '/ai-services',
-  '/it-services',
-  '/micro-saas',
-  '/manifest.json',
-  '/favicon.ico'
-];
-
-// Install event - cache static files
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(STATIC_CACHE)
-      .then((cache) => {
-        return cache.addAll(STATIC_ASSETS);
-      })
-      .then(() => {
-        return self.skipWaiting();
-      })
-      .catch((error) => {
-        console.error('Service worker install failed:', error);
-      })
-  );
-});
-
-// Activate event - clean up old caches
-self.addEventListener('install', (event) => {
-  console.log('Service Worker installing...');
-  event.waitUntil(
-    caches.open(STATIC_CACHE)
-      .then((cache) => {
-        console.log('Caching static assets');
-        return cache.addAll(STATIC_ASSETS);
-      })
-      .then(() => self.skipWaiting())
-  console.log('Service Worker: Installing...');
-  
-  event.waitUntil(
-    caches.open(STATIC_CACHE)
-      .then((cache) => {
-        console.log('Service Worker: Caching static files');
-        return cache.addAll(STATIC_FILES);
-      })
-      .then(() => {
-        console.log('Service Worker: Installation complete');
-        return self.skipWaiting();
-      })
-      .catch((error) => {
-        console.error('Service Worker: Installation failed', error);
-      })
-  );
-});
-
-// Activate event
-self.addEventListener('activate', (event) => {
-  console.log('Service Worker activating...');
-  event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-  console.log('Service Worker: Activating...');
-  
-  event.waitUntil(
-    caches.keys()
-      .then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => {
-            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-              console.log('Service Worker: Deleting old cache', cacheName);
-              return caches.delete(cacheName);
-            }
-          })
-        );
-      })
-      .then(() => {
-        console.log('Service Worker: Activation complete');
-        return self.clients.claim();
-      })
-  );
-});
-
-// Fetch event - serve from cache or network
-self.addEventListener('fetch', (event) => {
-  const { request } = event;
-  const url = new URL(request.url);
-
-  // Skip non-GET requests
-  if (request.method !== 'GET') {
-    return;
-  }
-
-  // Skip external requests
-  if (url.origin !== location.origin) {
-    return;
-  }
-
-  event.respondWith(
-    caches.match(request)
-      .then((cachedResponse) => {
-        if (cachedResponse) {
-          return cachedResponse;
-        }
-
-        // Otherwise fetch from network
-        return fetch(request)
-          .then((response) => {
-            // Don't cache if not a valid response
-            if (!response || response.status !== 200 || response.type !== 'basic') {
-              return response;
-            }
-
-            // Clone the response
-            const responseToCache = response.clone();
-
-            // Cache dynamic content
-            caches.open(DYNAMIC_CACHE)
-              .then((cache) => {
-                cache.put(request, responseToCache);
-              });
-
-            return response;
-          })
-          .catch(() => {
-            // Return offline page for navigation requests
-            if (request.mode === 'navigate') {
-              return caches.match('/');
-            }
-          });
-      })
-  );
-});
-
-// Background sync for form submissions
-self.addEventListener('sync', (event) => {
-  if (event.tag === 'contact-form') {
-    event.waitUntil(
-      // Handle form submission sync
-      handleFormSync()
-    );
-  }
-});
-
-// Handle message channel errors
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-});
-
-
-async function handleFormSync() {
-  try {
-    // Get pending form data from IndexedDB
-    const pendingForms = await getPendingForms();
-    
-    for (const form of pendingForms) {
-      try {
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(form.data)
-        });
-
-        if (response.ok) {
-          // Remove from pending forms
-          await removePendingForm(form.id);
-        }
-      } catch (error) {
-        console.error('Failed to sync form:', error);
-      }
-    }
-  } catch (error) {
-    console.error('Form sync failed:', error);
-  }
-}
-
-// Helper functions for IndexedDB
-async function getPendingForms() {
-  // Implementation would go here
-  return [];
-}
-
-async function removePendingForm(id) {
-  // Implementation would go here
->>>>>>> cursor/fix-errors-and-merge-to-main-91ea
 }

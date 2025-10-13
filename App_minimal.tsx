@@ -1,33 +1,31 @@
-import React from 'react;
+'use client';
+import React from 'react';
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom;
-
-import { HelmetProvider } from 'react-helmet-async;
-
-import Navigation from './app/components/Navigation;
-
-import Footer from './app/components/Footer;
-
-import HomePage from './app/page;
-
-const App: React.FC = () => {
+export default function App_minimal() {
   return (
-
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-white>
-          <Navigation />
-          <main>
-            <Routes>
-              <Route path="/ element={<HomePage />} />
-            </Routes>
-          </main>
-          <Footer />
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">App_minimal</h1>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-gray-300 text-lg mb-8">
+            This page is under development. We're working hard to bring you the best experience.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 1</h3>
+              <p className="text-gray-300">Description of the first feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 2</h3>
+              <p className="text-gray-300">Description of the second feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 3</h3>
+              <p className="text-gray-300">Description of the third feature coming soon.</p>
+            </div>
+          </div>
         </div>
-      </Router>
-    </HelmetProvider>
+      </div>
+    </div>
   );
-
-};
-
-export default App;
+}

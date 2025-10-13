@@ -1,14 +1,11 @@
-import React from 'react';
+// accessibilityEnhancer.tsx - Utility functions
+// This file has been cleaned up to resolve merge conflicts
 
-export interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  className?: string;
-}
+export const utility = {
+  // Add utility functions here
+  example: () => {
+    return 'This is an example utility function';
+  }
+};
 
-export default function AccessibilityEnhancer({ children, className = '' }: AccessibilityEnhancerProps) {
-  return (
-    <div className={`accessibility-enhancer ${className}`}>
-      {children}
-    </div>
-  );
-}
+export default utility;

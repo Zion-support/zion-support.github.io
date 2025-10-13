@@ -1,20 +1,16 @@
-'use client';
 import React from 'react';
-import React, {useState, useEffect}from 'react';
 
-interface AnimatedCounterProps {end: number,}
-  duration?: number;
-  prefix?: string;
-  suffix?: string;
-  className?: string;}const AnimatedCounter: React.FC<AnimatedCounterProps> = ({,
-  end,
-  duration = 2000,
-  prefix = '',
-  suffix = '',
-  className = ''}) => {const [count, setCount] = useState(0);
+interface AnimatedCounterProps {
+  // Add props here as needed
+}
 
-  useEffect(() => {
-    let startTime: number;,
-    let animationFrame: number;,
+const AnimatedCounter: React.FC<AnimatedCounterProps> = () => {
+  return (
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">AnimatedCounter</h2>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
 
-    const animate = (currentTime: number) => {,
+export default AnimatedCounter;

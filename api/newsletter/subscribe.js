@@ -1,41 +1,31 @@
-// Newsletter subscription API endpoint
-export default function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+'use client';
+import React from 'react';
 
-  try {
-    const { email, name } = req.body;
-
-    // Validate email
-    if (!email || !email.includes('@')) {
-      return res.status(400).json({ error: 'Valid email is required' });
-    }
-
-    // In a real application, you would:
-    // 1. Validate the email format
-    // 2. Check if email already exists
-    // 3. Store in your database
-    // 4. Send confirmation email
-    // 5. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
-
-    // console.log removed for production
-    console.log('Newsletter subscription:', {
-      email: req.body.email,
-      timestamp: new Date().toISOString()
-    });
-
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true, 
-      message: 'Successfully subscribed to newsletter',
-      email 
-    }));
-  } catch (error) {
-    console.error('Newsletter subscription error:', error);
-    res.statusCode = 500;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to subscribe to newsletter' }));
-  }
+export default function Subscribe() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold mb-8">Subscribe</h1>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-gray-300 text-lg mb-8">
+            This page is under development. We're working hard to bring you the best experience.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 1</h3>
+              <p className="text-gray-300">Description of the first feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 2</h3>
+              <p className="text-gray-300">Description of the second feature coming soon.</p>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg">
+              <h3 className="text-xl font-semibold mb-4">Feature 3</h3>
+              <p className="text-gray-300">Description of the third feature coming soon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }

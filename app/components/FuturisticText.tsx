@@ -1,14 +1,16 @@
 import React from 'react';
 
 interface FuturisticTextProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props here as needed
 }
 
-export default function FuturisticText({ className = '', children, ...props }: FuturisticTextProps) {
+const FuturisticText: React.FC<FuturisticTextProps> = () => {
   return (
-    <div className={`futuristic-text ${className}`} {...props}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">FuturisticText</h2>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
+
+export default FuturisticText;

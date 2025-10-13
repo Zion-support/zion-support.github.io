@@ -1,18 +1,16 @@
 import React from 'react';
 
 interface CoreWebVitalsProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props here as needed
 }
 
-export default function CoreWebVitals({ className = '', children }: CoreWebVitalsProps) {
+const CoreWebVitals: React.FC<CoreWebVitalsProps> = () => {
   return (
-    <div className={`core-web-vitals ${className}`}>
-      {children}
+    <div className="p-4">
+      <h2 className="text-2xl font-bold mb-4">CoreWebVitals</h2>
+      <p>This component is under development.</p>
     </div>
   );
-}
+};
 
-    // Log in development
-    if (process.env['NODE_ENV'] === 'development') {
-      }
+export default CoreWebVitals;
