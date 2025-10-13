@@ -30,13 +30,13 @@ class ErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+
     }
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       // You can integrate with services like Sentry, LogRocket, etc.
-      console.error('Production error:', error, errorInfo);
+
     }
   }
 

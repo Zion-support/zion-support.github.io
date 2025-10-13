@@ -36,7 +36,7 @@ class ErrorHandler extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorHandler caught an error:', error, errorInfo);
+
     }
 
     // Log error to external service in production
@@ -62,8 +62,6 @@ class ErrorHandler extends Component<Props, State> {
         url: window.location.href,
       };
 
-      console.error('Production error logged:', errorData);
-      
       // Example: Send to error tracking service
       // await fetch('/api/errors', {
       //   method: 'POST',
@@ -71,7 +69,7 @@ class ErrorHandler extends Component<Props, State> {
       //   body: JSON.stringify(errorData)
       // });
     } catch (logError) {
-      console.error('Failed to log error:', logError);
+
     }
   };
 

@@ -2,7 +2,7 @@
 
 export const Analyticstracker = {
   init: () => {
-    console.log("Analyticstracker initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Analyticstracker = {
   },
 
   cleanup: () => {
-    console.log("Analyticstracker cleaned up");
+
   },
 };
 

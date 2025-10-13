@@ -2,7 +2,7 @@
 
 export const Validators = {
   init: () => {
-    console.log("Validators initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Validators = {
   },
 
   cleanup: () => {
-    console.log("Validators cleaned up");
+
   },
 };
 

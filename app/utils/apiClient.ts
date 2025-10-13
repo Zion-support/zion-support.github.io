@@ -2,7 +2,7 @@
 
 export const Apiclient = {
   init: () => {
-    console.log("Apiclient initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Apiclient = {
   },
 
   cleanup: () => {
-    console.log("Apiclient cleaned up");
+
   },
 };
 

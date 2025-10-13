@@ -2,7 +2,7 @@
 
 export const Performanceutils = {
   init: () => {
-    console.log("Performanceutils initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Performanceutils = {
   },
 
   cleanup: () => {
-    console.log("Performanceutils cleaned up");
+
   },
 };
 

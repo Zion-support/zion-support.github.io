@@ -2,7 +2,7 @@
 
 export const Securitymanager = {
   init: () => {
-    console.log("Securitymanager initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Securitymanager = {
   },
 
   cleanup: () => {
-    console.log("Securitymanager cleaned up");
+
   },
 };
 

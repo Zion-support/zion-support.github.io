@@ -2,7 +2,7 @@
 
 export const Logger = {
   init: () => {
-    console.log("Logger initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Logger = {
   },
 
   cleanup: () => {
-    console.log("Logger cleaned up");
+
   },
 };
 

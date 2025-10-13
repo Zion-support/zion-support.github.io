@@ -103,7 +103,7 @@ export function checkPerformanceBudget(): void {
   };
 
   // This would typically integrate with a performance monitoring service
-  console.log("Performance budget check:", budget);
+
 }
 
 export function addResourceHints(): void {

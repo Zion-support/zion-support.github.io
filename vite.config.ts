@@ -28,7 +28,7 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: false,
-    minify: "esbuild",
+    minify: "terser",
     target: "es2020",
     cssCodeSplit: true,
     modulePreload: {
@@ -44,7 +44,12 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.warn', 'console.error'],
+        passes: 2
       },
+      mangle: {
+        safari10: true
+      }
     },
     rollupOptions: {
       output: {

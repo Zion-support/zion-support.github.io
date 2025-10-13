@@ -9,9 +9,14 @@ interface EnhancedSEOProps {
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
-  structuredData?: any;
+  structuredData?: Record<string, unknown>;
   noindex?: boolean;
   nofollow?: boolean;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
@@ -25,6 +30,11 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   structuredData,
   noindex = false,
   nofollow = false,
+  author = "Zion Tech Group",
+  publishedTime,
+  modifiedTime,
+  section = "Technology",
+  tags = ["AI", "IT Services", "Technology", "Digital Transformation"]
 }) => {
   const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
   
@@ -33,32 +43,129 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.png",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ziontechgroup.com/logo.png",
+      "width": 200,
+      "height": 200
+    },
     "description": description,
     "foundingDate": "2020",
     "sameAs": [
       "https://linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup",
-      "https://github.com/ziontechgroup"
+      "https://github.com/ziontechgroup",
+      "https://facebook.com/ziontechgroup"
     ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-555-0123",
       "contactType": "customer service",
       "areaServed": "US",
-      "availableLanguage": "English"
+      "availableLanguage": "English",
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
     },
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US",
       "addressLocality": "San Francisco",
-      "addressRegion": "CA"
+      "addressRegion": "CA",
+      "postalCode": "94105",
+      "streetAddress": "123 Tech Street"
     },
     "offers": {
       "@type": "Offer",
       "description": "AI-powered solutions and IT services",
-      "category": "Technology Services"
+      "category": "Technology Services",
+      "priceRange": "$$$"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Technology Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Solutions",
+            "description": "Artificial Intelligence and Machine Learning services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "IT Services",
+            "description": "Comprehensive IT infrastructure and support services"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Cybersecurity",
+            "description": "Advanced cybersecurity solutions and protection"
+          }
+        }
+      ]
     }
+  };
+
+  // Generate breadcrumb structured data
+  const breadcrumbStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ziontechgroup.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": section,
+        "item": canonical || "https://ziontechgroup.com"
+      }
+    ]
+  };
+
+  // Generate FAQ structured data
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services does Zion Tech Group offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zion Tech Group offers AI-powered solutions, IT services, cybersecurity, cloud computing, digital transformation, and 5G solutions for modern businesses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact Zion Tech Group?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can contact us through our website contact form, email us at info@ziontechgroup.com, or call us at +1-555-0123. We're available Monday through Friday, 9 AM to 6 PM PST."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer 24/7 support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer 24/7 technical support for all our enterprise clients. Our support team is available around the clock to ensure your systems run smoothly."
+        }
+      }
+    ]
   };
 
   return (
@@ -69,7 +176,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="keywords" content={keywords} />
       <meta name="robots" content={robotsContent} />
       <meta name="googlebot" content={robotsContent} />
-      <meta name="author" content="Zion Tech Group" />
+      <meta name="author" content={author} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
@@ -89,6 +196,12 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta property="og:image:alt" content={`${title} - ${description}`} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
       
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
@@ -112,15 +225,28 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       
+      {/* Preconnect to external domains */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+      
+      {/* Critical CSS */}
+      <link rel="preload" href="/critical.css" as="style" />
+      <link rel="stylesheet" href="/critical.css" />
+      
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(defaultStructuredData)}
       </script>
       
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbStructuredData)}
+      </script>
+      
+      <script type="application/ld+json">
+        {JSON.stringify(faqStructuredData)}
+      </script>
     </Helmet>
   );
 };

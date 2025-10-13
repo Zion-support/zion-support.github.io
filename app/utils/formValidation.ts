@@ -2,7 +2,7 @@
 
 export const Formvalidation = {
   init: () => {
-    console.log("Formvalidation initialized");
+
   },
 
   process: (data: any) => {
@@ -10,7 +10,7 @@ export const Formvalidation = {
   },
 
   cleanup: () => {
-    console.log("Formvalidation cleaned up");
+
   },
 };
 
