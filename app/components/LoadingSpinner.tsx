@@ -9,7 +9,7 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
-  text,
+  text = 'Loading...',
   className = '' 
 }) => {
   const sizeClasses = {
@@ -21,10 +21,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   return (
     <div className={`flex flex-col items-center justify-center space-y-2 ${className}`}>
-      <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
-      {text && (
-        <p className="text-gray-300 text-sm animate-pulse">{text}</p>
-      )}
+      <Loader2 data-testid="loading-spinner" className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
+      <p className="text-gray-300 text-sm animate-pulse">{text}</p>
     </div>
   );
 };
