@@ -9,17 +9,8 @@ const CacheManager = () => {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
           console.log('Service Worker registered:', registration);
-<<<<<<< HEAD
-
-        } catch (error) {
-          console.error('Service Worker registration failed:', error);
-
-
-
-=======
         } catch {
           // Handle error silently
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
         }
       }
     }
@@ -42,17 +33,8 @@ const CacheManager = () => {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
           console.log('Static assets cached successfully');
-<<<<<<< HEAD
-
-        } catch (error) {
-          console.error('Failed to cache static assets:', error);
-
-
-
-=======
         } catch {
           // Handle error silently
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
         }
       }
 
@@ -67,16 +49,7 @@ const CacheManager = () => {
           }
           
           return response
-<<<<<<< HEAD
-
-        } catch (error) {
-          console.error('Cache API error:', error);
-
-
-
-=======
         } catch {
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
           return fetch(request);
         }
       }

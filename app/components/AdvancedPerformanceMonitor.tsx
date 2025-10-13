@@ -1,11 +1,5 @@
 'use client'
 import { useEffect, useState } from 'react'
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
 
 interface PerformanceMetrics {
   fcp: number | null
@@ -18,12 +12,6 @@ interface PerformanceMetrics {
 }
 
 const AdvancedPerformanceMonitor = () => {
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -65,15 +53,7 @@ const AdvancedPerformanceMonitor = () => {
           reportMetric('TTFB', metric.value)
         })
       } catch (error) {
-<<<<<<< HEAD
-
-        console.error('Failed to measure web vitals:', error);
-
-
-
-=======
         console.warn('Web Vitals not available:', error)
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
       }
     }
 
@@ -95,37 +75,8 @@ const AdvancedPerformanceMonitor = () => {
 
     // Report metrics to analytics
     const reportMetric = (name: string, value: number) => {
-<<<<<<< HEAD
-
-      // Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          metric_name: name,
-          metric_value: Math.round(value),
-          metric_delta: Math.round(value)
-        })
-      }
-
-      // Send to custom analytics
-      if (typeof window !== 'undefined' && (window as any).analytics) {
-        (window as any).analytics.track('Performance Metric', {
-          name,
-          value: Math.round(value),
-          timestamp: Date.now()
-        })
-      }
-
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`Performance Metric: ${name} = ${value}`);
-
-
-      }
-
-=======
       // You can integrate with your analytics service here
       console.log(`Performance Metric - ${name}:`, value)
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
     }
 
     measureWebVitals()
@@ -179,36 +130,6 @@ const AdvancedPerformanceMonitor = () => {
 
   const performanceScore = calculateScore()
 
-<<<<<<< HEAD
-
-  // Render performance dashboard in development
-  if (process.env.NODE_ENV === 'development') {
-    return (
-      <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">
-        <div className="font-bold mb-2">Performance Metrics</div>
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
-        <div>Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}%` : 'N/A'}</div>
-        <div>Load: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}</div>
-        {performanceScore && (
-          <div className="mt-2 pt-2 border-t border-gray-600">
-            <div>Score: {performanceScore}/100</div>
-          </div>
-        )}
-      </div>
-    )
-  }
-
-  return null
-}
-
-export default AdvancedPerformanceMonitor
-
-
-=======
   // Don't render if no metrics are available
   if (!performanceScore) return null
 
@@ -281,4 +202,3 @@ export default AdvancedPerformanceMonitor
 }
 
 export default AdvancedPerformanceMonitor
->>>>>>> cursor/fix-errors-and-merge-to-main-6877

@@ -1,4 +1,4 @@
-import { ArrowRight, Cloud, Shield, Database, Zap, Globe, BarChart3, Users, Mail, Smartphone } from "lucide-react";
+import { ArrowRight, Cloud, Shield, Database, Zap, Globe, BarChart3, Mail, Smartphone } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -60,7 +60,6 @@ export default function CloudServices() {
     }
   ];
 
->>>>>>> 772e8e1b479bacba5b030e0b9a1c321c4e1bf36c
   return (
     <>
       <Helmet>
@@ -240,14 +239,4 @@ export default function CloudServices() {
       </div>
     </>
   );
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6877
-=======
-}
->>>>>>> 772e8e1b479bacba5b030e0b9a1c321c4e1bf36c
