@@ -1,11 +1,8 @@
 'use client'
 import { useEffect, useState } from 'react'
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
 
 interface PerformanceMetrics {
   fcp: number | null
@@ -18,12 +15,9 @@ interface PerformanceMetrics {
 }
 
 const AdvancedPerformanceMonitor = () => {
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -40,13 +34,7 @@ const AdvancedPerformanceMonitor = () => {
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return
 
-<<<<<<< HEAD
-    </div>
-  )
-}
-
-export default AdvancedPerformanceMonitor
-=======
+    try {
         onCLS((metric: any) => {
           setMetrics(prev => ({ ...prev, cls: metric.value }))
           reportMetric('CLS', metric.value)
@@ -72,32 +60,27 @@ export default AdvancedPerformanceMonitor
           reportMetric('TTFB', metric.value)
         })
       } catch (error) {
-
         console.error('Failed to measure web vitals:', error);
-
-
-
       }
-    }
 
-    // Measure memory usage
-    const measureMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory
-        setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }))
+      // Measure memory usage
+      const measureMemory = () => {
+        if ('memory' in performance) {
+          const memory = (performance as any).memory
+          setMetrics(prev => ({ ...prev, memoryUsage: memory.usedJSHeapSize }))
+        }
       }
-    }
 
-    // Measure load time
-    const measureLoadTime = () => {
-      if (performance.timing) {
-        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
-        setMetrics(prev => ({ ...prev, loadTime }))
+      // Measure load time
+      const measureLoadTime = () => {
+        if (performance.timing) {
+          const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart
+          setMetrics(prev => ({ ...prev, loadTime }))
+        }
       }
-    }
 
-    // Report metrics to analytics
-    const reportMetric = (name: string, value: number) => {
+      // Report metrics to analytics
+      const reportMetric = (name: string, value: number) => {
 
       // Send to Google Analytics
       if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -124,11 +107,10 @@ export default AdvancedPerformanceMonitor
 
       }
 
+      measureWebVitals()
+      measureMemory()
+      measureLoadTime()
     }
-
-    measureWebVitals()
-    measureMemory()
-    measureLoadTime()
 
     // Set up performance observer for additional metrics
     if ('PerformanceObserver' in window) {
@@ -205,4 +187,3 @@ export default AdvancedPerformanceMonitor
 export default AdvancedPerformanceMonitor
 
 
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61

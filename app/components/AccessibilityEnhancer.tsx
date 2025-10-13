@@ -217,10 +217,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
   return (
     <>
       {children}

@@ -148,17 +148,8 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             const componentName = target.dataset.lazyComponent;
             
             if (componentName) {
-              // Dynamically import the component
-              import(`../components/${componentName}.tsx`)
-                .then(() => {
-                  // Component loaded successfully
-                  target.classList.add('loaded');
-                })
-                .catch((error) => {
-                  if (process.env.NODE_ENV === 'development') {
-                    console.warn(`Failed to load component ${componentName}:`, error);
-                  }
-                });
+              // Mark component as loaded
+              target.classList.add('loaded');
               
               observer.unobserve(target);
             }
