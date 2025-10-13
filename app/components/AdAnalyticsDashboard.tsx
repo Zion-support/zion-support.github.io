@@ -206,7 +206,9 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
     return (
       <div className={`ad-analytics-dashboard ${className}`}>
         <div className="flex items-center justify-center h-64">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        </div>
+      </div>
     );
   }
 
@@ -214,9 +216,11 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
     return (
       <div className={`ad-analytics-dashboard ${className}`}>
         <div className="text-center py-12">
-          <div className="text-6xl mb-4">📊
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">No analytics data available
-          <p className="text-gray-600">Start running campaigns to see analytics data
+          <div className="text-6xl mb-4">📊</div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">No analytics data available</h3>
+          <p className="text-gray-600">Start running campaigns to see analytics data</p>
+        </div>
+      </div>
     );
   }
 
@@ -225,8 +229,10 @@ const AdAnalyticsDashboard: React.FC<AdAnalyticsDashboardProps> = ({ className =
       {/* Header */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <h1 className="text-3xl font-bold text-gray-900">Ad Analytics Dashboard
-            <p className="text-gray-600 mt-1">Track and analyze your advertising performance
+          <div>
+            <h1 className="text-3xl font-bold text-gray-900">Ad Analytics Dashboard</h1>
+            <p className="text-gray-600 mt-1">Track and analyze your advertising performance</p>
+          </div>
           <div className="flex items-center gap-3">
             <select
               value={selectedPeriod}

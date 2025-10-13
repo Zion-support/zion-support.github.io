@@ -36,7 +36,7 @@ export default function handler(req, res) {
       success: true, 
       message: 'Error report received' 
     }));
-  } catch (error) {
+  } catch (err) {
     // console.error removed for production
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

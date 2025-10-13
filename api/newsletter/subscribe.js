@@ -5,7 +5,7 @@ export default function handler(req, res) {
   }
 
   try {
-    const { email, name } = req.body;
+    const { email } = req.body;
 
     // Validate email
     if (!email || !email.includes('@')) {
