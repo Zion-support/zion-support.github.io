@@ -77,8 +77,6 @@ const Navigation = React.memo(() => {
               </Link>
             ))}
             
-<<<<<<< HEAD
-<<<<<<< HEAD
             {/* Solutions Dropdown */}
             <div className="relative">
               <button
@@ -121,10 +119,6 @@ const Navigation = React.memo(() => {
               )}
             </div>
             
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-713a
             {/* AI Services Dropdown */}
             <div className="relative">
               <button

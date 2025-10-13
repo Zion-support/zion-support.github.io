@@ -21,6 +21,9 @@ self.addEventListener('install', (event) => {
       .then(() => {
         return self.skipWaiting();
       })
+      .catch((error) => {
+        console.error('Service worker install failed:', error);
+      })
   );
 });
 
@@ -100,6 +103,14 @@ self.addEventListener('sync', (event) => {
     );
   }
 });
+
+// Handle message channel errors
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+});
+
 
 async function handleFormSync() {
   try {
