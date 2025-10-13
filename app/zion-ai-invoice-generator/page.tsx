@@ -1,49 +1,55 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, FileText, Download, Send, CheckCircle, Star, Users, Clock, Zap, Receipt, Calculator, CreditCard, DollarSign, TrendingUp, BarChart3, Globe, Smartphone, Monitor, Headphones, Mic, Camera, Edit, Palette, Layers, Filter, RotateCcw, PlayCircle, Pause, Stop, SkipBack, SkipForward, Volume2, VolumeX, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt as ReceiptIcon, ClipboardList, Workflow, Mail, Phone, MapPin, Award, TrendingUp as TrendingUpIcon, Shield, Cloud, Database, Code, Settings, Monitor as MonitorIcon, Laptop, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone as PhoneIcon, Voicemail, Headset, Speaker, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, RotateCcw as RotateCcwIcon, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize as MaximizeIcon, Minimize as MinimizeIcon, Square as SquareIcon, Circle as CircleIcon, Triangle as TriangleIcon, Hexagon as HexagonIcon, Octagon as OctagonIcon, Diamond as DiamondIcon, Star as StarIconIcon, Moon as MoonIcon, Sun as SunIcon, Sunrise as SunriseIcon, Sunset as SunsetIcon, CloudRain as CloudRainIcon, CloudSnow as CloudSnowIcon, CloudLightning as CloudLightningIcon, Wind as WindIcon, Droplets as DropletsIcon, Thermometer as ThermometerIcon, Gauge as GaugeIcon, Timer as TimerIcon, Stopwatch as StopwatchIcon, Hourglass as HourglassIcon, Clock3 as Clock3Icon, Clock4 as Clock4Icon, Clock5 as Clock5Icon, Clock6 as Clock6Icon, Clock7 as Clock7Icon, Clock8 as Clock8Icon, Clock9 as Clock9Icon, Clock10 as Clock10Icon, Clock11 as Clock11Icon, Clock12 as Clock12Icon, Calendar as CalendarIconIcon, CalendarDays as CalendarDaysIcon, CalendarCheck as CalendarCheckIcon, CalendarX as CalendarXIcon, CalendarPlus as CalendarPlusIcon, CalendarMinus as CalendarMinusIcon, CalendarRange as CalendarRangeIcon, CalendarSearch as CalendarSearchIcon, CalendarHeart as CalendarHeartIcon, CalendarStar as CalendarStarIcon, CalendarClock as CalendarClockIcon, CalendarUser as CalendarUserIcon, CalendarEdit as CalendarEditIcon, CalendarTrash as CalendarTrashIcon, CalendarSettings as CalendarSettingsIcon, CalendarImport as CalendarImportIcon, CalendarExport as CalendarExportIcon, CalendarShare as CalendarShareIcon, CalendarLock as CalendarLockIcon, CalendarUnlock as CalendarUnlockIcon, CalendarKey as CalendarKeyIcon, CalendarShield as CalendarShieldIcon, CalendarAlert as CalendarAlertIcon, CalendarBell as CalendarBellIcon, CalendarZap as CalendarZapIcon, CalendarSparkles as CalendarSparklesIcon, CalendarGift as CalendarGiftIcon, CalendarAward as CalendarAwardIcon, CalendarTrophy as CalendarTrophyIcon, CalendarMedal as CalendarMedalIcon, CalendarCrown as CalendarCrownIcon, CalendarGem as CalendarGemIcon, CalendarDiamond as CalendarDiamondIcon, CalendarPearl as CalendarPearlIcon, CalendarRuby as CalendarRubyIcon, CalendarSapphire as CalendarSapphireIcon, CalendarEmerald as CalendarEmeraldIcon, CalendarTopaz as CalendarTopazIcon, CalendarAmethyst as CalendarAmethystIcon, CalendarQuartz as CalendarQuartzIcon, CalendarCrystal as CalendarCrystalIcon, CalendarJewel as CalendarJewelIcon, CalendarTreasure as CalendarTreasureIcon, CalendarGold as CalendarGoldIcon, CalendarSilver as CalendarSilverIcon, CalendarBronze as CalendarBronzeIcon, CalendarPlatinum as CalendarPlatinumIcon, CalendarTitanium as CalendarTitaniumIcon, CalendarSteel as CalendarSteelIcon, CalendarIron as CalendarIronIcon, CalendarCopper as CalendarCopperIcon, CalendarAluminum as CalendarAluminumIcon, CalendarZinc as CalendarZincIcon, CalendarTin as CalendarTinIcon, CalendarLead as CalendarLeadIcon, CalendarMercury as CalendarMercuryIcon, CalendarUranium as CalendarUraniumIcon, CalendarPlutonium as CalendarPlutoniumIcon, CalendarRadium as CalendarRadiumIcon, CalendarThorium as CalendarThoriumIcon, CalendarActinium as CalendarActiniumIcon, CalendarProtactinium as CalendarProtactiniumIcon, CalendarNeptunium as CalendarNeptuniumIcon, CalendarAmericium as CalendarAmericiumIcon, CalendarCurium as CalendarCuriumIcon, CalendarBerkelium as CalendarBerkeliumIcon, CalendarCalifornium as CalendarCaliforniumIcon, CalendarEinsteinium as CalendarEinsteiniumIcon, CalendarFermium as CalendarFermiumIcon, CalendarMendelevium as CalendarMendeleviumIcon, CalendarNobelium as CalendarNobeliumIcon, CalendarLawrencium as CalendarLawrenciumIcon, CalendarRutherfordium as CalendarRutherfordiumIcon, CalendarDubnium as CalendarDubniumIcon, CalendarSeaborgium as CalendarSeaborgiumIcon, CalendarBohrium as CalendarBohriumIcon, CalendarHassium as CalendarHassiumIcon, CalendarMeitnerium as CalendarMeitneriumIcon, CalendarDarmstadtium as CalendarDarmstadtiumIcon, CalendarRoentgenium as CalendarRoentgeniumIcon, CalendarCopernicium as CalendarCoperniciumIcon, CalendarNihonium as CalendarNihoniumIcon, CalendarFlerovium as CalendarFleroviumIcon, CalendarMoscovium as CalendarMoscoviumIcon, CalendarLivermorium as CalendarLivermoriumIcon, CalendarTennessine as CalendarTennessineIcon, CalendarOganesson as CalendarOganessonIcon, Package as PackageIcon, Receipt as ReceiptIconIcon, ClipboardList as ClipboardListIcon, Workflow as WorkflowIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { 
+  FileText, 
+  Download, 
+  Send, 
+  Settings, 
+  Sparkles, 
+  Clock, 
+  Users, 
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Receipt,
+  CreditCard,
+  Zap,
+  Brain,
+  Shield,
+  Globe,
+  Calculator,
+  TrendingUp,
+  DollarSign
+} from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const ZionAIInvoiceGeneratorPage: React.FC = () => {
+const ZionAIInvoiceGeneratorPage = () => {
   const features = [
     {
       title: "AI-Powered Invoice Creation",
-      description: "Generate professional invoices automatically from project data and client information",
-      icon: <FileText className="w-8 h-8" />,
+      description: "Generate professional invoices automatically from project data, time tracking, and client information",
+      icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Smart Data Extraction",
-      description: "Automatically extract billing information from emails, contracts, and project management tools",
-      icon: <Calculator className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Multiple Payment Methods",
-      description: "Accept payments via credit cards, bank transfers, PayPal, and cryptocurrency",
+      title: "Smart Payment Tracking",
+      description: "Automatically track payments, send reminders, and manage overdue invoices with AI assistance",
       icon: <CreditCard className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
+      title: "Multi-Currency Support",
+      description: "Create invoices in 150+ currencies with real-time exchange rates and automatic conversions",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
       title: "Automated Follow-ups",
-      description: "Send automatic payment reminders and follow-up emails to clients",
+      description: "AI automatically sends payment reminders and follows up on overdue invoices to improve cash flow",
       icon: <Send className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Tax Compliance",
-      description: "Automatically calculate taxes, VAT, and ensure compliance with local regulations",
-      icon: <Receipt className="w-8 h-8" />,
-      color: "from-indigo-500 to-violet-500"
-    },
-    {
-      title: "Financial Analytics",
-      description: "Track revenue, outstanding payments, and generate financial reports",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500"
     }
   ];
 
@@ -51,357 +57,430 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
     {
       name: "Solo",
       price: "$19",
-      period: "per month",
+      period: "/month",
       description: "Perfect for freelancers and solo entrepreneurs",
       features: [
         "50 invoices per month",
         "Basic templates",
         "Payment tracking",
-        "Email support",
+        "Email reminders",
         "PDF export",
-        "Basic analytics"
+        "Basic reporting",
+        "Email support"
       ],
-      popular: false,
-      color: "from-gray-500 to-gray-600"
+      popular: false
     },
     {
       name: "Business",
       price: "$49",
-      period: "per month",
+      period: "/month",
       description: "Ideal for small to medium businesses",
       features: [
-        "200 invoices per month",
+        "500 invoices per month",
         "Premium templates",
+        "Advanced payment tracking",
         "Automated follow-ups",
-        "Priority support",
-        "Multiple payment methods",
-        "Advanced analytics",
-        "Tax calculations",
-        "Client portal"
+        "Multi-currency support",
+        "Advanced reporting",
+        "API access",
+        "Priority support"
       ],
-      popular: true,
-      color: "from-cyan-500 to-blue-500"
+      popular: true
     },
     {
       name: "Enterprise",
-      price: "$99",
-      period: "per month",
-      description: "For large organizations with high-volume needs",
+      price: "$149",
+      period: "/month",
+      description: "For large organizations with complex needs",
       features: [
         "Unlimited invoices",
         "Custom templates",
-        "API integration",
-        "24/7 phone support",
-        "White-label solution",
-        "Advanced reporting",
-        "Multi-currency support",
-        "Team collaboration",
-        "Custom workflows"
+        "Full payment automation",
+        "Advanced AI features",
+        "White-label options",
+        "Custom integrations",
+        "Dedicated account manager",
+        "SLA guarantee"
       ],
-      popular: false,
-      color: "from-purple-500 to-pink-500"
+      popular: false
     }
   ];
 
   const testimonials = [
     {
-      name: "David Martinez",
-      company: "Freelance Developer",
+      name: "Jennifer Martinez",
+      company: "Creative Agency",
+      role: "Finance Director",
+      content: "Zion AI Invoice Generator has streamlined our entire billing process. We've reduced invoice processing time by 80% and improved our cash flow significantly.",
+      rating: 5,
+      avatar: "JM"
+    },
+    {
+      name: "David Thompson",
+      company: "Freelance Consultant",
       role: "Independent Contractor",
-      content: "Zion AI Invoice Generator has streamlined my billing process completely. I can create professional invoices in seconds and track payments effortlessly.",
+      content: "As a freelancer, this tool has been a game-changer. I can create professional invoices in seconds and never miss a payment reminder.",
       rating: 5,
-      avatar: "DM"
+      avatar: "DT"
     },
     {
-      name: "Lisa Thompson",
-      company: "Marketing Agency",
-      role: "Operations Manager",
-      content: "The automated follow-up feature is a game-changer. Our payment collection time has improved by 60% since using this tool.",
+      name: "Lisa Chen",
+      company: "Tech Startup",
+      role: "CFO",
+      content: "The AI-powered features have helped us maintain better client relationships through timely and professional invoicing. Highly recommended!",
       rating: 5,
-      avatar: "LT"
-    },
-    {
-      name: "James Wilson",
-      company: "Consulting Firm",
-      role: "Managing Partner",
-      content: "The tax compliance features save us hours every month. Everything is calculated automatically and stays up-to-date with regulations.",
-      rating: 5,
-      avatar: "JW"
+      avatar: "LC"
     }
   ];
 
-  const stats = [
-    { number: "50,000+", label: "Invoices Generated", icon: <FileText className="w-6 h-6" /> },
-    { number: "95%", label: "Faster Payment Collection", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "30+", label: "Countries Supported", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
+  const benefits = [
+    {
+      title: "Save 10+ Hours Per Week",
+      description: "Automate invoice creation and follow-ups",
+      icon: <Clock className="w-6 h-6" />,
+      color: "text-cyan-400"
+    },
+    {
+      title: "Improve Cash Flow by 30%",
+      description: "Faster payments with automated reminders",
+      icon: <TrendingUp className="w-6 h-6" />,
+      color: "text-green-400"
+    },
+    {
+      title: "Reduce Errors by 95%",
+      description: "AI ensures accuracy in all calculations",
+      icon: <Shield className="w-6 h-6" />,
+      color: "text-purple-400"
+    },
+    {
+      title: "Professional Branding",
+      description: "Customizable templates that match your brand",
+      icon: <Sparkles className="w-6 h-6" />,
+      color: "text-pink-400"
+    }
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Zion AI Invoice Generator - Automated Invoice Creation & Payment Processing | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Create professional invoices automatically with Zion AI Invoice Generator. Smart data extraction, automated follow-ups, and payment processing. Start your free trial today!"
-        />
-        <meta
-          name="keywords"
-          content="AI invoice generator, automated invoicing, invoice creation, payment processing, billing automation, financial management"
-        />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-invoice-generator" />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Invoice Generator - Automated Invoice Creation & Payment Processing"
-        description="Create professional invoices automatically with Zion AI Invoice Generator. Smart data extraction, automated follow-ups, and payment processing."
-        keywords="AI invoice generator, automated invoicing, invoice creation, payment processing, billing automation"
+        title="Zion AI Invoice Generator - Automated Invoicing & Payment Tracking | Zion Tech Group"
+        description="Create professional invoices automatically with AI. Track payments, send reminders, and improve cash flow. Perfect for freelancers and businesses. Try free today!"
+        keywords="AI invoice generator, automated invoicing, payment tracking, invoice management, cash flow, billing software, invoice automation"
         canonical="https://ziontechgroup.com/zion-ai-invoice-generator"
       />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        <FuturisticBackground />
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto text-center">
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Automate Your Billing Process</span>
+              <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Invoicing</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Invoice Generator
+                Smart Invoicing
               </span>
+              <br />
+              <span className="text-white">Made Simple</span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Create professional invoices automatically with AI-powered data extraction, automated follow-ups, and seamless payment processing. Get paid faster with intelligent billing automation.
+              Create professional invoices, track payments, and improve cash flow with our AI-powered invoicing platform. 
+              Automate your entire billing process and get paid faster.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <FuturisticButton
                 href="/contact"
                 variant="primary"
                 size="lg"
                 icon={<FileText className="w-5 h-5" />}
               >
-                Start Free Trial
+                Start Creating Invoices
               </FuturisticButton>
               <FuturisticButton
-                href="/demo"
+                href="#demo"
                 variant="outline"
                 size="lg"
-                icon={<Calculator className="w-5 h-5" />}
+                icon={<Receipt className="w-5 h-5" />}
               >
-                Watch Demo
+                View Demo
               </FuturisticButton>
             </div>
-            
+
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
-                  </div>
-                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-                </div>
-              ))}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">$2.5M+</div>
+                <div className="text-gray-300 text-sm">Invoices Processed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">30%</div>
+                <div className="text-gray-300 text-sm">Faster Payments</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">95%</div>
+                <div className="text-gray-300 text-sm">Error Reduction</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">10+</div>
+                <div className="text-gray-300 text-sm">Hours Saved/Week</div>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Intelligent Invoice Management
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Transform your billing process with AI-powered automation and smart financial management tools.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <FuturisticCard
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-                >
-                  <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                  >
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 text-center leading-relaxed">
-                    {feature.description}
-                  </p>
-                </FuturisticCard>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Choose Your Plan
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options to fit your invoicing needs
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
-                    plan.popular ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20' : 'border-white/20'
-                  } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
-                >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </span>
-                    </div>
-                  )}
-                  
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-300 ml-2">{plan.period}</span>
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <FuturisticButton
-                    href="/contact"
-                    variant={plan.popular ? "primary" : "outline"}
-                    size="lg"
-                    className="w-full"
-                    icon={<ArrowRight className="w-5 h-5" />}
-                  >
-                    Get Started
-                  </FuturisticButton>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Businesses Worldwide
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our users say about Zion AI Invoice Generator
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-                >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
-                  <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                      {testimonial.avatar}
-                    </div>
-                    <div>
-                      <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Automate Your Invoicing?
+              Why Choose Our AI Invoice Generator?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Invoice Generator to streamline their billing process and get paid faster.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Transform your invoicing process with intelligent automation and professional results.
             </p>
-            
-            {/* Contact Information */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Mail className="w-6 h-6 text-white" />
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center group">
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r from-slate-800 to-slate-700 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={benefit.color}>
+                    {benefit.icon}
+                  </div>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Email</h3>
-                <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {benefit.description}
+                </p>
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Phone className="w-6 h-6 text-white" />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Powerful Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Everything you need to manage your invoicing and improve cash flow.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <FuturisticCard key={index} className="group hover:scale-105 transition-all duration-300">
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                  {feature.icon}
                 </div>
-                <h3 className="text-white font-semibold mb-2">Phone</h3>
-                <p className="text-cyan-400">+1 302 464 0950</p>
+                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-cyan-400 transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 text-center leading-relaxed">
+                  {feature.description}
+                </p>
+              </FuturisticCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              How It Works
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Get started with professional invoicing in just 3 simple steps
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold text-white">1</span>
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-white font-semibold mb-2">Address</h3>
-                <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Set Up Your Business</h3>
+              <p className="text-gray-300">
+                Add your business information, logo, and branding. Our AI learns your preferences for future invoices.
+              </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-              >
-                Start Free Trial
-              </FuturisticButton>
-              <FuturisticButton
-                href="/services"
-                variant="outline"
-                size="lg"
-                icon={<DollarSign className="w-5 h-5" />}
-              >
-                View All Services
-              </FuturisticButton>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold text-white">2</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Create Invoices</h3>
+              <p className="text-gray-300">
+                Input project details or connect your time tracking. AI automatically generates professional invoices with proper formatting.
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold text-white">3</span>
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Track & Follow Up</h3>
+              <p className="text-gray-300">
+                Send invoices automatically, track payments, and let AI handle follow-ups to ensure timely payments.
+              </p>
             </div>
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your invoicing needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <div
+                key={index}
+                className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
+                  plan.popular 
+                    ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
+                    : 'border-white/20'
+                } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <FuturisticButton
+                  href="/contact"
+                  variant={plan.popular ? "primary" : "outline"}
+                  size="lg"
+                  className="w-full"
+                  icon={<ArrowRight className="w-5 h-5" />}
+                >
+                  Get Started
+                </FuturisticButton>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Trusted by Businesses Worldwide
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See what our users say about Zion AI Invoice Generator
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <p className="text-gray-300 mb-6 italic leading-relaxed">
+                  "{testimonial.content}"
+                </p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Invoicing?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Join thousands of businesses who have improved their cash flow with AI-powered invoicing. 
+            Start your free trial today and see the difference.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <FuturisticButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<FileText className="w-5 h-5" />}
+            >
+              Start Free Trial
+            </FuturisticButton>
+            <FuturisticButton
+              href="/demo"
+              variant="outline"
+              size="lg"
+              icon={<Receipt className="w-5 h-5" />}
+            >
+              View Demo
+            </FuturisticButton>
+          </div>
+          
+          <p className="text-gray-400 text-sm mt-6">
+            No credit card required • 14-day free trial • Cancel anytime
+          </p>
+        </div>
+      </section>
+    </div>
   );
 };
 
