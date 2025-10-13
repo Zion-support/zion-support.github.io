@@ -2,8 +2,6 @@ import { Helmet } from 'react-helmet-async';
 
 export default function AIServices() {
   return (
-    <div>
-  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
@@ -14,10 +12,5 @@ export default function AIServices() {
         <p className="text-xl text-gray-300">Coming Soon</p>
       </div>
     </div>
-    </div>
-);
-}
-export default AIServicesPage;
-    </div>
-);
+  );
 }
