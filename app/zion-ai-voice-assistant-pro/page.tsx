@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from "react-helmet-async";
@@ -103,8 +104,15 @@ export default function ZionAIVoiceAssistantPro() {
       color: "from-orange-500 to-red-500"
     }
   ];
+=======
+<<<<<<< HEAD
+export default function ZionAIVoiceAssistantPro() {
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 
 export default function Page() {
+>>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -144,7 +152,10 @@ export default function Page() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 }

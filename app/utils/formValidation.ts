@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+// Formvalidation utility functions
+export const Formvalidation = {
+  init: () => {
+    },
+  process: (data: any) => {
+  },
+  cleanup: () => {
+    },
+=======
 // formValidation utility
 export const formValidation = {
   // Utility implementation
@@ -5,3 +15,4 @@ export const formValidation = {
     console.log('formValidation initialized');
   }
 };
+>>>>>>> origin/main

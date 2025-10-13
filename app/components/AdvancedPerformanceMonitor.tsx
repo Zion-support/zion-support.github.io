@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+const AdvancedPerformanceMonitor: React.FC = () => {
+=======
 import React from 'react';
 
 interface AdvancedperformancemonitorProps {
@@ -12,3 +15,4 @@ export default function Advancedperformancemonitor({ className = '', children, .
     </div>
   );
 }
+>>>>>>> origin/main

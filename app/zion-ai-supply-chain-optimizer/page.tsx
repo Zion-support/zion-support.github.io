@@ -1,9 +1,17 @@
+<<<<<<< HEAD
 import React from "react";
 import { ArrowRight } from "lucide-react";
 
 import { Helmet } from "react-helmet-async";
+=======
+<<<<<<< HEAD
+export default function ZionAISupplyChainOptimizer() {
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 
 export default function Page() {
+>>>>>>> origin/main
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -43,5 +51,4 @@ export default function Page() {
         </div>
       </div>
     </div>
-  );
 }

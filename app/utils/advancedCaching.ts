@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+// Advancedcaching utility functions
+export const Advancedcaching = {
+  init: () => {
+    },
+  process: (data: any) => {
+  },
+  cleanup: () => {
+    },
+=======
 // advancedCaching utility
 export const advancedCaching = {
   // Utility implementation
@@ -5,3 +15,4 @@ export const advancedCaching = {
     console.log('advancedCaching initialized');
   }
 };
+>>>>>>> origin/main

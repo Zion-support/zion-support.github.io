@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+const NotFoundPage = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page Not Found | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="The page you are looking for could not be found"
+        />
+      </Helmet>
+      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              Page Not Found
+            </span>
+=======
+import React from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 
 const NotFoundPage = () => {
   return (
@@ -6,12 +28,17 @@ const NotFoundPage = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             NotFound
+>>>>>>> origin/main
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
           </p>
         </div>
       </div>
+<<<<<<< HEAD
+    </div>
+=======
     </div>
   );
 }
+>>>>>>> origin/main

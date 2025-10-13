@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
 export default function AICodeGenerationZionTechGroup() {
+=======
+<<<<<<< HEAD
+export default function AICodeGenerationZionTechGroup() {
+=======
+import React from 'react';
+
+export default function Page() {
+>>>>>>> origin/main
+>>>>>>> cursor/fix-errors-and-merge-to-main-eba1
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -39,6 +49,11 @@ export default function AICodeGenerationZionTechGroup() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+    </>
+}
+=======
     </div>
   );
 }
+>>>>>>> origin/main

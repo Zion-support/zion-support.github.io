@@ -1,11 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { lazy } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
+=======
+// Lazy load pages for better performance
+>>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 =======
 import React, { lazy, Suspense } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
+=======
+>>>>>>> origin/main
+>>>>>>> cursor/fix-errors-and-merge-to-main-eba1
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
 const ContactPage = lazy(() => import("./contact/page"));
@@ -18,7 +26,6 @@ const CareersPage = lazy(() => import("./careers/page"));
 const PrivacyPage = lazy(() => import("./privacy/page"));
 const TermsPage = lazy(() => import("./terms/page"));
 const CookiesPage = lazy(() => import("./cookies/page"));
-
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"));
 const FiveGEdgeComputingPage = lazy(() => import("./5g-edge-computing/page"));
@@ -26,17 +33,15 @@ const FiveGImplementationPage = lazy(() => import("./5g-implementation/page"));
 const FiveGIoTSolutionsPage = lazy(() => import("./5g-iot-solutions/page"));
 const FiveGMobileApplicationsPage = lazy(
   () => import("./5g-mobile-applications/page"),
-);
 const FiveGNetworkInfrastructurePage = lazy(
   () => import("./5g-network-infrastructure/page"),
-);
 const FiveGPrivateNetworksPage = lazy(
   () => import("./5g-private-networks/page"),
-);
 const FiveGSmartCitySolutionsPage = lazy(
   () => import("./5g-smart-city-solutions/page"),
-);
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 // Main App Component
@@ -119,6 +124,7 @@ const LoadingSpinner = () => (
   </div>
 );
 
+>>>>>>> origin/main
 // Main App Component
 export default function App() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-b6b8
@@ -139,7 +145,6 @@ export default function App() {
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/cookies" element={<CookiesPage />} />
-
               {/* 5G Solutions Routes */}
               <Route
                 path="/5g-data-analytics"
@@ -178,5 +183,9 @@ export default function App() {
         </Suspense>
       </BrowserRouter>
     </HelmetProvider>
+<<<<<<< HEAD
+}
+=======
   );
 }
+>>>>>>> origin/main

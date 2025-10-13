@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+// Performanceutils utility functions
+export const Performanceutils = {
+  init: () => {
+    },
+  process: (data: any) => {
+  },
+  cleanup: () => {
+    },
+=======
 // performanceUtils utility
 export const performanceUtils = {
   // Utility implementation
@@ -5,3 +15,4 @@ export const performanceUtils = {
     console.log('performanceUtils initialized');
   }
 };
+>>>>>>> origin/main

@@ -1,7 +1,22 @@
+<<<<<<< HEAD
+export default function AiWorkflowAutomationZionTechGroup() {
+=======
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+=======
+
+export default function Page() {
+>>>>>>> origin/main
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+>>>>>>> cursor/fix-errors-and-merge-to-main-eba1
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             This page is under development. Please check back later.
@@ -9,6 +24,11 @@ import { ArrowRight } from 'lucide-react';
 
         </div>
       </div>
+<<<<<<< HEAD
+    </>
+}
+=======
     </div>
   );
 }
+>>>>>>> origin/main

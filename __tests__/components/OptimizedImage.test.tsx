@@ -9,10 +9,22 @@ jest.mock('framer-motion', () => ({
   },
 }));
 
+// Mock IntersectionObserver
+global.IntersectionObserver = jest.fn().mockImplementation((callback) => {
+  // Trigger the callback immediately to simulate intersection
+  setTimeout(() => callback([{ isIntersecting: true }]), 0);
+  return {
+    observe: jest.fn(),
+    unobserve: jest.fn(),
+    disconnect: jest.fn(),
+  };
+});
+
 describe('OptimizedImage', () => {
   const defaultProps = {
     src: 'https://example.com/image.jpg',
     alt: 'Test image',
+    priority: true, // Always render immediately in tests
   };
 
   it('renders with basic props', () => {
@@ -69,8 +81,12 @@ describe('OptimizedImage', () => {
     expect(img).toHaveAttribute('loading', 'eager');
   });
 
-  it('renders with lazy loading by default', () => {
-    render(<OptimizedImage {...defaultProps} />);
+  it('renders with lazy loading by default', async () => {
+    render(<OptimizedImage {...defaultProps} priority={false} />);
+    // Wait for the IntersectionObserver to trigger
+    await waitFor(() => {
+      expect(screen.getByAltText('Test image')).toBeInTheDocument();
+    });
     const img = screen.getByAltText('Test image');
     expect(img).toHaveAttribute('loading', 'lazy');
   });

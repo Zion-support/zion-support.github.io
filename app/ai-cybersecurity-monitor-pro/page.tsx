@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 
 import { Helmet } from 'react-helmet-async';
 export default function AiCybersecurityMonitorProZionTechGroup() {
+=======
+<<<<<<< HEAD
+export default function AiCybersecurityMonitorProZionTechGroup() {
+=======
+import React from 'react';
+
+export default function Page() {
+>>>>>>> origin/main
+>>>>>>> cursor/fix-errors-and-merge-to-main-eba1
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -39,6 +49,11 @@ export default function AiCybersecurityMonitorProZionTechGroup() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+    </>
+}
+=======
     </div>
   );
 }
+>>>>>>> origin/main

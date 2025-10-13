@@ -1,5 +1,16 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
+<<<<<<< HEAD
+interface AccessibilityEnhancerProps {
+  children: ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  return <>{children}</>;
+};
+
+export default AccessibilityEnhancer;
+=======
 export default function Accessibilityenhancer() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -16,3 +27,4 @@ export default function Accessibilityenhancer() {
     </div>
   );
 }
+>>>>>>> origin/main
