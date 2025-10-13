@@ -8,13 +8,14 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-import { LoadingPage } from "./app/components/LoadingStates";
+import { LoadingPage } from "./app/components/EnhancedLoadingStates";
 import AdvancedPerformanceEnhancer from "./app/components/AdvancedPerformanceEnhancer";
+import AdvancedPerformanceOptimizer from "./app/components/AdvancedPerformanceOptimizer";
+import EnhancedSEOOptimizer from "./app/components/EnhancedSEOOptimizer";
 import EnhancedAccessibilityManager from "./app/components/EnhancedAccessibilityManager";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import EnhancedSEO from "./app/components/EnhancedSEO";
@@ -470,7 +471,12 @@ function App() {
                     </Suspense>
                   </main>
                   <Footer />
-                  <EnhancedPerformanceOptimizer />
+                  <AdvancedPerformanceOptimizer 
+                    enableImageOptimization={true}
+                    enablePreloading={true}
+                    enableCaching={true}
+                    enableCompression={true}
+                  />
                   <AdvancedPerformanceEnhancer 
                     enableImageOptimization={true}
                     enablePreloading={true}
@@ -482,6 +488,8 @@ function App() {
                     enableScreenReader={true}
                     enableHighContrast={true}
                     enableFocusManagement={true}
+                    enableVoiceNavigation={true}
+                    enableReducedMotion={true}
                   />
                   <EnhancedAccessibility>
                     <div></div>
@@ -494,6 +502,7 @@ function App() {
                     <PerformanceEnhancer />
                     <SEOOptimizer />
                     <EnhancedSEO />
+                    <EnhancedSEOOptimizer />
                   </div>
                 </AnalyticsProvider>
               </div>

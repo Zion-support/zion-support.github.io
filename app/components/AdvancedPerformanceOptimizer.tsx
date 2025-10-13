@@ -1,301 +1,272 @@
-'use client';
-import React, { useState, useEffect, useCallback } from 'react';
-import { Zap, Settings, Activity } from 'lucide-react';
+import React, { useEffect, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 
-interface OptimizationSettings {
-  imageOptimization: boolean;
-  codeSplitting: boolean;
-  lazyLoading: boolean;
-  compression: boolean;
-  caching: boolean;
-  minification: boolean;
+interface PerformanceOptimizerProps {
+  enableImageOptimization?: boolean;
+  enablePreloading?: boolean;
+  enableCaching?: boolean;
+  enableCompression?: boolean;
 }
 
-interface PerformanceMetrics {
-  loadTime: number | null;
-  bundleSize: number | null;
-  imageCount: number | null;
-  unusedCSS: number | null;
-  unusedJS: number | null;
-}
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enableImageOptimization = true,
+  enablePreloading = true,
+  enableCaching = true,
+  enableCompression = true,
+}) => {
+  const location = useLocation();
 
-const AdvancedPerformanceOptimizer: React.FC = () => {
-  const [settings, setSettings] = useState<OptimizationSettings>({
-    imageOptimization: false,
-    codeSplitting: false,
-    lazyLoading: false,
-    compression: false,
-    caching: false,
-    minification: false
-  });
+  // Image optimization
+  const optimizeImages = useCallback(() => {
+    if (!enableImageOptimization) return;
 
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: null,
-    bundleSize: null,
-    imageCount: null,
-    unusedCSS: null,
-    unusedJS: null
-  });
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Add loading="lazy" to images below the fold
+      if (img.getBoundingClientRect().top > window.innerHeight) {
+        img.setAttribute('loading', 'lazy');
+      }
 
-  const [isVisible, setIsVisible] = useState(false);
-  const [isOptimizing, setIsOptimizing] = useState(false);
+      // Add decoding="async" for better performance
+      img.setAttribute('decoding', 'async');
 
-  const measurePerformance = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    // Measure page load time
-    const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-    setMetrics(prev => ({ ...prev, loadTime }));
-
-    // Measure bundle size (approximate)
-    const scripts = document.querySelectorAll('script[src]');
-    let totalSize = 0;
-    scripts.forEach(script => {
-      const src = script.getAttribute('src');
-      if (src && !src.includes('node_modules')) {
-        // This is a rough estimate - in reality you'd need to fetch the actual file size
-        totalSize += 100; // Placeholder
+      // Add fetchpriority="high" for above-the-fold images
+      if (img.getBoundingClientRect().top <= window.innerHeight) {
+        img.setAttribute('fetchpriority', 'high');
       }
     });
-    setMetrics(prev => ({ ...prev, bundleSize: totalSize }));
+  }, [enableImageOptimization]);
 
-    // Count images
-    const images = document.querySelectorAll('img');
-    setMetrics(prev => ({ ...prev, imageCount: images.length }));
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    if (!enablePreloading) return;
 
-    // Estimate unused CSS/JS (this would require more sophisticated analysis)
-    setMetrics(prev => ({ 
-      ...prev, 
-      unusedCSS: Math.random() * 30, // Placeholder
-      unusedJS: Math.random() * 20   // Placeholder
-    }));
+    // Preload critical CSS
+    const criticalCSS = document.createElement('link');
+    criticalCSS.rel = 'preload';
+    criticalCSS.href = '/assets/index-Dq8n7JAm.css';
+    criticalCSS.as = 'style';
+    criticalCSS.onload = () => {
+      criticalCSS.rel = 'stylesheet';
+    };
+    document.head.appendChild(criticalCSS);
+
+    // Preload critical fonts
+    const fontPreload = document.createElement('link');
+    fontPreload.rel = 'preload';
+    fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+    fontPreload.as = 'style';
+    document.head.appendChild(fontPreload);
+
+    // Preload next likely page based on current route
+    const nextPage = getNextLikelyPage(location.pathname);
+    if (nextPage) {
+      const prefetchLink = document.createElement('link');
+      prefetchLink.rel = 'prefetch';
+      prefetchLink.href = nextPage;
+      document.head.appendChild(prefetchLink);
+    }
+  }, [enablePreloading, location.pathname]);
+
+  // Enhanced caching strategies
+  const setupCaching = useCallback(() => {
+    if (!enableCaching) return;
+
+    // Service Worker registration for caching
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('SW registered: ', registration);
+          }
+        })
+        .catch((registrationError) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('SW registration failed: ', registrationError);
+          }
+        });
+    }
+
+    // Set up cache headers for static assets
+    const staticAssets = document.querySelectorAll('link[rel="stylesheet"], script[src]');
+    staticAssets.forEach((asset) => {
+      if (asset instanceof HTMLLinkElement && asset.href) {
+        // Add cache control headers via meta tags
+        const cacheMeta = document.createElement('meta');
+        cacheMeta.setAttribute('http-equiv', 'Cache-Control');
+        cacheMeta.setAttribute('content', 'public, max-age=31536000');
+        asset.appendChild(cacheMeta);
+      }
+    });
+  }, [enableCaching]);
+
+  // Compression optimization
+  const setupCompression = useCallback(() => {
+    if (!enableCompression) return;
+
+    // Enable gzip compression hints
+    const compressionMeta = document.createElement('meta');
+    compressionMeta.setAttribute('http-equiv', 'Accept-Encoding');
+    compressionMeta.setAttribute('content', 'gzip, deflate, br');
+    document.head.appendChild(compressionMeta);
+
+    // Optimize resource loading
+    const scripts = document.querySelectorAll('script[src]');
+    scripts.forEach((script) => {
+      if (script instanceof HTMLScriptElement) {
+        script.setAttribute('defer', '');
+        script.setAttribute('async', '');
+      }
+    });
+  }, [enableCompression]);
+
+  // Memory management
+  const optimizeMemory = useCallback(() => {
+    // Clean up unused event listeners
+    const cleanup = () => {
+      // Remove old event listeners that might be causing memory leaks
+      const oldListeners = document.querySelectorAll('[data-listener-cleanup]');
+      oldListeners.forEach((element) => {
+        element.removeAttribute('data-listener-cleanup');
+      });
+    };
+
+    // Run cleanup every 5 minutes
+    const cleanupInterval = setInterval(cleanup, 5 * 60 * 1000);
+
+    return () => clearInterval(cleanupInterval);
   }, []);
 
+  // Bundle splitting optimization
+  const optimizeBundleSplitting = useCallback(() => {
+    // Dynamically import non-critical components
+    const lazyLoadComponents = () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLElement;
+            const componentName = target.dataset.lazyComponent;
+            
+            if (componentName) {
+              // Dynamically import the component
+              import(`../components/${componentName}.tsx`)
+                .then(() => {
+                  // Component loaded successfully
+                  target.classList.add('loaded');
+                })
+                .catch((error) => {
+                  if (process.env.NODE_ENV === 'development') {
+                    console.warn(`Failed to load component ${componentName}:`, error);
+                  }
+                });
+              
+              observer.unobserve(target);
+            }
+          }
+        });
+      });
+
+      // Observe all elements with lazy-loading data attribute
+      const lazyElements = document.querySelectorAll('[data-lazy-component]');
+      lazyElements.forEach((element) => observer.observe(element));
+    };
+
+    // Start lazy loading after initial page load
+    if (document.readyState === 'complete') {
+      lazyLoadComponents();
+    } else {
+      window.addEventListener('load', lazyLoadComponents);
+    }
+  }, []);
+
+  // Performance monitoring
+  const setupPerformanceMonitoring = useCallback(() => {
+    // Monitor Core Web Vitals
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint') {
+          const lcp = entry as PerformanceEntry & { startTime: number };
+          if (lcp.startTime > 2500) {
+            // LCP is too slow, trigger optimization
+            optimizeImages();
+          }
+        }
+      });
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // Monitor memory usage
+    if ('memory' in performance) {
+      const checkMemory = () => {
+        const memory = (performance as any).memory;
+        const usedMemory = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
+        
+        if (usedMemory > 0.8) {
+          // Memory usage is high, trigger garbage collection
+          if (window.gc) {
+            window.gc();
+          }
+        }
+      };
+
+      setInterval(checkMemory, 30000); // Check every 30 seconds
+    }
+  }, [optimizeImages]);
+
+  // Initialize all optimizations
   useEffect(() => {
-    measurePerformance();
-  }, [measurePerformance]);
+    const cleanup = optimizeMemory();
+    
+    // Run optimizations after a short delay to not block initial render
+    const timeoutId = setTimeout(() => {
+      optimizeImages();
+      preloadCriticalResources();
+      setupCaching();
+      setupCompression();
+      optimizeBundleSplitting();
+      setupPerformanceMonitoring();
+    }, 100);
 
-  const optimizePerformance = useCallback(async () => {
-    setIsOptimizing(true);
-    
-    // Simulate optimization process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Apply optimizations based on settings
-    if (settings.imageOptimization) {
-      // Simulate image optimization
-      // Optimizing images...
-    }
-    
-    if (settings.codeSplitting) {
-      // Simulate code splitting
-      // Implementing code splitting...
-    }
-    
-    if (settings.lazyLoading) {
-      // Simulate lazy loading implementation
-      // Implementing lazy loading...
-    }
-    
-    if (settings.compression) {
-      // Simulate compression
-      // Enabling compression...
-    }
-    
-    if (settings.caching) {
-      // Simulate caching setup
-      // Setting up caching...
-    }
-    
-    if (settings.minification) {
-      // Simulate minification
-      // Minifying assets...
-    }
-    
-    setIsOptimizing(false);
-    
-    // Re-measure performance after optimization
-    setTimeout(measurePerformance, 1000);
-  }, [settings, measurePerformance]);
+    return () => {
+      clearTimeout(timeoutId);
+      cleanup();
+    };
+  }, [
+    optimizeImages,
+    preloadCriticalResources,
+    setupCaching,
+    setupCompression,
+    optimizeMemory,
+    optimizeBundleSplitting,
+    setupPerformanceMonitoring,
+  ]);
 
-  const toggleSetting = (key: keyof OptimizationSettings) => {
-    setSettings(prev => ({
-      ...prev,
-      [key]: !prev[key]
-    }));
+  // Re-run optimizations on route change
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      optimizeImages();
+      preloadCriticalResources();
+    }, 200);
+
+    return () => clearTimeout(timeoutId);
+  }, [location.pathname, optimizeImages, preloadCriticalResources]);
+
+  return null; // This component doesn't render anything
+};
+
+// Helper function to determine next likely page
+const getNextLikelyPage = (currentPath: string): string | null => {
+  const likelyPages: Record<string, string> = {
+    '/': '/about',
+    '/about': '/services',
+    '/services': '/contact',
+    '/ai-services': '/ai-analytics',
+    '/micro-saas': '/zion-analytics-pro',
+    '/5g-solutions': '/5g-implementation',
   };
 
-  const optimizationFeatures = [
-    {
-      key: 'imageOptimization' as keyof OptimizationSettings,
-      title: 'Image Optimization',
-      description: 'Compress and optimize images for faster loading',
-      impact: 'High'
-    },
-    {
-      key: 'codeSplitting' as keyof OptimizationSettings,
-      title: 'Code Splitting',
-      description: 'Split code into smaller chunks for better loading',
-      impact: 'High'
-    },
-    {
-      key: 'lazyLoading' as keyof OptimizationSettings,
-      title: 'Lazy Loading',
-      description: 'Load images and components only when needed',
-      impact: 'Medium'
-    },
-    {
-      key: 'compression' as keyof OptimizationSettings,
-      title: 'Compression',
-      description: 'Enable Gzip/Brotli compression for assets',
-      impact: 'High'
-    },
-    {
-      key: 'caching' as keyof OptimizationSettings,
-      title: 'Caching',
-      description: 'Implement proper caching strategies',
-      impact: 'Medium'
-    },
-    {
-      key: 'minification' as keyof OptimizationSettings,
-      title: 'Minification',
-      description: 'Minify CSS and JavaScript files',
-      impact: 'Medium'
-    }
-  ];
-
-  const getImpactColor = (impact: string) => {
-    switch (impact) {
-      case 'High': return 'text-red-400';
-      case 'Medium': return 'text-yellow-400';
-      case 'Low': return 'text-green-400';
-      default: return 'text-gray-400';
-    }
-  };
-
-  if (!isVisible) {
-    return (
-      <button
-        onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
-        aria-label="Open performance optimizer"
-      >
-        <Zap className="w-6 h-6" />
-      </button>
-    );
-  }
-
-  return (
-    <div className="fixed bottom-4 left-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">
-          <Settings className="w-5 h-5 mr-2" />
-          Performance Optimizer
-        </h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
-          aria-label="Close performance optimizer"
-        >
-          ×
-        </button>
-      </div>
-      
-      {/* Performance Metrics */}
-      <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-        <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-          <Activity className="w-4 h-4 mr-2" />
-          Current Metrics
-        </h4>
-        <div className="grid grid-cols-2 gap-2 text-xs">
-          <div>
-            <span className="text-gray-600 dark:text-gray-400">Load Time:</span>
-            <span className="ml-1 text-gray-900 dark:text-white">
-              {metrics.loadTime ? `${metrics.loadTime}ms` : 'N/A'}
-            </span>
-          </div>
-          <div>
-            <span className="text-gray-600 dark:text-gray-400">Bundle Size:</span>
-            <span className="ml-1 text-gray-900 dark:text-white">
-              {metrics.bundleSize ? `${metrics.bundleSize}KB` : 'N/A'}
-            </span>
-          </div>
-          <div>
-            <span className="text-gray-600 dark:text-gray-400">Images:</span>
-            <span className="ml-1 text-gray-900 dark:text-white">
-              {metrics.imageCount || 'N/A'}
-            </span>
-          </div>
-          <div>
-            <span className="text-gray-600 dark:text-gray-400">Unused CSS:</span>
-            <span className="ml-1 text-gray-900 dark:text-white">
-              {metrics.unusedCSS ? `${metrics.unusedCSS.toFixed(1)}%` : 'N/A'}
-            </span>
-          </div>
-        </div>
-      </div>
-      
-      {/* Optimization Settings */}
-      <div className="space-y-4">
-        <h4 className="text-sm font-semibold text-gray-900 dark:text-white">
-          Optimization Features
-        </h4>
-        {optimizationFeatures.map((feature) => (
-          <div key={feature.key} className="flex items-center justify-between">
-            <div className="flex-1">
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-900 dark:text-white">
-                  {feature.title}
-                </span>
-                <span className={`text-xs ${getImpactColor(feature.impact)}`}>
-                  {feature.impact} Impact
-                </span>
-              </div>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                {feature.description}
-              </p>
-            </div>
-            <button
-              onClick={() => toggleSetting(feature.key)}
-              className={`ml-3 relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                settings[feature.key]
-                  ? 'bg-purple-600'
-                  : 'bg-gray-200 dark:bg-gray-700'
-              }`}
-              aria-label={`Toggle ${feature.title}`}
-            >
-              <span
-                className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                  settings[feature.key] ? 'translate-x-5' : 'translate-x-1'
-                }`}
-              />
-            </button>
-          </div>
-        ))}
-      </div>
-      
-      {/* Optimize Button */}
-      <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-        <button
-          onClick={optimizePerformance}
-          disabled={isOptimizing}
-          className="w-full bg-gradient-to-r from-purple-500 to-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-        >
-          {isOptimizing ? (
-            <>
-              <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-              Optimizing...
-            </>
-          ) : (
-            <>
-              <Zap className="w-4 h-4 mr-2" />
-              Optimize Now
-            </>
-          )}
-        </button>
-      </div>
-    </div>
-  );
+  return likelyPages[currentPath] || null;
 };
 
 export default AdvancedPerformanceOptimizer;
