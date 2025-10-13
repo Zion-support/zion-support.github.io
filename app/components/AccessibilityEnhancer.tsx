@@ -1,9 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-<<<<<<< HEAD
-const AccessibilityEnhancer: React.FC = () => {
-  return null; // This component enhances accessibility but doesn't render anything visible
-=======
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -166,7 +162,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-0bb0
 };
 
 export default AccessibilityEnhancer;

@@ -2,23 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-const ZionAIInventoryManagerPage = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Zion AI Inventory Manager - Zion Tech Group</title>
-        <meta name="description" content="Professional AI inventory manager services by Zion Tech Group." />
-      </Helmet>
-      <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-white">Zion AI Inventory Manager Page</h1>
-      </div>
-    </>
-  );
-};
 
-export default ZionAIInventoryManagerPage;
-=======
 export default function ZionAIInventoryManager() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -90,4 +74,4 @@ export default function ZionAIInventoryManager() {
     </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-0bb0
+
