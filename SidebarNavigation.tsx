@@ -2,22 +2,23 @@ import React from 'react';
 import { User, X  } from 'lucide-react';
 interface SidebarNavigationProps {
   isOpen: boolean;
-  onClose: () => void;}
+  onClose: () => void;
 }
-'
-const navigationItems = [{ name: 'Home', href: '/', icon: User },';
-  { name: 'Profile', href: '/profile', icon: User },';
-  { name: 'Settings', href: '/settings', icon: User },';
-  { name: 'Help', href: '/help', icon: User },';
+
+const navigationItems = [
+  { name: 'Home', href: '/', icon: User },
+  { name: 'Profile', href: '/profile', icon: User },
+  { name: 'Settings', href: '/settings', icon: User },
+  { name: 'Help', href: '/help', icon: User }
 ];
 
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
-  return ('}
-    <div className={`fixed inset-0 z-50 ${isOpen ? 'block' : 'hidden'}`}>';
-      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />;
-      <div className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out">;
-        <div className="flex items-center justify-between p-4 border-b">;
-          <h2 className="text-lg font-semibold"></h2>;
+  return (
+    <div className={`fixed inset-0 z-50 ${isOpen ? 'block' : 'hidden'}`}>
+      <div className="fixed inset-0 bg-black bg-opacity-50" onClick={onClose} />
+      <div className="fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out">
+        <div className="flex items-center justify-between p-4 border-b">
+          <h2 className="text-lg font-semibold">Navigation</h2>
           <button onClick={onClose} className="p-2 hover:bg-gray-100 rounded">;
             <X className="w-5 h-5" />;
           </button>;
