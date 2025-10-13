@@ -1,6 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+
+const CaseStudiesPage = () => {
+  const stats = [
+    { value: '500+', label: 'Projects Completed' },
+    { value: '98%', label: 'Client Satisfaction' },
+    { value: '50+', label: 'Industries Served' },
+    { value: '$2M+', label: 'Cost Savings' }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <Helmet>

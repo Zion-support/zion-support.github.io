@@ -1,110 +1,108 @@
-=======
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Clock, Users, Shield, Brain, Cloud, Zap, Star, Phone, Mail, MapPin } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Consultation() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   company: '',
+  //   phone: '',
+  //   service: '',
+  //   message: ''
+  // });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
+  // const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  //   const { name, value } = e.target;
+  //   setFormData(prev => ({
+  //     ...prev,
+  //     [name]: value
+  //   }));
+  // };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   // Handle form submission
+  //   console.log('Form submitted:', formData);
+  // };
 
-  const consultationTypes = [
-    {
-      title: 'AI Strategy Consultation',
-      description: 'Develop a comprehensive AI roadmap for your business',
-      duration: '2-4 hours',
-      price: 'Free',
-      features: [
-        'AI readiness assessment',
-        'Technology stack evaluation',
-        'Implementation roadmap',
-        'ROI projections'
-      ],
-      icon: <Brain className="w-8 h-8" />
-    },
-    {
-      title: 'Cybersecurity Audit',
-      description: 'Comprehensive security assessment and recommendations',
-      duration: '4-6 hours',
-      price: 'Free',
-      features: [
-        'Security vulnerability scan',
-        'Compliance assessment',
-        'Risk analysis report',
-        'Remediation plan'
-      ],
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      title: 'Cloud Migration Planning',
-      description: 'Strategic cloud migration and optimization strategy',
-      duration: '3-5 hours',
-      price: 'Free',
-      features: [
-        'Current infrastructure analysis',
-        'Cloud platform selection',
-        'Migration timeline',
-        'Cost optimization plan'
-      ],
-      icon: <Cloud className="w-8 h-8" />
-    },
-    {
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation strategy and planning',
-      duration: '6-8 hours',
-      price: 'Free',
-      features: [
-        'Business process analysis',
-        'Technology gap assessment',
-        'Transformation roadmap',
-        'Change management plan'
-      ],
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
+  // const _consultationTypes = [
+  //   {
+  //     title: 'AI Strategy Consultation',
+  //     description: 'Develop a comprehensive AI roadmap for your business',
+  //     duration: '2-4 hours',
+  //     price: 'Free',
+  //     features: [
+  //       'AI readiness assessment',
+  //       'Technology stack evaluation',
+  //       'Implementation roadmap',
+  //       'ROI projections'
+  //     ],
+  //     icon: <Brain className="w-8 h-8" />
+  //   },
+  //   {
+  //     title: 'Cybersecurity Audit',
+  //     description: 'Comprehensive security assessment and recommendations',
+  //     duration: '4-6 hours',
+  //     price: 'Free',
+  //     features: [
+  //       'Security vulnerability scan',
+  //       'Compliance assessment',
+  //       'Risk analysis report',
+  //       'Remediation plan'
+  //     ],
+  //     icon: <Shield className="w-8 h-8" />
+  //   },
+  //   {
+  //     title: 'Cloud Migration Planning',
+  //     description: 'Strategic cloud migration and optimization strategy',
+  //     duration: '3-5 hours',
+  //     price: 'Free',
+  //     features: [
+  //       'Current infrastructure analysis',
+  //       'Cloud platform selection',
+  //       'Migration timeline',
+  //       'Cost optimization plan'
+  //     ],
+  //     icon: <Cloud className="w-8 h-8" />
+  //   },
+  //   {
+  //     title: 'Digital Transformation',
+  //     description: 'Complete digital transformation strategy and planning',
+  //     duration: '6-8 hours',
+  //     price: 'Free',
+  //     features: [
+  //       'Business process analysis',
+  //       'Technology gap assessment',
+  //       'Transformation roadmap',
+  //       'Change management plan'
+  //     ],
+  //     icon: <Zap className="w-8 h-8" />
+  //   }
+  // ];
 
-  const benefits = [
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: 'Quick Response',
-      description: 'Get back to you within 24 hours'
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: 'Expert Team',
-      description: 'Certified professionals with 10+ years experience'
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Confidential',
-      description: 'Your information is completely secure and private'
-    },
-    {
-      icon: <Star className="w-6 h-6" />,
-      title: 'No Obligation',
-      description: 'Free consultation with no strings attached'
-    }
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
+  // const _benefits = [
+  //   {
+  //     icon: <Clock className="w-6 h-6" />,
+  //     title: 'Quick Response',
+  //     description: 'Get back to you within 24 hours'
+  //   },
+  //   {
+  //     icon: <Users className="w-6 h-6" />,
+  //     title: 'Expert Team',
+  //     description: 'Certified professionals with 10+ years experience'
+  //   },
+  //   {
+  //     icon: <Shield className="w-6 h-6" />,
+  //     title: 'Confidential',
+  //     description: 'Your information is completely secure and private'
+  //   },
+  //   {
+  //     icon: <Star className="w-6 h-6" />,
+  //     title: 'No Obligation',
+  //     description: 'Free consultation with no strings attached'
+  //   }
+  // ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -143,13 +141,7 @@ export default function Consultation() {
             </div>
           </div>
         </section>
-
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );
-}
+};

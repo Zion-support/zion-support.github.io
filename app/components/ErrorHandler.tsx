@@ -53,23 +53,15 @@ class ErrorHandler extends Component<Props, State> {
     // Example: Send to monitoring service
     try {
       // Replace with your actual error reporting service
-      const errorData = {
+      // Send error data to your error reporting service here
+      console.log('Error data:', {
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString()
-      };
-      // Send to your error reporting service here
-<<<<<<< HEAD
+      });
     } catch (reportingError) {
       console.warn('Error reporting failed:', reportingError);
-
-=======
-
-      console.log('Error data prepared for reporting:', errorData);
-    } catch (reportingError) {
-      console.error('Failed to prepare error data for reporting:', reportingError);
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
 
     }
   }
