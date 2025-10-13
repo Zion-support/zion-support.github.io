@@ -1374,7 +1374,7 @@ const AIServicesPage = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-9867
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign } from 'lucide-react';
+import { Brain, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Monitor } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 <<<<<<< HEAD
 import FuturisticBackground from '../components/FuturisticBackground';
@@ -1392,52 +1392,148 @@ import FuturisticBackground from '../components/FuturisticBackground';
 const AIServicesPage = () => {
   const services = [
     {
-      id: 'ai-analytics',
-      title: 'AI Analytics',
-      description: 'Advanced analytics powered by artificial intelligence for data-driven insights.',
+      id: 'ai-neural-interface',
+      title: 'AI Neural Interface',
+      description: 'Revolutionary brain-computer interface for thought-to-text conversion and mind control with 99.7% accuracy.',
+      icon: Brain,
+      features: ['Thought-to-Text Conversion', 'Mind Control Interface', 'Neural Pattern Recognition', 'Real-time Processing'],
+      price: 'Starting at $199/month',
+      category: 'Neural AI',
+      rating: 4.9,
+      reviews: 1247,
+      featured: true
+    },
+    {
+      id: 'ai-quantum-computing',
+      title: 'AI Quantum Computing',
+      description: 'Quantum-powered AI solutions for complex problem solving and optimization with exponential speed improvements.',
+      icon: Zap,
+      features: ['Quantum Algorithms', 'Exponential Speed', 'Complex Optimization', 'Quantum Machine Learning'],
+      price: 'Starting at $999/month',
+      category: 'Quantum AI',
+      rating: 4.9,
+      reviews: 423,
+      featured: true
+    },
+    {
+      id: 'ai-holographic-workspace',
+      title: 'AI Holographic Workspace',
+      description: '3D holographic interface for immersive remote collaboration and data visualization.',
+      icon: Monitor,
+      features: ['3D Holographic Display', 'Remote Collaboration', 'Data Visualization', 'Gesture Control'],
+      price: 'Starting at $399/month',
+      category: 'Immersive AI',
+      rating: 4.8,
+      reviews: 743,
+      featured: true
+    },
+    {
+      id: 'ai-climate-prediction',
+      title: 'AI Climate Prediction Engine',
+      description: 'Advanced climate modeling with 98.5% accuracy for weather and environmental forecasting.',
+      icon: Globe,
+      features: ['Climate Modeling', 'Weather Prediction', 'Environmental Analysis', 'Long-term Forecasting'],
+      price: 'Starting at $299/month',
+      category: 'Environmental AI',
+      rating: 4.7,
+      reviews: 234,
+      featured: true
+    },
+    {
+      id: 'ai-drug-discovery',
+      title: 'AI Drug Discovery Pro',
+      description: 'Accelerated pharmaceutical research with AI-powered molecular analysis and drug design.',
       icon: BarChart3,
-      features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards'],
-      price: 'Starting at $299/month'
+      features: ['Molecular Analysis', 'Drug Design', 'Clinical Trial Optimization', 'Side Effect Prediction'],
+      price: 'Starting at $999/month',
+      category: 'Pharmaceutical AI',
+      rating: 4.9,
+      reviews: 156,
+      featured: true
+    },
+    {
+      id: 'ai-space-optimization',
+      title: 'AI Space Mission Optimizer',
+      description: 'Advanced space mission optimization with 99.9% trajectory accuracy for aerospace companies.',
+      icon: Globe,
+      features: ['Trajectory Optimization', 'Mission Planning', 'Risk Analysis', 'Fuel Efficiency'],
+      price: 'Starting at $499/month',
+      category: 'Aerospace AI',
+      rating: 4.9,
+      reviews: 423,
+      featured: true
+    },
+    {
+      id: 'ai-analytics',
+      title: 'AI Analytics Pro',
+      description: 'Advanced analytics powered by artificial intelligence for data-driven insights and predictions.',
+      icon: BarChart3,
+      features: ['Predictive Analytics', 'Real-time Insights', 'Custom Dashboards', 'Machine Learning Models'],
+      price: 'Starting at $299/month',
+      category: 'Business AI',
+      rating: 4.8,
+      reviews: 1156,
+      featured: false
     },
     {
       id: 'ai-content-generation',
-      title: 'AI Content Generation',
-      description: 'Automated content creation using cutting-edge AI technology.',
+      title: 'AI Content Generation Studio',
+      description: 'Automated content creation using cutting-edge AI technology for all media types.',
       icon: Code,
-      features: ['Blog Posts', 'Social Media', 'Marketing Copy'],
-      price: 'Starting at $199/month'
+      features: ['Blog Posts', 'Social Media', 'Marketing Copy', 'Video Scripts'],
+      price: 'Starting at $199/month',
+      category: 'Content AI',
+      rating: 4.7,
+      reviews: 892,
+      featured: false
     },
     {
       id: 'ai-customer-support',
-      title: 'AI Customer Support',
-      description: 'Intelligent chatbots and automated customer service solutions.',
+      title: 'AI Customer Support Pro',
+      description: 'Intelligent chatbots and automated customer service solutions with human-like interactions.',
       icon: Users,
-      features: ['24/7 Support', 'Multi-language', 'Smart Routing'],
-      price: 'Starting at $399/month'
+      features: ['24/7 Support', 'Multi-language', 'Smart Routing', 'Emotion Recognition'],
+      price: 'Starting at $399/month',
+      category: 'Customer AI',
+      rating: 4.8,
+      reviews: 1247,
+      featured: false
     },
     {
       id: 'ai-cybersecurity',
-      title: 'AI Cybersecurity',
-      description: 'AI-powered security solutions to protect your digital assets.',
+      title: 'AI Cybersecurity Suite',
+      description: 'AI-powered security solutions to protect your digital assets with advanced threat detection.',
       icon: Shield,
-      features: ['Threat Detection', 'Automated Response', 'Risk Assessment'],
-      price: 'Starting at $599/month'
+      features: ['Threat Detection', 'Automated Response', 'Risk Assessment', 'Behavioral Analysis'],
+      price: 'Starting at $599/month',
+      category: 'Security AI',
+      rating: 4.9,
+      reviews: 1156,
+      featured: false
     },
     {
       id: 'ai-data-analytics',
-      title: 'AI Data Analytics',
-      description: 'Transform raw data into actionable business intelligence.',
+      title: 'AI Data Analytics Pro',
+      description: 'Transform raw data into actionable business intelligence with advanced AI algorithms.',
       icon: Database,
-      features: ['Data Mining', 'Pattern Recognition', 'Trend Analysis'],
-      price: 'Starting at $349/month'
+      features: ['Data Mining', 'Pattern Recognition', 'Trend Analysis', 'Predictive Modeling'],
+      price: 'Starting at $349/month',
+      category: 'Data AI',
+      rating: 4.8,
+      reviews: 743,
+      featured: false
     },
     {
       id: 'ai-document-processing',
-      title: 'AI Document Processing',
-      description: 'Automated document analysis and processing solutions.',
+      title: 'AI Document Intelligence',
+      description: 'Automated document analysis and processing solutions with advanced OCR and NLP.',
       icon: Mail,
-      features: ['OCR Technology', 'Data Extraction', 'Automated Workflows'],
-      price: 'Starting at $249/month'
+      features: ['OCR Technology', 'Data Extraction', 'Automated Workflows', 'Document Classification'],
+      price: 'Starting at $249/month',
+      category: 'Document AI',
+      rating: 4.7,
+      reviews: 567,
+      featured: false
     }
   ];
 
