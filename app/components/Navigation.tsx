@@ -28,7 +28,9 @@ import {
   Receipt,
   TrendingUp,
   Cpu,
-  Network
+  Network,
+  Bot,
+  Clock
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -143,7 +145,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             { name: 'AI Email Analyzer', path: '/ai-powered-email-analyzer', icon: <Mail className="w-4 h-4" /> },
             { name: 'Customer Sentiment Tracker', path: '/ai-customer-sentiment-tracker', icon: <Heart className="w-4 h-4" /> },
             { name: 'Smart Expense Categorizer', path: '/smart-expense-categorizer', icon: <Receipt className="w-4 h-4" /> },
-            { name: 'Smart Inventory Optimizer', path: '/smart-inventory-optimizer', icon: <Package className="w-4 h-4" /> }
+            { name: 'Smart Inventory Optimizer', path: '/smart-inventory-optimizer', icon: <Package className="w-4 h-4" /> },
+            { name: 'AI Chatbot Builder', path: '/ai-chatbot-builder', icon: <Bot className="w-4 h-4" /> },
+            { name: 'AI Code Assistant', path: '/ai-code-assistant', icon: <Code className="w-4 h-4" /> }
           ]
         },
         {

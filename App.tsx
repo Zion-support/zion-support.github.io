@@ -78,6 +78,8 @@ const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/ai-powered-ema
 const SmartInventoryOptimizerPage = React.lazy(() => import("./app/smart-inventory-optimizer/page"));
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/smart-expense-categorizer/page"));
+const AIChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
+const AICodeAssistantPage = React.lazy(() => import("./app/ai-code-assistant/page"));
 
 function App() {
   useEffect(() => {
@@ -165,10 +167,10 @@ function App() {
                               <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
                               <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
                               <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
+                              <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+                              <Route path="/ai-code-assistant" element={<AICodeAssistantPage />} />
 
                               {/* Additional AI Services Routes */}
-                              <Route path="/ai-chatbot-builder" element={<React.lazy(() => import("./app/ai-chatbot-builder/page")) />} />
-                              <Route path="/ai-code-assistant" element={<React.lazy(() => import("./app/ai-code-assistant/page")) />} />
                               <Route path="/ai-design-studio" element={<React.lazy(() => import("./app/ai-design-studio/page")) />} />
                               <Route path="/ai-business-intelligence" element={<React.lazy(() => import("./app/ai-business-intelligence/page")) />} />
                               <Route path="/ai-automation" element={<React.lazy(() => import("./app/ai-automation/page")) />} />
