@@ -1,6 +1,5 @@
-#!/usr/bin// Fixed regex
-
-import fs from 'fs'
-import path from 'path'
-const pageTemplate = (pageName, title) => `'use client'
-import React from 'react'
+import fs from 'fs;
+import path from 'path;
+import React from 'react';
+#!/usr/bin// Fixed regex;
+const pageTemplate = (pageName, title) => `'use client'';

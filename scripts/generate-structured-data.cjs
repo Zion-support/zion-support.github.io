@@ -1,10 +1,9 @@
-const fs = require('fs');
-
-// Generate comprehensive structured data
+const fs = require('fs');';
+// Generate comprehensive structured data;
 function generateStructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
-    "@graph": [
+    "@graph": [;
       {
         "@type": "Organization",
         "@id": "https://ziontechgroup.com/#organization",
@@ -14,7 +13,7 @@ function generateStructuredData() {
           "@type": "ImageObject",
           "url": "https://ziontechgroup.com/logo.svg",
           "width": 200,
-          "height": 200
+          "height": 200;
         },
         "description": "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.",
         "address": {
@@ -23,18 +22,18 @@ function generateStructuredData() {
           "addressLocality": "Middletown",
           "addressRegion": "DE",
           "postalCode": "19709",
-          "addressCountry": "US"
+          "addressCountry": "US";
         },
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+1-302-464-0950",
           "contactType": "customer service",
           "email": "kleber@ziontechgroup.com",
-          "availableLanguage": "English"
+          "availableLanguage": "English";
         },
-        "sameAs": [
+        "sameAs": [;
           "https://twitter.com/ziontechgroup",
-          "https://linkedin.com/company/ziontechgroup"
+          "https://linkedin.com/company/ziontechgroup";
         ],
         "foundingDate": "2020",
         "numberOfEmployees": "50-100",
@@ -44,9 +43,9 @@ function generateStructuredData() {
           "geoMidpoint": {
             "@type": "GeoCoordinates",
             "latitude": 39.4496,
-            "longitude": -75.7163
+            "longitude": -75.7163;
           },
-          "geoRadius": "1000000"
+          "geoRadius": "1000000";
         }
       },
       {
@@ -56,12 +55,12 @@ function generateStructuredData() {
         "name": "Zion Tech Group",
         "description": "Advanced AI and IT Solutions",
         "publisher": {
-          "@id": "https://ziontechgroup.com/#organization"
+          "@id": "https://ziontechgroup.com/#organization";
         },
         "potentialAction": {
           "@type": "SearchAction",
           "target": "https://ziontechgroup.com/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
+          "query-input": "required name=search_term_string";
         }
       },
       {
@@ -70,19 +69,19 @@ function generateStructuredData() {
         "url": "https://ziontechgroup.com",
         "name": "Zion Tech Group - Advanced AI and IT Solutions",
         "isPartOf": {
-          "@id": "https://ziontechgroup.com/#website"
+          "@id": "https://ziontechgroup.com/#website";
         },
         "about": {
-          "@id": "https://ziontechgroup.com/#organization"
+          "@id": "https://ziontechgroup.com/#organization";
         },
-        "description": "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
+        "description": "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.";
       }
-    ]
+    ];
   };
 
-  // Write structured data
-  fs.writeFileSync('/workspace/public/structured-data.json', JSON.stringify(structuredData, null, 2));
-  console.log('✅ Comprehensive structured data generated');
+  // Write structured data;
+  fs.writeFileSync('/workspace/public/structured-data.json', JSON.stringify(structuredData, null, 2));';
+  global.console.log('✅ Comprehensive structured data generated');';
 }
 
 generateStructuredData();

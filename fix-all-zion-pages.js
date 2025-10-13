@@ -1,15 +1,14 @@
-#!/usr/bin// Fixed regex
-
-import fs from 'fs'
-  '
-  '
-  '
-  '
-  '
-  '
-  '
-  console.error('Error:'
-    let content = fs.readFileSync(filePath, 'utf8'
-    if (content.includes('
-    } else if (content.includes('
-        '
+import fs from 'fs;
+#!/usr/bin// Fixed regex;
+  '';
+  '';
+  '';
+  '';
+  '';
+  '';
+  '';
+  console.error('Error:'';
+    let content = fs.readFileSync(filePath, 'utf8'';
+    if (content.includes('';
+    } else if (content.includes('';
+        '';

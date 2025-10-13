@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-=======
+
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -28,7 +27,7 @@ import {
   CircleStackIcon
 } from '@heroicons/react/24/outline';
 
-export default function ITSolutionsPage() {
+export default function ITSolutionsPage()   {
   const itServices = [
     {
       title: "IT Infrastructure Management",

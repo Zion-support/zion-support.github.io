@@ -1,7 +1,7 @@
-&apos;use client&apos;;
-import { useEffect, useCallback, useRef } from 'react';
+import React from 'react';
+import { useEffect, useCallback, useRef } from 'react;
 import { Helmet } from 'react-helmet-async';
-
+&apos;use client&apos;
 interface SEOData {
   title: string;
   description: string;
@@ -19,7 +19,7 @@ interface AdvancedSEOOptimizerProps {
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData,
-  children
+  children;
 }) => {
   const {
     title,
@@ -28,7 +28,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     canonicalUrl,
     ogImage,
     noIndex = false,
-    structuredData
+    structuredData;
   } = seoData;
 
   const baseStructuredData = {
@@ -41,22 +41,21 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
-      "contactType": "customer service"
+      "contactType": "customer service";
     }
   };
 
   const finalStructuredData = structuredData || baseStructuredData;
 
   return (
-    <.Fragment>
+    <.Fragment>;
       <Helmet>
         {/* Basic Meta Tags */}
         <title>{title}
         <meta name="description" content={description} />
-        <meta name="keywords" content={keywords.join(', ')} />
+        <meta name="keywords" content={keywords.join(', ')} />';
         <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
-        
+        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />';
         {/* Canonical URL */}
         {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         
@@ -74,7 +73,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         {ogImage && <meta name="twitter:image" content={ogImage} />}
         
         {/* Structured Data */}
-        <script type="application/ld+json">
+        <script type="application/ld+json">;
           {JSON.stringify(finalStructuredData)}
       {children}
   );

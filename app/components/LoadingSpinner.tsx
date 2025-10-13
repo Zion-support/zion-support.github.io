@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 'use client';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
@@ -15,37 +13,13 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-  text = 'Loading...',
+text = 'Loading...',
   fullScreen = false,
   className = ''
-=======
-import React from 'react';
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  className?: string;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  text = 'Loading...', 
-  className = '' 
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-<<<<<<< HEAD
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16'
-  };
-
-  const spinner = (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <Loader2 className={`${sizeClasses[size]} text-purple-500 animate-spin`} />
-      {text && (
-        <p className="mt-3 text-gray-300 text-sm font-medium">
           {text}
         </p>
       )}
@@ -54,7 +28,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   if (fullScreen) {
     return (
-      <div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
+<div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
         <div className="bg-slate-800 rounded-lg p-8 shadow-xl">
           {spinner}
         </div>
@@ -63,19 +37,9 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   }
 
   return spinner;
+<<<<<<< HEAD
 =======
-    lg: 'w-12 h-12'
-  };
-
-  return (
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-purple-600`}></div>
-      {text && (
-        <p className="mt-2 text-sm text-gray-400">{text}</p>
-      )}
-    </div>
-  );
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 };
 
 export default LoadingSpinner;

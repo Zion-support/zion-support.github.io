@@ -1,6 +1,6 @@
-// accessibilityUtils utility
+// accessibilityUtils utility;
 export const accessibilityUtils = () => {
-  // Implementation
+  // Implementation;
   return true;
 };
 

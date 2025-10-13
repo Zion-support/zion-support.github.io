@@ -20,10 +20,8 @@ import NeonButton from '../components/NeonButton';
 import AnimatedCard from '../components/AnimatedCard';
 import { services } from '../data/servicesData';
 
-export default function HomePage() {
-<<<<<<< HEAD
-  const featuredServices = services.slice(0, 6);
-=======
+export default function HomePage()  {
+
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -36,7 +34,6 @@ export default function HomePage() {
       "query-input": "required name=search_term_string"
     }
   };
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
 
   return (
     <>

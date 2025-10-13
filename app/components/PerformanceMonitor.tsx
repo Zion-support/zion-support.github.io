@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
 interface PerformanceMetrics {
   cls: number | null;
@@ -8,6 +9,7 @@ interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
   ttfb: number | null;
+  loadTime: number | null;
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -16,6 +18,7 @@ const PerformanceMonitor: React.FC = () => {
     inp: null,
     fcp: null,
     lcp: null,
+<<<<<<< HEAD
     ttfb: null
   });
 
@@ -46,20 +49,9 @@ const PerformanceMonitor: React.FC = () => {
     onLCP(handleMetric);
     onTTFB(handleMetric);
   }, []);
-<<<<<<< HEAD
-  // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
-=======
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
-    return null;
-  }
-
-  return (
-<<<<<<< HEAD
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
       <h3 className="font-bold mb-2">Performance Metrics</h3>
       <div className="space-y-1">
         <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
@@ -67,92 +59,6 @@ const PerformanceMonitor: React.FC = () => {
         <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
         <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
         <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
-=======
-
-interface PerformanceMetrics {
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-}
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Only show in development
-    if (process.env.NODE_ENV !== 'development') return;
-
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      
-      entries.forEach((entry) => {
-        if (entry.entryType === 'paint') {
-          if (entry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-          }
-        }
-        
-        if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-        }
-        
-        if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-        }
-        
-        if (entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { value: number };
-          setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + clsEntry.value }));
-        }
-      });
-    });
-
-    // Observe different types of performance entries
-    try {
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-    } catch (e) {
-      console.warn('Performance Observer not supported');
-    }
-
-    // Toggle visibility with Ctrl+Shift+P
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
-        e.preventDefault();
-        setIsVisible(prev => !prev);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, []);
-
-  if (!isVisible || process.env.NODE_ENV !== 'development') {
-    return null;
-  }
-
-  const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-slate-800 border border-slate-600 rounded-lg p-4 shadow-xl z-50 max-w-sm">
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-white font-semibold text-sm">Performance Metrics</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white text-sm"
-        >
-          ✕
-        </button>
       </div>
       
       <div className="space-y-2 text-xs">
@@ -198,14 +104,6 @@ const PerformanceMonitor: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
       </div>
 =======
-    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-xs font-mono z-50">
-      <div className="font-bold mb-2">Performance Metrics</div>
-      <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
-      <div>INP: {metrics.inp?.toFixed(1) || 'N/A'}ms</div>
-      <div>FCP: {metrics.fcp?.toFixed(1) || 'N/A'}ms</div>
-      <div>LCP: {metrics.lcp?.toFixed(1) || 'N/A'}ms</div>
-      <div>TTFB: {metrics.ttfb?.toFixed(1) || 'N/A'}ms</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
     </div>
   );
 };

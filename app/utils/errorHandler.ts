@@ -1,6 +1,6 @@
-// errorHandler utility
+// errorHandler utility;
 export const errorHandler = () => {
-  // Implementation
+  // Implementation;
   return true;
 };
 

@@ -1,13 +1,10 @@
+import { apiClient } from '../utils/apiClient;
+import logger from '../utils/logger;
 'use client';
-
-/**
- * Base Service Class
- * Provides common functionality for all service classes
- */
-
-import { apiClient } from '../utils/apiClient';
-import logger from '../utils/logger';
-
+/**;
+ * Base Service Class;
+ * Provides common functionality for all service classes;
+ */;
 export interface ServiceOptions {
   baseUrl?: string;
   timeout?: number;
@@ -32,14 +29,14 @@ export class BaseService {
       timeout: 30000,
       retries: 3,
       cache: false,
-      cacheDuration: 300000, // 5 minutes
+      cacheDuration: 300000, // 5 minutes;
       ...options,
     };
   }
 
-  /**
-   * Check if cached data is still valid
-   */
+  /**;
+   * Check if cached data is still valid;
+   */;
   protected isCacheValid(key: string): boolean {
     const _entry = this.cache.get(key);
     if (!entry) return false;
@@ -48,9 +45,9 @@ export class BaseService {
     return age < (this.options.cacheDuration || 300000);
   }
 
-  /**
-   * Get data from cache
-   */
+  /**;
+   * Get data from cache;
+   */;
   protected getFromCache<T>(key: string): T | null {
     if (!this.options.cache) return null;
     
@@ -63,9 +60,9 @@ export class BaseService {
     return null;
   }
 
-  /**
-   * Set data in cache
-   */
+  /**;
+   * Set data in cache;
+   */;
   protected setInCache<T>(key: string, data: T): void {
     if (!this.options.cache) return;
 
@@ -75,9 +72,9 @@ export class BaseService {
     });
   }
 
-  /**
-   * Clear cache for a specific key or all cache
-   */
+  /**;
+   * Clear cache for a specific key or all cache;
+   */;
   protected clearCache(key?: string): void {
     if (key) {
       this.cache.delete(key);
@@ -86,9 +83,9 @@ export class BaseService {
     }
   }
 
-  /**
-   * Make a GET request
-   */
+  /**;
+   * Make a GET request;
+   */;
   protected async get<T>(endpoint: string, useCache = true): Promise<T> {
     const _cacheKey = `GET:${endpoint}`;
     
@@ -109,18 +106,18 @@ export class BaseService {
       }
 
       return response.data;
-    } catch (error) {
-      logger.error('GET request failed', error as Error, {
-        component: 'BaseService',
+    } catch (_error) {
+      logger._error('GET request failed', _error as Error, {';
+        component: 'BaseService',';
         endpoint,
       });
-      throw error;
+      throw _error;
     }
   }
 
-  /**
-   * Make a POST request
-   */
+  /**;
+   * Make a POST request;
+   */;
   protected async post<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
     try {
       logger.debug(`POST request to ${endpoint}`, { component: 'BaseService' });
@@ -129,18 +126,18 @@ export class BaseService {
         retries: this.options.retries,
       });
       return response.data;
-    } catch (error) {
-      logger.error('POST request failed', error as Error, {
-        component: 'BaseService',
+    } catch (_error) {
+      logger._error('POST request failed', _error as Error, {';
+        component: 'BaseService',';
         endpoint,
       });
-      throw error;
+      throw _error;
     }
   }
 
-  /**
-   * Make a PUT request
-   */
+  /**;
+   * Make a PUT request;
+   */;
   protected async put<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
     try {
       logger.debug(`PUT request to ${endpoint}`, { component: 'BaseService' });
@@ -149,18 +146,18 @@ export class BaseService {
         retries: this.options.retries,
       });
       return response.data;
-    } catch (error) {
-      logger.error('PUT request failed', error as Error, {
-        component: 'BaseService',
+    } catch (_error) {
+      logger._error('PUT request failed', _error as Error, {';
+        component: 'BaseService',';
         endpoint,
       });
-      throw error;
+      throw _error;
     }
   }
 
-  /**
-   * Make a PATCH request
-   */
+  /**;
+   * Make a PATCH request;
+   */;
   protected async patch<T, D = unknown>(endpoint: string, data?: D): Promise<T> {
     try {
       logger.debug(`PATCH request to ${endpoint}`, { component: 'BaseService' });
@@ -169,18 +166,18 @@ export class BaseService {
         retries: this.options.retries,
       });
       return response.data;
-    } catch (error) {
-      logger.error('PATCH request failed', error as Error, {
-        component: 'BaseService',
+    } catch (_error) {
+      logger._error('PATCH request failed', _error as Error, {';
+        component: 'BaseService',';
         endpoint,
       });
-      throw error;
+      throw _error;
     }
   }
 
-  /**
-   * Make a DELETE request
-   */
+  /**;
+   * Make a DELETE request;
+   */;
   protected async delete<T>(endpoint: string): Promise<T> {
     try {
       logger.debug(`DELETE request to ${endpoint}`, { component: 'BaseService' });
@@ -189,24 +186,24 @@ export class BaseService {
         retries: this.options.retries,
       });
       return response.data;
-    } catch (error) {
-      logger.error('DELETE request failed', error as Error, {
-        component: 'BaseService',
+    } catch (_error) {
+      logger._error('DELETE request failed', _error as Error, {';
+        component: 'BaseService',';
         endpoint,
       });
-      throw error;
+      throw _error;
     }
   }
 
-  /**
-   * Handle service error
-   */
-  protected handleError(error: Error, context?: Record<string, unknown>): never {
-    logger.error('Service error', error, {
+  /**;
+   * Handle service _error;
+   */;
+  protected handleError(_error: Error, context?: Record<string, unknown>): never {
+    logger._error('Service _error', _error, {';
       component: this.constructor.name,
       ...context,
     });
-    throw error;
+    throw _error;
   }
 }
 
