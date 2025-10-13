@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe } from 'lucide-react';
 
 export default function Community() {
+  return (
+    <div>
   const stats = [
     { number: "10K+", label: "Active Members", icon: <Users className="w-8 h-8" /> },
     { number: "500+", label: "Events Hosted", icon: <Calendar className="w-8 h-8" /> },
@@ -82,6 +84,8 @@ export default function Community() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4">
+        </section>
+        </section>
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -112,6 +116,8 @@ export default function Community() {
 
         {/* Stats Section */}
         <section className="py-16 px-4 bg-gray-800/30">
+        </section>
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
@@ -129,6 +135,8 @@ export default function Community() {
 
         {/* Events Section */}
         <section className="py-20 px-4">
+        </section>
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Upcoming Events</h2>
@@ -168,6 +176,8 @@ export default function Community() {
 
         {/* Initiatives Section */}
         <section className="py-20 px-4 bg-gray-800/30">
+        </section>
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Community Initiatives</h2>
@@ -193,6 +203,8 @@ export default function Community() {
 
         {/* CTA Section */}
         <section className="py-20 px-4">
+        </section>
+        </section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Join Our Community?</h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -209,6 +221,7 @@ export default function Community() {
         </section>
       </div>
 </div>
-  );
+    </div>
+);
 }
 

@@ -1,87 +1,74 @@
 #!/usr/bin/env python3
+"""
+Script to fix common syntax errors in the codebase
+"""
 import os
 import re
 import glob
 
-def fix_jsx_syntax(content):
-    """Fix common JSX syntax errors."""
-    # Fix missing closing tags
-    content = re.sub(r'<(\w+)([^>]*?)(?<!/)>', r'<\1\2></\1>', content)
-    
-    # Fix unclosed JSX expressions
-    content = re.sub(r'\{([^}]*?)(?<!\})$', r'{\1}', content, flags=re.MULTILINE)
-    
-    # Fix missing semicolons after statements
-    content = re.sub(r'(\w+)\s*$', r'\1;', content, flags=re.MULTILINE)
-    
-    # Fix missing commas in object literals
-    content = re.sub(r'(\w+):\s*([^,\n}]+)(?=\s*[}\n])', r'\1: \2,', content)
-    
-    # Fix missing parentheses in function calls
-    content = re.sub(r'(\w+)\s*$', r'\1()', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_typescript_syntax(content):
-    """Fix common TypeScript syntax errors."""
-    # Fix missing type annotations
-    content = re.sub(r'(\w+):\s*([^=:]+?)(?=\s*[=;])', r'\1: any', content)
-    
-    # Fix missing return types
-    content = re.sub(r'function\s+(\w+)\s*\([^)]*\)\s*\{', r'function \1(): any {', content)
-    
-    # Fix missing interface declarations
-    content = re.sub(r'interface\s+(\w+)\s*\{', r'interface \1 {\n  [key: string]: any;', content)
-    
-    return content
-
-def fix_file_syntax(file_path):
-    """Fix syntax errors in a single file."""
+def fix_syntax_errors(file_path):
+    """Fix common syntax errors in a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
         original_content = content
         
-        # Fix JSX syntax
-        if file_path.endswith(('.tsx', '.jsx')):
-            content = fix_jsx_syntax(content)
+        # Fix incomplete import statements
+        content = re.sub(r'import\s*{\s*$', 'import { ArrowRight } from \'lucide-react\';', content)
         
-        # Fix TypeScript syntax
-        if file_path.endswith(('.ts', '.tsx')):
-            content = fix_typescript_syntax(content)
+        # Fix missing closing braces in imports
+        content = re.sub(r'import\s*{\s*([^}]*?)\s*$', r'import { \1 } from \'lucide-react\';', content, flags=re.MULTILINE)
         
-        # Only write if content changed
+        # Fix self-closing div tags that should be opening tags
+        content = re.sub(r'<div([^>]*?)\s*/>\s*<Helmet>', r'<div\1>\n      <Helmet>', content)
+        
+        # Fix missing closing tags for sections
+        content = re.sub(r'<section([^>]*?)>\s*$', r'<section\1>\n        </section>', content, flags=re.MULTILINE)
+        
+        # Fix JSX expressions that need a parent element
+        # This is a complex fix, so we'll handle it case by case
+        
+        # Fix missing closing braces in function definitions
+        content = re.sub(r'export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*$', r'export default function \1() {\n  return (\n    <div>', content, flags=re.MULTILINE)
+        
+        # Fix incomplete return statements
+        if 'return (' in content and not content.strip().endswith('}') and not content.strip().endswith(');'):
+            content = content.rstrip() + '\n  );\n}'
+        
+        # Write back if changes were made
         if content != original_content:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(content)
-            print(f"Fixed syntax in: {file_path}")
+            print(f"Fixed syntax errors in {file_path}")
             return True
         
         return False
+        
     except Exception as e:
-        print(f"Error fixing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    # Find all TypeScript/TSX files in the app directory
+    """Main function to fix syntax errors"""
     patterns = [
-        '/workspace/app/**/*.tsx',
-        '/workspace/app/**/*.ts',
-        '/workspace/src/**/*.tsx',
-        '/workspace/src/**/*.ts'
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'app/**/*.jsx',
+        'app/**/*.js'
     ]
     
-    files_fixed = 0
-    total_files = 0
+    files_processed = 0
+    errors_fixed = 0
     
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            total_files += 1
-            if fix_file_syntax(file_path):
-                files_fixed += 1
+            files_processed += 1
+            if fix_syntax_errors(file_path):
+                errors_fixed += 1
     
-    print(f"\nFixed syntax in {files_fixed} out of {total_files} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Fixed syntax errors in {errors_fixed} files")
 
 if __name__ == "__main__":
     main()

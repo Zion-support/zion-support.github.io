@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award } from 'lucide-react';
 
 export default function page() {
+  return (
+    <div>
   const features = [
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }
@@ -86,6 +88,7 @@ export default function page() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="py-20 px-4">
+        </section>
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
@@ -116,6 +119,7 @@ export default function page() {
 
         {/* Compliance Frameworks Section */}
         <section className="py-20 px-4">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Our Compliance Certifications</h2>
@@ -145,6 +149,7 @@ export default function page() {
 
         {/* Services Section */}
         <section className="py-20 px-4 bg-gray-800/30">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Our Compliance Services</h2>
@@ -174,6 +179,7 @@ export default function page() {
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Why Choose Our Compliance Services?</h2>
@@ -198,6 +204,7 @@ export default function page() {
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gray-800/30">
+        </section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Achieve Compliance?</h2>
             <p className="text-xl text-gray-300 mb-8">

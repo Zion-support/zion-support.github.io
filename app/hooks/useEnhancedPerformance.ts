@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
 export const useEnhancedPerformance = () => {
   const [data, setData] = useState<any>(null);

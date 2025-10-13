@@ -1,11 +1,9 @@
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+import { useState, useEffect } from 'react';
 
 export default function ConsultationPage() {
+  return (
+    <div>
   const benefits = [
     "Benefit 1",
     "Benefit 2"
@@ -109,6 +107,7 @@ export default function ConsultationPage() {
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Star className="w-4 h-4 text-cyan-400 mr-2" />
@@ -130,6 +129,7 @@ export default function ConsultationPage() {
 
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -158,6 +158,7 @@ export default function ConsultationPage() {
 
         {/* Consultation Types */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -220,6 +221,7 @@ export default function ConsultationPage() {
 
         {/* Consultation Form */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-4xl mx-auto">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <div className="text-center mb-8">
@@ -399,6 +401,7 @@ export default function ConsultationPage() {
 
         {/* Contact Info */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-2xl font-bold text-white mb-6">

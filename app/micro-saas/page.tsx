@@ -4,6 +4,8 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function Page() {
+  return (
+    <div>
   const benefits = [
     "Benefit 1",
     "Benefit 2"
@@ -113,6 +115,7 @@ export default function Page() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        </section>
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -160,6 +163,7 @@ export default function Page() {
 
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -186,6 +190,7 @@ export default function Page() {
 
         {/* Services Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -248,6 +253,7 @@ export default function Page() {
 
         {/* Testimonials Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -286,6 +292,7 @@ export default function Page() {
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
+        </section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?

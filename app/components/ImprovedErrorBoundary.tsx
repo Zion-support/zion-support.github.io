@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 interface Props {
   children: ReactNode;
@@ -150,3 +147,5 @@ export const _useErrorHandler = () => {
 };
 
 export default ImprovedErrorBoundary;
+  );
+}

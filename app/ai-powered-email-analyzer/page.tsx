@@ -1,22 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { 
-  Mail, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  Target, 
-  Brain, 
-  Sparkles
-} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Mail, 
+import { Mail } from 'lucide-react';
   Shield, 
   Zap, 
   BarChart3, 
@@ -110,7 +94,7 @@ const AIPoweredEmailAnalyzerPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Advanced AI services with cutting-edge technology and expert solutions." />
@@ -373,3 +357,5 @@ const AIPoweredEmailAnalyzerPage = () => {
 };
 
 export default Page;
+  );
+}

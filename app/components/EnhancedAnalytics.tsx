@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+import { useState, useEffect } from 'react';
 interface EnhancedAnalyticsProps {
   children: React.ReactNode;
 }

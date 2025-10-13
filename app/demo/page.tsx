@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar } from 'lucide-react';
 
 export default function Page() {
+  return (
+    <div>
   const stats = [
     { label: "Stat 1", value: "100%" }
   ];
@@ -145,6 +147,7 @@ export default function Page() {
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Play className="w-4 h-4 text-cyan-400 mr-2" />
@@ -166,6 +169,7 @@ export default function Page() {
 
         {/* Stats Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
@@ -184,6 +188,7 @@ export default function Page() {
 
         {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -212,6 +217,7 @@ export default function Page() {
 
         {/* Main Demo Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -346,6 +352,7 @@ export default function Page() {
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6">

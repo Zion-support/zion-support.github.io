@@ -5,6 +5,8 @@ import { Helmet } from "react-helmet-async";
 import { Code, Globe, Smartphone, Zap, Database, ArrowRight, ArrowRight, Mail, Smartphone, Globe, ArrowRight } from 'lucide-react';
 
 export default function page() {
+  return (
+    <div>
   const features = [
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }
@@ -87,6 +89,7 @@ export default function page() {
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-block">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
@@ -121,6 +124,7 @@ export default function page() {
 
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -189,6 +193,7 @@ export default function page() {
 
         {/* Contact Information Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section>
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

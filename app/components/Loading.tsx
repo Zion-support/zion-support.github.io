@@ -22,3 +22,5 @@ const Loading: React.FC<LoadingProps> = ({ message = 'Loading...' }) => {
 };
 
 export default Loading;
+  );
+}

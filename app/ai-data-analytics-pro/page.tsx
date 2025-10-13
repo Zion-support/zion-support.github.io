@@ -1,20 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { 
-  TrendingUp, 
-  Zap, 
-  Brain, 
-  PieChart, 
-  Sparkles, 
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  TrendingUp, 
+import { TrendingUp } from 'lucide-react';
   ArrowRight,
   Sparkles,
   CheckCircle,
@@ -73,6 +60,8 @@ const AIDataAnalyticsProPage = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        </section>
+        </section>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -116,6 +105,8 @@ const AIDataAnalyticsProPage = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -162,6 +153,8 @@ const AIDataAnalyticsProPage = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section>
+        </section>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Analytics?
@@ -183,3 +176,5 @@ const AIDataAnalyticsProPage = () => {
 };
 
 export default Page;
+  );
+}

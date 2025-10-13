@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet-async";
 
 export default function ZionAIEmailAnalyzer() {
   return (
+    <div>
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
         <title>Zion AI Email Analyzer - Coming Soon | Zion Tech Group</title>

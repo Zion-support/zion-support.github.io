@@ -1,10 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Package, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe, Shield } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+import { useState, useEffect } from 'react';
 const SmartInventoryOptimizerPage = () => {
   const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
 
@@ -72,6 +69,7 @@ const SmartInventoryOptimizerPage = () => {
 
       {/* Hero Section */}
       <section className="relative py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 20 }}
@@ -117,6 +115,7 @@ const SmartInventoryOptimizerPage = () => {
 
       {/* Stats Section */}
       <section className="py-16 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -141,6 +140,7 @@ const SmartInventoryOptimizerPage = () => {
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 20 }}
@@ -183,6 +183,7 @@ const SmartInventoryOptimizerPage = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 20 }}
@@ -224,6 +225,7 @@ const SmartInventoryOptimizerPage = () => {
 
       {/* Pricing Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 20 }}
@@ -298,6 +300,7 @@ const SmartInventoryOptimizerPage = () => {
 
       {/* CTA Section */}
       <section className="py-20 px-4">
+        </section>
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 20 }}
@@ -335,6 +338,7 @@ const SmartInventoryOptimizerPage = () => {
 
       {/* Contact Information */}
       <section className="py-16 px-4 bg-black/20">
+        </section>
         <div className="max-w-7xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
           <p className="text-gray-300 mb-6">
@@ -357,3 +361,5 @@ const SmartInventoryOptimizerPage = () => {
 };
 
 export default SmartInventoryOptimizerPage;
+  );
+}

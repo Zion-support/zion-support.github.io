@@ -2,6 +2,8 @@ import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 export default function CaseStudies() {
+  return (
+    <div>
   const _caseStudies = [
     {
       id: 1,
@@ -134,5 +136,6 @@ export default function CaseStudies() {
         </div>
       </div>
     </div>
-  );
+    </div>
+);
 }
