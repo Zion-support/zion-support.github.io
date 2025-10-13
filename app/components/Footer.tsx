@@ -51,15 +51,10 @@ const Footer: React.FC = () => {
     { name: "Micro SAAS", path: "/micro-saas" },
     { name: "5G Solutions", path: "/5g-solutions" },
     { name: "Contact", path: "/contact" },
-<<<<<<< HEAD
-    { name: "Demo", path: "/demo" },
-    { name: "Consultation", path: "/consultation" },
-=======
     { name: "Blog", path: "/blog" },
     { name: "Tutorials", path: "/tutorials" },
     { name: "Demo", path: "/demo" },
     { name: "Support", path: "/support" },
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
   ];
 
   const aiServices = [
