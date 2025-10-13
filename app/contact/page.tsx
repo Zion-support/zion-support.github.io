@@ -126,29 +126,6 @@ export default function ContactPage() {
           &amp;lt;/h2&amp;gt;
           
           {isSubmitted ? (
-<<<<<<< HEAD
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4">
-                <CheckCircle className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
-              <p className="text-gray-300 mb-6">
-                Thank you for contacting us. We&apos;ll get back to you within 24 hours.
-              </p>
-              <button
-                onClick={() => {
-=======
-            &amp;lt;div className=&amp;quot;bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center&amp;quot;&amp;gt;
-              &amp;lt;div className=&amp;quot;w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4&amp;quot;&amp;gt;
-                &amp;lt;CheckCircle className=&amp;quot;w-8 h-8 text-white&amp;quot; /&amp;gt;
-              &amp;lt;/div&amp;gt;
-              &amp;lt;h3 className=&amp;quot;text-2xl font-bold text-white mb-4&amp;quot;&amp;gt;Message Sent!&amp;lt;/h3&amp;gt;
-              &amp;lt;p className=&amp;quot;text-gray-300 mb-6&amp;quot;&amp;gt;
-                Thank you for contacting us. We&amp;apos;ll get back to you within 24 hours.
-              &amp;lt;/p&amp;gt;
-              &amp;lt;button
-                onClick={() =&amp;gt; {
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
                   setIsSubmitted(false);
                   setFormData({
                     name: &amp;apos;&amp;apos;,

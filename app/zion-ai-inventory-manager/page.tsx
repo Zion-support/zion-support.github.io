@@ -2,11 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
 export default function ZionAIInventoryManager() {
@@ -80,11 +75,6 @@ export default function ZionAIInventoryManager() {
     </div>
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-29e3
