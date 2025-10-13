@@ -1,7 +1,59 @@
-import React from 'react';
+#!/usr/bin/env python3
+"""
+Comprehensive script to clean up merge conflicts and syntax errors
+"""
+import os
+import re
+import glob
+
+def clean_file_comprehensive(file_path):
+    """Comprehensive cleanup of a file"""
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Remove merge conflict markers completely
+        content = re.sub(r'<<<<<<< [^\n]+\n.*?\n=======.*?\n>>>>>>> [^\n]+\n?', '', content, flags=re.DOTALL)
+        
+        # Remove any remaining conflict markers
+        content = re.sub(r'<<<<<<< [^\n]+.*?>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
+        content = re.sub(r'=======.*?>>>>>>> [^\n]+', '', content, flags=re.DOTALL)
+        
+        # Fix duplicate function declarations - keep only the last one
+        # Pattern: export default function FunctionName
+        function_pattern = r'export default function (\w+)\s*\([^)]*\)\s*\{[^}]*\}(?=\s*export default function \1)'
+        content = re.sub(function_pattern, '', content, flags=re.DOTALL)
+        
+        # Fix incomplete JSX elements - remove incomplete opening tags
+        content = re.sub(r'<div[^>]*>\s*$', '', content, flags=re.MULTILINE)
+        
+        # Fix incomplete function declarations
+        content = re.sub(r'export default function \w+\s*\([^)]*\)\s*\{\s*$', '', content, flags=re.MULTILINE)
+        
+        # Remove empty lines and clean up spacing
+        content = re.sub(r'\n\s*\n\s*\n+', '\n\n', content)
+        
+        # Remove trailing whitespace
+        content = re.sub(r'[ \t]+$', '', content, flags=re.MULTILINE)
+        
+        # Write the cleaned content back
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(content)
+        
+        print(f"Cleaned: {file_path}")
+        return True
+        
+    except Exception as e:
+        print(f"Error cleaning {file_path}: {e}")
+        return False
+
+def fix_specific_files():
+    """Fix specific problematic files manually"""
+    fixes = {
+        '/workspace/app/about/page.tsx': '''import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Users } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Users, Award } from 'lucide-react';
 
 export default function AboutPage() {
   const teamMembers = [
@@ -116,4 +168,57 @@ export default function AboutPage() {
       </div>
     </div>
   );
+}''',
+        
+        '/workspace/app/components/FuturisticText.tsx': '''import React from 'react';
+
+interface FuturisticTextProps {
+  className?: string;
+  children?: React.ReactNode;
 }
+
+export default function FuturisticText({ className = '', children, ...props }: FuturisticTextProps) {
+  return (
+    <div className={`futuristic-text ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}'''
+    }
+    
+    for file_path, content in fixes.items():
+        try:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+            print(f"Fixed: {file_path}")
+        except Exception as e:
+            print(f"Error fixing {file_path}: {e}")
+
+def main():
+    """Main function to clean all files"""
+    # Fix specific problematic files first
+    fix_specific_files()
+    
+    # Find all TypeScript/TSX files in the app directory
+    patterns = [
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        'components/**/*.tsx',
+        'components/**/*.ts'
+    ]
+    
+    files_to_clean = []
+    for pattern in patterns:
+        files_to_clean.extend(glob.glob(pattern, recursive=True))
+    
+    print(f"Found {len(files_to_clean)} files to clean")
+    
+    cleaned_count = 0
+    for file_path in files_to_clean:
+        if clean_file_comprehensive(file_path):
+            cleaned_count += 1
+    
+    print(f"Successfully cleaned {cleaned_count} files")
+
+if __name__ == "__main__":
+    main()

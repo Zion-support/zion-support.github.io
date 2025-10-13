@@ -2,11 +2,7 @@ export interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
-<<<<<<< HEAD
-  canonicalUrl: string;
-=======
   canonicalUrl?: string;
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
@@ -28,6 +24,7 @@ export class SEOUtils {
       'og:title': this.config.title,
       'og:description': this.config.description,
       'og:image': this.config.ogImage,
+      'og:type': this.config.ogType || 'website',
       'twitter:card': this.config.twitterCard || 'summary_large_image',
       'twitter:title': this.config.title,
       'twitter:description': this.config.description,
@@ -35,15 +32,11 @@ export class SEOUtils {
     };
   }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
-  updateTitle(title: string) {
+  updateTitle(title: string): void {
     document.title = title;
   }
 
-  updateMetaDescription(description: string) {
+  updateMetaDescription(description: string): void {
     let metaDescription = document.querySelector('meta[name="description"]');
     if (!metaDescription) {
       metaDescription = document.createElement('meta');
@@ -53,7 +46,7 @@ export class SEOUtils {
     metaDescription.setAttribute('content', description);
   }
 
-  updateMetaKeywords(keywords: string[]) {
+  updateMetaKeywords(keywords: string[]): void {
     let metaKeywords = document.querySelector('meta[name="keywords"]');
     if (!metaKeywords) {
       metaKeywords = document.createElement('meta');
@@ -63,8 +56,7 @@ export class SEOUtils {
     metaKeywords.setAttribute('content', keywords.join(', '));
   }
 
-  updateCanonicalUrl(url: string | undefined) {
-    if (!url) return;
+  updateCanonicalUrl(url: string): void {
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
@@ -74,65 +66,38 @@ export class SEOUtils {
     canonical.setAttribute('href', url);
   }
 
-  updateOpenGraphTags() {
-    const ogTags = [
-      { property: 'og:title', content: this.config.title },
-      { property: 'og:description', content: this.config.description },
-      { property: 'og:url', content: this.config.canonicalUrl || '' },
-      { property: 'og:type', content: this.config.ogType || 'website' },
-    ];
-
-    if (this.config.ogImage) {
-      ogTags.push({ property: 'og:image', content: this.config.ogImage });
-    }
-
-    ogTags.forEach(tag => {
-      let meta = document.querySelector(`meta[property="${tag.property}"]`);
+  updateOpenGraphTags(tags: Record<string, string>): void {
+    Object.entries(tags).forEach(([property, content]) => {
+      let meta = document.querySelector(`meta[property="${property}"]`);
       if (!meta) {
         meta = document.createElement('meta');
-        meta.setAttribute('property', tag.property);
+        meta.setAttribute('property', property);
         document.head.appendChild(meta);
       }
-      meta.setAttribute('content', tag.content);
+      meta.setAttribute('content', content);
     });
   }
 
-  updateTwitterCard() {
-    if (this.config.twitterCard) {
-      let meta = document.querySelector('meta[name="twitter:card"]');
+  updateTwitterCardTags(tags: Record<string, string>): void {
+    Object.entries(tags).forEach(([name, content]) => {
+      let meta = document.querySelector(`meta[name="${name}"]`);
       if (!meta) {
         meta = document.createElement('meta');
-        meta.setAttribute('name', 'twitter:card');
+        meta.setAttribute('name', name);
         document.head.appendChild(meta);
       }
-      meta.setAttribute('content', this.config.twitterCard);
-    }
+      meta.setAttribute('content', content);
+    });
   }
 
-  generateStructuredData() {
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": this.config.description,
-      "url": this.config.canonicalUrl,
-    };
-
+  generateStructuredData(data: Record<string, any>): void {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
+    script.textContent = JSON.stringify(data);
     document.head.appendChild(script);
   }
 
-  applySEO() {
-    this.updateTitle(this.config.title);
-    this.updateMetaDescription(this.config.description);
-    this.updateMetaKeywords(this.config.keywords);
-    this.updateCanonicalUrl(this.config.canonicalUrl);
-    this.updateOpenGraphTags();
-    this.updateTwitterCard();
-    this.generateStructuredData();
+  getConfig(): SEOConfig {
+    return { ...this.config };
   }
 }
-
-export default SEOUtils;

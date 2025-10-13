@@ -1,17 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+
 interface PerformanceMonitorProps {
   className?: string;
-  children?: React.ReactNode;
 }
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ className = '', children }) => {
-  useEffect(() => {
-    // Performance monitoring logic can be added here
-    console.log('Performance Monitor initialized');
-  }, []);
+
+export default function PerformanceMonitor({ className = '' }: PerformanceMonitorProps) {
   return (
-    <div className={`${className}`}>
-      {children}
+    <div className={`performance-monitor ${className}`}>
+      <h3>Performance Monitor</h3>
+      <p>Performance monitoring component</p>
     </div>
   );
-};
-export default PerformanceMonitor;
+}

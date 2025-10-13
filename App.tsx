@@ -5,13 +5,12 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-import { LoadingPage } from './app/components/LoadingStates';
-import { GlobalErrorBoundary } from './app/components/EnhancedErrorFeedback';
+import LoadingStates from './app/components/LoadingStates';
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import AccessibilityEnhancer from "./app/utils/accessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
@@ -25,7 +24,6 @@ const ServicesPage = React.lazy(() => import("./app/services/page"));
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
-// const MicroSAASPage = React.lazy(() => import("./app/micro-saas/page"));
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
@@ -33,7 +31,7 @@ const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 
-// AI Services Pages - only include existing ones
+// AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AIAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
 const AIBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
@@ -47,7 +45,7 @@ const AIMarketingPage = React.lazy(() => import("./app/ai-marketing/page"));
 const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
 const AIProjectManagementPage = React.lazy(() => import("./app/ai-project-management/page"));
 
-// 5G Solutions Pages - only include existing ones
+// 5G Solutions Pages
 const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
 const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
 const FiveGIoTSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
@@ -57,9 +55,6 @@ const FiveGSmartCitiesPage = React.lazy(() => import("./app/5g-smart-city-soluti
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const toggleSidebar = useCallback(() => {
-    setIsSidebarOpen(prev => !prev);
-  }, []);
 
   const closeSidebar = useCallback(() => {
     setIsSidebarOpen(false);
@@ -68,47 +63,49 @@ function App() {
   useEffect(() => {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
-      // Add any global initialization logic here
       console.log('Zion Tech Group App initialized');
     }
   }, []);
 
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Current Page' }
+  ];
+
   return (
-    <GlobalErrorBoundary>
-      <EnhancedErrorBoundary>
-        <HelmetProvider>
-          <AnalyticsProvider>
-            <PerformanceMonitor>
-              <WebVitalsTracker>
-                <EnhancedAccessibility>
-                  <AccessibilityEnhancer>
-                    <CoreWebVitals>
-                      <Router>
-                        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <EnhancedErrorBoundary>
+      <HelmetProvider>
+        <AnalyticsProvider>
+          <PerformanceMonitor className="performance-monitor">
+            <WebVitalsTracker className="web-vitals-tracker">
+              <EnhancedAccessibility className="enhanced-accessibility">
+                <AccessibilityEnhancer>
+                  <CoreWebVitals className="core-web-vitals">
+                    <Router>
+                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                         <FuturisticBackground>
                           <PerformanceOptimizer>
-                            <Navigation onSidebarToggle={toggleSidebar} />
-                          <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                          <Breadcrumb />
+                            <Navigation />
+                            <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                            <Breadcrumb items={breadcrumbItems} />
                             
                             <main className="relative z-10" id="main-content" role="main">
-                              <Suspense fallback={<LoadingPage />}>
+                              <Suspense fallback={<LoadingStates isLoading={true}><div>Loading...</div></LoadingStates>}>
                                 <Routes>
                                   {/* Main Pages */}
                                   <Route path="/" element={<HomePage />} />
                                   <Route path="/about" element={<AboutPage />} />
                                   <Route path="/contact" element={<ContactPage />} />
                                   <Route path="/services" element={<ServicesPage />} />
-                                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                                  <Route path="/blog" element={<BlogPage />} />
-                                  <Route path="/ai-services" element={<AIServicesPage />} />
+                                  <Route path="/privacy" element={<PrivacyPage />} />
+                                  <Route path="/terms" element={<TermsPage />} />
                                   <Route path="/tutorials" element={<TutorialsPage />} />
                                   <Route path="/demo" element={<DemoPage />} />
                                   <Route path="/support" element={<SupportPage />} />
-                                  <Route path="/privacy" element={<PrivacyPage />} />
-                                  <Route path="/terms" element={<TermsPage />} />
+                                  <Route path="/blog" element={<BlogPage />} />
 
                                   {/* AI Services */}
+                                  <Route path="/ai-services" element={<AIServicesPage />} />
                                   <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
                                   <Route path="/ai-automation" element={<AIAutomationPage />} />
                                   <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
@@ -122,7 +119,8 @@ function App() {
                                   <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
                                   <Route path="/ai-project-management" element={<AIProjectManagementPage />} />
 
-                                  {/* 5G Solutions Routes */}
+                                  {/* 5G Solutions */}
+                                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                                   <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
                                   <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                                   <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
@@ -133,15 +131,7 @@ function App() {
                                   <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
 
                                   {/* Catch all route */}
-                                  <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                                    <div className="text-center">
-                                      <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                                      <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
-                                      <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                        Go Home
-                                      </a>
-                                    </div>
-                                  </div>} />
+                                  <Route path="*" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-white">404 - Page Not Found</h1></div>} />
                                 </Routes>
                               </Suspense>
                             </main>
@@ -149,17 +139,16 @@ function App() {
                             <Footer />
                           </PerformanceOptimizer>
                         </FuturisticBackground>
-                        </div>
-                      </Router>
-                    </CoreWebVitals>
-                  </AccessibilityEnhancer>
-                </EnhancedAccessibility>
-              </WebVitalsTracker>
-            </PerformanceMonitor>
-          </AnalyticsProvider>
-        </HelmetProvider>
-      </EnhancedErrorBoundary>
-    </GlobalErrorBoundary>
+                      </div>
+                    </Router>
+                  </CoreWebVitals>
+                </AccessibilityEnhancer>
+              </EnhancedAccessibility>
+            </WebVitalsTracker>
+          </PerformanceMonitor>
+        </AnalyticsProvider>
+      </HelmetProvider>
+    </EnhancedErrorBoundary>
   );
 }
 
