@@ -1,36 +1,24 @@
 // apiCache utility functions
 
-export interface apiCacheConfig {
+export interface ApiCacheConfig {
   enabled: boolean;
 }
 
-export class apiCache {
-  private config: apiCacheConfig;
+export class ApiCache {
+  private config: ApiCacheConfig;
 
-  constructor(config: Partial<apiCacheConfig> = {}) {
+  constructor(config: Partial<ApiCacheConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// apiCache utility
-export const apiCache = {
-  // Utility implementation,
-    init: () => {
-    console.log('apiCache initialized');
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('apiCache initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
-export const apicache = new apiCache();
-export default apicache;
-// apiCache
-export const apiCache = () => {
-  // Utility function implementation
-  return null;
-};
+// Export default instance
+export const apiCache = new ApiCache();

@@ -1,32 +1,24 @@
 // accessibilityEnhancer utility functions
 
-export interface accessibilityEnhancerConfig {
+export interface AccessibilityEnhancerConfig {
   enabled: boolean;
 }
 
-export class accessibilityEnhancer {
-  private config: accessibilityEnhancerConfig;
+export class AccessibilityEnhancer {
+  private config: AccessibilityEnhancerConfig;
 
-  constructor(config: Partial<accessibilityEnhancerConfig> = {}) {
+  constructor(config: Partial<AccessibilityEnhancerConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-// accessibilityEnhancer utility;
-export const accessibilityEnhancer = {
-  // Utility implementation;
-  init: () => {
-  // Utility implementation,
-    init: () => {
-    console.log('accessibilityEnhancer initialized');
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('accessibilityEnhancer initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
-export const accessibilityenhancer = new accessibilityEnhancer();
-export default accessibilityenhancer;
+// Export default instance
+export const accessibilityEnhancer = new AccessibilityEnhancer();

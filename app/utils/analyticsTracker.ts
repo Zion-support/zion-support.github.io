@@ -1,36 +1,24 @@
 // analyticsTracker utility functions
 
-export interface analyticsTrackerConfig {
+export interface AnalyticsTrackerConfig {
   enabled: boolean;
 }
 
-export class analyticsTracker {
-  private config: analyticsTrackerConfig;
+export class AnalyticsTracker {
+  private config: AnalyticsTrackerConfig;
 
-  constructor(config: Partial<analyticsTrackerConfig> = {}) {
+  constructor(config: Partial<AnalyticsTrackerConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// analyticsTracker utility
-export const analyticsTracker = {
-  // Utility implementation,
-    init: () => {
-    console.log('analyticsTracker initialized');
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('analyticsTracker initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
-export const analyticstracker = new analyticsTracker();
-export default analyticstracker;
-// analyticsTracker
-export const analyticsTracker = () => {
-  // Utility function implementation
-  return null;
-};
+// Export default instance
+export const analyticsTracker = new AnalyticsTracker();

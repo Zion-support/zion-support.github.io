@@ -1,36 +1,24 @@
 // performanceOptimizations utility functions
 
-export interface performanceOptimizationsConfig {
+export interface PerformanceOptimizationsConfig {
   enabled: boolean;
 }
 
-export class performanceOptimizations {
-  private config: performanceOptimizationsConfig;
+export class PerformanceOptimizations {
+  private config: PerformanceOptimizationsConfig;
 
-  constructor(config: Partial<performanceOptimizationsConfig> = {}) {
+  constructor(config: Partial<PerformanceOptimizationsConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// performanceOptimizations utility
-export const performanceOptimizations = {
-  // Utility implementation,
-    init: () => {
-    console.log('performanceOptimizations initialized');
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('performanceOptimizations initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
-export const performanceoptimizations = new performanceOptimizations();
-export default performanceoptimizations;
-// performanceOptimizations
-export const performanceOptimizations = () => {
-  // Utility function implementation
-  return null;
-};
+// Export default instance
+export const performanceOptimizations = new PerformanceOptimizations();

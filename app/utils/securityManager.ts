@@ -1,36 +1,24 @@
 // securityManager utility functions
 
-export interface securityManagerConfig {
+export interface SecurityManagerConfig {
   enabled: boolean;
 }
 
-export class securityManager {
-  private config: securityManagerConfig;
+export class SecurityManager {
+  private config: SecurityManagerConfig;
 
-  constructor(config: Partial<securityManagerConfig> = {}) {
+  constructor(config: Partial<SecurityManagerConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// securityManager utility
-export const securityManager = {
-  // Utility implementation,
-    init: () => {
-    console.log('securityManager initialized');
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('securityManager initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
-export const securitymanager = new securityManager();
-export default securitymanager;
-// securityManager
-export const securityManager = () => {
-  // Utility function implementation
-  return null;
-};
+// Export default instance
+export const securityManager = new SecurityManager();

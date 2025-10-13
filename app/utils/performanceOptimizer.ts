@@ -1,36 +1,24 @@
 // performanceOptimizer utility functions
 
-export interface performanceOptimizerConfig {
+export interface PerformanceOptimizerConfig {
   enabled: boolean;
 }
 
-export class performanceOptimizer {
-  private config: performanceOptimizerConfig;
+export class PerformanceOptimizer {
+  private config: PerformanceOptimizerConfig;
 
-  constructor(config: Partial<performanceOptimizerConfig> = {}) {
+  constructor(config: Partial<PerformanceOptimizerConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// performanceOptimizer utility
-export const performanceOptimizer = {
-  // Utility implementation,
-    init: () => {
-    console.log('performanceOptimizer initialized');
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('performanceOptimizer initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
-export const performanceoptimizer = new performanceOptimizer();
-export default performanceoptimizer;
-// performanceOptimizer
-export const performanceOptimizer = () => {
-  // Utility function implementation
-  return null;
-};
+// Export default instance
+export const performanceOptimizer = new PerformanceOptimizer();

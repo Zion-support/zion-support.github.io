@@ -1,36 +1,24 @@
 // logger utility functions
 
-export interface loggerConfig {
+export interface LoggerConfig {
   enabled: boolean;
 }
 
-export class logger {
-  private config: loggerConfig;
+export class Logger {
+  private config: LoggerConfig;
 
-  constructor(config: Partial<loggerConfig> = {}) {
+  constructor(config: Partial<LoggerConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// logger utility
-export const logger = {
-  // Utility implementation,
-    init: () => {
-    console.log('logger initialized');
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('logger initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
-export const loggerInstance = new logger();
-export default loggerInstance;
-// logger
-export const logger = () => {
-  // Utility function implementation
-  return null;
-};
+// Export default instance
+export const logger = new Logger();

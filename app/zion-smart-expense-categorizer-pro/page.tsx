@@ -1,26 +1,6 @@
 import React from 'react';
-
-import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
 
-export default function zionSmartExpenseCategorizerPro() {
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Zionsmartexpensecategorizerpro() {
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Zion Smart Expense Categorizer Pro - Zion Tech Group</title>
-        <meta name="description" content="Zion Smart Expense Categorizer Pro solutions by Zion Tech Group" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">Zion Smart Expense Categorizer Pro</h1>
-          <p className="text-xl text-gray-300 mb-8">
 export default function ZionSmartExpenseCategorizerProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -34,15 +14,6 @@ export default function ZionSmartExpenseCategorizerProPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Zion Smart Expense Categorizer Pro
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-
-export default function ZionsmartexpensecategorizerproPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Zion Smart Expense Categorizer Pro</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
           </p>
@@ -79,9 +50,4 @@ export default function ZionsmartexpensecategorizerproPage() {
       </div>
     </div>
   );
-}
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
 }

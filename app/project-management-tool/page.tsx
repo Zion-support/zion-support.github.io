@@ -1,26 +1,6 @@
 import React from 'react';
-
-import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
 
-export default function projectManagementTool() {
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function Projectmanagementtool() {
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Project Management Tool - Zion Tech Group</title>
-        <meta name="description" content="Project Management Tool solutions by Zion Tech Group" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">Project Management Tool</h1>
-          <p className="text-xl text-gray-300 mb-8">
 export default function ProjectManagementToolPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -34,15 +14,6 @@ export default function ProjectManagementToolPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Project Management Tool
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-
-export default function ProjectmanagementtoolPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Project Management Tool</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
           </p>
@@ -79,9 +50,4 @@ export default function ProjectmanagementtoolPage() {
       </div>
     </div>
   );
-}
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
 }

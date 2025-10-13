@@ -1,54 +1,53 @@
 import React from 'react';
-
-interface pagebroken2Props {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function pagebroken2({ className = '', children }: pagebroken2Props) {
-  return (
-    <div className={`${className}`}>
-      {children}
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
-const Pagebroken2Page = () => {
 export default function PageBroken2Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
+        <title>Page Broken2 - Zion Tech Group</title>
+        <meta name="description" content="Advanced page broken2 solutions by Zion Tech Group" />
       </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Page Broken2
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Advanced AI and IT solutions for your business needs.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+            <p className="text-gray-600">
+              Comprehensive solution for your business requirements.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+            <p className="text-gray-600">
+              Advanced technology integration and optimization.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+            <p className="text-gray-600">
+              Scalable and secure implementation.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+            Get Started
+          </button>
+        </div>
       </div>
     </div>
   );
-}
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-    </div>
-  );
-}
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
 }

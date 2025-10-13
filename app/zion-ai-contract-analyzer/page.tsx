@@ -1,28 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-import { Helmet } from "react-helmet-async";
-
-export default function zionAiContractAnalyzer() {
-
-import React from 'react';
-
-export default function Page() {
-
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Zion Ai Contract Analyzer - Zion Tech Group</title>
-        <meta name="description" content="Zion Ai Contract Analyzer solutions by Zion Tech Group" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">Zion Ai Contract Analyzer</h1>
-          <p className="text-xl text-gray-300 mb-8">
 export default function ZionAiContractAnalyzerPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -36,15 +14,6 @@ export default function ZionAiContractAnalyzerPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Zion Ai Contract Analyzer
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-
-export default function ZionaicontractanalyzerPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Zion Ai Contract Analyzer</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
           </p>
@@ -81,8 +50,4 @@ export default function ZionaicontractanalyzerPage() {
       </div>
     </div>
   );
-}
-import { Helmet } from 'react-helmet-async';
-
-export default function ZionAiContractAnalyzerPage() {
 }

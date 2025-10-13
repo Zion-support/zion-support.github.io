@@ -1,34 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function search() {
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
-
-export default function Page() {
-const SearchPage = () => {
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">Search</h1>
-          <p className="text-xl text-gray-300 mb-8">
 export default function SearchPage() {
   return (
-
-import React from 'react';
-
-import { Helmet } from 'react-helmet-async';
-const SearchPage = () => {
-  return (
-
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Search - Zion Tech Group</title>
@@ -39,23 +13,9 @@ const SearchPage = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Search
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Page
-
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-
-export default function SearchPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Search</h1>
-          <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
-
           </p>
         </div>
 
@@ -87,30 +47,7 @@ export default function SearchPage() {
             Get Started
           </button>
         </div>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
       </div>
     </div>
   );
-}
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-    </div>
-  );
-}
-
 }

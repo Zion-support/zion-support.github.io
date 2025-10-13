@@ -1,36 +1,24 @@
 // formValidation utility functions
 
-export interface formValidationConfig {
+export interface FormValidationConfig {
   enabled: boolean;
 }
 
-export class formValidation {
-  private config: formValidationConfig;
+export class FormValidation {
+  private config: FormValidationConfig;
 
-  constructor(config: Partial<formValidationConfig> = {}) {
+  constructor(config: Partial<FormValidationConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// formValidation utility
-export const formValidation = {
-  // Utility implementation,
-    init: () => {
-    console.log('formValidation initialized');
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('formValidation initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
-export const formvalidation = new formValidation();
-export default formvalidation;
-// formValidation
-export const formValidation = () => {
-  // Utility function implementation
-  return null;
-};
+// Export default instance
+export const formValidation = new FormValidation();

@@ -1,32 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function Page5gNetworkInfrastructure() {
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Network } from 'lucide-react';
-
-export default function NetworkInfrastructure5GPage() {
+export default function FivegNetworkInfrastructurePage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>5g Network Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="5g Network Infrastructure solutions by Zion Tech Group" />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">5g Network Infrastructure</h1>
-          <p className="text-xl text-gray-300 mb-8">
-export default function FiveGNetworkInfrastructurePage() {
-  return (
-
-import React from 'react';
-
-import { Helmet } from 'react-helmet-async';
-export default function NetworkInfrastructure5GPage() {
-  return (
-
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>5g Network Infrastructure - Zion Tech Group</title>
@@ -37,20 +13,7 @@ export default function NetworkInfrastructure5GPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             5g Network Infrastructure
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">
-            Page
-
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-
-export default function FiveGNetworkinfrastructurePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">5G Network Infrastructure</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
           </p>
@@ -83,15 +46,8 @@ export default function FiveGNetworkinfrastructurePage() {
           <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
             Get Started
           </button>
-          </p>
-
         </div>
       </div>
     </div>
   );
-}
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
 }

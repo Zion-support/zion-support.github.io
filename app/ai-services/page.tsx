@@ -1,25 +1,6 @@
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function aiServices() {
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-export default function AIServices() {
-export default function Page() {
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>AI Services - Zion Tech Group</title>
-        <meta name="description" content="AI Services page coming soon." />
-      </Helmet>
-
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-8">Ai Services</h1>
-          <p className="text-xl text-gray-300 mb-8">
 export default function AiServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -33,15 +14,6 @@ export default function AiServicesPage() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Ai Services
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-
-export default function AiservicesPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Ai Services</h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced AI and IT solutions for your business needs.
           </p>
@@ -75,15 +47,7 @@ export default function AiservicesPage() {
             Get Started
           </button>
         </div>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">AI Services</h1>
-        <p className="text-xl text-gray-300">Coming Soon</p>
       </div>
     </div>
   );
-}
-
-  );
-}
-
 }

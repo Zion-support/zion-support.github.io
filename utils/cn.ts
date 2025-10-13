@@ -1,28 +1,24 @@
 // cn utility functions
 
-export interface cnConfig {
+export interface CnConfig {
   enabled: boolean;
-// Utility function for combining class names;
-export function cn(...classes: (string | undefined | null | false)[]): string {
-  return classes.filter(Boolean).join(' ');
 }
 
-export class cn {
-  private config: cnConfig;
+export class Cn {
+  private config: CnConfig;
 
-  constructor(config: Partial<cnConfig> = {}) {
+  constructor(config: Partial<CnConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
   }
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('cn initialized');
-    }
+  // Utility methods can be added here
+  public isEnabled(): boolean {
+    return this.config.enabled;
   }
 }
 
-export const cnInstance = new cn();
-export default cnInstance;
+// Export default instance
+export const cn = new Cn();
