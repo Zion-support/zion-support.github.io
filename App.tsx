@@ -18,7 +18,6 @@ import HomePage from './app/page';
 import AboutPage from './app/about/page';
 import ContactPage from './app/contact/page';
 import ServicesPage from './app/services/page';
-import CareersPage from './app/careers/page';
 import CaseStudiesPage from './app/case-studies/page';
 import PartnersPage from './app/partners/page';
 import PrivacyPage from './app/privacy/page';
@@ -50,7 +49,6 @@ function App() {
                             <Route path="/about" element={<AboutPage />} />
                             <Route path="/contact" element={<ContactPage />} />
                             <Route path="/services" element={<ServicesPage />} />
-                            <Route path="/careers" element={<CareersPage />} />
                             <Route path="/case-studies" element={<CaseStudiesPage />} />
                             <Route path="/partners" element={<PartnersPage />} />
                             <Route path="/privacy" element={<PrivacyPage />} />
