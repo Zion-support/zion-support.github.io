@@ -248,6 +248,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-c36b
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
 
@@ -294,10 +297,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     applyAccessibilitySettings(defaultSettings);
   };
 
+<<<<<<< HEAD
   // Removed unused functions - functionality is handled by updateSetting directly
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-3531
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-c36b
   return (
     <>
       {children}

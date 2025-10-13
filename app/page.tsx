@@ -11,7 +11,10 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-c36b
 
 const HomePage = () => {
   const structuredData = {
@@ -181,7 +184,10 @@ const HomePage = () => {
 =======
       <FuturisticBackground />
       <SEOOptimizer
+<<<<<<< HEAD
 >>>>>>> origin/main
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-c36b
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"

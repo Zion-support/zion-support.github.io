@@ -8,6 +8,7 @@ import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 =======
@@ -35,12 +36,17 @@ import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
 >>>>>>> origin/main
+=======
+import { LoadingPage } from "./app/components/LoadingStates";
+import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+>>>>>>> cursor/analyze-improve-and-deploy-application-c36b
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import LoadingPage from "./app/components/EnhancedLoading";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import EnhancedSEO from "./app/components/EnhancedSEO";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
@@ -51,6 +57,11 @@ import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import SEOEnhancer from "./app/components/SEOEnhancer";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 >>>>>>> origin/main
+=======
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import AccessibilityManager from "./app/components/AccessibilityManager";
+import ImageOptimizer from "./app/components/ImageOptimizer";
+>>>>>>> cursor/analyze-improve-and-deploy-application-c36b
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -754,13 +765,19 @@ function App() {
                   </main>
                   <Footer />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-c36b
                 </FuturisticBackground>
                 <PerformanceMonitor />
+                <WebVitalsTracker />
+                <AccessibilityManager />
                 <EnhancedSEO 
                   title="Zion Tech Group - Advanced AI and IT Solutions"
                   description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
                   keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
                 />
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -807,6 +824,9 @@ function App() {
                   <WebVitalsTracker />
                 </div>
               </AnalyticsProvider>
+=======
+              </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-c36b
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
