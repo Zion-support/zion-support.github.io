@@ -10,16 +10,16 @@ const AccessibilityEnhancer: React.FC = () => {
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';
       skipLink.style.zIndex = '9999';
       document.body.insertBefore(skipLink, document.body.firstChild);
-    }
+    };
 // Focus management for keyboard navigation
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
       }
-    }
+    };
     const handleMouseDown = () => {
       document.body.classList.remove('keyboard-navigation');
-    }
+    };
     // Add focus indicators for keyboard navigation
     const addFocusStyles = () => {
       const style = document.createElement('style');
@@ -114,7 +114,7 @@ const AccessibilityEnhancer: React.FC = () => {
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
       }
-    }
+    };
     // Add alt text to images without alt attributes
     const addAltText = () => {
       const images = document.querySelectorAll('img:not([alt])');
@@ -138,13 +138,9 @@ const AccessibilityEnhancer: React.FC = () => {
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
-    }
+    };
   }, []);
 
-return null;
-import React from 'react';
-
-const AccessibilityEnhancer: React.FC = () => {
   return null;
-}
+};
 export default AccessibilityEnhancer;
