@@ -37,6 +37,80 @@ export default defineConfig({
         drop_debugger: true,
       },
     },
+<<<<<<< HEAD
+=======
+    // Fix React scheduler issues
+    commonjsOptions: {
+      include: [/node_modules/],
+      transformMixedEsModules: true,
+    },
+    // Define global variables to fix React scheduler
+    define: {
+      global: 'globalThis',
+    },
+    
+    
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Scheduler should be in its own chunk
+          if (id.includes('scheduler')) {
+            return 'scheduler'
+          }
+          // Core React libraries
+          if (id.includes('react') || id.includes('react-dom')) {
+            return 'react-vendor'
+          }
+          // Router
+          if (id.includes('react-router')) {
+            return 'router'
+          }
+          // UI libraries
+          if (id.includes('framer-motion')) {
+            return 'animations'
+          }
+          if (id.includes('lucide-react')) {
+            return 'icons'
+          }
+          // SEO and meta
+          if (id.includes('react-helmet')) {
+            return 'seo'
+          }
+          // Charts and data visualization
+          if (id.includes('recharts')) {
+            return 'charts'
+          }
+          // Utility libraries
+          if (id.includes('clsx') || id.includes('tailwind-merge')) {
+            return 'utils'
+          }
+          // Performance monitoring
+          if (id.includes('web-vitals')) {
+            return 'performance'
+          }
+          // Error handling
+          if (id.includes('react-error-boundary')) {
+            return 'error-handling'
+          }
+          // Large page components (lazy load)
+          if (id.includes('/app/') && id.includes('/page.tsx')) {
+            return 'pages'
+          }
+          // Service pages
+          if (id.includes('/ai-') || id.includes('/zion-')) {
+            return 'services'
+          }
+          // Default chunk for other modules
+          return 'vendor'
+        },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
+      },
+    },
+    // Enable tree shaking
+    treeshake: true,
+>>>>>>> origin/cursor/analyze-and-fix-application-errors-5651
   },
   server: {
     port: 3000,
@@ -54,7 +128,16 @@ export default defineConfig({
       "react-router-dom",
       "framer-motion",
       "lucide-react",
+      "scheduler",
     ],
+    exclude: ["@vite/client", "@vite/env"],
+  },
+  // Add polyfills for better compatibility
+  esbuild: {
+    target: 'es2020',
+    define: {
+      global: 'globalThis',
+    },
   },
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
