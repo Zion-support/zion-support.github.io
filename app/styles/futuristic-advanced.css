@@ -1,0 +1,401 @@
+/* Advanced Futuristic Design System */
+:root {
+  /* Enhanced Color Palette */
+  --primary-purple: #8b5cf6;
+  --primary-pink: #ec4899;
+  --primary-cyan: #06b6d4;
+  --primary-blue: #3b82f6;
+  --primary-green: #10b981;
+  --primary-orange: #f59e0b;
+  --primary-red: #ef4444;
+  --primary-yellow: #eab308;
+  --primary-indigo: #6366f1;
+  --primary-violet: #8b5cf6;
+  --primary-rose: #f43f5e;
+
+  /* Dark Theme Colors */
+  --dark-bg: #0a0a0a;
+  --darker-bg: #000000;
+  --card-bg: #1a1a1a;
+  --border-color: #333333;
+  --accent-bg: #1e1e1e;
+
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #e5e5e5;
+  --text-muted: #a3a3a3;
+  --text-accent: #06b6d4;
+
+  /* Glow Effects */
+  --glow-purple: 0 0 30px rgba(139, 92, 246, 0.4);
+  --glow-pink: 0 0 30px rgba(236, 72, 153, 0.4);
+  --glow-cyan: 0 0 30px rgba(6, 182, 212, 0.4);
+  --glow-green: 0 0 30px rgba(16, 185, 129, 0.4);
+  --glow-blue: 0 0 30px rgba(59, 130, 246, 0.4);
+  --glow-orange: 0 0 30px rgba(245, 158, 11, 0.4);
+  --glow-red: 0 0 30px rgba(239, 68, 68, 0.4);
+
+  /* Animation Variables */
+  --animation-speed: 0.3s;
+  --animation-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--dark-bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Animated Background */
+.cyber-grid {
+  background-image:
+    linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-move 20s linear infinite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+@keyframes grid-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(50px, 50px); }
+}
+
+/* Neon Glow Effects */
+.neon-glow {
+  box-shadow: var(--glow-cyan);
+  animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse {
+  from { box-shadow: 0 0 20px rgba(6, 182, 212, 0.4); }
+  to { box-shadow: 0 0 40px rgba(6, 182, 212, 0.8); }
+}
+
+.neon-glow-purple {
+  box-shadow: var(--glow-purple);
+  animation: neon-pulse-purple 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse-purple {
+  from { box-shadow: 0 0 20px rgba(139, 92, 246, 0.4); }
+  to { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); }
+}
+
+.neon-glow-pink {
+  box-shadow: var(--glow-pink);
+  animation: neon-pulse-pink 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse-pink {
+  from { box-shadow: 0 0 20px rgba(236, 72, 153, 0.4); }
+  to { box-shadow: 0 0 40px rgba(236, 72, 153, 0.8); }
+}
+
+/* Futuristic Cards */
+.futuristic-card {
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--animation-speed) var(--animation-easing);
+}
+
+.futuristic-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.8), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.futuristic-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), var(--glow-cyan);
+  border-color: rgba(6, 182, 212, 0.5);
+}
+
+/* Animated Buttons */
+.futuristic-button {
+  background: linear-gradient(135deg, var(--primary-cyan), var(--primary-purple));
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  color: white;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--animation-speed) var(--animation-easing);
+  cursor: pointer;
+}
+
+.futuristic-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.futuristic-button:hover::before {
+  left: 100%;
+}
+
+.futuristic-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
+}
+
+/* Cyber Text Effects */
+.cyber-text {
+  background: linear-gradient(45deg, var(--primary-cyan), var(--primary-purple), var(--primary-pink));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Holographic Effects */
+.holographic {
+  background: linear-gradient(45deg, 
+    rgba(6, 182, 212, 0.1), 
+    rgba(139, 92, 246, 0.1), 
+    rgba(236, 72, 153, 0.1), 
+    rgba(16, 185, 129, 0.1)
+  );
+  background-size: 400% 400%;
+  animation: holographic-shift 4s ease-in-out infinite;
+}
+
+@keyframes holographic-shift {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating Animation */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Pulse Animation */
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.6);
+    transform: scale(1.05);
+  }
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(transparent 70%, rgba(6, 182, 212, 0.1) 100%);
+  animation: matrix-fall 10s linear infinite;
+}
+
+@keyframes matrix-fall {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Cyber Grid Overlay */
+.cyber-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+  animation: overlay-shift 15s ease-in-out infinite;
+}
+
+@keyframes overlay-shift {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .futuristic-card {
+    margin: 4px;
+  }
+  
+  .futuristic-button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cyber-grid {
+    background-size: 30px 30px;
+  }
+  
+  .futuristic-card {
+    margin: 2px;
+    padding: 1rem;
+  }
+  
+  .futuristic-button {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+  
+  .neon-glow,
+  .neon-glow-purple,
+  .neon-glow-pink {
+    box-shadow: none;
+  }
+  
+  .futuristic-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 640px) {
+  .cyber-grid {
+    background-size: 20px 20px;
+  }
+  
+  .futuristic-card {
+    padding: 0.75rem;
+  }
+  
+  .futuristic-button {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .cyber-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .futuristic-card {
+    padding: 0.5rem;
+  }
+  
+  .futuristic-button {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+}
+
+/* High Performance Optimizations */
+.futuristic-card,
+.futuristic-button,
+.neon-glow {
+  will-change: transform, box-shadow;
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .cyber-grid,
+  .neon-glow,
+  .floating,
+  .pulse-glow,
+  .matrix-rain,
+  .cyber-overlay {
+    animation: none;
+  }
+  
+  .futuristic-card:hover {
+    transform: none;
+  }
+}
+
+/* Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dark-bg: #000000;
+    --darker-bg: #000000;
+    --card-bg: #111111;
+    --border-color: #222222;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .cyber-grid,
+  .matrix-rain,
+  .cyber-overlay {
+    display: none;
+  }
+  
+  .futuristic-card {
+    background: white;
+    color: black;
+    border: 1px solid #ccc;
+  }
+}

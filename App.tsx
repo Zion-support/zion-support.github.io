@@ -4,8 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
-import Navigation from "./app/components/Navigation";
-import Footer from "./app/components/Footer";
+import "./app/styles/futuristic-advanced.css";
+import NavigationAdvanced from "./app/components/NavigationAdvanced";
+import FooterAdvanced from "./app/components/FooterAdvanced";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import ErrorBoundary from "./app/components/ErrorBoundary";
@@ -38,6 +39,11 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+
+// New comprehensive service pages
+const MicroSAASServicesPage = React.lazy(() => import("./app/micro-saas-services/page"));
+const AIServicesComprehensivePage = React.lazy(() => import("./app/ai-services-comprehensive/page"));
+const ITServicesComprehensivePage = React.lazy(() => import("./app/it-services-comprehensive/page"));
 
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -208,7 +214,7 @@ function App() {
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
             <FuturisticBackground>
-              <Navigation />
+              <NavigationAdvanced />
               <Breadcrumb />
               <Suspense fallback={<LoadingPage />}>
                 <Routes>
@@ -221,8 +227,11 @@ function App() {
                   <Route path="/case-studies" element={<CaseStudiesPage />} />
                   <Route path="/careers" element={<CareersPage />} />
                   <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/ai-services-comprehensive" element={<AIServicesComprehensivePage />} />
                   <Route path="/it-services" element={<ServicesPage />} />
+                  <Route path="/it-services-comprehensive" element={<ITServicesComprehensivePage />} />
                   <Route path="/micro-saas" element={<ServicesPage />} />
+                  <Route path="/micro-saas-services" element={<MicroSAASServicesPage />} />
                   <Route path="/tutorials" element={<TutorialsPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
                   <Route path="/demo" element={<DemoPage />} />
@@ -443,7 +452,7 @@ function App() {
                   />
                 </Routes>
               </Suspense>
-              <Footer />
+              <FooterAdvanced />
               <EnhancedPerformanceOptimizer />
               <AccessibilityEnhancer />
               <EnhancedAccessibility>
