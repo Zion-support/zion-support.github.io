@@ -16,7 +16,6 @@ import {
   Smartphone, 
   Monitor,
   Phone,
-  MapPin,
   Code,
   Database,
   ChevronDown,
@@ -29,7 +28,10 @@ import {
   TrendingUp,
   Cpu,
   Network,
-  Sparkles
+  Target,
+  Calendar,
+  Clock,
+  FileText
 } from 'lucide-react';
 
 interface NavigationProps {

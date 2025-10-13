@@ -8,15 +8,12 @@ import {
   Zap, 
   BarChart3, 
   Users, 
-  Clock, 
   CheckCircle,
-  Star,
   ArrowRight,
   Brain,
   Target,
   Globe,
   Smile,
-  Frown,
   AlertCircle
 } from 'lucide-react';
 
