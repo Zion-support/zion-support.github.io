@@ -1,9 +1,11 @@
+interface AccessibilityUtilsConfig {
+  enabled: boolean;
 }
 
-export class accessibilityUtils {
-  private config: accessibilityUtilsConfig;
+export class AccessibilityUtils {
+  private config: AccessibilityUtilsConfig;
 
-  constructor(config: Partial<accessibilityUtilsConfig> = {}) {
+  constructor(config: Partial<AccessibilityUtilsConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
@@ -12,10 +14,10 @@ export class accessibilityUtils {
 
   init(): void {
     if (this.config.enabled) {
-      console.log('accessibilityUtils initialized');
+      console.log('AccessibilityUtils initialized');
     }
   }
 }
 
-export const accessibilityutils = new accessibilityUtils();
-export default accessibilityutils;
+export const accessibilityUtils = new AccessibilityUtils();
+export default accessibilityUtils;
