@@ -2,16 +2,16 @@
 
 export const Accessibilityutils = {
   init: () => {
-    console.log('Accessibilityutils initialized');
+    console.log("Accessibilityutils initialized");
   },
-  
+
   process: (data: any) => {
     return data;
   },
-  
+
   cleanup: () => {
-    console.log('Accessibilityutils cleaned up');
-  }
+    console.log("Accessibilityutils cleaned up");
+  },
 };
 
 export default Accessibilityutils;

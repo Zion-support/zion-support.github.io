@@ -1,6 +1,6 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 interface LazyImageProps {
   src: string;
@@ -10,7 +10,13 @@ interface LazyImageProps {
   height?: number;
 }
 
-export default function LazyImage({ src, alt, className = '', width, height }: LazyImageProps) {
+export default function LazyImage({
+  src,
+  alt,
+  className = "",
+  width,
+  height,
+}: LazyImageProps) {
   return (
     <>
       <Helmet>

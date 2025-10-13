@@ -78,7 +78,7 @@
 }
 
 .loading::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -92,8 +92,12 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Enhanced focus indicators */
@@ -193,7 +197,7 @@ select:focus {
 }
 
 .btn-loading::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -219,15 +223,15 @@ select:focus {
   .no-print {
     display: none !important;
   }
-  
+
   .print-only {
     display: block !important;
   }
-  
+
   a[href]:after {
     content: " (" attr(href) ")";
   }
-  
+
   .page-break {
     page-break-before: always;
   }

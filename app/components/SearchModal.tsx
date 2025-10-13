@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SearchModalProps {
   children?: React.ReactNode;
@@ -9,9 +9,9 @@ interface SearchModalProps {
 
 const SearchModal: React.FC<SearchModalProps> = ({
   children,
-  className = '',
+  className = "",
   title,
-  description
+  description,
 }) => {
   return (
     <div className={`enhanced-component ${className}`}>

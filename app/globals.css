@@ -82,7 +82,7 @@
 }
 
 .loading::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -96,8 +96,12 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Enhanced focus indicators */
@@ -197,7 +201,7 @@ select:focus {
 }
 
 .btn-loading::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -223,15 +227,15 @@ select:focus {
   .no-print {
     display: none !important;
   }
-  
+
   .print-only {
     display: block !important;
   }
-  
+
   a[href]:after {
     content: " (" attr(href) ")";
   }
-  
+
   .page-break {
     page-break-before: always;
   }
@@ -241,14 +245,14 @@ select:focus {
 @layer base {
   /* High contrast mode */
   @media (prefers-contrast: high) {
-  .high-contrast {
-    --tw-bg-opacity: 1;
-    --tw-text-opacity: 1;
-  }
-  
-  .high-contrast * {
-    border-color: currentColor !important;
-  }
+    .high-contrast {
+      --tw-bg-opacity: 1;
+      --tw-text-opacity: 1;
+    }
+
+    .high-contrast * {
+      border-color: currentColor !important;
+    }
   }
 }
 
@@ -258,21 +262,21 @@ select:focus {
   .btn-focus:focus {
     @apply ring-2 ring-blue-500 ring-offset-2;
   }
-  
+
   /* Card hover states with better contrast */
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg hover:scale-105;
   }
-  
+
   .card-hover:focus {
     @apply ring-2 ring-blue-500 ring-offset-2;
   }
-  
+
   /* Form input focus states */
   .input-focus:focus {
     @apply ring-2 ring-blue-500 border-blue-500;
   }
-  
+
   /* Link focus states */
   .link-focus:focus {
     @apply underline ring-2 ring-blue-500 ring-offset-2;
@@ -284,11 +288,11 @@ select:focus {
   .focus-visible {
     @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
   }
-  
+
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .text-pretty {
     text-wrap: pretty;
   }
@@ -298,23 +302,23 @@ select:focus {
 @layer base {
   /* Optimize font loading */
   @font-face {
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-weight: 300 800;
     font-display: swap;
-    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    src: url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
   }
-  
+
   /* Optimize image loading */
   img {
     content-visibility: auto;
   }
-  
+
   /* Optimize layout shifts */
   .aspect-ratio {
     aspect-ratio: 16 / 9;
   }
-  
+
   /* Optimize animations for performance */
   .animate-optimized {
     will-change: transform, opacity;
@@ -329,11 +333,11 @@ select:focus {
   .high-contrast .bg-white\/10 {
     background-color: rgba(255, 255, 255, 0.9);
   }
-  
+
   .high-contrast .text-gray-300 {
     color: rgb(255, 255, 255);
   }
-  
+
   .high-contrast .text-gray-400 {
     color: rgb(200, 200, 200);
   }
@@ -414,11 +418,11 @@ select:focus {
   .no-print {
     display: none !important;
   }
-  
+
   .print-only {
     display: block !important;
   }
-  
+
   * {
     background: white !important;
     color: black !important;
@@ -427,7 +431,7 @@ select:focus {
     background: white !important;
     color: black !important;
   }
-  
+
   .bg-gradient-to-br {
     background: white !important;
   }

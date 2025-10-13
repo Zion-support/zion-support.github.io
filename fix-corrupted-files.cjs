@@ -1,24 +1,24 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
 
 // List of files that need to be fixed with proper function declarations
 const corruptedFiles = [
-  'app/api/page.tsx',
-  'app/automation/page.tsx',
-  'app/blockchain/page.tsx',
-  'app/cybersecurity/page.tsx',
-  'app/database/page.tsx',
-  'app/devops/page.tsx',
-  'app/health/page.tsx',
-  'app/investors/page.tsx',
-  'app/iot/page.tsx',
-  'app/news/page.tsx',
-  'app/nlp/page.tsx',
-  'app/offline/page.tsx',
-  'app/productivity/page.tsx',
-  'app/search/page.tsx',
-  'app/security/page.tsx',
-  'app/sla/page.tsx'
+  "app/api/page.tsx",
+  "app/automation/page.tsx",
+  "app/blockchain/page.tsx",
+  "app/cybersecurity/page.tsx",
+  "app/database/page.tsx",
+  "app/devops/page.tsx",
+  "app/health/page.tsx",
+  "app/investors/page.tsx",
+  "app/iot/page.tsx",
+  "app/news/page.tsx",
+  "app/nlp/page.tsx",
+  "app/offline/page.tsx",
+  "app/productivity/page.tsx",
+  "app/search/page.tsx",
+  "app/security/page.tsx",
+  "app/sla/page.tsx",
 ];
 
 function createStandardPage(filePath, pageName, title, description) {
@@ -54,13 +54,15 @@ export default function ${pageName}() {
 
 function fixCorruptedFile(filePath) {
   try {
-    const fileName = path.basename(filePath, '.tsx');
-    const pageName = fileName.charAt(0).toUpperCase() + fileName.slice(1) + 'Page';
-    const title = fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, ' ');
+    const fileName = path.basename(filePath, ".tsx");
+    const pageName =
+      fileName.charAt(0).toUpperCase() + fileName.slice(1) + "Page";
+    const title =
+      fileName.charAt(0).toUpperCase() + fileName.slice(1).replace(/-/g, " ");
     const description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`;
-    
+
     const content = createStandardPage(filePath, pageName, title, description);
-    
+
     fs.writeFileSync(filePath, content);
     console.log(`Fixed corrupted file: ${filePath}`);
   } catch (error) {
@@ -69,8 +71,8 @@ function fixCorruptedFile(filePath) {
 }
 
 // Fix all corrupted files
-corruptedFiles.forEach(filePath => {
-  const fullPath = path.join('./', filePath);
+corruptedFiles.forEach((filePath) => {
+  const fullPath = path.join("./", filePath);
   if (fs.existsSync(fullPath)) {
     fixCorruptedFile(fullPath);
   } else {
@@ -78,4 +80,4 @@ corruptedFiles.forEach(filePath => {
   }
 });
 
-console.log('Corrupted files fix completed!');
+console.log("Corrupted files fix completed!");

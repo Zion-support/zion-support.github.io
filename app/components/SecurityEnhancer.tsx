@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SecurityEnhancerProps {
   children?: React.ReactNode;
@@ -9,9 +9,9 @@ interface SecurityEnhancerProps {
 
 const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   children,
-  className = '',
+  className = "",
   title,
-  description
+  description,
 }) => {
   return (
     <div className={`enhanced-component ${className}`}>

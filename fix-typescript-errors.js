@@ -1,34 +1,81 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+import fs from "fs";
+import path from "path";
+import { glob } from "glob";
 
 // Common Lucide React icons used across pages
 const commonIcons = [
-  'ArrowRight', 'Brain', 'Shield', 'Zap', 'Globe', 'CheckCircle', 'Star', 
-  'Phone', 'Mail', 'Clock', 'Target', 'BarChart3', 'TrendingUp', 'Settings',
-  'Users', 'DollarSign', 'BarChart', 'Cloud', 'Cpu', 'Database', 'Server',
-  'Layers', 'PieChart', 'Activity', 'Award', 'BookOpen', 'Briefcase',
-  'Building', 'Calendar', 'Camera', 'Code', 'Command', 'CreditCard',
-  'FileText', 'Gift', 'Heart', 'Home', 'Image', 'Laptop', 'Lock',
-  'MessageCircle', 'Monitor', 'Palette', 'PieChart', 'Play', 'Search',
-  'ShoppingCart', 'Smartphone', 'Tablet', 'Terminal', 'Truck', 'Wifi'
+  "ArrowRight",
+  "Brain",
+  "Shield",
+  "Zap",
+  "Globe",
+  "CheckCircle",
+  "Star",
+  "Phone",
+  "Mail",
+  "Clock",
+  "Target",
+  "BarChart3",
+  "TrendingUp",
+  "Settings",
+  "Users",
+  "DollarSign",
+  "BarChart",
+  "Cloud",
+  "Cpu",
+  "Database",
+  "Server",
+  "Layers",
+  "PieChart",
+  "Activity",
+  "Award",
+  "BookOpen",
+  "Briefcase",
+  "Building",
+  "Calendar",
+  "Camera",
+  "Code",
+  "Command",
+  "CreditCard",
+  "FileText",
+  "Gift",
+  "Heart",
+  "Home",
+  "Image",
+  "Laptop",
+  "Lock",
+  "MessageCircle",
+  "Monitor",
+  "Palette",
+  "PieChart",
+  "Play",
+  "Search",
+  "ShoppingCart",
+  "Smartphone",
+  "Tablet",
+  "Terminal",
+  "Truck",
+  "Wifi",
 ];
 
 function fixPageFile(filePath) {
-  let content = fs.readFileSync(filePath, 'utf8');
+  let content = fs.readFileSync(filePath, "utf8");
   let modified = false;
 
   // Remove unused React import if it's not used
-  if (content.includes("import React from 'react';") && !content.includes('React.')) {
-    content = content.replace("import React from 'react';\n", '');
+  if (
+    content.includes("import React from 'react';") &&
+    !content.includes("React.")
+  ) {
+    content = content.replace("import React from 'react';\n", "");
     modified = true;
   }
 
   // Add missing Lucide React imports
   const usedIcons = [];
-  commonIcons.forEach(icon => {
+  commonIcons.forEach((icon) => {
     if (content.includes(icon) && !content.includes(`import { ${icon}`)) {
       usedIcons.push(icon);
     }
@@ -36,25 +83,32 @@ function fixPageFile(filePath) {
 
   if (usedIcons.length > 0) {
     // Check if lucide-react is already imported
-    const lucideImportMatch = content.match(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/);
-    
+    const lucideImportMatch = content.match(
+      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/,
+    );
+
     if (lucideImportMatch) {
       // Add to existing import
-      const existingIcons = lucideImportMatch[1].split(',').map(i => i.trim());
+      const existingIcons = lucideImportMatch[1]
+        .split(",")
+        .map((i) => i.trim());
       const allIcons = [...new Set([...existingIcons, ...usedIcons])];
       content = content.replace(
         lucideImportMatch[0],
-        `import { ${allIcons.join(', ')} } from 'lucide-react';`
+        `import { ${allIcons.join(", ")} } from 'lucide-react';`,
       );
     } else {
       // Add new import
-      content = `import { ${usedIcons.join(', ')} } from 'lucide-react';\n${content}`;
+      content = `import { ${usedIcons.join(", ")} } from 'lucide-react';\n${content}`;
     }
     modified = true;
   }
 
   // Fix missing variable declarations
-  if (content.includes('chatbotFeatures') && !content.includes('const chatbotFeatures')) {
+  if (
+    content.includes("chatbotFeatures") &&
+    !content.includes("const chatbotFeatures")
+  ) {
     content = content.replace(
       /const EnhancedServicesShowcase/,
       `const chatbotFeatures = [
@@ -74,7 +128,7 @@ function fixPageFile(filePath) {
     { name: 'Mike Chen', company: 'StartupXYZ', text: 'Increased customer satisfaction by 40%.' }
   ];
 
-const EnhancedServicesShowcase`
+const EnhancedServicesShowcase`,
     );
     modified = true;
   }
@@ -88,13 +142,13 @@ const EnhancedServicesShowcase`
 // Main execution
 async function main() {
   // Find all page.tsx files in the app directory
-  const pageFiles = await glob('app/**/page.tsx');
+  const pageFiles = await glob("app/**/page.tsx");
 
   console.log(`Found ${pageFiles.length} page files to fix...`);
 
   pageFiles.forEach(fixPageFile);
 
-  console.log('TypeScript errors fix completed!');
+  console.log("TypeScript errors fix completed!");
 }
 
 main().catch(console.error);

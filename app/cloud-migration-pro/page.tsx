@@ -1,95 +1,109 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Cloud, Shield, Zap, CheckCircle, ArrowRight, Star } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import {
+  Cloud,
+  Shield,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Star,
+} from "lucide-react";
 
 const CloudMigrationProPage = () => {
   const features = [
     {
       icon: Cloud,
-      title: 'Seamless Migration',
-      description: 'Zero-downtime migration to cloud infrastructure with minimal disruption'
+      title: "Seamless Migration",
+      description:
+        "Zero-downtime migration to cloud infrastructure with minimal disruption",
     },
     {
       icon: Zap,
-      title: 'Performance Optimization',
-      description: 'Optimize your cloud resources for maximum performance and cost efficiency'
+      title: "Performance Optimization",
+      description:
+        "Optimize your cloud resources for maximum performance and cost efficiency",
     },
     {
       icon: Shield,
-      title: 'Security First',
-      description: 'Enterprise-grade security throughout the migration process'
-    }
+      title: "Security First",
+      description: "Enterprise-grade security throughout the migration process",
+    },
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$2,999',
-      period: '/project',
-      description: 'Perfect for small to medium businesses',
+      name: "Starter",
+      price: "$2,999",
+      period: "/project",
+      description: "Perfect for small to medium businesses",
       features: [
-        'Up to 10 servers',
-        'Basic migration planning',
-        'Email support',
-        'Standard documentation'
+        "Up to 10 servers",
+        "Basic migration planning",
+        "Email support",
+        "Standard documentation",
       ],
-      popular: false
+      popular: false,
     },
     {
-      name: 'Professional',
-      price: '$7,999',
-      period: '/project',
-      description: 'Ideal for growing enterprises',
+      name: "Professional",
+      price: "$7,999",
+      period: "/project",
+      description: "Ideal for growing enterprises",
       features: [
-        'Up to 50 servers',
-        'Advanced migration planning',
-        'Priority support',
-        'Custom integrations',
-        'Performance optimization',
-        'Security assessment'
+        "Up to 50 servers",
+        "Advanced migration planning",
+        "Priority support",
+        "Custom integrations",
+        "Performance optimization",
+        "Security assessment",
       ],
-      popular: true
+      popular: true,
     },
     {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: '',
-      description: 'Tailored for large organizations',
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "Tailored for large organizations",
       features: [
-        'Unlimited servers',
-        'Custom migration strategy',
-        'Dedicated support team',
-        'White-label options',
-        'API access',
-        'Custom reporting',
-        '24/7 monitoring'
+        "Unlimited servers",
+        "Custom migration strategy",
+        "Dedicated support team",
+        "White-label options",
+        "API access",
+        "Custom reporting",
+        "24/7 monitoring",
       ],
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      company: 'TechCorp Inc.',
-      content: 'The cloud migration was seamless. Our performance improved by 40% and costs reduced by 30%.',
-      rating: 5
+      name: "Sarah Johnson",
+      role: "CTO",
+      company: "TechCorp Inc.",
+      content:
+        "The cloud migration was seamless. Our performance improved by 40% and costs reduced by 30%.",
+      rating: 5,
     },
     {
-      name: 'Michael Chen',
-      role: 'IT Director',
-      company: 'Global Solutions Ltd.',
-      content: 'Outstanding expertise and support throughout the entire migration process.',
-      rating: 5
-    }
+      name: "Michael Chen",
+      role: "IT Director",
+      company: "Global Solutions Ltd.",
+      content:
+        "Outstanding expertise and support throughout the entire migration process.",
+      rating: 5,
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Migration Pro | Zion Tech Group</title>
-        <meta name="description" content="Professional cloud migration services with zero downtime, security-first approach, and performance optimization." />
+        <meta
+          name="description"
+          content="Professional cloud migration services with zero downtime, security-first approach, and performance optimization."
+        />
       </Helmet>
 
       {/* Hero Section */}
@@ -103,8 +117,9 @@ const CloudMigrationProPage = () => {
             <span className="text-white">Pro</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Seamlessly migrate your infrastructure to the cloud with our expert team. 
-            Zero downtime, maximum security, and optimized performance guaranteed.
+            Seamlessly migrate your infrastructure to the cloud with our expert
+            team. Zero downtime, maximum security, and optimized performance
+            guaranteed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -132,17 +147,25 @@ const CloudMigrationProPage = () => {
               Why Choose Our Cloud Migration Pro?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our cloud migration experts deliver seamless, secure, and optimized solutions.
+              Our cloud migration experts deliver seamless, secure, and
+              optimized solutions.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+              >
                 <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center">{feature.title}</h3>
-                <p className="text-gray-300 text-center">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 text-center">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -162,7 +185,10 @@ const CloudMigrationProPage = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 relative ${plan.popular ? 'border-cyan-400' : ''}`}>
+              <div
+                key={index}
+                className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 relative ${plan.popular ? "border-cyan-400" : ""}`}
+              >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-400 text-black px-4 py-1 rounded-full text-sm font-semibold">
@@ -170,14 +196,20 @@ const CloudMigrationProPage = () => {
                     </span>
                   </div>
                 )}
-                <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {plan.name}
+                </h3>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">
-                  {plan.price}<span className="text-lg text-gray-400">{plan.period}</span>
+                  {plan.price}
+                  <span className="text-lg text-gray-400">{plan.period}</span>
                 </div>
                 <p className="text-gray-300 mb-6">{plan.description}</p>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                    <li
+                      key={featureIndex}
+                      className="flex items-center text-sm text-gray-300"
+                    >
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
                     </li>
@@ -186,9 +218,9 @@ const CloudMigrationProPage = () => {
                 <Link
                   to="/contact"
                   className={`w-full block text-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular 
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700' 
-                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                    plan.popular
+                      ? "bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700"
+                      : "border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900"
                   }`}
                 >
                   Get Started
@@ -207,21 +239,32 @@ const CloudMigrationProPage = () => {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join hundreds of companies that have successfully migrated to the cloud.
+              Join hundreds of companies that have successfully migrated to the
+              cloud.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
+              >
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star
+                      key={i}
+                      className="w-5 h-5 text-yellow-400 fill-current"
+                    />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
-                <div className="font-semibold text-white">{testimonial.name}</div>
+                <div className="font-semibold text-white">
+                  {testimonial.name}
+                </div>
                 <div className="text-sm text-gray-400">{testimonial.role}</div>
-                <div className="text-sm text-gray-500">{testimonial.company}</div>
+                <div className="text-sm text-gray-500">
+                  {testimonial.company}
+                </div>
               </div>
             ))}
           </div>
@@ -235,7 +278,8 @@ const CloudMigrationProPage = () => {
             Ready to Migrate to the Cloud?
           </h2>
           <p className="text-gray-300 text-lg mb-8">
-            Let our experts handle your cloud migration with zero downtime and maximum security
+            Let our experts handle your cloud migration with zero downtime and
+            maximum security
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

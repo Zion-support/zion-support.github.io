@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 interface OptimizedImageProps {
   src: string;
@@ -9,7 +9,13 @@ interface OptimizedImageProps {
   height?: number;
 }
 
-export default function OptimizedImage({ src, alt, className = '', width, height }: OptimizedImageProps) {
+export default function OptimizedImage({
+  src,
+  alt,
+  className = "",
+  width,
+  height,
+}: OptimizedImageProps) {
   return (
     <>
       <div className="optimized-image-container">

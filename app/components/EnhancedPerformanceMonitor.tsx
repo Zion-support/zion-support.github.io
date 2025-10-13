@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Activity, Zap, Clock, TrendingUp } from "lucide-react";
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -17,9 +17,9 @@ interface EnhancedPerformanceMonitorProps {
 }
 
 const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
-  className = '',
+  className = "",
   showDetails = true,
-  refreshInterval = 1000
+  refreshInterval = 1000,
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -27,7 +27,7 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
     memoryUsage: 0,
     cpuUsage: 0,
     networkLatency: 0,
-    errorRate: 0
+    errorRate: 0,
   });
 
   const [isMonitoring, setIsMonitoring] = useState(false);
@@ -43,7 +43,7 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
         memoryUsage: Math.random() * 100,
         cpuUsage: Math.random() * 100,
         networkLatency: Math.random() * 200 + 50,
-        errorRate: Math.random() * 5
+        errorRate: Math.random() * 5,
       });
     };
 
@@ -53,41 +53,61 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
     return () => clearInterval(interval);
   }, [isMonitoring, refreshInterval]);
 
-  const getPerformanceStatus = (value: number, thresholds: { good: number; warning: number }) => {
-    if (value <= thresholds.good) return 'good';
-    if (value <= thresholds.warning) return 'warning';
-    return 'poor';
+  const getPerformanceStatus = (
+    value: number,
+    thresholds: { good: number; warning: number },
+  ) => {
+    if (value <= thresholds.good) return "good";
+    if (value <= thresholds.warning) return "warning";
+    return "poor";
   };
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'good': return 'text-green-400';
-      case 'warning': return 'text-yellow-400';
-      case 'poor': return 'text-red-400';
-      default: return 'text-gray-400';
+      case "good":
+        return "text-green-400";
+      case "warning":
+        return "text-yellow-400";
+      case "poor":
+        return "text-red-400";
+      default:
+        return "text-gray-400";
     }
   };
 
-  const loadTimeStatus = getPerformanceStatus(metrics.loadTime, { good: 200, warning: 500 });
-  const memoryStatus = getPerformanceStatus(metrics.memoryUsage, { good: 50, warning: 80 });
-  const cpuStatus = getPerformanceStatus(metrics.cpuUsage, { good: 30, warning: 70 });
+  const loadTimeStatus = getPerformanceStatus(metrics.loadTime, {
+    good: 200,
+    warning: 500,
+  });
+  const memoryStatus = getPerformanceStatus(metrics.memoryUsage, {
+    good: 50,
+    warning: 80,
+  });
+  const cpuStatus = getPerformanceStatus(metrics.cpuUsage, {
+    good: 30,
+    warning: 70,
+  });
 
   return (
-    <div className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}>
+    <div
+      className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
+    >
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-2">
           <Activity className="w-6 h-6 text-cyan-400" />
-          <h3 className="text-xl font-semibold text-white">Performance Monitor</h3>
+          <h3 className="text-xl font-semibold text-white">
+            Performance Monitor
+          </h3>
         </div>
         <button
           onClick={() => setIsMonitoring(!isMonitoring)}
           className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
             isMonitoring
-              ? 'bg-red-500 hover:bg-red-600 text-white'
-              : 'bg-green-500 hover:bg-green-600 text-white'
+              ? "bg-red-500 hover:bg-red-600 text-white"
+              : "bg-green-500 hover:bg-green-600 text-white"
           }`}
         >
-          {isMonitoring ? 'Stop' : 'Start'} Monitoring
+          {isMonitoring ? "Stop" : "Start"} Monitoring
         </button>
       </div>
 
@@ -97,7 +117,9 @@ const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
             <Clock className="w-5 h-5 text-blue-400 mr-2" />
             <span className="text-sm text-gray-300">Load Time</span>
           </div>
-          <div className={`text-2xl font-bold ${getStatusColor(loadTimeStatus)}`}>
+          <div
+            className={`text-2xl font-bold ${getStatusColor(loadTimeStatus)}`}
+          >
             {metrics.loadTime.toFixed(0)}ms
           </div>
         </div>
