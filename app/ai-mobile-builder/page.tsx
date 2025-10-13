@@ -22,22 +22,7 @@ export default function AiMobileBuilder() {
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
               <p className="text-gray-600">
-<<<<<<< HEAD
-                Description of the first feature.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-              <p className="text-gray-600">
-                Description of the second feature.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-              <p className="text-gray-600">
-                Description of the third feature.
-=======
-                Create mobile apps quickly with our AI-assisted development tools.
+Create mobile apps quickly with our AI-assisted development tools.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
@@ -50,7 +35,7 @@ export default function AiMobileBuilder() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Performance Optimization</h3>
               <p className="text-gray-600">
                 Automatic performance optimization and code quality improvements.
->>>>>>> cursor/fix-errors-and-merge-to-main-062f
+
               </p>
             </div>
           </div>

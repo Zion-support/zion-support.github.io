@@ -22,22 +22,7 @@ export default function LandingPageBuilder() {
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
               <p className="text-gray-600">
-<<<<<<< HEAD
-                Description of the first feature.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-              <p className="text-gray-600">
-                Description of the second feature.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-              <p className="text-gray-600">
-                Description of the third feature.
-=======
-                Easy-to-use drag and drop interface for creating landing pages.
+Easy-to-use drag and drop interface for creating landing pages.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
@@ -50,7 +35,7 @@ export default function LandingPageBuilder() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Analytics Integration</h3>
               <p className="text-gray-600">
                 Comprehensive analytics and performance tracking.
->>>>>>> cursor/fix-errors-and-merge-to-main-062f
+
               </p>
             </div>
           </div>

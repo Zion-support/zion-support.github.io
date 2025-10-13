@@ -86,16 +86,10 @@ export class PerformanceUtils {
       fps: 0
     };
   }
-<<<<<<< HEAD
-}
-
-export default PerformanceUtils;
-=======
-
-  init(): void {
+init(): void {
     if (this.config.enabled) {
       console.log('Performance utils initialized');
     }
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-062f
+

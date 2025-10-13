@@ -20,24 +20,7 @@ export default function ZionAiSurveyBuilder() {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-md p-6">
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
-              <p className="text-gray-600">
-                Description of the first feature.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
-              <p className="text-gray-600">
-                Description of the second feature.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
-              <p className="text-gray-600">
-                Description of the third feature.
-=======
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Question Generation</h3>
+<h3 className="text-xl font-semibold text-gray-900 mb-4">AI Question Generation</h3>
               <p className="text-gray-600">
                 Generate intelligent survey questions based on your objectives and target audience.
               </p>
@@ -52,7 +35,7 @@ export default function ZionAiSurveyBuilder() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Customizable Templates</h3>
               <p className="text-gray-600">
                 Choose from a variety of survey templates or create your own custom surveys.
->>>>>>> cursor/fix-errors-and-merge-to-main-062f
+
               </p>
             </div>
           </div>
