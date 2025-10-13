@@ -7,6 +7,8 @@ import {
   Shield, 
   Zap, 
   Globe, 
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -34,38 +36,45 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     {
       name: 'Home',
       path: '/',
-      icon: <Globe className="w-4 h-4" />
+      icon: <Globe className="w-4 h-4" />,
+      ariaLabel: 'Go to home page'
     },
     {
       name: 'About',
       path: '/about',
-      icon: <Brain className="w-4 h-4" />
+      icon: <Brain className="w-4 h-4" />,
+      ariaLabel: 'Learn about Zion Tech Group'
     },
     {
       name: 'Services',
       path: '/services',
       icon: <Shield className="w-4 h-4" />,
-      hasDropdown: true
+      hasDropdown: true,
+      ariaLabel: 'View our services'
     },
     {
       name: 'AI Services',
       path: '/ai-services',
-      icon: <Brain className="w-4 h-4" />
+      icon: <Brain className="w-4 h-4" />,
+      ariaLabel: 'Explore AI solutions'
     },
     {
       name: 'Micro SAAS',
       path: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />
+      icon: <Zap className="w-4 h-4" />,
+      ariaLabel: 'Browse micro SAAS solutions'
     },
     {
       name: '5G Solutions',
       path: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />
+      icon: <Globe className="w-4 h-4" />,
+      ariaLabel: 'Discover 5G solutions'
     },
     {
       name: 'Contact',
       path: '/contact',
-      icon: <Globe className="w-4 h-4" />
+      icon: <Globe className="w-4 h-4" />,
+      ariaLabel: 'Get in touch with us'
     }
   ];
 
@@ -87,16 +96,20 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
               <div key={item.name} className="relative">
                 <Link
                   to={item.path}
-                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 ${
                     isActive(item.path)
                       ? 'text-cyan-400 bg-cyan-500/10'
                       : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
                   }`}
+                  aria-label={item.ariaLabel}
+                  role="menuitem"
                 >
-                  {item.icon}
+                  <span aria-hidden="true">{item.icon}</span>
                   <span>{item.name}</span>
                   {item.hasDropdown && (
-                    <ChevronDown className="w-4 h-4" />
+                    <span aria-hidden="true">
+                      <ChevronDown className="w-4 h-4" />
+                    </span>
                   )}
                 </Link>
               </div>
@@ -107,30 +120,36 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-gray-300 hover:text-cyan-400 focus:outline-none focus:text-cyan-400"
-              aria-label="Toggle menu"
+              className="text-gray-300 hover:text-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-md p-2"
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <span aria-hidden="true">
+                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </span>
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden">
+          <div className="md:hidden" id="mobile-menu" role="menu">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2">
               {navigationItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-800 ${
                     isActive(item.path)
                       ? 'text-cyan-400 bg-cyan-500/10'
                       : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
                   }`}
                   onClick={() => setIsOpen(false)}
+                  aria-label={item.ariaLabel}
+                  role="menuitem"
                 >
-                  {item.icon}
+                  <span aria-hidden="true">{item.icon}</span>
                   <span>{item.name}</span>
                 </Link>
               ))}

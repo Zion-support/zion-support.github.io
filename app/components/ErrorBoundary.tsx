@@ -26,6 +26,17 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
+    
+    // Send error to analytics/monitoring service
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: false,
+        custom_map: {
+          component_stack: errorInfo.componentStack
+        }
+      });
+    }
   }
 
   handleRetry = () => {
@@ -47,7 +58,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
 
             {/* Error Message */}
-            <h1 className="text-2xl font-bold text-white mb-4">
+            <h1 className="text-2xl font-bold text-white mb-4" role="alert">
               Oops! Something went wrong
             </h1>
             <p className="text-gray-300 mb-6">
