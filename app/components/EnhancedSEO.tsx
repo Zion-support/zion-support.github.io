@@ -58,6 +58,23 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#06b6d4" />
       <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="bingbot" content="index, follow" />
+      
+      {/* Performance Hints */}
+      <meta httpEquiv="x-dns-prefetch-control" content="on" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      
+      {/* Favicon and Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/manifest.json" />
       
       {/* Structured Data */}
       {structuredData && (
@@ -65,6 +82,16 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
           {JSON.stringify(structuredData)}
         </script>
       )}
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="msapplication-TileColor" content="#06b6d4" />
+      <meta name="msapplication-config" content="/browserconfig.xml" />
     </Helmet>
   );
 };

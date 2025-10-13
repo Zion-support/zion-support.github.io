@@ -16,6 +16,31 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
           mainContent.scrollIntoView({ behavior: 'smooth' });
         }
       }
+
+      // Escape key to close modals/dropdowns
+      if (event.key === 'Escape') {
+        const activeElement = document.activeElement as HTMLElement;
+        if (activeElement && activeElement.blur) {
+          activeElement.blur();
+        }
+      }
+
+      // Arrow key navigation for custom components
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        const focusableElements = document.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element);
+        
+        if (currentIndex !== -1) {
+          const nextIndex = event.key === 'ArrowDown' 
+            ? Math.min(currentIndex + 1, focusableElements.length - 1)
+            : Math.max(currentIndex - 1, 0);
+          
+          (focusableElements[nextIndex] as HTMLElement)?.focus();
+          event.preventDefault();
+        }
+      }
     };
 
     // Add focus management
@@ -25,6 +50,27 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
         target.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     };
+
+    // Add ARIA live region for screen readers
+    const addLiveRegion = () => {
+      const liveRegion = document.createElement('div');
+      liveRegion.setAttribute('aria-live', 'polite');
+      liveRegion.setAttribute('aria-atomic', 'true');
+      liveRegion.className = 'sr-only';
+      liveRegion.id = 'live-region';
+      document.body.appendChild(liveRegion);
+    };
+
+    // Announce page changes to screen readers
+    const announcePageChange = () => {
+      const liveRegion = document.getElementById('live-region');
+      if (liveRegion) {
+        liveRegion.textContent = `Page loaded: ${document.title}`;
+      }
+    };
+
+    addLiveRegion();
+    announcePageChange();
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('focusin', handleFocusIn);

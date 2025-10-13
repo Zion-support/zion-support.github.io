@@ -35,8 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 200, // Increased threshold for better chunking
-    assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 100, // Reduced for better performance monitoring
+    assetsInlineLimit: 2048, // Reduced for better caching
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -83,22 +83,19 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries - keep separate for better caching
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
-          // Router
+          // Router - separate chunk
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
-          if (id.includes('framer-motion')) {
-            return 'animations'
+          // UI libraries - group together
+          if (id.includes('framer-motion') || id.includes('lucide-react')) {
+            return 'ui-libs'
           }
-          if (id.includes('lucide-react')) {
-            return 'icons'
-          }
-          // SEO and meta
+          // SEO and meta - lightweight
           if (id.includes('react-helmet')) {
             return 'seo'
           }
@@ -106,15 +103,11 @@ export default defineConfig({
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Utility libraries
-          if (id.includes('clsx') || id.includes('tailwind-merge')) {
+          // Utility libraries - group together
+          if (id.includes('clsx') || id.includes('tailwind-merge') || id.includes('web-vitals')) {
             return 'utils'
           }
-          // Performance monitoring
-          if (id.includes('web-vitals')) {
-            return 'performance'
-          }
-          // Error handling
+          // Error handling - lightweight
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }

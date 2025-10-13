@@ -62,7 +62,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
     onError?.();
   };
 
-  const optimizedSrc = `${src}?w=800&q=${quality}&f=webp`;
+  // Only add optimization parameters if it's not already optimized
+  const optimizedSrc = src.includes('?') ? src : `${src}?w=800&q=${quality}&f=webp`;
 
   return (
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
