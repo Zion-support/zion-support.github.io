@@ -29,7 +29,14 @@ import {
   TrendingUp,
   Cpu,
   Network,
-  Sparkles
+  FileText,
+  Target,
+  Calendar,
+  Clock,
+  Heart,
+  Leaf,
+  Bot,
+  BookOpen
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -98,7 +105,12 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             { name: 'AI Marketing Automation', path: '/ai-marketing-automation', icon: <TrendingUp className="w-4 h-4" /> },
             { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics', icon: <BarChart3 className="w-4 h-4" /> },
             { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Smartphone className="w-4 h-4" /> },
-            { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: <Zap className="w-4 h-4" /> }
+            { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: <Zap className="w-4 h-4" /> },
+            { name: 'AI Quantum Computing', path: '/ai-quantum-computing', icon: <Cpu className="w-4 h-4" /> },
+            { name: 'AI Space Technology', path: '/ai-space-technology', icon: <Globe className="w-4 h-4" /> },
+            { name: 'AI Blockchain Solutions', path: '/ai-blockchain-solutions', icon: <Shield className="w-4 h-4" /> },
+            { name: 'AI Climate Solutions', path: '/ai-climate-solutions', icon: <Leaf className="w-4 h-4" /> },
+            { name: 'AI Autonomous Systems', path: '/ai-autonomous-systems', icon: <Bot className="w-4 h-4" /> }
           ]
         },
         {
@@ -156,7 +168,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             { name: 'Zion Cloud Vault Pro', path: '/zion-cloud-vault-pro', icon: <Cloud className="w-4 h-4" /> },
             { name: 'Zion AI CRM Pro', path: '/zion-ai-crm-pro', icon: <Users className="w-4 h-4" /> },
             { name: 'Zion AI Marketing Pro', path: '/zion-ai-marketing-automation-pro', icon: <Target className="w-4 h-4" /> },
-            { name: 'Zion AI Project Manager Pro', path: '/zion-ai-project-manager-pro', icon: <Calendar className="w-4 h-4" /> }
+            { name: 'Zion AI Project Manager Pro', path: '/zion-ai-project-manager-pro', icon: <Calendar className="w-4 h-4" /> },
+            { name: 'Zion AI Healthcare Pro', path: '/zion-ai-healthcare-pro', icon: <Heart className="w-4 h-4" /> },
+            { name: 'Zion AI Education Pro', path: '/zion-ai-education-pro', icon: <BookOpen className="w-4 h-4" /> }
           ]
         },
         {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Heart, Cpu, Calendar, Target, BookOpen, Leaf } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -135,6 +135,38 @@ const HomePage = () => {
       price: "From $99/month",
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Healthcare Pro",
+      description: "Revolutionary AI-powered healthcare solutions with medical diagnosis and predictive analytics",
+      price: "From $299/month",
+      icon: <Heart className="w-6 h-6" />,
+      link: "/zion-ai-healthcare-pro",
+      featured: true
+    },
+    {
+      name: "AI Quantum Computing",
+      description: "Next-generation quantum computing solutions with AI-powered optimization and machine learning",
+      price: "From $2,999/month",
+      icon: <Cpu className="w-6 h-6" />,
+      link: "/ai-quantum-computing",
+      featured: true
+    },
+    {
+      name: "Zion AI Education Pro",
+      description: "Revolutionary AI-powered education platform with personalized learning and intelligent tutoring",
+      price: "From $199/month",
+      icon: <BookOpen className="w-6 h-6" />,
+      link: "/zion-ai-education-pro",
+      featured: true
+    },
+    {
+      name: "AI Climate Solutions",
+      description: "AI-powered climate solutions for weather forecasting, carbon tracking, and environmental monitoring",
+      price: "From $999/month",
+      icon: <Leaf className="w-6 h-6" />,
+      link: "/ai-climate-solutions",
       featured: true
     }
   ];

@@ -1,132 +1,132 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Shield, BarChart3, Cpu, Database, Globe, ArrowRight, CheckCircle, Star, Users, Award } from 'lucide-react';
+import { Leaf, Globe, BarChart3, Zap, Shield, Brain, ArrowRight, CheckCircle, Star, Users, Award, Cloud, Droplets } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const AIQuantumComputingPage = () => {
+const AIClimateSolutionsPage = () => {
   const features = [
     {
-      title: "Quantum Machine Learning",
-      description: "Leverage quantum algorithms for exponentially faster machine learning computations and pattern recognition",
-      icon: <Brain className="w-8 h-8" />,
-      benefits: ["1000x faster training", "Exponential speedup", "Quantum advantage"]
+      title: "Climate Prediction AI",
+      description: "Advanced AI models for accurate weather forecasting, climate change prediction, and extreme weather event detection",
+      icon: <Cloud className="w-8 h-8" />,
+      benefits: ["95% accuracy", "Long-term forecasting", "Early warning systems"]
     },
     {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms",
-      icon: <Shield className="w-8 h-8" />,
-      benefits: ["Unbreakable security", "Future-proof encryption", "Quantum key distribution"]
+      title: "Carbon Footprint Analytics",
+      description: "AI-powered carbon tracking and reduction strategies for businesses and individuals",
+      icon: <Leaf className="w-8 h-8" />,
+      benefits: ["Real-time tracking", "Reduction strategies", "Sustainability reporting"]
     },
     {
-      title: "Quantum Optimization",
-      description: "Solve complex optimization problems with quantum annealing and variational algorithms",
+      title: "Renewable Energy Optimization",
+      description: "Intelligent optimization of renewable energy systems for maximum efficiency and grid stability",
       icon: <Zap className="w-8 h-8" />,
-      benefits: ["Complex problem solving", "Quantum annealing", "Optimization algorithms"]
+      benefits: ["Energy optimization", "Grid stability", "Cost reduction"]
     },
     {
-      title: "Quantum Simulation",
-      description: "Simulate quantum systems and materials for drug discovery, chemistry, and physics research",
-      icon: <Cpu className="w-8 h-8" />,
-      benefits: ["Material discovery", "Drug development", "Scientific research"]
+      title: "Environmental Monitoring",
+      description: "AI-powered monitoring of air quality, water resources, and ecosystem health",
+      icon: <Droplets className="w-8 h-8" />,
+      benefits: ["Real-time monitoring", "Environmental alerts", "Data insights"]
     }
   ];
 
   const pricing = [
     {
-      name: "Quantum Starter",
-      price: "$2,999",
+      name: "Climate Starter",
+      price: "$999",
       period: "per month",
-      description: "Basic quantum computing access for small projects",
+      description: "Basic climate AI tools for small organizations",
       features: [
-        "5 hours quantum compute time",
-        "Basic quantum algorithms",
-        "Standard support",
-        "Documentation access"
+        "Weather forecasting",
+        "Basic carbon tracking",
+        "Email alerts",
+        "Standard support"
       ],
       popular: false
     },
     {
-      name: "Quantum Professional",
-      price: "$9,999",
+      name: "Climate Professional",
+      price: "$4,999",
       period: "per month",
-      description: "Advanced quantum computing for enterprise applications",
+      description: "Advanced climate AI for medium organizations",
       features: [
-        "50 hours quantum compute time",
-        "Advanced quantum algorithms",
+        "Advanced forecasting",
+        "Carbon analytics suite",
+        "Energy optimization",
         "Priority support",
-        "Custom algorithm development",
         "API access"
       ],
       popular: true
     },
     {
-      name: "Quantum Enterprise",
+      name: "Climate Enterprise",
       price: "Custom",
       period: "pricing",
-      description: "Full quantum computing infrastructure for large organizations",
+      description: "Complete climate AI solution for large organizations",
       features: [
-        "Unlimited quantum compute time",
-        "Custom quantum hardware",
+        "Full climate suite",
+        "Custom models",
         "Dedicated support team",
-        "White-label solutions",
+        "White-label options",
         "On-premise deployment"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
+  const applications = [
     {
-      title: "Financial Services",
-      description: "Portfolio optimization, risk analysis, and fraud detection using quantum algorithms",
-      icon: <BarChart3 className="w-6 h-6" />
+      title: "Agriculture",
+      description: "AI-powered precision farming and crop optimization for sustainable agriculture",
+      icon: <Leaf className="w-6 h-6" />
     },
     {
-      title: "Healthcare & Life Sciences",
-      description: "Drug discovery, protein folding, and personalized medicine research",
-      icon: <Brain className="w-6 h-6" />
+      title: "Energy Sector",
+      description: "Smart grid management and renewable energy optimization",
+      icon: <Zap className="w-6 h-6" />
     },
     {
-      title: "Logistics & Supply Chain",
-      description: "Route optimization, inventory management, and supply chain optimization",
+      title: "Urban Planning",
+      description: "Smart city solutions for sustainable urban development",
       icon: <Globe className="w-6 h-6" />
     },
     {
-      title: "Cybersecurity",
-      description: "Quantum-resistant cryptography and advanced threat detection",
+      title: "Disaster Management",
+      description: "AI-powered early warning systems and disaster response planning",
       icon: <Shield className="w-6 h-6" />
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       <Helmet>
-        <title>AI Quantum Computing Solutions | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary quantum computing solutions powered by AI. Experience exponential computational power with quantum machine learning, cryptography, and optimization." />
-        <meta name="keywords" content="quantum computing, AI quantum, quantum machine learning, quantum cryptography, quantum optimization" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing" />
+        <title>AI Climate Solutions | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered climate solutions. Weather forecasting, carbon tracking, renewable energy optimization, and environmental monitoring." />
+        <meta name="keywords" content="AI climate, climate AI, weather forecasting, carbon tracking, renewable energy, environmental monitoring, sustainability" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-climate-solutions" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer className="text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-6">
-            <Brain className="w-4 h-4 text-purple-400 mr-2" />
-            <span className="text-purple-400 text-sm font-medium">Next-Generation Quantum AI</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-cyan-500/20 border border-green-500/30 mb-6">
+            <Leaf className="w-4 h-4 text-green-400 mr-2" />
+            <span className="text-green-400 text-sm font-medium">AI-Powered Climate Solutions</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400">
-              AI Quantum Computing
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-cyan-400 to-blue-400">
+              AI Climate Solutions
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Harness the power of quantum computing combined with artificial intelligence to solve 
-            the most complex problems with exponential speed and efficiency.
+            Combat climate change with AI-powered solutions for weather forecasting, carbon tracking, 
+            renewable energy optimization, and environmental monitoring.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -134,9 +134,9 @@ const AIQuantumComputingPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Brain className="w-5 h-5" />}
+              icon={<Leaf className="w-5 h-5" />}
             >
-              Start Quantum Journey
+              Start Climate Action
             </FuturisticButton>
             <FuturisticButton
               href="#features"
@@ -144,7 +144,7 @@ const AIQuantumComputingPage = () => {
               size="lg"
               icon={<BarChart3 className="w-5 h-5" />}
             >
-              Explore Features
+              Explore Solutions
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
@@ -155,21 +155,21 @@ const AIQuantumComputingPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Quantum AI Capabilities
+              Climate AI Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of computing with our quantum AI solutions that deliver 
-              unprecedented computational power and problem-solving capabilities.
+              Comprehensive AI-powered climate solutions designed to help organizations 
+              reduce their environmental impact and build a sustainable future.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <FuturisticCard key={index} className="group">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-purple-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-green-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-6 leading-relaxed">
@@ -189,29 +189,29 @@ const AIQuantumComputingPage = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      {/* Applications Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-green-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Climate Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how quantum AI is transforming industries across the globe
+              Discover how AI climate solutions are transforming industries worldwide
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {applications.map((application, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  {useCase.icon}
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  {application.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                  {useCase.title}
+                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">
+                  {application.title}
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  {useCase.description}
+                  {application.description}
                 </p>
               </div>
             ))}
@@ -224,10 +224,10 @@ const AIQuantumComputingPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quantum Computing Pricing
+              Climate AI Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect quantum computing plan for your needs
+              Choose the perfect climate AI solution for your organization
             </p>
           </div>
           
@@ -235,12 +235,12 @@ const AIQuantumComputingPage = () => {
             {pricing.map((plan, index) => (
               <div key={index} className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                 plan.popular 
-                  ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' 
-                  : 'border-white/20 hover:border-purple-500/30'
+                  ? 'border-green-500/50 shadow-2xl shadow-green-500/25' 
+                  : 'border-white/20 hover:border-green-500/30'
               }`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -279,14 +279,14 @@ const AIQuantumComputingPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-cyan-900/30">
         <ResponsiveContainer className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Experience Quantum AI?
+            Ready to Fight Climate Change?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Join the quantum revolution and unlock unprecedented computational power. 
-            Contact our quantum computing experts to get started today.
+            Join the global effort to combat climate change with AI-powered solutions. 
+            Contact our climate technology experts to start your sustainability journey.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -294,9 +294,9 @@ const AIQuantumComputingPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Brain className="w-5 h-5" />}
+              icon={<Leaf className="w-5 h-5" />}
             >
-              Start Quantum Journey
+              Start Climate Action
             </FuturisticButton>
             <FuturisticButton
               href="/ai-services"
@@ -313,4 +313,4 @@ const AIQuantumComputingPage = () => {
   );
 };
 
-export default AIQuantumComputingPage;
+export default AIClimateSolutionsPage;

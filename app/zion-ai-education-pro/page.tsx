@@ -1,78 +1,78 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Zap, Shield, BarChart3, Cpu, Database, Globe, ArrowRight, CheckCircle, Star, Users, Award } from 'lucide-react';
+import { BookOpen, Brain, Users, BarChart3, Award, Zap, ArrowRight, CheckCircle, Star, GraduationCap, Target, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const AIQuantumComputingPage = () => {
+const ZionAIEducationProPage = () => {
   const features = [
     {
-      title: "Quantum Machine Learning",
-      description: "Leverage quantum algorithms for exponentially faster machine learning computations and pattern recognition",
+      title: "AI-Powered Learning",
+      description: "Personalized learning paths with AI that adapts to each student's pace and learning style",
       icon: <Brain className="w-8 h-8" />,
-      benefits: ["1000x faster training", "Exponential speedup", "Quantum advantage"]
+      benefits: ["Personalized curriculum", "Adaptive learning", "Real-time feedback"]
     },
     {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms",
-      icon: <Shield className="w-8 h-8" />,
-      benefits: ["Unbreakable security", "Future-proof encryption", "Quantum key distribution"]
+      title: "Intelligent Tutoring",
+      description: "AI tutors that provide 24/7 support, answer questions, and guide students through complex topics",
+      icon: <GraduationCap className="w-8 h-8" />,
+      benefits: ["24/7 availability", "Instant help", "Step-by-step guidance"]
     },
     {
-      title: "Quantum Optimization",
-      description: "Solve complex optimization problems with quantum annealing and variational algorithms",
-      icon: <Zap className="w-8 h-8" />,
-      benefits: ["Complex problem solving", "Quantum annealing", "Optimization algorithms"]
+      title: "Progress Analytics",
+      description: "Advanced analytics to track student progress, identify learning gaps, and predict performance",
+      icon: <BarChart3 className="w-8 h-8" />,
+      benefits: ["Performance tracking", "Learning insights", "Predictive analytics"]
     },
     {
-      title: "Quantum Simulation",
-      description: "Simulate quantum systems and materials for drug discovery, chemistry, and physics research",
-      icon: <Cpu className="w-8 h-8" />,
-      benefits: ["Material discovery", "Drug development", "Scientific research"]
+      title: "Automated Assessment",
+      description: "AI-powered assessment tools that create, grade, and provide feedback on assignments and tests",
+      icon: <Award className="w-8 h-8" />,
+      benefits: ["Auto-grading", "Instant feedback", "Bias-free assessment"]
     }
   ];
 
   const pricing = [
     {
-      name: "Quantum Starter",
-      price: "$2,999",
+      name: "Education Starter",
+      price: "$199",
       period: "per month",
-      description: "Basic quantum computing access for small projects",
+      description: "Basic AI education tools for small schools",
       features: [
-        "5 hours quantum compute time",
-        "Basic quantum algorithms",
-        "Standard support",
-        "Documentation access"
+        "Up to 100 students",
+        "Basic AI tutoring",
+        "Progress tracking",
+        "Email support"
       ],
       popular: false
     },
     {
-      name: "Quantum Professional",
-      price: "$9,999",
+      name: "Education Professional",
+      price: "$599",
       period: "per month",
-      description: "Advanced quantum computing for enterprise applications",
+      description: "Advanced AI education for medium institutions",
       features: [
-        "50 hours quantum compute time",
-        "Advanced quantum algorithms",
+        "Up to 500 students",
+        "Advanced AI tutoring",
+        "Comprehensive analytics",
         "Priority support",
-        "Custom algorithm development",
         "API access"
       ],
       popular: true
     },
     {
-      name: "Quantum Enterprise",
-      price: "Custom",
-      period: "pricing",
-      description: "Full quantum computing infrastructure for large organizations",
+      name: "Education Enterprise",
+      price: "$1,999",
+      period: "per month",
+      description: "Complete AI education platform for large institutions",
       features: [
-        "Unlimited quantum compute time",
-        "Custom quantum hardware",
-        "Dedicated support team",
-        "White-label solutions",
-        "On-premise deployment"
+        "Unlimited students",
+        "Full AI suite",
+        "Custom integrations",
+        "Dedicated support",
+        "White-label options"
       ],
       popular: false
     }
@@ -80,53 +80,53 @@ const AIQuantumComputingPage = () => {
 
   const useCases = [
     {
-      title: "Financial Services",
-      description: "Portfolio optimization, risk analysis, and fraud detection using quantum algorithms",
-      icon: <BarChart3 className="w-6 h-6" />
+      title: "K-12 Education",
+      description: "AI-powered learning platforms for elementary and high school students",
+      icon: <BookOpen className="w-6 h-6" />
     },
     {
-      title: "Healthcare & Life Sciences",
-      description: "Drug discovery, protein folding, and personalized medicine research",
-      icon: <Brain className="w-6 h-6" />
+      title: "Higher Education",
+      description: "Advanced AI tools for universities and colleges",
+      icon: <GraduationCap className="w-6 h-6" />
     },
     {
-      title: "Logistics & Supply Chain",
-      description: "Route optimization, inventory management, and supply chain optimization",
-      icon: <Globe className="w-6 h-6" />
+      title: "Corporate Training",
+      description: "AI-driven employee training and development programs",
+      icon: <Users className="w-6 h-6" />
     },
     {
-      title: "Cybersecurity",
-      description: "Quantum-resistant cryptography and advanced threat detection",
-      icon: <Shield className="w-6 h-6" />
+      title: "Online Learning",
+      description: "AI-enhanced online courses and virtual classrooms",
+      icon: <Zap className="w-6 h-6" />
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
-        <title>AI Quantum Computing Solutions | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary quantum computing solutions powered by AI. Experience exponential computational power with quantum machine learning, cryptography, and optimization." />
-        <meta name="keywords" content="quantum computing, AI quantum, quantum machine learning, quantum cryptography, quantum optimization" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing" />
+        <title>Zion AI Education Pro | AI-Powered Learning Platform</title>
+        <meta name="description" content="Revolutionary AI-powered education platform. Personalized learning, intelligent tutoring, progress analytics, and automated assessment." />
+        <meta name="keywords" content="AI education, educational AI, learning platform, AI tutoring, personalized learning, education technology" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-education-pro" />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer className="text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-6">
-            <Brain className="w-4 h-4 text-purple-400 mr-2" />
-            <span className="text-purple-400 text-sm font-medium">Next-Generation Quantum AI</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
+            <BookOpen className="w-4 h-4 text-blue-400 mr-2" />
+            <span className="text-blue-400 text-sm font-medium">AI-Powered Education</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400">
-              AI Quantum Computing
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
+              Zion AI Education Pro
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Harness the power of quantum computing combined with artificial intelligence to solve 
-            the most complex problems with exponential speed and efficiency.
+            Transform education with AI-powered personalized learning, intelligent tutoring, 
+            and comprehensive analytics for students and educators.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -134,9 +134,9 @@ const AIQuantumComputingPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Brain className="w-5 h-5" />}
+              icon={<BookOpen className="w-5 h-5" />}
             >
-              Start Quantum Journey
+              Start Free Trial
             </FuturisticButton>
             <FuturisticButton
               href="#features"
@@ -155,21 +155,21 @@ const AIQuantumComputingPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Quantum AI Capabilities
+              AI Education Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of computing with our quantum AI solutions that deliver 
-              unprecedented computational power and problem-solving capabilities.
+              Comprehensive AI-powered education solutions designed to enhance learning 
+              outcomes and streamline educational processes.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <FuturisticCard key={index} className="group">
-                <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-purple-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-blue-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-6 leading-relaxed">
@@ -190,24 +190,24 @@ const AIQuantumComputingPage = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Education Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how quantum AI is transforming industries across the globe
+              Discover how AI is revolutionizing education across all levels
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   {useCase.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
+                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {useCase.title}
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
@@ -224,10 +224,10 @@ const AIQuantumComputingPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quantum Computing Pricing
+              Education AI Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect quantum computing plan for your needs
+              Choose the perfect AI education solution for your institution
             </p>
           </div>
           
@@ -235,12 +235,12 @@ const AIQuantumComputingPage = () => {
             {pricing.map((plan, index) => (
               <div key={index} className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                 plan.popular 
-                  ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' 
-                  : 'border-white/20 hover:border-purple-500/30'
+                  ? 'border-blue-500/50 shadow-2xl shadow-blue-500/25' 
+                  : 'border-white/20 hover:border-blue-500/30'
               }`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -279,14 +279,14 @@ const AIQuantumComputingPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <ResponsiveContainer className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Experience Quantum AI?
+            Ready to Transform Education?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Join the quantum revolution and unlock unprecedented computational power. 
-            Contact our quantum computing experts to get started today.
+            Join thousands of educators already using our AI solutions to enhance 
+            learning outcomes and streamline educational processes.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -294,17 +294,17 @@ const AIQuantumComputingPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Brain className="w-5 h-5" />}
+              icon={<BookOpen className="w-5 h-5" />}
             >
-              Start Quantum Journey
+              Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-              href="/ai-services"
+              href="/micro-saas-services"
               variant="outline"
               size="lg"
               icon={<ArrowRight className="w-5 h-5" />}
             >
-              Explore AI Services
+              View All Solutions
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
@@ -313,4 +313,4 @@ const AIQuantumComputingPage = () => {
   );
 };
 
-export default AIQuantumComputingPage;
+export default ZionAIEducationProPage;
