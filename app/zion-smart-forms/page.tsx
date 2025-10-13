@@ -1,87 +1,87 @@
-import { ArrowRight, Wrench, Brain, Zap, Shield, Globe, CheckCircle, Star, BarChart3, Settings, Smartphone, Users, AlertTriangle } from "lucide-react";
+import { ArrowRight, FileText, Zap, Shield, Globe, CheckCircle, Star, BarChart3, Settings, Smartphone, Users, Brain } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiPredictiveMaintenance() {
+export default function ZionSmartForms() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Predictions",
-      description: "Machine learning algorithms predict equipment failures with 95% accuracy up to 30 days in advance"
+      title: "AI-Powered Form Builder",
+      description: "Create intelligent forms with smart field suggestions and conditional logic using our no-code builder"
     },
     {
-      icon: <Wrench className="w-6 h-6" />,
-      title: "Smart Maintenance Scheduling",
-      description: "Automated maintenance scheduling based on predicted failure risks and operational requirements"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Smart Validation",
+      description: "Advanced form validation with real-time error checking and intelligent field completion suggestions"
     },
     {
-      icon: <AlertTriangle className="w-6 h-6" />,
-      title: "Real-Time Alerts",
-      description: "Instant notifications for critical issues with severity-based alerting and escalation protocols"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive analytics on equipment health, maintenance costs, and operational efficiency"
+      icon: <FileText className="w-6 h-6" />,
+      title: "Multi-Step Forms",
+      description: "Create complex multi-step forms with progress tracking and dynamic field generation"
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Enterprise Security",
-      description: "Bank-level security with industrial-grade encryption and compliance with industry standards"
+      description: "Bank-level security with GDPR compliance, data encryption, and secure form submissions"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Detailed insights into form performance, completion rates, and user behavior analytics"
     },
     {
       icon: <Globe className="w-6 h-6" />,
       title: "Multi-Platform Integration",
-      description: "Seamless integration with existing ERP, CMMS, and IoT systems for unified operations"
+      description: "Seamless integration with CRM, email marketing, payment processors, and 100+ third-party tools"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$12",
       period: "/month",
-      description: "Perfect for small facilities",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 50 assets",
-        "Basic predictive models",
-        "Email alerts",
-        "Standard analytics",
-        "Email support",
-        "Basic integrations"
+        "Up to 5 forms",
+        "1,000 submissions/month",
+        "Basic form builder",
+        "Email notifications",
+        "Basic analytics",
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$599",
+      price: "$39",
       period: "/month",
-      description: "Most popular for growing operations",
+      description: "Most popular for growing businesses",
       features: [
-        "Up to 500 assets",
-        "Advanced predictive models",
-        "Multi-channel alerts",
+        "Up to 25 forms",
+        "10,000 submissions/month",
+        "Advanced form builder",
+        "Multi-step forms",
         "Advanced analytics",
         "Priority support",
-        "Custom integrations",
-        "API access",
-        "Custom dashboards"
+        "Custom branding",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$99",
       period: "/month",
-      description: "For large industrial operations",
+      description: "For large organizations",
       features: [
-        "Unlimited assets",
-        "Custom AI models",
-        "Real-time monitoring",
-        "Custom analytics",
-        "24/7 dedicated support",
+        "Unlimited forms",
+        "Unlimited submissions",
         "White-label solution",
+        "Custom integrations",
         "Advanced security",
+        "24/7 dedicated support",
+        "Custom analytics",
         "SLA guarantee"
       ],
       popular: false
@@ -90,24 +90,24 @@ export default function AiPredictiveMaintenance() {
 
   const testimonials = [
     {
-      name: "James Mitchell",
-      company: "Manufacturing Solutions Inc.",
-      role: "Operations Director",
-      content: "Zion AI Predictive Maintenance reduced our unplanned downtime by 70% and maintenance costs by 45%. The predictions are incredibly accurate.",
-      rating: 5
-    },
-    {
-      name: "Dr. Sarah Chen",
-      company: "Energy Power Systems",
-      role: "Chief Engineer",
-      content: "The real-time alerts and predictive accuracy have been game-changing for our power generation facilities. We've prevented multiple critical failures.",
+      name: "Lisa Chen",
+      company: "Digital Marketing Agency",
+      role: "Operations Manager",
+      content: "Zion Smart Forms has revolutionized our lead generation. The AI-powered builder makes it incredibly easy to create complex forms that convert.",
       rating: 5
     },
     {
       name: "Michael Rodriguez",
-      company: "Industrial Automation Corp",
-      role: "Maintenance Manager",
-      content: "The integration with our existing systems was seamless. The analytics insights helped us optimize our maintenance strategy and reduce costs significantly.",
+      company: "E-commerce Platform",
+      role: "Product Manager",
+      content: "The analytics insights helped us optimize our checkout forms and increase conversions by 45%. The multi-step form feature is particularly powerful.",
+      rating: 5
+    },
+    {
+      name: "Sarah Johnson",
+      company: "Healthcare Provider",
+      role: "Patient Services Director",
+      content: "The security features and GDPR compliance give us peace of mind when handling sensitive patient data. Highly recommended for healthcare organizations.",
       rating: 5
     }
   ];
@@ -115,14 +115,14 @@ export default function AiPredictiveMaintenance() {
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Smart Equipment Monitoring | Zion Tech Group</title>
+        <title>Zion Smart Forms - AI-Powered Form Builder | Zion Tech Group</title>
         <meta
           name="description"
-          content="Prevent equipment failures with AI Predictive Maintenance. 95% accuracy predictions, smart scheduling, and real-time alerts. Start your free trial today."
+          content="Create intelligent forms with Zion Smart Forms. AI-powered builder, smart validation, and advanced analytics. Start your free trial today."
         />
         <meta
           name="keywords"
-          content="predictive maintenance, AI maintenance, equipment monitoring, failure prediction, maintenance scheduling, industrial IoT"
+          content="form builder, smart forms, AI forms, form validation, lead generation, form analytics, no-code forms"
         />
       </Helmet>
 
@@ -132,16 +132,16 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Star className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 Predictive Maintenance Platform 2024</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 AI Form Builder 2024</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                AI Predictive Maintenance
+                Zion Smart Forms
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Prevent equipment failures before they happen with our AI-powered predictive maintenance platform. 
-              Achieve 95% prediction accuracy and reduce maintenance costs by up to 50%.
+              Create intelligent, high-converting forms with our AI-powered form builder. Smart validation, 
+              multi-step forms, and advanced analytics to maximize your lead generation and user engagement.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -162,16 +162,16 @@ export default function AiPredictiveMaintenance() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300">Prediction Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">500,000+</div>
+                <div className="text-gray-300">Forms Created</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">70%</div>
-                <div className="text-gray-300">Reduction in Downtime</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">85%</div>
+                <div className="text-gray-300">Average Conversion Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50%</div>
-                <div className="text-gray-300">Cost Savings</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">50M+</div>
+                <div className="text-gray-300">Submissions Processed</div>
               </div>
             </div>
           </div>
@@ -182,10 +182,10 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Predictive Maintenance Features
+                Intelligent Form Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to optimize equipment performance and prevent costly failures.
+                Everything you need to create forms that convert and provide exceptional user experiences.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -217,7 +217,7 @@ export default function AiPredictiveMaintenance() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your facility size and maintenance needs. All plans include 14-day free trial.
+                Choose the plan that fits your form needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -274,10 +274,10 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industrial Leaders
+                Trusted by Leading Companies
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Predictive Maintenance
+                See what our customers say about Zion Smart Forms
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -306,10 +306,10 @@ export default function AiPredictiveMaintenance() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Prevent Equipment Failures?
+              Ready to Create High-Converting Forms?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of industrial organizations using AI Predictive Maintenance to optimize operations.
+              Join thousands of businesses using Zion Smart Forms to maximize their lead generation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

@@ -1,87 +1,88 @@
-import { ArrowRight, Wrench, Brain, Zap, Shield, Globe, CheckCircle, Star, BarChart3, Settings, Smartphone, Users, AlertTriangle } from "lucide-react";
+import { ArrowRight, MessageCircle, Brain, Zap, Shield, Globe, CheckCircle, Star, Bot, Users, BarChart3, Settings } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiPredictiveMaintenance() {
+export default function ZionAiChatbotBuilder() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Predictions",
-      description: "Machine learning algorithms predict equipment failures with 95% accuracy up to 30 days in advance"
+      title: "No-Code AI Builder",
+      description: "Create intelligent chatbots without coding using our drag-and-drop interface"
     },
     {
-      icon: <Wrench className="w-6 h-6" />,
-      title: "Smart Maintenance Scheduling",
-      description: "Automated maintenance scheduling based on predicted failure risks and operational requirements"
+      icon: <MessageCircle className="w-6 h-6" />,
+      title: "Multi-Channel Support",
+      description: "Deploy across websites, WhatsApp, Facebook Messenger, and Slack"
     },
     {
-      icon: <AlertTriangle className="w-6 h-6" />,
-      title: "Real-Time Alerts",
-      description: "Instant notifications for critical issues with severity-based alerting and escalation protocols"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive analytics on equipment health, maintenance costs, and operational efficiency"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Natural Language Processing",
+      description: "Advanced NLP for human-like conversations and intent recognition"
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Enterprise Security",
-      description: "Bank-level security with industrial-grade encryption and compliance with industry standards"
+      description: "SOC 2 compliant with end-to-end encryption and data protection"
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Platform Integration",
-      description: "Seamless integration with existing ERP, CMMS, and IoT systems for unified operations"
+      title: "Multi-Language Support",
+      description: "Support for 50+ languages with automatic translation capabilities"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Analytics Dashboard",
+      description: "Real-time insights into conversation metrics and user engagement"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$19",
       period: "/month",
-      description: "Perfect for small facilities",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 50 assets",
-        "Basic predictive models",
-        "Email alerts",
-        "Standard analytics",
+        "Up to 1,000 conversations/month",
+        "Basic chatbot builder",
+        "Website integration",
         "Email support",
-        "Basic integrations"
+        "5 languages supported",
+        "Basic analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$599",
+      price: "$49",
       period: "/month",
-      description: "Most popular for growing operations",
+      description: "Most popular for growing businesses",
       features: [
-        "Up to 500 assets",
-        "Advanced predictive models",
-        "Multi-channel alerts",
-        "Advanced analytics",
+        "Up to 10,000 conversations/month",
+        "Advanced AI builder",
+        "Multi-channel deployment",
         "Priority support",
-        "Custom integrations",
-        "API access",
-        "Custom dashboards"
+        "25 languages supported",
+        "Advanced analytics",
+        "Custom branding",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$149",
       period: "/month",
-      description: "For large industrial operations",
+      description: "For large organizations",
       features: [
-        "Unlimited assets",
-        "Custom AI models",
-        "Real-time monitoring",
-        "Custom analytics",
-        "24/7 dedicated support",
+        "Unlimited conversations",
         "White-label solution",
-        "Advanced security",
+        "All channels supported",
+        "24/7 dedicated support",
+        "50+ languages supported",
+        "Custom analytics",
+        "Advanced integrations",
+        "Custom AI training",
         "SLA guarantee"
       ],
       popular: false
@@ -90,24 +91,24 @@ export default function AiPredictiveMaintenance() {
 
   const testimonials = [
     {
-      name: "James Mitchell",
-      company: "Manufacturing Solutions Inc.",
+      name: "Jennifer Martinez",
+      company: "E-commerce Plus",
+      role: "Customer Success Manager",
+      content: "Zion AI Chatbot Builder reduced our support tickets by 60% and improved customer satisfaction significantly. The no-code interface made it incredibly easy to set up.",
+      rating: 5
+    },
+    {
+      name: "David Kim",
+      company: "TechStart Solutions",
+      role: "Founder",
+      content: "The multi-language support and advanced NLP capabilities are outstanding. Our international customers love the seamless experience across all channels.",
+      rating: 5
+    },
+    {
+      name: "Sarah Thompson",
+      company: "Digital Marketing Pro",
       role: "Operations Director",
-      content: "Zion AI Predictive Maintenance reduced our unplanned downtime by 70% and maintenance costs by 45%. The predictions are incredibly accurate.",
-      rating: 5
-    },
-    {
-      name: "Dr. Sarah Chen",
-      company: "Energy Power Systems",
-      role: "Chief Engineer",
-      content: "The real-time alerts and predictive accuracy have been game-changing for our power generation facilities. We've prevented multiple critical failures.",
-      rating: 5
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "Industrial Automation Corp",
-      role: "Maintenance Manager",
-      content: "The integration with our existing systems was seamless. The analytics insights helped us optimize our maintenance strategy and reduce costs significantly.",
+      content: "The analytics dashboard provides incredible insights into customer behavior. We've optimized our sales funnel based on chatbot data and increased conversions by 35%.",
       rating: 5
     }
   ];
@@ -115,14 +116,14 @@ export default function AiPredictiveMaintenance() {
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Smart Equipment Monitoring | Zion Tech Group</title>
+        <title>Zion AI Chatbot Builder - No-Code AI Chatbot Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Prevent equipment failures with AI Predictive Maintenance. 95% accuracy predictions, smart scheduling, and real-time alerts. Start your free trial today."
+          content="Build intelligent chatbots without coding using Zion AI Chatbot Builder. Multi-channel deployment, advanced NLP, and enterprise security. Start your free trial today."
         />
         <meta
           name="keywords"
-          content="predictive maintenance, AI maintenance, equipment monitoring, failure prediction, maintenance scheduling, industrial IoT"
+          content="AI chatbot builder, no-code chatbot, conversational AI, customer service automation, multi-channel chatbot, NLP chatbot"
         />
       </Helmet>
 
@@ -132,16 +133,16 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Star className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 Predictive Maintenance Platform 2024</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 No-Code AI Platform 2024</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                AI Predictive Maintenance
+                Zion AI Chatbot Builder
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Prevent equipment failures before they happen with our AI-powered predictive maintenance platform. 
-              Achieve 95% prediction accuracy and reduce maintenance costs by up to 50%.
+              Create intelligent, conversational AI chatbots without coding. Deploy across multiple channels, 
+              support 50+ languages, and provide 24/7 customer service with our no-code platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -162,16 +163,16 @@ export default function AiPredictiveMaintenance() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300">Prediction Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">50,000+</div>
+                <div className="text-gray-300">Active Chatbots</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">70%</div>
-                <div className="text-gray-300">Reduction in Downtime</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">98%</div>
+                <div className="text-gray-300">Customer Satisfaction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50%</div>
-                <div className="text-gray-300">Cost Savings</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
+                <div className="text-gray-300">Languages Supported</div>
               </div>
             </div>
           </div>
@@ -182,10 +183,10 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Predictive Maintenance Features
+                Powerful Features for Modern Chatbots
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to optimize equipment performance and prevent costly failures.
+                Everything you need to build, deploy, and manage intelligent chatbots that provide exceptional customer experiences.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -217,7 +218,7 @@ export default function AiPredictiveMaintenance() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your facility size and maintenance needs. All plans include 14-day free trial.
+                Choose the plan that fits your business needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -274,10 +275,10 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industrial Leaders
+                Trusted by Industry Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Predictive Maintenance
+                See what our customers say about Zion AI Chatbot Builder
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -306,10 +307,10 @@ export default function AiPredictiveMaintenance() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Prevent Equipment Failures?
+              Ready to Build Your AI Chatbot?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of industrial organizations using AI Predictive Maintenance to optimize operations.
+              Join thousands of businesses using Zion AI Chatbot Builder to provide exceptional customer service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

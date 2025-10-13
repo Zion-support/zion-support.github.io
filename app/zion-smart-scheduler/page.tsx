@@ -1,87 +1,87 @@
-import { ArrowRight, Wrench, Brain, Zap, Shield, Globe, CheckCircle, Star, BarChart3, Settings, Smartphone, Users, AlertTriangle } from "lucide-react";
+import { ArrowRight, Calendar, Clock, Users, Zap, Shield, Globe, CheckCircle, Star, Smartphone, BarChart3, Settings } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiPredictiveMaintenance() {
+export default function ZionSmartScheduler() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Predictions",
-      description: "Machine learning algorithms predict equipment failures with 95% accuracy up to 30 days in advance"
+      icon: <Calendar className="w-6 h-6" />,
+      title: "AI-Powered Scheduling",
+      description: "Intelligent scheduling that automatically finds the best meeting times for all participants"
     },
     {
-      icon: <Wrench className="w-6 h-6" />,
-      title: "Smart Maintenance Scheduling",
-      description: "Automated maintenance scheduling based on predicted failure risks and operational requirements"
+      icon: <Clock className="w-6 h-6" />,
+      title: "Time Zone Intelligence",
+      description: "Automatically handles time zones and suggests optimal meeting times for global teams"
     },
     {
-      icon: <AlertTriangle className="w-6 h-6" />,
-      title: "Real-Time Alerts",
-      description: "Instant notifications for critical issues with severity-based alerting and escalation protocols"
+      icon: <Users className="w-6 h-6" />,
+      title: "Team Collaboration",
+      description: "Seamless integration with team calendars and availability management"
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive analytics on equipment health, maintenance costs, and operational efficiency"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Automated Reminders",
+      description: "Smart reminder system with customizable notifications via email, SMS, and push"
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Enterprise Security",
-      description: "Bank-level security with industrial-grade encryption and compliance with industry standards"
+      description: "Bank-level security with GDPR compliance and data encryption"
     },
     {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Platform Integration",
-      description: "Seamless integration with existing ERP, CMMS, and IoT systems for unified operations"
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Analytics & Insights",
+      description: "Detailed analytics on meeting patterns, productivity, and scheduling efficiency"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199",
+      name: "Personal",
+      price: "$9",
       period: "/month",
-      description: "Perfect for small facilities",
+      description: "Perfect for individuals and freelancers",
       features: [
-        "Up to 50 assets",
-        "Basic predictive models",
-        "Email alerts",
-        "Standard analytics",
-        "Email support",
-        "Basic integrations"
+        "Unlimited personal meetings",
+        "Basic AI scheduling",
+        "Calendar integration",
+        "Email reminders",
+        "Mobile app access",
+        "Basic analytics"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$599",
+      name: "Team",
+      price: "$29",
       period: "/month",
-      description: "Most popular for growing operations",
+      description: "Most popular for small teams",
       features: [
-        "Up to 500 assets",
-        "Advanced predictive models",
-        "Multi-channel alerts",
+        "Up to 10 team members",
+        "Advanced AI scheduling",
+        "Team availability sync",
+        "Multi-channel reminders",
+        "Custom branding",
         "Advanced analytics",
-        "Priority support",
-        "Custom integrations",
         "API access",
-        "Custom dashboards"
+        "Priority support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$99",
       period: "/month",
-      description: "For large industrial operations",
+      description: "For large organizations",
       features: [
-        "Unlimited assets",
-        "Custom AI models",
-        "Real-time monitoring",
-        "Custom analytics",
-        "24/7 dedicated support",
+        "Unlimited team members",
+        "AI-powered optimization",
+        "Custom integrations",
         "White-label solution",
         "Advanced security",
+        "Custom analytics",
+        "24/7 dedicated support",
         "SLA guarantee"
       ],
       popular: false
@@ -90,24 +90,24 @@ export default function AiPredictiveMaintenance() {
 
   const testimonials = [
     {
-      name: "James Mitchell",
-      company: "Manufacturing Solutions Inc.",
+      name: "Alex Chen",
+      company: "Remote Work Solutions",
+      role: "Project Manager",
+      content: "Zion Smart Scheduler has revolutionized how we coordinate meetings across time zones. The AI scheduling saves us 5+ hours per week.",
+      rating: 5
+    },
+    {
+      name: "Maria Rodriguez",
+      company: "Consulting Firm",
       role: "Operations Director",
-      content: "Zion AI Predictive Maintenance reduced our unplanned downtime by 70% and maintenance costs by 45%. The predictions are incredibly accurate.",
+      content: "The team collaboration features are incredible. We can now schedule complex multi-stakeholder meetings in seconds instead of hours.",
       rating: 5
     },
     {
-      name: "Dr. Sarah Chen",
-      company: "Energy Power Systems",
-      role: "Chief Engineer",
-      content: "The real-time alerts and predictive accuracy have been game-changing for our power generation facilities. We've prevented multiple critical failures.",
-      rating: 5
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "Industrial Automation Corp",
-      role: "Maintenance Manager",
-      content: "The integration with our existing systems was seamless. The analytics insights helped us optimize our maintenance strategy and reduce costs significantly.",
+      name: "James Wilson",
+      company: "Global Tech Corp",
+      role: "Executive Assistant",
+      content: "The analytics insights helped us optimize our meeting patterns and increase productivity by 40%. Highly recommended for any organization.",
       rating: 5
     }
   ];
@@ -115,14 +115,14 @@ export default function AiPredictiveMaintenance() {
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Smart Equipment Monitoring | Zion Tech Group</title>
+        <title>Zion Smart Scheduler - AI-Powered Meeting Scheduler | Zion Tech Group</title>
         <meta
           name="description"
-          content="Prevent equipment failures with AI Predictive Maintenance. 95% accuracy predictions, smart scheduling, and real-time alerts. Start your free trial today."
+          content="Streamline meeting scheduling with Zion Smart Scheduler. AI-powered scheduling, time zone intelligence, and team collaboration tools. Start your free trial today."
         />
         <meta
           name="keywords"
-          content="predictive maintenance, AI maintenance, equipment monitoring, failure prediction, maintenance scheduling, industrial IoT"
+          content="meeting scheduler, AI scheduling, calendar management, team collaboration, time zone scheduling, meeting optimization"
         />
       </Helmet>
 
@@ -132,16 +132,16 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Star className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 Predictive Maintenance Platform 2024</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 AI Scheduler 2024</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                AI Predictive Maintenance
+                Zion Smart Scheduler
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Prevent equipment failures before they happen with our AI-powered predictive maintenance platform. 
-              Achieve 95% prediction accuracy and reduce maintenance costs by up to 50%.
+              Never waste time scheduling meetings again. Our AI-powered scheduler finds the perfect meeting times, 
+              handles time zones automatically, and keeps your team perfectly coordinated.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -162,16 +162,16 @@ export default function AiPredictiveMaintenance() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300">Prediction Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">25,000+</div>
+                <div className="text-gray-300">Meetings Scheduled Daily</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">70%</div>
-                <div className="text-gray-300">Reduction in Downtime</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+                <div className="text-gray-300">Time Saved</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50%</div>
-                <div className="text-gray-300">Cost Savings</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">150+</div>
+                <div className="text-gray-300">Countries Supported</div>
               </div>
             </div>
           </div>
@@ -182,10 +182,10 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Predictive Maintenance Features
+                Intelligent Scheduling Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to optimize equipment performance and prevent costly failures.
+                Everything you need to streamline meeting scheduling and boost team productivity.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -217,7 +217,7 @@ export default function AiPredictiveMaintenance() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your facility size and maintenance needs. All plans include 14-day free trial.
+                Choose the plan that fits your team size and needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -274,10 +274,10 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industrial Leaders
+                Trusted by Teams Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Predictive Maintenance
+                See what our customers say about Zion Smart Scheduler
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -306,10 +306,10 @@ export default function AiPredictiveMaintenance() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Prevent Equipment Failures?
+              Ready to Streamline Your Scheduling?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of industrial organizations using AI Predictive Maintenance to optimize operations.
+              Join thousands of teams using Zion Smart Scheduler to optimize their meeting coordination.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

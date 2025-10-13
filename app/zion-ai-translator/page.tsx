@@ -1,86 +1,86 @@
-import { ArrowRight, Wrench, Brain, Zap, Shield, Globe, CheckCircle, Star, BarChart3, Settings, Smartphone, Users, AlertTriangle } from "lucide-react";
+import { ArrowRight, Globe, Brain, Zap, Shield, CheckCircle, Star, Languages, BarChart3, Settings, Smartphone, Users } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AiPredictiveMaintenance() {
+export default function ZionAiTranslator() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Predictions",
-      description: "Machine learning algorithms predict equipment failures with 95% accuracy up to 30 days in advance"
+      title: "AI-Powered Translation",
+      description: "Advanced neural machine translation with context-aware accuracy and natural language processing"
     },
     {
-      icon: <Wrench className="w-6 h-6" />,
-      title: "Smart Maintenance Scheduling",
-      description: "Automated maintenance scheduling based on predicted failure risks and operational requirements"
+      icon: <Globe className="w-6 h-6" />,
+      title: "100+ Languages",
+      description: "Support for over 100 languages with real-time translation and cultural context adaptation"
     },
     {
-      icon: <AlertTriangle className="w-6 h-6" />,
-      title: "Real-Time Alerts",
-      description: "Instant notifications for critical issues with severity-based alerting and escalation protocols"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive analytics on equipment health, maintenance costs, and operational efficiency"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Real-Time Translation",
+      description: "Instant translation for live conversations, meetings, and customer support interactions"
     },
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Enterprise Security",
-      description: "Bank-level security with industrial-grade encryption and compliance with industry standards"
+      description: "Bank-level encryption with GDPR compliance and secure data handling for sensitive content"
     },
     {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Platform Integration",
-      description: "Seamless integration with existing ERP, CMMS, and IoT systems for unified operations"
+      icon: <Languages className="w-6 h-6" />,
+      title: "Industry-Specific Models",
+      description: "Specialized translation models for legal, medical, technical, and business terminology"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Translation Analytics",
+      description: "Detailed insights into translation usage, accuracy metrics, and cost optimization"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$15",
       period: "/month",
-      description: "Perfect for small facilities",
+      description: "Perfect for individuals and small teams",
       features: [
-        "Up to 50 assets",
-        "Basic predictive models",
-        "Email alerts",
-        "Standard analytics",
+        "Up to 100,000 characters/month",
+        "50+ languages supported",
+        "Basic translation API",
         "Email support",
-        "Basic integrations"
+        "Mobile app access",
+        "Basic analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$599",
+      price: "$49",
       period: "/month",
-      description: "Most popular for growing operations",
+      description: "Most popular for growing businesses",
       features: [
-        "Up to 500 assets",
-        "Advanced predictive models",
-        "Multi-channel alerts",
-        "Advanced analytics",
+        "Up to 1M characters/month",
+        "100+ languages supported",
+        "Advanced translation API",
         "Priority support",
-        "Custom integrations",
-        "API access",
-        "Custom dashboards"
+        "Industry-specific models",
+        "Advanced analytics",
+        "Custom glossaries",
+        "Batch processing"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$199",
       period: "/month",
-      description: "For large industrial operations",
+      description: "For large organizations",
       features: [
-        "Unlimited assets",
-        "Custom AI models",
-        "Real-time monitoring",
-        "Custom analytics",
+        "Unlimited characters",
+        "All languages supported",
+        "Custom translation models",
         "24/7 dedicated support",
         "White-label solution",
+        "Custom analytics",
         "Advanced security",
         "SLA guarantee"
       ],
@@ -90,24 +90,24 @@ export default function AiPredictiveMaintenance() {
 
   const testimonials = [
     {
-      name: "James Mitchell",
-      company: "Manufacturing Solutions Inc.",
-      role: "Operations Director",
-      content: "Zion AI Predictive Maintenance reduced our unplanned downtime by 70% and maintenance costs by 45%. The predictions are incredibly accurate.",
+      name: "Dr. Sarah Kim",
+      company: "Global Medical Research",
+      role: "Research Director",
+      content: "Zion AI Translator has been invaluable for our international research collaborations. The medical terminology accuracy is exceptional.",
       rating: 5
     },
     {
-      name: "Dr. Sarah Chen",
-      company: "Energy Power Systems",
-      role: "Chief Engineer",
-      content: "The real-time alerts and predictive accuracy have been game-changing for our power generation facilities. We've prevented multiple critical failures.",
+      name: "Roberto Silva",
+      company: "International Law Firm",
+      role: "Senior Partner",
+      content: "The legal translation accuracy is outstanding. We've reduced translation costs by 70% while improving quality significantly.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      company: "Industrial Automation Corp",
-      role: "Maintenance Manager",
-      content: "The integration with our existing systems was seamless. The analytics insights helped us optimize our maintenance strategy and reduce costs significantly.",
+      name: "Yuki Tanaka",
+      company: "Tech Startup",
+      role: "CEO",
+      content: "Real-time translation during our global client calls has been a game-changer. The context awareness is incredibly accurate.",
       rating: 5
     }
   ];
@@ -115,14 +115,14 @@ export default function AiPredictiveMaintenance() {
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Smart Equipment Monitoring | Zion Tech Group</title>
+        <title>Zion AI Translator - Advanced Translation Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Prevent equipment failures with AI Predictive Maintenance. 95% accuracy predictions, smart scheduling, and real-time alerts. Start your free trial today."
+          content="Break language barriers with Zion AI Translator. 100+ languages, real-time translation, and industry-specific models. Start your free trial today."
         />
         <meta
           name="keywords"
-          content="predictive maintenance, AI maintenance, equipment monitoring, failure prediction, maintenance scheduling, industrial IoT"
+          content="AI translation, machine translation, real-time translation, multilingual support, language translation, translation API"
         />
       </Helmet>
 
@@ -132,16 +132,16 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Star className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 Predictive Maintenance Platform 2024</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 AI Translation Platform 2024</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                AI Predictive Maintenance
+                Zion AI Translator
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Prevent equipment failures before they happen with our AI-powered predictive maintenance platform. 
-              Achieve 95% prediction accuracy and reduce maintenance costs by up to 50%.
+              Break language barriers with our advanced AI translation platform. Support for 100+ languages, 
+              real-time translation, and industry-specific models for accurate, context-aware translations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
@@ -162,16 +162,16 @@ export default function AiPredictiveMaintenance() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300">Prediction Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">100+</div>
+                <div className="text-gray-300">Languages Supported</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">70%</div>
-                <div className="text-gray-300">Reduction in Downtime</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">99.5%</div>
+                <div className="text-gray-300">Translation Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50%</div>
-                <div className="text-gray-300">Cost Savings</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">1B+</div>
+                <div className="text-gray-300">Words Translated Daily</div>
               </div>
             </div>
           </div>
@@ -182,10 +182,10 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Predictive Maintenance Features
+                Advanced Translation Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to optimize equipment performance and prevent costly failures.
+                Everything you need to communicate effectively across languages and cultures.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -217,7 +217,7 @@ export default function AiPredictiveMaintenance() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your facility size and maintenance needs. All plans include 14-day free trial.
+                Choose the plan that fits your translation needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -274,10 +274,10 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industrial Leaders
+                Trusted by Global Organizations
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Predictive Maintenance
+                See what our customers say about Zion AI Translator
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -306,10 +306,10 @@ export default function AiPredictiveMaintenance() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Prevent Equipment Failures?
+              Ready to Break Language Barriers?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of industrial organizations using AI Predictive Maintenance to optimize operations.
+              Join thousands of organizations using Zion AI Translator to communicate globally.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
