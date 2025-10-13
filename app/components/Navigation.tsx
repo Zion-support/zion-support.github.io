@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { 
+  Menu, 
+  X, 
   Network,
   FileText,
-  Clock
+  Clock,
+  ChevronDown, 
+  Phone, 
+  Mail, 
+  MapPin,
+  Brain, 
+  Cloud, 
+  Shield, 
+  Code, 
+  BarChart
 } from 'lucide-react';
 import FuturisticButton from './FuturisticButton';
+
 interface NavigationProps {
   onSidebarToggle: () => void;
 }
-import { Menu, X } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+  const toggleMenu = useCallback(() => {
     setIsMenuOpen(prev => !prev);
   }, []);
 
@@ -22,42 +35,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     setActiveDropdown(prev => prev === dropdown ? null : dropdown);
   }, []);
 
-import { 
-  ChevronDown, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Menu, 
-  X, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Code, 
-  BarChart, 
-  Users, 
-  Zap, 
-  ArrowRight, 
-  Sparkles, 
-  Cpu, 
-  Target, 
-  Globe, 
-  Database, 
-  Smartphone, 
-  Lock, 
-  TrendingUp, 
-  Settings, 
-  Calendar, 
-  CheckSquare, 
-  FileText, 
-  Search,
-  Palette
-} from 'lucide-react';
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
+
   const handleResize = () => {
     if (window.innerWidth >= 1024) {
-      setIsOpen(false);
-      icon: <Database className="w-4 h-4" />,
-      description: 'Comprehensive IT infrastructure services'
+      setIsMenuOpen(false);
+    }
   };
 
   const handleScroll = () => {
@@ -68,8 +51,15 @@ import {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    setMicroSaasOpen(false);
-  };
+    
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);

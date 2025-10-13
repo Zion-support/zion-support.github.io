@@ -1,15 +1,11 @@
-import React from 'react';
-'use client;
+'use client';
+import React, { memo } from 'react';
 
-import React, { memo } from 'react;
+import { Link } from 'react-router-dom';
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
 
-import { Link } from 'react-router-dom;
-
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from lucide-react;
-
-const Footer: React.FC = memo(() => {;
-
-const currentYear = new Date().getFullYear();;;
+const Footer: React.FC = memo(() => {
+  const currentYear = new Date().getFullYear();
 
 const aiServices = [;;;
 

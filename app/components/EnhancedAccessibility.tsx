@@ -1,7 +1,5 @@
-import React from 'react';
-'use client;
-
-import React, { useEffect, useState } from 'react;
+'use client';
+import React, { useEffect, useState } from 'react';
 
 import { Eye, EyeOff, Volume2, VolumeX, Type, Contrast } from lucide-react;
 
