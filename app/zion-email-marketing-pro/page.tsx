@@ -1,103 +1,103 @@
-import { ArrowRight, Users, BarChart3, Target, CheckCircle, Star, Zap, Brain, TrendingUp, MessageCircle } from "lucide-react";
+import { ArrowRight, Mail, BarChart3, Target, CheckCircle, Star, Zap, Users, TrendingUp, Send } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionCrmIntelligence() {
+export default function ZionEmailMarketingPro() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Lead Scoring",
-      description: "Automatically score and prioritize leads using machine learning algorithms and behavioral analysis"
-    },
-    {
       icon: <Target className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Forecast sales outcomes, identify high-value prospects, and predict customer churn with 95% accuracy"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Reporting",
-      description: "Comprehensive dashboards with real-time insights, custom reports, and automated analytics"
+      title: "AI-Powered Segmentation",
+      description: "Automatically segment your audience using machine learning and behavioral data analysis"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Sales Automation",
-      description: "Automate follow-ups, email sequences, and task management to maximize sales efficiency"
+      title: "Smart Automation",
+      description: "Create complex email workflows with drag-and-drop automation builder and AI optimization"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Track open rates, click-through rates, conversions, and revenue attribution with detailed insights"
+    },
+    {
+      icon: <Mail className="w-6 h-6" />,
+      title: "Email Designer",
+      description: "Create stunning emails with our drag-and-drop builder and AI-powered design suggestions"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "360° Customer View",
-      description: "Complete customer profiles with interaction history, preferences, and engagement metrics"
+      title: "List Management",
+      description: "Advanced contact management with custom fields, tags, and automated list cleaning"
     },
     {
-      icon: <MessageCircle className="w-6 h-6" />,
-      title: "Communication Hub",
-      description: "Unified inbox for emails, calls, and messages with AI-powered response suggestions"
+      icon: <Send className="w-6 h-6" />,
+      title: "A/B Testing",
+      description: "Test subject lines, content, and send times with AI-powered optimization recommendations"
     }
   ];
 
-  const integrations = [
-    "Salesforce",
-    "HubSpot",
-    "Pipedrive",
-    "Zoho CRM",
-    "Microsoft Dynamics",
-    "Gmail",
-    "Outlook",
-    "Slack",
-    "Teams",
-    "WhatsApp Business",
-    "LinkedIn Sales Navigator",
-    "Zoom"
+  const emailTypes = [
+    "Welcome Series",
+    "Newsletter Campaigns",
+    "Product Announcements",
+    "Abandoned Cart Recovery",
+    "Birthday & Anniversary",
+    "Re-engagement Campaigns",
+    "Event Invitations",
+    "Survey & Feedback",
+    "Educational Content",
+    "Promotional Offers",
+    "Transactional Emails",
+    "Drip Campaigns"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$39",
+      price: "$25",
       period: "/month",
-      description: "Perfect for small sales teams",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 contacts",
-        "Basic lead scoring",
-        "Standard reporting",
-        "Email integration",
-        "Mobile app",
-        "Email support"
+        "Up to 2,500 subscribers",
+        "10,000 emails per month",
+        "Basic templates",
+        "Email support",
+        "Basic analytics",
+        "A/B testing"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$65",
       period: "/month",
-      description: "Most popular for growing teams",
+      description: "Most popular for growing businesses",
       features: [
-        "Up to 10,000 contacts",
-        "Advanced AI features",
-        "Predictive analytics",
-        "Custom reporting",
+        "Up to 10,000 subscribers",
+        "50,000 emails per month",
+        "Advanced templates",
         "Priority support",
-        "Team collaboration",
-        "API access",
-        "Advanced automation"
+        "Advanced analytics",
+        "Automation workflows",
+        "Custom fields",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited contacts",
-        "Custom AI models",
+        "Unlimited subscribers",
+        "Unlimited emails",
         "White-label solution",
         "24/7 dedicated support",
+        "Advanced reporting",
         "Custom integrations",
-        "Advanced security",
-        "Multi-tenant architecture",
-        "Custom workflows"
+        "Advanced automation",
+        "Multi-user accounts"
       ],
       popular: false
     }
@@ -105,24 +105,24 @@ export default function ZionCrmIntelligence() {
 
   const testimonials = [
     {
-      name: "David Chen",
-      company: "Software Solutions Inc",
-      role: "Sales Director",
-      content: "Zion CRM Intelligence increased our conversion rate by 180%. The AI lead scoring is incredibly accurate.",
+      name: "Jennifer Adams",
+      company: "E-commerce Store",
+      role: "Marketing Manager",
+      content: "Zion Email Marketing Pro increased our email revenue by 350%. The automation features are game-changing!",
       rating: 5
     },
     {
-      name: "Sarah Williams",
-      company: "Marketing Agency",
-      role: "Account Manager",
-      content: "The predictive analytics helped us identify our best prospects. Revenue increased by 300% in 6 months.",
+      name: "Robert Kim",
+      company: "SaaS Startup",
+      role: "Growth Manager",
+      content: "The AI segmentation helped us personalize our emails perfectly. Open rates increased by 200%.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      company: "E-commerce Platform",
-      role: "VP of Sales",
-      content: "Finally, a CRM that actually helps us sell more. The automation features save us 20 hours per week.",
+      name: "Lisa Thompson",
+      company: "Non-profit Organization",
+      role: "Communications Director",
+      content: "Easy to use, powerful features, and excellent deliverability. Our donor engagement has never been better.",
       rating: 5
     }
   ];
@@ -130,45 +130,45 @@ export default function ZionCrmIntelligence() {
   return (
     <>
       <Helmet>
-        <title>Zion CRM Intelligence - AI-Powered Customer Relationship Management | Zion Tech Group</title>
+        <title>Zion Email Marketing Pro - AI-Powered Email Marketing Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your sales with Zion CRM Intelligence - the ultimate AI-powered CRM platform. Advanced lead scoring, predictive analytics, and sales automation."
+          content="Transform your email marketing with Zion Email Marketing Pro - the ultimate AI-powered platform for automation, segmentation, and analytics."
         />
         <meta
           name="keywords"
-          content="CRM software, sales automation, lead scoring, predictive analytics, customer relationship management, sales intelligence"
+          content="email marketing, email automation, email campaigns, marketing automation, email analytics, email segmentation"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-blue-500/20 border border-indigo-500/30 mb-6">
-              <Users className="w-4 h-4 text-indigo-400 mr-2" />
-              <span className="text-indigo-400 text-sm font-medium">#1 AI CRM Platform 2024</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
+              <Mail className="w-4 h-4 text-green-400 mr-2" />
+              <span className="text-green-400 text-sm font-medium">#1 Email Marketing Platform 2024</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400">
-                Zion CRM Intelligence
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                Zion Email Marketing Pro
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your sales process with AI-powered customer relationship management. 
-              Advanced lead scoring, predictive analytics, and intelligent automation for modern sales teams.
+              Transform your email marketing with AI-powered automation, smart segmentation, 
+              and advanced analytics. Drive engagement and revenue with every email.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -177,16 +177,16 @@ export default function ZionCrmIntelligence() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-indigo-400 mb-2">180%</div>
-                <div className="text-gray-300">Average Conversion Increase</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">350%</div>
+                <div className="text-gray-300">Average Revenue Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">95%</div>
-                <div className="text-gray-300">Prediction Accuracy</div>
+                <div className="text-3xl font-bold text-emerald-400 mb-2">98%</div>
+                <div className="text-gray-300">Deliverability Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">20hrs</div>
-                <div className="text-gray-300">Time Saved Weekly</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">2M+</div>
+                <div className="text-gray-300">Emails Sent Daily</div>
               </div>
             </div>
           </div>
@@ -197,10 +197,10 @@ export default function ZionCrmIntelligence() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Intelligent CRM Features
+                Powerful Email Marketing Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to manage, nurture, and convert your leads into customers.
+                Everything you need to create, send, and optimize your email campaigns.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -209,7 +209,7 @@ export default function ZionCrmIntelligence() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-500 to-blue-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -224,25 +224,25 @@ export default function ZionCrmIntelligence() {
           </div>
         </section>
 
-        {/* Integrations Section */}
+        {/* Email Types Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Seamless Integrations
+                Create Any Type of Email Campaign
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Connect with your favorite tools and platforms for a unified workflow.
+                From welcome series to promotional campaigns, we have templates for every need.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {integrations.map((integration, index) => (
+              {emailTypes.map((type, index) => (
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{integration}</span>
+                  <span className="text-gray-300">{type}</span>
                 </div>
               ))}
             </div>
@@ -254,10 +254,10 @@ export default function ZionCrmIntelligence() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your sales team size. All plans include 14-day free trial.
+                Choose the plan that fits your email marketing needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -266,13 +266,13 @@ export default function ZionCrmIntelligence() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-indigo-400 bg-gradient-to-br from-indigo-500/10 to-blue-500/10'
-                      : 'border-white/20 hover:border-indigo-400'
+                      ? 'border-green-400 bg-gradient-to-br from-green-500/10 to-emerald-500/10'
+                      : 'border-white/20 hover:border-green-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -297,8 +297,8 @@ export default function ZionCrmIntelligence() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-indigo-500 to-blue-600 text-white hover:from-indigo-600 hover:to-blue-700'
-                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
+                        : 'border border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -314,10 +314,10 @@ export default function ZionCrmIntelligence() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Sales Teams
+                Trusted by Email Marketers
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what sales professionals say about Zion CRM Intelligence
+                See what marketing professionals say about Zion Email Marketing Pro
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -346,22 +346,22 @@ export default function ZionCrmIntelligence() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Sales Process?
+              Ready to Transform Your Email Marketing?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of sales teams using Zion CRM Intelligence to close more deals.
+              Join thousands of marketers using Zion Email Marketing Pro to grow their business.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-indigo-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>

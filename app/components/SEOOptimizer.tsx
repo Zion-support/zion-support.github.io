@@ -194,7 +194,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
       <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
-<<<<<<< HEAD
       
       {/* Canonical URL */}
       {canonical && <link rel="canonical" href={canonical} />}
@@ -202,7 +201,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
-=======
       
       {/* Canonical URL */}
       <link rel="canonical" href={finalCanonical} />
