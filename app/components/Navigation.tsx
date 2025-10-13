@@ -1,20 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
 
-export default function Navigation() {
+const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   
-  const toggleMenu = () => {
+  const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
-  }
+  }, [isOpen])
 
-  const toggleServices = () => {
+  const toggleServices = useCallback(() => {
     setIsServicesOpen(!isServicesOpen)
-  }
+  }, [isServicesOpen])
 
-  const services = [
+  const services = useMemo(() => [
     { name: 'AI & Machine Learning', path: '/ai-services', icon: <Zap className="w-4 h-4" /> },
     { name: 'Cloud Solutions', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
@@ -22,7 +22,7 @@ export default function Navigation() {
     { name: 'Data Analytics', path: '/data-analytics', icon: <Database className="w-4 h-4" /> },
     { name: 'Custom Development', path: '/custom-development', icon: <Code className="w-4 h-4" /> },
     { name: 'Mobile Solutions', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
-  ]
+  ], [])
 
   return (
     <nav className="bg-gray-900 text-white shadow-lg">
@@ -178,4 +178,8 @@ export default function Navigation() {
       </div>
     </nav>
   )
-}
+})
+
+Navigation.displayName = 'Navigation'
+
+export default Navigation

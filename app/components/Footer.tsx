@@ -1,10 +1,11 @@
+import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Linkedin, Twitter, Github } from "lucide-react";
 
-export default function Footer() {
+const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
 
-  const socialLinks = [
+  const socialLinks = useMemo(() => [
     {
       name: "Twitter",
       url: "https://twitter.com/ziontechgroup",
@@ -20,7 +21,7 @@ export default function Footer() {
       url: "https://github.com/ziontechgroup",
       icon: <Github className="w-5 h-5" />,
     },
-  ];
+  ], []);
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -204,4 +205,8 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+});
+
+Footer.displayName = 'Footer';
+
+export default Footer;
