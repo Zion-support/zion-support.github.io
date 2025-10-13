@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { 
@@ -20,7 +17,6 @@ import {
 } from '@heroicons/react/24/outline';
 
 export default function AboutPage() {
-<<<<<<< HEAD
   return (
     <>
       <Helmet>
@@ -29,84 +25,6 @@ export default function AboutPage() {
         <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" />
       </Helmet>
       
-=======
-  const values = [
-    {
-      icon: CheckCircleIcon,
-      title: 'Mission-Driven',
-      description: 'We are committed to delivering innovative solutions that drive real business value and transformation.'
-    },
-    {
-      icon: UserGroupIcon,
-      title: 'Client-Focused',
-      description: 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'
-    },
-    {
-      icon: StarIcon,
-      title: 'Excellence',
-      description: 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'
-    },
-    {
-      icon: LightBulbIcon,
-      title: 'Innovation',
-      description: 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Integrity',
-      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Agility',
-      description: 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'
-    }
-  ];
-
-  const team = [
-    {
-      name: 'Kleber Santos',
-      role: 'Founder & CEO',
-      description: 'Technology visionary with 15+ years of experience in AI and enterprise solutions.',
-      image: '/team/kleber.jpg'
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      description: 'Expert in cloud architecture and cybersecurity with a passion for innovation.',
-      image: '/team/sarah.jpg'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Lead AI Engineer',
-      description: 'Machine learning specialist focused on practical AI applications for business.',
-      image: '/team/michael.jpg'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Head of Design',
-      description: 'User experience designer creating intuitive and engaging digital experiences.',
-      image: '/team/emily.jpg'
-    }
-  ];
-
-  const stats = [
-    { number: '50+', label: 'Projects Completed' },
-    { number: '25+', label: 'Happy Clients' },
-    { number: '99%', label: 'Success Rate' },
-    { number: '4+', label: 'Years Experience' }
-  ];
-
-  return (
-    <>
-      <SEO 
-        title="About Us - Zion Tech Group"
-        description="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions."
-        keywords="about us, team, mission, values, AI company, IT solutions"
-        url="/about"
-      />
-
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
@@ -121,16 +39,10 @@ export default function AboutPage() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Empowering businesses through innovative technology solutions
             </p>
-<<<<<<< HEAD
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
               Founded in 2020, we've been at the forefront of digital transformation, 
               helping companies leverage the power of artificial intelligence, cybersecurity, 
               and cloud technologies to achieve unprecedented growth.
-=======
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Founded in 2020, Zion Tech Group has been at the forefront of digital transformation, 
-              helping businesses leverage cutting-edge AI and IT solutions to achieve their goals.
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
             </p>
           </div>
         </div>
