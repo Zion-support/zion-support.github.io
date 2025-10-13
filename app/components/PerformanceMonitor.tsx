@@ -1,80 +1,96 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
-interface PerformanceMetrics {
-  CLS: number | null;
-  INP: number | null;
-  FCP: number | null;
-  LCP: number | null;
-  TTFB: number | null;
+interface PerformanceMonitorProps {
+  showDetails?: boolean;
+  children: React.ReactNode;
 }
 
-interface PerformanceMonitorProps {
-  children: React.ReactNode;
-  showDetails?: boolean;
+interface PerformanceMetrics {
+  cls: number | null;
+  inp: number | null;
+  fcp: number | null;
+  lcp: number | null;
+  ttfb: number | null;
 }
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
-  children, 
-  showDetails = false 
+  showDetails = false, 
+  children 
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    CLS: null,
-    INP: null,
-    FCP: null,
-    LCP: null,
-    TTFB: null
+    cls: null,
+    inp: null,
+    fcp: null,
+    lcp: null,
+    ttfb: null
   });
 
-  useEffect(() => {
-    const sendToAnalytics = (metric: any) => {
-      console.log('Performance Metric:', metric.name, metric.value);
-      
-      setMetrics(prev => ({
-        ...prev,
-        [metric.name]: metric.value
-      }));
+  const [isVisible, setIsVisible] = useState(false);
 
-      // Send to analytics service (replace with your analytics)
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          value: Math.round(metric.value),
-          non_interaction: true,
-        });
-      }
-    };
-
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics);
-    onFCP(sendToAnalytics);
-    onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
+  const updateMetric = useCallback((name: keyof PerformanceMetrics, value: number) => {
+    setMetrics(prev => ({
+      ...prev,
+      [name]: value
+    }));
   }, []);
 
-  const getMetricStatus = (value: number | null, thresholds: { good: number; poor: number }) => {
-    if (value === null) return 'pending';
-    if (value <= thresholds.good) return 'good';
-    if (value <= thresholds.poor) return 'needs-improvement';
-    return 'poor';
+  useEffect(() => {
+    // Measure Core Web Vitals
+    onCLS((metric) => {
+      updateMetric('cls', metric.value);
+    });
+
+    onINP((metric) => {
+      updateMetric('inp', metric.value);
+    });
+
+    onFCP((metric) => {
+      updateMetric('fcp', metric.value);
+    });
+
+    onLCP((metric) => {
+      updateMetric('lcp', metric.value);
+    });
+
+    onTTFB((metric) => {
+      updateMetric('ttfb', metric.value);
+    });
+
+    // Performance observer for additional metrics
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'navigation') {
+            const navEntry = entry as PerformanceNavigationTiming;
+            // Track additional navigation metrics
+            console.log('Navigation timing:', {
+              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
+              domInteractive: navEntry.domInteractive - navEntry.navigationStart
+            });
+          }
+        }
+      });
+
+      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] });
+
+      return () => observer.disconnect();
+    }
+  }, [updateMetric]);
+
+  const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
+    if (value === null) return 'text-gray-400';
+    if (value <= thresholds.good) return 'text-green-400';
+    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
+    return 'text-red-400';
   };
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'good': return 'text-green-400';
-      case 'needs-improvement': return 'text-yellow-400';
-      case 'poor': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
-  };
-
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'good': return '✅';
-      case 'needs-improvement': return '⚠️';
-      case 'poor': return '❌';
-      default: return '⏳';
-    }
+  const getScoreText = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
+    if (value === null) return 'Measuring...';
+    if (value <= thresholds.good) return 'Good';
+    if (value <= thresholds.needsImprovement) return 'Needs Improvement';
+    return 'Poor';
   };
 
   if (!showDetails) {
@@ -82,46 +98,83 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   }
 
   return (
-    <div className="relative">
+    <>
       {children}
       
-      {/* Performance Debug Panel */}
-      <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 max-w-sm z-50">
-        <h3 className="text-sm font-semibold text-white mb-3">Performance Metrics</h3>
-        <div className="space-y-2 text-xs">
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300">CLS:</span>
-            <span className={getStatusColor(getMetricStatus(metrics.CLS, { good: 0.1, poor: 0.25 }))}>
-              {getStatusIcon(getMetricStatus(metrics.CLS, { good: 0.1, poor: 0.25 }))} {metrics.CLS?.toFixed(3) || '...'}
-            </span>
+      {/* Performance Monitor Overlay */}
+      <div className="fixed bottom-4 right-4 z-50">
+        <button
+          onClick={() => setIsVisible(!isVisible)}
+          className="bg-slate-800 text-white px-3 py-2 rounded-lg shadow-lg hover:bg-slate-700 transition-colors text-sm font-medium"
+        >
+          Performance {isVisible ? '▼' : '▲'}
+        </button>
+        
+        {isVisible && (
+          <div className="absolute bottom-12 right-0 bg-slate-800 text-white p-4 rounded-lg shadow-xl min-w-80">
+            <h3 className="text-lg font-semibold mb-3 text-cyan-400">Core Web Vitals</h3>
+            
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between items-center">
+                <span>LCP (Largest Contentful Paint):</span>
+                <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
+                  {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'Measuring...'}
+                </span>
+              </div>
+              <div className="text-xs text-gray-400">
+                {getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 })}
+              </div>
+              
+              <div className="flex justify-between items-center">
+                <span>INP (Interaction to Next Paint):</span>
+                <span className={getScoreColor(metrics.inp, { good: 200, needsImprovement: 500 })}>
+                  {metrics.inp ? `${Math.round(metrics.inp)}ms` : 'Measuring...'}
+                </span>
+              </div>
+              <div className="text-xs text-gray-400">
+                {getScoreText(metrics.inp, { good: 200, needsImprovement: 500 })}
+              </div>
+              
+              <div className="flex justify-between items-center">
+                <span>CLS (Cumulative Layout Shift):</span>
+                <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
+                  {metrics.cls ? metrics.cls.toFixed(3) : 'Measuring...'}
+                </span>
+              </div>
+              <div className="text-xs text-gray-400">
+                {getScoreText(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}
+              </div>
+              
+              <div className="flex justify-between items-center">
+                <span>FCP (First Contentful Paint):</span>
+                <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
+                  {metrics.fcp ? `${Math.round(metrics.fcp)}ms` : 'Measuring...'}
+                </span>
+              </div>
+              <div className="text-xs text-gray-400">
+                {getScoreText(metrics.fcp, { good: 1800, needsImprovement: 3000 })}
+              </div>
+              
+              <div className="flex justify-between items-center">
+                <span>TTFB (Time to First Byte):</span>
+                <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
+                  {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'Measuring...'}
+                </span>
+              </div>
+              <div className="text-xs text-gray-400">
+                {getScoreText(metrics.ttfb, { good: 800, needsImprovement: 1800 })}
+              </div>
+            </div>
+            
+            <div className="mt-3 pt-3 border-t border-gray-600">
+              <div className="text-xs text-gray-400">
+                Last updated: {new Date().toLocaleTimeString()}
+              </div>
+            </div>
           </div>
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300">INP:</span>
-            <span className={getStatusColor(getMetricStatus(metrics.INP, { good: 200, poor: 500 }))}>
-              {getStatusIcon(getMetricStatus(metrics.INP, { good: 200, poor: 500 }))} {metrics.INP ? `${metrics.INP}ms` : '...'}
-            </span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300">FCP:</span>
-            <span className={getStatusColor(getMetricStatus(metrics.FCP, { good: 1800, poor: 3000 }))}>
-              {getStatusIcon(getMetricStatus(metrics.FCP, { good: 1800, poor: 3000 }))} {metrics.FCP ? `${metrics.FCP}ms` : '...'}
-            </span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300">LCP:</span>
-            <span className={getStatusColor(getMetricStatus(metrics.LCP, { good: 2500, poor: 4000 }))}>
-              {getStatusIcon(getMetricStatus(metrics.LCP, { good: 2500, poor: 4000 }))} {metrics.LCP ? `${metrics.LCP}ms` : '...'}
-            </span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300">TTFB:</span>
-            <span className={getStatusColor(getMetricStatus(metrics.TTFB, { good: 800, poor: 1800 }))}>
-              {getStatusIcon(getMetricStatus(metrics.TTFB, { good: 800, poor: 1800 }))} {metrics.TTFB ? `${metrics.TTFB}ms` : '...'}
-            </span>
-          </div>
-        </div>
+        )}
       </div>
-    </div>
+    </>
   );
 };
 

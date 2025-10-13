@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
+# Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Crawl-delay for respectful crawling
@@ -17,11 +18,16 @@ Disallow: /static/
 Allow: /
 Allow: /about
 Allow: /services
+Allow: /contact
 Allow: /ai-services
 Allow: /micro-saas
 Allow: /5g-solutions
-Allow: /contact
 Allow: /blog
+Allow: /tutorials
+Allow: /demo
+Allow: /support
 
-# Host
-Host: https://ziontechgroup.com
+# Block common bot traps
+Disallow: /*.json$
+Disallow: /*?*
+Disallow: /*#

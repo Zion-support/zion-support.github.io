@@ -17,6 +17,7 @@ import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
+import MobileOptimizer from "./app/components/MobileOptimizer";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -123,24 +124,25 @@ function App() {
         <AnalyticsProvider>
           <EnhancedAnalytics>
             <PerformanceOptimizer>
-              <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
-                <WebVitalsTracker>
-                  <AccessibilityEnhancer>
-                    <Router>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                        {/* Skip to main content link */}
-                        <a href="#main-content" className="skip-link">
-                          Skip to main content
-                        </a>
-                        
-                        <FuturisticBackground>
-                          <Navigation onSidebarToggle={toggleSidebar} />
-                          <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                          <Breadcrumb />
+              <MobileOptimizer>
+                <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
+                  <WebVitalsTracker>
+                    <AccessibilityEnhancer>
+                      <Router>
+                        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                          {/* Skip to main content link */}
+                          <a href="#main-content" className="skip-link">
+                            Skip to main content
+                          </a>
                           
-                          <main id="main-content" role="main" className="relative z-10">
-                            <Suspense fallback={<LoadingPage message="Loading Zion Tech Group..." />}>
-                              <Routes>
+                          <FuturisticBackground>
+                            <Navigation onSidebarToggle={toggleSidebar} />
+                            <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                            <Breadcrumb />
+                            
+                            <main id="main-content" role="main" className="relative z-10">
+                              <Suspense fallback={<LoadingPage message="Loading Zion Tech Group..." />}>
+                                <Routes>
                             {/* Main Pages */}
                             <Route path="/" element={<HomePage />} />
                             <Route path="/about" element={<AboutPage />} />
@@ -226,15 +228,16 @@ function App() {
                             <Route path="*" element={<NotFoundPage />} />
                           </Routes>
                         </Suspense>
-                          </main>
-                          
-                          <Footer />
-                        </FuturisticBackground>
-                      </div>
-                    </Router>
-                  </AccessibilityEnhancer>
-                </WebVitalsTracker>
-              </PerformanceMonitor>
+                            </main>
+                            
+                            <Footer />
+                          </FuturisticBackground>
+                        </div>
+                      </Router>
+                    </AccessibilityEnhancer>
+                  </WebVitalsTracker>
+                </PerformanceMonitor>
+              </MobileOptimizer>
             </PerformanceOptimizer>
           </EnhancedAnalytics>
         </AnalyticsProvider>
